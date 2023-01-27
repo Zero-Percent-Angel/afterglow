@@ -7,9 +7,9 @@
 	name = "feral ghoul"
 	desc = "A ghoul that has lost its mind and become aggressive."
 	icon = 'icons/fallout/mobs/humans/ghouls.dmi'
-	icon_state = "feralghoul"
-	icon_living = "feralghoul"
-	icon_dead = "feralghoul_dead"
+	icon_state = "feralghoul_h"
+	icon_living = "feralghoul_h"
+	icon_dead = "feralghoul_h_dead"
 	var/rare_icon = "feralghoul_h"
 	can_ghost_into = TRUE
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
@@ -24,30 +24,14 @@
 	waddle_side_time = 1
 	speak_emote = list(
 		"growls",
-		"murrs",
-		"barks",
 		"gurgles",
 		"screeches",
-		"hisses",
-		"uwu's",
-		"awoos",
-		"borks",
-		"pants",
-		"wiggles its eyebrows",
-		"churrs",
-		"purrs",
-		"trills",
-		"waggles"
+		"hisses"
 		)
 	emote_see = list(
-		"wags its tail",
 		"looks hungry",
-		"sniffs the air",
 		"growls",
-		"foams at the mouth",
-		"loses its shit",
-		"busts it down",
-		"goes full tilt"
+		"foams at the mouth"
 		)
 	a_intent = INTENT_HARM
 	speed = 1
@@ -124,9 +108,9 @@
 /mob/living/simple_animal/hostile/ghoul/reaver
 	name = "feral ghoul reaver"
 	desc = "A ghoul that has lost its mind and become aggressive. This one is strapped with metal armor, and appears far stronger."
-	icon_state = "ghoulreaver"
-	icon_living = "ghoulreaver"
-	icon_dead = "ghoulreaver_dead"
+	icon_state = "ghoulreaver_h"
+	icon_living = "ghoulreaver_h"
+	icon_dead = "ghoulreaver_h_dead"
 	rare_icon = "ghoulreaver_h"
 	speed = 2
 	mob_armor = ARMOR_VALUE_GHOUL_REAVER
@@ -222,9 +206,9 @@
 /mob/living/simple_animal/hostile/ghoul/legendary
 	name = "legendary ghoul"
 	desc = "A ghoul that has lost its mind and become aggressive. This one has exceptionally large, bulging muscles. It looks quite strong."
-	icon_state = "glowinghoul"
-	icon_living = "glowinghoul"
-	icon_dead = "glowinghoul_dead"
+	icon_state = "glowinghoul_h"
+	icon_living = "glowinghoul_h"
+	icon_dead = "glowinghoul_h_dead"
 	color = "#FFFF00"
 	mob_armor = ARMOR_VALUE_GHOUL_LEGEND
 	can_ghost_into = FALSE
@@ -249,9 +233,9 @@
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "glowing feral ghoul"
 	desc = "A feral ghoul that has absorbed massive amounts of radiation, causing them to glow in the dark and radiate constantly."
-	icon_state = "glowinghoul"
-	icon_living = "glowinghoul"
-	icon_dead = "glowinghoul_dead"
+	icon_state = "glowinghoul_h"
+	icon_living = "glowinghoul_h"
+	icon_dead = "glowinghoul_h_dead"
 	rare_icon = "glowinghoul_h"
 	mob_armor = ARMOR_VALUE_GHOUL_GLOWING
 	maxHealth = 40 

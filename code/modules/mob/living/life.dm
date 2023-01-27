@@ -8,11 +8,13 @@
 /mob/living/proc/Life(seconds, times_fired)
 
 	if(!SPECIAL_SET)
-		src.maxHealth += (src.special_e*3)//SPECIAL Integration
-		src.health += (src.special_e*3)//SPECIAL Integration
+		src.maxHealth += (src.special_e*3 - 14)//SPECIAL Integration
+		src.health += (src.special_e*3 - 14)//SPECIAL Integration
+		src.sprint_buffer_max += (src.special_e - 5)
+		src.stambuffer += (round(special_e/2) - 2)
 		var/obj/item/organ/brain/brain = src.getorgan(/obj/item/organ/brain)
 		if (istype(brain))
-			brain.maxHealth += (src.special_c + src.special_i) 
+			brain.maxHealth += ((src.special_c + src.special_i + src.special_p)*2 - 25)
 		update_special_speed((5-src.special_a)/20)//SPECIAL Integration
 		SPECIAL_SET = TRUE
 	

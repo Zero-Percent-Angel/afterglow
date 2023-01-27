@@ -73,7 +73,7 @@
 	src.add_fingerprint(user)
 	user.visible_message(span_warning("[user] starts climbing onto [src]."), \
 								span_notice("You start climbing onto [src]..."))
-	var/adjusted_climb_time = climb_time
+	var/adjusted_climb_time = climb_time * (1.5 - (user.special_a/10))
 	if(user.restrained()) //climbing takes twice as long when restrained.
 		adjusted_climb_time *= 2
 	if(isalien(user))
@@ -87,8 +87,8 @@
 				user.visible_message(span_warning("[user] climbs onto [src]."), \
 									span_notice("You climb onto [src]."))
 				log_combat(user, src, "climbed onto")
-				if(climb_stun && !HAS_TRAIT(user, TRAIT_FREERUNNING))
-					user.Stun(climb_stun)
+				if(climb_stun && (!HAS_TRAIT(user, TRAIT_FREERUNNING) || user.special_a > 8))
+					user.Stun(climb_stun * (1.5 - (user.special_a/10)))
 				. = 1
 			else
 				to_chat(user, span_warning("You fail to climb onto [src]."))
