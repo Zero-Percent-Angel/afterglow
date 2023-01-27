@@ -229,7 +229,7 @@
 	. = ..()
 	if(!. || !owner)
 		return
-	if(damage >= BRAIN_DAMAGE_DEATH) //rip
+	if(damage >= maxHealth) //rip
 		if(owner.stat != DEAD)
 			to_chat(owner, span_userdanger("The last spark of life in your brain fizzles out..."))
 			owner.death()
@@ -270,7 +270,7 @@
 				brain_message = span_warning("You feel lightheaded.")
 			else if(prev_damage < BRAIN_DAMAGE_SEVERE && damage >= BRAIN_DAMAGE_SEVERE)
 				brain_message = span_warning("You feel less in control of your thoughts.")
-			else if(prev_damage < (BRAIN_DAMAGE_DEATH - 20) && damage >= (BRAIN_DAMAGE_DEATH - 20))
+			else if(prev_damage < (maxHealth - 20) && damage >= (maxHealth - 20))
 				brain_message = span_warning("You can feel your mind flickering on and off...")
 
 			if(.)

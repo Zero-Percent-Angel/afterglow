@@ -18,7 +18,8 @@
 		/datum/reagent/drug/bath_salts = 4,
 		/datum/reagent/drug/aranesp = 4,
 		/datum/reagent/drug/happiness = 4,
-		/datum/reagent/drug/jet = 6
+		/datum/reagent/drug/jet = 6,
+		/datum/reagent/blackpowder = 5
 	)
 
 	expert_chemicals = list(
@@ -38,5 +39,6 @@
 	upgraded_chemicals2 = list(
 		/datum/reagent/medicine/strange_reagent = 4,
 		/datum/reagent/medicine/mentat = 3,
-		/datum/reagent/medicine/stimpak = 3
+		/datum/reagent/medicine/stimpak = 3,
+		/datum/reagent/blackpowder = 2
 	)
