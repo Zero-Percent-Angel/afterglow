@@ -21,7 +21,8 @@
 	density = TRUE
 	use_power = NO_POWER_USE
 	circuit = /obj/item/circuitboard/machine/smes
-
+	icon = 'icons/fallout/machines/power.dmi'
+	
 	var/capacity = 5e6 // maximum charge
 	var/charge = 0 // actual charge
 
