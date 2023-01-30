@@ -16,7 +16,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	var/list/job_list
 
 	//Assigned_role that can use it. If empty - everyone can.
-	var/list/job_req = list("CentCom Official", "CentCom Commander", "Death")
+	var/list/job_req = list()
 
 	var/obj/item/card/id/inserted_scan_id
 	var/obj/item/card/id/inserted_modify_id

@@ -90,6 +90,7 @@
 		for(var/i in mood_events)
 			var/datum/mood_event/event = mood_events[i]
 			msg += event.description
+			msg += "\n"
 	else
 		msg += "<span class='nicegreen'>I don't have much of a reaction to anything right now.<span>\n"
 	to_chat(user || parent, msg)

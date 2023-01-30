@@ -19,7 +19,7 @@
 "bP" = (/obj/item/radio/intercom{frequency = 1361; name = "Vault Intercom"; pixel_y = 30},/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,/area/f13/vault)
 "bR" = (/obj/machinery/light{light_color = "#e8eaff"},/obj/structure/closet/crate/bin,/turf/open/floor/plasteel/f13/vault_floor/white,/area/hydroponics)
 "bT" = (/obj/structure/cable{icon_state = "1-2"},/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,/area/f13/vault)
-"cb" = (/obj/structure/vaultdoor,/obj/machinery/light/fo13colored/Red{dir = 8},/obj/item/radio/intercom{frequency = 1361; name = "Vault Intercom"; pixel_x = -30},/turf/open/floor/f13,/area/f13/wasteland)
+"cb" = (/obj/structure/vaultdoor,/obj/machinery/light/fo13colored/Red{dir = 8},/obj/item/radio/intercom{frequency = 1361; name = "Vault Intercom"; pixel_x = -30},/turf/open/floor/f13,/area/f13/vault)
 "cd" = (/obj/structure/reagent_dispensers/watertank/high,/obj/machinery/light{light_color = "#e8eaff"},/turf/open/floor/plasteel/f13/vault_floor/white,/area/hydroponics)
 "cj" = (/obj/structure/chair/right{dir = 1},/turf/open/floor/plasteel/f13/vault_floor/floor,/area/f13/vault/diner)
 "ck" = (/obj/machinery/vending/wallmed{pixel_y = 30},/turf/open/floor/plasteel/f13/vault_floor/red/redchess,/area/f13/vault/security)
@@ -50,6 +50,7 @@
 "ef" = (/obj/structure/chair/sofa/corp/left{dir = 1},/turf/open/floor/plasteel/f13/vault_floor/red/redchess,/area/f13/vault/security)
 "eg" = (/obj/effect/landmark/start/f13/vaultsecurityofficer,/turf/open/floor/plasteel/f13/vault_floor/red/redchess,/area/f13/vault/security)
 "ek" = (/obj/structure/closet/toolcloset,/obj/effect/spawner/lootdrop/toolsgood,/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess,/area/f13/vault/reactor)
+"eD" = (/obj/item/radio/intercom{pixel_y = 30},/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,/area/f13/vault/overseer)
 "eL" = (/obj/machinery/light{pixel_x = 16},/obj/structure/cable{icon_state = "4-8"},/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,/area/f13/vault)
 "eR" = (/obj/machinery/seed_extractor,/turf/open/floor/plasteel/f13/vault_floor/white,/area/hydroponics)
 "fe" = (/obj/machinery/door/airlock/wood,/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,/area/f13/vault)
@@ -65,6 +66,7 @@
 "gw" = (/obj/machinery/vending/wardrobe/engi_wardrobe/free,/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess,/area/f13/vault/reactor)
 "gx" = (/obj/machinery/computer/crew,/turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,/area/f13/vault/medical)
 "gy" = (/obj/structure/chair/comfy/modern{dir = 8},/turf/open/floor/carpet/orange,/area/f13/vault/chiefoffice)
+"gF" = (/turf/open/floor/f13,/area/f13/vault)
 "gM" = (/obj/machinery/chem_dispenser,/turf/open/floor/plasteel/f13/vault_floor/purple/purplechess,/area/f13/vault/science)
 "gQ" = (/obj/machinery/light,/turf/open/floor/plasteel/f13/vault_floor/purple/purplechess,/area/f13/vault/science)
 "gS" = (/obj/structure/cable{icon_state = "2-8"},/turf/open/floor/plasteel/f13/vault_floor/white,/area/f13/vault/diner)
@@ -152,7 +154,7 @@
 "pJ" = (/obj/structure/table/reinforced,/turf/open/floor/carpet/vault,/area/f13/vault/overseer)
 "pL" = (/obj/machinery/door/airlock/science/glass{name = "Science"; req_access_txt = "31"},/turf/open/floor/plasteel/f13/vault_floor/purple/purplechess,/area/f13/vault/science)
 "pN" = (/turf/closed/indestructible/vaultdoor,/area/f13/vault/security/checkpoint)
-"pP" = (/obj/machinery/light/fo13colored/Red{dir = 4},/turf/open/floor/f13,/area/f13/wasteland)
+"pP" = (/obj/machinery/light/fo13colored/Red{dir = 4},/turf/open/floor/f13,/area/f13/vault)
 "pR" = (/obj/structure/chair/comfy/modern{dir = 4},/turf/open/floor/plasteel/f13/vault_floor/floor,/area/f13/vault)
 "qm" = (/obj/machinery/vending/donksofttoyvendor,/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,/area/f13/vault)
 "qt" = (/obj/machinery/door/airlock/public/glass{name = "Diner"},/obj/structure/cable{icon_state = "4-8"},/turf/open/floor/plasteel/f13/vault_floor/white,/area/f13/vault/diner)
@@ -386,6 +388,7 @@
 "Nd" = (/obj/structure/chair/comfy/modern{dir = 1},/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,/area/f13/vault/overseer)
 "Nf" = (/obj/structure/rack/shelf_metal,/obj/item/gun/energy/disabler,/obj/item/gun/energy/disabler,/obj/item/gun/energy/disabler,/obj/item/shield/riot/bullet_proof,/obj/item/shield/riot/bullet_proof,/obj/item/shield/riot/bullet_proof,/turf/open/floor/plasteel/f13/vault_floor/red/redchess,/area/f13/vault/security/armory)
 "Nl" = (/obj/structure/sink{dir = 4; pixel_x = 12},/obj/structure/mirror{pixel_y = 32},/turf/open/floor/plasteel/f13/vault_floor/green,/area/f13/vault/overseer)
+"Nm" = (/turf/closed/wall/f13/tunnel,/area/f13/vault)
 "No" = (/turf/open/floor/plasteel/f13/vault_floor/red/redchess,/area/f13/vault/security)
 "Nq" = (/obj/effect/landmark/start/f13/vaultsecurityofficer,/turf/open/floor/plasteel/f13/vault_floor/red/redchess,/area/f13/vault/security/armory)
 "Ns" = (/obj/structure/chair/sofa/corp/corner{dir = 4},/turf/open/floor/carpet/vault,/area/f13/vault/overseer)
@@ -440,11 +443,13 @@
 "Tm" = (/obj/machinery/chem_master,/turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,/area/f13/vault/medical/chemistry)
 "To" = (/obj/structure/chair/f13chair1{dir = 1},/turf/open/floor/plasteel/f13/vault_floor/red/redchess,/area/f13/vault/security)
 "Tx" = (/obj/machinery/light{dir = 1; light_color = "#e8eaff"},/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,/area/f13/vault)
+"Ty" = (/obj/structure/sign/departments/medbay/alt,/turf/closed/wall/r_wall/f13vault{icon_state = "2-i"},/area/f13/vault/medical)
 "TG" = (/obj/structure/table/reinforced,/obj/machinery/microwave,/turf/open/floor/plasteel/f13/vault_floor/white,/area/f13/vault/diner)
 "TM" = (/obj/structure/rack/shelf_metal,/obj/item/storage/belt/army/security/full,/obj/item/storage/belt/army/security,/obj/item/storage/belt/army/security,/obj/item/storage/belt/army/security,/obj/item/assembly/flash,/obj/item/assembly/flash,/turf/open/floor/plasteel/f13/vault_floor/red/redchess,/area/f13/vault/security/armory)
 "TU" = (/obj/structure/bed/wooden,/turf/open/floor/plasteel/f13/vault_floor/red/redchess,/area/f13/vault/security)
 "Ug" = (/obj/machinery/smartfridge/chemistry,/turf/closed/wall/r_wall/f13vault{icon_state = "2-i"},/area/f13/vault/medical/chemistry)
 "Uh" = (/obj/machinery/door/airlock/medical{name = "Operating Theatre"; req_access_txt = "45; 5"},/obj/structure/cable{icon_state = "1-2"},/turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,/area/f13/vault/medical/surgery)
+"Ui" = (/obj/machinery/holopad,/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,/area/f13/vault)
 "Uo" = (/obj/machinery/power/apc/auto_name/east,/obj/structure/cable{icon_state = "0-8"},/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,/area/f13/vault/overseer)
 "Ut" = (/obj/structure/table,/obj/item/radio/intercom{frequency = 1361; name = "Vault Intercom"; pixel_x = -30},/turf/open/floor/plasteel/f13/vault_floor/purple/purplechess,/area/f13/vault/science)
 "Uz" = (/obj/machinery/light{light_color = "#e8eaff"},/obj/structure/cable{icon_state = "4-8"},/turf/open/floor/plasteel/f13/vault_floor/red/redchess,/area/f13/vault/security)
@@ -464,6 +469,7 @@
 "VJ" = (/obj/structure/table,/obj/machinery/reagentgrinder,/turf/open/floor/plasteel/f13/vault_floor/purple/purplechess,/area/f13/vault/science)
 "VX" = (/obj/machinery/light{dir = 4},/obj/effect/landmark/start/f13/vaultengineer,/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess,/area/f13/vault/reactor)
 "VY" = (/obj/machinery/light{pixel_x = 16},/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess,/area/f13/vault/reactor)
+"Wa" = (/obj/machinery/holopad,/turf/open/floor/f13,/area/f13/vault)
 "Wg" = (/obj/structure/table/reinforced,/obj/item/defibrillator/loaded,/obj/machinery/light{dir = 8},/turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,/area/f13/vault/medical)
 "Wr" = (/obj/item/kirbyplants/random,/turf/open/floor/plasteel/f13/vault_floor/red/redchess,/area/f13/vault/security)
 "Wv" = (/obj/structure/cable{icon_state = "4-8"},/obj/effect/landmark/start/f13/vaultengineer,/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess,/area/f13/vault/reactor)
@@ -512,7 +518,7 @@ LdYdNoNoNoNonyKnItNoKnItNoKnItNoKnItNoKnItNoKnItNoHHGWwVwVwVwVGWwVwVwVwVGWGWGWGW
 LdYdXzsxsxNohqKnKnSyKnKnSyKnKnSyKnKnSyKnKnSyKnKnSymlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlOZguvavavaKhau
 LdYdrPNoNoNoegSyWwNoNoWwNoNoWwNoNoWwNoNoWwNoNoWwNoEyawawuNawawawuNawawawuNawawuNawawmlKKisvavoxGGaau
 LdYdwIcmNodoWrKnKnKnSyKnKnKnKnKnKnKnSyKnKnKnKnKnKnhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXawmlKKsgvaYrYrdcau
-LdYdKnKnSyKnKnKnWrckNoHgWrKnXvWwNoXvNoqTXvqTNojtbKhXhXAGawMiawATawMiawawhXLdLdLdhXawmlKKFyvaPdiFcjau
+LdYdKnKnSyKnKnKnWrckNoHgWrKnXvWwNoXvNoqTXvqTNojtbKhXhXAGawMieDATawMiawawhXLdLdLdhXawmlKKFyvaPdiFcjau
 LdYdHvHvNoHvHvKnNoNoobNoNoKnKTKTKTNoNohMNohMhqKnKnhXCJawawiCawcWawScawfshXhXhXhXhXawmlKKwHvavoxGfwau
 LdYdhFqANoqABvKnwhsxmisxNoKnwhsxsxNoNoNoNoNoNojtbKhXKXawawYoiCiCiCYoawawEyawawcQawawmlKKIlvaYrYrYrau
 LdYdUSUSUSUSUSKnNoNoNoNoNoKnToToToNoNohMNohMhqKnKnhXrhawawawNdNdNdawawfshXhXhXhXhXDWmlKKysvaPdiFSjau
@@ -542,15 +548,15 @@ LdhoHuFwQhNfVjRJVvHqrZJEIjIjgQjUgQVDVDrZUtgmscgmscVJdVhXhXhXhXhXhXhXhXhXhXhXhXhX
 LdhoULNqULULULRJVvbTOkOkOkOkOkOkOkOkOkOkOkOkOkOkOkOkOkOkOkOkOkOtOtnDnDOtOtzIzIzIzIzIzIzIzIhXHOmlLdLd
 LdhorNPmTMULyeRJVvbTOkgxnjnEOkbqrxbqSzLfLfLfGKLfLfxWLfGKLfxWLfyzlRxrxrubOtzIzIzIzIzIzIzIzIhXawmlLdLd
 LdhoULmKikOQvlRJLIHqOkZRZTVgLgVggfKvTcOkOkLgOkOkOkUhOksOuWuJUgOtwFxrxrsihXhXhXhXhXhXhXhXhXhXawmlLdLd
-xzhohoCsRJRJRJycVvbTOkvdvdKqOkWgVgKAyQOkgbVgbjOkPMXGywsOBTihnLsOdDxrxrxrEyawcQawawcQawawawcQawmlLdLd
+xzhohoCsRJRJRJycVvbTTyvdvdKqOkWgVgKAyQOkgbVgbjOkPMXGywsOBTihnLsOdDxrxrxrEyawcQawawcQawawawcQawmlLdLd
 xzfQoJbTTxVvbPVvVvbTLgVgVgVgLgVgVgKALVOkZCVgOpOkHVXGzRsOHXuQvcsOdDxrxrryhXhXhXhXhXhXhXhXhXhXawmlLdLd
 xzfQoJMXnNnNnNnNnNkMqHLfmRVeqHLfmRTcyQOkZCxFOpOksnLYwgsOmETmPRsOIhxrxrubOtzIzIzIzIzIzIzIzImoawmlLdLd
 xzpNpNdurararajOjOjOOkOkOkOkOkOkOkOkOkOkOkOkOkOkOkGEOksOsOsOsOsOOtpDpDOtOtxUxUxUxUxUxUxUxUhXawmlLdLd
 LdpNMRslEFCDaBVvVvaEhXHrOxhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXhXawmlLdLd
-LdpNXukXFxAiaBVvVvVvEyawOmawawcQawawcQawawcQawawawcQawawawcQawawawcQawawawcQawawawcQawawawcQawmlLdLd
+LdpNXukXFxAiaBVvUiVvEyawOmawawcQawawcQawawcQawawawcQawawawcQawawawcQawawawcQawawawcQawawawcQawmlLdLd
 LdpNcOkXPFAiaBVvVvaEmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlmlLdLd
 LdpNBKPFPFxDpNxzVvxzxzLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLd
-LdpNpNpNpNpNpNcbSPpPrmLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLd
-LdLdLdLdLdLdrmSPSPSPrmLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLd
+LdpNpNpNpNpNpNcbgFpPNmLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLd
+LdLdLdLdLdLdrmSPWaSPrmLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLd
 LdLdLdLdLdLdrmSPSPSPrmLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLdLd
 "}
