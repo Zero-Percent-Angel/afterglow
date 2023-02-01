@@ -1,7 +1,8 @@
 /obj/machinery/rnd/science_lab
 	name = "science lab"
 	desc = "Used to increase research points."
-	icon_state = "protolathe"
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "HPLCempty"
 	circuit = /obj/item/circuitboard/machine/science_lab
 	var/engaged_in_science = FALSE
 	var/list/blueprint_types = list("small energy", "big energy", "small guns", "big guns")
@@ -16,6 +17,10 @@
 								/obj/item/book/granter/crafting_recipe/blueprint/plasmarifle, /obj/item/book/granter/crafting_recipe/blueprint/aer9,
 								/obj/item/book/granter/crafting_recipe/blueprint/gauss)
 	var/attempts = 0
+
+/obj/machinery/rnd/science_lab/Initialize()
+	. = ..()
+	update_overlays()
 
 /obj/machinery/rnd/science_lab/proc/successful_experiment(science_awarded = 1)
 	linked_console.stored_research.research_points[TECHWEB_POINT_TYPE_GENERIC] = linked_console.stored_research.research_points[TECHWEB_POINT_TYPE_GENERIC] + science_awarded
@@ -77,10 +82,13 @@
 			return
 		say("Creation started.")
 		engaged_in_science = TRUE
+		update_overlays()
 		if (do_after(usr, 10 SECONDS, 1, src, required_mobility_flags = MOBILITY_USE))
 			//need to make sure someone hasn't spent all the points while we were working!
 			if (!linked_console.stored_research.can_afford(list(TECHWEB_POINT_TYPE_GENERIC = points_to_contribute)))
 				say("Not enough points.")
+				engaged_in_science = FALSE
+				update_overlays()
 				return
 			var/difficulty_selected = 50 - (points_to_contribute/100) - attempts
 			if (usr.skill_roll(SKILL_SCIENCE, difficulty_selected))
@@ -128,6 +136,7 @@
 			engaged_in_science = FALSE
 	else if (engaged_in_science)
 		say("Please wait for current experiment to end.")
+	update_overlays()
 
 /obj/machinery/rnd/science_lab/proc/do_experiment(mob/user, difficulty = DIFFICULTY_EASY)
 	var/part_bonus = 3
@@ -235,3 +244,11 @@
 		FB.preparePixelProjectile(MT, start)
 		FB.fire()
 		warn_admins(user, "fireball")
+
+/obj/machinery/rnd/science_lab/update_overlays()
+	. = ..()
+	. += "HPLCbeaker"
+	if (!(stat & (NOPOWER|BROKEN)))
+		. += "HPLCScreen"
+	if (engaged_in_science)
+		. += "HPLCgraph"
