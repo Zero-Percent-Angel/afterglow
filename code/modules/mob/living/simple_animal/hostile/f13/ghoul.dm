@@ -228,6 +228,8 @@
 	send_mobs = null
 	pop_required_to_jump_into = BIG_MOB_MIN_PLAYERS
 	desc_short = "A deadly creature that may or may not be reanimated jerky."
+	sneak_detection_threshold = HARD_CHECK
+	sneak_roll_modifier = DIFFICULTY_CHALLENGE
 
 //Glowing Ghoul
 /mob/living/simple_animal/hostile/ghoul/glowing
@@ -304,6 +306,8 @@
 	loot = list(/obj/item/stack/f13Cash/random/low/medchance)
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 	can_ghost_into = FALSE
+	sneak_detection_threshold = HARD_CHECK
+	sneak_roll_modifier = DIFFICULTY_CHALLENGE
 
 //Alive Ghoul
 /mob/living/simple_animal/hostile/ghoul/soldier/armored
@@ -489,4 +493,6 @@
 	bare_wound_bonus = 0
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 	can_ghost_into = FALSE
+	sneak_detection_threshold = HARD_CHECK
+	sneak_roll_modifier = DIFFICULTY_CHALLENGE
 

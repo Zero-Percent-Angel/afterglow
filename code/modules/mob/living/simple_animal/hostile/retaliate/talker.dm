@@ -5,6 +5,7 @@
 	var/list/failed = list()
 	var/list/intimidated = list()
 	var/intimidation_difficulty = DIFFICULTY_NORMAL
+	desc = "Just someone out in the wastes trying to survive."
 	
 /mob/living/simple_animal/hostile/retaliate/talker/basic
 	name = "Nanotrasen Private Security Officer"
@@ -53,6 +54,17 @@
 	projectilesound = 'sound/weapons/gunshot_smg.ogg'
 	loot = list(/obj/item/gun/ballistic/automatic/autopipe,
 				/obj/effect/mob_spawn/human/corpse/nanotrasensoldier)
+
+
+/mob/living/simple_animal/hostile/retaliate/talker/basic/waster
+	
+	
+/mob/living/simple_animal/hostile/retaliate/talker/Initialize()
+	. = ..()
+	if (gender == MALE)
+		name = capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
+	else
+		name = capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
 
 
 /mob/living/simple_animal/hostile/retaliate/talker/talk_to(mob/talker)

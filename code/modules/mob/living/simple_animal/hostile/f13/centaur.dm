@@ -61,6 +61,8 @@
 	idlesound = list('sound/f13npc/centaur/idle1.ogg', 'sound/f13npc/centaur/idle2.ogg')
 	death_sound = 'sound/f13npc/centaur/centaur_death.ogg'
 	attack_sound = 'sound/f13npc/centaur/lash.ogg'
+	sneak_detection_threshold = HARD_CHECK
+	sneak_roll_modifier = DIFFICULTY_CHALLENGE
 
 /obj/item/projectile/neurotox
 	name = "spitball"
@@ -165,6 +167,8 @@
 	attack_sound = 'sound/weapons/punch1.ogg'
 	var/static/list/abom_sounds
 	deathmessage = "wails as its form shudders and violently comes to a stop."
+	sneak_detection_threshold = HARD_CHECK
+	sneak_roll_modifier = DIFFICULTY_CHALLENGE
 
 // NSB variant, some sort of bulletsponge
 /mob/living/simple_animal/hostile/abomhorror/nsb

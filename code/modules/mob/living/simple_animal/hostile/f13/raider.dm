@@ -141,6 +141,8 @@
 	rapid_melee = 1
 	loot = list(/obj/item/melee/onehanded/knife/survival, /obj/item/reagent_containers/food/snacks/kebab/human, /obj/item/stack/f13Cash/random/high)
 	footstep_type = FOOTSTEP_MOB_SHOE
+	sneak_detection_threshold = HARD_CHECK
+	sneak_roll_modifier = DIFFICULTY_CHALLENGE
 
 // LEGENDARY RANGED RAIDER
 /mob/living/simple_animal/hostile/raider/ranged/legendary
@@ -172,6 +174,8 @@
 		SP_DISTANT_SOUND(PISTOL_HEAVY_DISTANT_SOUND),
 		SP_DISTANT_RANGE(PISTOL_HEAVY_RANGE_DISTANT)
 	)
+	sneak_detection_threshold = HARD_CHECK
+	sneak_roll_modifier = DIFFICULTY_CHALLENGE
 
 // RAIDER BOSS
 /mob/living/simple_animal/hostile/raider/ranged/boss
@@ -214,6 +218,8 @@
 		MOB_MINIMUM_DISTANCE_LIST(0, 2, 4),
 		MOB_MINIMUM_DISTANCE_CHANGE_PER_TURN_CHANCE(40),
 	)
+	sneak_detection_threshold = HARD_CHECK
+	sneak_roll_modifier = DIFFICULTY_CHALLENGE
 
 /mob/living/simple_animal/hostile/raider/ranged/boss/Aggro()
 	. = ..()
@@ -229,6 +235,7 @@
 	icon_state = "mango_matt"
 	icon_living = "mango_matt"
 	icon_dead = "mango_matt_dead"
+	gender = MALE
 	mob_armor = ARMOR_VALUE_RAIDER_COMBAT_ARMOR_BOSS
 	maxHealth = 165
 	health = 165

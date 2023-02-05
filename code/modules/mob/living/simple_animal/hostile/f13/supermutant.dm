@@ -73,6 +73,8 @@
 	wound_bonus = 0
 	bare_wound_bonus = 0
 	footstep_type = FOOTSTEP_MOB_HEAVY
+	sneak_detection_threshold = HARD_CHECK
+	sneak_roll_modifier = DIFFICULTY_NORMAL
 
 /mob/living/simple_animal/hostile/supermutant/playable
 	mob_armor = ARMOR_VALUE_SUPERMUTANT_BASE
@@ -147,6 +149,8 @@
 	melee_damage_upper = 44
 	attack_sound = "hit_swing"
 	footstep_type = FOOTSTEP_MOB_HEAVY
+	sneak_detection_threshold = HARD_CHECK
+	sneak_roll_modifier = DIFFICULTY_NORMAL
 
 /mob/living/simple_animal/hostile/supermutant/meleemutant/death(gibbed)
 	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
@@ -227,6 +231,8 @@
 	melee_damage_upper = 57
 	mob_size = 5
 	footstep_type = FOOTSTEP_MOB_HEAVY
+	sneak_detection_threshold = EXPERT_CHECK
+	sneak_roll_modifier = DIFFICULTY_EXPERT
 
 /mob/living/simple_animal/hostile/supermutant/legendary/death(gibbed)
 	icon = 'icons/fallout/mobs/supermutant_dead.dmi'
@@ -251,6 +257,8 @@
 	attack_verb_simple = "slashes"
 	attack_sound = "sound/weapons/bladeslice.ogg"
 	footstep_type = FOOTSTEP_MOB_HEAVY
+	sneak_detection_threshold = HARD_CHECK
+	sneak_roll_modifier = DIFFICULTY_CHALLENGE
 
 /mob/living/simple_animal/hostile/supermutant/nightkin/Aggro()
 	..()
@@ -342,6 +350,8 @@
 		SP_DISTANT_SOUND(PLASMA_DISTANT_SOUND),
 		SP_DISTANT_RANGE(PLASMA_RANGE_DISTANT)
 	)
+	sneak_detection_threshold = EXPERT_CHECK
+	sneak_roll_modifier = DIFFICULTY_EXPERT
 
 /mob/living/simple_animal/hostile/supermutant/nightkin/elitemutant/Aggro()
 	..()
