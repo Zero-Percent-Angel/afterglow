@@ -205,6 +205,9 @@
 			var/datum/plant_gene/G = a
 			if(!G)
 				continue
+			if(!user.skill_check(SKILL_SCIENCE, G.science_req))
+				dat += "<tr><td width='260px'>Unknown Gene</td></tr>"
+				continue
 			dat += "<tr><td width='260px'>[G.get_name()]</td><td>"
 			if(can_extract && G.mutability_flags & PLANT_GENE_EXTRACTABLE)
 				dat += "<a href='?src=[REF(src)];gene=[REF(G)];op=extract'>Extract</a>"
@@ -219,6 +222,9 @@
 				dat += "<table>"
 				for(var/a in reagent_genes)
 					var/datum/plant_gene/G = a
+					if(!user.skill_check(SKILL_SCIENCE, G.science_req))
+						dat += "<tr><td width='260px'>Unknown Gene</td></tr>"
+						continue
 					dat += "<tr><td width='260px'>[G.get_name()]</td><td>"
 					if(can_extract)
 						dat += "<a href='?src=[REF(src)];gene=[REF(G)];op=extract'>Extract</a>"
@@ -236,6 +242,9 @@
 				dat += "<table>"
 				for(var/a in trait_genes)
 					var/datum/plant_gene/G = a
+					if(!user.skill_check(SKILL_SCIENCE, G.science_req))
+						dat += "<tr><td width='260px'>Unknown Gene</td></tr>"
+						continue
 					dat += "<tr><td width='260px'>[G.get_name()]</td><td>"
 					if(can_extract && G.mutability_flags & PLANT_GENE_EXTRACTABLE)
 						dat += "<a href='?src=[REF(src)];gene=[REF(G)];op=extract'>Extract</a>"
@@ -246,7 +255,8 @@
 			else
 				dat += "No trait-related genes detected in sample.<br>"
 			if(can_insert && istype(disk.gene, /datum/plant_gene/trait) && !seed.is_gene_forbidden(disk.gene.type))
-				dat += "<a href='?src=[REF(src)];op=insert'>Insert: [disk.gene.get_name()]</a>"
+				var/disk_gene_name = user.skill_check(SKILL_SCIENCE, disk.gene.science_req) ? disk.gene.get_name() : "Unknown Gene"
+				dat += "<a href='?src=[REF(src)];op=insert'>Insert: [disk_gene_name]</a>"
 			dat += "</div>"
 	else
 		dat += "<br>No sample found.<br><span class='highlight'>Please, insert a plant sample to use this device.</span>"

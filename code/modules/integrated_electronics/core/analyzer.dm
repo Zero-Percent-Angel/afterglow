@@ -9,6 +9,9 @@
 /obj/item/integrated_electronics/analyzer/afterattack(atom/A, mob/living/user)
 	. = ..()
 	if(istype(A, /obj/item/electronic_assembly))
+		if (!user.skill_check(SKILL_SCIENCE, HARD_CHECK))
+			to_chat(user, span_bad("You have no idea how to use this."))
+			return
 		var/saved = "[A.name] analyzed! On circuit printers with cloning enabled, you may use the code below to clone the circuit:<br><br><code>[SScircuit.save_electronic_assembly(A)]</code>"
 		if(saved)
 			to_chat(user, span_notice("You scan [A]."))

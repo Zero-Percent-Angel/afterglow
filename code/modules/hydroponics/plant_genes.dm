@@ -1,6 +1,7 @@
 /datum/plant_gene
 	var/name
 	var/mutability_flags = PLANT_GENE_EXTRACTABLE | PLANT_GENE_REMOVABLE ///These flags tells the genemodder if we want the gene to be extractable, only removable or neither.
+	var/science_req = EASY_CHECK
 
 /datum/plant_gene/proc/get_name() // Used for manipulator display and gene disk name.
 	var/formatted_name
@@ -117,6 +118,7 @@
 	name = "Nutriment"
 	var/reagent_id = /datum/reagent/consumable/nutriment
 	var/rate = 0.04
+	science_req = REGULAR_CHECK
 
 /datum/plant_gene/reagent/get_name()
 	var/formatted_name
@@ -221,6 +223,7 @@
 	// For code, see grown.dm
 	name = "Liquid Contents"
 	examine_line = span_info("It has a lot of liquid contents inside.")
+	science_req = REGULAR_CHECK
 
 /datum/plant_gene/trait/squash/on_slip(obj/item/reagent_containers/food/snacks/grown/G, mob/living/carbon/C)
 	// Squash the plant on slip.
@@ -232,6 +235,7 @@
 	name = "Slippery Skin"
 	rate = 1.6
 	examine_line = span_info("It has a very slippery skin.")
+	science_req = REGULAR_CHECK
 
 /datum/plant_gene/trait/slip/on_new(obj/item/reagent_containers/food/snacks/grown/G, newloc)
 	..()
@@ -256,6 +260,7 @@
 	// Also affects plant batteries see capatative cell production datum
 	name = "Electrical Activity"
 	rate = 0.2
+	science_req = HARD_CHECK
 
 /datum/plant_gene/trait/cell_charge/on_slip(obj/item/reagent_containers/food/snacks/grown/G, mob/living/carbon/C)
 	var/power = G.seed.potency*rate
@@ -294,6 +299,7 @@
 	examine_line = span_info("It emits a soft glow.")
 	trait_id = "glow"
 	var/glow_color = "#C3E381"
+	science_req = HARD_CHECK
 
 /datum/plant_gene/trait/glow/proc/glow_range(obj/item/seeds/S)
 	return 1.4 + S.potency*rate
@@ -355,6 +361,7 @@
 	// Teleport radius is calculated as max(round(potency*rate), 1)
 	name = "Bluespace Activity"
 	rate = 0.1
+	science_req = EXPERT_CHECK
 
 /datum/plant_gene/trait/teleport/on_squash(obj/item/reagent_containers/food/snacks/grown/G, atom/target)
 	if(isliving(target))
@@ -378,6 +385,7 @@
 	// 2x to max reagents volume.
 	name = "Densified Chemicals"
 	rate = 2
+	science_req = HARD_CHECK
 
 /datum/plant_gene/trait/maxchem/on_new(obj/item/reagent_containers/food/snacks/grown/G, newloc)
 	..()
@@ -393,6 +401,7 @@
 
 /datum/plant_gene/trait/battery
 	name = "Capacitive Cell Production"
+	science_req = HARD_CHECK
 
 /datum/plant_gene/trait/battery/on_attackby(obj/item/reagent_containers/food/snacks/grown/G, obj/item/I, mob/user)
 	if(istype(I, /obj/item/stack/cable_coil))
@@ -420,6 +429,7 @@
 
 /datum/plant_gene/trait/stinging
 	name = "Hypodermic Prickles"
+	science_req = EXPERT_CHECK
 
 /datum/plant_gene/trait/stinging/on_throw_impact(obj/item/reagent_containers/food/snacks/grown/G, atom/target)
 	if(isliving(target) && G.reagents && G.reagents.total_volume)
@@ -433,6 +443,7 @@
 
 /datum/plant_gene/trait/smoke
 	name = "gaseous decomposition"
+	science_req = HARD_CHECK
 
 /datum/plant_gene/trait/smoke/on_squash(obj/item/reagent_containers/food/snacks/grown/G, atom/target)
 	var/datum/effect_system/smoke_spread/chem/S = new
@@ -445,6 +456,7 @@
 
 /datum/plant_gene/trait/fire_resistance // Lavaland
 	name = "Fire Resistance"
+	science_req = HARD_CHECK
 
 /datum/plant_gene/trait/fire_resistance/apply_vars(obj/item/seeds/S)
 	if(!(S.resistance_flags & FIRE_PROOF))
@@ -457,6 +469,7 @@
 //Invasive spreading lets the plant jump to other trays, the spreadinhg plant won't replace plants of the same type.
 /datum/plant_gene/trait/invasive
 	name = "Invasive Spreading"
+	science_req = REGULAR_CHECK
 
 /datum/plant_gene/trait/invasive/on_grow(obj/machinery/hydroponics/H)
 	for(var/step_dir in GLOB.alldirs)
@@ -484,13 +497,17 @@
 
 /datum/plant_gene/trait/plant_type/weed_hardy
 	name = "Weed Adaptation"
+	science_req = REGULAR_CHECK
 
 /datum/plant_gene/trait/plant_type/fungal_metabolism
 	name = "Fungal Vitality"
+	science_req = REGULAR_CHECK
 
 /datum/plant_gene/trait/plant_type/alien_properties
-	name ="?????"
+	name ="Alien Gene?"
+	science_req = HARD_CHECK
 
 /datum/plant_gene/trait/plant_type/carnivory
 	name = "Obligate Carnivory"
+	science_req = HARD_CHECK
 
