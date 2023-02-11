@@ -146,6 +146,9 @@
 	. = ..()
 	if(!check_interactivity(user))
 		return
+	if(!user.skill_check(SKILL_SCIENCE, HARD_CHECK))
+		to_chat(user, span_bad("You don't even know where to start with this thing."))
+		return
 
 	var/total_part_size = return_total_size()
 	var/total_complexity = return_total_complexity()

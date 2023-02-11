@@ -111,6 +111,10 @@
 	if(!(in_range(src, user) || hasSiliconAccessInArea(user)))
 		return
 
+	if(!user.skill_check(SKILL_SCIENCE, HARD_CHECK))
+		to_chat(user, span_bad("You have no idea how to work this."))
+		return
+
 	if(isnull(current_category))
 		current_category = SScircuit.circuit_fabricator_recipe_list[1]
 

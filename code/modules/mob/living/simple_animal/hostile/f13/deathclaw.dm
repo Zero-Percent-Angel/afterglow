@@ -54,6 +54,8 @@
 	aggrosound = list('sound/f13npc/deathclaw/aggro1.ogg', 'sound/f13npc/deathclaw/aggro2.ogg', )
 	idlesound = list('sound/f13npc/deathclaw/idle.ogg',)
 	death_sound = 'sound/f13npc/deathclaw/death.ogg'
+	sneak_detection_threshold = HARD_CHECK
+	sneak_roll_modifier = DIFFICULTY_CHALLENGE
 
 /mob/living/simple_animal/hostile/deathclaw/playable
 	emote_taunt_sound = null
@@ -92,6 +94,8 @@
 	melee_damage_lower = 25
 	melee_damage_upper = 55
 	footstep_type = FOOTSTEP_MOB_HEAVY
+	sneak_detection_threshold = EXPERT_CHECK
+	sneak_roll_modifier = DIFFICULTY_EXPERT
 
 /mob/living/simple_animal/hostile/deathclaw/legendary/death(gibbed)
 	var/turf/T = get_turf(src)
@@ -113,6 +117,8 @@
 	melee_damage_lower = 40
 	melee_damage_upper = 60
 	footstep_type = FOOTSTEP_MOB_HEAVY
+	sneak_detection_threshold = EXPERT_CHECK
+	sneak_roll_modifier = DIFFICULTY_EXPERT
 
 
 /mob/living/simple_animal/hostile/deathclaw/bullet_act(obj/item/projectile/Proj)

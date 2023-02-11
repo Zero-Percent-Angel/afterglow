@@ -2176,11 +2176,12 @@ Records disabled until a use for them is found
 					if(new_eyes)
 						right_eye_color = sanitize_hexcolor(new_eyes, 6)
 
+				/*
 				if("eye_type")
 					var/new_eye_type = input(user, "Choose your character's eye type.", "Character Preference") as null|anything in GLOB.eye_types
 					if(new_eye_type)
 						eye_type = new_eye_type
-
+				*/
 				if("toggle_split_eyes")
 					split_eye_colors = !split_eye_colors
 					right_eye_color = left_eye_color
