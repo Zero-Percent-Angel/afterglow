@@ -11,6 +11,8 @@
 	var/mob/target_mob = null
 	var/followingAFriend = FALSE
 	var/trust_no_one = FALSE
+	var/autoSucceedThreshold = HARD_CHECK
+	var/roll_difficulty = DIFFICULTY_NORMAL
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/dialog_options(mob/talker, display_options)
 	var/dat = "" 
@@ -24,7 +26,7 @@
 /mob/living/simple_animal/hostile/retaliate/talker/follower/Topic(href, href_list)
 	if(href_list["together"])
 		usr.say("The wastes are a dangerous place, we should stick together.")
-		if (!trust_no_one && !failed.Find(WEAKREF(usr)) && (usr.skill_check(SKILL_SPEECH, HARD_CHECK) || usr.skill_roll(SKILL_SPEECH) || intimidated.Find(WEAKREF(usr))))
+		if (!trust_no_one && !failed.Find(WEAKREF(usr)) && (usr.skill_check(SKILL_SPEECH, autoSucceedThreshold) || usr.skill_roll(SKILL_SPEECH, roll_difficulty) || intimidated.Find(WEAKREF(usr))))
 			say("Alright you look like you've got it together. Where to?")
 			friends |= WEAKREF(usr)
 			if (istype(usr, /mob/living/carbon/human))

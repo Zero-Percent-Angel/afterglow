@@ -380,7 +380,7 @@
 	for(var/rec in GLOB.crafting_recipes)
 		var/datum/crafting_recipe/R = rec
 
-		if(!R.always_available && !(R.type in user?.mind?.learned_recipes) && !user.skill_check(R.skill_needed, EXPERT_CHECK)) //User doesn't actually know how to make this.
+		if(!R.always_available && !(R.type in user?.mind?.learned_recipes)) //User doesn't actually know how to make this. maybe have: && !user.skill_check(R.skill_needed, EXPERT_CHECK)
 			continue
 
 		if(!has_skill_needed_to_construct(user, R)) //User doesn't have the skill to make this

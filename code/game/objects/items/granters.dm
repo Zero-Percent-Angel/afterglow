@@ -542,6 +542,7 @@
 
 /obj/item/book/granter/crafting_recipe
 	var/list/crafting_recipe_types = list() //Use full /datum/crafting_recipe/what_you_craft
+	var/list/already_learned = list()
 
 /obj/item/book/granter/crafting_recipe/on_reading_finished(mob/user)
 	. = ..()
@@ -549,13 +550,18 @@
 		return
 	for(var/crafting_recipe_type in crafting_recipe_types)
 		var/datum/crafting_recipe/R = crafting_recipe_type
-		user.mind.teach_crafting_recipe(crafting_recipe_type)
-		to_chat(user,span_notice("You learned how to make [initial(R.name)]."))
+		if (user.skill_check(R.skill_needed, R.skill_level))
+			if (!already_learned.Find(crafting_recipe_type))
+				user.mind.teach_crafting_recipe(crafting_recipe_type)
+				to_chat(user,span_notice("You learned how to make [initial(R.name)]."))
+				already_learned |= crafting_recipe_type
+		else
+			to_chat(user,span_notice("Try as you may, you can't understand how to make [initial(R.name)]."))
 	onlearned(user)
 
 /obj/item/book/granter/crafting_recipe/onlearned(mob/living/user)
 	..()
-	if(oneuse)
+	if(oneuse && already_learned.len == crafting_recipe_types.len)
 		user.visible_message(
 		message = span_notice("Just as [user] finishes reading [p_their(user)] copy of [src], the ancient document crumbles to dust!"),
 		self_message = span_caution("The ancient copy of [src] crumbles to dust as you finish reading it."),
