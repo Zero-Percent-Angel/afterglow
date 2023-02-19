@@ -407,7 +407,7 @@
 		if(R.name == "") //This is one of the invalid parents that sneaks in
 			continue
 
-		if(!R.always_available && !(R.type in user?.mind?.learned_recipes) && !user.skill_check(R.skill_needed, EXPERT_CHECK)) //User doesn't actually know how to make this.
+		if(!R.always_available && !(R.type in user?.mind?.learned_recipes)) //User doesn't actually know how to make this. was here: && !user.skill_check(R.skill_needed, EXPERT_CHECK)
 			continue
 
 		if(!has_skill_needed_to_construct(user, R)) //User doesn't have the skill to make this
