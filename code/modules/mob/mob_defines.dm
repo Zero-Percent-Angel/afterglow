@@ -202,3 +202,6 @@
 
 	var/will_talk = FALSE
 
+	var/list/cached_knowable_recipies = list()
+	var/list/cached_unknowable_recipies = list()
+

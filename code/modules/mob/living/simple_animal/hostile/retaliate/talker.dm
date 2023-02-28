@@ -5,6 +5,10 @@
 	var/list/failed = list()
 	var/list/intimidated = list()
 	var/intimidation_difficulty = DIFFICULTY_NORMAL
+	var/randomise_name = TRUE
+	var/use_custom_names = FALSE
+	var/list/custom_first_names = list()
+	var/list/custom_last_names = list()
 	desc = "Just someone out in the wastes trying to survive."
 	
 /mob/living/simple_animal/hostile/retaliate/talker/basic
@@ -61,10 +65,14 @@
 	
 /mob/living/simple_animal/hostile/retaliate/talker/Initialize()
 	. = ..()
-	if (gender == MALE)
-		name = capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
-	else
-		name = capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
+	if (randomise_name)
+		if (use_custom_names)
+			name = capitalize(pick(custom_first_names)) + " " + capitalize(pick(custom_last_names))
+		else
+			if (gender == MALE)
+				name = capitalize(pick(GLOB.first_names_male)) + " " + capitalize(pick(GLOB.last_names))
+			else
+				name = capitalize(pick(GLOB.first_names_female)) + " " + capitalize(pick(GLOB.last_names))
 
 
 /mob/living/simple_animal/hostile/retaliate/talker/talk_to(mob/talker)

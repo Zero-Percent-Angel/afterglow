@@ -197,7 +197,17 @@
 	return TRUE
 
 /datum/component/personal_crafting/proc/has_skill_needed_to_construct(mob/user, datum/crafting_recipe/R)
-	return (user.skill_check(R.skill_needed, R.skill_level) || ((R.falls_back_on_outdoors || R.category == CAT_TRIBAL) && user.skill_check(SKILL_OUTDOORSMAN, R.skill_level)))
+	if (user.cached_knowable_recipies.Find(R)) 
+		return 1
+	else if (user.cached_unknowable_recipies.Find(R))
+		return 0
+	else 
+		if ((user.skill_check(R.skill_needed, R.skill_level) || ((R.falls_back_on_outdoors || R.category == CAT_TRIBAL) && user.skill_check(SKILL_OUTDOORSMAN, R.skill_level))))
+			user.cached_knowable_recipies.Add(R)
+			return 1
+		else
+			user.cached_unknowable_recipies.Add(R)
+	return 0
 
 /datum/component/personal_crafting/proc/construct_item(atom/a, datum/crafting_recipe/R)
 	var/list/contents = get_surroundings(a)

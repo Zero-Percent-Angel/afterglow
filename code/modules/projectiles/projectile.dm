@@ -355,6 +355,12 @@
 			return TRUE
 
 	var/distance = get_dist(T, starting) // Get the distance between the turf shot from and the mob we hit and use that for the calculations.
+	var/surface_chance = 100
+	if (istype(firer, /mob))
+		var/mob/shooter = firer
+		if (istype(fired_from, /obj/item/gun))
+			var/obj/item/gun/used_gun = fired_from
+			surface_chance = shooter.skill_value(used_gun.gun_skill_used) + shooter.special_l
 	if(distance > 1) // Point blank, you'll hit what you're aiming at
 		if(zone_accuracy_type == ZONE_WEIGHT_GUNS_CHOICE) // Someone didnt set our accuracy! Naughty!
 			zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
@@ -363,9 +369,9 @@
 				if(def_zone && check_zone(def_zone) == BODY_ZONE_HEAD && distance > 2) // Aiming for the head more than 2 tiles away means a 20ish% chance to hit the head
 					def_zone = ran_zone(def_zone, 0, ZONE_WEIGHT_LIST_PRECISION) // Keeps good accuracy
 			if(ZONE_WEIGHT_SEMI_AUTO)
-				def_zone = ran_zone(def_zone, 100-(7*distance), ZONE_WEIGHT_LIST_DEFAULT) //Lower accurancy/longer range tradeoff. 7 is a balanced number to use.
+				def_zone = ran_zone(def_zone, surface_chance-(7*distance), ZONE_WEIGHT_LIST_DEFAULT) //Lower accurancy/longer range tradeoff. 7 is a balanced number to use.
 			if(ZONE_WEIGHT_AUTOMATIC)
-				def_zone = ran_zone(def_zone, 100-(20*distance), ZONE_WEIGHT_LIST_AUTOMATIC)
+				def_zone = ran_zone(def_zone, surface_chance-(20*distance), ZONE_WEIGHT_LIST_AUTOMATIC)
 			if(ZONE_WEIGHT_SHOTGUN)
 				def_zone = ran_zone(def_zone, 0, ZONE_WEIGHT_LIST_AUTOMATIC)
 

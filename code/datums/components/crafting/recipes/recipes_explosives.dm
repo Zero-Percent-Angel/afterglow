@@ -49,6 +49,8 @@
 				/obj/item/stack/ore/blackpowder = 2)
 	time = 5
 	category = CAT_EXPLOSIVE
+	skill_needed = SKILL_TRAPS
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/explosive/firebomb
 	name = "Firebomb"
@@ -72,7 +74,7 @@
 	time = 5
 	category = CAT_EXPLOSIVE
 	skill_needed = SKILL_TRAPS
-	skill_level = VERY_EASY_CHECK
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/explosive/coffeepotbomb
 	name = "Coffeepot Bomb"
@@ -97,7 +99,7 @@
 	time = 5
 	category = CAT_EXPLOSIVE
 	skill_needed = SKILL_TRAPS
-	skill_level = VERY_EASY_CHECK
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/explosive/bottlecap_mine
 	name = "Bottlecap Mine"
@@ -219,6 +221,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 5
 	always_available = FALSE
+	skill_needed = SKILL_TRAPS
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/frag_shrapnel
 	name = "Fragmentation Grenade"

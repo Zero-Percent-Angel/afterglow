@@ -51,6 +51,7 @@
 	var/right_click_overridden = FALSE
 	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'
 	dryfire_text = "*power failure*"
+	var/missfire_sound = 'sound/f13weapons/equipsounds/pulsepistolequip.ogg'
 
 	init_firemodes = list(
 		WEAPON_NORMAL
@@ -166,13 +167,13 @@
 			process_chamber()	// If the gun was drained and then recharged, load a new shot.
 		else
 			to_chat(user, span_danger("You fumble your energy gun!"))
-			playsound(user, dryfire_sound, 25, 1, -1)
+			playsound(user, missfire_sound, 25, 1, -1)
 			return
 	if (user.skill_roll(SKILL_ENERGY, -30))
 		return ..()
 	else
 		to_chat(user, span_danger("You fumble your energy gun!"))
-		playsound(user, dryfire_sound, 25, 1, -1)
+		playsound(user, missfire_sound, 25, 1, -1)
 		return
 
 // Firemodes/Ammotypes

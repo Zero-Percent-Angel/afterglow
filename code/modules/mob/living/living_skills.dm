@@ -63,6 +63,44 @@
 		return skill_outdoorsman + round((special_i + special_e)/2)
 	return 0
 
+
+/mob/proc/update_skill_value(skill, value)
+	if (SKILL_GUNS == skill)
+		skill_guns = value
+	if (SKILL_ENERGY == skill)
+		skill_energy = value
+	if (SKILL_UNARMED == skill)
+		skill_unarmed = value
+	if (SKILL_MELEE == skill)
+		skill_melee = value
+	if (SKILL_THROWING == skill)
+		skill_throwing = value
+	if (SKILL_FIRST_AID == skill)
+		skill_first_aid = value
+	if (SKILL_DOCTOR == skill)
+		skill_doctor = value
+	if (SKILL_SNEAK == skill)
+		skill_sneak = value
+	if (SKILL_LOCKPICK == skill)
+		skill_lockpick = value
+	if (SKILL_TRAPS == skill)
+		skill_traps = value
+	if (SKILL_SCIENCE == skill)
+		skill_science = value
+	if (SKILL_REPAIR == skill)
+		skill_repair = value
+	if (SKILL_SPEECH == skill)
+		skill_speech = value
+	if (SKILL_BARTER == skill)
+		skill_barter = value
+	if (SKILL_OUTDOORSMAN == skill)
+		skill_outdoorsman = value
+	invalidate_skill_caches()
+	
+/mob/proc/invalidate_skill_caches()
+	cached_knowable_recipies = list()
+	cached_unknowable_recipies = list()
+
 /mob/living/verb/try_to_talk_to(atom/A as mob in view())
 	set name = "Talk to"
 	set category = "IC"
