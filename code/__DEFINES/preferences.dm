@@ -72,7 +72,7 @@
 //f13 stuff
 #define EXP_TYPE_FALLOUT		"Fallout"
 #define EXP_TYPE_VAULT			"Vault"
-#define EXP_TYPE_BROTHERHOOD	"Southern BoS Outcasts"
+#define EXP_TYPE_BROTHERHOOD	"Brotherhood Of Steel"
 #define EXP_TYPE_NCR			"Ncr"
 #define EXP_TYPE_OASIS "Oasis"
 #define EXP_TYPE_LEGION			"Legion"
@@ -83,7 +83,7 @@
 #define EXP_TYPE_SCRIBE         "Scribe"
 #define EXP_TYPE_DECANUS        "Decanus"
 #define EXP_TYPE_TRIBAL			"Tribal"
-#define EXP_TYPE_FOLLOWERS		"Nash Clinic"
+#define EXP_TYPE_FOLLOWERS		"Town Clinic"
 #define EXP_TYPE_OUTLAW			"Outlaw"
 #define EXP_TYPE_KHAN			"Great Khans"
 //Flags in the players table in the db

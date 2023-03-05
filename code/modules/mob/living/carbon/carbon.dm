@@ -331,7 +331,7 @@
 		var/buckle_cd = 600
 		if(handcuffed)
 			var/obj/item/restraints/O = src.get_item_by_slot(SLOT_HANDCUFFED)
-			buckle_cd = O.breakouttime
+			buckle_cd = O.breakouttime * REGULAR_CHECK/skill_value(SKILL_TRAPS)
 		MarkResistTime()
 		visible_message(span_warning("[src] attempts to unbuckle [p_them()]self!"), \
 					span_notice("You attempt to unbuckle yourself... (This will take around [round(buckle_cd/600,1)] minute\s, and you need to stay still.)"))
@@ -373,7 +373,7 @@
 		to_chat(src, span_warning("You're already attempting to remove [I]!"))
 		return
 	I.item_flags |= BEING_REMOVED
-	breakouttime = I.breakouttime
+	breakouttime = I.breakouttime  * REGULAR_CHECK/skill_value(SKILL_TRAPS)
 	if(!cuff_break)
 		visible_message(span_warning("[src] attempts to remove [I]!"))
 		to_chat(src, span_notice("You attempt to remove [I]... (This will take around [DisplayTimeText(breakouttime)] and you need to stand still.)"))

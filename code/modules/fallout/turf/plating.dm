@@ -5,8 +5,8 @@
 	icon_state = "housebase"
 	icon = 'icons/fallout/turfs/ground.dmi'
 	intact = 0
-	broken_states = list("housebase1-broken", "housebase2-broken", "housebase3-broken", "housebase4-broken")
-	burnt_states = list("housebase")
+	broken_states = list("housebase1-broken", "housebase2-broken", "housebase3-broken")
+	burnt_states = list("housebase4-broken")
 //	step_sounds = list("human" = "woodfootsteps")
 
 /turf/open/floor/plating/wooden/make_plating()

@@ -65,7 +65,7 @@
 		speed_mod = user.mind.action_skill_mod(/datum/skill/numerical/surgery, speed_mod, THRESHOLD_UNTRAINED, FALSE)
 	var/delay = time * speed_mod
 	if(do_after(user, delay, target = target))
-		var/prob_chance = user.skill_value(mechanical ? SKILL_REPAIR : SKILL_DOCTOR) / REGULAR_CHECK
+		var/prob_chance = EXPERT_CHECK * user.skill_value(mechanical ? SKILL_REPAIR : SKILL_DOCTOR) / REGULAR_CHECK
 		if(implement_type)	//this means it isn't a require hand or any item step.
 			prob_chance = implements[implement_type] * user.skill_value(mechanical ? SKILL_REPAIR : SKILL_DOCTOR)/(REGULAR_CHECK + speed_mod)
 		prob_chance *= surgery.get_propability_multiplier()

@@ -148,31 +148,39 @@ GENETICS SCANNER
 
 	var/msg = "<span class='info'>*---------*\nAnalyzing results for [M]:\n\tOverall status: [mob_status]"
 
-	// Damage descriptions
-	if(brute_loss > 10)
-		msg += "\n\t<span class='alert'>[brute_loss > 50 ? "Severe" : "Minor"] tissue damage detected.</span>"
-	if(fire_loss > 10)
-		msg += "\n\t<span class='alert'>[fire_loss > 50 ? "Severe" : "Minor"] burn damage detected.</span>"
-	if(oxy_loss > 10)
-		msg += "\n\t<span class='alert'>[oxy_loss > 50 ? "Severe" : "Minor"] oxygen deprivation detected.</span>"
-	if(tox_loss > 10)
-		msg += "\n\t<span class='alert'>[tox_loss > 50 ? "Severe" : "Minor"] amount of toxin damage detected.</span>"
-	if(bleed_loss > 10)
-		msg += "\n\t<span class='alert'>[bleed_loss > 50 ? "Severe" : "Minor"] lacerations detected.</span>"
-	if(M.getStaminaLoss())
-		msg += "\n\t<span class='alert'>Subject appears to be suffering from fatigue.</span>"
-		if(advanced)
-			msg += "\n\t<span class='info'>Fatigue Level: [M.getStaminaLoss()]%.</span>"
-	if (M.getCloneLoss())
-		msg += "\n\t<span class='alert'>Subject appears to have [M.getCloneLoss() > 30 ? "Severe" : "Minor"] cellular damage.</span>"
-		if(advanced)
-			msg += "\n\t<span class='info'>Cellular Damage Level: [M.getCloneLoss()].</span>"
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		if(advanced && H.has_dna())
-			msg += "\n\t<span class='info'>Genetic Stability: [H.dna.stability]%.</span>"
+	if (user.skill_check(SKILL_DOCTOR, EASY_CHECK) || user.skill_check(SKILL_FIRST_AID, REGULAR_CHECK) || user.skill_check(SKILL_SCIENCE, HARD_CHECK))
+		// Damage descriptions
+		if(brute_loss > 10)
+			msg += "\n\t<span class='alert'>[brute_loss > 50 ? "Severe" : "Minor"] tissue damage detected.</span>"
+		if(fire_loss > 10)
+			msg += "\n\t<span class='alert'>[fire_loss > 50 ? "Severe" : "Minor"] burn damage detected.</span>"
+		if(oxy_loss > 10)
+			msg += "\n\t<span class='alert'>[oxy_loss > 50 ? "Severe" : "Minor"] oxygen deprivation detected.</span>"
+		if(tox_loss > 10)
+			msg += "\n\t<span class='alert'>[tox_loss > 50 ? "Severe" : "Minor"] amount of toxin damage detected.</span>"
+		if(bleed_loss > 10)
+			msg += "\n\t<span class='alert'>[bleed_loss > 50 ? "Severe" : "Minor"] lacerations detected.</span>"
+		if(M.getStaminaLoss())
+			msg += "\n\t<span class='alert'>Subject appears to be suffering from fatigue.</span>"
+			if(advanced)
+				msg += "\n\t<span class='info'>Fatigue Level: [M.getStaminaLoss()]%.</span>"
+		if (M.getCloneLoss())
+			msg += "\n\t<span class='alert'>Subject appears to have [M.getCloneLoss() > 30 ? "Severe" : "Minor"] cellular damage.</span>"
+			if(advanced)
+				msg += "\n\t<span class='info'>Cellular Damage Level: [M.getCloneLoss()].</span>"
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			if(advanced && H.has_dna())
+				msg += "\n\t<span class='info'>Genetic Stability: [H.dna.stability]%.</span>"
 
-	to_chat(user, msg)
+		to_chat(user, msg)
+	else
+		if (user.skill_check(SKILL_DOCTOR, EASY_CHECK) || user.skill_check(SKILL_FIRST_AID, EASY_CHECK))
+			to_chat(user, msg)
+		else
+			to_chat(user, span_danger("You don't know how to work this damn thing."))
+			return
+		to_chat(user, span_danger("You don't know how to work this to check damage specifics."))
 	msg = ""
 
 	// Body part damage report
@@ -214,7 +222,8 @@ GENETICS SCANNER
 									<td></td>\
 									</tr>"
 			dmgreport += "</table>"
-			to_chat(user, dmgreport.Join())
+			if (user.skill_check(SKILL_DOCTOR, EASY_CHECK) || user.skill_check(SKILL_FIRST_AID, REGULAR_CHECK) || user.skill_check(SKILL_SCIENCE, HARD_CHECK))
+				to_chat(user, dmgreport.Join())
 
 
 	//Organ damages report
@@ -513,10 +522,10 @@ GENETICS SCANNER
 			msg += span_notice("Detected cybernetic modifications:")
 			msg += span_notice("[cyberimp_detect]")
 	msg += span_notice("*---------*")
-	if (user.skill_check(SKILL_DOCTOR, EASY_CHECK) || user.skill_check(SKILL_FIRST_AID, REGULAR_CHECK) || user.skill_check(SKILL_SCIENCE, HARD_CHECK))
+	if (user.skill_check(SKILL_DOCTOR, REGULAR_CHECK) || user.skill_check(SKILL_FIRST_AID, HARD_CHECK) || user.skill_check(SKILL_SCIENCE, EXPERT_CHECK))
 		to_chat(user, msg)
 	else
-		to_chat(user, span_danger("You don't know how to work this damn thing."))
+		to_chat(user, span_danger("You don't know how to work this to check blood levels, wounds and organs."))
 	SEND_SIGNAL(M, COMSIG_NANITE_SCAN, user, FALSE)
 
 /proc/chemscan(mob/living/user, mob/living/M)

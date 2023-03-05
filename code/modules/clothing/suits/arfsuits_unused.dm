@@ -28,6 +28,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 // LEGION //
 ////////////
 
+/obj/item/clothing/suit/armor/heavy/legion
+	icon = 'icons/fallout/clothing/armored_heavy.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_DT_T3)
+
 // Recipe combine veteran armor with a kevlar vest
 /obj/item/clothing/suit/armor/heavy/legion/breacher
 	name = "legion breacher armor"
@@ -91,6 +96,10 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "legrecruit"
 	item_state = "legarmor"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2) // Because shit armor
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_LIGHT
+	armor_tier_desc = ARMOR_CLOTHING_LIGHT
+	stiffness = LIGHT_STIFFNESS
 
 /datum/component/storage/concrete/pockets/tiny/legion
 	max_items = 3
@@ -110,6 +119,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "Legion Primes have survived some skirmishes, and when promoted often recieve a set of armor, padded leather modeled on ancient baseball catcher uniforms and various plates of metal or boiled leather."
 	icon_state = "legion_prime"
 	item_state = "legion_prime"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_ENV_T1)
 
 /obj/item/clothing/suit/armor/legion/prime/decan
 	name = "legion prime decanus armor"
@@ -120,6 +130,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of bracers, a chainmail skirt, and large pauldrons.  A tabard emblazoned with the bull is loosely draped over the torso."
 	icon_state = "legion-orator"
 	item_state = "legion-orator"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_ENV_T1)
 
 /obj/item/clothing/suit/armor/legion/prime/slavemaster
 	name = "slavemaster armor"
@@ -135,6 +146,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "legion_veteran"
 	item_state = "legion_veteran"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 4) // Slightly better armor
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/legion/heavy
 	name = "legion veteran decan armor"
@@ -144,6 +156,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "legion_heavy"
 	item_state = "legion_heavy"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_HEAVY
+	armor_tier_desc = ARMOR_CLOTHING_HEAVY
+	stiffness = MEDIUM_STIFFNESS
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_DT_T3)
 
 /obj/item/clothing/suit/armor/legion/vet/explorer
 	name = "legion scout armor"
@@ -159,6 +176,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = " Worn by Vexillarius, this armor has been reinforced with circular metal plates on the chest and a back mounted pole for the flag of the Bull, making the wearer easy to see at a distance."
 	icon_state = "legion_vex"
 	item_state = "legion_vex"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/legion/venator
 	name = "legion explorer armor"
@@ -166,6 +184,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "legion-venator"
 	item_state = "legion-venator"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/legion/centurion //good all around
 	name = "legion centurion armor"
@@ -175,6 +194,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "legion_centurion"
 	item_state = "legion_centurion"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Rest in pieces
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_HEAVY
+	armor_tier_desc = ARMOR_CLOTHING_HEAVY
+	stiffness = MEDIUM_STIFFNESS
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_DT_T3)
 
 /obj/item/clothing/suit/armor/legion/palacent //laser resist spec
 	name = "paladin-slayer centurion armor"
@@ -183,7 +207,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "A Centurion able to defeat a Brotherhood Paladin gets the honorific title 'Paladin-Slayer', and adds bits of the looted armor to his own."
 	icon_state = "legion_palacent"
 	item_state = "legion_palacent"
-
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_HEAVY
+	armor_tier_desc = ARMOR_CLOTHING_HEAVY
+	stiffness = MEDIUM_STIFFNESS
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T3)
 
 /obj/item/clothing/suit/armor/legion/rangercent //speed and bullet resist, sacrifices all else
 	name = "ranger-hunter centurion armor"
@@ -192,6 +220,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "Centurions who have led many patrols and ambushes against NCR Rangers have a distinct look from the many looted pieces of Ranger armor, and are often experienced in skirmishing."
 	icon_state = "legion_rangercent"
 	item_state = "legion_rangercent"
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_MEDIUM
+	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
+	stiffness = MEDIUM_STIFFNESS
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T3, ARMOR_MODIFIER_UP_LASER_T1)
 
 /obj/item/clothing/suit/armor/legion/legate
 	name = "legion legate armor"
@@ -201,6 +234,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "legion_legate"
 	item_state = "legion_legate"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 15) // Wouldn't it be hilarious if we just tore apart Legate's armor?
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_HEAVY
+	armor_tier_desc = ARMOR_CLOTHING_HEAVY
+	stiffness = MEDIUM_STIFFNESS
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T3)
 
 /obj/item/clothing/suit/armor/medium/combat/legion
 	name = "Legion combat armor"
@@ -225,6 +263,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 	icon_state = "legion-explorercustom"
 	item_state = "legion-explorercustom"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/ncrarmor
 	name = "NCR patrol vest"
@@ -232,6 +271,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "ncr_infantry_vest"
 	item_state = "ncr_infantry_vest"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_MEDIUM
+	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
+	stiffness = LIGHT_STIFFNESS
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /datum/component/storage/concrete/pockets/bulletbelt/ncr
 	max_items = 2
@@ -253,6 +297,8 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "A standard issue NCR Infantry vest reinforced with a thin kelvar sheet."
 	icon_state = "ncr_kelvar_vest"
 	item_state = "ncr_kelvar_vest"
+	armor = ARMOR_VALUE_LIGHT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/ncrarmor/reinforced
 	name = "NCR reinforced patrol vest"
@@ -260,6 +306,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "ncr_reinforced_vest"
 	item_state = "ncr_reinforced_vest"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/ncrarmor/reinforced/engineer
 	name = "NCR blast-padded reinforced patrol vest"
@@ -269,6 +316,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	name = "NCR reinforced mantle vest"
 	desc = "A standard issue NCR Infantry vest reinforced with a groinpad and a mantle."
 	icon_state = "ncr_reinforced_mantle"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/ncrarmor/mantle/reinforced/trenchraider
 	name = "NCR reinforced trench mantle vest"
@@ -279,12 +327,18 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "An armored labcoat typically issued to NCR Medical Officers. It's a standard white labcoat with the Medical Officer's name stitched into the breast and a two headed bear sewn into the shoulder."
 	icon_state = "ncr_labcoat"
 	item_state = "ncr_labcoat"
+	slowdown = ARMOR_SLOWDOWN_NONE * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_CLOTHES
+	armor_tier_desc = ARMOR_CLOTHING_DESC
+	stiffness = LIGHT_STIFFNESS
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2)
 
 /obj/item/clothing/suit/armor/ncrarmor/lieutenant
 	name = "NCR officer vest"
 	desc = "A reinforced set of NCR mantle armour, with added padding on the groin, neck and shoulders. Intended for use by the officer class."
 	icon_state = "ncr_lt_armour"
 	item_state = "ncr_lt_armour"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/ncrarmor/captain/ncr_officer_coat
 	name = "NCR officer vest"
@@ -292,6 +346,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "ncr_officer_coat"
 	item_state = "ncr_officer_coat"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/ncrarmor/captain
 	name = "NCR reinforced officer vest"
@@ -299,18 +354,27 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "ncr_captain_armour"
 	item_state = "ncr_captain_armour"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10) // Le captain
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/ncrarmor/ncr_dressjack
 	name = "NCR dress jacket"
 	desc = "A brown dress uniform jacket intended for enlisted NCRA personnel."
 	icon_state = "ncr_dressjack"
 	item_state = "ncr_dressjack"
+	slowdown = ARMOR_SLOWDOWN_NONE * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_CLOTHES
+	armor_tier_desc = ARMOR_CLOTHING_DESC
+	stiffness = LIGHT_STIFFNESS
 
 /obj/item/clothing/suit/armor/ncrarmor/ncr_codressjack
 	name = "NCR dress jacket"
 	desc = "A brown dress uniform jacket for commissioned NCRA personnel."
 	icon_state = "ncr_codressjack"
 	item_state = "ncr_codressjack"
+	slowdown = ARMOR_SLOWDOWN_NONE * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_CLOTHES
+	armor_tier_desc = ARMOR_CLOTHING_DESC
+	stiffness = LIGHT_STIFFNESS
 
 
 //NCR Ranger
@@ -320,6 +384,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "duster_recon"
 	item_state = "duster_recon"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 4)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_LIGHT
+	armor_tier_desc = ARMOR_CLOTHING_LIGHT
+	stiffness = LIGHT_STIFFNESS
 
 /obj/item/clothing/suit/armor/trailranger
 	name = "ranger vest"
@@ -327,6 +396,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "cowboyrang"
 	item_state = "cowboyrang"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 4)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_LIGHT
+	armor_tier_desc = ARMOR_CLOTHING_LIGHT
+	stiffness = LIGHT_STIFFNESS
 
 /obj/item/clothing/suit/armor/modif_r_vest
 	name = "subdued ranger vest"
@@ -334,6 +408,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "modif_r_vest"
 	item_state = "modif_r_vest"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 4)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_LIGHT
+	armor_tier_desc = ARMOR_CLOTHING_LIGHT
+	stiffness = LIGHT_STIFFNESS
 
 
 /obj/item/clothing/suit/armor/rangercombat
@@ -342,6 +421,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	icon_state = "ranger"
 	item_state = "ranger"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T3)
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_LIGHT
+	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
+	stiffness = LIGHT_STIFFNESS
 
 //Great Khan
 /obj/item/clothing/suit/armor/khan_jacket
@@ -349,6 +433,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "The symbol of the greatest pushers."
 	icon_state = "khan_jacket"
 	item_state = "khan_jacket"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_LIGHT
+	armor_tier_desc = ARMOR_CLOTHING_LIGHT
+	stiffness = LIGHT_STIFFNESS
 
 //All of the armor below is mostly unused
 
@@ -601,6 +690,8 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 
 //// LIGHT LEGION ARMOR //// unused =3
 /obj/item/clothing/suit/armor/light/tribal/legion
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 
 
 /obj/item/clothing/suit/armor/light/tribal/legion/recruit
@@ -628,11 +719,17 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 // LEGION //
 ////////////
 
+/obj/item/clothing/suit/armor/medium/tribal/legion
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+
+
 /obj/item/clothing/suit/armor/medium/tribal/legion/legexile
 	name = "modified Legion armor"
 	desc = "A modified detoriated armor kit consisting of Legion gear and scrap metal."
 	icon_state = "legexile"
 	item_state = "legexile"
+	
 
 /obj/item/clothing/suit/armor/medium/tribal/legion/forgemaster
 	name = "forgemaster armor"

@@ -317,3 +317,29 @@
 	projectilesound = 'sound/weapons/gunshot_smg.ogg'
 	loot = list(/obj/item/gun/ballistic/automatic/autopipe,
 				/obj/effect/mob_spawn/human/corpse/nanotrasensoldier)
+
+
+/*
+/mob/living/simple_animal/hostile/retaliate/talker/trader/reluctant
+	var/list/trusted = list()
+
+
+/mob/living/simple_animal/hostile/retaliate/talker/trader/reluctant/dialog_options(mob/talker, display_options)
+	var/dat = ""
+	if (!broken_trust.Find(WEAKREF(talker)) && !enemies.Find(WEAKREF(talker)) && 
+		!failed.Find(WEAKREF(talker)) && (trusted.Find(WEAKREF(talker)) || intimidated.Find(WEAKREF(talker))))
+		dat += "<center><a href='?src=[REF(src)];trade=1'>Trade with [name].</a></center>"
+	return dat
+
+/mob/living/simple_animal/hostile/retaliate/talker/trader/reluctant/easy
+	var/difficulty = EASY_CHECK
+	var/trade_items =  GLOB.loot_t2_range
+
+/mob/living/simple_animal/hostile/retaliate/talker/trader/reluctant/regular
+	var/difficulty = REGULAR_CHECK
+	var/trade_items =  GLOB.loot_t3_range
+
+/mob/living/simple_animal/hostile/retaliate/talker/trader/reluctant/hard
+	var/difficulty = HARD_CHECK
+	var/trade_items =  GLOB.loot_t4_range
+*/

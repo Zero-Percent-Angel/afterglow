@@ -197,7 +197,17 @@
 	return TRUE
 
 /datum/component/personal_crafting/proc/has_skill_needed_to_construct(mob/user, datum/crafting_recipe/R)
-	return (user.skill_check(R.skill_needed, R.skill_level) || ((R.falls_back_on_outdoors || R.category == CAT_TRIBAL) && user.skill_check(SKILL_OUTDOORSMAN, R.skill_level)))
+	if (user.cached_knowable_recipies.Find(R)) 
+		return 1
+	else if (user.cached_unknowable_recipies.Find(R))
+		return 0
+	else 
+		if ((user.skill_check(R.skill_needed, R.skill_level) || ((R.falls_back_on_outdoors || R.category == CAT_TRIBAL) && user.skill_check(SKILL_OUTDOORSMAN, R.skill_level))))
+			user.cached_knowable_recipies.Add(R)
+			return 1
+		else
+			user.cached_unknowable_recipies.Add(R)
+	return 0
 
 /datum/component/personal_crafting/proc/construct_item(atom/a, datum/crafting_recipe/R)
 	var/list/contents = get_surroundings(a)
@@ -380,7 +390,7 @@
 	for(var/rec in GLOB.crafting_recipes)
 		var/datum/crafting_recipe/R = rec
 
-		if(!R.always_available && !(R.type in user?.mind?.learned_recipes) && !user.skill_check(R.skill_needed, EXPERT_CHECK)) //User doesn't actually know how to make this.
+		if(!R.always_available && !(R.type in user?.mind?.learned_recipes)) //User doesn't actually know how to make this. maybe have: && !user.skill_check(R.skill_needed, EXPERT_CHECK)
 			continue
 
 		if(!has_skill_needed_to_construct(user, R)) //User doesn't have the skill to make this
@@ -407,7 +417,7 @@
 		if(R.name == "") //This is one of the invalid parents that sneaks in
 			continue
 
-		if(!R.always_available && !(R.type in user?.mind?.learned_recipes) && !user.skill_check(R.skill_needed, EXPERT_CHECK)) //User doesn't actually know how to make this.
+		if(!R.always_available && !(R.type in user?.mind?.learned_recipes)) //User doesn't actually know how to make this. was here: && !user.skill_check(R.skill_needed, EXPERT_CHECK)
 			continue
 
 		if(!has_skill_needed_to_construct(user, R)) //User doesn't have the skill to make this

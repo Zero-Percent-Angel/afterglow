@@ -36,6 +36,55 @@
 	update_body(TRUE)
 
 
+/mob/living/carbon/human/verb/remove_underwear(atom/A as mob in view())
+	set name = "Remove others undergarments"
+	set category = "IC"
+	if (istype(A, /mob/living/carbon/human))
+		var/mob/living/carbon/human/h = A
+		var/confirm = input(src, "Select what part of their form to alter", "Undergarment Toggling") as null|anything in list("Top", "Bottom", "Socks", "All")
+		if(!confirm)
+			return
+		if(do_after(src, 3 SECONDS, target = h))
+			if(confirm == "Top")
+				if(h.upper_body_exposed())
+					h.undershirt = "nude"
+				else
+					to_chat(src, span_alert("Their uniform is in the way."))
+
+			if(confirm == "Bottom")
+				if(h.lower_body_exposed())
+					h.underwear = "nude"
+				else
+					to_chat(src, span_alert("Their uniform is in the way."))
+
+			if(confirm == "Socks")
+				if(h.shoes == null)
+					h.socks = "nude"
+				else
+					to_chat(src, span_alert("Their shoes are in the way."))
+
+			if(confirm == "All")
+				if(h.lower_body_exposed())
+					h.underwear = "nude"
+				else
+					to_chat(src, span_alert("Their uniform is in the way."))
+				if(h.shoes == null)
+					h.socks = "nude"
+				else
+					to_chat(src, span_alert("Their shoes are in the way."))
+				if(h.upper_body_exposed())
+					h.undershirt = "nude"
+				else
+					to_chat(src, span_alert("Their uniform is in the way."))
+				
+			h.update_body(TRUE)
+
+/mob/living/carbon/human/proc/lower_body_exposed()
+	return (w_uniform == null || !(w_uniform.body_parts_covered & GROIN)) && (wear_suit == null || !(wear_suit.body_parts_covered & GROIN))
+
+/mob/living/carbon/human/proc/upper_body_exposed()
+	return (w_uniform == null || !(w_uniform.body_parts_covered & CHEST)) && (wear_suit == null || !(wear_suit.body_parts_covered & CHEST))
+
 /mob/living/carbon/human/proc/adjust_arousal(strength,aphro = FALSE,maso = FALSE) // returns all genitals that were adjust
 	var/list/obj/item/organ/genital/genit_list = list()
 	if(!client?.prefs.arousable || (aphro && (client?.prefs.cit_toggles & NO_APHRO)) || (maso && !HAS_TRAIT(src, TRAIT_MASO)))

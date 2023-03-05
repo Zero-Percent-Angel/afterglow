@@ -11,6 +11,8 @@
 	var/mob/target_mob = null
 	var/followingAFriend = FALSE
 	var/trust_no_one = FALSE
+	var/autoSucceedThreshold = HARD_CHECK
+	var/roll_difficulty = DIFFICULTY_NORMAL
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/dialog_options(mob/talker, display_options)
 	var/dat = "" 
@@ -24,7 +26,7 @@
 /mob/living/simple_animal/hostile/retaliate/talker/follower/Topic(href, href_list)
 	if(href_list["together"])
 		usr.say("The wastes are a dangerous place, we should stick together.")
-		if (!trust_no_one && !failed.Find(WEAKREF(usr)) && (usr.skill_check(SKILL_SPEECH, HARD_CHECK) || usr.skill_roll(SKILL_SPEECH) || intimidated.Find(WEAKREF(usr))))
+		if (!trust_no_one && !failed.Find(WEAKREF(usr)) && (usr.skill_check(SKILL_SPEECH, autoSucceedThreshold) || usr.skill_roll(SKILL_SPEECH, roll_difficulty) || intimidated.Find(WEAKREF(usr))))
 			say("Alright you look like you've got it together. Where to?")
 			friends |= WEAKREF(usr)
 			if (istype(usr, /mob/living/carbon/human))
@@ -276,3 +278,182 @@
 	projectilesound = 'sound/weapons/gunshot_smg.ogg'
 	loot = list(/obj/item/gun/ballistic/automatic/autopipe,
 				/obj/effect/mob_spawn/human/corpse/nanotrasensoldier)
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction
+	var/list/enemy_factions = list()
+	var/myplace = null
+	var/my_original_loc = null
+	var/return_to_post = FALSE
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/Initialize(mapload)
+	myplace = get_turf(src)
+	my_original_loc = loc
+	..()
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/dialog_options(mob/talker, display_options)
+	var/dat = "" 
+	if (faction_check_mob(talker))
+		dat += "<center><a href='?src=[REF(src)];post=1'>Order them back to thier post</a></center>"
+	return dat
+
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/Hear(message, atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, message_mode, atom/movable/source)
+	. = ..()
+	if (faction_check_mob(speaker))
+		listen(speaker, raw_message)
+	return ..()
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/Topic(href, href_list)
+	if(href_list["post"])
+		usr.say("Return to your post.")
+		if (faction_check_mob(usr))
+			say("On it.")
+			walk_to(src, myplace, 0 , move_to_delay)
+			stop_automated_movement = 1
+			return_to_post = TRUE
+	..(href, href_list)
+
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/handle_automated_action()
+	if(AIStatus == AI_OFF)
+		return 0
+	for (var/mob/living/A in oview(vision_range, targets_from)) //mob/dead/observers arent possible targets
+		CHECK_TICK
+		if (faction_check(enemy_factions, A.faction))
+			if (A.sneaking && (A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
+				to_chat(A, span_notice("[name] has not spotted you."))
+			else
+				enemies += WEAKREF(A)
+	return ..()
+
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/handle_automated_movement()
+	CHECK_TICK
+	if (return_to_post)
+		if (loc == my_original_loc)
+			return_to_post = FALSE
+			stop_automated_movement = 0
+			walk_to(src,0)
+	else
+		if (!followingAFriend && (get_dist(loc, my_original_loc) > 5) && !stop_automated_movement)
+			walk_to(src, myplace, 0 , move_to_delay)
+			return_to_post = TRUE
+			stop_automated_movement = TRUE
+		else
+			..()
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/ncr_trooper
+	name = "Trooper"
+	desc = "Just another trooper on patrol for the NCR."
+	icon = 'icons/fallout/mobs/humans/fallout_npc.dmi'
+	icon_state = "ncr_trooper"
+	icon_living = "ncr_trooper"
+	icon_dead = null
+	del_on_death = TRUE
+	icon_gib = "gib"
+	turns_per_move = 5
+	response_help_continuous = "pokes"
+	response_help_simple = "poke"
+	response_disarm_continuous = "shoves"
+	response_disarm_simple = "shove"
+	response_harm_continuous = "hits"
+	response_harm_simple = "hit"
+	speed = 0
+	stat_attack = CONSCIOUS
+	ranged_cooldown_time = 10
+	ranged = TRUE
+	robust_searching = TRUE
+	healable = TRUE
+	maxHealth = 120
+	health = 120
+	harm_intent_damage = 5
+	melee_damage_lower = 10
+	melee_damage_upper = 15
+	attack_verb_continuous = "punches"
+	attack_verb_simple = "punch"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	faction = list(FACTION_NCR)
+	enemy_factions = list(FACTION_LEGION)
+	a_intent = INTENT_HARM
+	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
+	unsuitable_atmos_damage = 15
+	status_flags = CANPUSH
+	search_objects = 1
+	vision_range = 9
+	rapid = 0
+	retreat_distance = 3
+	minimum_distance = 5
+	projectiletype = /obj/item/projectile/bullet/a556/simple
+	projectilesound = 'sound/f13weapons/varmint_rifle.ogg'
+	casingtype = /obj/item/ammo_casing/a556
+	projectile_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(RIFLE_LIGHT_VOLUME),
+		SP_VOLUME_SILENCED(RIFLE_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(RIFLE_LIGHT_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(RIFLE_LIGHT_DISTANT_SOUND),
+		SP_DISTANT_RANGE(RIFLE_LIGHT_RANGE_DISTANT)
+	)
+	speak = list("Patrolling the Mojave almost makes you wish for a nuclear winter.", "When I got this assignment I was hoping there would be more gambling.", "It's been a long tour, all I can think about now is going back home.", "You know, if you were serving, you'd probably be halfway to general by now.", "You oughtta think about enlisting. We need you here.")
+	speak_emote = list("says")
+	loot = list(/obj/effect/mob_spawn/human/corpse/ncr)
+
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/legion_guard
+	name = "Legion Guard"
+	desc = "A recruit legionary."
+	icon = 'icons/fallout/mobs/humans/fallout_npc.dmi'
+	icon_state = "legion_prime"
+	icon_living = "legion_prime"
+	icon_dead = null
+	del_on_death = TRUE
+	gender = MALE
+	icon_gib = "gib"
+	turns_per_move = 5
+	response_help_continuous = "pokes"
+	response_help_simple = "poke"
+	response_disarm_continuous = "shoves"
+	response_disarm_simple = "shove"
+	response_harm_continuous = "hits"
+	response_harm_simple = "hit"
+	speed = 0
+	stat_attack = CONSCIOUS
+	ranged = TRUE
+	robust_searching = TRUE
+	healable = TRUE
+	maxHealth = 120
+	health = 120
+	harm_intent_damage = 5
+	melee_damage_lower = 10
+	melee_damage_upper = 15
+	attack_verb_continuous = "punches"
+	attack_verb_simple = "punch"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	faction = list(FACTION_LEGION)
+	enemy_factions = list(FACTION_NCR)
+	a_intent = INTENT_HARM
+	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
+	unsuitable_atmos_damage = 15
+	status_flags = CANPUSH
+	search_objects = 1
+	vision_range = 9
+	retreat_distance = 3
+	minimum_distance = 5
+	speak = list("Ave, true to Caesar.", "True to Caesar.", "Ave, Amicus.", "The new slave girls are quite beautiful.", "Give me cause, Profligate.", "Degenerates like you belong on a cross.")
+	speak_emote = list("says")
+	projectiletype = /obj/item/projectile/bullet/a762/sport/simple
+	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
+	casingtype = /obj/item/ammo_casing/a762/sport
+	projectile_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(RIFLE_MEDIUM_VOLUME),
+		SP_VOLUME_SILENCED(RIFLE_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(RIFLE_MEDIUM_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(RIFLE_MEDIUM_DISTANT_SOUND),
+		SP_DISTANT_RANGE(RIFLE_MEDIUM_RANGE_DISTANT)
+	)
+	loot = list(/obj/effect/mob_spawn/human/corpse/legion)

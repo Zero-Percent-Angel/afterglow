@@ -18,7 +18,7 @@
 /datum/sprite_accessory/penis/human
 	icon_state = "human"
 	name = "Human"
-
+/*
 /datum/sprite_accessory/penis/nondescript
 	icon_state = "nondescript"
 	name = "Nondescript"
@@ -56,7 +56,7 @@
 /datum/sprite_accessory/penis/hemiknot
 	icon_state = "hemiknot"
 	name = "Knotted Hemi"
-
+*/
 //Testicles
 /datum/sprite_accessory/testicles
 	icon = 'icons/obj/genitals/testicles_onmob.dmi'
@@ -67,11 +67,11 @@
 /datum/sprite_accessory/testicles/single
 	icon_state = "single"
 	name = "Pair of testicles" //Clarifies it for something else
-
+/*
 /datum/sprite_accessory/testicles/sheath
 	icon_state = "single"
 	name = "Sheath"
-
+*/
 //Vaginas
 /datum/sprite_accessory/vagina
 	icon = 'icons/obj/genitals/vagina_onmob.dmi'
@@ -82,7 +82,7 @@
 /datum/sprite_accessory/vagina/human
 	icon_state = "human"
 	name = "Human"
-
+/*
 /datum/sprite_accessory/vagina/tentacles
 	icon_state = "tentacle"
 	name = "Tentacle"
@@ -90,12 +90,12 @@
 /datum/sprite_accessory/vagina/dentata
 	icon_state = "dentata"
 	name = "Dentata"
-
+*/
 /datum/sprite_accessory/vagina/hairy
 	icon_state = "hairy"
 	name = "Hairy"
 	alt_aroused = FALSE
-
+/*
 /datum/sprite_accessory/vagina/spade
 	icon_state = "spade"
 	name = "Spade"
@@ -105,7 +105,7 @@
 	icon_state = "furred"
 	name = "Furred"
 	alt_aroused = FALSE
-
+*/
 /datum/sprite_accessory/vagina/gaping
 	icon_state = "gaping"
 	name = "Gaping"
@@ -119,7 +119,7 @@
 /datum/sprite_accessory/breasts/pair
 	icon_state = "pair"
 	name = "Pair"
-
+/* Two boobs are enough
 /datum/sprite_accessory/breasts/quad
 	icon_state = "quad"
 	name = "Quad"
@@ -127,7 +127,7 @@
 /datum/sprite_accessory/breasts/sextuple
 	icon_state = "sextuple"
 	name = "Sextuple"
-
+*/
 //BUTT BE HERE
 /datum/sprite_accessory/butt
 	icon = 'icons/obj/genitals/butt_onmob.dmi'
