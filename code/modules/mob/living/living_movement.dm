@@ -49,7 +49,7 @@
 
 /mob/living/update_config_movespeed()
 	update_move_intent_slowdown()
-	sprint_buffer_max = CONFIG_GET(number/movedelay/sprint_buffer_max)
+	sprint_buffer_max = CONFIG_GET(number/movedelay/sprint_buffer_max) + default_sprint_buffer_max
 	sprint_buffer_regen_ds = CONFIG_GET(number/movedelay/sprint_buffer_regen_per_ds)
 	sprint_stamina_cost = CONFIG_GET(number/movedelay/sprint_stamina_cost)
 	return ..()

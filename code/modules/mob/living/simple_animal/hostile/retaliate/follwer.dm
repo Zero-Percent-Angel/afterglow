@@ -402,7 +402,7 @@
 
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/legion_guard
-	name = "Trooper"
+	name = "Legion Guard"
 	desc = "A recruit legionary."
 	icon = 'icons/fallout/mobs/humans/fallout_npc.dmi'
 	icon_state = "legion_prime"
