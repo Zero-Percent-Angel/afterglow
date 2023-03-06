@@ -86,6 +86,10 @@
 			if(surgery.status > surgery.steps.len)
 				surgery.complete()
 	surgery.step_in_progress = FALSE
+	if (!target.IsUnconscious())
+		// We used the sleep verb but somone is doing surgery on us... painful!
+		target.SetSleeping(0)
+		SEND_SIGNAL(target, COMSIG_ADD_MOOD_EVENT, "awake_surgery", /datum/mood_event/surgery_while_awake)
 	return advance
 
 /datum/surgery_step/proc/preop(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery)
