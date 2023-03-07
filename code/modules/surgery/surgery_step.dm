@@ -86,7 +86,7 @@
 			if(surgery.status > surgery.steps.len)
 				surgery.complete()
 	surgery.step_in_progress = FALSE
-	if (!target.IsUnconscious())
+	if (!target.IsUnconscious() || !target.reagents.get_reagent_amount(/datum/reagent/medicine/morphine))
 		// We used the sleep verb but somone is doing surgery on us... painful!
 		target.SetSleeping(0)
 		SEND_SIGNAL(target, COMSIG_ADD_MOOD_EVENT, "awake_surgery", /datum/mood_event/surgery_while_awake)

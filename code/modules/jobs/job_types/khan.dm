@@ -50,8 +50,8 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
 
 /datum/outfit/job/khan/mangudai
-	jobtype = /datum/job/khan/mangudai
-
+	jobtype = /datum/job/khan/lacky
+/*
 /datum/outfit/job/khan/kipchak
 	jobtype = /datum/job/khan/kipchak
 
@@ -63,9 +63,9 @@
 
 /datum/outfit/job/khanleader/steward
 	jobtype = /datum/job/khan/steward
-
+*/
 /datum/outfit/job/khanleader/noyan
-	jobtype = /datum/job/khan/noyan
+	jobtype = /datum/job/khanleader/great
 
 /datum/outfit/job/khanleader
 	name = "Khan"
@@ -98,6 +98,50 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
 
+/datum/job/khan/lacky
+	title = "Khan"
+	flag = F13MANGUDAI
+	faction = FACTION_KHAN
+	total_positions = 4
+	spawn_positions = 4
+	description = "You are a Khan, who has passed the Trial of Position within the arena and earned their place. While your combat skills are to be respected, remember your position as a soldier - protect the Khan Fortress and Bighorn, show loyalty, and you may find chances yet to prove your greater worth."
+	supervisors = "the great khan."
+	selection_color = "#ff915e"
+	exp_type = EXP_TYPE_KHAN
+	outfit = /datum/outfit/job/khan/mangudai
+
+	loadout_options = list(
+		/datum/outfit/loadout/enforcer,
+		/datum/outfit/loadout/khanskirmisher,
+		/datum/outfit/loadout/khandrug,
+		)
+
+/datum/job/khanleader/great
+	title = "Great Khan"
+	flag = F13NOYAN
+	head_announce = list("Security")
+	faction = FACTION_KHAN
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are a the Great Khan. You serve with the authority of the Khan themselves, and answer only to them - every Khan within the region is under your command."
+	enforces = "While you command great respect, you are nevertheless expected to keep the interests of the Khanate central. Put down dissent, but expect rapid and justified rebellion amongst your Khans if you begin unnecessarily endangering the interests of the Khanate."
+	supervisors = "the Khan and Khanate"
+	selection_color = "#ff915e"
+	req_admin_notify = 1
+	exp_requirements = 1000
+	exp_type = EXP_TYPE_KHAN
+	outfit = /datum/outfit/job/khanleader/noyan
+
+	loadout_options = list(
+		/datum/outfit/loadout/ironfist,
+		/datum/outfit/loadout/peopleleader,
+		/datum/outfit/loadout/pacifier,
+		/datum/outfit/loadout/bigboss,
+		)
+
+
+// Somehow, I doubt a bunch of gangers from california 200 years after a nuclear end of the world know ANYTHING about the Mongolian Ranks 2000ish years prior.
+/*
 /datum/job/khan/mangudai
 	title = "Mangudai"
 	flag = F13MANGUDAI
@@ -115,7 +159,7 @@
 		/datum/outfit/loadout/khanskirmisher,
 		/datum/outfit/loadout/khandrug,
 		)
-
+*/
 //=========================================================== LOADOUT DATUMS ===========================================================
 
 //KIPCHAK =================================================================
@@ -328,7 +372,7 @@
 		/obj/item/book/granter/trait/bigleagues = 1)
 
 //=========================================================== JOBS ===========================================================
-
+/*
 /datum/job/khan/kipchak
 	title = "Kipchak"
 	flag = F13KIPCHAK
@@ -432,3 +476,4 @@
 		/datum/outfit/loadout/pacifier,
 		/datum/outfit/loadout/bigboss,
 		)
+*/

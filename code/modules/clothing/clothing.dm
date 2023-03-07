@@ -329,6 +329,12 @@
 			for(var/dam_type in armor_list)
 				var/armor_amount = armor_list[dam_type]
 				readout += "\n[dam_type] [armor_amount]" //e.g. MELEE 27
+		if(LAZYLEN(armor_tokens))
+			readout += "\n<b>ARMOR MODIFICATIONS</b>"
+			for(var/list/inner in armor_tokens)
+				for(var/dam_type in inner)
+					var/armor_amount = inner[dam_type]
+					readout += "\n[dam_type] [armor_amount]" //e.g. MELEE 27
 		if(LAZYLEN(environmental_list))
 			readout += "\n<b>ENVIRONMENTAL</b>"
 			for(var/dam_type in environmental_list)

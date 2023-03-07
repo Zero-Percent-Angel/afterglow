@@ -103,6 +103,7 @@
 	dispensable_reagents = sortList(dispensable_reagents, /proc/cmp_reagents_asc)
 	if (!istype(cartridge))
 		cartridge = new/obj/item/stock_parts/chem_cartridge/empty(loc)
+		cartridge.forceMove(src)
 	update_icon()
 
 /obj/machinery/chem_lab/Destroy()

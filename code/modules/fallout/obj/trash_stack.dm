@@ -33,12 +33,15 @@
 	if(user in loot_players)
 		to_chat(user, span_notice("You already have looted [src]."))
 		return
-	for(var/i=0, i<rand(1,4), i++)
+	for(var/i=0, i<rand(1,user.special_p), i++)
 		var/itemtype= pickweight(lootable_trash)
 		//var/itemtypebonus= pickweight(lootable_trash)
 		if(itemtype)
 			to_chat(user, span_notice("You scavenge through [src]."))
 			var/atom/newthing = new itemtype(ST)
+			if (!prob(max(user.skill_value(SKILL_OUTDOORSMAN, user.special_p* 10))) && !prob(user.special_l * 5))
+				to_chat(user, span_notice("You sift through [src], but find nothing, you keep searching."))
+				continue
 			//if (prob(10+(user.special_l*3.5)))//SPECIAL Integration
 			//	to_chat(user, span_notice("You get lucky and find even more loot!"))
 			//	var/obj/item/bonusitem = new itemtypebonus(ST)
@@ -49,7 +52,7 @@
 				newitem.from_trash = TRUE
 				if(isgun(newitem))
 					var/obj/item/gun/trash_gun = newitem
-					var/prob_trash = 80
+					var/prob_trash = user.special_p * 10
 					while(prob_trash > 0)
 						if(prob(prob_trash))
 							var/trash_mod_path = pick(GLOB.trash_gunmods)

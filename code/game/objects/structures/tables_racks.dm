@@ -699,6 +699,48 @@
 	attack_hand_speed = CLICK_CD_MELEE
 	attack_hand_is_action = TRUE
 
+/obj/structure/shelf_wood/MouseDrop_T(obj/O, mob/user)
+	. = ..()
+	if ((!( istype(O, /obj/item) ) || user.get_active_held_item() != O))
+		return
+	if(!user.dropItemToGround(O))
+		return
+	if(O.loc != src.loc)
+		step(O, get_dir(O, src))
+
+/obj/structure/shelf_wood/attackby(obj/item/W, mob/user, params)
+	if (istype(W, /obj/item/wrench) && !(flags_1&NODECONSTRUCT_1))
+		W.play_tool_sound(src)
+		deconstruct(TRUE)
+		return
+	if(user.a_intent == INTENT_HARM)
+		return ..()
+	if(user.transferItemToLoc(W, drop_location()))
+		return 1
+
+/obj/structure/shelf_wood/attack_paw(mob/living/user)
+	attack_hand(user)
+
+/obj/structure/shelf_wood/on_attack_hand(mob/living/user, act_intent = user.a_intent, unarmed_attack_flags)
+	. = ..()
+	if(.)
+		return
+	if(CHECK_MULTIPLE_BITFIELDS(user.mobility_flags, MOBILITY_STAND|MOBILITY_MOVE) || user.get_num_legs() < 2)
+		return
+	user.do_attack_animation(src, ATTACK_EFFECT_KICK)
+	user.visible_message(span_danger("[user] kicks [src]."), null, null, COMBAT_MESSAGE_RANGE)
+	take_damage(rand(4,8), BRUTE, "melee", 1, attacked_by = user)
+
+/obj/structure/shelf_wood/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)
+	switch(damage_type)
+		if(BRUTE)
+			if(damage_amount)
+				playsound(loc, 'sound/items/dodgeball.ogg', 80, 1)
+			else
+				playsound(loc, 'sound/weapons/tap.ogg', 50, 1)
+		if(BURN)
+			playsound(loc, 'sound/items/welder.ogg', 40, 1)
+
 /obj/structure/rack
 	name = "rack"
 	desc = "Different from the Medieval version."

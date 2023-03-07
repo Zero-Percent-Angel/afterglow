@@ -173,6 +173,10 @@
 		if(501 to 15000)
 			icon_state = "[initial(icon_state)]6"
 
+/obj/item/stack/f13Cash/random/trash
+	min_qty = 1 / CASH_CAP
+	max_qty = LOW_MIN / CASH_CAP
+
 /obj/item/stack/f13Cash/random/low
 	min_qty = LOW_MIN / CASH_CAP
 	max_qty = LOW_MAX / CASH_CAP
