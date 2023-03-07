@@ -938,6 +938,13 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 
 
+/obj/effect/landmark/start/f13/khan
+	name = "Khan"
+	icon_state = "Pusher"
+
+/obj/effect/landmark/start/f13/great_khan
+	name = "Great Khan"
+	icon_state = "Pusher"
 
 /obj/effect/landmark/start/f13/noyan
 	name = "Noyan"

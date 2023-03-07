@@ -42,7 +42,7 @@
 	icon_state = "salvaged"
 	item_state = "salvaged"
 	custom_price = PRICE_ABOVE_NORMAL
-	maxCharge = 0
+	maxCharge = 1
 	custom_materials = list(/datum/material/iron=500, /datum/material/glass=500)
 
 /obj/item/stock_parts/chem_cartridge/garbage

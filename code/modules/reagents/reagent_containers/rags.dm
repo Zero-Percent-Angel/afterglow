@@ -156,7 +156,6 @@
 			body_parts_covered = CHEST|GROIN|LEGS
 		if(SLOT_HEAD)
 			body_parts_covered = HEAD
-			flags_inv = HIDEHAIR
 
 /obj/item/reagent_containers/rag/towel/dropped(mob/user)
 	. = ..()
