@@ -67,6 +67,7 @@
 		if(D)
 			linked_console = D
 			updateUsrDialog()
+			return
 	if(scantype == "create" && !engaged_in_science)
 		if (!linked_console.stored_research.isNodeResearchedID("weaponry"))
 			say("Weaponry research required.")

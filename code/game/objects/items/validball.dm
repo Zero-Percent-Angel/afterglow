@@ -395,6 +395,10 @@
 	icon_state = "x2"
 	color = "#00FF00"
 	var/obj/item/validball/the_thing = /obj/item/validball
+	anchored = TRUE
+	layer = MID_LANDMARK_LAYER
+	invisibility = INVISIBILITY_ABSTRACT
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
 /obj/effect/validball_spawner/Initialize(mapload)
 	. = ..()

@@ -57,17 +57,16 @@
 			if(user.skill_check(skill, skill_needed[skill]))
 				to_chat(user, span_warning("You lack the skill needed to learn this!"))
 				return FALSE
-	else
-		on_reading_start(user)
-		reading = TRUE
-		for(var/i in 1 to pages_to_mastery)
-			if(!turn_page(user))
-				on_reading_stopped()
-				reading = FALSE
-				return
-		if(do_after(user, time_per_page, TRUE, user))
-			on_reading_finished(user)
-		reading = FALSE
+	on_reading_start(user)
+	reading = TRUE
+	for(var/i in 1 to pages_to_mastery)
+		if(!turn_page(user))
+			on_reading_stopped()
+			reading = FALSE
+			return
+	if(do_after(user, time_per_page, TRUE, user))
+		on_reading_finished(user)
+	reading = FALSE
 	return TRUE
 ///TRAITS///
 

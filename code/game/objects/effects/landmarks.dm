@@ -920,7 +920,8 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Town Scientist"
 
 
-
+/obj/effect/landmark/npc_wastelander_spawn_position
+	name = "npc waster spawn location"
 
 
 
