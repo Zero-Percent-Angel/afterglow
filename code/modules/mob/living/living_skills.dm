@@ -101,6 +101,27 @@
 	cached_knowable_recipies = list()
 	cached_unknowable_recipies = list()
 
+
+/mob/proc/get_skill_all_values()
+	var/list/dat = list()
+	dat = list(list("name" = SKILL_GUNS, "value" = num2text(skill_guns + special_a), "description" = "Applies to ballistic weapons. Controls things like recoil and dispersion. Higher values; tighter firing arcs and slower recoil buildup."),
+	list("name" = SKILL_ENERGY, "value" = num2text(skill_energy + special_a), "description" = "Applies to energy weapons. Controls things like recoil and dispersion. Higher values; tighter firing arcs and slower recoil buildup. Also important for failure to fire chance."),
+	list("name" = SKILL_UNARMED, "value" = num2text(skill_unarmed + round((special_a + special_s)/2)), "description" = "Hit chance when unarmed, also determines chances to disarm and break out of grabs and the like."),
+	list("name" = SKILL_MELEE, "value" = num2text(skill_melee + round((special_a + special_s)/2)), "description" = "Hit chance when using a melee weapon."),
+	list("name" = SKILL_THROWING, "value" = num2text(skill_throwing + special_a), "description" = "Hit chance for projectiles thrown by your character."),
+	list("name" = SKILL_FIRST_AID, "value" = num2text(skill_first_aid + round((special_p*2 + special_i)/2)), "description" = "Bandage, Suture, Salves, basic medicine effectiveness, higher values means longer lifetimes and more healing. Also can be used to read from health scanners."),
+	list("name" = SKILL_DOCTOR, "value" = num2text(skill_doctor + round((special_p*2 + special_i)/2)), "description" = "Surgical success chance, higher values also unlock more surgeries. Can also be used to control various medical devices autosurgeons and the like."),
+	list("name" = SKILL_SNEAK, "value" = num2text(skill_sneak + special_a), "description" = "Determines what happens when using the sneak verb. Higher values make your sprite more transparent and lower mob dectection chance."),
+	list("name" = SKILL_LOCKPICK, "value" = num2text(skill_lockpick + round((special_p*2 + special_a)/2)), "description" = "Lockpicking; success chance for opening locks both on doors and for lock boxes!"),
+	list("name" = SKILL_TRAPS, "value" = num2text(skill_traps + round((special_p*2 + special_a)/2)), "description" = "Disarming traps; such as on locked doors and locked boxes. Also lets you spot hidden traps. Used as the skill for creating explosives when crafting."),
+	list("name" = SKILL_SCIENCE, "value" = num2text(skill_science + (special_i * 2)), "description" = "Research effectiveness; determines what nodes you can research as well as how good your experiments will be. Dictates chemistry skill too higher values, more known chemicals; and is used for 'hacking'."),
+	list("name" = SKILL_REPAIR, "value" = num2text(skill_repair + special_i), "description" = "The primary construction and crafting skill, limits what you can do based on the value. Can be used for smithing too."),
+	list("name" = SKILL_SPEECH, "value" = num2text(skill_speech + (special_c * 2)), "description" = "Higher skill, better chance of convincing npcs to do what you want them to."),
+	list("name" = SKILL_BARTER, "value" = num2text(skill_barter + (special_c * 2)), "description" = "Higher skill, better prices from npc traders."),
+	list("name" = SKILL_OUTDOORSMAN, "value" = num2text(skill_outdoorsman + round((special_i + special_e)/2)), "description" = "The primary skill for tribal crafting, can be used for smithing too. higher values will also give you more yeild from plants and butchering."))
+	return dat
+
+
 /mob/living/verb/try_to_talk_to(atom/A as mob in view())
 	set name = "Talk to"
 	set category = "IC"
@@ -111,7 +132,6 @@
 		return
 	
 	m.talk_to(src)
-
 
 /mob/living/verb/sneak()
 	set name = "Sneak"

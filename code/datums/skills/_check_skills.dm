@@ -30,6 +30,7 @@
 /datum/skill_holder/ui_static_data(mob/user)
 	. = list()
 	.["skills"] = list()
+	.["foSkills"] = user.get_skill_all_values()
 	for(var/path in GLOB.skill_datums)
 		var/datum/skill/S = GLOB.skill_datums[path]
 		var/list/dat = S.get_skill_data(src)

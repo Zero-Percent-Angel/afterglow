@@ -84,6 +84,9 @@ Prevents players on higher Zs from seeing into buildings they arent meant to.
 	if(!CanBuildHere())
 		return
 	if(istype(C, /obj/item/stack/rods))
+		if(!user.skill_check(SKILL_REPAIR, HARD_CHECK))
+			to_chat(user, span_warning("You don't have the repair skill needed to construct that!"))
+			return
 		if(locate(/obj/structure/lattice/catwalk, src))
 			to_chat(user, span_warning("There is already a catwalk here!"))
 			return

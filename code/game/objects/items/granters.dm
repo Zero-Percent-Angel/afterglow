@@ -547,6 +547,7 @@
 	. = ..()
 	if(!user.mind)
 		return
+	user.invalidate_skill_caches()
 	for(var/crafting_recipe_type in crafting_recipe_types)
 		var/datum/crafting_recipe/R = crafting_recipe_type
 		if (user.skill_check(initial(R.skill_needed), initial(R.skill_level)))
