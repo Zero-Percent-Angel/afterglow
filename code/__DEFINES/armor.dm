@@ -120,13 +120,13 @@
  * Great defense
  * Lots of DT
  *
- * +100 effective HP
+ * +90 effective HP
  * +10 laser HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_SALVAGE list(\
-		"linemelee" = 100, \
-		"linebullet" = 100, \
-		"linelaser" = 110, \
+		"linemelee" = 90, \
+		"linebullet" = 90, \
+		"linelaser" = 100, \
 		"energy" = 30, \
 		"bomb" = 60, \
 		"bio" = 80, \
@@ -912,7 +912,7 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
  * Global multiplier for armor slowdown
  * Change this, changes them all
 */
-#define ARMOR_SLOWDOWN_GLOBAL_MULT 1
+#define ARMOR_SLOWDOWN_GLOBAL_MULT 0.8
 
 /*
  * No slowdown
