@@ -42,8 +42,8 @@ Administrator
 	department_flag = FOLLOWERS
 	head_announce = list("Security")
 	faction = "Followers"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "Generally speaking your only actual supervisor is your own judgement, but it might not be amiss to listen to the Mayor. Assuming they're around."
 	description = "You are a Senior Doctor. Your rank is given due to your experience in the field compared to regular doctors. Help deal with issues that arise that normal doctors aren't prepared for, and teach those willing to learn more in the clinic."
 	enforces = "Assist and provide medical services to those in need. Provide education for all those who are willing to learn."
@@ -75,12 +75,14 @@ Administrator
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
+	/*
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rechargerpistol)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/pico_manip)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_matter_bin)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/phasic_scanning)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_capacitor)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ultra_micro_laser)
+	*/
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
@@ -109,7 +111,7 @@ Administrator
 	)
 
 //Professor
-
+/* No the town is not a research station
 /datum/job/followers/f13Professor
 	title = "Town Scientist"
 	flag = F13PRACTITIONER
@@ -201,7 +203,7 @@ Administrator
 		/obj/item/gun/syringe/dart = 1,
 		/obj/item/reagent_containers/syringe/dart = 3,
 	)
-
+*/
 /*
 Practitioner
 */
@@ -210,8 +212,8 @@ Practitioner
 	flag = F13PRACTITIONER
 	department_flag = FOLLOWERS
 	faction = "Followers"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "Generally speaking your only actual supervisor is your own judgement, but it might not be amiss to listen to the Mayor and Senior Doctors. Assuming they're around."
 	description = "You are a Town Doctor. Whether a doctor in training or a less experienced doctor of some form, you are tasked with providing medical aid where and when it's needed."
 	enforces = "Assist and provide medical services to those in need. Provide education for all those who are willing to learn."
@@ -255,11 +257,13 @@ Practitioner
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
+	/* Don't be silly.
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/pico_manip)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_matter_bin)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/phasic_scanning)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_capacitor)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ultra_micro_laser)
+	*/
 	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
@@ -339,8 +343,8 @@ Follower Volunteer
 	flag = F13FOLLOWERVOLUNTEER
 	department_flag = FOLLOWERS
 	faction = "Followers"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "Generally speaking your only actual supervisor is your own judgement, but it might not be amiss to listen to the Mayor, Doctors, or anyone with more experience than you. Assuming they're around."
 	description = "You are a Nurse. As a Nurse you provide first aid to those that are injured and assist the clinic doctors as needed."
 	enforces = "Assist and provide medical services to those in need. Provide education for all those who are willing to learn."
@@ -429,8 +433,8 @@ Follower Volunteer
 	flag = F13FOLLOWERGUARD
 	department_flag = FOLLOWERS
 	faction = "Followers"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "Generally speaking your only actual supervisor is your own judgement, but it might not be amiss to listen to the Mayor and Doctors. Assuming they're around."
 	description = "You are one of the towns Paramedics.  Your job is to prepare parties to go out and try and help those in need that can't make it to the hospital on their own. Be that shooting your way to them or seeking them out with a rescue party."
 	enforces = "Assist and provide medical services to those in need. Provide education for all those who are willing to learn."

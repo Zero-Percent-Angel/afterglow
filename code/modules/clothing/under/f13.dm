@@ -1313,8 +1313,8 @@
 	item_color = "GunnerPlates"
 
 /obj/item/clothing/under/f13/combat/militia
-	name = "NDF fatigues"
-	desc = "An olive-green combat uniform, issued to members of the Nash Defense Force."
+	name = "RDF fatigues"
+	desc = "An olive-green combat uniform, issued to members of the Ripley Defense Force."
 
 /obj/item/clothing/under/f13/enclave_officer
 	name = "officer uniform"
@@ -1340,7 +1340,7 @@
 
 /obj/item/clothing/under/f13/general/oasis
 	name = "dictator's overcoat"
-	desc = "A grim looking overcoat - preferable standard for the ruler of Nash.<br>It's decorated with golden stars, each one adorned with a tree."
+	desc = "A grim looking overcoat - preferable standard for the ruler of Ripley.<br>It's decorated with golden stars, each one adorned with a tree."
 
 /obj/item/clothing/under/f13/recon
 	name = "recon armor"

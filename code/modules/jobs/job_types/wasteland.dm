@@ -12,8 +12,8 @@ Raider
 	head_announce = list("Security")
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_RAIDERS
-	total_positions = 16
-	spawn_positions = 16
+	total_positions = 6
+	spawn_positions = 6
 	description = "You are an Outlaw - the choice of why is up to you. You are responsible for making the wasteland unsafe and today is another day to antagonize it. You may be varied in your approaches, but you must have motives that are realistic for your job."
 	supervisors = "your conscious if you have one"
 	selection_color = "#df80af"
@@ -350,8 +350,8 @@ Raider
 	head_announce = list("Security")
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_RAIDERS
-	total_positions = 10
-	spawn_positions = 10
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are an Redwater Watcher - the choice of why is up to you. You have taken up the responsibility to protect and supervise the town of Redwater to ensure that the slaves do not escape and are productive, as well as to protect the towns assets and make sure it has what it needs to thrive. You are only to leave town briefly to gather resources in order to expand and improve upon the current design. Assist the outbound outlaws who venture out for big gains, and protect them if they come home followed by angry victims. Beware, life is cheap in Redwater."
 	supervisors = "The Overboss runs the town, and you are responsible for making sure the town maintains a relative peace and order so that more nasty business can occur. Try to work with other outlaws rather than against them unless there is good reason not to"
 	selection_color = "#df80af"
@@ -647,8 +647,8 @@ Raider
 	head_announce = list("Security")
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_RAIDERS
-	total_positions = 10
-	spawn_positions = 10
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are a Redwater Resident - the choice of why is up to you. You are a squatter who has taken it upon themselves to call Redwater home and be a part of their ecosystem without responsibility. You are not a slave as you have built a good reputation for yourself, however you are not immune from consequences."
 	supervisors = "The Overboss and the Watchers"
 	selection_color = "#df80af"
@@ -1744,8 +1744,8 @@ datum/job/wasteland/f13dendoctor
 	title = "Vigilante"
 	flag = F13VIGILANTE
 	faction = FACTION_WASTELAND
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "You have come a long way to reach this god forsaken place... it is now your job to protect its inhabitants from all sorts of injustice. Your moral codex requires you to help anyone in need and to never harm an innocent. Always try to capture and reeducate criminals instead of killing. Do not get involved in the conflicts between the major factions, that is not your fight."
 	supervisors = "your moral code"
 	selection_color = "#76885f"
@@ -2254,8 +2254,8 @@ datum/job/wasteland/f13dendoctor
 	title = "Redwater Slave"
 	flag = F13LEGIONSLAVE
 	faction = FACTION_WASTELAND
-	total_positions = 10
-	spawn_positions = 10
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "the slavers in Redwater, or your personal owner."
 	description = "Either you were captured by the Redwater slavers, or born into servitude.  Either way your life has been one of being treated as property to another human since the explosive collar was fitted to your neck.  Freedom feels like a dream long gone, hidden behind the fear of the signaler that would cause your head to sail off in an arc.  Despite that you've found a place in their society, and are a protected commodity.  Be you a field worker, sex slave, or pack mule.  The good news is, as long as you serve a purpose then you'll probably get to live, and being alive means a chance to escape."
 	selection_color = "#dcba97"

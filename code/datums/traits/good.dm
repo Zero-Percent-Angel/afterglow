@@ -576,6 +576,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 		H.mind.learned_recipes -= GLOB.basic_explosive_recipes
 		H.mind.learned_recipes -= GLOB.adv_explosive_recipes
 
+/* No... no you can't lick yourself or someone else to heal!
 /datum/quirk/lick_heal
 	name = "Soothing Saliva"
 	desc = "Your saliva has a mild healing effect on burns and bruises. Use *lick to lick your injuries."
@@ -621,7 +622,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	if(!our_tongue)
 		return //welp
 	QDEL_NULL(our_tongue.lick_bandage)
-
+*/
 /datum/quirk/advanced_explosive_crafting
 	name = "Advanced Explosive Crafting"
 	desc = "Decades of engineering knowledge have taught you to make all kinds of horrible explosives."

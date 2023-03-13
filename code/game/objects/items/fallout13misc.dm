@@ -183,8 +183,8 @@
 	faction = FACTION_LEGION
 
 /obj/item/flag/oasis
-	name = "Oasis flag"
-	desc = "A flag depicting a stylised pink flower on a green background. It's the symbol of the town of Oasis."
+	name = "Ripley flag"
+	desc = "A flag depicting a stylised pink flower on a green background. It's the symbol of the town of Ripley."
 	icon_state = "oasisflag"
 	item_state = "oasisflag"
 

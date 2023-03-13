@@ -57,12 +57,12 @@
  * Low defense
  * Low DT
  *
- * +20 effective HP
+ * +15 effective HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_LIGHT list(\
-		"linemelee" = 20, \
-		"linebullet" = 20, \
-		"linelaser" = 20, \
+		"linemelee" = 15, \
+		"linebullet" = 15, \
+		"linelaser" = 15, \
 		"energy" = 0, \
 		"bomb" = 0, \
 		"bio" = 10, \
@@ -99,13 +99,13 @@
  * High defense
  * Lot of DT
  *
- * +45 effective HP
+ * +50 effective HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_HEAVY list(\
-		"linemelee" = 45, \
-		"linebullet" = 45, \
-		"linelaser" = 45, \
-		"energy" = 0, \
+		"linemelee" = 50, \
+		"linebullet" = 50, \
+		"linelaser" = 50, \
+		"energy" = 10, \
 		"bomb" = 25, \
 		"bio" = 25, \
 		"rad" = 25, \
@@ -120,13 +120,13 @@
  * Great defense
  * Lots of DT
  *
- * +80 effective HP
- * +20 laser HP
+ * +100 effective HP
+ * +10 laser HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_SALVAGE list(\
-		"linemelee" = 80, \
-		"linebullet" = 80, \
-		"linelaser" = 100, \
+		"linemelee" = 100, \
+		"linebullet" = 100, \
+		"linelaser" = 110, \
 		"energy" = 30, \
 		"bomb" = 60, \
 		"bio" = 80, \

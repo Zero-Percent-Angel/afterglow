@@ -658,7 +658,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/slave
-	name = "Legion Slave"
+	name = "Camp Follower"
 	icon_state = "Wastelander"
 
 // Brotherhood of Steel
@@ -773,11 +773,11 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Doctor"
 
 /obj/effect/landmark/start/f13/quartermaster
-	name = "Texarkana Quartermaster"
+	name = "Ripley Quartermaster"
 	icon_state = "Shopkeeper"
 
 /obj/effect/landmark/start/f13/shopkeeper
-	name = "Shopkeeper"
+	name = "Ripley Trade Worker"
 	icon_state = "Shopkeeper"
 
 /obj/effect/landmark/start/f13/banker
@@ -804,6 +804,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/raider
 	name = "Outlaw"
 	icon_state = "Raider"
+
+/obj/effect/landmark/start/f13/tribal_new
+	name = "Far-Lands Tribals"
+	icon_state = "Tribal"
 
 /obj/effect/landmark/start/f13/enforcer
 	name = "Den Mob Enforcer"

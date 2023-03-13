@@ -125,7 +125,9 @@
 /mob/living/verb/try_to_talk_to(atom/A as mob in view())
 	set name = "Talk to"
 	set category = "IC"
-
+	if (HAS_TRAIT(src, TRAIT_MUTE))
+		to_chat(src, span_alert("You're mute, how will you talk to them?"))
+		return
 	var/mob/m = A
 	if(!(A in view(client ? client.view : world.view, src)) || !m.will_talk)
 		// shift-click catcher may issue examinate() calls for out-of-sight turfs

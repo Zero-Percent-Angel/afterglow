@@ -236,6 +236,9 @@
 			species.liked_food |= MEAT
 		if(initial(species.disliked_food) & ~MEAT)
 			species.disliked_food &= ~MEAT
+
+/* One head is enough thanks!
+
 /datum/quirk/hydra
 	name = "Hydra Heads"
 	desc = "You are a tri-headed creature. To use, format your name like (Rucks-Sucks-Ducks) and use the action button in the top left."
@@ -281,6 +284,8 @@
 	hydra.real_name = selhead
 	hydra.visible_message("<span class='notice'>[hydra.name] pulls the rest of their heads back; and puts [selhead]'s forward.</span>", \
 							"<span class='notice'>You are now talking as [selhead]!</span>", ignored_mobs=owner)
+
+*/
 
 /datum/quirk/sheltered
 	name = "Sheltered"
