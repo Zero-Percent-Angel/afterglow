@@ -1738,7 +1738,7 @@ Records disabled until a use for them is found
 						return
 					all_quirks -= quirk
 				else
-					if(GetPositiveQuirkCount() >= MAX_QUIRKS)
+					if(value > 0 && GetPositiveQuirkCount() >= MAX_QUIRKS)
 						to_chat(user, span_warning("You can't have more than [MAX_QUIRKS] positive quirks!"))
 						return
 					if(balance - value < 0)
