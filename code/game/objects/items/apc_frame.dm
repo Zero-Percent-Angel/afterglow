@@ -107,10 +107,8 @@
 	stops our very many duplicated areas from going powerless from one apc placement. 
 	now only the BoS areas need worry about the APCs.
 	TODO: replace the many duplicated areas with unique areas so we dont need this.
+	Angel Edit: Ripping this bandaid off.
 	*/
-	if(A.power_light)
-		to_chat(user, span_warning("This area already has power!"))
-		return
 	for(var/obj/machinery/power/terminal/E in T)
 		if(E.master)
 			to_chat(user, span_warning("There is another network terminal here!"))

@@ -391,7 +391,7 @@ GLOBAL_LIST_INIT(desolate_plant_spawn_list, list(
 	slowdown = 6
 	depth = 1
 	bullet_sizzle = TRUE
-	bullet_bounce_sound = null //needs a splashing sound one day.
+	bullet_bounce_sound = 'sound/effects/puddlesplash.ogg' //needs a splashing sound one day.
 	footstep = FOOTSTEP_WATER
 	barefootstep = FOOTSTEP_WATER
 	clawfootstep = FOOTSTEP_WATER

@@ -15,6 +15,7 @@ const skillyellow = {
 
 export const SkillPanel = (props, context) => {
   const { act, data } = useBackend(context);
+  const falloutOutSkills = data.foSkills || [];
   const skills = data.skills || [];
   return (
     <Window
@@ -25,6 +26,25 @@ export const SkillPanel = (props, context) => {
       <Window.Content scrollable>
         <Section title={skills.playername}>
           <LabeledList>
+			{
+				falloutOutSkills.map(element => (
+					<LabeledList.Item 
+					key={element.name}
+					label={element.name}>
+						<span style={skillyellow}>
+							{element.description}
+						</span>
+						<br/>
+						<Fragment>
+							<Level
+							skill_lvl_num={(parseFloat(element.value) + 100) * 6/100}
+							skill_lvl={element.value} />
+							<br />
+						</Fragment>
+					</LabeledList.Item>
+					)
+				)
+			}
             {skills.map(skill => (
               <LabeledList.Item
                 key={skill.name}

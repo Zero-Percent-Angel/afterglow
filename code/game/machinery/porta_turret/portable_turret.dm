@@ -1556,6 +1556,7 @@
 	lethal_projectile_sound = 'sound/f13weapons/9mm.ogg'
 	stun_projectile_sound = 'sound/f13weapons/9mm.ogg'
 	faction = null
+	var/hack_id = ""
 
 /// .22LR turret
 /obj/machinery/porta_turret/f13/turret_22lr

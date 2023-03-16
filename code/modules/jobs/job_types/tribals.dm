@@ -87,8 +87,8 @@ Tribal Chief
 	flag = F13CHIEF
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "The Elders of the tribe."
 	enforces = "The ways of the Sulphur River spirits."
@@ -137,8 +137,8 @@ Tribal Shaman
 	flag = F13SHAMAN
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "The Elders of the tribe and the chief."
 	enforces = "The ways of the Sulphur River spirits."
@@ -219,8 +219,8 @@ Tribal Head Hunter
 	flag = F13HHUNTER
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "The Elders of the tribe and the chief."
 	enforces = "The ways of the Sulphur River spirits."
@@ -276,8 +276,8 @@ Druid
 	flag = F13DRUID
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "The Chief and the Shaman."
 	enforces = "The ways of the Sulphur River  spirits."
@@ -341,8 +341,8 @@ Villager
 	flag = F13VILLAGER
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
-	total_positions = 10
-	spawn_positions = 10
+	total_positions = 0
+	spawn_positions = 0
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "Tribal Chief, Shaman and Headhunter"
 	description = "A proud member of the Sulphur Bottom tribe, you do what needs to be done to ensure the survival of yourself and your people while following the laws of the tribe. While it is common to venture out into the wasteland, do not tread far or without informing your kin."
@@ -443,8 +443,8 @@ Hunter
 	flag = F13HUNTER
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
-	total_positions = 5
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "The chief and Head Hunter."
 	enforces = "The ways of the Sulphur River spirits."
@@ -531,8 +531,8 @@ Spirit-Pledged
 	flag = F13SPIRITPLEDGED
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 0
+	spawn_positions = 0
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "All other tribals."
 	description = "An outsider to the tribe, you have been welcomed to learn their ways and grow closer to their culture and lifestyle, do NOT run off alone into the wasteland without the supervision of another higher ranking tribal."
@@ -569,8 +569,8 @@ Guardian
 	flag = F13GUARDIAN
 	department_flag = TRIBAL
 	faction = FACTION_TRIBE
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 0
+	spawn_positions = 0
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "All leadership, but the Chief is priority"
 	description = "A hand chosen Hunter with much promise, you are one of the village Guardians. An elite Hunter given the duty to protect the village, your duty is to ensure your kin are safe at all costs, as well as follow any orders from your superiors and enforce the law of the tribe. Do not leave the village unless circumstances allow it."

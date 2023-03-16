@@ -576,6 +576,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 		H.mind.learned_recipes -= GLOB.basic_explosive_recipes
 		H.mind.learned_recipes -= GLOB.adv_explosive_recipes
 
+/* No... no you can't lick yourself or someone else to heal!
 /datum/quirk/lick_heal
 	name = "Soothing Saliva"
 	desc = "Your saliva has a mild healing effect on burns and bruises. Use *lick to lick your injuries."
@@ -621,7 +622,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	if(!our_tongue)
 		return //welp
 	QDEL_NULL(our_tongue.lick_bandage)
-
+*/
 /datum/quirk/advanced_explosive_crafting
 	name = "Advanced Explosive Crafting"
 	desc = "Decades of engineering knowledge have taught you to make all kinds of horrible explosives."
@@ -736,6 +737,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You know? Being cold kind of sucks actually.")
 	locked =  FALSE
 
+/* You can't be that immune, unless you're like a ghoul!
 /datum/quirk/radimmune
 	name = "Radiation - Immune"
 	desc = "Gieger Counters are for suckers."
@@ -753,6 +755,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("You've decided radiation just doesn't matter much.")
 	lose_text = span_danger("You no longer feel like you could roll around in a rad puddle for a while.")
 	locked =  FALSE
+*/
 
 /datum/quirk/radimmunesorta
 	name = "Radiation - Sorta Immune"
@@ -763,6 +766,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You no longer think you should hang out next to rad puddles.")
 	locked =  FALSE
 
+/* Everyone needs to eat.
 /datum/quirk/nohunger
 	name = "Does not Eat"
 	desc = "You don't need to eat to live, lucky you."
@@ -771,6 +775,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("Your need for food has left you.")
 	lose_text = span_danger("GOD YOU WANT A BURGER SO BAD.")
 	locked =  FALSE
+*/
 
 /datum/quirk/thickskin
 	name = "Thick Skin"

@@ -66,9 +66,9 @@ GLOBAL_LIST_INIT(area_weather_list, list(WEATHER_ALL))
 	/// Size of the area in open turfs, only calculated for indoors areas.
 	var/areasize = 0
 
-	var/power_equip = TRUE
-	var/power_light = TRUE
-	var/power_environ = TRUE
+	var/power_equip = FALSE
+	var/power_light = FALSE
+	var/power_environ = FALSE
 	var/music = null
 	var/used_equip = 0
 	var/used_light = 0

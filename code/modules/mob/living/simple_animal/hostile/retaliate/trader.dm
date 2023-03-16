@@ -26,9 +26,18 @@
 	myplace = get_turf(src)
 	my_original_loc = loc
 	..()
+	if (gender == MALE)
+		icon_state = "trader_male"
+		icon_living = "trader_male"
+	else
+		icon_state = "trader_female"
+		icon_living = "trader_female"
 
 /mob/living/simple_animal/hostile/retaliate/talker/trader/handle_automated_movement()
 	if (my_original_loc != loc)
+		if (pulledby)
+			pulledby.stop_pulling()
+			walk_to(src, myplace, 0 , move_to_delay)
 		if (!walking)
 			walking = TRUE
 			walk_to(src, myplace, 0 , move_to_delay)
@@ -45,7 +54,7 @@
 		else if (iii < 3)
 			random_list += pick(GLOB.loot_prewar_costume)
 		else if (iii < 5)
-			random_list += pick(GLOB.loot_medical_drug)
+			random_list += pick(pick(list(GLOB.loot_medical_drug, GLOB.loot_craft_basic)))
 		else if (iii < 7)
 			random_list += pick(GLOB.loot_medical_medicine)
 		else if (iii < 12)
@@ -254,28 +263,29 @@
 	if(stored_caps[WEAKREF(user)] > C.max_amount)
 		C.add(C.max_amount - 1)
 		C.forceMove(user.loc)
+		user.put_in_active_hand(C)
 		stored_caps[WEAKREF(user)] -= C.max_amount
 	else
 		C.add(stored_caps[WEAKREF(user)] - 1)
 		C.forceMove(user.loc)
+		user.put_in_active_hand(C)
 		stored_caps[WEAKREF(user)] = 0
 	playsound(src, 'sound/items/coinflip.ogg', 60, 1)
 	src.ui_interact(usr)
 
 /mob/living/simple_animal/hostile/retaliate/talker/trader/proc/add_caps(mob/user, obj/item/stack/f13Cash/cash)
-	if(!stored_caps[WEAKREF(user)])
-		stored_caps[WEAKREF(user)] = cash.amount
-	else
-		stored_caps[WEAKREF(user)] += cash.amount
-	cash.use(cash.amount)
+	var/num = cash.amount + 1 - 1
+	if (cash.use(cash.amount))
+		if(!stored_caps[WEAKREF(user)])
+			stored_caps[WEAKREF(user)] = num
+		else
+			stored_caps[WEAKREF(user)] += num
 	
 
 /mob/living/simple_animal/hostile/retaliate/talker/trader/basic
 	name = "Bob the Trader"
-	desc = "An officer part of Nanotrasen's private security force."
-	icon = 'icons/mob/simple_human.dmi'
-	icon_state = "nanotrasen"
-	icon_living = "nanotrasen"
+	desc = "A trader who sells items."
+	icon = 'icons/fallout/mobs/humans/traders.dmi'
 	icon_dead = null
 	del_on_death = TRUE
 	icon_gib = "syndicate_gib"
@@ -290,10 +300,11 @@
 	stat_attack = CONSCIOUS
 	ranged_cooldown_time = 22
 	ranged = TRUE
+	mob_armor = ARMOR_VALUE_DEATHCLAW_MOTHER
 	robust_searching = TRUE
 	healable = TRUE
-	maxHealth = 100
-	health = 100
+	maxHealth = 300
+	health = 300
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 15

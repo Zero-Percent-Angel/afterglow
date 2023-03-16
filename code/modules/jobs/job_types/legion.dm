@@ -555,8 +555,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/job/CaesarsLegion/Legionnaire/f13vexillarius
 	title = "Legion Vexillarius"
 	flag = F13VEXILLARIUS
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are a Veteran of proven bravery. When not fighting, relay orders from the commander and act as a bodyguard."
 	supervisors = "the Veteran Decanus and Centurion"
 	display_order = JOB_DISPLAY_ORDER_VEXILLARIUS
@@ -979,8 +979,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/job/CaesarsLegion/Legionnaire/f13immune
 	title = "Legion Immune"
 	flag = F13IMMUNE
-	total_positions = 4
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "An Immune is a legionnaire temporarily assigned to keeping the camp in order, according to their tasking on any given week."
 	supervisors = "the Centurion."
 	display_order = JOB_DISPLAY_ORDER_IMMUNE
@@ -1170,12 +1170,12 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 // Both get Mars teachings to help out when normal work is done.
 
 /datum/job/CaesarsLegion/slave
-	title = "Legion Slave"
+	title = "Camp Follower"
 	flag = F13LEGIONSLAVE
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 4
+	spawn_positions = 4
 	description = "A slave that survives the breaking camps is given a Legion appropriate name (latin-tribal inspired) and bull tattoo. Be obedient, respectful, stay inside the camp. Work the farm, mine, make food, clean and help injured men. Do NOT escape on your own, up to you how to handle it if forcibly freed by outside forces."
-	supervisors = "Officers and Slavemaster first, then Auxilia, then warriors."
+	supervisors = "Officers first, then Auxilia, then warriors."
 	display_order = JOB_DISPLAY_ORDER_LEGIONSLAVE
 	exp_requirements = 0
 	outfit = /datum/outfit/job/CaesarsLegion/slave
@@ -1205,7 +1205,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	jobtype = /datum/outfit/job/CaesarsLegion/slave
 	id = /obj/item/card/id/legionbrand
 	uniform = /obj/item/clothing/under/f13/legslavef
-	neck = /obj/item/electropack/shockcollar
 	shoes =	null
 	l_pocket = /obj/item/radio
 
@@ -1306,11 +1305,11 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 
 // Slavemaster
 
-datum/job/CaesarsLegion/Legionnaire/f13slavemaster
+/datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 	title = "Legion Slavemaster"
 	flag = F13SLAVEMASTER
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are the feared and respected disciplinary corps of the Legion. Acting as both master of the Slaves and de-facto executioner of the Centurion's will within his ranks, you are a faceless and undoubtedly cruel torturer... but be careful to not let your hubris and malice lead to a strikeback from those you thought broken."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 150

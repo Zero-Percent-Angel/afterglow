@@ -6,7 +6,7 @@
 	name = "error"
 	icon_state = "error"
 	has_gravity = 1
-//	requires_power = 0
+	requires_power = 1
 
 //Wasteland generic areas
 
@@ -40,6 +40,7 @@
 	environment = 19
 	grow_chance = 45
 	weather_tags = list(WEATHER_ALL)
+	always_unpowered = TRUE
 
 /area/f13/wasteland/city
 	name = "City"
@@ -620,6 +621,16 @@
 
 /area/f13/bunker/bunkertwo
 	name = "Bunker Two"
+
+/area/f13/bunker/bunkerthree
+	name = "Bunker Three"
+
+/area/f13/bunker/bunkerfour
+	name = "Bunker four"
+
+/area/f13/bunker/bunkerfive
+	name = "Bunker five"
+
 
 /area/f13/bunker/museum
 	name = "Bunker Museum"

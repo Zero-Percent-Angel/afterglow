@@ -7,10 +7,11 @@
 	var/list/known_commands = list("stay", "stop", "attack", "follow", "trust")
 	var/list/allowed_targets = list() //WHO CAN I KILL D:
 	var/retribution = 1 //whether or not they will attack us if we attack them like some kinda dick.
-	emote_hear = list("Okay.", "Got it.", "Yep.", "Yup.", "Yes.")
+	var/list/heard_list = list("Okay.", "Got it.", "Yep.", "Yup.", "Yes.")
 	var/mob/target_mob = null
 	var/followingAFriend = FALSE
 	var/trust_no_one = FALSE
+	var/ordered_attack = FALSE
 	var/autoSucceedThreshold = HARD_CHECK
 	var/roll_difficulty = DIFFICULTY_NORMAL
 
@@ -70,13 +71,13 @@
 						break
 				if("follow")
 					if(follow_command(speaker,text))
-						if(emote_hear && emote_hear.len)
-							say("[pick(emote_hear)]")
+						if(heard_list && heard_list.len)
+							say("[pick(heard_list)]")
 						break
 				if("trust")
 					if(friend_command(speaker,text))
-						if(emote_hear && emote_hear.len)
-							say("[pick(emote_hear)]")
+						if(heard_list && heard_list.len)
+							say("[pick(heard_list)]")
 						break
 				else
 					misc_command(speaker,text) //for specific commands
@@ -112,8 +113,8 @@
 		return 1
 
 	allowed_targets += get_targets_by_name(text)
-	if(emote_hear && emote_hear.len)
-		say("[pick(emote_hear)]")
+	if(heard_list && heard_list.len)
+		say("[pick(heard_list)]")
 	return allowed_targets.len != 0
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/proc/stay_command(var/mob/speaker,var/text)
@@ -121,19 +122,20 @@
 	followingAFriend = FALSE
 	stop_automated_movement = 1
 	walk_to(src,0)
-	if(emote_hear && emote_hear.len)
-		say("[pick(emote_hear)]")
+	if(heard_list && heard_list.len)
+		say("[pick(heard_list)]")
 	return 1
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/proc/stop_command(var/mob/speaker,var/text)
 	allowed_targets = list()
 	followingAFriend = FALSE
+	ordered_attack = FALSE
 	LoseTarget()
 	walk_to(src,0)
 	target_mob = null //gotta stop SOMETHIN
 	stop_automated_movement = 0
-	if(emote_hear && emote_hear.len)
-		say("[pick(emote_hear)]")
+	if(heard_list && heard_list.len)
+		say("[pick(heard_list)]")
 	return 1
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/proc/follow_command(var/mob/speaker,var/text)
@@ -160,6 +162,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/proc/follow_target()
 	stop_automated_movement = 1
+	ordered_attack = FALSE
 	if(!target_mob)
 		return
 	walk_to(src, target_mob, 1, move_to_delay)
@@ -176,7 +179,7 @@
 		return ..()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/Retaliate()
-	var/list/around = view(src, vision_range)
+	var/list/around = view(vision_range, src)
 
 	for(var/atom/movable/A in around)
 		if(A == src)
@@ -219,6 +222,7 @@
 /mob/living/simple_animal/hostile/retaliate/talker/follower/proc/fight_time()
 	if (allowed_targets.len)
 		if (allowed_targets[1] == "everyone")
+			ordered_attack = TRUE
 			Retaliate()
 			allowed_targets = list()
 		else
@@ -284,6 +288,49 @@
 	var/myplace = null
 	var/my_original_loc = null
 	var/return_to_post = FALSE
+	speak_chance = 8
+	var/waiting_ticks = 0
+	var/combat_ticks = 0
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/bullet_act(var/obj/item/projectile/P, var/def_zone)
+	..()
+	target_mob = null
+	enemies |= WEAKREF(P.firer)
+	var/list/around = view(vision_range, src)
+	for(var/mob/living/simple_animal/hostile/retaliate/H in around)
+		if(faction_check_mob(H) && !attack_same && !H.attack_same)
+			H.enemies |= enemies
+	
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/attackby(var/obj/item/O, var/mob/user)
+	..()
+	target_mob = null
+	enemies |= WEAKREF(user)
+	var/list/around = view(vision_range, src)
+	for(var/mob/living/simple_animal/hostile/retaliate/H in around)
+		if(faction_check_mob(H) && !attack_same && !H.attack_same)
+			H.enemies |= enemies
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/Retaliate()
+	if (ordered_attack)
+		var/list/around = view(src, vision_range)
+		for(var/atom/movable/A in around)
+			if(A == src)
+				continue
+			if(isliving(A))
+				var/mob/living/M = A
+				if(faction_check_mob(M) && attack_same || !faction_check_mob(M))
+					enemies |= WEAKREF(M)
+			else if(ismecha(A))
+				var/obj/mecha/M = A
+				if(M.occupant)
+					enemies |= WEAKREF(M)
+					enemies |= WEAKREF(M.occupant)
+		for(var/mob/living/simple_animal/hostile/retaliate/H in around)
+			if(faction_check_mob(H) && !attack_same && !H.attack_same)
+				H.enemies |= enemies
+		return 0
+	else
+		return 0
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/Initialize(mapload)
 	myplace = get_turf(src)
@@ -307,7 +354,8 @@
 	if(href_list["post"])
 		usr.say("Return to your post.")
 		if (faction_check_mob(usr))
-			say("On it.")
+			say("[pick(heard_list)]")
+			ordered_attack = FALSE
 			walk_to(src, myplace, 0 , move_to_delay)
 			stop_automated_movement = 1
 			return_to_post = TRUE
@@ -315,31 +363,56 @@
 
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/handle_automated_action()
-	if(AIStatus == AI_OFF)
-		return 0
-	for (var/mob/living/A in oview(vision_range, targets_from)) //mob/dead/observers arent possible targets
-		CHECK_TICK
-		if (faction_check(enemy_factions, A.faction))
-			if (A.sneaking && (A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
-				to_chat(A, span_notice("[name] has not spotted you."))
-			else
-				enemies += WEAKREF(A)
+	CHECK_TICK
+	if (!enemies.len)
+		ordered_attack = FALSE
+		toggle_ai(AI_IDLE)
+	else
+		if (combat_ticks > 5)
+			combat_ticks = 0
+			var/clear_the_list = 0
+			for(var/datum/weakref/en_ref in enemies)
+				var/mob/living/ene = en_ref.resolve()
+				if (istype(ene) && (ene.health <= 0 || faction_check_mob(ene)))
+					clear_the_list = 1
+			if (clear_the_list)
+				enemies.Cut()
+		else
+			combat_ticks++
 	return ..()
 
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/handle_automated_movement()
 	CHECK_TICK
 	if (return_to_post)
+		if (pulledby)
+			pulledby.stop_pulling()
+			walk_to(src, myplace, 0 , move_to_delay)
 		if (loc == my_original_loc)
 			return_to_post = FALSE
 			stop_automated_movement = 0
 			walk_to(src,0)
+			waiting_ticks = 0
+		if (waiting_ticks > 4)
+			return_to_post = FALSE
+			stop_automated_movement = FALSE
+			waiting_ticks = 0
+			walk_to(src,0)
+		waiting_ticks++
 	else
 		if (!followingAFriend && (get_dist(loc, my_original_loc) > 5) && !stop_automated_movement)
 			walk_to(src, myplace, 0 , move_to_delay)
 			return_to_post = TRUE
 			stop_automated_movement = TRUE
 		else
+			for (var/mob/living/A in oview(vision_range, targets_from)) //mob/dead/observers arent possible targets
+				if (faction_check(enemy_factions, A.faction) && A.health > 0)
+					if (A.sneaking && (A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
+						to_chat(A, span_notice("[name] has not spotted you."))
+					else
+						enemies |= WEAKREF(A)
+				if (enemies.len)
+					toggle_ai(AI_ON)
 			..()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/ncr_trooper
@@ -373,7 +446,7 @@
 	attack_verb_simple = "punch"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	faction = list(FACTION_NCR)
-	enemy_factions = list(FACTION_LEGION)
+	enemy_factions = list(FACTION_LEGION, "hostile", "ant")
 	a_intent = INTENT_HARM
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15
@@ -432,7 +505,7 @@
 	attack_verb_simple = "punch"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	faction = list(FACTION_LEGION)
-	enemy_factions = list(FACTION_NCR)
+	enemy_factions = list(FACTION_NCR, "hostile", "supermutant", "scorched", "ant")
 	a_intent = INTENT_HARM
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15

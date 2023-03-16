@@ -73,6 +73,8 @@
 		)
 	pop_required_to_jump_into = MED_MOB_MIN_PLAYERS
 	desc_short = "A snooty robot with a circular saw."
+	sneak_detection_threshold = HARD_CHECK
+	sneak_roll_modifier = DIFFICULTY_CHALLENGE
 
 /mob/living/simple_animal/hostile/handy/playable
 	mob_armor = ARMOR_VALUE_ROBOT_CIVILIAN

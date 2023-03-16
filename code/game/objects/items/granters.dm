@@ -57,17 +57,16 @@
 			if(user.skill_check(skill, skill_needed[skill]))
 				to_chat(user, span_warning("You lack the skill needed to learn this!"))
 				return FALSE
-	else
-		on_reading_start(user)
-		reading = TRUE
-		for(var/i in 1 to pages_to_mastery)
-			if(!turn_page(user))
-				on_reading_stopped()
-				reading = FALSE
-				return
-		if(do_after(user, time_per_page, TRUE, user))
-			on_reading_finished(user)
-		reading = FALSE
+	on_reading_start(user)
+	reading = TRUE
+	for(var/i in 1 to pages_to_mastery)
+		if(!turn_page(user))
+			on_reading_stopped()
+			reading = FALSE
+			return
+	if(do_after(user, time_per_page, TRUE, user))
+		on_reading_finished(user)
+	reading = FALSE
 	return TRUE
 ///TRAITS///
 
@@ -548,6 +547,7 @@
 	. = ..()
 	if(!user.mind)
 		return
+	user.invalidate_skill_caches()
 	for(var/crafting_recipe_type in crafting_recipe_types)
 		var/datum/crafting_recipe/R = crafting_recipe_type
 		if (user.skill_check(initial(R.skill_needed), initial(R.skill_level)))
@@ -920,11 +920,11 @@
 	crafting_recipe_types = list(/datum/crafting_recipe/set_vrboard/den)
 
 /obj/item/book/granter/crafting_recipe/ODF
-	name = "Weapons of Texarkana and the Nash Defense Force"
+	name = "Weapons of the Ripley Defense Force"
 	desc = "a book detailing weapons used in the region and by the local town, it has lithiographed pictures of hand-drawn schematics for each weapon type"
 	oneuse = TRUE
 	crafting_recipe_types = list(/datum/crafting_recipe/policepistol, /datum/crafting_recipe/durathread_vest, /datum/crafting_recipe/policerifle, /datum/crafting_recipe/steelbib/heavy, /datum/crafting_recipe/armyhelmetheavy, /datum/crafting_recipe/huntingshotgun)
-	remarks = list("Looks like Nash hand-crafts replicas from a pre-war police armory", "Some of these weapons are more than 200 years old....", "Duct tape really can hold it together!", "So that is how you laminate armor sheets together", "Looks like you can beat metal into just the right shape to replace the bits")
+	remarks = list("Looks like Ripley hand-crafts replicas from a pre-war police armory", "Some of these weapons are more than 200 years old....", "Duct tape really can hold it together!", "So that is how you laminate armor sheets together", "Looks like you can beat metal into just the right shape to replace the bits")
 
 
 /obj/item/book/granter/trait/tagger
