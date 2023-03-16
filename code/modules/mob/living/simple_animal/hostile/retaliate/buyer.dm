@@ -12,6 +12,12 @@
 	my_original_loc = loc
 	setup_buys()
 	..()
+	if (gender == MALE)
+		icon_state = "trader_male"
+		icon_living = "trader_male"
+	else
+		icon_state = "trader_female"
+		icon_living = "trader_female"
 
 /mob/living/simple_animal/hostile/retaliate/talker/buyer/proc/setup_buys()
 	if (!buys_list.len)
@@ -52,7 +58,7 @@
 /mob/living/simple_animal/hostile/retaliate/talker/buyer/dialog_options(mob/talker, display_options)
 	var/dat = ""
 	if (!broken_trust.Find(WEAKREF(talker)) && !enemies.Find(WEAKREF(talker)) && !failed.Find(WEAKREF(talker)))
-		dat += "<center><a href='?src=[REF(src)];trade=1'>Ask if \he will buy your held item.</a></center>"
+		dat += "<center><a href='?src=[REF(src)];trade=1'>Ask if they will buy your held item.</a></center>"
 	return dat
 
 
@@ -100,9 +106,7 @@
 /mob/living/simple_animal/hostile/retaliate/talker/buyer/basic
 	name = "Bob the Trader"
 	desc = "A trader who buys items."
-	icon = 'icons/mob/simple_human.dmi'
-	icon_state = "nanotrasen"
-	icon_living = "nanotrasen"
+	icon = 'icons/fallout/mobs/humans/traders.dmi'
 	icon_dead = null
 	del_on_death = TRUE
 	icon_gib = "syndicate_gib"

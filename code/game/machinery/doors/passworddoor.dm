@@ -14,6 +14,7 @@
 	var/voice_activated = FALSE //Say the password nearby to open the door.
 	var/list/failures = list()
 	var/terminal_has_pass = FALSE
+	var/door_id = ""
 
 /obj/machinery/door/password/voice
 	voice_activated = TRUE

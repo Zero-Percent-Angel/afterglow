@@ -226,9 +226,13 @@
 		var/list/heardm = hearers(vision_range, targets_from) - src //Remove self, so we don't suicide
 		var/list/copyOfList = heardm.Copy()
 		for (var/mob/living/A in copyOfList)
-			if (A.sneaking && (A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
-				to_chat(A, span_notice("[name] has not spotted you."))
-				heardm -= A
+			if (A.sneaking)
+				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
+					to_chat(A, span_notice("[name] has not spotted you."))
+					heardm -= A
+				else
+					A.stop_sneaking()
+					to_chat(A, span_danger("[name] has spotted you!"))
 		. = heardm
 
 		var/static/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha, /obj/structure/destructible/clockwork/ocular_warden,/obj/item/electronic_assembly))
@@ -244,8 +248,13 @@
 			. += A
 		for (var/mob/living/A in oview(vision_range, targets_from)) //mob/dead/observers arent possible targets
 			CHECK_TICK
-			if (A.sneaking && (A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
-				to_chat(A, span_notice("[name] has not spotted you."))
+			if (A.sneaking)
+				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
+					to_chat(A, span_notice("[name] has not spotted you."))
+				else
+					A.stop_sneaking()
+					to_chat(A, span_danger("[name] has spotted you!"))
+					. += A
 			else
 				. += A
 

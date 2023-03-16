@@ -26,6 +26,12 @@
 	myplace = get_turf(src)
 	my_original_loc = loc
 	..()
+	if (gender == MALE)
+		icon_state = "trader_male"
+		icon_living = "trader_male"
+	else
+		icon_state = "trader_female"
+		icon_living = "trader_female"
 
 /mob/living/simple_animal/hostile/retaliate/talker/trader/handle_automated_movement()
 	if (my_original_loc != loc)
@@ -279,9 +285,7 @@
 /mob/living/simple_animal/hostile/retaliate/talker/trader/basic
 	name = "Bob the Trader"
 	desc = "A trader who sells items."
-	icon = 'icons/mob/simple_human.dmi'
-	icon_state = "nanotrasen"
-	icon_living = "nanotrasen"
+	icon = 'icons/fallout/mobs/humans/traders.dmi'
 	icon_dead = null
 	del_on_death = TRUE
 	icon_gib = "syndicate_gib"
