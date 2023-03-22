@@ -1346,7 +1346,7 @@
 		if(cur_excess > 0)
 			var/charging_cell = min(cur_excess, cell.maxcharge * GLOB.CHARGELEVEL)
 			cell.give(charging_cell)
-			add_load(charging_cell)
+			add_load(charging_cell/GLOB.CELLRATE)
 			lastused_total += charging_cell
 			longtermpower = min(10,longtermpower + 1)
 			if(chargemode && !charging)

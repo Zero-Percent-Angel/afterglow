@@ -202,7 +202,7 @@
 	else if (user.cached_unknowable_recipies.Find(R))
 		return 0
 	else 
-		if ((user.skill_check(R.skill_needed, R.skill_level) || ((R.falls_back_on_outdoors || R.category == CAT_TRIBAL) && user.skill_check(SKILL_OUTDOORSMAN, R.skill_level))))
+		if ((user.skill_check(R.skill_needed, R.skill_level) || ((R.falls_back_on_outdoors || R.category == CAT_TRIBAL || R.category == CAT_PRIMAL) && user.skill_check(SKILL_OUTDOORSMAN, R.skill_level))))
 			user.cached_knowable_recipies.Add(R)
 			return 1
 		else
