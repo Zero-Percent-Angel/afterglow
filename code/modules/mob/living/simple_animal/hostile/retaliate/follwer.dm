@@ -14,6 +14,7 @@
 	var/ordered_attack = FALSE
 	var/autoSucceedThreshold = HARD_CHECK
 	var/roll_difficulty = DIFFICULTY_NORMAL
+	var/faction_mob = FALSE
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/dialog_options(mob/talker, display_options)
 	var/dat = "" 
@@ -235,12 +236,20 @@
 	else if (!followingAFriend)
 		. = ..()
 
+/mob/living/simple_animal/hostile/retaliate/talker/follower/Initialize()
+	. = ..()
+	if (!faction_mob)
+		if (gender == FEMALE)
+			icon_state = "WasterG_Gun"
+		else
+			icon_state = "WasterM_Gun"
+
 /mob/living/simple_animal/hostile/retaliate/talker/follower/basic
 	name = "Jeff"
 	desc = "An officer part of Nanotrasen's private security force."
-	icon = 'icons/mob/simple_human.dmi'
-	icon_state = "nanotrasen"
-	icon_living = "nanotrasen"
+	icon = 'icons/fallout/mobs/humans/fallout_npc.dmi'
+	icon_state = "WasterG_Neutral"
+	icon_living = "WasterG_Neutral"
 	icon_dead = null
 	del_on_death = TRUE
 	icon_gib = "syndicate_gib"
@@ -271,8 +280,6 @@
 	unsuitable_atmos_damage = 15
 	status_flags = CANPUSH
 	search_objects = 1
-	icon_state = "nanotrasenrangedsmg"
-	icon_living = "nanotrasenrangedsmg"
 	vision_range = 9
 	rapid = 3
 	retreat_distance = 3
@@ -280,8 +287,7 @@
 	casingtype = /obj/item/ammo_casing/c9mm
 	projectiletype = /obj/item/projectile/bullet/c9mm
 	projectilesound = 'sound/weapons/gunshot_smg.ogg'
-	loot = list(/obj/item/gun/ballistic/automatic/autopipe,
-				/obj/effect/mob_spawn/human/corpse/nanotrasensoldier)
+	loot = list(/obj/item/gun/ballistic/automatic/autopipe)
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction
 	var/list/enemy_factions = list()
@@ -291,6 +297,7 @@
 	speak_chance = 8
 	var/waiting_ticks = 0
 	var/combat_ticks = 0
+	faction_mob = TRUE
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/bullet_act(var/obj/item/projectile/P, var/def_zone)
 	..()
