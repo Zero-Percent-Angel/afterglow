@@ -129,6 +129,7 @@
 	obj_integrity = 1000
 	assemblytype = /obj/item/stack/rods
 	visible = FALSE
+	opacity = FALSE
 	explosion_block = FALSE
 	pass_flags = LETPASSTHROW  // would be great but the var is not functional for some reason.
 	proj_pass_rate = 95

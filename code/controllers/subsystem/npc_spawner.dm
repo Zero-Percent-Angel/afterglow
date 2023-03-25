@@ -3,7 +3,7 @@ SUBSYSTEM_DEF(waster_spawn)
 	wait = 10 MINUTES
 	var/successful_firing = 0
 	var/allowed_firings = 90
-	var/chance_of_fire = 99 
+	var/chance_of_fire = 80 
 
 
 /datum/controller/subsystem/waster_spawn/fire(resumed = 0)
@@ -27,5 +27,5 @@ SUBSYSTEM_DEF(waster_spawn)
 		possible_positions += S
 	var/obj/effect/landmark/npc_wastelander_spawn_position/choosen = pick(possible_positions)
 	var/mob/living/simple_animal/hostile/retaliate/talker/follower/basic/ourboy = new /mob/living/simple_animal/hostile/retaliate/talker/follower/basic(choosen.loc)
-	message_admins("Spawned: [ourboy] at [ourboy.loc]")
+	message_admins("Spawned: [ourboy] at [ADMIN_COORDJMP(choosen)]")
 	log_game("Spawned: [ourboy] at [ourboy.loc]")

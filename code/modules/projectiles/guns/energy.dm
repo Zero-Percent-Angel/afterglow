@@ -268,7 +268,7 @@
 /obj/item/gun/energy/update_icon_state()
 	if(initial(item_state))
 		return
-	..()
+	//..()
 	var/ratio = get_charge_ratio()
 	var/new_item_state = ""
 	new_item_state = initial(icon_state)

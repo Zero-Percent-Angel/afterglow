@@ -1303,7 +1303,7 @@
 		main_status = 2
 
 	var/cur_excess = excess
-	var/cur_used = lastused_total
+	var/cur_used = GLOB.CELLRATE * lastused_total
 	/*
 	// first: if we have enough power, power the essentials DIRECTLY
 	// This shit doesn't work. It just makes power states flicker.
@@ -1346,7 +1346,7 @@
 		if(cur_excess > 0)
 			var/charging_cell = min(cur_excess, cell.maxcharge * GLOB.CHARGELEVEL)
 			cell.give(charging_cell)
-			add_load(charging_cell)
+			add_load(charging_cell/GLOB.CELLRATE)
 			lastused_total += charging_cell
 			longtermpower = min(10,longtermpower + 1)
 			if(chargemode && !charging)
@@ -1359,8 +1359,8 @@
 			charging = APC_NOT_CHARGING
 			chargecount = 0
 			longtermpower = max(-10,longtermpower - 2)
-			if(cell.charge >= cur_used)
-				cell.use(GLOB.CELLRATE * cur_used)
+			if(cell.charge >=  cur_used)
+				cell.use(cur_used)
 			else
 				// This turns everything off in the case that there is still a charge left on the battery, just not enough to run the room.
 				equipment = autoset(equipment, 0)

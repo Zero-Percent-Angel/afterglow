@@ -26,6 +26,7 @@
 	. = ..()
 	if(!anchored)	//why would you put these on the shuttle?
 		addtimer(CALLBACK(src, .proc/RemoveFromLatejoin), 0)
+	handle_layer()
 
 /obj/structure/chair/ComponentInitialize()
 	. = ..()
@@ -132,8 +133,9 @@
 			var/mob/living/buckled_mob = m
 			buckled_mob.setDir(direction)
 
+//I prefer the RP of looking like we're sitting on chairs, rather than worrying about power gamers hiding behind them. That's an admin issue not a code one.
 /obj/structure/chair/proc/handle_layer()
-	if(has_buckled_mobs() && dir == NORTH)
+	if(dir == NORTH)
 		plane = MOB_PLANE
 		layer = ABOVE_MOB_LAYER
 	else
