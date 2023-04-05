@@ -24,11 +24,11 @@
 /mob/proc/skill_roll(check, difficulty = DIFFICULTY_NORMAL, do_message = 1)
 	if ((skill_value(check) + special_l) >= (rand(1,100) + difficulty))
 		if (do_message)
-			to_chat(src, span_good("You succeed the skill check using: [check]"))
+			to_chat(src, span_green("You succeed the skill check using: [check]"))
 		return TRUE
 	else
 		if (do_message)
-			to_chat(src, span_bad("You fail the skill check using: [check]"))
+			to_chat(src, span_red("You fail the skill check using: [check]"))
 		return FALSE
 	
 
