@@ -245,8 +245,8 @@
 			icon_state = "WasterM_Gun"
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/basic
-	name = "Jeff"
-	desc = "An officer part of Nanotrasen's private security force."
+	name = "Wastelander"
+	desc = "A wastelander, just trying to survive."
 	icon = 'icons/fallout/mobs/humans/fallout_npc.dmi'
 	icon_state = "WasterG_Neutral"
 	icon_living = "WasterG_Neutral"

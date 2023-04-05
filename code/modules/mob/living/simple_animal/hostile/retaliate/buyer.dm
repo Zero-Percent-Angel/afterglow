@@ -104,7 +104,7 @@
 
 
 /mob/living/simple_animal/hostile/retaliate/talker/buyer/basic
-	name = "Bob the Trader"
+	name = "A Trader"
 	desc = "A trader who buys items."
 	icon = 'icons/fallout/mobs/humans/traders.dmi'
 	icon_dead = null
