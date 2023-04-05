@@ -58,6 +58,7 @@
 								for (var/obj/machinery/porta_turret/f13/turret in controlled_turrets)
 									turret.faction = U.faction
 									turret.clear_targets()
+							to_chat(U, span_good("You sucessfully reprogram the turrets"))
 						else
 							say("Commands not accepted. Turrets remaining active; Locking console.")
 							locked_console = TRUE

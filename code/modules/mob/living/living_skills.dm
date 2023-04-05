@@ -21,8 +21,16 @@
 // -10 for difficulty on a 'normal' roll
 // 0 for a challenging roll
 // +20 for an expert roll
-/mob/proc/skill_roll(check, difficulty = DIFFICULTY_NORMAL)
-	return ((skill_value(check) + special_l) >= (rand(1,100) + difficulty))
+/mob/proc/skill_roll(check, difficulty = DIFFICULTY_NORMAL, do_message = 1)
+	if ((skill_value(check) + special_l) >= (rand(1,100) + difficulty))
+		if (do_message)
+			to_chat(src, span_good("You succeed the skill check using: [check]"))
+		return TRUE
+	else
+		if (do_message)
+			to_chat(src, span_bad("You fail the skill check using: [check]"))
+		return FALSE
+	
 
 /mob/proc/skill_roll_under(check, difficulty = DIFFICULTY_NORMAL)
 	return  ((rand(1,100) + difficulty) - (skill_value(check)))

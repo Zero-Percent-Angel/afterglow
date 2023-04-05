@@ -133,7 +133,7 @@
 
 	var/force_out = force + force_modifier
 
-	if(!user.skill_roll(SKILL_MELEE, M.special_a))
+	if(!user.skill_roll(SKILL_MELEE, M.special_a, 0))
 		M.visible_message(span_warning("[user]'s swing of [src.name] misses!"), target = user, \
 			target_message = span_warning("You missed your attack, weapon swinging wide!"))
 		playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)

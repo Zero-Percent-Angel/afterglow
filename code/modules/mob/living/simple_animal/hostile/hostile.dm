@@ -227,7 +227,7 @@
 		var/list/copyOfList = heardm.Copy()
 		for (var/mob/living/A in copyOfList)
 			if (A.sneaking)
-				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
+				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier, 0)))
 					to_chat(A, span_notice("[name] has not spotted you."))
 					heardm -= A
 				else
@@ -249,7 +249,7 @@
 		for (var/mob/living/A in oview(vision_range, targets_from)) //mob/dead/observers arent possible targets
 			CHECK_TICK
 			if (A.sneaking)
-				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
+				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier, 0)))
 					to_chat(A, span_notice("[name] has not spotted you."))
 				else
 					A.stop_sneaking()

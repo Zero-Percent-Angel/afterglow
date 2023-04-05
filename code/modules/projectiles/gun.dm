@@ -541,7 +541,7 @@ ATTACHMENTS
 		misfire_act(user)
 		if(chambered)
 			sprd = user.calculate_offset(sprd, gun_skill_used)
-			if(user.skill_roll(gun_skill_used))
+			if(user.skill_roll(gun_skill_used, do_message = 0))
 				sprd += ((100 - user.skill_value(gun_skill_used))/20)
 				to_chat(user, span_danger("You fumble your aim!"))
 			before_firing(target,user)
