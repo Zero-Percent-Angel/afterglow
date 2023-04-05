@@ -73,7 +73,7 @@
 			return TRUE
 		return FALSE
 	else
-		if(do_after(user, 10 SECONDS, target = src) && user.skill_roll(SKILL_SCIENCE, DIFFICULTY_CHALLENGE) && !failures.Find(WEAKREF(user)))
+		if(!failures.Find(WEAKREF(user)) && do_after(user, 10 SECONDS, target = src) && user.skill_roll(SKILL_SCIENCE, DIFFICULTY_CHALLENGE))
 			user.visible_message(span_good("[user] hacks the door!"), span_good("Got it!"))
 			return TRUE
 		else
