@@ -64,9 +64,7 @@
 			if(!(martial_art_result == BULLET_ACT_HIT))
 				return martial_art_result
 	//we got hit, let our friends know we're in danger!
-	for (var/mob/living/simple_animal/hostile/retaliate/talker/talker in mob_friends)
-		if (src != P.firer)
-			talker.enemies |= WEAKREF(P.firer)
+	handle_friends(P.firer)
 	return ..()
 
 /mob/living/carbon/human/proc/check_martial_melee_block()
@@ -86,9 +84,7 @@
 
 /mob/living/carbon/human/grippedby(mob/living/user, instant = FALSE)
 	//we're getting grabbed! let our friends know we're in danger!
-	for (var/mob/living/simple_animal/hostile/retaliate/talker/talker in mob_friends)
-		if (src != user)
-			talker.enemies |= WEAKREF(user)
+	handle_friends(user)
 	if(w_uniform)
 		w_uniform.add_fingerprint(user)
 	..()
@@ -111,11 +107,7 @@
 	SSblackbox.record_feedback("tally", "zone_targeted", 1, target_area)
 	
 	//we got hit, let our friends know we're in danger!
-	for (var/mob/l in mob_friends)
-		if (src != user)
-			if (istype(l, /mob/living/simple_animal/hostile/retaliate/talker))
-				var/mob/living/simple_animal/hostile/retaliate/talker/talk = l
-				talk.enemies |= WEAKREF(user)
+	handle_friends(user)
 	
 	// the attacked_by code varies among species
 	return dna.species.spec_attacked_by(I, user, affecting, a_intent, src, attackchain_flags, damage_multiplier, damage_addition)
@@ -250,6 +242,7 @@
 		var/armor = run_armor_check(affecting, "melee", armour_penetration = M.armour_penetration)
 		var/dt = max(run_armor_check(affecting, "damage_threshold") - M.damage_threshold_penetration_mob, 0)
 		apply_damage(damage, M.melee_damage_type, affecting, armor, wound_bonus = M.wound_bonus, bare_wound_bonus = M.bare_wound_bonus, sharpness = M.sharpness, damage_threshold = dt)
+		handle_friends(M)
 
 /mob/living/carbon/human/attack_slime(mob/living/simple_animal/slime/M)
 	. = ..()
@@ -1099,3 +1092,11 @@
 
 	for(var/obj/item/I in torn_items)
 		I.take_damage(damage_amount, damage_type, damage_flag, 0)
+
+
+/mob/living/carbon/human/proc/handle_friends(mob/our_attacker)
+	for (var/mob/l in mob_friends)
+		if (src != our_attacker)
+			if (istype(l, /mob/living/simple_animal/hostile/retaliate/talker))
+				var/mob/living/simple_animal/hostile/retaliate/talker/talk = l
+				talk.handle_enemy(our_attacker)

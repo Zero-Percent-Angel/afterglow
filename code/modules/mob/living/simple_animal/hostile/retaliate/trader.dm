@@ -16,7 +16,7 @@
 	
 /mob/living/simple_animal/hostile/retaliate/talker/trader/dialog_options(mob/talker, display_options)
 	var/dat = ""
-	if (!broken_trust.Find(WEAKREF(talker)) && !enemies.Find(WEAKREF(talker)) && !failed.Find(WEAKREF(talker)))
+	if (!broken_trust.Find(WEAKREF(talker)) && !enemies.Find(WEAKREF(talker)))
 		dat += "<center><a href='?src=[REF(src)];trade=1'>Trade with [name].</a></center>"
 	return dat
 
@@ -44,6 +44,12 @@
 	else
 		walk_to(src, 0)
 		walking = FALSE
+		next_restock--
+		if (next_restock == 0)
+			next_restock = 1000
+			product_records = list()
+			hidden_records = list()
+			restock()
 		..()
 
 /mob/living/simple_animal/hostile/retaliate/talker/trader/proc/restock()

@@ -15,6 +15,7 @@
 	var/autoSucceedThreshold = HARD_CHECK
 	var/roll_difficulty = DIFFICULTY_NORMAL
 	var/faction_mob = FALSE
+	var/list/enemy_factions = list()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/dialog_options(mob/talker, display_options)
 	var/dat = "" 
@@ -131,23 +132,28 @@
 	allowed_targets = list()
 	followingAFriend = FALSE
 	ordered_attack = FALSE
+	enemies = list()
 	LoseTarget()
 	walk_to(src,0)
 	target_mob = null //gotta stop SOMETHIN
+	toggle_ai(AI_IDLE)
 	stop_automated_movement = 0
-	if(heard_list && heard_list.len)
+	if(heard_list && heard_list.len && speaker)
 		say("[pick(heard_list)]")
 	return 1
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/proc/follow_command(var/mob/speaker,var/text)
-	//we can assume 'stop following' is handled by stop_command
+	stop_command()
 	if(findtext(text,"me"))
 		target_mob = speaker //this wont bite me in the ass later.
+		follow_target()
 		return 1
 	var/list/targets = get_targets_by_name(text)
 	if(targets.len > 1 || !targets.len) //CONFUSED. WHO DO I FOLLOW?
 		return 0
 	target_mob = targets[1] //YEAH GOOD IDEA
+	if(istype(target_mob))
+		follow_target()
 	return 1
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/proc/friend_command(var/mob/speaker,var/text)
@@ -162,10 +168,10 @@
 	return 0
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/proc/follow_target()
-	stop_automated_movement = 1
-	ordered_attack = FALSE
 	if(!target_mob)
 		return
+	stop_automated_movement = 1
+	ordered_attack = FALSE
 	walk_to(src, target_mob, 1, move_to_delay)
 	followingAFriend = TRUE
 
@@ -201,17 +207,24 @@
 	return 0
 
 
+/mob/living/simple_animal/hostile/retaliate/talker/follower/handle_enemy(mob/maybe_enemy)
+	var/en_weak_ref = WEAKREF(maybe_enemy)
+	if (!friends.Find(en_weak_ref))
+		enemies |= en_weak_ref
+
 /mob/living/simple_animal/hostile/retaliate/talker/follower/bullet_act(var/obj/item/projectile/P, var/def_zone)
 	..()
 	target_mob = null
 	if (friends.Find(WEAKREF(P.firer)))
 		friends -= WEAKREF(P.firer)
+		say("Friendly fire!")
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/attackby(var/obj/item/O, var/mob/user)
 	..()
 	target_mob = null
 	if(friends.Find(WEAKREF(user)))
 		friends -= WEAKREF(user)
+		say("You bastard...")
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/hitby(atom/movable/AM, skipcatch, hitpush = TRUE, blocked = FALSE, datum/thrownthing/throwingdatum)//Standardization and logging -Sieve
 	..()
@@ -219,6 +232,7 @@
 	if(ismob(throwingdatum.thrower))
 		if(friends.Find(WEAKREF(throwingdatum.thrower)))
 			friends -= WEAKREF(throwingdatum.thrower)
+			say("Okay, you're pushing it buddy.")
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/proc/fight_time()
 	if (allowed_targets.len)
@@ -231,10 +245,13 @@
 			allowed_targets = list()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/handle_automated_movement()
-	if(istype(target_mob) && !followingAFriend)
-		follow_target()
-	else if (!followingAFriend)
+	if (!followingAFriend || target)
+		followingAFriend = FALSE
+		target_mob = null
 		. = ..()
+	else if (followingAFriend && pulledby)
+		pulledby.stop_pulling()
+		follow_target()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/Initialize()
 	. = ..()
@@ -290,7 +307,6 @@
 	loot = list(/obj/item/gun/ballistic/automatic/autopipe)
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction
-	var/list/enemy_factions = list()
 	var/myplace = null
 	var/my_original_loc = null
 	var/return_to_post = FALSE
@@ -422,6 +438,10 @@
 					toggle_ai(AI_ON)
 			..()
 
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/attack_animal(mob/living/simple_animal/M)
+	. = ..()
+	enemies |= WEAKREF(M)
+
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/ncr_trooper
 	name = "Trooper"
 	desc = "Just another trooper on patrol for the NCR."
@@ -453,7 +473,7 @@
 	attack_verb_simple = "punch"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	faction = list(FACTION_NCR)
-	enemy_factions = list(FACTION_LEGION, "hostile", "ant")
+	enemy_factions = list(FACTION_LEGION, "hostile", "ant", "radscorpion", "raider", "wastebot", "tunneler", "trog", "deathclaw", "china", "gecko")
 	a_intent = INTENT_HARM
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15
@@ -512,7 +532,7 @@
 	attack_verb_simple = "punch"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	faction = list(FACTION_LEGION)
-	enemy_factions = list(FACTION_NCR, "hostile", "supermutant", "scorched", "ant")
+	enemy_factions = list(FACTION_NCR, "hostile", "supermutant", "scorched", "ant", "radscorpion", "raider", "wastebot", "tunneler", "trog", "deathclaw", "china", "gecko")
 	a_intent = INTENT_HARM
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15
