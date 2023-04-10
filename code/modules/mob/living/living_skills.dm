@@ -154,7 +154,7 @@
 /mob/living/proc/start_sneaking()
 	if (!sneaking)
 		sneaking = TRUE
-		src.alpha = (255 - (src.skill_value(SKILL_SNEAK) * 2))
+		src.alpha = (255 - min(src.skill_value(SKILL_SNEAK) * 2, 210))
 		to_chat(src, span_notice("You start sneaking."))
 		if (m_intent != MOVE_INTENT_WALK)
 			toggle_move_intent()
