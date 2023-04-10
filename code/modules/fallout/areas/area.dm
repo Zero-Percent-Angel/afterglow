@@ -90,6 +90,27 @@
 		/datum/looping_sound/ambient/lightbulb,
 		)
 
+/area/f13/building/abandoned/a
+	name = "Abandoned Building"
+	
+/area/f13/building/abandoned/b
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/c
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/d
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/e
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/f
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/g
+	name = "Abandoned Building"
+
 /area/f13/building/hospital
 	name = "Hospital Building"
 	icon_state = "hospital"

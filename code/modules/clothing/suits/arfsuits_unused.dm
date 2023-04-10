@@ -433,7 +433,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "The symbol of the greatest pushers."
 	icon_state = "khan_jacket"
 	item_state = "khan_jacket"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1)
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_LIGHT
 	armor_tier_desc = ARMOR_CLOTHING_LIGHT
@@ -804,6 +804,10 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "A black leather jacket with ballistic plates and a big Great Khan logo on the back. Some prefer to wear a leather vest (alt-click)."
 	icon_state = "khan_jacket_armored"
 	item_state = "khan_jacket_armored"
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_MEDIUM
+	armor_tier_desc = ARMOR_CLOTHING_LIGHT
+	stiffness = LIGHT_STIFFNESS
 
 //Battlecoat
 /obj/item/clothing/suit/toggle/labcoat/khan_jacket/coat
@@ -811,6 +815,11 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "Heavy leather coat lined with a patchwork of metal plates on the inside."
 	icon_state = "khan_heavy"
 	item_state = "khan_heavy"
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_MEDIUM
+	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1)
+	stiffness = LIGHT_STIFFNESS
 
 //Battlecoat/Goji
 /obj/item/clothing/suit/toggle/labcoat/khan_jacket/coat/goji
@@ -818,6 +827,10 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "Heavy Geckoskin jacket lined with a bulletproof lining on the inside. On the back the symbol of the Great Khans is displayed proudly."
 	icon_state = "GojiSuit"
 	item_state = "GojiSuit"
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_HEAVY
+	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
+	stiffness = MEDIUM_STIFFNESS
 
 //Special Biosuit
 

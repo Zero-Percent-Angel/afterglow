@@ -63,6 +63,9 @@
 /mob/living/simple_animal/hostile/retaliate/talker/basic/waster
 	
 	
+/mob/living/simple_animal/hostile/retaliate/talker/proc/handle_enemy(mob/maybe_enemy)
+	enemies += WEAKREF(maybe_enemy)
+	
 /mob/living/simple_animal/hostile/retaliate/talker/Initialize()
 	. = ..()
 	if (randomise_name)
@@ -107,7 +110,7 @@
 		say(dat)
 	if(!we_introduced)
 		dat += "<center><a href='?src=[REF(src)];introduce=1'>Intoduce yourself</a></center>"
-	if(!friends.Find(WEAKREF(talker)))
+	if(!friends.Find(WEAKREF(talker)) && !intimidated.Find(WEAKREF(talker)) && !failed.Find(WEAKREF(talker)))
 		dat += "<center><a href='?src=[REF(src)];stare=1'>Remain silent and stare. (Speech - Intimidate)</a></center>"
 	dat += dialog_options(talker, we_introduced || intimidated.Find(WEAKREF(talker)))
 	return dat
@@ -125,7 +128,7 @@
 	if(href_list["stare"])
 		usr.emote("stare")
 		introduced |= WEAKREF(usr)
-		if (usr.skill_roll(SKILL_SPEECH, intimidation_difficulty) && !failed.Find(WEAKREF(usr)))
+		if (!failed.Find(WEAKREF(usr)) && usr.skill_roll(SKILL_SPEECH, intimidation_difficulty))
 			say("Right... Can I help you?")
 			intimidated |= WEAKREF(usr)
 		else

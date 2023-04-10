@@ -27,6 +27,18 @@
 	subcategory = CAT_ROBOT
 	skill_level = REGULAR_CHECK
 
+/datum/crafting_recipe/fusebox
+	name = "Fusebox"
+	result = /obj/item/wallframe/apc/fusebox
+	reqs = list(/obj/item/stack/sheet/metal = 1,
+				/obj/item/stack/crafting/electronicparts = 1,
+				/obj/item/stack/cable_coil = 10)
+	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER)
+	time = 30
+	category = CAT_CRAFTING
+	subcategory = CAT_ROBOT
+	skill_level = REGULAR_CHECK
+
 /datum/crafting_recipe/pressureplate
 	name = "Pressure Plate"
 	result = /obj/item/pressure_plate
