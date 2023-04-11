@@ -57,7 +57,7 @@
 		listen(speaker, raw_message)
 	return ..()
 
-/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/listen(var/mob/speaker, var/text)
+/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/listen(mob/speaker, text)
 	for(var/command in known_commands)
 		if(findtext(text,command))
 			switch(command)
@@ -87,7 +87,7 @@
 	return 1
 
 //returns a list of everybody we wanna do stuff with.
-/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/get_targets_by_name(var/text, var/filter_friendlies = 0)
+/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/get_targets_by_name(text, filter_friendlies = 0)
 	var/list/possible_targets = hearers(src,10)
 	. = list()
 	for(var/mob/M in possible_targets)
@@ -105,7 +105,7 @@
 		if(found)
 			. += WEAKREF(M)
 
-/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/attack_command(var/mob/speaker,var/text)
+/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/attack_command(mob/speaker, text)
 	target_mob = null //want me to attack something? Well I better forget my old target.
 	walk_to(src,0)
 	followingAFriend = FALSE
@@ -119,7 +119,7 @@
 		say("[pick(heard_list)]")
 	return allowed_targets.len != 0
 
-/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/stay_command(var/mob/speaker,var/text)
+/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/stay_command(mob/speaker, text)
 	target_mob = null
 	followingAFriend = FALSE
 	stop_automated_movement = 1
@@ -128,7 +128,7 @@
 		say("[pick(heard_list)]")
 	return 1
 
-/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/stop_command(var/mob/speaker,var/text)
+/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/stop_command(mob/speaker, text)
 	allowed_targets = list()
 	followingAFriend = FALSE
 	ordered_attack = FALSE
@@ -142,7 +142,7 @@
 		say("[pick(heard_list)]")
 	return 1
 
-/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/follow_command(var/mob/speaker,var/text)
+/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/follow_command(mob/speaker, text)
 	stop_command()
 	if(findtext(text,"me"))
 		target_mob = speaker //this wont bite me in the ass later.
@@ -156,7 +156,7 @@
 		follow_target()
 	return 1
 
-/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/friend_command(var/mob/speaker,var/text)
+/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/friend_command(mob/speaker, text)
 	//we can assume 'stop following' is handled by stop_command
 	var/list/targets = get_targets_by_name(text)
 	if(targets.len > 1 || !targets.len) //CONFUSED. WHO DO I FOLLOW?
@@ -164,7 +164,7 @@
 	friends |= WEAKREF(targets[1]) //YEAH GOOD IDEA
 	return 1
 
-/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/misc_command(var/mob/speaker,var/text)
+/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/misc_command(mob/speaker, text)
 	return 0
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/proc/follow_target()
@@ -212,14 +212,14 @@
 	if (!friends.Find(en_weak_ref))
 		enemies |= en_weak_ref
 
-/mob/living/simple_animal/hostile/retaliate/talker/follower/bullet_act(var/obj/item/projectile/P, var/def_zone)
+/mob/living/simple_animal/hostile/retaliate/talker/follower/bullet_act(obj/item/projectile/P, def_zone)
 	..()
 	target_mob = null
 	if (friends.Find(WEAKREF(P.firer)))
 		friends -= WEAKREF(P.firer)
 		say("Friendly fire!")
 
-/mob/living/simple_animal/hostile/retaliate/talker/follower/attackby(var/obj/item/O, var/mob/user)
+/mob/living/simple_animal/hostile/retaliate/talker/follower/attackby(obj/item/O, mob/user)
 	..()
 	target_mob = null
 	if(friends.Find(WEAKREF(user)))
@@ -315,7 +315,7 @@
 	var/combat_ticks = 0
 	faction_mob = TRUE
 
-/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/bullet_act(var/obj/item/projectile/P, var/def_zone)
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/bullet_act(obj/item/projectile/P, def_zone)
 	..()
 	target_mob = null
 	enemies |= WEAKREF(P.firer)
@@ -324,7 +324,7 @@
 		if(faction_check_mob(H) && !attack_same && !H.attack_same)
 			H.enemies |= enemies
 	
-/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/attackby(var/obj/item/O, var/mob/user)
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/attackby(obj/item/O, mob/user)
 	..()
 	target_mob = null
 	enemies |= WEAKREF(user)
