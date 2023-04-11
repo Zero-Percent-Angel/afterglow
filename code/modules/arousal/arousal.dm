@@ -42,7 +42,7 @@
 	if (istype(A, /mob/living/carbon/human))
 		var/mob/living/carbon/human/h = A
 		var/confirm = input(src, "Select what part of their form to alter", "Undergarment Toggling") as null|anything in list("Top", "Bottom", "Socks", "All")
-		if(!confirm)
+		if(!confirm || restrained())
 			return
 		visible_message(span_warning("[src] is trying to remove [confirm != "All"? "the " : ""]" + confirm  +" of [h]'s underwear!"), span_notice("You start removing [h]'s " + confirm + " underwear."))
 		if(do_after(src, 3 SECONDS, target = h))
