@@ -29,18 +29,18 @@ export const SkillPanel = (props, context) => {
             {
               falloutOutSkills.map(element => (
                 <LabeledList.Item
-                  key={element.name}
-                  label={element.name}>
-                  <span style={skillyellow}>
-                    {element.description}
-                  </span>
+                key={element.name}
+                label={element.name}>
+                <span style={skillyellow}>
+                  {element.description}
+                </span>
+                <br />
+                <Fragment>
+                  <Level
+                  skill_lvl_num={(parseFloat(element.value) + 100) * 6/100}
+                  skill_lvl={element.value} />
                   <br />
-                  <Fragment>
-                    <Level
-                      skill_lvl_num={(parseFloat(element.value) + 100) * 6/100}
-                      skill_lvl={element.value} />
-                    <br />
-                  </Fragment>
+                </Fragment>
                 </LabeledList.Item>
               )
               )
