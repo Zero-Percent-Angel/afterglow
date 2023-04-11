@@ -97,14 +97,12 @@
 	var/peace_phrase = "" //Makes the mob become peaceful (if it wasn't beforehand) upon hearing
 	var/reveal_phrase = "" //Uncamouflages the mob (if it were to become invisible via the alpha var) upon hearing
 	var/hide_phrase = "" //Camouflages the mob (Sets it to a defined alpha value, regardless if already 'hiddeb') upon hearing
-  
 	var/obj/effect/proc_holder/mob_common/make_nest/make_a_nest
 	var/obj/effect/proc_holder/mob_common/unmake_nest/unmake_a_nest
 
 	// sneak detection
 	var/sneak_detection_threshold = REGULAR_CHECK
 	var/sneak_roll_modifier = DIFFICULTY_EASY
-  
 
 
 /mob/living/simple_animal/hostile/Initialize()
@@ -157,7 +155,7 @@
 	if(AICanContinue(possible_targets))
 		if(!QDELETED(target) && !targets_from.Adjacent(target))
 			DestroyPathToTarget()
-		if(!MoveToTarget(possible_targets))     //if we lose our target
+		if(!MoveToTarget(possible_targets))	//if we lose our target
 			if(AIShouldSleep(possible_targets))	// we try to acquire a new one
 				toggle_ai(AI_IDLE)			// otherwise we go idle
 	return 1
@@ -616,7 +614,7 @@
 	dodging = FALSE
 	. = Move(get_step(loc,pick(cdir,ccdir)))
 	if(!.)//Can't dodge there so we just carry on
-		. =  Move(moving_to,move_direction)
+		. = Move(moving_to,move_direction)
 	dodging = TRUE
 
 /mob/living/simple_animal/hostile/proc/DestroyObjectsInDirection(direction)
