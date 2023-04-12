@@ -38,7 +38,7 @@
 
 /datum/component/construction/proc/check_step(obj/item/I, mob/living/user)
 	var/diff = is_right_key(I)
-	if (user.skill_roll(SKILL_REPAIR, DIFFICULTY_EXPERT) || user.skill_check(SKILL_REPAIR, HARD_CHECK))
+	if (user.skill_check(SKILL_REPAIR, HARD_CHECK) || user.skill_roll(SKILL_REPAIR, DIFFICULTY_EXPERT))
 		if(diff && custom_action(I, user, diff))
 			update_index(diff)
 			return TRUE

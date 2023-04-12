@@ -168,7 +168,7 @@ Tribal Shaman
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_SPIRITUAL, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_LOW, src)
+	//ADD_TRAIT(H, TRAIT_SURGERY_LOW, src)
 
 
 /datum/outfit/job/tribal/f13shaman
@@ -195,7 +195,7 @@ Tribal Shaman
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
+	//ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
 
 /datum/outfit/loadout/invoker
 	name = "Invoker"
@@ -311,7 +311,7 @@ Druid
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_SPIRITUAL, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_LOW, src)
+	//ADD_TRAIT(H, TRAIT_SURGERY_LOW, src)
 
 
 /datum/outfit/job/tribal/f13druid

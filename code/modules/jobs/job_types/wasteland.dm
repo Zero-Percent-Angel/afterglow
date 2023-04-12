@@ -51,7 +51,7 @@ Raider
 	// /datum/outfit/loadout/raider_smith,
 	/datum/outfit/loadout/raider_vault,
 	/datum/outfit/loadout/raider_ncr,
-	// /datum/outfit/loadout/raider_legion,
+	/datum/outfit/loadout/raider_legion,
 	/datum/outfit/loadout/raider_bos,
 	/datum/outfit/loadout/quack_doctor
 	)
@@ -271,7 +271,7 @@ Raider
 		/obj/item/storage/box/ration/ranger_breakfast = 1,
 		/obj/item/book/granter/crafting_recipe/blueprint/service = 1)
 
-/*
+
 /datum/outfit/loadout/raider_legion
 	name = "Disgraced Legionnaire"
 	suit = /obj/item/clothing/suit/armor/exile/legexile
@@ -280,11 +280,11 @@ Raider
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/gladius = 1,
 		/obj/item/storage/backpack/spearquiver = 1,
-		/obj/item/gun/ballistic/automatic/smg/greasegun = 1,
-		/obj/item/ammo_box/magazine/greasegun = 1,
+		///obj/item/gun/ballistic/automatic/smg/greasegun = 1,
+		///obj/item/ammo_box/magazine/greasegun = 1,
 		/obj/item/book/granter/trait/trekking = 1
 		)
-*/
+
 
 /datum/outfit/loadout/raider_bos
 	name = "Brotherhood Exile"

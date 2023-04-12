@@ -83,10 +83,10 @@ Administrator
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_capacitor)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ultra_micro_laser)
 	*/
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	//ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
+	//ADD_TRAIT(H, TRAIT_MEDICALEXPERT, src)
+	//ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 
 /datum/outfit/job/followers/f13leadpractitioner
 	name =	"Senior Doctor"
@@ -264,9 +264,9 @@ Practitioner
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_capacitor)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ultra_micro_laser)
 	*/
-	ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
+	//ADD_TRAIT(H, TRAIT_MEDICALGRADUATE, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
+	//ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
 	ADD_TRAIT(H, TRAIT_CYBERNETICIST, src)
 
 	//the follower practitioner doesn't need access because it's already set in the /datum/job/follower

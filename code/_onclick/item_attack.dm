@@ -108,16 +108,16 @@
 	force_modifier += (user.special_s - 5)
 	if(force >= 5)
 		if(HAS_TRAIT(user, TRAIT_BIG_LEAGUES))
-			force_modifier += 10
+			force_modifier += (force * 0.2)
 
 		if(HAS_TRAIT(user, TRAIT_LITTLE_LEAGUES))
-			force_modifier += 5
+			force_modifier += (force * 0.1)
 
 		if(HAS_TRAIT(user, TRAIT_GENTLE))
-			force_modifier += -5
+			force_modifier += (-force * 0.1)
 
 		if(HAS_TRAIT(user, TRAIT_WIMPY))
-			force_modifier += -10
+			force_modifier += (-force * 0.2)
 
 		if(HAS_TRAIT(user, TRAIT_BUFFOUT_BUFF))
 			force_modifier += (force * 0.25)
@@ -132,8 +132,8 @@
 			force_modifier += (-force * 0.25)
 
 	var/force_out = force + force_modifier
-
-	if(!user.skill_roll(SKILL_MELEE, M.special_a, 0))
+	var/hit_helper = M.lying ? -20 : 0
+	if(M != user && !M.IsUnconscious() && !user.skill_roll(SKILL_MELEE, M.special_a + hit_helper, 0))
 		M.visible_message(span_warning("[user]'s swing of [src.name] misses!"), target = user, \
 			target_message = span_warning("You missed your attack, weapon swinging wide!"))
 		playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)

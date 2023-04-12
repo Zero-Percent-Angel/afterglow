@@ -78,7 +78,7 @@ Mayor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/phasic_scanning)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_capacitor)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ultra_micro_laser)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	//ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 /datum/outfit/job/den/f13mayor
@@ -239,9 +239,9 @@ Mayor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/phasic_scanning)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_capacitor)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ultra_micro_laser)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	//ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_SELF_AWARE, src)
+	//ADD_TRAIT(H, TRAIT_SELF_AWARE, src)
 
 
 /*--------------------------------------------------------------*/
@@ -622,7 +622,7 @@ Mayor
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	//ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 /datum/outfit/loadout/engineer
@@ -713,9 +713,9 @@ Mayor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/phasic_scanning)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_capacitor)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ultra_micro_laser)
-	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
+	//ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
+	//ADD_TRAIT(H, TRAIT_SURGERY_HIGH, src)
 
 /datum/outfit/loadout/rescueranger
 	name = "Search and Rescue"
@@ -1266,7 +1266,7 @@ Mayor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	//ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
@@ -1370,7 +1370,7 @@ Mayor
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/armyhelmetheavy)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
-	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	//ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/lever_action)
