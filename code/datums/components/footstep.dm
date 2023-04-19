@@ -117,6 +117,7 @@
 	var/list/L = GLOB.barefootstep
 	var/turf_footstep = T.barefootstep
 	var/special = FALSE
+	var/sneak_modifier = 1 //disabled for now max(0, (100 - (H.skill_value(SKILL_SNEAK) * 1.5)) / 100)
 	if(H.physiology.footstep_type)
 		switch(H.physiology.footstep_type)
 			if(FOOTSTEP_MOB_CLAW)
@@ -132,10 +133,10 @@
 				turf_footstep = T.footstep
 				L = GLOB.footstep
 			if(FOOTSTEP_MOB_SLIME)
-				playsound(T, 'sound/effects/footstep/slime1.ogg', 50 * volume, ignore_walls = TRUE)
+				playsound(T, 'sound/effects/footstep/slime1.ogg', 50 * volume * sneak_modifier, ignore_walls = TRUE)
 				return
 			if(FOOTSTEP_MOB_CRAWL)
-				playsound(T, 'sound/effects/footstep/crawl1.ogg', 50 * volume)
+				playsound(T, 'sound/effects/footstep/crawl1.ogg', 50 * volume * sneak_modifier)
 				return
 		special = TRUE
 	else
@@ -149,10 +150,10 @@
 			return
 
 	if(!special && H.dna.species.special_step_sounds)
-		playsound(T, pick(H.dna.species.special_step_sounds), 50, TRUE,ignore_walls = TRUE)
+		playsound(T, pick(H.dna.species.special_step_sounds), 50 * sneak_modifier, TRUE,ignore_walls = TRUE)
 	else
 		playsound(T, pick(L[turf_footstep][1]),
-			L[turf_footstep][2] * volume,
+			L[turf_footstep][2] * volume * sneak_modifier,
 			TRUE,
 			L[turf_footstep][3] + e_range,
 			ignore_walls = TRUE)

@@ -1024,7 +1024,7 @@
 	name = "Wasteland Survival Guide"
 	desc = "This indispensable guidebook contains everything that a survivor in the wasteland would need to know."
 	oneuse = TRUE
-	granted_trait = TRAIT_HARD_YARDS
+	granted_trait = TRAIT_SOFT_YARDS
 	traitname = "trekking"
 	remarks = list("Tribes and gangs often hide the best loot in the back room.", "Radiation is best avoided entirely, but it helps to carry spare rad-x.", "Whether ancient or recent, landmines are still a threat, and readers should look out for them.", "Injuries and open bleeding make it harder to travel, always carry spare medical supplies.", "Most animals are simple-minded, and can be led into easy lines of fire.")
 

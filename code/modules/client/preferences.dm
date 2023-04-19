@@ -269,13 +269,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	var/hide_ckey = FALSE //pref for hiding if your ckey shows round-end or not
 
-	var/special_s = 5
-	var/special_p = 5
-	var/special_e = 5
-	var/special_c = 5
-	var/special_i = 5
-	var/special_a = 5
-	var/special_l = 5
+	var/special_s = 1
+	var/special_p = 1
+	var/special_e = 1
+	var/special_c = 1
+	var/special_i = 1
+	var/special_a = 1
+	var/special_l = 1
 
 	//Combat
 	var/skill_guns_base = 30
