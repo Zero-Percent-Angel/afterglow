@@ -663,7 +663,7 @@
 		to_chat(user, span_notice("You ready your slapping hand."))
 	else
 		to_chat(user, span_warning("You're incapable of slapping in your current state."))
-
+/*
 /datum/emote/living/audible/blorble
 	key = "blorble"
 	key_third_person = "blorbles"
@@ -689,7 +689,7 @@
 		var/mob/living/carbon/C = user
 		if(isjellyperson(C))
 			pick(playsound(C, 'sound/effects/meatslap.ogg', 50, 1),playsound(C, 'sound/effects/gib_step.ogg', 50, 1))
-
+*/
 /datum/emote/living/surrender
 	key = "surrender"
 	key_third_person = "surrenders"
@@ -714,6 +714,7 @@
 		//then maybe just CI them down with your uzi?
 
 	//This is a good starting point for adding a simple emote with a sound, consider using this in the future for other sounds.
+/*
 /datum/emote/cackle
 	key = "cackle" // What the *emote will be
 	key_third_person = "cackles worryingly" // What someone else will see.
@@ -1079,7 +1080,7 @@
 	key = "warn"
 	message = "blares an alarm!"
 	sound = 'sound/machines/warning-buzzer.ogg'
-
+*/
 #define EMOTE_SPECIAL_STR "Strength"
 #define EMOTE_SPECIAL_PER "Perception"
 #define EMOTE_SPECIAL_END "Endurance"
