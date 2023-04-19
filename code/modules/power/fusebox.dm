@@ -15,6 +15,7 @@
 
 /obj/machinery/power/apc/fusebox/ui_interact()
 	//do nothing it's a fuse box....
+	update()
 
 //Icon
 /obj/machinery/power/apc/fusebox/update_icon()
@@ -70,6 +71,7 @@
 	playsound(src, 'sound/machines/click.ogg', 50, 1)
 	operating = !operating
 	to_chat(user, span_notice("You turn the fusebox [operating ? "on" : "off"]."))
+	update()
 
 
 /obj/machinery/power/apc/fusebox/Initialize(mapload, ndir, building = FALSE)
