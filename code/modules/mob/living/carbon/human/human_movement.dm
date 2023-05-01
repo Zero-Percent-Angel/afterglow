@@ -107,7 +107,7 @@
 /mob/living/carbon/human/handle_movement_recoil()
 	deltimer(recoil_reduction_timer)
 
-	var/base_recoil = 1
+	var/base_recoil = max(1, (120 - skill_value(SKILL_GUNS))/40)
 
 	var/mob/living/carbon/human/H = src
 	var/suit_stiffness = 0
