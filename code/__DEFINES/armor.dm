@@ -912,7 +912,7 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
  * Global multiplier for armor slowdown
  * Change this, changes them all
 */
-#define ARMOR_SLOWDOWN_GLOBAL_MULT 0.8
+#define ARMOR_SLOWDOWN_GLOBAL_MULT 0.9
 
 /*
  * No slowdown

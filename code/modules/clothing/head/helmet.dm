@@ -460,3 +460,4 @@
 	icon_state = "armyhelmetheavy"
 	item_state = "armyhelmetheavy"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T3)
+	custom_price = PRICE_ABOVE_EXPENSIVE
