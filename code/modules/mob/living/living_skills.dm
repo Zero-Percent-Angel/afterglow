@@ -17,6 +17,8 @@
 	var/skill_outdoorsman = 100
 	var/sneaking = FALSE
 
+	var/highest_gun_or_energy_cache = 0
+
 // -20 for an easy roll
 // -10 for difficulty on a 'normal' roll
 // 0 for a challenging roll
@@ -37,6 +39,11 @@
 
 /mob/proc/skill_check(check, threshold = REGULAR_CHECK)
 	return (skill_value(check) >= threshold)
+
+/mob/proc/highest_skill_value(check1, check2)
+	var/skill_1_val = skill_value(check1)
+	var/skill_2_val = skill_value(check2)
+	return skill_1_val > skill_2_val ? skill_1_val : skill_2_val
 
 /mob/proc/skill_value(check)
 	if (SKILL_GUNS == check)
@@ -108,6 +115,7 @@
 /mob/proc/invalidate_skill_caches()
 	cached_knowable_recipies = list()
 	cached_unknowable_recipies = list()
+	highest_gun_or_energy_cache = 0
 
 
 /mob/proc/get_skill_all_values()

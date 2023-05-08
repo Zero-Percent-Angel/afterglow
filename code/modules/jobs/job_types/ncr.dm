@@ -870,6 +870,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Construction Specialist"
 	belt = /obj/item/storage/belt/army/assault/ncr/engineer
 	glasses = /obj/item/clothing/glasses/welding
+	suit = /obj/item/clothing/suit/armor/ncrarmor/reinforced/engineer
+	head = /obj/item/clothing/head/hardhat/ncr
+	gloves = /obj/item/clothing/gloves/color/yellow
 	suit_store = /obj/item/gun/ballistic/automatic/service/r82
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
@@ -884,6 +887,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Minelayer"
 	belt = /obj/item/storage/belt/army/assault/ncr/engineer
 	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
+	suit = /obj/item/clothing/suit/armor/ncrarmor/reinforced/engineer
+	head = /obj/item/clothing/head/hardhat/ncr
+	gloves = /obj/item/clothing/gloves/color/yellow
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m10mm/adv/ext = 2,
 		/obj/item/book/granter/crafting_recipe/blueprint/trapper = 1,
@@ -895,6 +901,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Combat Sapper"
 	belt = /obj/item/storage/belt/army/assault/ncr
 	glasses	= /obj/item/clothing/glasses/sunglasses
+	suit = /obj/item/clothing/suit/armor/ncrarmor/reinforced/engineer
+	head = /obj/item/clothing/head/hardhat/ncr
+	gloves = /obj/item/clothing/gloves/color/yellow
 	suit_store =  /obj/item/gun/ballistic/automatic/service/r82
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
@@ -904,6 +913,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/loadout/combatengineerrocketeer
 	name = "Rocket Engineer"
 	suit_store = /obj/item/gun/ballistic/rocketlauncher
+	suit = /obj/item/clothing/suit/armor/ncrarmor/reinforced/engineer
+	head = /obj/item/clothing/head/hardhat/ncr
+	gloves = /obj/item/clothing/gloves/color/yellow
 	backpack_contents = list(
 		/obj/item/ammo_casing/caseless/rocket = 4,
 		/obj/item/ammo_casing/caseless/rocket/big = 1,
@@ -995,6 +1007,20 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/firstaid/regular = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
 		/obj/item/stack/crafting/armor_plate = 4,
+		)
+
+
+/datum/outfit/loadout/combatmedic
+	name = "Combat Medic"
+	suit = /obj/item/clothing/suit/armor/ncrarmor/reinforced
+	head = /obj/item/clothing/head/f13/ncr/steelpot_med
+	mask = /obj/item/clothing/mask/surgical
+	backpack_contents = list(
+		/obj/item/clothing/gloves/color/latex/nitrile = 1,
+		/obj/item/clothing/head/f13/ncr/steelpot_med = 1,
+		/obj/item/clothing/accessory/armband/med/ncr = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/storage/survivalkit/medical = 1,
 		)
 
 /datum/outfit/job/ncr/f13combatmedic/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)

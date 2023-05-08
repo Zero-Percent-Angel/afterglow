@@ -51,7 +51,7 @@
 	var/right_click_overridden = FALSE
 	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'
 	dryfire_text = "*power failure*"
-	var/missfire_sound = 'sound/f13weapons/equipsounds/pulsepistolequip.ogg'
+	var/missfire_sound = 'sound/machines/triple_beep.ogg'
 
 	init_firemodes = list(
 		WEAPON_NORMAL
@@ -163,13 +163,13 @@
 
 /obj/item/gun/energy/do_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
 	if(!chambered && can_shoot())
-		if (user.skill_roll(SKILL_ENERGY, -30, 0))
+		if (user.skill_roll(SKILL_ENERGY, DIFFICULTY_EASY, 0))
 			process_chamber()	// If the gun was drained and then recharged, load a new shot.
 		else
 			to_chat(user, span_danger("You fumble your energy gun!"))
 			playsound(user, missfire_sound, 25, 1, -1)
 			return
-	if (user.skill_roll(SKILL_ENERGY, -30, 0))
+	if (user.skill_roll(SKILL_ENERGY, DIFFICULTY_EASY, 0))
 		return ..()
 	else
 		to_chat(user, span_danger("You fumble your energy gun!"))

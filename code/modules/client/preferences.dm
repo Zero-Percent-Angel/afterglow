@@ -408,7 +408,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<center><b>Current Quirks:</b> [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
 			dat += "<center><h2>S.P.E.C.I.A.L</h2>"
 			dat += "<a href='?_src_=prefs;preference=special;task=menu'>Allocate Points</a><br></center>"
-			dat += "<center><h2>Skills</h2>"
+			if (remainingSkillBalance())
+				dat += "<center><h2>Skills</h2> " + span_warning("You have unspent skill points.")
+			else
+				dat += "<center><h2>Skills</h2>"
 			dat += "<a href='?_src_=prefs;preference=skill;task=menu'>Allocate Points</a><br></center>"
 			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
 			dat += "<h2>Identity</h2>"
