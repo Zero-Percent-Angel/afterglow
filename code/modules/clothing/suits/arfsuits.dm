@@ -2928,6 +2928,9 @@
 		return
 
 	if(ispath(salvaged_type))
+		if (!user.skill_check(SKILL_REPAIR, REGULAR_CHECK))
+			to_chat(user, span_notice("You don't have the skill to salvage [src]."))
+			return
 		switch(salvage_step)
 			if(0)
 				// Salvage

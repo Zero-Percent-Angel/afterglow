@@ -98,6 +98,11 @@
 						return
 					if(reagents.total_volume >= reagents.maximum_volume)
 						return
+				if(isliving(L) && (!user.skill_check(SKILL_DOCTOR, EASY_CHECK) || !user.skill_roll(SKILL_FIRST_AID, DIFFICULTY_CHALLENGE)))
+					L.visible_message(span_danger("[user] misses the vein of [L]!"), \
+					span_userdanger("[user] misses the vein of [L]!"))
+					L.take_overall_damage(2)
+					return
 				busy = FALSE
 				if(L.transfer_blood_to(src, drawn_amount))
 					user.visible_message("[user] takes a blood sample from [L].")

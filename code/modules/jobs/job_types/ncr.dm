@@ -372,8 +372,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13drillsergeant
 	title = "NCR Senior Enlisted Advisor"
 	flag = F13DRILLSERGEANT
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "The direct superior to all enlisted, you are to provide training exercises, maintain military discipline, and instill orderliness within the ranks. You may also manage the NCOs. You are the pinnacle of the NCR's enlisted ranks, and are to advise the commissioned officers. You are not a frontline trooper, you are camp support."
 	supervisors = "Lieutenant and Above"
 	selection_color = "#fff5cc"
@@ -802,8 +802,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13combatengineer
 	title = "NCR Combat Engineer"
 	flag = F13COMBATENGINEER
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are a senior enlisted trooper with an engineering skill set. You work closely with your squad, taking orders from the officers. You have the authority to command troopers if there are no non-commissioned officers present."
 	supervisors = "Corporals and Above"
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY)
@@ -881,6 +881,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/stack/sheet/metal/fifty = 1,
 		/obj/item/stack/sheet/glass/fifty = 1,
 		/obj/item/stack/ore/blackpowder/twenty = 1,
+		/obj/item/shovel/trench = 1,
+		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/combatengineertrapper
@@ -895,6 +897,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/book/granter/crafting_recipe/blueprint/trapper = 1,
 		/obj/item/book/granter/trait/explosives = 1,
 		/obj/item/book/granter/trait/explosives_advanced = 1,
+		/obj/item/shovel/trench = 1,
+		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/combatengineerflamethrower
@@ -908,6 +912,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/m2flamethrowertank = 1,
+		/obj/item/shovel/trench = 1,
+		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/combatengineerrocketeer
@@ -920,6 +926,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_casing/caseless/rocket = 4,
 		/obj/item/ammo_casing/caseless/rocket/big = 1,
 		/obj/item/book/granter/trait/explosives = 1,
+		/obj/item/shovel/trench = 1,
+		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 // MILITARY POLICE
@@ -970,8 +978,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13combatmedic
 	title = "NCR Combat Medic"
 	flag = F13COMBATMEDIC
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are a senior enlisted with a medical skill set. You work closely with your squad, taking orders from your officers. You have the authority to command troopers if there are no non-commissioned officers present."
 	supervisors = "Corporals and Above"
 	selection_color = "#fff5cc"
@@ -1009,6 +1017,78 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/stack/crafting/armor_plate = 4,
 		)
 
+
+/datum/job/ncr/specialist
+	title = "NCR Specialist"
+	flag = F13COMBATMEDIC
+	total_positions = 4
+	spawn_positions = 4
+	description = "You are senior enlisted with a special skill set. You work closely with your squad, taking orders from your officers. You have the authority to command troopers if there are no non-commissioned officers present."
+	supervisors = "Corporals and Above"
+	selection_color = "#fff5cc"
+	display_order = JOB_DISPLAY_ORDER_COMBATMEDIC
+	outfit = /datum/outfit/job/ncr/specialist
+	exp_requirements = 60
+
+	loadout_options = list( // ALL: Trench tool, Limited blueprints
+		/datum/outfit/loadout/combatengineerbuilder, // R82, X4 explosive, Extra materials
+		/datum/outfit/loadout/combatengineertrapper, // 10mm SMG, Minelaying, Explosive Crafting
+		/datum/outfit/loadout/combatengineerflamethrower, // Flamer, R82
+		/datum/outfit/loadout/combatengineerrocketeer, // Rocket launcher, Explosive Crafting
+		/datum/outfit/loadout/combatmedic // medic loadout
+		)
+
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/ncr,
+			),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/ncr,
+			),
+		)
+
+/datum/outfit/job/ncr/specialist
+	name = "NCR Specialist"
+	jobtype = /datum/job/ncr/specialist
+	id = /obj/item/card/id/dogtag/ncrtrooper
+	box = /obj/item/storage/survivalkit
+	backpack_contents = list(
+		/obj/item/clothing/accessory/ncr/SPC = 1,
+		/obj/item/ammo_box/magazine/m10mm/adv/simple = 2,
+		/obj/item/gun/ballistic/automatic/m1carbine/compact,
+		/obj/item/storage/bag/money/small/ncrenlisted = 1
+		)
+
+/datum/outfit/job/ncr/specialist/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	. = ..()
+	if(visualsOnly)
+		return
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/servicerifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/scoutcarbine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1garand)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedarmorconversion)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tools/forged/entrenching_tool)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedhelmetconversion)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ninemil)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1911)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingrifle)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingshotgun)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1carbine)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/jet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/turbo)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/psycho)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/medx/chemistry)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak/chemistry)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak5)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/stimpak5/chemistry)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
 
 /datum/outfit/loadout/combatmedic
 	name = "Combat Medic"

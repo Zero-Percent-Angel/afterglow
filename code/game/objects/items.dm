@@ -154,6 +154,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	var/list/grind_results //A reagent list containing the reagents this item produces when ground up in a grinder - this can be an empty list to allow for reagent transferring only
 	var/list/juice_results //A reagent list containing blah blah... but when JUICED in a grinder!
 
+
 /* Our block parry data. Should be set in init, or something if you are using it.
  * This won't be accessed without ITEM_CAN_BLOCK or ITEM_CAN_PARRY so do not set it unless you have to to save memory.
  * If you decide it's a good idea to leave this unset while turning the flags on, you will runtime. Enjoy.
@@ -166,6 +167,10 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	var/list/datum/skill/used_skills
 	var/skill_difficulty = THRESHOLD_UNTRAINED //how difficult it's to use this item in general.
 	var/skill_gain = DEF_SKILL_GAIN //base skill value gain from using this item.
+
+	//fallout skill stuff
+	var/needs_skill_to_operate = FALSE
+	var/skill_used_for_operation = null
 
 	var/canMouseDown = FALSE
 
@@ -920,6 +925,9 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	// Run the start check here so we wouldn't have to call it manually.
 	if(!delay && !tool_start_check(user, amount))
 		return
+
+	if(needs_skill_to_operate)
+		delay *= (200 - user.skill_value(skill_used_for_operation))/100
 
 	delay *= toolspeed
 

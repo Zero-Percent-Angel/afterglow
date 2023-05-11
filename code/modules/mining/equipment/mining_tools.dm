@@ -17,6 +17,8 @@
 	usesound = list('sound/effects/picaxe1.ogg', 'sound/effects/picaxe2.ogg', 'sound/effects/picaxe3.ogg')
 	attack_verb = list("hit", "pierced", "sliced", "attacked")
 	var/digrange = 1
+	needs_skill_to_operate = TRUE
+	skill_used_for_operation = SKILL_OUTDOORSMAN
 
 /obj/item/pickaxe/attack_self(mob/user)
 	if(initial(digrange) > 0)
@@ -101,6 +103,7 @@
 	usesound = 'sound/weapons/drill.ogg'
 	hitsound = 'sound/weapons/drill.ogg'
 	desc = "An electric mining drill for the especially scrawny."
+	needs_skill_to_operate = FALSE
 
 /obj/item/pickaxe/drill/cyborg
 	name = "cyborg mining drill"
@@ -154,6 +157,8 @@
 	custom_materials = list(/datum/material/iron=350)
 	attack_verb = list("bashed", "bludgeoned", "thrashed", "whacked")
 	sharpness = SHARP_EDGED
+	needs_skill_to_operate = TRUE
+	skill_used_for_operation = SKILL_OUTDOORSMAN
 
 /obj/item/shovel/Initialize()
 	. = ..()

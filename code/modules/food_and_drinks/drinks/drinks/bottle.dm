@@ -138,7 +138,7 @@
 	desc = "The most popular flavored soft drink in the United States before the Great War."
 	icon = 'icons/obj/f13vending.dmi'
 	icon_state = "nukacola"
-	list_reagents = list(/datum/reagent/consumable/nuka_cola = 25, /datum/reagent/radium = 5)
+	list_reagents = list(/datum/reagent/consumable/nuka_cola = 30)
 	foodtype = NUKA
 	isGlass = TRUE
 

@@ -133,8 +133,8 @@
 	list("name" = SKILL_SCIENCE, "value" = num2text(skill_science + (special_i * 2)), "description" = "Research effectiveness; determines what nodes you can research as well as how good your experiments will be. Dictates chemistry skill too higher values, more known chemicals; and is used for 'hacking'."),
 	list("name" = SKILL_REPAIR, "value" = num2text(skill_repair + special_i), "description" = "The primary construction and crafting skill, limits what you can do based on the value. Can be used for smithing too."),
 	list("name" = SKILL_SPEECH, "value" = num2text(skill_speech + (special_c * 2)), "description" = "Higher skill, better chance of convincing npcs to do what you want them to."),
-	list("name" = SKILL_BARTER, "value" = num2text(skill_barter + (special_c * 2)), "description" = "Higher skill, better prices from npc traders."),
-	list("name" = SKILL_OUTDOORSMAN, "value" = num2text(skill_outdoorsman + round((special_i + special_e)/2)), "description" = "The primary skill for tribal crafting, can be used for smithing too. higher values will also give you more yeild from plants and butchering."))
+	list("name" = SKILL_BARTER, "value" = num2text(skill_barter + (special_c * 2)), "description" = "Higher skill, better prices from npc traders as well as better quest rewards."),
+	list("name" = SKILL_OUTDOORSMAN, "value" = num2text(skill_outdoorsman + round((special_i + special_e)/2)), "description" = "The primary skill for tribal crafting, can be used for smithing too. higher values will also give you more yeild from plants and butchering as well as faster mining speeds."))
 	return dat
 
 
