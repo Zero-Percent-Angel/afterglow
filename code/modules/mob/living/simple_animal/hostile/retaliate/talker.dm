@@ -79,6 +79,7 @@
 
 
 /mob/living/simple_animal/hostile/retaliate/talker/talk_to(mob/talker)
+	face_atom(talker)
 	if (enemies.Find(WEAKREF(talker)))
 		if(!broken_trust.Find(WEAKREF(talker)) && talker.skill_roll(SKILL_SPEECH))
 			say("Alright.... But shoot me again and there will be trouble.")
