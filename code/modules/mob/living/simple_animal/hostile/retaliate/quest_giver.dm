@@ -139,7 +139,7 @@
 /datum/quest/proc/spawn_quest()
 	var/obj/item/quest/quest_item = new choosen_quest_thing(quest_landmark.loc)
 	quest_item.quest_id = quest_id
-	if(istype(choosen_quest_thing_to_spawn_in, /mob/living/simple_animal))
+	if(ispath(choosen_quest_thing_to_spawn_in, /mob/living/simple_animal))
 		var/mob/living/simple_animal/spawned_mob = new choosen_quest_thing_to_spawn_in(quest_landmark.loc)
 		spawned_mob.transferItemToLoc(quest_item, src, TRUE)
 		message_admins("Quest spawned: [spawned_mob] at [ADMIN_COORDJMP(quest_landmark)]")
