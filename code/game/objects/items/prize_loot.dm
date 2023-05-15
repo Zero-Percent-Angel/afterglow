@@ -13,6 +13,8 @@
 	desc = "Doubles up as a basic lockpicking instrument."
 	uses_left = 1
 	min_uses_left = 1
+	icon = 'icons/fallout/objects/keys.dmi'
+	icon_state = "Hairpin"
 
 /obj/item/lockpick_set/Initialize()
 	. = ..()
