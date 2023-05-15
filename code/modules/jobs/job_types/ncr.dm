@@ -464,7 +464,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	loadout_options = list(
 		/datum/outfit/loadout/repbrahminbaron,
 		/datum/outfit/loadout/repambassador,
-		/datum/outfit/loadout/repexecutive
+		/datum/outfit/loadout/repexecutive,
+		/datum/outfit/loadout/osi
 		)
 
 	matchmaking_allowed = list(
@@ -516,6 +517,17 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	suit = /obj/item/clothing/under/suit_jacket/tan
 	shoes = /obj/item/clothing/shoes/laceup
 	head = /obj/item/clothing/head/helmet/f13/rustedcowboyhat
+	backpack_contents = list(
+		/obj/item/storage/bag/money/small/ncr = 1,
+		/obj/item/storage/box/ration/menu_two = 1
+		)
+
+/datum/outfit/loadout/osi
+	name = "OSI"
+	uniform = /obj/item/clothing/under/misc/poly_shirt
+	suit = /obj/item/clothing/suit/toggle/labcoat/science
+	shoes = /obj/item/clothing/shoes/laceup
+	head = /obj/item/clothing/head/beret/ncr
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/ncr = 1,
 		/obj/item/storage/box/ration/menu_two = 1

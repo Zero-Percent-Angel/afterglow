@@ -236,10 +236,10 @@
 			if (q.quest_id == choosen_quest_id)
 				usr.say("[q.quest_name].")
 				if (q.requires_speech && !usr.skill_check(SKILL_SPEECH, HARD_CHECK) && !usr.skill_roll(SKILL_SPEECH, DIFFICULTY_NORMAL))
-					say("Yea, you don't look up to it, sorry bud.")
+					say("Yup, you don't look up to it, sorry bud.")
 					return
 				var/the_thing = q.spawn_quest()
-				say("Yea, I do.")
+				say("Aye, I do.")
 				say("[the_thing].")
 				say("You'll find [q.prefix][the_thing], [q.quest_description].")
 				active_quests[WEAKREF(usr)] = q
@@ -263,8 +263,9 @@
 				var/datum/quest/the_quest = active_quests[WEAKREF(user)]
 				if (the_quest.quest_id == quest_it.quest_id)
 					var/obj/item/stack/f13Cash/C = new /obj/item/stack/f13Cash/caps
-					var/calc_price = 0
-					calc_price = round((the_quest.reward_amount * ((35 + user.skill_value(SKILL_BARTER))/100)))
+					var/calc_price = intimidated.Find(WEAKREF(user)) ? 10 + the_quest.reward_amount : the_quest.reward_amount
+					calc_price -= failed.Find(WEAKREF(user)) ? 5 : 0
+					calc_price = round((calc_price * ((35 + user.skill_value(SKILL_BARTER))/100)))
 					C.add(calc_price - 1)
 					C.forceMove(user.loc)
 					qdel(item_in_hand)
