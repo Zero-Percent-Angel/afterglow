@@ -11,16 +11,16 @@
 	var/walking = FALSE
 
 /mob/living/simple_animal/hostile/retaliate/talker/quest_giver/Initialize()
-	. = ..()
 	myplace = get_turf(src)
 	my_original_loc = loc
+	..()
 	if (gender == FEMALE)
 		icon_state = "WasterG_Gun"
 	else
 		icon_state = "WasterM_Gun"
 
 /mob/living/simple_animal/hostile/retaliate/talker/quest_giver/handle_automated_movement()
-	if (my_original_loc != loc)
+	if (get_dist(my_original_loc, loc) > 2)
 		if (pulledby)
 			pulledby.stop_pulling()
 			walk_to(src, myplace, 0 , move_to_delay)
@@ -141,8 +141,9 @@
 	quest_item.quest_id = quest_id
 	if(ispath(choosen_quest_thing_to_spawn_in, /mob/living/simple_animal))
 		var/mob/living/simple_animal/spawned_mob = new choosen_quest_thing_to_spawn_in(quest_landmark.loc)
-		spawned_mob.transferItemToLoc(quest_item, src, TRUE)
+		spawned_mob.transferItemToLoc(quest_item, spawned_mob, TRUE)
 		message_admins("Quest spawned: [spawned_mob] at [ADMIN_COORDJMP(quest_landmark)]")
+		message_admins("Item: [ADMIN_VV(quest_item)]")
 		log_game("Quest spawned: [spawned_mob] at [quest_landmark.loc]")
 		return spawned_mob
 	message_admins("Quest spawned: [quest_item] at [ADMIN_COORDJMP(quest_landmark)]")
@@ -250,28 +251,32 @@
 
 /mob/living/simple_animal/hostile/retaliate/talker/quest_giver/proc/evaluate_held_item(mob/interacter)
 	if (istype(interacter, /mob/living/carbon))
-		var/mob/living/carbon/user = interacter
-		var/obj/item_in_hand = user.get_active_held_item()
-		if (item_in_hand == null)
-			say("You ain't holding anything.")
-			return
-		if (istype(item_in_hand, /obj/item/quest))
-			var/obj/item/quest/quest_it = item_in_hand
-			var/datum/quest/the_quest = active_quests[WEAKREF(user)]
-			if (the_quest.quest_id == quest_it.quest_id)
-				var/obj/item/stack/f13Cash/C = new /obj/item/stack/f13Cash/caps
-				var/calc_price = 0
-				calc_price = round((the_quest.reward_amount * ((35 + user.skill_value(SKILL_BARTER))/100)))
-				C.add(calc_price - 1)
-				C.forceMove(user.loc)
-				qdel(item_in_hand)
-				user.put_in_active_hand(C)
-				say("Here are your caps.")
-				completed_quests[the_quest] = WEAKREF(user)
-				active_quests.Remove(WEAKREF(user))
-				cooldown[WEAKREF(user)] = world.time + 3 MINUTES
+		var/distance_between = get_dist(src.loc, interacter.loc)
+		if (distance_between <= 1)
+			var/mob/living/carbon/user = interacter
+			var/obj/item_in_hand = user.get_active_held_item()
+			if (item_in_hand == null)
+				say("You ain't holding anything.")
+				return
+			if (istype(item_in_hand, /obj/item/quest))
+				var/obj/item/quest/quest_it = item_in_hand
+				var/datum/quest/the_quest = active_quests[WEAKREF(user)]
+				if (the_quest.quest_id == quest_it.quest_id)
+					var/obj/item/stack/f13Cash/C = new /obj/item/stack/f13Cash/caps
+					var/calc_price = 0
+					calc_price = round((the_quest.reward_amount * ((35 + user.skill_value(SKILL_BARTER))/100)))
+					C.add(calc_price - 1)
+					C.forceMove(user.loc)
+					qdel(item_in_hand)
+					user.put_in_active_hand(C)
+					say("Here are your caps.")
+					completed_quests[the_quest] = WEAKREF(user)
+					active_quests.Remove(WEAKREF(user))
+					cooldown[WEAKREF(user)] = world.time + 3 MINUTES
+			else
+				say("Clearly that isn't what I want.")
 		else
-			say("Clearly that isn't what I want.")
+			say("Need you to step closer.")
 
 /mob/living/simple_animal/hostile/raider/ranged/quest/death(gibbed)
 	for(var/obj/I in contents)
@@ -292,6 +297,16 @@
 	color = "#008f07"
 	health = 250
 	maxHealth = 250
+
+/mob/living/simple_animal/hostile/deathclaw/quest/death(gibbed)
+	for(var/obj/I in contents)
+		src.dropItemToGround(I)
+	. = ..()
+
+/mob/living/simple_animal/hostile/wolf/alpha/quest/death(gibbed)
+	for(var/obj/I in contents)
+		src.dropItemToGround(I)
+	. = ..()
 
 /mob/living/simple_animal/hostile/raider/quest/Initialize()
 	. = ..()
