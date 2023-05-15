@@ -13,6 +13,9 @@ GLOBAL_LIST_INIT(alldirs_multiz, list(
 GLOBAL_LIST_INIT(alldirs, list(NORTH, SOUTH, EAST, WEST, NORTHEAST, NORTHWEST, SOUTHEAST, SOUTHWEST))
 
 GLOBAL_LIST_EMPTY(landmarks_list)				//list of all landmarks created
+GLOBAL_LIST_EMPTY(quest_people_spawns_list)		//list of all the landmarks where humans to kill can be spawned
+GLOBAL_LIST_EMPTY(quest_animal_spawns_list)		//list of all the landmarks where animals to kill can be spawned
+GLOBAL_LIST_EMPTY(quest_item_spawns_list)		//list of all the landmarks where quest items can spawn
 GLOBAL_LIST_EMPTY(dungeon_marks)	//test
 GLOBAL_LIST_EMPTY(start_landmarks_list)			//list of all spawn points created
 GLOBAL_LIST_EMPTY(department_security_spawns)	//list of all department security spawns
