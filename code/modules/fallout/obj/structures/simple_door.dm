@@ -138,6 +138,16 @@
 		for(var/obj/structure/barricade/wooden/planks/P in loc)
 			P.attackby(I, user, params)
 			return TRUE
+	if(istype(I, /obj/item/lockpick_set))
+		if(padlock)
+			var/obj/item/lockpick_set/pSet = I
+			user.visible_message(span_warning("[user] starts to pick the lock!"), span_notice("You start trying to pick the lock."))
+			if (pSet.use_tool(src, user, 40) && user.skill_roll(SKILL_LOCKPICK, DIFFICULTY_CHALLENGE))
+				user.visible_message(span_warning("[user] unlocks the lock!"), span_notice("You manage to unlock the lock."))
+				padlock.locked = FALSE
+			else
+				user.visible_message(span_warning("[user] fails to unlock the lock!"), span_notice("You fail to unlock the lock."))
+			pSet.use_pick(user)
 	if(istype(I, /obj/item/screwdriver))
 		if(padlock)
 			to_chat(user, span_warning("Remove padlock before door dissasembling."))

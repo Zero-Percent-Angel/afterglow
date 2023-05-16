@@ -65,6 +65,19 @@
 	subcategory = CAT_FORGING
 	falls_back_on_outdoors = TRUE
 
+/datum/crafting_recipe/ore_furnace
+	name = "Ore Furnace"
+	result = /obj/structure/ore_furnace
+	time = 300
+	reqs = list(
+		/obj/item/stack/sheet/mineral/sandstone = 20,
+		/obj/item/stack/sheet/metal = 6,
+		)
+	tools = list(TOOL_CROWBAR)
+	category = CAT_CRAFTING
+	subcategory = CAT_FORGING
+	falls_back_on_outdoors = TRUE
+
 /datum/crafting_recipe/barrelfire
 	name = "Stoke barrel fire"
 	result = /obj/structure/campfire/barrel

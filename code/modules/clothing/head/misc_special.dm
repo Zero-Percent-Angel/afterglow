@@ -28,6 +28,7 @@
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = FIRE_PROOF
 	mutantrace_variation = STYLE_MUZZLE
+	armor = ARMOR_VALUE_LIGHT
 
 /obj/item/clothing/head/welding/attack_self(mob/user)
 	weldingvisortoggle(user)
@@ -328,3 +329,4 @@
 	icon_state = "m1helm"
 	item_state = "helmet"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/rushelmet
+	armor = ARMOR_VALUE_MEDIUM

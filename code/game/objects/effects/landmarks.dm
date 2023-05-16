@@ -567,6 +567,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "NCR Combat Medic"
 	icon_state = "NCR Trooper"
 
+/obj/effect/landmark/start/f13/ncrspecialist
+	name = "NCR Specialist"
+	icon_state = "NCR Trooper"
+
 /obj/effect/landmark/start/f13/ncrtrooper
 	name = "NCR Trooper"
 	icon_state = "NCR Trooper"

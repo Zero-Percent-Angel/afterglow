@@ -18,6 +18,8 @@ Simple datum which is instanced once per type and is used for every object of sa
 	var/strength_modifier = 1
 	///This is a modifier for integrity, and resembles the strength of the material
 	var/integrity_modifier = 1
+	//The material density, dictates the 'weight', we'll have 1 roughly be iron/steel, but this isn't an exact representation
+	var/material_density = 1
 	///This is the amount of value per 1 unit of the material
 	var/value_per_unit = 0
 	///Armor modifiers, multiplies an items normal armor vars by these amounts.

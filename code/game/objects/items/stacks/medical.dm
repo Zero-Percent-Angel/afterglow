@@ -232,7 +232,7 @@
 	is_healing = FALSE
 	/// now we start doing 'healy' things!
 	if(heal_operations & DO_HURT_DAMAGE) // Needle pierce flesh, ow ow ow
-		if(affected_bodypart.receive_damage((hurt_brute / user_skill_first_aid), sharpness = SHARP_NONE, wound_bonus = CANT_WOUND, damage_coverings = FALSE)) // as funny as it is to wound people with a suture, its buggy as fuck and breaks everything
+		if(!user.skill_roll(SKILL_FIRST_AID, DIFFICULTY_EASY) && affected_bodypart.receive_damage((hurt_brute / user_skill_first_aid), sharpness = SHARP_NONE, wound_bonus = CANT_WOUND, damage_coverings = FALSE)) // as funny as it is to wound people with a suture, its buggy as fuck and breaks everything
 			if(!user.skill_roll(SKILL_FIRST_AID, DIFFICULTY_NORMAL))
 				C.emote("scream") // a
 			C.update_damage_overlays()

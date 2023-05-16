@@ -160,6 +160,9 @@
 "bg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/glass,
+/obj/effect/landmark/questing/item{
+	location_description = "in the old hospital."
+	},
 /turf/open/floor/wood_common,
 /area/f13/building/hospital)
 "bk" = (
@@ -182,6 +185,13 @@
 /obj/item/book/manual/wiki/surgery,
 /turf/open/floor/f13/wood,
 /area/f13/building/mall)
+"bt" = (
+/obj/structure/table/glass,
+/obj/effect/landmark/questing/item{
+	location_description = "in the old hospital."
+	},
+/turf/open/floor/wood_common,
+/area/f13/building/hospital)
 "bu" = (
 /obj/structure/simple_door/house{
 	name = "Sparky Appliances"
@@ -567,11 +577,26 @@
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/mall)
+"dV" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/landmark/questing/people{
+	location_description = "hiding in the mall."
+	},
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building/mall)
 "dX" = (
 /obj/structure/table,
 /obj/structure/fluff/railing{
 	color = "#968d87";
 	dir = 4
+	},
+/obj/effect/landmark/questing/item{
+	location_description = "in the mall."
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/mall)
@@ -907,6 +932,13 @@
 	sunlight_state = 1
 	},
 /area/f13/building/hospital)
+"gg" = (
+/obj/structure/table,
+/obj/effect/landmark/questing/item{
+	location_description = "in the old hospital."
+	},
+/turf/open/floor/wood_common,
+/area/f13/building/hospital)
 "gh" = (
 /obj/machinery/light{
 	dir = 4
@@ -1215,6 +1247,16 @@
 /obj/effect/spawner/lootdrop/f13/armor/clothes,
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/z)
+"it" = (
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/landmark/questing/item{
+	location_description = "in the mall."
+	},
+/turf/open/floor/f13/wood,
+/area/f13/building/mall)
 "iu" = (
 /obj/structure/railing{
 	dir = 9
@@ -1747,6 +1789,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building/mall)
+"ly" = (
+/turf/open/floor/plating/f13/outside/roof/wood/old,
+/area/f13/wasteland)
 "lz" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -2246,10 +2291,10 @@
 /area/f13/building/abandoned/g)
 "oT" = (
 /obj/structure/bed/double,
-/obj/item/blanket/blanketalt{
+/obj/item/bedsheet/blanket,
+/obj/item/bedsheet/blanket{
 	pixel_y = 12
 	},
-/obj/item/blanket/blanketalt,
 /turf/open/floor/carpet/red,
 /area/f13/legioncamp)
 "oU" = (
@@ -2729,10 +2774,10 @@
 	pixel_y = 17
 	},
 /obj/structure/bed/double,
-/obj/item/blanket/blanketalt{
+/obj/item/bedsheet/blanket,
+/obj/item/bedsheet/blanket{
 	pixel_y = 12
 	},
-/obj/item/blanket/blanketalt,
 /turf/open/floor/carpet/red,
 /area/f13/legioncamp)
 "rv" = (
@@ -3107,6 +3152,14 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/g)
+"tx" = (
+/obj/structure/rack,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/stack/f13Cash/caps/onezerozero,
+/turf/open/floor/wood_mosaic,
+/area/engine/workshop)
 "tC" = (
 /turf/closed/wall/f13/wood/house/clean,
 /area/f13/followers)
@@ -3598,6 +3651,9 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
+/obj/effect/landmark/questing/item{
+	location_description = "in the mall."
+	},
 /turf/open/floor/f13{
 	icon_state = "greendirtyfull"
 	},
@@ -3939,6 +3995,11 @@
 /obj/structure/window/fulltile/house,
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/g)
+"yK" = (
+/obj/structure/rack,
+/obj/item/stack/f13Cash/caps/onezerozero,
+/turf/open/floor/wood_mosaic,
+/area/engine/workshop)
 "yN" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -4145,6 +4206,14 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/building/hospital)
+"Af" = (
+/obj/structure/table/wood,
+/obj/structure/destructible/tribal_torch/lit,
+/obj/effect/landmark/questing/item{
+	location_description = "in the old hospital."
+	},
+/turf/open/indestructible/ground/outside/roof,
+/area/f13/wasteland)
 "Ag" = (
 /obj/structure/chair/sofa/right{
 	dir = 8
@@ -4314,14 +4383,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/misc/bar,
 /area/f13/building/mall)
-"Bd" = (
-/obj/structure/bed/double,
-/obj/item/blanket/blanketalt,
-/obj/item/blanket/blanketalt{
-	pixel_y = 12
-	},
-/turf/open/floor/carpet/red,
-/area/f13/legioncamp)
 "Be" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood{
@@ -4510,6 +4571,11 @@
 	color = "#e4e4e4"
 	},
 /area/f13/building/mall)
+"Cg" = (
+/obj/structure/bed/wooden,
+/obj/item/bedsheet/blanket/blanketalt,
+/turf/open/floor/wood_mosaic,
+/area/engine/workshop)
 "Ci" = (
 /obj/structure/rack,
 /obj/item/clothing/suit/jacket/letterman_red{
@@ -5139,6 +5205,16 @@
 /obj/item/reagent_containers/glass/beaker,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
+"FO" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/structure/table,
+/obj/effect/landmark/questing/item{
+	location_description = "in the old hospital."
+	},
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/building/hospital)
 "FP" = (
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/building/mall)
@@ -5426,6 +5502,18 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/wood_fancy,
 /area/f13/bar)
+"Hv" = (
+/obj/structure/table/reinforced{
+	color = "#c1b6a5"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/questing/item{
+	location_description = "in the mall."
+	},
+/turf/open/floor/f13{
+	icon_state = "redrustyfull"
+	},
+/area/f13/building/mall)
 "HA" = (
 /obj/machinery/light{
 	dir = 4
@@ -6627,6 +6715,15 @@
 "PO" = (
 /turf/open/floor/plasteel/f13/vault_floor/blue/side,
 /area/f13/building/hospital)
+"PP" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/landmark/questing/animals{
+	location_description = "in a house to the north of the hospital, upstairs."
+	},
+/turf/open/floor/f13/wood,
+/area/f13/ruins)
 "PQ" = (
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
@@ -7399,6 +7496,13 @@
 	},
 /turf/open/floor/carpet/royalblue,
 /area/f13/wasteland)
+"UC" = (
+/obj/structure/table,
+/obj/effect/landmark/questing/item{
+	location_description = "in the old hospital."
+	},
+/turf/open/floor/plasteel/f13/vault_floor/purple,
+/area/f13/building/hospital)
 "UE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/bar,
@@ -7682,6 +7786,13 @@
 /obj/machinery/computer/arcade,
 /turf/open/floor/carpet/arcade,
 /area/f13/building/mall)
+"Wr" = (
+/obj/structure/table,
+/obj/effect/landmark/questing/item{
+	location_description = "in the old hospital."
+	},
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/building/hospital)
 "Ws" = (
 /obj/structure/simple_door/house{
 	name = "New Age Gardening"
@@ -8005,6 +8116,7 @@
 /area/f13/building/mall)
 "Yx" = (
 /obj/structure/bed,
+/obj/item/bedsheet,
 /turf/open/floor/carpet/royalblue,
 /area/f13/bar)
 "Yz" = (
@@ -8100,6 +8212,9 @@
 /obj/item/crafting/small_gear{
 	pixel_x = -5;
 	pixel_y = 7
+	},
+/obj/effect/landmark/questing/item{
+	location_description = "in the mall."
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/building/mall)
@@ -19640,14 +19755,14 @@ Cb
 Cb
 Cb
 Cb
+be
+be
+be
+be
+be
+be
+be
 Cb
-be
-be
-be
-be
-be
-be
-be
 Cb
 Cb
 Cb
@@ -19822,9 +19937,9 @@ nv
 Ll
 Cb
 AR
-Tw
-jw
-jw
+tx
+yK
+yK
 PW
 AR
 jH
@@ -19842,14 +19957,14 @@ Cb
 Cb
 Cb
 Cb
+be
+be
+be
+be
+be
+be
+be
 Cb
-be
-be
-be
-be
-be
-be
-be
 Cb
 Cb
 Cb
@@ -20044,14 +20159,14 @@ Cb
 Cb
 Cb
 Cb
+be
+be
+be
+be
+be
+be
+be
 Cb
-be
-be
-be
-be
-be
-be
-be
 Cb
 Cb
 Cb
@@ -20246,14 +20361,14 @@ Cb
 Cb
 Cb
 Cb
+be
+be
+be
+be
+be
+be
+be
 Cb
-be
-be
-be
-be
-be
-be
-be
 Cb
 Cb
 Cb
@@ -20438,24 +20553,24 @@ jH
 jH
 jH
 Cb
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+be
+be
+be
+be
+be
+be
+be
 Cb
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-be
-be
-be
-be
-be
-be
-be
 Cb
 Cb
 Cb
@@ -20640,24 +20755,24 @@ jH
 jH
 jH
 Cb
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+be
+be
+be
+be
+be
+be
+be
 Cb
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-be
-be
-be
-be
-be
-be
-be
 Cb
 Cb
 Cb
@@ -20842,24 +20957,24 @@ jH
 jH
 jH
 Cb
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+be
+be
+be
+be
+be
+be
+be
 Cb
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-be
-be
-be
-be
-be
-be
-be
 Cb
 Cb
 Cb
@@ -21044,24 +21159,24 @@ jH
 jH
 jH
 Cb
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+be
+be
+be
+be
+be
+be
+be
 Cb
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-be
-be
-be
-be
-be
-be
-be
 Cb
 Cb
 Cb
@@ -21246,24 +21361,24 @@ jH
 jH
 jH
 Cb
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+be
+be
+be
+be
+be
+be
+be
 Cb
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-be
-be
-be
-be
-be
-be
-be
 Cb
 Cb
 Cb
@@ -21441,31 +21556,31 @@ AR
 df
 df
 HA
-df
+Cg
 AR
 jH
 jH
 jH
 jH
 Cb
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+be
+be
+be
+be
+be
+be
+be
 Cb
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-be
-be
-be
-be
-be
-be
-be
 Cb
 Cb
 Cb
@@ -21650,24 +21765,24 @@ jH
 jH
 jH
 Cb
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+be
+be
+be
+be
+be
+be
+be
 Cb
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-be
-be
-be
-be
-be
-be
-be
 Cb
 Cb
 Cb
@@ -21852,24 +21967,24 @@ Cb
 Cb
 Cb
 Cb
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+be
+be
+be
+be
+be
+be
+be
 Cb
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-be
-be
-be
-be
-be
-be
-be
 Cb
 Cb
 Cb
@@ -22054,24 +22169,24 @@ Cb
 Cb
 Cb
 Cb
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+be
+be
+be
+be
+be
+be
+be
 Cb
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-be
-be
-be
-be
-be
-be
-be
 Cb
 Cb
 Cb
@@ -22228,12 +22343,11 @@ Cb
 Cb
 Cb
 Cb
-Cb
-Cb
-Cb
-Cb
-Cb
-Cb
+ly
+ly
+ly
+ly
+ly
 Cb
 Cb
 Cb
@@ -22274,6 +22388,7 @@ be
 be
 be
 be
+Cb
 Cb
 Cb
 Cb
@@ -22430,12 +22545,11 @@ Cb
 Cb
 Cb
 Cb
-Cb
-Cb
-Cb
-Cb
-Cb
-Cb
+ly
+ly
+ly
+ly
+ly
 Cb
 Cb
 Cb
@@ -22469,6 +22583,7 @@ dC
 dC
 dC
 dC
+Cb
 Cb
 Cb
 Cb
@@ -22632,12 +22747,11 @@ Cb
 Cb
 Cb
 Cb
-Cb
-Cb
-Cb
-Cb
-Cb
-Cb
+ly
+ly
+ly
+ly
+ly
 Cb
 Cb
 Cb
@@ -22671,6 +22785,7 @@ dC
 dC
 dC
 dC
+Cb
 Cb
 Cb
 Cb
@@ -22834,11 +22949,11 @@ Cb
 Cb
 Cb
 Cb
-Cb
-Cb
-Cb
-Cb
-Cb
+ly
+ly
+ly
+ly
+ly
 Cb
 Cb
 YC
@@ -23036,11 +23151,11 @@ Cb
 Cb
 Cb
 Cb
-Cb
-Cb
-Cb
-Cb
-Cb
+ly
+ly
+ly
+ly
+ly
 Cb
 Cb
 YC
@@ -23238,11 +23353,11 @@ Cb
 Cb
 Cb
 Cb
-Cb
-Cb
-Cb
-Cb
-Cb
+ly
+ly
+ly
+ly
+ly
 Cb
 Cb
 YC
@@ -23440,11 +23555,11 @@ Cb
 Cb
 Cb
 Cb
-Cb
-Cb
-Cb
-Cb
-Cb
+ly
+ly
+ly
+ly
+ly
 Cb
 Cb
 YC
@@ -23642,11 +23757,11 @@ Cb
 Cb
 Cb
 Cb
-Cb
-Cb
-Cb
-Cb
-Cb
+ly
+ly
+ly
+ly
+ly
 Cb
 Cb
 YC
@@ -23844,11 +23959,11 @@ Cb
 Cb
 Cb
 Cb
-Cb
-Cb
-Cb
-Cb
-Cb
+ly
+ly
+ly
+ly
+ly
 Cb
 Cb
 YC
@@ -24046,11 +24161,11 @@ Cb
 Cb
 Cb
 Cb
-Cb
-Cb
-Cb
-Cb
-Cb
+ly
+ly
+ly
+ly
+ly
 Cb
 Cb
 YC
@@ -28214,7 +28329,7 @@ Cb
 Cb
 es
 LZ
-kl
+PP
 DL
 Yn
 kl
@@ -29245,7 +29360,7 @@ Zl
 Zl
 Zl
 As
-Cw
+bt
 xP
 EM
 Cw
@@ -30045,7 +30160,7 @@ Ri
 Lv
 yB
 Zl
-fJ
+Wr
 zx
 uq
 Zl
@@ -30258,7 +30373,7 @@ ik
 Tm
 Sz
 Kz
-vQ
+gg
 Zl
 Sm
 sh
@@ -30862,7 +30977,7 @@ yB
 Zl
 ZV
 vN
-Yu
+UC
 Yu
 Zl
 Wk
@@ -31259,7 +31374,7 @@ PO
 Fm
 Wk
 yP
-nJ
+FO
 Zl
 NW
 HP
@@ -31653,7 +31768,7 @@ YZ
 YZ
 xr
 iU
-uv
+Af
 iU
 iU
 Te
@@ -35890,7 +36005,7 @@ Cb
 Cb
 YZ
 Xl
-wB
+dV
 sH
 Og
 tK
@@ -36934,7 +37049,7 @@ if
 if
 Im
 hR
-WT
+Hv
 er
 ln
 My
@@ -38339,7 +38454,7 @@ Ru
 zE
 lx
 tN
-ce
+it
 ce
 Jo
 GW
@@ -51603,7 +51718,7 @@ ru
 jv
 DD
 pc
-Bd
+oT
 CM
 pc
 Cb

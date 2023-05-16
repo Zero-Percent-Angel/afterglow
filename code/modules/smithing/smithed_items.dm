@@ -164,7 +164,7 @@
 	name = "wooden rod"
 	desc = "It's a rod, suitable for use of a handle of a tool. Also could serve as a weapon, in a pinch."
 	icon_state = "woodrod"
-	force = 7
+	force = 5
 	resistance_flags = FLAMMABLE
 
 // Using leather strips on a wooden rod to make a sword handle
@@ -230,9 +230,10 @@
 
 /obj/item/smithing/shovelhead/startfinish()
 	finalitem = new /obj/item/shovel/smithed(src)
+	var/datum/material/mat = custom_materials[1]
 	finalitem.force += quality/2
 	if(quality > 0)
-		finalitem.toolspeed = max(0.05,(1-(quality/10)))
+		finalitem.toolspeed = max(0.05,(1-((quality/10)*mat.integrity_modifier)))
 	else
 		finalitem.toolspeed *= max(1, (quality * -1))
 	..()
@@ -244,9 +245,10 @@
 
 /obj/item/smithing/pickaxehead/startfinish()
 	var/obj/item/pickaxe/smithed/finalforreal = new /obj/item/pickaxe/smithed(src)
+	var/datum/material/mat = custom_materials[1]
 	finalforreal.force += quality/2
 	if(quality > 0)
-		finalforreal.toolspeed = max(0.05,(1-(quality/10)))
+		finalforreal.toolspeed = max(0.05,(1-((quality/10))*mat.integrity_modifier))
 	else
 		finalforreal.toolspeed *= max(1, (quality * -1))
 	finalforreal.digrange = 1
@@ -273,9 +275,11 @@
 /obj/item/smithing/prospectingpickhead/startfinish()
 	var/obj/item/mining_scanner/prospector/finalforreal = new /obj/item/mining_scanner/prospector(src)
 	finalforreal.range = 2 + quality
+	var/datum/material/mat = custom_materials[1]
 	if(quality)
-		finalforreal.cooldown = 100/quality
+		finalforreal.cooldown = 100/(quality * mat.strength_modifier)
 	finalforreal.force += quality
+	finalforreal.force *= mat.strength_modifier
 	finalitem = finalforreal
 	..()
 
@@ -322,6 +326,8 @@
 	var/obj/item/smithing/knifeblade/finalforreal = new /obj/item/smithing/knifeblade(src)
 	finalitem = new /obj/item/kitchen/knife(src)
 	finalforreal.force += quality*2
+	var/datum/material/mat = custom_materials[1]
+	finalforreal.force *= mat.strength_modifier
 	finalitem = finalforreal
 	finalitem.icon = 'icons/fallout/objects/crafting/blacksmith.dmi'
 	finalitem.icon_state = "knife_smith"
@@ -429,6 +435,8 @@
 /obj/item/smithing/swordblade/startfinish()
 	finalitem = new /obj/item/melee/smith/sword(src)
 	finalitem.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalitem.force *= mat.strength_modifier
 	..()
 
 /obj/item/smithing/sabreblade
@@ -440,6 +448,8 @@
 /obj/item/smithing/sabreblade/startfinish()
 	finalitem = new /obj/item/melee/smith/sword/sabre(src)
 	finalitem.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalitem.force *= mat.strength_modifier
 	..()
 
 /obj/item/smithing/spathablade
@@ -461,6 +471,8 @@
 /obj/item/smithing/spearhead/startfinish()
 	var/obj/item/melee/smith/twohand/spear/finalforreal = new /obj/item/melee/smith/twohand/spear(src)
 	finalforreal.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalforreal.force *= mat.strength_modifier
 	finalforreal.wielded_icon = "[icon_state]2"
 	finalforreal.throwforce = finalforreal.force/10
 	finalitem = finalforreal
@@ -475,6 +487,8 @@
 /obj/item/smithing/lancehead/startfinish()
 	var/obj/item/melee/smith/twohand/spear/lance/finalforreal = new /obj/item/melee/smith/twohand/spear/lance(src)
 	finalforreal.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalforreal.force *= mat.strength_modifier
 	finalforreal.wielded_icon = "[icon_state]2"
 	finalforreal.throwforce = finalforreal.force/10
 	finalitem = finalforreal
@@ -489,6 +503,9 @@
 /obj/item/smithing/axehead/startfinish()
 	var/obj/item/melee/smith/twohand/axe/finalforreal = new /obj/item/melee/smith/twohand/axe(src)
 	finalforreal.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalforreal.force *= mat.strength_modifier
+	finalforreal.force *= mat.material_density
 	finalforreal.wielded_icon = "[icon_state]2"
 	finalitem = finalforreal
 	..()
@@ -501,6 +518,9 @@
 /obj/item/smithing/warhonedhead/startfinish()
 	var/obj/item/melee/smith/twohand/axe/warhoned/finalforreal = new /obj/item/melee/smith/twohand/axe/warhoned(src)
 	finalforreal.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalforreal.force *= mat.strength_modifier
+	finalforreal.force *= mat.material_density
 	finalforreal.wielded_icon = "[icon_state]2"
 	finalitem = finalforreal
 	..()
@@ -514,6 +534,9 @@
 /obj/item/smithing/scrapblade/startfinish()
 	var/obj/item/melee/smith/twohand/axe/scrapblade/finalforreal = new /obj/item/melee/smith/twohand/axe/scrapblade(src)
 	finalforreal.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalforreal.force *= mat.strength_modifier
+	finalforreal.force *= mat.material_density
 	finalforreal.wielded_icon = "[icon_state]2"
 	finalitem = finalforreal
 	..()
@@ -528,6 +551,8 @@
 /obj/item/smithing/daggerblade/startfinish()
 	finalitem = new /obj/item/melee/smith/dagger(src)
 	finalitem.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalitem.force *= mat.strength_modifier
 	//finalitem.armour_penetration += quality*0.0375
 	..()
 
@@ -541,6 +566,8 @@
 /obj/item/smithing/macheteblade/startfinish()
 	finalitem = new /obj/item/melee/smith/machete(src)
 	finalitem.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalitem.force *= mat.strength_modifier
 	..()
 
 
@@ -553,6 +580,8 @@
 /obj/item/smithing/gladiusblade/startfinish()
 	finalitem = new /obj/item/melee/smith/machete/gladius(src)
 	finalitem.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalitem.force *= mat.strength_modifier
 	..()
 
 
@@ -576,6 +605,9 @@
 /obj/item/smithing/macehead/startfinish()
 	finalitem = new /obj/item/melee/smith/mace(src)
 	finalitem.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalitem.force *= mat.integrity_modifier
+	finalitem.force *= mat.material_density
 	//finalitem.armour_penetration += quality*0.05
 	..()
 
@@ -590,6 +622,8 @@
 /obj/item/smithing/wakiblade/startfinish()
 	finalitem = new /obj/item/melee/smith/wakizashi(src)
 	finalitem.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalitem.force *= mat.strength_modifier
 	..()
 
 
@@ -603,6 +637,8 @@
 	var/obj/item/melee/smith/twohand/katana/finalforreal = new /obj/item/melee/smith/twohand/katana(src)
 	finalforreal.force += quality
 	finalforreal.wielded_icon = "[icon_state]2"
+	var/datum/material/mat = custom_materials[1]
+	finalforreal.force *= mat.strength_modifier
 	finalitem = finalforreal
 	..()
 
@@ -615,6 +651,8 @@
 /obj/item/smithing/javelinhead/startfinish()
 	var/obj/item/melee/smith/javelin/finalforreal = new /obj/item/melee/smith/javelin(src)
 	finalforreal.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalforreal.force *= mat.strength_modifier
 	finalforreal.throwforce = finalforreal.force*1.5
 	finalitem = finalforreal
 	..()
@@ -630,6 +668,8 @@
 /obj/item/smithing/throwingknife/startfinish()
 	var/obj/item/melee/smith/throwingknife/finalforreal = new /obj/item/melee/smith/throwingknife(src)
 	finalforreal.force += quality
+	var/datum/material/mat = custom_materials[1]
+	finalforreal.force *= mat.strength_modifier
 	finalforreal.throwforce = finalforreal.force*1.4
 	finalitem = finalforreal
 	..()

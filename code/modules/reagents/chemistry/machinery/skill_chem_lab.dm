@@ -102,7 +102,7 @@
 		upgraded_chemicals2 = sortList(upgraded_chemicals2, /proc/cmp_reagents_asc)
 	dispensable_reagents = sortList(dispensable_reagents, /proc/cmp_reagents_asc)
 	if (!istype(cartridge))
-		cartridge = new/obj/item/stock_parts/chem_cartridge/empty(loc)
+		cartridge = new/obj/item/stock_parts/chem_cartridge/pristine(loc)
 		cartridge.forceMove(src)
 	update_icon()
 
@@ -356,7 +356,7 @@
 	R.my_atom = src
 	R.add_reagent(chosenchem , 50)
 	var/datum/effect_system/smoke_spread/chem/smoke = new
-	smoke.set_up(R, 0, src, silent = TRUE)
+	smoke.set_up(R, 2, src, silent = TRUE)
 	playsound(src, 'sound/effects/smoke.ogg', 50, 1, -3)
 	smoke.start()
 	qdel(R)

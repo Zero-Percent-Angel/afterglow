@@ -151,7 +151,7 @@
 		"energy" = 40, \
 		"bomb" = 90, \
 		"bio" = 100, \
-		"rad" = 50, \
+		"rad" = 55, \
 		"fire" = 95, \
 		"acid" = 95, \
 		"wound" = 100, \
@@ -912,7 +912,7 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
  * Global multiplier for armor slowdown
  * Change this, changes them all
 */
-#define ARMOR_SLOWDOWN_GLOBAL_MULT 0.8
+#define ARMOR_SLOWDOWN_GLOBAL_MULT 0.9
 
 /*
  * No slowdown

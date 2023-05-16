@@ -14,6 +14,9 @@
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	sheet_type = /obj/item/stack/sheet/lead
 	value_per_unit = 0.0025
+	strength_modifier = 0.4
+	integrity_modifier = 1
+	material_density = 2
 
 ///Breaks extremely easily but is transparent.
 /datum/material/glass
@@ -23,6 +26,7 @@
 	alpha = 150
 	categories = list(MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	integrity_modifier = 0.1
+	material_density = 0.6
 	sheet_type = /obj/item/stack/sheet/glass
 	value_per_unit = 0.0025
 	beauty_modifier = 0.05
@@ -36,6 +40,9 @@
 	categories = list(MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	sheet_type = /obj/item/stack/ore/blackpowder
 	value_per_unit = 0.0050
+	strength_modifier = 0.1
+	integrity_modifier = 0.1
+	material_density = 0.6
 
 
 /*
@@ -52,6 +59,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	sheet_type = /obj/item/stack/sheet/mineral/silver
 	value_per_unit = 0.025
 	beauty_modifier = 0.075
+	strength_modifier = 0.4
+	integrity_modifier = 1
+	material_density = 1.4
 
 ///Slight force decrease. It's gold, it's soft as fuck.
 /datum/material/gold
@@ -64,19 +74,24 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	value_per_unit = 0.0625
 	beauty_modifier = 0.15
 	armor_modifiers = list("melee" = 1.1, "bullet" = 1.1, "laser" = 1.15, "energy" = 1.15, "bomb" = 1, "bio" = 1, "rad" = 1, "fire" = 0.7, "acid" = 1.1)
+	strength_modifier = 0.4
+	integrity_modifier = 1
+	material_density = 1.8
 
 ///Small force increase, for diamond swords
 /datum/material/diamond
 	name = "diamond"
 	desc = "Highly pressurized carbon"
 	color = list(48/255, 272/255, 301/255,0, 0,0,0,0, 0,0,0,0, 0,0,0,1, 0,0,0,0)
-	strength_modifier = 1.1
 	alpha = 132
 	categories = list(MAT_CATEGORY_ORE = TRUE, MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/diamond
 	value_per_unit = 0.25
 	beauty_modifier = 0.3
 	armor_modifiers = list("melee" = 1.3, "bullet" = 1.3, "laser" = 0.6, "energy" = 1, "bomb" = 1.2, "bio" = 1, "rad" = 1, "fire" = 1, "acid" = 1)
+	strength_modifier = 1.2
+	integrity_modifier = 1.5
+	material_density = 0.4
 
 ///Is slightly radioactive
 /datum/material/uranium
@@ -88,6 +103,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	value_per_unit = 0.05
 	beauty_modifier = 0.3 //It shines so beautiful
 	armor_modifiers = list("melee" = 1.5, "bullet" = 1.4, "laser" = 0.5, "energy" = 0.5, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 1, "acid" = 1)
+	strength_modifier = 0.5
+	integrity_modifier = 1
+	material_density = 2.2
 
 /datum/material/uranium/on_applied(atom/source, amount, material_flags)
 	. = ..()
@@ -108,6 +126,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	value_per_unit = 0.1
 	beauty_modifier = 0.15
 	armor_modifiers = list("melee" = 1.4, "bullet" = 0.7, "laser" = 0, "energy" = 1.2, "bomb" = 0, "bio" = 1.2, "rad" = 1, "fire" = 0, "acid" = 0.5)
+	strength_modifier = 0.4
+	integrity_modifier = 0.4
+	material_density = 0.4
 
 /datum/material/plasma/on_applied(atom/source, amount, material_flags)
 	. = ..()
@@ -130,6 +151,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.5
 	sheet_type = /obj/item/stack/sheet/mineral/abductor
 	value_per_unit = 0.15
+	strength_modifier = 1.5
+	integrity_modifier = 1.5
+	material_density = 1.2
 
 ///Can cause bluespace effects on use. (Teleportation) (Not yet implemented)
 /datum/material/bluespace
@@ -142,6 +166,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.5
 	sheet_type = /obj/item/stack/sheet/bluespace_crystal
 	value_per_unit = 0.15
+	strength_modifier = 0.2
+	integrity_modifier = 0.2
+	material_density = 1.2
 
 ///Mediocre force increase
 /datum/material/titanium
@@ -154,6 +181,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	value_per_unit = 0.0625
 	beauty_modifier = 0.05
 	armor_modifiers = list("melee" = 1.35, "bullet" = 1.3, "laser" = 1.3, "energy" = 1.25, "bomb" = 1.25, "bio" = 1, "rad" = 1, "fire" = 0.7, "acid" = 1)
+	strength_modifier = 1.2
+	integrity_modifier = 1.2
+	material_density = 0.9
 
 /datum/material/runite
 	name = "runite"
@@ -164,6 +194,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	sheet_type = /obj/item/stack/sheet/mineral/runite
 	beauty_modifier = 0.5
 	armor_modifiers = list("melee" = 1.35, "bullet" = 2, "laser" = 0.5, "energy" = 1.25, "bomb" = 1.25, "bio" = 1, "rad" = 1, "fire" = 1.4, "acid" = 1) //rune is weak against magic lasers but strong against bullets. This is the combat triangle.
+	strength_modifier = 1.2
+	integrity_modifier = 1.2
+	material_density = 0.9
 
 ///Force decrease
 /datum/material/plastic
@@ -176,6 +209,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	value_per_unit = 0.0125
 	beauty_modifier = -0.01
 	armor_modifiers = list("melee" = 1.5, "bullet" = 1.1, "laser" = 0.3, "energy" = 0.5, "bomb" = 1, "bio" = 1, "rad" = 1, "fire" = 1.1, "acid" = 1)
+	strength_modifier = 0.5
+	integrity_modifier = 0.8
+	material_density = 0.4
 
 ///Force decrease and mushy sound effect. (Not yet implemented)
 /datum/material/biomass
@@ -184,6 +220,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	color = "#735b4d"
 	strength_modifier = 0.8
 	value_per_unit = 0.025
+	strength_modifier = 0.2
+	integrity_modifier = 0.2
+	material_density = 0.4
 
 
 /datum/material/wood
@@ -196,6 +235,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	value_per_unit = 0.06
 	beauty_modifier = 0.1
 	armor_modifiers = list("melee" = 1.1, "bullet" = 1.1, "laser" = 0.4, "energy" = 0.4, "bomb" = 1, "bio" = 0.2, "rad" = 0, "fire" = 0, "acid" = 0.3)
+	strength_modifier = 0.6
+	integrity_modifier = 0.6
+	material_density = 0.4
 
 /datum/material/wood/on_applied_obj(obj/source, amount, material_flags)
 	. = ..()
@@ -220,6 +262,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	value_per_unit = 0.25
 	beauty_modifier = 0.4
 	armor_modifiers = list("melee" = 1.5, "bullet" = 1.5, "laser" = 1.3, "energy" = 1.3, "bomb" = 1, "bio" = 1, "rad" = 1, "fire" = 2.5, "acid" = 1)
+	strength_modifier = 1.5
+	integrity_modifier = 1.5
+	material_density = 1.2
 
 ///RPG Magic. (Admin only)
 /datum/material/mythril
@@ -231,6 +276,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	value_per_unit = 0.75
 	beauty_modifier = 0.5
 	armor_modifiers = list("melee" = 2, "bullet" = 2, "laser" = 2, "energy" = 2, "bomb" = 2, "bio" = 2, "rad" = 2, "fire" = 2, "acid" = 2)
+	strength_modifier = 1.5
+	integrity_modifier = 1.5
+	material_density = 1.2
 
 /datum/material/mythril/on_applied_obj(atom/source, amount, material_flags)
 	. = ..()
@@ -256,6 +304,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.25
 	turf_sound_override = FOOTSTEP_SAND
 	texture_layer_icon_state = "sand"
+	strength_modifier = 0.1
+	integrity_modifier = 0.2
+	material_density = 0.6
 
 //And now for our lavaland dwelling friends, sand, but in stone form! Truly revolutionary.
 /datum/material/sandstone
@@ -269,6 +320,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.3
 	turf_sound_override = FOOTSTEP_WOOD
 	texture_layer_icon_state = "brick"
+	strength_modifier = 0.4
+	integrity_modifier = 0.8
+	material_density = 0.6
 
 /datum/material/snow
 	name = "snow"
@@ -281,6 +335,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.3
 	turf_sound_override = FOOTSTEP_SAND
 	texture_layer_icon_state = "sand"
+	strength_modifier = 0.2
+	integrity_modifier = 0.2
+	material_density = 0.2
 
 /datum/material/runedmetal
 	name = "runed metal"
@@ -327,6 +384,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.3
 	turf_sound_override = FOOTSTEP_SAND
 	texture_layer_icon_state = "paper"
+	strength_modifier = 0.2
+	integrity_modifier = 0.2
+	material_density = 0.2
 
 /datum/material/paper/on_applied_obj(obj/source, amount, material_flags)
 	. = ..()
@@ -350,6 +410,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	value_per_unit = 0.003
 	armor_modifiers = list("melee" = 0.25, "bullet" = 0.25, "laser" = 0.25, "energy" = 0.25, "bomb" = 0.25, "bio" = 0.25, "rad" = 1.5, "fire" = 0, "acid" = 1.5)
 	beauty_modifier = -0.1
+	strength_modifier = 0.2
+	integrity_modifier = 0.2
+	material_density = 0.2
 
 /datum/material/cardboard/on_applied_obj(obj/source, amount, material_flags)
 	. = ..()
@@ -372,6 +435,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	categories = list(MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	armor_modifiers = list("melee" = 1.2, "bullet" = 0.75, "laser" = 0.75, "energy" = 1.2, "bomb" = 1, "bio" = 1, "rad" = 1.5, "fire" = 1.5, "acid" = 1.5)
 	beauty_modifier = -0.2
+	strength_modifier = 0.8
+	integrity_modifier = 0.8
+	material_density = 0.4
 
 /datum/material/bamboo
 	name = "bamboo"
@@ -384,21 +450,33 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.2
 	turf_sound_override = FOOTSTEP_WOOD
 	texture_layer_icon_state = "bamboo"
+	strength_modifier = 0.6
+	integrity_modifier = 0.6
+	material_density = 0.4
 
 /datum/material/leather
 	name = "leather"
 	desc = "The by-product of mob grinding."
 	sheet_type = /obj/item/stack/sheet/leather
+	strength_modifier = 0.6
+	integrity_modifier = 0.6
+	material_density = 0.4
 
 /datum/material/sinew
 	name = "sinew"
 	desc = "Long stringy filaments, presumably from some kind of animal."
 	sheet_type = /obj/item/stack/sheet/sinew
+	strength_modifier = 0.6
+	integrity_modifier = 0.6
+	material_density = 0.4
 
 /datum/material/chitin
 	name = "chitin"
 	desc = "Thick insect chitin, tough but light."
 	sheet_type = /obj/item/stack/sheet/animalhide/chitin
+	strength_modifier = 0.8
+	integrity_modifier = 1
+	material_density = 0.4
 
 /datum/material/f13cash
 	name = "caps"
@@ -410,6 +488,9 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	name = "deathclaw leather"
 	desc = "A glorious hunting trophy."
 	sheet_type = /obj/item/stack/sheet/animalhide/deathclaw
+	strength_modifier = 1
+	integrity_modifier = 1.1
+	material_density = 0.6
 
 /* /datum/material/prewar
 	name = "prewar alloy"

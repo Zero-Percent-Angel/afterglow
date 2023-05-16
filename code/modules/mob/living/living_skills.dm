@@ -17,6 +17,8 @@
 	var/skill_outdoorsman = 100
 	var/sneaking = FALSE
 
+	var/highest_gun_or_energy_cache = 0
+
 // -20 for an easy roll
 // -10 for difficulty on a 'normal' roll
 // 0 for a challenging roll
@@ -37,6 +39,11 @@
 
 /mob/proc/skill_check(check, threshold = REGULAR_CHECK)
 	return (skill_value(check) >= threshold)
+
+/mob/proc/highest_skill_value(check1, check2)
+	var/skill_1_val = skill_value(check1)
+	var/skill_2_val = skill_value(check2)
+	return skill_1_val > skill_2_val ? skill_1_val : skill_2_val
 
 /mob/proc/skill_value(check)
 	if (SKILL_GUNS == check)
@@ -108,6 +115,7 @@
 /mob/proc/invalidate_skill_caches()
 	cached_knowable_recipies = list()
 	cached_unknowable_recipies = list()
+	highest_gun_or_energy_cache = 0
 
 
 /mob/proc/get_skill_all_values()
@@ -125,8 +133,8 @@
 	list("name" = SKILL_SCIENCE, "value" = num2text(skill_science + (special_i * 2)), "description" = "Research effectiveness; determines what nodes you can research as well as how good your experiments will be. Dictates chemistry skill too higher values, more known chemicals; and is used for 'hacking'."),
 	list("name" = SKILL_REPAIR, "value" = num2text(skill_repair + special_i), "description" = "The primary construction and crafting skill, limits what you can do based on the value. Can be used for smithing too."),
 	list("name" = SKILL_SPEECH, "value" = num2text(skill_speech + (special_c * 2)), "description" = "Higher skill, better chance of convincing npcs to do what you want them to."),
-	list("name" = SKILL_BARTER, "value" = num2text(skill_barter + (special_c * 2)), "description" = "Higher skill, better prices from npc traders."),
-	list("name" = SKILL_OUTDOORSMAN, "value" = num2text(skill_outdoorsman + round((special_i + special_e)/2)), "description" = "The primary skill for tribal crafting, can be used for smithing too. higher values will also give you more yeild from plants and butchering."))
+	list("name" = SKILL_BARTER, "value" = num2text(skill_barter + (special_c * 2)), "description" = "Higher skill, better prices from npc traders as well as better quest rewards."),
+	list("name" = SKILL_OUTDOORSMAN, "value" = num2text(skill_outdoorsman + round((special_i + special_e)/2)), "description" = "The primary skill for tribal crafting, can be used for smithing too. higher values will also give you more yeild from plants and butchering as well as faster mining speeds."))
 	return dat
 
 

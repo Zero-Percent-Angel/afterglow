@@ -134,7 +134,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 
 /obj/machinery/computer/card/ui_interact(mob/user)
 	if(LAZYLEN(job_req) && !(user.mind?.assigned_role in job_req))
-		to_chat(user, span_warning("You have no idea how to use it..."))
+		to_chat(user, span_warning("You lack the required clearance to use this..."))
 		return
 	. = ..()
 	var/list/dat = list()

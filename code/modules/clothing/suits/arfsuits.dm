@@ -572,6 +572,7 @@
 	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1)
+	custom_price = 50
 
 /obj/item/clothing/suit/armor/light/tribal/wastetribe
 	name = "wasteland tribe armor"
@@ -688,6 +689,7 @@
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
+	custom_price = 50
 
 /obj/item/clothing/suit/hooded/cloak/Initialize()
 	/// make sure the parents work first for this, child lists take priority
@@ -723,6 +725,7 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1)
+	custom_price = PRICE_EXPENSIVE
 
 /obj/item/clothing/head/hooded/cloakhood/goliath/tattered
 	name = "tattered red cloak hood"
@@ -791,6 +794,7 @@
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
 	body_parts_hidden = 0
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/head/hooded/cloakhood/shunter
 	name = "quickclaw hood"
@@ -801,6 +805,7 @@
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/suit/hooded/cloak/deathclaw
 	name = "deathclaw cloak"
@@ -812,6 +817,7 @@
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
 	body_parts_hidden = 0
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/head/hooded/cloakhood/deathclaw
 	name = "deathclaw cloak hood"
@@ -821,6 +827,7 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/suit/hooded/cloak/razorclaw
 	name = "razorclaw cloak"
@@ -834,6 +841,7 @@
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
 	body_parts_hidden = 0
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/head/hooded/cloakhood/razorclaw
 	name = "razorclaw helm"
@@ -844,6 +852,7 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/suit/hooded/cloak/desert
 	name = "desert cloak"
@@ -883,6 +892,7 @@
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
 	body_parts_hidden = 0
+	custom_price = PRICE_ALMOST_EXPENSIVE
 
 /obj/item/clothing/head/hooded/cloakhood/outcast
 	name = "patched leather hood"
@@ -895,6 +905,7 @@
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
+	custom_price = PRICE_ALMOST_EXPENSIVE
 
 /obj/item/clothing/suit/hooded/outcast/tribal
 	name = "patched heavy leather cloak"
@@ -910,6 +921,7 @@
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
 	body_parts_hidden = 0
+	custom_price = PRICE_ALMOST_EXPENSIVE
 
 /obj/item/clothing/head/hooded/cloakhood/tribaloutcast
 	name = "patched leather hood"
@@ -922,6 +934,7 @@
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
+	custom_price = PRICE_ALMOST_EXPENSIVE
 
 //////////////////
 // LIGHT RAIDER //
@@ -995,6 +1008,7 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2)
 	// Nothing extra fancy for their storage, but they can carry an extra 2 normal-sized guns in their pockets
 	body_parts_hidden = CHEST|ARMS
+	custom_price = PRICE_ALMOST_EXPENSIVE
 
 /obj/item/clothing/suit/armor/harpercoat
 	name = "outlaw coat"
@@ -1038,6 +1052,7 @@
 	item_state = "duster"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
 	body_parts_hidden = ARMS
+	custom_price = PRICE_EXPENSIVE
 
 /* 	icon = 'icons/fallout/clothing/armored_light.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
@@ -1053,6 +1068,7 @@
 	item_state = "duster_lawman"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
 	body_parts_hidden = ARMS
+	custom_price = PRICE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/light/duster/town
 	name = "town trenchcoat"
@@ -1082,6 +1098,7 @@
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 1.1
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
+	custom_price = PRICE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/light/duster/battlecoat //Maxson's battlecoat from Fallout 4
 	name = "battlecoat"
@@ -1284,6 +1301,7 @@
 	icon_state = "leather_armor_mk2"
 	item_state = "leather_armor_mk2"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_FIRE_T2, ARMOR_MODIFIER_UP_DT_T3)
+	custom_price = PRICE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/light/leather/leathersuit
 	name = "leather suit"
@@ -1310,7 +1328,7 @@
 	item_state = "leather_jacket_thick"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
 	body_parts_hidden = ARMS | CHEST | LEGS
-	custom_price = PRICE_ABOVE_EXPENSIVE
+	custom_price = PRICE_EXPENSIVE
 
 // Recipe : Thick Leather Jacket + Deathclaw Skin
 /obj/item/clothing/suit/armor/light/leather/leathercoat
@@ -1434,6 +1452,7 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 
 /////////////
@@ -1475,6 +1494,7 @@
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
 	stiffness = MEDIUM_STIFFNESS
+	custom_price = PRICE_ALMOST_EXPENSIVE
 
 ////////////////////////////
 /// MEDIUM TRIBAL ARMOR ////
@@ -1507,6 +1527,7 @@
 	siemens_coefficient = 0.5
 	permeability_coefficient = 0.5
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T2) // tribal enviro armor
+	custom_price = PRICE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/medium/tribal/rustwalkers
 	name = "Rustwalkers armor"
@@ -1543,6 +1564,7 @@
 	item_state = "bone_dancer_armor"
 	blood_overlay_type = "armor"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T2)
+	custom_price = PRICE_EXPENSIVE
 
 /*/obj/item/clothing/suit/armor/medium/tribal/westernwayfarer
 	name = "Western Wayfarer armor"
@@ -1560,6 +1582,7 @@
 	icon_state = "tribal_heavy"
 	item_state = "tribal_heavy"
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T3)
+	custom_price = PRICE_EXPENSIVE
 
 ////////////////////////////////
 //// MEDIUM BALLISTIC VESTS ////
@@ -1578,6 +1601,7 @@
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 	body_parts_hidden = CHEST
+	custom_price = PRICE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/medium/vest/flak
 	name = "ancient flak vest"
@@ -1638,7 +1662,7 @@
 	item_state = "vest_flak"
 
 /obj/item/clothing/suit/armor/medium/vest/oasis
-	name = "NPD vest"
+	name = "RPD vest"
 	desc = "a lightweight ballistic vest that combines protection and comfort. This one has pockets sewn into the front and a badge pinned on it."
 	icon_state = "blueshift"
 	item_state = "blueshift"
@@ -1751,6 +1775,7 @@
 	icon_state = "armor_enclave_peacekeeper"
 	item_state = "armor_enclave_peacekeeper"
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T2, ARMOR_MODIFIER_UP_DT_T3)
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 
 /////////////////////////////
@@ -1768,6 +1793,7 @@
 	item_state = "steel_bib"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T2)
+	custom_price = PRICE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/medium/vest/breastplate/khan
 	name = "Leather battle coat" //NO PIT THIS GAME UNIVERSE AND THAT GAME UNIVERSE HAVE NOTHING TO DO WITH EACH OTHER!!! (Sorry but I'm not keeping the original name of a petfaction) - Blue
@@ -1811,6 +1837,7 @@
 	icon_state = "steel_bib_rein"
 	item_state = "steel_bib_rein"
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/medium/vest/breastplate/scrap
 	name = "scrap metal chestplate"
@@ -1869,6 +1896,7 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster/armored
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1)
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/medium/duster/navyblue
 	name = "head of security's jacket"
@@ -1994,6 +2022,7 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T2)
+	custom_price = PRICE_REALLY_EXPENSIVE
 
 /obj/item/clothing/suit/armor/medium/combat/laserproof
 	name = "ablative combat armor"
@@ -2294,6 +2323,7 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster/armored
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/medium/raider/combatduster/patrolduster
 	name = "Patrol Duster"
@@ -2308,6 +2338,7 @@
 	item_state = "raider_combat"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/medium/raider/raidermetal
 	name = "metal raider armor"
@@ -2317,6 +2348,7 @@
 	resistance_flags = FIRE_PROOF
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/medium/raider/wastewar
 	name = "wasteland warrior armor"
@@ -2334,6 +2366,7 @@
 	item_state = "blastmaster"
 	flash_protect = 2
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_BOMB_T2)
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/suit/armor/medium/raider/yankee
 	name = "yankee raider armor"
@@ -2384,6 +2417,7 @@
 	armor = ARMOR_VALUE_HEAVY
 	armor_tier_desc = ARMOR_CLOTHING_HEAVY
 	stiffness = HEAVY_STIFFNESS
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /////////////////////
 //// BULLET VEST //// ...?
@@ -2399,6 +2433,7 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T2, ARMOR_MODIFIER_UP_DT_T3)
+	custom_price = PRICE_REALLY_EXPENSIVE
 
 //////////////////////
 //// TRIBAL ARMOR ////
@@ -2489,7 +2524,7 @@
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 	mutantrace_variation = STYLE_PAW_TAURIC
-	custom_price = PRICE_EXPENSIVE
+	custom_price = PRICE_REALLY_EXPENSIVE
 
 /obj/item/clothing/suit/armor/heavy/metal/polished
 	name = "polished metal armor"
@@ -2553,6 +2588,7 @@
 		"rad" = 0,
 		"fire" = 0,
 		"acid" = 0)
+	custom_price = PRICE_REALLY_EXPENSIVE
 
 /obj/item/clothing/suit/armor/heavy/metal/tesla/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if(is_energy_reflectable_projectile(object) && (attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
@@ -2569,6 +2605,7 @@
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 	mutantrace_variation = STYLE_PAW_TAURIC
+	custom_price = PRICE_REALLY_EXPENSIVE
 
 /obj/item/clothing/suit/armor/heavy/metal/mutant
 	name = "mutant armour"
@@ -2586,6 +2623,7 @@
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 	mutantrace_variation = NONE
+	custom_price = PRICE_REALLY_EXPENSIVE
 
 /obj/item/clothing/suit/armor/heavy/metal/sulphite
 	name = "sulphite armor"
@@ -2598,6 +2636,7 @@
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_FIRE_T3)
 	mutantrace_variation = NONE
+	custom_price = PRICE_REALLY_EXPENSIVE
 
 ////////////////////
 //// RIOT ARMOR ////
@@ -2612,6 +2651,7 @@
 	blocks_shove_knockdown = TRUE
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_FIRE_T3, ARMOR_MODIFIER_UP_DT_T2)
+	custom_price = PRICE_REALLY_EXPENSIVE
 
 /obj/item/clothing/suit/armor/heavy/riot/combat
 	name = "combat riot armor"
@@ -2679,6 +2719,7 @@
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_SALVAGE
 	armor_tier_desc = ARMOR_CLOTHING_SALVAGE
+	custom_price = PRICE_ULTRA_EXPENSIVE
 
 // T-45B
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
@@ -2799,6 +2840,7 @@
 	armor = ARMOR_VALUE_PA
 	armor_tier_desc = ARMOR_CLOTHING_PA
 	stiffness = MEDIUM_STIFFNESS
+	custom_price = PRICE_ALMOST_ONE_GRAND
 
 /obj/item/clothing/suit/armor/power_armor/Initialize()
 	. = ..()
@@ -2886,6 +2928,9 @@
 		return
 
 	if(ispath(salvaged_type))
+		if (!user.skill_check(SKILL_REPAIR, REGULAR_CHECK))
+			to_chat(user, span_notice("You don't have the skill to salvage [src]."))
+			return
 		switch(salvage_step)
 			if(0)
 				// Salvage

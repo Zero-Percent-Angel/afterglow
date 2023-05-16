@@ -5,7 +5,7 @@ BEDSHEETS
 LINEN BINS
 */
 
-/obj/item/blanket
+/obj/item/bedsheet/blanket
 	name = "blanket"
 	desc = "A undyed rough blanket."
 	icon = 'icons/obj/bedsheets.dmi'
@@ -18,7 +18,7 @@ LINEN BINS
 	w_class = WEIGHT_CLASS_TINY
 	resistance_flags = FLAMMABLE
 
-/obj/item/blanket/blanketalt
+/obj/item/bedsheet/blanket/blanketalt
 	icon_state = "blanket2"
 
 /obj/item/bedsheet

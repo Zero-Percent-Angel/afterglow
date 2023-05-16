@@ -250,6 +250,7 @@
 	/// Used to track next tool required to salvage the suit
 	var/salvage_step = 0
 	armor = ARMOR_VALUE_PA
+	custom_price = PRICE_ULTRA_EXPENSIVE
 
 /obj/item/clothing/head/helmet/f13/power_armor/ComponentInitialize()
 	. = ..()

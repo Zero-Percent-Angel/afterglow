@@ -13,6 +13,7 @@
 	var/skill_gate = EASY_CHECK
 	var/skill_roll_v = DIFFICULTY_EASY
 	var/trapped_door = FALSE
+	var/maybe_trapped = FALSE
 	var/list/failures = list()
 
 /obj/machinery/door/locked/update_icon()
@@ -36,12 +37,18 @@
 /obj/machinery/door/locked/easy/trapped
 	trapped_door = TRUE
 
+/obj/machinery/door/locked/easy/maybe_trapped
+	maybe_trapped = TRUE
+
 /obj/machinery/door/locked/regular
 	skill_gate = REGULAR_CHECK
 	skill_roll_v = DIFFICULTY_NORMAL
 
 /obj/machinery/door/locked/regular/trapped
 	trapped_door = TRUE
+
+/obj/machinery/door/locked/regular/maybe_trapped
+	maybe_trapped = TRUE
 
 /obj/machinery/door/locked/hard
 	skill_gate = HARD_CHECK
@@ -50,12 +57,23 @@
 /obj/machinery/door/locked/hard/trapped
 	trapped_door = TRUE
 
+/obj/machinery/door/locked/hard/maybe_trapped
+	maybe_trapped = TRUE
+
 /obj/machinery/door/locked/expert
 	skill_gate = EXPERT_CHECK
 	skill_roll_v = DIFFICULTY_EXPERT
 
 /obj/machinery/door/locked/expert/trapped
 	trapped_door = TRUE
+
+/obj/machinery/door/locked/expert/maybe_trapped
+	maybe_trapped = TRUE
+
+/obj/machinery/door/locked/Initialize()
+	. = ..()
+	if (maybe_trapped && prob(25))
+		trapped_door = TRUE
 
 /obj/machinery/door/locked/Bumped(atom/movable/AM)
 	if(src.locked || src.trapped_door)

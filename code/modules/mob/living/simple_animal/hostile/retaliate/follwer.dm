@@ -298,13 +298,13 @@
 	status_flags = CANPUSH
 	search_objects = 1
 	vision_range = 9
-	rapid = 3
+	rapid = 2
 	retreat_distance = 3
 	minimum_distance = 5
 	casingtype = /obj/item/ammo_casing/c9mm
-	projectiletype = /obj/item/projectile/bullet/c9mm
+	projectiletype = /obj/item/projectile/bullet/c9mm/improvised
 	projectilesound = 'sound/weapons/gunshot_smg.ogg'
-	loot = list(/obj/item/gun/ballistic/automatic/autopipe)
+	loot = list(/obj/item/gun/ballistic/automatic/hobo/destroyer)
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction
 	var/myplace = null
