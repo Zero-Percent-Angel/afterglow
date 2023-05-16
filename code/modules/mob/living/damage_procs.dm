@@ -24,7 +24,7 @@
 		damage = max(damage - min(damage_threshold, ARMOR_CAP_DT), 0)
 	var/damage_amount =  forced ? damage : damage * hit_percent
 
-	stop_sneaking()
+	stop_sneaking(TRUE)
 
 	switch(damagetype)
 		if(BRUTE)

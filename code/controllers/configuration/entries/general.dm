@@ -218,7 +218,7 @@
 	config_entry_value = ""
 
 /datum/config_entry/string/discordurl
-	config_entry_value = "https://discord.gg/K4AJYS6xSh"
+	config_entry_value = "https://discord.com/channels/1106635532013940836/1106635532013940839"
 
 /datum/config_entry/string/wikiurltg
 	config_entry_value = "https://tgstation13.org/wiki/Main_Page"

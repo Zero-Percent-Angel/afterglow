@@ -229,7 +229,7 @@
 					to_chat(A, span_notice("[name] has not spotted you."))
 					heardm -= A
 				else
-					A.stop_sneaking()
+					A.stop_sneaking(TRUE)
 					to_chat(A, span_danger("[name] has spotted you!"))
 		. = heardm
 
@@ -250,7 +250,7 @@
 				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier, 0)))
 					to_chat(A, span_notice("[name] has not spotted you."))
 				else
-					A.stop_sneaking()
+					A.stop_sneaking(TRUE)
 					to_chat(A, span_danger("[name] has spotted you!"))
 					. += A
 			else
