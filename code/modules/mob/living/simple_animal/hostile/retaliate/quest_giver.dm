@@ -168,6 +168,7 @@
 /obj/item/quest
 	name = "A quest item"
 	var/quest_id = ""
+	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/quest/ring
 	name = "ring"
@@ -180,6 +181,7 @@
 	desc = "This looks like an important item someone might want."
 	icon = 'icons/obj/clockwork_objects.dmi'
 	icon_state = "clockwork_slab"
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/quest/key
 	name = "key"
@@ -192,6 +194,7 @@
 	color = "#008f07"
 	icon = 'icons/fallout/objects/items.dmi'
 	icon_state = "match_broken"
+	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/quest/fur
 	name = "green fur"
@@ -199,6 +202,7 @@
 	color = "#008f07"
 	icon = 'icons/fallout/objects/items.dmi'
 	icon_state = "sheet-human"
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/quest/New(loc, our_id)
 	quest_id = our_id
