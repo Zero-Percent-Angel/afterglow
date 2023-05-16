@@ -16,7 +16,7 @@
 	var/skill_barter = 100
 	var/skill_outdoorsman = 100
 	var/sneaking = FALSE
-
+	var/sneaking_cooldown = 0
 	var/highest_gun_or_energy_cache = 0
 
 // -20 for an easy roll
@@ -128,7 +128,7 @@
 	list("name" = SKILL_FIRST_AID, "value" = num2text(skill_first_aid + round((special_p*2 + special_i)/2)), "description" = "Bandage, Suture, Salves, basic medicine effectiveness, higher values means longer lifetimes and more healing. Also can be used to read from health scanners."),
 	list("name" = SKILL_DOCTOR, "value" = num2text(skill_doctor + round((special_p*2 + special_i)/2)), "description" = "Surgical success chance, higher values also unlock more surgeries. Can also be used to control various medical devices autosurgeons and the like."),
 	list("name" = SKILL_SNEAK, "value" = num2text(skill_sneak + special_a), "description" = "Determines what happens when using the sneak verb. Higher values make your sprite more transparent and lower mob dectection chance."),
-	list("name" = SKILL_LOCKPICK, "value" = num2text(skill_lockpick + round((special_p*2 + special_a)/2)), "description" = "Lockpicking; success chance for opening locks both on doors and for lock boxes!"),
+	list("name" = SKILL_LOCKPICK, "value" = num2text(skill_lockpick + round((special_p*2 + special_a)/2)), "description" = "Lockpicking; success chance for opening locks both on doors and for lock boxes! Lockpicks can also be used on any unpowered/unwired locked door."),
 	list("name" = SKILL_TRAPS, "value" = num2text(skill_traps + round((special_p*2 + special_a)/2)), "description" = "Disarming traps; such as on locked doors and locked boxes. Also lets you spot hidden traps. Used as the skill for creating explosives when crafting."),
 	list("name" = SKILL_SCIENCE, "value" = num2text(skill_science + (special_i * 2)), "description" = "Research effectiveness; determines what nodes you can research as well as how good your experiments will be. Dictates chemistry skill too higher values, more known chemicals; and is used for 'hacking'."),
 	list("name" = SKILL_REPAIR, "value" = num2text(skill_repair + special_i), "description" = "The primary construction and crafting skill, limits what you can do based on the value. Can be used for smithing too."),
@@ -154,6 +154,9 @@
 /mob/living/verb/sneak()
 	set name = "Sneak"
 	set category = "IC"
+	if (sneaking_cooldown)
+		to_chat(src, span_warning("You can't sneak again yet!"))
+		return
 	if (!sneaking)
 		start_sneaking()
 	else
@@ -168,8 +171,14 @@
 			toggle_move_intent()
 		
 
-/mob/living/proc/stop_sneaking()
+/mob/living/proc/stop_sneaking(cooldown = FALSE)
 	if (sneaking)
 		sneaking = FALSE
 		src.alpha = 255
 		to_chat(src, span_warning("You stop sneaking."))
+		if (cooldown)
+			sneaking_cooldown = TRUE
+			addtimer(CALLBACK(src, /mob/living/proc/clear_cooldown), 5 SECONDS)
+
+/mob/living/proc/clear_cooldown()
+	sneaking_cooldown = FALSE
