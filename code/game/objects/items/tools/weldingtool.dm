@@ -85,7 +85,7 @@
 	//This is to start fires. process() is only called if the welder is on.
 	open_flame()
 
-/obj/item/weldingtool/use_tool(atom/target, mob/living/user, delay, amount, volume, datum/callback/extra_checks)
+/obj/item/weldingtool/use_tool(atom/target, mob/living/user, delay, amount, volume, datum/callback/extra_checks, skill_gain_mult = STD_USE_TOOL_MULT)
 	target.add_overlay(GLOB.welding_sparks)
 	. = ..()
 	target.cut_overlay(GLOB.welding_sparks)

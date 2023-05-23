@@ -164,7 +164,7 @@
 /obj/item/gun/energy/plasmacutter/use(amount)
 	return cell.use(amount * 100)
 
-/obj/item/gun/energy/plasmacutter/use_tool(atom/target, mob/living/user, delay, amount=1, volume=0, datum/callback/extra_checks)
+/obj/item/gun/energy/plasmacutter/use_tool(atom/target, mob/living/user, delay, amount=1, volume=0, datum/callback/extra_checks, skill_gain_mult = STD_USE_TOOL_MULT)
 
 	if(amount)
 		target.add_overlay(GLOB.welding_sparks)
