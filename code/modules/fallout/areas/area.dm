@@ -457,6 +457,25 @@
 	grow_chance = 5
 	weather_tags = list(WEATHER_ALL)
 
+/area/f13/village/indoors
+	name = "Village"
+	icon_state = "village"
+
+//	ambientmusic = list('sound/f13music/fo2_village.ogg','sound/f13music/fo2_wasteland.ogg','sound/misc/null.ogg')
+	ambientsounds = list(
+		AREA_SOUND('sound/f13ambience/dog_distant_1.ogg', 10 SECONDS),
+		AREA_SOUND('sound/f13ambience/dog_distant_2.ogg', 10 SECONDS),
+		AREA_SOUND('sound/f13ambience/dog_distant_3.ogg', 10 SECONDS),
+		AREA_SOUND('sound/f13ambience/bird_1.ogg', 10 SECONDS),
+		AREA_SOUND('sound/f13ambience/bird_2.ogg', 10 SECONDS),
+		AREA_SOUND('sound/f13ambience/bird_3.ogg', 10 SECONDS),
+		AREA_SOUND('sound/f13ambience/bird_4.ogg', 10 SECONDS))
+	blob_allowed = 0
+	environment = 15
+	grow_chance = 5
+	outdoors = FALSE
+	weather_tags = null
+
 /area/f13/outpost
 	name = "Outpost"
 	icon_state = "outpost"
