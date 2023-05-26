@@ -32,7 +32,7 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 
 #define isgroundturf(A) (istype(A, /turf/open/indestructible/ground))
 
-#define iswaterturf(A) (istype(A, /turf/open/indestructible/ground/outside/water))
+#define iswaterturf(A) (istype(A, /turf/open/indestructible/ground/outside/water) || istype(A, /turf/open/water))
 
 #define isclosedturf(A) (istype(A, /turf/closed))
 
