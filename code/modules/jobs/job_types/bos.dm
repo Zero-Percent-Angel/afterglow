@@ -1086,6 +1086,6 @@ Initiate
 	gloves =		/obj/item/clothing/gloves/color/latex
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak=1,
-		/obj/item/book/granter/trait/chemistry=1,
+		//obj/item/book/granter/trait/chemistry=1,
 		/obj/item/clothing/accessory/bos/initiateS=1,
 		)
