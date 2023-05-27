@@ -193,7 +193,7 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Forgemaster",
 	"Legion Immune",
 	"Legion Auxilia",
-	"Legion Slave",
+	"Camp Follower",
 	"Legion Slavemaster"
 ))
 
