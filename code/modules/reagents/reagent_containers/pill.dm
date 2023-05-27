@@ -116,6 +116,13 @@
 	list_reagents = list(/datum/reagent/medicine/ephedrine = 10, /datum/reagent/medicine/antihol = 10, /datum/reagent/consumable/coffee = 30)
 	roundstart = TRUE
 
+/obj/item/reagent_containers/pill/uhohstimulant
+	name = "uhoh stimulant pill"
+	desc = "This will make you out of control!"
+	icon_state = "pill19"
+	list_reagents = list(/datum/reagent/drug/aphrodisiacplus = 30)
+	roundstart = TRUE
+
 /obj/item/reagent_containers/pill/salbutamol
 	name = "salbutamol pill"
 	desc = "Used to treat oxygen deprivation."

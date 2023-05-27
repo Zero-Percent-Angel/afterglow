@@ -453,7 +453,12 @@
 			A.do_jiggle()
 			if(istype(over_object, /obj/screen/inventory/hand))
 				var/obj/screen/inventory/hand/H = over_object
-				M.putItemFromInventoryInHandIfPossible(A, H.held_index)
+				if (!istype(A, /obj/item/clothing/neck/petcollar/locked))
+					M.putItemFromInventoryInHandIfPossible(A, H.held_index)
+				else
+					var/obj/item/clothing/neck/petcollar/locked/petcoll = A
+					if (!petcoll.lock)
+						M.putItemFromInventoryInHandIfPossible(A, H.held_index)
 				return
 			A.add_fingerprint(M)
 
