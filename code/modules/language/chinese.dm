@@ -7,7 +7,7 @@
 	key = "c"
 	flags = TONGUELESS_SPEECH | LANGUAGE_HIDE_ICON_IF_UNDERSTOOD
 	default_priority = 20
-	icon_state = "galcom"
+	icon_state = "china"
 
 
 /datum/language/chinese/syllables = list(
