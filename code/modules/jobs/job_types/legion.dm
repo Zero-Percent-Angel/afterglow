@@ -1039,7 +1039,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/stack/sheet/prewar/twenty = 1,
 		/obj/item/weldingtool = 1,
 		/obj/item/book/granter/trait/explosives = 1,
-		/obj/item/book/granter/trait/explosives_advanced = 1
+		//obj/item/book/granter/trait/explosives_advanced = 1
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13campfollower/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1144,7 +1144,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/stack/sticky_tape/surgical = 1,
 		/obj/item/stack/medical/bone_gel = 1,
-		/obj/item/book/granter/trait/midsurgery = 1,
+		//obj/item/book/granter/trait/midsurgery = 1,
 		/obj/item/clothing/under/f13/legauxilia = 1,
 		)
 /datum/outfit/loadout/auxopifex
@@ -1221,7 +1221,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/reagent_containers/pill/healingpowder = 2,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		/obj/item/smelling_salts = 1,
-		/obj/item/book/granter/trait/lowsurgery = 1,
+		//obj/item/book/granter/trait/lowsurgery = 1,
 		/obj/item/reagent_containers/food/condiment/flour = 2,
 		/obj/item/storage/box/bowls = 1,
 		/obj/item/reagent_containers/glass/beaker/large = 1,

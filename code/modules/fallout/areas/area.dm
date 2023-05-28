@@ -671,6 +671,17 @@
 /area/f13/bunker/bunkerfive
 	name = "Bunker five"
 
+/area/f13/bunker/bunkersix
+	name = "Bunker six"
+
+/area/f13/bunker/bunkerseven
+	name = "Bunker seven"
+
+/area/f13/bunker/bunkereight
+	name = "Bunker eight"
+
+/area/f13/bunker/bunkernine
+	name = "Bunker nine"
 
 /area/f13/bunker/museum
 	name = "Bunker Museum"
