@@ -39,6 +39,8 @@ GLOBAL_LIST_EMPTY(insect_fluffs_list)
 GLOBAL_LIST_EMPTY(insect_markings_list)
 GLOBAL_LIST_EMPTY(caps_list)
 
+GLOBAL_LIST_EMPTY(list_of_nothing)
+
 //a way to index the right bodypart list given the type of bodypart
 GLOBAL_LIST_INIT(mutant_reference_list, list(
 	"tail_lizard" = GLOB.tails_list_lizard,
