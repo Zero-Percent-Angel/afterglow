@@ -132,7 +132,7 @@
 			force_modifier += (-force * 0.25)
 
 	var/force_out = force + force_modifier
-	var/hit_helper = M.lying ? -20 : 0
+	var/hit_helper = M.lying ? -40 : -20
 	if(M != user && !M.IsUnconscious() && !user.skill_roll(SKILL_MELEE, M.special_a + hit_helper, 0))
 		M.visible_message(span_warning("[user]'s swing of [src.name] misses!"), target = user, \
 			target_message = span_warning("You missed your attack, weapon swinging wide!"))
