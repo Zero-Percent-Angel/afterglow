@@ -2451,8 +2451,8 @@ Records disabled until a use for them is found
 				*/
 				if("s_tone")
 					var/list/choices = GLOB.skin_tones - GLOB.nonstandard_skin_tones
-					if(CONFIG_GET(flag/allow_custom_skintones))
-						//choices += "custom"
+					// if(CONFIG_GET(flag/allow_custom_skintones))
+					// 	choices += "custom"
 					var/new_s_tone = input(user, "Choose your character's skin tone:", "Character Preference")  as null|anything in choices
 					if(new_s_tone)
 						if(new_s_tone == "custom")

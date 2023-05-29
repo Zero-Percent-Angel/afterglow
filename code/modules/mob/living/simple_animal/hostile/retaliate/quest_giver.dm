@@ -13,7 +13,7 @@
 /mob/living/simple_animal/hostile/retaliate/talker/quest_giver/Initialize()
 	myplace = get_turf(src)
 	my_original_loc = loc
-	..()
+	. = ..()
 	if (gender == FEMALE)
 		icon_state = "WasterG_Gun"
 	else
