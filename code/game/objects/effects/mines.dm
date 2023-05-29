@@ -35,6 +35,9 @@
 /obj/effect/mine/proc/triggermine(mob/victim)
 	if(triggered)
 		return
+	if(victim.skill_roll(SKILL_TRAPS))
+		visible_message(span_danger("[victim] manages to avoid [icon2html(src, viewers(src))] [src]!"))
+		return
 	visible_message(span_danger("[victim] sets off [icon2html(src, viewers(src))] [src]!"))
 	var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
 	s.set_up(3, 1, src)
