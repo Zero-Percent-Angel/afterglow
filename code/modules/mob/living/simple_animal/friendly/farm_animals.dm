@@ -239,20 +239,7 @@
 		return TRUE
 	if(stat == CONSCIOUS && is_type_in_list(O, food_types))
 		feed_em(O, user)
-		return
-	/* if (istype(O,/obj/item/brahminbags))
-		if(bags)
-			to_chat(user, span_warning("The mount already has bags attached!"))
-			return
-		if(is_calf)
-			to_chat(user, span_warning("The young animal cannot carry the bags!"))
-			return
-		to_chat(user, span_notice("You add [O] to [src]..."))
-		bags = TRUE
-		qdel(O)
-		ComponentInitialize()
-		return */
-
+		return TRUE
 	if(istype(O,/obj/item/brahmincollar))
 		if(user != owner)
 			to_chat(user, span_warning("You need to claim the mount with a bridle before you can rename it!"))
@@ -1032,15 +1019,6 @@
 		"8" = list(3, 7)
 		)
 
-
-	/*
-/obj/item/brahminbags
-	name = "saddle bags"
-	desc = "Attach these bags to a mount and leave the heavy lifting to them!"
-	icon = 'icons/fallout/objects/storage.dmi'
-	icon_state = "trekkerpack"
-*/
-
 /obj/item/brahmincollar
 	name = "mount collar"
 	desc = "A collar with a piece of etched metal serving as a tag. Use this on a mount you own to rename them."
@@ -1070,25 +1048,12 @@
 
 /obj/item/storage/backpack/duffelbag/debug_brahmin_kit/PopulateContents()
 	. = ..()
-	//new /obj/item/brahminbags(src)
 	new /obj/item/brahmincollar(src)
 	new /obj/item/brahminbridle(src)
 	new /obj/item/brahminsaddle(src)
 	new /obj/item/brahminbrand(src)
 	new /obj/item/choice_beacon/pet(src)
 	new /obj/item/gun/ballistic/rifle/mag/antimateriel(src)
-
-/*
-/datum/crafting_recipe/brahminbags
-	name = "Saddle bags"
-	result = /obj/item/brahminbags
-	time = 60
-	reqs = list(/obj/item/storage/backpack/duffelbag = 2,
-				/obj/item/stack/sheet/cloth = 5)
-	tools = list(TOOL_WORKBENCH)
-	subcategory = CAT_MISCELLANEOUS
-	category = CAT_MISC
-*/
 
 /datum/crafting_recipe/brahmincollar
 	name = "Mount collar"
