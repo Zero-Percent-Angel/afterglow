@@ -18,7 +18,7 @@
 	//var/wielded_mult = 1
 
 /obj/item/melee/smith/Initialize()
-	..()
+	. = ..()
 	if(desc == "cringe")
 		desc = "A handmade [name]."
 	overlay = mutable_appearance(icon, overlay_state)
@@ -96,7 +96,7 @@
 	sharpness = SHARP_POINTY
 
 /obj/item/mining_scanner/prospector/Initialize()
-	..()
+	. = ..()
 	var/mutable_appearance/overlay
 	desc = "A handmade [name]."
 	overlay = mutable_appearance(icon, "handle_prospect")
