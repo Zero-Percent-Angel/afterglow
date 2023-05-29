@@ -358,7 +358,7 @@
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/Initialize(mapload)
 	myplace = get_turf(src)
 	my_original_loc = loc
-	..()
+	return ..()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/dialog_options(mob/talker, display_options)
 	var/dat = "" 

@@ -20,12 +20,11 @@
 		dat += "<center><a href='?src=[REF(src)];trade=1'>Trade with [name].</a></center>"
 	return dat
 
-
 /mob/living/simple_animal/hostile/retaliate/talker/trader/Initialize(mapload)
 	restock()
 	myplace = get_turf(src)
 	my_original_loc = loc
-	..()
+	. = ..()
 	if (gender == MALE)
 		icon_state = "trader_male"
 		icon_living = "trader_male"
