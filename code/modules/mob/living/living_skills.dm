@@ -32,13 +32,32 @@
 		if (do_message)
 			to_chat(src, span_red("You fail the skill check using: [check]"))
 		return FALSE
+
+// rolling with advantage, should use this when we kind of want the check to pass
+/mob/proc/skill_roll_kind(check, difficulty = DIFFICULTY_NORMAL, do_message = 1)
+	var/lowest_random = min(rand(1,100), rand(1,100)) + difficulty
+	if ((skill_value(check) + special_l) >= lowest_random)
+		if (do_message)
+			to_chat(src, span_green("You succeed the skill check using: [check]"))
+		return TRUE
+	else
+		if (do_message)
+			to_chat(src, span_red("You fail the skill check using: [check]"))
+		return FALSE
 	
+	//Maybe we'll use the flat formula later.
+	//var/the_val = (skill_value(check) + special_l)
+	//prob((the_val-difficulty)*(the_val-difficulty)/100+((100+difficulty-the_val)*the_val)/100*2)
 
 /mob/proc/skill_roll_under(check, difficulty = DIFFICULTY_NORMAL)
 	return  ((rand(1,100) + difficulty) - (skill_value(check)))
 
-/mob/proc/skill_check(check, threshold = REGULAR_CHECK)
-	return (skill_value(check) >= threshold)
+/mob/proc/skill_check(check, threshold = REGULAR_CHECK, do_message = 0)
+	if (skill_value(check) >= threshold)
+		if (do_message)
+			to_chat(src, span_green("You exceed the skill threshold using: [check]"))
+		return TRUE
+	return FALSE
 
 /mob/proc/highest_skill_value(check1, check2)
 	var/skill_1_val = skill_value(check1)
@@ -120,10 +139,10 @@
 
 /mob/proc/get_skill_all_values()
 	var/list/dat = list()
-	dat = list(list("name" = SKILL_GUNS, "value" = num2text(skill_guns + special_a), "description" = "Applies to ballistic weapons. Controls things like recoil and dispersion. Higher values; tighter firing arcs and slower recoil buildup."),
-	list("name" = SKILL_ENERGY, "value" = num2text(skill_energy + special_a), "description" = "Applies to energy weapons. Controls things like recoil and dispersion. Higher values; tighter firing arcs and slower recoil buildup. Also important for failure to fire chance."),
+	dat = list(list("name" = SKILL_GUNS, "value" = num2text(skill_guns + special_a), "description" = "Applies to ballistic weapons. Controls things like recoil and dispersion. Higher values; tighter firing arcs and slower recoil buildup, Less aim fumble chance."),
+	list("name" = SKILL_ENERGY, "value" = num2text(skill_energy + special_a), "description" = "Applies to energy weapons. Controls things like recoil and dispersion. Higher values slower recoil buildup, Also important for failure to fire chance and aim fumbles."),
 	list("name" = SKILL_UNARMED, "value" = num2text(skill_unarmed + round((special_a + special_s)/2)), "description" = "Hit chance when unarmed, also determines chances to disarm and break out of grabs and the like."),
-	list("name" = SKILL_MELEE, "value" = num2text(skill_melee + round((special_a + special_s)/2)), "description" = "Hit chance when using a melee weapon."),
+	list("name" = SKILL_MELEE, "value" = num2text(skill_melee + round((special_a + special_s)/2)), "description" = "Hit chance when using any melee weapon. Also influnces blocking."),
 	list("name" = SKILL_THROWING, "value" = num2text(skill_throwing + special_a), "description" = "Hit chance for projectiles thrown by your character."),
 	list("name" = SKILL_FIRST_AID, "value" = num2text(skill_first_aid + round((special_p*2 + special_i)/2)), "description" = "Bandage, Suture, Salves, basic medicine effectiveness, higher values means longer lifetimes and more healing. Also can be used to read from health scanners."),
 	list("name" = SKILL_DOCTOR, "value" = num2text(skill_doctor + round((special_p*2 + special_i)/2)), "description" = "Surgical success chance, higher values also unlock more surgeries. Can also be used to control various medical devices autosurgeons and the like."),

@@ -107,8 +107,10 @@
 	var/generic_bleedstacks
 	/// If we have a gauze wrapping currently applied (not including splints)
 	var/obj/item/stack/medical/current_gauze
+	var/current_skill_of_application_gauze = 1
 	/// If we have a suture stitching our wounds closed
 	var/obj/item/stack/medical/current_suture
+	var/current_skill_of_application_suture = 1
 	COOLDOWN_DECLARE(bandage_isnt_good_enough)
 
 /obj/item/bodypart/examine(mob/user)
@@ -1077,7 +1079,7 @@
  *
  * Arguments:
  * * gauze- Just the gauze stack we're taking a sheet from to apply here
- * * skill_mult- The time multiplier used for the covering's duration
+ * * skill_mult- The time and power multiplier used for the covering's duration (between 0 - 2)
  * * just_check- Just return if a bandage would be applied
  */
 /obj/item/bodypart/proc/apply_gauze(obj/item/stack/medical/gauze/gauze, skill_mult = 1, just_check = FALSE)
@@ -1095,11 +1097,11 @@
 		if(!just_check)
 			apply_gauze_to_limb(gauze, skill_mult)
 		return BANDAGE_NEW_APPLIED
-	if((gauze.bandage_power * skill_mult) > current_gauze.bandage_power) // bandage is more better
+	if((gauze.bandage_power * skill_mult) > (current_gauze.bandage_power * current_skill_of_application_gauze)) // bandage is more better
 		if(!just_check)
 			apply_gauze_to_limb(gauze, skill_mult)
 		return BANDAGE_NEW_APPLIED
-	if((gauze.heal_per_tick) > current_gauze.heal_per_tick) // bandage more healing
+	if((gauze.heal_per_tick  * skill_mult) > (current_gauze.heal_per_tick * current_skill_of_application_gauze)) // bandage more healing
 		if(!just_check)
 			apply_gauze_to_limb(gauze, skill_mult)
 		return BANDAGE_NEW_APPLIED
@@ -1112,6 +1114,7 @@
 	QDEL_NULL(current_gauze)
 	S_TIMER_COOLDOWN_RESET(src, BANDAGE_COOLDOWN_ID)
 	current_gauze = new gauze.type(src, 1)
+	current_skill_of_application_gauze = skill_mult
 	S_TIMER_COOLDOWN_START(src, BANDAGE_COOLDOWN_ID, current_gauze.covering_lifespan * skill_mult)
 	needs_processing = TRUE
 	return BANDAGE_NEW_APPLIED
@@ -1140,8 +1143,8 @@
 		return
 	if(!istype(current_gauze, /obj/item/stack/medical/gauze))
 		return
-	var/heal_amt = current_gauze.heal_per_tick
-	var/bleed_healing = current_gauze.bandage_power * (istype(current_suture) ? SUTURE_AND_BANDAGE_BONUS : 1)
+	var/heal_amt = current_gauze.heal_per_tick * current_skill_of_application_gauze
+	var/bleed_healing = current_gauze.bandage_power * (istype(current_suture) ? SUTURE_AND_BANDAGE_BONUS : 1) * current_skill_of_application_gauze
 	covering_heal_nutrition_mod(bleed_healing, heal_amt)
 
 	/* else if(!current_gauze.told_owner_its_out_of_juice)
@@ -1212,7 +1215,7 @@
  *
  * Arguments:
  * * suture- Just the suture stack we're taking a sheet from to apply here
- * * skill_mult- The time multiplier used for the covering's duration
+ * * skill_mult- The time and power multiplier used for the covering's duration (between 0 - 2)
  * * just_check- Just return if a suture would be applied
  */
 /obj/item/bodypart/proc/apply_suture(obj/item/stack/medical/suture/suture, skill_mult = 1, just_check = FALSE)
@@ -1230,11 +1233,11 @@
 		if(!just_check)
 			apply_suture_to_limb(suture, skill_mult)
 		return SUTURE_NEW_APPLIED
-	if((suture.suture_power * skill_mult) > current_suture.suture_power) // suture is more better
+	if((suture.suture_power * skill_mult) > (current_suture.suture_power * current_skill_of_application_suture)) // suture is more better
 		if(!just_check)
 			apply_suture_to_limb(suture, skill_mult)
 		return SUTURE_NEW_APPLIED
-	if((suture.heal_per_tick) > current_suture.heal_per_tick) // suture more healing
+	if((suture.heal_per_tick * skill_mult) > (current_suture.heal_per_tick * current_skill_of_application_suture)) // suture more healing
 		if(!just_check)
 			apply_suture_to_limb(suture, skill_mult)
 		return SUTURE_NEW_APPLIED
@@ -1247,6 +1250,7 @@
 	QDEL_NULL(current_suture)
 	S_TIMER_COOLDOWN_RESET(src, SUTURE_COOLDOWN_ID)
 	current_suture = new suture.type(src, 1)
+	current_skill_of_application_suture = skill_mult
 	S_TIMER_COOLDOWN_START(src, SUTURE_COOLDOWN_ID, current_suture.covering_lifespan * skill_mult)
 	needs_processing = TRUE
 	return SUTURE_NEW_APPLIED
@@ -1276,8 +1280,8 @@
 		return
 	if(!istype(current_suture, /obj/item/stack/medical/suture))
 		return
-	var/heal_amt = current_suture.heal_per_tick
-	var/bleed_healing = current_suture.suture_power * (istype(current_gauze) ? SUTURE_AND_BANDAGE_BONUS : 1)
+	var/heal_amt = current_suture.heal_per_tick * current_skill_of_application_suture
+	var/bleed_healing = current_suture.suture_power * (istype(current_gauze) ? SUTURE_AND_BANDAGE_BONUS : 1) * current_skill_of_application_suture
 	covering_heal_nutrition_mod(bleed_healing, heal_amt)
 
 /**
