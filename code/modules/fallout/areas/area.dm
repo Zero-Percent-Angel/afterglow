@@ -111,6 +111,25 @@
 /area/f13/building/abandoned/g
 	name = "Abandoned Building"
 
+/area/f13/building/abandoned/h
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/i
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/j
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/k
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/l
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/m
+	name = "Abandoned Building"
+
+
 /area/f13/building/hospital
 	name = "Hospital Building"
 	icon_state = "hospital"
