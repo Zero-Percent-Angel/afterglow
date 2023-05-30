@@ -1440,8 +1440,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		target.visible_message(span_warning("[target] blocks [user]'s attack!"), target = user, \
 			target_message = span_warning("[target] blocks your attack!"))
 		return FALSE
-	var/hit_helper = target.lying ? -40 : -20
-	if(target != user && !target.IsUnconscious() && !user.skill_roll(SKILL_UNARMED, target.special_a + hit_helper, 0))
+	var/hit_helper = !CHECK_MOBILITY(target, MOBILITY_STAND) ? -30 : -10
+	if(target != user && !target.IsUnconscious() && !user.skill_roll_kind(SKILL_UNARMED, target.special_a + hit_helper, 0))
 		target.visible_message(span_warning("[user]'s attack misses!"), target = user, \
 			target_message = span_warning("You missed your attack!"))
 		playsound(user, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
