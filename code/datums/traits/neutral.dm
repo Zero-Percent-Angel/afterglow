@@ -331,7 +331,7 @@
 
 /datum/quirk/chinese/add()
 	var/mob/living/carbon/human/H = quirk_holder
-	H.grant_language(/datum/language/chinese)
+	H.grant_language(/datum/language/chinese, TRUE, TRUE)
 
 /datum/quirk/chinese/remove()
 	var/mob/living/carbon/human/H = quirk_holder

@@ -1,6 +1,6 @@
 SUBSYSTEM_DEF(waster_spawn)
 	name = "NPC Waster Spawn"
-	wait = 10 MINUTES
+	wait = 20 MINUTES
 	var/successful_firing = 0
 	var/allowed_firings = 90
 	var/chance_of_fire = 80 

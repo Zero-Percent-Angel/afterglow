@@ -5,7 +5,7 @@
 	speech_verb = "says"
 	whisper_verb = "whispers"
 	key = "c"
-	flags = TONGUELESS_SPEECH | LANGUAGE_HIDE_ICON_IF_UNDERSTOOD
+	flags = LANGUAGE_HIDE_ICON_IF_UNDERSTOOD
 	default_priority = 20
 	icon_state = "china"
 
