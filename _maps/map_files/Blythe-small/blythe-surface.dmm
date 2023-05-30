@@ -2778,9 +2778,7 @@
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/i)
 "bzD" = (
-/obj/structure/obstacle/barbedwire/end{
-	dir = 1
-	},
+/obj/structure/obstacle/barbedwire,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain2"
 	},
@@ -8926,6 +8924,12 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/ncr)
+"eOu" = (
+/obj/structure/shelf_wood,
+/obj/effect/spawner/bundle/f13/varmint,
+/obj/item/storage/toolbox/mechanical,
+/turf/open/floor/plasteel/f13/stone,
+/area/f13/ncr_main)
 "eOG" = (
 /obj/structure/bed/wooden,
 /obj/item/bedsheet/pirate,
@@ -11164,6 +11168,12 @@
 "fWh" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticalrightborderright2"
+	},
+/area/f13/wasteland/city)
+"fWm" = (
+/obj/structure/obstacle/barbedwire/end,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalinnermain2"
 	},
 /area/f13/wasteland/city)
 "fWo" = (
@@ -22400,7 +22410,7 @@
 /area/f13/wasteland/ncr)
 "lKK" = (
 /obj/effect/landmark/questing/people{
-	location_description = "somewhere to the south of the old school building, behind a locked door."
+	location_description = "somewhere to the south of the new town, behind a locked door."
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
@@ -24137,12 +24147,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building/mall)
-"mAk" = (
-/obj/structure/shelf_wood,
-/obj/effect/spawner/bundle/f13/varmint,
-/obj/item/storage/toolbox/mechanical,
-/turf/open/floor/plasteel/f13/stone,
-/area/f13/ncr_main)
 "mAy" = (
 /obj/effect/overlay/desert/sonora/edge{
 	dir = 8
@@ -36273,6 +36277,14 @@
 	icon_state = "floordirty"
 	},
 /area/f13/building)
+"sIw" = (
+/obj/structure/obstacle/barbedwire/end{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "verticalinnermain2"
+	},
+/area/f13/wasteland/city)
 "sIz" = (
 /obj/structure/chair/bench,
 /turf/open/floor/plasteel/f13{
@@ -38017,7 +38029,7 @@
 /area/f13/ncr)
 "tCL" = (
 /obj/effect/landmark/questing/people{
-	location_description = "somewhere to the south of the old school building, behind a locked door."
+	location_description = "somewhere to the south of the new town, behind a locked door."
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/c)
@@ -41097,12 +41109,6 @@
 	icon_state = "horizontalbottomborderbottom0"
 	},
 /area/f13/building/hospital)
-"vqC" = (
-/obj/structure/obstacle/barbedwire,
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "verticalinnermain2"
-	},
-/area/f13/wasteland/city)
 "vqZ" = (
 /obj/structure/closet/crate/bin/trashbin,
 /obj/effect/decal/cleanable/dirt,
@@ -42595,12 +42601,6 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel/khanfort)
-"wgb" = (
-/obj/structure/obstacle/barbedwire/end,
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "verticalinnermain2"
-	},
-/area/f13/wasteland/city)
 "wgg" = (
 /obj/structure/fence,
 /turf/open/indestructible/ground/outside/dirt{
@@ -51360,7 +51360,7 @@ yjc
 wBq
 dBk
 reP
-mAk
+eOu
 reP
 xlI
 reP
@@ -80520,9 +80520,9 @@ sql
 sql
 sql
 lor
-wgb
-vqC
-vqC
+fWm
+bzD
+bzD
 nkK
 spT
 fXS
@@ -82742,7 +82742,7 @@ jaY
 jaY
 iXU
 wnQ
-bzD
+sIw
 sql
 sql
 kVs
