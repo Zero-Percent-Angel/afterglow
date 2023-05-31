@@ -818,6 +818,7 @@
 	name = "anti-materiel rifle blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/am_rifle)
+	design_print = "antimatrif"
 
 /obj/item/book/granter/crafting_recipe/blueprint/citykiller
 	name = "citykiller blueprint"
