@@ -105,6 +105,10 @@
 	name = "Braided"
 	icon_state = "hair_braided"
 
+/datum/sprite_accessory/hair/braided_sidetail
+	name = "Braided Sidetail"
+	icon_state = "hair_braided_sidetail"
+
 /datum/sprite_accessory/hair/front_braid
 	name = "Braided Front"
 	icon_state = "hair_braidfront"
