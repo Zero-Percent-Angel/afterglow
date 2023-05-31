@@ -1840,7 +1840,7 @@
 	always_available = FALSE
 	skill_level = HARD_CHECK
 
-/datum/crafting_recipe/coolant
+/datum/crafting_recipe/full_auto
 	name = "Full Auto Kit"
 	result = /obj/item/gun_upgrade/mechanism/weintraub
 	reqs = list(
