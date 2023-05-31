@@ -457,7 +457,7 @@
 		approaching_target = FALSE
 	set_glide_size(DELAY_TO_GLIDE_SIZE(move_to_delay))
 	var/distance_to_target = get_dist(targets_from, target)
-	if ((approaching_target && istype(target, /mob/living/carbon/human)) && (actively_moving || (distance_to_target < 4 && distance_to_target > 1)))
+	if ((approaching_target && istype(target, /mob/living/carbon/human)) && (actively_moving || distance_to_target < 4))
 		// if we're close we can do an A* Pathfind to not get stuck in place, to really put the I in AI
 		// we're also only going to do such an expensive operation if it's a player we're chasing, mob on mob violence is low effort
 		path_to(target, minimum_distance, 8, delay)
