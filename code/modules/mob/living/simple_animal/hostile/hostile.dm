@@ -462,7 +462,7 @@
 		// we're also only going to do such an expensive operation if it's a player we're chasing, mob on mob violence is low effort
 		path_to(target, minimum_distance, 8, delay)
 	else
-		actively_moving = FALSE
+		moving_halt()
 		walk_to(src, target, minimum_distance, delay)
 		
 

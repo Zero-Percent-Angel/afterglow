@@ -264,6 +264,12 @@ GLOBAL_LIST_INIT(desolate_plant_spawn_list, list(
 	name = "desert edge"
 	icon = 'icons/fallout/turfs/wasteland.dmi'
 	icon_state = "desertedge"
+	density = FALSE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	plane = FLOOR_PLANE
+	layer = ABOVE_OPEN_TURF_LAYER
+	anchored = TRUE
+	resistance_flags = INDESTRUCTIBLE
 
 /obj/effect/overlay/desert/sonora/edge/corner
 	icon_state = "desertcorner"
