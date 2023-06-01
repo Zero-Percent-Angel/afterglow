@@ -573,7 +573,7 @@
 	extra_projectiles = 2
 	ranged_cooldown_time = 2 SECONDS
 	auto_fire_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	projectiletype = /obj/item/projectile/bullet/shrapnel/simple
+	projectiletype = /obj/item/projectile/bullet/c22
 	projectilesound = 'sound/f13weapons/auto5.ogg'
 	loot = list(/obj/item/stack/f13Cash/random/high)
 	footstep_type = FOOTSTEP_MOB_SHOE

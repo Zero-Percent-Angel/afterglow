@@ -205,7 +205,7 @@
 	send_item_attack_message(I, user, null, totitemdamage)
 	I.do_stagger_action(src, user, totitemdamage)
 	if(I.force)
-		apply_damage(totitemdamage, I.damtype)
+		apply_damage(totitemdamage, I.damtype, blocked = src.run_armor_check())
 		if(I.damtype == BRUTE)
 			if(prob(33))
 				I.add_mob_blood(src)

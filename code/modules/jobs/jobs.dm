@@ -153,6 +153,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Senior Scribe",
 	"Scribe",
 	"Initiate",
+	"BoS Off-Duty"
 ))
 //Nash/Oasis
 GLOBAL_LIST_INIT(oasis_positions, list(
