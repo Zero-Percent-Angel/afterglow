@@ -1708,6 +1708,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/f13/legioncamp
 	name = "Legion Camp"
 	icon_state = "legioncamp"
+	power_equip = 1
+	power_environ = 1
 
 /area/f13/powerplant
 	name = "Power Plant"

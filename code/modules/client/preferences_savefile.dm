@@ -839,7 +839,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["ears"]				= sanitize_inlist(features["ears"], GLOB.list_of_nothing, "None")
 	features["frills"]				= sanitize_inlist(features["frills"], GLOB.list_of_nothing, "None")
 	features["spines"]				= sanitize_inlist(features["spines"], GLOB.list_of_nothing, "None")
-	features["legs"]				= sanitize_inlist(features["legs"], GLOB.legs_list, "Plantigrade")
+	features["legs"]				= sanitize_inlist(features["legs"], GLOB.list_of_nothing, "Plantigrade")
 	features["deco_wings"] 			= sanitize_inlist(features["deco_wings"], GLOB.list_of_nothing, "None")
 	features["insect_fluff"]		= sanitize_inlist(features["insect_fluff"], GLOB.list_of_nothing, "None")
 	features["insect_markings"] 	= sanitize_inlist(features["insect_markings"], GLOB.list_of_nothing, "None")

@@ -86,7 +86,7 @@
 		if(density && istype(I, /obj/item/lockpick_set))
 			if(try_to_lockpick(I, user))
 				return TRUE
-	else
+	else if(I.tool_behaviour != TOOL_WELDER)
 		return ..()
 
 /obj/machinery/door/locked/try_to_activate_door(mob/user, force_open)

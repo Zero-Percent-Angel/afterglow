@@ -15,9 +15,9 @@
 	my_original_loc = loc
 	. = ..()
 	if (gender == FEMALE)
-		icon_state = "WasterG_Gun"
+		icon_state = "trader_female"
 	else
-		icon_state = "WasterM_Gun"
+		icon_state = "trader_male"
 
 /mob/living/simple_animal/hostile/retaliate/talker/quest_giver/handle_automated_movement()
 	if (get_dist(my_original_loc, loc) > 2)
@@ -35,7 +35,7 @@
 /mob/living/simple_animal/hostile/retaliate/talker/quest_giver/basic
 	name = "Wastelander"
 	desc = "A wastelander, just trying to survive, this one seems to have an extra agenda though."
-	icon = 'icons/fallout/mobs/humans/fallout_npc.dmi'
+	icon = 'icons/fallout/mobs/humans/traders.dmi'
 	icon_state = "WasterG_Neutral"
 	icon_living = "WasterG_Neutral"
 	icon_dead = null
