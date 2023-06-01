@@ -69,7 +69,7 @@
 #define RADIO_KEY_TOWN "f"
 #define RADIO_TOKEN_TOWN ":f"
 
-#define RADIO_CHANNEL_TOWN_PD "Sheriff"
+#define RADIO_CHANNEL_TOWN_PD "Legion"
 #define RADIO_KEY_TOWN_PD "l"
 #define RADIO_TOKEN_TOWN_PD ":l"
 
@@ -81,9 +81,9 @@
 #define RADIO_KEY_TOWN_MAYOR "y"
 #define RADIO_TOKEN_TOWN_MAYOR ":y"
 
-#define RADIO_CHANNEL_REDWATER "Redwater"
-#define RADIO_KEY_REDWATER "d"
-#define RADIO_TOKEN_REDWATER ":d"
+#define RADIO_CHANNEL_REDWATER "Sheriff"
+#define RADIO_KEY_REDWATER "i"
+#define RADIO_TOKEN_REDWATER ":i"
 
 #define RADIO_CHANNEL_CTF_RED "Red Team"
 #define RADIO_CHANNEL_CTF_BLUE "Blue Team"
@@ -111,6 +111,7 @@
 #define FREQ_RANGER 1373 //Ranger
 #define FREQ_TOWN_MAYOR 1375 //Den
 #define FREQ_TOWN_COMMERCE 1376 //Khans
+#define FREQ_LEGION 1377 // Legion
 
 #define FREQ_HOLOGRID_SOLUTION 1433
 #define FREQ_STATUS_DISPLAYS 1435

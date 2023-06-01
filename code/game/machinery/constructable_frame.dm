@@ -87,7 +87,7 @@
 					return
 				to_chat(user, span_notice("You start to add cables to the frame..."))
 				if(P.use_tool(src, user, 20, volume=50, amount=5))
-					if (user.skill_check(SKILL_REPAIR) || user.skill_roll(SKILL_REPAIR))
+					if (user.skill_check(SKILL_REPAIR, do_message = TRUE) || user.skill_roll(SKILL_REPAIR))
 						to_chat(user, span_notice("You add cables to the frame."))
 						state = 2
 						icon_state = "box_1"
@@ -131,7 +131,7 @@
 					return
 				if(!user.transferItemToLoc(B, src))
 					return
-				if(!(user.skill_check(SKILL_REPAIR) || user.skill_roll(SKILL_REPAIR, DIFFICULTY_NORMAL)))
+				if(!(user.skill_check(SKILL_REPAIR, do_message = TRUE) || user.skill_roll(SKILL_REPAIR, DIFFICULTY_NORMAL)))
 					qdel(P)
 					to_chat(user, span_notice("You fumble the board, damaging it to the point where it won't work. You toss it to one side."))
 					return

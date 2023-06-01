@@ -75,24 +75,16 @@
 		return skill_melee + round((special_a + special_s)/2)
 	if (SKILL_THROWING == check)
 		return skill_throwing + special_a
-	if (SKILL_FIRST_AID == check)
-		return skill_first_aid + round((special_p*2 + special_i)/2)
-	if (SKILL_DOCTOR == check)
+	if (SKILL_FIRST_AID == check || SKILL_DOCTOR == check)
 		return skill_doctor + round((special_p*2 + special_i)/2)
-	if (SKILL_SNEAK == check)
-		return skill_sneak + special_a
-	if (SKILL_LOCKPICK == check)
-		return skill_lockpick + round((special_p*2 + special_a)/2)
-	if (SKILL_TRAPS == check)
-		return skill_traps + round((special_p*2 + special_a)/2)
+	if (SKILL_SNEAK == check || SKILL_LOCKPICK == check || SKILL_TRAPS == check)
+		return skill_sneak + round((special_p*2 + special_a)/2)
 	if (SKILL_SCIENCE == check)
 		return skill_science + (special_i * 2)
 	if (SKILL_REPAIR == check)
 		return skill_repair + special_i
-	if (SKILL_SPEECH == check)
+	if (SKILL_SPEECH == check || SKILL_BARTER == check)
 		return skill_speech + (special_c * 2)
-	if (SKILL_BARTER == check)
-		return skill_barter + (special_c * 2)
 	if (SKILL_OUTDOORSMAN == check)
 		return skill_outdoorsman + round((special_i + special_e)/2)
 	return 0
@@ -144,15 +136,15 @@
 	list("name" = SKILL_UNARMED, "value" = num2text(skill_unarmed + round((special_a + special_s)/2)), "description" = "Hit chance when unarmed, also determines chances to disarm and break out of grabs and the like."),
 	list("name" = SKILL_MELEE, "value" = num2text(skill_melee + round((special_a + special_s)/2)), "description" = "Hit chance when using any melee weapon. Also influnces blocking."),
 	list("name" = SKILL_THROWING, "value" = num2text(skill_throwing + special_a), "description" = "Hit chance for projectiles thrown by your character."),
-	list("name" = SKILL_FIRST_AID, "value" = num2text(skill_first_aid + round((special_p*2 + special_i)/2)), "description" = "Bandage, Suture, Salves, basic medicine effectiveness, higher values means longer lifetimes and more healing. Also can be used to read from health scanners."),
-	list("name" = SKILL_DOCTOR, "value" = num2text(skill_doctor + round((special_p*2 + special_i)/2)), "description" = "Surgical success chance, higher values also unlock more surgeries. Can also be used to control various medical devices autosurgeons and the like."),
-	list("name" = SKILL_SNEAK, "value" = num2text(skill_sneak + special_a), "description" = "Determines what happens when using the sneak verb. Higher values make your sprite more transparent and lower mob dectection chance."),
-	list("name" = SKILL_LOCKPICK, "value" = num2text(skill_lockpick + round((special_p*2 + special_a)/2)), "description" = "Lockpicking; success chance for opening locks both on doors and for lock boxes! Lockpicks can also be used on any unpowered/unwired locked door."),
-	list("name" = SKILL_TRAPS, "value" = num2text(skill_traps + round((special_p*2 + special_a)/2)), "description" = "Disarming traps; such as on locked doors and locked boxes. Also lets you spot hidden traps. Used as the skill for creating explosives when crafting."),
+	//list("name" = SKILL_FIRST_AID, "value" = num2text(skill_first_aid + round((special_p*2 + special_i)/2)), "description" = "Bandage, Suture, Salves, basic medicine effectiveness, higher values means longer lifetimes and more healing. Also can be used to read from health scanners."),
+	list("name" = SKILL_DOCTOR, "value" = num2text(skill_doctor + round((special_p*2 + special_i)/2)), "description" = "Surgical success chance, higher values also unlock more surgeries. Can also be used to control various medical devices autosurgeons and the like. [SKILL_FIRST_AID] Bandage, Suture, Salves, basic medicine effectiveness."),
+	list("name" = SKILL_SNEAK, "value" = num2text(skill_sneak  + round((special_p*2 + special_a)/2)), "description" = "Determines what happens when using the sneak verb. Higher values make your sprite more transparent and lower mob dectection chance. [SKILL_TRAPS] Used for disarming traps. [SKILL_LOCKPICK] Success chance for opening locks both on doors and for lock boxes."),
+	//list("name" = SKILL_LOCKPICK, "value" = num2text(skill_lockpick + round((special_p*2 + special_a)/2)), "description" = "Lockpicking; success chance for opening locks both on doors and for lock boxes! Lockpicks can also be used on any unpowered/unwired locked door."),
+	//list("name" = SKILL_TRAPS, "value" = num2text(skill_traps + round((special_p*2 + special_a)/2)), "description" = "Disarming traps; such as on locked doors and locked boxes. Also lets you spot hidden traps. Used as the skill for creating explosives when crafting."),
 	list("name" = SKILL_SCIENCE, "value" = num2text(skill_science + (special_i * 2)), "description" = "Research effectiveness; determines what nodes you can research as well as how good your experiments will be. Dictates chemistry skill too higher values, more known chemicals; and is used for 'hacking'."),
 	list("name" = SKILL_REPAIR, "value" = num2text(skill_repair + special_i), "description" = "The primary construction and crafting skill, limits what you can do based on the value. Can be used for smithing too."),
-	list("name" = SKILL_SPEECH, "value" = num2text(skill_speech + (special_c * 2)), "description" = "Higher skill, better chance of convincing npcs to do what you want them to."),
-	list("name" = SKILL_BARTER, "value" = num2text(skill_barter + (special_c * 2)), "description" = "Higher skill, better prices from npc traders as well as better quest rewards."),
+	list("name" = SKILL_SPEECH, "value" = num2text(skill_speech + (special_c * 2)), "description" = "Higher skill, better chance of convincing npcs to do what you want them to, better prices from npc traders as well as better quest rewards."),
+	//list("name" = SKILL_BARTER, "value" = num2text(skill_barter + (special_c * 2)), "description" = "Higher skill, better prices from npc traders as well as better quest rewards."),
 	list("name" = SKILL_OUTDOORSMAN, "value" = num2text(skill_outdoorsman + round((special_i + special_e)/2)), "description" = "The primary skill for tribal crafting, can be used for smithing too. higher values will also give you more yeild from plants and butchering as well as faster mining speeds."))
 	return dat
 
