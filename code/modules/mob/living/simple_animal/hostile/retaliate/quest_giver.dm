@@ -15,9 +15,9 @@
 	my_original_loc = loc
 	. = ..()
 	if (gender == FEMALE)
-		icon_state = "WasterG_Gun"
+		icon_state = "trader_female"
 	else
-		icon_state = "WasterM_Gun"
+		icon_state = "trader_male"
 
 /mob/living/simple_animal/hostile/retaliate/talker/quest_giver/handle_automated_movement()
 	if (get_dist(my_original_loc, loc) > 2)
