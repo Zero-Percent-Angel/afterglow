@@ -185,7 +185,7 @@
 		ignore_walls = FALSE
 		)
 	
-	if(user.skill_check(SKILL_LOCKPICK, skill_gate) || user.skill_roll(SKILL_LOCKPICK, skill_roll_v))
+	if(user.skill_check(SKILL_LOCKPICK, skill_gate, TRUE) || user.skill_roll(SKILL_LOCKPICK, skill_roll_v))
 		user.show_message(span_green(pick(pick_messages["successmessages"])))
 		try_to_activate_door(user, TRUE)
 		. = TRUE

@@ -178,6 +178,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Chaplain"
 	icon_state = "Chaplain"
 
+/obj/effect/landmark/start/f13/cyborg
+	name = "Cyborg"
+	icon_state = "Cyborg"
+
 /obj/effect/landmark/start/cyborg
 	name = "Cyborg"
 	icon_state = "Cyborg"

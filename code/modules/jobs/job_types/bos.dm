@@ -295,7 +295,6 @@ Head Scribe
 	name = "Head Scribe"
 	jobtype = /datum/job/bos/f13headscribe
 	//chemwhiz = TRUE
-	belt = /obj/item/kit_spawner/bos/scientist
 	uniform = 		/obj/item/clothing/under/syndicate/brotherhood
 	accessory = 	/obj/item/clothing/accessory/bos/headscribe
 	glasses =       /obj/item/clothing/glasses/sunglasses
@@ -305,6 +304,7 @@ Head Scribe
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
+		/obj/item/kit_spawner/bos/scientist = 1
 		)
 
 /datum/outfit/loadout/hsstand
@@ -739,11 +739,11 @@ Scribe
 	id = 			/obj/item/card/id/dogtag
 	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/gun/energy/laser/pistol=1,
+		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/gun/energy/laser/pistol = 1,
 		/obj/item/storage/belt/utility/full/engi = 1,
-		/obj/item/melee/onehanded/knife/survival=1,
-		/obj/item/storage/firstaid/regular=1,
+		/obj/item/melee/onehanded/knife/survival = 1,
+		/obj/item/storage/firstaid/regular = 1,
 		)
 
 /*
