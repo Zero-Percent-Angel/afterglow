@@ -1120,6 +1120,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	//ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tailor/legionuniform)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/warpaint)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/bitterdrink)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/bitterdrink5)
 
 
 /datum/outfit/loadout/auxassist
