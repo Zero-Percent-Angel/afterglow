@@ -8,9 +8,8 @@
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 10
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = REGULAR_CHECK
+	skill_level = HARD_CHECK
 
 /datum/crafting_recipe/bluepotion
 	name = "Blue Potion"
@@ -22,9 +21,8 @@
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 10
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = REGULAR_CHECK
+	skill_level = HARD_CHECK
 
 /datum/crafting_recipe/greenpotion
 	name = "Green Potion"
@@ -36,9 +34,8 @@
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 10
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = REGULAR_CHECK
+	skill_level = HARD_CHECK
 
 /datum/crafting_recipe/upgraded_gauze
 	name = "Improved Gauze"
@@ -110,7 +107,6 @@
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 10
 	category = CAT_MEDICAL
-	always_available = FALSE // Only the Twin Mothers Tribe knew the secret to making bitter drink prior to legion annexation. Any clever chemist can bootleg the recipe though.
 	skill_needed = SKILL_OUTDOORSMAN
 	skill_level = REGULAR_CHECK
 
@@ -137,9 +133,8 @@
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 10
 	category = CAT_MEDICAL
-	always_available = FALSE // only tribals know the secret
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = REGULAR_CHECK
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/healpoultice5
 	name = "Batch of healing poultice (x5)"
@@ -151,9 +146,8 @@
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 20
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = REGULAR_CHECK
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/smell_salts
 	name = "Smelling salts"
@@ -177,10 +171,9 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 10
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_SCIENCE
 	skill_level = REGULAR_CHECK
-	falls_back_on_outdoors = TRUE
+	//falls_back_on_outdoors = TRUE		- Disabling for now since Bitters are re-enabled and work roughly the same. Re-enable if it's an issue. Makes Sci useful skillwise.
 
 /datum/crafting_recipe/stimpak/chemistry // Purely chemistry recipe
 	name = "Stimpak (from chems)"
@@ -190,7 +183,6 @@
 	tools = list(TOOL_CHEMMASTER)
 	time = 10
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_SCIENCE
 	skill_level = REGULAR_CHECK
 
@@ -203,7 +195,6 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 20
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_SCIENCE
 	skill_level = REGULAR_CHECK
 
@@ -215,7 +206,6 @@
 	tools = list(TOOL_CHEMMASTER)
 	time = 20
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_SCIENCE
 	skill_level = REGULAR_CHECK
 
@@ -516,6 +506,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
+	skill_level = SKILL_REPAIR 
+	skill_needed = REGULAR_CHECK
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_surgical
@@ -528,6 +520,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
+	skill_level = SKILL_REPAIR 
+	skill_needed = REGULAR_CHECK
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_janitor
@@ -540,6 +534,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
+	skill_level = SKILL_REPAIR 
+	skill_needed = REGULAR_CHECK
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_service
@@ -552,6 +548,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
+	skill_level = SKILL_REPAIR 
+	skill_needed = REGULAR_CHECK
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_nutriment
@@ -564,4 +562,6 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
+	skill_level = SKILL_REPAIR 
+	skill_needed = REGULAR_CHECK
 	always_available = FALSE

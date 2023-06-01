@@ -29,7 +29,7 @@
 				/obj/item/stack/rods = 2)
 	category = CAT_CRAFTING
 	subcategory = CAT_TOOL
-	skill_level = REGULAR_CHECK
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/crudewrench
 	name = "Crude Wrench"
