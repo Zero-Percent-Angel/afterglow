@@ -92,7 +92,7 @@ Administrator
 	name =	"Senior Doctor"
 	jobtype =	/datum/job/followers/f13leadpractitioner
 	id =	/obj/item/card/id/silver
-	chemwhiz =	TRUE
+	//chemwhiz =	TRUE
 	uniform =	/obj/item/clothing/under/f13/followers
 	suit=	/obj/item/clothing/suit/toggle/labcoat/followers
 	shoes =	/obj/item/clothing/shoes/f13/brownie
@@ -278,7 +278,7 @@ Practitioner
 	jobtype =	/datum/job/followers/f13practitioner
 	uniform =	/obj/item/clothing/under/f13/followers
 	id =	/obj/item/card/id/silver
-	chemwhiz =	TRUE
+	//chemwhiz =	TRUE
 	backpack =	/obj/item/storage/backpack/medic
 	belt = /obj/item/kit_spawner/follower/doctor
 	satchel =	/obj/item/storage/backpack/satchel/med

@@ -1,8 +1,8 @@
 /obj/machinery/door/locked
 	name = "locked door"
-	desc = "This door only opens after a sucessful lockpicking attempt."
+	desc = "This door only opens after a sucessful lockpicking attempt and is not part of a player or faction base."
 	icon = 'icons/fallout/structures/doors.dmi'
-	icon_state = "secure"
+	icon_state = "iron_padlock"
 	explosion_block = 3
 	heat_proof = TRUE
 	locked = TRUE
@@ -18,18 +18,18 @@
 
 /obj/machinery/door/locked/update_icon()
 	if(density)
-		icon_state = "secure"
+		icon_state = "iron"
 	else
-		icon_state = "secureopen"
+		icon_state = "ironopen"
 
 /obj/machinery/door/locked/do_animate(animation)
 	switch(animation)
 		if("opening")
 			playsound(src,'sound/machines/door_open.ogg',40,1)
-			flick("secure_opening", src)
+			flick("ironopening", src)
 		if("closing")
 			playsound(src,'sound/machines/door_close.ogg',40,1)
-			flick("secure_closing", src)
+			flick("ironclosing", src)
 
 /obj/machinery/door/locked/easy
 	trapped_door = FALSE

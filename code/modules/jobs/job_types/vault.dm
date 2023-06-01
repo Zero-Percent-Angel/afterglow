@@ -153,7 +153,7 @@ Medical Doctor
 /datum/outfit/job/vault/f13doctor
 	name = "Medical Doctor"
 	jobtype = /datum/job/vault/f13doctor
-	chemwhiz = TRUE
+	//chemwhiz = TRUE
 	//pda
 	uniform = 		/obj/item/clothing/under/f13/vault13
 	ears = 			/obj/item/radio/headset/headset_vault
@@ -198,7 +198,7 @@ Scientist
 /datum/outfit/job/vault/f13vaultscientist
 	name = "Scientist"
 	jobtype = /datum/job/vault/f13vaultscientist
-	chemwhiz = TRUE
+	//chemwhiz = TRUE
 
 	//pda
 	uniform = 		/obj/item/clothing/under/f13/vault13

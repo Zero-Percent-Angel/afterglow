@@ -685,7 +685,7 @@ Mayor
 /datum/outfit/job/den/f13dendoc
 	name = "Doctor"
 	jobtype = /datum/job/oasis/f13dendoc
-	chemwhiz = TRUE
+	//chemwhiz = TRUE
 	belt = /obj/item/kit_spawner/townie/doctor
 	ears = /obj/item/radio/headset/headset_town/medical
 	uniform = /obj/item/clothing/under/f13/medic
