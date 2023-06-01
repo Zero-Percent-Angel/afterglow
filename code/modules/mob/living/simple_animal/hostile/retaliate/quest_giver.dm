@@ -35,7 +35,7 @@
 /mob/living/simple_animal/hostile/retaliate/talker/quest_giver/basic
 	name = "Wastelander"
 	desc = "A wastelander, just trying to survive, this one seems to have an extra agenda though."
-	icon = 'icons/fallout/mobs/humans/fallout_npc.dmi'
+	icon = 'icons/fallout/mobs/humans/traders.dmi'
 	icon_state = "WasterG_Neutral"
 	icon_living = "WasterG_Neutral"
 	icon_dead = null
