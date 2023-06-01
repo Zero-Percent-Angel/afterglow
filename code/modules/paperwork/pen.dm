@@ -31,6 +31,7 @@
 	var/font = PEN_FONT
 	embedding = list()
 	sharpness = SHARP_POINTY
+	var/naming = FALSE
 
 /obj/item/pen/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] is scribbling numbers all over [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit sudoku..."))
@@ -145,32 +146,35 @@
 	else
 		. = ..()
 
-/obj/item/pen/afterattack(obj/O, mob/living/user, proximity)
+
+/obj/item/pen/afterattack(obj/O, mob/living/user, proximity, params)
 	. = ..()
-	//Changing Name/Description of items. Only works if they have the 'unique_rename' flag set
-	if(isobj(O) && proximity && (O.obj_flags & UNIQUE_RENAME))
-		var/penchoice = input(user, "What would you like to edit?", "Rename or change description?") as null|anything in list("Rename","Change description")
-		if(QDELETED(O) || !user.canUseTopic(O, BE_CLOSE))
-			return
-		if(penchoice == "Rename")
-			var/input = stripped_input(user,"What do you want to name \the [O.name]?", ,"", MAX_NAME_LEN)
-			var/oldname = O.name
+	if (naming)
+		//Changing Name/Description of items. Only works if they have the 'unique_rename' flag set
+		if(isobj(O) && proximity)
+			var/penchoice = input(user, "What would you like to edit?", "Rename or change description?") as null|anything in list("Rename","Change description")
 			if(QDELETED(O) || !user.canUseTopic(O, BE_CLOSE))
 				return
-			if(oldname == input)
-				to_chat(user, span_notice("You changed \the [O.name] to... well... \the [O.name]."))
-			else
-				O.name = input
-				to_chat(user, span_notice("\The [oldname] has been successfully been renamed to \the [input]."))
-				O.renamedByPlayer = TRUE
+			if(penchoice == "Rename")
+				var/input = stripped_input(user,"What do you want to name \the [O.name]?", ,"", MAX_NAME_LEN)
+				var/oldname = O.name
+				if(QDELETED(O) || !user.canUseTopic(O, BE_CLOSE))
+					return
+				if(oldname == input)
+					to_chat(user, "<span class='notice'>You changed \the [O.name] to... well... \the [O.name].</span>")
+				else
+					O.name = input
+					to_chat(user, "<span class='notice'>\The [oldname] has been successfully been renamed to \the [input].</span>")
+					O.renamedByPlayer = TRUE
 
-		if(penchoice == "Change description")
-			var/input = stripped_input(user,"Describe \the [O.name] here", ,"", 100)
-			if(QDELETED(O) || !user.canUseTopic(O, BE_CLOSE))
-				return
-			O.desc = input
-			to_chat(user, span_notice("You have successfully changed \the [O.name]'s description."))
-
+			if(penchoice == "Change description")
+				var/input = stripped_input(user,"Describe \the [O.name] here", ,"", 100)
+				if(QDELETED(O) || !user.canUseTopic(O, BE_CLOSE))
+					return
+				O.desc = input
+				to_chat(user, "<span class='notice'>You have successfully changed \the [O.name]'s description.</span>")
+	else	
+		return
 /*
  * Sleepypens
  */
