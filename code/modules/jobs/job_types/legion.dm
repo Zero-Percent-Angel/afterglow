@@ -723,7 +723,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 // VETERAN
 
 /datum/job/CaesarsLegion/Legionnaire/vetlegionnaire
-	title = "Veteran Legionnaire"
+	title = "Veteran Legionary"
 	flag = F13VETLEGIONARY
 	total_positions = 3
 	spawn_positions = 3
@@ -758,7 +758,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	//ADD_TRAIT(H, TRAIT_IRONFIST, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/vetlegionnaire
-	name = "Veteran Legionnaire"
+	name = "Veteran Legionary"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/vetlegionnaire
 	id = /obj/item/card/id/dogtag/legveteran
 	mask = /obj/item/clothing/mask/bandana/legion/legvet
@@ -824,7 +824,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 // PRIME
 
 /datum/job/CaesarsLegion/Legionnaire/f13legionary
-	title = "Prime Legionnaire"
+	title = "Prime Legionary"
 	flag = F13LEGIONARY
 	total_positions = 4
 	spawn_positions = 4
@@ -857,7 +857,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	//ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
-	name = "Prime Legionnaire"
+	name = "Prime Legionary"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
 	id = /obj/item/card/id/dogtag/legprime
 	mask = /obj/item/clothing/mask/bandana/legion/legprime
@@ -905,7 +905,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 // RECRUIT
 
 /datum/job/CaesarsLegion/Legionnaire/f13recleg
-	title = "Recruit Legionnaire"
+	title = "Recruit Legionary"
 	flag = F13RECRUITLEG
 	total_positions = 5
 	spawn_positions = 5
@@ -977,7 +977,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 // Immunes are mostly an off-duty role meant to attend to the camp itself and the slaves or prisoners within.
 
 /datum/job/CaesarsLegion/Legionnaire/f13immune
-	title = "Legion Immune"
+	title = "Legion Off-Duty"
 	flag = F13IMMUNE
 	total_positions = 0
 	spawn_positions = 0
@@ -988,7 +988,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	exp_requirements = 150
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13immune
-	name = "Immune"
+	name = "Legion Off-Duty"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13immune
 	id = /obj/item/card/id/dogtag/legimmune
 	mask = /obj/item/clothing/mask/bandana/legion/camp

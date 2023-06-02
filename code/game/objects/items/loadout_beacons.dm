@@ -751,9 +751,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	name = "bands of the swampstar case"
 	w_class = WEIGHT_CLASS_BULKY
 
-/obj/item/storage/box/gun/melee/fist_of_the_swampstar/PopulateContents()
-	new /obj/item/clothing/gloves/fingerless/pugilist/rapid(src)
-
 /obj/item/storage/box/gun/melee/militarypolice
 	name = "baton case"
 
