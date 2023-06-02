@@ -47,7 +47,8 @@
 
 /proc/try_to_zombie_infect(mob/living/carbon/human/target)
 	CHECK_DNA_AND_SPECIES(target)
-
+	//nope no zombies allowed
+	return
 	if(NOZOMBIE in target.dna.species.species_traits)
 		// cannot infect any NOZOMBIE subspecies (such as high functioning
 		// zombies)

@@ -24,8 +24,8 @@
 	. = ..()
 
 /obj/item/organ/zombie_infection/Insert(mob/living/carbon/M, special = 0, drop_if_replaced = TRUE)
-	. = ..()
-	START_PROCESSING(SSobj, src)
+	//. = ..()
+	//START_PROCESSING(SSobj, src)
 
 /obj/item/organ/zombie_infection/Remove(special = FALSE)
 	if(owner)
