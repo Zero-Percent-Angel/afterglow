@@ -350,7 +350,6 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 	skill_level = HARD_CHECK
-
 */
 /datum/crafting_recipe/a556shrap
 	name = "5.56mm micro-shrapnel ammo box"
