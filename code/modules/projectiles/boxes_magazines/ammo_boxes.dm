@@ -461,14 +461,14 @@
 	max_ammo = 12
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_HEAVY_BOX)
-
+/*
 /obj/item/ammo_box/a50MGbox/rubber
 	name = "ammo box (.50 rubber)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "50box"
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/a50MG/rubber
-
+*/
 /obj/item/ammo_box/a50MGbox/improvised
 	name = "bag with reloaded .50MG slugs"
 	ammo_type = /obj/item/ammo_casing/a50MG/improvised
