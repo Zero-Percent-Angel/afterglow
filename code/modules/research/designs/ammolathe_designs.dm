@@ -101,13 +101,6 @@
 	build_path = /obj/item/ammo_box/magazine/m22/extended/empty
 	category = list("initial", "Simple Magazines", "Handmade Magazines")
 
-/datum/design/ammolathe/speedloader38
-	name = "empty speed loader (.38)"
-	id = "speedloader38"
-	materials = list(/datum/material/iron = 2000)
-	build_path = /obj/item/ammo_box/c38/empty
-	category = list("initial", "Simple Magazines", "Handmade Magazines")
-
 /datum/design/ammolathe/speedloader22
 	name = "empty speed loader (.22 LR)"
 	id = "speedloader22"
@@ -235,20 +228,6 @@
 	build_path = /obj/item/ammo_box/a308box
 	category = list("initial", "Simple Ammo")
 
-/datum/design/ammolathe/c38
-	name = ".38 ammo box"
-	id = "c38"
-	materials = list(/datum/material/iron = 10000, /datum/material/blackpowder = 1000)
-	build_path = /obj/item/ammo_box/c38box
-	category = list("initial", "Simple Ammo")
-
-/datum/design/ammolathe/c38rubber
-	name = ".38 rubber ammo box"
-	id = "useless"
-	materials = list(/datum/material/iron = 8000, /datum/material/blackpowder = 1000)
-	build_path = /obj/item/ammo_box/c38box/rubber
-	category = list("initial", "Simple Ammo")
-
 /datum/design/ammolathe/a223
 	name = ".223 ammo box"
 	id = "a223"
@@ -298,13 +277,6 @@
 	id = "mini_uzimag"
 	materials = list(/datum/material/iron = 4000)
 	build_path = /obj/item/ammo_box/magazine/uzim9mm/empty
-	category = list("initial", "Basic Magazines")
-
-/datum/design/ammolathe/carl_gustafmag
-	name = "empty carl gustaf magazine (10mm)"
-	id = "carl_gustafmag"
-	materials = list(/datum/material/iron = 4000)
-	build_path = /obj/item/ammo_box/magazine/cg45/empty
 	category = list("initial", "Basic Magazines")
 
 /datum/design/ammolathe/pistol22mag
@@ -805,20 +777,6 @@
 	id = "handloader_a45rubber"
 	materials = list(/datum/material/iron = 10000, /datum/material/blackpowder = 1500)
 	build_path = /obj/item/ammo_box/c45/rubber
-	category = list("initial", "Handloaded Ammo")
-
-/datum/design/ammolathe/improvised/c38
-	name = ".38 bag"
-	id = "handloader_c38"
-	materials = list(/datum/material/iron = 10000, /datum/material/blackpowder = 1000)
-	build_path = /obj/item/ammo_box/c38box/improvised
-	category = list("initial", "Handloaded Ammo")
-
-/datum/design/ammolathe/improvised/c38rubber
-	name = ".38 rubber ammo box"
-	id = "handloader_useless" // (X)Doubt
-	materials = list(/datum/material/iron = 8000, /datum/material/blackpowder = 1000)
-	build_path = /obj/item/ammo_box/c38box/rubber
 	category = list("initial", "Handloaded Ammo")
 
 /datum/design/ammolathe/improvised/a357

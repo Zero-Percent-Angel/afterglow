@@ -235,20 +235,6 @@
 	subcategory = CAT_AMMO
 	skill_level = REGULAR_CHECK
 
-/datum/crafting_recipe/c38boxincin
-	name = ".38 incendiary-tipped ammo box"
-	result = /obj/item/ammo_box/c38box/incendiary
-	reqs = list(/obj/item/stack/crafting/metalparts = 1,
-	/obj/item/stack/sheet/metal = 5,
-	/datum/reagent/fuel = 20,
-	/obj/item/stack/ore/blackpowder = 1
-	)
-	tools = list(TOOL_AWORKBENCH)
-	time = 5
-	category = CAT_WEAPONRY
-	subcategory = CAT_AMMO
-	skill_level = REGULAR_CHECK
-
 /datum/crafting_recipe/c10mmincin
 	name = "10mm incendiary-tipped ammo box"
 	result = /obj/item/ammo_box/c10mm/fire
@@ -502,9 +488,9 @@
 	subcategory = CAT_WEAPON
 	skill_level = VERY_EASY_CHECK
 
-/datum/crafting_recipe/gun/shotpistol
-	name = "Shotpistol"
-	result = /obj/item/gun/ballistic/revolver/shotpistol
+/datum/crafting_recipe/gun/single_shotgun
+	name = "Single shotgun"
+	result = /obj/item/gun/ballistic/revolver/single_shotgun
 	reqs = list(/obj/item/stack/rods = 1,
 				/obj/item/stack/crafting/metalparts = 1)
 	tools = list(TOOL_WORKBENCH)
@@ -610,20 +596,6 @@
 	subcategory = CAT_WEAPON
 	skill_level = HARD_CHECK
 
-/datum/crafting_recipe/gun/autoshock
-	name = "Autoshock tesla pistol"
-	result = /obj/item/gun/energy/laser/auto/oasis
-	reqs = list(/obj/item/gun/energy/laser/auto = 1,
-				/obj/item/stock_parts/capacitor/adv = 1,
-				/obj/item/stack/crafting/electronicparts = 10,
-				/obj/item/stack/cable_coil = 3)
-	tools = list(TOOL_WORKBENCH, TOOL_MULTITOOL)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	skill_level = HARD_CHECK
-
-
 //browning hi-power
 /datum/crafting_recipe/ninemil
 	name = "9mm Pistol"
@@ -711,36 +683,6 @@
 	always_available = FALSE
 	skill_level = HARD_CHECK
 	
-//coyote repeater
-/datum/crafting_recipe/coyoterepeater
-	name = "Coyote Repeater"
-	result = /obj/item/gun/ballistic/rifle/repeater/cowboy/tribal
-	reqs = list(/obj/item/gun/ballistic/rifle/repeater/cowboy = 1,
-				/obj/item/stack/sheet/sinew = 2,
-				/obj/item/stack/sheet/bone = 4)
-	tools = list(TOOL_ALCHEMY_TABLE)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = TRUE
-	skill_level = REGULAR_CHECK
-
-//rainstick
-/datum/crafting_recipe/rainstick
-	name = "Rainstick"
-	result = /obj/item/gun/ballistic/rifle/repeater/trail/tribal
-	reqs = list(/obj/item/gun/ballistic/rifle/repeater/trail = 1,
-				/obj/item/stack/sheet/sinew = 2,
-				/obj/item/stack/sheet/bone = 3,
-				/obj/item/grown/rose = 1)
-	tools = list(TOOL_ALCHEMY_TABLE)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = TRUE
-	skill_level = REGULAR_CHECK
-	falls_back_on_outdoors = TRUE
-	
 //medicinestick
 /datum/crafting_recipe/medicinestick
 	name = "Medicine Stick"
@@ -750,39 +692,6 @@
 				/obj/item/stack/sheet/bone = 2,
 				/obj/item/grown/rose = 1,
 				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 1)
-	tools = list(TOOL_ALCHEMY_TABLE)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = TRUE
-	skill_level = REGULAR_CHECK
-	falls_back_on_outdoors = TRUE
-	
-//smelltheroses
-/datum/crafting_recipe/smelltheroses
-	name = "Smell-The-Roses"
-	result = /obj/item/gun/ballistic/rifle/repeater/ranger/tribal
-	reqs = list(/obj/item/gun/ballistic/rifle/repeater/ranger = 1,
-				/obj/item/stack/sheet/sinew = 2,
-				/obj/item/stack/sheet/bone = 2,
-				/obj/item/grown/rose = 1)
-	tools = list(TOOL_ALCHEMY_TABLE)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = TRUE
-	skill_level = REGULAR_CHECK
-	falls_back_on_outdoors = TRUE
-
-//mourningsunrise
-/datum/crafting_recipe/mourningsunrise
-	name = "Mourning Sunrise"
-	result = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever/stock/tribal
-	reqs = list(/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever = 1,
-				/obj/item/stack/sheet/sinew = 2,
-				/obj/item/stack/sheet/bone = 2,
-				/obj/item/grown/rose = 1,
-				/obj/item/stack/sheet/mineral/wood = 2)
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 120
 	category = CAT_WEAPONRY
@@ -810,7 +719,7 @@
 	name = "Upgraded Varmint Rifle"
 	result = /obj/item/gun/ballistic/automatic/varmint/verminkiller
 	reqs = list(/obj/item/gun/ballistic/automatic/varmint = 1,
-				/obj/item/gun/ballistic/automatic/delisle = 1, //silencer
+				/obj/item/gun_upgrade/muzzle/silencer = 1, //silencer
 				/obj/item/advanced_crafting_components/lenses = 1, //scope
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/plastic = 2,
@@ -902,20 +811,6 @@
 				/obj/item/stack/crafting/metalparts = 2
 				)
 	tools = list(TOOL_AWORKBENCH)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = FALSE
-	skill_level = HARD_CHECK
-
-/datum/crafting_recipe/commando
-	name = "DeLisle Commando Carbine"
-	result = /obj/item/gun/ballistic/automatic/delisle/commando
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/obj/item/advanced_crafting_components/receiver = 1,
-				/obj/item/stack/crafting/metalparts = 2
-				)
-	tools = list(TOOL_WORKBENCH)
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
@@ -1181,21 +1076,6 @@
 	always_available = FALSE
 	skill_level = HARD_CHECK
 
-//BoS plasma pistol
-/datum/crafting_recipe/lightplasmapistol
-	name = "Lightweight Plasma Pistol"
-	result = /obj/item/gun/energy/laser/plasma/pistol/light
-	reqs = list(/obj/item/advanced_crafting_components/flux = 1,
-				/obj/item/stack/crafting/metalparts = 5,
-				/obj/item/stack/crafting/electronicparts = 2
-				)
-	tools = list(TOOL_AWORKBENCH)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = FALSE
-	skill_level = HARD_CHECK
-
 //uzi
 /datum/crafting_recipe/uzi
 	name = "Uzi SMG"
@@ -1406,24 +1286,6 @@
 	always_available = FALSE
 	skill_level = EXPERT_CHECK
 
-//tribeam Stun
-/datum/crafting_recipe/tribeam_stun
-	name = "Tribeam Stun Rifle"
-	result = /obj/item/gun/energy/laser/scatter/nonlethal
-	reqs = list(/obj/item/stack/sheet/metal = 15,
-				/obj/item/advanced_crafting_components/conductors = 1,
-				/obj/item/advanced_crafting_components/alloys = 1,
-				/obj/item/advanced_crafting_components/lenses = 1,
-				/obj/item/stack/crafting/goodparts = 3,
-				/obj/item/stack/crafting/electronicparts = 3
-				)
-	tools = list(TOOL_WORKBENCH)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = FALSE
-	skill_level = EXPERT_CHECK
-
 //rcw
 /datum/crafting_recipe/rcw
 	name = "Laser RCW"
@@ -1571,58 +1433,6 @@
 	time = 120
 	category = CAT_WEAPONRY
 	subcategory = CAT_WEAPON
-	skill_level = HARD_CHECK
-
-//SLR
-/datum/crafting_recipe/slr
-	name = "Enfield Self-loading Rifle"
-	result = /obj/item/gun/ballistic/automatic/slr
-	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
-				/obj/item/stack/crafting/metalparts = 4,
-				/obj/item/advanced_crafting_components/receiver = 1,
-				/obj/item/advanced_crafting_components/alloys = 1,
-				/obj/item/advanced_crafting_components/assembly = 1,
-				/obj/item/stack/crafting/goodparts = 5,
-				/obj/item/stack/sheet/metal = 3)
-	tools = list(TOOL_WORKBENCH)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = FALSE
-	skill_level = HARD_CHECK
-
-//R82 heavy service rifle
-/datum/crafting_recipe/R82
-	name = "R82 heavy service rifle"
-	result = /obj/item/gun/ballistic/automatic/service/r82
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/obj/item/advanced_crafting_components/assembly = 1,
-				/obj/item/advanced_crafting_components/receiver = 1,
-				/obj/item/stack/sheet/mineral/wood = 5,
-				/obj/item/stack/crafting/goodparts = 5,
-				)
-	tools = list(TOOL_WORKBENCH)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = FALSE
-	skill_level = HARD_CHECK
-
-//R82 heavy service rifle
-/datum/crafting_recipe/R93
-	name = "R93 PDW"
-	result = /obj/item/gun/ballistic/automatic/r93
-	reqs = list(/obj/item/stack/sheet/metal = 5,
-				/obj/item/advanced_crafting_components/assembly = 1,
-				/obj/item/advanced_crafting_components/receiver = 1,
-				/obj/item/stack/sheet/plastic = 5,
-				/obj/item/stack/crafting/goodparts = 5
-				)
-	tools = list(TOOL_AWORKBENCH)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = FALSE
 	skill_level = HARD_CHECK
 
 
@@ -1973,51 +1783,3 @@ Not implemented due to balance at the moment
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	skill_level = VERY_EASY_CHECK
-
-//AR-10 armalite
-
-/datum/crafting_recipe/armalite
-	name = "AR-10 Armalite"
-	result = /obj/item/gun/ballistic/automatic/armalite
-	reqs = list(/obj/item/stack/sheet/metal = 10,
-				/obj/item/advanced_crafting_components/assembly = 1,
-				/obj/item/advanced_crafting_components/alloys = 1,
-				/obj/item/advanced_crafting_components/receiver = 1,
-				/obj/item/stack/crafting/goodparts = 5,
-				/obj/item/stack/crafting/metalparts = 5
-				)
-	tools = list(TOOL_AWORKBENCH)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = FALSE
-	skill_level = HARD_CHECK
-
-/datum/crafting_recipe/rangerlever
-	name = "Ranger Repeater"
-	result = /obj/item/gun/ballistic/rifle/repeater/ranger
-	reqs = list(/obj/item/stack/sheet/plastic = 3,
-				/obj/item/advanced_crafting_components/receiver = 1,
-				/obj/item/stack/crafting/goodparts = 3,
-				/obj/item/stack/crafting/metalparts = 5
-				)
-	tools = list(TOOL_AWORKBENCH)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = FALSE
-	skill_level = REGULAR_CHECK
-
-/datum/crafting_recipe/schmeisser
-	name = "Schmeisser Classic"
-	result = /obj/item/gun/ballistic/automatic/pistol/schmeisser
-	reqs = list(/obj/item/stack/crafting/metalparts = 2,
-				/obj/item/stack/sheet/metal = 3,
-				/obj/item/stack/crafting/goodparts = 3,
-				)
-	tools = list(TOOL_WORKBENCH)
-	time = 120
-	category = CAT_WEAPONRY
-	subcategory = CAT_WEAPON
-	always_available = FALSE
-	skill_level = HARD_CHECK

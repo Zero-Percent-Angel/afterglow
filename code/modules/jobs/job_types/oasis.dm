@@ -1253,7 +1253,7 @@ Mayor
 /datum/outfit/loadout/ballistic_master
 	name = "Ballistic Master"
 	backpack_contents = list(
-		/obj/item/book/granter/crafting_recipe/blueprint/armalite = 1
+		/obj/item/book/granter/crafting_recipe/blueprint/r91 = 1
 	)
 
 /datum/outfit/job/den/f13quartermaster/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1343,7 +1343,7 @@ Mayor
 	name = "Energy Specialist"
 	backpack_contents = list(
 		/obj/item/book/granter/crafting_recipe/blueprint/aer9=1,
-		/obj/item/book/granter/crafting_recipe/blueprint/lightplasmapistol=1
+		/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol=1
 	)
 
 /datum/outfit/loadout/ballistic_specialist

@@ -417,16 +417,6 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
-/datum/design/stuntribeam
-	name = "Stun Tri-beam"
-	desc = "A stub tri-beam."
-	id = "stuntribeam"
-	build_type = PROTOLATHE
-	materials = list(/datum/material/titanium = 20000, /datum/material/lead = 13000, /datum/material/gold = 3000, /datum/material/silver = 3000)
-	build_path = /obj/item/gun/energy/laser/scatter/nonlethal
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
 /datum/design/tribeam
 	name = "Tri-beam"
 	desc = "A laser gun that fires three lasers at once."

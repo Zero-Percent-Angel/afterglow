@@ -8,7 +8,6 @@
 #define CALIBER_9MM "9mm rounds"
 #define CALIBER_10MM "10mm rounds"
 #define CALIBER_14MM "14mm rounds"
-#define CALIBER_38 ".38 special rounds"
 #define CALIBER_357 ".357 magnum rounds"
 #define CALIBER_44 ".44 magnum rounds"
 #define CALIBER_45LC ".45 LC rounds"
@@ -62,7 +61,6 @@
 	CALIBER_22LR,\
 	CALIBER_9MM,\
 	CALIBER_10MM,\
-	CALIBER_38,\
 	CALIBER_357,\
 	CALIBER_44,\
 	CALIBER_45LC,\
@@ -73,7 +71,6 @@
 	CALIBER_22LR,\
 	CALIBER_9MM,\
 	CALIBER_10MM,\
-	CALIBER_38,\
 	CALIBER_357,\
 	CALIBER_45ACP\
 	)
@@ -81,7 +78,6 @@
 #define KNUCKLEGUN_AMMO_CALIBERS list(\
 	CALIBER_9MM,\
 	CALIBER_10MM,\
-	CALIBER_38,\
 	CALIBER_357,\
 	CALIBER_44,\
 	CALIBER_45ACP\
@@ -101,7 +97,6 @@ GLOBAL_LIST_INIT(pipe_rifle_valid_calibers, list(
 	CALIBER_9MM,
 	CALIBER_10MM,
 	CALIBER_14MM,
-	CALIBER_38,
 	CALIBER_357,
 	CALIBER_44,
 	CALIBER_45LC,
