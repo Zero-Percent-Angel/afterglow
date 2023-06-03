@@ -627,23 +627,23 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Vexillarius"
 
 /obj/effect/landmark/start/f13/vetlegionary
-	name = "Veteran Legionnaire"
-	icon_state = "Veteran Legionnaire"
+	name = "Veteran Legionary"
+	icon_state = "Veteran Legionary"
 
 /obj/effect/landmark/start/f13/decan
 	name = "Legion Prime Decanus"
 	icon_state = "Decanus"
 
 /obj/effect/landmark/start/f13/legionary
-	name = "Prime Legionnaire"
-	icon_state = "Veteran Legionnaire"
+	name = "Prime Legionary"
+	icon_state = "Veteran Legionary"
 
 /obj/effect/landmark/start/f13/decanrec
 	name = "Legion Recruit Decanus"
 	icon_state = "Decanus"
 
 /obj/effect/landmark/start/f13/recleg
-	name = "Recruit Legionnaire"
+	name = "Recruit Legionary"
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/slavemaster

@@ -716,9 +716,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 
 
-///////////////////
-////Legionnaires///
-///////////////////
+////////////////
+////Legionary///
+////////////////
 
 // VETERAN
 
@@ -935,7 +935,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	//ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13recleg
-	name = "Recruit Legionnaire"
+	name = "Recruit Legionary"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13recleg
 	id = /obj/item/card/id/dogtag/legrecruit
 	shoes = /obj/item/clothing/shoes/f13/military/leather

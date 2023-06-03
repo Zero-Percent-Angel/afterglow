@@ -17,7 +17,7 @@
  */
 
 /mob/living/simple_animal/hostile/asteroid/elite/legionnaire
-	name = "legionnaire"
+	name = "legionary"
 	desc = "A towering skeleton, embodying the terrifying power of Legion."
 	icon_state = "legionnaire"
 	icon_living = "legionnaire"
@@ -49,7 +49,7 @@
 	var/has_head = TRUE
 
 /datum/action/innate/elite_attack/legionnaire_charge
-	name = "Legionnaire Charge"
+	name = "Legionary Charge"
 	button_icon_state = "legionnaire_charge"
 	chosen_message = span_boldwarning("You will attempt to grab your opponent and throw them.")
 	chosen_attack_num = LEGIONNAIRE_CHARGE
@@ -214,8 +214,8 @@
 
 //The legionnaire's head.  Basically the same as any legion head, but we have to tell our creator when we die so they can generate another head.
 /mob/living/simple_animal/hostile/asteroid/elite/legionnairehead
-	name = "legionnaire head"
-	desc = "The legionnaire's head floating by itself.  One shouldn't get too close, though once it sees you, you really don't have a choice."
+	name = "legionary head"
+	desc = "The legionary's head floating by itself.  One shouldn't get too close, though once it sees you, you really don't have a choice."
 	icon_state = "legionnaire_head"
 	icon_living = "legionnaire_head"
 	icon_aggro = "legionnaire_head"
@@ -281,8 +281,8 @@
 // Legionnaire's loot: Legionnaire Spine
 
 /obj/item/crusher_trophy/legionnaire_spine
-	name = "legionnaire spine"
-	desc = "The spine of a legionnaire.  It almost feels like it's moving..."
+	name = "legionary spine"
+	desc = "The spine of a legionary. It almost feels like it's moving..."
 	icon = 'icons/obj/lavaland/elite_trophies.dmi'
 	icon_state = "legionnaire_spine"
 	denied_type = /obj/item/crusher_trophy/legionnaire_spine
