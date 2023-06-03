@@ -613,7 +613,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Legion Orator"
 
 /obj/effect/landmark/start/f13/immune
-	name = "Legion Immune"
+	name = "Legion Off-Duty"
 
 /obj/effect/landmark/start/f13/priestess
 	name = "Priestess of Mars"
