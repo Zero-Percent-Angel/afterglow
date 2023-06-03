@@ -255,14 +255,14 @@
 	build_path = /obj/item/ammo_box/a556/sport
 	materials = list(/datum/material/iron = 16000, /datum/material/blackpowder = 1000)
 	category = list("initial", "Simple Ammo")
-
+/*
 /datum/design/ammolathe/a50rubber
 	name = ".50 rubber ammo box"
 	id = "a50MGrubber"
 	materials = list(/datum/material/iron = 15000, /datum/material/blackpowder = 1500)
 	build_path = /obj/item/ammo_box/a50MGbox/rubber
 	category = list("initial", "Basic Ammo")
-
+*/
 /* --Tier 2 Ammo And Magazines-- */
 //Tier 2 Magazines
 /datum/design/ammolathe/tube44
