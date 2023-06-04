@@ -809,6 +809,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("What's a two by four again?")
 	locked =  FALSE
 
+/*
 /datum/quirk/grappler
 	name = "Trained Grappler"
 	desc = "You've got real skills when it comes to grabbing people by the bits!"
@@ -835,7 +836,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("They are already dead.")
 	lose_text = span_danger("Your fists no longer feel so powerful.")
 	locked =  FALSE
-
+*/
 /datum/quirk/quietstep
 	name = "Quiet Step"
 	desc = "Your steps just don't make any noise at all."
@@ -845,6 +846,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You're pretty sure that's the sound of your asscheeks clapping, but it might be footsteps.")
 	locked =  FALSE
 
+/* temp removed for now! Might rework later
 /datum/quirk/deadeye
 	name = "Dead Eye"
 	desc = "You hit the shots you aim. No ifs, ands, or buts."
@@ -853,7 +855,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("Your aim is legendary, and you know it.")
 	lose_text = span_danger("Your aim could use some work...")
 	locked =  FALSE
-
+*/
 /datum/quirk/straightshooter
 	name = "Straight Shooter"
 	desc = "You're a better than average shot."
