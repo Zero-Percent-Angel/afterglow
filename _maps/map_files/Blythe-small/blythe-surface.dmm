@@ -3172,8 +3172,15 @@
 /turf/closed/wall/f13/wood/house,
 /area/f13/ambientlighting/building/p)
 "bBH" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/brotherhood/surface)
 "bBS" = (
@@ -3349,7 +3356,9 @@
 	},
 /area/f13/wasteland/city)
 "bGR" = (
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/closed/wall/f13/store,
 /area/f13/brotherhood/surface)
 "bGY" = (
@@ -3400,9 +3409,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/building/hospital)
 "bHT" = (
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/turf/open/indestructible/ground/outside/desert,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/smes,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/brotherhood/surface)
 "bIi" = (
 /obj/structure/toilet{
@@ -6050,7 +6059,9 @@
 	dir = 4
 	},
 /obj/machinery/power/apc/fusebox/north,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/brotherhood/surface)
 "cWI" = (
@@ -6692,10 +6703,7 @@
 	},
 /area/f13/wasteland/city)
 "dnv" = (
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /obj/structure/simple_door/interior,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/brotherhood/surface)
 "dnE" = (
@@ -7627,11 +7635,11 @@
 	},
 /area/f13/building)
 "dNF" = (
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/obj/structure/cable/outdoors{
-	icon_state = "1-2"
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "1-8"
 	},
-/turf/closed/wall/f13/tunnel,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/brotherhood/surface)
 "dNJ" = (
 /obj/item/storage/trash_stack,
@@ -9150,6 +9158,9 @@
 "eDv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/apc/fusebox/south,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/brotherhood/surface)
 "eDF" = (
@@ -15831,12 +15842,11 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "hMv" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/apc/fusebox/north,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#e8eaff"
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/brotherhood/surface)
@@ -28558,9 +28568,10 @@
 "nPz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/light_emitter,
 /obj/machinery/power/apc/fusebox/north,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/brotherhood/surface)
 "nPB" = (
@@ -30985,13 +30996,6 @@
 	icon_state = "horizontaltopborderbottom0"
 	},
 /area/f13/building/abandoned/a)
-"pbO" = (
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/obj/structure/cable/outdoors{
-	icon_state = "1-2"
-	},
-/turf/closed/wall/r_wall/rust,
-/area/f13/brotherhood/surface)
 "pce" = (
 /obj/effect/landmark/start/f13/venator,
 /turf/open/indestructible/ground/outside/desert,
@@ -38895,10 +38899,10 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "sOi" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/obj/machinery/power/smes,
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/closed/wall/r_wall/rust,
 /area/f13/brotherhood/surface)
 "sOm" = (
 /obj/effect/turf_decal/stripes/white/line,
@@ -42310,12 +42314,9 @@
 	},
 /area/f13/ambientlighting/building/j)
 "uAf" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/stack/sheet/mineral/plasma/fifty,
-/obj/item/stack/sheet/mineral/plasma/fifty,
-/obj/item/stack/sheet/mineral/plasma/fifty,
-/obj/structure/table/reinforced,
-/obj/item/stack/sheet/mineral/plasma/fifty,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/brotherhood/surface)
 "uAk" = (
@@ -45371,10 +45372,14 @@
 	},
 /area/f13/ncr_main)
 "wdg" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/obj/machinery/power/terminal{
-	dir = 1
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/brotherhood/surface)
@@ -46649,9 +46654,15 @@
 	},
 /area/f13/ncr)
 "wGl" = (
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/obj/structure/simple_door/interior,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/mineral/plasma/fifty,
+/obj/item/stack/sheet/mineral/plasma/fifty,
+/obj/item/stack/sheet/mineral/plasma/fifty,
+/obj/structure/table/reinforced,
+/obj/item/stack/sheet/mineral/plasma/fifty,
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/brotherhood/surface)
 "wGH" = (
@@ -47373,9 +47384,8 @@
 /area/f13/building/hospital)
 "wYl" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/cable,
-/obj/machinery/power/port_gen/pacman,
-/obj/machinery/light,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/light_emitter,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/brotherhood/surface)
 "wYv" = (
@@ -97667,7 +97677,7 @@ fWU
 fWU
 fWU
 fWU
-wGl
+dnv
 uix
 uix
 prL
@@ -97861,15 +97871,15 @@ rVj
 ftB
 fWU
 fWU
-fWU
+xHd
+xHd
+xHd
 mCz
 mCz
 mCz
-mCz
-dNF
 wXe
 wXe
-pbO
+hco
 hWK
 vrW
 fdi
@@ -98063,9 +98073,9 @@ jMk
 jMk
 jMk
 jMk
-fWU
-mCz
-sOi
+xHd
+bHT
+hMv
 wdg
 aFa
 xHd
@@ -98265,15 +98275,15 @@ kAZ
 kAZ
 kAZ
 jMk
-fWU
-mCz
+xHd
+bHT
 hMv
 bBH
-wYl
+aFa
 xHd
 fWU
 fWU
-hco
+kAZ
 cWA
 vrW
 fdi
@@ -98467,10 +98477,10 @@ ayO
 dgv
 kAZ
 jMk
-fWU
-mCz
+xHd
+wGl
 uAf
-uix
+dNF
 iyW
 xHd
 fWU
@@ -98669,7 +98679,7 @@ sPy
 kVM
 kAZ
 jMk
-fWU
+xHd
 mCz
 xHd
 dnv
@@ -99677,16 +99687,16 @@ qWm
 qWm
 tzp
 eDv
-hco
+sOi
 bGR
 lhH
-bHT
+lhH
 lhH
 lhH
 knR
 fWU
 fWU
-wGl
+dnv
 uix
 vrW
 veg
@@ -99890,7 +99900,7 @@ fWU
 fWU
 kAZ
 nPz
-fdi
+wYl
 fdi
 uix
 uix
