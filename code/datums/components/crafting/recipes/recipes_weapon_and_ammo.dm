@@ -206,6 +206,7 @@
 	subcategory = CAT_AMMO
 	skill_level = REGULAR_CHECK
 
+/*
 /datum/crafting_recipe/m22shock
 	name = ".22 Long Rifle electroshock ammo box"
 	result = /obj/item/ammo_box/m22/shock
@@ -220,6 +221,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 	skill_level = HARD_CHECK
+*/
 
 /datum/crafting_recipe/c9mmincin
 	name = "9mm incendiary-tipped ammo box"
@@ -290,7 +292,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 	skill_level = REGULAR_CHECK
-
+/*
 /datum/crafting_recipe/c4570boxheavy
 	name = ".45-70 Gv'mt ultradense ammo box"
 	result = /obj/item/ammo_box/c4570box/knockback
@@ -334,7 +336,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 	skill_level = HARD_CHECK
-
+*/
 /datum/crafting_recipe/a556shrap
 	name = "5.56mm micro-shrapnel ammo box"
 	result = /obj/item/ammo_box/a556/microshrapnel
@@ -378,7 +380,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 */
-
+/*
 /datum/crafting_recipe/a762boxshrap
 	name = "7.62mm micro-shrapnel ammo box"
 	result = /obj/item/ammo_box/a762box/microshrapnel
@@ -392,7 +394,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 	skill_level = REGULAR_CHECK
-
+*/
 
 /*
 /datum/crafting_recipe/a50MGboxuranium
@@ -409,7 +411,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 */
-
+/*
 /datum/crafting_recipe/a50MGboxcontaminated
 	name = "12.7mm contaminated ammo box"
 	result = /obj/item/ammo_box/a50MGbox/contam
@@ -454,7 +456,7 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 	skill_level = REGULAR_CHECK
-
+*/
 /////////////////
 ///GUN CRAFTING//
 /////////////////

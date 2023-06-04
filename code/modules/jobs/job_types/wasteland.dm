@@ -273,7 +273,7 @@ Raider
 
 
 /datum/outfit/loadout/raider_legion
-	name = "Disgraced Legionnaire"
+	name = "Disgraced Legionary"
 	suit = /obj/item/clothing/suit/armor/exile/legexile
 	uniform = /obj/item/clothing/under/f13/exile/legion
 	id = /obj/item/card/id/rusted/rustedmedallion

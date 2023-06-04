@@ -565,16 +565,6 @@
 /obj/item/storage/box/large/custom_kit/pipes_wildin2/PopulateContents()
 	new /obj/item/stealthboy(src)
 
-/datum/gear/donator/kits/pixelexip
-	name = "Bruiser's Kit"
-	path = /obj/item/storage/box/large/custom_kit/pixelexip
-	ckeywhitelist = list("pixelexip")
-
-/obj/item/storage/box/large/custom_kit/pixelexip/PopulateContents()
-	new /obj/item/clothing/suit/armor/light/poachervest(src)
-	new /obj/item/reagent_containers/food/drinks/flask/gold(src)
-	new /obj/item/clothing/gloves/fingerless/pugilist/rapid(src)
-
 /datum/gear/donator/kits/planetary
 	name = "Collector"
 	path = /obj/item/storage/box/large/custom_kit/planetary

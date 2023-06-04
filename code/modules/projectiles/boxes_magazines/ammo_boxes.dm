@@ -82,13 +82,13 @@
 	name = "ammo box (.22lr rubber)"
 	desc = "A box of .22 rubber rounds. For when you want to be useless."
 	ammo_type = /obj/item/ammo_casing/a22/rubber
-
+/*
 /obj/item/ammo_box/m22/shock
 	name = "ammo box (.22lr electroshock)"
 	icon_state = "22shockbox"
 	desc = "A box of .22 electroshock rounds."
 	ammo_type = /obj/item/ammo_casing/a22/shock
-
+*/
 //9mm and .38
 /obj/item/ammo_box/c9mm
 	name = "ammo box (9mm)"
@@ -264,7 +264,7 @@
 	max_ammo = 15
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_MEDIUM_BOX)
-
+/*
 /obj/item/ammo_box/c4570box/explosive
 	name = "ammo box (.45-70 HE)"
 	desc = ".45-70 Goverment rounds with explosive tips. Surely an archaic blackpowder cartridge with an explosive payload is completely safe."
@@ -274,7 +274,7 @@
 	name = "ammo box (.45-70 ultradense)"
 	desc = ".45-70 Goverment rounds with heavy, blunt bullets. Sure to knock even an elephant off their footing."
 	ammo_type = /obj/item/ammo_casing/c4570/knockback
-
+*/
 /obj/item/ammo_box/c4570box/improvised
 	name = "bag with reloaded .45-70 bullets"
 	ammo_type = /obj/item/ammo_casing/c4570/improvised
@@ -295,12 +295,12 @@
 	max_ammo = 30
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_SMALL_BOX)
-
+/*
 /obj/item/ammo_box/m5mmbox/shock
 	name = "ammo box (5mm ESD)"
 	desc = "Advanced 5mm bullets with electrostatic discharger tips."
 	ammo_type = /obj/item/ammo_casing/m5mm/shock
-
+*/
 /obj/item/ammo_box/m5mmbox/improvised
 	name = "bag with reloaded 5mm bullets"
 	ammo_type = /obj/item/ammo_casing/m5mm/improvised
@@ -405,12 +405,12 @@
 	STOP_PROCESSING(SSradiation,src)
 	..()
 */
-
+/*
 /obj/item/ammo_box/a762box/microshrapnel
 	name = "ammo box (7.62x51 microshrapnel)"
 	desc = "Now with EVEN MORE fragments!"
 	ammo_type = /obj/item/ammo_casing/a762/microshrapnel
-
+*/
 /obj/item/ammo_box/a762box/rubber
 	name = "ammo box (7.62x51 rubber)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
@@ -430,27 +430,27 @@
 	max_ammo = 12
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_HEAVY_BOX)
-
+/*
 /obj/item/ammo_box/a50MGbox/rubber
 	name = "ammo box (.50 rubber)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "50box"
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/a50MG/rubber
-
+*/
 /obj/item/ammo_box/a50MGbox/improvised
 	name = "bag with reloaded .50MG slugs"
 	ammo_type = /obj/item/ammo_casing/a50MG/improvised
 	icon_state = "improvshotbag"
 	max_ammo = 10
 	multiple_sprites = 3
-
+/*
 /obj/item/ammo_box/a50MGbox/contam
 	name = "ammo box (12.7mm contaminated)"
 	max_ammo = 12
 	desc = "12.7mm bullets loaded with a gaseous hepatoxic payload, which reduces the effectiveness of medicine and toxins."
 	ammo_type = /obj/item/ammo_casing/a50MG/contam
-
+*/
 /*
 /obj/item/ammo_box/a50MGbox/uraniumtipped
 	name = "ammo box (12.7mm uranium-tipped)"
@@ -469,12 +469,12 @@
 	max_ammo = 18
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_PISTOL_HEAVY_BOX)
-
+/*
 /obj/item/ammo_box/m14mm/contam
 	name = "ammo box (14mm contaminated)"
 	desc = "14mm bullets loaded with a gaseous hepatoxic payload, which reduces the effectiveness of medicine and toxins."
 	ammo_type = /obj/item/ammo_casing/p14mm/contam
-
+*/
 /obj/item/ammo_box/m14mm/improvised
 	name = "bag with reloaded 14mm bullets"
 	icon_state = "improvshotbag"
@@ -511,7 +511,7 @@
 /obj/item/ammo_box/m473/dumdum
 	name = "ammo box (4.73mm flat-nose)"
 	ammo_type = /obj/item/ammo_casing/caseless/g11/dumdum
-
+/*
 /obj/item/ammo_box/m473/explosive
 	name = "ammo box (4.73mm explosive)"
 	desc = "Explosive caseless rounds. Very safe."
@@ -520,7 +520,7 @@
 /obj/item/ammo_box/m473/shock
 	name = "ammo box (4.73mm ESD)"
 	ammo_type = /obj/item/ammo_casing/caseless/g11/shock
-
+*/
 /obj/item/ammo_box/m473/hv
 	name = "ammo box (4.73mm high-velocity)"
 	ammo_type = /obj/item/ammo_casing/caseless/g11/hv
@@ -869,8 +869,7 @@
 	ammo_type = /obj/item/ammo_casing/a50MG/incendiary
 	max_ammo = 5
 	multiple_sprites = 1
-
-
+/*
 /obj/item/ammo_box/a50MG/explosive
 	name = "anti-materiel explosive ammo rack (.50MG)"
 	desc = "5 rounds of explosive .50 MG. More then enough to kill anything that moves."
@@ -878,7 +877,7 @@
 	ammo_type = /obj/item/ammo_casing/a50MG/explosive
 	max_ammo = 5
 	multiple_sprites = 1
-
+*/
 /obj/item/ammo_box/a50MG/penetrator
 	name = "anti-materiel penetrator ammo rack (.50MG)"
 	desc = "5 rounds of penetrator .50 MG, when you really want something dead and it's on the other side of a wall."
