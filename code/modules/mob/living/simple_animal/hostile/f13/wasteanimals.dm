@@ -132,6 +132,7 @@
 	melee_damage_lower = 8
 	melee_damage_upper = 12
 	footstep_type = FOOTSTEP_MOB_CLAW
+	can_ghost_into = TRUE
 
 /// Testing its randomness
 /mob/living/simple_animal/hostile/gecko/debug
@@ -226,6 +227,7 @@
 	anchored = FALSE
 	melee_damage_lower = 10
 	melee_damage_upper = 15
+	can_ghost_into = TRUE
 
 /mob/living/simple_animal/hostile/stalker/AttackingTarget()
 	. = ..()
@@ -297,6 +299,7 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	footstep_type = FOOTSTEP_MOB_CLAW
+	can_ghost_into = TRUE
 
 /mob/living/simple_animal/hostile/stalker/AttackingTarget()
 	. = ..()
