@@ -430,7 +430,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	shoes = /obj/item/clothing/shoes/laceup
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/revolver45 = 1,
-		/obj/item/ammo_box/a45lcbox = 1,
+		/obj/item/ammo_box/c45 = 1,
 		/obj/item/binoculars = 1,
 		/obj/item/clothing/accessory/ncr/FSGT = 1
 		)
@@ -630,7 +630,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack_contents = list(
 		/obj/item/book/granter/trait/gunslinger = 1,
 		/obj/item/gun/ballistic/revolver/revolver45 = 2,
-		/obj/item/ammo_box/a45lcbox = 1,
+		/obj/item/ammo_box/c45 = 1,
 		/obj/item/lighter = 1,
 		)
 

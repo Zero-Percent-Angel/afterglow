@@ -204,22 +204,6 @@
 	ammo_type = /obj/item/ammo_casing/m44/improvised
 	multiple_sprites = 3
 
-/obj/item/ammo_box/a45lcbox
-	name = "ammo box (.45 Long Colt)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "ammobox"
-	caliber = list(CALIBER_45LC)
-	ammo_type = /obj/item/ammo_casing/a45lc
-	max_ammo = 30
-	w_class = WEIGHT_CLASS_SMALL
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_MEDIUM_BOX)
-
-/obj/item/ammo_box/a45lcbox/improvised
-	name = "bag with reloaded .45 Long Colt bullets"
-	icon_state = "improvshotbag"
-	ammo_type = /obj/item/ammo_casing/a45lc/improvised
-	multiple_sprites = 3
-
 
 // .45 ACP
 /obj/item/ammo_box/c45
@@ -675,20 +659,6 @@
 	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
 
 /obj/item/ammo_box/c45rev/empty
-	start_empty = 1
-
-/obj/item/ammo_box/a45lcrev
-	name = "speed loader (.45 LC)"
-	desc = "Designed to quickly reload revolvers."
-	icon_state = "44"
-	caliber = list(CALIBER_45LC)
-	ammo_type = /obj/item/ammo_casing/a45lc
-	max_ammo = 6
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
-
-/obj/item/ammo_box/a45lcrev/empty
 	start_empty = 1
 
 // 308

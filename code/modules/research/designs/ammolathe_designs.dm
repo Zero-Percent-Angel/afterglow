@@ -430,13 +430,6 @@
 	build_path = /obj/item/ammo_box/tube/c4570/empty
 	category = list("initial", "Intermediate Magazines")
 
-/datum/design/ammolathe/speedloader45lc
-	name = "empty speed loader (.45 LC)"
-	id = "speedloader45lc"
-	materials = list(/datum/material/iron = 4000)
-	build_path = /obj/item/ammo_box/a45lcrev/empty
-	category = list("initial", "Intermediate Magazines")
-
 /datum/design/ammolathe/d12g
 	name = "empty shotgun drum magazine (12g)"
 	id = "d12g"
@@ -520,13 +513,6 @@
 	id = "c4570"
 	materials = list(/datum/material/iron = 16000, /datum/material/blackpowder = 2000)
 	build_path = /obj/item/ammo_box/c4570box
-	category = list("initial", "Intermediate Ammo")
-
-/datum/design/ammolathe/lc45
-	name = ".45 LC ammo box"
-	id = "c45lc"
-	materials = list(/datum/material/iron = 12000, /datum/material/blackpowder = 1500)
-	build_path = /obj/item/ammo_box/a45lcbox
 	category = list("initial", "Intermediate Ammo")
 
 /datum/design/ammolathe/a50mg
@@ -798,13 +784,6 @@
 	id = "handloader_c4570"
 	materials = list(/datum/material/iron = 16000, /datum/material/blackpowder = 2000)
 	build_path = /obj/item/ammo_box/c4570box/improvised
-	category = list("initial", "Handloaded Ammo")
-
-/datum/design/ammolathe/improvised/lc45
-	name = ".45 LC bag"
-	id = "handloader_c45lc"
-	materials = list(/datum/material/iron = 12000, /datum/material/blackpowder = 1500)
-	build_path = /obj/item/ammo_box/a45lcbox/improvised
 	category = list("initial", "Handloaded Ammo")
 
 /datum/design/ammolathe/improvised/a14mm

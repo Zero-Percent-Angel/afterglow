@@ -116,28 +116,3 @@
 		/datum/material/iron = (MATS_RIFLE_HEAVY_CASING * MATS_AMMO_CASING_HANDLOAD_MULT) + (MATS_RIFLE_HEAVY_BULLET * MATS_AMMO_BULLET_HANDLOAD_MULT),
 		/datum/material/blackpowder = MATS_RIFLE_HEAVY_POWDER * MATS_AMMO_POWDER_HANDLOAD_MULT)
 	fire_power = CASING_POWER_HEAVY_RIFLE * CASING_POWER_MOD_MATCH
-
-//.45 Long Colt bouncing
-/obj/item/ammo_casing/a45lc
-	name = ".45 Long Colt bullet casing"
-	desc = "An archaic .45 long colt bullet casing."
-	caliber = CALIBER_45LC
-	projectile_type = /obj/item/projectile/bullet/a45lc
-	material_class = BULLET_IS_MEDIUM_PISTOL
-	custom_materials = list(
-		/datum/material/iron = MATS_PISTOL_MEDIUM_CASING + MATS_PISTOL_MEDIUM_BULLET,
-		/datum/material/blackpowder = MATS_PISTOL_MEDIUM_POWDER)
-	fire_power = CASING_POWER_HEAVY_PISTOL * CASING_POWER_MOD_MATCH
-
-/obj/item/ammo_casing/a45lc/improvised
-	name = "shoddy .45 LC bullet casing"
-	desc = "An archaic .45 long colt bullet casing. Now about 25% worse."
-	caliber = CALIBER_45LC
-	projectile_type = /obj/item/projectile/bullet/a45lc/improvised
-	material_class = BULLET_IS_MEDIUM_PISTOL
-	casing_quality = BULLET_IS_HANDLOAD
-	custom_materials = list(
-		/datum/material/iron = (MATS_PISTOL_MEDIUM_CASING * MATS_AMMO_CASING_HANDLOAD_MULT) + (MATS_PISTOL_MEDIUM_BULLET * MATS_AMMO_BULLET_HANDLOAD_MULT),
-		/datum/material/blackpowder = MATS_PISTOL_MEDIUM_POWDER * MATS_AMMO_POWDER_HANDLOAD_MULT)
-	fire_power = CASING_POWER_HEAVY_PISTOL * CASING_POWER_MOD_SURPLUS
-

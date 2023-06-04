@@ -196,7 +196,6 @@ GLOBAL_LIST_INIT(small_ammo_types, typecacheof(list(
 	/obj/item/ammo_box/a357,
 	/obj/item/ammo_box/m44,
 	/obj/item/ammo_box/c45rev,
-	/obj/item/ammo_box/a45lcrev,
 	/obj/item/ammo_box/rev308,
 	/obj/item/ammo_box/c4570,
 	/obj/item/ammo_box/a762,
