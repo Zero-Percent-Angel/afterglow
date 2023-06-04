@@ -29,7 +29,7 @@
 	pass_flags = PASSTABLE | PASSMOB | PASSGRILLE
 	var/datum/action/cooldown/coffer
 	var/datum/action/cooldown/riot
-	can_ghost_into = TRUE
+	can_ghost_into = FALSE
 	desc_short = "King of the squeaks!"
 	///Number assigned to rats and mice, checked when determining infighting.
 
@@ -194,7 +194,7 @@
 	mob_size = MOB_SIZE_TINY
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	faction = list("rat")
-	can_ghost_into = TRUE
+	can_ghost_into = FALSE
 	desc_short = "Squeak!"
 	pop_required_to_jump_into = 0	
 	call_backup = /obj/effect/proc_holder/mob_common/summon_backup/rat
