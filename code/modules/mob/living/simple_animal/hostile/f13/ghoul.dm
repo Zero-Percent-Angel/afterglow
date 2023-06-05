@@ -11,7 +11,7 @@
 	icon_living = "feralghoul_h"
 	icon_dead = "feralghoul_h_dead"
 	var/rare_icon = "feralghoul_h"
-	can_ghost_into = TRUE
+	can_ghost_into = FALSE
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	mob_armor = ARMOR_VALUE_GHOUL_NAKED
 	maxHealth = 40 
@@ -91,7 +91,7 @@
 	death_sound = 'sound/f13npc/ghoul/ghoul_death.ogg'
 	loot = list(/obj/item/stack/f13Cash/random/low/lowchance)
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	can_ghost_into = TRUE
+	can_ghost_into = FALSE
 	call_backup = /obj/effect/proc_holder/mob_common/summon_backup/ghoul
 	send_mobs = /obj/effect/proc_holder/mob_common/direct_mobs/ghoul
 	desc_short = "A flimsy creature that may or may not be a reanimated corpse."
@@ -129,7 +129,7 @@
 	melee_damage_upper = 14
 	loot = list(/obj/item/stack/f13Cash/random/low/medchance)
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	can_ghost_into = TRUE
+	can_ghost_into = FALSE
 	pop_required_to_jump_into = BIG_MOB_MIN_PLAYERS
 
 	variation_list = list(
@@ -255,7 +255,7 @@
 	light_system = MOVABLE_LIGHT
 	light_range = 2
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	can_ghost_into = TRUE
+	can_ghost_into = FALSE
 	pop_required_to_jump_into = BIG_MOB_MIN_PLAYERS
 	desc_short = "A glowing creature that may or may not be a reanimated corpse."
 
