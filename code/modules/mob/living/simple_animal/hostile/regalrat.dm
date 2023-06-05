@@ -196,7 +196,7 @@
 	faction = list("rat")
 	can_ghost_into = FALSE
 	desc_short = "Squeak!"
-	pop_required_to_jump_into = 0	
+	pop_required_to_jump_into = SMALL_MOB_MIN_PLAYERS
 	call_backup = /obj/effect/proc_holder/mob_common/summon_backup/rat
 	send_mobs = /obj/effect/proc_holder/mob_common/direct_mobs/rat
 	make_a_nest = /obj/effect/proc_holder/mob_common/make_nest/rat
