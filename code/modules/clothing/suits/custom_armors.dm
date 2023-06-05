@@ -8,10 +8,24 @@ Make sure you ALWAYS direct the icon path of these custom items to: "suit(s)_cus
 
 Below you will find all the templates for modkit items.*/
 
-//Custom item - Rebel0 / Mariya Sankinova	- This is done as a base because: 1. I am biased and want my own gear, yes. 	2. This is an example template of HOW you do this.
+//Custom item - BOS Mid-West ATA, sprited by Rebel0 / Mariya Sankinova
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/mari
 	name = "modified midwestern power armor"
-	desc = "This set of power armor once belonged to the Midwestrn branch of the Brotherhood. Though now it appears to be modified and sporting a new paintjob, the words 'Fighting Girlfriend' painted onto its right shoulder alongside its new chapter colors."
+	desc = "This set of power armor once belonged to the Midwestrn branch of the Brotherhood. Though now it appears to be modified and sporting a new paintjob reflecting its new chapter colors."
 	icon = 'icons/obj/clothing/suits_custom.dmi'
 	icon_state = "mariarmor"
 	item_state = "mariarmor"
+
+//Custom item - T60 PA; literally just an alt of T45 since it's just a mass-produced T45 piece in-lore anyway.
+/obj/item/clothing/suit/armor/power_armor/t60
+	name = "T-60a power armor"
+	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal."
+	icon_state = "t60powerarmor"
+	item_state = "t60powerarmor"
+
+//Custom item - Hellfire PA; literally just an alt of x02 snowflake stuff.
+/obj/item/clothing/suit/armor/power_armor/advanced/x02/hellfire
+	name = "hellfire power armor"
+	desc = "A deep black helmet of Enclave-manufactured heavy power armor, based on pre-war designs such as the T-51 and improving off of data gathered by post-war designs such as the X-01. Most commonly fielded on the East Coast, no other helmet rivals it's strength."
+	icon_state = "hellfire"
+	item_state = "hellfire"
