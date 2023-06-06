@@ -308,18 +308,8 @@
 	equip_delay_other = 50
 	max_integrity = 200
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T2)
-
-/obj/item/clothing/suit/armor/medium/combat/laserproof
-	name = "ablative combat armor"
-	desc = "An old military grade pre war combat armor. This one switches out its ballistic fibers for an ablative coating that disrupts energy weapons."
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T1)
-
-/obj/item/clothing/suit/armor/medium/combat/dark
-	name = "combat armor"
-	desc = "An old military grade pre war combat armor. Now in dark, and extra-crispy!"
-	color = "#514E4E"
 
 /obj/item/clothing/suit/armor/medium/combat/Initialize()
 	. = ..()
@@ -330,26 +320,22 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
-/obj/item/clothing/suit/armor/medium/combat/mk2
-	name = "reinforced combat armor"
-	desc = "A reinforced set of bracers, greaves, and torso plating of prewar design. This one is kitted with additional plates."
-	icon_state = "combat_armor_mk2"
-	item_state = "combat_armor_mk2"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
+/obj/item/clothing/suit/armor/medium/combat/laserproof
+	name = "ablative combat armor"
+	desc = "An old military grade pre war combat armor. This one switches out its ballistic fibers for an ablative coating that disrupts energy weapons."
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T2)
 
-/obj/item/clothing/suit/armor/medium/combat/mk2/dark
-	name = "reinforced combat armor"
-	desc = "A reinforced model based of the pre-war combat armor. Now in dark, light, and smoky barbeque!"
-	color = "#302E2E"
+/obj/item/clothing/suit/armor/medium/combat/dark
+	name = "combat armor"
+	desc = "An old military grade pre war combat armor. Now in dark, and extra-crispy!"
+	color = "#514E4E"
 
-/obj/item/clothing/suit/armor/medium/combat/mk2/tribal
+/obj/item/clothing/suit/armor/medium/combat/tribal
 	name = "tribal reinforced combat armor"
 	desc = "An old military grade pre-war reinforced combat armor, now decorated with sinew and the bones of the hunted for its new wearer."
 	icon_state = "combat_armor_tribe"
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/medium/combat/chinese
 	name = "chinese combat armor"
@@ -362,7 +348,16 @@
 	desc = "An old military grade pre war combat armor. This set has seen better days, weathered by time. The composite plates look sound and intact still."
 	icon_state = "rusted_combat_armor"
 	item_state = "rusted_combat_armor"
-	slowdown = 0.6
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
+
+//recipe any combat armor + duster
+/obj/item/clothing/suit/armor/medium/combat/duster
+	name = "combat duster"
+	desc = "Refurbished combat armor under a weathered duster. Simple metal plates replace the ceramic plates that has gotten damaged."
+	icon_state = "combatduster"
+	item_state = "combatduster"
+	permeability_coefficient = 0.9
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster/armored
 
 /obj/item/clothing/suit/armor/medium/combat/environmental
 	name = "environmental armor"
@@ -382,34 +377,19 @@
 	. = ..()
 	AddComponent(/datum/component/rad_insulation, RAD_NO_INSULATION, TRUE, FALSE)
 
-//recipe any combat armor + duster
-/obj/item/clothing/suit/armor/medium/combat/duster
-	name = "combat duster"
-	desc = "Refurbished combat armor under a weathered duster. Simple metal plates replace the ceramic plates that has gotten damaged."
-	icon_state = "combatduster"
-	item_state = "combatduster"
-	permeability_coefficient = 0.9
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster/armored
+/obj/item/clothing/suit/armor/medium/combat/mk2
+	name = "combat armor Mk II"
+	desc = "A reinforced set of bracers, greaves, and torso plating of prewar design. This one is kitted with additional plates."
+	icon_state = "combat_armor_mk2"
+	item_state = "combat_armor_mk2"
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
-/obj/item/clothing/suit/armor/medium/combat/brotherhood/exile
-	name = "modified Brotherhood armor"
-	desc = "A modified detoriated armor kit consisting of brotherhood combat armor and scrap metal."
-	icon_state = "exile_bos"
-	item_state = "exile_bos"
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
-
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/outlaw
-	name = "desert outlaw armor"
-	desc = "A modified detoriated armor kit consisting of Desert Ranger style combat armor and scrap metal."
-	icon_state = "ncrexile"
-	item_state = "ncrexile"
-
-/obj/item/clothing/suit/armor/medium/legion/legexile
-	name = "modified Legion armor"
-	desc = "A modified detoriated armor kit consisting of Legion gear and scrap metal."
-	icon_state = "legexile"
-	item_state = "legexile"
+/obj/item/clothing/suit/armor/medium/combat/mk2/dark
+	name = "combat armor Mk II"
+	desc = "A reinforced model based of the pre-war combat armor. Now in dark, light, and smoky barbeque!"
+	color = "#302E2E"
 
 ///////////////////
 // MEDIUM RAIDER //
@@ -421,7 +401,7 @@
 	desc = "for testing"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/jacket
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/medium/raider/slam
 	name = "slammer raider armor"
@@ -487,7 +467,6 @@
 	armor_tokens = list(, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2)
 
 
-
 ///////////////////////////
 // !!!FACTION SECTION!!! //
 ///////////////////////////
@@ -532,6 +511,33 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
+// Outlaw exile armors
+/obj/item/clothing/suit/armor/medium/combat/mk2/remnant
+	name = "remnant combat armor"
+	desc = "A dark armor, used commonly in espionage or shadow ops. For ex-patriots."
+	icon_state = "remnant"
+	item_state = "remnant"
+
+/obj/item/clothing/suit/armor/medium/combat/brotherhood/exile
+	name = "modified Brotherhood armor"
+	desc = "A modified detoriated armor kit consisting of brotherhood combat armor and scrap metal."
+	icon_state = "exile_bos"
+	item_state = "exile_bos"
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
+
+/obj/item/clothing/suit/armor/medium/combat/desert_ranger/outlaw
+	name = "modified NCR armor"
+	desc = "A modified detoriated armor kit consisting of Desert Ranger style combat armor and scrap metal."
+	icon_state = "ncrexile"
+	item_state = "ncrexile"
+
+/obj/item/clothing/suit/armor/medium/combat/legion/legexile
+	name = "modified Legion armor"
+	desc = "A modified detoriated armor kit consisting of Legion gear and scrap metal."
+	icon_state = "legexile"
+	item_state = "legexile"
+
 /////////
 // NCR //
 /////////
@@ -575,15 +581,11 @@
 /obj/item/clothing/suit/armor/medium/combat/patrol
 	name = "NCR patrol ranger combat armor"
 	desc = "A modified set of combat armor specifically for use of heavy patrol rangers."
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "ncr_ranger_patrol"
 
-/obj/item/clothing/suit/armor/medium/ncr/vetranger
+/obj/item/clothing/suit/armor/medium/combat/mk2/ncr/vetranger
 	name = "NCR veteran ranger combat armor"
 	desc = "The NCR veteran ranger combat armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Considered one of the most prestigious suits of armor to earn and wear while in service of the NCR Rangers."
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "ncr_ranger_veteran"
 
 //Event
@@ -599,8 +601,6 @@
 /obj/item/clothing/suit/armor/medium/legion
 	name = "modified Legion armor"
 	desc = "A modified detoriated armor kit consisting of Legion gear and scrap metal."
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	cold_protection = CHEST|GROIN
 	heat_protection = CHEST|GROIN
 	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
@@ -661,15 +661,16 @@
 	icon_state = "brotherhood_armor"
 
 /obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate/mk2
-	name = "reinforced initiate armor"
+	name = "brotherhood armor Mk II"
 	desc = "A combat armor set made and updated by the Brotherhood of Steel. This varient appears to be a refurbished set based on its welding marks."
 	icon_state = "brotherhood_armor_mk2"
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
 /obj/item/clothing/suit/armor/medium/combat/brotherhood/senior
 	name = "brotherhood senior knight armor"
 	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Senior Knights. It bears a silver stripe."
 	icon_state = "brotherhood_armor_senior"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 

@@ -397,7 +397,7 @@
 	icon_state = "brotherhood_helmet"
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate/mk2
-	name = "reinforced knight helmet"
+	name = "brotherhood helmet Mk II"
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_helmet"
 	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
