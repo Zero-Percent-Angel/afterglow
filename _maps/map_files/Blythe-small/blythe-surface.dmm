@@ -6101,9 +6101,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/brotherhood/surface)
 "cWI" = (
-/obj/machinery/door/poddoor/gate{
+/obj/machinery/door/poddoor/gate/preopen{
 	id = "NCRgate";
-	name = "gate"
+	name = "NCR Gate"
 	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain0"
@@ -6770,9 +6770,11 @@
 	},
 /area/f13/wasteland/city)
 "doD" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/turf/closed/wall/r_wall/rust,
+/turf/open/indestructible/ground/outside/sidewalk{
+	dir = 1;
+	icon_state = "horizontaloutermain1"
+	},
 /area/f13/brotherhood/surface)
 "doN" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
@@ -16118,6 +16120,11 @@
 	icon_state = "horizontalinnermain1"
 	},
 /area/f13/wasteland/city)
+"hRy" = (
+/obj/structure/simple_door/interior,
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
+/area/f13/brotherhood/surface)
 "hRD" = (
 /obj/machinery/light{
 	dir = 1
@@ -23555,6 +23562,12 @@
 /obj/effect/landmark/start/f13/settler,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland/town)
+"lrJ" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/closed/wall/f13/tunnel,
+/area/f13/brotherhood/surface)
 "lsl" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
@@ -23870,13 +23883,6 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/ncr)
-"lBP" = (
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/turf/open/indestructible/ground/outside/sidewalk{
-	dir = 1;
-	icon_state = "horizontaloutermain1"
-	},
-/area/f13/brotherhood/surface)
 "lBS" = (
 /obj/structure/table,
 /obj/item/storage/belt/utility/full/engi,
@@ -26730,11 +26736,6 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building)
-"mSU" = (
-/obj/structure/simple_door/interior,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
-/area/f13/brotherhood/surface)
 "mSY" = (
 /obj/structure/barricade/tentclothedge{
 	dir = 1;
@@ -27917,6 +27918,11 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/ambientlighting/building/h)
+"ntm" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/turf/closed/wall/r_wall/rust,
+/area/f13/brotherhood/surface)
 "ntz" = (
 /obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/closed/wall/f13/wood/house,
@@ -38461,12 +38467,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"sBK" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/closed/wall/f13/tunnel,
-/area/f13/brotherhood/surface)
 "sBL" = (
 /turf/closed/wall/f13/supermart,
 /area/f13/building/mall)
@@ -98128,10 +98128,10 @@ fWU
 fWU
 xHd
 mCz
-sBK
-sBK
-sBK
-sBK
+lrJ
+lrJ
+lrJ
+lrJ
 wXe
 wXe
 hco
@@ -99346,7 +99346,7 @@ gcJ
 gcJ
 uwi
 uwi
-lBP
+doD
 gcJ
 uwi
 gcJ
@@ -99749,8 +99749,8 @@ fWU
 fWU
 fWU
 fWU
-doD
-doD
+ntm
+ntm
 anB
 bFY
 bFY
@@ -99951,7 +99951,7 @@ fWU
 knR
 fWU
 fWU
-mSU
+hRy
 uix
 vrW
 veg
