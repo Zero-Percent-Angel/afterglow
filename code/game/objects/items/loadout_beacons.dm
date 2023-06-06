@@ -1375,7 +1375,7 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 /// Revolvers!
 
 /datum/loadout_box/detective
-	entry_tag = ".38 Detective Special"
+	entry_tag = ".22 Detective Special"
 	entry_flags = LOADOUT_FLAG_WASTER
 	entry_class = LOADOUT_CAT_REVOLVER
 	spawn_thing = /obj/item/storage/box/gun/revolver
