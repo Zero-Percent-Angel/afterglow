@@ -131,17 +131,9 @@
 	if(!owned_by)
 		return
 	if (owned_by.seen_messages)
-		var/idx = 1
-		var/combined_height = approx_lines
 		for(var/msg in owned_by.seen_messages[message_loc])
 			var/datum/chatmessage/m = msg
-			animate(m.message, pixel_y = m.message.pixel_y + mheight, time = CHAT_MESSAGE_SPAWN_TIME)
-			combined_height += m.approx_lines
-			var/sched_remaining = m.scheduled_destruction - world.time
-			if (sched_remaining > CHAT_MESSAGE_SPAWN_TIME)
-				var/remaining_time = (sched_remaining) * (CHAT_MESSAGE_EXP_DECAY ** idx++) * (CHAT_MESSAGE_HEIGHT_DECAY ** combined_height)
-				m.scheduled_destruction = world.time + remaining_time
-				addtimer(CALLBACK(m, .proc/end_of_life), remaining_time, TIMER_UNIQUE|TIMER_OVERRIDE)
+			qdel(m)
 
 	// Build message image
 	message = image(loc = message_loc, layer = CHAT_LAYER)
@@ -161,15 +153,17 @@
 
 	// Prepare for destruction
 	scheduled_destruction = world.time + (lifespan - CHAT_MESSAGE_EOL_FADE)
-	addtimer(CALLBACK(src, .proc/end_of_life), lifespan - CHAT_MESSAGE_EOL_FADE, TIMER_UNIQUE|TIMER_OVERRIDE)
+	animate(message, alpha = 0, time = (lifespan - CHAT_MESSAGE_EOL_FADE), flags = ANIMATION_PARALLEL)
+	
 
 /**
  * Applies final animations to overlay CHAT_MESSAGE_EOL_FADE deciseconds prior to message deletion
  */
+ /* Unused now
 /datum/chatmessage/proc/end_of_life(fadetime = CHAT_MESSAGE_EOL_FADE)
 	animate(message, alpha = 0, time = fadetime, flags = ANIMATION_PARALLEL)
 	QDEL_IN(src, fadetime)
-
+*/
 /**
  * Creates a message overlay at a defined location for a given speaker
  *
