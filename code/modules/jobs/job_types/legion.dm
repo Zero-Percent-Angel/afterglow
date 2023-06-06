@@ -1076,8 +1076,10 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	description = "A non-combat position in the Legion for free citizens who perform tasks that need special training, such as surgery. They are loyal to the Legion even if they are not treated as equals to warriors."
 	supervisors = "the Centurion"
 	display_order = JOB_DISPLAY_ORDER_AUXILIA
-	outfit = /datum/outfit/job/CaesarsLegion/auxilia
 	exp_requirements = 0
+	access = list(ACCESS_LEGION)
+	minimal_access = list(ACCESS_LEGION)
+	outfit = /datum/outfit/job/CaesarsLegion/auxilia
 
 	loadout_options = list(
 		/datum/outfit/loadout/auxassist, // Keep track of the money, handle trading beneath the warriors
@@ -1107,8 +1109,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	belt = null
 	r_pocket = /obj/item/flashlight/lantern
 	backpack_contents = list(
+		/obj/item/warpaint_bowl = 1,
 		/obj/item/reagent_containers/pill/healingpowder = 2,
-		/obj/item/warpaint_bowl
 		)
 
 /datum/outfit/job/CaesarsLegion/auxilia/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
