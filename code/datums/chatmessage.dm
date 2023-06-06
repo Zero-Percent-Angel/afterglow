@@ -158,8 +158,9 @@
 
 /**
  * Applies final animations to overlay CHAT_MESSAGE_EOL_FADE deciseconds prior to message deletion
+ * Unused now
  */
- /* Unused now
+ /*
 /datum/chatmessage/proc/end_of_life(fadetime = CHAT_MESSAGE_EOL_FADE)
 	animate(message, alpha = 0, time = fadetime, flags = ANIMATION_PARALLEL)
 	QDEL_IN(src, fadetime)
