@@ -531,9 +531,9 @@
 				/obj/item/stack/cable_coil = 1)
 	category = CAT_TRIBAL
 	tools = list(TOOL_WORKBENCH)
-	skill_needed = SKILL_SCIENCE || SKILL_REPAIR
+	skill_needed = SKILL_REPAIR
 	skill_level = EASY_CHECK  
-
+	falls_back_on_outdoors = TRUE
 /* tdo
 /datum/crafting_recipe/beartrap
 	name = "Bear Trap"
