@@ -14,7 +14,7 @@
 	icon_living = "handy"
 	icon_dead = "robot_dead"
 	speed = 2
-	can_ghost_into = TRUE
+	can_ghost_into = FALSE
 	gender = NEUTER
 	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
 	move_resist = MOVE_FORCE_OVERPOWERING // Can't be pulled
@@ -316,7 +316,7 @@
 	maxHealth = 100 
 	health = 100
 	speed = 4
-	can_ghost_into = TRUE
+	can_ghost_into = FALSE
 	melee_damage_lower = 5 //severely reduced melee damage here because its silly to have a ranged mob also be a cqc master
 	melee_damage_upper = 10
 	extra_projectiles = 0 //removed extra projectiles to make these easier to deal with on super lowpop

@@ -21,6 +21,7 @@
 
 	if(stat != DEAD)
 		handle_brain_damage()
+		calc_recoil()
 
 	if(stat != DEAD)
 		handle_liver()

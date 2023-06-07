@@ -37,6 +37,16 @@
 	skill_needed = SKILL_OUTDOORSMAN
 	skill_level = HARD_CHECK
 
+/datum/crafting_recipe/regular_gauze
+	name = "Regular Gauze"
+	result = /obj/item/stack/medical/gauze
+	time = 50
+	reqs = list(/obj/item/stack/medical/gauze/improvised = 1,
+				/datum/reagent/abraxo_cleaner = 5)
+	category = CAT_MEDICAL
+	skill_needed = SKILL_SCIENCE
+	skill_level = EASY_CHECK
+
 /datum/crafting_recipe/upgraded_gauze
 	name = "Improved Gauze"
 	result = /obj/item/stack/medical/gauze/adv/one
@@ -381,7 +391,8 @@
 	time = 100
 	tools = list(TOOL_WORKBENCH, TOOL_SCREWDRIVER, TOOL_CROWBAR)
 	category = CAT_MEDICAL
-	skill_level = HARD_CHECK
+	skill_level = EASY_CHECK
+	skill_needed = SKILL_SCIENCE
 
 /datum/crafting_recipe/crafted_chem_cartridge
 	name = "Crafted chemical Cartridge"
@@ -398,6 +409,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_SCREWDRIVER, TOOL_CROWBAR)
 	category = CAT_MEDICAL
 	skill_level = HARD_CHECK
+	skill_needed = SKILL_SCIENCE
 
 /datum/crafting_recipe/fiery_purgative
 	name = "Fiery purgative"
@@ -408,6 +420,9 @@
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 10
 	category = CAT_MEDICAL
+	falls_back_on_outdoors = TRUE
+	skill_needed = SKILL_SCIENCE
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/fiery_purgative5
 	name = "Fiery purgative (x5)"
