@@ -9,6 +9,8 @@
 
 /mob/living/proc/add_recoil(var/recoil_buildup)
 	if(recoil_buildup)
+		if (!highest_gun_or_energy_cache)
+			highest_gun_or_energy_cache = highest_skill_value(SKILL_GUNS, SKILL_ENERGY)
 		if(HAS_TRAIT(src, SPREAD_CONTROL))
 			recoil_buildup *= 0.8
 		recoil += (recoil_buildup * min((50/highest_gun_or_energy_cache), 1))
@@ -16,6 +18,8 @@
 
 /mob/living/proc/calc_recoil()
 	if (recoil)
+		if (!highest_gun_or_energy_cache)
+			highest_gun_or_energy_cache = highest_skill_value(SKILL_GUNS, SKILL_ENERGY)
 		var/base = 3 * (highest_gun_or_energy_cache/40)
 		var/scale = 0.8 * (40/highest_gun_or_energy_cache)
 
