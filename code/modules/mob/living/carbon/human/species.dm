@@ -1703,6 +1703,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		attacker_style = M.mind.martial_art
 		if(attacker_style?.pacifism_check && HAS_TRAIT(M, TRAIT_PACIFISM)) // most martial arts are quite harmful, alas.
 			attacker_style = null
+	M.stop_sneaking(TRUE)
 	switch(act_intent)
 		if("help")
 			help(M, H, attacker_style)

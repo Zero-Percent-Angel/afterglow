@@ -1,36 +1,37 @@
 /mob/living/proc/handle_recoil(var/obj/item/gun/G, var/recoil_buildup)
-	deltimer(recoil_reduction_timer)
-
 	add_recoil(recoil_buildup)
 
 /mob/living/proc/external_recoil(var/recoil_buildup) // Used in human_attackhand.dm
-	deltimer(recoil_reduction_timer)
 	add_recoil(recoil_buildup)
 
-mob/proc/handle_movement_recoil() // Used in movement/mob.dm
+/mob/proc/handle_movement_recoil() // Used in movement/mob.dm
 	return // Ghosts and roaches have no movement recoil
 
 /mob/living/proc/add_recoil(var/recoil_buildup)
 	if(recoil_buildup)
+		if (!highest_gun_or_energy_cache)
+			highest_gun_or_energy_cache = highest_skill_value(SKILL_GUNS, SKILL_ENERGY)
 		if(HAS_TRAIT(src, SPREAD_CONTROL))
-			recoil_buildup *= 0.5
-		recoil += recoil_buildup
+			recoil_buildup *= 0.8
+		recoil += (recoil_buildup * min((50/highest_gun_or_energy_cache), 1))
 		update_recoil()
 
 /mob/living/proc/calc_recoil()
+	if (recoil)
+		if (!highest_gun_or_energy_cache)
+			highest_gun_or_energy_cache = highest_skill_value(SKILL_GUNS, SKILL_ENERGY)
+		var/base = 3 * (highest_gun_or_energy_cache/40)
+		var/scale = 0.8 * (40/highest_gun_or_energy_cache)
 
-	var/base = 0.8
-	var/scale = 0.8
+		if(HAS_TRAIT(src, SPREAD_CONTROL))
+			scale = 0.6 * (40/highest_gun_or_energy_cache)
 
-	if(HAS_TRAIT(src, SPREAD_CONTROL))
-		scale = 0.5
-
-	if(recoil <= base)
-		recoil = 0
-	else
-		recoil -= base
-		recoil *= scale
-	update_recoil()
+		if(recoil <= base)
+			recoil = 0
+		else
+			recoil -= base
+			recoil *= scale
+		update_recoil()
 
 /mob/living/proc/calculate_offset(var/offset = 0, skill_used = SKILL_GUNS)
 	var/the_skill_val = skill_value(skill_used)
@@ -52,13 +53,6 @@ mob/proc/handle_movement_recoil() // Used in movement/mob.dm
 	var/obj/item/gun/G = get_active_held_item()
 	if(istype(G) && G)
 		G.check_safety_cursor(src)
-
-	if(recoil > 0)
-		recoil_reduction_timer = addtimer(CALLBACK(src, .proc/calc_recoil), 0.1 SECONDS, TIMER_STOPPABLE)
-	else
-		if(!istype(G))
-			remove_cursor()
-		deltimer(recoil_reduction_timer)
 
 /mob/living/proc/update_cursor(var/obj/item/gun/G)
 	if(!(istype(get_active_held_item(), /obj/item/gun) || recoil > 0))

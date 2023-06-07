@@ -2146,7 +2146,9 @@
 /area/f13/brotherhood/chemistry)
 "bIA" = (
 /obj/machinery/light,
-/obj/machinery/vending/wardrobe/chem_wardrobe,
+/obj/machinery/vending/wardrobe/chem_wardrobe{
+	force_free = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/medical)
 "bIG" = (
@@ -4673,7 +4675,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/chemistry)
 "dMk" = (
-/obj/machinery/vending/hydroseeds,
+/obj/machinery/vending/hydroseeds{
+	force_free = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "neutralrustyfull"
 	},
@@ -10848,7 +10852,9 @@
 	},
 /area/f13/brotherhood/operations)
 "izB" = (
-/obj/machinery/vending/wardrobe/medi_wardrobe,
+/obj/machinery/vending/wardrobe/medi_wardrobe{
+	force_free = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/medical)
 "izE" = (
@@ -11409,6 +11415,18 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/brotherhood/rnd)
+"jeq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/rack,
+/obj/item/gun/energy/laser/aer9,
+/obj/item/gun/energy/laser/aer9,
+/obj/item/gun/energy/laser/aer9,
+/obj/item/gun/energy/laser/aer9,
+/obj/item/gun/energy/laser/aer9,
+/turf/open/floor/f13{
+	icon_state = "reddirtyfull"
+	},
+/area/f13/brotherhood/armory)
 "jeT" = (
 /obj/structure/lattice/catwalk,
 /obj/effect/decal/fakelattice{
@@ -11907,7 +11925,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/radiation)
 "jwj" = (
-/obj/machinery/vending/tool,
+/obj/machinery/vending/tool{
+	force_free = 1
+	},
 /obj/structure/sign/poster/contraband/rip_badger{
 	pixel_x = 14;
 	pixel_y = 31
@@ -12101,7 +12121,9 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/ambientlighting/building/m)
 "jEa" = (
-/obj/machinery/vending/cigarette,
+/obj/machinery/vending/cigarette{
+	force_free = 1
+	},
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/brotherhood/operations)
@@ -13108,7 +13130,6 @@
 "krw" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/ammo_box/a556/microshrapnel,
-/obj/item/ammo_box/a50MGbox/contam,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
 "krL" = (
@@ -16195,7 +16216,9 @@
 /area/f13/tcoms)
 "mMF" = (
 /obj/structure/lattice/catwalk,
-/obj/machinery/vending/snack,
+/obj/machinery/vending/snack{
+	force_free = 1
+	},
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -19280,7 +19303,9 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/building/sewers)
 "plx" = (
-/obj/machinery/vending/hydronutrients,
+/obj/machinery/vending/hydronutrients{
+	force_free = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "neutralrustyfull"
 	},
@@ -19560,7 +19585,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/chemistry)
 "pxW" = (
-/obj/machinery/vending/robotics,
+/obj/machinery/vending/robotics{
+	force_free = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/red{
 	icon_state = "darkyellowfull"
 	},
@@ -19716,6 +19743,8 @@
 "pDK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack,
+/obj/item/gun/energy/laser/pistol,
+/obj/item/gun/energy/laser/pistol,
 /obj/item/gun/energy/laser/pistol,
 /obj/item/gun/energy/laser/pistol,
 /obj/item/gun/energy/laser/pistol,
@@ -23998,7 +24027,8 @@
 /area/f13/brotherhood/armory)
 "szB" = (
 /obj/machinery/vending/cola{
-	name = "\improper Nuka Cola Vending Machine"
+	name = "\improper Nuka Cola Vending Machine";
+	force_free = 1
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
@@ -80667,7 +80697,7 @@ eGK
 wYF
 wYF
 wYF
-wYF
+jeq
 pDK
 vfy
 azP

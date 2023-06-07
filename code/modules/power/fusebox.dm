@@ -14,8 +14,9 @@
 
 
 /obj/machinery/power/apc/fusebox/ui_interact()
+	return
 	//do nothing it's a fuse box....
-	update()
+	//update()
 
 //Icon
 /obj/machinery/power/apc/fusebox/update_icon()
@@ -68,10 +69,7 @@
 
 
 /obj/machinery/power/apc/fusebox/on_attack_hand(mob/user, act_intent, unarmed_attack_flags)
-	playsound(src, 'sound/machines/click.ogg', 50, 1)
-	operating = !operating
-	to_chat(user, span_notice("You turn the fusebox [operating ? "on" : "off"]."))
-	update()
+	return
 
 
 /obj/machinery/power/apc/fusebox/Initialize(mapload, ndir, building = FALSE)
