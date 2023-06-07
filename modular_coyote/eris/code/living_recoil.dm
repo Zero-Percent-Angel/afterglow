@@ -11,7 +11,7 @@
 	if(recoil_buildup)
 		if(HAS_TRAIT(src, SPREAD_CONTROL))
 			recoil_buildup *= 0.8
-		recoil += (recoil_buildup * Min((50/highest_gun_or_energy_cache), 1))
+		recoil += (recoil_buildup * min((50/highest_gun_or_energy_cache), 1))
 		update_recoil()
 
 /mob/living/proc/calc_recoil()
