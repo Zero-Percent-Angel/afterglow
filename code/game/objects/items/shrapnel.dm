@@ -20,13 +20,6 @@
 	icon_state = "s-casing"
 	item_flags = NONE
 
-/obj/item/shrapnel/bullet/c38 // .38 round
-	name = "\improper .38 bullet"
-
-/obj/item/shrapnel/bullet/c38/dumdum // .38 DumDum round
-	name = "\improper .38 DumDum bullet"
-	embedding = list(embed_chance=70, fall_chance=7, jostle_chance=7, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=5, jostle_pain_mult=6, rip_time=10, embed_chance_turf_mod=-100)
-
 /obj/item/projectile/bullet/shrapnel
 	name = "flying shrapnel shard"
 	damage = 14

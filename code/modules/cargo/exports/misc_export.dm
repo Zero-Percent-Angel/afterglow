@@ -58,7 +58,6 @@
 		/obj/item/gun/ballistic/automatic/pistol/m1911/custom,
 		/obj/item/gun/ballistic/automatic/pistol/mk23,
 		/obj/item/gun/ballistic/automatic/pistol/sig,
-		/obj/item/gun/ballistic/revolver/revolver44,
 		)
 
 /datum/export/item/advpistol
@@ -66,14 +65,11 @@
 	unit_name = "advanced pistol"
 	export_types = list(
 		/obj/item/gun/ballistic/automatic/pistol/deagle,
-		/obj/item/gun/ballistic/automatic/pistol/automag,
 		/obj/item/gun/ballistic/automatic/pistol/sig,
 		/obj/item/gun/ballistic/automatic/pistol/pistol14,
 		/obj/item/gun/ballistic/revolver/revolver45,
 		/obj/item/gun/ballistic/revolver/m29,
-		/obj/item/gun/ballistic/revolver/revolver44,
-		/obj/item/gun/ballistic/revolver/hunting,
-		/obj/item/gun/ballistic/automatic/pistol/schmeisser
+		/obj/item/gun/ballistic/revolver/hunting
 		)
 
 /datum/export/item/smg
@@ -97,14 +93,11 @@
 	unit_name = "carbine"
 	export_types = list(
 		/obj/item/gun/ballistic/automatic/m1carbine,
-		/obj/item/gun/ballistic/automatic/delisle,
 		/obj/item/gun/ballistic/automatic/sportcarbine,
 		/obj/item/gun/ballistic/automatic/varmint,
 		/obj/item/gun/ballistic/rifle/repeater/cowboy,
 		/obj/item/gun/ballistic/rifle/repeater/trail,
 		/obj/item/gun/ballistic/rifle/hunting,
-		/obj/item/gun/ballistic/rifle/enfield,
-		/obj/item/gun/ballistic/rifle/repeater/ranger
 	)
 
 /datum/export/item/dbshotgun
@@ -156,23 +149,18 @@
 		/obj/item/gun/ballistic/automatic/service,
 		/obj/item/gun/ballistic/automatic/marksman,
 		/obj/item/gun/ballistic/automatic/rangemaster,
-		/obj/item/gun/ballistic/automatic/slr,
 		/obj/item/gun/ballistic/automatic/m1garand,
 		/obj/item/gun/ballistic/rifle/repeater/brush,
 		/obj/item/gun/ballistic/automatic/marksman/sniper,
 		/obj/item/gun/ballistic/rifle/mag/antimateriel,
-		/obj/item/gun/ballistic/automatic/armalite,
 	)
 
 /datum/export/item/autorifle
 	cost = 850
 	unit_name = "automatic rifle"
 	export_types = list(
-		/obj/item/gun/ballistic/automatic/service/r82,
 		/obj/item/gun/ballistic/automatic/assault_rifle,
-		/obj/item/gun/ballistic/automatic/r93,
 		/obj/item/gun/energy/laser/scatter,
-		/obj/item/gun/energy/laser/aer12,
 		/obj/item/gun/energy/laser/rcw,
 		/obj/item/gun/ballistic/automatic/type93,
 		/obj/item/gun/ballistic/automatic/bozar,

@@ -189,7 +189,7 @@
 		to_chat(src, span_warning("You stop sneaking."))
 		if (!sneaking_cooldown && cooldown)
 			sneaking_cooldown = TRUE
-			addtimer(CALLBACK(src, /mob/living/proc/clear_cooldown), 5 SECONDS)
+			addtimer(CALLBACK(src, /mob/living/proc/clear_cooldown), 8 SECONDS)
 
 /mob/living/proc/clear_cooldown()
 	sneaking_cooldown = FALSE

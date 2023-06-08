@@ -8,7 +8,6 @@
 	var/list/allowed_targets = list() //WHO CAN I KILL D:
 	var/retribution = 1 //whether or not they will attack us if we attack them like some kinda dick.
 	var/list/heard_list = list("Okay.", "Got it.", "Yep.", "Yup.", "Yes.")
-	var/mob/target_mob = null
 	var/followingAFriend = FALSE
 	var/trust_no_one = FALSE
 	var/ordered_attack = FALSE
@@ -186,24 +185,25 @@
 		return ..()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/Retaliate()
-	var/list/around = view(vision_range, src)
+	if (ordered_attack)
+		var/list/around = view(vision_range, src)
 
-	for(var/atom/movable/A in around)
-		if(A == src)
-			continue
-		if(isliving(A))
-			var/mob/living/M = A
-			if(!friends.Find(WEAKREF(M)))
-				enemies |= WEAKREF(M)
-		else if(ismecha(A))
-			var/obj/mecha/M = A
-			if(M.occupant && !friends.Find(WEAKREF(M.occupant)))
-				enemies |= WEAKREF(M)
-				enemies |= WEAKREF(M.occupant)
+		for(var/atom/movable/A in around)
+			if(A == src)
+				continue
+			if(isliving(A))
+				var/mob/living/M = A
+				if(!friends.Find(WEAKREF(M)))
+					enemies |= WEAKREF(M)
+			else if(ismecha(A))
+				var/obj/mecha/M = A
+				if(M.occupant && !friends.Find(WEAKREF(M.occupant)))
+					enemies |= WEAKREF(M)
+					enemies |= WEAKREF(M.occupant)
 
-	for(var/mob/living/simple_animal/hostile/retaliate/H in around)
-		if(faction_check_mob(H) && !attack_same && !H.attack_same)
-			H.enemies |= enemies
+		for(var/mob/living/simple_animal/hostile/retaliate/H in around)
+			if(faction_check_mob(H) && !attack_same && !H.attack_same)
+				H.enemies |= enemies
 	return 0
 
 
@@ -211,20 +211,6 @@
 	var/en_weak_ref = WEAKREF(maybe_enemy)
 	if (!friends.Find(en_weak_ref))
 		enemies |= en_weak_ref
-
-/mob/living/simple_animal/hostile/retaliate/talker/follower/bullet_act(obj/item/projectile/P, def_zone)
-	..()
-	target_mob = null
-	if (friends.Find(WEAKREF(P.firer)))
-		friends -= WEAKREF(P.firer)
-		say("Friendly fire!")
-
-/mob/living/simple_animal/hostile/retaliate/talker/follower/attackby(obj/item/O, mob/user)
-	..()
-	target_mob = null
-	if(friends.Find(WEAKREF(user)))
-		friends -= WEAKREF(user)
-		say("You bastard...")
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/hitby(atom/movable/AM, skipcatch, hitpush = TRUE, blocked = FALSE, datum/thrownthing/throwingdatum)//Standardization and logging -Sieve
 	..()

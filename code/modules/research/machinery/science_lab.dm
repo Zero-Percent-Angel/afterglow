@@ -6,14 +6,14 @@
 	circuit = /obj/item/circuitboard/machine/science_lab
 	var/engaged_in_science = FALSE
 	var/list/blueprint_types = list("small energy", "big energy", "small guns", "big guns")
-	var/list/point_selections = list(200, 500, 1000, 5000)
+	var/list/point_selections = list(2000, 5000, 10000, 50000)
 	var/list/obj/small_guns = list(/obj/item/book/granter/crafting_recipe/blueprint/thatgun, /obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
 								/obj/item/book/granter/crafting_recipe/blueprint/deagle, /obj/item/book/granter/crafting_recipe/blueprint/n99)
 	var/list/obj/big_guns = list(/obj/item/book/granter/crafting_recipe/blueprint/combatrifle, /obj/item/book/granter/crafting_recipe/blueprint/r84,
 								/obj/item/book/granter/crafting_recipe/blueprint/lsw, /obj/item/book/granter/crafting_recipe/blueprint/am_rifle)
 	var/list/obj/small_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/aep7, /obj/item/book/granter/crafting_recipe/blueprint/plasmapistol, 
-									/obj/item/book/granter/crafting_recipe/blueprint/lightplasmapistol, /obj/item/book/granter/crafting_recipe/blueprint/tesla)
-	var/list/obj/big_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/tribeam_stun, /obj/item/book/granter/crafting_recipe/blueprint/tribeam,
+									/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol, /obj/item/book/granter/crafting_recipe/blueprint/tesla)
+	var/list/obj/big_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/tribeam,
 								/obj/item/book/granter/crafting_recipe/blueprint/plasmarifle, /obj/item/book/granter/crafting_recipe/blueprint/aer9,
 								/obj/item/book/granter/crafting_recipe/blueprint/gauss)
 	var/attempts = 0
@@ -91,7 +91,7 @@
 				engaged_in_science = FALSE
 				update_overlays()
 				return
-			var/difficulty_selected = 50 - (points_to_contribute/100) - attempts
+			var/difficulty_selected = 50 - (points_to_contribute/1000) - attempts
 			if (usr.skill_roll(SKILL_SCIENCE, difficulty_selected))
 				if (choosen_step == "small energy")
 					var/obj/i = pick(small_energy)

@@ -120,37 +120,6 @@
 	multiple_sprites = 3
 	ammo_type = /obj/item/ammo_casing/c9mm/improvised
 
-/obj/item/ammo_box/c38box
-	name = "ammo box (.38)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "38box"
-	multiple_sprites = 2
-	caliber = list(CALIBER_38)
-	ammo_type = /obj/item/ammo_casing/c38
-	max_ammo = 25
-	w_class = WEIGHT_CLASS_SMALL
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SMALL_BOX)
-
-/obj/item/ammo_box/c38box/rubber
-	name = "ammo box (.38 rubber)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "38box"
-	multiple_sprites = 2
-	ammo_type = /obj/item/ammo_casing/c38/rubber
-
-/obj/item/ammo_box/c38box/incendiary
-	name = "ammo box (.38 incendiary-tipped)"
-	desc = "A box of .38 incendiary-tipped rounds. This'll burn."
-	ammo_type = /obj/item/ammo_casing/c38/incendiary
-
-/obj/item/ammo_box/c38box/improvised
-	name = "bag with reloaded .38 bullets"
-	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
-	icon_state = "improvshotbag"
-	multiple_sprites = 3
-	ammo_type = /obj/item/ammo_casing/c38/improvised
-
-
 //10mm
 /obj/item/ammo_box/c10mm
 	name = "ammo box (10mm)"
@@ -186,7 +155,7 @@
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "357box"
 	multiple_sprites = 2
-	caliber = list(CALIBER_357, CALIBER_38)
+	caliber = list(CALIBER_357)
 	ammo_type = /obj/item/ammo_casing/a357
 	max_ammo = 25
 	custom_materials = list(/datum/material/iron = MATS_PISTOL_HEAVY_BOX)
@@ -233,22 +202,6 @@
 	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
 	icon_state = "improvshotbag"
 	ammo_type = /obj/item/ammo_casing/m44/improvised
-	multiple_sprites = 3
-
-/obj/item/ammo_box/a45lcbox
-	name = "ammo box (.45 Long Colt)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "ammobox"
-	caliber = list(CALIBER_45LC)
-	ammo_type = /obj/item/ammo_casing/a45lc
-	max_ammo = 30
-	w_class = WEIGHT_CLASS_SMALL
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_MEDIUM_BOX)
-
-/obj/item/ammo_box/a45lcbox/improvised
-	name = "bag with reloaded .45 Long Colt bullets"
-	icon_state = "improvshotbag"
-	ammo_type = /obj/item/ammo_casing/a45lc/improvised
 	multiple_sprites = 3
 
 
@@ -599,21 +552,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	multiple_sprites = 1
 
-//.38
-/obj/item/ammo_box/c38
-	name = "speed loader (.38)"
-	desc = "Designed to quickly reload revolvers."
-	icon_state = "357"
-	caliber = list(CALIBER_38)
-	ammo_type = /obj/item/ammo_casing/c38
-	max_ammo = 6
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
-
-/obj/item/ammo_box/c38/empty
-	start_empty = 1
-
 //.22
 /obj/item/ammo_box/c22
 	name = "speed loader (.22 LR)"
@@ -648,10 +586,10 @@
 //.357
 /obj/item/ammo_box/a357
 	name = "speed loader (.357)"
-	desc = "Designed to quickly reload revolvers. Also accepts .38!"
+	desc = "Designed to quickly reload revolvers."
 	icon_state = "357"
 	ammo_type = /obj/item/ammo_casing/a357
-	caliber = list(CALIBER_357, CALIBER_38)
+	caliber = list(CALIBER_357)
 	max_ammo = 6
 	multiple_sprites = 1
 	w_class = WEIGHT_CLASS_TINY
@@ -670,9 +608,9 @@
 
 /obj/item/ammo_box/tube/a357
 	name = "speed loader tube (.357)"
-	desc = "Designed to quickly reload repeaters. Also accepts .38!"
+	desc = "Designed to quickly reload repeaters."
 	icon_state = "357tube"
-	caliber = list(CALIBER_357, CALIBER_38)
+	caliber = list(CALIBER_357)
 	ammo_type = /obj/item/ammo_casing/a357
 	max_ammo = 12
 
@@ -721,20 +659,6 @@
 	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
 
 /obj/item/ammo_box/c45rev/empty
-	start_empty = 1
-
-/obj/item/ammo_box/a45lcrev
-	name = "speed loader (.45 LC)"
-	desc = "Designed to quickly reload revolvers."
-	icon_state = "44"
-	caliber = list(CALIBER_45LC)
-	ammo_type = /obj/item/ammo_casing/a45lc
-	max_ammo = 6
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
-
-/obj/item/ammo_box/a45lcrev/empty
 	start_empty = 1
 
 // 308
