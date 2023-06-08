@@ -42,6 +42,9 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	/// these flags plus whatever's picked in the root menu = what we're allowed to spawn, easy peasy
 	/// MUST be set
 	var/allowed_flags
+	/// One instance per-use; fuck you. Don't abuse it.
+	var/in_use
+
 	/// What kits are inside this kit? If blank, just show a list of everything set to be allowed
 	var/list/multiple_choice = list()
 
@@ -298,15 +301,22 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 
 /obj/item/kit_spawner/attack_self(mob/user)
 	if(can_use_kit(user))
-		use_the_kit(user)
+		INVOKE_ASYNC(src, .proc/use_the_kit, user)
+	else
+		playsound(src, 'sound/machines/synth_no.ogg', 40, 1)
+
+/obj/item/kit_spawner/proc/stop_using_the_kit(mob/user)
+	in_use = FALSE
 
 /obj/item/kit_spawner/proc/can_use_kit(mob/living/user)
+	if(in_use)
+		to_chat(user, span_alert("Hold your horses, you're still using this thing!"))
+		return FALSE
 	if(user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
 		return TRUE
-	playsound(src, 'sound/machines/synth_no.ogg', 40, 1)
-	return FALSE
 
 /obj/item/kit_spawner/proc/use_the_kit(mob/living/user)
+	in_use = TRUE
 	if(!LAZYLEN(GLOB.loadout_boxes[type]))
 		build_output_list()
 		if(!LAZYLEN(GLOB.loadout_boxes[type]))
@@ -317,9 +327,11 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 		first_key = input(user, "Pick a category!", "Pick a category!") as null|anything in multiple_choice
 		if(!first_key)
 			user.show_message(span_alert("Invalid selection!"))
+			stop_using_the_kit(user)
 			return
 		if(!LAZYLEN(multiple_choice[first_key]))
 			user.show_message(span_phobia("Whoever set up [src] didn't set up the multiple choice list right! there should be a list here, and there isnt one! this is a bug~"))
+			stop_using_the_kit(user)
 			return
 		first_list = multiple_choice[first_key]
 		// Filter out anything from the first list that isnt in the second list. & might work, were I cleverer
@@ -340,6 +352,7 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 		one_only = TRUE
 	if(!second_key)
 		user.show_message(span_alert("Invalid selection!"))
+		stop_using_the_kit(user)
 		return
 	user.show_message("[second_key] selected!")
 	/// now the actual gunweapon! entries are formatted as "thingname" = path
@@ -352,16 +365,10 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 		final_key = input(user, "Pick a weapon!", "Pick a weapon!") as null|anything in GLOB.loadout_boxes[type][second_key]
 	if(!check_choice(GLOB.loadout_boxes[type][second_key][final_key]))
 		user.show_message(span_alert("Invalid selection!"))
+		stop_using_the_kit(user)
 		return
 	//user.show_message("[final_key] selected!")
-	if(!spawn_the_thing(user, GLOB.loadout_boxes[type][second_key][final_key]))
-		user.show_message(span_alert("Couldn't get the thing out of the case. Try again?"))
-		return
-	if(first_key && (first_key in multiple_choice))
-		multiple_choice[first_key] = null
-		multiple_choice -= first_key
-	if(LAZYLEN(multiple_choice) < 1)
-		qdel(src)
+	INVOKE_ASYNC(src, .proc/spawn_the_thing, user, GLOB.loadout_boxes[type][second_key][final_key], first_key)
 
 
 /obj/item/kit_spawner/proc/check_choice(choice_to_check)
@@ -371,13 +378,21 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 		return FALSE
 	return TRUE
 
-/obj/item/kit_spawner/proc/spawn_the_thing(mob/user, atom/the_thing)
+/obj/item/kit_spawner/proc/spawn_the_thing(mob/user, atom/the_thing, first_key)
 	var/turf/spawn_here
 	spawn_here = user ? get_turf(user) : get_turf(src)
 	var/obj/item/new_thing = new the_thing(spawn_here)
-	if(istype(new_thing))
-		user.show_message(span_green("You pull \a [new_thing.name] out of [src]."))
-		return TRUE
+	stop_using_the_kit(user)
+	if(!istype(new_thing))
+		user.show_message(span_alert("Couldn't get the thing out of the case. Try again?"))
+		return
+	user.show_message(span_green("You pull \a [new_thing.name] out of [src]."))
+	user.put_in_hands(new_thing)
+	if(first_key && (first_key in multiple_choice))
+		multiple_choice[first_key] = null
+		multiple_choice -= first_key
+	if(LAZYLEN(multiple_choice) < 1)
+		qdel(src)
 
 /obj/item/storage/box/gun
 	name = "weapon case"
