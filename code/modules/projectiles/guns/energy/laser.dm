@@ -609,8 +609,8 @@
 
 //Unique Wattz 2000 Laser rifle
 /obj/item/gun/energy/laser/wattz2ks
-	name = "wattz 2000s"
-	desc = "The Postwar Unicorn of laser rifles, The Wattz 2000 Sports Edition was designed for professional hunting - featuring a state-of-the-art self-charging system that has still endured two hundred years later."
+	name = "wattz 2000 'Shanxi'"
+	desc = "Wattz 2000 Laser Rifle. Uses micro fusion cells for more powerful lasers, and an extended barrel for additional range. This vairant shows battle scars of its campaign at Shanxi, including various feild upgrades - including a self-recharging core!"
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
@@ -668,11 +668,11 @@
 		/datum/firemode/semi_auto/slow
 	)
 
-//Quirked-up AER9
-/obj/item/gun/energy/laser/aer9/focused
-	name = "\improper Hot-wired AER9 laser rifle"
-	desc = "A sturdy pre-war laser rifle. Emits beams of concentrated light to kill targets. This one has been jury-rigged against common sense to dump more power into its shots."
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/hitscan/focused)
+//AER-12 - basically stronger AP/damage AER-9 but with higher power consumption.
+/obj/item/gun/energy/laser/aer12
+	name = "AER12 laser rifle"
+	desc = "A sturdy pre-war laser rifle. Emits beams of concentrated light to kill targets. This model is an 'improvement' over the AER9 but suffers extra power consumption in return for its better focused beam."
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/aer12/hitscan)
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY

@@ -84,7 +84,7 @@
 /// this is an awful, awful idea
 #define SHOTGUNBAT_AMMO_CALIBERS list(\
 	CALIBER_SHOTGUN,\
-	CALIBER_14MM
+	CALIBER_14MM\
 	)
 
 GLOBAL_LIST_INIT(pipe_rifle_valid_calibers, list(

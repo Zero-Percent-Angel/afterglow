@@ -706,7 +706,7 @@
 	name = "laser beam"
 	damage = 36
 	hitscan = TRUE
-	armour_penetration = 0.02
+	armour_penetration = 0.5
 	tracer_type = /obj/effect/projectile/tracer/xray
 	muzzle_type = /obj/effect/projectile/muzzle/xray
 	impact_type = /obj/effect/projectile/impact/xray
