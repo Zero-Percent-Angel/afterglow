@@ -380,6 +380,16 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto
 	)
+
+//Recharger Rifle
+/obj/item/gun/energy/laser/wattz/recharger/rifle
+	name = "Recharger Rifle"
+	desc = "A recharger rifle manufactred by the Followers of the Apocalpyse. AS the name implies, it charges its capacitor banks over time using radioactive decay."
+	icon = 'icons/fallout/objects/guns/longguns.dmi'
+	icon_state = "rechargerrifle"
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan/rifle)
+	weapon_weight = GUN_TWO_HAND_ONLY
+
 //AEP 7 Laser pistol
 /obj/item/gun/energy/laser/pistol
 	name = "\improper AEP7 laser pistol"
@@ -672,6 +682,8 @@
 /obj/item/gun/energy/laser/aer12
 	name = "AER12 laser rifle"
 	desc = "A sturdy pre-war laser rifle. Emits beams of concentrated light to kill targets. This model is an 'improvement' over the AER9 but suffers extra power consumption in return for its better focused beam."
+	icon_state = "aer12"
+	item_state = "laser-rifle9"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/aer12/hitscan)
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY

@@ -395,7 +395,7 @@
 
 /obj/item/projectile/beam/laser/recharger/hitscan //hitscan recharger pistol
 	name = "recharger beam"
-	damage = 25
+	damage = 26
 	hitscan = TRUE
 	armour_penetration = 0.02
 	tracer_type = /obj/effect/projectile/tracer/pulse
@@ -403,6 +403,9 @@
 	impact_type = /obj/effect/projectile/impact/pulse
 	light_color = LIGHT_COLOR_BLUE
 
+/obj/item/projectile/beam/laser/recharger/hitscan/rifle //hitscan recharger rifle
+	damage = 20
+	armour_penetration = 0.02
 
 /obj/item/projectile/beam/laser/ultra_pistol //unused
 	name = "laser beam"
