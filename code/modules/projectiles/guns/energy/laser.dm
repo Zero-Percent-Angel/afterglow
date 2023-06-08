@@ -4,6 +4,7 @@
 /obj/item/gun/energy/laser
 	name = "energy weapon template"
 	desc = "Should not exists. Bugreport."
+	icon = 'icons/fallout/objects/guns/energy.dmi'
 	icon_state = "laser"
 	item_state = "laser"
 	w_class = WEIGHT_CLASS_BULKY
