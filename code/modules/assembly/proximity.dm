@@ -6,18 +6,19 @@
 	attachable = TRUE
 	var/scanning = FALSE
 	var/timing = FALSE
-	var/time = 10
-	var/sensitivity = 1
+	var/time = 20
+	var/sensitivity = 0
 	var/hearing_range = 3
 
-/obj/item/assembly/prox_sensor/Initialize()
+/obj/item/assembly/prox_sensor/Initialize(mapload)
 	. = ..()
 	proximity_monitor = new(src, 0)
 	START_PROCESSING(SSobj, src)
 
 /obj/item/assembly/prox_sensor/Destroy()
 	STOP_PROCESSING(SSobj, src)
-	. = ..()
+	QDEL_NULL(proximity_monitor)
+	return ..()
 
 /obj/item/assembly/prox_sensor/examine(mob/user)
 	. = ..()
@@ -33,19 +34,42 @@
 	update_icon()
 	return TRUE
 
+/obj/item/assembly/prox_sensor/dropped()
+	. = ..()
+	// Pick the first valid object in this list:
+	// Wiring datum's owner
+	// assembly holder's attached object
+	// assembly holder itself
+	// us
+	proximity_monitor?.set_host(connected?.holder || holder?.master || holder || src, src)
+
+/obj/item/assembly/prox_sensor/on_attach()
+	. = ..()
+	// Pick the first valid object in this list:
+	// Wiring datum's owner
+	// assembly holder's attached object
+	// assembly holder itself
+	// us
+	proximity_monitor.set_host(connected?.holder || holder?.master || holder || src, src)
+
 /obj/item/assembly/prox_sensor/on_detach()
 	. = ..()
 	if(!.)
 		return
 	else
-		proximity_monitor.set_host(src,src)
+		// Pick the first valid object in this list:
+		// Wiring datum's owner
+		// assembly holder's attached object
+		// assembly holder itself
+		// us
+		proximity_monitor.set_host(connected?.holder || holder?.master || holder || src, src)
 
 /obj/item/assembly/prox_sensor/toggle_secure()
 	secured = !secured
 	if(!secured)
 		if(scanning)
 			toggle_scan()
-			proximity_monitor.set_host(src,src)
+			proximity_monitor.set_host(src, src)
 		timing = FALSE
 		STOP_PROCESSING(SSobj, src)
 	else
@@ -62,19 +86,18 @@
 /obj/item/assembly/prox_sensor/proc/sense()
 	if(!scanning || !secured || next_activate > world.time)
 		return FALSE
-	pulse(FALSE)
-	audible_message("[icon2html(src, hearers(src))] *beep* *beep* *beep*", null, hearing_range)
-	for(var/CHM in get_hearers_in_view(hearing_range, src))
-		if(ismob(CHM))
-			var/mob/LM = CHM
-			LM.playsound_local(get_turf(src), 'sound/machines/triple_beep.ogg', ASSEMBLY_BEEP_VOLUME, TRUE)
-	next_activate = world.time + 30
+	next_activate = world.time + (3 SECONDS) // this must happen before anything else
+	pulse()
+	audible_message("<span class='infoplain'>[icon2html(src, hearers(src))] *beep* *beep* *beep*</span>", null, hearing_range)
+	for(var/mob/hearing_mob in get_hearers_in_view(hearing_range, src))
+		hearing_mob.playsound_local(get_turf(src), 'sound/machines/triple_beep.ogg', ASSEMBLY_BEEP_VOLUME, TRUE)
+
 	return TRUE
 
-/obj/item/assembly/prox_sensor/process()
+/obj/item/assembly/prox_sensor/process(seconds_per_tick)
 	if(!timing)
 		return
-	time--
+	time -= seconds_per_tick
 	if(time <= 0)
 		timing = FALSE
 		toggle_scan(TRUE)
@@ -94,17 +117,18 @@
 		sense()
 
 /obj/item/assembly/prox_sensor/update_icon()
-	cut_overlays()
+	. = ..()
+	holder?.update_icon()
+
+/obj/item/assembly/prox_sensor/update_overlays()
+	. = ..()
 	attached_overlays = list()
 	if(timing)
-		add_overlay("prox_timing")
+		. += "prox_timing"
 		attached_overlays += "prox_timing"
 	if(scanning)
-		add_overlay("prox_scanning")
+		. += "prox_scanning"
 		attached_overlays += "prox_scanning"
-	if(holder)
-		holder.update_icon()
-	return
 
 /obj/item/assembly/prox_sensor/ui_status(mob/user)
 	if(is_secured(user))
@@ -127,7 +151,8 @@
 	return data
 
 /obj/item/assembly/prox_sensor/ui_act(action, params)
-	if(..())
+	. = ..()
+	if(.)
 		return
 
 	switch(action)
