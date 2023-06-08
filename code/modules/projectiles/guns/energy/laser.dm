@@ -4,6 +4,7 @@
 /obj/item/gun/energy/laser
 	name = "energy weapon template"
 	desc = "Should not exists. Bugreport."
+	icon = 'icons/fallout/objects/guns/energy.dmi'
 	icon_state = "laser"
 	item_state = "laser"
 	w_class = WEIGHT_CLASS_BULKY
@@ -331,7 +332,7 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slow
 	)
-//Wattz 1000s Laser pistol
+//Unique Wattz 1000 Laser pistol
 /obj/item/gun/energy/laser/wattzs
 	name = "Wattz 1000s laser pistol"
 	desc = "The Wattz 1000 Sports Edition was designed as a direct competitor to the AEP7, boasting an optimized emitter that greatly increases cell efficiency."
@@ -380,6 +381,16 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto
 	)
+
+//Recharger Rifle
+/obj/item/gun/energy/laser/wattz/recharger/rifle
+	name = "Recharger Rifle"
+	desc = "A recharger rifle manufactred by the Followers of the Apocalpyse. AS the name implies, it charges its capacitor banks over time using radioactive decay."
+	icon = 'icons/fallout/objects/guns/longguns.dmi'
+	icon_state = "rechargerrifle"
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan/rifle)
+	weapon_weight = GUN_TWO_HAND_ONLY
+
 //AEP 7 Laser pistol
 /obj/item/gun/energy/laser/pistol
 	name = "\improper AEP7 laser pistol"
@@ -460,7 +471,7 @@
 	name = "\improper integrated laser pistol"
 	desc = "An integrated laser pistol that draws power directly from your cell."
 
-//Compliance Regulator
+//Compliance Regulator	-	Base SS13 stun-gun basically. CAREFUL IN USAGE.
 
 /obj/item/gun/energy/laser/complianceregulator
 	name = "AEP5-CR Disabling Beam Pistol"
@@ -519,140 +530,7 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto
 	)
-//Badland's Special
-/obj/item/gun/energy/laser/badlands
-	name = "\improper Badland's Special"
-	slowdown = 0.2
-	desc = "A jury-rigged AEP7, this pistol carves out every safety feature and shortens the lenses length to cram a second emitter inside."
-	icon = 'icons/fallout/objects/guns/energy.dmi'
-	icon_state = "bspecial"
-	item_state = "laser-pistol"
-	w_class = WEIGHT_CLASS_SMALL
-	slot_flags = ITEM_SLOT_BELT
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/badlands)
-	cell_type = /obj/item/stock_parts/cell/ammo/ec
-	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
 
-	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-
-//Worn Badland's Special
-/obj/item/gun/energy/laser/badlands/worn
-	name = "\improper Worn Badland's Special"
-	slowdown = 0.2
-	desc = "A jury-rigged AEP7, this pistol carves out every safety feature and shortens the lenses length to cram a second emitter inside. This ones seems aged."
-	icon = 'icons/fallout/objects/guns/energy.dmi'
-	icon_state = "bspecial"
-	item_state = "laser-pistol"
-	w_class = WEIGHT_CLASS_SMALL
-	slot_flags = ITEM_SLOT_BELT
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/badlands/worn)
-	cell_type = /obj/item/stock_parts/cell/ammo/ec
-	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
-
-	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-
-//Freeblade Blaster
-/obj/item/gun/energy/laser/freeblade
-	name = "\improper Freeblade Blaster"
-	desc = "A special tri-shot pistol. Does decent damage, and is specialty customized for a certain someone."
-	icon = 'icons/fallout/objects/guns/energy.dmi'
-	icon_state = "freeblade"
-	item_state = "freeblade"
-	w_class = WEIGHT_CLASS_SMALL
-	slot_flags = ITEM_SLOT_BELT
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/freeblade)
-	cell_type = /obj/item/stock_parts/cell/ammo/ec
-	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
-
-	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-
-//Compact RCW
-
-/obj/item/gun/energy/laser/auto
-	name = "compact rcw"
-	desc = "A beefed-up laser pistol manufactured by West Tek, reinforced to allow it to withstand the thermal load of sustained fire."
-	icon = 'icons/fallout/objects/guns/energy.dmi'
-	icon_state = "protolaser"
-	item_state = "laser"
-	w_class = WEIGHT_CLASS_NORMAL
-	cell_type = /obj/item/stock_parts/cell/ammo/ecp
-	ammo_type =  list(/obj/item/ammo_casing/energy/laser/autolaser) //5dmg, 0.4 AP, good for fast firings.
-	automatic = 1
-	can_scope = FALSE
-
-	slowdown = GUN_SLOWDOWN_SMG_LIGHT
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FASTEST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
-	init_firemodes = list(
-		/datum/firemode/semi_auto/fastest
-	)
-//Worn compact RCW
-/obj/item/gun/energy/laser/auto/worn
-	name = "worn compact rcw"
-	desc = "A much more compact version of the RCW. Attuned to pierce through most armor with ease, while also being more streamlined."
-	icon = 'icons/fallout/objects/guns/energy.dmi'
-	icon_state = "protolaser"
-	item_state = "laser"
-	w_class = WEIGHT_CLASS_NORMAL
-	cell_type = /obj/item/stock_parts/cell/ammo/ecp
-	ammo_type =  list(/obj/item/ammo_casing/energy/laser/autolaser/worn) //5dmg, 0.4 AP, good for fast firings.
-	automatic = 1
-	can_scope = FALSE
-
-	slowdown = GUN_SLOWDOWN_SMG_LIGHT
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FASTEST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
-	init_firemodes = list(
-		/datum/firemode/semi_auto/faster
-	)
-// OASIS autolaser
-/obj/item/gun/energy/laser/auto/oasis
-	name = "autoshock tesla pistol"
-	desc = " An upgraded version of the Compact RCW. Boasts a higher cell efficiency at the cost of the burstfire and armor melting power."
-	ammo_type =  list(/obj/item/ammo_casing/energy/laser/autolaser/shock) //8dmg + 10 Stamina, flagged as "energy" so very few armors can reduce it below 5-6 dmg, has a very high bare wound bonus, so anyone with no armor on will be crippled
-
-	slowdown = GUN_SLOWDOWN_SMG_LIGHT
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FASTEST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
-	init_firemodes = list(
-		/datum/firemode/semi_auto/fastest
-	)
 //Ultracite Laser pistol
 /obj/item/gun/energy/laser/ultra_pistol
 	name = "\improper Ultracite laser pistol"
@@ -712,6 +590,7 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slow
 	)
+
 //Wattz 2000 Extended
 /obj/item/gun/energy/laser/wattz2k/extended
 	name = "wattz 2000e"
@@ -738,10 +617,11 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slow
 	)
-//Wattz 2000s Laser rifle
+
+//Unique Wattz 2000 Laser rifle
 /obj/item/gun/energy/laser/wattz2ks
-	name = "wattz 2000s"
-	desc = "The Postwar Unicorn of laser rifles, The Wattz 2000 Sports Edition was designed for professional hunting - featuring a state-of-the-art self-charging system that has still endured two hundred years later."
+	name = "wattz 2000 'Shanxi'"
+	desc = "Wattz 2000 Laser Rifle. Uses micro fusion cells for more powerful lasers, and an extended barrel for additional range. This vairant shows battle scars of its campaign at Shanxi, including various feild upgrades - including a self-recharging core!"
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
@@ -768,7 +648,6 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slow
 	)
-
 
 //AER9 Laser rifle
 /obj/item/gun/energy/laser/aer9
@@ -799,10 +678,14 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slow
 	)
-/obj/item/gun/energy/laser/aer9/focused
-	name = "\improper Hot-wired AER9 laser rifle"
-	desc = "A sturdy pre-war laser rifle. Emits beams of concentrated light to kill targets. This one has been jury-rigged against common sense to dump more power into its shots."
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/hitscan/focused)
+
+//AER-12 - basically stronger AP/damage AER-9 but with higher power consumption.
+/obj/item/gun/energy/laser/aer12
+	name = "AER12 laser rifle"
+	desc = "A sturdy pre-war laser rifle. Emits beams of concentrated light to kill targets. This model is an 'improvement' over the AER9 but suffers extra power consumption in return for its better focused beam."
+	icon_state = "aer12"
+	item_state = "laser-rifle9"
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/aer12/hitscan)
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
@@ -816,6 +699,7 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slower
 	)
+
 //Ultracite Laser rifle
 /obj/item/gun/energy/laser/ultra_rifle
 	name = "\improper Ultracite laser rifle"
@@ -863,26 +747,8 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slow
 	)
-/obj/item/gun/energy/laser/scatter/nonlethal
-	name = "tribeam stunrifle"
-	desc = "A modified AER9 equipped with a refraction kit that divides the laser shot into three separate beams. This one has its power consumption lowered, delivering only non-lethal strikes and charging faster."
-	icon_state = "tribeam_nonlethal"
-	item_state = "laser-rifle9"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter/tribeam/hitscan/nonlethal)
-	cell_type = /obj/item/stock_parts/cell/ammo/mfc
-	equipsound = 'sound/f13weapons/equipsounds/tribeamequip.ogg'
 
-	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER * 0.7 //
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
-	)
+//Unique tribeam variant
 /obj/item/gun/energy/laser/scatter/laserbuss
 	name = "Laserbuss"
 	desc = "A questionably-designed tribeam laser rifle that has been modified to feature a dense array of emitters and scatter lenses."
@@ -901,36 +767,6 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
-	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
-	)
-
-//AER12 Laser rifle
-/obj/item/gun/energy/laser/aer12
-	name = "\improper AER12 laser rifle"
-	desc = "A cutting-edge, pre-war laser rifle. Its focusing crystal array is housed in gold alloy, making it difficult to maintain."
-	icon = 'icons/fallout/objects/guns/longguns.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
-	icon_state = "aer12new"
-	item_state = "aer12new"
-	slot_flags = ITEM_SLOT_BACK
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/aer12/hitscan)
-	cell_type = /obj/item/stock_parts/cell/ammo/mfc
-	scope_state = "AEP7_scope"
-	scope_x_offset = 12
-	scope_y_offset = 20
-	equipsound = 'sound/f13weapons/equipsounds/tribeamequip.ogg'
-
-	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	gun_tags = list(GUN_SCOPE)
-	can_scope = TRUE
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slow
 	)
@@ -986,7 +822,7 @@
 		/datum/firemode/semi_auto/slow
 	)
 
-//Fallout 4 laser tommy gun.
+//RCW SMG
 /obj/item/gun/energy/laser/rcw
 	name = "laser RCW"
 	desc = "A rapid-fire laser rifle modeled after the familiar \"Thompson\" SMG. It features high-accuracy burst fire that will whittle down targets in a matter of seconds."

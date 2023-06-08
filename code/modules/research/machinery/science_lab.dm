@@ -12,8 +12,8 @@
 	var/list/obj/big_guns = list(/obj/item/book/granter/crafting_recipe/blueprint/combatrifle, /obj/item/book/granter/crafting_recipe/blueprint/r84,
 								/obj/item/book/granter/crafting_recipe/blueprint/lsw, /obj/item/book/granter/crafting_recipe/blueprint/am_rifle)
 	var/list/obj/small_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/aep7, /obj/item/book/granter/crafting_recipe/blueprint/plasmapistol, 
-									/obj/item/book/granter/crafting_recipe/blueprint/lightplasmapistol, /obj/item/book/granter/crafting_recipe/blueprint/tesla)
-	var/list/obj/big_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/tribeam_stun, /obj/item/book/granter/crafting_recipe/blueprint/tribeam,
+									/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol, /obj/item/book/granter/crafting_recipe/blueprint/tesla)
+	var/list/obj/big_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/tribeam,
 								/obj/item/book/granter/crafting_recipe/blueprint/plasmarifle, /obj/item/book/granter/crafting_recipe/blueprint/aer9,
 								/obj/item/book/granter/crafting_recipe/blueprint/gauss)
 	var/attempts = 0

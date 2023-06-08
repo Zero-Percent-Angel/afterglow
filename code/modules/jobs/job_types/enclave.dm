@@ -158,7 +158,7 @@
 
 /datum/outfit/loadout/gysgt_laser
 	name = "Laser Weaponry"
-	suit_store = /obj/item/gun/energy/laser/aer12
+	suit_store = /obj/item/gun/energy/laser/aer14
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 4,
 		)
@@ -305,7 +305,7 @@
 	jobtype = /datum/job/enclave/enclavespy
 	head = /obj/item/clothing/head/helmet/f13/combat/swat
 	suit = /obj/item/clothing/suit/armor/medium/combat/swat
-	suit_store =  /obj/item/gun/ballistic/automatic/assault_carbine/worn
+	suit_store =  /obj/item/gun/ballistic/automatic/assault_carbine/ak112
 	accessory = /obj/item/clothing/accessory/enclave
 
 	backpack_contents = list(
