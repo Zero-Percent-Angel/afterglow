@@ -96,7 +96,7 @@
 	if(!timerid)
 		timerid = addtimer(CALLBACK(src, .proc/sound_loop, world.time), mid_length + loop_delay, TIMER_CLIENT_TIME | TIMER_STOPPABLE | TIMER_LOOP)
 	else
-		set_timer_wait(timerid, mid_length + loop_delay)
+		updatetimedelay(timerid, mid_length + loop_delay)
 
 /// takes in list('sound/file.ogg', mid_length) and plays the file and ques up another in mid_length deciseconds
 /datum/looping_sound/proc/play(list/sound_list)

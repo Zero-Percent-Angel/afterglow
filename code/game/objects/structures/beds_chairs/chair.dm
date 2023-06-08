@@ -24,9 +24,12 @@
 
 /obj/structure/chair/Initialize()
 	. = ..()
-	if(!anchored)	//why would you put these on the shuttle?
-		addtimer(CALLBACK(src, .proc/RemoveFromLatejoin), 0)
 	handle_layer()
+
+/obj/structure/chair/LateInitialize()
+	. = ..()
+	if(!anchored)	//this is probably not necesarry
+		addtimer(CALLBACK(src, .proc/RemoveFromLatejoin), 0)
 
 /obj/structure/chair/ComponentInitialize()
 	. = ..()

@@ -122,14 +122,14 @@
 	. = ..()
 
 	var/datum/action/innate/pai/software/SW = new
-	var/datum/action/innate/pai/shell/AS = new /datum/action/innate/pai/shell
+	var/datum/action/innate/pai/shell/pai_shell = new /datum/action/innate/pai/shell
 	var/datum/action/innate/pai/chassis/AC = new /datum/action/innate/pai/chassis
 	var/datum/action/innate/pai/rest/AR = new /datum/action/innate/pai/rest
 	var/datum/action/innate/pai/light/AL = new /datum/action/innate/pai/light
 
 	var/datum/action/language_menu/ALM = new
 	SW.Grant(src)
-	AS.Grant(src)
+	pai_shell.Grant(src)
 	AC.Grant(src)
 	AR.Grant(src)
 	AL.Grant(src)
