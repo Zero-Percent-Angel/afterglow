@@ -91,9 +91,9 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Legion Explorer",
 "Legion Slavemaster",
 "Legion Veteran Decanus",
-"Veteran Legionnaire",
+"Veteran Legionary",
 "Legion Prime Decanus",
-"Prime Legionnaire",
+"Prime Legionary",
 "Legion Recruit Decanus",
 "Legion Scout",
 "Legion Auxilia",
@@ -153,6 +153,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Senior Scribe",
 	"Scribe",
 	"Initiate",
+	"BoS Off-Duty"
 ))
 //Nash/Oasis
 GLOBAL_LIST_INIT(oasis_positions, list(
@@ -187,11 +188,11 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Vexillarius",
 	"Legion Explorer",
 	"Legion Scout",
-	"Veteran Legionnaire",
-	"Prime Legionnaire",
-	"Recruit Legionnaire",
+	"Veteran Legionary",
+	"Prime Legionary",
+	"Recruit Legionary",
 	"Legion Forgemaster",
-	"Legion Immune",
+	"Legion Off-Duty",
 	"Legion Auxilia",
 	"Camp Follower",
 	"Legion Slavemaster"

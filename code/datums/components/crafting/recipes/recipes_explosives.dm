@@ -27,7 +27,7 @@
 	parts = list(/obj/item/stock_parts/matter_bin = 1, /obj/item/grenade/chem_grenade = 2)
 	time = 30
 	category = CAT_EXPLOSIVE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/explosive/molotov
@@ -38,7 +38,7 @@
 		)
 	time = 2
 	category = CAT_EXPLOSIVE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/explosive/dynamite
@@ -49,7 +49,7 @@
 				/obj/item/stack/ore/blackpowder = 2)
 	time = 5
 	category = CAT_EXPLOSIVE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/explosive/firebomb
@@ -61,7 +61,7 @@
 				/obj/item/reagent_containers/food/drinks/flask = 1)
 	time = 5
 	category = CAT_EXPLOSIVE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/explosive/firebomb_2
@@ -73,7 +73,7 @@
 				/obj/item/stack/sheet/metal = 2)
 	time = 5
 	category = CAT_EXPLOSIVE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/explosive/coffeepotbomb
@@ -85,7 +85,7 @@
 				/obj/item/assembly/timer = 1)
 	time = 5
 	category = CAT_EXPLOSIVE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/explosive/coffeepotbomb_2
@@ -98,7 +98,7 @@
 				/obj/item/stack/crafting/electronicparts = 3)
 	time = 5
 	category = CAT_EXPLOSIVE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/explosive/bottlecap_mine
@@ -111,7 +111,7 @@
 			/obj/item/stack/f13Cash/caps = 200)
 	time = 15
 	category = CAT_EXPLOSIVE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/explosive/shrapnelmine
@@ -126,7 +126,7 @@
 	time = 15
 	category = CAT_EXPLOSIVE
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/explosive/explomine
@@ -143,7 +143,7 @@
 	time = 15
 	category = CAT_EXPLOSIVE
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/explosive/stingmine
@@ -160,7 +160,7 @@
 	time = 15
 	category = CAT_EXPLOSIVE
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/explosive/pulsemine
@@ -176,7 +176,7 @@
 	time = 15
 	category = CAT_EXPLOSIVE
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/explosive/stunmine
@@ -191,7 +191,7 @@
 	time = 15
 	category = CAT_EXPLOSIVE
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/lance
@@ -221,7 +221,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 5
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/frag_shrapnel
@@ -240,7 +240,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 5
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/incendiary
@@ -259,7 +259,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 5
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/stinger
@@ -277,7 +277,7 @@
 	tools = list(TOOL_AWORKBENCH)
 	time = 5
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/radgrenade
@@ -297,7 +297,7 @@
 	tools = list(TOOL_AWORKBENCH)
 	time = 5
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/flashbang
@@ -315,7 +315,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 5
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/smokebomb
@@ -333,7 +333,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 5
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/empgrenade
@@ -351,7 +351,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 5
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/rocket_base
@@ -383,7 +383,7 @@
 	tools = list(TOOL_AWORKBENCH)
 	time = 5
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/strongrocket
@@ -399,7 +399,7 @@
 	tools = list(TOOL_AWORKBENCH)
 	time = 5
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/incendiaryrocket
@@ -416,5 +416,5 @@
 	tools = list(TOOL_AWORKBENCH)
 	time = 5
 	always_available = FALSE
-	skill_needed = SKILL_TRAPS
+	skill_needed = SKILL_REPAIR
 	skill_level = REGULAR_CHECK

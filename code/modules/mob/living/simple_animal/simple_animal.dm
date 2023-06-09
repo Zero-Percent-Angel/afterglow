@@ -186,6 +186,10 @@ GLOBAL_LIST_EMPTY(playmob_cooldowns)
 	/// required pop to hop into this thing
 	var/pop_required_to_jump_into = 0
 
+	//Pathfinding Stuff
+	var/list/path_list
+	var/actively_moving = FALSE
+
 /mob/living/simple_animal/Initialize()
 	. = ..()
 	GLOB.simple_animals[AIStatus] += src

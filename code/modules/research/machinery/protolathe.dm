@@ -33,6 +33,7 @@
 	offstation_security_levels = FALSE
 	circuit = /obj/item/circuitboard/machine/protolathe/offstation
 
+/* Not Needed now we add blueprints directly to the console
 /obj/machinery/rnd/production/protolathe/Insert_Item(obj/item/I, mob/user)
 	if (istype(I, /obj/item/book/granter/crafting_recipe/blueprint))
 		var/obj/item/book/granter/crafting_recipe/blueprint/bp = I
@@ -43,3 +44,4 @@
 /obj/machinery/rnd/production/protolathe/proc/add_blueprint(add)
 	stored_research.add_design(SSresearch.techweb_design_by_id(add), TRUE)
 	say("Design uploaded to protolathe.")
+*/

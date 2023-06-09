@@ -51,6 +51,19 @@ Nothing else in the console has ID requirements.
 	/// Long action cooldown to prevent spam
 	var/last_long_action = 0
 
+/obj/machinery/computer/rdconsole/attackby(obj/item/O, mob/user, params)
+	if (istype(O, /obj/item/book/granter/crafting_recipe/blueprint))
+		return Insert_Item(O, user)
+	else
+		return ..()
+
+/obj/machinery/computer/rdconsole/proc/Insert_Item(obj/item/book/granter/crafting_recipe/blueprint/bp, mob/user)
+	if (bp.design_print)
+		stored_research.add_design(SSresearch.techweb_design_by_id(bp.design_print))
+		say("Design uploaded to protolathe.")
+		qdel(bp)
+		return TRUE
+
 /obj/machinery/computer/rdconsole/production
 	circuit = /obj/item/circuitboard/computer/rdconsole/production
 	research_control = FALSE

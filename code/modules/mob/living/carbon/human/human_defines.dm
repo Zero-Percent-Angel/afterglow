@@ -117,7 +117,7 @@
 		return ..()
 	if(parry_efficiency < D.parry_data["HUMAN_PARRY_MINIMUM_EFFICIENCY"])
 		return ..()
-	if(!skill_check(SKILL_MELEE))
+	if(!skill_roll_kind(SKILL_MELEE, DIFFICULTY_CHALLENGE))
 		to_chat(span_warning("You miss your opportunity to get the perfect strike back."))
 		return ..()
 	visible_message(span_warning("[src] strikes back perfectly at [attacker], staggering them!"))

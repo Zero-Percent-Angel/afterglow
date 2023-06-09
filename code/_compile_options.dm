@@ -64,20 +64,6 @@
 #define FORCE_MAP "_maps/runtimestation.json"
 #endif
 
-//Update this whenever you need to take advantage of more recent byond features
-#define MIN_COMPILER_VERSION 513
-#define MIN_COMPILER_BUILD 1514
-#if DM_VERSION < MIN_COMPILER_VERSION || DM_BUILD < MIN_COMPILER_BUILD
-//Don't forget to update this part
-#error Your version of BYOND is too out-of-date to compile this project. Go to https://secure.byond.com/download and update.
-#error You need version 513.1508 or higher
-#endif
-
-#if DM_VERSION == 514 && DM_BUILD >= 1585
-#warn You are using BYOND 514.1585. There's a good chance that Auxtools will cause the project to compile incorrectly.area
-#warn You can download an earlier version of BYOND from https://www.byond.com/download/build/514, if it doesn't work.
-#endif // If this is fixed after 514.1585, please remove this warning.
-
 //Additional code for the above flags.
 #ifdef TESTING
 #warn compiling in TESTING mode. testing() debug messages will be visible.

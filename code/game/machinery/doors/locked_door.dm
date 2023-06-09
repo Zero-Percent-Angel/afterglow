@@ -1,8 +1,8 @@
 /obj/machinery/door/locked
 	name = "locked door"
-	desc = "This door only opens after a sucessful lockpicking attempt."
+	desc = "This door only opens after a sucessful lockpicking attempt and is not part of a player or faction base."
 	icon = 'icons/fallout/structures/doors.dmi'
-	icon_state = "secure"
+	icon_state = "iron_padlock"
 	explosion_block = 3
 	heat_proof = TRUE
 	locked = TRUE
@@ -18,18 +18,18 @@
 
 /obj/machinery/door/locked/update_icon()
 	if(density)
-		icon_state = "secure"
+		icon_state = "iron"
 	else
-		icon_state = "secureopen"
+		icon_state = "ironopen"
 
 /obj/machinery/door/locked/do_animate(animation)
 	switch(animation)
 		if("opening")
 			playsound(src,'sound/machines/door_open.ogg',40,1)
-			flick("secure_opening", src)
+			flick("ironopening", src)
 		if("closing")
 			playsound(src,'sound/machines/door_close.ogg',40,1)
-			flick("secure_closing", src)
+			flick("ironclosing", src)
 
 /obj/machinery/door/locked/easy
 	trapped_door = FALSE
@@ -86,7 +86,7 @@
 		if(density && istype(I, /obj/item/lockpick_set))
 			if(try_to_lockpick(I, user))
 				return TRUE
-	else
+	else if(I.tool_behaviour != TOOL_WELDER)
 		return ..()
 
 /obj/machinery/door/locked/try_to_activate_door(mob/user, force_open)
@@ -185,7 +185,7 @@
 		ignore_walls = FALSE
 		)
 	
-	if(user.skill_check(SKILL_LOCKPICK, skill_gate) || user.skill_roll(SKILL_LOCKPICK, skill_roll_v))
+	if(user.skill_check(SKILL_LOCKPICK, skill_gate, TRUE) || user.skill_roll(SKILL_LOCKPICK, skill_roll_v))
 		user.show_message(span_green(pick(pick_messages["successmessages"])))
 		try_to_activate_door(user, TRUE)
 		. = TRUE

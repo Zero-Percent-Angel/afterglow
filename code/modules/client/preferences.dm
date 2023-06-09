@@ -1144,12 +1144,10 @@ Records disabled until a use for them is found
 			dat += "<h2>Adult content prefs</h2>"
 			dat += "<b>Arousal:</b><a href='?_src_=prefs;preference=arousable'>[arousable == TRUE ? "Enabled" : "Disabled"]</a><BR>"
 			dat += "<b>Genital examine text</b>:<a href='?_src_=prefs;preference=genital_examine'>[(cit_toggles & GENITAL_EXAMINE) ? "Enabled" : "Disabled"]</a><BR>"
-			dat += "<b>Hypno:</b> <a href='?_src_=prefs;preference=never_hypno'>[(cit_toggles & NEVER_HYPNO) ? "Disallowed" : "Allowed"]</a><br>"
 			dat += "<b>Ass Slapping:</b> <a href='?_src_=prefs;preference=ass_slap'>[(cit_toggles & NO_ASS_SLAP) ? "Disallowed" : "Allowed"]</a><br>"
-			dat += "<b>Automatic Wagging:</b> <a href='?_src_=prefs;preference=auto_wag'>[(cit_toggles & NO_AUTO_WAG) ? "Disabled" : "Enabled"]</a><br>"
+			//dat += "<b>Automatic Wagging:</b> <a href='?_src_=prefs;preference=auto_wag'>[(cit_toggles & NO_AUTO_WAG) ? "Disabled" : "Enabled"]</a><br>"
 			dat += "<b>Forced Feminization:</b> <a href='?_src_=prefs;preference=feminization'>[(cit_toggles & FORCED_FEM) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "<b>Forced Masculinization:</b> <a href='?_src_=prefs;preference=masculinization'>[(cit_toggles & FORCED_MASC) ? "Allowed" : "Disallowed"]</a><br>"
-			dat += "<b>Lewd Hypno:</b> <a href='?_src_=prefs;preference=hypno'>[(cit_toggles & HYPNO) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "<b>Bimbofication:</b> <a href='?_src_=prefs;preference=bimbo'>[(cit_toggles & BIMBOFICATION) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "</td>"
 			dat +="<td width='300px' height='300px' valign='top'>"
@@ -1589,42 +1587,43 @@ Records disabled until a use for them is found
 	var/skill_throwing_t = skill_throwing + skill_throwing_base + special_a
 
 	//Active
-	var/skill_first_aid_t = skill_first_aid + skill_first_aid_base + round((special_p*2 + special_i)/2)
+	//var/skill_first_aid_t = skill_first_aid + skill_first_aid_base + round((special_p*2 + special_i)/2)
 	var/skill_doctor_t = skill_doctor + skill_doctor_base + round((special_p*2 + special_i)/2)
-	var/skill_sneak_t = skill_sneak + skill_sneak_base + special_a
-	var/skill_lockpick_t = skill_lockpick + skill_lockpick_base + round((special_p*2 + special_a)/2)
-	var/skill_traps_t = skill_traps + skill_traps_base + round((special_p*2 + special_a)/2)
+	var/skill_sneak_t = skill_sneak + skill_sneak_base + round((special_p*2 + special_a)/2)
+	//var/skill_lockpick_t = skill_lockpick + skill_lockpick_base + round((special_p*2 + special_a)/2)
+	//var/skill_traps_t = skill_traps + skill_traps_base + round((special_p*2 + special_a)/2)
 	var/skill_science_t = skill_science + skill_science_base + (special_i * 2)
 	var/skill_repair_t = skill_repair + skill_repair_base + special_i
 
 	//Passive
 	var/skill_speech_t = skill_speech + skill_speech_base + (special_c * 2)
-	var/skill_barter_t = skill_barter + skill_barter_base + (special_c * 2)
+	//var/skill_barter_t = skill_barter + skill_barter_base + (special_c * 2)
 	var/skill_outdoorsman_t = skill_outdoorsman + skill_outdoorsman_base + round((special_i + special_e)/2)
 
-	var/total = skill_guns + skill_energy + skill_unarmed + skill_melee + skill_throwing + skill_first_aid + skill_doctor + skill_sneak + skill_lockpick + skill_traps + skill_science + skill_repair + skill_speech + skill_barter + skill_outdoorsman
+	var/total = skill_guns + skill_energy + skill_unarmed + skill_melee + skill_throwing + skill_doctor + skill_sneak + skill_science + skill_repair + skill_speech + skill_outdoorsman
 	var/max_skill = skill_points + (special_i*2)
 
 	dat += "<center><b>Allocate points</b></center>"
 	dat += "<center>[total] out of [max_skill] possible</center><br>"
+	dat += "<b>Skill thresholds: 35(Novice), 50(Journeyman), 65(Experienced), 80(Expert)</b><BR><BR>"	
 	dat += "<b>Combat skills:</b><BR>"	
-	dat += "<b>Guns	       :</b> <a href='?_src_=prefs;preference=skill_guns;task=input'>[skill_guns]</a>: [skill_guns_t]<BR>"
-	dat += "<b>Energy Guns :</b> <a href='?_src_=prefs;preference=skill_energy;task=input'>[skill_energy]</a>: [skill_energy_t]<BR>"
-	dat += "<b>Unarmed     :</b> <a href='?_src_=prefs;preference=skill_unarmed;task=input'>[skill_unarmed]</a>: [skill_unarmed_t]<BR>"
-	dat += "<b>Melee       :</b> <a href='?_src_=prefs;preference=skill_melee;task=input'>[skill_melee]</a>: [skill_melee_t]<BR>"
-	dat += "<b>Throwing    :</b> <a href='?_src_=prefs;preference=skill_throwing;task=input'>[skill_throwing]</a>: [skill_throwing_t]<BR>"
+	dat += "<b>Guns	       :</b> <a href='?_src_=prefs;preference=skill_guns;task=input'>[skill_guns] (Points Spent)</a>: [skill_guns_t] Skill Total<BR>"
+	dat += "<b>Energy Guns :</b> <a href='?_src_=prefs;preference=skill_energy;task=input'>[skill_energy] (Points Spent)</a>: [skill_energy_t] Skill Total<BR>"
+	dat += "<b>Unarmed     :</b> <a href='?_src_=prefs;preference=skill_unarmed;task=input'>[skill_unarmed] (Points Spent)</a>: [skill_unarmed_t] Skill Total<BR>"
+	dat += "<b>Melee       :</b> <a href='?_src_=prefs;preference=skill_melee;task=input'>[skill_melee] (Points Spent)</a>: [skill_melee_t] Skill Total<BR>"
+	dat += "<b>Throwing    :</b> <a href='?_src_=prefs;preference=skill_throwing;task=input'>[skill_throwing] (Points Spent)</a>: [skill_throwing_t] Skill Total<BR>"
 	dat += "<b>Active skills:</b><BR>"	
-	dat += "<b>First Aid   :</b> <a href='?_src_=prefs;preference=skill_first_aid;task=input'>[skill_first_aid]</a>: [skill_first_aid_t]<BR>"
-	dat += "<b>Doctor      :</b> <a href='?_src_=prefs;preference=skill_doctor;task=input'>[skill_doctor]</a>: [skill_doctor_t]<BR>"
-	dat += "<b>Sneak       :</b> <a href='?_src_=prefs;preference=skill_sneak;task=input'>[skill_sneak]</a>: [skill_sneak_t]<BR>"
-	dat += "<b>Lock Picking:</b> <a href='?_src_=prefs;preference=skill_lockpick;task=input'>[skill_lockpick]</a>: [skill_lockpick_t]<BR>"
-	dat += "<b>Traps       :</b> <a href='?_src_=prefs;preference=skill_traps;task=input'>[skill_traps]</a>: [skill_traps_t]<BR>"
-	dat += "<b>Science     :</b> <a href='?_src_=prefs;preference=skill_science;task=input'>[skill_science]</a>: [skill_science_t]<BR>"
-	dat += "<b>Repair      :</b> <a href='?_src_=prefs;preference=skill_repair;task=input'>[skill_repair]</a>: [skill_repair_t]<BR>"
+	//dat += "<b>First Aid   :</b> <a href='?_src_=prefs;preference=skill_first_aid;task=input'>[skill_first_aid]</a>: [skill_first_aid_t]<BR>"
+	dat += "<b>Medical     :</b> <a href='?_src_=prefs;preference=skill_doctor;task=input'>[skill_doctor] (Points Spent)</a>: [skill_doctor_t] Skill Total<BR>"
+	dat += "<b>Stealth     :</b> <a href='?_src_=prefs;preference=skill_sneak;task=input'>[skill_sneak] (Points Spent)</a>: [skill_sneak_t] Skill Total<BR>"
+	//dat += "<b>Lock Picking:</b> <a href='?_src_=prefs;preference=skill_lockpick;task=input'>[skill_lockpick]</a>: [skill_lockpick_t]<BR>"
+	//dat += "<b>Traps       :</b> <a href='?_src_=prefs;preference=skill_traps;task=input'>[skill_traps]</a>: [skill_traps_t]<BR>"
+	dat += "<b>Science     :</b> <a href='?_src_=prefs;preference=skill_science;task=input'>[skill_science] (Points Spent)</a>: [skill_science_t] Skill Total<BR>"
+	dat += "<b>Repair      :</b> <a href='?_src_=prefs;preference=skill_repair;task=input'>[skill_repair] (Points Spent)</a>: [skill_repair_t] Skill Total<BR>"
 	dat += "<b>Passive skills:</b><BR>"
-	dat += "<b>Speech      :</b> <a href='?_src_=prefs;preference=skill_speech;task=input'>[skill_speech]</a>: [skill_speech_t]<BR>"
-	dat += "<b>Barter      :</b> <a href='?_src_=prefs;preference=skill_barter;task=input'>[skill_barter]</a>: [skill_barter_t]<BR>"
-	dat += "<b>Outdoorsman :</b> <a href='?_src_=prefs;preference=skill_outdoorsman;task=input'>[skill_outdoorsman]</a>: [skill_outdoorsman_t]<BR>"
+	dat += "<b>Speech      :</b> <a href='?_src_=prefs;preference=skill_speech;task=input'>[skill_speech] (Points Spent)</a>: [skill_speech_t] Skill Total<BR>"
+	//dat += "<b>Barter      :</b> <a href='?_src_=prefs;preference=skill_barter;task=input'>[skill_barter]</a>: [skill_barter_t]<BR>"
+	dat += "<b>Outdoorsman :</b> <a href='?_src_=prefs;preference=skill_outdoorsman;task=input'>[skill_outdoorsman] (Points Spent)</a>: [skill_outdoorsman_t] Skill Total<BR>"
 
 	if (total > max_skill)
 		dat += "<center>Maximum exceeded, please change until your total is at or below [max_skill]<center>"
@@ -1643,7 +1642,7 @@ Records disabled until a use for them is found
 	return 40 - (special_s + special_p + special_e + special_c + special_i + special_a + special_l)
 
 /datum/preferences/proc/remainingSkillBalance()
-	return skill_points + (special_i*2) - (skill_guns + skill_energy + skill_unarmed + skill_melee + skill_throwing + skill_first_aid + skill_doctor + skill_sneak + skill_lockpick + skill_traps + skill_science + skill_repair + skill_speech + skill_barter + skill_outdoorsman)
+	return skill_points + (special_i*2) - (skill_guns + skill_energy + skill_unarmed + skill_melee + skill_throwing + skill_doctor + skill_sneak + skill_science + skill_repair + skill_speech + skill_outdoorsman)
 
 /datum/preferences/proc/GetQuirkBalance()
 	var/bal = 5
@@ -2451,8 +2450,8 @@ Records disabled until a use for them is found
 				*/
 				if("s_tone")
 					var/list/choices = GLOB.skin_tones - GLOB.nonstandard_skin_tones
-					if(CONFIG_GET(flag/allow_custom_skintones))
-						//choices += "custom"
+					// if(CONFIG_GET(flag/allow_custom_skintones))
+					// 	choices += "custom"
 					var/new_s_tone = input(user, "Choose your character's skin tone:", "Character Preference")  as null|anything in choices
 					if(new_s_tone)
 						if(new_s_tone == "custom")

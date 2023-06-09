@@ -203,6 +203,7 @@
 	. = ..()
 	M.adjustBruteLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
 	M.adjustFireLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustToxLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
 	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
 	. = TRUE
 	..()
@@ -301,6 +302,7 @@
 
 /datum/reagent/medicine/radaway/on_mob_life(mob/living/carbon/M)
 	M.radiation = max(M.radiation - 3, 0) //the other 60% works if drank or otherwise overtime
+	M.adjustToxLoss(-1*metabolization_rate*0.4)
 	. = TRUE
 	..()
 

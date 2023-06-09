@@ -273,7 +273,7 @@ Raider
 
 
 /datum/outfit/loadout/raider_legion
-	name = "Disgraced Legionnaire"
+	name = "Disgraced Legionary"
 	suit = /obj/item/clothing/suit/armor/exile/legexile
 	uniform = /obj/item/clothing/under/f13/exile/legion
 	id = /obj/item/card/id/rusted/rustedmedallion
@@ -507,11 +507,11 @@ Raider
 	head = /obj/item/clothing/head/f13/town/big
 	shoes = /obj/item/clothing/shoes/laceup
 	backpack_contents = list(
-		///obj/item/gun/ballistic/rifle/hunting/remington = 1,
+		///obj/item/gun/ballistic/rifle/hunting = 1,
 		///obj/item/ammo_box/a308 = 1,
 		///obj/item/ammo_box/a308box = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
-	//	/obj/item/gun/ballistic/revolver/revolver44=2,
+	//	/obj/item/gun/ballistic/revolver/m29=2,
 		/obj/item/storage/belt/shoulderholster=1,
 	//	/obj/item/ammo_box/m44=4,
 	//	/obj/item/book/granter/trait/gunslinger = 1,
@@ -1744,8 +1744,8 @@ datum/job/wasteland/f13dendoctor
 	title = "Vigilante"
 	flag = F13VIGILANTE
 	faction = FACTION_WASTELAND
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You have come a long way to reach this god forsaken place... it is now your job to protect its inhabitants from all sorts of injustice. Your moral codex requires you to help anyone in need and to never harm an innocent. Always try to capture and reeducate criminals instead of killing. Do not get involved in the conflicts between the major factions, that is not your fight."
 	supervisors = "your moral code"
 	selection_color = "#76885f"
@@ -1792,7 +1792,7 @@ datum/job/wasteland/f13dendoctor
 	name = "Desert Ranger"
 	head = /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 	suit = /obj/item/clothing/suit/armor/medium/combat/desert_ranger
-	r_hand = /obj/item/gun/ballistic/revolver/revolver44/desert_ranger
+	r_hand = /obj/item/gun/ballistic/revolver/m29/desert_ranger
 	backpack_contents = list(
 							)
 
@@ -1837,7 +1837,7 @@ datum/job/wasteland/f13dendoctor
 	gloves = /obj/item/clothing/gloves/f13/military
 	head = /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 	suit = /obj/item/clothing/suit/armor/medium/combat/desert_ranger
-	suit_store = /obj/item/gun/ballistic/revolver/sequoia/death
+	suit_store = /obj/item/gun/ballistic/revolver/sequoia/bayonet
 	glasses = /obj/item/clothing/glasses/hud/health/night
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=4, \

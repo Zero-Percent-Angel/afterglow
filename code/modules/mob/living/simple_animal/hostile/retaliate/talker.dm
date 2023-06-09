@@ -9,6 +9,8 @@
 	var/use_custom_names = FALSE
 	var/list/custom_first_names = list()
 	var/list/custom_last_names = list()
+	var/agressive_to_everyone_on_attack = FALSE
+	var/mob/target_mob = null
 	desc = "Just someone out in the wastes trying to survive."
 	
 /mob/living/simple_animal/hostile/retaliate/talker/basic
@@ -60,8 +62,73 @@
 				/obj/effect/mob_spawn/human/corpse/nanotrasensoldier)
 
 
-/mob/living/simple_animal/hostile/retaliate/talker/basic/waster
+/mob/living/simple_animal/hostile/retaliate/talker/Retaliate()
+	if (agressive_to_everyone_on_attack)
+		var/list/around = view(vision_range, src)
+
+		for(var/atom/movable/A in around)
+			if(A == src)
+				continue
+			if(isliving(A))
+				var/mob/living/M = A
+				if(!friends.Find(WEAKREF(M)))
+					enemies |= WEAKREF(M)
+			else if(ismecha(A))
+				var/obj/mecha/M = A
+				if(M.occupant && !friends.Find(WEAKREF(M.occupant)))
+					enemies |= WEAKREF(M)
+					enemies |= WEAKREF(M.occupant)
+
+		for(var/mob/living/simple_animal/hostile/retaliate/H in around)
+			if(faction_check_mob(H) && !attack_same && !H.attack_same)
+				H.enemies |= enemies
+	return 0
+
+/mob/living/simple_animal/hostile/retaliate/talker/attacked_by(obj/item/I, mob/living/user, attackchain_flags = NONE, damage_multiplier = 1, damage_addition)
+	var/user_ref = WEAKREF(user)
+	if(!friends.Find(user_ref))
+		enemies |= user_ref
+	toggle_ai(AI_ON)
+	..()
+	target_mob = null
+	if (friends.Find(user_ref))
+		friends -= user_ref
+		say("You bastard...")
+
+/mob/living/simple_animal/hostile/retaliate/talker/bullet_act(obj/item/projectile/P, def_zone)
+	var/user_ref = WEAKREF(P.firer)
+	if(!friends.Find(user_ref))
+		enemies |= user_ref
+	toggle_ai(AI_ON)
+	..()
+	target_mob = null
+	if (friends.Find(user_ref))
+		friends -= user_ref
+		say("Friendly fire!")
+
+/mob/living/simple_animal/hostile/retaliate/talker/attack_animal(mob/user)
+	var/user_ref = WEAKREF(user)
+	if(!friends.Find(user_ref))
+		enemies |= user_ref
+	toggle_ai(AI_ON)
+	..()
+	target_mob = null
 	
+
+/mob/living/simple_animal/hostile/retaliate/talker/handle_automated_action()
+	..()
+	if (!enemies.len)
+		toggle_ai(AI_IDLE)
+
+/mob/living/simple_animal/hostile/retaliate/talker/on_attack_hand(mob/living/carbon/human/M)
+	if (M.a_intent != INTENT_HELP)
+		var/user_ref = WEAKREF(M)
+		target_mob = null
+		if(!friends.Find(user_ref))
+			enemies |= user_ref
+		toggle_ai(AI_ON)
+		say("You bastard...")
+	return ..()
 	
 /mob/living/simple_animal/hostile/retaliate/talker/proc/handle_enemy(mob/maybe_enemy)
 	enemies += WEAKREF(maybe_enemy)

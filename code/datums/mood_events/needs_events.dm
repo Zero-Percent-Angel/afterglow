@@ -2,26 +2,32 @@
 /datum/mood_event/fat
 	description = "<span class='warning'><B>I feel like I'm gonna burst...</B></span>\n"
 	mood_change = -4
+	timeout = 10 SECONDS
 
 /datum/mood_event/fat/voracious
 	description = span_nicegreen("Nothing like a good, hearty meal out here in the wastes!")
 	mood_change = 4
+	timeout = 10 SECONDS
 
 /datum/mood_event/wellfed
 	description = span_nicegreen("I'm stuffed!")
 	mood_change = 6
+	timeout = 10 SECONDS
 
 /datum/mood_event/fed
 	description = span_nicegreen("I have recently had some food.")
 	mood_change = 3
+	timeout = 10 SECONDS
 
 /datum/mood_event/hungry
 	description = span_warning("I'm getting a bit hungry.")
 	mood_change = -2
+	timeout = 10 SECONDS
 
 /datum/mood_event/starving
 	description = span_boldwarning("I'm starving!")
 	mood_change = -4
+	timeout = 10 SECONDS
 
 //charge
 /datum/mood_event/supercharged

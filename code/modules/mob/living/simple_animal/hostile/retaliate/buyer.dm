@@ -11,7 +11,7 @@
 	myplace = get_turf(src)
 	my_original_loc = loc
 	setup_buys()
-	..()
+	. = ..()
 	if (gender == MALE)
 		icon_state = "trader_male"
 		icon_living = "trader_male"

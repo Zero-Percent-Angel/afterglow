@@ -161,6 +161,11 @@
 
 	if(announceinirc)
 		send2irc("BAN ALERT","[a_key] applied a [bantype_str] on [bankey]")
+	
+	if(CONFIG_GET(flag/enable_tgs_ban_channel))
+		var/tgs_channel_string = CONFIG_GET(string/tgs_ban_channel_identifier) || "ban"
+		var/message = "`BAN ALERT: '[a_key]' applied a '[bantype_str][job ? " as [job]" : ""]' on '[bankey]'`"
+		send2chat(message, tgs_channel_string)
 
 	if(kickbannedckey)
 		if(AH)

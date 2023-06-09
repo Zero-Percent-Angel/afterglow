@@ -4,10 +4,6 @@ GLOBAL_LIST_INIT(chemwhiz_recipes, list(
 	/datum/crafting_recipe/psycho,
 	/datum/crafting_recipe/medx,
 	/datum/crafting_recipe/medx/chemistry,
-	/datum/crafting_recipe/stimpak,
-	/datum/crafting_recipe/stimpak/chemistry,
-	/datum/crafting_recipe/stimpak5,
-	/datum/crafting_recipe/stimpak5/chemistry,
 	/datum/crafting_recipe/superstimpak,
 	/datum/crafting_recipe/superstimpak5,
 	/datum/crafting_recipe/buffout,
@@ -519,7 +515,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 
 /datum/quirk/iron_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow = 6
+	mob_tar.dna.species.punchdamagelow = 2
 	mob_tar.dna.species.punchdamagehigh = 12
 
 /datum/quirk/steel_fist
@@ -533,8 +529,8 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 
 /datum/quirk/steel_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow = 10
-	mob_tar.dna.species.punchdamagehigh = 16
+	mob_tar.dna.species.punchdamagelow = 4
+	mob_tar.dna.species.punchdamagehigh = 14
 
 /datum/quirk/light_step
 	name = "Glass Walker"
@@ -813,6 +809,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("What's a two by four again?")
 	locked =  FALSE
 
+/*
 /datum/quirk/grappler
 	name = "Trained Grappler"
 	desc = "You've got real skills when it comes to grabbing people by the bits!"
@@ -839,7 +836,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("They are already dead.")
 	lose_text = span_danger("Your fists no longer feel so powerful.")
 	locked =  FALSE
-
+*/
 /datum/quirk/quietstep
 	name = "Quiet Step"
 	desc = "Your steps just don't make any noise at all."
@@ -849,6 +846,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You're pretty sure that's the sound of your asscheeks clapping, but it might be footsteps.")
 	locked =  FALSE
 
+/* temp removed for now! Might rework later
 /datum/quirk/deadeye
 	name = "Dead Eye"
 	desc = "You hit the shots you aim. No ifs, ands, or buts."
@@ -857,7 +855,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("Your aim is legendary, and you know it.")
 	lose_text = span_danger("Your aim could use some work...")
 	locked =  FALSE
-
+*/
 /datum/quirk/straightshooter
 	name = "Straight Shooter"
 	desc = "You're a better than average shot."

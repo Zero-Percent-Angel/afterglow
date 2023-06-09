@@ -329,7 +329,7 @@
 
 /datum/design/dgal
 	name = "Desert Eagle"
-	desc = "A .50 design."
+	desc = "A .44 design."
 	id = "degal"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = 20000, /datum/material/titanium = 5000)
@@ -382,7 +382,7 @@
 	desc = "An energy pistol."
 	id = "aep7"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 10000, /datum/material/glass = 10000, /datum/material/silver = 10000)
+	materials = list(/datum/material/titanium = 10000, /datum/material/lead = 10000, /datum/material/silver = 10000)
 	build_path = /obj/item/gun/energy/laser/pistol
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
@@ -392,7 +392,7 @@
 	desc = "An plasma pistol."
 	id = "plasmapistol"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 10000, /datum/material/glass = 10000, /datum/material/silver = 10000)
+	materials = list(/datum/material/titanium = 10000, /datum/material/lead = 10000, /datum/material/plasma = 10000)
 	build_path = /obj/item/gun/energy/laser/pistol
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
@@ -402,7 +402,7 @@
 	desc = "An plasma pistol."
 	id = "lplasmapistol"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 8000, /datum/material/glass = 8000, /datum/material/silver = 8000)
+	materials = list(/datum/material/titanium = 8000, /datum/material/lead = 8000, /datum/material/plasma = 8000)
 	build_path = /obj/item/gun/energy/laser/pistol
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
@@ -412,18 +412,8 @@
 	desc = "A high-tech revolver that fires internal, reusable shock cartridges in a revolving cylinder. The cartridges can be recharged using conventional rechargers."
 	id = "stunrevolver"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 10000, /datum/material/glass = 10000, /datum/material/silver = 10000)
+	materials = list(/datum/material/titanium = 10000, /datum/material/lead = 10000, /datum/material/plasma = 10000)
 	build_path = /obj/item/gun/energy/tesla_revolver
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
-/datum/design/stuntribeam
-	name = "Stun Tri-beam"
-	desc = "A stub tri-beam."
-	id = "stuntribeam"
-	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 25000, /datum/material/glass = 13000, /datum/material/gold = 3000, /datum/material/silver = 3000)
-	build_path = /obj/item/gun/energy/laser/scatter/nonlethal
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
@@ -432,7 +422,7 @@
 	desc = "A laser gun that fires three lasers at once."
 	id = "tribeam"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 25000, /datum/material/glass = 13000, /datum/material/gold = 3000, /datum/material/silver = 3000)
+	materials = list(/datum/material/titanium = 22000, /datum/material/lead = 13000, /datum/material/gold = 3000, /datum/material/silver = 3000)
 	build_path = /obj/item/gun/energy/laser/scatter
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
@@ -442,7 +432,7 @@
 	desc = "A gun that fires a super heated bolt of plasma as a projectile"
 	id = "plasmarifle"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 29000, /datum/material/glass = 13000, /datum/material/gold = 3000, /datum/material/silver = 3000)
+	materials = list(/datum/material/titanium = 22000, /datum/material/lead = 13000, /datum/material/gold = 3000, /datum/material/silver = 3000, /datum/material/plasma = 3000)
 	build_path = /obj/item/gun/energy/laser/plasma
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
@@ -452,7 +442,7 @@
 	desc = "A laser rifle, very powerful."
 	id = "ae9rifle"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 29000, /datum/material/glass = 13000, /datum/material/gold = 3000, /datum/material/silver = 3000)
+	materials = list(/datum/material/titanium = 22000, /datum/material/lead = 13000, /datum/material/gold = 3000, /datum/material/silver = 3000, /datum/material/plasma = 3000)
 	build_path = /obj/item/gun/energy/laser/aer9
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
@@ -462,7 +452,7 @@
 	desc = "A PA busting rifle, can ruin your whole day."
 	id = "m72guass"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 29000, /datum/material/glass = 2000, /datum/material/titanium = 12000)
+	materials = list(/datum/material/iron = 24000, /datum/material/lead = 2000, /datum/material/titanium = 12000, /datum/material/plasma = 3000)
 	build_path = /obj/item/gun/ballistic/automatic/m72
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY

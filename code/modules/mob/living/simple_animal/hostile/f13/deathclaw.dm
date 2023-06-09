@@ -49,6 +49,7 @@
 	faction = list("deathclaw")
 	gold_core_spawnable = HOSTILE_SPAWN
 	var/charging = FALSE
+	var/charging_cooldown = FALSE
 	move_resist = MOVE_FORCE_OVERPOWERING
 	emote_taunt_sound = list('sound/f13npc/deathclaw/taunt.ogg')
 	aggrosound = list('sound/f13npc/deathclaw/aggro1.ogg', 'sound/f13npc/deathclaw/aggro2.ogg', )
@@ -124,9 +125,9 @@
 /mob/living/simple_animal/hostile/deathclaw/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		return
-	if(!charging)
+	if(!charging && !charging_cooldown)
 		visible_message(span_danger("\The [src] growls, enraged!"))
-		addtimer(CALLBACK(src, .proc/Charge), 3)
+		addtimer(CALLBACK(src, .proc/Charge), 1 SECONDS)
 	. = ..() // I swear I looked at this like 10 times before, never once noticed this wasnt here, fmdakm
 
 /mob/living/simple_animal/hostile/deathclaw/do_attack_animation(atom/A, visual_effect_icon, obj/item/used_item, no_effect)
@@ -150,20 +151,26 @@
 		DestroySurroundings()
 
 /mob/living/simple_animal/hostile/deathclaw/proc/Charge()
-	var/turf/T = get_turf(target)
-	if(!T || T == loc)
-		return
-	charging = TRUE
-	visible_message(span_danger(">[src] charges!"))
-	DestroySurroundings()
-	walk(src, 0)
-	setDir(get_dir(src, T))
-	var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(loc,src)
-	animate(D, alpha = 0, color = "#FF0000", transform = matrix()*2, time = 1)
-	throw_at(T, get_dist(src, T), 1, src, 0, callback = CALLBACK(src, .proc/charge_end))
+	if (!charging && !charging_cooldown)
+		charging = TRUE
+		charging_cooldown = TRUE
+		var/turf/T = get_turf(target)
+		if(!T || T == loc)
+			return
+		visible_message(span_danger(">[src] charges!"))
+		DestroySurroundings()
+		walk(src, 0)
+		setDir(get_dir(src, T))
+		var/obj/effect/temp_visual/decoy/D = new /obj/effect/temp_visual/decoy(loc,src)
+		animate(D, alpha = 0, color = "#FF0000", transform = matrix()*2, time = 1)
+		throw_at(T, get_dist(src, T), 1, src, 0, callback = CALLBACK(src, .proc/charge_end))
+
+/mob/living/simple_animal/hostile/deathclaw/proc/charge_cooldown()
+	charging_cooldown = FALSE
 
 /mob/living/simple_animal/hostile/deathclaw/proc/charge_end(list/effects_to_destroy)
 	charging = FALSE
+	addtimer(CALLBACK(src, .proc/charge_cooldown), 2 SECONDS)
 	if(target)
 		Goto(target, move_to_delay, minimum_distance)
 

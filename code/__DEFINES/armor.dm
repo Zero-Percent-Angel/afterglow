@@ -378,7 +378,7 @@
  * * * * * * * * * * * */
 #define ARMOR_VALUE_DEATHCLAW_COMMON list(\
 		"melee" = 45, \
-		"bullet" = 75, \
+		"bullet" = 45, \
 		"laser" = 35, \
 		"energy" = 10, \
 		"bomb" = 0, \
@@ -398,7 +398,7 @@
  * * * * * * * * * * * */
 #define ARMOR_VALUE_DEATHCLAW_MOTHER list(\
 		"melee" = 55, \
-		"bullet" = 80, \
+		"bullet" = 55, \
 		"laser" = 45, \
 		"energy" = 15, \
 		"bomb" = 0, \
@@ -418,7 +418,7 @@
  * * * * * * * * * * * */
 #define ARMOR_VALUE_DEATHCLAW_LEGEND list(\
 		"melee" = 65, \
-		"bullet" = 85, \
+		"bullet" = 55, \
 		"laser" = 25, \
 		"energy" = 15, \
 		"bomb" = 0, \

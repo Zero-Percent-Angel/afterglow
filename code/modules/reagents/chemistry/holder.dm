@@ -867,6 +867,10 @@
 
 	if(amount < CHEMICAL_QUANTISATION_LEVEL)//To prevent small ammount problems.
 		return FALSE
+	
+	if(!IS_FINITE(amount))
+		stack_trace("non finite amount passed to add reagent [amount] [reagent]")
+		return FALSE
 
 	var/datum/reagent/D = GLOB.chemical_reagents_list[reagent]
 	if(!D)
@@ -982,7 +986,8 @@
 	if(!isnum(amount))
 		return FALSE
 
-	if(amount < 0)
+	if(amount < 0 || !IS_FINITE(amount))
+		stack_trace("invalid number passed to remove_reagent [amount]")
 		return FALSE
 
 	var/list/cached_reagents = reagent_list

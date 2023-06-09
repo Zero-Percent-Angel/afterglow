@@ -753,7 +753,7 @@
 		/obj/item/storage/survivalkit = 1,
 		/obj/item/storage/survivalkit/medical = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
-		/obj/item/gun/ballistic/revolver/revolver44 = 1,
+		/obj/item/gun/ballistic/revolver/m29 = 1,
 		/obj/item/ammo_box/m44 = 2,
 		/obj/item/clothing/mask/gas/ranger = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
@@ -763,14 +763,14 @@
 	new_spawn.real_name = random_unique_name(gender)
 
 /obj/effect/mob_spawn/human/fallout13/legion
-	name = "Prime Legionnaire Spawn"
+	name = "Prime Legionary Spawn"
 	desc = "An entry point for prime legionaries of Caesar's Legion to join a battle."
 	faction = "Legion"
-	mob_name = "Prime Legionnaire"
-	job_description = "Prime Legionnaire"
+	mob_name = "Prime Legionary"
+	job_description = "Prime Legionary"
 	short_desc = "You are a might warrior of Caesar's Legion. Retribution!"
 	flavour_text = "True to Caesar!"
-	assignedrole = "Prime Legionnaire"
+	assignedrole = "Prime Legionary"
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/cowboy
 	backpack_contents = list(
@@ -780,11 +780,11 @@
 		)
 
 /obj/effect/mob_spawn/human/fallout13/legion/veteran
-	name = "Veteran Legionnaire Spawn"
+	name = "Veteran Legionary Spawn"
 	desc = "An entry point for veteran legionaries of Caesar's Legion to join a battle."
-	mob_name = "Veteran Legionnaire"
-	job_description = "Veteran Legionnaire"
-	assignedrole = "Veteran Legionnaire"
+	mob_name = "Veteran Legionary"
+	job_description = "Veteran Legionary"
+	assignedrole = "Veteran Legionary"
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/vetlegionnaire
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(

@@ -164,14 +164,14 @@
 	pass_flags_self = PASSTABLE | LETPASSTHROW
 	climbable = TRUE
 	var/seed_default_value = 4
-	var/seed_to_compost_scale = 0.08 // Meaning average (50 potency) foods will give 4 compost
+	var/seed_to_compost_scale = 0.16 // Meaning average (50 potency) foods will give 8 compost
 	var/produce_default_value = 10
-	var/food_to_compost_scale = 0.2 // Meaning average (50 potency) foods will give 10 compost
+	var/food_to_compost_scale = 0.25 // Meaning average (50 potency) foods will give 15 compost
 
 /obj/structure/reagent_dispensers/compostbin/Initialize()
 	. = ..()
 	reagents.clear_reagents()
-	reagents.add_reagent(reagent_id, 100)
+	reagents.add_reagent(reagent_id, 1000)
 
 /obj/structure/reagent_dispensers/compostbin/attackby(obj/item/W, mob/user, params)
 	if(W.is_refillable())

@@ -6,14 +6,14 @@
 	circuit = /obj/item/circuitboard/machine/science_lab
 	var/engaged_in_science = FALSE
 	var/list/blueprint_types = list("small energy", "big energy", "small guns", "big guns")
-	var/list/point_selections = list(200, 500, 1000, 5000)
+	var/list/point_selections = list(2000, 5000, 10000, 50000)
 	var/list/obj/small_guns = list(/obj/item/book/granter/crafting_recipe/blueprint/thatgun, /obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
 								/obj/item/book/granter/crafting_recipe/blueprint/deagle, /obj/item/book/granter/crafting_recipe/blueprint/n99)
 	var/list/obj/big_guns = list(/obj/item/book/granter/crafting_recipe/blueprint/combatrifle, /obj/item/book/granter/crafting_recipe/blueprint/r84,
 								/obj/item/book/granter/crafting_recipe/blueprint/lsw, /obj/item/book/granter/crafting_recipe/blueprint/am_rifle)
 	var/list/obj/small_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/aep7, /obj/item/book/granter/crafting_recipe/blueprint/plasmapistol, 
-									/obj/item/book/granter/crafting_recipe/blueprint/lightplasmapistol, /obj/item/book/granter/crafting_recipe/blueprint/tesla)
-	var/list/obj/big_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/tribeam_stun, /obj/item/book/granter/crafting_recipe/blueprint/tribeam,
+									/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol, /obj/item/book/granter/crafting_recipe/blueprint/tesla)
+	var/list/obj/big_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/tribeam,
 								/obj/item/book/granter/crafting_recipe/blueprint/plasmarifle, /obj/item/book/granter/crafting_recipe/blueprint/aer9,
 								/obj/item/book/granter/crafting_recipe/blueprint/gauss)
 	var/attempts = 0
@@ -91,7 +91,7 @@
 				engaged_in_science = FALSE
 				update_overlays()
 				return
-			var/difficulty_selected = 50 - (points_to_contribute/100) - attempts
+			var/difficulty_selected = 50 - (points_to_contribute/1000) - attempts
 			if (usr.skill_roll(SKILL_SCIENCE, difficulty_selected))
 				if (choosen_step == "small energy")
 					var/obj/i = pick(small_energy)
@@ -120,6 +120,9 @@
 	else if(scantype == "refresh")
 		updateUsrDialog()
 	else if (scantype && !engaged_in_science)
+		if (!usr.skill_check(SKILL_SCIENCE, EASY_CHECK))
+			to_chat(usr, span_warning("You have no idea how to even start an experiment with this stuff."))
+			return
 		say("Experiment started.")
 		engaged_in_science = TRUE
 		if (do_after(usr, 10 SECONDS, 1, src, required_mobility_flags = MOBILITY_USE))
@@ -141,9 +144,10 @@
 
 /obj/machinery/rnd/science_lab/proc/do_experiment(mob/user, difficulty = DIFFICULTY_EASY)
 	var/part_bonus = 3
+	log_admin("[user] has done a science experiment: [difficulty], (-20 safe, -10 average danger, 0 risky, 10 REALLY RISKY)")
 	for(var/obj/item/stock_parts/M in component_parts)
 		part_bonus -= M.rating
-	if (user.skill_roll(SKILL_SCIENCE, (difficulty + part_bonus)))
+	if (user.skill_check(SKILL_SCIENCE, 65 + difficulty, 1) || user.skill_roll(SKILL_SCIENCE, (difficulty + part_bonus)))
 		//happy science time :D
 		if (difficulty == DIFFICULTY_EASY)
 			successful_experiment(1000)
@@ -167,7 +171,7 @@
 			if (prob(50))
 				coolant_cloud()
 			else
-				radiation_pulse()
+				radiation()
 		if (difficulty == DIFFICULTY_EXPERT)
 			if (prob(50))
 				death_smoke(user)
@@ -188,13 +192,13 @@
 	R.add_reagent(/datum/reagent/consumable/frostoil, 50)
 	investigate_log("Experimentor has released frostoil gas.", INVESTIGATE_EXPERIMENTOR)
 	var/datum/effect_system/smoke_spread/chem/smoke = new
-	smoke.set_up(R, 0, src, silent = TRUE)
+	smoke.set_up(R, 2, src, silent = TRUE)
 	playsound(src, 'sound/effects/smoke.ogg', 50, 1, -3)
 	smoke.start()
 	qdel(R)
 
 //3
-/obj/machinery/rnd/science_lab/proc/radiation_pulse()
+/obj/machinery/rnd/science_lab/proc/radiation()
 	visible_message(span_danger("[src] malfunctions, melting a glowing beaker, leaking radiation!"))
 	playsound(src, 'sound/effects/clock_tick.ogg', 50, 1, -3)
 	radiation_pulse(src, 500)
@@ -221,7 +225,7 @@
 /obj/machinery/rnd/science_lab/proc/death_smoke(user)
 	visible_message(span_danger("[src]'s chemical chamber has sprung a leak!"))
 	var/chosenchem
-	chosenchem = pick(/datum/reagent/mutationtoxin,/datum/reagent/nanomachines,/datum/reagent/toxin/acid,/datum/reagent/carbon,/datum/reagent/radium,/datum/reagent/toxin,
+	chosenchem = pick(/datum/reagent/mutationtoxin,/datum/reagent/nanomachines,/datum/reagent/toxin/acid,/datum/reagent/radium,/datum/reagent/toxin,
 						/datum/reagent/consumable/condensedcapsaicin,/datum/reagent/drug/mushroomhallucinogen,
 						/datum/reagent/drug/space_drugs,/datum/reagent/consumable/ethanol,/datum/reagent/consumable/ethanol/beepsky_smash)
 	var/datum/reagents/R = new/datum/reagents(50)

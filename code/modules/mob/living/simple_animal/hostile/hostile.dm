@@ -225,7 +225,7 @@
 		var/list/copyOfList = heardm.Copy()
 		for (var/mob/living/A in copyOfList)
 			if (A.sneaking)
-				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier, 0)))
+				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier, 0)) && prob((100 - 10 + A.special_l)))
 					to_chat(A, span_notice("[name] has not spotted you."))
 					heardm -= A
 				else
@@ -247,7 +247,7 @@
 		for (var/mob/living/A in oview(vision_range, targets_from)) //mob/dead/observers arent possible targets
 			CHECK_TICK
 			if (A.sneaking)
-				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier, 0)))
+				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier, 0)) && prob((100 - 10 + A.special_l)))
 					to_chat(A, span_notice("[name] has not spotted you."))
 				else
 					A.stop_sneaking(TRUE)
@@ -456,7 +456,16 @@
 	else
 		approaching_target = FALSE
 	set_glide_size(DELAY_TO_GLIDE_SIZE(move_to_delay))
-	walk_to(src, target, minimum_distance, delay)
+	var/distance_to_target = get_dist(targets_from, target)
+	if ((approaching_target && istype(target, /mob/living/carbon/human)) && (actively_moving || distance_to_target < 4))
+		// if we're close we can do an A* Pathfind to not get stuck in place, to really put the I in AI
+		// we're also only going to do such an expensive operation if it's a player we're chasing, mob on mob violence is low effort
+		path_to(target, minimum_distance, 8, delay)
+	else
+		moving_halt()
+		walk_to(src, target, minimum_distance, delay)
+		
+
 	if(variation_list[MOB_MINIMUM_DISTANCE_CHANCE] && LAZYLEN(variation_list[MOB_MINIMUM_DISTANCE]) && prob(variation_list[MOB_MINIMUM_DISTANCE_CHANCE]))
 		minimum_distance = vary_from_list(variation_list[MOB_MINIMUM_DISTANCE])
 	if(variation_list[MOB_VARIED_SPEED_CHANCE] && LAZYLEN(variation_list[MOB_VARIED_SPEED]) && prob(variation_list[MOB_VARIED_SPEED_CHANCE]))
@@ -859,3 +868,33 @@ mob/living/simple_animal/hostile/proc/DestroySurroundings() // for use with mega
 	minimum_distance = rand(0, 10)
 	LoseTarget()
 	visible_message(span_notice("[src] jerks around wildly and starts acting strange!"))
+
+
+/* Follow a path given to us by the game.
+	
+	Byonds walk_to doesn't check orthogonally adjacent tiles to see if a diagonal move is valid.
+	SS13 does check both shared Orthogonal neighbours to see if a diagonal move is valid.
+	So mobs get stuck on corners when using byonds walk_to.
+	This proc handles getting a path to our traget and moving towards it.
+*/
+/mob/living/simple_animal/hostile/proc/path_to(obj/target, minimum_distance, maximum_distance, delay)
+	if(!target || src.loc == target.loc || path_list)
+		return
+	if(!path_list)
+		path_list = AStar(src, target, /turf/proc/Distance, null, maximum_distance, minimum_distance)
+	if(!actively_moving && path_list)
+		actively_moving = TRUE
+		process_moving(delay)
+
+/mob/living/simple_animal/hostile/proc/process_moving(delay)
+	if (actively_moving)
+		if(!path_list || path_list.len <= 0 || stat != CONSCIOUS || !target )
+			moving_halt()
+			return
+		walk_to(src, path_list[1], 0, 0)
+		path_list -= path_list[1]
+		addtimer(CALLBACK(src, .proc/process_moving, delay), delay)
+
+/mob/living/simple_animal/hostile/proc/moving_halt()
+	path_list = null
+	actively_moving = FALSE

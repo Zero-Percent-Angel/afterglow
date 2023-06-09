@@ -51,7 +51,7 @@
 	dextrous = TRUE
 	held_items = list(null, null)
 	see_in_dark = 8
-	can_ghost_into = TRUE
+	can_ghost_into = FALSE
 
 /mob/living/simple_animal/pet/catslug/proc/catslug_color()
 	set name = "Pick Color"

@@ -46,8 +46,10 @@
 				check_feast(target, user)
 
 /proc/try_to_zombie_infect(mob/living/carbon/human/target)
+	return
+	/*
 	CHECK_DNA_AND_SPECIES(target)
-
+	//nope no zombies allowed
 	if(NOZOMBIE in target.dna.species.species_traits)
 		// cannot infect any NOZOMBIE subspecies (such as high functioning
 		// zombies)
@@ -58,6 +60,7 @@
 	if(!infection)
 		infection = new()
 		infection.Insert(target)
+	*/
 
 /obj/item/zombie_hand/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] is ripping [user.p_their()] brains out! It looks like [user.p_theyre()] trying to commit suicide!"))
@@ -130,6 +133,8 @@
 				check_feast(target, user)
 
 /proc/try_to_ghoul_zombie_infect(mob/living/carbon/human/target)
+	return
+	/*
 	CHECK_DNA_AND_SPECIES(target)
 
 	if(NOZOMBIE in target.dna.species.species_traits)
@@ -140,6 +145,7 @@
 	if(!infection)
 		infection = new()
 		infection.Insert(target)
+	*/
 
 /obj/item/ghoul_zombie_hand/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] is ripping [user.p_their()] brains out! It looks like [user.p_theyre()] trying to commit suicide!"))

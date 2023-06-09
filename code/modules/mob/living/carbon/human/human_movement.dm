@@ -17,7 +17,7 @@
 			SSI = CONFIG_GET_ENTRY(number/movedelay/sprint_speed_increase)
 		. -= SSI.config_entry_value
 	if(m_intent == MOVE_INTENT_WALK && HAS_TRAIT(src, TRAIT_SPEEDY_STEP))
-		. -= 1.25
+		. -= 0.25
 
 /mob/living/carbon/human/slip(knockdown_amount, obj/O, lube)
 	if(HAS_TRAIT(src, TRAIT_NOSLIPALL))
@@ -105,10 +105,9 @@
 	return ..()
 
 /mob/living/carbon/human/handle_movement_recoil()
-	deltimer(recoil_reduction_timer)
 	if (!highest_gun_or_energy_cache)
 		highest_gun_or_energy_cache = highest_skill_value(SKILL_GUNS, SKILL_ENERGY)
-	var/base_recoil = max(1, (120 - highest_gun_or_energy_cache)/40)
+	var/base_recoil = max(0.4, (100 - highest_gun_or_energy_cache)/50)
 
 	var/mob/living/carbon/human/H = src
 	var/suit_stiffness = 0

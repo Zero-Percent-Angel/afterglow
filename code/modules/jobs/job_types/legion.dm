@@ -250,7 +250,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/gun/ballistic/automatic/m1919
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/mm762 = 1,
-		/obj/item/book/granter/martial/cqc = 1,
+		//obj/item/book/granter/martial/cqc = 1,
 		)
 
 /datum/outfit/loadout/rangerhunter
@@ -335,8 +335,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	head = /obj/item/clothing/head/helmet/f13/legion/heavy
 	suit_store = /obj/item/twohanded/sledgehammer/supersledge
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/smg/cg45 = 1,
-		/obj/item/ammo_box/magazine/cg45 = 2,
+		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
+		/obj/item/ammo_box/magazine/m10mm/adv/ext = 2,
 		/obj/item/grenade/smokebomb = 1,
 		)
 
@@ -346,8 +346,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/twohanded/thermic_lance
 	backpack_contents = list(
 		/obj/item/melee/onehanded/machete/spatha = 1,
-		/obj/item/gun/ballistic/automatic/smg/cg45 = 1,
-		/obj/item/ammo_box/magazine/cg45 = 2,
+		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
+		/obj/item/ammo_box/magazine/m10mm/adv/ext = 1,
 		/obj/item/reagent_containers/pill/bitterdrink = 2,
 		)
 
@@ -614,7 +614,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	backpack_contents = list(
 		/obj/item/melee/unarmed/tigerclaw = 1,
 		/obj/item/melee/powered/ripper = 1,
-		/obj/item/book/granter/martial/berserker = 1,
+		//obj/item/book/granter/martial/berserker = 1,
 		)
 
 /datum/outfit/loadout/vexfox
@@ -716,14 +716,14 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 
 
-///////////////////
-////Legionnaires///
-///////////////////
+////////////////
+////Legionary///
+////////////////
 
 // VETERAN
 
 /datum/job/CaesarsLegion/Legionnaire/vetlegionnaire
-	title = "Veteran Legionnaire"
+	title = "Veteran Legionary"
 	flag = F13VETLEGIONARY
 	total_positions = 3
 	spawn_positions = 3
@@ -758,7 +758,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	//ADD_TRAIT(H, TRAIT_IRONFIST, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/vetlegionnaire
-	name = "Veteran Legionnaire"
+	name = "Veteran Legionary"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/vetlegionnaire
 	id = /obj/item/card/id/dogtag/legveteran
 	mask = /obj/item/clothing/mask/bandana/legion/legvet
@@ -789,10 +789,10 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/vetsmg
 	name = "Flanker"
-	suit_store = /obj/item/gun/ballistic/automatic/smg/cg45
+	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
 	backpack_contents = list(
 		/obj/item/twohanded/spear/lance = 1,
-		/obj/item/ammo_box/magazine/cg45 = 2,
+		/obj/item/ammo_box/magazine/m10mm/adv/ext = 2,
 		/obj/item/gun/ballistic/revolver/colt357 = 1,
 		/obj/item/ammo_box/a357 = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
@@ -824,7 +824,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 // PRIME
 
 /datum/job/CaesarsLegion/Legionnaire/f13legionary
-	title = "Prime Legionnaire"
+	title = "Prime Legionary"
 	flag = F13LEGIONARY
 	total_positions = 4
 	spawn_positions = 4
@@ -857,7 +857,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	//ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
-	name = "Prime Legionnaire"
+	name = "Prime Legionary"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
 	id = /obj/item/card/id/dogtag/legprime
 	mask = /obj/item/clothing/mask/bandana/legion/legprime
@@ -905,7 +905,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 // RECRUIT
 
 /datum/job/CaesarsLegion/Legionnaire/f13recleg
-	title = "Recruit Legionnaire"
+	title = "Recruit Legionary"
 	flag = F13RECRUITLEG
 	total_positions = 5
 	spawn_positions = 5
@@ -935,7 +935,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	//ADD_TRAIT(H, TRAIT_BIG_LEAGUES, src)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13recleg
-	name = "Recruit Legionnaire"
+	name = "Recruit Legionary"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13recleg
 	id = /obj/item/card/id/dogtag/legrecruit
 	shoes = /obj/item/clothing/shoes/f13/military/leather
@@ -977,7 +977,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 // Immunes are mostly an off-duty role meant to attend to the camp itself and the slaves or prisoners within.
 
 /datum/job/CaesarsLegion/Legionnaire/f13immune
-	title = "Legion Immune"
+	title = "Legion Off-Duty"
 	flag = F13IMMUNE
 	total_positions = 0
 	spawn_positions = 0
@@ -988,7 +988,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	exp_requirements = 150
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13immune
-	name = "Immune"
+	name = "Legion Off-Duty"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13immune
 	id = /obj/item/card/id/dogtag/legimmune
 	mask = /obj/item/clothing/mask/bandana/legion/camp
@@ -1076,8 +1076,10 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	description = "A non-combat position in the Legion for free citizens who perform tasks that need special training, such as surgery. They are loyal to the Legion even if they are not treated as equals to warriors."
 	supervisors = "the Centurion"
 	display_order = JOB_DISPLAY_ORDER_AUXILIA
-	outfit = /datum/outfit/job/CaesarsLegion/auxilia
 	exp_requirements = 0
+	access = list(ACCESS_LEGION)
+	minimal_access = list(ACCESS_LEGION)
+	outfit = /datum/outfit/job/CaesarsLegion/auxilia
 
 	loadout_options = list(
 		/datum/outfit/loadout/auxassist, // Keep track of the money, handle trading beneath the warriors
@@ -1107,8 +1109,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	belt = null
 	r_pocket = /obj/item/flashlight/lantern
 	backpack_contents = list(
+		/obj/item/warpaint_bowl = 1,
 		/obj/item/reagent_containers/pill/healingpowder = 2,
-		/obj/item/warpaint_bowl
 		)
 
 /datum/outfit/job/CaesarsLegion/auxilia/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1120,6 +1122,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	//ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tailor/legionuniform)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/warpaint)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/bitterdrink)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/bitterdrink5)
 
 
 /datum/outfit/loadout/auxassist
