@@ -1,14 +1,3 @@
-/datum/crafting_recipe/binoculars
-	name = "Binoculars"
-	result = /obj/item/binoculars
-	time = 60
-	reqs = list(/obj/item/stack/sheet/metal = 10,
-				/obj/item/stack/sheet/glass = 5)
-	tools = list(TOOL_SCREWDRIVER,TOOL_WORKBENCH)
-	subcategory = CAT_MISCELLANEOUS
-	category = CAT_MISC
-	skill_needed = HARD_CHECK
-
 /////////////////
 //Large Objects//
 /////////////////
@@ -403,6 +392,16 @@
 	reqs = list(/obj/item/stack/rods = 1,
 				/obj/item/stack/sheet/cardboard = 2)
 	time = 80
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+	skill_level = VERY_EASY_CHECK
+
+/datum/crafting_recipe/binoculars
+	name = "Binoculars"
+	result = /obj/item/binoculars
+	reqs = list(/obj/item/stack/rods = 1,
+				/obj/item/stack/sheet/metal = 2)
+	time = 20
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	skill_level = VERY_EASY_CHECK
