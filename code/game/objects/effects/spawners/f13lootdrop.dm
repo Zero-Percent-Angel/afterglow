@@ -226,29 +226,19 @@
 	loot = list(
 				/obj/item/clothing/suit/armor/light/leather/leather_jacket,
 				/obj/item/clothing/suit/armor/light/leather,
-				/obj/effect/spawner/bundle/f13/armor/supafly,
 				/obj/effect/spawner/bundle/f13/armor/sadist,
 				/obj/effect/spawner/bundle/f13/armor/blastmaster,
 				/obj/effect/spawner/bundle/f13/armor/yankee,
 				/obj/effect/spawner/bundle/f13/armor/badlands,
-				/obj/effect/spawner/bundle/f13/armor/psycho,
 				/obj/item/clothing/suit/armor/light/duster,
 				/obj/effect/spawner/bundle/f13/armor/combatduster,
 				/obj/item/clothing/suit/armor/medium/raider/iconoclast,
-				/obj/item/clothing/suit/armor/medium/vest/breastplate/light,
 	)
-
-/obj/effect/spawner/bundle/f13/armor/supafly
-	name = "supafly raider armor spawner"
-	items = list(
-				/obj/item/clothing/suit/armor/light/raider/supafly,
-				/obj/item/clothing/head/helmet/f13/raider/supafly
-				)
 
 /obj/effect/spawner/bundle/f13/armor/sadist
 	name = "blastmaster raider armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/light/raider/sadist,
+				/obj/item/clothing/suit/armor/light/raider/leather,
 				/obj/item/clothing/head/helmet/f13/raider/arclight
 				)
 
@@ -269,22 +259,15 @@
 /obj/effect/spawner/bundle/f13/armor/badlands
 	name = "badlands raider armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/medium/raider/badlands,
-				/obj/item/clothing/head/helmet/f13/fiend
+				/obj/item/clothing/suit/armor/light/raider/badlands,
+				/obj/item/clothing/head/helmet/f13/motorcycle
 				)
 
 /obj/effect/spawner/bundle/f13/armor/combatduster
 	name = "combat duster raider armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/medium/raider/combatduster,
+				/obj/item/clothing/suit/armor/medium/raider/rebel,
 				/obj/item/clothing/head/helmet/f13/raidercombathelmet
-				)
-
-/obj/effect/spawner/bundle/f13/armor/psycho
-	name = "knight armor spawner"
-	items = list(
-				/obj/item/clothing/suit/armor/light/raider/painspike,
-				/obj/item/clothing/head/helmet/f13/raider/psychotic
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier2 //TIER 2 ARMOR
@@ -292,11 +275,9 @@
 	loot = list(
 				/obj/effect/spawner/bundle/f13/armor/knight,
 				/obj/effect/spawner/bundle/f13/armor/metal,
-				/obj/effect/spawner/bundle/f13/armor/laserproofmetal,
-				/obj/item/clothing/suit/armor/light/leather/leather_jacketmk2,
+				/obj/item/clothing/suit/armor/light/leather/leather_jacket,
 				/obj/item/clothing/suit/armor/light/leather/leathercoat,
 				/obj/item/clothing/suit/armor/medium/vest,
-				/obj/item/clothing/suit/armor/medium/vest/alt,
 				/obj/item/clothing/suit/armor/medium/raider/slam,
 				/obj/item/clothing/suit/armor/medium/raider/scrapcombat
 				)
@@ -312,14 +293,7 @@
 	name = "metal armor spawner"
 	items = list(
 				/obj/item/clothing/suit/armor/heavy/metal,
-				/obj/item/clothing/head/helmet/f13/metalmask
-				)
-
-/obj/effect/spawner/bundle/f13/armor/laserproofmetal
-	name = "polsihed metal armor spawner"
-	items = list(
-				/obj/item/clothing/suit/armor/heavy/metal/polished,
-				/obj/item/clothing/head/helmet/f13/metalmask
+				/obj/item/clothing/head/helmet/knight/f13/metal
 				)
 
 
@@ -331,8 +305,7 @@
 				/obj/effect/spawner/bundle/f13/armor/combat,
 				/obj/effect/spawner/bundle/f13/armor/bulletproof,
 				/obj/effect/spawner/bundle/f13/armor/sulphite,
-				/obj/effect/spawner/bundle/f13/armor/vault,
-				/obj/item/clothing/suit/armor/medium/vest/breastplate/khan
+				/obj/effect/spawner/bundle/f13/armor/vault
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/randomraiderchest //random raider armor
@@ -357,13 +330,13 @@
 /obj/effect/spawner/bundle/f13/armor/metal/reinforced
 	items = list(
 				/obj/item/clothing/suit/armor/heavy/metal/reinforced,
-				/obj/item/clothing/head/helmet/f13/metalmask/mk2
+				/obj/item/clothing/head/helmet/knight/f13/metal/reinforced
 				)
 
 /obj/effect/spawner/bundle/f13/armor/swat
 	items = list(
 				/obj/item/clothing/head/helmet/f13/combat/swat,
-				/obj/item/clothing/suit/armor/medium/combat/swat
+				/obj/item/clothing/suit/armor/medium/combat
 				)
 
 /obj/effect/spawner/bundle/f13/armor/combat
@@ -376,7 +349,7 @@
 /obj/effect/spawner/bundle/f13/armor/bulletproof
 	name = "bulletproof armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/heavy/vest/bulletproof,
+				/obj/item/clothing/suit/armor/medium/vest/bulletproof,
 				/obj/item/clothing/head/helmet/alt
 				)
 
@@ -415,7 +388,7 @@
 /obj/effect/spawner/bundle/f13/armor/riot
 	name = "riot armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/heavy/riot/combat,
+				/obj/item/clothing/suit/armor/heavy/riot,
 				/obj/item/clothing/head/helmet/f13/combat/rangerbroken
 				)
 

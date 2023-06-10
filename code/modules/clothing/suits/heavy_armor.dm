@@ -30,6 +30,7 @@
 	armor = ARMOR_VALUE_HEAVY
 	armor_tier_desc = ARMOR_CLOTHING_HEAVY
 	stiffness = HEAVY_STIFFNESS
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 //////////////////////
 //// TRIBAL ARMOR ////
@@ -145,6 +146,7 @@
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_SALVAGE
 	armor_tier_desc = ARMOR_CLOTHING_SALVAGE
+	custom_price = PRICE_ULTRA_EXPENSIVE
 
 // T-45B
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
@@ -165,7 +167,6 @@
 	icon_state = "t45hotrod"
 	item_state = "t45hotrod"
 	armor_tokens = list(ARMOR_MODIFIER_UP_FIRE_T3)
-
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/tribal
 	name = "salvaged tribal T45-b power armor"

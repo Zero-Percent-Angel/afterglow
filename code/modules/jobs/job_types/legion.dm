@@ -1185,8 +1185,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	outfit = /datum/outfit/job/CaesarsLegion/slave
 
 	loadout_options = list(
-		/datum/outfit/loadout/slaveservant,
-		/datum/outfit/loadout/slaveworker,
+		/datum/outfit/loadout/slaveservant
 		)
 
 	matchmaking_allowed = list(
@@ -1245,21 +1244,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 			var/obj/item/card/id/dogtag/L = H.wear_id
 			L.registered_name = H.name
 			L.update_label()
-
-//Laborers farm and mine.
-/datum/outfit/loadout/slaveworker
-	name = "Worker"
-	suit = /obj/item/clothing/suit/armor/outfit/slavelabor
-	uniform = /obj/item/clothing/under/f13/legslave
-	shoes =	/obj/item/clothing/shoes/f13/rag
-	r_hand = /obj/item/flashlight/flare/torch
-	backpack_contents = list(
-		/obj/item/storage/bag/plants = 1,
-		/obj/item/reagent_containers/food/snacks/grown/ambrosia/deus = 1,
-		/obj/item/cultivator = 1,
-		/obj/item/soap/homemade = 1,
-		/obj/item/shovel/spade = 1,
-		)
 
 /*
 Post Scriptum

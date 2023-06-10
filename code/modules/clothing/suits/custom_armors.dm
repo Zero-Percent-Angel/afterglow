@@ -12,12 +12,12 @@ Below you will find all the templates for modkit items.*/
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/mari
 	name = "modified midwestern power armor"
 	desc = "This set of power armor once belonged to the Midwestrn branch of the Brotherhood. Though now it appears to be modified and sporting a new paintjob reflecting its new chapter colors."
-	icon = 'icons/obj/clothing/suits_custom.dmi'
+	icon = 'icons/fallout/clothing/custom/suits_custom.dmi'
 	icon_state = "mariarmor"
 	item_state = "mariarmor"
 
 //Custom item - T60 PA; literally just an alt of T45 since it's just a mass-produced T45 piece in-lore anyway.
-/obj/item/clothing/suit/armor/power_armor/t60
+/obj/item/clothing/suit/armor/power_armor/t45d/t60
 	name = "T-60a power armor"
 	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal."
 	icon_state = "t60powerarmor"

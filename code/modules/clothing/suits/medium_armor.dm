@@ -37,6 +37,7 @@
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
 	stiffness = MEDIUM_STIFFNESS
+	custom_price = PRICE_ALMOST_EXPENSIVE
 
 ////////////////////////////
 /// MEDIUM TRIBAL ARMOR ////
@@ -230,8 +231,6 @@
 /obj/item/clothing/suit/armor/medium/vest/breastplate/scrap/brokencombat
 	name = "broken combat armor chestpiece"
 	desc = "It's barely holding together, but the plates might still work, you hope."
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "combat_chestpiece"
 	item_state = "combat_chestpiece"
 	mutantrace_variation = NONE
@@ -239,8 +238,6 @@
 /obj/item/clothing/suit/armor/medium/vest/breastplate/scrap/mutant
 	name = "mutant armour"
 	desc = "Metal plates rigged to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
-	icon = 'icons/fallout/clothing/armored_medium.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "mutie_heavy_metal"
 	item_state = "mutie_heavy_metal"
 	mutantrace_variation = NONE
@@ -678,7 +675,7 @@
 // Town //
 //////////
 
-/obj/item/clothing/suit/armor/medium/duster/sheriff
+/obj/item/clothing/suit/armor/medium/duster/deputy
 	name = "deputy trenchcoat"
 	desc = "A trenchcoat which does a poor job at hiding the full-body combat armor beneath it."
 	icon_state = "towntrench_medium"

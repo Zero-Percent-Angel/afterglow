@@ -37,6 +37,7 @@
 	armor = ARMOR_VALUE_LIGHT
 	armor_tier_desc = ARMOR_CLOTHING_LIGHT
 	stiffness = LIGHT_STIFFNESS
+	custom_price = PRICE_ALMOST_EXPENSIVE
 
 ////////////////////////
 // LIGHT TRIBAL ARMOR //
@@ -496,7 +497,7 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
 	body_parts_hidden = ARMS | CHEST
 
-/obj/item/clothing/suit/armor/light/leather/leather_jacketmk2
+/obj/item/clothing/suit/armor/light/leather/leather_jacket
 	name = "thick leather jacket"
 	desc = "This heavily padded leather jacket is unusual in that it has two sleeves. You'll definitely make a fashion statement whenever, and wherever, you rumble."
 	icon_state = "leather_jacket_thick"
@@ -591,7 +592,7 @@
 /////////
 
 /obj/item/clothing/suit/armor/light/ncr
-armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 //Army
 /obj/item/clothing/suit/armor/light/ncr/labcoat
@@ -702,9 +703,9 @@ armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
 	desc = "A fancy long trenchcoat belonging to a bartender, features an internal pocket large enough to hold a shotgun concealed."
 	icon_state = "town_bartender"
 
-/obj/item/clothing/suit/armor/light/duster/town/deputy
-	name = "armored trenchcoat"
-	desc = "A lightly armored stylish trenchcoat for low-grade lawmen."
+/obj/item/clothing/suit/armor/light/duster/town/coat
+	name = "lightly armored trenchcoat"
+	desc = "A lightly armored stylish trenchcoat for officals who need the protection."
 	icon_state = "town_security"
 
 /////////////////

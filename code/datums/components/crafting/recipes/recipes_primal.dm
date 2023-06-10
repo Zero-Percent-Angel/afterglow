@@ -199,18 +199,6 @@
 	category = CAT_TRIBAL
 	always_available = FALSE
 
-/datum/crafting_recipe/tribal_r_combat_armor
-	name = "Tribal Reinforced Combat Armor"
-	time = 40
-	reqs = list(
-			/obj/item/clothing/suit/armor/medium/combat/mk2 = 1,
-			/obj/item/stack/sheet/sinew = 1,
-			/obj/item/stack/sheet/bone = 2
-			)
-	result = /obj/item/clothing/suit/armor/medium/combat/mk2/tribal
-	category = CAT_TRIBAL
-	always_available = FALSE
-
 /datum/crafting_recipe/tribal_combat_armor_helmet
 	name = "Tribal Combat Helmet"
 	time = 40
@@ -446,16 +434,6 @@
 	category = CAT_TRIBAL
 	always_available = TRUE
 
-/datum/crafting_recipe/tribalwar/lighttribe
-	name = "Light Tribal Plates"
-	result = /obj/item/clothing/suit/armor/light/tribal/strips
-	time = 600
-	reqs = list(/obj/item/stack/sheet/metal = 10,
-				/obj/item/stack/sheet/cloth = 5)
-	category = CAT_TRIBAL
-	tools = list(TOOL_FORGE)
-	always_available = FALSE
-
 /datum/crafting_recipe/tribalwar/heavytribe
 	name = "Heavy Tribal Plates"
 	result = /obj/item/clothing/suit/armor/medium/tribal/tribe_heavy_armor
@@ -496,18 +474,6 @@
 				/obj/item/stack/sheet/sinew = 2,
 				/obj/item/stack/sheet/bone = 8,
 				/obj/item/stack/sheet/mineral/wood = 10)
-	category = CAT_TRIBAL
-	tools = list(TOOL_WORKBENCH)
-	always_available = FALSE
-
-/datum/crafting_recipe/tribalwar/lightcloak
-	name = "Light Armored Cloak"
-	result = /obj/item/clothing/suit/armor/light/tribal/geckocloak
-	time = 120
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 8,
-				/obj/item/stack/sheet/leather = 6,
-				/obj/item/stack/crafting/goodparts = 1,
-				/obj/item/stack/sheet/cloth = 5)
 	category = CAT_TRIBAL
 	tools = list(TOOL_WORKBENCH)
 	always_available = FALSE

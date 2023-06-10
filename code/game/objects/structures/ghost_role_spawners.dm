@@ -371,7 +371,6 @@
 	name = "Hotel Secuirty"
 	uniform = /obj/item/clothing/under/rank/security/officer/blueshirt
 	shoes = /obj/item/clothing/shoes/jackboots
-	suit = /obj/item/clothing/suit/armor/medium/vest/blueshirt
 	head = /obj/item/clothing/head/helmet/blueshirt
 	back = /obj/item/storage/backpack/security
 	belt = /obj/item/storage/belt/army/security/full
@@ -498,7 +497,6 @@
 /datum/outfit/syndicate_empty/SBC/assault/captain
 	name = "Syndicate Battlecruiser Captain"
 	r_pocket = /obj/item/melee/classic_baton/telescopic
-	suit = /obj/item/clothing/suit/armor/medium/vest/capcarapace/syndicate
 	back = /obj/item/storage/backpack/satchel/leather
 	head = /obj/item/clothing/head/HoS/syndicate
 	mask = /obj/item/clothing/mask/cigarette/cigar/havana
@@ -743,7 +741,7 @@
 	flavour_text = "Rangers lead the way!"
 	assignedrole = "NCR Ranger"
 	outfit = /datum/outfit/job/ncr/f13ranger
-	suit = /obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol
+	suit = /obj/item/clothing/suit/armor/light/ncr/trailranger
 	belt = /obj/item/storage/belt/army/assault/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
 	head = /obj/item/clothing/head/f13/ranger

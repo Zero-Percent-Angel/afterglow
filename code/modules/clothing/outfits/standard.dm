@@ -178,7 +178,7 @@
 	name = "CentCom Commander"
 
 	uniform = /obj/item/clothing/under/rank/centcom/commander
-	suit = /obj/item/clothing/suit/armor/heavy/vest/bulletproof
+	suit = /obj/item/clothing/suit/armor/medium/vest/bulletproof
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	ears = /obj/item/radio/headset/headset_cent/commander

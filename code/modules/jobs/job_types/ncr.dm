@@ -525,7 +525,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/loadout/osi
 	name = "OSI"
 	uniform = /obj/item/clothing/under/misc/poly_shirt
-	suit = /obj/item/clothing/suit/toggle/labcoat/science
+	suit = /obj/item/clothing/suit/armor/light/ncr/labcoat
 	shoes = /obj/item/clothing/shoes/laceup
 	head = /obj/item/clothing/head/beret/ncr
 	backpack_contents = list(
@@ -651,7 +651,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 	loadout_options = list( // ALL: Binoculars, Bowie knife
 	/datum/outfit/loadout/rangerrecon, // DKS Sniper rifle, .45 Revolver
-	/datum/outfit/loadout/rangertrail, // Rangermaster, 2 x .357 Revolvers
 	/datum/outfit/loadout/rangerpatrol, // R91 Assault Rifle, .44 SA Revolver
 	/datum/outfit/loadout/rangerpatrolcqb, // 10mm SMG, .44 Snubnose revolver
 	)
@@ -702,24 +701,10 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/c45rev = 2,
 		)
 
-/datum/outfit/loadout/rangertrail
-	name = "Trail Ranger"
-	suit = /obj/item/clothing/suit/armor/trailranger
-	belt = /obj/item/storage/belt/military/NCR_Bandolier
-	neck = /obj/item/clothing/neck/mantle/ranger
-	suit_store = /obj/item/gun/ballistic/automatic/rangemaster
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m762 = 3,
-		/obj/item/melee/classic_baton/telescopic = 1,
-		/obj/item/gun_upgrade/scope/watchman = 1,
-		/obj/item/gun/ballistic/revolver/colt357 = 2,
-		/obj/item/ammo_box/a357=4,
-		)
-
 /datum/outfit/loadout/rangerpatrol
 	name = "Patrol Ranger"
-	suit = /obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol
-	head = /obj/item/clothing/head/f13/ranger
+	suit = /obj/item/clothing/suit/armor/medium/combat/patrol
+	head = /obj/item/clothing/head/f13/ncr/ranger
 	uniform	= /obj/item/clothing/under/f13/ranger/patrol
 	belt = /obj/item/storage/belt/army/assault/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/assault_rifle
@@ -732,8 +717,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/rangerpatrolcqb
 	name = "CQB Patrol Ranger"
-	suit = /obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol
-	head = /obj/item/clothing/head/f13/ranger
+	suit = /obj/item/clothing/suit/armor/light/ncr/trailranger
+	head = /obj/item/clothing/head/f13/ncr/ranger
 	uniform	= /obj/item/clothing/under/f13/ranger/patrol
 	belt = /obj/item/storage/belt/army/assault/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
@@ -1499,7 +1484,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	accessory = /obj/item/clothing/accessory/ncr/LT2
 	head = /obj/item/clothing/head/beret/ncr/ncr_sapper
 	l_pocket = /obj/item/storage/belt/legholster
-	suit = /obj/item/clothing/suit/armor/outfit/vest/utility/logisticsofficer
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	glasses	= /obj/item/clothing/glasses/welding
 	belt = /obj/item/storage/belt/army/assault/ncr/engineer
 	gloves = /obj/item/clothing/gloves/color/yellow
@@ -1563,7 +1548,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 // Logistics soldier
 /datum/outfit/loadout/rearlog
 	name = "Logistics"
-	suit = /obj/item/clothing/suit/armor/outfit/vest/utility
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	belt = /obj/item/storage/belt/military/NCR_Bandolier
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/varmint = 1,
@@ -1575,12 +1560,11 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 // Technician	Salvaging
 /datum/outfit/loadout/reartech
 	name = "Technician"
-	suit = /obj/item/clothing/suit/armor/outfit/vest/utility
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	belt = /obj/item/storage/belt/utility/full
 	gloves = /obj/item/clothing/gloves/color/yellow
 	backpack_contents = list(
 		/obj/item/book/granter/trait/techno = 1,
-		/obj/item/clothing/suit/armor/outfit/vest/utility = 1,
 		/obj/item/gun/ballistic/shotgun/hunting = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
@@ -1592,7 +1576,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 // Corpsman		Chemistry, simple medical
 /datum/outfit/loadout/rearcorps
 	name = "Corpsman"
-	suit = /obj/item/clothing/suit/armor/outfit/vest/utility
+	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	belt = /obj/item/storage/belt/medical
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
 	belt = /obj/item/storage/belt/legholster

@@ -201,7 +201,7 @@ Head Paladin
 /datum/outfit/loadout/sentstand
 	name = "Shock Head Paladin"
 	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	l_hand = /obj/item/gun/energy/laser/scatter
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3,
@@ -210,7 +210,7 @@ Head Paladin
 /datum/outfit/loadout/sentheavy
 	name = "Heavy Head Paladin"
 	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/m72 = 1,
 		/obj/item/ammo_box/magazine/m2mm = 3,
@@ -221,7 +221,7 @@ Head Paladin
 /datum/outfit/loadout/sentgat
 	name = "Gatling Head Paladin"
 	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/minigunpack=1,
 	)
@@ -229,7 +229,7 @@ Head Paladin
 /datum/outfit/loadout/sentmini
 	name = "Minigun Head Paladin"
 	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/minigunpackbal5mm=1,
 		/obj/item/gun/energy/laser/pistol=1,
@@ -368,7 +368,7 @@ Head Knight
 	//gunsmith_two = TRUE
 	//gunsmith_three = TRUE
 	//gunsmith_four = TRUE
-	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood/captain
+	suit = 			/obj/item/clothing/head/helmet/f13/power_armor/t51b
 	glasses =		/obj/item/clothing/glasses/night
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	accessory =		/obj/item/clothing/accessory/bos/knightcaptain
@@ -459,7 +459,7 @@ Star Paladin
 	name =	"Senior Paladin"
 	jobtype =	/datum/job/bos/f13seniorpaladin
 	suit =	/obj/item/clothing/suit/armor/power_armor/t45d/bos
-	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos
+	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	accessory =	/obj/item/clothing/accessory/bos/seniorpaladin
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
@@ -561,7 +561,7 @@ Paladin
 	name =	"Paladin"
 	jobtype =	/datum/job/bos/f13paladin
 	suit =	/obj/item/clothing/suit/armor/power_armor/t45d/bos
-	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos
+	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
 	//belt = /obj/item/kit_spawner/bos/combat
@@ -1184,7 +1184,7 @@ Initiate
 /datum/outfit/loadout/initiatek
 	name = "Knight-Aspirant"
 	belt = 			/obj/item/storage/belt/utility
-	suit = 			/obj/item/clothing/suit/armor/light/duster/bos/outcast
+	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/wattz=1,

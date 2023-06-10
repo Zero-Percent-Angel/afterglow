@@ -140,7 +140,7 @@
 	name = "reinforced metal helmet"
 	icon_state = "metalhelmet_r"
 	item_state = "metalhelmet_r"
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T3, ARMOR_MODIFIER_UP_MELEE_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_MELEE_T3)
 
 //////////
 //LEGION//
@@ -158,7 +158,7 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 1)
-	armor = ARMOR_VALUE_LEATHER_ARMOR
+	armor = ARMOR_VALUE_LIGHT
 
 /////////////
 /*LINE LEG */
@@ -182,7 +182,7 @@
 	icon_state = "legvet"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 	flags_inv = HIDEEARS|HIDEHAIR
-	armor = ARMOR_VALUE_REINFORCED_LEATHER_ARMOR
+	armor = ARMOR_VALUE_MEDIUM
 
 ////////////////
 /*RECON/SCOUT */
@@ -251,7 +251,7 @@
 	righthand_file = ""
 	icon_state = "leg_cent"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	armor = ARMOR_VALUE_REINFORCED_METAL_ARMOR
+	armor = ARMOR_VALUE_HEAVY
 
 /obj/item/clothing/head/helmet/f13/legion/palacent
 	name = "legion centurion paladin-slayer helmet"
@@ -273,7 +273,7 @@
 	righthand_file = ""
 	icon_state = "legcentrang"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	armor = ARMOR_VALUE_METAL_ARMOR
+	armor = ARMOR_VALUE_MEDIUM
 
 //Don't give this to anything outside of event crap
 /obj/item/clothing/head/helmet/f13/legion/legate
@@ -298,8 +298,7 @@
 	desc = "A standard issue NCR pith hat made out of scrap and covered over with leather." //THESE ARE MADE OUT OF LEATHER HOLY HELL MAN
 	icon_state = "ncr_helmet"
 	strip_delay = 50
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 1)
-	armor = ARMOR_VALUE_LEATHER_ARMOR
+	armor = ARMOR_VALUE_LIGHT
 
 /obj/item/clothing/head/helmet/f13/ncr/med
 	name = "NCR medic hat"
@@ -352,19 +351,19 @@
 	name = "NCR ranger hat"
 	desc = "a rustic, homely style cowboy hat worn by NCR rangers. Yeehaw!"
 	icon_state = "ncr_ranger"
-	armor = ARMOR_VALUE_LEATHER_JACKET
+	armor = ARMOR_VALUE_LIGHT
 
 /obj/item/clothing/head/f13/ncr/patrol
 	name = "NCR ranger campaign hat"
 	desc = "An NCR ranger hat, standard issue amongst all but the most elite rangers."
 	icon_state = "ncr_ranger_patrol"
-	armor = ARMOR_VALUE_COMBAT_ARMOR
+	armor = ARMOR_VALUE_MEDIUM
 
 /obj/item/clothing/head/f13/ncr/veteran
 	name = "NCR veteran ranger combat helmet"
 	desc = "An old combat helmet, out of use around the time of the war."
 	icon_state = "ncr_ranger_veteran"
-	armor = ARMOR_VALUE_RIOT_ARMOR
+	armor = ARMOR_VALUE_HEAVY
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -383,13 +382,13 @@
 	name = "brotherhood helmet"
 	desc = "An improved combat helmet, bearing the symbol of the Knights."
 	icon_state = "brotherhood_helmet_knight"
-	armor = ARMOR_VALUE_COMBAT_ARMOR
+	armor = ARMOR_VALUE_MEDIUM
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
 	name = "brotherhood senior knight helmet"
 	desc = "An improved combat helmet, bearing the symbol of a Senior Knight."
 	icon_state = "brotherhood_helmet_senior"
-	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
+	armor = ARMOR_VALUE_HEAVY
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	name = "initiate helmet"
@@ -400,14 +399,14 @@
 	name = "brotherhood helmet Mk II"
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_helmet"
-	armor = ARMOR_VALUE_REINFORCED_COMBAT_ARMOR
+	armor = ARMOR_VALUE_HEAVY
 
 ///////////
 /*T O W N*/
 ///////////
 // Just like Rangers, a lot are not helmets.. but they are going to act akin to helmets for our purposes.
 /obj/item/clothing/head/f13/town
-	armor = ARMOR_VALUE_DUSTER_ARMOR
+	armor = ARMOR_VALUE_LIGHT
 
 /obj/item/clothing/head/f13/town/deputy
 	name = "town lawman's hat"
@@ -422,7 +421,7 @@
 /obj/item/clothing/head/helmet/f13/combat/town
 	name = "town security helmet"
 	desc = "An old riot helmet reinforced with proper alloys and stripped of it's faceshield to be more usable outside of confines of a vault."
-	armor = ARMOR_VALUE_COMBAT_ARMOR
+	armor = ARMOR_VALUE_MEDIUM
 	icon_state = "town_helmet"
 	flags_inv = HIDEEARS
 
@@ -430,7 +429,7 @@
 	name = "town sheriff combat helmet"
 	desc = "An old riot helmet bastardized into a what is essentially a maska without functioning internals. Belongs to the big gun of the town."
 	icon_state = "town_marshal_riot"
-	armor = ARMOR_VALUE_RIOT_ARMOR
+	armor = ARMOR_VALUE_HEAVY
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -451,7 +450,7 @@
 	desc = "A piece of headwear commonly worn by the Great Khans that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a pre-War motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
 	icon_state = "khan_helmet"
 	item_state = "khan_helmet"
-	armor = ARMOR_VALUE_REINFORCED_LEATHER_JACKET
+	armor = ARMOR_VALUE_LIGHT
 	flags_inv = null
 	flags_cover = null
 	strip_delay = 20
@@ -468,7 +467,7 @@
 	desc = " A Khan helmet modified with steel horns and a full guard comprised of red sunglass lenses and a thick metal plate to conceal the lower face."
 	icon_state = "khan_fullhelmet"
 	item_state = "khan_fullhelmet"
-	armor = ARMOR_VALUE_COMBAT_ARMOR
+	armor = ARMOR_VALUE_MEDIUM
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 20

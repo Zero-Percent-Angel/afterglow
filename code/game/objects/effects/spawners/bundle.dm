@@ -34,13 +34,6 @@
 		/obj/item/clothing/under/costume/gladiator,
 		/obj/item/clothing/head/helmet/gladiator)
 
-/obj/effect/spawner/bundle/costume/madscientist
-	name = "mad scientist costume spawner"
-	items = list(
-		/obj/item/clothing/under/rank/captain/suit,
-		/obj/item/clothing/head/flatcap,
-		/obj/item/clothing/suit/toggle/labcoat/mad)
-
 /obj/effect/spawner/bundle/costume/elpresidente
 	name = "el presidente costume spawner"
 	items = list(
@@ -87,13 +80,6 @@
 		/obj/item/cane,
 		/obj/item/clothing/under/suit/sl,
 		/obj/item/clothing/mask/fakemoustache)
-
-/obj/effect/spawner/bundle/costume/plaguedoctor
-	name = "plague doctor costume spawner"
-	items = list(
-		/obj/item/clothing/suit/bio_suit/plaguedoctorsuit,
-		/obj/item/clothing/head/plaguedoctorhat,
-		/obj/item/clothing/mask/gas/plaguedoctor)
 
 /obj/effect/spawner/bundle/costume/nightowl
 	name = "night owl costume spawner"
