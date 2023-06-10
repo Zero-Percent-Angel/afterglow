@@ -615,7 +615,7 @@
 	icon_state = "gab1"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/ninemil, /datum/crafting_recipe/huntingrifle, /datum/crafting_recipe/schmeisser)
+	crafting_recipe_types = list(/datum/crafting_recipe/ninemil, /datum/crafting_recipe/huntingrifle)
 
 /obj/item/book/granter/crafting_recipe/gunsmith_two
 	name = "Guns and Bullets, Part 2"
@@ -623,7 +623,7 @@
 	icon_state = "gab2"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/n99, /datum/crafting_recipe/huntingrifle, /datum/crafting_recipe/m1911, /datum/crafting_recipe/varmintrifle, /datum/crafting_recipe/rangerlever, /datum/crafting_recipe/caravanshotty)
+	crafting_recipe_types = list(/datum/crafting_recipe/n99, /datum/crafting_recipe/huntingrifle, /datum/crafting_recipe/m1911, /datum/crafting_recipe/varmintrifle, /datum/crafting_recipe/caravanshotty)
 
 /obj/item/book/granter/crafting_recipe/gunsmith_three
 	name = "Guns and Bullets, Part 3"
@@ -688,11 +688,6 @@
 	crafting_recipe_types = list()
 	design_print = "stunrevolver"
 
-/obj/item/book/granter/crafting_recipe/blueprint/r82
-	name = "r82 heavy service rifle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/R82)
-
 /obj/item/book/granter/crafting_recipe/blueprint/marksman
 	name = "marksman carbine blueprint"
 	icon_state = "blueprint2"
@@ -742,12 +737,6 @@
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/plasmapistol)
 	design_print = "plasmapistol"
-
-/obj/item/book/granter/crafting_recipe/blueprint/lightplasmapistol
-	name = "light plasma pistol blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/lightplasmapistol)
-	design_print = "lplasmapistol"
 
 /obj/item/book/granter/crafting_recipe/blueprint/uzi
 	name = "mini uzi blueprint"
@@ -809,12 +798,6 @@
 	crafting_recipe_types = list(/datum/crafting_recipe/tribeam)
 	design_print = "tribeam"
 
-/obj/item/book/granter/crafting_recipe/blueprint/tribeam_stun
-	name = "tribeam Stun rifle blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribeam_stun)
-	design_print = "stuntribeam"
-
 /obj/item/book/granter/crafting_recipe/blueprint/am_rifle
 	name = "anti-materiel rifle blueprint"
 	icon_state = "blueprint2"
@@ -861,26 +844,6 @@
 	name = "ppsh-41 blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/pps)
-
-/obj/item/book/granter/crafting_recipe/blueprint/commando
-	name = "commando carbine blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/commando)
-
-/obj/item/book/granter/crafting_recipe/blueprint/armalite
-	name = "armalite blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/armalite)
-
-/obj/item/book/granter/crafting_recipe/blueprint/rangerrepeater
-	name = "ranger repeater carbine"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/rangerlever)
-
-/obj/item/book/granter/crafting_recipe/blueprint/schmeisser
-	name = "schmeisser blueprint"
-	icon_state = "blueprint2"
-	crafting_recipe_types = list(/datum/crafting_recipe/schmeisser)
 
 /obj/item/book/granter/crafting_recipe/blueprint/trapper
 	name = "guide to minelaying"

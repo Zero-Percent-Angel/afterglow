@@ -29,7 +29,7 @@ I'd like to point out from my calculations it'll take about 60-80 minutes to die
 	var/sleepytime = 0
 	inverse_chem_val = 0.25
 	can_synth = FALSE
-	var/datum/action/chem/astral/AS = new/datum/action/chem/astral()
+	var/datum/action/chem/astral/astral_chem = new/datum/action/chem/astral()
 	value = REAGENT_VALUE_AMAZING
 
 /datum/action/chem/astral
@@ -73,9 +73,9 @@ I'd like to point out from my calculations it'll take about 60-80 minutes to die
 			G = new(get_turf(M.loc))
 		G.name = "[M]'s astral projection"
 		//var/datum/action/chem/astral/AS = new(G)
-		AS.Grant(G)
-		AS.origin = M
-		AS.originalmind = originalmind
+		astral_chem.Grant(G)
+		astral_chem.origin = M
+		astral_chem.originalmind = originalmind
 
 		if(M.mind)
 			M.mind.transfer_to(G)

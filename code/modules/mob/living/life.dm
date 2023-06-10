@@ -16,7 +16,7 @@
 		var/obj/item/organ/brain/brain = getorgan(/obj/item/organ/brain)
 		if (istype(brain))
 			brain.maxHealth += ((special_c + special_i + special_p)*2 - 25)
-		update_special_speed((5-special_a)/20)//SPECIAL Integration
+		update_special_speed((5-special_a)/40)//SPECIAL Integration
 		SPECIAL_SET = TRUE
 	
 	//SHOULD_NOT_SLEEP(TRUE)

@@ -454,11 +454,11 @@ Raider
 	head = /obj/item/clothing/head/f13/town/big
 	shoes = /obj/item/clothing/shoes/laceup
 	backpack_contents = list(
-		///obj/item/gun/ballistic/rifle/hunting/remington = 1,
+		///obj/item/gun/ballistic/rifle/hunting = 1,
 		///obj/item/ammo_box/a308 = 1,
 		///obj/item/ammo_box/a308box = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
-	//	/obj/item/gun/ballistic/revolver/revolver44=2,
+	//	/obj/item/gun/ballistic/revolver/m29=2,
 		/obj/item/storage/belt/shoulderholster=1,
 	//	/obj/item/ammo_box/m44=4,
 	//	/obj/item/book/granter/trait/gunslinger = 1,
@@ -1723,7 +1723,7 @@ datum/job/wasteland/f13dendoctor
 	name = "Desert Ranger"
 	head = /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 	suit = /obj/item/clothing/suit/armor/medium/combat/desert_ranger
-	r_hand = /obj/item/gun/ballistic/revolver/revolver44/desert_ranger
+	r_hand = /obj/item/gun/ballistic/revolver/m29/desert_ranger
 	backpack_contents = list(
 							)
 
@@ -1768,7 +1768,7 @@ datum/job/wasteland/f13dendoctor
 	gloves = /obj/item/clothing/gloves/f13/military
 	head = /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
 	suit = /obj/item/clothing/suit/armor/medium/combat/desert_ranger
-	suit_store = /obj/item/gun/ballistic/revolver/sequoia/death
+	suit_store = /obj/item/gun/ballistic/revolver/sequoia/bayonet
 	glasses = /obj/item/clothing/glasses/hud/health/night
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak/super=4, \

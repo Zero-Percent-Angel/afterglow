@@ -484,7 +484,7 @@ Star Paladin
 /datum/outfit/loadout/spaladinb
 	name = "Senior Tactical Paladin"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/wt550 = 1,
+		/obj/item/gun/ballistic/automatic/g11 = 1,
 		/obj/item/ammo_box/magazine/m473/small = 3,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
@@ -584,7 +584,7 @@ Paladin
 /datum/outfit/loadout/paladinb
 	name = "Tactical Paladin"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/wt550 = 1,
+		/obj/item/gun/ballistic/automatic/g11 = 1,
 		/obj/item/ammo_box/magazine/m473/small = 3,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
@@ -862,7 +862,7 @@ Senior Knight
 /datum/outfit/loadout/sknightc
 	name = "Recon"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/r93=1,
+		/obj/item/gun/ballistic/automatic/assault_rifle=1,
 		/obj/item/ammo_box/magazine/m556/rifle=2,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
@@ -966,7 +966,7 @@ Knight
 	name = "Junior Knight-Defender"
 	backpack_contents = list(
 		/obj/item/clothing/accessory/bos/juniorknight=1,
-		/obj/item/gun/ballistic/automatic/r93=1,
+		/obj/item/gun/ballistic/automatic/assault_rifle=1,
 		/obj/item/ammo_box/magazine/m556/rifle=2,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
@@ -1183,7 +1183,7 @@ Initiate
 
 /datum/outfit/loadout/initiatek
 	name = "Knight-Aspirant"
-	belt = 			/obj/item/storage/belt/utility
+	belt = 			/obj/item/storage/belt/army/assault
 	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	backpack_contents = list(
