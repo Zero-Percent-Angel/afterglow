@@ -12,7 +12,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
-	skill_level = REGULAR_CHECK
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/combat_jacket
 	name = "Combat Jacket"
@@ -25,6 +25,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = VERY_EASY_CHECK  
 	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/combat_coat
