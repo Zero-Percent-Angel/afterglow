@@ -704,7 +704,7 @@
 
 	//BoS (Steel Blue)
 		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
-		dat += "<tr align='center' bgcolor='8eb7e3'><th colspan='[length(GLOB.oasis_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=brotherhooddept;jobban4=[REF(M)]'>Brotherhood Positions</a></th></tr><tr align='center'>"
+		dat += "<tr align='center' bgcolor='8eb7e3'><th colspan='[length(GLOB.brotherhood_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=brotherhooddept;jobban4=[REF(M)]'>Brotherhood Positions</a></th></tr><tr align='center'>"
 		for(var/jobPos in GLOB.brotherhood_positions)
 			if(!jobPos)
 				continue
@@ -722,8 +722,8 @@
 
 	//Oasis (Green)
 		dat += "<table cellpadding='1' cellspacing='0' width='100%'>"
-		dat += "<tr align='center' bgcolor='8ee3a4'><th colspan='[length(GLOB.oasis_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=oasisdept;jobban4=[REF(M)]'>Oasis Positions</a></th></tr><tr align='center'>"
-		for(var/jobPos in GLOB.oasis_positions)
+		dat += "<tr align='center' bgcolor='8ee3a4'><th colspan='[length(GLOB.town_positions)]'><a href='?src=[REF(src)];[HrefToken()];jobban3=oasisdept;jobban4=[REF(M)]'>Oasis Positions</a></th></tr><tr align='center'>"
+		for(var/jobPos in GLOB.town_positions)
 			if(!jobPos)
 				continue
 			if(jobban_isbanned(M, jobPos))
@@ -1041,7 +1041,7 @@
 						continue
 					joblist += jobPos
 			if("oasisdept")
-				for(var/jobPos in GLOB.oasis_positions)
+				for(var/jobPos in GLOB.town_positions)
 					if(!jobPos)
 						continue
 					joblist += jobPos
