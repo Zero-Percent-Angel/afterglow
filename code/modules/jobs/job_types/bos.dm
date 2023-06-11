@@ -409,7 +409,7 @@ Head Knight
 */
 
 /*
-Star Paladin
+Senior Paladin
 */
 
 /datum/job/bos/f13seniorpaladin
@@ -485,7 +485,7 @@ Star Paladin
 	name = "Senior Tactical Paladin"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/g11 = 1,
-		/obj/item/ammo_box/magazine/m473/small = 3,
+		/obj/item/ammo_box/magazine/m473 = 3,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		)
@@ -585,7 +585,7 @@ Paladin
 	name = "Tactical Paladin"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/g11 = 1,
-		/obj/item/ammo_box/magazine/m473/small = 3,
+		/obj/item/ammo_box/magazine/m473 = 3,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/clothing/accessory/bos/paladin=1,
