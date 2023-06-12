@@ -499,8 +499,8 @@
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 /mob/living/simple_animal/hostile/raider/ranged/boss/junker
-	name = "Junker Footman"
-	desc = "A Junker raider, outfitted in reinforced combat raider armor with extra metal plates."
+	name = "Junker Scrapper"
+	desc = "A Junker raider, outfitted in reinforced combat raider armor with extra metal plates and an armoured duster."
 	icon_state = "junker_scrapper"
 	icon_living = "junker_scrapper"
 	icon_dead = "junker_dead"
@@ -559,7 +559,7 @@
 
 /mob/living/simple_animal/hostile/raider/junker/boss
 	name = "Junker Boss"
-	desc = "A Junker boss, clad in hotrod power armor, and wielding a deadly rapid-fire shrapnel cannon."
+	desc = "A Junker boss, clad in a sentry bot helmet, wielding a deadly rapid-fire shrapnel cannon."
 	icon_state = "junker_boss"
 	icon_living = "junker_boss"
 	icon_dead = "junker_dead"
