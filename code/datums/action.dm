@@ -215,15 +215,6 @@
 /datum/action/item_action/toggle_firemode
 	name = "Toggle Firemode"
 
-/datum/action/item_action/toggle_armgun
-	name = "Rotate Gun"
-
-/datum/action/item_action/toggle_armgun/Trigger()
-	var/obj/item/gun/ballistic/automatic/varmint/bushmaster_arm_gun/bag = target
-	if(istype(bag))
-		bag.rotate_the_stupid_gun(owner)
-		return
-
 /datum/action/item_action/toggle_sidewinder
 	name = "Spin Gun"
 

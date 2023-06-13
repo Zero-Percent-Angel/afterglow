@@ -200,14 +200,14 @@
 		SP_DISTANT_RANGE(RIFLE_MEDIUM_RANGE_DISTANT)
 	)
 /* * * * * * * * * * *
- * Coyote Repeater
+ * Tribal Repeater
  * Baseline Repeater Tribal Skin
  * .357 Magnum
- * Tribal Only
+ * Unique
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/rifle/repeater/cowboy/tribal
-	name = "coyote repeater"
+	name = "tribal repeater"
 	desc = "A sanctified .357 lever action rifle, bearing a paw print, teeth painted on the handguard and what appears to be a severed paw."
 	icon_state = "cowboyrepeatert"
 	item_state = "cowboyrepeater"
@@ -281,11 +281,11 @@
  * Trail Repeater Tribal
  * Rain Stick
  * .44 Magnum
- * Tribal Only
+ * Unique
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/rifle/repeater/trail/tribal
-	name = "rainstick"
+	name = "tribal carbine"
 	desc = "A sactified .44 lever action rifle, coated in detailed markings and a carved bead chain that sounds like rain."
 	icon_state = "trailcarbinet"
 	item_state = "trailcarbine"
@@ -396,96 +396,6 @@
 		SP_DISTANT_SOUND(RIFLE_HEAVY_DISTANT_SOUND),
 		SP_DISTANT_RANGE(RIFLE_HEAVY_RANGE_DISTANT)
 	)
-/* * * * * * * * * * *
- * Ranger repeater
- * Biggest repeater
- * .308
- * Medium rarity
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/rifle/repeater/ranger
-	name = "long ranger repeater"
-	desc = "A lever action chambered in .308. Shares lots of characteristics with lever actions, but also the clunkiness of bolt actions, Best of both worlds, or master of none?"
-	icon_state = "308-lever"
-	item_state = "brushgun"
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube380
-
-	slowdown = GUN_SLOWDOWN_REPEATER
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_BASE
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(2.4)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-	init_firemodes = list(
-		/datum/firemode/semi_auto
-	)
-	fire_sound = 'sound/f13weapons/brushgunfire.ogg'
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(RIFLE_HEAVY_VOLUME),
-		SP_VOLUME_SILENCED(RIFLE_HEAVY_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(RIFLE_HEAVY_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(RIFLE_HEAVY_DISTANT_SOUND),
-		SP_DISTANT_RANGE(RIFLE_HEAVY_RANGE_DISTANT)
-	)
-/* * * * * * * * * * *
- * Ranger repeater tribal
- * Smell-The-Roses
- * .308
- * Tribal Only
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/rifle/repeater/ranger/tribal
-	name = "Smell-The-Roses"
-	desc = "A .308 lever action. Clunky, Heavy and decorated by someone with a sick sense of humor. A flowering rose around the bore, it's stem trailing along and petals on a string."
-	icon_state = "smell-the-roses"
-	item_state = "brushgun"
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube380
-
-	slowdown = GUN_SLOWDOWN_REPEATER
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_BASE
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(2.4)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-	init_firemodes = list(
-		/datum/firemode/semi_auto
-	)
-	fire_sound = 'sound/f13weapons/brushgunfire.ogg'
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(RIFLE_HEAVY_VOLUME),
-		SP_VOLUME_SILENCED(RIFLE_HEAVY_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(RIFLE_HEAVY_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(RIFLE_HEAVY_DISTANT_SOUND),
-		SP_DISTANT_RANGE(RIFLE_HEAVY_RANGE_DISTANT)
-	)
-/* * * * * * * * * * *
- * Three oh hate
- * unique repeater
- * .308
- * unique
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/rifle/repeater/ranger/threeohate
-	name = "Three Oh Hate"
-	desc = "placeholder"
 
 /* * * * * * * * * * * *
  * Bolt-Action Rifles  *
@@ -558,81 +468,6 @@
 		var/obj/item/melee/transforming/energy/W = A
 		if(W.active)
 			sawoff(user)
-
-/obj/item/gun/ballistic/rifle/hunting/special
-	name = "hypocritical oath"
-	desc = "An old, worn-in hunting rifle with leather wrapping the stock. Do (no) harm."
-	icon_state = "308special"
-	item_state = "308special"
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/hunting
-
-	slowdown = GUN_SLOWDOWN_RIFLE_BOLT
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(3)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-	gun_tags = list(GUN_SCOPE)
-	can_scope = TRUE
-	scope_state = "scope_long"
-	scope_x_offset = 4
-	scope_y_offset = 12
-	pump_sound = 'sound/weapons/boltpump.ogg'
-	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-
-	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
-	)
-
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(RIFLE_MEDIUM_VOLUME),
-		SP_VOLUME_SILENCED(RIFLE_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(RIFLE_MEDIUM_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(RIFLE_MEDIUM_DISTANT_SOUND),
-		SP_DISTANT_RANGE(RIFLE_MEDIUM_RANGE_DISTANT)
-	)
-
-/* * * * * * * * * * *
- * Remmington Bolt-Action Rifle
- * Accurate Bolt-Action Rifle
- * .308 / 7.62
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/rifle/hunting/remington
-	name = "Remington rifle"
-	desc = "A militarized hunting rifle rechambered to 7.62. This one has had the barrel floated with shims to increase accuracy."
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/hunting/remington
-
-	slowdown = GUN_SLOWDOWN_RIFLE_BOLT
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
-	cock_delay = GUN_COCK_RIFLE_BASE
-
-/obj/item/gun/ballistic/rifle/hunting/remington/attackby(obj/item/A, mob/user, params) //DO NOT BUBBA YOUR STANDARD ISSUE RIFLE SOLDIER!
-	if(istype(A, /obj/item/circular_saw) || istype(A, /obj/item/gun/energy/plasmacutter))
-		return
-	else if(istype(A, /obj/item/melee/transforming/energy))
-		var/obj/item/melee/transforming/energy/W = A
-		if(W.active)
-			return
-	else
-		..()
 
 /* * * * * * * * * * *
  * Paciencia Bolt-Action Rifle
@@ -728,58 +563,6 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slower
 	)
-/* * * * * * * * * * *
- * SMLE Bolt-Action Rifle
- * Quick Bolt-Action Rifle
- * .308 / 7.62
- * Faster cock
- * More tiring cock
- * Can bayonet
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/rifle/enfield
-	name = "Lee-Enfield rifle"
-	desc = "A british rifle sometimes known as the SMLE. It seems to have been re-chambered in .308."
-	icon_state = "enfield2"
-	item_state = "308"
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
-
-	slowdown = GUN_SLOWDOWN_RIFLE_BOLT
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
-	cock_delay = GUN_COCK_RIFLE_FAST
-	init_recoil = RIFLE_RECOIL(2.8)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-	gun_tags = list(GUN_SCOPE)
-	can_scope = TRUE
-	scope_state = "scope_mosin"
-	scope_x_offset = 3
-	scope_y_offset = 13
-	can_bayonet = TRUE
-	bayonet_state = "bayonet"
-	knife_x_offset = 22
-	knife_y_offset = 21
-	pump_sound = 'sound/weapons/boltpump.ogg'
-	fire_sound = 'sound/f13weapons/boltfire.ogg'
-	pump_stam_cost = 15
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(RIFLE_MEDIUM_VOLUME),
-		SP_VOLUME_SILENCED(RIFLE_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(RIFLE_MEDIUM_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(RIFLE_MEDIUM_DISTANT_SOUND),
-		SP_DISTANT_RANGE(RIFLE_MEDIUM_RANGE_DISTANT)
-	)
-
 
 /* * * * * * * * * * * * * * * * * *
  * Magazine-Fed Bolt-Action Rifles *

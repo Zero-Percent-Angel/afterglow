@@ -1565,7 +1565,6 @@ GLOBAL_LIST_INIT(gun_yeet_words, list(
 	new /obj/item/gun_upgrade/muzzle/silencer(src)
 	new /obj/item/melee/onehanded/knife/bayonet(src)
 	new /obj/item/flashlight/seclite(src)
-	new /obj/item/gun/ballistic/automatic/smg/sidewinder(src)
 	new /obj/item/ammo_box/magazine/uzim9mm(src)
 	new /obj/item/ammo_box/magazine/uzim9mm(src)
 	new /obj/item/ammo_box/magazine/m9mm/doublestack(src)

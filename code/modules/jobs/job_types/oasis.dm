@@ -169,8 +169,8 @@ Mayor
 	/datum/outfit/loadout/pw
 	)
 
-	access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_FOLLOWER)
-	minimal_access = list(ACCESS_BAR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_FOLLOWER)
+	access = list(ACCESS_BAR, ACCESS_MAYOR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_CLINIC, ACCESS_KITCHEN, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_FOLLOWER)
+	minimal_access = list(ACCESS_BAR, ACCESS_MAYOR, ACCESS_CLONING, ACCESS_GATEWAY, ACCESS_CARGO_BOT, ACCESS_MINT_VAULT, ACCESS_KITCHEN, ACCESS_CLINIC, ACCESS_MINING, ACCESS_FORENSICS_LOCKERS, ACCESS_FOLLOWER)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis
@@ -1253,7 +1253,7 @@ Mayor
 /datum/outfit/loadout/ballistic_master
 	name = "Ballistic Master"
 	backpack_contents = list(
-		/obj/item/book/granter/crafting_recipe/blueprint/armalite = 1
+		/obj/item/book/granter/crafting_recipe/blueprint/r91 = 1
 	)
 
 /datum/outfit/job/den/f13quartermaster/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1343,7 +1343,7 @@ Mayor
 	name = "Energy Specialist"
 	backpack_contents = list(
 		/obj/item/book/granter/crafting_recipe/blueprint/aer9=1,
-		/obj/item/book/granter/crafting_recipe/blueprint/lightplasmapistol=1
+		/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol=1
 	)
 
 /datum/outfit/loadout/ballistic_specialist
