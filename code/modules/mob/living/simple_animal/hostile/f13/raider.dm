@@ -517,8 +517,8 @@
 /mob/living/simple_animal/hostile/raider/ranged/junker/scavver
 	name = "Junker Scavver"
 	desc = "A Junker outfitted in an armoured duster with a Pip-Boy 2000, the screen glowing red."
-	icon_state = "junker_scrapper"
-	icon_living = "junker_scrapper"
+	icon_state = "junker_scavver"
+	icon_living = "junker_scavver"
 	icon_dead = "junker_dead"
 	faction = list("raider", "wastebot")
 	mob_armor = ARMOR_VALUE_RAIDER_COMBAT_ARMOR_BOSS
@@ -539,6 +539,24 @@
 	var/spawn_time = 5 SECONDS
 	var/spawn_text = "appears from"
 	footstep_type = FOOTSTEP_MOB_SHOE
+
+/mob/living/simple_animal/hostile/raider/ranged/junker/scavver/Initialize()
+	. = ..()
+	AddComponent(/datum/component/spawner, mob_types, spawn_time, faction, spawn_text, max_mobs, _range = 3)
+
+/mob/living/simple_animal/hostile/raider/ranged/junker/scavver/death()
+	RemoveComponentByType(/datum/component/spawner)
+	. = ..()
+
+/mob/living/simple_animal/hostile/raider/ranged/junker/scavver/Destroy()
+	RemoveComponentByType(/datum/component/spawner)
+	. = ..()
+
+/mob/living/simple_animal/hostile/raider/ranged/junker/scavver/Aggro()
+	. = ..()
+	if(.)
+		return
+	summon_backup(10)
 
 /mob/living/simple_animal/hostile/raider/junker/creator
 	name = "Junker Field Creator"
@@ -604,3 +622,20 @@
 	loot = list(/obj/item/stack/f13Cash/random/high)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
+/mob/living/simple_animal/hostile/raider/junker/boss/overboss
+	name = "Junker Overboss"
+	desc = "The Boss of all Junker scrapheaps, clad in armour torn from a Sentry Bot, carrying a minigun torn from the wreck."
+	icon_state = "junker_overboss"
+	icon_living = "junker_overboss"
+	icon_dead = "junker_dead"
+	mob_armor = ARMOR_VALUE_ROBOT_SECURITY
+	maxHealth = 200
+	health = 200
+	ranged = TRUE
+	rapid_melee = 1
+	ranged_cooldown_time = 1 SECONDS
+	projectiletype = /obj/item/projectile/bullet/a556/microshrapnel
+	projectilesound = 'sound/f13weapons/auto5.ogg'
+	loot = list(/obj/item/stack/f13Cash/random/high,)
+	footstep_type = FOOTSTEP_MOB_SHOE
+	environment_smash = ENVIRONMENT_SMASH_RWALLS

@@ -687,7 +687,9 @@
 	},
 /area/f13/bunker/bunkerthree)
 "dE" = (
-/obj/machinery/door/password,
+/obj/machinery/door/password{
+	door_id = "blackwatch"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -880,6 +882,10 @@
 /obj/structure/reagent_dispensers/watertank/high,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault/custodial)
+"eE" = (
+/mob/living/simple_animal/hostile/raider/junker/boss,
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/bunker)
 "eF" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/blueprintVHighPartsWeighted,
@@ -3648,9 +3654,9 @@
 /turf/open/floor/carpet/vault,
 /area/f13/vault/overseer)
 "sz" = (
-/obj/structure/simple_door/metal/iron,
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden,
+/obj/machinery/door/locked/expert/maybe_trapped,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "sB" = (
@@ -4241,11 +4247,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess,
 /area/f13/vault/reactor)
 "vH" = (
-/obj/structure/table/wood/poker,
-/obj/structure/chair/e_chair,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "floorrustysolid"
-	},
+/obj/structure/nest/molerat,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker)
 "vJ" = (
 /obj/structure/table,
@@ -4783,9 +4786,7 @@
 /turf/open/floor/f13,
 /area/f13/caves)
 "yu" = (
-/obj/structure/bed/mattress{
-	icon_state = "mattress6"
-	},
+/obj/structure/bed/mattress,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -5358,10 +5359,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/hydroponics)
 "Bh" = (
-/obj/structure/table/wood/poker{
-	name = "felt table"
-	},
-/turf/open/indestructible/ground/outside/desert,
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "Bj" = (
 /obj/structure/sign/departments/medbay/alt{
@@ -5844,6 +5843,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess,
 /area/f13/vault/reactor)
+"DB" = (
+/mob/living/simple_animal/hostile/raider/ranged/junker/scavver,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bunker)
 "DD" = (
 /obj/machinery/light{
 	dir = 1;
@@ -6030,7 +6033,8 @@
 /turf/closed/indestructible/f13vaultrusted,
 /area/f13/bunker/bunkerthree)
 "EG" = (
-/turf/open/indestructible/ground/outside/desert,
+/obj/machinery/door/locked/expert/maybe_trapped,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "EI" = (
 /mob/living/simple_animal/hostile/raider/firefighter,
@@ -6829,6 +6833,14 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/neutral/white,
 /area/f13/vault/lavatory)
+"II" = (
+/obj/machinery/door/password{
+	door_id = "blackout"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "floorrustysolid"
+	},
+/area/f13/bunker)
 "IK" = (
 /obj/machinery/light{
 	dir = 4;
@@ -7195,6 +7207,11 @@
 "Ku" = (
 /turf/closed/wall/f13/store,
 /area/f13/caves)
+"Kv" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/raider/ranged/junker/scavver,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bunker)
 "Ky" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -7845,6 +7862,10 @@
 	pixel_y = -10
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bunker)
+"NL" = (
+/mob/living/simple_animal/hostile/raider/ranged/boss,
+/turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/bunker)
 "NM" = (
 /obj/machinery/door/airlock{
@@ -8917,6 +8938,13 @@
 	},
 /obj/machinery/door/locked/hard/trapped,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bunker)
+"Tp" = (
+/obj/structure/table/wood,
+/obj/machinery/computer/terminal/stored_password{
+	door_id = "blackout"
+	},
+/turf/open/floor/plasteel/freezer,
 /area/f13/bunker)
 "Tq" = (
 /obj/structure/table,
@@ -42558,7 +42586,7 @@ Rl
 JH
 Ke
 JH
-JH
+yd
 JH
 JH
 yd
@@ -42760,7 +42788,7 @@ JH
 JH
 je
 JH
-JH
+TK
 JH
 cf
 yd
@@ -43318,7 +43346,7 @@ mc
 hd
 tD
 yd
-mJ
+Tp
 mJ
 zn
 zn
@@ -43355,7 +43383,7 @@ JH
 JH
 JH
 JH
-vk
+TK
 JH
 JH
 JH
@@ -44320,7 +44348,7 @@ EN
 hd
 xy
 ia
-oi
+NL
 oi
 PI
 ps
@@ -44529,7 +44557,7 @@ oi
 qX
 hd
 hd
-kQ
+II
 hd
 eO
 hd
@@ -44726,7 +44754,7 @@ VB
 oi
 Gr
 oi
-oi
+eE
 oi
 te
 hd
@@ -47637,7 +47665,7 @@ TF
 TF
 TF
 io
-io
+vH
 io
 TF
 TF
@@ -50099,9 +50127,9 @@ yd
 yd
 yd
 yd
-vk
+EG
 CI
-vk
+EG
 yd
 yd
 yd
@@ -52920,9 +52948,9 @@ hd
 hd
 yd
 yd
-vk
+EG
 yd
-vk
+EG
 yd
 yd
 TF
@@ -53095,7 +53123,7 @@ yd
 hd
 EN
 jR
-vH
+jR
 jR
 EN
 hd
@@ -53291,7 +53319,7 @@ TF
 TF
 TF
 yd
-JH
+Bh
 JH
 yd
 hd
@@ -54302,7 +54330,7 @@ TF
 TF
 yd
 JH
-JH
+Bh
 yd
 hd
 hd
@@ -54671,7 +54699,7 @@ Rm
 XP
 XP
 ND
-Bh
+XP
 XP
 SV
 Xy
@@ -56729,7 +56757,7 @@ JH
 JH
 JH
 JH
-JH
+Bh
 JH
 JH
 JH
@@ -56931,7 +56959,7 @@ JH
 JH
 JH
 JH
-JH
+Bh
 JH
 JH
 JH
@@ -57135,7 +57163,7 @@ JH
 JH
 JH
 JH
-JH
+DB
 JH
 JH
 yd
@@ -57540,7 +57568,7 @@ JH
 JH
 JH
 JH
-JH
+Bh
 JH
 rx
 vq
@@ -57745,7 +57773,7 @@ JH
 JH
 JH
 eQ
-XE
+Kv
 JH
 JH
 JH
@@ -58105,7 +58133,7 @@ Xy
 mZ
 FK
 mZ
-EG
+Xy
 rG
 Xy
 Xy
