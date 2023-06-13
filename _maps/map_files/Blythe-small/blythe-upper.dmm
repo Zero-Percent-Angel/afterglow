@@ -2150,9 +2150,6 @@
 "ks" = (
 /turf/open/floor/wood_fancy,
 /area/f13/followers)
-"kt" = (
-/turf/open/floor/wood_mosaic/wood_mosaic_light,
-/area/engine/workshop)
 "kw" = (
 /obj/structure/table,
 /obj/structure/bedsheetbin,
@@ -4669,7 +4666,9 @@
 	},
 /area/f13/building/mall)
 "wj" = (
-/obj/structure/simple_door/interior,
+/obj/machinery/door/unpowered/secure_NCR{
+	req_access_txt = "121,132"
+	},
 /turf/open/floor/plasteel/f13,
 /area/f13/ncr)
 "wk" = (
@@ -5001,7 +5000,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/building/hospital)
 "xO" = (
-/obj/structure/simple_door/room,
+/obj/machinery/door/unpowered/secure_NCR{
+	req_access_txt = "121,132"
+	},
 /turf/open/floor/wood_common,
 /area/f13/ncr)
 "xP" = (
@@ -6082,9 +6083,14 @@
 /turf/open/floor/carpet/cyan,
 /area/f13/bar)
 "De" = (
-/obj/structure/destructible/tribal_torch/wall/lit,
-/turf/open/floor/plasteel/f13,
-/area/f13/wasteland/ncr)
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/turf/closed/wall/f13/supermart,
+/area/f13/building/mall)
 "Df" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/remains/xeno{
@@ -6325,6 +6331,9 @@
 "Ei" = (
 /turf/open/floor/carpet/red,
 /area/f13/legioncamp)
+"Ek" = (
+/turf/open/floor/wood_mosaic/wood_mosaic_light,
+/area/engine/workshop)
 "El" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -6715,13 +6724,9 @@
 /turf/open/floor/carpet/red,
 /area/f13/legioncamp)
 "Gi" = (
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 8;
-	light_color = "#f4e3b0"
-	},
-/obj/structure/barricade/sandbags,
-/turf/open/floor/plasteel/f13,
-/area/f13/wasteland/ncr)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/wood_mosaic/wood_mosaic_light,
+/area/engine/workshop)
 "Gl" = (
 /obj/structure/closet/wardrobe/pjs,
 /obj/item/reagent_containers/food/drinks/flask/vault113,
@@ -7933,10 +7938,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
-"LP" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_mosaic/wood_mosaic_light,
-/area/engine/workshop)
 "LV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/washing_machine,
@@ -10677,6 +10678,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/j)
+"Zp" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/f13/supermart,
+/area/f13/building/mall)
 "Zr" = (
 /obj/structure/closet,
 /obj/effect/spawner/lootdrop/weapon_parts,
@@ -12248,18 +12253,18 @@ Cb
 Cb
 Cb
 Cb
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
 Cb
 Cb
 Cb
@@ -12450,18 +12455,18 @@ Cb
 Cb
 Cb
 Cb
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
 Cb
 Cb
 Cb
@@ -12652,18 +12657,18 @@ Cb
 Cb
 Cb
 Cb
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
 Cb
 Cb
 Cb
@@ -12854,18 +12859,18 @@ Cb
 Cb
 Cb
 Cb
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
 Cb
 Cb
 Cb
@@ -13056,18 +13061,18 @@ nQ
 nQ
 Cb
 Cb
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
 Cb
 Cb
 Cb
@@ -13258,18 +13263,18 @@ wU
 nQ
 Cb
 Cb
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
-iU
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
 Cb
 Cb
 Cb
@@ -13462,13 +13467,13 @@ Cb
 Cb
 Cb
 Cb
-iU
-iU
-iU
-iU
-iU
-iU
-iU
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
 Cb
 Cb
 Cb
@@ -13664,13 +13669,13 @@ Cb
 Cb
 Cb
 Cb
-iU
-iU
-iU
-iU
-iU
-iU
-iU
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
 Cb
 Cb
 Cb
@@ -13866,13 +13871,13 @@ Cb
 Cb
 Cb
 Cb
-iU
-iU
-iU
-iU
-iU
-iU
-iU
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
 Cb
 Cb
 Cb
@@ -16285,8 +16290,8 @@ Ox
 AE
 sZ
 Ox
-Pc
-Pc
+AJ
+AJ
 Pc
 Pc
 Pc
@@ -16487,7 +16492,7 @@ aj
 vl
 dp
 aj
-wj
+xO
 IP
 IP
 Kc
@@ -16689,7 +16694,7 @@ xE
 vl
 dp
 dU
-Pc
+AJ
 ij
 ij
 IP
@@ -16891,7 +16896,7 @@ La
 mc
 QX
 QN
-Pc
+AJ
 lr
 lr
 Pv
@@ -17093,8 +17098,8 @@ hT
 nQ
 nQ
 nQ
-Pc
-Pc
+AJ
+AJ
 Pc
 Pc
 Pc
@@ -22568,8 +22573,8 @@ Cb
 iU
 iU
 iU
-iU
-iU
+FY
+FY
 iU
 iU
 Cb
@@ -22741,8 +22746,8 @@ vw
 vw
 vw
 vw
-De
-Wo
+vw
+Hc
 LM
 Cb
 Cb
@@ -22944,7 +22949,7 @@ vw
 vw
 vw
 vw
-Gi
+Hc
 LM
 Cb
 Cb
@@ -23173,9 +23178,9 @@ Cb
 Cb
 iU
 iU
-FY
 iU
-FY
+iU
+iU
 iU
 iU
 Cb
@@ -23375,9 +23380,9 @@ Cb
 Cb
 iU
 iU
-FY
 iU
-FY
+iU
+iU
 iU
 iU
 Cb
@@ -23833,8 +23838,8 @@ Cb
 Cb
 AR
 eF
-LP
-kt
+Gi
+Ek
 NY
 AR
 jH
@@ -24185,7 +24190,7 @@ iU
 iU
 iU
 iU
-iU
+FY
 iU
 iU
 Cb
@@ -36702,8 +36707,8 @@ VM
 ze
 Xx
 ln
-iU
-iU
+YZ
+YZ
 YZ
 YZ
 YZ
@@ -36904,8 +36909,8 @@ uY
 nD
 Xx
 ln
-iU
-iU
+YZ
+YZ
 YZ
 YZ
 YZ
@@ -37106,8 +37111,8 @@ uY
 iJ
 iJ
 ln
-iU
-iU
+YZ
+YZ
 YZ
 YZ
 YZ
@@ -37309,14 +37314,14 @@ Xx
 yu
 Og
 ln
-Fq
+Zp
 ln
 ln
 Og
 ln
 ln
-Xl
-Xl
+De
+De
 ln
 ln
 ln
