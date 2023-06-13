@@ -498,6 +498,18 @@
 	melee_damage_upper = 42
 	footstep_type = FOOTSTEP_MOB_SHOE
 
+/mob/living/simple_animal/hostile/raider/ranged/junker
+	name = "Junker"
+	desc = "A raider from the Junker gang."
+	faction = list("raider", "wastebot")
+	icon_state = "junker_ranged"
+	icon_living = "junker_ranged"
+	icon_dead = "junker_dead"
+	mob_armor = ARMOR_VALUE_RAIDER_COMBAT_ARMOR_RUSTY
+	maxHealth = 100
+	health = 100
+	footstep_type = FOOTSTEP_MOB_SHOE
+
 /mob/living/simple_animal/hostile/raider/ranged/boss/junker
 	name = "Junker Scrapper"
 	desc = "A Junker outfitted in reinforced combat raider armor with extra metal plates and an armoured duster."
