@@ -644,6 +644,9 @@
 	name = "BOS Entrance Elevator"
 	port_id = "entrance"
 
+/datum/map_template/shuttle/raider_station_train
+	name = "Junker Train"
+
 /datum/map_template/shuttle/bunker/elevator
 	suffix = "elevator"
 	name = "Bunker Elevator"

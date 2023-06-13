@@ -231,6 +231,13 @@
 "bn" = (
 /turf/closed/mineral/strong/wasteland,
 /area/f13/bunker/bunkerthree)
+"bo" = (
+/obj/structure/timeddoor/sixtyminute,
+/turf/closed/indestructible/opshuttle{
+	icon = 'icons/turf/walls/reinforced_wall.dmi';
+	icon_state = "r_wall"
+	},
+/area/f13/caves)
 "bp" = (
 /obj/machinery/computer/security/wooden_tv,
 /turf/open/floor/carpet/vault,
@@ -1613,6 +1620,17 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/diner)
+"hP" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 7;
+	id = "raider_station";
+	name = "Grand Junker Station";
+	roundstart_template = /datum/map_template/shuttle/raider_station_train
+	},
+/turf/open/floor/f13,
+/area/f13/bunker)
 "hR" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/oil/slippery,
@@ -3480,13 +3498,6 @@
 	dir = 4
 	},
 /area/f13/ambientlighting/building/m)
-"qH" = (
-/obj/machinery/computer/shuttle{
-	name = "train controls";
-	possible_destinations = "raider_train;raider_station"
-	},
-/turf/open/floor/plasteel/dark,
-/area/f13/caves)
 "qJ" = (
 /obj/machinery/camera/autoname{
 	dir = 10;
@@ -4055,13 +4066,6 @@
 /obj/item/reagent_containers/food/snacks/meat/slab/mirelurk,
 /turf/open/floor/plasteel/freezer,
 /area/f13/bunker)
-"tj" = (
-/obj/structure/timeddoor/sixtyminute,
-/turf/closed/indestructible/opshuttle{
-	icon = 'icons/turf/walls/reinforced_wall.dmi';
-	icon_state = "r_wall"
-	},
-/area/f13/caves)
 "tk" = (
 /obj/structure/table/wood,
 /obj/item/trash/plate{
@@ -4218,10 +4222,6 @@
 	icon_state = "housewood2"
 	},
 /area/f13/bunker)
-"tU" = (
-/obj/structure/timeddoor/sixtyminute,
-/turf/open/floor/plasteel/dark,
-/area/f13/caves)
 "tW" = (
 /obj/structure/decoration/rag{
 	icon_state = "skulls";
@@ -8505,6 +8505,13 @@
 	icon_state = "housewood2"
 	},
 /area/f13/bunker)
+"Oc" = (
+/obj/machinery/computer/shuttle{
+	name = "train controls";
+	possible_destinations = "raider_train;raider_station"
+	},
+/turf/open/floor/plasteel/dark,
+/area/f13/caves)
 "Od" = (
 /obj/machinery/door/airlock/public,
 /turf/open/floor/f13,
@@ -10944,6 +10951,10 @@
 /obj/item/gun/energy/taser,
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
 /area/f13/vault/security)
+"Zv" = (
+/obj/structure/timeddoor/sixtyminute,
+/turf/open/floor/plasteel/dark,
+/area/f13/caves)
 "Zw" = (
 /obj/effect/decal/waste{
 	icon_state = "goo12"
@@ -15180,9 +15191,9 @@ sv
 sv
 sv
 sv
-tU
-tU
-tU
+Zv
+Zv
+Zv
 sv
 sv
 sv
@@ -15382,9 +15393,9 @@ sv
 Fk
 sv
 sv
-tU
-qH
-tU
+Zv
+Oc
+Zv
 sv
 sv
 Fk
@@ -15584,9 +15595,9 @@ ZO
 ZO
 ZO
 ZO
-tj
-tj
-tU
+bo
+bo
+Zv
 Dd
 ZO
 ZO
@@ -56366,7 +56377,7 @@ gY
 gY
 OR
 WD
-TS
+hP
 YE
 Yj
 lZ
