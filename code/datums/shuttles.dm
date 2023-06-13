@@ -645,7 +645,9 @@
 	port_id = "entrance"
 
 /datum/map_template/shuttle/raider_station_train
+	suffix = "train"
 	name = "Junker Train"
+	port_id = "raider_station"
 
 /datum/map_template/shuttle/bunker/elevator
 	suffix = "elevator"
