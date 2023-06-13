@@ -59,7 +59,7 @@
 	icon_state = "ripley_r_leg"
 
 ///////// Odysseus
-/*
+
 /obj/item/mecha_parts/chassis/odysseus
 	name = "\improper Odysseus chassis"
 	construct_type = /datum/component/construction/unordered/mecha_chassis/odysseus
@@ -93,9 +93,9 @@
 	name = "\improper Odysseus right leg"
 	desc = "An odysseus right leg. Contains complex servodrives and balance maintaining systems to maintain stability for critical patients."
 	icon_state = "odysseus_r_leg"
-*/
+
 ///////// Gygax
-/*
+
 /obj/item/mecha_parts/chassis/gygax
 	name = "\improper Gygax chassis"
 	construct_type = /datum/component/construction/unordered/mecha_chassis/gygax
@@ -308,7 +308,7 @@
 	name="Phazon armor"
 	desc="Phazon armor plates. They are layered with plasma to protect the pilot from the stress of phasing and have unusual properties."
 	icon_state = "phazon_armor"
-*/
+
 
 ///////// Circuitboards
 
@@ -325,15 +325,15 @@
 	throwforce = 0
 	throw_speed = 3
 	throw_range = 7
-/*
+
 /obj/item/circuitboard/mecha/ripley/peripherals
 	name = "Ripley Peripherals Control module (Exosuit Board)"
 	icon_state = "mcontroller"
 
 /obj/item/circuitboard/mecha/ripley/main
 	name = "Ripley Central Control module (Exosuit Board)"
-	icon_state = "mainboard" */ 
-/*
+	icon_state = "mainboard" 
+
 /obj/item/circuitboard/mecha/gygax/peripherals
 	name = "Gygax Peripherals Control module (Exosuit Board)"
 	icon_state = "mcontroller"
@@ -376,7 +376,7 @@
 
 /obj/item/circuitboard/mecha/phazon/main
 	name = "Phazon Central Control module (Exosuit Board)"
-*/ 
+
 /obj/item/circuitboard/mecha/clarke/peripherals
 	name = "Clarke Peripherals Control module (Exosuit Board)"
 	icon_state = "mcontroller"
@@ -384,7 +384,7 @@
 /obj/item/circuitboard/mecha/clarke/main
 	name = "Clarke Central Control module (Exosuit Board)"
 	icon_state = "mainboard"
-/*
+
 /obj/item/circuitboard/mecha/marauder/peripherals
 	name = "Marauder Peripherals Control module (Exosuit Board)"
 	icon_state = "mcontroller"
@@ -396,7 +396,7 @@
 /obj/item/circuitboard/mecha/marauder/main
 	name = "Marauder Central Control module (Exosuit Board)"
 	icon_state = "mainboard"
-*/ 
+
 /obj/item/mecha_parts/chassis/clarke
 	name = "\improper Clarke chassis"
 	construct_type = /datum/component/construction/unordered/mecha_chassis/ripley/clarke

@@ -621,7 +621,7 @@
 	materials = list(/datum/material/iron=25000,/datum/material/plasma=20000,/datum/material/titanium=20000)
 	construction_time = 300
 	category = list("Phazon")
-
+*/
 //Exosuit Equipment
 /datum/design/mech_hydraulic_clamp
 	name = "Exosuit Engineering Equipment (Hydraulic Clamp)"
@@ -667,7 +667,7 @@
 	materials = list(/datum/material/iron=10000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-
+/*
 /datum/design/mech_generator
 	name = "Exosuit Equipment (Plasma Generator)"
 	id = "mech_generator"
