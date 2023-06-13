@@ -796,6 +796,14 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	special_i		= sanitize_integer(special_i, 1, 10, initial(special_i))
 	special_a		= sanitize_integer(special_a, 1, 10, initial(special_a))
 	special_l		= sanitize_integer(special_l, 1, 10, initial(special_l))
+	if ((special_a + special_c + special_e + special_i + special_l + special_p + special_s) > 40)
+		special_s = 1
+		special_p = 1
+		special_e = 1
+		special_c = 1
+		special_i = 1
+		special_a = 1
+		special_l = 1
 	skill_guns			= sanitize_integer(skill_guns, 0, 99, initial(skill_guns))
 	skill_energy		= sanitize_integer(skill_energy, 0, 99, initial(skill_energy))
 	skill_unarmed		= sanitize_integer(skill_unarmed, 0, 99, initial(skill_unarmed))

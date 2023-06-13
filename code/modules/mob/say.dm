@@ -5,7 +5,7 @@
 	set hidden = TRUE
 	set category = "IC"
 	display_typing_indicator()
-	var/message = input(usr, EMOTE_HEADER_TEXT, "say") as text|null
+	var/message = input(usr, "", "say") as text|null
 	// If they don't type anything just drop the message.
 	clear_typing_indicator()
 	if(!length(message))

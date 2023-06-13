@@ -125,13 +125,6 @@
 		makeTrail(newloc, T, old_direction)
 
 
-/mob/living/Move_Pulled(atom/A)
-	. = ..()
-	if(!. || !isliving(A))
-		return
-	var/mob/living/L = A
-	set_pull_offsets(L, grab_state)
-
 /mob/living/forceMove(atom/destination)
 	if(!currently_z_moving)
 		stop_pulling()

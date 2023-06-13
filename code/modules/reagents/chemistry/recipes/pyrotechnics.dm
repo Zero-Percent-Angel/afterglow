@@ -382,7 +382,7 @@
 /datum/chemical_reaction/pyrosium/on_reaction(datum/reagents/holder, multiplier)
 	holder.chem_temp = 20 // also cools the fuck down
 	return
-
+/*
 /datum/chemical_reaction/teslium
 	name = "Teslium"
 	id = /datum/reagent/teslium
@@ -395,13 +395,13 @@
 	name = "Energized Jelly"
 	id = /datum/reagent/teslium/energized_jelly
 	results = list(/datum/reagent/teslium/energized_jelly = 2)
-	required_reagents = list(/datum/reagent/celugel = 1, /datum/reagent/teslium = 1)
+	required_reagents = list(/datum/reagent/celugel = 1)
 	mix_message = span_danger("The cellulose gel starts glowing intermittently.")
 
 /datum/chemical_reaction/reagent_explosion/teslium_lightning
 	name = "Teslium Destabilization"
 	id = "teslium_lightning"
-	required_reagents = list(/datum/reagent/teslium = 1, /datum/reagent/water = 1)
+	required_reagents = list(/datum/reagent/water = 1)
 	strengthdiv = 100
 	modifier = -100
 	noexplosion = TRUE
@@ -434,7 +434,7 @@
 	id = "teslium_lightning2"
 	required_temp = 474
 	required_reagents = list(/datum/reagent/teslium = 1)
-
+*/
 /datum/chemical_reaction/reagent_explosion/nitrous_oxide
 	name = "N2O explosion"
 	id = "n2o_explosion"
