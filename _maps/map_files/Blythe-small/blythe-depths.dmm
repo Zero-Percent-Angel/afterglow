@@ -427,8 +427,7 @@
 	dwidth = 2;
 	height = 7;
 	id = "raider_train";
-	name = "Blythe Station";
-	roundstart_template = /datum/map_template/shuttle/raider_station_train
+	name = "Blythe Station"
 	},
 /turf/open/floor/plating/dirt,
 /area/f13/caves)
@@ -3197,13 +3196,6 @@
 /obj/machinery/rnd/science_lab,
 /turf/open/floor/plasteel/f13/vault_floor/purple/purplechess,
 /area/f13/vault/science)
-"py" = (
-/obj/structure/timeddoor/sixtyminute,
-/turf/closed/indestructible/opshuttle{
-	icon = 'icons/turf/walls/reinforced_wall.dmi';
-	icon_state = "r_wall"
-	},
-/area/f13/caves)
 "pz" = (
 /turf/closed/wall/r_wall/f13vault{
 	icon_state = "2-i"
@@ -3488,6 +3480,13 @@
 	dir = 4
 	},
 /area/f13/ambientlighting/building/m)
+"qH" = (
+/obj/machinery/computer/shuttle{
+	name = "train controls";
+	possible_destinations = "raider_train;raider_station"
+	},
+/turf/open/floor/plasteel/dark,
+/area/f13/caves)
 "qJ" = (
 /obj/machinery/camera/autoname{
 	dir = 10;
@@ -3608,13 +3607,6 @@
 /obj/effect/spawner/lootdrop/securityloot,
 /turf/open/floor/plasteel/dark,
 /area/f13/bunker/bunkertwo)
-"rq" = (
-/obj/machinery/computer/shuttle{
-	name = "train controls";
-	possible_destinations = "raider_train;raider_station"
-	},
-/turf/open/floor/plasteel/dark,
-/area/f13/caves)
 "rr" = (
 /obj/structure/table,
 /obj/machinery/computer/terminal,
@@ -4063,6 +4055,13 @@
 /obj/item/reagent_containers/food/snacks/meat/slab/mirelurk,
 /turf/open/floor/plasteel/freezer,
 /area/f13/bunker)
+"tj" = (
+/obj/structure/timeddoor/sixtyminute,
+/turf/closed/indestructible/opshuttle{
+	icon = 'icons/turf/walls/reinforced_wall.dmi';
+	icon_state = "r_wall"
+	},
+/area/f13/caves)
 "tk" = (
 /obj/structure/table/wood,
 /obj/item/trash/plate{
@@ -4219,6 +4218,10 @@
 	icon_state = "housewood2"
 	},
 /area/f13/bunker)
+"tU" = (
+/obj/structure/timeddoor/sixtyminute,
+/turf/open/floor/plasteel/dark,
+/area/f13/caves)
 "tW" = (
 /obj/structure/decoration/rag{
 	icon_state = "skulls";
@@ -6381,10 +6384,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
 /area/f13/vault/medical/surgery)
-"DK" = (
-/obj/structure/timeddoor/sixtyminute,
-/turf/open/floor/plasteel/dark,
-/area/f13/caves)
 "DL" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
@@ -15181,9 +15180,9 @@ sv
 sv
 sv
 sv
-DK
-DK
-DK
+tU
+tU
+tU
 sv
 sv
 sv
@@ -15383,9 +15382,9 @@ sv
 Fk
 sv
 sv
-DK
-rq
-DK
+tU
+qH
+tU
 sv
 sv
 Fk
@@ -15585,9 +15584,9 @@ ZO
 ZO
 ZO
 ZO
-py
-py
-DK
+tj
+tj
+tU
 Dd
 ZO
 ZO
