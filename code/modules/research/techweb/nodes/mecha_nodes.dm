@@ -103,8 +103,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-*/
-/*
+
 /datum/techweb_node/phazon
 	id = "mecha_phazon"
 	display_name = "EXOSUIT: Phazon"
@@ -113,7 +112,7 @@
 	design_ids = list("phazon_chassis", "phazon_torso", "phazon_head", "phazon_left_arm", "phazon_right_arm", "phazon_left_leg", "phazon_right_leg", "phazon_main",
 	"phazon_peri", "phazon_targ", "phazon_armor")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000)
-*/ 
+*/
 /datum/techweb_node/adv_mecha_tools
 	id = "adv_mecha_tools"
 	display_name = "Advanced Exosuit Equipment"
@@ -133,7 +132,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2000)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-*/
+
 /datum/techweb_node/mech_modules
 	id = "adv_mecha_modules"
 	display_name = "Simple Exosuit Modules"
@@ -144,7 +143,7 @@
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
 
-/* ## Uncomment it after projectiles don't runtime anymore
+ ## Uncomment it after projectiles don't runtime anymore
 /datum/techweb_node/mech_scattershot
 	id = "mecha_tools"
 	display_name = "Exosuit Weapon (LBX AC 10 \"Scattershot\")"
@@ -176,8 +175,7 @@
 	prereq_ids = list("adv_weaponry")
 	design_ids = list("mech_lmg", "mech_lmg_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-*/
-/*
+
 /datum/techweb_node/mech_ion
 	id = "mmech_ion"
 	display_name = "Exosuit Weapon (MKIV Ion Heavy Cannon)"
@@ -258,7 +256,6 @@
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
 
-/*
 /datum/techweb_node/clusterbang_launcher
 	id = "clusterbang_launcher"
 	display_name = "Exosuit Module (SOB-3 Clusterbang Launcher)"
@@ -266,7 +263,7 @@
 	prereq_ids = list("adv_weaponry")
 	design_ids = list("clusterbang_launcher", "clusterbang_launcher_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-*/
+
 /datum/techweb_node/mech_teleporter
 	id = "mech_teleporter"
 	display_name = "Exosuit Module (Teleporter Module)"
@@ -276,7 +273,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-/*
+
 /datum/techweb_node/mech_wormhole_gen
 	id = "mech_wormhole_gen"
 	display_name = "Exosuit Module (Localized Wormhole Generator)"
@@ -284,7 +281,7 @@
 	prereq_ids = list("adv_bluespace")
 	design_ids = list("mech_wormhole_gen")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-*/
+
 /datum/techweb_node/mech_taser
 	id = "mech_taser"
 	display_name =  "Exosuit Weapon (PBT \"Pacifier\" Mounted Taser)"
@@ -294,7 +291,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-
+*/ 
 /datum/techweb_node/mech_diamond_drill
 	id = "mech_diamond_drill"
 	display_name =  "Exosuit Diamond Drill"
@@ -304,3 +301,4 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
+
