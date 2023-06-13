@@ -338,6 +338,13 @@
 	pulling.Move(get_step(pulling.loc, move_dir), move_dir, glide_size)
 	return TRUE
 
+/mob/living/Move_Pulled(atom/moving_atom)
+	. = ..()
+	if(!. || !isliving(moving_atom))
+		return
+	var/mob/living/pulled_mob = moving_atom
+	set_pull_offsets(pulled_mob, grab_state)
+
 /atom/movable/proc/check_pulling(only_pulling = FALSE, z_allowed = FALSE)
 	if(pulling)
 		if(get_dist(src, pulling) > 1 || (z != pulling.z && !z_allowed))

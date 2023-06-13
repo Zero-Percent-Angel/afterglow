@@ -171,27 +171,24 @@
 		visible_message(span_danger("[src] is torn to pieces by the gravitational pull!"))
 		qdel(src)
 
-/obj/structure/ladder/proc/travel(going_up, mob/user, is_ghost, obj/structure/ladder/ladder)
+/obj/structure/ladder/proc/travel(mob/user, going_up = TRUE, is_ghost = FALSE)
+	var/obj/structure/ladder/ladder = going_up ? up : down
+	if(!ladder)
+		to_chat(user, span_warning("there's nothing that way!"))
+		return
+	
 	if(!is_ghost)
-		if(in_use)
-			return
-		in_use = TRUE
 		user.visible_message("[user] begins to climb [going_up ? "up" : "down"] [src].", span_notice("You begin to climb [going_up ? "up" : "down"] [src]."))
-		if(!do_after(user, timetouse, target = src))
-			in_use = FALSE
-			return
+	if(!do_after(user, timetouse, target = src))	
 		in_use = FALSE
-		show_fluff_message(going_up, user)
-		ladder.add_fingerprint(user)
+		return
 
-	var/turf/T = get_turf(ladder)
-	var/atom/movable/AM
-	if(user.pulling)
-		AM = user.pulling
-		AM.forceMove(T)
-	user.forceMove(T)
-	if(AM)
-		user.start_pulling(AM)
+	var/response = SEND_SIGNAL(user, COMSIG_LADDER_TRAVEL, src, ladder, going_up)
+	if(response & LADDER_TRAVEL_BLOCK)
+		return
+	
+	var/turf/target = get_turf(ladder)
+	user.zMove(target = target, z_move_flags = ZMOVE_CHECK_PULLEDBY|ZMOVE_ALLOW_BUCKLED|ZMOVE_INCLUDE_PULLED)
 
 /obj/structure/ladder/proc/use(mob/user, is_ghost=FALSE)
 	if (!is_ghost && !in_range(src, user))
@@ -209,9 +206,9 @@
 
 	if(!uhoh_weather && !both_ways)
 		if(up)
-			travel(TRUE, user, is_ghost, up)
+			travel(user, TRUE, is_ghost)
 		if(down)
-			travel(FALSE, user, is_ghost, down)
+			travel(user, FALSE, is_ghost)
 		return
 
 	var/list/tool_list = list()
@@ -231,9 +228,9 @@
 		return  // nice try
 	switch(result)
 		if("Up")
-			travel(TRUE, user, is_ghost, up)
+			travel(user, TRUE, is_ghost)
 		if("Down")
-			travel(FALSE, user, is_ghost, down)
+			travel(user, FALSE, is_ghost)
 		if("Cancel")
 			return
 
@@ -407,28 +404,6 @@
 		user.visible_message("[user] walks up to [src].",span_notice("You walk up to [src]."))
 	else
 		user.visible_message("[user] walks down to [src].",span_notice("You walk down to [src]."))
-
-/obj/structure/ladder/unbreakable/transition/travel(going_up, mob/user, is_ghost, obj/structure/ladder/ladder)
-	if(!is_ghost)
-		if(in_use)
-			return
-		in_use = TRUE
-		user.visible_message("[user] begins to walk [going_up ? "up to" : "down to"] [src].", span_notice("You begin to walk [going_up ? "up to" : "down to"] [src]."))
-		if(!do_after(user, timetouse, target = src))
-			in_use = FALSE
-			return
-		in_use = FALSE
-		show_fluff_message(going_up, user)
-		ladder.add_fingerprint(user)
-
-	var/turf/T = get_turf(ladder)
-	var/atom/movable/AM
-	if(user.pulling)
-		AM = user.pulling
-		AM.forceMove(T)
-	user.forceMove(T)
-	if(AM)
-		user.start_pulling(AM)
 
 /obj/structure/ladder/unbreakable/transition/Cross(atom/movable/AM)
 	use(AM)
