@@ -4,7 +4,8 @@
 	time = 30
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 4)
 	category = CAT_PRIMAL
-
+	falls_back_on_outdoors = TRUE
+	
 /datum/crafting_recipe/handheld_torch
 	name = "Handheld Torch"
 	result = /obj/item/flashlight/flare/torch
@@ -12,13 +13,15 @@
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 3,
 				/obj/item/stack/sheet/cloth = 1)
 	category = CAT_PRIMAL
-
+	falls_back_on_outdoors = TRUE
+	
 /datum/crafting_recipe/bonfire
 	name = "Bonfire"
 	time = 60
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 30)
 	result = /obj/structure/bonfire
 	category = CAT_PRIMAL
+	falls_back_on_outdoors = TRUE
 
 /datum/crafting_recipe/bonfirecaps
 	name = "Bonfire"
@@ -26,6 +29,7 @@
 	reqs = list(/obj/item/grown/log = 5)
 	result = /obj/structure/bonfire
 	category = CAT_PRIMAL
+	falls_back_on_outdoors = TRUE
 
 /datum/crafting_recipe/campfire //Adding a campfire; it takes less expertise, and less ingredients than the bonfire available to primals, but it's also less grand and takes more time.
 	name = "Campfire"
@@ -34,6 +38,7 @@
 	result = /obj/structure/campfire
 	category = CAT_TRIBAL
 	always_available = TRUE
+	falls_back_on_outdoors = TRUE
 
 /datum/crafting_recipe/spearfisher
 	name = "Spearfisher"
@@ -126,6 +131,7 @@
 			/datum/reagent/oil = 5)
 	result = /obj/structure/statue/bone/rib
 	category = CAT_PRIMAL
+	falls_back_on_outdoors = TRUE
 
 /datum/crafting_recipe/skull
 	name = "Skull Carving"
@@ -135,6 +141,7 @@
 			/datum/reagent/oil = 5)
 	result = /obj/structure/statue/bone/skull
 	category = CAT_PRIMAL
+	falls_back_on_outdoors = TRUE
 
 /datum/crafting_recipe/halfskull
 	name = "Cracked Skull Carving"
@@ -144,7 +151,8 @@
 			/datum/reagent/oil = 5)
 	result = /obj/structure/statue/bone/skull/half
 	category = CAT_PRIMAL
-
+	falls_back_on_outdoors = TRUE
+	
 /datum/crafting_recipe/boneshovel
 	name = "Serrated Bone Shovel"
 	always_available = TRUE
@@ -154,7 +162,8 @@
 			/obj/item/shovel/spade = 1)
 	result = /obj/item/shovel/serrated
 	category = CAT_PRIMAL
-
+	falls_back_on_outdoors = TRUE
+	
 /datum/crafting_recipe/punji_sticks
 	name = "Punji stick Trap"
 	time = 30
@@ -162,7 +171,8 @@
 			/obj/item/stack/sheet/mineral/bamboo = 5)
 	result = /obj/structure/punji_sticks
 	category = CAT_PRIMAL
-
+	falls_back_on_outdoors = TRUE
+	
 /datum/crafting_recipe/tribal_pa
 	name = "Tribal Salvaged Power Armor"
 	time = 120
@@ -445,6 +455,7 @@
 				/obj/item/stack/sheet/metal = 1)
 	category = CAT_TRIBAL
 	always_available = TRUE
+	falls_back_on_outdoors = TRUE
 
 /datum/crafting_recipe/tribalwar/lighttribe
 	name = "Light Tribal Plates"
@@ -531,8 +542,9 @@
 				/obj/item/stack/cable_coil = 1)
 	category = CAT_TRIBAL
 	tools = list(TOOL_WORKBENCH)
-	skill_level = HARD_CHECK
-
+	skill_needed = SKILL_REPAIR
+	skill_level = EASY_CHECK  
+	falls_back_on_outdoors = TRUE
 /* tdo
 /datum/crafting_recipe/beartrap
 	name = "Bear Trap"
