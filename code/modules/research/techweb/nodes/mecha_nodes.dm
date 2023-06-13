@@ -143,7 +143,7 @@
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
 
- ## Uncomment it after projectiles don't runtime anymore
+## Uncomment it after projectiles don't runtime anymore
 /datum/techweb_node/mech_scattershot
 	id = "mecha_tools"
 	display_name = "Exosuit Weapon (LBX AC 10 \"Scattershot\")"
