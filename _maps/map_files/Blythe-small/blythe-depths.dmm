@@ -1011,6 +1011,16 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess,
 /area/f13/vault/reactor)
+"fh" = (
+/obj/structure/fluff/rails,
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 7;
+	id = "raider_station_train"
+	},
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/bunker)
 "fi" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -2079,11 +2089,6 @@
 	icon_state = "darkrustysolid"
 	},
 /area/f13/ambientlighting/building/m)
-"kr" = (
-/obj/structure/barricade/wooden,
-/obj/structure/barricade/wooden,
-/turf/closed/indestructible/f13/obsidian,
-/area/f13/bunker)
 "ks" = (
 /obj/machinery/light{
 	dir = 8;
@@ -3542,16 +3547,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/f13/caves)
-"rk" = (
-/obj/structure/fluff/rails,
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 2;
-	height = 7;
-	id = "raider_station_train"
-	},
-/turf/open/indestructible/ground/inside/subway,
-/area/f13/bunker)
 "rl" = (
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault)
@@ -3581,10 +3576,6 @@
 /obj/machinery/computer/terminal,
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/ambientlighting/building/m)
-"rv" = (
-/obj/structure/barricade/wooden,
-/turf/open/floor/f13,
-/area/f13/bunker)
 "rw" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 8;
@@ -4189,6 +4180,11 @@
 "ug" = (
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/diner)
+"uh" = (
+/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden,
+/turf/closed/indestructible/f13/obsidian,
+/area/f13/bunker)
 "ui" = (
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
 /area/f13/vault/security)
@@ -4235,9 +4231,6 @@
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/ambientlighting/building/m)
-"uD" = (
-/turf/closed/indestructible/f13/matrix,
-/area/f13/bunker)
 "uF" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -5235,6 +5228,9 @@
 	name = "dirty floor"
 	},
 /area/f13/bunker/bunkerthree)
+"zf" = (
+/turf/closed/indestructible/f13/matrix,
+/area/f13/bunker)
 "zi" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -8174,6 +8170,10 @@
 	name = "dirty floor"
 	},
 /area/f13/bunker/bunkerthree)
+"Nf" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/f13,
+/area/f13/bunker)
 "Ng" = (
 /obj/structure/chair/office/dark,
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess/redchess2,
@@ -53555,7 +53555,7 @@ TF
 CC
 kh
 kh
-rk
+fh
 kh
 kh
 YO
@@ -59417,9 +59417,9 @@ CB
 kh
 kh
 YO
-rv
-rv
-rv
+Nf
+Nf
+Nf
 dJ
 TF
 TF
@@ -59618,10 +59618,10 @@ kh
 CB
 kh
 kh
-kr
-rv
+uh
+Nf
 lX
-rv
+Nf
 lX
 TF
 TF
@@ -61026,13 +61026,13 @@ TF
 TF
 TF
 TF
-uD
-uD
-uD
-uD
-uD
-uD
-uD
+zf
+zf
+zf
+zf
+zf
+zf
+zf
 TF
 TF
 TF
