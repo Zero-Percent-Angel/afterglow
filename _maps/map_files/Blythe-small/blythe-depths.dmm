@@ -1011,16 +1011,6 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess,
 /area/f13/vault/reactor)
-"fh" = (
-/obj/structure/fluff/rails,
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 2;
-	height = 7;
-	id = "raider_station_train"
-	},
-/turf/open/indestructible/ground/inside/subway,
-/area/f13/bunker)
 "fi" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -1187,6 +1177,18 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
+/area/f13/bunker)
+"gd" = (
+/obj/structure/fluff/rails,
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 7;
+	id = "raider_train";
+	name = "Grand Junker Station";
+	roundstart_template = /datum/map_template/shuttle/raider_station_train
+	},
+/turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker)
 "ge" = (
 /obj/structure/cable{
@@ -1601,6 +1603,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
+"ik" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/f13/caves)
 "il" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -4180,11 +4188,6 @@
 "ug" = (
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/diner)
-"uh" = (
-/obj/structure/barricade/wooden,
-/obj/structure/barricade/wooden,
-/turf/closed/indestructible/f13/obsidian,
-/area/f13/bunker)
 "ui" = (
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
 /area/f13/vault/security)
@@ -4895,6 +4898,11 @@
 /obj/machinery/vending/medical/free,
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
 /area/f13/vault/medical)
+"xF" = (
+/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden,
+/turf/closed/indestructible/f13/obsidian,
+/area/f13/bunker)
 "xG" = (
 /obj/machinery/flasher/portable,
 /turf/open/floor/plasteel/dark,
@@ -5228,9 +5236,6 @@
 	name = "dirty floor"
 	},
 /area/f13/bunker/bunkerthree)
-"zf" = (
-/turf/closed/indestructible/f13/matrix,
-/area/f13/bunker)
 "zi" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -7030,6 +7035,10 @@
 	name = "dirty floor"
 	},
 /area/f13/bunker/bunkerthree)
+"HR" = (
+/obj/structure/timeddoor/sixtyminute,
+/turf/closed/wall/f13/tunnel,
+/area/f13/caves)
 "HT" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/filingcabinet,
@@ -8170,10 +8179,6 @@
 	name = "dirty floor"
 	},
 /area/f13/bunker/bunkerthree)
-"Nf" = (
-/obj/structure/barricade/wooden,
-/turf/open/floor/f13,
-/area/f13/bunker)
 "Ng" = (
 /obj/structure/chair/office/dark,
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess/redchess2,
@@ -8795,6 +8800,13 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/neutral/white,
 /area/f13/vault/lavatory)
+"Qs" = (
+/obj/machinery/computer/shuttle{
+	name = "train controls";
+	possible_destinations = "raider_train;raider_station"
+	},
+/turf/open/floor/plasteel/dark,
+/area/f13/caves)
 "Qu" = (
 /obj/machinery/light{
 	dir = 8
@@ -9784,6 +9796,22 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/bunker)
+"UU" = (
+/obj/structure/timeddoor/sixtyminute,
+/turf/open/floor/plasteel/dark,
+/area/f13/caves)
+"UW" = (
+/obj/structure/fluff/rails{
+	dir = 4
+	},
+/obj/docking_port/stationary{
+	dwidth = 2;
+	height = 7;
+	id = "raider_station";
+	name = "Vault Station"
+	},
+/turf/open/floor/plating/dirt,
+/area/f13/caves)
 "UY" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
@@ -10399,6 +10427,9 @@
 "XQ" = (
 /turf/closed/wall/mineral/iron,
 /area/f13/bunker)
+"XS" = (
+/turf/closed/indestructible/f13/matrix,
+/area/f13/bunker)
 "XU" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -10676,6 +10707,10 @@
 "Zh" = (
 /obj/machinery/light,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bunker)
+"Zi" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/f13,
 /area/f13/bunker)
 "Zj" = (
 /obj/structure/chair/comfy/modern{
@@ -14605,7 +14640,7 @@ iX
 iX
 iX
 iX
-iX
+UW
 iX
 iX
 iX
@@ -14946,78 +14981,78 @@ TF
 "}
 (21,1,1) = {"
 TF
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
-Hw
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+UU
+UU
+UU
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
 Hw
 An
 An
@@ -15148,79 +15183,79 @@ TF
 "}
 (22,1,1) = {"
 TF
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+ik
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+ik
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+ik
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+ik
+sv
+sv
+sv
+sv
+sv
+sv
+ik
+sv
+Wp
+sv
+RO
+sv
+sv
+sv
+ik
+sv
+UU
+Qs
+UU
+sv
+sv
+sv
+ik
+sv
+sv
+sv
+sv
+ik
+sv
+sv
+sv
+sv
+ik
+sv
+sv
+Hw
 RB
 RB
 RB
@@ -15350,79 +15385,79 @@ TF
 "}
 (23,1,1) = {"
 TF
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+HR
+HR
+UU
+Dd
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
 RB
 RB
 RB
@@ -15606,18 +15641,18 @@ RB
 RB
 RB
 RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
+Hw
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+sv
+iW
+Hw
 RB
 RB
 RB
@@ -15808,18 +15843,18 @@ RB
 RB
 RB
 RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
+Hw
+sv
+sv
+ik
+sv
+sv
+sv
+ik
+sv
+sv
+iW
+Hw
 RB
 RB
 RB
@@ -16010,18 +16045,18 @@ RB
 RB
 RB
 RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
-RB
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
 RB
 RB
 RB
@@ -53555,7 +53590,7 @@ TF
 CC
 kh
 kh
-fh
+gd
 kh
 kh
 YO
@@ -59417,9 +59452,9 @@ CB
 kh
 kh
 YO
-Nf
-Nf
-Nf
+Zi
+Zi
+Zi
 dJ
 TF
 TF
@@ -59618,10 +59653,10 @@ kh
 CB
 kh
 kh
-uh
-Nf
+xF
+Zi
 lX
-Nf
+Zi
 lX
 TF
 TF
@@ -61026,13 +61061,13 @@ TF
 TF
 TF
 TF
-zf
-zf
-zf
-zf
-zf
-zf
-zf
+XS
+XS
+XS
+XS
+XS
+XS
+XS
 TF
 TF
 TF
