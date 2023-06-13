@@ -19,7 +19,7 @@
 	design_ids = list("mech_drill", "mech_mscanner", "mech_extinguisher", "mech_cable_layer", "mech_hydraulic_clamp")
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-
+/*
 /datum/techweb_node/ripley
 	id = "mech_ripley"
 	display_name = "EXOSUIT: Ripley"
@@ -29,7 +29,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-
+*/
 /datum/techweb_node/clarke
 	id = "mech_clarke"
 	display_name = "EXOSUIT: Clarke"
@@ -49,7 +49,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-
+/*
 /datum/techweb_node/odysseus
 	id = "mecha_odysseus"
 	display_name = "EXOSUIT: Odysseus"
@@ -103,7 +103,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-
+*/
 /*
 /datum/techweb_node/phazon
 	id = "mecha_phazon"
@@ -113,7 +113,7 @@
 	design_ids = list("phazon_chassis", "phazon_torso", "phazon_head", "phazon_left_arm", "phazon_right_arm", "phazon_left_leg", "phazon_right_leg", "phazon_main",
 	"phazon_peri", "phazon_targ", "phazon_armor")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000)
-*/
+*/ 
 /datum/techweb_node/adv_mecha_tools
 	id = "adv_mecha_tools"
 	display_name = "Advanced Exosuit Equipment"
@@ -123,7 +123,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-
+/*
 /datum/techweb_node/med_mech_tools
 	id = "med_mech_tools"
 	display_name = "Medical Exosuit Equipment"
@@ -133,7 +133,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2000)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-
+*/
 /datum/techweb_node/mech_modules
 	id = "adv_mecha_modules"
 	display_name = "Simple Exosuit Modules"
@@ -177,7 +177,7 @@
 	design_ids = list("mech_lmg", "mech_lmg_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 */
-
+/*
 /datum/techweb_node/mech_ion
 	id = "mmech_ion"
 	display_name = "Exosuit Weapon (MKIV Ion Heavy Cannon)"
