@@ -667,7 +667,7 @@
 	materials = list(/datum/material/iron=10000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-/*
+
 /datum/design/mech_generator
 	name = "Exosuit Equipment (Plasma Generator)"
 	id = "mech_generator"
@@ -676,7 +676,7 @@
 	materials = list(/datum/material/iron=10000,/datum/material/glass=1000,/datum/material/silver=2000,/datum/material/plasma=5000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-*/ 
+
 /////////////////////////////////////////
 //////////////Borg Upgrades//////////////
 /////////////////////////////////////////

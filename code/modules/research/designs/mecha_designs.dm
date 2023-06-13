@@ -378,7 +378,7 @@
 	materials = list(/datum/material/iron=10000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-
+*/
 /datum/design/mech_repair_droid
 	name = "Exosuit Module (Repair Droid Module)"
 	desc = "Automated Repair Droid. BEEP BOOP"
@@ -388,7 +388,7 @@
 	materials = list(/datum/material/iron=10000,/datum/material/glass=5000,/datum/material/gold=1000,/datum/material/silver=2000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-
+/*
 /datum/design/mech_energy_relay
 	name = "Exosuit Module (Tesla Energy Relay)"
 	desc = "Tesla Energy Relay"
@@ -418,7 +418,7 @@
 	materials = list(/datum/material/iron=20000,/datum/material/gold=5000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-
+*/
 /datum/design/mech_diamond_drill
 	name = "Exosuit Module (Diamond Mining Drill)"
 	desc = "An upgraded version of the standard drill."
@@ -428,7 +428,7 @@
 	materials = list(/datum/material/iron=10000,/datum/material/diamond=6500)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-
+/*
 /datum/design/mech_generator_nuclear
 	name = "Exosuit Module (ExoNuclear Reactor)"
 	desc = "Compact nuclear reactor module."
