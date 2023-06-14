@@ -12,7 +12,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
-	skill_level = REGULAR_CHECK
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/combat_jacket
 	name = "Combat Jacket"
@@ -24,6 +24,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = VERY_EASY_CHECK  
 	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/combat_coat
@@ -34,6 +36,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
+	skill_needed = SKILL_OUTDOORSMAN
 	subcategory = CAT_ARMOR
 
 /*
@@ -68,6 +71,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = VERY_EASY_CHECK 
 	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/leatherarmor2
@@ -79,6 +84,7 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
+	skill_needed = SKILL_OUTDOORSMAN
 	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/leather_jacket
@@ -89,6 +95,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = VERY_EASY_CHECK 
 	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/metalarmor
@@ -572,6 +580,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 5
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 //General clothing
@@ -584,6 +593,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 10
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/warboy
@@ -594,6 +604,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 10
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/khaki
@@ -604,6 +615,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 10
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/cowboyg
@@ -614,6 +626,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/cowboyb
@@ -624,6 +637,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/cowboyt
@@ -634,6 +648,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/westender
@@ -644,6 +659,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/westendervest
@@ -654,6 +670,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 10
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/sleazeball
@@ -664,6 +681,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/greendress
@@ -674,6 +692,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/bluedress
@@ -684,6 +703,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/pinkdress
@@ -694,6 +714,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/relaxedwear
@@ -704,6 +725,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 
 /datum/crafting_recipe/roving
 	name = "Roving Trader Outfit"
@@ -723,6 +745,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/mercadv
@@ -733,6 +756,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/fmercadv
@@ -743,6 +767,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/brahmin
@@ -753,6 +778,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/fbrahmin
@@ -763,6 +789,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/flapper
@@ -773,6 +800,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/overalls_farmer
@@ -783,6 +811,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/overalls_maid
@@ -793,6 +822,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/overalls_blacksmith
@@ -803,6 +833,7 @@ datum/crafting_recipe/steelbib/heavy
 	time = 15
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
+	falls_back_on_outdoors = TRUE
 	skill_level = VERY_EASY_CHECK
 
 /////////////////////

@@ -520,6 +520,9 @@
 /datum/config_entry/string/discord_channel_serverstatus
 	config_entry_value = "server_status"
 
+/datum/config_entry/string/discord_roundend_role_id
+	config_entry_value = ""
+
 /datum/config_entry/flag/enable_tgs_ban_channel
 	config_entry_value = FALSE
 

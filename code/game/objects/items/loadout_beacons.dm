@@ -425,14 +425,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	new /obj/item/ammo_box/magazine/m10mm/adv/ext(src)
 	new /obj/item/ammo_box/magazine/m10mm/adv/ext(src)
 
-/obj/item/storage/box/gun/law/commando
-	name = "commando carbine case"
-
-/obj/item/storage/box/gun/law/commando/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/delisle/commando(src)
-	new /obj/item/ammo_box/magazine/m45/socom(src)
-	new /obj/item/ammo_box/magazine/m45/socom(src)
-
 /obj/item/storage/box/gun/law/combat //luv u scryden
 	name = "combat carbine case"
 
@@ -528,10 +520,10 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	new /obj/item/ammo_box/magazine/m9mm/doublestack(src)
 
 /obj/item/storage/box/gun/premium/automatic //beretta m93r, but keeping the naming scheme I got
-	name = "Beretta M93R case" //might be stronk, might need to not take greasegun mags, will see
+	name = "Beretta M9 case" //might be stronk, might need to not take greasegun mags, will see
 
 /obj/item/storage/box/gun/premium/automatic/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/pistol/beretta/automatic(src)
+	new /obj/item/gun/ballistic/automatic/pistol/beretta(src)
 	new /obj/item/ammo_box/magazine/m9mm/doublestack(src)
 	new /obj/item/ammo_box/magazine/m9mm/doublestack(src)
 
@@ -569,21 +561,13 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 
 //mk23 and magnum semi-autos are just a liiiiittle too chonky for this list
 
-/obj/item/storage/box/gun/premium/mateba //ugh, fiiiiiiiine you can have your dumb coolness revolver, if you're the right rank~
-	name = "Unica 6 case"
-
-/obj/item/storage/box/gun/premium/mateba/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/colt357/mateba(src)
-	new /obj/item/ammo_box/c38(src)
-	new /obj/item/ammo_box/c38(src)
-
 /obj/item/storage/box/gun/premium/lucky //not sure if this should be allowed, or if is supposed to be unique
 	name = ".357 magnum revolver case"
 
 /obj/item/storage/box/gun/premium/lucky/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/colt357/lucky(src)
-	new /obj/item/ammo_box/c38(src)
-	new /obj/item/ammo_box/c38(src)
+	new /obj/item/ammo_box/a357box(src)
+	new /obj/item/ammo_box/a357box(src)
 
 /obj/item/storage/box/gun/premium/alt //pearly .44 mag
 	name = "pearl .44 magnum case"
@@ -605,7 +589,7 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	name = "ranger revolver case"
 
 /obj/item/storage/box/gun/premium/desert_ranger/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/revolver44/desert_ranger(src)
+	new /obj/item/gun/ballistic/revolver/m29/desert_ranger(src)
 	new /obj/item/ammo_box/m44(src)
 	new /obj/item/ammo_box/m44(src)
 
@@ -648,23 +632,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	new /obj/item/gun/ballistic/automatic/smg/mini_uzi/smg22(src)
 	new /obj/item/ammo_box/magazine/m22/extended(src)
 
-/obj/item/storage/box/gun/rifle/sidewinder //should this be allowed? not field tested personally
-	name = "multi-caliber carbine case"
-
-/obj/item/storage/box/gun/rifle/sidewinder/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/smg/sidewinder/worn(src)
-	new /obj/item/ammo_box/magazine/m22(src) //you asked for multicaliber, you get multiple calibers
-	new /obj/item/ammo_box/magazine/m45(src)
-
-/obj/item/storage/box/gun/rifle/sidewinder_magnum //should this be allowed? not field tested personally
-	name = "multi-caliber magnum case"
-
-/obj/item/storage/box/gun/rifle/sidewinder_magnum/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/smg/sidewinder/magnum(src)
-	new /obj/item/ammo_box/magazine/m45(src) //you asked for multicaliber, you get multiple calibers
-	new /obj/item/ammo_box/magazine/m44(src)
-	new /obj/item/ammo_box/magazine/m14mm(src)
-
 /obj/item/storage/box/gun/rifle/m1carbine
 	name = "M1 carbine case"
 
@@ -672,14 +639,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	new /obj/item/gun/ballistic/automatic/m1carbine(src)
 	new /obj/item/ammo_box/magazine/m10mm/adv(src) //why can't 10mm magazines be normal? make sure these aren't extended or broken
 	new /obj/item/ammo_box/magazine/m10mm/adv(src)
-
-/obj/item/storage/box/gun/rifle/delisle
-	name = "De Lisle carbine case"
-
-/obj/item/storage/box/gun/rifle/delisle/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/delisle(src)
-	new /obj/item/ammo_box/magazine/m9mm/doublestack(src)
-	new /obj/item/ammo_box/magazine/m9mm/doublestack(src)
 
 /obj/item/storage/box/gun/rifle/sportcarbine
 	name = "sport carbine case"
@@ -779,7 +738,7 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	w_class = WEIGHT_CLASS_NORMAL //will designate for each box since pipe guns vary in size
 
 /obj/item/storage/box/gun/hobo/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/shotpistol(src)
+	new /obj/item/gun/ballistic/revolver/single_shotgun(src)
 	new /obj/item/ammo_box/shotgun/buck(src)
 
 /obj/item/storage/box/gun/hobo/zipgun
@@ -871,16 +830,16 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 
 /obj/item/storage/box/gun/revolver/colt357/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/colt357(src)
-	new /obj/item/ammo_box/c38(src)
-	new /obj/item/ammo_box/c38(src)
+	new /obj/item/ammo_box/a357box(src)
+	new /obj/item/ammo_box/a357box(src)
 
 /obj/item/storage/box/gun/revolver/police
 	name = "police revolver case"
 
 /obj/item/storage/box/gun/revolver/police/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/police(src)
-	new /obj/item/ammo_box/c38(src)
-	new /obj/item/ammo_box/c38(src)
+	new /obj/item/ammo_box/a357box(src)
+	new /obj/item/ammo_box/a357box(src)
 
 /obj/item/storage/box/gun/revolver/m29
 	name = ".44 magnum revolver case"
@@ -895,14 +854,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 
 /obj/item/storage/box/gun/revolver/m29snub/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/m29/snub(src)
-	new /obj/item/ammo_box/m44(src)
-	new /obj/item/ammo_box/m44(src)
-
-/obj/item/storage/box/gun/revolver/revolver44
-	name = ".44 magnum single-action case"
-
-/obj/item/storage/box/gun/revolver/revolver44/PopulateContents()
-	new /obj/item/gun/ballistic/revolver/revolver44(src)
 	new /obj/item/ammo_box/m44(src)
 	new /obj/item/ammo_box/m44(src)
 
@@ -930,14 +881,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 
 /obj/item/storage/box/gun/pistol/ninemil/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/pistol/ninemil(src)
-	new /obj/item/ammo_box/magazine/m9mm/doublestack(src)
-	new /obj/item/ammo_box/magazine/m9mm/doublestack(src)
-
-/obj/item/storage/box/gun/pistol/beretta
-	name = "Beretta M9FS case"
-
-/obj/item/storage/box/gun/pistol/beretta/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/pistol/beretta(src)
 	new /obj/item/ammo_box/magazine/m9mm/doublestack(src)
 	new /obj/item/ammo_box/magazine/m9mm/doublestack(src)
 
@@ -1036,34 +979,12 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 
 /// ENERGY!
 
-/obj/item/storage/box/gun/energy
-	name = "compact rcw case"
-	w_class = WEIGHT_CLASS_NORMAL //no roundstart laser rifles rn
-
-/obj/item/storage/box/gun/energy/PopulateContents()
-	new /obj/item/gun/energy/laser/auto/worn(src)
-	new /obj/item/stock_parts/cell/ammo/ecp(src)
-
-/obj/item/storage/box/gun/energy/plasma
-	name = "plasma pistol case"
-
-/obj/item/storage/box/gun/energy/plasma/PopulateContents()
-	new /obj/item/gun/energy/laser/plasma/pistol/worn(src)
-	new /obj/item/stock_parts/cell/ammo/ec(src)
-
 /obj/item/storage/box/gun/energy/stun
 	name = "compliance regulator case"
 
 /obj/item/storage/box/gun/energy/stun/PopulateContents()
 	new /obj/item/gun/energy/laser/complianceregulator(src)
 	new /obj/item/stock_parts/cell/ammo/ec(src)
-
-/obj/item/storage/box/gun/energy/compact_rcw
-	name = "compact RCW case"
-
-/obj/item/storage/box/gun/energy/compact_rcw/PopulateContents()
-	new /obj/item/gun/energy/laser/auto(src)
-	new /obj/item/stock_parts/cell/ammo/ecp(src)
 
 /obj/item/storage/box/gun/energy/wattz1000
 	name = "wattz 1000 case"
@@ -1091,18 +1012,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 
 /// Energy Guns
 
-/datum/loadout_box/energy
-	entry_tag = "Compact RCW"
-	entry_flags = LOADOUT_FLAG_PREMIUM
-	entry_class = LOADOUT_CAT_ENERGY
-	spawn_thing = /obj/item/storage/box/gun/energy
-
-/datum/loadout_box/plasma
-	entry_tag = "Plasma Pistol"
-	entry_flags = LOADOUT_FLAG_PREMIUM
-	entry_class = LOADOUT_CAT_PREMIUM
-	spawn_thing = /obj/item/storage/box/gun/energy/plasma
-
 /datum/loadout_box/aer9
 	entry_tag = "AER-9"
 	entry_flags = LOADOUT_FLAG_PREMIUM
@@ -1121,12 +1030,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	entry_class = LOADOUT_CAT_ENERGY
 	spawn_thing = /obj/item/storage/box/gun/energy/stun
 
-/datum/loadout_box/compact_rcw
-	entry_tag = "Compact RCW"
-	entry_flags = LOADOUT_FLAG_WASTER
-	entry_class = LOADOUT_CAT_ENERGY
-	spawn_thing = /obj/item/storage/box/gun/energy/compact_rcw
-
 /datum/loadout_box/wattz1000
 	entry_tag = "Wattz 1000"
 	entry_flags = LOADOUT_FLAG_WASTER
@@ -1142,7 +1045,7 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	spawn_thing = /obj/item/storage/box/gun/premium/maria
 
 /datum/loadout_box/beretta_auto
-	entry_tag = "Beretta M93R Burstfire"
+	entry_tag = "Beretta M9 Burstfire"
 	entry_flags = LOADOUT_FLAG_PREMIUM
 	entry_class = LOADOUT_CAT_PREMIUM
 	spawn_thing = /obj/item/storage/box/gun/premium/automatic
@@ -1170,12 +1073,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	entry_flags = LOADOUT_FLAG_PREMIUM
 	entry_class = LOADOUT_CAT_PREMIUM
 	spawn_thing = /obj/item/storage/box/gun/premium/custom
-
-/datum/loadout_box/mateba
-	entry_tag = "Unica 6"
-	entry_flags = LOADOUT_FLAG_PREMIUM
-	entry_class = LOADOUT_CAT_PREMIUM
-	spawn_thing = /obj/item/storage/box/gun/premium/mateba
 
 /datum/loadout_box/lucky
 	entry_tag = "Lucky Revolver"
@@ -1220,12 +1117,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	entry_flags = LOADOUT_FLAG_LAWMAN
 	entry_class = LOADOUT_CAT_LAWMAN
 	spawn_thing = /obj/item/storage/box/gun/law/smg10mm
-
-/datum/loadout_box/commando
-	entry_tag = "Commando Carbine"
-	entry_flags = LOADOUT_FLAG_LAWMAN
-	entry_class = LOADOUT_CAT_LAWMAN
-	spawn_thing = /obj/item/storage/box/gun/law/commando
 
 /datum/loadout_box/combat
 	entry_tag = "Combat Carbine"
@@ -1289,12 +1180,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	entry_class = LOADOUT_CAT_LONGGUN
 	spawn_thing = /obj/item/storage/box/gun/rifle/smg22
 
-/datum/loadout_box/sidewinder
-	entry_tag = "Multicaliber Carbine"
-	entry_flags = LOADOUT_FLAG_WASTER
-	entry_class = LOADOUT_CAT_LONGGUN
-	spawn_thing = /obj/item/storage/box/gun/rifle/sidewinder
-
 /* /datum/loadout_box/sidewinder_magnum
 	entry_tag = "Multicaliber Magnum"
 	entry_flags = LOADOUT_FLAG_WASTER
@@ -1306,12 +1191,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	entry_flags = LOADOUT_FLAG_WASTER
 	entry_class = LOADOUT_CAT_LONGGUN
 	spawn_thing = /obj/item/storage/box/gun/rifle/m1carbine
-
-/datum/loadout_box/delisle
-	entry_tag = "Delisle Carbine"
-	entry_flags = LOADOUT_FLAG_WASTER
-	entry_class = LOADOUT_CAT_LONGGUN
-	spawn_thing = /obj/item/storage/box/gun/rifle/delisle
 
 /datum/loadout_box/sportcarbine
 	entry_tag = "Sport Carbine"
@@ -1390,7 +1269,7 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 /// Revolvers!
 
 /datum/loadout_box/detective
-	entry_tag = ".22 Detective Special"
+	entry_tag = ".22 Gambler Special"
 	entry_flags = LOADOUT_FLAG_WASTER
 	entry_class = LOADOUT_CAT_REVOLVER
 	spawn_thing = /obj/item/storage/box/gun/revolver
@@ -1425,12 +1304,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	entry_class = LOADOUT_CAT_REVOLVER
 	spawn_thing = /obj/item/storage/box/gun/revolver/m29snub
 
-/datum/loadout_box/revolver44
-	entry_tag = ".44 Single-Action Revolver"
-	entry_flags = LOADOUT_FLAG_WASTER 
-	entry_class = LOADOUT_CAT_REVOLVER
-	spawn_thing = /obj/item/storage/box/gun/revolver/revolver44
-
 /datum/loadout_box/thatgun //thotgun
 	entry_tag = ".308 Revolver"
 	entry_flags = LOADOUT_FLAG_WASTER
@@ -1450,12 +1323,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	entry_flags = LOADOUT_FLAG_WASTER
 	entry_class = LOADOUT_CAT_PISTOL
 	spawn_thing = /obj/item/storage/box/gun/pistol/ninemil
-
-/datum/loadout_box/beretta
-	entry_tag = "Beretta M9FS"
-	entry_flags = LOADOUT_FLAG_WASTER
-	entry_class = LOADOUT_CAT_PISTOL
-	spawn_thing = /obj/item/storage/box/gun/pistol/beretta
 
 /datum/loadout_box/n99
 	entry_tag = "10mm Pistol"

@@ -251,35 +251,6 @@
 	new /obj/item/flashlight/lantern(src)
 	new /obj/item/toy/plush/mammal/fox/squishfox(src)
 
-/datum/gear/donator/kits/brimcon
-	name = "Gift from Claws"
-	path = /obj/item/storage/box/large/custom_kit/brimcon
-	ckeywhitelist = list("brimcon")
-
-/obj/item/storage/box/large/custom_kit/brimcon/PopulateContents()
-	new /obj/item/clothing/suit/armor/light/tribal/cloak(src)
-	new /obj/item/gun/ballistic/automatic/combat/worn/brim(src)
-
-/datum/gear/donator/kits/bwoincognito
-	name = "Tasald's Kit"
-	path = /obj/item/storage/box/large/custom_kit/bwoincognito
-	ckeywhitelist = list("bwoincognito")
-
-/obj/item/storage/box/large/custom_kit/bwoincognito/PopulateContents()
-	new /obj/item/clothing/head/helmet/f13/brahmincowboyhat(src)
-	new /obj/item/clothing/under/f13/ranger/modif_ranger(src)
-	new /obj/item/clothing/shoes/combat(src)
-	new /obj/item/melee/onehanded/knife/trench(src)
-	new /obj/item/shovel/trench(src)
-	new /obj/item/storage/belt/legholster(src)
-	new /obj/item/gun/ballistic/revolver/revolver45/gunslinger(src)
-	new /obj/item/tool_upgrade/refinement/ported_barrel(src)
-	new /obj/item/ammo_box/a45lcrev(src)
-	new /obj/item/ammo_box/a45lcrev(src)
-	new /obj/item/ammo_box/a45lcbox(src)
-	new /obj/item/lighter/fusion(src)
-	new /obj/item/book/granter/crafting_recipe/poultice(src)
-
 // C
 
 /datum/gear/donator/kits/caseapollo58143
@@ -309,18 +280,6 @@
 	new /obj/item/clothing/shoes/russian(src)
 	new /obj/item/clothing/under/syndicate/rus_army(src)
 
-/datum/gear/donator/kits/cavusogluzevk
-	name = "Raider Kit"
-	path = /obj/item/storage/box/large/custom_kit/cavusogluzevk
-	ckeywhitelist = list("cavusogluzevk")
-
-/obj/item/storage/box/large/custom_kit/cavusogluzevk/PopulateContents()
-	new /obj/item/storage/belt/military/alt(src)
-	new /obj/item/melee/onehanded/knife/trench(src)
-	new /obj/item/melee/unarmed/brass/spiked(src)
-	new /obj/item/clothing/suit/armor/light/raider/painspike(src)
-	new /obj/item/gun/ballistic/automatic/pistol/sig/worn(src)
-
 /datum/gear/donator/kits/cavusogluzevk2
 	name = "B.O.S Loadout"
 	path = /obj/item/storage/box/large/custom_kit/cavusogluzevk2
@@ -334,19 +293,6 @@
 	new /obj/item/melee/onehanded/knife/survival(src)
 
 // D
-
-/datum/gear/donator/kits/dameonowen
-	name = "Dragon Stash"
-	path = /obj/item/storage/box/large/custom_kit/dameonowen
-	ckeywhitelist = list("dameonowen")
-
-/obj/item/storage/box/large/custom_kit/dameonowen/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/pistol/sig/trusty(src)
-	new /obj/item/ammo_box/magazine/m45/rubber(src)
-	new /obj/item/ammo_box/magazine/m45/rubber(src)
-	new /obj/item/ammo_box/c45/rubber(src)
-	new /obj/item/storage/belt/legholster(src)
-	new /obj/item/gun/ballistic/automatic/marksman/worn(src)
 
 /datum/gear/donator/kits/darknova92
 	name = "Nikolatz BoS"
@@ -413,15 +359,6 @@
 	new /obj/item/clothing/suit/armor/light/kit/plates(src)
 	new /obj/item/tool_upgrade/productivity/ergonomic_grip(src)
 
-/datum/gear/donator/kits/ferisramsay3
-	name = "Maddy's Loadout"
-	path = /obj/item/storage/box/large/custom_kit/ferisramsay3
-	ckeywhitelist = list("ferisramsay")
-
-/obj/item/storage/box/large/custom_kit/ferisramsay3/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/pistol/sig/worn(src)
-	new /obj/item/gun/ballistic/automatic/pistol/sig/worn(src)
-
 /datum/gear/donator/kits/fireclaw787
 	name = "Jade's Loadout"
 	path = /obj/item/storage/box/large/custom_kit/fireclaw787
@@ -439,21 +376,6 @@
 	new /obj/item/storage/pill_bottle/breast_enlarger(src)
 	new /obj/item/storage/pill_bottle/breast_enlarger(src)
 	new /obj/item/storage/pill_bottle/breast_enlarger(src)
-
-/datum/gear/donator/kits/fuzlet
-	name = "fuzzy supply box"
-	path = /obj/item/storage/box/large/custom_kit/fuzlet
-	ckeywhitelist = list("fuzlet", "superlagg")
-
-/obj/item/storage/box/large/custom_kit/fuzlet/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/pistol/sig/blackkite(src)
-	new /obj/item/gun/ballistic/automatic/pistol/sig/blackkite(src)
-	new /obj/item/card/fuzzy_license(src)
-	new /obj/item/toy/crayon/orange(src)
-	new /obj/item/geiger_counter(src)
-	new /obj/item/toy/plush/mammal/wolf/blue(src)
-	new /obj/item/toy/plush/mammal/fox/fuzzy(src)
-	new /obj/item/stack/marker_beacon/thirty(src)
 
 /datum/gear/donator/kits/fuzlet2
 	name = "Scavfox Kit"
@@ -546,23 +468,6 @@
 	new /obj/item/binoculars(src)
 	new /obj/item/shovel/trench(src)
 
-/datum/gear/donator/kits/jackson1112_2
-	name = "SAS Kit"
-	path = /obj/item/storage/box/large/custom_kit/jackson1112_2
-	ckeywhitelist = list("jackson1112")
-
-/obj/item/storage/box/large/custom_kit/jackson1112_2/PopulateContents()
-	new /obj/item/storage/belt/army(src)
-	new /obj/item/gun/ballistic/rifle/enfield(src)
-	new /obj/item/ammo_box/a308(src)
-	new /obj/item/ammo_box/a308(src)
-	new /obj/item/gun/ballistic/automatic/pistol/beretta(src)
-	new /obj/item/ammo_box/magazine/m9mm/doublestack(src)
-	new /obj/item/flashlight/seclite(src)
-	new /obj/item/clothing/under/syndicate/camo(src)
-	new /obj/item/gun_upgrade/muzzle/silencer(src)
-	new /obj/item/radio(src)
-
 // K
 // L
 
@@ -575,18 +480,6 @@
 	new /obj/item/melee/smith/hammer(src)
 	new /obj/item/clothing/head/helmet/f13/legion/orator(src)
 	new /obj/item/flashlight/lantern(src)
-
-/datum/gear/donator/kits/lucine
-	name = "Earlong Travel Supplies"
-	path = /obj/item/storage/box/large/custom_kit/lucine
-	ckeywhitelist = list("lucine")
-
-/obj/item/storage/box/large/custom_kit/lucine/PopulateContents()
-	new /obj/item/gun/energy/laser/freeblade(src)
-	new /obj/item/gun/energy/laser/freeblade(src)
-	new /obj/item/stock_parts/cell/ammo/ec(src)
-	new /obj/item/stock_parts/cell/ammo/ec(src)
-	new /obj/item/clothing/gloves/ring/plasma/lucine(src)
 
 // M
 
@@ -664,14 +557,6 @@
 	new /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/tribal/junk(src)
 	new /obj/item/twohanded/sledgehammer/simple(src)
 
-/datum/gear/donator/kits/pipes_wildin
-	name = "Teyla's Kit"
-	path = /obj/item/storage/box/large/custom_kit/pipes_wildin
-	ckeywhitelist = list("pipes_wildin")
-
-/obj/item/storage/box/large/custom_kit/pipes_wildin/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/combat/worn(src)
-
 /datum/gear/donator/kits/pipes_wildin2
 	name = "Zimnt's Kit"
 	path = /obj/item/storage/box/large/custom_kit/pipes_wildin2
@@ -679,14 +564,6 @@
 
 /obj/item/storage/box/large/custom_kit/pipes_wildin2/PopulateContents()
 	new /obj/item/stealthboy(src)
-
-/datum/gear/donator/kits/pixelexip2
-	name = "Hypocritical Oath Kit"
-	path = /obj/item/storage/box/large/custom_kit/pixelexip2
-	ckeywhitelist = list("pixelexip")
-
-/obj/item/storage/box/large/custom_kit/pixelexip2/PopulateContents()
-	new /obj/item/gun/ballistic/rifle/hunting/special(src)
 
 /datum/gear/donator/kits/planetary
 	name = "Collector"
@@ -699,16 +576,6 @@
 	new /obj/item/clothing/suit/armor/harpercoat(src)
 	new /obj/item/gun/ballistic/automatic/pistol/n99/crusader(src)
 	new /obj/item/toy/plush/mammal/fox(src)
-
-/datum/gear/donator/kits/planetary2
-	name = "Replica"
-	path = /obj/item/storage/box/large/custom_kit/planetary2
-	ckeywhitelist = list("planetary")
-
-/obj/item/storage/box/large/custom_kit/planetary2/PopulateContents()
-	new /obj/item/clothing/suit/armor/heavy/riot/eliteweak(src)
-	new /obj/item/clothing/head/helmet/f13/ncr/rangercombat/eliteriotweak(src)
-	new /obj/item/gun/ballistic/revolver/revolver44/desert_ranger(src)
 
 // Q
 // R
@@ -824,17 +691,6 @@
 	new /obj/item/melee/onehanded/knife/bowie(src)
 	new /obj/item/clothing/head/helmet/f13/marlowhat(src)
 
-/datum/gear/donator/kits/sloaff2
-	name = "Danger Doggo Kit"
-	path = /obj/item/storage/box/large/custom_kit/sloaff2
-	ckeywhitelist = list("sloaff")
-
-/obj/item/storage/box/large/custom_kit/sloaff2/PopulateContents()
-	new /obj/item/clothing/mask/surgical/sloaff(src)
-	new /obj/item/lighter/fusion(src)
-	new /obj/item/reagent_containers/pill/patch/jet(src)
-	new /obj/item/gun/energy/laser/badlands/worn(src)
-
 /datum/gear/donator/kits/sloaff3
 	name = "Sloan's Food Pack"
 	path = /obj/item/storage/box/large/custom_kit/sloaff3
@@ -850,33 +706,6 @@
 	name = "Shocome's relic cross"
 	path = /obj/item/nullrod/rosary/keep_as_is
 	ckeywhitelist = list("soulwinter446")
-
-/datum/gear/donator/kits/superlagg
-	name = "Bigfox Kit"
-	path = /obj/item/storage/box/large/custom_kit/superlagg
-	ckeywhitelist = list("superlagg")
-
-/obj/item/storage/box/large/custom_kit/superlagg/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/varmint/extended(src)
-	new /obj/item/ammo_box/magazine/m556/rifle(src)
-	new /obj/item/gun/ballistic/revolver/revolver44(src)
-	new /obj/item/ammo_box/m44(src)
-	new /obj/item/ammo_box/m44(src)
-	new /obj/item/melee/onehanded/knife/switchblade(src)
-	new /obj/item/toy/plush/mammal/fox/squishfox(src)
-
-/datum/gear/donator/kits/superlagg2
-	name = "Danny Kit"
-	path = /obj/item/storage/box/large/custom_kit/superlagg2
-	ckeywhitelist = list("superlagg")
-
-/obj/item/storage/box/large/custom_kit/superlagg2/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/smg/sidewinder(src)
-	new /obj/item/ammo_box/magazine/uzim9mm/rockwell/empty(src)
-	new /obj/item/ammo_box/magazine/cg45/empty(src)
-	new /obj/item/ammo_box/magazine/tommygunm45/stick/empty(src)
-	new /obj/item/melee/onehanded/knife/switchblade(src)
-	new /obj/item/toy/plush/mammal/fox/squishfox(src)
 
 /datum/gear/donator/kits/swirlby
 	name = "Tribal Kit"
@@ -900,25 +729,6 @@
 	new /obj/item/clothing/suit/hooded/outcast(src)
 	new /obj/item/gun/ballistic/automatic/pistol/ninemil/maria(src)
 	new /obj/item/gun/ballistic/automatic/pistol/n99/crusader/thingpony(src)
-
-/datum/gear/donator/kits/tk420634
-	name = "Casey's 'Business' Bundle"
-	path = /obj/item/storage/box/large/custom_kit/tk420634
-	ckeywhitelist = list("tk420634")
-
-/obj/item/storage/box/large/custom_kit/tk420634/PopulateContents()
-	new /obj/item/clothing/head/beret/sec/navyofficer(src)
-	new /obj/item/clothing/suit/armor/light/leather(src)
-	new /obj/item/melee/onehanded/knife/trench(src)
-	new /obj/item/gun/ballistic/automatic/varmint/bushmaster_arm_gun(src)
-	new /obj/item/ammo_box/a556/sport/improvised(src)
-	new /obj/item/ammo_box/a556/sport/improvised(src)
-	new /obj/item/ammo_box/magazine/m556/rifle(src)
-	new /obj/item/reagent_containers/food/snacks/grown/poppy/lily(src)
-	new /obj/item/binoculars(src)
-	new /obj/item/gun_upgrade/barrel/forged(src)
-	new /obj/item/tool_upgrade/refinement/stabilized_grip(src)
-	new /obj/item/gun/ballistic/revolver/thatgun(src)
 
 /datum/gear/donator/kits/tk420634_2
 	name = "Catgirl Kit"

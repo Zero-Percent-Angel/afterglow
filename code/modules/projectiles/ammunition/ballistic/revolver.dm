@@ -33,47 +33,6 @@
 		/datum/material/blackpowder = MATS_PISTOL_HEAVY_POWDER * MATS_AMMO_POWDER_HANDLOAD_MULT)
 	fire_power = CASING_POWER_HEAVY_PISTOL * CASING_POWER_MOD_HANDLOAD
 
-
-// .38 special
-/obj/item/ammo_casing/c38
-	name = ".38 special bullet casing"
-	desc = "A .38 special bullet casing."
-	caliber = CALIBER_38
-	projectile_type = /obj/item/projectile/bullet/c38
-	material_class = BULLET_IS_MEDIUM_PISTOL
-	custom_materials = list(
-		/datum/material/iron = MATS_PISTOL_MEDIUM_CASING + MATS_PISTOL_MEDIUM_BULLET,
-		/datum/material/blackpowder = MATS_PISTOL_MEDIUM_POWDER)
-	fire_power = CASING_POWER_LIGHT_PISTOL * CASING_POWER_MOD_HANDLOAD
-
-/obj/item/ammo_casing/c38/improvised
-	name = "shoddy .38 special bullet casing"
-	desc = "A homemade .38 bullet casing."
-	projectile_type = /obj/item/projectile/bullet/c38/improvised
-	material_class = BULLET_IS_MEDIUM_PISTOL
-	casing_quality = BULLET_IS_HANDLOAD
-	custom_materials = list(
-		/datum/material/iron = (MATS_PISTOL_MEDIUM_CASING * MATS_AMMO_CASING_HANDLOAD_MULT) + (MATS_PISTOL_MEDIUM_BULLET * MATS_AMMO_BULLET_HANDLOAD_MULT),
-		/datum/material/blackpowder = MATS_PISTOL_MEDIUM_POWDER * MATS_AMMO_POWDER_HANDLOAD_MULT)
-	fire_power = CASING_POWER_LIGHT_PISTOL * CASING_POWER_MOD_HANDLOAD
-
-/obj/item/ammo_casing/c38/rubber
-	name = ".38 special rubber bullet casing"
-	desc = "A .38 special rubber bullet casing. Some might call these useless, up until they're hit by em."
-	projectile_type = /obj/item/projectile/bullet/c38/rubber
-	material_class = BULLET_IS_MEDIUM_PISTOL
-	casing_quality = BULLET_IS_RUBBER
-	custom_materials = list(
-		/datum/material/iron = (MATS_PISTOL_MEDIUM_CASING * MATS_AMMO_CASING_HANDLOAD_MULT) + (MATS_PISTOL_MEDIUM_BULLET * MATS_AMMO_BULLET_HANDLOAD_MULT),
-		/datum/material/blackpowder = MATS_PISTOL_MEDIUM_POWDER * MATS_AMMO_POWDER_HANDLOAD_MULT)
-	fire_power = CASING_POWER_LIGHT_PISTOL * CASING_POWER_MOD_HANDLOAD
-
-/obj/item/ammo_casing/c38/incendiary
-	name = ".38 special incendiary bullet casing"
-	desc = "A .38 special incendiary bullet casing. For when you want to be slightly less useless."
-	projectile_type = /obj/item/projectile/bullet/c38/incendiary
-	fire_power = CASING_POWER_LIGHT_PISTOL * CASING_POWER_MOD_HANDLOAD
-
 // .44 magnum
 /obj/item/ammo_casing/m44
 	name = ".44 magnum FMJ bullet casing"
@@ -157,28 +116,3 @@
 		/datum/material/iron = (MATS_RIFLE_HEAVY_CASING * MATS_AMMO_CASING_HANDLOAD_MULT) + (MATS_RIFLE_HEAVY_BULLET * MATS_AMMO_BULLET_HANDLOAD_MULT),
 		/datum/material/blackpowder = MATS_RIFLE_HEAVY_POWDER * MATS_AMMO_POWDER_HANDLOAD_MULT)
 	fire_power = CASING_POWER_HEAVY_RIFLE * CASING_POWER_MOD_MATCH
-
-//.45 Long Colt bouncing
-/obj/item/ammo_casing/a45lc
-	name = ".45 Long Colt bullet casing"
-	desc = "An archaic .45 long colt bullet casing."
-	caliber = CALIBER_45LC
-	projectile_type = /obj/item/projectile/bullet/a45lc
-	material_class = BULLET_IS_MEDIUM_PISTOL
-	custom_materials = list(
-		/datum/material/iron = MATS_PISTOL_MEDIUM_CASING + MATS_PISTOL_MEDIUM_BULLET,
-		/datum/material/blackpowder = MATS_PISTOL_MEDIUM_POWDER)
-	fire_power = CASING_POWER_HEAVY_PISTOL * CASING_POWER_MOD_MATCH
-
-/obj/item/ammo_casing/a45lc/improvised
-	name = "shoddy .45 LC bullet casing"
-	desc = "An archaic .45 long colt bullet casing. Now about 25% worse."
-	caliber = CALIBER_45LC
-	projectile_type = /obj/item/projectile/bullet/a45lc/improvised
-	material_class = BULLET_IS_MEDIUM_PISTOL
-	casing_quality = BULLET_IS_HANDLOAD
-	custom_materials = list(
-		/datum/material/iron = (MATS_PISTOL_MEDIUM_CASING * MATS_AMMO_CASING_HANDLOAD_MULT) + (MATS_PISTOL_MEDIUM_BULLET * MATS_AMMO_BULLET_HANDLOAD_MULT),
-		/datum/material/blackpowder = MATS_PISTOL_MEDIUM_POWDER * MATS_AMMO_POWDER_HANDLOAD_MULT)
-	fire_power = CASING_POWER_HEAVY_PISTOL * CASING_POWER_MOD_SURPLUS
-

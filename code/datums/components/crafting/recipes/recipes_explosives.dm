@@ -5,6 +5,7 @@
 	reqs = list(/datum/reagent/blackpowder = 50)
 	category = CAT_EXPLOSIVE
 	skill_needed = SKILL_SCIENCE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/explosive/explosive_collar
 	name = "Explosive Collar"

@@ -1,7 +1,7 @@
 /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	name = "detective revolver cylinder"
-	ammo_type = /obj/item/ammo_casing/c38
-	caliber = list(CALIBER_38)
+	ammo_type = /obj/item/ammo_casing/a357
+	caliber = list(CALIBER_357)
 	max_ammo = 6
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev22
@@ -13,14 +13,14 @@
 /obj/item/ammo_box/magazine/internal/cylinder/rus357
 	name = "\improper Russian revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/a357
-	caliber = list(CALIBER_357, CALIBER_38)
+	caliber = list(CALIBER_357)
 	max_ammo = 6
 	multiload = 0
 
 /obj/item/ammo_box/magazine/internal/cylinder/lucky37
 	name = "\improper Lucky 37 cylinder"
 	ammo_type = /obj/item/ammo_casing/a357
-	caliber = list(CALIBER_357, CALIBER_38)
+	caliber = list(CALIBER_357)
 	max_ammo = 6
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev6520
@@ -126,7 +126,7 @@
 /obj/item/ammo_box/magazine/internal/cylinder/rev357
 	name = "357 magnum cylinder"
 	ammo_type = /obj/item/ammo_casing/a357
-	caliber = list(CALIBER_357, CALIBER_38)
+	caliber = list(CALIBER_357)
 	max_ammo = 6
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev45
@@ -134,12 +134,6 @@
 	ammo_type = /obj/item/ammo_casing/c45
 	caliber = list(CALIBER_45ACP)
 	max_ammo = 7
-
-/obj/item/ammo_box/magazine/internal/cylinder/rev45/gunslinger
-	name = ".45 LC revolver cylinder"
-	ammo_type = /obj/item/ammo_casing/a45lc
-	caliber = list(CALIBER_45LC)
-	max_ammo = 6
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev308
 	name = ".308 Sporting Revolver Cylinder"

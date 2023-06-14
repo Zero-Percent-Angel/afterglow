@@ -194,7 +194,6 @@ GLOBAL_LIST_INIT(trash_ammo, list(
 	/obj/item/ammo_box/c10mm/improvised = 5,
 	/obj/item/ammo_box/c9mm/improvised = 5,
 	/obj/item/ammo_casing/shotgun/improvised = 1,
-	/obj/item/ammo_box/c38box/improvised = 3,
 	/obj/item/ammo_box/m44box/improvised = 1,
 	/obj/item/ammo_box/c45/improvised = 5,
 	/obj/item/ammo_box/m14mm/improvised = 1,
@@ -223,7 +222,7 @@ GLOBAL_LIST_INIT(trash_craft, list(
 
 GLOBAL_LIST_INIT(trash_gun, list(
 	/obj/item/gun/ballistic/automatic/hobo/zipgun = 2,
-	/obj/item/gun/ballistic/revolver/shotpistol = 1,
+	/obj/item/gun/ballistic/revolver/single_shotgun = 1,
 	/obj/item/gun/ballistic/revolver/hobo/pepperbox = 2,
 	/obj/item/gun/ballistic/automatic/varmint = 1,
 	/obj/item/gun/ballistic/automatic/sportcarbine = 1,
@@ -526,7 +525,6 @@ GLOBAL_LIST_INIT(loot_t1_range, list(
 	/obj/item/gun/ballistic/rifle/mosin,
 	/obj/item/ammo_box/a762,
 	/obj/item/gun/ballistic/revolver/police,
-	/obj/item/ammo_box/c38,
 	/obj/item/gun/ballistic/revolver/hobo/pepperbox,
 	/obj/item/gun/ballistic/rifle/hunting,
 	/obj/item/ammo_box/a308,
@@ -555,17 +553,13 @@ GLOBAL_LIST_INIT(loot_t2_range, list(
 	/obj/item/ammo_box/a308,
 	/obj/item/ammo_box/m44,
 	/obj/item/gun/ballistic/rifle/repeater/cowboy,
-	/obj/item/ammo_box/c38,
-	/obj/item/ammo_box/c38,
 	/obj/item/gun/ballistic/revolver/colt357,
-	/obj/item/ammo_box/c38,
 	/obj/item/gun/ballistic/automatic/service,
 	/obj/item/ammo_box/magazine/m556/rifle,
 	/obj/item/gun/energy/laser/pistol,
 	/obj/item/stock_parts/cell/ammo/ec,
 	/obj/item/gun/ballistic/automatic/m1carbine,
 	/obj/item/ammo_box/magazine/m10mm/adv/simple,
-	/obj/item/gun/ballistic/automatic/delisle,
 	/obj/item/ammo_box/magazine/m9mm/doublestack
 ))
 
@@ -646,7 +640,6 @@ GLOBAL_LIST_INIT(loot_t1_ammo, list(
 	/obj/item/ammo_box/magazine/m9mm,
 	/obj/item/ammo_box/shotgun/buck,
 	/obj/item/ammo_box/shotgun/bean,
-	/obj/item/ammo_box/c38,
 	/obj/item/ammo_box/magazine/m10mm/adv/simple,
 	/obj/item/ammo_box/magazine/m556/rifle/small
 ))
@@ -657,7 +650,6 @@ GLOBAL_LIST_INIT(loot_t2_ammo, list(
 	/obj/item/ammo_box/a308,
 	/obj/item/ammo_box/magazine/m10mm/adv/simple,
 	/obj/item/ammo_box/magazine/m556/rifle,
-	/obj/item/ammo_box/c38,
 	/obj/item/ammo_box/magazine/m9mm,
 	/obj/item/ammo_box/m44,
 	/obj/item/ammo_box/tube/a357,
