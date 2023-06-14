@@ -40,6 +40,22 @@
 	else
 		. += span_notice("Alt-click to enable renaming mode!")
 
+/obj/item/pen/AltClick(mob/user)
+	if(!naming)
+		naming = TRUE
+		w_class = WEIGHT_CLASS_GIGANTIC
+		sharpness = SHARP_NONE
+		to_chat(usr, "<span class='notice'>You firmly grip the pen in preparation to rename something.</span>")
+		playsound(src, 'sound/machines/button2.ogg', 100, 1)
+		return
+	if(naming)
+		naming = FALSE
+		w_class = WEIGHT_CLASS_TINY
+		sharpness = SHARP_POINTY
+		to_chat(usr, "<span class='notice'>You reset the grip on the pen</span>")
+		playsound(src, 'sound/machines/button2.ogg', 100, 1)
+		return
+
 /obj/item/pen/suicide_act(mob/user)
 	user.visible_message(span_suicide("[user] is scribbling numbers all over [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit sudoku..."))
 	return(BRUTELOSS)
