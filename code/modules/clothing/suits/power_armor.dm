@@ -333,18 +333,6 @@
 	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
 
-/obj/item/clothing/suit/armor/power_armor/t45d/knightcaptain
-	name = "Head-Knight's T-45d Power Armour"
-	desc = "A classic set of T-45d Power Armour only to be used in armed combat, it signifies the Head Knight and their place in the Brotherhood. A leader, and a beacon of structure in a place where chaos reigns. All must rally to his call, for he is the Head Knight and your safety is his duty."
-	icon_state = "t45dkc"
-	item_state = "t45dkc"
-
-/obj/item/clothing/suit/armor/power_armor/t45d/bos
-	name = "Brotherhood T-45d Power Armour"
-	desc = "A suit of T-45d Power Armour adorned with the markings of the Brotherhood of Steel. Commonly used by the Paladins of the Brotherhood."
-	icon_state = "t45dpowerarmor_bos"
-	item_state = "t45dpowerarmor_bos"
-
 /obj/item/clothing/suit/armor/power_armor/t51b
 	name = "T-51b power armor"
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
@@ -359,13 +347,6 @@
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. It's plates have been chemially treated to be stronger."
 	icon_state = "t51green"
 	item_state = "t51green"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
-
-/obj/item/clothing/suit/armor/power_armor/t51b/bos
-	name = "Brotherhood T-51b Power Armour"
-	desc = "The pinnacle of pre-war technology, appropriated by the Brotherhood of Steel. Commonly worn by Head Paladins."
-	icon_state = "t51bpowerarmor_bos"
-	item_state = "t51bpowerarmor_bos"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/power_armor/excavator

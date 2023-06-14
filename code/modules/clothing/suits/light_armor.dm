@@ -139,30 +139,6 @@
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2)
 
-/obj/item/clothing/suit/hooded/cloak/drake //SS13 item, obviously
-	name = "drake armour"
-	desc = "A suit of armour fashioned from the remains of an ash drake."
-	icon_state = "dragon"
-	hoodtype = /obj/item/clothing/head/hooded/cloakhood/drake
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	// body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
-	resistance_flags = FIRE_PROOF | ACID_PROOF
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor = ARMOR_VALUE_MEDIUM
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_DT_T2)
-
-/obj/item/clothing/head/hooded/cloakhood/drake
-	name = "drake helm"
-	desc = "The skull of a dragon."
-	icon_state = "dragon"
-	heat_protection = HEAD
-	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
-	resistance_flags = FIRE_PROOF | ACID_PROOF
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor = ARMOR_VALUE_MEDIUM
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_DT_T2)
-
 /obj/item/clothing/suit/hooded/cloak/hhunter
 	name = "Razorclaw armour"
 	desc = "A suit of armour fashioned out of the remains of a legendary deathclaw."
@@ -211,7 +187,7 @@
 
 /obj/item/clothing/suit/hooded/cloak/deathclaw
 	name = "deathclaw cloak"
-	icon_state = "deathclaw"
+	icon_state = "desertcloak"
 	desc = "Made from the sinew and skin of the fearsome deathclaw, this cloak will shield its wearer from harm."
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/deathclaw
 	// body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -222,47 +198,12 @@
 
 /obj/item/clothing/head/hooded/cloakhood/deathclaw
 	name = "deathclaw cloak hood"
-	icon_state = "hood_deathclaw"
+	icon_state = "hood_desertcloak"
 	desc = "A protective and concealing hood."
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
-
-/obj/item/clothing/suit/hooded/cloak/razorclaw
-	name = "razorclaw cloak"
-	icon_state = "razorclaw"
-	desc = "A suit of armour fashioned out of the remains of a legendary deathclaw."
-	hoodtype = /obj/item/clothing/head/hooded/cloakhood/razorclaw
-	heat_protection = CHEST|GROIN|LEGS|ARMS|HANDS
-	// body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
-	resistance_flags = FIRE_PROOF | ACID_PROOF
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor = ARMOR_VALUE_MEDIUM
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
-	body_parts_hidden = 0
-
-/obj/item/clothing/head/hooded/cloakhood/razorclaw
-	name = "razorclaw helm"
-	icon_state = "helmet_razorclaw"
-	desc = "The skull of a legendary deathclaw."
-	heat_protection = HEAD
-	resistance_flags = FIRE_PROOF | ACID_PROOF
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor = ARMOR_VALUE_MEDIUM
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
-
-/obj/item/clothing/suit/hooded/cloak/desert
-	name = "desert cloak"
-	icon_state = "desertcloak"
-	desc = "A practical cloak made out of animal hide."
-	hoodtype = /obj/item/clothing/head/hooded/cloakhood/desert
-
-/obj/item/clothing/head/hooded/cloakhood/desert
-	name = "desert cloak hood"
-	icon_state = "desertcloak"
-	desc = "A protective and concealing hood."
-	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
 
 /obj/item/clothing/suit/hooded/cloak/desert/raven_cloak
 	name = "Raven cloak"
@@ -276,55 +217,6 @@
 	desc = "A hood fashioned out of patchwork and feathers"
 	icon_state = "raven_hood"
 	item_state = "raven_hood"
-
-/obj/item/clothing/suit/hooded/outcast
-	name = "patched heavy leather cloak"
-	desc = "A robust cloak made from layered gecko skin patched with various bits of leather from dogs and other animals, able to absorb more force than one would expect from leather."
-	icon_state = "cloak_outcast"
-	item_state = "cloak_outcast"
-	hoodtype = /obj/item/clothing/head/hooded/cloakhood/outcast
-	// body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor = ARMOR_VALUE_LIGHT
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
-	body_parts_hidden = 0
-
-/obj/item/clothing/head/hooded/cloakhood/outcast
-	name = "patched leather hood"
-	desc = "Thick layered leather, patched together."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	icon_state = "hood_tribaloutcast"
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	item_state = "hood_tribaloutcast"
-	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
-	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor = ARMOR_VALUE_LIGHT
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
-
-/obj/item/clothing/suit/hooded/outcast/tribal
-	name = "patched heavy leather cloak"
-	desc = "A robust cloak made from layered gecko skin patched with various bits of leather from dogs and other animals, able to absorb more force than one would expect from leather."
-	icon_state = "cloak_outcast"
-	item_state = "cloak_outcast"
-	strip_delay = 40
-	hoodtype = /obj/item/clothing/head/hooded/cloakhood/tribaloutcast
-	// body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor = ARMOR_VALUE_LIGHT
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
-	body_parts_hidden = 0
-
-/obj/item/clothing/head/hooded/cloakhood/tribaloutcast
-	name = "patched leather hood"
-	desc = "Thick layered leather, patched together."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	icon_state = "hood_tribaloutcast"
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	item_state = "hood_tribaloutcast"
-	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
-	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor = ARMOR_VALUE_LIGHT
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 //////////////////
 // LIGHT RAIDER //
@@ -350,13 +242,6 @@
 	icon_state = "badlands"
 	item_state = "badlands"
 	body_parts_hidden = ARMS
-
-/obj/item/clothing/suit/armor/light/raider/tribalraider
-	name = "tribal raider wear"
-	desc = "Very worn bits of clothing and armor in a style favored by many tribes."
-	icon_state = "tribal_outcast"
-	item_state = "tribal_outcast"
-	body_parts_hidden = ARMS | GROIN
 
 /obj/item/clothing/suit/armor/light/raider/leather
 	name = "punk raider jacket"
@@ -407,8 +292,8 @@
 /obj/item/clothing/suit/armor/light/duster/brahmin
 	name = "brahmin leather duster"
 	desc = "A duster made from tanned brahmin hide. It has a thick waxy surface from the processing, making it surprisingly laser resistant."
-	icon_state = "duster"
-	item_state = "duster"
+	icon_state = "duster_brahmin"
+	item_state = "duster_brahmin"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/light/duster/desperado
@@ -481,8 +366,8 @@
 /obj/item/clothing/suit/armor/light/leather/leathersuit
 	name = "leather suit"
 	desc = "Comfortable suit of tanned leather leaving one arm mostly bare. Keeps you warm and cozy."
-	icon_state = "leather_suit"
-	item_state = "leather_suit"
+	icon_state = "combat_jacket"
+	item_state = "combat_jacket"
 	flags_inv = HIDEJUMPSUIT
 	cold_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 0.9
@@ -491,8 +376,8 @@
 /obj/item/clothing/suit/armor/light/leather/leathercoat
 	name = "thick leather coat"
 	desc = "Reinforced leather jacket with a overcoat. Well insulated, creaks a lot while moving."
-	icon_state = "leather_coat_fighter"
-	item_state = "leather_coat_fighter"
+	icon_state = "leatherarmor"
+	item_state = "leatherarmor"
 	siemens_coefficient = 0.8
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
 	body_parts_hidden = ARMS | CHEST
@@ -500,8 +385,8 @@
 /obj/item/clothing/suit/armor/light/leather/leather_jacket
 	name = "thick leather jacket"
 	desc = "This heavily padded leather jacket is unusual in that it has two sleeves. You'll definitely make a fashion statement whenever, and wherever, you rumble."
-	icon_state = "leather_jacket_thick"
-	item_state = "leather_jacket_thick"
+	icon_state = "combat_coat"
+	item_state = "combat_coat"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_FIRE_T2, ARMOR_MODIFIER_UP_DT_T3)
 	body_parts_hidden = ARMS | CHEST | LEGS
 
@@ -556,14 +441,6 @@
 	item_state = "armorkit_punk"
 	icon = 'icons/fallout/clothing/armored_light.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
-
-/obj/item/clothing/suit/armor/light/kit/shoulder
-	name = "armor kit"
-	desc = "A single big metal shoulderplate for the right side, keeping it turned towards the enemy is advisable."
-	icon = 'icons/fallout/clothing/armored_light.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
-	icon_state = "armorkit_shoulder"
-	item_state = "armorkit_shoulder"
 
 /obj/item/clothing/suit/armor/light/kit/plates
 	name = "light armor plates"
@@ -654,21 +531,29 @@
 	desc = "A red cloth robe worn by the Brotherhood of Steel Scribes."
 	icon_state = "scribe"
 	item_state = "scribe"
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2)
 
 /obj/item/clothing/suit/armor/light/duster/bos/scribe/headscribe
 	name = "brotherhood head scribe robe"
 	desc = " A red cloth robe with gold trimmings, worn eclusively by the Head Scribe of a chapter."
 	icon_state = "headscribe"
 	item_state = "headscribe"
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2)
 
 /obj/item/clothing/suit/armor/light/duster/bos/scribe/seniorscribe
 	name = "Brotherhood Senior Scribe's robe"
 	desc = "A red cloth robe with silver gildings worn by the Brotherhood of Steel Senior Scribes."
 	icon_state = "seniorscribe"
 	item_state = "seniorscribe"
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2)
+
+/obj/item/clothing/suit/armor/light/duster/bos/scribe/field_coat
+	name = "fieldscribe coat"
+	desc = "A heavy-duty coat and chestrig fitted with tons of pockets. Ballistic weave and ceramic inserts are included to substantially increase Field Scribe survival rates."
+	icon_state = "scribecoat"
+	item_state = "scribecoat"
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/suit/armor/light/duster/bos/scribe/elder
 	name = "Brotherhood Elder's robe"
@@ -687,6 +572,7 @@
 	icon_state = "brotherhood_scout_knight"
 	item_state = "brotherhood_scout_knight"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/suit/armor/light/combat/brotherhood/scout/senior
 	name = "brotherhood senior scout armor"

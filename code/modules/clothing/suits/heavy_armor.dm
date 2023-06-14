@@ -176,7 +176,6 @@
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT // zooom
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2)
 
-
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
 	name = "salvaged T-45d power armor"
 	desc = "T-45d power armor with servomotors and all valuable components stripped out of it."
