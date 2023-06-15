@@ -120,7 +120,7 @@
 /datum/outfit/russiancorpse/ranged/trooper
 	name = "Ranged Russian Trooper Corpse"
 	uniform = /obj/item/clothing/under/syndicate/camo
-	suit = /obj/item/clothing/suit/armor/heavy/vest/bulletproof
+	suit = /obj/item/clothing/suit/armor/light/vest/russian
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/tackler/combat
 	ears = /obj/item/radio/headset
@@ -213,7 +213,7 @@ obj/effect/mob_spawn/human/corpse/raider
 	uniform = /obj/item/clothing/under/jabroni
 	suit = /obj/item/clothing/suit/armor/heavy/metal
 	shoes = /obj/item/clothing/shoes/jackboots
-	head = /obj/item/clothing/head/helmet/f13/metalmask
+	head = /obj/item/clothing/head/helmet/knight/f13/metal
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
 
@@ -240,7 +240,7 @@ obj/effect/mob_spawn/human/corpse/raidermelee
 	uniform = /obj/item/clothing/under/f13/raiderharness
 	suit = /obj/item/clothing/suit/armor/heavy/metal/reinforced
 	shoes = /obj/item/clothing/shoes/f13/explorer
-	head = /obj/item/clothing/head/helmet/f13/metalmask/mk2
+	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
 

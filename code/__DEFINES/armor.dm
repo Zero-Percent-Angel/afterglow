@@ -930,25 +930,29 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
  * Medium Armor
  * Substantial armor
 */
-#define ARMOR_SLOWDOWN_MEDIUM 0.5
+#define ARMOR_SLOWDOWN_MEDIUM 0.25
+//Originally this was 0.5 on Coyete
 
 /*
  * Heavy Armor
  * Bulky suits of heavy armor
 */
-#define ARMOR_SLOWDOWN_HEAVY 1
+#define ARMOR_SLOWDOWN_HEAVY 0.5
+//Originally this was 1.0 on Coyete
 
 /*
  * Salvaged Power Armor
  * Basically wearing a car
 */
-#define ARMOR_SLOWDOWN_SALVAGE 2
+#define ARMOR_SLOWDOWN_SALVAGE 1
+//Originally this was 2 on Coyete
 
 /*
  * Power Armor
  * Basically driving a car
 */
-#define ARMOR_SLOWDOWN_PA 1
+#define ARMOR_SLOWDOWN_PA 0.5
+//Originally this was 1 on Coyete
 
 /* Armor slowdown modifiers
  * Multipliers to armor slowdown

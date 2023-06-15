@@ -281,7 +281,7 @@
 		/obj/effect/spawner/bundle/f13/trenchshotgun,
 		/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 		/obj/item/stack/f13Cash/random/low,
-		/obj/item/clothing/suit/armor/medium/vest/breastplate/light
+		/obj/item/clothing/suit/armor/medium/vest/breastplate/scrap
 		)
 	robust_searching = TRUE
 	speak = list(

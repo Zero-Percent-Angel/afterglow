@@ -8,15 +8,7 @@
 
 /obj/effect/spawner/lootdrop/f13/armor/tier1/Initialize(mapload)
 	var/list/loot_extra = list(
-		/obj/effect/spawner/bundle/f13/armor/goner/green
+		/obj/effect/spawner/lootdrop/f13/gasmask_goner
 	)
 	LAZYADD(loot, loot_extra)
 	. = ..()
-
-/obj/effect/spawner/bundle/f13/armor/goner/green
-	name = "green trencher outfit spawner"
-	items = list(
-		/obj/item/clothing/suit/armor/light/duster/goner/green,
-		/obj/effect/spawner/lootdrop/f13/gasmask_goner,
-		/obj/item/clothing/head/helmet/f13/goner/green
-	)
