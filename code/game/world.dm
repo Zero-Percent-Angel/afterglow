@@ -303,29 +303,19 @@ GLOBAL_LIST(topic_status_cache)
 		var/server_name = CONFIG_GET(string/servername)
 		if (server_name)
 			s += "<b>[server_name]</b> &#8212; "
-		// features += "[CONFIG_GET(flag/norespawn) ? "no " : ""]respawn"
-		// if(CONFIG_GET(flag/allow_vote_mode))
-		// 	features += "vote"
-		// if(CONFIG_GET(flag/allow_ai))
-		// 	features += "AI allowed"
 		hostedby = CONFIG_GET(string/hostedby)
 
-	s += "<b>[station_name()]</b>";
-	s += " ("
-	s += "<a href=\"https://discord.gg/KGC5cxHv\">" //Change this to wherever you want the hub to link to.
-	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
-	s += "</a>"
-	s += ")\]" //CIT CHANGE - encloses the server title in brackets to make the hub entry fancier
+	s += "<b>[station_name()]</b>"
+	var/discord = !isnull(config) && CONFIG_GET(string/discordurl)
+	if(!isnull(discord))
+		s += " ("
+		s += "<a href=\"[discord]\">" //Change this to wherever you want the hub to link to.
+		s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+		s += "</a>"
+		s += ")\]" //CIT CHANGE - encloses the server title in brackets to make the hub entry fancier
 	s += "<br>[CONFIG_GET(string/servertagline)]<br>" //CIT CHANGE - adds a tagline!
 
 	var/players = GLOB.clients.len
-
-	if(SSmapping.config) // this just stops the runtime, honk.
-		features += "[SSmapping.config.map_name]"	//CIT CHANGE - makes the hub entry display the current map
-
-	//if(NUM2SECLEVEL(GLOB.security_level)) // Coyote Bayou - We don't use alert levels.
-	//	features += "[NUM2SECLEVEL(GLOB.security_level)] alert"
-
 	var/popcaptext = ""
 	var/popcap = max(CONFIG_GET(number/extreme_popcap), CONFIG_GET(number/hard_popcap), CONFIG_GET(number/soft_popcap))
 	if (popcap)
