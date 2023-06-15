@@ -22,12 +22,8 @@ GLOBAL_LIST_INIT(tribal_job_recipes, list(
 	/datum/crafting_recipe/tribal_pa_helmet,
 	/datum/crafting_recipe/tribal_combat_armor,
 	/datum/crafting_recipe/tribal_combat_armor_helmet,
-	/datum/crafting_recipe/tribal_r_combat_armor,
-	/datum/crafting_recipe/tribal_r_combat_armor_helmet,
 	/datum/crafting_recipe/tribalwar/chitinarmor,
-	/datum/crafting_recipe/tribalwar/lightcloak,
 	/datum/crafting_recipe/warmace,
-	/datum/crafting_recipe/tribalwar/lighttribe,
 	/datum/crafting_recipe/tribalwar/heavytribe,
 	/datum/crafting_recipe/tribalwar/legendaryclawcloak,
 	/datum/crafting_recipe/tribalwar/deathclawspear,
@@ -494,7 +490,7 @@ Hunter
 	uniform = /obj/item/clothing/under/f13/wayfarer/hunter
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	shoes = /obj/item/clothing/shoes/sandal
-	suit = /obj/item/clothing/suit/armor/light/tribal/strips
+	suit = /obj/item/clothing/suit/armor/light/tribal/wastetribe
 	id = /obj/item/card/id/tribetattoo
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/healingpowder=2,

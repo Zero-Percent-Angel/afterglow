@@ -332,7 +332,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/decvetbull
 	name = "Mark of The Bull"
-	head = /obj/item/clothing/head/helmet/f13/legion/heavy
+	head = /obj/item/cloathing/head/helmet/f13/legion/vet/decan/heavy
 	suit_store = /obj/item/twohanded/sledgehammer/supersledge
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
@@ -628,7 +628,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/vexnight
 	name = "Night Stalker"
-	head = /obj/item/clothing/head/helmet/f13/legion/vet/nightvexil
+	head = /obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44 = 2,
@@ -678,7 +678,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	id = /obj/item/card/id/dogtag/legprime
 	suit = /obj/item/clothing/suit/armor/legion/vet/explorer
-	head = /obj/item/clothing/head/helmet/f13/legion/vet/explorer
+	head = /obj/item/clothing/head/helmet/f13/legion/explorer
 	neck = /obj/item/storage/belt/shoulderholster
 	r_pocket = /obj/item/flashlight
 	l_pocket = /obj/item/binoculars
@@ -1185,8 +1185,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	outfit = /datum/outfit/job/CaesarsLegion/slave
 
 	loadout_options = list(
-		/datum/outfit/loadout/slaveservant,
-		/datum/outfit/loadout/slaveworker,
+		/datum/outfit/loadout/slaveservant
 		)
 
 	matchmaking_allowed = list(
@@ -1245,21 +1244,6 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 			var/obj/item/card/id/dogtag/L = H.wear_id
 			L.registered_name = H.name
 			L.update_label()
-
-//Laborers farm and mine.
-/datum/outfit/loadout/slaveworker
-	name = "Worker"
-	suit = /obj/item/clothing/suit/armor/outfit/slavelabor
-	uniform = /obj/item/clothing/under/f13/legslave
-	shoes =	/obj/item/clothing/shoes/f13/rag
-	r_hand = /obj/item/flashlight/flare/torch
-	backpack_contents = list(
-		/obj/item/storage/bag/plants = 1,
-		/obj/item/reagent_containers/food/snacks/grown/ambrosia/deus = 1,
-		/obj/item/cultivator = 1,
-		/obj/item/soap/homemade = 1,
-		/obj/item/shovel/spade = 1,
-		)
 
 /*
 Post Scriptum
@@ -1327,7 +1311,6 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	uniform =		/obj/item/clothing/under/gladiator
 	suit = 			/obj/item/clothing/suit/armor/legion/prime/slavemaster
 	belt = 			/obj/item/melee/onehanded/slavewhip
-	head = 			/obj/item/clothing/head/helmet/f13/legion/prime/slavemaster
 	shoes =			/obj/item/clothing/shoes/roman
 	suit_store = 	/obj/item/melee/onehanded/machete/forgedmachete
 	backpack_contents = list(
