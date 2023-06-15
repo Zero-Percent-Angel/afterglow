@@ -41,7 +41,6 @@ Raider
 	loadout_options = list(
 //	/datum/outfit/loadout/raider_sheriff,
 //	/datum/outfit/loadout/raider_mobster,
-	/datum/outfit/loadout/raider_tribal,
 	/datum/outfit/loadout/raider_yankee,
 	/datum/outfit/loadout/raider_blast,
 	/datum/outfit/loadout/raider_badlands,
@@ -279,22 +278,6 @@ Raider
 	backpack_contents = list(
 		///obj/item/gun/ballistic/revolver/thatgun = 1,
 		/obj/item/pda=1,
-		)
-
-/datum/outfit/loadout/raider_tribal
-	name = "Tribal Outcast"
-	uniform = /obj/item/clothing/under/f13/exile/tribal
-	suit = /obj/item/clothing/suit/hooded/outcast/tribal
-	//suit_store = /obj/item/twohanded/spear/bonespear
-	shoes = /obj/item/clothing/shoes/sandal
-	belt = /obj/item/storage/backpack/spearquiver
-	back = /obj/item/storage/backpack/satchel/explorer
-	box = /obj/item/storage/survivalkit/tribal
-	box_two = /obj/item/storage/survivalkit/medical/tribal
-	backpack_contents = list(
-		/obj/item/book/granter/trait/tribaltraditions =1,
-		/obj/item/clothing/mask/cigarette/pipe = 1,
-		/obj/item/melee/onehanded/knife/bone = 1,
 		)
 
 /datum/job/wasteland/f13raider/watcher
@@ -705,7 +688,6 @@ Raider
 			/obj/item/clothing/neck/garlic_necklace)
 	suit = pick(
 			/obj/item/clothing/suit/armor/light/kit/punk, \
-			/obj/item/clothing/suit/armor/light/kit/shoulder, \
 			/obj/item/clothing/suit/armor/light/kit)
 
 /*
@@ -906,7 +888,6 @@ Raider
 	/datum/outfit/loadout/vaquero,
 	/datum/outfit/loadout/hobo,
 	/datum/outfit/loadout/hombre,
-	/datum/outfit/loadout/exmil,
 	/datum/outfit/loadout/strandedbos,
 	/datum/outfit/loadout/eidolon,
 	/datum/outfit/loadout/aviator,
@@ -944,8 +925,7 @@ Raider
 		/obj/item/clothing/under/f13/lumberjack, \
 		/obj/item/clothing/under/f13/roving)
 	suit = pick(
-		/obj/item/clothing/suit/armor/light/kit, \
-		/obj/item/clothing/suit/armor/light/kit/shoulder)
+		/obj/item/clothing/suit/armor/light/kit)
 
 /datum/outfit/loadout/salvager
 	name = "Salvager"
@@ -1119,19 +1099,6 @@ Raider
 	//	/obj/item/ammo_box/a357=2,
 		/obj/item/binoculars=1,
 		/obj/item/radio=1,)
-
-/datum/outfit/loadout/exmil
-	name = "Ex-Military"
-	suit = /obj/item/clothing/suit/armor/light/kit/shoulder
-	uniform = /obj/item/clothing/under/f13/bdu
-	shoes = /obj/item/clothing/shoes/f13/military
-	head = /obj/item/clothing/head/flakhelm
-	glasses = /obj/item/clothing/glasses/sunglasses/big
-	gloves = /obj/item/clothing/gloves/f13/military
-	//l_hand = /obj/item/gun/ballistic/automatic/pistol/ninemil
-	backpack_contents = list(
-	//	/obj/item/ammo_box/magazine/m9mm/doublestack=2,
-		/obj/item/storage/fancy/cigarettes/dromedaryco=1,)
 
 /datum/outfit/loadout/strandedbos
 	name = "Stranded BoS Member"
@@ -1807,7 +1774,6 @@ datum/job/wasteland/f13dendoctor
 
 	loadout_options = list(
 	/datum/outfit/loadout/brawler,
-	/datum/outfit/loadout/spearman,
 	/datum/outfit/loadout/wayfarermelee,
 	/datum/outfit/loadout/wayfarerranged,
 	/datum/outfit/loadout/wayfarershaman,
@@ -1904,18 +1870,6 @@ datum/job/wasteland/f13dendoctor
 		/obj/item/restraints/legcuffs/bola = 2,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		/obj/item/stack/medical/gauze = 1,
-		/obj/item/book/granter/trait/tribaltraditions =1,
-		)
-
-/datum/outfit/loadout/spearman
-	name = "Far-Lands Spear Warrior"
-	suit = /obj/item/clothing/suit/armor/light/raider/tribalraider
-	head = /obj/item/clothing/head/helmet/f13/fiend
-	mask = /obj/item/clothing/mask/facewrap
-	neck = /obj/item/clothing/neck/mantle/gray
-	backpack_contents = list(
-		///obj/item/twohanded/spear = 1,
-		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		/obj/item/book/granter/trait/tribaltraditions =1,
 		)
 

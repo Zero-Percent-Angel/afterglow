@@ -77,8 +77,8 @@
 /obj/item/clothing/suit/armor/heavy/metal
 	name = "metal armor"
 	desc = "A set of plates formed together to form a crude chestplate."
-	icon_state = "metal_chestplate"
-	item_state = "metal_chestplate"
+	icon_state = "metalarmor"
+	item_state = "metalarmor"
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 
@@ -108,7 +108,7 @@
 	name = "riot suit"
 	desc = "A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Helps the wearer resist shoving in close quarters."
 	icon_state = "riot"
-	item_state = "swat_suit"
+	item_state = "riot"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
 	blocks_shove_knockdown = TRUE
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
@@ -147,6 +147,7 @@
 	armor = ARMOR_VALUE_SALVAGE
 	armor_tier_desc = ARMOR_CLOTHING_SALVAGE
 	custom_price = PRICE_ULTRA_EXPENSIVE
+	strip_delay = 50
 
 // T-45B
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
@@ -241,4 +242,3 @@
 	name = "legion legate armor"
 	desc = " Made by the most skilled blacksmiths in Arizona, the bronzed steel of this rare armor offers good protection, and the scars on its metal proves it has seen use on the field."
 	icon_state = "leg_legate"
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 15) // Wouldn't it be hilarious if we just tore apart Legate's armor?

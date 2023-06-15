@@ -76,6 +76,13 @@
 	item_state = "tribal_armor"
 	body_parts_hidden = CHEST|ARMS|LEGS
 
+/obj/item/clothing/suit/armor/light/tribal/outcast
+	name = "outcast tribal armor"
+	desc = "Armor made up of ruggid and weathered leather strips, large pieces of cloth, chitten, and other forms of materials. Clearly showing the marks of a lost soul."
+	icon_state = "tribal_outcast"
+	item_state = "tribal_outcast"
+	body_parts_hidden = CHEST|ARMS|LEGS
+
 /// to be refactored to work with the New Tier System (tm)
 /obj/item/clothing/suit/hooded/cloak
 	name = "cloak"

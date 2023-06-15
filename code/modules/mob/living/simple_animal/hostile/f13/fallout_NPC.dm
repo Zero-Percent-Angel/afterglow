@@ -361,7 +361,7 @@
 /obj/effect/mob_spawn/human/corpse/bs/paladin
 	name = "Brotherhood Paladin"
 	uniform = /obj/item/clothing/under/f13/recon
-	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
+	suit = /obj/item/clothing/suit/armor/power_armor/t51b
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	belt = 	/obj/item/storage/belt/army/assault

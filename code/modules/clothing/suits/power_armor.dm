@@ -312,6 +312,8 @@
 		var/mob/living/L = loc
 		to_chat(L, span_warning("Armor power reroute successful. All systems operational."))
 		L.update_equipment_speed_mods()
+/*
+Most bullets literally DO NOT have fucking armor pen, so it deflects nearly all bullets. No, fuck that. Get fucked. - Rebel0
 
 /obj/item/clothing/suit/armor/power_armor/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if((attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
@@ -319,7 +321,7 @@
 			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
 			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return ..()
-
+*/
 /obj/item/clothing/suit/armor/power_armor/t45b
 	name = "T-45b power armor"
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and restored servomotors. Bulky, but almost as good as the real thing."

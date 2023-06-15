@@ -20,6 +20,7 @@ Below you will find all the templates for modkit items.*/
 /obj/item/clothing/suit/armor/power_armor/t45d/t60
 	name = "T-60a power armor"
 	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal."
+	icon = 'icons/fallout/clothing/custom/suits_custom.dmi'
 	icon_state = "t60powerarmor"
 	item_state = "t60powerarmor"
 
@@ -27,5 +28,6 @@ Below you will find all the templates for modkit items.*/
 /obj/item/clothing/suit/armor/power_armor/advanced/x02/hellfire
 	name = "hellfire power armor"
 	desc = "A deep black helmet of Enclave-manufactured heavy power armor, based on pre-war designs such as the T-51 and improving off of data gathered by post-war designs such as the X-01. Most commonly fielded on the East Coast, no other helmet rivals it's strength."
+	icon = 'icons/fallout/clothing/custom/suits_custom.dmi'
 	icon_state = "hellfire"
 	item_state = "hellfire"

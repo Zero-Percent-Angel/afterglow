@@ -1,4 +1,8 @@
-
+/obj/item/clothing/head/helmet/f13
+	name = "Generic helmet"
+	desc = "This is a helmet master-path. You shouldn't be seeing this.."
+	icon = 'icons/fallout/clothing/hats.dmi'					// Someone should repath all helmets to here at some point. I cannot be fucked to rn though, holy shit. -Rebel0
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 
 /obj/item/clothing/head/helmet/f13/motorcycle
 	name = "motorcycle helmet"
@@ -8,10 +12,6 @@
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEMASK|HIDEEARS|HIDEHAIR
 	strip_delay = 10
-
-/obj/item/clothing/head/helmet/f13/motorcycle/Initialize()
-	. = ..()
-	AddComponent(/datum/component/armor_plate)
 
 /obj/item/clothing/head/helmet/f13/firefighter
 	name = "firefighter helmet"
@@ -149,7 +149,7 @@
 /obj/item/clothing/head/helmet/f13/legion
 	name = "legion helmet template"
 	desc = "should not exist."
-	icon = 'icons/fallout/clothing/hats.dmi'
+	icon = 'icons/fallout/clothing/helmets.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	lefthand_file = ""
 	righthand_file = ""
@@ -245,8 +245,6 @@
 /obj/item/clothing/head/helmet/f13/legion/centurion
 	name = "legion centurion helmet"
 	desc = "A sturdy helmet from steel and brass with a red horizontal plume."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	lefthand_file = ""
 	righthand_file = ""
 	icon_state = "leg_cent"
@@ -256,8 +254,6 @@
 /obj/item/clothing/head/helmet/f13/legion/palacent
 	name = "legion centurion paladin-slayer helmet"
 	desc = "The once-marvelous helmet of the T-45d power armor set, repurposed by the Legion into a symbol of its might. It has a large plume of red horse hair across the top of it going horizontally, donoting the rank of Centurion."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	lefthand_file = ""
 	righthand_file = ""
 	icon_state = "legcentpal"
@@ -267,8 +263,6 @@
 /obj/item/clothing/head/helmet/f13/legion/rangercent
 	name = "legion centurion ranger-hunter helmet"
 	desc = "The helmet of an NCR ranger, refit to serve as a Centurions helmet."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	lefthand_file = ""
 	righthand_file = ""
 	icon_state = "legcentrang"
@@ -279,8 +273,6 @@
 /obj/item/clothing/head/helmet/f13/legion/legate
 	name = "legion legate helmet"
 	desc = "A custom forged steel full helmet complete with abstract points and arches. The face is extremely intimidating, as it was meant to be. This particular one was ordered to be forged by Caesar, given to his second legate in exchange for his undying loyalty to Caesar."
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	lefthand_file = ""
 	righthand_file = ""
 	icon_state = "legate"
@@ -296,19 +288,19 @@
 /obj/item/clothing/head/helmet/f13/ncr
 	name = "NCR pith hat"
 	desc = "A standard issue NCR pith hat made out of scrap and covered over with leather." //THESE ARE MADE OUT OF LEATHER HOLY HELL MAN
-	icon_state = "ncr_helmet"
+	icon_state = "ncr_steelpot"			//Not actually a steel pot..
 	strip_delay = 50
 	armor = ARMOR_VALUE_LIGHT
 
 /obj/item/clothing/head/helmet/f13/ncr/med
 	name = "NCR medic hat"
 	desc = "A standard issue NCR pth hat with the addition of decalling signifying a medic."
-	icon_state = "ncr_helmet_med"
+	icon_state = "ncr_steelpot_med"
 
 /obj/item/clothing/head/helmet/f13/ncr/engineer //Whoever named these steelpots should go to get their eyes checked
 	name = "NCR engineer helmet"
 	desc = "A standard issue NCR steel helmet, issued with an additional pair of storm goggles for weather resistance."
-	icon_state = "ncr_storm"
+	icon_state = "ncr_steelpot_goggles"
 	alt_toggle_message = "You push the goggles down"
 	can_toggle = 1
 	flags_inv = HIDEEARS
@@ -342,7 +334,7 @@
 /obj/item/clothing/head/helmet/f13/ncr/mp
 	name = "NCR military police helmet"
 	desc = "A standard issue NCR steel helmet emblazoned with the initials of the military police."
-	icon_state = "ncr_mp"
+	icon_state = "ncr_steelpot_mp"
 
 //Ranger
 //Yes, nearly all of these are not helmets - but this is because they ACT as helmets for balance-purposes.
@@ -446,11 +438,10 @@
 ////////////////////////
 
 /obj/item/clothing/head/helmet/f13/khan
-	name = "Great Khan helmet"
-	desc = "A piece of headwear commonly worn by the Great Khans that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a pre-War motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
+	name = "horned helmet"
+	desc = "A piece of headwear commonly worn by the horned tribals that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a pre-War motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
 	icon_state = "khan_helmet"
 	item_state = "khan_helmet"
-	armor = ARMOR_VALUE_LIGHT
 	flags_inv = null
 	flags_cover = null
 	strip_delay = 20

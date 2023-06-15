@@ -144,19 +144,19 @@
 	name = "ancient flak vest"
 	desc = "Poorly maintained, this patched vest will still still stop some bullets, but don't expect any miracles. The ballistic nylon used in its construction is inferior to kevlar, and very weak to acid, but still quite tough."
 	icon_state = "vest_flak"
-	item_state = "vest_flak"
+	item_state = "detective-armor"
 
 /obj/item/clothing/suit/armor/medium/vest/kevlar
 	name = "kevlar vest"
 	desc = "Worn but serviceable, the vest is is effective against ballistic impacts."
 	icon_state = "vest_kevlar"
-	item_state = "vest_kevlar"
+	item_state = "armor"
 
 /obj/item/clothing/suit/armor/medium/vest/bulletproof
 	name = "bulletproof vest"
 	desc = "This vest is in good shape, the layered kevlar lightweight yet very good at stopping bullets."
 	icon_state = "vest_bullet"
-	item_state = "vest_bullet"
+	item_state = "bulletproof"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T2, ARMOR_MODIFIER_UP_DT_T2)
 
@@ -164,13 +164,13 @@
 	name = "security vest"
 	desc = "A thick bullet-resistant vest composed of ballistic plates and padding. Common with pre-war security forces."
 	icon_state = "vest_armor"
-	item_state = "vest_armor"
+	item_state = "armor"
 
 /obj/item/clothing/suit/armor/light/vest/russian
 	name = "russian vest"
 	desc = "A bulletproof vest with forest camo. Good thing there's plenty of forests to hide in around here, right?"
 	icon_state = "rus_armor"
-	item_state = "rus_armor"
+	item_state = "detective-armor"
 
 /obj/item/clothing/suit/armor/medium/vest/chinese
 	name = "chinese flak vest"
@@ -208,8 +208,8 @@
 /obj/item/clothing/suit/armor/medium/vest/breastplate/reinforced
 	name = "reinforced steel breastplate"
 	desc = "a steel breastplate inspired by a pre-war design. It provides some protection against impacts, cuts, and medium-velocity bullets. It's pressed steel construction feels heavy."
-	icon_state = "steel_bib"
-	item_state = "steel_bib"
+	icon_state = "steel_bib_heavy"
+	item_state = "steel_bib_heavy"
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
 /obj/item/clothing/suit/armor/medium/vest/breastplate/scrap
@@ -508,13 +508,17 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
-// Outlaw exile armors
-/obj/item/clothing/suit/armor/medium/combat/mk2/remnant
-	name = "remnant combat armor"
-	desc = "A dark armor, used commonly in espionage or shadow ops. For ex-patriots."
-	icon_state = "remnant"
-	item_state = "remnant"
+/obj/item/clothing/suit/armor/medium/combat/town
+	name = "modified Ripley duster"
+	desc = "A modified trenchcoat put atop of what clearly shows some painted and worn combat armor. Modified to reflect the town of Ripley."
+	icon_state = "towntrench_combat"
 
+/obj/item/clothing/suit/armor/medium/combat/mk2/town
+	name = "reinforced modified Ripley duster"
+	desc = "A modified trenchcoat put atop of what clearly shows some painted and worn Mk II combat armor. Modified to reflect the town of Ripley."
+	icon_state = "towntrench_combat"
+
+// Outlaw-exiles
 /obj/item/clothing/suit/armor/medium/combat/brotherhood/exile
 	name = "modified Brotherhood armor"
 	desc = "A modified detoriated armor kit consisting of brotherhood combat armor and scrap metal."
@@ -680,15 +684,10 @@
 	desc = "A trenchcoat which does a poor job at hiding the full-body combat armor beneath it."
 	icon_state = "towntrench_medium"
 
-/obj/item/clothing/suit/armor/medium/combat/town
-	name = "security combat armor"
-	desc = "A traditional Vault-Tec riot vest reinforced for use out in wastes. Features wrist and legguards compared to standard version"
-	icon_state = "town_armor"
-
 /obj/item/clothing/suit/armor/medium/town/riot //UN Glowie
 	name = "sheriff riot coat"
 	desc = "A weathered coat made for most part out of ballistic fiber and stuffed with ceramic plates underneath, it provides more than enough protection for the big gun of the town."
-	icon_state = "towntrench_heavy"
+	icon_state = "town_marshal_riot"
 
 /////////////
 // Enclave //
@@ -734,19 +733,3 @@
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
 	stiffness = MEDIUM_STIFFNESS
-
-//takes from duster
-/obj/item/clothing/suit/toggle/labcoat/khan_jacket/coat
-	name = "Great Khan battle coat"
-	desc = "Heavy leather coat lined with a patchwork of metal plates on the inside. On the back the symbol of the Great Khans is displayed proudly."
-	icon_state = "khan_heavy"
-	item_state = "khan_heavy"
-	cold_protection = CHEST|GROIN|LEGS|ARMS
-	heat_protection = CHEST|GROIN|LEGS|ARMS
-	strip_delay = 80
-	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
-	equip_delay_other = 50
-	max_integrity = 200
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster/armored
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1)

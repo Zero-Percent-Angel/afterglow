@@ -200,7 +200,7 @@ Head Paladin
 
 /datum/outfit/loadout/sentstand
 	name = "Shock Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
+	suit = /obj/item/clothing/suit/armor/power_armor/t51b
 	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	l_hand = /obj/item/gun/energy/laser/scatter
 	backpack_contents = list(
@@ -209,7 +209,7 @@ Head Paladin
 
 /datum/outfit/loadout/sentheavy
 	name = "Heavy Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
+	suit = /obj/item/clothing/suit/armor/power_armor/t51b
 	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/m72 = 1,
@@ -220,7 +220,7 @@ Head Paladin
 
 /datum/outfit/loadout/sentgat
 	name = "Gatling Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
+	suit = /obj/item/clothing/suit/armor/power_armor/t51b
 	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/minigunpack=1,
@@ -228,7 +228,7 @@ Head Paladin
 
 /datum/outfit/loadout/sentmini
 	name = "Minigun Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
+	suit = /obj/item/clothing/suit/armor/power_armor/t51b
 	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/minigunpackbal5mm=1,
@@ -458,7 +458,7 @@ Star Paladin
 /datum/outfit/job/bos/f13seniorpaladin
 	name =	"Senior Paladin"
 	jobtype =	/datum/job/bos/f13seniorpaladin
-	suit =	/obj/item/clothing/suit/armor/power_armor/t45d/bos
+	suit =	/obj/item/clothing/suit/armor/power_armor/t45d
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	accessory =	/obj/item/clothing/accessory/bos/seniorpaladin
 	uniform =	/obj/item/clothing/under/f13/recon
@@ -560,7 +560,7 @@ Paladin
 /datum/outfit/job/bos/f13paladin
 	name =	"Paladin"
 	jobtype =	/datum/job/bos/f13paladin
-	suit =	/obj/item/clothing/suit/armor/power_armor/t45d/bos
+	suit =	/obj/item/clothing/suit/armor/power_armor/t45d
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
