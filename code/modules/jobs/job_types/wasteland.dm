@@ -114,10 +114,7 @@ Raider
 		/obj/item/clothing/head/helmet/f13/raider/arclight,\
 		/obj/item/clothing/head/helmet/f13/raider/blastmaster,\
 		/obj/item/clothing/head/helmet/f13/raider/yankee,\
-		/obj/item/clothing/head/helmet/f13/raider/psychotic,\
-		/obj/item/clothing/head/helmet/f13/fiend,\
 		/obj/item/clothing/head/helmet/f13/hoodedmask,\
-		/obj/item/clothing/head/helmet/f13/fiend,\
 		/obj/item/clothing/head/f13/bandit,\
 		/obj/item/clothing/head/helmet/rus_ushanka,\
 		/obj/item/clothing/head/helmet/skull,\
@@ -406,7 +403,6 @@ Raider
 			/obj/item/clothing/head/helmet/f13/raider/arclight,\
 			/obj/item/clothing/head/helmet/f13/raider/blastmaster,\
 			/obj/item/clothing/head/helmet/f13/raider/yankee,\
-			/obj/item/clothing/head/helmet/f13/raider/psychotic,\
 			/obj/item/clothing/head/helmet/f13/fiend)
 	if(prob(50))
 		neck = pick(
@@ -1688,7 +1684,7 @@ datum/job/wasteland/f13dendoctor
 
 /datum/outfit/loadout/desert_ranger
 	name = "Desert Ranger"
-	head = /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
+	head = /obj/item/clothing/head/helmet/f13/combat/rangerbroken
 	suit = /obj/item/clothing/suit/armor/medium/combat/desert_ranger
 	r_hand = /obj/item/gun/ballistic/revolver/m29/desert_ranger
 	backpack_contents = list(
@@ -1733,7 +1729,7 @@ datum/job/wasteland/f13dendoctor
 	uniform = /obj/item/clothing/under/f13/merca
 	backpack = /obj/item/storage/backpack/satchel/trekker
 	gloves = /obj/item/clothing/gloves/f13/military
-	head = /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
+	head = /obj/item/clothing/head/helmet/f13/combat/rangerbroken
 	suit = /obj/item/clothing/suit/armor/medium/combat/desert_ranger
 	suit_store = /obj/item/gun/ballistic/revolver/sequoia/bayonet
 	glasses = /obj/item/clothing/glasses/hud/health/night
@@ -2257,7 +2253,6 @@ datum/job/wasteland/f13dendoctor
 		/obj/item/clothing/head/helmet/f13/raider/arclight,\
 		/obj/item/clothing/head/helmet/f13/raider/blastmaster,\
 		/obj/item/clothing/head/helmet/f13/raider/yankee,\
-		/obj/item/clothing/head/helmet/f13/raider/psychotic,\
 		/obj/item/clothing/head/helmet/f13/fiend)
 	shoes = pick(
 			/obj/item/clothing/shoes/jackboots,\

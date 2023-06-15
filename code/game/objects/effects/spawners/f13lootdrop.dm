@@ -267,7 +267,7 @@
 	name = "combat duster raider armor spawner"
 	items = list(
 				/obj/item/clothing/suit/armor/medium/raider/rebel,
-				/obj/item/clothing/head/helmet/f13/raidercombathelmet
+				/obj/item/clothing/head/helmet/f13/combat/raider
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/tier2 //TIER 2 ARMOR
@@ -322,8 +322,6 @@
 /obj/effect/spawner/lootdrop/f13/armor/randomraiderhead //random raider armor
 	name = "raider boss armor drop"
 	loot = list(
-				/obj/item/clothing/head/helmet/f13/raider/wastehound,
-				/obj/item/clothing/head/helmet/f13/raidermetal,
 				/obj/item/clothing/head/helmet/f13/combat/mk2/raider
 				)
 

@@ -24,11 +24,6 @@
 	target_items = list(/obj/item/clothing/suit/armor/rangercombat)
 	result_item = /obj/item/clothing/suit/armor/medium/combat/desert_ranger
 
-/obj/item/modkit/riotgear_helmet
-	name = "desert ranger riot helmet modkit"
-	target_items = list(/obj/item/clothing/head/helmet/f13/ncr/rangercombat)
-	result_item = /obj/item/clothing/head/helmet/f13/ncr/rangercombat/desert
-
 /obj/item/modkit/riotgear/fox
 	name = "sniper riot gear modkit"
 	result_item = /obj/item/clothing/suit/armor/rangercombat/foxcustom

@@ -332,7 +332,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/decvetbull
 	name = "Mark of The Bull"
-	head = /obj/item/clothing/head/helmet/f13/legion/heavy
+	head = /obj/item/cloathing/head/helmet/f13/legion/vet/decan/heavy
 	suit_store = /obj/item/twohanded/sledgehammer/supersledge
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
@@ -628,7 +628,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/vexnight
 	name = "Night Stalker"
-	head = /obj/item/clothing/head/helmet/f13/legion/vet/nightvexil
+	head = /obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44 = 2,
@@ -678,7 +678,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	id = /obj/item/card/id/dogtag/legprime
 	suit = /obj/item/clothing/suit/armor/legion/vet/explorer
-	head = /obj/item/clothing/head/helmet/f13/legion/vet/explorer
+	head = /obj/item/clothing/head/helmet/f13/legion/explorer
 	neck = /obj/item/storage/belt/shoulderholster
 	r_pocket = /obj/item/flashlight
 	l_pocket = /obj/item/binoculars
@@ -1311,7 +1311,6 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	uniform =		/obj/item/clothing/under/gladiator
 	suit = 			/obj/item/clothing/suit/armor/legion/prime/slavemaster
 	belt = 			/obj/item/melee/onehanded/slavewhip
-	head = 			/obj/item/clothing/head/helmet/f13/legion/prime/slavemaster
 	shoes =			/obj/item/clothing/shoes/roman
 	suit_store = 	/obj/item/melee/onehanded/machete/forgedmachete
 	backpack_contents = list(

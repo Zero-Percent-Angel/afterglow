@@ -294,28 +294,9 @@
 							"NCR Off-Duty"
 						)
 
-/datum/gear/head/steelpot_goggles
-	name = "NCR storm helmet"
-	path = /obj/item/clothing/head/f13/ncr/steelpot_goggles
-	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 2
-	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Sergeant First Class",
-							"NCR Lieutenant",
-							"NCR Heavy Trooper",
-							"NCR Sergeant",
-							"NCR Corporal",
-							"NCR Combat Engineer",
-							"NCR Combat Medic",
-							"NCR Trooper",
-						)
-
 /datum/gear/head/steelpot_gambler
 	name = "NCR gambler helmet"
-	path = /obj/item/clothing/head/f13/ncr/steelpot_gambler
+	path = /obj/item/clothing/head/helmet/f13/ncr/gambler
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
 	cost = 2
 	restricted_desc = "NCR"
@@ -334,7 +315,7 @@
 
 datum/gear/head/steelpot_bandolier
 	name = "NCR bandolier helmet"
-	path = /obj/item/clothing/head/f13/ncr/steelpot_bandolier
+	path = /obj/item/clothing/head/helmet/f13/ncr/bandolier
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
 	cost = 2
 	restricted_desc = "NCR"

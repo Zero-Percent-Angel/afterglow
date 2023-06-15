@@ -375,7 +375,7 @@ Head Knight
 	//belt = /obj/item/kit_spawner/bos/combat
 	l_pocket =			/obj/item/storage/belt/shoulderholster
 	mask =			/obj/item/clothing/mask/gas/sechailer
-	head =			/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
+	head =			/obj/item/clothing/head/helmet/f13/combat/brotherhood
 	id =			/obj/item/card/id/dogtag
 	backpack_contents = list(
 		/obj/item/book/granter/crafting_recipe/gunsmith_one=1,

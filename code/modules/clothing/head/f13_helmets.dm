@@ -3,6 +3,16 @@
 	desc = "This is a helmet master-path. You shouldn't be seeing this.."
 	icon = 'icons/fallout/clothing/hats.dmi'					// Someone should repath all helmets to here at some point. I cannot be fucked to rn though, holy shit. -Rebel0
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	armor = ARMOR_VALUE_LIGHT
+
+/obj/item/clothing/head/helmet/f13/raider/arclight
+	name = "arclight raider helmet"
+	desc = "Welding mask with rare polarizing glass thats somehow still in working order. A treasured item in the wasteland."
+	icon_state = "arclight"
+	item_state = "arclight"
+	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	flash_protect = 2
+	tint = 0.5
 
 /obj/item/clothing/head/helmet/f13/motorcycle
 	name = "motorcycle helmet"
@@ -12,6 +22,50 @@
 	flags_cover = HEADCOVERSEYES
 	flags_inv = HIDEMASK|HIDEEARS|HIDEHAIR
 	strip_delay = 10
+
+/obj/item/clothing/head/helmet/f13/raider/eyebot
+	name = "eyebot helmet"
+	desc = "It is a dismantled eyebot, hollowed out to accommodate for a humanoid head."
+	icon_state = "eyebot"
+	item_state = "eyebot"
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+	strip_delay = 50
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/helmet/f13/raider/blastmaster
+	name = "blastmaster raider helmet"
+	desc = "A sturdy helmet to protect against both the elements and from harm, if only it was not looking in such poor condition."
+	icon_state = "blastmaster"
+	item_state = "blastmaster"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BOMB_T3, ARMOR_MODIFIER_UP_DT_T1)
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+
+/obj/item/clothing/head/helmet/f13/raider/yankee
+	name = "yankee raider helmet"
+	desc = "Long time ago, it has belonged to a football player, now it belongs to wasteland."
+	icon_state = "yankee"
+	item_state = "yankee"
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE
+
+/obj/item/clothing/head/helmet/f13/fiend
+	name = "fiend helmet"
+	desc = "A leather cap cobbled together adorned with a bighorner skull, perfect for any drug-fueled frenzy."
+	icon_state = "fiend"
+	item_state = "fiend"
+	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/helmet/f13/fiend_reinforced
+	name = "reinforced fiend helmet"
+	desc = "A leather cap cobbled together adorned with a bighorner skull, perfect for any drug-fueled frenzy. This helmet has been reinforced with metal plates under its skull"
+	icon_state = "fiend"
+	item_state = "fiend"
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
+	flags_inv = HIDEEARS|HIDEHAIR
+	slowdown = 0.025
 
 /obj/item/clothing/head/helmet/f13/firefighter
 	name = "firefighter helmet"
@@ -26,6 +80,24 @@
 	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
 	strip_delay = 30
 	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/head/helmet/f13/deathskull
+	name = "eerie helm"
+	desc = "A helmet fastened from the skull of a deer. Something about it doesn't look right."
+	icon_state = "shamskull"
+	item_state = "shamskull"
+
+/obj/item/clothing/head/helmet/f13/wayfarer/hunter
+	name = "hunter headdress"
+	desc = "Azure decorations dangle from the sturdy cap, it is sung that the wearers of these are watched over by the spirits."
+	icon_state = "hunterhelm"
+	item_state = "hunterhelm"
+
+/obj/item/clothing/head/helmet/f13/wayfarer/antler
+	name = "antler skullcap"
+	desc = "An antler skull headdress traditionally worn by the spiritually inclined."
+	icon_state = "antlerhelm"
+	item_state = "antlerhelm"
 
 /obj/item/clothing/head/helmet/f13/wastewarhat
 	name = "warrior helmet"
@@ -76,15 +148,34 @@
 	name = "reinforced combat helmet"
 	color = "#302E2E" // Dark Grey
 
+/obj/item/clothing/head/helmet/f13/combat/raider
+	name = "customized raider combat helmet"
+	desc = "A reinforced combat helmet painted black with the laser designator removed."
+	icon_state = "combat_helmet_raider"
+	item_state = "combat_helmet_raider"
+
 /obj/item/clothing/head/helmet/f13/combat/mk2/raider
 	name = "customized raider combat helmet"
 	desc = "A reinforced combat helmet painted black with the laser designator removed."
 	icon_state = "combat_helmet_raider"
 	item_state = "combat_helmet_raider"
 
+/obj/item/clothing/head/helmet/f13/combat/tribal
+	name = "tribalized combat helmet"
+	desc = "An old military grade pre-war combat helmet, repainted and re-purposed with bones and sinew."
+	icon_state = "tribe_helmet"
+	item_state = "tribe_helmet"
+
+/obj/item/clothing/head/helmet/f13/combat/mk2/tribal
+	name = "tribalized reinforced helmet"
+	desc = "An old military grade pre-war reinforced combat helmet, repainted and re-purposed with bones and sinew."
+	icon_state = "tribe_helmet"
+	item_state = "tribe_helmet"
+
 /obj/item/clothing/head/helmet/f13/combat/rangerbroken
 	name = "broken riot helmet"
 	icon_state = "ranger_broken"
+	item_state = "ranger_broken"
 	desc = "An old riot police helmet, out of use around the time of the war."
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -168,18 +259,21 @@
 	name = "legion recruit helmet"
 	desc = "It's a leather skullcap issued to recruits."
 	icon_state = "legrecruit"
+	item_state = "legrecruit"
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/legion/prime
 	name = "legion prime helmet"
 	desc = "A helmet from reinforced leather with a red peak."
 	icon_state = "legprime"
+	item_state = "legprime"
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/legion/vet
 	name = "legion veteran helmet"
 	desc = "It's a metal legion veteran helmet, clearly inspired by old world sports uniforms."
 	icon_state = "legvet"
+	item_state = "legvet"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 	flags_inv = HIDEEARS|HIDEHAIR
 	armor = ARMOR_VALUE_MEDIUM
@@ -192,7 +286,14 @@
 	name = "legion explorer hood"
 	desc = "It's a leather hood with metal reinforcments and built in headphones to plug the radio into."
 	icon_state = "leg_explorer"
+	item_state = "leg_explorer"
 	flags_inv = HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/head/helmet/f13/legion/venator
+	name = "legion explorer hood"
+	desc = "A leather hood with a sturdy metal skullcap and a gold bull insignia in the front."
+	icon_state = "legion-venator"
+	item_state = "legion-venator"
 
 //////////
 /*DECANI*/
@@ -204,6 +305,7 @@
 	lefthand_file = ""
 	righthand_file = ""
 	icon_state = "legdecan"
+	item_state = "legdecan"
 
 /obj/item/clothing/head/helmet/f13/legion/prime/decan
 	name = "legion prime decanus helmet"
@@ -211,6 +313,7 @@
 	lefthand_file = ""
 	righthand_file = ""
 	icon_state = "legdecanprime"
+	item_state = "legdecanprime"
 
 /obj/item/clothing/head/helmet/f13/legion/vet/decan
 	name = "legion veteran decanus helmet"
@@ -218,11 +321,13 @@
 	lefthand_file = ""
 	righthand_file = ""
 	icon_state = "legdecanvet"
+	item_state = "legdecanvet"
 
 /obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	name = "legion fox vexillarius helmet"
 	desc = "This helmet is decorated with the pelt of a desert fox."
 	icon_state = "legvex"
+	item_state = "legvex"
 
 /obj/item/clothing/head/helmet/f13/legion/vet/combvexil
 	name = "legion bear vexillarius helmet"
@@ -230,6 +335,7 @@
 	lefthand_file = ""
 	righthand_file = ""
 	icon_state = "legvex_alt"
+	item_state = "legvex_alt"
 
 /obj/item/cloathing/head/helmet/f13/legion/vet/decan/heavy
 	name = "reinforced legion veteran decanus helmet"
@@ -237,6 +343,7 @@
 	lefthand_file = ""
 	righthand_file = ""
 	icon_state = "legheavy"
+	item_state = "legheavy"
 
 /////////////
 /*CENTURION*/
@@ -248,6 +355,7 @@
 	lefthand_file = ""
 	righthand_file = ""
 	icon_state = "leg_cent"
+	item_state = "leg_cent"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	armor = ARMOR_VALUE_HEAVY
 
@@ -257,6 +365,7 @@
 	lefthand_file = ""
 	righthand_file = ""
 	icon_state = "legcentpal"
+	item_state = "legcentpal"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	armor = ARMOR_VALUE_SALVAGE
 
@@ -266,6 +375,7 @@
 	lefthand_file = ""
 	righthand_file = ""
 	icon_state = "legcentrang"
+	item_state = "legcentrang"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	armor = ARMOR_VALUE_MEDIUM
 
@@ -276,9 +386,18 @@
 	lefthand_file = ""
 	righthand_file = ""
 	icon_state = "legate"
+	item_state = "legate"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
+
+/obj/item/clothing/head/helmet/f13/legion/orator
+	name = "laurel wreath"
+	desc = "A laurel wreath is made of branches and leaves of the laurel, a type of evergreen shrub or small tree. This one appears to be out of metal,however. In Ancient Rome, it was worn on the head as a symbol of triumph."
+	icon_state = "legion-orator"
+	item_state = "legion-orator"
+	flags_inv = null
+	armor = ARMOR_VALUE_LIGHT
 
 ///////
 /*NCR*/
@@ -286,21 +405,39 @@
 
 //Army
 /obj/item/clothing/head/helmet/f13/ncr
-	name = "NCR pith hat"
-	desc = "A standard issue NCR pith hat made out of scrap and covered over with leather." //THESE ARE MADE OUT OF LEATHER HOLY HELL MAN
+	name = "NCR helmet"
+	desc = "A standard issue NCR pith helmet made out of scrap and covered over with leather." //THESE ARE MADE OUT OF LEATHER HOLY HELL MAN
 	icon_state = "ncr_steelpot"			//Not actually a steel pot..
+	item_state = "ncr_steelpot"
+	unique_reskin = list("M1" = "ncr_old")
 	strip_delay = 50
 	armor = ARMOR_VALUE_LIGHT
 
+/obj/item/clothing/head/helmet/f13/ncr/gambler
+	name = "NCR gambler helmet"
+	desc = "A standard issue NCR pith helmet. Stashed in the strap are decks of cards, dominoes and cigarettes for personal use."
+	icon_state = "steelpot_gambler"
+	item_state = "steelpot_gambler"
+	unique_reskin = list("M1" = "ncr_old_gambler")
+
+/obj/item/clothing/head/helmet/f13/ncr/bandolier
+	name = "NCR bandolier helmet"
+	desc = "A standard issue NCR pith helmet. This one has clearly seen heavy use, as well as having additional bullets tucked into the strap."
+	icon_state = "steelpot_bandolier"
+	item_state = "steelpot_bandolier"
+	unique_reskin = list("M1" = "ncr_old_bandolier")
+
 /obj/item/clothing/head/helmet/f13/ncr/med
-	name = "NCR medic hat"
-	desc = "A standard issue NCR pth hat with the addition of decalling signifying a medic."
+	name = "NCR medic helmet"
+	desc = "A standard issue NCR pith helmet with the addition of decalling signifying a medic."
 	icon_state = "ncr_steelpot_med"
+	item_state = "ncr_steelpot_med"
 
 /obj/item/clothing/head/helmet/f13/ncr/engineer //Whoever named these steelpots should go to get their eyes checked
 	name = "NCR engineer helmet"
 	desc = "A standard issue NCR steel helmet, issued with an additional pair of storm goggles for weather resistance."
 	icon_state = "ncr_steelpot_goggles"
+	item_state = "ncr_steelpot_goggles"
 	alt_toggle_message = "You push the goggles down"
 	can_toggle = 1
 	flags_inv = HIDEEARS
@@ -335,6 +472,7 @@
 	name = "NCR military police helmet"
 	desc = "A standard issue NCR steel helmet emblazoned with the initials of the military police."
 	icon_state = "ncr_steelpot_mp"
+	item_state = "ncr_steelpot_mp"
 
 //Ranger
 //Yes, nearly all of these are not helmets - but this is because they ACT as helmets for balance-purposes.
@@ -343,18 +481,21 @@
 	name = "NCR ranger hat"
 	desc = "a rustic, homely style cowboy hat worn by NCR rangers. Yeehaw!"
 	icon_state = "ncr_ranger"
+	item_state = "ncr_ranger"
 	armor = ARMOR_VALUE_LIGHT
 
 /obj/item/clothing/head/f13/ncr/patrol
 	name = "NCR ranger campaign hat"
 	desc = "An NCR ranger hat, standard issue amongst all but the most elite rangers."
 	icon_state = "ncr_ranger_patrol"
+	item_state = "ncr_ranger_patrol"
 	armor = ARMOR_VALUE_MEDIUM
 
-/obj/item/clothing/head/f13/ncr/veteran
+/obj/item/clothing/head/helmet/f13/ncr/veteran
 	name = "NCR veteran ranger combat helmet"
 	desc = "An old combat helmet, out of use around the time of the war."
 	icon_state = "ncr_ranger_veteran"
+	item_state = "ncr_ranger_veteran"
 	armor = ARMOR_VALUE_HEAVY
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -374,23 +515,27 @@
 	name = "brotherhood helmet"
 	desc = "An improved combat helmet, bearing the symbol of the Knights."
 	icon_state = "brotherhood_helmet_knight"
+	item_state = "brotherhood_helmet_knight"
 	armor = ARMOR_VALUE_MEDIUM
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
 	name = "brotherhood senior knight helmet"
 	desc = "An improved combat helmet, bearing the symbol of a Senior Knight."
 	icon_state = "brotherhood_helmet_senior"
+	item_state = "brotherhood_helmet_senior"
 	armor = ARMOR_VALUE_HEAVY
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	name = "initiate helmet"
 	desc = "An old degraded pre-war combat helmet, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_helmet"
+	item_state = "brotherhood_helmet"
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate/mk2
 	name = "brotherhood helmet Mk II"
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_helmet"
+	item_state = "brotherhood_helmet"
 	armor = ARMOR_VALUE_HEAVY
 
 ///////////
@@ -404,23 +549,27 @@
 	name = "town lawman's hat"
 	desc = "A stylish classic hat used by lawmen."
 	icon_state = "town_deputy"
+	item_state = "town_deputy"
 
 /obj/item/clothing/head/f13/town/sheriff
 	name = "town sheriff's hat"
 	desc = "A stylish classic hat used by lawmen. This one belongs to the man of big iron"
 	icon_state = "town_marshal"
+	item_state = "town_marshal"
 
 /obj/item/clothing/head/helmet/f13/combat/town
 	name = "town security helmet"
 	desc = "An old riot helmet reinforced with proper alloys and stripped of it's faceshield to be more usable outside of confines of a vault."
 	armor = ARMOR_VALUE_MEDIUM
 	icon_state = "town_helmet"
+	item_state = "town_helmet"
 	flags_inv = HIDEEARS
 
 /obj/item/clothing/head/f13/town/riot //UN Glowie
 	name = "town sheriff combat helmet"
 	desc = "An old riot helmet bastardized into a what is essentially a maska without functioning internals. Belongs to the big gun of the town."
 	icon_state = "town_marshal_riot"
+	item_state = "ncr_ranger_veteran"
 	armor = ARMOR_VALUE_HEAVY
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -462,6 +611,63 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 20
+
+/obj/item/clothing/head/helmet/f13/khan/bandana
+	name = "outlaw bandana"
+	desc = "A bandana. Tougher than it looks. One side of the cloth is dark, the other red, so it can be reversed."
+	icon_state = "khan_bandana"
+	item_state = "khan_bandana"
+	strip_delay = 10
+	dynamic_hair_suffix = null
+	dynamic_fhair_suffix = null
+	var/helmettoggled = FALSE
+	armor = ARMOR_VALUE_LIGHT
+
+/obj/item/clothing/head/helmet/f13/khan/bandana/AltClick(mob/user)
+	. = ..()
+	if(!user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+	helmet_toggle(user)
+	return TRUE
+
+/obj/item/clothing/head/helmet/f13/khan/bandana/ui_action_click()
+	helmet_toggle()
+
+/obj/item/clothing/head/helmet/f13/khan/bandana/proc/helmet_toggle()
+	set src in usr
+
+	if(!can_use(usr))
+		return 0
+
+	to_chat(usr, span_notice("You turn the [src] inside out."))
+	if(src.helmettoggled)
+		src.icon_state = "[initial(icon_state)]"
+		src.item_state = "[initial(icon_state)]"
+		src.helmettoggled = FALSE
+	else if(!src.helmettoggled)
+		src.icon_state = "[initial(icon_state)]_t"
+		src.item_state = "[initial(icon_state)]_t"
+		src.helmettoggled = TRUE
+	usr.update_inv_head()
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+
+///////////////
+// V A U L T //
+///////////////
+
+/obj/item/clothing/head/helmet/riot/vaultsec
+	name = "security helmet"
+	desc = "A standard issue vault security helmet, pretty robust."
+	slowdown = 0.01
+
+
+/obj/item/clothing/head/helmet/riot/vaultsec/vc
+	name = "vtcc riot helmet"
+	desc = "A riot helmet adapted from the design of most pre-war riot helmets, painted blue."
+	icon_state = "vtcc_riot_helmet"
+	item_state = "vtcc_riot_helmet"
 
 //////////////////////////
 // Salvaged Power Armor //

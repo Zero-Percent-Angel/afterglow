@@ -373,7 +373,6 @@ GLOBAL_LIST_INIT(loot_t2_armor, list(
 	/obj/item/clothing/suit/armor/medium/raider/yankee,
 	/obj/item/clothing/head/helmet/f13/raider/yankee,
 	/obj/item/clothing/head/helmet/f13/fiend,
-	/obj/item/clothing/head/helmet/f13/raider/psychotic,
 	/obj/item/clothing/head/helmet/f13/raider,
 	/obj/item/clothing/suit/armor/medium/raider/iconoclast
 ))

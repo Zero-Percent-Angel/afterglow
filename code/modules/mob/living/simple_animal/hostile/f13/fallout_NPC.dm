@@ -242,7 +242,6 @@
 	suit = /obj/item/clothing/suit/bio_suit/enclave
 	shoes = /obj/item/clothing/shoes/f13/enclave/serviceboots
 	gloves = /obj/item/clothing/gloves/color/latex/nitrile
-	head = /obj/item/clothing/head/helmet/f13/envirosuit
 
 /obj/effect/mob_spawn/human/corpse/enclave
 	name = "enclave specialist"
@@ -250,7 +249,7 @@
 	shoes = /obj/item/clothing/shoes/f13/enclave/serviceboots
 	gloves = /obj/item/clothing/gloves/f13/military
 	mask = /obj/item/clothing/mask/gas/enclave
-	head = /obj/item/clothing/head/f13/enclave/peacekeeper
+	head = /obj/item/clothing/head/helmet/f13/combat
 
 /obj/effect/mob_spawn/human/corpse/enclave/soldier
 	name = "enclave armored infantry"
@@ -472,7 +471,7 @@
 	suit = /obj/item/clothing/suit/armor/light/ncr/trailranger
 	shoes = /obj/item/clothing/shoes/f13/military/leather
 	gloves = /obj/item/clothing/gloves/patrol
-	head = /obj/item/clothing/head/f13/ranger
+	head = /obj/item/clothing/head/f13/ncr/ranger
 
 ////////////////
 // LEGION NPC //

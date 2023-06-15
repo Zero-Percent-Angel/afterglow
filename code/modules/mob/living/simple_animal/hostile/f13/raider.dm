@@ -392,7 +392,7 @@
 	auto_fire_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	projectiletype = /obj/item/projectile/bullet/a762/sport/simple
 	projectilesound = 'sound/f13weapons/magnum_fire.ogg'
-	loot = list(/obj/item/gun/ballistic/revolver/thatgun, /obj/item/clothing/suit/armor/medium/combat/rusted, /obj/item/clothing/head/helmet/f13/raidercombathelmet, /obj/item/stack/f13Cash/random/med)
+	loot = list(/obj/item/gun/ballistic/revolver/thatgun, /obj/item/clothing/suit/armor/medium/combat/rusted, /obj/item/clothing/head/helmet/f13/combat/raider, /obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_SHOE
 	projectile_sound_properties = list(
 		SP_VARY(FALSE),
@@ -410,7 +410,7 @@
 	suit = /obj/item/clothing/suit/armor/medium/combat/rusted
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
-	head = /obj/item/clothing/head/helmet/f13/raidercombathelmet
+	head = /obj/item/clothing/head/helmet/f13/combat/raider
 	neck = /obj/item/clothing/neck/mantle/brown
 
 // YANKEE RAIDER
@@ -458,7 +458,6 @@
 	suit = /obj/item/clothing/suit/armor/light/tribal
 	shoes = /obj/item/clothing/shoes/f13/rag
 	mask = /obj/item/clothing/mask/facewrap
-	head = /obj/item/clothing/head/helmet/f13/fiend
 
 //////////////
 // SULPHITE //

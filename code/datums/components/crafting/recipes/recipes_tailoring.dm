@@ -287,7 +287,7 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/salvecomb
 	name = "Combat Helmet (waster)"
-	result = /obj/item/clothing/head/helmet/f13/raidercombathelmet
+	result = /obj/item/clothing/head/helmet/f13/combat/raider
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 30,
 				/obj/item/stack/sheet/cloth = 5)
@@ -592,8 +592,8 @@ datum/crafting_recipe/steelbib/heavy
 	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/westendervest
-	name = "Bartender vest"
-	result = /obj/item/clothing/suit/armor/outfit/vest/bartender
+	name = "Bartender duster"
+	result = /obj/item/clothing/suit/armor/light/duster/town/bartender
 	reqs = list(/obj/item/stack/sheet/cloth = 2)
 	tools = list(TOOL_WORKBENCH)
 	time = 10
@@ -724,39 +724,6 @@ datum/crafting_recipe/steelbib/heavy
 /datum/crafting_recipe/flapper
 	name = "Flapper Dress"
 	result = /obj/item/clothing/under/f13/female/flapper
-	reqs = list(/obj/item/stack/sheet/cloth = 2)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-	falls_back_on_outdoors = TRUE
-	skill_level = VERY_EASY_CHECK
-
-/datum/crafting_recipe/overalls_farmer
-	name = "Farmer Overalls"
-	result = /obj/item/clothing/suit/armor/outfit/overalls/farmer
-	reqs = list(/obj/item/stack/sheet/cloth = 2)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-	falls_back_on_outdoors = TRUE
-	skill_level = VERY_EASY_CHECK
-
-/datum/crafting_recipe/overalls_maid
-	name = "Sexy Maid Overalls"
-	result = /obj/item/clothing/suit/armor/outfit/overalls/sexymaid
-	reqs = list(/obj/item/stack/sheet/cloth = 2)
-	tools = list(TOOL_WORKBENCH)
-	time = 15
-	category = CAT_CLOTHING
-	subcategory = CAT_GENCLOTHES
-	falls_back_on_outdoors = TRUE
-	skill_level = VERY_EASY_CHECK
-
-/datum/crafting_recipe/overalls_blacksmith
-	name = "Smithing Overalls"
-	result = /obj/item/clothing/suit/armor/outfit/overalls/blacksmith
 	reqs = list(/obj/item/stack/sheet/cloth = 2)
 	tools = list(TOOL_WORKBENCH)
 	time = 15

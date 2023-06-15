@@ -278,7 +278,6 @@ Fence
 								/obj/item/clothing/accessory/bos/paladin = 30,
 								/obj/item/clothing/accessory/bos/seniorpaladin = 45,
 								/obj/item/clothing/accessory/bos/knightcaptain = 60,
-								/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain = 75,
 								/obj/item/clothing/accessory/bos/headscribe = 60,
 								/obj/item/clothing/suit/armor/light/duster/bos/scribe/headscribe = 75,
 								/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 75,

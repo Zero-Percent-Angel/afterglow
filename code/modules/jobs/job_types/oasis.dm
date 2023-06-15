@@ -318,7 +318,7 @@ Mayor
 	name = "The Chief"
 	uniform = /obj/item/clothing/under/f13/police/chief
 	suit = /obj/item/clothing/suit/armor/medium/town/riot
-	head = /obj/item/clothing/head/f13/town/chief
+	head = /obj/item/clothing/head/helmet/f13/combat/town
 	neck = /obj/item/storage/belt/shoulderholster/ranger45
 	shoes = /obj/item/clothing/shoes/combat
 	// r_hand = /obj/item/gun/ballistic/shotgun/automatic/combat/citykiller
@@ -432,7 +432,7 @@ Mayor
 	name = "Ripley PD"
 	uniform = /obj/item/clothing/under/f13/police/officer
 	suit = /obj/item/clothing/suit/armor/medium/vest/bulletproof
-	head = /obj/item/clothing/head/f13/town/officer
+	head = /obj/item/clothing/head/f13/town/deputy
 	belt = /obj/item/storage/belt/legholster
 	//r_hand = /obj/item/gun/ballistic/shotgun/police
 	shoes = /obj/item/clothing/shoes/jackboots
