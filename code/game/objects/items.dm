@@ -342,6 +342,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	. += research_msg.Join()
 
 /obj/item/interact(mob/user)
+	check_skill_test(user)
 	add_fingerprint(user)
 	ui_interact(user)
 

@@ -97,6 +97,12 @@
 
 	/// What does this creature taste like?
 	var/list/tastes = list("something" = 1) // for example list("crisps" = 2, "salt" = 1)
+	var/has_a_added_skill_check = FALSE
+	var/added_skill_check = SKILL_GUNS
+	var/added_skill_check_is_a_roll = FALSE
+	var/added_skill_can_be_retried = FALSE
+	var/list/added_skill_failures
+	var/added_skill_difficulty = DIFFICULTY_CHALLENGE
 
 /atom/New(loc, ...)
 	//atom creation method that preloads variables at creation

@@ -156,7 +156,7 @@
 	reagent_state = SOLID
 	color = "#A9FBFB"
 	taste_description = "bitterness"
-	metabolization_rate = 1 * REAGENTS_METABOLISM	// same as bicaridine
+	metabolization_rate = 1.4 * REAGENTS_METABOLISM	// same as bicaridine
 	overdose_threshold = 30
 	ghoulfriendly = TRUE
 

@@ -6,6 +6,7 @@ GLOBAL_PROTECT(admin_verbs_default)
 	return list(
 	/client/proc/deadmin,				/*destroys our own admin datum so we can play as a regular player*/
 	/client/proc/cmd_admin_say,			/*admin-only ooc chat*/
+	/client/proc/cmd_admin_add_skill_check,
 	/client/proc/dsay,					/*talk in deadchat using our ckey/fakekey*/
 	/client/proc/deadchat,
 	/client/proc/investigate_show,		/*various admintools for investigation. Such as a singulo grief-log*/
