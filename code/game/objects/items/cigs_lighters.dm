@@ -747,7 +747,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	item_state = "holy_zippo"
 	heat = 777
 	light_color = LIGHT_COLOR_HOLY_MAGIC
-	grind_results = list(/datum/reagent/iron = 1, /datum/reagent/fuel = 5, /datum/reagent/teslium = 50)
+	grind_results = list(/datum/reagent/iron = 1, /datum/reagent/fuel = 5)
 
 /obj/item/lighter/fox
 	name = "fox zippo"
