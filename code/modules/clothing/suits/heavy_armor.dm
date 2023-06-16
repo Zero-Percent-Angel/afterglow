@@ -206,6 +206,7 @@
 	name = "recycled power armor"
 	desc = "Taking pieces off from a wrecked power armor will at least give you thick plating, but don't expect too much of this shot up, piecemeal armor.."
 	icon_state = "recycled_power"
+	item_state = "recycled_power"
 
 
 ///////////////////////////
@@ -237,8 +238,10 @@
 	name = "legion centurion paladin-slayer armor"
 	desc = "A Centurion able to defeat a Brotherhood Paladin gets the honorific title 'Paladin-Slayer', and adds bits of the looted armor to his own."
 	icon_state = "leg_cent_paladin"
+	item_state = "leg_cent_paladin"
 
 /obj/item/clothing/suit/armor/heavy/legion/legate
 	name = "legion legate armor"
 	desc = " Made by the most skilled blacksmiths in Arizona, the bronzed steel of this rare armor offers good protection, and the scars on its metal proves it has seen use on the field."
 	icon_state = "leg_legate"
+	item_state = "leg_legate"

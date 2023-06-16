@@ -245,7 +245,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/palacent
 	name = "Paladin-Slayer Centurion"
-	suit = /obj/item/clothing/suit/armor/legion/palacent
+	suit = /obj/item/clothing/suit/armor/heavy/legion/palacent
 	head = /obj/item/clothing/head/helmet/f13/legion/palacent
 	suit_store = /obj/item/gun/ballistic/automatic/m1919
 	backpack_contents = list(
@@ -267,7 +267,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/centurion
 	name = "Warlord Centurion"
-	suit = /obj/item/clothing/suit/armor/legion/centurion
+	suit = /obj/item/clothing/suit/armor/medium/legion/centurion
 	head = /obj/item/clothing/head/helmet/f13/legion/centurion
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/pistol14
 	backpack_contents = list(

@@ -130,8 +130,8 @@
 /obj/item/clothing/suit/armor/medium/vest
 	name = "armor vest"
 	desc = "A slim armored vest with a rigid exterior that provides decent protection against pistol rounds, stabs, and bludgeons."
-	icon_state = "armoralt"
-	item_state = "armoralt"
+	icon_state = "armor_armor"
+	item_state = "armor_armor"
 	blood_overlay_type = "armor"
 	dog_fashion = /datum/dog_fashion/back
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
@@ -331,6 +331,7 @@
 	name = "tribal reinforced combat armor"
 	desc = "An old military grade pre-war reinforced combat armor, now decorated with sinew and the bones of the hunted for its new wearer."
 	icon_state = "combat_armor_tribe"
+	item_state = "combat_armor_tribe"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 
@@ -476,21 +477,25 @@
 	name = "raider combat armor"
 	desc = "An old military-grade pre-war combat armor. It appears to be fitted with metal plates to replace the crumbling ceramic."
 	icon_state = "combat_armor_raider"
+	icon_state = "combat_armor_raider"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/raider
 	name = "reinforced raider combat armor"
 	desc = "An old set of reinforced combat armor with some parts supplanted with painspike armor. It seems less protective than a mint-condition set of combat armor."
 	icon_state = "combat_armor_raider"
+	item_state = "combat_armor_raider"
 
 /obj/item/clothing/suit/armor/medium/combat/ncr
 	name = "NCR combat armor"
 	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for New California Republic."
 	icon_state = "combat_armor_ncr"
+	item_state = "combat_armor_ncr"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/ncr
 	name = "reinforced NCR combat armor"
 	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for New California Republic."
 	icon_state = "combat_armor_ncr_mk2"
+	item_state = "combat_armor_ncr_mk2"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
@@ -499,11 +504,13 @@
 	name = "legion combat armor"
 	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for Caesar's Legion."
 	icon_state = "combat_armor_legion"
+	item_state = "combat_armor_legion"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/legion
 	name = "reinforced legion combat armor"
 	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for Caesar's Legion."
 	icon_state = "combat_armor_legion_mk2"
+	item_state = "combat_armor_legion_mk2"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
@@ -512,11 +519,13 @@
 	name = "modified Ripley duster"
 	desc = "A modified trenchcoat put atop of what clearly shows some painted and worn combat armor. Modified to reflect the town of Ripley."
 	icon_state = "towntrench_combat"
+	item_state = "towntrench_combat"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/town
 	name = "reinforced modified Ripley duster"
 	desc = "A modified trenchcoat put atop of what clearly shows some painted and worn Mk II combat armor. Modified to reflect the town of Ripley."
 	icon_state = "towntrench_combat"
+	item_state = "towntrench_combat"
 
 // Outlaw-exiles
 /obj/item/clothing/suit/armor/medium/combat/brotherhood/exile
@@ -583,10 +592,12 @@
 	name = "NCR patrol ranger combat armor"
 	desc = "A modified set of combat armor specifically for use of heavy patrol rangers."
 	icon_state = "ncr_ranger_patrol"
+	item_state = "ncr_ranger_patrol"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/ncr/vetranger
 	name = "NCR veteran ranger combat armor"
 	desc = "The NCR veteran ranger combat armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Considered one of the most prestigious suits of armor to earn and wear while in service of the NCR Rangers."
+	icon_state = "ncr_ranger_veteran"
 	icon_state = "ncr_ranger_veteran"
 
 //Event
@@ -616,6 +627,7 @@
 	name = "legion veteran armor"
 	desc = "An armor worn by veteran legionaries who have proven their combat prowess in many battles, its hardened leather is sturdier than that of previous ranks."
 	icon_state = "legion_vet"
+	item_state = "legion_vet"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
 
@@ -623,6 +635,7 @@
 	name = "legion vexillarius armor"
 	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of circular metal plates attached to the torso, as well as a banner displaying the flag of the Legion worn on the back."
 	icon_state = "legion_vex"
+	item_state = "legion_vex"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
 
@@ -630,16 +643,19 @@
 	name = "legion orator armor"
 	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of bracers, a chainmail skirt, and large pauldrons.  A tabard emblazoned with the bull is loosely draped over the torso."
 	icon_state = "legion_orator"
+	item_state = "legion_orator"
 
 /obj/item/clothing/suit/armor/medium/legion/centurion //good all around
 	name = "legion centurion armor"
 	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
 	icon_state = "legion_cent"
+	item_state = "legion_cent"
 
 /obj/item/clothing/suit/armor/medium/legion/rangercent //speed and bullet resist, sacrifices all else
 	name = "legion centurion ranger-hunter armor"
 	desc = "Centurions who have led many patrols and ambushes against NCR Rangers have a distinct look from the many looted pieces of Ranger armor, and are often experienced in skirmishing."
 	icon_state = "leg_cent_ranger"
+	item_state = "leg_cent_ranger"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
@@ -653,6 +669,7 @@
 	name = "brotherhood armor"
 	desc = "A combat armor set made by the Brotherhood of Steel, standard issue for all Knights. It bears a red stripe."
 	icon_state = "brotherhood_armor_knight"
+	item_state = "brotherhood_armor_knight"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 
@@ -660,11 +677,13 @@
 	name = "initiate armor"
 	desc = "An old military grade pre war combat armor, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_armor"
+	item_state = "brotherhood_armor"
 
 /obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate/mk2
 	name = "brotherhood armor Mk II"
 	desc = "A combat armor set made and updated by the Brotherhood of Steel. This varient appears to be a refurbished set based on its welding marks."
 	icon_state = "brotherhood_armor_mk2"
+	item_state = "brotherhood_armor_mk2"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
@@ -672,6 +691,7 @@
 	name = "brotherhood senior knight armor"
 	desc = "A renforced combat armor set made by the Brotherhood of Steel, standard issue for all Senior Knights. It bears a silver stripe."
 	icon_state = "brotherhood_armor_senior"
+	item_state = "brotherhood_armor_senior"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
@@ -683,11 +703,13 @@
 	name = "deputy trenchcoat"
 	desc = "A trenchcoat which does a poor job at hiding the full-body combat armor beneath it."
 	icon_state = "towntrench_medium"
+	item_state = "towntrench_medium"
 
 /obj/item/clothing/suit/armor/medium/town/riot //UN Glowie
 	name = "sheriff riot coat"
 	desc = "A weathered coat made for most part out of ballistic fiber and stuffed with ceramic plates underneath, it provides more than enough protection for the big gun of the town."
-	icon_state = "town_marshal_riot"
+	icon_state = "towntrench_heavy"
+	item_state = "towntrench_heavy"
 
 /////////////
 // Enclave //

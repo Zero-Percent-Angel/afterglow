@@ -317,7 +317,6 @@ Raider
 	/datum/outfit/loadout/raider_sawbones,
 	/datum/outfit/loadout/unethical_practitioner,
 	/datum/outfit/loadout/redwater_maintainer,
-	/datum/outfit/loadout/nefarious_conman,
 	/datum/outfit/loadout/demonness
 	)
 
@@ -527,26 +526,6 @@ Raider
 		/obj/item/stack/ore/blackpowder/twenty = 1,
 	//	/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever = 1,
 	//	/obj/item/ammo_box/shotgun/slug = 2
-		)
-
-/datum/outfit/loadout/nefarious_conman
-	name = "Nefarious Conman"
-	suit = /obj/item/clothing/suit/armor/medium/duster/trenchcoat
-	head = /obj/item/clothing/head/collectable/tophat
-	uniform = /obj/item/clothing/under/suit/charcoal
-	//belt = /obj/item/gun/energy/laser/plasma/pistol/worn
-	shoes = /obj/item/clothing/shoes/f13/fancy
-	backpack_contents = list(
-		/obj/item/storage/belt/legholster,
-		/obj/item/lighter/fusion = 1,
-		/obj/item/toy/cards/deck = 1,
-		/obj/item/ingot/gold = 10,
-		/obj/item/storage/fancy/cigarettes/cigars/havana = 1,
-		/obj/item/storage/box/dice = 1,
-		/obj/item/storage/fancy/ringbox/silver = 1,
-		/obj/item/stack/tile/carpet/royalblack/fifty = 1,
-		/obj/item/stack/tile/carpet/black/fifty = 1,
-		/obj/item/stack/f13Cash/caps/onezerozero = 1,
 		)
 
 /datum/outfit/loadout/demonness
