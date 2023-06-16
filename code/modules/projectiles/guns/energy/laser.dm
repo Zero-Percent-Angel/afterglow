@@ -875,7 +875,7 @@
 /obj/item/gun/energy/gammagun
 	name = "Gamma gun"
 	desc = "An advanced radiation weapon commonly utilized by people who have passionate hatred for their fellow man. Fires slow velocity, low damage radiation beams."
-	icon_state = "ultra_pistol"
+	icon_state = "gammagun"
 	item_state = "laser-pistol"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
