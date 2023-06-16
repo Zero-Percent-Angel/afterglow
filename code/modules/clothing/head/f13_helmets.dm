@@ -354,8 +354,8 @@
 	desc = "A sturdy helmet from steel and brass with a red horizontal plume."
 	lefthand_file = ""
 	righthand_file = ""
-	icon_state = "leg_cent"
-	item_state = "leg_cent"
+	icon_state = "legion-centurion"
+	item_state = "legion-centurion"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	armor = ARMOR_VALUE_HEAVY
 
@@ -394,8 +394,8 @@
 /obj/item/clothing/head/helmet/f13/legion/orator
 	name = "laurel wreath"
 	desc = "A laurel wreath is made of branches and leaves of the laurel, a type of evergreen shrub or small tree. This one appears to be out of metal,however. In Ancient Rome, it was worn on the head as a symbol of triumph."
-	icon_state = "legion-orator"
-	item_state = "legion-orator"
+	icon_state = "legion-slavemaster"
+	item_state = "legion-slavemaster"
 	flags_inv = null
 	armor = ARMOR_VALUE_LIGHT
 
@@ -407,8 +407,8 @@
 /obj/item/clothing/head/helmet/f13/ncr
 	name = "NCR helmet"
 	desc = "A standard issue NCR pith helmet made out of scrap and covered over with leather." //THESE ARE MADE OUT OF LEATHER HOLY HELL MAN
-	icon_state = "ncr_steelpot"			//Not actually a steel pot..
-	item_state = "ncr_steelpot"
+	icon_state = "ncr_helmet"			//Not actually a steel pot..
+	item_state = "ncr_helmet"
 	unique_reskin = list("M1" = "ncr_old")
 	strip_delay = 50
 	armor = ARMOR_VALUE_LIGHT
@@ -430,14 +430,14 @@
 /obj/item/clothing/head/helmet/f13/ncr/med
 	name = "NCR medic helmet"
 	desc = "A standard issue NCR pith helmet with the addition of decalling signifying a medic."
-	icon_state = "ncr_steelpot_med"
-	item_state = "ncr_steelpot_med"
+	icon_state = "ncr_helmet_medic"
+	item_state = "ncr_helmet_medic"
 
 /obj/item/clothing/head/helmet/f13/ncr/engineer //Whoever named these steelpots should go to get their eyes checked
 	name = "NCR engineer helmet"
 	desc = "A standard issue NCR steel helmet, issued with an additional pair of storm goggles for weather resistance."
-	icon_state = "ncr_steelpot_goggles"
-	item_state = "ncr_steelpot_goggles"
+	icon_state = "ncr_helmet_storm"
+	item_state = "ncr_helmet_storm"
 	alt_toggle_message = "You push the goggles down"
 	can_toggle = 1
 	flags_inv = HIDEEARS
@@ -471,8 +471,8 @@
 /obj/item/clothing/head/helmet/f13/ncr/mp
 	name = "NCR military police helmet"
 	desc = "A standard issue NCR steel helmet emblazoned with the initials of the military police."
-	icon_state = "ncr_steelpot_mp"
-	item_state = "ncr_steelpot_mp"
+	icon_state = "ncr_helmet_mp"
+	item_state = "ncr_helmet_mp"
 
 //Ranger
 //Yes, nearly all of these are not helmets - but this is because they ACT as helmets for balance-purposes.
@@ -544,6 +544,8 @@
 // Just like Rangers, a lot are not helmets.. but they are going to act akin to helmets for our purposes.
 /obj/item/clothing/head/f13/town
 	armor = ARMOR_VALUE_LIGHT
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 
 /obj/item/clothing/head/f13/town/deputy
 	name = "town lawman's hat"
@@ -605,8 +607,8 @@
 /obj/item/clothing/head/helmet/f13/khan/fullhelm
 	name = "Great Khan full helmet"
 	desc = " A Khan helmet modified with steel horns and a full guard comprised of red sunglass lenses and a thick metal plate to conceal the lower face."
-	icon_state = "khan_fullhelmet"
-	item_state = "khan_fullhelmet"
+	icon_state = "khanhelmet"
+	item_state = "khanhelmet"
 	armor = ARMOR_VALUE_MEDIUM
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -765,7 +767,7 @@
 	light_system = MOVABLE_LIGHT_DIRECTIONAL
 	light_range = 5
 	light_on = FALSE
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10)
+	//salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10)
 	salvage_tool_behavior = TOOL_WELDER
 	/// Projectiles below this damage will get deflected
 	var/deflect_damage = 18

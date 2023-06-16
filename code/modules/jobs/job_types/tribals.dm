@@ -109,7 +109,6 @@ Tribal Chief
 /datum/outfit/job/tribal/f13chief
 	name =	"Chief"
 	jobtype =	/datum/job/tribal/f13chief
-	head =	/obj/item/clothing/head/helmet/f13/wayfarer/chief/green
 	uniform =	/obj/item/clothing/under/f13/wayfarer
 	belt =	/obj/item/storage/backpack/spearquiver
 	neck =	/obj/item/clothing/neck/mantle/chief
@@ -148,10 +147,6 @@ Tribal Shaman
 	access = list(ACCESS_TRIBE)
 	minimal_access = list(ACCESS_TRIBE)
 
-	loadout_options = list(
-		/datum/outfit/loadout/invoker, //Red shaman
-		/datum/outfit/loadout/ascetic, //Blue shaman
-	)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/mentor = list(
 			/datum/job/tribal/f13druid,
@@ -192,20 +187,6 @@ Tribal Shaman
 	if(visualsOnly)
 		return
 	//ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
-
-/datum/outfit/loadout/invoker
-	name = "Invoker"
-	backpack_contents = list(
-		/obj/item/clothing/head/helmet/f13/wayfarer/shamanred=1,
-		/obj/item/clothing/under/f13/wayfarer/shamanred=1
-	)
-
-/datum/outfit/loadout/ascetic
-	name = "Ascetic"
-	backpack_contents = list(
-		/obj/item/clothing/head/helmet/f13/wayfarer/shamanblue=1,
-		/obj/item/clothing/under/f13/wayfarer/shamanblue=1
-	)
 
 /*
 Tribal Head Hunter

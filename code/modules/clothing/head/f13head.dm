@@ -364,26 +364,6 @@
 	item_state = "fedora"
 	flags_inv = HIDEHAIR
 
-/obj/item/clothing/head/helmet/f13/wayfarer/chief/green
-	name = "helm of the helping hand"
-	desc = "The many eyed helper to the village and all, the Chief that chooses this Mr. Handy based mantle is clever and kind in equal measure, they embody industry and diplomacy. Though they aren't defensive, they are surgically precise in eliminating those who oppose them."
-	icon_state = "chiefgreen"
-	item_state = "chiefgreen"
-
-/obj/item/clothing/head/helmet/f13/wayfarer/shamanblue
-	name = "ritual headdress"
-	desc = "An ancient mask fashioned at the coasts of the Great Salt Water, imbued with the ancestral blessing through a long forgotten ritual."
-	icon_state = "shamanblue"
-	item_state = "shamanblue"
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-
-/obj/item/clothing/head/helmet/f13/wayfarer/shamanred
-	name = "crimson mask"
-	desc = "An uncanny helm passed down through generations, originating from a tribal culture once situated at the top of a Sonoran mesa."
-	icon_state = "shamanred"
-	item_state = "shamanred"
-	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
-
 //Old World Law Enforcement
 //Police and State Police
 
