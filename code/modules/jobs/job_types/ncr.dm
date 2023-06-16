@@ -293,7 +293,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 	loadout_options = list( // ALL: Bayonet, M1911 sidearm
 		/datum/outfit/loadout/sergeantrifleman,	// Worn Assault Carbine
-		/datum/outfit/loadout/sergeantrecon, // Scout Carbine, Trekking
+		/datum/outfit/loadout/sergeantrecon, // Scout Carbine, Trekking, Binocs.
 		/datum/outfit/loadout/sergeantcqc, // Trench Shotgun, Gas mask, Smoke bombs, Trench knife
 		)
 
@@ -353,6 +353,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/box/ration/menu_eight = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
 		/obj/item/book/granter/trait/trekking = 1,
+		/obj/item/binoculars = 1,
 		)
 
 /datum/outfit/loadout/sergeantcqc
