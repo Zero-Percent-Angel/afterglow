@@ -337,13 +337,14 @@
 	icon_state = "legvex_alt"
 	item_state = "legvex_alt"
 
-/obj/item/cloathing/head/helmet/f13/legion/vet/decan/heavy
+/obj/item/clothing/head/helmet/f13/legion/vet/decan/heavy
 	name = "reinforced legion veteran decanus helmet"
 	desc = "It's a metal helmet with an array of red, white, and black feathers. Unmistakably a Veterna Decanus's helmet. This one, however, sports a face-shield and plating to protect the user."
 	lefthand_file = ""
 	righthand_file = ""
+	icon = 'icons/fallout/clothing/helmets.dmi'
 	icon_state = "legheavy"
-	item_state = "legheavy"
+	item_state = "leg_decan_veteran"
 
 /////////////
 /*CENTURION*/
@@ -416,15 +417,17 @@
 /obj/item/clothing/head/helmet/f13/ncr/gambler
 	name = "NCR gambler helmet"
 	desc = "A standard issue NCR pith helmet. Stashed in the strap are decks of cards, dominoes and cigarettes for personal use."
-	icon_state = "steelpot_gambler"
-	item_state = "steelpot_gambler"
+	icon_state = "ncr_helmet_storm"
+	item_state = "ncr_helmet_storm-up"
 	unique_reskin = list("M1" = "ncr_old_gambler")
 
 /obj/item/clothing/head/helmet/f13/ncr/bandolier
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	name = "NCR bandolier helmet"
 	desc = "A standard issue NCR pith helmet. This one has clearly seen heavy use, as well as having additional bullets tucked into the strap."
-	icon_state = "steelpot_bandolier"
-	item_state = "steelpot_bandolier"
+	icon_state = "ncr_helmet_storm"
+	item_state = "ncr_helmet_storm-up"
 	unique_reskin = list("M1" = "ncr_old_bandolier")
 
 /obj/item/clothing/head/helmet/f13/ncr/med
@@ -478,6 +481,8 @@
 //Yes, nearly all of these are not helmets - but this is because they ACT as helmets for balance-purposes.
 
 /obj/item/clothing/head/f13/ncr/ranger
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	name = "NCR ranger hat"
 	desc = "a rustic, homely style cowboy hat worn by NCR rangers. Yeehaw!"
 	icon_state = "ncr_ranger"
@@ -485,6 +490,8 @@
 	armor = ARMOR_VALUE_LIGHT
 
 /obj/item/clothing/head/f13/ncr/patrol
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	name = "NCR ranger campaign hat"
 	desc = "An NCR ranger hat, standard issue amongst all but the most elite rangers."
 	icon_state = "ncr_ranger_patrol"
@@ -552,12 +559,16 @@
 	desc = "A stylish classic hat used by lawmen."
 	icon_state = "town_deputy"
 	item_state = "town_deputy"
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 
 /obj/item/clothing/head/f13/town/sheriff
 	name = "town sheriff's hat"
 	desc = "A stylish classic hat used by lawmen. This one belongs to the man of big iron"
 	icon_state = "town_marshal"
 	item_state = "town_marshal"
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 
 /obj/item/clothing/head/helmet/f13/combat/town
 	name = "town security helmet"
@@ -615,6 +626,7 @@
 	strip_delay = 20
 
 /obj/item/clothing/head/helmet/f13/khan/bandana
+	icon = 'icons/fallout/clothing/khans.dmi'
 	name = "outlaw bandana"
 	desc = "A bandana. Tougher than it looks. One side of the cloth is dark, the other red, so it can be reversed."
 	icon_state = "khan_bandana"

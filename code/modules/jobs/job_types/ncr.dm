@@ -119,7 +119,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	id = /obj/item/card/id/dogtag/ncrtrooper
 	accessory = /obj/item/clothing/accessory/ncr/CPL
 	shoes = /obj/item/clothing/shoes/f13/military/ncr_officer_boots
-	head = /obj/item/clothing/head/f13/ncr
+	head = /obj/item/clothing/head/helmet/f13/ncr
 	belt = /obj/item/storage/belt/legholster
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
 	suit = /obj/item/clothing/suit/armor/ncrarmor/captain
@@ -1192,7 +1192,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/corporalrifleman		//Name changed for better flavor
 	name = "Master Corporal"
-	head = /obj/item/clothing/head/f13/ncr
+	head = /obj/item/clothing/head/helmet/f13/ncr
 	suit = /obj/item/clothing/suit/armor/ncrarmor/mantle
 	suit_store = /obj/item/gun/ballistic/automatic/service
 	backpack_contents = list(
@@ -1264,7 +1264,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	jobtype	= /datum/job/ncr/f13trooper
 	id = /obj/item/card/id/dogtag/ncrtrooper
 	accessory = /obj/item/clothing/accessory/ncr/TPR
-	head = /obj/item/clothing/head/f13/ncr
+	head = /obj/item/clothing/head/helmet/f13/ncr
 	suit = /obj/item/clothing/suit/armor/ncrarmor
 	glasses	= null
 	backpack_contents = list(

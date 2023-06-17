@@ -319,9 +319,11 @@
 	icon_state = "ncr_codresscap"
 	item_state = "ncr_codresscap"
 
-/Oasis/Town
+//Oasis/Town
 
 /obj/item/clothing/head/f13/town
+	icon = 'icons/obj/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/head.dmi'
 	name = "town tricorn"
 	desc = "Why are there tricorns in the desert again?"
 	icon_state = "tricorn"
@@ -486,3 +488,53 @@ obj/item/clothing/head/f13/army/beret
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "chinese_officer"
 	item_state = "chinese_officer"
+
+//Enclave
+/obj/item/clothing/head/f13/enclave
+	name = "officer hat"
+	desc = "A standard-issue Enclave officer's cap."
+	icon_state = "enclave"
+	item_color = "enclave"
+
+/* /obj/item/clothing/head/helmet/soft/f13/enclave/Initialize()
+	. = ..()
+	AddComponent(/datum/component/armor_plate)
+ */
+/obj/item/clothing/head/f13/enclave/peacekeeper
+	name = "peacekeeper cap"
+	desc = "Reinforced field cap issued to the soldiers of the Enclave."
+	icon_state = "hat_enclave_peacekeeper"
+	item_state = "hat_enclave_peacekeeper"
+
+/obj/item/clothing/head/beret/enclave
+	name = "enclave beret"
+	desc = "A standard issue black beret of the Enclave."
+	icon_state = "remnant"
+	item_state = "remnant"
+	flags_inv = HIDEEARS|HIDEFACE
+	flags_cover = null
+
+/obj/item/clothing/head/beret/enclave/science
+	name = "science beret"
+	desc = "Blue beret signifying the wearer is a Science Officer of the Enclave."
+	icon_state = "hat_enclave_science"
+	item_state = "hat_enclave_science"
+
+/obj/item/clothing/head/beret/enclave/intel
+	name = "intel beret"
+	desc = "Dark beret issued to Intelligence Officers of the Enclave."
+	icon_state = "hat_enclave_intel"
+	item_state = "hat_enclave_intel"
+
+/obj/item/clothing/head/helmet/f13/envirosuit
+	name = "enclave envirosuit hood"
+	icon_state = "envirohead"
+	item_state = "envirohead"
+	desc = "A white hazmat helmet with a coupling system, the visor looks to be made out of orange plexiglas."
+	clothing_flags = THICKMATERIAL
+	flags_inv = HIDEMASK|HIDEEARS|HIDEFACE|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1, ARMOR_MODIFIER_UP_ENV_T3)
+	strip_delay = 60
+	equip_delay_other = 60
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE

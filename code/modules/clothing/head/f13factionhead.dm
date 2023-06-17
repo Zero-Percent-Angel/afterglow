@@ -822,6 +822,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 //Oasis/Town
 
 /obj/item/clothing/head/f13/town
+	icon = 'icons/obj/clothing/hats.dmi'
 	name = "town tricorn"
 	desc = "Why are there tricorns in the desert again?"
 	icon_state = "tricorn"

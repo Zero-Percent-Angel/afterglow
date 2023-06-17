@@ -130,8 +130,8 @@
 /obj/item/clothing/suit/armor/medium/vest
 	name = "armor vest"
 	desc = "A slim armored vest with a rigid exterior that provides decent protection against pistol rounds, stabs, and bludgeons."
-	icon_state = "armor_armor"
-	item_state = "armor_armor"
+	icon_state = "vest_armor"
+	item_state = "vest_armor"
 	blood_overlay_type = "armor"
 	dog_fashion = /datum/dog_fashion/back
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
@@ -648,8 +648,8 @@
 /obj/item/clothing/suit/armor/medium/legion/centurion //good all around
 	name = "legion centurion armor"
 	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
-	icon_state = "legion_cent"
-	item_state = "legion_cent"
+	icon_state = "legion_centurion"
+	item_state = "legion_centurion"
 
 /obj/item/clothing/suit/armor/medium/legion/rangercent //speed and bullet resist, sacrifices all else
 	name = "legion centurion ranger-hunter armor"
@@ -738,10 +738,11 @@
 
 //takes from medium armor
 /obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	name = "Great Khan armored jacket"
 	desc = "A black leather jacket with ballistic plates and a big Great Khan logo on the back. Some prefer to wear a leather vest (alt-click)."
 	icon_state = "khan_battlecoat"
-	item_state = "khan_battlecoat"
+	item_state = "khanbattle"
 	slowdown = 0.5
 	cold_protection = CHEST|GROIN
 	heat_protection = CHEST|GROIN

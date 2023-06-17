@@ -270,6 +270,14 @@
 	icon_state = "diesel-off"
 	base_icon = "diesel"
 
+/obj/machinery/power/port_gen/infinite/diesel
+	name = "diesel generator"
+	desc = "A portable generator for emergency backup power."
+	icon = 'icons/fallout/machines/power.dmi'
+	icon_state = "diesel-off"
+	base_icon = "diesel"
+	
+
 /obj/machinery/power/port_gen/pacman/diesel/update_icon_state()
 	var/addon = active ? "on" : "off"
 	icon_state = "[base_icon]-[addon]"

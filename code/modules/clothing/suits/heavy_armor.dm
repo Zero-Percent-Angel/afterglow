@@ -237,8 +237,8 @@
 /obj/item/clothing/suit/armor/heavy/legion/palacent //laser resist spec
 	name = "legion centurion paladin-slayer armor"
 	desc = "A Centurion able to defeat a Brotherhood Paladin gets the honorific title 'Paladin-Slayer', and adds bits of the looted armor to his own."
-	icon_state = "leg_cent_paladin"
-	item_state = "leg_cent_paladin"
+	icon_state = "legion_palacent"
+	item_state = "legion_palacent"
 
 /obj/item/clothing/suit/armor/heavy/legion/legate
 	name = "legion legate armor"

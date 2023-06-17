@@ -60,7 +60,7 @@
 /atom/proc/_try_interact(mob/user)
 	if(IsAdminGhost(user))		//admin abuse
 		return interact(user)
-	if(can_interact(user))
+	if(can_interact(user) && check_skill_test(user))
 		return interact(user)
 
 /atom/proc/can_interact(mob/user)
@@ -86,7 +86,6 @@
 		return FALSE
 
 /atom/proc/interact(mob/user)
-	check_skill_test(user)
 	if(interaction_flags_atom & INTERACT_ATOM_NO_FINGERPRINT_INTERACT)
 		add_hiddenprint(user)
 	else
@@ -99,25 +98,30 @@
 	if (has_a_added_skill_check)
 		if (!added_skill_can_be_retried && added_skill_failures.Find(WEAKREF(user)))
 			to_chat(user, span_bad("You've already failed that."))
-			return
+			return FALSE
 		user.visible_message(span_alert("[user] starts the skill check."), span_notice("You start the skill check."))
 		if (do_after(user, 5 SECONDS, target = src))
 			if (added_skill_check_is_a_roll)
 				if (user.skill_roll(added_skill_check, added_skill_difficulty, TRUE))
 					user.visible_message(span_good("[user] succeeds the skill check."))
 					message_admins("[user] succeeded at the skill check on [src]!")
+					return TRUE
 				else
 					message_admins("[user] failed at the skill check on [src]!")
 					user.visible_message(span_bad("[user] fails the skill check."))
+					return FALSE
 			else
 				if (user.skill_check(added_skill_check, added_skill_difficulty, TRUE))
 					user.visible_message(span_good("[user] succeeds the skill check."))
 					message_admins("[user] succeeded at the skill check on [src]!")
+					return TRUE
 				else
 					message_admins("[user] failed at the skill check on [src]!")
 					user.visible_message(span_bad("[user] fails the skill check."))
 					if (!added_skill_can_be_retried)
 						added_skill_failures += WEAKREF(user)
+					return FALSE
+	return TRUE
 
 /*
 /mob/living/carbon/human/RestrainedClickOn(atom/A) ---carbons will handle this

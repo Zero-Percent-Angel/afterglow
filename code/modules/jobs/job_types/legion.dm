@@ -332,7 +332,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/decvetbull
 	name = "Mark of The Bull"
-	head = /obj/item/cloathing/head/helmet/f13/legion/vet/decan/heavy
+	head = /obj/item/clothing/head/helmet/f13/legion/vet/decan/heavy
 	suit_store = /obj/item/twohanded/sledgehammer/supersledge
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
