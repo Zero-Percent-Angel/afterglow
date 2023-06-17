@@ -83,9 +83,12 @@
 					return
 			var/list/options = params2list(possible_destinations)
 			if(!(params["shuttle_id"] in options))
-				log_admin("[usr] attempted to href dock exploit on [src] with target location \"[params["shuttle_id"]]\"")
-				message_admins("[usr] just attempted to href dock exploit on [src] with target location \"[params["shuttle_id"]]\"")
+				var/attempted = params["shuttle_id"]
+				var/sanitized = url_encode(attempted)
+				log_admin("[usr] attempted to href dock exploit on [src] with target location \"[attempted]\"")
+				message_admins("[usr] just attempted to href dock exploit on [src] with target location \"[sanitized]\"")
 				return
+		
 			switch(SSshuttle.moveShuttle(shuttleId, params["shuttle_id"], 1))
 				if(0)
 					say("Shuttle departing. Please stand away from the doors.")
