@@ -176,7 +176,6 @@ GLOBAL_LIST_INIT(leather_recipes, list (
 	new/datum/stack_recipe("rustic cowboy hat", /obj/item/clothing/head/helmet/f13/brahmincowboyhat, 3),
 	null,
 	new/datum/stack_recipe("leather jacket", /obj/item/clothing/suit/jacket/leather, 7),
-	new/datum/stack_recipe("leather mantle", /obj/item/clothing/suit/armor/outfit/jacket/mantle, 7),
 	new/datum/stack_recipe("leather shoes", /obj/item/clothing/shoes/laceup, 2),
 	new/datum/stack_recipe("leather overcoat", /obj/item/clothing/suit/jacket/leather/overcoat, 10),
 	new/datum/stack_recipe("leather cloak", /obj/item/clothing/suit/hooded/cloak/desert, 3),
@@ -332,7 +331,6 @@ GLOBAL_LIST_INIT(sinew_recipes, list (
 
 GLOBAL_LIST_INIT(leatherstrips_recipes, list (
 	new/datum/stack_recipe("gear harness", /obj/item/clothing/under/misc/gear_harness, 2, time = 40),
-	new/datum/stack_recipe("slave labor outfit", /obj/item/clothing/suit/armor/outfit/slavelabor, 2, time = 50), 
 	new/datum/stack_recipe("jabroni outfit", /obj/item/clothing/under/jabroni, 4, time = 80),
 	new/datum/stack_recipe("muzzle", /obj/item/clothing/mask/muzzle, 2, time = 40), 
 	new/datum/stack_recipe("pet collar", /obj/item/clothing/neck/petcollar, 2, time = 40)

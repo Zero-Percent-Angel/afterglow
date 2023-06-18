@@ -107,6 +107,16 @@
 /mob/living/carbon/human/handle_movement_recoil()
 	if (!highest_gun_or_energy_cache)
 		highest_gun_or_energy_cache = highest_skill_value(SKILL_GUNS, SKILL_ENERGY)
+	on_the_move = TRUE
+	var/mob/living/carbon/human/H = src
+	var/suit_stiffness = 0
+	var/uniform_stiffness = 0
+	if(H.wear_suit)
+		suit_stiffness = H.wear_suit.stiffness
+	if(H.w_uniform)
+		uniform_stiffness = H.w_uniform.stiffness
+	suit_recoil = suit_stiffness + suit_stiffness * uniform_stiffness
+/*
 	var/base_recoil = max(0.4, (100 - highest_gun_or_energy_cache)/50)
 
 	var/mob/living/carbon/human/H = src
@@ -120,3 +130,4 @@
 	base_recoil += suit_stiffness + suit_stiffness * uniform_stiffness // Wearing it under actual armor, or anything too thick is extremely uncomfortable.
 
 	add_recoil(base_recoil)
+*/

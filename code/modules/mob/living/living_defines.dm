@@ -163,6 +163,7 @@
 
 	//Used in living/recoil.dm
 	var/recoil = 0 //What our current recoil level is
-	var/recoil_reduction_timer
+	var/on_the_move = FALSE
+	var/suit_recoil
 
 	var/disconnect_time //how long have we been dc'd for
