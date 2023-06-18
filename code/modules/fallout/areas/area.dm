@@ -410,6 +410,9 @@
 	name = "Bighorn Bunker"
 	icon_state = "bighornbunker"
 
+/area/f13/building/powered
+	requires_power = FALSE
+
 /area/f13/farm
 	name = "Farm"
 	icon_state = "farm"
@@ -1030,6 +1033,9 @@
 /area/f13/brotherhood/mining
 	name = "Brotherhood of Steel Mining"//Brother Hood
 	icon_state = "brotherhoodmining"
+
+/area/f13/brotherhood/powered
+	requires_power = FALSE
 
 /area/f13/enclave
 	name = "Enclave Bunker"
