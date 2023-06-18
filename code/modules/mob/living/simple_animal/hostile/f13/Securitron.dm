@@ -200,8 +200,9 @@
 	health = 800
 	maxHealth = 800 //chomk
 	obj_damage = 300
+	armour_penetration = 0.5 //applies to melee. i forgor.
 	move_to_delay = 4.0 //bit faster
-	retreat_distance = 0
+	retreat_distance = 1
 	minimum_distance = 2 //run up to your face and magdump you bot
 	environment_smash = ENVIRONMENT_SMASH_RWALLS //wall-obliterator. perish.
 	color = "#75FFE2"
