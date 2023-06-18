@@ -276,7 +276,14 @@
 	icon = 'icons/fallout/machines/power.dmi'
 	icon_state = "diesel-off"
 	base_icon = "diesel"
-	
+
+/obj/machinery/power/port_gen/infinite/diesel/Initialize()
+	. = ..()
+	update_icon()
+
+/obj/machinery/power/port_gen/infinite/diesel/update_icon_state()
+	var/addon = active ? "on" : "off"
+	icon_state = "[base_icon]-[addon]"
 
 /obj/machinery/power/port_gen/pacman/diesel/update_icon_state()
 	var/addon = active ? "on" : "off"

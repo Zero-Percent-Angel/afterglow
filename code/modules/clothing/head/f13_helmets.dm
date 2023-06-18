@@ -285,8 +285,8 @@
 /obj/item/clothing/head/helmet/f13/legion/explorer
 	name = "legion explorer hood"
 	desc = "It's a leather hood with metal reinforcments and built in headphones to plug the radio into."
-	icon_state = "leg_explorer"
-	item_state = "leg_explorer"
+	icon_state = "legion-hood"
+	item_state = "legion-hood"
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/legion/venator
@@ -344,7 +344,7 @@
 	righthand_file = ""
 	icon = 'icons/fallout/clothing/helmets.dmi'
 	icon_state = "legheavy"
-	item_state = "leg_decan_veteran"
+	item_state = "legdecanvet"
 
 /////////////
 /*CENTURION*/
