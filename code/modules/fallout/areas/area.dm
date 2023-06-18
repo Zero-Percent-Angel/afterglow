@@ -773,6 +773,9 @@
 	environment = 21
 	grow_chance = 50
 
+/area/f13/sewer/powered
+	requires_power = FALSE
+
 /area/f13/caves
 	name = "Caves"
 	icon_state = "caves"
