@@ -311,6 +311,12 @@
 /obj/item/projectile/beam/laser/pistol/ultraweak
 	damage = 15 //quantity over quality
 
+//Chewchews Beam
+/obj/item/projectile/beam/laser/pistol/ultraweak/chewchew
+	damage = 13 //less dam..
+	armour_penetration = 0.25 //..more pen
+	is_reflectable = FALSE
+
 //Alrem's plasmacaster
 /obj/item/projectile/f13plasma/plasmacaster/arlem
 	name = "plasma bolt"

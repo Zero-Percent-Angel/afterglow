@@ -35,7 +35,6 @@
 					/obj/item/reagent_containers/food/drinks/beer = 5,
 					/obj/item/book/manual/nuka_recipes = 1)
 	contraband = list(/obj/item/reagent_containers/food/drinks/mug/tea = 12,
-					/obj/item/clothing/suit/armor/outfit/overalls/sexymaid = 5,
 					/obj/item/clothing/head/maid = 5,
 					/obj/item/clothing/neck/apron/bartender = 2,
 					/obj/item/reagent_containers/food/drinks/bottle/fernet = 5)

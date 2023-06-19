@@ -793,7 +793,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 /obj/item/clothing/suit/toggle/labcoat/khan_jacket
 	name = "Great Khan jacket"
 	desc = "A black leather jacket. <br>There is an illustration on the back - an aggressive, red-eyed skull wearing a fur hat with horns.<br>The skull has a mongoloid moustache - it's obviously a Great Khans emblem."
-	icon = 'icons/fallout/clothing/khans.dmi'
+	icon = 'icons/fallout/clothing/armored_light.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
 	icon_state = "khan_jacket"
 	item_state = "khan_jacket"
@@ -815,6 +815,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "Heavy leather coat lined with a patchwork of metal plates on the inside."
 	icon_state = "khan_heavy"
 	item_state = "khan_heavy"
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tier_desc = ARMOR_CLOTHING_MEDIUM

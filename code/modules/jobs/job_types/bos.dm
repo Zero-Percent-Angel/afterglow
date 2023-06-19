@@ -37,23 +37,27 @@ Main doors: ACCESS_CAPTAIN 20
 	if(visualsOnly)
 		return
 
-/*
+
 /datum/outfit/job/bos/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/bos_combat)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/bos_combat_mk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombathelmet)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombathelmetmk2)
+	/*
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tribalradio)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombatarmor)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombathelmet)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombatarmormk2)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombathelmetmk2)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/bos)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_bos)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/bosoutcastlight)
-*/
+	*/
+
 
 /*
 Elder
@@ -200,8 +204,8 @@ Head Paladin
 
 /datum/outfit/loadout/sentstand
 	name = "Shock Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
+	suit = /obj/item/clothing/suit/armor/power_armor/t51b
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	l_hand = /obj/item/gun/energy/laser/scatter
 	backpack_contents = list(
 		/obj/item/stock_parts/cell/ammo/mfc = 3,
@@ -209,8 +213,8 @@ Head Paladin
 
 /datum/outfit/loadout/sentheavy
 	name = "Heavy Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
+	suit = /obj/item/clothing/suit/armor/power_armor/t51b
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/m72 = 1,
 		/obj/item/ammo_box/magazine/m2mm = 3,
@@ -220,16 +224,16 @@ Head Paladin
 
 /datum/outfit/loadout/sentgat
 	name = "Gatling Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
+	suit = /obj/item/clothing/suit/armor/power_armor/t51b
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/minigunpack=1,
 	)
 
 /datum/outfit/loadout/sentmini
 	name = "Minigun Head Paladin"
-	suit = /obj/item/clothing/suit/armor/power_armor/t51b/bos
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
+	suit = /obj/item/clothing/suit/armor/power_armor/t51b
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	backpack_contents = list(
 		/obj/item/minigunpackbal5mm=1,
 		/obj/item/gun/energy/laser/pistol=1,
@@ -368,14 +372,14 @@ Head Knight
 	//gunsmith_two = TRUE
 	//gunsmith_three = TRUE
 	//gunsmith_four = TRUE
-	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood/captain
+	suit = 			/obj/item/clothing/head/helmet/f13/power_armor/t51b
 	glasses =		/obj/item/clothing/glasses/night
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	accessory =		/obj/item/clothing/accessory/bos/knightcaptain
 	//belt = /obj/item/kit_spawner/bos/combat
 	l_pocket =			/obj/item/storage/belt/shoulderholster
 	mask =			/obj/item/clothing/mask/gas/sechailer
-	head =			/obj/item/clothing/head/helmet/f13/combat/brotherhood/captain
+	head =			/obj/item/clothing/head/helmet/f13/combat/brotherhood
 	id =			/obj/item/card/id/dogtag
 	backpack_contents = list(
 		/obj/item/book/granter/crafting_recipe/gunsmith_one=1,
@@ -409,7 +413,7 @@ Head Knight
 */
 
 /*
-Star Paladin
+Senior Paladin
 */
 
 /datum/job/bos/f13seniorpaladin
@@ -458,8 +462,8 @@ Star Paladin
 /datum/outfit/job/bos/f13seniorpaladin
 	name =	"Senior Paladin"
 	jobtype =	/datum/job/bos/f13seniorpaladin
-	suit =	/obj/item/clothing/suit/armor/power_armor/t45d/bos
-	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos
+	suit =	/obj/item/clothing/suit/armor/power_armor/t45d
+	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	accessory =	/obj/item/clothing/accessory/bos/seniorpaladin
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
@@ -485,7 +489,7 @@ Star Paladin
 	name = "Senior Tactical Paladin"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/g11 = 1,
-		/obj/item/ammo_box/magazine/m473/small = 3,
+		/obj/item/ammo_box/magazine/m473 = 3,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		)
@@ -560,8 +564,8 @@ Paladin
 /datum/outfit/job/bos/f13paladin
 	name =	"Paladin"
 	jobtype =	/datum/job/bos/f13paladin
-	suit =	/obj/item/clothing/suit/armor/power_armor/t45d/bos
-	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos
+	suit =	/obj/item/clothing/suit/armor/power_armor/t45d
+	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
 	//belt = /obj/item/kit_spawner/bos/combat
@@ -585,7 +589,7 @@ Paladin
 	name = "Tactical Paladin"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/g11 = 1,
-		/obj/item/ammo_box/magazine/m473/small = 3,
+		/obj/item/ammo_box/magazine/m473 = 3,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/clothing/accessory/bos/paladin=1,

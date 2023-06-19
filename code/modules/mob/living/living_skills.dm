@@ -49,6 +49,18 @@
 	//var/the_val = (skill_value(check) + special_l)
 	//prob((the_val-difficulty)*(the_val-difficulty)/100+((100+difficulty-the_val)*the_val)/100*2)
 
+// You have sinned, now you must pay
+/mob/proc/skill_roll_evil(check, difficulty = DIFFICULTY_NORMAL, do_message = 1)
+	var/highest_random = max(rand(1,100), rand(1,100)) + difficulty
+	if ((skill_value(check) + special_l) >= highest_random && prob(special_l*9))
+		if (do_message)
+			to_chat(src, span_green("You succeed the skill check using: [check]"))
+		return TRUE
+	else
+		if (do_message)
+			to_chat(src, span_red("You fail the skill check using: [check]"))
+		return FALSE
+
 /mob/proc/skill_roll_under(check, difficulty = DIFFICULTY_NORMAL)
 	return  ((rand(1,100) + difficulty) - (skill_value(check)))
 
@@ -176,7 +188,7 @@
 /mob/living/proc/start_sneaking()
 	if (!sneaking)
 		sneaking = TRUE
-		src.alpha = (255 - min(src.skill_value(SKILL_SNEAK) * 2, 210))
+		src.alpha = (255 - min(src.skill_value(SKILL_SNEAK) * 2, 200))
 		to_chat(src, span_notice("You start sneaking."))
 		if (m_intent != MOVE_INTENT_WALK)
 			toggle_move_intent()

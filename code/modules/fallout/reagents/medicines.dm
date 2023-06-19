@@ -156,15 +156,15 @@
 	reagent_state = SOLID
 	color = "#A9FBFB"
 	taste_description = "bitterness"
-	metabolization_rate = 1 * REAGENTS_METABOLISM	// same as bicaridine
+	metabolization_rate = 2 * REAGENTS_METABOLISM	// same as bicaridine
 	overdose_threshold = 30
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
 	if(M.getBruteLoss() > M.getFireLoss())	//Less effective at healing mixed damage types.
-		M.adjustBruteLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustBruteLoss(-4*REAGENTS_EFFECT_MULTIPLIER)
 	else
-		M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustFireLoss(-4*REAGENTS_EFFECT_MULTIPLIER)
 	. = TRUE
 	..()
 
@@ -186,8 +186,8 @@
 	description = "Potent, stinging herbs that swiftly aid in the recovery of grevious wounds."
 	color = "#C8A5DC"
 	overdose_threshold = 12
-	var/clot_rate = 0.10
-	var/clot_coeff_per_wound = 0.7
+	var/clot_rate = 0.20
+	var/clot_coeff_per_wound = 0.9
 
 /datum/reagent/medicine/healing_powder/poultice/on_mob_metabolize(mob/living/carbon/M) // a painful remedy!
 	. = ..()
@@ -201,9 +201,9 @@
 
 /datum/reagent/medicine/healing_powder/poultice/on_mob_life(mob/living/carbon/M)
 	. = ..()
-	M.adjustBruteLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
-	M.adjustFireLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
-	M.adjustToxLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustBruteLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustToxLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
 	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
 	. = TRUE
 	..()

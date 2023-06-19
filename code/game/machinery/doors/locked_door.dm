@@ -15,6 +15,7 @@
 	var/trapped_door = FALSE
 	var/maybe_trapped = FALSE
 	var/list/failures = list()
+	var/is_busy = FALSE
 
 /obj/machinery/door/locked/update_icon()
 	if(density)
@@ -116,6 +117,9 @@
 		to_chat(user, span_warning("You are unable to pick this lock"))
 		return FALSE
 	picking.in_use = TRUE
+	if (is_busy)
+		return
+	is_busy = TRUE
 
 	var/list/pick_messages = list(
 		"otherpicking" = list(
@@ -193,4 +197,5 @@
 		user.show_message(span_alert(pick(pick_messages["failmessages"])))
 		failures |= WEAKREF(user)
 	picking.in_use = FALSE
+	is_busy = FALSE
 	picking.use_pick(user)

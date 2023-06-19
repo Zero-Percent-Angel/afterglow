@@ -14,7 +14,6 @@
 		/obj/item/clothing/head/russobluecamohat = 20
 		)
 	contraband = list(
-		/obj/item/clothing/suit/armor/light/duster/russian_coat = 4,
 		/obj/item/clothing/mask/balaclava = 4,
 		/obj/item/clothing/head/helmet/rus_ushanka = 4,
 		/obj/item/clothing/suit/space/hardsuit/soviet = 3,
