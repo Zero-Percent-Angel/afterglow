@@ -47,7 +47,8 @@
 		"cargo" = "cargo_pahrump",
 		"ferry" = "ferry_fancy",
 		"emergency" = "emergency_pahrump",
-		"junker" = "raider_station_train")
+		"junker" = "raider_station_train"
+		)
 
 	var/year_offset = 257 //The offset of ingame year from the actual IRL year. You know you want to make a map that takes place in the 90's. Don't lie.
 
