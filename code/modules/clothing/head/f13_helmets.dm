@@ -393,8 +393,8 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
 /obj/item/clothing/head/helmet/f13/legion/orator
-	name = "laurel wreath"
-	desc = "A laurel wreath is made of branches and leaves of the laurel, a type of evergreen shrub or small tree. This one appears to be out of metal,however. In Ancient Rome, it was worn on the head as a symbol of triumph."
+	name = "legion death mask"
+	desc = "A decorative helmet made of metal with a gold trim around its faceplate, etched with extremely fine details modeled into it. It looks life-like, as if modeled after a mans face..."
 	icon_state = "legion-slavemaster"
 	item_state = "legion-slavemaster"
 	flags_inv = null
