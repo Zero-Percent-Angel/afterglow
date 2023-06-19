@@ -578,11 +578,11 @@
 	item_state = "town_helmet"
 	flags_inv = HIDEEARS
 
-/obj/item/clothing/head/f13/town/riot //UN Glowie
+/obj/item/clothing/head/helmet/f13/town/riot //UN Glowie
 	name = "town sheriff combat helmet"
 	desc = "An old riot helmet bastardized into a what is essentially a maska without functioning internals. Belongs to the big gun of the town."
 	icon_state = "town_marshal_riot"
-	item_state = "ncr_ranger_veteran"
+	item_state = "town_marshal_riot"
 	armor = ARMOR_VALUE_HEAVY
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH

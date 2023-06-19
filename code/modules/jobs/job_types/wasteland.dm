@@ -224,7 +224,7 @@ Raider
 
 /datum/outfit/loadout/raider_legion
 	name = "Disgraced Legionary"
-	suit = /obj/item/clothing/suit/armor/exile/legexile
+	suit = /obj/item/clothing/suit/armor/medium/combat/legion/legexile
 	uniform = /obj/item/clothing/under/f13/exile/legion
 	id = /obj/item/card/id/rusted/rustedmedallion
 	backpack_contents = list(
