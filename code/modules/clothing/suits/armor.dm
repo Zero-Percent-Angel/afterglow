@@ -1,3 +1,83 @@
+///////////////
+//// ARMOR ////
+///////////////
+
+/obj/item/clothing/suit/armor
+	name = "armor template"
+	icon = 'icons/obj/clothing/suits.dmi'
+	lefthand_file = 'icons/mob/inhands/clothing_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/clothing_righthand.dmi'
+	cold_protection = CHEST|GROIN
+	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
+	heat_protection = CHEST|GROIN
+	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
+	strip_delay = 30
+	equip_delay_other = 40
+	max_integrity = 250
+	resistance_flags = NONE
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS // gonna be like this until limbs stop critting people
+	blood_overlay_type = "armor"
+	slowdown = ARMOR_SLOWDOWN_NONE * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tier_desc = ARMOR_CLOTHING_DESC
+
+	/// which mutantrace variations are supported. leave at NONE to keep it snapped at plantigrade
+	//mutantrace_variation = NONE
+
+	/// These dont seem to do anything
+	var/list/protected_zones = list(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_GROIN, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
+	var/armor_block_chance = null //Chance for the armor to block a low penetration projectile
+	var/deflection_chance = null //Chance for the armor to redirect a blocked projectile
+	var/melee_block_threshold = null
+	var/dmg_block_threshold = null
+
+//Biosuit complete with shoes (in the item sprite)
+/obj/item/clothing/head/bio_hood
+	name = "bio hood"
+	icon_state = "bio"
+	desc = "A hood that protects the head and face from biological contaminants."
+	permeability_coefficient = 0.01
+	clothing_flags = THICKMATERIAL | BLOCK_GAS_SMOKE_EFFECT
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE|HIDESNOUT
+	resistance_flags = ACID_PROOF
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	mutantrace_variation = STYLE_MUZZLE
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_LIGHT
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T4)
+
+/obj/item/clothing/suit/bio_suit
+	name = "bio suit"
+	desc = "A suit that protects against biological contamination."
+	icon_state = "bio"
+	item_state = "bio_suit"
+	w_class = WEIGHT_CLASS_BULKY
+	gas_transfer_coefficient = 0.01
+	permeability_coefficient = 0.01
+	clothing_flags = THICKMATERIAL
+	// body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAUR
+	strip_delay = 70
+	equip_delay_other = 70
+	resistance_flags = ACID_PROOF
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_SNEK_TAURIC|STYLE_PAW_TAURIC
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_LIGHT
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T4)
+
+/obj/item/clothing/suit/bio_suit/enclave
+	name = "enclave envirosuit"
+	desc = "An advanced white and airtight environmental suit. It seems to be equipped with a fire-resistant seal and a refitted internals system. This one looks to have been developed by the Enclave sometime after the Great War. You'd usually exclusively see this on scientists of the Enclave."
+	icon_state = "envirosuit"
+	item_state = "envirosuit"
+	w_class = WEIGHT_CLASS_BULKY
+	gas_transfer_coefficient = 0.9
+	permeability_coefficient = 0.5
+	clothing_flags = THICKMATERIAL
+	strip_delay = 60
+	equip_delay_other = 60
+	flags_inv = HIDEJUMPSUIT
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
+
 /* /obj/item/clothing/suit/armor
 	allowed = null
 	cold_protection = CHEST|GROIN
@@ -251,6 +331,7 @@
 	clothing_flags = THICKMATERIAL
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+*/
 
 /obj/item/clothing/suit/armor/tdome/red
 	name = "thunderdome suit"
@@ -264,7 +345,7 @@
 	icon_state = "tdgreen"
 	item_state = "tdgreen"
 
-
+/*
 /obj/item/clothing/suit/armor/heavy/riot/knight
 	name = "plate armour"
 	desc = "A classic suit of plate armour, highly effective at stopping melee attacks."

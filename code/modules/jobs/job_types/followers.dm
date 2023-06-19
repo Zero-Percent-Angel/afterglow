@@ -94,7 +94,7 @@ Administrator
 	id =	/obj/item/card/id/silver
 	//chemwhiz =	TRUE
 	uniform =	/obj/item/clothing/under/f13/followers
-	suit=	/obj/item/clothing/suit/toggle/labcoat/followers
+	suit=	/obj/item/clothing/suit/toggle/labcoat
 	shoes =	/obj/item/clothing/shoes/f13/brownie
 	belt = /obj/item/kit_spawner/follower/admin
 	backpack =	/obj/item/storage/backpack/medic
@@ -294,7 +294,7 @@ Practitioner
 
 /datum/outfit/loadout/physician
 	name =	"Emergency Physician"
-	suit =	/obj/item/clothing/suit/toggle/labcoat/followers
+	suit =	/obj/item/clothing/suit/toggle/labcoat
 	mask =	/obj/item/clothing/mask/surgical
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
 	backpack_contents = list(
@@ -305,7 +305,7 @@ Practitioner
 
 /datum/outfit/loadout/pharmacist
 	name =	"Pharmacist"
-	suit =	/obj/item/clothing/suit/toggle/labcoat/chemist
+	suit =	/obj/item/clothing/suit/toggle/labcoat
 	gloves =	/obj/item/clothing/gloves/color/latex
 	glasses =	/obj/item/clothing/glasses/science
 	backpack_contents = list(

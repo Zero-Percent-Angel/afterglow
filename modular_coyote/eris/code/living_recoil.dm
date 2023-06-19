@@ -17,6 +17,7 @@
 		update_recoil()
 
 /mob/living/proc/calc_recoil()
+	on_the_move = FALSE
 	if (recoil)
 		if (!highest_gun_or_energy_cache)
 			highest_gun_or_energy_cache = highest_skill_value(SKILL_GUNS, SKILL_ENERGY)
@@ -31,12 +32,14 @@
 		else
 			recoil -= base
 			recoil *= scale
-		update_recoil()
+	update_recoil()
 
 /mob/living/proc/calculate_offset(var/offset = 0, skill_used = SKILL_GUNS)
 	var/the_skill_val = skill_value(skill_used)
 	if (skill_used == SKILL_GUNS)
 		offset += max((80 - the_skill_val)/12, 0)
+	if (on_the_move)
+		offset += max((100 - the_skill_val)/15, 0.5) + suit_recoil
 	if(recoil)
 		offset += (recoil*(70/the_skill_val))
 	if(ishuman(src))

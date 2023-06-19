@@ -12,7 +12,7 @@
 	icon_living = "securitron"
 	icon_dead = "securitron_dead"
 	mob_armor = ARMOR_VALUE_ROBOT_SECURITY
-	maxHealth = 100 
+	maxHealth = 100
 	health = 100
 	emp_flags = list(
 		MOB_EMP_STUN,
@@ -37,7 +37,7 @@
 
 	retreat_distance = 2
 	//how far they pull back
-	
+
 	minimum_distance = 5
 	// how close you can get before they try to pull back
 
@@ -131,7 +131,7 @@
 	icon_living = "sentrybot"
 	icon_dead = "sentrybot_dead"
 	mob_armor = ARMOR_VALUE_ROBOT_SECURITY
-	maxHealth = 150 
+	maxHealth = 150
 	health = 150
 	del_on_death = FALSE
 	melee_damage_lower = 24
@@ -193,20 +193,25 @@
 			playsound(src, 'sound/f13npc/sentry/systemfailure.ogg', 75, FALSE)
 
 // Lil chew-chew
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew
+/mob/living/simple_animal/hostile/securitron/sentrybot/chew //Made it more like an old sentrybot. None of this new sentrybot shit.
 	name = "lil' chew-chew"
 	desc = "An oddly scorched pre-war military robot armed with a deadly gatling laser and covered in thick, oddly blue armor plating, the name Lil' Chew-Chew scratched onto it's front armour crudely, highlighted by small bits of white paint. There seems to be an odd pack on the monstrosity of a sentrie's back, a chute at the bottom of it - there's the most scorch-marks on the robot here, so it's safe to assume this robot is capable of explosions. Better watch out!"
 	extra_projectiles = 6
-	health = 1000
-	maxHealth = 1000 //CHONK
+	health = 800
+	maxHealth = 800 //chomk
 	obj_damage = 300
-	retreat_distance = 0
+	armour_penetration = 0.5 //applies to melee. i forgor.
+	move_to_delay = 4.0 //bit faster
+	retreat_distance = 1
+	minimum_distance = 2 //run up to your face and magdump you bot
 	environment_smash = ENVIRONMENT_SMASH_RWALLS //wall-obliterator. perish.
 	color = "#75FFE2"
 	aggro_vision_range = 15
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 //cannot self-harm with it's explosion spam
 	sneak_detection_threshold = EXPERT_CHECK
 	sneak_roll_modifier = DIFFICULTY_CHALLENGE
+	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/chewchew
+	auto_fire_delay = GUN_AUTOFIRE_DELAY_NORMAL
 
 /mob/living/simple_animal/hostile/securitron/sentrybot/chew/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)

@@ -47,6 +47,13 @@
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_HEAD))*/
 
+
+
+
+//Note: ALL OF THIS SHIT NEEDS TO BE TRANSFERED!!!!
+//Either put it all into f13head, or f13helmets depending if it's  FUCKING HELMET OR NOT!!!
+//We DO NOT need a fucking faction file. If we're going to have one, make one .dm file PER FACTION. - By Rebel0, 5/15/2023
+
 //Raider
 /obj/item/clothing/head/helmet/f13/raider
 	name = "base raider helmet"
@@ -815,6 +822,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 //Oasis/Town
 
 /obj/item/clothing/head/f13/town
+	icon = 'icons/obj/clothing/hats.dmi'
 	name = "town tricorn"
 	desc = "Why are there tricorns in the desert again?"
 	icon_state = "tricorn"
