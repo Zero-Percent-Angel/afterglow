@@ -916,14 +916,6 @@
 	icon_state = "t45dhelmet[light_on]"
 	item_state = "t45dhelmet[light_on]"
 
-/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos
-	name = "Brotherhood T-45d power helmet"
-	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
-
-/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos/update_icon_state()
-	icon_state = "t45dhelmet[light_on]"
-	item_state = "t45dhelmet[light_on]"
-
 /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	name = "T-51b power helmet"
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
@@ -934,14 +926,6 @@
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b
 
 /obj/item/clothing/head/helmet/f13/power_armor/t51b/update_icon_state()
-	icon_state = "t51bhelmet[light_on]"
-	item_state = "t51bhelmet[light_on]"
-
-/obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
-	name = "T-51b power helmet"
-	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
-
-/obj/item/clothing/head/helmet/f13/power_armor/t51b/bos/update_icon_state()
 	icon_state = "t51bhelmet[light_on]"
 	item_state = "t51bhelmet[light_on]"
 

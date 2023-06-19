@@ -365,7 +365,7 @@
 	gloves = /obj/item/clothing/gloves/combat
 	belt = 	/obj/item/storage/belt/army/assault
 	mask = /obj/item/clothing/mask/gas/sechailer
-	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
+	head = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 
 
 ///////////////

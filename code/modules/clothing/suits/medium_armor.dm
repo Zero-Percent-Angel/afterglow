@@ -676,7 +676,7 @@
 	icon_state = "brotherhood_armor"
 	item_state = "brotherhood_armor"
 
-/obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate/mk2
+/obj/item/clothing/suit/armor/medium/combat/brotherhood/mk2
 	name = "brotherhood armor Mk II"
 	desc = "A combat armor set made and updated by the Brotherhood of Steel. This varient appears to be a refurbished set based on its welding marks."
 	icon_state = "brotherhood_armor_mk2"

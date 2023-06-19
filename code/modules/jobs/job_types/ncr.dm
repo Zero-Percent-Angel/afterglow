@@ -44,6 +44,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	if(visualsOnly)
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrgate)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncr_combat)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncr_combat_mk2)
 
 
 ///////////////////////
