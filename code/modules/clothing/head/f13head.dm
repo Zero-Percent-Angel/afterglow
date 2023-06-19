@@ -244,8 +244,8 @@
 	desc = "A soft red cap with a black band, used by female Auxilia outside camp."
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = "legion-aux"
-	item_state = "legion-aux"
+	icon_state = "leg_aux"
+	item_state = "leg_aux"
 	flags_inv = HIDEEARS
 	flags_cover = null
 

@@ -152,6 +152,8 @@ Raider
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raid_combat)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raid_combat_mk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raid_combat_helm)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raid_combat_helm_mk2)
 	//ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)
 
 
