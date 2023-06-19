@@ -101,7 +101,9 @@
 	var/added_skill_check = SKILL_GUNS
 	var/added_skill_check_is_a_roll = FALSE
 	var/added_skill_can_be_retried = FALSE
+	var/added_skill_being_checked = FALSE
 	var/list/added_skill_failures
+	var/list/added_skill_passers
 	var/added_skill_difficulty = DIFFICULTY_CHALLENGE
 
 /atom/New(loc, ...)

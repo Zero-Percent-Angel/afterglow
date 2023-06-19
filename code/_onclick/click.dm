@@ -102,6 +102,8 @@
 	var/obj/item/W = get_active_held_item()
 
 	if(W == A)
+		if (!A.check_skill_test(src))
+			return
 		W.attack_self(src)
 		update_inv_hands()
 		return
@@ -109,6 +111,8 @@
 	//These are always reachable.
 	//User itself, current loc, and user inventory
 	if(has_direct_access_to(A, FAR_DEPTH))
+		if (!A.check_skill_test(src))
+			return
 		if(W)
 			return W.melee_attack_chain(src, A, params)
 		else
@@ -123,6 +127,8 @@
 
 	//Standard reach turf to turf or reaching inside storage
 	if(can_reach(A, INVENTORY_DEPTH, reach))
+		if (!A.check_skill_test(src))
+			return
 		if(W)
 			return W.melee_attack_chain(src, A, params)
 		else

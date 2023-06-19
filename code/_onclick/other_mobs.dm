@@ -60,7 +60,7 @@
 /atom/proc/_try_interact(mob/user)
 	if(IsAdminGhost(user))		//admin abuse
 		return interact(user)
-	if(can_interact(user) && check_skill_test(user))
+	if(can_interact(user))
 		return interact(user)
 
 /atom/proc/can_interact(mob/user)
@@ -96,30 +96,39 @@
 
 /atom/proc/check_skill_test(mob/user)
 	if (has_a_added_skill_check)
+		if (added_skill_being_checked)
+			to_chat(user, span_bad("A skill check is already in progress."))
+			return FALSE
 		if (!added_skill_can_be_retried && added_skill_failures.Find(WEAKREF(user)))
 			to_chat(user, span_bad("You've already failed that."))
 			return FALSE
+		if (added_skill_passers.Find(WEAKREF(user)))
+			return TRUE
 		user.visible_message(span_alert("[user] starts the skill check."), span_notice("You start the skill check."))
+		added_skill_being_checked = TRUE
 		if (do_after(user, 5 SECONDS, target = src))
+			added_skill_being_checked = FALSE
 			if (added_skill_check_is_a_roll)
 				if (user.skill_roll(added_skill_check, added_skill_difficulty, TRUE))
 					user.visible_message(span_good("[user] succeeds the skill check."))
 					message_admins("[user] succeeded at the skill check on [src]!")
-					return TRUE
-				else
-					message_admins("[user] failed at the skill check on [src]!")
-					user.visible_message(span_bad("[user] fails the skill check."))
-					return FALSE
-			else
-				if (user.skill_check(added_skill_check, added_skill_difficulty, TRUE))
-					user.visible_message(span_good("[user] succeeds the skill check."))
-					message_admins("[user] succeeded at the skill check on [src]!")
+					added_skill_passers += WEAKREF(user)
 					return TRUE
 				else
 					message_admins("[user] failed at the skill check on [src]!")
 					user.visible_message(span_bad("[user] fails the skill check."))
 					if (!added_skill_can_be_retried)
 						added_skill_failures += WEAKREF(user)
+					return FALSE
+			else
+				if (user.skill_check(added_skill_check, added_skill_difficulty, TRUE))
+					user.visible_message(span_good("[user] succeeds the skill check."))
+					message_admins("[user] succeeded at the skill check on [src]!")
+					added_skill_passers += WEAKREF(user)
+					return TRUE
+				else
+					message_admins("[user] failed at the skill check on [src]!")
+					user.visible_message(span_bad("[user] fails the skill check."))
 					return FALSE
 	return TRUE
 
