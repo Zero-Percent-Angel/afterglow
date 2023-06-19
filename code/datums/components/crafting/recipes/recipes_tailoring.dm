@@ -189,7 +189,7 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/boscombatarmormk2
 	name = "reinforced knight armor"
-	result = /obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate/mk2
+	result = /obj/item/clothing/suit/armor/medium/combat/brotherhood/mk2
 	blacklist = list(/obj/item/clothing/suit/armor/medium/combat)
 	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1,
 				/obj/item/toy/crayon/spraycan)
@@ -1167,3 +1167,118 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
 */
+
+
+///////////////////////////////////
+// FACTIONS COMBAT ARMOR SECTION //
+///////////////////////////////////
+
+// NCR Combat Armor
+
+/datum/crafting_recipe/ncr_combat
+	name = "NCR combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/ncr
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/ncr_combat_mk2
+	name = "mk2 NCR combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/mk2/ncr
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+// Legion Combat Armor
+
+/datum/crafting_recipe/leg_combat
+	name = "legion combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/legion
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/leg_combat_mk2
+	name = "mk2 legion combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/mk2/legion
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+// Brotherhood Combat Armor
+
+/datum/crafting_recipe/bos_combat
+	name = "brotherhood combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/brotherhood
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/bos_combat_mk2
+	name = "mk2 brotherhood combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/brotherhood/mk2
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+// Town Combat Armor
+
+/datum/crafting_recipe/town_combat
+	name = "town combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/town
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/town_combat_mk2
+	name = "mk2 town combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/mk2/town
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+// Raider combat armor
+
+/datum/crafting_recipe/raid_combat
+	name = "raider combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/raider
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/raid_combat_mk2
+	name = "mk2 raider combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/mk2/raider
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE

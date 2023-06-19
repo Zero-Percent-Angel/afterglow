@@ -145,13 +145,15 @@ Raider
 //		/obj/item/gun/ballistic/automatic/pistol/type17,
 //		)
 
-/*
+
 /datum/outfit/job/wasteland/f13raider/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
-	ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)
-*/
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raid_combat)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/raid_combat_mk2)
+	//ADD_TRAIT(H, TRAIT_LONGPORKLOVER, src)
+
 
 	H.social_faction = FACTION_RAIDERS
 	add_verb(H, /mob/living/proc/creategang)
@@ -224,7 +226,7 @@ Raider
 
 /datum/outfit/loadout/raider_legion
 	name = "Disgraced Legionary"
-	suit = /obj/item/clothing/suit/armor/exile/legexile
+	suit = /obj/item/clothing/suit/armor/medium/combat/legion/legexile
 	uniform = /obj/item/clothing/under/f13/exile/legion
 	id = /obj/item/card/id/rusted/rustedmedallion
 	backpack_contents = list(
