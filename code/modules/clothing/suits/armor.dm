@@ -331,6 +331,7 @@
 	clothing_flags = THICKMATERIAL
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+*/
 
 /obj/item/clothing/suit/armor/tdome/red
 	name = "thunderdome suit"
@@ -344,7 +345,7 @@
 	icon_state = "tdgreen"
 	item_state = "tdgreen"
 
-
+/*
 /obj/item/clothing/suit/armor/heavy/riot/knight
 	name = "plate armour"
 	desc = "A classic suit of plate armour, highly effective at stopping melee attacks."

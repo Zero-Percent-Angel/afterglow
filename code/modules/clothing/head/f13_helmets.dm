@@ -417,17 +417,15 @@
 /obj/item/clothing/head/helmet/f13/ncr/gambler
 	name = "NCR gambler helmet"
 	desc = "A standard issue NCR pith helmet. Stashed in the strap are decks of cards, dominoes and cigarettes for personal use."
-	icon_state = "ncr_helmet_storm"
-	item_state = "ncr_helmet_storm-up"
+	icon_state = "ncr_gambler"
+	item_state = "ncr_gambler"
 	unique_reskin = list("M1" = "ncr_old_gambler")
 
 /obj/item/clothing/head/helmet/f13/ncr/bandolier
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	name = "NCR bandolier helmet"
 	desc = "A standard issue NCR pith helmet. This one has clearly seen heavy use, as well as having additional bullets tucked into the strap."
-	icon_state = "ncr_helmet_storm"
-	item_state = "ncr_helmet_storm-up"
+	icon_state = "ncr_bandolier"
+	item_state = "ncr_bandolier"
 	unique_reskin = list("M1" = "ncr_old_bandolier")
 
 /obj/item/clothing/head/helmet/f13/ncr/med
@@ -578,11 +576,11 @@
 	item_state = "town_helmet"
 	flags_inv = HIDEEARS
 
-/obj/item/clothing/head/f13/town/riot //UN Glowie
+/obj/item/clothing/head/helmet/f13/town/riot //UN Glowie
 	name = "town sheriff combat helmet"
 	desc = "An old riot helmet bastardized into a what is essentially a maska without functioning internals. Belongs to the big gun of the town."
 	icon_state = "town_marshal_riot"
-	item_state = "ncr_ranger_veteran"
+	item_state = "town_marshal_riot"
 	armor = ARMOR_VALUE_HEAVY
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -918,14 +916,6 @@
 	icon_state = "t45dhelmet[light_on]"
 	item_state = "t45dhelmet[light_on]"
 
-/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos
-	name = "Brotherhood T-45d power helmet"
-	desc = "It's an old pre-War power armor helmet. It's pretty hot inside of it."
-
-/obj/item/clothing/head/helmet/f13/power_armor/t45d/bos/update_icon_state()
-	icon_state = "t45dhelmet[light_on]"
-	item_state = "t45dhelmet[light_on]"
-
 /obj/item/clothing/head/helmet/f13/power_armor/t51b
 	name = "T-51b power helmet"
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
@@ -936,14 +926,6 @@
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b
 
 /obj/item/clothing/head/helmet/f13/power_armor/t51b/update_icon_state()
-	icon_state = "t51bhelmet[light_on]"
-	item_state = "t51bhelmet[light_on]"
-
-/obj/item/clothing/head/helmet/f13/power_armor/t51b/bos
-	name = "T-51b power helmet"
-	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
-
-/obj/item/clothing/head/helmet/f13/power_armor/t51b/bos/update_icon_state()
 	icon_state = "t51bhelmet[light_on]"
 	item_state = "t51bhelmet[light_on]"
 
