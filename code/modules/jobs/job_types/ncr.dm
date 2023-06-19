@@ -46,6 +46,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrgate)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncr_combat)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncr_combat_mk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncr_combat_helm)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncr_combat_helm_mk2)
 
 
 ///////////////////////
@@ -674,7 +676,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	jobtype	= /datum/job/ncr/f13ranger
 	id = /obj/item/card/id/dogtag/ncrranger
 	uniform	= /obj/item/clothing/under/f13/ranger/trail
-	head = /obj/item/clothing/head/f13/trailranger
+	head = /obj/item/clothing/head/f13/ncr/ranger
 	gloves = /obj/item/clothing/gloves/patrol
 	shoes = /obj/item/clothing/shoes/f13/military/leather
 	glasses	= /obj/item/clothing/glasses/sunglasses
