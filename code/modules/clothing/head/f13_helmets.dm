@@ -417,17 +417,15 @@
 /obj/item/clothing/head/helmet/f13/ncr/gambler
 	name = "NCR gambler helmet"
 	desc = "A standard issue NCR pith helmet. Stashed in the strap are decks of cards, dominoes and cigarettes for personal use."
-	icon_state = "ncr_helmet_storm"
-	item_state = "ncr_helmet_storm-up"
+	icon_state = "ncr_gambler"
+	item_state = "ncr_gambler"
 	unique_reskin = list("M1" = "ncr_old_gambler")
 
 /obj/item/clothing/head/helmet/f13/ncr/bandolier
-	icon = 'icons/fallout/clothing/hats.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	name = "NCR bandolier helmet"
 	desc = "A standard issue NCR pith helmet. This one has clearly seen heavy use, as well as having additional bullets tucked into the strap."
-	icon_state = "ncr_helmet_storm"
-	item_state = "ncr_helmet_storm-up"
+	icon_state = "ncr_bandolier"
+	item_state = "ncr_bandolier"
 	unique_reskin = list("M1" = "ncr_old_bandolier")
 
 /obj/item/clothing/head/helmet/f13/ncr/med
