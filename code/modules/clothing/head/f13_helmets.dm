@@ -649,7 +649,6 @@
 	glass_colour_type = /datum/client_colour/glass_colour/red
 	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
 	darkness_view = 24
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3, /obj/item/clothing/glasses/night/polarizing = 1)
 
 ////////////////////////
 // GREAT KHAN HELMETS //

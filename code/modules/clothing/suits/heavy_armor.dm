@@ -236,7 +236,7 @@
 	desc = "An armor worn by veteran legionary decanus who have proven their combat prowess in many battles, strapped to it is various forms of kevlar and other bullet-proof armors."
 	icon_state = "legion_heavy"
 	item_state = "legion_heavy"
-	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T2 *ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 *ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2)
 
 /obj/item/clothing/suit/armor/heavy/legion/centurion //good all around
@@ -244,7 +244,7 @@
 	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
 	icon_state = "legion_centurion"
 	item_state = "legion_centurion"
-	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/palacent //laser resist spec
 	name = "legion centurion paladin-slayer armor"
