@@ -1602,18 +1602,12 @@
 	},
 /area/f13/bunker)
 "gS" = (
-/obj/structure/fluff/rails{
-	dir = 4
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "junker"
 	},
-/obj/docking_port/stationary{
-	dwidth = 2;
-	height = 7;
-	id = "raider_train";
-	name = "Vault Central Station";
-	area_type = /area/f13/bunker
-	},
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bunker)
 "gT" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/ammo/military,
@@ -2831,7 +2825,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault)
 "mB" = (
-/turf/closed/indestructible/f13/obsidian,
+/obj/structure/timeddoor/sixtyminute,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "mD" = (
 /obj/structure/cable{
@@ -6943,6 +6938,13 @@
 "EF" = (
 /turf/closed/indestructible/f13vaultrusted,
 /area/f13/bunker/bunkerthree)
+"EG" = (
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	id = "junker"
+	},
+/turf/open/floor/plasteel/dark,
+/area/f13/caves)
 "EH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/trash_stack,
@@ -7604,19 +7606,11 @@
 	},
 /area/f13/bunker/bunkereight)
 "Hz" = (
-/obj/structure/fluff/rails,
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 2;
-	height = 7;
-	id = "raider_station";
-	name = "Grand Junker Station";
-	json_key = "junker";
-	area_type = /area/f13/bunker;
-	width = 11;
-	roundstart_template = /datum/map_template/shuttle/raider_station_train
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = "junker1"
 	},
-/turf/open/indestructible/ground/inside/subway,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "HB" = (
 /obj/machinery/light{
@@ -8322,6 +8316,13 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/hydroponics)
+"KM" = (
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	id = "junker1"
+	},
+/turf/open/floor/plasteel/dark,
+/area/f13/caves)
 "KO" = (
 /obj/structure/toilet{
 	dir = 4
@@ -9804,6 +9805,11 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker/bunkertwo)
+"RI" = (
+/obj/structure/simple_door/metal,
+/obj/structure/timeddoor/sixtyminute,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bunker)
 "RL" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
@@ -15347,7 +15353,7 @@ iX
 iX
 iX
 iX
-gS
+iX
 iX
 iX
 iX
@@ -16807,8 +16813,8 @@ RB
 RB
 RB
 ZO
-ZO
-ZO
+sv
+sv
 ZO
 ZO
 ZO
@@ -17008,10 +17014,10 @@ RB
 RB
 RB
 RB
-RB
-RB
-RB
-RB
+ZO
+sv
+sv
+ZO
 RB
 RB
 RB
@@ -17210,10 +17216,10 @@ RB
 RB
 RB
 RB
-RB
-RB
-RB
-RB
+ZO
+sv
+sv
+ZO
 RB
 RB
 RB
@@ -17412,10 +17418,10 @@ RB
 RB
 RB
 RB
-RB
-RB
-RB
-RB
+ZO
+sv
+sv
+ZO
 RB
 RB
 RB
@@ -17614,10 +17620,10 @@ RB
 RB
 RB
 RB
-RB
-RB
-RB
-RB
+ZO
+sv
+sv
+ZO
 RB
 RB
 RB
@@ -17816,10 +17822,10 @@ RB
 RB
 RB
 RB
-RB
-RB
-RB
-RB
+ZO
+EG
+KM
+ZO
 RB
 RB
 RB
@@ -18018,10 +18024,10 @@ RB
 RB
 RB
 RB
-RB
-RB
-RB
-RB
+ZO
+ZO
+ZO
+ZO
 RB
 RB
 RB
@@ -51505,11 +51511,11 @@ TF
 TF
 TF
 TF
-TF
-TF
-TF
-TF
-TF
+qI
+qI
+qI
+qI
+VG
 TF
 TF
 TF
@@ -51707,11 +51713,11 @@ TF
 TF
 TF
 TF
-TF
-TF
-TF
-TF
-TF
+qI
+Gc
+oB
+oB
+VG
 TF
 TF
 TF
@@ -51909,16 +51915,16 @@ TF
 TF
 TF
 TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
+qI
+oB
+oB
+oB
+VG
+qI
+qI
+qI
+qI
+qI
 qI
 Vm
 rs
@@ -52111,18 +52117,18 @@ TF
 TF
 TF
 TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
 qI
-Vm
+gS
+oB
+oB
+mB
+Gc
+oB
+oB
+oB
+oB
+RI
+rs
 rs
 cm
 Cq
@@ -52313,18 +52319,18 @@ TF
 TF
 TF
 TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
 qI
-Vm
+Hz
+oB
+oB
+mB
+oB
+oB
+oB
+oB
+RX
+qI
+rs
 rs
 cm
 Cq
@@ -52515,16 +52521,16 @@ TF
 TF
 TF
 TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
-TF
+qI
+oB
+oB
+oB
+VG
+qI
+qI
+qI
+qI
+qI
 qI
 qI
 qI
@@ -52717,11 +52723,11 @@ TF
 TF
 TF
 TF
-TF
-TF
-TF
-TF
-TF
+qI
+RX
+oB
+oB
+VG
 TF
 TF
 TF
@@ -52919,11 +52925,11 @@ TF
 TF
 TF
 TF
-TF
-TF
-TF
-TF
-TF
+qI
+qI
+qI
+qI
+VG
 TF
 TF
 TF
@@ -54349,7 +54355,7 @@ TF
 EV
 Cq
 Cq
-Hz
+rV
 Cq
 Cq
 Ro
@@ -60215,7 +60221,7 @@ mj
 mj
 mj
 kL
-mB
+EV
 TF
 TF
 TF
@@ -60417,7 +60423,7 @@ mj
 mu
 mj
 mu
-mB
+EV
 TF
 TF
 TF
