@@ -170,6 +170,7 @@
 		ban_content.embed = embed_data
 
 		embed_data.timestamp = time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss", 0)
+		embed_data.author = new("[a_ckey]")
 		embed_data.title = "BAN ALERT"
 		embed_data.colour = "#FF0000"
 		embed_data.fields = list()
