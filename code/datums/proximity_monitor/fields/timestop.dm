@@ -6,6 +6,7 @@
 	icon = 'icons/effects/160x160.dmi'
 	icon_state = "time"
 	layer = FLY_LAYER
+	plane = ABOVE_GAME_PLANE
 	pixel_x = -64
 	pixel_y = -64
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
@@ -15,76 +16,100 @@
 	var/duration = 140
 	var/datum/proximity_monitor/advanced/timestop/chronofield
 	alpha = 125
-	var/check_anti_magic = FALSE
-	var/check_holy = FALSE
+	var/antimagic_flags = NONE
+	///if true, immune atoms moving ends the timestop instead of duration.
+	var/channelled = FALSE
+	/// hides time icon effect and mutes sound
+	var/hidden = FALSE
 
-/obj/effect/timestop/Initialize(mapload, radius, time, list/immune_atoms, start = TRUE)	//Immune atoms assoc list atom = TRUE
+/obj/effect/timestop/Initialize(mapload, radius, time, list/immune_atoms, start = TRUE, silent = FALSE) //Immune atoms assoc list atom = TRUE
 	. = ..()
 	if(!isnull(time))
 		duration = time
 	if(!isnull(radius))
 		freezerange = radius
+	if(silent)
+		hidden = TRUE
+		alpha = 0
 	for(var/A in immune_atoms)
 		immune[A] = TRUE
-	for(var/mob/living/L in GLOB.player_list)
-		if(locate(/obj/effect/proc_holder/spell/aoe_turf/timestop) in L.mind.spell_list) //People who can stop time are immune to its effects
-			immune[L] = TRUE
-	for(var/mob/living/simple_animal/hostile/guardian/G in GLOB.parasites)
-		if(G.summoner && locate(/obj/effect/proc_holder/spell/aoe_turf/timestop) in G.summoner.mind.spell_list) //It would only make sense that a person's stand would also be immune.
-			immune[G] = TRUE
+	for(var/mob/living/to_check in GLOB.player_list)
+		if(HAS_TRAIT(to_check, TRAIT_TIME_STOP_IMMUNE))
+			immune[to_check] = TRUE
+	for(var/mob/living/simple_animal/hostile/guardian/stand in GLOB.parasites)
+		if(stand.summoner && HAS_TRAIT(stand.summoner, TRAIT_TIME_STOP_IMMUNE)) //It would only make sense that a person's stand would also be immune.
+			immune[stand] = TRUE
 	if(start)
-		INVOKE_ASYNC(src, .proc/timestop) // ironic...
+		INVOKE_ASYNC(src, .proc/timestop)
 
 /obj/effect/timestop/Destroy()
-	qdel(chronofield)
-	playsound(src, 'sound/magic/timeparadox2.ogg', 75, TRUE, frequency = -1) //reverse!
+	QDEL_NULL(chronofield)
+	if(!hidden)
+		playsound(src, 'sound/magic/timeparadox2.ogg', 75, TRUE, frequency = -1) //reverse!
 	return ..()
 
 /obj/effect/timestop/proc/timestop()
 	target = get_turf(src)
-	playsound(src, 'sound/magic/timeparadox2.ogg', 75, 1, -1)
-	chronofield = make_field(/datum/proximity_monitor/advanced/timestop, list("current_range" = freezerange, "host" = src, "immune" = immune, "check_anti_magic" = check_anti_magic, "check_holy" = check_holy))
-	QDEL_IN(src, duration)
+	if(!hidden)
+		playsound(src, 'sound/magic/timeparadox2.ogg', 75, TRUE, -1)
+	chronofield = new (src, freezerange, TRUE, immune, antimagic_flags, channelled)
+	if(!channelled)
+		QDEL_IN(src, duration)
 
-/obj/effect/timestop/magic
-	check_anti_magic = TRUE
+///indefinite version, but only if no immune atoms move.
+/obj/effect/timestop/channelled
+	channelled = TRUE
 
 /datum/proximity_monitor/advanced/timestop
-	name = "chronofield"
-	setup_field_turfs = TRUE
-	field_shape = FIELD_SHAPE_RADIUS_SQUARE
-	requires_processing = TRUE
+	edge_is_a_field = TRUE
 	var/list/immune = list()
 	var/list/frozen_things = list()
 	var/list/frozen_mobs = list() //cached separately for processing
 	var/list/frozen_structures = list() //Also machinery, and only frozen aestethically
 	var/list/frozen_turfs = list() //Only aesthetically
-	var/check_anti_magic = FALSE
-	var/check_holy = FALSE
+	var/antimagic_flags = NONE
+	///if true, this doesn't time out after a duration but rather when an immune atom inside moves.
+	var/channelled = FALSE
 
 	var/static/list/global_frozen_atoms = list()
 
+/datum/proximity_monitor/advanced/timestop/New(atom/_host, range, _ignore_if_not_on_turf = TRUE, list/immune, antimagic_flags, channelled)
+	..()
+	src.immune = immune
+	src.antimagic_flags = antimagic_flags
+	src.channelled = channelled
+	recalculate_field()
+	START_PROCESSING(SSfastprocess, src)
+
 /datum/proximity_monitor/advanced/timestop/Destroy()
 	unfreeze_all()
+	if(channelled)
+		for(var/atom in immune)
+			UnregisterSignal(atom, COMSIG_MOVABLE_MOVED)
+	STOP_PROCESSING(SSfastprocess, src)
 	return ..()
 
-/datum/proximity_monitor/advanced/timestop/field_turf_crossed(atom/movable/AM)
-	freeze_atom(AM)
+/datum/proximity_monitor/advanced/timestop/field_turf_crossed(atom/movable/movable, turf/location)
+	freeze_atom(movable)
 
 /datum/proximity_monitor/advanced/timestop/proc/freeze_atom(atom/movable/A)
-	if(immune[A] || global_frozen_atoms[A] || !istype(A))
+	if(global_frozen_atoms[A] || !istype(A))
 		return FALSE
-	if(ismob(A))
+	if(immune[A]) //a little special logic but yes immune things don't freeze
+		if(channelled)
+			RegisterSignal(A, COMSIG_MOVABLE_MOVED, .proc/atom_broke_channel, override = TRUE)
+		return FALSE
+	/*if(ismob(A))
 		var/mob/M = A
-		if(M.anti_magic_check(check_anti_magic, check_holy))
+		if(M.can_block_magic(antimagic_flags))
 			immune[A] = TRUE
-			return
+			return*/
 	var/frozen = TRUE
 	if(isliving(A))
 		freeze_mob(A)
-	else if(istype(A, /obj/item/projectile))
+	else if(isprojectile(A))
 		freeze_projectile(A)
-	else if(istype(A, /obj/mecha))
+	else if(ismecha(A))
 		freeze_mecha(A)
 	else if((ismachinery(A) && !istype(A, /obj/machinery/light)) || isstructure(A)) //Special exception for light fixtures since recoloring causes them to change light
 		freeze_structure(A)
@@ -103,6 +128,8 @@
 	RegisterSignal(A, COMSIG_MOVABLE_PRE_MOVE, .proc/unfreeze_atom)
 	RegisterSignal(A, COMSIG_ITEM_PICKUP, .proc/unfreeze_atom)
 
+	SEND_SIGNAL(A, COMSIG_ATOM_TIMESTOP_FREEZE, src)
+
 	return TRUE
 
 /datum/proximity_monitor/advanced/timestop/proc/unfreeze_all()
@@ -112,21 +139,26 @@
 		unfreeze_turf(T)
 
 /datum/proximity_monitor/advanced/timestop/proc/unfreeze_atom(atom/movable/A)
+	SIGNAL_HANDLER
 	if(A.throwing)
 		unfreeze_throwing(A)
 	if(isliving(A))
 		unfreeze_mob(A)
-	else if(istype(A, /obj/item/projectile))
+	else if(isprojectile(A))
 		unfreeze_projectile(A)
-	else if(istype(A, /obj/mecha))
+	else if(ismecha(A))
 		unfreeze_mecha(A)
 
 	UnregisterSignal(A, COMSIG_MOVABLE_PRE_MOVE)
 	UnregisterSignal(A, COMSIG_ITEM_PICKUP)
+
+	SEND_SIGNAL(A, COMSIG_ATOM_TIMESTOP_UNFREEZE, src)
+
 	escape_the_negative_zone(A)
 	A.move_resist = frozen_things[A]
 	frozen_things -= A
 	global_frozen_atoms -= A
+
 
 /datum/proximity_monitor/advanced/timestop/proc/freeze_mecha(obj/mecha/M)
 	M.completely_disabled = TRUE
@@ -160,13 +192,13 @@
 /datum/proximity_monitor/advanced/timestop/process()
 	for(var/i in frozen_mobs)
 		var/mob/living/m = i
-		m.Stun(20, 1, 1)
+		m.Stun(20, ignore_canstun = TRUE)
 
-/datum/proximity_monitor/advanced/timestop/setup_field_turf(turf/T)
-	for(var/i in T.contents)
+/datum/proximity_monitor/advanced/timestop/setup_field_turf(turf/target)
+	. = ..()
+	for(var/i in target.contents)
 		freeze_atom(i)
-	freeze_turf(T)
-	return ..()
+	freeze_turf(target)
 
 /datum/proximity_monitor/advanced/timestop/proc/freeze_projectile(obj/item/projectile/P)
 	P.paused = TRUE
@@ -174,25 +206,33 @@
 /datum/proximity_monitor/advanced/timestop/proc/unfreeze_projectile(obj/item/projectile/P)
 	P.paused = FALSE
 
-/datum/proximity_monitor/advanced/timestop/proc/freeze_mob(mob/living/L)
-	frozen_mobs += L
-	L.Stun(20, 1, 1)
-	ADD_TRAIT(L, TRAIT_MUTE, TIMESTOP_TRAIT)
-	walk(L, 0) //stops them mid pathing even if they're stunimmune
-	if(isanimal(L))
-		var/mob/living/simple_animal/S = L
-		S.toggle_ai(AI_OFF)
-		if(ishostile(L))
-			var/mob/living/simple_animal/hostile/H = L
-			H.LoseTarget()
+/datum/proximity_monitor/advanced/timestop/proc/freeze_mob(mob/living/victim)
+	frozen_mobs += victim
+	victim.Stun(20, ignore_canstun = TRUE)
+	ADD_TRAIT(victim, TRAIT_MUTE, TIMESTOP_TRAIT)
+	ADD_TRAIT(victim, TRAIT_EMOTEMUTE, TIMESTOP_TRAIT)
+	SSmove_manager.stop_looping(victim) //stops them mid pathing even if they're stunimmune //This is really dumb
+	if(isanimal(victim))
+		var/mob/living/simple_animal/animal_victim = victim
+		animal_victim.toggle_ai(AI_OFF)
+		if(ishostile(victim))
+			var/mob/living/simple_animal/hostile/hostile_victim = victim
+			hostile_victim.LoseTarget()
+	/*else if(isbasicmob(victim))
+		var/mob/living/basic/basic_victim = victim
+		basic_victim.ai_controller?.set_ai_status(AI_STATUS_OFF)*/
 
-/datum/proximity_monitor/advanced/timestop/proc/unfreeze_mob(mob/living/L)
-	L.AdjustStun(-20, 1, 1)
-	REMOVE_TRAIT(L, TRAIT_MUTE, TIMESTOP_TRAIT)
-	frozen_mobs -= L
-	if(isanimal(L))
-		var/mob/living/simple_animal/S = L
-		S.toggle_ai(initial(S.AIStatus))
+/datum/proximity_monitor/advanced/timestop/proc/unfreeze_mob(mob/living/victim)
+	victim.AdjustStun(-20, ignore_canstun = TRUE)
+	REMOVE_TRAIT(victim, TRAIT_MUTE, TIMESTOP_TRAIT)
+	REMOVE_TRAIT(victim, TRAIT_EMOTEMUTE, TIMESTOP_TRAIT)
+	frozen_mobs -= victim
+	if(isanimal(victim))
+		var/mob/living/simple_animal/animal_victim = victim
+		animal_victim.toggle_ai(initial(animal_victim.AIStatus))
+	/*else if(isbasicmob(victim))
+		var/mob/living/basic/basic_victim = victim
+		basic_victim.ai_controller?.reset_ai_status()*/
 
 //you don't look quite right, is something the matter?
 /datum/proximity_monitor/advanced/timestop/proc/into_the_negative_zone(atom/A)
@@ -201,3 +241,8 @@
 //let's put some colour back into your cheeks
 /datum/proximity_monitor/advanced/timestop/proc/escape_the_negative_zone(atom/A)
 	A.remove_atom_colour(TEMPORARY_COLOUR_PRIORITY)
+
+//signal fired when an immune atom moves in the time freeze zone
+/datum/proximity_monitor/advanced/timestop/proc/atom_broke_channel(datum/source)
+	SIGNAL_HANDLER
+	qdel(host)

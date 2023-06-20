@@ -124,7 +124,7 @@
 		shadow_mask = image('icons/misc/field_of_vision.dmi', fov, "[shadow_angle]", FIELD_OF_VISION_LAYER)
 		shadow_mask.plane = FIELD_OF_VISION_PLANE
 		visual_shadow = image('icons/misc/field_of_vision.dmi', fov, "[shadow_angle]_v", FIELD_OF_VISION_LAYER)
-		visual_shadow.plane = FIELD_OF_VISION_VISUAL_PLANE
+		visual_shadow.plane = ABOVE_GAME_PLANE
 		owner_mask = new
 		owner_mask.appearance_flags = RESET_TRANSFORM
 		owner_mask.plane = FIELD_OF_VISION_BLOCKER_PLANE
