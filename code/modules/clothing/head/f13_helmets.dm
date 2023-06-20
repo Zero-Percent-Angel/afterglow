@@ -777,8 +777,8 @@
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/tribal
 	name = "tribal t-45b headdress"
 	desc = "A salvaged T-45b powered armor, with the servos removed and a feathered headdress. Certain bits of plating have been stripped out to retain more freedom of movement."
-	icon_state = "tribal_PA_helmet"
-	item_state = "tribal_PA_helmet"
+	icon_state = "tribal"
+	item_state = "tribal"
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2)
 	slowdown = 0
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
