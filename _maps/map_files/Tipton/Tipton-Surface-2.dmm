@@ -51,7 +51,14 @@
 /turf/closed/mineral/random/no_caves,
 /area/f13/caves)
 "abd" = (
-/obj/structure/wreck/trash/five_tires,
+/obj/structure/wreck/trash/five_tires{
+	pixel_y = 26;
+	pixel_x = -1
+	},
+/obj/structure/wreck/trash/bus_door{
+	pixel_x = 8;
+	pixel_y = 8
+	},
 /turf/open/indestructible/ground/outside/snow,
 /area/f13/wasteland)
 "abI" = (
@@ -223,6 +230,11 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/wasteland)
+"agf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/junkspawners,
+/turf/open/floor/plating/dirt,
+/area/f13/klamat/powered)
 "agt" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -2170,10 +2182,6 @@
 /area/f13/klamat/powered)
 "brP" = (
 /obj/structure/flora/grass/jungle/b,
-/obj/machinery/light/small{
-	brightness = 7;
-	dir = 4
-	},
 /obj/structure/closet/crate/trashcart,
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /obj/effect/spawner/lootdrop/f13/junkspawners,
@@ -3401,6 +3409,11 @@
 /turf/open/floor/f13{
 	icon_state = "whitegreenrustychess"
 	},
+/area/f13/klamat/powered)
+"cgz" = (
+/obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/trash,
+/turf/open/floor/plating/dirt,
 /area/f13/klamat/powered)
 "cgE" = (
 /obj/item/storage/trash_stack,
@@ -7529,6 +7542,11 @@
 	},
 /turf/open/indestructible/ground/outside/snow,
 /area/f13/wasteland)
+"eVJ" = (
+/obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/f13/junkspawners,
+/turf/open/floor/plating/dirt,
+/area/f13/klamat/powered)
 "eWi" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -8108,6 +8126,7 @@
 "fov" = (
 /obj/structure/table,
 /obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/plating/dirt,
 /area/f13/klamat/powered)
 "foF" = (
@@ -9355,10 +9374,6 @@
 	},
 /turf/open/floor/plating/dirt,
 /area/f13/brotherhood/powered)
-"gfO" = (
-/obj/structure/statue_fal,
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
 "ggh" = (
 /obj/structure/barricade/concrete,
 /obj/effect/turf_decal/weather/snow/corner,
@@ -10660,6 +10675,10 @@
 	pixel_x = -13;
 	pixel_y = 11
 	},
+/obj/structure/wreck/trash/two_tire{
+	pixel_y = -15;
+	pixel_x = -4
+	},
 /turf/open/indestructible/ground/outside/snow,
 /area/f13/wasteland)
 "gWT" = (
@@ -10945,11 +10964,23 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
+"hdT" = (
+/obj/structure/statue_fal,
+/turf/open/indestructible/ground/outside/snow,
+/area/f13/wasteland)
 "heH" = (
 /turf/open/indestructible/ground/outside/ruins{
 	icon_state = "rubbleplate"
 	},
 /area/f13/building)
+"heL" = (
+/obj/structure/wreck/trash/three_barrels,
+/obj/machinery/light/small{
+	brightness = 7;
+	dir = 1
+	},
+/turf/open/floor/plating/dirt,
+/area/f13/klamat/powered)
 "heO" = (
 /obj/structure/flora/grass/wasteland{
 	pixel_x = 9;
@@ -16324,9 +16355,10 @@
 /turf/open/floor/f13/wood,
 /area/f13/klamat/powered)
 "kDt" = (
-/obj/structure/wreck/trash/two_tire,
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
+/obj/structure/chair/bench,
+/obj/effect/spawner/lootdrop/trash,
+/turf/open/floor/plating/dirt,
+/area/f13/klamat/powered)
 "kDy" = (
 /obj/structure/bonfire,
 /turf/open/floor/plating/dirt,
@@ -33407,8 +33439,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/klamat/powered)
 "wgi" = (
-/obj/effect/spawner/lootdrop/f13/weapon/melee/tier3,
 /obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/tier1,
 /turf/open/floor/plating/dirt,
 /area/f13/klamat/powered)
 "wgq" = (
@@ -47756,7 +47788,7 @@ guE
 ctf
 uoV
 uoV
-gfO
+hdT
 uoV
 uoV
 uoV
@@ -64262,7 +64294,7 @@ vUv
 hzg
 dof
 drW
-qkl
+eVJ
 fov
 lNp
 sbK
@@ -64467,7 +64499,7 @@ lNp
 qkl
 qkl
 lCf
-uDT
+cBo
 wew
 oNH
 lpF
@@ -64868,7 +64900,7 @@ fuU
 lpF
 lBq
 uhI
-qkl
+cgz
 qkl
 lCf
 lzR
@@ -65699,7 +65731,7 @@ uoV
 uoV
 uoV
 gWP
-kDt
+uoV
 uoV
 uoV
 uoV
@@ -66077,7 +66109,7 @@ kog
 vUv
 vUv
 vUv
-lCf
+kDt
 uDT
 oIx
 oVK
@@ -66494,7 +66526,7 @@ mFe
 jSe
 mQd
 cka
-uDT
+cBo
 fKh
 rUO
 bSK
@@ -66671,7 +66703,7 @@ iKL
 wVQ
 oIx
 gKs
-uDT
+cBo
 sbK
 mFe
 wew
@@ -68084,7 +68116,7 @@ vLu
 ePY
 vLu
 vLu
-geI
+heL
 brP
 lCf
 xxn
@@ -68284,7 +68316,7 @@ uDT
 oQe
 iKL
 uDT
-uDT
+fPM
 uDT
 uDT
 uDT
@@ -69500,7 +69532,7 @@ uDT
 xxn
 wdW
 xfC
-dnF
+agf
 dnF
 lCf
 wqz
