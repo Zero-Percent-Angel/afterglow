@@ -1,5 +1,5 @@
 /* buckshot pellet
- * DAMAGE: 11
+ * DAMAGE: 8
  * STAMIN: 1
  * RECOIL: 2
  * WOUNDS: 0
@@ -23,7 +23,7 @@
 
 /* rubber pellet
  * DAMAGE: 1
- * STAMIN: 11
+ * STAMIN: 16
  * RECOIL: 2
  * WOUNDS: 0
  * WNAKED: 0
@@ -84,7 +84,7 @@
 
 /* 12g slug
  * DAMAGE: 50
- * STAMIN: 10
+ * STAMIN: 30
  * RECOIL: 2
  * WOUNDS: 40
  * WNAKED: 30
@@ -131,7 +131,7 @@
 
 /* 12g beanbag
  * DAMAGE: 5
- * STAMIN: 100
+ * STAMIN: 50
  * RECOIL: 2
  * WOUNDS: 120
  * WNAKED: 90
