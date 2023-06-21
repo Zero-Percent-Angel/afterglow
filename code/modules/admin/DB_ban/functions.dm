@@ -176,8 +176,8 @@
 		embed_data.colour = "#FF0000"
 		embed_data.fields = list()
 
-		var/datum/tgs_chat_embed/field/ban_information = new /datum/tgs_chat_embed/field("Ban Information")
-		ban_information.value = "Banned: `[bankey]`\nReason: `[reason]`\nType: `[bantype_str]`"
+		var/datum/tgs_chat_embed/field/ban_information = new /datum/tgs_chat_embed/field("Ban Information", "Banned: `[bankey]`")
+		ban_information.value += "\nReason: `[reason]`\nType: `[bantype_str]`"
 		if(job)
 			ban_information.value += "\nJob: `[job]`"
 		if(duration > 0)
