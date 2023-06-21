@@ -12,7 +12,7 @@
  * * * * * * * */
 
 /* 5.56 match
- * DAMAGE: 37
+ * DAMAGE: 37.5
  * STAMIN: 6.25
  * RECOIL: 1
  * WOUNDS: 6.5
@@ -76,7 +76,7 @@
 
 /* 5.56 rubber
  * DAMAGE: 2.5
- * STAMIN: 60
+ * STAMIN: 30
  * RECOIL: 1
  * WOUNDS: 7.5
  * WNAKED: 5.6
@@ -199,7 +199,7 @@
 
 /* 4.73 rubber
  * DAMAGE: 2.5
- * STAMIN: 12
+ * STAMIN: 30
  * RECOIL: 1
  * WOUNDS: 7.5
  * WNAKED: 5.7
@@ -515,7 +515,7 @@
 
 /* 7.62mm fmj
  * DAMAGE: 56
- * STAMIN: 56
+ * STAMIN: 22.5
  * RECOIL: 2
  * WOUNDS: 25
  * WNAKED: 15
@@ -578,7 +578,7 @@
 
 /* 7.62mm rubber
  * DAMAGE: 4.5
- * STAMIN: 135
+ * STAMIN: 45
  * RECOIL: 2
  * WOUNDS: 40
  * WNAKED: 30
@@ -660,7 +660,7 @@
 
 /* .50MG Match
  * DAMAGE: 93
- * STAMIN: 140
+ * STAMIN: 75
  * RECOIL: 2
  * WOUNDS: 50
  * WNAKED: 30
@@ -681,7 +681,7 @@
 
 /* .50MG surplus
  * DAMAGE: 75
- * STAMIN: 140
+ * STAMIN: 75
  * RECOIL: 2
  * WOUNDS: 40
  * WNAKED: 30
@@ -702,7 +702,7 @@
 
 /* .50MG handloaded
  * DAMAGE: 56
- * STAMIN: 84
+ * STAMIN: 75
  * RECOIL: 2
  * WOUNDS: 30
  * WNAKED: 30
@@ -780,7 +780,7 @@
 
 /* .50MG rubber
  * DAMAGE: 7
- * STAMIN: 225 gnight
+ * STAMIN: 75
  * RECOIL: 2
  * WOUNDS: 200
  * WNAKED: 150
@@ -888,8 +888,8 @@
  * * * * * * * */
 
 /* .45-70 match
- * DAMAGE: 70
- * STAMIN: 70
+ * DAMAGE: 60
+ * STAMIN: 30
  * RECOIL: 1
  * WOUNDS: 25
  * WNAKED: 15
@@ -909,8 +909,8 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
 
 /* .45-70 surplus
- * DAMAGE: 56
- * STAMIN: 56
+ * DAMAGE: 60
+ * STAMIN: 30
  * RECOIL: 1
  * WOUNDS: 25
  * WNAKED: 15
@@ -1017,7 +1017,7 @@
 
 /* .45-70 rubber
  * DAMAGE: 7
- * STAMIN: 281
+ * STAMIN: 60
  * RECOIL: 1
  * WOUNDS: 125
  * WNAKED: 75
@@ -1059,8 +1059,8 @@
 #define BULLET_GAUSS_SPEED_MULT 10 // lol
 
 /* 2mmEC match
- * DAMAGE: 37
- * STAMIN: 7
+ * DAMAGE: 50
+ * STAMIN: 25
  * RECOIL: 4.5
  * WOUNDS: 6
  * WNAKED: 3
@@ -1083,7 +1083,7 @@
 
 	movement_type = FLYING | UNSTOPPABLE
 	hitscan = TRUE
-	armour_penetration = 0.5
+	armour_penetration = 0.4
 	tracer_type = /obj/effect/projectile/tracer/laser/blue
 	muzzle_type = /obj/effect/projectile/muzzle/laser/blue
 	impact_type = /obj/effect/projectile/impact/laser/blue

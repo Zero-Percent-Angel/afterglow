@@ -157,7 +157,7 @@
 	var/timestop_duration = 100
 
 /obj/effect/proc_holder/spell/aoe_turf/timestop/cast(list/targets, mob/user = usr)
-	new /obj/effect/timestop/magic(get_turf(user), timestop_range, timestop_duration, list(user))
+	new /obj/effect/timestop(get_turf(user), timestop_range, timestop_duration, list(user))
 
 /obj/effect/proc_holder/spell/aoe_turf/conjure/carp
 	name = "Summon Carp"

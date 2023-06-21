@@ -138,7 +138,7 @@
 
 /* 9mm rubber
  * DAMAGE: 2
- * STAMIN: 40
+ * STAMIN: 20
  * RECOIL: 0.5
  * WOUNDS: 5
  * WNAKED: 2.5
@@ -324,7 +324,7 @@
 
 /* 10mm
  * DAMAGE: 30
- * STAMIN: 30
+ * STAMIN: 15
  * RECOIL: 1
  * WOUNDS: 5
  * WNAKED: 3.75
@@ -387,7 +387,7 @@
 
 /* 10mm rubber
  * DAMAGE: 2.5
- * STAMIN: 90
+ * STAMIN: 30
  * RECOIL: 1
  * WOUNDS: 7.5
  * WNAKED: 3.75
@@ -455,8 +455,8 @@
  * * * * * * * */
 
 /* 45
- * DAMAGE: 30
- * STAMIN: 39
+ * DAMAGE: 36
+ * STAMIN: 18
  * RECOIL: 3
  * WOUNDS: 6.5
  * WNAKED: 5
@@ -515,7 +515,7 @@
 
 /* 45 rubber
  * DAMAGE: 3
- * STAMIN: 117
+ * STAMIN: 36
  * RECOIL: 1
  * WOUNDS: 9.75
  * WNAKED: 4.8
@@ -585,15 +585,15 @@
  * * * * * * * */
 
 /* 357 fmj
- * DAMAGE: 45
+ * DAMAGE: 36
  * STAMIN: 40
- * RECOIL: 1
- * WOUNDS: 10
+ * RECOIL: 3.75
+ * WOUNDS: 6.25
  * WNAKED: 7.5
  */
 /obj/item/projectile/bullet/a357
 	name = ".357 FMJ bullet"
-	damage = BULLET_DAMAGE_PISTOL_38_MATCH
+	damage = BULLET_DAMAGE_PISTOL_38
 	stamina = BULLET_STAMINA_PISTOL_38
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_PISTOL_38_MATCH
@@ -606,7 +606,7 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
 
 /* 357 handload
- * DAMAGE: 30
+ * DAMAGE: 36
  * STAMIN: 30
  * RECOIL: 1
  * WOUNDS: 7.5
@@ -733,8 +733,8 @@
 
 /* 44 fmj
  * DAMAGE: 44
- * STAMIN: 52
- * RECOIL: 1
+ * STAMIN: 22
+ * RECOIL: 4
  * WOUNDS: 20
  * WNAKED: 15
  */
@@ -839,7 +839,7 @@
 
 /* 14mm fmj
  * DAMAGE: 50
- * STAMIN: 80
+ * STAMIN: 25
  * RECOIL: 3
  * WOUNDS: 20
  * WNAKED: 15

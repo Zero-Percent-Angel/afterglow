@@ -99,6 +99,7 @@
 	aggrosound = list('sound/f13npc/gecko/gecko_alert.ogg')
 	death_sound = 'sound/f13npc/gecko/gecko_death.ogg'
 	can_ghost_into = TRUE // not a bad idea at all
+	pop_required_to_jump_into = BIG_MOB_MIN_PLAYERS
 	desc_short = "Short, angry, and as confused as they are tasty."
 	desc_important = "Still in development! Report wierdness on the discord!"
 	make_a_nest = /obj/effect/proc_holder/mob_common/make_nest/gecko
@@ -133,6 +134,7 @@
 	melee_damage_upper = 12
 	footstep_type = FOOTSTEP_MOB_CLAW
 	can_ghost_into = TRUE
+	pop_required_to_jump_into = BIG_MOB_MIN_PLAYERS
 
 /// Testing its randomness
 /mob/living/simple_animal/hostile/gecko/debug
