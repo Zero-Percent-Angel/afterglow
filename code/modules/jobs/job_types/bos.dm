@@ -196,7 +196,7 @@ Head Paladin
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/melee/powerfist/f13 = 1,
-		/obj/item/gun/ballistic/automatic/pistol/n99/crusader = 1,
+		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
 		/obj/item/ammo_box/magazine/m10mm/adv/simple = 2,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
 		/obj/item/storage/belt/army/assault = 1
@@ -1097,8 +1097,8 @@ Initiate
 /datum/job/bos/offduty
 	title = "BoS Off-Duty"
 	flag = F13OFFDUTYBOS
-	total_positions = 10
-	spawn_positions = 10
+	total_positions = 6
+	spawn_positions = 6
 	description = "You are an off duty brotherhood member."
 	forbids = "The Brotherhood of Steel Forbids: violence beyond what is needed."
 	enforces = "The Brotherhood of Steel Expects: Obeying the Chain That - Binds your direct superior. Collection and safeguarding of technology from the hands of the blind. Experimentation and research."
@@ -1233,7 +1233,7 @@ Initiate
 	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/aep7=1,
+		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/clothing/accessory/bos/initiateK=1,
 		)

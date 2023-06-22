@@ -867,30 +867,6 @@
 	)
 
 /* * * * * * * * * * *
- * M1/N Carbine
- * 10mm
- * Higher damage
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/m1carbine/m1n
-	name = "M1/N carbine"
-	desc = "An M1 Carbine with faded military markings. Looks beat up but functional."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	icon_state = "ncr-m1carbine"
-	item_state = "rifle"
-
-	slowdown = GUN_SLOWDOWN_CARBINE
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
-	cock_delay = GUN_COCK_RIFLE_BASE
-
-/* * * * * * * * * * *
  * M1A1 Carbine
  * 10mm
  * Folds up!
@@ -1740,7 +1716,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 
 /* * * * * * * * * * *
