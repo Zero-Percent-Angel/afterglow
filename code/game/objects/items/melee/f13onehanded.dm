@@ -753,7 +753,6 @@ obj/item/melee/onehanded/knife/switchblade
 	item_state = "spiked"
 	sharpness = SHARP_POINTY
 	force = 28
-	armour_penetration = 0.10
 
 // Sappers			Keywords: Damage 27
 /obj/item/melee/unarmed/sappers

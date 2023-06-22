@@ -22,8 +22,8 @@
 					max_spread += 0.2 //You're slightly less accurate because you can't see well - as an upside, lasers don't suffer these penalties!
 				if(HAS_TRAIT(user,TRAIT_POOR_AIM)) //You really shouldn't try this at home.
 					max_spread += 1.5//This is cripplingly bad. Trust me.
-				if(HAS_TRAIT(user,TRAIT_NICE_SHOT)) // halves your inaccuracy!
-					max_spread *= 0.5 // Nice shot!
+				if(HAS_TRAIT(user,TRAIT_NICE_SHOT)) // Reduces inaccuracy by 15%
+					max_spread *= 0.85 // Nice shot!
 				angle_out = clamp(rand(-max_spread, max_spread), -MAX_ACCURACY_OFFSET, MAX_ACCURACY_OFFSET)
 
 	var/targloc = get_turf(target)
