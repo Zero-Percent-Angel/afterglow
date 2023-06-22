@@ -51,6 +51,8 @@
 	heat_protection = CHEST|GROIN
 	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	strip_delay = 30
 	equip_delay_other = 50
 	max_integrity = 200
@@ -114,13 +116,6 @@
 	item_state = "tribal_armor"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T2)
-
-/obj/item/clothing/suit/armor/medium/tribal/tribe_heavy_armor
-	name = "heavy tribal armor"
-	desc = "Heavy armor make of sturdy leather and pieces of bone. Worn by seasoned veterans within the Wayfinder tribe."
-	icon_state = "tribal_heavy"
-	item_state = "tribal_heavy"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T3)
 
 ////////////////////////////////
 //// MEDIUM BALLISTIC VESTS ////
@@ -562,20 +557,22 @@
 	icon_state = "ncr_infantry_vest"
 	item_state = "ncr_infantry_vest"
 	armor = ARMOR_VALUE_MEDIUM
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_BULLET_T1)		//Too strong to give to Troopers vs primes witohut this.
 
 /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	name = "NCR mantle vest"
 	desc = "A standard issue NCR Infantry vest with a mantle on the shoulder."
 	icon_state = "ncr_standard_mantle"
 	item_state = "ncr_standard_mantle"
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1)		//For corporals so it's better.
 
 /obj/item/clothing/suit/armor/medium/vest/ncr/reinf
 	name = "NCR reinforced armor vest"
 	desc = "A standard issue NCR Infantry vest reinforced with a groinpad."
 	icon_state = "ncr_reinforced_vest"
 	item_state = "ncr_reinforced_vest"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)	//Sergeants +
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/suit/armor/medium/vest/ncr/reinf/mant
 	name = "NCR reinforced mantle vest"
@@ -588,6 +585,8 @@
 	desc = "A reinforced set of NCR mantle armour, with added padding on the groin, neck and shoulders. Intended for use by the officer class."
 	icon_state = "ncr_lt_armour"
 	item_state = "ncr_lt_armour"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)	//LT + Crapton
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //Rangers
 /obj/item/clothing/suit/armor/medium/combat/patrol
@@ -595,6 +594,7 @@
 	desc = "A modified set of combat armor specifically for use of heavy patrol rangers."
 	icon_state = "ncr_ranger_patrol"
 	item_state = "ncr_ranger_patrol"
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/ncr/vetranger
 	name = "NCR veteran ranger combat armor"

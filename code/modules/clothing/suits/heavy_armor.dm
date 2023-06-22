@@ -50,7 +50,6 @@
 /obj/item/clothing/suit/armor/heavy/tribal/bone
 	name = "Heavy Bone armor"
 	desc = "A tribal full armor plate, crafted from animal bone, metal and leather. Usually worn by the Bone Dancers"
-	icon = 'icons/obj/clothing/suits.dmi'
 	mob_overlay_icon = null
 	icon_state = "bone_dancer_armor_heavy"
 	item_state = "bone_dancer_armor_heavy"
@@ -66,8 +65,6 @@
 /obj/item/clothing/suit/armor/heavy/tribal/westernwayfarer
 	name = "Western Wayfarer heavy armor"
 	desc = "A Suit of armor crafted by Tribals using pieces of scrap metals and the armor of fallen foes, a bighorner's skull sits on the right pauldron along with bighorner fur lining the collar of the leather bound chest. Along the leather straps adoring it are multiple bone charms with odd markings on them."
-	icon_state = "western_wayfarer_armor_heavy"
-	item_state = "western_wayfarer_armor_heavy"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
 
 /////////////////////
@@ -239,7 +236,7 @@
 	desc = "An armor worn by veteran legionary decanus who have proven their combat prowess in many battles, strapped to it is various forms of kevlar and other bullet-proof armors."
 	icon_state = "legion_heavy"
 	item_state = "legion_heavy"
-	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T2 *ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 *ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2)
 
 /obj/item/clothing/suit/armor/heavy/legion/centurion //good all around
@@ -247,7 +244,7 @@
 	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
 	icon_state = "legion_centurion"
 	item_state = "legion_centurion"
-	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/palacent //laser resist spec
 	name = "legion centurion paladin-slayer armor"

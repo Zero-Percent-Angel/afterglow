@@ -52,7 +52,7 @@ GLOBAL_LIST_INIT(sacredwellitems_high, typecacheof(list(/obj/item/gun/energy/las
 				/obj/item/gun/ballistic/automatic/smg/tommygun/whitelegs,
 				/obj/item/gun/ballistic/bow/claw,
 				/obj/item/gun/ballistic/bow/sturdy,
-				/obj/item/clothing/suit/armor/medium/tribal/tribe_heavy_armor,
+				/obj/item/clothing/suit/armor/heavy/tribal,
 				/obj/item/clothing/suit/armor/light/tribal/simple,
 				/obj/item/clothing/suit/hooded/cloak)
 

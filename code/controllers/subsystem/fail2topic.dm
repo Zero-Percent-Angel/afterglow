@@ -47,12 +47,12 @@ SUBSYSTEM_DEF(fail2topic)
 /datum/controller/subsystem/fail2topic/proc/IsRateLimited(ip)
 	var/last_attempt = rate_limiting[ip]
 
-	var/static/datum/config_entry/keyed_list/topic_rate_limit_whitelist/cached_whitelist_entry
+	var/static/list/cached_whitelist_entry
 	if(!istype(cached_whitelist_entry))
 		cached_whitelist_entry = CONFIG_GET(keyed_list/topic_rate_limit_whitelist)
 
-	if(istype(cached_whitelist_entry))
-		if(cached_whitelist_entry.config_entry_value[ip])
+	if(islist(cached_whitelist_entry))
+		if(cached_whitelist_entry[ip])
 			return FALSE
 
 	if (active_bans[ip])

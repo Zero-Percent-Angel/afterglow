@@ -155,8 +155,8 @@
 	item_state = "combat_helmet_raider"
 
 /obj/item/clothing/head/helmet/f13/combat/mk2/raider
-	name = "customized raider combat helmet"
-	desc = "A reinforced combat helmet painted black with the laser designator removed."
+	name = "customized reinforced raider combat helmet"
+	desc = "A reinforced combat helmet painted black with the laser designator removed. This one has extra plating."
 	icon_state = "combat_helmet_raider"
 	item_state = "combat_helmet_raider"
 
@@ -171,6 +171,57 @@
 	desc = "An old military grade pre-war reinforced combat helmet, repainted and re-purposed with bones and sinew."
 	icon_state = "tribe_helmet"
 	item_state = "tribe_helmet"
+
+/////////////////////////////
+//Combat Helmets - Factions//
+///////////////////////////// 
+
+//NCR
+/obj/item/clothing/head/helmet/f13/combat/ncr
+	name = "ncr combat helmet"
+	desc = "An old military grade pre-war combat helmet. This one is marked with NCR colors."
+	icon_state = "combat_helmet_ncr"
+	item_state = "combat_helmet_ncr"
+	armor = ARMOR_VALUE_MEDIUM
+	strip_delay = 50
+	flags_inv = HIDEEARS|HIDEHAIR
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+	custom_price = PRICE_ABOVE_EXPENSIVE
+
+/obj/item/clothing/head/helmet/f13/combat/mk2/ncr
+	name = "ncr reinforced combat helmet"
+	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms. This one is marked with NCR colors."
+	icon_state = "combat_helmet_ncr_mk2"
+	item_state = "combat_helmet_ncr_mk2"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+
+//Legion
+/obj/item/clothing/head/helmet/f13/combat/legion
+	name = "legion combat helmet"
+	desc = "An old military grade pre-war combat helmet. This one is marked with Legion colors."
+	icon_state = "combat_helmet_legion"
+	item_state = "combat_helmet_legion"
+	armor = ARMOR_VALUE_MEDIUM
+	strip_delay = 50
+	flags_inv = HIDEEARS|HIDEHAIR
+	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+	custom_price = PRICE_ABOVE_EXPENSIVE
+
+/obj/item/clothing/head/helmet/f13/combat/mk2/legion
+	name = "legion reinforced combat helmet"
+	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms. This one is marked with Legion colors."
+	icon_state = "combat_helmet_legion_mk2"
+	item_state = "combat_helmet_legion_mk2"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2)
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+
 
 /obj/item/clothing/head/helmet/f13/combat/rangerbroken
 	name = "broken riot helmet"
@@ -393,8 +444,8 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
 /obj/item/clothing/head/helmet/f13/legion/orator
-	name = "laurel wreath"
-	desc = "A laurel wreath is made of branches and leaves of the laurel, a type of evergreen shrub or small tree. This one appears to be out of metal,however. In Ancient Rome, it was worn on the head as a symbol of triumph."
+	name = "legion death mask"
+	desc = "A decorative helmet made of metal with a gold trim around its faceplate, etched with extremely fine details modeled into it. It looks life-like, as if modeled after a mans face..."
 	icon_state = "legion-slavemaster"
 	item_state = "legion-slavemaster"
 	flags_inv = null
@@ -536,12 +587,12 @@
 	icon_state = "brotherhood_helmet"
 	item_state = "brotherhood_helmet"
 
-/obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate/mk2
+/obj/item/clothing/head/helmet/f13/combat/brotherhood/mk2
 	name = "brotherhood helmet Mk II"
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_helmet"
 	item_state = "brotherhood_helmet"
-	armor = ARMOR_VALUE_HEAVY
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2)
 
 ///////////
 /*T O W N*/
@@ -576,6 +627,13 @@
 	item_state = "town_helmet"
 	flags_inv = HIDEEARS
 
+/obj/item/clothing/head/helmet/f13/combat/mk2/town
+	name = "town reinforced security helmet"
+	desc = "An old riot helmet reinforced with proper alloys and stripped of it's faceshield to be more usable outside of confines of a vault. This one is reinforced."
+	icon_state = "town_helmet"
+	item_state = "town_helmet"
+	flags_inv = HIDEEARS
+
 /obj/item/clothing/head/helmet/f13/town/riot //UN Glowie
 	name = "town sheriff combat helmet"
 	desc = "An old riot helmet bastardized into a what is essentially a maska without functioning internals. Belongs to the big gun of the town."
@@ -591,7 +649,6 @@
 	glass_colour_type = /datum/client_colour/glass_colour/red
 	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
 	darkness_view = 24
-	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3, /obj/item/clothing/glasses/night/polarizing = 1)
 
 ////////////////////////
 // GREAT KHAN HELMETS //
@@ -720,8 +777,8 @@
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/tribal
 	name = "tribal t-45b headdress"
 	desc = "A salvaged T-45b powered armor, with the servos removed and a feathered headdress. Certain bits of plating have been stripped out to retain more freedom of movement."
-	icon_state = "tribal_PA_helmet"
-	item_state = "tribal_PA_helmet"
+	icon_state = "tribal"
+	item_state = "tribal"
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2)
 	slowdown = 0
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
