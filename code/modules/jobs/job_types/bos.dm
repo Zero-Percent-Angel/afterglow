@@ -320,6 +320,10 @@ Head Scribe
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/gun/medbeam = 1,
 		/obj/item/reagent_containers/hypospray/CMO = 1,
+		/obj/item/stack/medical/suture/medicated = 1,
+		/obj/item/stack/medical/gauze/adv = 2,
+		/obj/item/stack/medical/ointment = 2,
+		/obj/item/storage/pill_bottle/antirad = 1,
 	)
 
 /*
@@ -698,6 +702,10 @@ Senior Scribe
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		/obj/item/reagent_containers/hypospray/CMO = 1,
 		/obj/item/storage/belt/medical/surgery_belt_adv = 1,
+		/obj/item/stack/medical/suture/medicated = 1,
+		/obj/item/stack/medical/gauze/adv = 2,
+		/obj/item/stack/medical/ointment = 2,
+		/obj/item/storage/pill_bottle/antirad = 1,
 		)
 
 /*
@@ -804,6 +812,10 @@ Scribe
 		/obj/item/clothing/accessory/bos/juniorscribe=1,
 		/obj/item/storage/belt/medical = 1,
 		/obj/item/reagent_containers/medspray/sterilizine = 1,
+		/obj/item/stack/medical/suture/medicated = 1,
+		/obj/item/stack/medical/gauze/adv = 2,
+		/obj/item/stack/medical/ointment = 2,
+		/obj/item/storage/pill_bottle/antirad = 1,
 		)
 
 /datum/outfit/loadout/quillb
@@ -812,6 +824,10 @@ Scribe
 		/obj/item/clothing/accessory/bos/scribe=1,
 		/obj/item/storage/belt/medical = 1,
 		/obj/item/reagent_containers/medspray/sterilizine = 1,
+		/obj/item/stack/medical/suture/medicated = 1,
+		/obj/item/stack/medical/gauze/adv = 2,
+		/obj/item/stack/medical/ointment = 2,
+		/obj/item/storage/pill_bottle/antirad = 1,
 		)
 
 /*
