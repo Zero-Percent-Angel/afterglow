@@ -1,5 +1,5 @@
 /obj/item/ammo_casing/energy/plasma
-	projectile_type = /obj/item/projectile/f13plasma
+	projectile_type = /obj/item/projectile/plasmacarbine
 	select_name = "plasma burst"
 	fire_sound = 'sound/f13weapons/plasma_rifle.ogg'
 	e_cost = 100
@@ -33,6 +33,15 @@
 	select_name = "scatter"
 	fire_sound = 'sound/f13weapons/multiplas_rifle.ogg'
 	e_cost = 200 //10 shots
+
+/obj/item/ammo_casing/energy/plasma/caster
+	projectile_type = /obj/item/projectile/f13plasma
+	fire_sound = 'sound/f13weapons/plasmacaster_fnv.ogg'
+	e_cost = 200 //10 shots
+
+/obj/item/ammo_casing/energy/plasma/caster/balanced
+	projectile_type = /obj/item/projectile/f13plasma/balanced
+	e_cost = 250 //8 shots
 
 /obj/item/ammo_casing/energy/plasma/pistol
 	projectile_type = /obj/item/projectile/f13plasma/pistol

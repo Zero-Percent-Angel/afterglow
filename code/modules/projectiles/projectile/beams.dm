@@ -544,7 +544,7 @@
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
 
-/obj/item/projectile/f13plasma //Plasma rifle
+/obj/item/projectile/f13plasma //FNV plasma caster
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
@@ -555,6 +555,10 @@
 	eyeblur = 0
 	is_reflectable = TRUE
 	pixels_per_second =  TILES_TO_PIXELS(10) //same as 40mm grenade
+
+/obj/item/projectile/f13plasma/balanced //the kind you are meant to use
+	damage = 50 //2-hit KO, 3 with armor, 4 with good armor
+	wound_bonus = 51 //just to get that one over a plasma rifle
 
 /obj/item/projectile/plasmacarbine //Plasma carbine
 	name = "plasma bolt"
@@ -625,6 +629,8 @@
 
 /obj/item/projectile/f13plasma/scatter //Multiplas, fires 3 shots, will melt you
 	damage = 35
+
+/obj/item/projectile/f13plasma/pistol/glock
 
 /obj/item/projectile/beam/laser/rcw //RCW
 	name = "rapidfire beam"
