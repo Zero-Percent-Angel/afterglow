@@ -543,12 +543,12 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
 
 /obj/item/clothing/suit/armor/light/legion/explorer/assassin
-	name = "legion exactor armor"
-	desc = "Issued to exactors to keep them cool during long hours of watching the slaves work in the sun."
+	name = "legion assassin armor"
+	desc = "A suit of light armor with reinforced plates and leather added to it, protecting its user. Perfect for combatants specializing in hit-and-run."
 	icon_state = "legion_praetorian"
 	item_state = "legion_praetorian"
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 //////////////////////////
 // Brotherhood of Steel //

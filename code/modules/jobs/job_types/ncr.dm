@@ -521,7 +521,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	description = "You answer directly to the Captain, working either independently or in a team to complete your mission objectives however required, operating either alone, in a squad or with the NCR Army. Your primary mission is to improve general opinion of the Republic and to neutralize slavers and raiders operating in the area."
 	supervisors = "NCRA Captain, High Command"
 	selection_color = "#ffeeaa"
-	display_order = JOB_DISPLAY_ORDER_VETRANGE
+	display_order = JOB_DISPLAY_ORDER_VETRANGER
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR_COMMAND)
 	outfit = /datum/outfit/job/ncr/f13vetranger
 	exp_requirements = 1750
@@ -1657,8 +1657,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	flag = F13NCROFFDUTY
 	total_positions = 4
 	spawn_positions = 4
-	description = "You are the support element sent to assist the Camp Miller garrison. You are essential specialized support staff to help sustain the base via supply or specialized skills. You are not allowed to leave base unless given an explicit order by the CO or the current acting CO."
-	supervisors = "Logistics/Medical officer first, regular chain of command after that."
+	description = "You are a member of the NCR spending your off-duty time on the local base. Be it your day off, requested off-duty time, or otherwise relived from active duty. You are not to interfere with the duty of active-servicemen."
+	supervisors = "On-Duty members of the NCR."
 	selection_color = "#fff5cc"
 	exp_type = EXP_TYPE_NCR
 	display_order = JOB_DISPLAY_ORDER_NCR_OFF_DUTY
