@@ -1,6 +1,33 @@
 GLOBAL_VAR_INIT(OOC_COLOR, null)//If this is null, use the CSS for OOC. Otherwise, use a custom colour.
 GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
+/client/proc/matrix_inplace()
+	set name = "Matrix"
+	set category = "OOC"
+	set desc = "Matrix inplace, for when you joined as the wrong role."
+
+	if(!ishuman(mob))
+		to_chat(src, span_warning("You must join the round to use this command."))
+		return
+
+	var/datum/mind/mind = mob.mind
+	if(isnull(mind))
+		to_chat(src, span_warning("You don't have a mind!"))
+		return
+
+	if(!CONFIG_GET(flag/enable_inplace_matrix))
+		to_chat(src, span_warning("Matrix Inplace is disabled by config."))
+		return
+
+	var/grace_period = CONFIG_GET(number/inplace_matrix_grace_period)
+	var/last_call = mind.mind_created_at + grace_period
+	if((last_call > 0) && (world.time > last_call))
+		to_chat(src, span_warning("You can't Matrix Inplace anymore."))
+		return
+
+	var/mob/living/carbon/human/user = mob
+	user.do_matrix(mob)
+
 /client/verb/ooc(msg as text)
 	set name = "OOC" //Gave this shit a shorter name so you only have to time out "ooc" rather than "ooc message" to use it --NeoFite
 	set category = "OOC"
@@ -74,7 +101,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 				keyname = "[key]/[GetOOCName()]"
 			else
 				keyname = GetOOCName()
-			
+
 			if(holder)
 				if(!holder.fakekey || C.holder)
 					if(check_rights_for(src, R_ADMIN))
