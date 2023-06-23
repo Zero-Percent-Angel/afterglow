@@ -291,11 +291,12 @@ turf/closed/wall/f13/wood/house/update_damage_overlay()
 		to_chat(span_warning("Cannot matrix someone else while they are connected."))
 		return FALSE
 
-	var/grace = logout_time + 2 MINUTES
-	if(world.time < grace)
-		to_chat(user, span_warning("You must wait at least two minutes to matrix another player."))
-		return FALSE
-	
+	if(user != src)
+		var/grace = logout_time + 2 MINUTES
+		if(world.time < grace)
+			to_chat(user, span_warning("You must wait at least two minutes to matrix another player."))
+			return FALSE
+
 	return TRUE
 
 /mob/living/proc/do_matrix(mob/living/user)
