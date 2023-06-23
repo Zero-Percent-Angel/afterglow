@@ -30,7 +30,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_223_MATCH
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 5.56 sport
  * DAMAGE: 30
@@ -51,7 +51,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_223
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 5.56 handload
  * DAMAGE: 22
@@ -117,7 +117,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_223
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 	embed_falloff_tile = BULLET_WOUND_FALLOFF_RIFLE_LIGHT
 	embedding = list(
@@ -152,7 +152,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_223_HANDLOAD * 0.5
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /*
 /obj/item/projectile/bullet/a556/uraniumtipped
@@ -195,7 +195,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_473
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 4.73 rubber
  * DAMAGE: 2.5
@@ -216,7 +216,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_473
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 	sharpness = SHARP_NONE
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION // Rubbers go where you want
@@ -240,7 +240,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_473
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 	damage_type = BURN // still checks bullet resist
 	sharpness = SHARP_NONE
@@ -280,7 +280,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_473
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 	supereffective_damage = BULLET_DAMAGE_RIFLE_473 * 2
 	supereffective_faction = list("hostile", "ant", "supermutant", "deathclaw", "cazador", "raider", "china", "gecko", "wastebot")
 
@@ -303,7 +303,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_473
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /obj/item/projectile/bullet/a473/explosive/on_hit(atom/target, blocked = FALSE)
 	..()
@@ -331,7 +331,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_473
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 	damage_type = BURN // still checks bullet resist
 	sharpness = SHARP_NONE
@@ -359,7 +359,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_473
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 	hitscan = TRUE
 
 ////////////////
@@ -391,7 +391,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_5MM
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 5mm fmj
  * DAMAGE: more
@@ -412,7 +412,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_5MM_MATCH
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 5mm fmj
  * DAMAGE: less
@@ -433,7 +433,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_5MM_HANDLOAD
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 /* 5mm simple
  * DAMAGE: 31.25
@@ -464,7 +464,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_5MM
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 	damage_type = BURN // still checks bullet resist
 	sharpness = SHARP_NONE
@@ -497,7 +497,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_5MM
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
 
 ////////////////////
@@ -514,8 +514,8 @@
  * * * * * * * */
 
 /* 7.62mm fmj
- * DAMAGE: 56
- * STAMIN: 22.5
+ * DAMAGE: 43
+ * STAMIN: 35
  * RECOIL: 2
  * WOUNDS: 25
  * WNAKED: 15
@@ -532,11 +532,11 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_308_MATCH
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 /* 7.62mm surplus
- * DAMAGE: 45
- * STAMIN: 45
+ * DAMAGE: 35
+ * STAMIN: 35
  * RECOIL: 2
  * WOUNDS: 25
  * WNAKED: 15
@@ -553,11 +553,11 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_308
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 /* 7.62mm handloaded
- * DAMAGE: 33
- * STAMIN: 33
+ * DAMAGE: 26
+ * STAMIN: 35
  * RECOIL: 2
  * WOUNDS: 15
  * WNAKED: 15
@@ -574,7 +574,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_308_HANDLOAD
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 /* 7.62mm rubber
  * DAMAGE: 4.5
@@ -595,7 +595,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_308
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 	sharpness = SHARP_NONE
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION // Rubbers go where you want
@@ -619,7 +619,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_308
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 	embed_falloff_tile = BULLET_WOUND_FALLOFF_RIFLE_LIGHT
 	embedding = list(embed_chance=12, fall_chance=1, jostle_chance=1, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.3, pain_mult=5, jostle_pain_mult=6, rip_time=10, embed_chance_turf_mod=100, projectile_payload = /obj/item/shrapnel/bullet/a762/microshrapnel)
@@ -677,7 +677,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG_MATCH
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 
 /* .50MG surplus
  * DAMAGE: 75
@@ -698,7 +698,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 
 /* .50MG handloaded
  * DAMAGE: 56
@@ -719,7 +719,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG_HANDLOAD
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 
 /* .50MG fire
  * DAMAGE: 37
@@ -740,7 +740,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 
 	damage_type = BURN // still checks bullet resist
 	sharpness = SHARP_NONE
@@ -772,7 +772,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 
 /obj/item/projectile/bullet/a50MG/explosive/on_hit(atom/target, blocked = FALSE)
 	..()
@@ -797,7 +797,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 
 	sharpness = SHARP_NONE
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION // Rubbers go where you want
@@ -821,7 +821,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 
 	sharpness = SHARP_NONE
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION // Rubbers go where you want
@@ -854,7 +854,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 	var/smoke_radius = 3
 
 /obj/item/projectile/bullet/a50MG/contam/Initialize()
@@ -906,7 +906,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_4570
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 /* .45-70 surplus
  * DAMAGE: 60
@@ -927,7 +927,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_4570
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 /* .45-70 handloaded
  * DAMAGE: 42 // cant kill a ghoul
@@ -948,7 +948,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_4570
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 /* .45-70 explode
  * DAMAGE: 35
@@ -969,7 +969,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_4570
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 	damage_type = BURN // still checks bullet resist
 	sharpness = SHARP_NONE
@@ -997,7 +997,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_4570
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 	damage_type = BURN // still checks bullet resist
 	sharpness = SHARP_NONE
@@ -1034,7 +1034,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_4570
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 	sharpness = SHARP_NONE
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION // Rubbers go where you want
@@ -1079,7 +1079,7 @@
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
 
 	pixels_per_second = BULLET_SPEED_RIFLE_GAUSS
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
+	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
 	movement_type = FLYING | UNSTOPPABLE
 	hitscan = TRUE
