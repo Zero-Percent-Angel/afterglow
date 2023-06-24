@@ -1201,7 +1201,7 @@ datum/crafting_recipe/steelbib/heavy
 /datum/crafting_recipe/leg_combat_helm
 	name = "legion combat helmets"
 	result = /obj/item/clothing/head/helmet/f13/combat/legion
-	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1,
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat = 1,
 				/obj/item/toy/crayon/spraycan)
 	tools = list(TOOL_WORKBENCH)
 	time = 60
@@ -1212,7 +1212,7 @@ datum/crafting_recipe/steelbib/heavy
 /datum/crafting_recipe/leg_combat_helm_mk2
 	name = "mk2 legion combat helmets"
 	result = /obj/item/clothing/head/helmet/f13/combat/mk2/legion
-	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1,
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat/mk2 = 1,
 				/obj/item/toy/crayon/spraycan)
 	tools = list(TOOL_WORKBENCH)
 	time = 60
