@@ -11,7 +11,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/legiongate
 	name = "Legion iron gate"
@@ -21,7 +21,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/gate_bos
 	name = "Brotherhood steel door"
@@ -31,7 +31,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/gate_khanate
 	name = "Khans steel-reinforced wood door"
@@ -42,7 +42,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/plant
 	name = "Potted plant"
