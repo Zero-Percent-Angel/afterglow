@@ -601,6 +601,13 @@
 /obj/structure/wreck/trash/machinepiletwo,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
+"aGS" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/radioterminal/legion,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood3-broken"
+	},
+/area/f13/legion)
 "aHa" = (
 /obj/structure/chair/sofa/left{
 	dir = 4
@@ -641,7 +648,9 @@
 "aHR" = (
 /obj/machinery/iv_drip,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "aHU" = (
 /mob/living/simple_animal/hostile/jungle/leaper{
@@ -1540,6 +1549,7 @@
 /area/f13/tunnel)
 "bnT" = (
 /obj/structure/simple_door/dirtyglass,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/bunker)
 "boj" = (
 /obj/structure/disposalpipe/segment{
@@ -4002,7 +4012,6 @@
 /area/f13/caves)
 "dyq" = (
 /obj/structure/table,
-/obj/item/nuke_core,
 /turf/open/floor/carpet/green,
 /area/f13/radiation)
 "dyr" = (
@@ -5978,6 +5987,15 @@
 	icon_state = "bar"
 	},
 /area/f13/bunker)
+"fek" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/port_gen/pacman/diesel,
+/obj/item/stack/sheet/mineral/uranium/fifty,
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/turf/open/floor/plating/tunnel{
+	icon_state = "tunnelrusty"
+	},
+/area/f13/legion)
 "feL" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -6326,7 +6344,9 @@
 "ftN" = (
 /obj/machinery/chem_heater,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "ftS" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7036,6 +7056,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/den)
+"fWQ" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/closed/wall/rust,
+/area/f13/legion)
 "fXw" = (
 /obj/structure/spacevine,
 /obj/structure/spacevine,
@@ -7463,10 +7487,14 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "gqN" = (
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 8
+/obj/effect/decal/fakelattice,
+/obj/structure/lattice/catwalk{
+	layer = 4
 	},
-/turf/open/indestructible/ground/inside/subway,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 4
+	},
+/turf/open/floor/plating/tunnel,
 /area/f13/legion)
 "gqP" = (
 /obj/machinery/light/small{
@@ -8056,6 +8084,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/den)
+"gNI" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/closed/mineral/random/no_caves,
+/area/f13/caves)
 "gNO" = (
 /obj/machinery/chem_dispenser/drinks{
 	dir = 1
@@ -8303,7 +8335,7 @@
 /area/f13/bunker)
 "hbR" = (
 /turf/closed/indestructible/riveted,
-/area/f13/wasteland)
+/area/f13/tcoms)
 "hcc" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/wreck/trash/machinepiletwo,
@@ -8894,6 +8926,11 @@
 	},
 /obj/effect/decal/fakelattice,
 /turf/open/floor/plating/tunnel,
+/area/f13/legion)
+"hDY" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/landmark/start/f13/orator,
+/turf/open/indestructible/ground/inside/subway,
 /area/f13/legion)
 "hEt" = (
 /obj/effect/decal/cleanable/dirt{
@@ -10190,7 +10227,9 @@
 "iGM" = (
 /mob/living/simple_animal/hostile/handy/gutsy/nsb,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "iHc" = (
 /obj/structure/flora/grass/jungle{
@@ -10629,6 +10668,7 @@
 	pixel_y = 23
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/furnace,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
 	},
@@ -10706,12 +10746,6 @@
 "jaz" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 4
-	},
-/obj/machinery/button/door{
-	id = "legiongates";
-	name = "gate";
-	pixel_x = 32;
-	pixel_y = -5
 	},
 /obj/machinery/button/door{
 	id = "legionshuttereast";
@@ -11131,7 +11165,8 @@
 	},
 /area/f13/sewer/powered)
 "jrM" = (
-/obj/item/flag/bos,
+/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden/planks,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer/powered)
 "jrU" = (
@@ -11373,11 +11408,17 @@
 "jAM" = (
 /obj/structure/closet/crate/freezer/blood/anchored,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "jBX" = (
 /turf/closed/indestructible/rock,
 /area/f13/ncr)
+"jCt" = (
+/obj/item/flag/bos,
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/sewer/powered)
 "jCL" = (
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/wasteland)
@@ -11440,6 +11481,11 @@
 /mob/living/simple_animal/hostile/ghoul/glowing,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/bunker)
+"jGn" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/door/unpowered/secure_legion,
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/legion)
 "jGM" = (
 /obj/effect/decal/remains/human,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
@@ -13696,7 +13742,9 @@
 /obj/item/surgicaldrill,
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "lzm" = (
 /obj/effect/decal/fakelattice,
@@ -13905,7 +13953,9 @@
 	dir = 8;
 	light_color = "#d8b1b1"
 	},
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "lKd" = (
 /obj/structure/table/wood,
@@ -13979,7 +14029,9 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "lMz" = (
 /obj/structure/handrail/g_central{
@@ -14679,7 +14731,7 @@
 /area/f13/sewer/powered)
 "mqG" = (
 /turf/closed/indestructible/rock,
-/area/f13/wasteland)
+/area/f13/tcoms)
 "mrf" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/armor/random,
@@ -15436,7 +15488,9 @@
 "naB" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "naV" = (
 /obj/structure/handrail/g_central{
@@ -16195,7 +16249,7 @@
 "nFI" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhigh,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/highmid,
 /turf/open/floor/plasteel/f13{
 	icon_state = "yellowdirtysolid"
 	},
@@ -16635,7 +16689,9 @@
 "oaX" = (
 /obj/machinery/chem_master,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "obg" = (
 /obj/effect/spawner/lootdrop/f13/armor/tier3,
@@ -17337,7 +17393,9 @@
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "oEH" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
@@ -17655,7 +17713,9 @@
 "oUT" = (
 /obj/machinery/vending/medical,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "oUZ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -18123,6 +18183,13 @@
 /obj/item/trash/coal,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/den)
+"pvf" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/reagent_dispensers/barrel/explosive,
+/turf/open/floor/plating/tunnel{
+	icon_state = "tunnelrusty"
+	},
+/area/f13/legion)
 "pvq" = (
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random,
 /mob/living/simple_animal/hostile/ghoul{
@@ -18522,7 +18589,9 @@
 /obj/structure/table,
 /obj/item/defibrillator/loaded,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "pNR" = (
 /obj/effect/decal/fakelattice,
@@ -18927,7 +18996,7 @@
 /area/f13/den)
 "qgm" = (
 /turf/open/indestructible,
-/area/f13/wasteland)
+/area/f13/tcoms)
 "qgx" = (
 /obj/item/rack_parts,
 /turf/open/floor/f13{
@@ -18982,7 +19051,7 @@
 "qjo" = (
 /obj/machinery/telecomms/relay/preset/telecomms,
 /turf/open/indestructible,
-/area/f13/wasteland)
+/area/f13/tcoms)
 "qjL" = (
 /obj/item/instrument/harmonica,
 /obj/effect/decal/cleanable/dirt,
@@ -19099,10 +19168,10 @@
 /turf/open/water,
 /area/f13/sewer/powered)
 "qqD" = (
-/obj/structure/girder,
-/turf/open/floor/f13{
-	icon_state = "yellowdirtyfull"
+/obj/effect/turf_decal/arrows/red{
+	dir = 4
 	},
+/turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer/powered)
 "qqM" = (
 /obj/structure/table/wood/settler,
@@ -21204,7 +21273,9 @@
 "sgK" = (
 /obj/structure/bed/roller,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "shf" = (
 /obj/structure/bed/mattress,
@@ -21351,7 +21422,9 @@
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "snL" = (
 /obj/structure/handrail/g_central{
@@ -21441,7 +21514,9 @@
 /obj/structure/table,
 /obj/item/healthanalyzer,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "stc" = (
 /obj/item/reagent_containers/food/snacks/f13/deathclawegg,
@@ -21701,7 +21776,9 @@
 /obj/structure/table,
 /obj/item/book/granter/trait/midsurgery,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "sFT" = (
 /obj/effect/spawner/lootdrop/f13/armor/tier2,
@@ -21868,7 +21945,9 @@
 /obj/item/retractor,
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "sLh" = (
 /obj/structure/table,
@@ -22008,7 +22087,9 @@
 /obj/structure/table,
 /obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "sQr" = (
 /obj/structure/barricade/wooden/strong,
@@ -22678,7 +22759,9 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "tyb" = (
 /obj/structure/loot_pile,
@@ -22738,6 +22821,7 @@
 /area/f13/caves)
 "tBx" = (
 /obj/structure/simple_door/repaired,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/bunker)
 "tCf" = (
 /turf/open/floor/f13{
@@ -23191,8 +23275,7 @@
 /turf/open/water,
 /area/f13/caves)
 "tTg" = (
-/obj/structure/simple_door/metal/iron,
-/obj/structure/barricade/wooden/planks/pregame,
+/obj/machinery/door/unpowered/secure_NCR,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer/powered)
 "tTG" = (
@@ -23445,9 +23528,11 @@
 /turf/open/floor/plasteel/floorgrime,
 /area/f13/sewer/powered)
 "ufF" = (
-/obj/machinery/chem_dispenser,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/obj/machinery/chem_lab,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "ufS" = (
 /obj/effect/gibspawner/human,
@@ -23825,11 +23910,13 @@
 	},
 /area/f13/tunnel)
 "uum" = (
-/mob/living/simple_animal/hostile/ghoul/reaver,
-/turf/open/floor/f13{
-	icon_state = "whitegreenrustychess"
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/apc/auto_name/south,
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/turf/open/floor/plating/tunnel{
+	icon_state = "tunnelrusty"
 	},
-/area/f13/sewer/powered)
+/area/f13/legion)
 "uun" = (
 /obj/structure/ladder/unbreakable{
 	height = 1;
@@ -24269,7 +24356,6 @@
 /area/f13/tunnel)
 "uOQ" = (
 /obj/structure/table/wood,
-/obj/item/storage/toolbox/syndicate,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/shack)
 "uPa" = (
@@ -24459,11 +24545,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/den)
 "uWa" = (
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 4
-	},
-/turf/open/indestructible/ground/inside/subway,
-/area/f13/legion)
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/closed/indestructible/rock,
+/area/f13/caves)
 "uWn" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/storage/trash_stack,
@@ -25381,10 +25465,12 @@
 	},
 /area/f13/sewer/powered)
 "vJl" = (
-/obj/structure/barricade/wooden,
-/obj/structure/barricade/wooden/planks,
-/turf/open/indestructible/ground/inside/subway,
-/area/f13/sewer/powered)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/ore_furnace,
+/turf/open/floor/plating/tunnel{
+	icon_state = "tunnelrusty"
+	},
+/area/f13/legion)
 "vJZ" = (
 /obj/structure/handrail/g_central{
 	dir = 4;
@@ -26827,6 +26913,7 @@
 /area/f13/radiation)
 "wUv" = (
 /obj/item/flag/legion,
+/obj/structure/destructible/tribal_torch/wall/lit,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer/powered)
 "wUG" = (
@@ -27519,8 +27606,10 @@
 	},
 /area/f13/bunker)
 "xxQ" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/airless/floorgrime,
+/obj/machinery/door/airlock/hatch,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "xxT" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -27622,7 +27711,9 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/open/floor/plasteel/airless/floorgrime,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/bunker)
 "xCo" = (
 /turf/open/floor/plasteel/f13/vault_floor/yellow{
@@ -27823,14 +27914,11 @@
 	},
 /area/f13/bunker)
 "xKf" = (
-/obj/machinery/door/poddoor/gate/preopen{
-	id = "legiongates"
-	},
 /obj/effect/decal/fakelattice,
 /obj/structure/lattice/catwalk{
 	layer = 4
 	},
-/turf/open/floor/plating/tunnel,
+/turf/closed/wall/r_wall/rust,
 /area/f13/legion)
 "xKF" = (
 /obj/item/instrument/eguitar,
@@ -37536,7 +37624,7 @@ tRM
 tRM
 dhU
 xvl
-uum
+tCf
 wVO
 wOo
 rNS
@@ -37943,7 +38031,7 @@ xvl
 wUM
 fUi
 tCf
-uum
+tCf
 tCf
 tCf
 tCf
@@ -58783,7 +58871,7 @@ dhU
 xvl
 htC
 htC
-jrM
+jCt
 mOL
 efQ
 efQ
@@ -59591,7 +59679,7 @@ dhU
 xvl
 htC
 htC
-jrM
+jCt
 mOL
 ozF
 sVU
@@ -61810,7 +61898,7 @@ dhU
 dhU
 tRM
 tRM
-vJl
+jrM
 htC
 htC
 htC
@@ -69052,8 +69140,8 @@ aou
 btb
 mOQ
 wSI
-pGE
-pGE
+xxQ
+xxQ
 wSI
 wSI
 wSI
@@ -69254,9 +69342,9 @@ uWT
 mOQ
 mOQ
 wSI
-xxQ
-xxQ
-xxQ
+mzk
+mzk
+mzk
 lKb
 sQo
 naB
@@ -69456,11 +69544,11 @@ aou
 btb
 mOQ
 wSI
-xxQ
-xxQ
+mzk
+mzk
 iGM
-xxQ
-xxQ
+mzk
+mzk
 sES
 naB
 uLN
@@ -69659,11 +69747,11 @@ vLn
 mOQ
 wSI
 oEB
-xxQ
-xxQ
-xxQ
-xxQ
-xxQ
+mzk
+mzk
+mzk
+mzk
+mzk
 naB
 uLN
 vLn
@@ -69861,11 +69949,11 @@ gDw
 mOQ
 wSI
 pNQ
-xxQ
+mzk
 txV
 oUT
-xxQ
-xxQ
+mzk
+mzk
 snj
 uLN
 vLn
@@ -70063,12 +70151,12 @@ vRQ
 mOQ
 wSI
 ssr
-xxQ
+mzk
 naB
 jAM
-xxQ
-xxQ
-xxQ
+mzk
+mzk
+mzk
 pGE
 aou
 aou
@@ -70265,12 +70353,12 @@ vLn
 mOQ
 wSI
 oaX
-xxQ
+mzk
 oEB
 naB
-xxQ
-xxQ
-xxQ
+mzk
+mzk
+mzk
 pGE
 aou
 aou
@@ -70467,12 +70555,12 @@ btb
 mOQ
 wSI
 ufF
-xxQ
-xxQ
+mzk
+mzk
 iGM
-xxQ
-xxQ
-xxQ
+mzk
+mzk
+mzk
 fUw
 vLn
 aou
@@ -70669,11 +70757,11 @@ uqU
 mOQ
 wSI
 ftN
-xxQ
-xxQ
-xxQ
-xxQ
-xxQ
+mzk
+mzk
+mzk
+mzk
+mzk
 lyG
 uLN
 vLn
@@ -80558,7 +80646,7 @@ mjv
 bUM
 rIe
 kKl
-rIe
+fek
 bUM
 gFR
 aHX
@@ -80760,7 +80848,7 @@ ePR
 bUM
 fWb
 vDe
-vDe
+uum
 bUM
 gFR
 ocR
@@ -81149,7 +81237,7 @@ mrJ
 cPB
 rUl
 htC
-gqN
+aFO
 lPP
 lPP
 lPP
@@ -81162,7 +81250,7 @@ vbV
 hSe
 gDc
 bUM
-vDe
+pvf
 vDe
 kPG
 bUM
@@ -81351,11 +81439,11 @@ htC
 cPB
 rUl
 htC
+qQC
 gFR
-gFR
 fOO
 fOO
-fOO
+jGn
 fOO
 fOO
 lPP
@@ -81553,11 +81641,11 @@ mrJ
 htC
 rUl
 htC
-uWa
+aFO
 lPP
+gqN
 lPP
-lPP
-lPP
+xKf
 lPP
 wJa
 mFR
@@ -81768,7 +81856,7 @@ mMD
 uXM
 bUM
 bUM
-vDe
+vJl
 vDe
 vDe
 bUM
@@ -81956,7 +82044,7 @@ lXW
 htC
 htC
 rUl
-htC
+qqD
 aFO
 bUM
 bUM
@@ -82158,7 +82246,7 @@ nek
 mrJ
 htC
 rUl
-htC
+qqD
 aFO
 bUM
 bKo
@@ -82360,7 +82448,7 @@ klv
 klv
 fYH
 rUl
-htC
+qqD
 aFO
 bUM
 wqP
@@ -83192,7 +83280,7 @@ kYA
 bUM
 vPj
 fOO
-fOO
+hDY
 fOO
 fOO
 fOO
@@ -83207,7 +83295,7 @@ pnU
 kBM
 nwL
 bUM
-dHf
+aGS
 xhM
 ldq
 viy
@@ -84178,7 +84266,7 @@ vKr
 klv
 cPB
 rUl
-htC
+qqD
 aFO
 bUM
 bUM
@@ -84380,7 +84468,7 @@ vKr
 klv
 cPB
 rUl
-htC
+qqD
 aFO
 bUM
 cfM
@@ -84582,7 +84670,7 @@ vKr
 klv
 cPB
 rUl
-htC
+qqD
 aFO
 bUM
 mii
@@ -85821,9 +85909,9 @@ vPj
 fOO
 edM
 bUM
-iBp
-tYm
-tYm
+uWa
+gNI
+nLV
 tYm
 tYm
 iBp
@@ -86023,9 +86111,9 @@ vPj
 fOO
 jnh
 bUM
-iBp
-tYm
-tYm
+uWa
+gNI
+nLV
 tYm
 tYm
 tYm
@@ -86224,10 +86312,10 @@ bUM
 vPj
 fOO
 wLX
-bUM
-iBp
-tYm
-tYm
+fWQ
+uWa
+gNI
+nLV
 tYm
 tYm
 tYm
@@ -86427,9 +86515,9 @@ iJg
 fOO
 fOO
 bUM
-iBp
-tYm
-tYm
+nLV
+nLV
+nLV
 tYm
 tYm
 tYm
@@ -86804,7 +86892,7 @@ vKr
 klv
 htC
 rUl
-htC
+qqD
 mOL
 tYm
 tYm
@@ -87006,7 +87094,7 @@ vKr
 klv
 cPB
 rUl
-htC
+qqD
 mOL
 nLV
 nLV
@@ -87208,7 +87296,7 @@ vKr
 klv
 cPB
 rUl
-htC
+qqD
 mOL
 tYm
 tYm
@@ -89430,7 +89518,7 @@ vKr
 klv
 htC
 rUl
-htC
+qqD
 mOL
 tYm
 tYm
@@ -89632,7 +89720,7 @@ vKr
 klv
 htC
 rUl
-htC
+qqD
 mOL
 tYm
 tYm
@@ -89834,7 +89922,7 @@ vKr
 klv
 wSw
 rUl
-htC
+qqD
 mOL
 tYm
 tYm
@@ -101033,7 +101121,7 @@ iBp
 klv
 klv
 klv
-qqD
+tCf
 jVU
 nzH
 tzL
@@ -101234,7 +101322,7 @@ iBp
 iBp
 iBp
 iBp
-iBp
+nLV
 klv
 itd
 qSQ
