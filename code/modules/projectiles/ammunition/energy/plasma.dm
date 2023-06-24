@@ -38,6 +38,7 @@
 	projectile_type = /obj/item/projectile/f13plasma
 	fire_sound = 'sound/f13weapons/plasmacaster_fnv.ogg'
 	e_cost = 200 //10 shots
+	damage_threshold_penetration = 4 //MF cell baby
 
 /obj/item/ammo_casing/energy/plasma/caster/balanced
 	projectile_type = /obj/item/projectile/f13plasma/balanced
