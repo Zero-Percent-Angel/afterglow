@@ -1090,6 +1090,18 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	entry_class = LOADOUT_CAT_LAWMAN
 	spawn_thing = /obj/item/storage/box/gun/premium/desert_ranger
 
+/datum/loadout_box/wattz_2000e
+	entry_tag = "wattz 2000e"
+	entry_flags = LOADOUT_FLAG_LAWMAN
+	entry_class = LOADOUT_CAT_LAWMAN
+	spawn_thing = /obj/item/gun/energy/laser/wattz2k/extended
+
+/datum/loadout_box/rcw
+	entry_tag = "laser RCW"
+	entry_flags = LOADOUT_FLAG_LAWMAN
+	entry_class = LOADOUT_CAT_LAWMAN
+	spawn_thing = /obj/item/gun/energy/laser/rcw
+
 /// Lawman guns
 
 /datum/loadout_box/american_180
