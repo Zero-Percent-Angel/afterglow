@@ -352,6 +352,41 @@ Turf and target are separate in case you want to teleport some distance from a t
 		if(M.ckey == key)
 			return M
 
+///Returns the src and all recursive contents as a list.
+/atom/proc/get_all_contents(ignore_flag_1)
+	. = list(src)
+	var/i = 0
+	while(i < length(.))
+		var/atom/checked_atom = .[++i]
+		if(checked_atom.flags_1 & ignore_flag_1)
+			continue
+		. += checked_atom.contents
+
+///identical to get_all_contents but returns a list of atoms of the type passed in the argument.
+/atom/proc/get_all_contents_type(type)
+	var/list/processing_list = list(src)
+	. = list()
+	while(length(processing_list))
+		var/atom/checked_atom = processing_list[1]
+		processing_list.Cut(1, 2)
+		processing_list += checked_atom.contents
+		if(istype(checked_atom, type))
+			. += checked_atom
+
+///Like get_all_contents_type, but uses a typecache list as argument
+/atom/proc/get_all_contents_ignoring(list/ignore_typecache)
+	if(!length(ignore_typecache))
+		return get_all_contents()
+	var/list/processing = list(src)
+	. = list()
+	var/i = 0
+	while(i < length(processing))
+		var/atom/checked_atom = processing[++i]
+		if(ignore_typecache[checked_atom.type])
+			continue
+		processing += checked_atom.contents
+		. += checked_atom
+
 //Returns the atom sitting on the turf.
 //For example, using this on a disk, which is in a bag, on a mob, will return the mob because it's on the turf.
 //Optional arg 'type' to stop once it reaches a specific type instead of a turf.
@@ -1413,37 +1448,6 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	else
 		D.vars[var_name] = var_value
 
-#define	TRAIT_CALLBACK_ADD(target, trait, source) CALLBACK(GLOBAL_PROC, /proc/___TraitAdd, ##target, ##trait, ##source)
-#define	TRAIT_CALLBACK_REMOVE(target, trait, source) CALLBACK(GLOBAL_PROC, /proc/___TraitRemove, ##target, ##trait, ##source)
-
-///DO NOT USE ___TraitAdd OR ___TraitRemove as a replacement for ADD_TRAIT / REMOVE_TRAIT defines. To be used explicitly for callback.
-/proc/___TraitAdd(target,trait,source)
-	if(!target || !trait || !source)
-		return
-	if(islist(target))
-		for(var/i in target)
-			if(!isatom(i))
-				continue
-			var/atom/the_atom = i
-			ADD_TRAIT(the_atom,trait,source)
-	else if(isatom(target))
-		var/atom/the_atom2 = target
-		ADD_TRAIT(the_atom2,trait,source)
-
-///DO NOT USE ___TraitAdd OR ___TraitRemove as a replacement for ADD_TRAIT / REMOVE_TRAIT defines. To be used explicitly for callback.
-/proc/___TraitRemove(target,trait,source)
-	if(!target || !trait || !source)
-		return
-	if(islist(target))
-		for(var/i in target)
-			if(!isatom(i))
-				continue
-			var/atom/the_atom = i
-			REMOVE_TRAIT(the_atom,trait,source)
-	else if(isatom(target))
-		var/atom/the_atom2 = target
-		REMOVE_TRAIT(the_atom2,trait,source)
-
 /proc/get_random_food()
 	var/list/blocked = list(/obj/item/reagent_containers/food/snacks,
 		/obj/item/reagent_containers/food/snacks/store/bread,
@@ -1533,8 +1537,6 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	set waitfor = FALSE
 	return call(source, proctype)(arglist(arguments))
 
-#define TURF_FROM_COORDS_LIST(List) (locate(List[1], List[2], List[3]))
-
 /proc/num2sign(numeric)
 	if(numeric > 0)
 		return 1
@@ -1613,7 +1615,7 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	var/list/channels_to_use = list()
 	for(var/I in world.TgsChatChannelInfo())
 		var/datum/tgs_chat_channel/channel = I
-		if(channel.tag == config_setting)
+		if(channel.custom_tag == config_setting)
 			channels_to_use += channel
 
 	if(length(channels_to_use))

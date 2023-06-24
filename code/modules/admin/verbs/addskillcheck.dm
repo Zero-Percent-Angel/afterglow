@@ -16,6 +16,7 @@
 					M.added_skill_difficulty = mod
 					M.added_skill_check_is_a_roll = FALSE
 					M.added_skill_failures = null
+					M.added_skill_passers = list()
 					log_admin("[key_name_admin(usr)] added a skill check to: [M]")
 			else
 				mod = input(src, "What is the skill modifier? Positive to make the check harder, negative for easier.", "Set difficulty", 0) as num|null
@@ -26,5 +27,6 @@
 				M.added_skill_difficulty = mod
 				M.added_skill_check_is_a_roll = TRUE
 				M.added_skill_failures = list()
+				M.added_skill_passers = list()
 				log_admin("[key_name_admin(usr)] added a skill roll to: [M]")
 	SSblackbox.record_feedback("tally", "admin_verb", 1, "Add Skill Check")

@@ -145,70 +145,6 @@ datum/crafting_recipe/steelbib/heavy
 	subcategory = CAT_ARMOR
 	always_available = FALSE
 
-/datum/crafting_recipe/ncrsalvagedarmorconversion
-	name = "Salvaged NCR Power Armor"
-	result = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr
-	reqs = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b = 1,
-				/obj/item/toy/crayon/spraycan)
-	time = 30
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-	always_available = FALSE
-
-/datum/crafting_recipe/ncrsalvagedhelmetconversion
-	name = "NCR salvaged T-45b helmet"
-	result = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr
-	reqs = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b = 1,
-				/obj/item/toy/crayon/spraycan)
-	time = 20
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-	always_available = FALSE
-
-/datum/crafting_recipe/boscombatarmor
-	name = "knight armor"
-	result = /obj/item/clothing/suit/armor/medium/combat/brotherhood
-	blacklist = list(/obj/item/clothing/suit/armor/medium/combat/mk2)
-	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1,
-				/obj/item/toy/crayon/spraycan)
-	time = 30
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-	always_available = FALSE
-
-/datum/crafting_recipe/boscombathelmet
-	name = "knight helmet"
-	result = /obj/item/clothing/head/helmet/f13/combat/brotherhood
-	blacklist = list(/obj/item/clothing/head/helmet/f13/combat/mk2)
-	reqs = list(/obj/item/clothing/head/helmet/f13/combat = 1,
-				/obj/item/toy/crayon/spraycan)
-	time = 30
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-	always_available = FALSE
-
-/datum/crafting_recipe/boscombatarmormk2
-	name = "reinforced knight armor"
-	result = /obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate/mk2
-	blacklist = list(/obj/item/clothing/suit/armor/medium/combat)
-	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1,
-				/obj/item/toy/crayon/spraycan)
-	time = 30
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-	always_available = FALSE
-
-/datum/crafting_recipe/boscombathelmetmk2
-	name = "reinforced knight helmet"
-	result = /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate/mk2
-	blacklist = list(/obj/item/clothing/head/helmet/f13/combat)
-	reqs = list(/obj/item/clothing/head/helmet/f13/combat/mk2 = 1,
-				/obj/item/toy/crayon/spraycan)
-	time = 30
-	category = CAT_CLOTHING
-	subcategory = CAT_ARMOR
-	always_available = FALSE
-
 /datum/crafting_recipe/durathread_vest
 	name = "Makeshift Durathread Armour"
 	result = /obj/item/clothing/suit/armor/light/leather/durathread
@@ -1167,3 +1103,257 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
 */
+
+/datum/crafting_recipe/ncrsalvagedarmorconversion
+	name = "Salvaged NCR Power Armor"
+	result = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr
+	reqs = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b = 1,
+				/obj/item/toy/crayon/spraycan)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/ncrsalvagedhelmetconversion
+	name = "NCR salvaged T-45b helmet"
+	result = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr
+	reqs = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b = 1,
+				/obj/item/toy/crayon/spraycan)
+	time = 20
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+///////////////////////////////////
+// FACTIONS COMBAT ARMOR SECTION //
+///////////////////////////////////
+
+// NCR Combat Armor
+
+/datum/crafting_recipe/ncr_combat
+	name = "NCR combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/ncr
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/ncr_combat_mk2
+	name = "mk2 NCR combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/mk2/ncr
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/ncr_combat_helm
+	name = "NCR combat helmet"
+	result = /obj/item/clothing/head/helmet/f13/combat/ncr
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/ncr_combat_helm_mk2
+	name = "mk2 NCR combat helmet"
+	result = /obj/item/clothing/head/helmet/f13/combat/mk2/ncr
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat/mk2 = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+// Legion Combat Armor
+
+/datum/crafting_recipe/leg_combat
+	name = "legion combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/legion
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/leg_combat_mk2
+	name = "mk2 legion combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/mk2/legion
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/leg_combat_helm
+	name = "legion combat helmets"
+	result = /obj/item/clothing/head/helmet/f13/combat/legion
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/leg_combat_helm_mk2
+	name = "mk2 legion combat helmets"
+	result = /obj/item/clothing/head/helmet/f13/combat/mk2/legion
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat/mk2 = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+// Brotherhood Combat Armor
+
+/datum/crafting_recipe/boscombatarmor
+	name = "knight armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/brotherhood
+	blacklist = list(/obj/item/clothing/suit/armor/medium/combat/mk2)
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1,
+				/obj/item/toy/crayon/spraycan)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/boscombathelmet
+	name = "knight helmet"
+	result = /obj/item/clothing/head/helmet/f13/combat/brotherhood
+	blacklist = list(/obj/item/clothing/head/helmet/f13/combat/mk2)
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat = 1,
+				/obj/item/toy/crayon/spraycan)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/boscombatarmormk2
+	name = "reinforced knight armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/brotherhood/mk2
+	blacklist = list(/obj/item/clothing/suit/armor/medium/combat)
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1,
+				/obj/item/toy/crayon/spraycan)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/boscombathelmetmk2
+	name = "reinforced knight helmet"
+	result = /obj/item/clothing/head/helmet/f13/combat/brotherhood/mk2
+	blacklist = list(/obj/item/clothing/head/helmet/f13/combat)
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat/mk2 = 1,
+				/obj/item/toy/crayon/spraycan)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+// Town Combat Armor
+
+/datum/crafting_recipe/town_combat
+	name = "town combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/town
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/town_combat_mk2
+	name = "mk2 town combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/mk2/town
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/town_combat_helm
+	name = "town combat helmet"
+	result = /obj/item/clothing/head/helmet/f13/combat/town
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/town_combat_helm_mk2
+	name = "mk2 town combat helmet"
+	result = /obj/item/clothing/head/helmet/f13/combat/mk2/town
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+// Raider combat armor
+
+/datum/crafting_recipe/raid_combat
+	name = "raider combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/raider
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/raid_combat_mk2
+	name = "mk2 raider combat armor"
+	result = /obj/item/clothing/suit/armor/medium/combat/mk2/raider
+	reqs = list(/obj/item/clothing/suit/armor/medium/combat/mk2 = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/raid_combat_helm
+	name = "raider combat helmet"
+	result = /obj/item/clothing/head/helmet/f13/combat/raider
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+
+/datum/crafting_recipe/raid_combat_helm_mk2
+	name = "mk2 raider combat helmet"
+	result = /obj/item/clothing/head/helmet/f13/combat/mk2/raider
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat/mk2 = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE

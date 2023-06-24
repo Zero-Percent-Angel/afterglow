@@ -101,7 +101,9 @@
 	var/added_skill_check = SKILL_GUNS
 	var/added_skill_check_is_a_roll = FALSE
 	var/added_skill_can_be_retried = FALSE
+	var/added_skill_being_checked = FALSE
 	var/list/added_skill_failures
+	var/list/added_skill_passers
 	var/added_skill_difficulty = DIFFICULTY_CHALLENGE
 
 /atom/New(loc, ...)
@@ -115,7 +117,7 @@
 	var/do_initialize = SSatoms.initialized
 	if(do_initialize != INITIALIZATION_INSSATOMS)
 		args[1] = do_initialize == INITIALIZATION_INNEW_MAPLOAD
-		if(SSatoms.InitAtom(src, args))
+		if(SSatoms.InitAtom(src, FALSE, args))
 			//we were deleted
 			return
 

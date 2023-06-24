@@ -19,15 +19,6 @@
 	else
 		return ..()
 
-/obj/item/modkit/riotgear
-	name = "desert ranger riot gear modkit"
-	target_items = list(/obj/item/clothing/suit/armor/rangercombat)
-	result_item = /obj/item/clothing/suit/armor/medium/combat/desert_ranger
-
-/obj/item/modkit/riotgear/fox
-	name = "sniper riot gear modkit"
-	result_item = /obj/item/clothing/suit/armor/rangercombat/foxcustom
-
 /*
 /obj/item/modkit/custom_excess
 	name = "champion of kanab's armor modkit"

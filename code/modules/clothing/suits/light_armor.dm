@@ -88,6 +88,7 @@
 	name = "cloak"
 	desc = "A cloak, made out of cloak."
 	icon_state = "clawsuitcloak"
+	item_state = "clawsuitcloak"
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/goliath
 	// body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	cold_protection = CHEST|GROIN|ARMS|LEGS
@@ -113,6 +114,7 @@
 	name = "deathclaw cloak"
 	desc = "A staunch, practical cloak made out of sinew and skin from the fearsome deathclaw."
 	icon_state = "clawsuitcloak"
+	item_state = "clawsuitcloak"
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/goliath
 	// body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
@@ -123,6 +125,7 @@
 	name = "deathclaw cloak hood"
 	desc = "A protective & concealing hood."
 	icon_state = "clawheadcloak"
+	item_state = "clawheadcloak"
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_MEDIUM
@@ -132,6 +135,7 @@
 	name = "tattered red cloak"
 	desc = "An old ragged, tattered red cloak that is covered in burns and bullet holes."
 	icon_state = "goliath_cloak"
+	item_state = "goliath_cloak"
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/goliath/tattered
 	// body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
@@ -142,6 +146,7 @@
 	name = "tattered red cloak hood"
 	desc = "A tattered hood, better than nothing in the waste."
 	icon_state = "golhood"
+	item_state = "golhood"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2)
@@ -150,6 +155,7 @@
 	name = "Razorclaw armour"
 	desc = "A suit of armour fashioned out of the remains of a legendary deathclaw."
 	icon_state = "rcarmour"
+	item_state = "rcarmour"
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/hhunter
 	heat_protection = CHEST|GROIN|LEGS|ARMS|HANDS
 	// body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
@@ -163,6 +169,7 @@
 	name = "Razorclaw helm"
 	desc = "The skull of a legendary deathclaw."
 	icon_state = "rchelmet"
+	item_state = "rchelmet"
 	heat_protection = HEAD
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
@@ -173,6 +180,7 @@
 	name = "quickclaw armour"
 	desc = "A suit of armour fashioned out of the remains of a legendary deathclaw, this one has been crafted to remove a good portion of its protection to improve on speed and trekking."
 	icon_state = "birdarmor"
+	item_state = "birdarmor"
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/shunter
 	heat_protection = CHEST|GROIN|LEGS|ARMS|HANDS
 	// body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
@@ -186,6 +194,7 @@
 	name = "quickclaw hood"
 	desc = "A hood made of deathclaw hides, light while also being comfortable to wear, designed for speed."
 	icon_state = "birdhood"
+	item_state = "birdhood"
 	heat_protection = HEAD
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
@@ -195,6 +204,7 @@
 /obj/item/clothing/suit/hooded/cloak/deathclaw
 	name = "deathclaw cloak"
 	icon_state = "desertcloak"
+	item_state = "desertcloak"
 	desc = "Made from the sinew and skin of the fearsome deathclaw, this cloak will shield its wearer from harm."
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/deathclaw
 	// body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -206,6 +216,7 @@
 /obj/item/clothing/head/hooded/cloakhood/deathclaw
 	name = "deathclaw cloak hood"
 	icon_state = "hood_desertcloak"
+	item_state = "hood_desertcloak"
 	desc = "A protective and concealing hood."
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
@@ -383,8 +394,8 @@
 /obj/item/clothing/suit/armor/light/leather/leathercoat
 	name = "thick leather coat"
 	desc = "Reinforced leather jacket with a overcoat. Well insulated, creaks a lot while moving."
-	icon_state = "leatherarmor"
-	item_state = "leatherarmor"
+	icon_state = "leather_suit"
+	item_state = "leather_suit"
 	siemens_coefficient = 0.8
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
 	body_parts_hidden = ARMS | CHEST
@@ -392,8 +403,8 @@
 /obj/item/clothing/suit/armor/light/leather/leather_jacket
 	name = "thick leather jacket"
 	desc = "This heavily padded leather jacket is unusual in that it has two sleeves. You'll definitely make a fashion statement whenever, and wherever, you rumble."
-	icon_state = "combat_coat"
-	item_state = "combat_coat"
+	icon_state = "leather_jacket_thick"
+	item_state = "leather_jacket_thick"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_FIRE_T2, ARMOR_MODIFIER_UP_DT_T3)
 	body_parts_hidden = ARMS | CHEST | LEGS
 
@@ -483,6 +494,7 @@
 	name = "NCR medical labcoat"
 	desc = "An armored labcoat typically issued to NCR Medical Officers. It's a standard white labcoat with the Medical Officer's name stitched into the breast and a two headed bear sewn into the shoulder."
 	icon_state = "ncr_labcoat"
+	item_state = "ncr_labcoat"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/medical
 
 //Ranger
@@ -490,6 +502,7 @@
 	name = "NCR ranger vest"
 	desc = "A quaint little jacket and scarf worn by NCR trail rangers."
 	icon_state = "ncr_ranger"
+	item_state = "ncr_ranger"
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
@@ -498,6 +511,7 @@
 	name = "NCR mutant scraps"
 	desc = "So-called 'armor' given to mutant members of the NCR military. Though.. this equates to little more than scraps of armor."
 	icon_state = "mutie_ncr_scrap"
+	item_state = "mutie_ncr_scrap"
 
 ////////////
 // Legion //
@@ -510,24 +524,31 @@
 	name = "legion recruit armor"
 	desc = "The most basic legion armor, clearly inspired by gear worn by old world football players and baseball catchers, much of it restored ancient actual sports equipment, other newly made from mostly leather, tanned and boiled in oil."
 	icon_state = "legion_rec"
+	item_state = "legion_rec"
 
 /obj/item/clothing/suit/armor/light/legion/prime
 	name = "legion prime armor"
 	desc = "It's a legion prime armor, the warrior has been granted some additional protective pieces to add to his suit."
 	icon_state = "legion_prime"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
+	item_state = "legion_prime"
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/light/legion/explorer
 	name = "legion explorer armor"
 	desc = "A light armor with layered strips of laminated linen and leather and worn with a large pouch for storing your binoculars."
 	icon_state = "legion_explorer"
+	item_state = "legion_explorer"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/binocular
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
 
-/obj/item/clothing/suit/armor/light/legion/recruit/slavemaster
+/obj/item/clothing/suit/armor/light/legion/explorer/assassin
 	name = "legion exactor armor"
 	desc = "Issued to exactors to keep them cool during long hours of watching the slaves work in the sun."
-	icon_state = "legion_master"
+	icon_state = "legion_praetorian"
+	item_state = "legion_praetorian"
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 //////////////////////////
 // Brotherhood of Steel //
@@ -595,11 +616,13 @@
 	name = "bartender's trenchcoat"
 	desc = "A fancy long trenchcoat belonging to a bartender, features an internal pocket large enough to hold a shotgun concealed."
 	icon_state = "town_bartender"
+	item_state = "town_bartender"
 
 /obj/item/clothing/suit/armor/light/duster/town/coat
 	name = "lightly armored trenchcoat"
 	desc = "A lightly armored stylish trenchcoat for officals who need the protection."
 	icon_state = "town_security"
+	item_state = "town_security"
 
 /////////////////
 // Great Khans //
