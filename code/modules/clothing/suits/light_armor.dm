@@ -394,8 +394,8 @@
 /obj/item/clothing/suit/armor/light/leather/leathercoat
 	name = "thick leather coat"
 	desc = "Reinforced leather jacket with a overcoat. Well insulated, creaks a lot while moving."
-	icon_state = "leatherarmor"
-	item_state = "leatherarmor"
+	icon_state = "leather_suit"
+	item_state = "leather_suit"
 	siemens_coefficient = 0.8
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
 	body_parts_hidden = ARMS | CHEST
@@ -540,7 +540,7 @@
 	icon_state = "legion_explorer"
 	item_state = "legion_explorer"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/binocular
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
 
 /obj/item/clothing/suit/armor/light/legion/explorer/assassin
 	name = "legion exactor armor"

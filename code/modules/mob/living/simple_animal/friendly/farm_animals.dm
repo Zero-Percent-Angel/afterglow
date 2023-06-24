@@ -687,6 +687,7 @@
 	waddle_up_time = 1
 	waddle_side_time = 2
 	can_ghost_into = TRUE
+	pop_required_to_jump_into = BIG_MOB_MIN_PLAYERS
 	attack_sound = 'sound/weapons/punch1.ogg'
 	young_type = /mob/living/simple_animal/cow/brahmin/calf
 	var/obj/item/inventory_back
@@ -731,6 +732,7 @@
 	waddle_up_time = 1
 	waddle_side_time = 2
 	can_ghost_into = TRUE
+	pop_required_to_jump_into = BIG_MOB_MIN_PLAYERS
 	attack_sound = 'sound/weapons/punch1.ogg'
 	footstep_type = FOOTSTEP_MOB_HOOF
 	ride_offsets = list(
@@ -768,6 +770,7 @@
 	maxHealth = 200
 	ride_move_delay = 2.0
 	can_ghost_into = TRUE
+	pop_required_to_jump_into = BIG_MOB_MIN_PLAYERS
 	response_help_continuous  = "pets"
 	response_help_simple = "pet"
 	response_disarm_continuous = "gently pushes aside"
@@ -817,6 +820,7 @@
 	maxHealth = 100
 	ride_move_delay = 1.5
 	can_ghost_into = TRUE
+	pop_required_to_jump_into = BIG_MOB_MIN_PLAYERS
 	response_help_continuous  = "pets"
 	response_help_simple = "pet"
 	response_disarm_continuous = "gently pushes aside"
@@ -864,6 +868,7 @@
 	maxHealth = 150
 	ride_move_delay = 1.8
 	can_ghost_into = TRUE
+	pop_required_to_jump_into = BIG_MOB_MIN_PLAYERS
 	response_help_continuous  = "pets"
 	response_help_simple = "pet"
 	response_disarm_continuous = "gently pushes aside"
@@ -919,6 +924,7 @@
 	maxHealth = 150
 	ride_move_delay = 1.8
 	can_ghost_into = TRUE
+	pop_required_to_jump_into = BIG_MOB_MIN_PLAYERS
 	response_help_continuous  = "pets"
 	response_help_simple = "pet"
 	response_disarm_continuous = "gently pushes aside"
@@ -985,6 +991,7 @@
 	maxHealth = 100
 	ride_move_delay = 1.5
 	can_ghost_into = TRUE
+	pop_required_to_jump_into = BIG_MOB_MIN_PLAYERS
 	response_help_continuous  = "pets"
 	response_help_simple = "pet"
 	response_disarm_continuous = "gently pushes aside"

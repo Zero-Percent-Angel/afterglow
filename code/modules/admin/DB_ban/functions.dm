@@ -170,13 +170,14 @@
 		ban_content.embed = embed_data
 
 		embed_data.timestamp = time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss", 0)
-		embed_data.author = new("[a_ckey]")
+		embed_data.author = new /datum/tgs_chat_embed/provider/author("[a_ckey]")
+		embed_data.author.url = "https://afterglowcdn.shiptest.net"
 		embed_data.title = "BAN ALERT"
 		embed_data.colour = "#FF0000"
 		embed_data.fields = list()
 
-		var/datum/tgs_chat_embed/field/ban_information = new /datum/tgs_chat_embed/field("Ban Information")
-		ban_information.value = "Banned: `[bankey]`\nReason: `[reason]`\nType: `[bantype_str]`"
+		var/datum/tgs_chat_embed/field/ban_information = new /datum/tgs_chat_embed/field("Ban Information", "Banned: `[bankey]`")
+		ban_information.value += "\nReason: `[reason]`\nType: `[bantype_str]`"
 		if(job)
 			ban_information.value += "\nJob: `[job]`"
 		if(duration > 0)
