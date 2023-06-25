@@ -23,7 +23,61 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	/datum/crafting_recipe/radgrenade,
 	/datum/crafting_recipe/empgrenade,
 	/datum/crafting_recipe/incendiaryrocket,
-	/datum/crafting_recipe/strongrocket))
+	/datum/crafting_recipe/strongrocket)
+	)
+
+GLOBAL_LIST_INIT(whitelegs_recipes, list(
+	/datum/crafting_recipe/tribalwar/whitelegs/garb,
+	/datum/crafting_recipe/tribalwar/whitelegs/femalegarb, 
+	/datum/crafting_recipe/tribalwar/whitelegs/lightarmour,
+	/datum/crafting_recipe/tribalwar/whitelegs/armour, 
+	/datum/crafting_recipe/tribalwar/whitelegs/heavyarmour)
+	)
+
+GLOBAL_LIST_INIT(deadhorses_recipes, list(
+	/datum/crafting_recipe/tribalwar/deadhorses/garb,
+	/datum/crafting_recipe/tribalwar/deadhorses/femalegarb,
+	/datum/crafting_recipe/tribalwar/deadhorses/lightarmour,
+	/datum/crafting_recipe/tribalwar/deadhorses/armour,
+	/datum/crafting_recipe/tribalwar/deadhorses/heavyarmour)
+	)
+
+GLOBAL_LIST_INIT(sorrows_recipes, list(
+	/datum/crafting_recipe/tribalwar/sorrows/armour,
+	/datum/crafting_recipe/tribalwar/sorrows/garb,
+	/datum/crafting_recipe/tribalwar/sorrows/femalegarb,
+	/datum/crafting_recipe/tribalwar/sorrows/yaoguaigauntlet)
+	)
+
+GLOBAL_LIST_INIT(rustwalkers_recipes, list(
+	/datum/crafting_recipe/tribalwar/rustwalkers/garb,
+	/datum/crafting_recipe/tribalwar/rustwalkers/femalegarb,
+	/datum/crafting_recipe/tribalwar/rustwalkers/lightarmour,
+	/datum/crafting_recipe/tribalwar/rustwalkers/armour,
+	/datum/crafting_recipe/tribalwar/rustwalkers/heavyarmour)
+	)
+
+GLOBAL_LIST_INIT(eighties_recipes, list(
+	/datum/crafting_recipe/tribalwar/eighties/lightarmour,
+	/datum/crafting_recipe/tribalwar/eighties/armour,
+	/datum/crafting_recipe/tribalwar/eighties/garb,
+	/datum/crafting_recipe/tribalwar/eighties/femalegarb,
+	/datum/crafting_recipe/tribalwar/eighties/heavyarmour)
+	)
+
+GLOBAL_LIST_INIT(wayfarer_recipes, list(
+	/datum/crafting_recipe/tribalwar/lighttribe,
+	/datum/crafting_recipe/tribalwar/heavytribe,
+	/datum/crafting_recipe/warmace)
+	)
+
+GLOBAL_LIST_INIT(bone_dancer_recipes, list(
+	/datum/crafting_recipe/tribalwar/bone/lightarmour,
+	/datum/crafting_recipe/tribalwar/bone/armour, 
+	/datum/crafting_recipe/tribalwar/bone/heavyarmour,
+	/datum/crafting_recipe/tribalwar/bone/garb,
+	/datum/crafting_recipe/tribalwar/bone/helmet)
+	)
 
 GLOBAL_LIST_INIT(tier_three_parts, list(
 	/datum/crafting_recipe/pico_manip,
@@ -652,6 +706,13 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/whitelegstraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/whiteleg)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.whitelegs_recipes
+
 /datum/quirk/deadhorsestraditions
 	name = "Dead Horses traditions"
 	desc = "You remember how to make your peoples ancient garments after all this time."
@@ -660,6 +721,13 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
+
+/datum/quirk/deadhorsestraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/deadhorses)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.deadhorses_recipes
 
 /datum/quirk/rustwalkerstraditions
 	name = "Rust Walkers traditions"
@@ -670,6 +738,13 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/rustwalkerstraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/german)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.rustwalkers_recipes
+
 /datum/quirk/eightiestraditions
 	name = "Eighties traditions"
 	desc = "You remember how to make your peoples ancient garments after all this time."
@@ -678,6 +753,13 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
+
+/datum/quirk/eightiestraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.eighties_recipes
 
 /datum/quirk/sorrowstraditions
 	name = "Sorrows traditions"
@@ -688,6 +770,13 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/sorrowstraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/sorrows)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.sorrows_recipes
+
 /datum/quirk/wayfarertraditions
 	name = "Wayfarer traditions"
 	desc = "You remember how to make your peoples ancient garments after all this time."
@@ -697,6 +786,13 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/wayfarertraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.wayfarer_recipes
+
 /datum/quirk/bonedancertraditions
 	name = "Bone Dancer traditions"
 	desc = "You remember how to make your peoples ancient garments after all this time."
@@ -705,6 +801,13 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
+
+/datum/quirk/bonedancertraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.bone_dancer_recipes
 
 /datum/quirk/brickwall
 	name = "Brick wall"
