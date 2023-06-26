@@ -53,7 +53,6 @@
 	heat_protection = CHEST|GROIN|ARMS|LEGS // chyll
 	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/light/tribal/wastetribe
 	name = "wasteland tribe armor"

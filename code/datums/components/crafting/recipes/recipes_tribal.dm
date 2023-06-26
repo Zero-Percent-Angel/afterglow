@@ -230,11 +230,20 @@
 /datum/crafting_recipe/tribalwar/whitelegs
 	always_available = FALSE
 
+/datum/crafting_recipe/tribalwar/whitelegs/lightarmour
+	name = "White Legs Light Armour"
+	result = /obj/item/clothing/suit/armor/light/tribal/whitelegs
+	time = 60
+	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 3,
+				/obj/item/stack/sheet/leather = 2,
+				/obj/item/stack/crafting/goodparts = 5)
+
 /datum/crafting_recipe/tribalwar/whitelegs/armour
 	name = "White Legs Armour"
 	result = /obj/item/clothing/suit/armor/medium/tribal/whitelegs
 	time = 60
-	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 3,
+	reqs = list(/obj/item/clothing/under/f13/whitelegs = 1,
+				/obj/item/stack/sheet/animalhide/gecko = 3,
 				/obj/item/stack/sheet/leather = 2,
 				/obj/item/stack/crafting/goodparts = 5)
 
