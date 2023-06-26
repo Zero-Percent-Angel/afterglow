@@ -685,12 +685,6 @@
 	},
 /turf/open/indestructible/ground/outside/snow,
 /area/f13/ncr/powered)
-"asR" = (
-/obj/effect/landmark/start/f13/quartermaster,
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/klamat/powered)
 "atf" = (
 /obj/structure/flora/brushwoodalt,
 /turf/open/indestructible/ground/outside/desert,
@@ -5091,6 +5085,11 @@
 	icon_state = "whitegreenrustychess"
 	},
 /area/f13/brotherhood/powered)
+"cZs" = (
+/obj/effect/turf_decal/weather/snow/corner,
+/obj/effect/landmark/start/f13/ncrspecialist,
+/turf/open/floor/plating/dirt,
+/area/f13/wasteland)
 "cZt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wood/settler,
@@ -5740,11 +5739,6 @@
 	icon_state = "housewood1-broken"
 	},
 /area/f13/casino)
-"dvg" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/f13/followersadministrator,
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/klamat/powered)
 "dvj" = (
 /obj/structure/table,
 /obj/item/stack/crafting/electronicparts/five,
@@ -6006,6 +6000,7 @@
 /area/f13/underground/mountain)
 "dAR" = (
 /obj/structure/chair/comfy/black,
+/obj/effect/landmark/start/f13/mayor,
 /turf/open/floor/f13/wood,
 /area/f13/klamat/powered)
 "dBB" = (
@@ -8225,6 +8220,11 @@
 	icon_state = "darkrustysolid"
 	},
 /area/f13/brotherhood/powered)
+"eTD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/followersdoctor,
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/klamat/powered)
 "eTI" = (
 /obj/structure/chair/booth{
 	dir = 1
@@ -8436,6 +8436,9 @@
 /obj/machinery/door/unpowered/securedoor{
 	name = "Gatehouse";
 	req_one_access_txt = "136: 137"
+	},
+/obj/machinery/door/unpowered/securedoor{
+	req_access_txt = "136"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/klamat/powered)
@@ -10670,6 +10673,9 @@
 	name = "Mayor's Office";
 	req_access_txt = "136; 137"
 	},
+/obj/machinery/door/unpowered/securedoor{
+	req_access_txt = "135"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/klamat/powered)
 "gsH" = (
@@ -12118,11 +12124,6 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
-"hih" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/f13/followersdoctor,
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/klamat/powered)
 "hii" = (
 /obj/structure/sink{
 	dir = 4;
@@ -12928,11 +12929,6 @@
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/f13/wood,
 /area/f13/building)
-"hIa" = (
-/obj/effect/turf_decal/weather/snow/corner,
-/obj/effect/landmark/start/f13/ncrspecialist,
-/turf/open/floor/plating/dirt,
-/area/f13/wasteland)
 "hJg" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/blueprintLow,
@@ -13595,6 +13591,12 @@
 /obj/effect/decal/cleanable/blood/gibs/human,
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/casino)
+"icr" = (
+/obj/effect/landmark/start/f13/secretary,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/klamat/powered)
 "icv" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "housewindowbrokenvertical"
@@ -13650,6 +13652,9 @@
 /obj/machinery/door/unpowered/securedoor{
 	name = "Mayor's Office";
 	req_access_txt = "136; 137"
+	},
+/obj/machinery/door/unpowered/securedoor{
+	req_access_txt = "135"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/klamat/powered)
@@ -17777,10 +17782,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
-"kzL" = (
-/obj/effect/landmark/start/f13/mayor,
-/turf/open/floor/plating/dirt,
-/area/f13/klamat/powered)
 "kzN" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
@@ -17822,11 +17823,6 @@
 	icon_state = "innermaincornerinner"
 	},
 /area/f13/wasteland)
-"kAE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/f13/followersscientist,
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/klamat/powered)
 "kAQ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/closed/wall/f13/store,
@@ -20568,6 +20564,11 @@
 	dir = 1
 	},
 /area/f13/brotherhood/powered)
+"moz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/followersguard,
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/klamat/powered)
 "moD" = (
 /obj/machinery/autolathe,
 /turf/open/floor/plating/rust,
@@ -21557,6 +21558,19 @@
 /obj/structure/barricade/wooden,
 /turf/closed/wall/f13/wood/house/broken,
 /area/f13/building/powered)
+"mTf" = (
+/obj/machinery/door/unpowered/securedoor{
+	name = "Gatehouse";
+	req_one_access_txt = "136: 137"
+	},
+/obj/machinery/door/unpowered/securedoor{
+	req_access_txt = "25"
+	},
+/obj/machinery/door/unpowered/securedoor{
+	req_access_txt = "136"
+	},
+/turf/open/floor/f13/wood,
+/area/f13/klamat/powered)
 "mTr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -22920,11 +22934,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/building/powered)
-"nEc" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/f13/followersvolunteer,
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/klamat/powered)
 "nEi" = (
 /obj/structure/closet/fridge,
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
@@ -24560,6 +24569,12 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"oEM" = (
+/obj/effect/landmark/start/f13/quartermaster,
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/f13/klamat/powered)
 "oEN" = (
 /obj/structure/rack,
 /obj/item/clothing/under/f13/cowboyt,
@@ -24703,6 +24718,9 @@
 	name = "Mayor's Office";
 	req_access_txt = "136; 137"
 	},
+/obj/machinery/door/unpowered/securedoor{
+	req_access_txt = "135"
+	},
 /turf/open/floor/carpet/black,
 /area/f13/klamat/powered)
 "oIS" = (
@@ -24795,6 +24813,9 @@
 /obj/machinery/door/unpowered/securedoor{
 	name = "Mayor's Office";
 	req_access_txt = "136; 137"
+	},
+/obj/machinery/door/unpowered/securedoor{
+	req_access_txt = "135"
 	},
 /turf/open/floor/carpet/black,
 /area/f13/klamat/powered)
@@ -27389,6 +27410,11 @@
 "qpp" = (
 /obj/structure/rack,
 /turf/open/indestructible/ground/outside/sidewalk,
+/area/f13/klamat/powered)
+"qpt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/followersscientist,
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/klamat/powered)
 "qpy" = (
 /obj/machinery/iv_drip,
@@ -30258,6 +30284,10 @@
 /obj/machinery/telecomms/server/presets/legion,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/tcoms)
+"scP" = (
+/obj/effect/landmark/start/f13/mayor,
+/turf/open/floor/plating/dirt,
+/area/f13/klamat/powered)
 "sdg" = (
 /obj/effect/decal/marking,
 /obj/structure/car,
@@ -30811,6 +30841,11 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/wasteland)
+"swQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/followersadministrator,
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/klamat/powered)
 "sxC" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/lootdrop/f13/junkspawners,
@@ -35567,6 +35602,12 @@
 	name = "Gatehouse";
 	req_one_access_txt = "136: 137"
 	},
+/obj/machinery/door/unpowered/securedoor{
+	req_access_txt = "25"
+	},
+/obj/machinery/door/unpowered/securedoor{
+	req_access_txt = "136"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/klamat/powered)
 "voF" = (
@@ -35762,11 +35803,6 @@
 	},
 /turf/open/floor/plating/dirt,
 /area/f13/brotherhood/powered)
-"vvc" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/f13/followersguard,
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/klamat/powered)
 "vvj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/simple_door/repaired,
@@ -39007,6 +39043,9 @@
 	name = "Gatehouse";
 	req_one_access_txt = "136: 137"
 	},
+/obj/machinery/door/unpowered/securedoor{
+	req_access_txt = "136"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/klamat/powered)
 "xpY" = (
@@ -40274,6 +40313,11 @@
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/open/floor/plating/dirt,
 /area/f13/wasteland)
+"yfM" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/followersvolunteer,
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/klamat/powered)
 "ygk" = (
 /obj/structure/rack,
 /obj/item/clothing/shoes/sneakers/black{
@@ -47871,7 +47915,7 @@ yhi
 yhi
 sTy
 kRO
-hIa
+cZs
 lQG
 yhi
 cSt
@@ -68238,7 +68282,7 @@ uDT
 hzg
 lzR
 oIx
-xpt
+mTf
 xUn
 xUn
 gsa
@@ -72479,9 +72523,9 @@ rlZ
 sei
 hEY
 pBn
-hih
-vvc
-nEc
+eTD
+moz
+yfM
 pBn
 pBn
 ube
@@ -72681,8 +72725,8 @@ sei
 sei
 osD
 pBn
-dvg
-kAE
+swQ
+qpt
 pBn
 pBn
 rYt
@@ -73268,7 +73312,7 @@ bJN
 xxn
 xxn
 uDT
-kzL
+scP
 lCf
 wqz
 qux
@@ -76694,7 +76738,7 @@ wqz
 wqz
 wqz
 vUv
-jtx
+icr
 jtx
 jtx
 tUT
@@ -78542,7 +78586,7 @@ tiC
 owp
 fNL
 fNL
-asR
+oEM
 fNL
 hqG
 cka
