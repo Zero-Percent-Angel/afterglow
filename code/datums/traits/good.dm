@@ -29,14 +29,14 @@ GLOBAL_LIST_INIT(whitelegs_recipes, list(
 	/datum/crafting_recipe/tribalwar/whitelegs/garb,
 	/datum/crafting_recipe/tribalwar/whitelegs/femalegarb, 
 	/datum/crafting_recipe/tribalwar/whitelegs/lightarmour,
-	/datum/crafting_recipe/tribalwar/whitelegs/armour
+	/datum/crafting_recipe/tribalwar/whitelegs/armour,
 	/datum/crafting_recipe/tribalwar/whitelegs/heavyarmour))
 
 GLOBAL_LIST_INIT(deadhorses_recipes, list(
 	/datum/crafting_recipe/tribalwar/deadhorses/garb,
 	/datum/crafting_recipe/tribalwar/deadhorses/femalegarb,
 	/datum/crafting_recipe/tribalwar/deadhorses/lightarmour,
-	/datum/crafting_recipe/tribalwar/deadhorses/armour
+	/datum/crafting_recipe/tribalwar/deadhorses/armour,
 	/datum/crafting_recipe/tribalwar/deadhorses/heavyarmour))
 
 GLOBAL_LIST_INIT(sorrows_recipes, list(
@@ -49,14 +49,14 @@ GLOBAL_LIST_INIT(rustwalkers_recipes, list(
 	/datum/crafting_recipe/tribalwar/rustwalkers/garb,
 	/datum/crafting_recipe/tribalwar/rustwalkers/femalegarb,
 	/datum/crafting_recipe/tribalwar/rustwalkers/lightarmour,
-	/datum/crafting_recipe/tribalwar/rustwalkers/armour
+	/datum/crafting_recipe/tribalwar/rustwalkers/armour,
 	/datum/crafting_recipe/tribalwar/rustwalkers/heavyarmour))
 
 GLOBAL_LIST_INIT(eighties_recipes, list(
 	/datum/crafting_recipe/tribalwar/eighties/garb,
 	/datum/crafting_recipe/tribalwar/eighties/femalegarb,
 	/datum/crafting_recipe/tribalwar/eighties/lightarmour,
-	/datum/crafting_recipe/tribalwar/eighties/armour
+	/datum/crafting_recipe/tribalwar/eighties/armour,
 	/datum/crafting_recipe/tribalwar/eighties/heavyarmour))
 
 GLOBAL_LIST_INIT(wayfarer_recipes, list(
@@ -68,7 +68,7 @@ GLOBAL_LIST_INIT(bone_dancer_recipes, list(
 	/datum/crafting_recipe/tribalwar/bone/garb,
 	/datum/crafting_recipe/tribalwar/bone/lightarmour,
 	/datum/crafting_recipe/tribalwar/bone/armour, 
-	/datum/crafting_recipe/tribalwar/bone/heavyarmour
+	/datum/crafting_recipe/tribalwar/bone/heavyarmour,
 	/datum/crafting_recipe/tribalwar/bone/helmet))
 
 GLOBAL_LIST_INIT(tier_three_parts, list(

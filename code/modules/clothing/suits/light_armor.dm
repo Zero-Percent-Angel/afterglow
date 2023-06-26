@@ -93,21 +93,21 @@
 	desc = "A simple leather bandolier and gecko hide chest covering. Commonly worn by the members of the Dead Horses tribe."
 	icon_state = "dead_horses_armour_light"
 	item_state = "dead_horses_armour_light"
-	body_parts_hidden = CHEST
+	body_parts_hidden = CHEST|ARMS|LEGS
 
 /obj/item/clothing/suit/armor/light/tribal/rustwalkers
 	name = "Rustwalkers light armour"
 	desc = "A car seat leather duster and a timing belt bandolier. Commonly worn by members of the Rustwalkers tribe."
 	icon_state = "rustwalkers_armour_light"
 	item_state = "rustwalkers_armour_light"
-	body_parts_hidden = CHEST
+	body_parts_hidden = CHEST|ARMS|LEGS
 
 /obj/item/clothing/suit/armor/light/tribal/eighties
 	name = "Eighties light armour"
 	desc = "A fairly simple, black leather jacket with an overly popped collar. Commonly worn by the members of the 80s tribe."
 	icon_state = "eighties_armour_light"
 	item_state = "eighties_armour_light"
-	body_parts_hidden = CHEST
+	body_parts_hidden = CHEST|ARMS
 
 /obj/item/clothing/suit/armor/light/tribal/bonedancers
 	name = "Bone Dancers light armour"

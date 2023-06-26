@@ -57,10 +57,39 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T1)
 
 /obj/item/clothing/suit/armor/heavy/tribal/rustwalkers
-	name = "Rustwalkers heavy armor"
+	name = "Rustwalkers heavy armour"
 	desc = "A car seat leather duster, a timing belt bandolier, and armour plating made from various parts of a car, it surely would weigh the wearer down. Commonly worn by members of the Rustwalkers tribe."
 	icon_state = "rustwalkers_armour_heavy"
 	item_state = "rustwalkers_armour_heavy"
+	body_parts_hidden = CHEST|GROIN|LEGS|ARMS
+
+/obj/item/clothing/suit/armor/heavy/tribal/whitelegs
+	name = "White Legs heavy armour"
+	desc = "A series of tan and khaki armour plates, held in place with a considerable amount of strapping and possibly duct tape. Commonly worn by members of the White Legs tribe."
+	icon_state = "white_legs_armour_heavy"
+	item_state = "white_legs_armour_heavy"
+	body_parts_hidden = ARMS | LEGS
+
+/obj/item/clothing/suit/armor/heavy/tribal/eighties
+	name = "80s heavy armour"
+	desc = "A ballistic duster with the number 80 stitched onto the back worn over a breastplate made from a motorcycle's engine housing, with kneepads made from stirrups. Worn by the members of the 80s tribe."
+	icon_state = "80s_armour_heavy"
+	item_state = "80s_armour_heavy"
+	body_parts_hidden = CHEST|GROIN|LEGS|ARMS
+
+/obj/item/clothing/suit/armor/heavy/tribal/deadhorses
+	name = "Dead Horses heavy armour"
+	desc = "A simple leather bandolier and gecko hide chest covering, with an engraved metal pauldron and a set of black leather straps, one holding a shinpad in place. Commonly worn by the members of the Dead Horses tribe."
+	icon_state = "dead_horses_armour_heavy"
+	item_state = "dead_horses_armour_heavy"
+	body_parts_hidden = CHEST
+
+/obj/item/clothing/suit/armor/heavy/tribal/bonedancers
+	name = "Bone Dancers heavy armour"
+	desc = "A chestplate, pauldrons, bracers, thigh guards and greaves made from bone, metal and sinew. Commonly worn by members of the Bone Dancers tribe."
+	icon_state = "bone_dancer_armor_heavy"
+	item_state = "bone_dancer_armor_heavy"
+	body_parts_hidden = CHEST|GROIN|LEGS|ARMS
 
 /obj/item/clothing/suit/armor/heavy/tribal/westernwayfarer
 	name = "Western Wayfarer heavy armor"

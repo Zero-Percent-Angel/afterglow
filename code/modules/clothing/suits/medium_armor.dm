@@ -75,21 +75,28 @@
 
 /obj/item/clothing/suit/armor/medium/tribal/rustwalkers
 	name = "Rustwalkers armor"
-	desc = "A car seat leather duster, a timing belt bandolier, and armour plating made from various parts of a car, it surely would weigh the wearer down. Commonly worn by members of the Rustwalkers tribe."
+	desc = "A timing belt bandolier and armour plating made from various parts of a car, it can't be comfortable. Commonly worn by members of the Rustwalkers tribe."
 	icon_state = "rustwalkers_armour"
 	item_state = "rustwalkers_armour"
 	body_parts_hidden = CHEST
 
 /obj/item/clothing/suit/armor/medium/tribal/whitelegs
 	name = "White Legs armour"
-	desc = "A series of tan and khaki armour plates, held in place with a considerable amount of strapping and possibly duct tape. Commonly worn by members of the White Legs tribe."
+	desc = "A series of tan and khaki armour plates, held in place with a fair amount of strapping and a hint of duct tape. Commonly worn by members of the White Legs tribe."
 	icon_state = "white_legs_armour"
 	item_state = "white_legs_armour"
 	body_parts_hidden = ARMS | LEGS
 
+/obj/item/clothing/suit/armor/medium/tribal/sorrows
+	name = "Sorrows armour"
+	desc = "A simple ballistic vest, adorned with blue feathers."
+	icon_state = "sorrows_armour"
+	item_state = "sorrows_armour"
+	body_parts_hidden = ARMS | LEGS
+
 /obj/item/clothing/suit/armor/medium/tribal/eighties
 	name = "80s armour"
-	desc = "A ballistic duster with the number 80 stitched onto the back worn over a breastplate made from a motorcycle's engine housing, with kneepads made from stirrups. Worn by the members of the 80s tribe."
+	desc = "A ballistic jacket with the number 80 stitched onto the back worn with bracers made using exhausts. Worn by the members of the 80s tribe."
 	icon_state = "80s_armour"
 	item_state = "80s_armour"
 	body_parts_hidden = ARMS | CHEST
@@ -100,6 +107,13 @@
 	icon_state = "dead_horses_armour"
 	item_state = "dead_horses_armour"
 	body_parts_hidden = 0
+
+/obj/item/clothing/suit/armor/medium/tribal/bonedancers
+	name = "Bone Dancers armour"
+	desc = "A chestplate, pauldrons, bracers and thigh guards made from bone and sinew. Commonly worn by members of the Bone Dancers tribe."
+	icon_state = "bone_dancer_armor"
+	item_state = "bone_dancer_armor"
+	body_parts_hidden = CHEST
 
 /obj/item/clothing/suit/armor/medium/tribal/bone
 	name = "Reinforced Bone armor"

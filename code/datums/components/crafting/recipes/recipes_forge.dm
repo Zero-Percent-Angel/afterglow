@@ -466,7 +466,7 @@
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-	skill_level =  = EASY_CHECK
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/tools/forged/shovel
 	name = "Shovel"
