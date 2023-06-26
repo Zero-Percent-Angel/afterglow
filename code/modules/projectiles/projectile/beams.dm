@@ -630,8 +630,6 @@
 /obj/item/projectile/f13plasma/scatter //Multiplas, fires 3 shots, will melt you
 	damage = 35
 
-/obj/item/projectile/f13plasma/pistol/glock
-
 /obj/item/projectile/beam/laser/rcw //RCW
 	name = "rapidfire beam"
 	icon_state = "xray"
