@@ -332,8 +332,6 @@
 	armor = ARMOR_VALUE_MEDIUM
 
 /obj/item/clothing/head/helmet/f13/power_armor/t51b/costume
-	actions_types = list(/datum/action/item_action/toggle_helmet_light)
-	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b
  	armor = ARMOR_VALUE_CLOTHES
 	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T3) //not totally useless
 
