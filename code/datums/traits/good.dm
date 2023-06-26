@@ -68,8 +68,7 @@ GLOBAL_LIST_INIT(bone_dancer_recipes, list(
 	/datum/crafting_recipe/tribalwar/bone/garb,
 	/datum/crafting_recipe/tribalwar/bone/lightarmour,
 	/datum/crafting_recipe/tribalwar/bone/armour, 
-	/datum/crafting_recipe/tribalwar/bone/heavyarmour,
-	/datum/crafting_recipe/tribalwar/bone/helmet))
+	/datum/crafting_recipe/tribalwar/bone/heavyarmour))
 
 GLOBAL_LIST_INIT(tier_three_parts, list(
 	/datum/crafting_recipe/pico_manip,

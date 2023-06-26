@@ -434,23 +434,31 @@
 datum/crafting_recipe/tribalwar/bone
 	always_available = FALSE
 
-/datum/crafting_recipe/tribalwar/bone/armour
-	name = "Bone Dancer Reinforced Armor"
-	result = /obj/item/clothing/suit/armor/medium/tribal/bone
+/datum/crafting_recipe/tribalwar/bone/lightarmour
+	name = "Bone Dancer Light Armor"
+	result = /obj/item/clothing/suit/armor/light/tribal/bonedancers
 	time = 60
 	reqs = list(/obj/item/stack/crafting/metalparts = 2,
 				/obj/item/stack/sheet/leather = 3,
 				/obj/item/stack/sheet/bone = 6)
 
+/datum/crafting_recipe/tribalwar/bone/armour
+	name = "Bone Dancer Reinforced Armor"
+	result = /obj/item/clothing/suit/armor/medium/tribal/bonedancers
+	time = 60
+	reqs = list(/obj/item/clothing/suit/armor/light/tribal/bonedancers = 1,
+				/obj/item/stack/crafting/metalparts = 5,
+				/obj/item/stack/sheet/leather = 20,
+				/obj/item/stack/sheet/bone = 30)
+
 /datum/crafting_recipe/tribalwar/bone/heavyarmour
 	name = "Bone Dancer Heavy Armor"
-	result = /obj/item/clothing/suit/armor/heavy/tribal/bone
+	result = /obj/item/clothing/suit/armor/heavy/tribal/bonedancers
 	time = 60
-	reqs = list(/obj/item/clothing/suit/armor/light/tribal =1,
-				/obj/item/clothing/suit/armor/light/tribal = 1,
+	reqs = list(/obj/item/clothing/suit/armor/medium/tribal/bonedancers = 1,
 				/obj/item/stack/crafting/metalparts = 5,
-				/obj/item/stack/sheet/leather = 2,
-				/obj/item/stack/sheet/bone = 4)
+				/obj/item/stack/sheet/leather = 20,
+				/obj/item/stack/sheet/bone = 30)
 
 /datum/crafting_recipe/tribalwar/bone/garb
 	name = "Bone Dancer Garb"
