@@ -235,7 +235,7 @@
 	result = /obj/item/clothing/suit/armor/light/tribal/whitelegs
 	time = 60
 	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 10,
-				/obj/item/stack/sheet/leather = 20,
+				/obj/item/stack/sheet/leather = 10,
 				/obj/item/stack/crafting/goodparts = 5)
 
 /datum/crafting_recipe/tribalwar/whitelegs/armour
@@ -243,18 +243,18 @@
 	result = /obj/item/clothing/suit/armor/medium/tribal/whitelegs
 	time = 120
 	reqs = list(/obj/item/clothing/suit/armor/light/tribal/whitelegs = 1,
-				/obj/item/stack/sheet/animalhide/gecko = 30,
-				/obj/item/stack/sheet/leather = 30,
-				/obj/item/stack/crafting/goodparts = 20)
+				/obj/item/stack/sheet/animalhide/gecko = 15,
+				/obj/item/stack/sheet/leather = 10,
+				/obj/item/stack/crafting/goodparts = 10)
 
 /datum/crafting_recipe/tribalwar/whitelegs/heavyarmour
 	name = "White Legs Heavy Armour"
 	result = /obj/item/clothing/suit/armor/heavy/tribal/whitelegs
 	time = 180
 	reqs = list(/obj/item/clothing/suit/armor/medium/tribal/whitelegs = 1,
-				/obj/item/stack/sheet/animalhide/gecko = 60,
-				/obj/item/stack/sheet/leather = 60,
-				/obj/item/stack/crafting/goodparts = 30)
+				/obj/item/stack/sheet/animalhide/gecko = 20,
+				/obj/item/stack/sheet/leather = 30,
+				/obj/item/stack/crafting/goodparts = 15)
 
 /datum/crafting_recipe/tribalwar/whitelegs/garb
 	name = "White Legs Garb"
@@ -298,7 +298,7 @@
 	reqs = list(/obj/item/clothing/suit/armor/medium/tribal/rustwalkers = 1,
 				/obj/item/shockpaddles/primitive = 1,
 				/obj/item/stack/sheet/leather = 10,
-				/obj/item/stack/crafting/goodparts = 20)
+				/obj/item/stack/crafting/goodparts = 5)
 
 /datum/crafting_recipe/tribalwar/rustwalkers/garb
 	name = "Rustwalkers Garb"
@@ -338,9 +338,9 @@
 	result = /obj/item/clothing/suit/armor/heavy/tribal/eighties
 	time = 60
 	reqs = list(/obj/item/clothing/suit/armor/medium/tribal/eighties = 1,
-				/obj/item/stack/crafting/goodparts = 15,
-				/obj/item/stack/sheet/leather = 20,
-				/obj/item/stack/sheet/cloth = 30
+				/obj/item/stack/crafting/goodparts = 10,
+				/obj/item/stack/sheet/leather = 10,
+				/obj/item/stack/sheet/cloth = 10
 				)
 
 /datum/crafting_recipe/tribalwar/eighties/garb
@@ -448,8 +448,8 @@ datum/crafting_recipe/tribalwar/bone
 	time = 60
 	reqs = list(/obj/item/clothing/suit/armor/light/tribal/bonedancers = 1,
 				/obj/item/stack/crafting/metalparts = 5,
-				/obj/item/stack/sheet/leather = 20,
-				/obj/item/stack/sheet/bone = 30)
+				/obj/item/stack/sheet/leather = 15,
+				/obj/item/stack/sheet/bone = 20)
 
 /datum/crafting_recipe/tribalwar/bone/heavyarmour
 	name = "Bone Dancer Heavy Armor"
@@ -458,7 +458,7 @@ datum/crafting_recipe/tribalwar/bone
 	reqs = list(/obj/item/clothing/suit/armor/medium/tribal/bonedancers = 1,
 				/obj/item/stack/crafting/metalparts = 5,
 				/obj/item/stack/sheet/leather = 20,
-				/obj/item/stack/sheet/bone = 30)
+				/obj/item/stack/sheet/bone = 20)
 
 /datum/crafting_recipe/tribalwar/bone/garb
 	name = "Bone Dancer Garb"

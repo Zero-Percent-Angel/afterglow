@@ -62,6 +62,7 @@
 	icon_state = "rustwalkers_armour_heavy"
 	item_state = "rustwalkers_armour_heavy"
 	body_parts_hidden = CHEST|GROIN|LEGS|ARMS
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/heavy/tribal/whitelegs
 	name = "White Legs heavy armour"
@@ -76,6 +77,7 @@
 	icon_state = "80s_armour_heavy"
 	item_state = "80s_armour_heavy"
 	body_parts_hidden = CHEST|GROIN|LEGS|ARMS
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/heavy/tribal/deadhorses
 	name = "Dead Horses heavy armour"
@@ -90,6 +92,7 @@
 	icon_state = "bone_dancer_armor_heavy"
 	item_state = "bone_dancer_armor_heavy"
 	body_parts_hidden = CHEST|GROIN|LEGS|ARMS
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/heavy/tribal/westernwayfarer
 	name = "Western Wayfarer heavy armor"

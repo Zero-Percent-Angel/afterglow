@@ -79,6 +79,7 @@
 	icon_state = "rustwalkers_armour"
 	item_state = "rustwalkers_armour"
 	body_parts_hidden = CHEST
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1)
 
 /obj/item/clothing/suit/armor/medium/tribal/whitelegs
 	name = "White Legs armour"
@@ -93,6 +94,7 @@
 	icon_state = "sorrows_armour"
 	item_state = "sorrows_armour"
 	body_parts_hidden = ARMS | LEGS
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1)
 
 /obj/item/clothing/suit/armor/medium/tribal/eighties
 	name = "80s armour"
@@ -100,6 +102,7 @@
 	icon_state = "80s_armour"
 	item_state = "80s_armour"
 	body_parts_hidden = ARMS | CHEST
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1)
 
 /obj/item/clothing/suit/armor/medium/tribal/deadhorses
 	name = "Dead Horses armour"
@@ -114,6 +117,7 @@
 	icon_state = "bone_dancer_armor"
 	item_state = "bone_dancer_armor"
 	body_parts_hidden = CHEST
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/medium/tribal/bone
 	name = "Reinforced Bone armor"
@@ -500,28 +504,28 @@
 /obj/item/clothing/suit/armor/medium/combat/ncr
 	name = "NCR combat armor"
 	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for New California Republic."
-	icon_state = "combat_armor_ncr"
-	item_state = "combat_armor_ncr"
+	icon_state = "ncr_armor"
+	item_state = "ncr_armor"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/ncr
 	name = "reinforced NCR combat armor"
 	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for New California Republic."
-	icon_state = "combat_armor_ncr_mk2"
-	item_state = "combat_armor_ncr_mk2"
+	icon_state = "ncr_armor_mk2"
+	item_state = "ncr_armor_mk2"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
 /obj/item/clothing/suit/armor/medium/combat/legion
 	name = "legion combat armor"
 	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "combat_armor_legion"
-	item_state = "combat_armor_legion"
+	icon_state = "legion_combat"
+	item_state = "legion_combat"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/legion
 	name = "reinforced legion combat armor"
 	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "combat_armor_legion_mk2"
-	item_state = "combat_armor_legion_mk2"
+	icon_state = "legion_combat2"
+	item_state = "legion_combat2"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
