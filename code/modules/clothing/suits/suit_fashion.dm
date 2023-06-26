@@ -277,7 +277,7 @@
 	requires_training = FALSE
 	deflect_damage = 1
  	armor = ARMOR_VALUE_CLOTHES
-	armor_tokens = (ARMOR_MODIFIER_UP_DT_T3) //not totally useless
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T3) //not totally useless
 
 /* uncomment when old system cleaned out
 /obj/item/clothing/suit/cardborg/equipped(mob/living/user, slot)
