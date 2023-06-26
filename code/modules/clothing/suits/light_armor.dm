@@ -53,7 +53,6 @@
 	heat_protection = CHEST|GROIN|ARMS|LEGS // chyll
 	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/light/tribal/wastetribe
 	name = "wasteland tribe armor"
@@ -82,6 +81,40 @@
 	icon_state = "tribal_outcast"
 	item_state = "tribal_outcast"
 	body_parts_hidden = CHEST|ARMS|LEGS
+
+/obj/item/clothing/suit/armor/light/tribal/whitelegs
+	name = "White Legs light armour"
+	desc = "A series of tan armour plates, held in place with a small amount of strapping. Commonly worn by members of the White Legs tribe."
+	icon_state = "white_legs_armour_light"
+	item_state = "white_legs_armour_light"
+
+/obj/item/clothing/suit/armor/light/tribal/deadhorses
+	name = "Dead Horses light armour"
+	desc = "A simple leather bandolier and gecko hide chest covering. Commonly worn by the members of the Dead Horses tribe."
+	icon_state = "dead_horses_armour_light"
+	item_state = "dead_horses_armour_light"
+	body_parts_hidden = CHEST|ARMS|LEGS
+
+/obj/item/clothing/suit/armor/light/tribal/rustwalkers
+	name = "Rustwalkers light armour"
+	desc = "A car seat leather duster and a timing belt bandolier. Commonly worn by members of the Rustwalkers tribe."
+	icon_state = "rustwalkers_armour_light"
+	item_state = "rustwalkers_armour_light"
+	body_parts_hidden = CHEST|ARMS|LEGS
+
+/obj/item/clothing/suit/armor/light/tribal/eighties
+	name = "Eighties light armour"
+	desc = "A fairly simple, black leather jacket with an overly popped collar. Commonly worn by the members of the 80s tribe."
+	icon_state = "eighties_armour_light"
+	item_state = "eighties_armour_light"
+	body_parts_hidden = CHEST|ARMS
+
+/obj/item/clothing/suit/armor/light/tribal/bonedancers
+	name = "Bone Dancers light armour"
+	desc = "A chestplate, pauldrons and thigh guards made from bone and sinew. Commonly worn by members of the Bone Dancers tribe."
+	icon_state = "eighties_armour_light"
+	item_state = "eighties_armour_light"
+	body_parts_hidden = CHEST
 
 /// to be refactored to work with the New Tier System (tm)
 /obj/item/clothing/suit/hooded/cloak
