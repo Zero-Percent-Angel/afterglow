@@ -276,7 +276,7 @@
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. Now with clanking action!" 
 	requires_training = FALSE
 	deflect_damage = 1
- 	armor = ARMOR_VALUE_CLOTHES
+	armor = ARMOR_VALUE_CLOTHES
 	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T3) //not totally useless
 
 /* uncomment when old system cleaned out
