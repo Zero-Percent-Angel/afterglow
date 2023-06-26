@@ -337,3 +337,4 @@
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b
  	armor = ARMOR_VALUE_CLOTHES
 	armor_tokens = (ARMOR_MODIFIER_UP_DT_T3) //not totally useless
+
