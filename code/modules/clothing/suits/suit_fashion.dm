@@ -271,6 +271,14 @@
 	item_state = "cardborg"
 	flags_inv = HIDEJUMPSUIT
 	dog_fashion = /datum/dog_fashion/back
+
+/obj/item/clothing/suit/armor/power_armor/t51b/costume
+	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. Now with clanking action!" 
+	requires_training = FALSE
+	deflect_damage = 1
+ 	armor = ARMOR_VALUE_CLOTHES
+	armor_tokens = (ARMOR_MODIFIER_UP_DT_T3) //not totally useless
+
 /* uncomment when old system cleaned out
 /obj/item/clothing/suit/cardborg/equipped(mob/living/user, slot)
 	..()
