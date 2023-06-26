@@ -265,6 +265,10 @@
 	var/warped = FALSE
 	clothing_flags = IGNORE_HAT_TOSS
 
+/obj/item/clothing/head/helmet/f13/power_armor/t51b/costume
+ 	armor = ARMOR_VALUE_CLOTHES
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T3) //not totally useless
+
 /obj/item/clothing/head/foilhat/Initialize(mapload)
 	. = ..()
 	if(!warped)
@@ -331,7 +335,5 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small/rushelmet
 	armor = ARMOR_VALUE_MEDIUM
 
-/obj/item/clothing/head/helmet/f13/power_armor/t51b/costume
- 	armor = ARMOR_VALUE_CLOTHES
-	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T3) //not totally useless
+
 
