@@ -466,7 +466,7 @@
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-	skill_needed = EASY_CHECK
+	skill_level =  = EASY_CHECK
 
 /datum/crafting_recipe/tools/forged/shovel
 	name = "Shovel"
@@ -479,7 +479,7 @@
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-	skill_needed = EASY_CHECK
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/tools/forged/hatchet
 	name = "Hatchet"
@@ -492,7 +492,7 @@
 	tools = list(TOOL_FORGE)
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
-	skill_needed = EASY_CHECK
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/tools/forged/entrenching_tool
 	name = "Pattern 2281 Entrenching Tool"
@@ -507,4 +507,4 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_MELEE
 	always_available = FALSE
-	skill_needed = EASY_CHECK
+	skill_level = EASY_CHECK
