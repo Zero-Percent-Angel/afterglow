@@ -618,6 +618,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	spawn_positions = 3
 	description = "As an NCR Ranger, you are the premier special forces unit of the NCR. You are the forward observations and support the Army in it's campaigns, as well as continuing the tradition of stopping slavery in it's tracks."
 	supervisors = "Veteran Ranger"
+	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY)
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_RANGER
 	outfit = /datum/outfit/job/ncr/f13ranger
@@ -644,9 +645,10 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "NCR Ranger"
 	jobtype	= /datum/job/ncr/f13ranger
 	id = /obj/item/card/id/dogtag/ncrranger
-	uniform	= /datum/gear/uniform/ranger/patrol
-	head = /obj/item/clothing/head/f13/ncr/patrol
-	gloves = /obj/item/clothing/gloves/patrol
+	uniform	= /obj/item/clothing/under/f13/ranger/trail
+	suit = /obj/item/clothing/suit/armor/light/ncr/trailranger
+	head = /obj/item/clothing/head/f13/ncr/ranger
+	gloves = /obj/item/clothing/gloves/rifleman
 	shoes = /obj/item/clothing/shoes/f13/military/leather
 	glasses	= /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/headset_ranger
@@ -705,6 +707,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	spawn_positions = 2
 	description = "As an NCR Civilian Ranger, you are a low-ranking member of the premier special forces of the NCR. You are to aid the Rangers and Veteran Ranger in scouting operations and acting as support for Ranger activites."
 	supervisors = "Rangers and the Veteran Ranger"
+	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY)
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_CIVILIANRANGER
 	outfit = /datum/outfit/job/ncr/f13civilianranger
