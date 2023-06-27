@@ -690,14 +690,14 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER
+	fire_delay = GUN_FIRE_DELAY_SLOW
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	gun_tags = list(GUN_SCOPE)
 	can_scope = TRUE
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slower
+		/datum/firemode/semi_auto/slow
 	)
 
 //Ultracite Laser rifle
@@ -789,14 +789,14 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
+	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	gun_tags = list(GUN_SCOPE)
 	can_scope = TRUE
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 
 //LAER Energy rifle

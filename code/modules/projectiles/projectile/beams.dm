@@ -336,7 +336,7 @@
 /obj/item/projectile/beam/laser/lasgun/hitscan //hitscan aer9 test
 	name = "laser beam"
 	damage = 32
-	armour_penetration = 0.02 //mostly just to allow scratch damage, so you arent SOL just mostly fucced
+	armour_penetration = 0.1 //mostly just to allow scratch damage, so you arent SOL just mostly fucced
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
@@ -641,6 +641,7 @@
 	name = "rapidfire beam"
 	icon_state = "emitter"
 	damage = 19
+	armour_penetration = 0.05
 	hitscan = TRUE
 	muzzle_type = /obj/effect/projectile/muzzle/laser/emitter
 	tracer_type = /obj/effect/projectile/tracer/laser/emitter
@@ -684,7 +685,7 @@
 /obj/item/projectile/beam/laser/aer14 //AER14
 	name = "laser beam"
 	damage = 38
-	armour_penetration = 0.6
+	armour_penetration = 0.25
 	icon_state = "omnilaser"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	light_color = LIGHT_COLOR_BLUE
@@ -692,7 +693,7 @@
 /obj/item/projectile/beam/laser/aer14/hitscan
 	damage = 32
 	wound_bonus = 20
-	armour_penetration = 0.05
+	armour_penetration = 0.2
 	tracer_type = /obj/effect/projectile/tracer/pulse
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
 	impact_type = /obj/effect/projectile/impact/pulse
@@ -719,7 +720,7 @@
 	name = "laser beam"
 	damage = 36
 	hitscan = TRUE
-	armour_penetration = 0.5
+	armour_penetration = 0.25
 	tracer_type = /obj/effect/projectile/tracer/xray
 	muzzle_type = /obj/effect/projectile/muzzle/xray
 	impact_type = /obj/effect/projectile/impact/xray
