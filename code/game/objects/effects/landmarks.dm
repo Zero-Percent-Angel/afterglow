@@ -658,7 +658,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/venator
-	name = "Legion Explorer"
+	name = "Legion Assassin"
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/auxilia
