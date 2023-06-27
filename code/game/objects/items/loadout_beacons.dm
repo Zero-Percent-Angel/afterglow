@@ -543,14 +543,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	new /obj/item/ammo_box/magazine/m10mm/adv/simple(src)
 	new /obj/item/ammo_box/magazine/m10mm/adv/simple(src)
 
-/obj/item/storage/box/gun/premium/sig //can downgrade to whatever the trusty sig p220 is for. it has slightly lower fire rate
-	name = "Sig P220 case"
-
-/obj/item/storage/box/gun/premium/sig/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/pistol/sig(src)
-	new /obj/item/ammo_box/magazine/m45(src)
-	new /obj/item/ammo_box/magazine/m45(src)
-
 /obj/item/storage/box/gun/premium/custom
 	name = "M1911 Custom case"
 
@@ -1062,12 +1054,6 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	entry_class = LOADOUT_CAT_PREMIUM
 	spawn_thing = /obj/item/storage/box/gun/premium/crusader
 
-/datum/loadout_box/sig
-	entry_tag = "Sig P220"
-	entry_flags = LOADOUT_FLAG_PREMIUM
-	entry_class = LOADOUT_CAT_PREMIUM
-	spawn_thing = /obj/item/storage/box/gun/premium/sig
-
 /datum/loadout_box/m1911_custom
 	entry_tag = "M1911 Custom"
 	entry_flags = LOADOUT_FLAG_PREMIUM
@@ -1103,6 +1089,18 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	entry_flags = LOADOUT_FLAG_LAWMAN
 	entry_class = LOADOUT_CAT_LAWMAN
 	spawn_thing = /obj/item/storage/box/gun/premium/desert_ranger
+
+/datum/loadout_box/wattz_2000e
+	entry_tag = "wattz 2000e"
+	entry_flags = LOADOUT_FLAG_LAWMAN
+	entry_class = LOADOUT_CAT_LAWMAN
+	spawn_thing = /obj/item/gun/energy/laser/wattz2k/extended
+
+/datum/loadout_box/rcw
+	entry_tag = "laser RCW"
+	entry_flags = LOADOUT_FLAG_LAWMAN
+	entry_class = LOADOUT_CAT_LAWMAN
+	spawn_thing = /obj/item/gun/energy/laser/rcw
 
 /// Lawman guns
 

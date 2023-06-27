@@ -594,8 +594,8 @@
 /obj/item/borg/projectile_dampen/proc/activate_field()
 	if(istype(dampening_field))
 		QDEL_NULL(dampening_field)
-	dampening_field = make_field(/datum/proximity_monitor/advanced/peaceborg_dampener, list("current_range" = field_radius, "host" = src, "projector" = src))
 	var/mob/living/silicon/robot/owner = get_host()
+	dampening_field = new(owner, field_radius, TRUE, src)
 	if(owner)
 		owner.module.allow_riding = FALSE
 	active = TRUE
@@ -634,11 +634,6 @@
 /obj/item/borg/projectile_dampen/process()
 	process_recharge()
 	process_usage()
-	update_location()
-
-/obj/item/borg/projectile_dampen/proc/update_location()
-	if(dampening_field)
-		dampening_field.HandleMove()
 
 /obj/item/borg/projectile_dampen/proc/process_usage()
 	var/usage = 0

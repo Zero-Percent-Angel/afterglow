@@ -693,7 +693,7 @@ GLOBAL_LIST_INIT(brass_recipes, list ( \
 	throw_range = 3
 	turf_type = /turf/open/floor/clockwork
 	novariants = FALSE
-	grind_results = list(/datum/reagent/iron = 5, /datum/reagent/teslium = 15, /datum/reagent/fuel/holyoil = 1)
+	grind_results = list(/datum/reagent/iron = 5, /datum/reagent/fuel/holyoil = 1)
 	merge_type = /obj/item/stack/tile/brass
 	tableVariant = /obj/structure/table/reinforced/brass
 
@@ -792,7 +792,7 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 GLOBAL_LIST_INIT(bone_recipes, list(
 	new /datum/stack_recipe("bone dagger", /obj/item/melee/onehanded/knife/bone, 2, time = 20),
 	null, \
-	new /datum/stack_recipe("bone armor", /obj/item/clothing/suit/armor/light/tribal/bone, 6, time = 30),
+	new /datum/stack_recipe("bone armor", /obj/item/clothing/suit/armor/medium/tribal/bone, 6, time = 30),
 	new /datum/stack_recipe("skull helmet", /obj/item/clothing/head/helmet/skull, 4, time = 30),
 	null, \
 	new/datum/stack_recipe_list("medicine", list( \

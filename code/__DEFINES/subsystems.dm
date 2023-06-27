@@ -65,6 +65,24 @@
 	}\
 }
 
+//! ### SS initialization hints
+/**
+ * Negative values incidate a failure or warning of some kind, positive are good.
+ * 0 and 1 are unused so that TRUE and FALSE are guarenteed to be invalid values.
+ */
+
+/// Subsystem failed to initialize entirely. Print a warning, log, and disable firing.
+#define SS_INIT_FAILURE -2
+
+/// The default return value which must be overriden. Will succeed with a warning.
+#define SS_INIT_NONE -1
+
+/// Subsystem initialized sucessfully.
+#define SS_INIT_SUCCESS 2
+
+/// Successful, but don't print anything. Useful if subsystem was disabled.
+#define SS_INIT_NO_NEED 3
+
 // Subsystem init_order, from highest priority to lowest priority
 // Subsystems shutdown in the reverse of the order they initialize in
 // The numbers just define the ordering, they are meaningless otherwise.
@@ -133,7 +151,6 @@
 #define FIRE_PRIORITY_THROWING		25
 #define FIRE_PRIORITY_SPACEDRIFT	30
 #define FIRE_PRIORITY_INSTRUMENTS	30
-#define FIRE_PRIORITY_FIELDS		30
 #define FIRE_PRIOTITY_SMOOTHING		35
 #define FIRE_PRIORITY_HUDS			40
 #define FIRE_PRIORITY_NETWORKS		40
@@ -152,6 +169,7 @@
 #define FIRE_PRIORITY_ATMOS_ADJACENCY	300
 #define FIRE_PRIORITY_STATPANEL		390
 #define FIRE_PRIORITY_CHAT			400
+#define FIRE_PRIORITY_RUNECHAT		410
 #define FIRE_PRIORITY_OVERLAYS		500
 #define FIRE_PRIORITY_CALLBACKS		600
 #define FIRE_PRIORITY_TIMER			700

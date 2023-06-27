@@ -247,11 +247,12 @@
 
 			else if(href_list["vir"])
 				var/type = href_list["vir"]
-				var/datum/disease/Dis = new type(FALSE)
-				var/AfS = ""
-				for(var/mob/M in Dis.viable_mobtypes)
-					AfS += " [initial(M.name)];"
-				temp = {"<b>Name:</b> [Dis.name]
+				if (istype(type, /datum/disease))
+					var/datum/disease/Dis = new type(FALSE)
+					var/AfS = ""
+					for(var/mob/M in Dis.viable_mobtypes)
+						AfS += " [initial(M.name)];"
+					temp = {"<b>Name:</b> [Dis.name]
 <BR><b>Number of stages:</b> [Dis.max_stages]
 <BR><b>Spread:</b> [Dis.spread_text] Transmission
 <BR><b>Possible Cure:</b> [(Dis.cure_text||"none")]

@@ -91,7 +91,7 @@
 	display_name = "Advanced Data Theory"
 	description = "Better insight into programming and data."
 	prereq_ids = list("datatheory")
-	design_ids = list("icprinter", "icupgadv", "icupgclo")
+	//design_ids = list("icprinter", "icupgadv", "icupgclo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 	skill_level_needed = REGULAR_CHECK
@@ -643,7 +643,7 @@
 	"ripley_main", "ripley_peri", "mech_hydraulic_clamp", "ripley_whole", "odysseus_whole", "borg_complete")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
-
+*/
 /datum/techweb_node/adv_mecha
 	id = "adv_mecha"
 	display_name = "Advanced Exosuits"
@@ -652,7 +652,7 @@
 	design_ids = list("mech_repair_droid")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
-
+/*
 /datum/techweb_node/odysseus
 	id = "mecha_odysseus"
 	display_name = "EXOSUIT: Odysseus"
@@ -661,8 +661,8 @@
 	design_ids = list("odysseus_chassis", "odysseus_torso", "odysseus_head", "odysseus_left_arm", "odysseus_right_arm" ,"odysseus_left_leg", "odysseus_right_leg",
 	"odysseus_main", "odysseus_peri")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-	export_price = 5000
-*/
+	export_price = 5000 */
+
 /*
 /datum/techweb_node/gygax
 	id = "mech_gygax"
@@ -834,7 +834,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 */
-/*
+
 /datum/techweb_node/mech_diamond_drill
 	id = "mech_diamond_drill"
 	display_name =  "Exosuit Diamond Drill"
@@ -843,7 +843,7 @@
 	design_ids = list("mech_diamond_drill")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
-*/
+
 ////////////////////////Alien technology////////////////////////
 
 /datum/techweb_node/alien_bio

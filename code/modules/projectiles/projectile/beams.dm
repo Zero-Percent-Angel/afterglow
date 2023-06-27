@@ -311,6 +311,12 @@
 /obj/item/projectile/beam/laser/pistol/ultraweak
 	damage = 15 //quantity over quality
 
+//Chewchews Beam
+/obj/item/projectile/beam/laser/pistol/ultraweak/chewchew
+	damage = 13 //less dam..
+	armour_penetration = 0.25 //..more pen
+	is_reflectable = FALSE
+
 //Alrem's plasmacaster
 /obj/item/projectile/f13plasma/plasmacaster/arlem
 	name = "plasma bolt"
@@ -538,7 +544,7 @@
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
 
-/obj/item/projectile/f13plasma //Plasma rifle
+/obj/item/projectile/f13plasma //FNV plasma caster
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
@@ -549,6 +555,10 @@
 	eyeblur = 0
 	is_reflectable = TRUE
 	pixels_per_second =  TILES_TO_PIXELS(10) //same as 40mm grenade
+
+/obj/item/projectile/f13plasma/balanced //the kind you are meant to use
+	damage = 50 //2-hit KO, 3 with armor, 4 with good armor
+	wound_bonus = 51 //just to get that one over a plasma rifle
 
 /obj/item/projectile/plasmacarbine //Plasma carbine
 	name = "plasma bolt"

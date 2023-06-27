@@ -47,7 +47,7 @@
 		if (pulledby)
 			pulledby.stop_pulling()
 			walk_to(src, myplace, 0 , move_to_delay)
-		if (!walking)
+		if (AIStatus == AI_IDLE)
 			walking = TRUE
 			walk_to(src, myplace, 0 , move_to_delay)
 	else

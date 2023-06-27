@@ -164,8 +164,27 @@
 	
 	if(CONFIG_GET(flag/enable_tgs_ban_channel))
 		var/tgs_channel_string = CONFIG_GET(string/tgs_ban_channel_identifier) || "ban"
-		var/message = "`BAN ALERT: '[a_key]' applied a '[bantype_str][job ? " as [job]" : ""]' on '[bankey]'`"
-		send2chat(message, tgs_channel_string)
+
+		var/datum/tgs_message_content/ban_content = new("`[a_ckey]` added a new ban to the database.")
+		var/datum/tgs_chat_embed/structure/embed_data = new
+		ban_content.embed = embed_data
+
+		embed_data.timestamp = time2text(world.timeofday, "YYYY-MM-DD hh:mm:ss", 0)
+		embed_data.author = new /datum/tgs_chat_embed/provider/author("[a_ckey]")
+		embed_data.author.url = "https://afterglowcdn.shiptest.net"
+		embed_data.title = "BAN ALERT"
+		embed_data.colour = "#FF0000"
+		embed_data.fields = list()
+
+		var/datum/tgs_chat_embed/field/ban_information = new /datum/tgs_chat_embed/field("Ban Information", "Banned: `[bankey]`")
+		ban_information.value += "\nReason: `[reason]`\nType: `[bantype_str]`"
+		if(job)
+			ban_information.value += "\nJob: `[job]`"
+		if(duration > 0)
+			ban_information.value += "\nDuration: `[duration]` minutes"
+		embed_data.fields += ban_information
+
+		send2chat(ban_content, tgs_channel_string)
 
 	if(kickbannedckey)
 		if(AH)

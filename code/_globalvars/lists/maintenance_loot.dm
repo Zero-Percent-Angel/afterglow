@@ -171,8 +171,6 @@ GLOBAL_LIST_INIT(trash_part, list(
 GLOBAL_LIST_INIT(trash_clothing, list(
 	/obj/item/clothing/glasses/sunglasses/big = 5,
 	/obj/item/clothing/glasses/sunglasses = 5,
-	/obj/item/clothing/suit/armor/medium/vest/breastplate/light = 5,
-	/obj/item/clothing/head/helmet/knight/f13/rider = 5,
 	/obj/item/clothing/shoes/f13/cowboy = 5,
 	/obj/item/clothing/shoes/f13/explorer = 5,
 	/obj/item/clothing/shoes/f13/diesel = 5,
@@ -238,9 +236,9 @@ GLOBAL_LIST_INIT(trash_money, list(
 ))
 
 GLOBAL_LIST_INIT(trash_mob, list(
-	/obj/effect/spawner/bundle/mobs/rat/one = 30,
-	/obj/effect/spawner/bundle/mobs/rat/three = 9,
-	/obj/effect/spawner/bundle/mobs/rat/five = 1
+	///obj/effect/spawner/bundle/mobs/rat/one = 30,
+	///obj/effect/spawner/bundle/mobs/rat/three = 9,
+	///obj/effect/spawner/bundle/mobs/rat/five = 1
 ))
 
 GLOBAL_LIST_INIT(trash_tool, list(
@@ -368,18 +366,13 @@ GLOBAL_LIST_INIT(loot_t1_armor, list(
 ))
 
 GLOBAL_LIST_INIT(loot_t2_armor, list(
-	/obj/item/clothing/suit/armor/light/raider/supafly,
 	/obj/item/clothing/head/helmet/f13/raider,
-	/obj/item/clothing/suit/armor/light/raider/sadist,
 	/obj/item/clothing/head/helmet/f13/raider/arclight,
 	/obj/item/clothing/suit/armor/medium/raider/blastmaster,
 	/obj/item/clothing/head/helmet/f13/raider/blastmaster,
 	/obj/item/clothing/suit/armor/medium/raider/yankee,
 	/obj/item/clothing/head/helmet/f13/raider/yankee,
 	/obj/item/clothing/head/helmet/f13/fiend,
-	/obj/item/clothing/suit/armor/light/raider/painspike,
-	/obj/item/clothing/head/helmet/f13/raider/psychotic,
-	/obj/item/clothing/suit/armor/light/raider/supafly,
 	/obj/item/clothing/head/helmet/f13/raider,
 	/obj/item/clothing/suit/armor/medium/raider/iconoclast
 ))
@@ -388,21 +381,18 @@ GLOBAL_LIST_INIT(loot_t3_armor, list(
 	/obj/item/clothing/suit/armor/heavy/metal,
 	/obj/item/clothing/head/helmet/knight/f13/metal,
 	/obj/item/clothing/suit/armor/heavy/metal,
-	/obj/item/clothing/head/helmet/f13/metalmask,
 	/obj/item/clothing/suit/armor/light/leather,
-	/obj/item/clothing/suit/armor/light/leather/leather_jacketmk2,
+	/obj/item/clothing/suit/armor/light/leather/leather_jacket,
 	/obj/item/clothing/suit/armor/light/leather/leathercoat
 ))
 
 GLOBAL_LIST_INIT(loot_t4_armor, list(
 	/obj/item/clothing/suit/armor/heavy/metal/reinforced,
-	/obj/item/clothing/head/helmet/f13/metalmask/mk2,
 	/obj/item/clothing/suit/armor/light/leather/leathercoat,
 	/obj/item/clothing/head/helmet/f13/combat/swat,
-	/obj/item/clothing/suit/armor/medium/combat/swat,
 	/obj/item/clothing/suit/armor/medium/combat,
 	/obj/item/clothing/head/helmet/f13/combat,
-	/obj/item/clothing/suit/armor/heavy/vest/bulletproof,
+	/obj/item/clothing/suit/armor/medium/vest/bulletproof,
 	/obj/item/clothing/head/helmet/alt,
 	/obj/item/clothing/suit/armor/medium/combat/dark,
 	/obj/item/clothing/head/helmet/f13/combat/dark,
@@ -415,7 +405,8 @@ GLOBAL_LIST_INIT(loot_t4_armor, list(
 GLOBAL_LIST_INIT(loot_t5_armor, list(
 	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b,
 	/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b,
-	/obj/item/clothing/suit/armor/heavy/riot/combat,
+	/obj/item/clothing/suit/armor/heavy/riot,
+	/obj/item/clothing/suit/armor/heavy/riot/police,
 	/obj/item/clothing/head/helmet/f13/combat/rangerbroken,
 	/obj/item/clothing/suit/armor/medium/combat/mk2,
 	/obj/item/clothing/head/helmet/f13/combat/mk2

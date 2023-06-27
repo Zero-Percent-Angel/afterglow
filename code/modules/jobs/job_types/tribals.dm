@@ -22,12 +22,8 @@ GLOBAL_LIST_INIT(tribal_job_recipes, list(
 	/datum/crafting_recipe/tribal_pa_helmet,
 	/datum/crafting_recipe/tribal_combat_armor,
 	/datum/crafting_recipe/tribal_combat_armor_helmet,
-	/datum/crafting_recipe/tribal_r_combat_armor,
-	/datum/crafting_recipe/tribal_r_combat_armor_helmet,
 	/datum/crafting_recipe/tribalwar/chitinarmor,
-	/datum/crafting_recipe/tribalwar/lightcloak,
 	/datum/crafting_recipe/warmace,
-	/datum/crafting_recipe/tribalwar/lighttribe,
 	/datum/crafting_recipe/tribalwar/heavytribe,
 	/datum/crafting_recipe/tribalwar/legendaryclawcloak,
 	/datum/crafting_recipe/tribalwar/deathclawspear,
@@ -113,7 +109,6 @@ Tribal Chief
 /datum/outfit/job/tribal/f13chief
 	name =	"Chief"
 	jobtype =	/datum/job/tribal/f13chief
-	head =	/obj/item/clothing/head/helmet/f13/wayfarer/chief/green
 	uniform =	/obj/item/clothing/under/f13/wayfarer
 	belt =	/obj/item/storage/backpack/spearquiver
 	neck =	/obj/item/clothing/neck/mantle/chief
@@ -152,10 +147,6 @@ Tribal Shaman
 	access = list(ACCESS_TRIBE)
 	minimal_access = list(ACCESS_TRIBE)
 
-	loadout_options = list(
-		/datum/outfit/loadout/invoker, //Red shaman
-		/datum/outfit/loadout/ascetic, //Blue shaman
-	)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/mentor = list(
 			/datum/job/tribal/f13druid,
@@ -196,20 +187,6 @@ Tribal Shaman
 	if(visualsOnly)
 		return
 	//ADD_TRAIT(H, TRAIT_SURGERY_MID, src)
-
-/datum/outfit/loadout/invoker
-	name = "Invoker"
-	backpack_contents = list(
-		/obj/item/clothing/head/helmet/f13/wayfarer/shamanred=1,
-		/obj/item/clothing/under/f13/wayfarer/shamanred=1
-	)
-
-/datum/outfit/loadout/ascetic
-	name = "Ascetic"
-	backpack_contents = list(
-		/obj/item/clothing/head/helmet/f13/wayfarer/shamanblue=1,
-		/obj/item/clothing/under/f13/wayfarer/shamanblue=1
-	)
 
 /*
 Tribal Head Hunter
@@ -494,7 +471,7 @@ Hunter
 	uniform = /obj/item/clothing/under/f13/wayfarer/hunter
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	shoes = /obj/item/clothing/shoes/sandal
-	suit = /obj/item/clothing/suit/armor/light/tribal/strips
+	suit = /obj/item/clothing/suit/armor/light/tribal/wastetribe
 	id = /obj/item/card/id/tribetattoo
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/healingpowder=2,
@@ -597,7 +574,7 @@ Guardian
 	uniform = /obj/item/clothing/under/f13/wayfarer/hunter
 	gloves = /obj/item/clothing/gloves/f13/handwraps
 	shoes = /obj/item/clothing/shoes/sandal
-	suit = /obj/item/clothing/suit/armor/medium/tribal/tribe_heavy_armor
+	suit = /obj/item/clothing/suit/armor/heavy/tribal
 	//suit_store = /obj/item/twohanded/spear/bonespear/deathclaw
 	id = /obj/item/card/id/tribetattoo
 	backpack_contents = list(

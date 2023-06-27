@@ -95,7 +95,6 @@
 	icon_dead = "worldpeas-dead"
 	genes = list (/datum/plant_gene/trait/glow/blue)
 	reagents_add = list (
-		/datum/reagent/pax = 0.1,
 		/datum/reagent/drug/happiness = 0.1,
 		/datum/reagent/consumable/nutriment = 0.15
 	)

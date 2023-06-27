@@ -78,7 +78,7 @@
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_healingpowder"
 	list_reagents = list(/datum/reagent/medicine/healing_powder = 10)
-	self_delay = 5
+	self_delay = 1
 
 // ---------------------------------
 // CUSTOM POWDER
@@ -89,7 +89,7 @@
 	list_reagents = null
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_healingpowder"
-	self_delay = 5
+	self_delay = 2
 	color = COLOR_PALE_GREEN_GRAY
 
 // ---------------------------------
@@ -101,7 +101,7 @@
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	list_reagents = list(/datum/reagent/medicine/healing_powder/poultice = 10, /datum/reagent/medicine/healing_powder = 10, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5)
 	icon_state = "patch_healingpoultice"
-	self_delay = 5
+	self_delay = 1
 
 // ---------------------------------
 // BITTER DRINK
@@ -112,7 +112,7 @@
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_bitterdrink"
 	list_reagents = list(/datum/reagent/medicine/healing_powder = 5, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5) 
-	self_delay = 5
+	self_delay = 1
 
 // ---------------------------------
 // HYDRA - never a thing, make it something. Sprites done.
