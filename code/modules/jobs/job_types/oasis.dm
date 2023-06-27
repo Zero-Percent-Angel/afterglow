@@ -1043,7 +1043,7 @@ Mayor
 /datum/outfit/loadout/jackofall_specialist
 	name = "Arms Dealer"
 	backpack_contents = list(
-		/datum/crafting_recipe/policerifle=1,
+		/obj/item/book/granter/crafting_recipe/ODF=1,
 		/obj/item/book/granter/crafting_recipe/blueprint/n99=1
 	)
 

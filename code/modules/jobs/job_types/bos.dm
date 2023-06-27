@@ -301,7 +301,7 @@ Head Scribe
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/plasma/glock = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/datum/crafting_recipe/gun/energy/wattz2k = 1,
+		/obj/item/book/granter/crafting_recipe/blueprint/wattz2k = 1,
 		)
 
 /datum/outfit/loadout/hshield
@@ -483,7 +483,7 @@ Senior Paladin
 		/obj/item/gun/energy/laser/scatter = 1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
-		/obj/item/stock_parts/cell/ammo/mfc = 2,,
+		/obj/item/stock_parts/cell/ammo/mfc = 2,
 	)
 
 /datum/outfit/loadout/spaladinb
