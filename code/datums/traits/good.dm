@@ -560,8 +560,8 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 
 /datum/quirk/iron_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow = 2
-	mob_tar.dna.species.punchdamagehigh = 12
+	mob_tar.dna.species.punchdamagelow = 4
+	mob_tar.dna.species.punchdamagehigh = 10
 
 /datum/quirk/steel_fist
 	name = "Fists of Steel"
@@ -574,8 +574,8 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 
 /datum/quirk/steel_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow = 4
-	mob_tar.dna.species.punchdamagehigh = 14
+	mob_tar.dna.species.punchdamagelow = 6
+	mob_tar.dna.species.punchdamagehigh = 12
 
 /datum/quirk/light_step
 	name = "Glass Walker"
