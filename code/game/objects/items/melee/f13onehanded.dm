@@ -249,7 +249,7 @@
 	armour_penetration = 0.1
 	custom_materials = null
 
-obj/item/melee/onehanded/knife/switchblade
+/obj/item/melee/onehanded/knife/switchblade
 	name = "switchblade"
 	desc = "A sharp, concealable, spring-loaded knife."
 	icon_state = "knife_switch"
