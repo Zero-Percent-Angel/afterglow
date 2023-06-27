@@ -643,11 +643,11 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/job/ncr/f13ranger
 	name = "NCR Ranger"
-	jobtype	= /datum/job/ncr/f13ranger
 	id = /obj/item/card/id/dogtag/ncrranger
-	uniform	= /datum/gear/uniform/ranger/patrol
-	head = /obj/item/clothing/head/f13/ncr/patrol
-	gloves = /obj/item/clothing/gloves/patrol
+	uniform	= /obj/item/clothing/under/f13/ranger/trail
+	suit = /obj/item/clothing/suit/armor/light/ncr/trailranger
+	head = /obj/item/clothing/head/f13/ncr/ranger
+	gloves = /obj/item/clothing/gloves/rifleman
 	shoes = /obj/item/clothing/shoes/f13/military/leather
 	glasses	= /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/headset_ranger
