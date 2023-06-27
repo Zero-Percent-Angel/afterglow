@@ -1,7 +1,7 @@
 /proc/job_is_whitelist_locked(jobtitle)
-	if(!CONFIG_GET(flag/use_role_whitelist) && (jobtitle in GLOB.command_positions | GLOB.ncr_command_positions | GLOB.bos_command_positions | GLOB.legion_command_positions | GLOB.town_command_positions | GLOB.vault_command_positions | GLOB.ncr_elite_positions | GLOB.bos_elite_positions | GLOB.legion_elite_positions | GLOB.tribe_outlaw_positions))
+	if(!CONFIG_GET(flag/use_role_whitelist) && (jobtitle in GLOB.command_positions | GLOB.ncr_command_positions | GLOB.bos_command_positions | GLOB.legion_command_positions | GLOB.town_command_positions | GLOB.vault_command_positions | GLOB.vault_science_positions | GLOB.ncr_elite_positions | GLOB.bos_elite_positions | GLOB.legion_elite_positions | GLOB.tribe_outlaw_positions))
 		return FALSE
-	if(!CONFIG_GET(flag/use_role_whitelist) && !(jobtitle in GLOB.command_positions | GLOB.ncr_command_positions | GLOB.bos_command_positions | GLOB.legion_command_positions | GLOB.town_command_positions | GLOB.vault_command_positions | GLOB.ncr_elite_positions | GLOB.bos_elite_positions | GLOB.legion_elite_positions | GLOB.tribe_outlaw_positions))
+	if(!CONFIG_GET(flag/use_role_whitelist) && !(jobtitle in GLOB.command_positions | GLOB.ncr_command_positions | GLOB.bos_command_positions | GLOB.legion_command_positions | GLOB.town_command_positions | GLOB.vault_command_positions | GLOB.vault_science_positions | GLOB.ncr_elite_positions | GLOB.bos_elite_positions | GLOB.legion_elite_positions | GLOB.tribe_outlaw_positions))
 		return FALSE
 	return TRUE
 
@@ -66,6 +66,10 @@
 		for(var/rtypeWL in GLOB.town_command_positions)
 			play_records[rtypeWL] = 0
 
+	if(!whitelists["vault_scientist"])
+		for(var/rtypeWL in GLOB.vault_science_positions)
+			play_records[rtypeWL] = 0
+
 	if(!whitelists["leadership_vault"])					// if they do not have leadership_legion vault, remove leadership_vault whitelist positions
 		for(var/rtypeWL in GLOB.vault_command_positions)
 			play_records[rtypeWL] = 0
@@ -108,13 +112,17 @@
 		for(var/rtypeWL in GLOB.town_command_positions)
 			play_records[rtypeWL] = rtypeWL
 	
+	if(!whitelists["vault_scientist"])
+		for(var/rtypeWL in GLOB.vault_science_positions)
+			play_records[rtypeWL] = rtypeWL
+
 	if(whitelists["leadership_vault"])
 		for(var/rtypeWL in GLOB.vault_command_positions)
 			play_records[rtypeWL] = rtypeWL
 	
 	if(whitelists["tribe_outlaw_positions"])
 		for(var/rtypeWL in GLOB.tribe_outlaw_positions)
-			play_records[rtypeWL] = 0
+			play_records[rtypeWL] = rtypeWL
 	
 	/* - Old shit, don't activate this. I'm just too lazy to remove it and keeping it incase I fucked something up. - Rebel0
 	
