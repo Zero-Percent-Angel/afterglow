@@ -704,11 +704,11 @@
 			H.dna.species.punchdamagehigh = 10
 			H.dna.species.punchdamagelow = 1
 		if(HAS_TRAIT(user, TRAIT_IRONFIST))
-			H.dna.species.punchdamagehigh = 12
-			H.dna.species.punchdamagelow = 2
-		if(HAS_TRAIT(user, TRAIT_STEELFIST))
-			H.dna.species.punchdamagehigh = 14
+			H.dna.species.punchdamagehigh = 10
 			H.dna.species.punchdamagelow = 4
+		if(HAS_TRAIT(user, TRAIT_STEELFIST))
+			H.dna.species.punchdamagehigh = 12
+			H.dna.species.punchdamagelow = 6
 		if(HAS_TRAIT(user, TRAIT_FEV)) //Holy shit that Supermutant had a powerfist!
 			H.dna.species.punchdamagehigh = 16
 			H.dna.species.punchdamagelow = 10
@@ -752,8 +752,8 @@
 	icon_state = "spiked"
 	item_state = "spiked"
 	sharpness = SHARP_POINTY
+	armour_penetration = 0.1
 	force = 28
-	armour_penetration = 0.10
 
 // Sappers			Keywords: Damage 27
 /obj/item/melee/unarmed/sappers
@@ -768,7 +768,7 @@
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(20, STAMINA, "head", M.run_armor_check("head", "melee"))
+	M.apply_damage(10, STAMINA, "head", M.run_armor_check("head", "melee"))
 
 // Tiger claws		Keywords: Damage 33, Pointy
 /obj/item/melee/unarmed/tigerclaw

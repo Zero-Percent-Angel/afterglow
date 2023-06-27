@@ -874,10 +874,10 @@
 //Gamma gun
 /obj/item/gun/energy/gammagun
 	name = "Gamma gun"
-	desc = "An advanced radiation weapon commonly utilized by people who have passionate hatred for their fellow man. Fires slow velocity, low damage radiation beams."
+	desc = "An advanced radiation weapon commonly utilized by people who have passionate hatred for their fellow man. Fires slow velocity, low damage radiation beams. Praise the glow."
 	icon = 'icons/fallout/objects/guns/energy.dmi'
-	icon_state = "ultra_pistol"
-	item_state = "laser-pistol"
+	icon_state = "gammagun"
+	item_state = "gammagun"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/gammagun)
