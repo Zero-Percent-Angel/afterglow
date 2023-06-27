@@ -193,7 +193,7 @@
 	time = 80
 	subcategory = CAT_FARMING
 	category = CAT_MISC
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/bellystove
 	name = "Pot belly stove"

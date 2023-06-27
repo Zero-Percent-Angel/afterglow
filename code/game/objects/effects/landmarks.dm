@@ -591,6 +591,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "NCR Ranger"
 	icon_state = "NCR Patrol Ranger"
 
+/obj/effect/landmark/start/f13/ncrcivilianranger
+	name = "NCR Civilian Ranger"
+	icon_state = "NCR Patrol Ranger"
+
 /obj/effect/landmark/start/f13/ncrrearechelon
 	name = "NCR Rear Echelon"
 	icon_state = "NCR Trooper"

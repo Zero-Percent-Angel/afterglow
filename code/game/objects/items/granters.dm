@@ -786,6 +786,11 @@
 	crafting_recipe_types = list(/datum/crafting_recipe/AER9)
 	design_print = "ae9rifle"
 
+/obj/item/book/granter/crafting_recipe/blueprint/wattz2k
+	name = "wattz2k blueprint"
+	icon_state = "blueprint2"
+	crafting_recipe_types = list(/datum/crafting_recipe/gun/energy/wattz2k)
+
 /obj/item/book/granter/crafting_recipe/blueprint/plasmarifle
 	name = "plasma rifle blueprint"
 	icon_state = "blueprint2"

@@ -41,6 +41,9 @@
 				icon_state = "fusebox"
 			if(APC_FULLY_CHARGED)
 				icon_state = "fusebox"
+				lighting = 3
+				equipment = 3
+				environ = 3
 
 /obj/machinery/power/apc/fusebox/north //Pixel offsets get overwritten on New()
 	dir = NORTH

@@ -175,7 +175,7 @@
 	items = list(
 		/obj/item/ammo_box/magazine/m10mm/rifle
 	)
-
+/*
 /// Mobs!
 
 /obj/effect/spawner/bundle/mobs/rat
@@ -232,3 +232,4 @@
 		/mob/living/simple_animal/hostile/rat/skitter,
 		/mob/living/simple_animal/hostile/rat/skitter,
 	)
+*/
