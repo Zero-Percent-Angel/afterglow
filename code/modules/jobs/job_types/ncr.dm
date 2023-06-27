@@ -1653,7 +1653,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 
 /datum/job/ncr/f13ncroffduty
-	title = "NCR Off Duty"
+	title = "NCR Off-Duty"
 	flag = F13NCROFFDUTY
 	total_positions = 4
 	spawn_positions = 4
@@ -1666,7 +1666,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 0
 
 /datum/outfit/job/ncr/f13ncroffduty
-	name = "NCR Off Duty"
+	name = "NCR Off-Duty"
 	jobtype	= /datum/job/ncr/f13ncroffduty
 	id = /obj/item/card/id/dogtag/ncrtrooper
 	uniform = /obj/item/clothing/under/f13/ncr
