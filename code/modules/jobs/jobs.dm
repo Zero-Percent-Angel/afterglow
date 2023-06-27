@@ -262,6 +262,10 @@ GLOBAL_LIST_INIT(vault_command_positions, list(
 	"Chief of Security"
 ))
 
+GLOBAL_LIST_INIT(vault_science_positions, list(
+	"Vault-tec Scientist"
+))
+
 GLOBAL_LIST_INIT(vault_positions, list(
 	"Overseer",
 	"Chief of Security",
