@@ -524,6 +524,7 @@
 
 /obj/item/projectile/beam/laser/tribeam/hitscan
 	name = "tribeam laser"
+	recoil = 25
 	damage = 25 //if all bullets connect, this will do 75.
 	hitscan = TRUE
 	bare_wound_bonus = -30 //tribeam is bad at wounding, as basically its only real downside

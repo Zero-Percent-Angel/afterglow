@@ -675,6 +675,7 @@
 	burst_size = 1
 	gun_tags = list(GUN_SCOPE)
 	can_scope = TRUE
+	init_recoil = RIFLE_RECOIL(2.8)
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slow
 	)
@@ -739,6 +740,7 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
+	init_recoil = RIFLE_RECOIL(5)
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOWER * 0.9 //too slow.
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
