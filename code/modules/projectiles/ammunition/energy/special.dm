@@ -2,6 +2,7 @@
 	projectile_type = /obj/item/projectile/ion
 	select_name = "ion"
 	fire_sound = 'sound/f13weapons/pulsegunfire.ogg'
+	e_cost = 300 // 6 shots
 
 /obj/item/ammo_casing/energy/ion/hos
 	projectile_type = /obj/item/projectile/ion/weak
