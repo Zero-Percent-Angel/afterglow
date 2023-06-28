@@ -305,7 +305,7 @@
 	flag = "energy"
 	eyeblur = 0
 	is_reflectable = TRUE
-	pixels_per_second = TILES_TO_PIXELS(85)
+	pixels_per_second = TILES_TO_PIXELS(80)
 
 //Securitrons Beam
 /obj/item/projectile/beam/laser/pistol/ultraweak
@@ -327,7 +327,7 @@
 	flag = "laser"
 	eyeblur = 0
 	is_reflectable = FALSE
-	pixels_per_second = TILES_TO_PIXELS(85)
+	pixels_per_second = TILES_TO_PIXELS(80)
 
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
@@ -685,7 +685,7 @@
 /obj/item/projectile/beam/laser/aer14 //AER14
 	name = "laser beam"
 	damage = 38
-	armour_penetration = 0.25
+	armour_penetration = 0.6
 	icon_state = "omnilaser"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	light_color = LIGHT_COLOR_BLUE
