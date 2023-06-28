@@ -305,7 +305,7 @@
 	flag = "energy"
 	eyeblur = 0
 	is_reflectable = TRUE
-	pixels_per_second = TILES_TO_PIXELS(100)
+	pixels_per_second = TILES_TO_PIXELS(85)
 
 //Securitrons Beam
 /obj/item/projectile/beam/laser/pistol/ultraweak
@@ -327,7 +327,7 @@
 	flag = "laser"
 	eyeblur = 0
 	is_reflectable = FALSE
-	pixels_per_second = TILES_TO_PIXELS(100)
+	pixels_per_second = TILES_TO_PIXELS(85)
 
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
