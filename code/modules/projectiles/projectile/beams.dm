@@ -538,6 +538,7 @@
 
 /obj/item/projectile/beam/laser/tribeam/laserbuss/hitscan
 	name = "tribeam laser"
+	recoil = 25
 	damage = 20
 	hitscan = TRUE
 	bare_wound_bonus = -30 //tribeam is bad at wounding, as basically its only real downside
