@@ -204,7 +204,6 @@
 		/obj/item/gun/ballistic/revolver/hobo/knifegun = 4,
 		/obj/item/gun/ballistic/revolver/hobo/knucklegun = 3,
 		/obj/effect/spawner/bundle/f13/guns/tommygun = 2,
-		/obj/item/gun/ballistic/automatic/hobo/destroyer = 1,
 		/obj/item/gun/ballistic/revolver/russian = 1,
 		/obj/item/twohanded/baseball/spiked = 8,
 		/obj/item/melee/unarmed/brass/spiked = 5,

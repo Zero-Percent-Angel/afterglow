@@ -291,9 +291,9 @@
 //musket
 /obj/item/projectile/beam/laser/musket //musket
 	name = "laser beam"
-	damage = 45
+	damage = 34
 	hitscan = TRUE
-	armour_penetration = 0.5 //rare laser to have AP, to offset single-fire
+	armour_penetration = 0.01 //rare laser to have AP, to offset single-fire
 	pixels_per_second = TILES_TO_PIXELS(50)
 
 //plasma caster
