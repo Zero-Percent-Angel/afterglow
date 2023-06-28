@@ -1651,7 +1651,7 @@
 	subcategory = CAT_PARTS
 	always_available = FALSE
 	skill_level = HARD_CHECK
-
+/* no
 /datum/crafting_recipe/full_auto
 	name = "Full Auto Kit"
 	result = /obj/item/gun_upgrade/mechanism/weintraub
@@ -1666,7 +1666,7 @@
 	subcategory = CAT_PARTS
 	always_available = FALSE
 	skill_level = HARD_CHECK
-
+*/
 /datum/crafting_recipe/flux
 	name = "Flux capacitor"
 	result = /obj/item/advanced_crafting_components/flux
