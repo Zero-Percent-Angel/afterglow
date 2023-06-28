@@ -301,7 +301,7 @@
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 60
+	damage = 55
 	flag = "energy"
 	eyeblur = 0
 	is_reflectable = TRUE
@@ -322,7 +322,7 @@
 	name = "plasma bolt"
 	icon_state = "plasma_clot"
 	damage_type = BURN
-	damage = 60
+	damage = 55
 	armour_penetration = 0.8
 	flag = "laser"
 	eyeblur = 0
@@ -335,8 +335,8 @@
 
 /obj/item/projectile/beam/laser/lasgun/hitscan //hitscan aer9 test
 	name = "laser beam"
-	damage = 32
-	armour_penetration = 0.1 //mostly just to allow scratch damage, so you arent SOL just mostly fucced
+	damage = 30
+	armour_penetration = 0.08 //mostly just to allow scratch damage, so you arent SOL just mostly fucced
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
@@ -718,7 +718,7 @@
 
 /obj/item/projectile/beam/laser/aer12/hitscan
 	name = "laser beam"
-	damage = 36
+	damage = 32
 	hitscan = TRUE
 	armour_penetration = 0.2
 	tracer_type = /obj/effect/projectile/tracer/xray
@@ -741,7 +741,7 @@
 
 /obj/item/projectile/beam/laser/wattz2k/hitscan
 	name = "sniper laser bolt"
-	damage = 52
+	damage = 50
 	wound_bonus = 10
 	bare_wound_bonus = 20
 	armour_penetration = 0.2
