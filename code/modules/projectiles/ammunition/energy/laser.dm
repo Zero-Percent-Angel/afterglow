@@ -300,7 +300,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 
 /obj/item/ammo_casing/energy/laser/aer14/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/aer14/hitscan
-	e_cost = 100 //15 shots, i hate the decimal value too trust me
+	e_cost = 100 //10 shots
 
 /obj/item/ammo_casing/energy/laser/aer12
 	projectile_type = /obj/item/projectile/beam/laser/aer12
@@ -310,7 +310,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 
 /obj/item/ammo_casing/energy/laser/aer12/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/aer12/hitscan
-	e_cost = 133.33 //8 shots.
+	e_cost = 133.33 //15 shots.
 	fire_sound = 'sound/f13weapons/aer9fire.ogg'
 	damage_threshold_penetration = 10 //Overcharged AF, lets at minimum 1/3rd of the damage it puts out burn through armor.
 
