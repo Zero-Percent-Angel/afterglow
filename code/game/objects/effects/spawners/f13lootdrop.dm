@@ -784,6 +784,7 @@
 				/obj/effect/spawner/bundle/f13/rcw = 20,
 				/obj/effect/spawner/bundle/f13/wattz2kext = 10, //Now a high tier gun.
 				/obj/effect/spawner/bundle/f13/plasmaglock = 20
+				/obj/item/minigunpack = 10 = 20
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh
@@ -917,6 +918,7 @@
 				/obj/effect/spawner/bundle/f13/riotshotgun = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 10,
 				/obj/effect/spawner/bundle/f13/guns/p90 = 2,
+				/obj/item/minigunpackbal5mm = 10
 				)
 
 
