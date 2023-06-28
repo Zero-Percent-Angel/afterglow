@@ -294,7 +294,7 @@
 	damage = 45
 	hitscan = TRUE
 	armour_penetration = 0.5 //rare laser to have AP, to offset single-fire
-	pixels_per_second = TILES_TO_PIXELS(130)
+	pixels_per_second = TILES_TO_PIXELS(50)
 
 //plasma caster
 /obj/item/projectile/f13plasma/plasmacaster
@@ -305,7 +305,7 @@
 	flag = "energy"
 	eyeblur = 0
 	is_reflectable = TRUE
-	pixels_per_second = TILES_TO_PIXELS(130)
+	pixels_per_second = TILES_TO_PIXELS(100)
 
 //Securitrons Beam
 /obj/item/projectile/beam/laser/pistol/ultraweak
@@ -327,7 +327,7 @@
 	flag = "laser"
 	eyeblur = 0
 	is_reflectable = FALSE
-	pixels_per_second = TILES_TO_PIXELS(130)
+	pixels_per_second = TILES_TO_PIXELS(100)
 
 /obj/item/projectile/beam/laser/lasgun //AER9
 	name = "laser beam"
