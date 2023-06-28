@@ -675,7 +675,7 @@
 	burst_size = 1
 	gun_tags = list(GUN_SCOPE)
 	can_scope = TRUE
-	init_recoil = RIFLE_RECOIL(2.8)
+	init_recoil = RIFLE_RECOIL(1)recoil
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slow
 	)
