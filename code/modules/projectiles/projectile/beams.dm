@@ -775,11 +775,6 @@
 	impact_type = /obj/effect/projectile/impact/heavy_laser
 	hitscan = TRUE
 
-/obj/item/projectile/beam/laser/musket //musket
-	name = "laser bolt"
-	damage = 40
-	armour_penetration = 0.6
-
 
 
 // BETA // Obsolete
