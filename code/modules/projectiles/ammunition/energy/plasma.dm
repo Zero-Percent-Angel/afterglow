@@ -29,7 +29,7 @@
 /obj/item/ammo_casing/energy/plasma/scatter
 	projectile_type = /obj/item/projectile/f13plasma/scatter
 	pellets = 3
-	variance = 14
+	variance = 80
 	select_name = "scatter"
 	fire_sound = 'sound/f13weapons/multiplas_rifle.ogg'
 	e_cost = 200 //10 shots
