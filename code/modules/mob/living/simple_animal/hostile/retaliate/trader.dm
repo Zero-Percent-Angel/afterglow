@@ -112,6 +112,8 @@
 /mob/living/simple_animal/hostile/retaliate/talker/trader/Topic(href, href_list)
 	if(href_list["trade"])
 		say("Alright, here take a look at what I've got.")
+		if (intimidated.Find(WEAKREF(usr)) || usr.skill_check(SKILL_BARTER, HARD_CHECK))
+			say("Couple of special things just for you.")
 		show_trade_box(usr)
 	..()
 
@@ -134,8 +136,10 @@
 				.["user"]["department"] = "No Department"
 	.["stock"] = list()
 	if (intimidated.Find(WEAKREF(user)) || user.skill_check(SKILL_BARTER, HARD_CHECK))
-		say("Couple of special things just for you.")
-		for (var/datum/data/vending_product/R in product_records + hidden_records)
+		var/list/combined = list()
+		combined += product_records
+		combined += hidden_records
+		for (var/datum/data/vending_product/R in combined)
 			.["stock"][R.name] = R.amount
 	else
 		for (var/datum/data/vending_product/R in product_records)

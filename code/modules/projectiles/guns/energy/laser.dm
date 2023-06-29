@@ -579,16 +579,16 @@
 	zoom_factor = 1
 	equipsound = 'sound/f13weapons/equipsounds/aer14equip.ogg'
 
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
+	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
+	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto/slower
 	)
 
 //Wattz 2000 Extended
@@ -690,14 +690,14 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER
+	fire_delay = GUN_FIRE_DELAY_SLOW
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	gun_tags = list(GUN_SCOPE)
 	can_scope = TRUE
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slower
+		/datum/firemode/semi_auto/slow
 	)
 
 //Ultracite Laser rifle
@@ -739,6 +739,7 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
+	init_recoil = RIFLE_RECOIL(5)
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOWER * 0.9 //too slow.
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
@@ -762,6 +763,7 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
+	init_recoil = RIFLE_RECOIL(5)
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOWER * 0.9 //too slow.
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
@@ -789,14 +791,14 @@
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
+	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	gun_tags = list(GUN_SCOPE)
 	can_scope = TRUE
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 
 //LAER Energy rifle
@@ -874,10 +876,10 @@
 //Gamma gun
 /obj/item/gun/energy/gammagun
 	name = "Gamma gun"
-	desc = "An advanced radiation weapon commonly utilized by people who have passionate hatred for their fellow man. Fires slow velocity, low damage radiation beams."
+	desc = "An advanced radiation weapon commonly utilized by people who have passionate hatred for their fellow man. Fires slow velocity, low damage radiation beams. Praise the glow."
 	icon = 'icons/fallout/objects/guns/energy.dmi'
-	icon_state = "ultra_pistol"
-	item_state = "laser-pistol"
+	icon_state = "gammagun"
+	item_state = "gammagun"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/gammagun)

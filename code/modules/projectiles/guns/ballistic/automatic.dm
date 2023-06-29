@@ -553,15 +553,15 @@
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(1)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
+		/datum/firemode/automatic/rpm150,
 		/datum/firemode/semi_auto/fast
 	)
 
@@ -602,8 +602,8 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
+	is_automatic = FALSE
 
 /* * * * * * * * * * *
  * P90c SMG
@@ -865,30 +865,6 @@
 		SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
 		SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
 	)
-
-/* * * * * * * * * * *
- * M1/N Carbine
- * 10mm
- * Higher damage
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/m1carbine/m1n
-	name = "M1/N carbine"
-	desc = "An M1 Carbine with faded military markings. Looks beat up but functional."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	icon_state = "ncr-m1carbine"
-	item_state = "rifle"
-
-	slowdown = GUN_SLOWDOWN_CARBINE
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
-	cock_delay = GUN_COCK_RIFLE_BASE
 
 /* * * * * * * * * * *
  * M1A1 Carbine
@@ -1203,15 +1179,15 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
 	init_firemodes = list(
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/semi_auto
 	)
 	gun_tags = list(GUN_FA_MODDABLE)
 
@@ -1661,9 +1637,9 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T4
+	damage_multiplier = GUN_EXTRA_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1)
+	init_recoil = RIFLE_RECOIL(3.6)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
 	init_firemodes = list(/datum/firemode/semi_auto/slower)
@@ -1672,7 +1648,7 @@
 	can_bayonet = FALSE
 	can_scope = FALSE
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-	zoom_factor = 2
+	zoom_factor = 1.5
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(RIFLE_MEDIUM_VOLUME),
@@ -1740,7 +1716,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 
 /* * * * * * * * * * *
@@ -2167,7 +2143,7 @@
  * Uncommon
  * * * * * * * * * * */
 
-obj/item/gun/ballistic/automatic/bar
+/obj/item/gun/ballistic/automatic/bar
 	name = "automatic rifle (.308)"
 	desc = "An ancient machine gun that looks like outdated even by pre-war standards. It has Colt etched on one-side and Sierra Madre on the other. It is alarmingly heavy for a rifle."
 	icon = 'icons/fallout/objects/guns/bar.dmi'
@@ -2341,9 +2317,9 @@ obj/item/gun/ballistic/automatic/bar
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = LMG_RECOIL(1)
+	init_recoil = LMG_RECOIL(1.4)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200
+		/datum/firemode/automatic/rpm150
 	)
 
 	is_automatic = TRUE
