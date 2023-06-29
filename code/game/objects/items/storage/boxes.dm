@@ -1362,7 +1362,7 @@ obj/item/storage/box/stingbangs
 	desc = "Working Lights and sounds!. fit for ages 9 and up. Choking hazard."
 
 /obj/item/storage/box/syndie/fakepa/PopulateContents()
-	new obj/item/clothing/head/helmet/f13/power_armor/t51b/costume
+	new /obj/item/clothing/head/helmet/f13/power_armor/t51b/costume
 	new /obj/item/clothing/suit/armor/power_armor/t51b/costume
 	
 /obj/item/storage/box/ids/follower/PopulateContents()
