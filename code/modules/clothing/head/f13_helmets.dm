@@ -395,7 +395,8 @@
 	righthand_file = ""
 	icon = 'icons/fallout/clothing/helmets.dmi'
 	icon_state = "legheavy"
-	item_state = "legdecanvet"
+	item_state = "legheavy"
+	can_toggle = 1
 
 /////////////
 /*CENTURION*/
