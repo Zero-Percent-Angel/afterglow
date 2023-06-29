@@ -192,7 +192,7 @@ Head Paladin
 	mask =			/obj/item/clothing/mask/gas/sechailer
 	ears =			/obj/item/radio/headset/headset_bos/command
 	id = 			/obj/item/card/id/dogtag
-	neck = 			/obj/item/clothing/neck/mantle/bos/paladin
+	//neck = 			/obj/item/clothing/neck/mantle/bos/paladin
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/melee/powerfist/f13 = 1,
@@ -468,7 +468,7 @@ Senior Paladin
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
 	//belt = /obj/item/kit_spawner/bos/combat
-	neck =	/obj/item/clothing/neck/mantle/bos/paladin
+	//neck =	/obj/item/clothing/neck/mantle/bos/paladin
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
@@ -560,7 +560,7 @@ Paladin
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
 	//belt = /obj/item/kit_spawner/bos/combat
-	neck =	/obj/item/clothing/neck/mantle/bos/paladin
+	//neck =	/obj/item/clothing/neck/mantle/bos/paladin
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak= 1,
 		/obj/item/melee/onehanded/knife/hunting = 1,
