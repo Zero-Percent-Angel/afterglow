@@ -1357,6 +1357,14 @@ obj/item/storage/box/stingbangs
 	desc = "Medallions for issue to recruits."
 	illustration = "legauxilia"
 
+/obj/item/storage/box/syndie/fakepa
+	name = "T-51b costume set"
+	desc = "Working Lights and sounds!. fit for ages 9 and up. Choking hazard."
+
+/obj/item/storage/box/syndie/fakepa/PopulateContents()
+	new obj/item/clothing/head/helmet/f13/power_armor/t51b/costume
+	new /obj/item/clothing/suit/armor/power_armor/t51b/costume
+	
 /obj/item/storage/box/ids/follower/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/card/id/dogtag/legrecruit
