@@ -75,11 +75,10 @@ proc/get_top_level_mob(mob/S)
 	var/list/non_admin_ghosts
 	// Exclude ghosts from the initial message if its a subtler, lets be *discrete*
 	if(subtler)
-		non_admin_ghosts = list(GLOB.dead_mob_list)
+		non_admin_ghosts = GLOB.dead_mob_list.Copy()
 		for(var/mob/ghostie in GLOB.dead_mob_list)
 			if(ghostie.client && check_rights_for(ghostie.client, R_ADMIN))
-				non_admin_ghosts -= ghostie
-
+				non_admin_ghosts.Remove(ghostie)
 	// Everyone in range can see it
 	user.visible_message(
 		message = message,
