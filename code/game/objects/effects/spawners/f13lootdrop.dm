@@ -2135,7 +2135,6 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7,
 		/obj/item/book/granter/crafting_recipe/blueprint/scoutcarbine,
-		/obj/item/book/granter/crafting_recipe/blueprint/sniper
 	)
 
 
@@ -2171,10 +2170,10 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootcount = 1
 	loot = list(
 		/obj/item/book/granter/crafting_recipe/blueprint/gauss,
-		/obj/item/book/granter/crafting_recipe/blueprint/am_rifle,
+		/obj/item/book/granter/crafting_recipe/blueprint/sniper,
 		/obj/item/book/granter/crafting_recipe/blueprint/citykiller,
 		/obj/item/book/granter/crafting_recipe/blueprint/rangemaster,
-		/obj/item/book/granter/crafting_recipe/blueprint/bozar
+		/obj/item/book/granter/crafting_recipe/blueprint/lsw
 	)
 
 /obj/effect/spawner/lootdrop/f13/blueprintVHighPartsWeighted
