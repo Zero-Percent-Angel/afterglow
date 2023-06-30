@@ -268,6 +268,7 @@
 /obj/item/clothing/head/helmet/f13/power_armor/t51b/costume
 	armor = ARMOR_VALUE_CLOTHES
 	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T3)//not totally useless
+	requires_training = FALSE
 
 /obj/item/clothing/head/foilhat/Initialize(mapload)
 	. = ..()

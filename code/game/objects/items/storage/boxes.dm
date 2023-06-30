@@ -1132,7 +1132,7 @@ obj/item/storage/box/stingbangs
 	new /obj/item/stock_parts/matter_bin/bluespace(src)
 	new /obj/item/stock_parts/matter_bin/bluespace(src)
 	new /obj/item/stock_parts/matter_bin/bluespace(src)
-	
+
 /obj/item/storage/box/sparelimbs
 	name = "box of prosthethic limbs"
 	desc = "Contains superior prosthethic limbs, one of each type."
@@ -1144,7 +1144,7 @@ obj/item/storage/box/stingbangs
 	new /obj/item/bodypart/r_arm/robot(src)
 	new /obj/item/bodypart/l_leg/robot(src)
 	new /obj/item/bodypart/r_leg/robot(src)
-	
+
 //Colored boxes.
 /obj/item/storage/box/green
 	icon_state = "box_green"
@@ -1357,17 +1357,17 @@ obj/item/storage/box/stingbangs
 	desc = "Medallions for issue to recruits."
 	illustration = "legauxilia"
 
+/obj/item/storage/box/ids/follower/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/card/id/dogtag/legrecruit
+
 /obj/item/storage/box/syndie/fakepa
 	name = "T-51b costume set"
 	desc = "Working Lights and sounds!. fit for ages 9 and up. Choking hazard."
 
 /obj/item/storage/box/syndie/fakepa/PopulateContents()
-	new /obj/item/clothing/head/helmet/f13/power_armor/t51b/costume
-	new /obj/item/clothing/suit/armor/power_armor/t51b/costume
-	
-/obj/item/storage/box/ids/follower/PopulateContents()
-	for(var/i in 1 to 7)
-		new /obj/item/card/id/dogtag/legrecruit
+	new /obj/item/clothing/head/helmet/f13/power_armor/t51b/costume(src)
+	new /obj/item/clothing/suit/armor/power_armor/t51b/costume(src)
 
 /obj/item/storage/box/deputy_badges
 	name = "box of spare badges"
@@ -1415,7 +1415,7 @@ list(/obj/item/stack/sheet/metal = 20,
 /obj/item/storage/box/shopkeeper
 	name = "Shopkeeper's blueprints"
 	desc = "a box of the shopkeeper's blueprints"
-	
+
 
 /obj/item/storage/box/shopkeeper/PopulateContents()
 	for(var/i in 1 to 4)
@@ -1431,7 +1431,7 @@ list(/obj/item/stack/sheet/metal = 20,
 							/obj/item/book/granter/crafting_recipe/blueprint/brushgun,
 							)
 		new randomgun(src)
-	
+
 /obj/item/storage/box/debug/huge_volume_four_item
 	name = "debug box"
 	desc = "a box!"
