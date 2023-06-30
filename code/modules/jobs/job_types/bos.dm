@@ -192,7 +192,7 @@ Head Paladin
 	mask =			/obj/item/clothing/mask/gas/sechailer
 	ears =			/obj/item/radio/headset/headset_bos/command
 	id = 			/obj/item/card/id/dogtag
-	neck = 			/obj/item/storage/belt/shoulderholster
+	belt = /obj/item/storage/belt/legholster
 	//neck = 			/obj/item/clothing/neck/mantle/bos/paladin
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/hunting = 1,
@@ -381,7 +381,6 @@ Head Knight
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	accessory =		/obj/item/clothing/accessory/bos/knightcaptain
 	//belt = /obj/item/kit_spawner/bos/combat
-	l_pocket =			/obj/item/storage/belt/shoulderholster
 	mask =			/obj/item/clothing/mask/gas/sechailer
 	head =			/obj/item/clothing/head/helmet/f13/combat/brotherhood
 	id =			/obj/item/card/id/dogtag
@@ -470,8 +469,7 @@ Senior Paladin
 	accessory =	/obj/item/clothing/accessory/bos/seniorpaladin
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
-	neck = 			/obj/item/storage/belt/shoulderholster
-	//belt = /obj/item/kit_spawner/bos/combat
+	belt = /obj/item/storage/belt/legholster
 	//neck =	/obj/item/clothing/neck/mantle/bos/paladin
 
 	backpack_contents = list(
@@ -563,8 +561,7 @@ Paladin
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
-	neck = 			/obj/item/storage/belt/shoulderholster
-	//belt = /obj/item/kit_spawner/bos/combat
+	belt = /obj/item/storage/belt/legholster
 	//neck =	/obj/item/clothing/neck/mantle/bos/paladin
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak= 1,
