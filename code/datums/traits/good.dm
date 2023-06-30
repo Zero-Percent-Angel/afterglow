@@ -964,6 +964,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("Guns were always better...")
 	locked =  FALSE
 
+/*		- Way too fucking powerful since bolt actions and the like get literal bonus damages. Makes using a ton of guns pointless if a bolt-action from the trash is better than a semi-auto rifle.
 /datum/quirk/masterrifleman
 	name = "Bolt Worker"
 	desc = "You've spent a lot of time working the bolt of a rifle, or the pump action of a shotgun. Your skill allows you to click to work the action instead of doing it manually."
@@ -972,6 +973,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("In a sudden haze you realize that the Mosin Nagant was Gods gift to mankind.")
 	lose_text = span_danger("After picking some 250 year old cosmoline out from under one of your nails you realize that... Uh, no, the Mosin Nagant is a piece of shit.")
 	locked =  FALSE
+*/
 
 /datum/quirk/ratlord
 	name = "Beast Master - Rats (Experimental)"
