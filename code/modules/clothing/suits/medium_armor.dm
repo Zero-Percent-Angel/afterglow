@@ -430,7 +430,7 @@
 	name = "rebel raider armor"
 	desc = "Rebel, rebel. Your face is a mess."
 	icon_state = "raider_rebel_icon"
-	item_state = "raider_rebel_armor"
+	item_state = "raider_rebel_icon"
 
 /obj/item/clothing/suit/armor/medium/raider/scrapcombat
 	name = "scrap combat armor"
