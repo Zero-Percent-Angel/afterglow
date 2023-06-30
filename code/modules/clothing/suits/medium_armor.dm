@@ -447,15 +447,6 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
 
-/obj/item/clothing/suit/armor/medium/raider/wastewar
-	name = "wasteland warrior armor"
-	desc = "a mad attempt to recreate armor based of images of japanese samurai, using a sawn up old car tire as shoulder pads, bits of chain to cover the hips and pieces of furniture for a breastplate. Might stop a blade but nothing else, burns easily too. Comes with an enormous scabbard welded to the back!"
-	icon_state = "wastewar"
-	item_state = "wastewar"
-	resistance_flags = FLAMMABLE
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/massive/swords
-	body_parts_hidden = CHEST | GROIN
-
 /obj/item/clothing/suit/armor/medium/raider/blastmaster
 	name = "blastmaster raider armor"
 	desc = "A suit composed largely of blast plating, though there's so many holes it's hard to say if it will protect against much."
