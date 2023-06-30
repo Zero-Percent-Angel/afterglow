@@ -812,9 +812,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/vetrifle
 	name = "Sharpshooter"
-	suit_store = /obj/item/gun/ballistic/rifle/repeater/cowboy
+	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
-		/obj/item/ammo_box/a357 = 1,
+		/obj/item/ammo_box/m44box = 1,
 		/obj/item/melee/onehanded/knife/throwing = 2,
 		/obj/item/reagent_containers/pill/bitterdrink = 1,
 		/obj/item/restraints/legcuffs/beartrap = 1,
