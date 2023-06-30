@@ -798,7 +798,7 @@
 	lootcount = 1
 
 	loot = list(/obj/item/gun/energy/laser/solar,
-				/obj/item/gun/energy/laser/scatter/laserbuss,
+				/* /obj/item/gun/energy/laser/scatter/laserbuss, */
 				/obj/item/gun/energy/laser/plasma/pistol/eve,
 				/obj/item/gun/energy/laser/wattz2ks,
 				/obj/effect/spawner/bundle/f13/aer14,
