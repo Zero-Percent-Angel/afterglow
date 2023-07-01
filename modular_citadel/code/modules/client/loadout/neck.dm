@@ -159,3 +159,14 @@
 /datum/gear/neck/scarf/stripedgreen
 	name = "striped green scarf"
 	path = /obj/item/clothing/neck/stripedgreenscarf
+
+/datum/gear/head/paladin_cape
+	name = "Paladin Cape"
+	path = /obj/item/clothing/neck/mantle/bos/paladin
+	subcategory = LOADOUT_SUBCATEGORY_NECK_FACTIONS
+	cost = 1
+	restricted_desc = "BOS"
+	restricted_roles = list("Head Paladin",
+							"Senior Paladin",
+							"Paladin",
+						)

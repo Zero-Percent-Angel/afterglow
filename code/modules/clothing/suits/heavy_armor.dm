@@ -269,7 +269,7 @@
 	icon_state = "legion_heavy"
 	item_state = "legion_heavy"
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 *ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1)
 
 /obj/item/clothing/suit/armor/heavy/legion/centurion //good all around
 	name = "legion centurion armor"
