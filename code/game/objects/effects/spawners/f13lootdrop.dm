@@ -316,7 +316,7 @@
 				/obj/item/clothing/suit/armor/medium/raider/rebel,
 				/obj/item/clothing/suit/armor/medium/raider/scrapcombat,
 				/obj/item/clothing/suit/armor/medium/raider/slam,
-				/obj/item/clothing/suit/armor/medium/raider/wastewar,
+				/obj/item/clothing/suit/armor/light/raider/wastewar,
 				/obj/item/clothing/suit/armor/medium/combat/mk2/raider) // da grail
 
 /obj/effect/spawner/lootdrop/f13/armor/randomraiderhead //random raider armor
