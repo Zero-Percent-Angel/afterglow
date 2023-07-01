@@ -574,7 +574,7 @@
 	icon_state = "legion_prime"
 	item_state = "legion_prime"
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/light/legion/explorer
 	name = "legion explorer armor"
@@ -582,7 +582,7 @@
 	icon_state = "legion_explorer"
 	item_state = "legion_explorer"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/binocular
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
 /obj/item/clothing/suit/armor/light/legion/explorer/assassin
 	name = "legion assassin armor"
