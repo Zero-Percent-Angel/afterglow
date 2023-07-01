@@ -21,7 +21,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 	var/grace_period = CONFIG_GET(number/inplace_matrix_grace_period)
 	var/last_call = mind.mind_created_at + grace_period
-	if((last_call > 0) && (world.time > last_call))
+	if((grace_period > 0) && (world.time > last_call))
 		to_chat(src, span_warning("You can't Matrix Inplace anymore."))
 		return
 
