@@ -47,13 +47,13 @@
 	name = "Brotherhood of Steel shoulder cape"
 	desc = "Issued to the Elders of the Brotherhood. Style over substance is important. This one is designed to be worn over the shoulder."
 	icon_state = "bosshouldercape_r"
-/*
+
 /obj/item/clothing/neck/mantle/bos/paladin
 	name = "Paladin cape"
 	desc = "This stylish deep crimson cape is made to be worn below a power armor pauldron, a shoulder holster is added for utility."
-	icon_state = "paladin"
+	icon_state = "palcapes"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bos/paladin
-
+/*
 /obj/item/clothing/neck/mantle/legion
 	name = "Legion Cape"
 	desc = "A deep crimson cape woven by fine legionary craftsmanship. A shoulder holster is added beneath for utility."
