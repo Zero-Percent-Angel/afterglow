@@ -148,7 +148,7 @@
 		if (!P)
 			log_admin("DEBUG: [O] in processor doesn't have a suitable recipe. How do you put it in?")
 			continue
-	process_food(P, O)
+		process_food(P, O)
 	pixel_x = initial(pixel_x) //return to its spot after shaking
 	processing = FALSE
 	visible_message("\The [src] finishes processing.")
