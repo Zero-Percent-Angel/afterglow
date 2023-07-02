@@ -137,7 +137,7 @@
 	if(!T)
 		return
 	if(!islist(ignored_mobs))
-        ignored_mobs = list(ignored_mobs)
+		ignored_mobs = list(ignored_mobs)
 	var/list/hearers = get_hearers_in_view(vision_distance, src) //caches the hearers and then removes ignored mobs.
 	if(!length(hearers))
 		return

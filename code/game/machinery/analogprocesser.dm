@@ -120,3 +120,35 @@
 			return 1
 		else
 			return ..()
+
+/obj/machinery/processor/chopping_block/interact(mob/user)
+    if(processing)
+        to_chat(user, span_warning("[src] is in the process of processing!"))
+        return TRUE
+    if(contents.len == 0)
+        to_chat(user, span_warning("[src] is empty!"))
+        return TRUE
+    processing = TRUE
+    user.visible_message("[user] turns on [src].", \
+        span_notice("You start chopping [src]."), \
+        span_italic("You hear a chopping."))
+    playsound(src.loc, 'sound/machines/blender.ogg', 50, 1) //PUT A NEW SOUND HERE
+    var/total_time = 0
+    for(var/O in src.contents)
+        var/datum/food_processor_process/P = select_recipe(O)
+        if (!P)
+            log_admin("DEBUG: [O] in processor doesn't have a suitable recipe. How did it get in there? Please report it immediately!!!")
+            continue
+        total_time += P.time
+    var/offset = prob(50) ? -2 : 2
+    animate(src, pixel_x = pixel_x + offset, time = 0.2, loop = (total_time / rating_speed)*5) //start shaking
+    sleep(total_time / rating_speed)
+    for(var/atom/movable/O in src.contents)
+        var/datum/food_processor_process/P = select_recipe(O)
+        if (!P)
+            log_admin("DEBUG: [O] in processor doesn't have a suitable recipe. How do you put it in?")
+            continue
+        process_food(P, O)
+    pixel_x = initial(pixel_x) //return to its spot after shaking
+    processing = FALSE
+    visible_message("\The [src] finishes processing.")
