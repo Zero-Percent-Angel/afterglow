@@ -644,6 +644,10 @@
 	name = "BOS Entrance Elevator"
 	port_id = "entrance"
 
+/*datum/map_template/shuttle/raider_station_train
+	name = "Junker Train"
+	port_id = "raider_station_train"*///until I can get it fixed, this is staying commented out
+
 /datum/map_template/shuttle/bunker/elevator
 	suffix = "elevator"
 	name = "Bunker Elevator"

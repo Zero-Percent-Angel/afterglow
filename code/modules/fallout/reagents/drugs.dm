@@ -289,7 +289,6 @@
 	if(isliving(M))
 		to_chat(M, span_notice("You feel stronger, and like you're able to endure more."))
 		ADD_TRAIT(M, TRAIT_BUFFOUT_BUFF, "buffout")
-		ADD_TRAIT(M, TRAIT_PERFECT_ATTACKER, "buffout")
 		M.maxHealth += 25
 		M.health += 25
 
@@ -298,7 +297,6 @@
 	if(isliving(M))
 		to_chat(M, span_notice("You feel weaker."))
 		REMOVE_TRAIT(M, TRAIT_BUFFOUT_BUFF, "buffout")
-		REMOVE_TRAIT(M, TRAIT_PERFECT_ATTACKER, "buffout")
 		M.maxHealth -= 25
 		M.health -= 25
 

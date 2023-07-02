@@ -53,7 +53,6 @@
 	heat_protection = CHEST|GROIN|ARMS|LEGS // chyll
 	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
 	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/light/tribal/wastetribe
 	name = "wasteland tribe armor"
@@ -82,6 +81,40 @@
 	icon_state = "tribal_outcast"
 	item_state = "tribal_outcast"
 	body_parts_hidden = CHEST|ARMS|LEGS
+
+/obj/item/clothing/suit/armor/light/tribal/whitelegs
+	name = "White Legs light armour"
+	desc = "A series of tan armour plates, held in place with a small amount of strapping. Commonly worn by members of the White Legs tribe."
+	icon_state = "white_legs_armour_light"
+	item_state = "white_legs_armour_light"
+
+/obj/item/clothing/suit/armor/light/tribal/deadhorses
+	name = "Dead Horses light armour"
+	desc = "A simple leather bandolier and gecko hide chest covering. Commonly worn by the members of the Dead Horses tribe."
+	icon_state = "dead_horses_armour_light"
+	item_state = "dead_horses_armour_light"
+	body_parts_hidden = CHEST|ARMS|LEGS
+
+/obj/item/clothing/suit/armor/light/tribal/rustwalkers
+	name = "Rustwalkers light armour"
+	desc = "A car seat leather duster and a timing belt bandolier. Commonly worn by members of the Rustwalkers tribe."
+	icon_state = "rustwalkers_armour_light"
+	item_state = "rustwalkers_armour_light"
+	body_parts_hidden = CHEST|ARMS|LEGS
+
+/obj/item/clothing/suit/armor/light/tribal/eighties
+	name = "Eighties light armour"
+	desc = "A fairly simple, black leather jacket with an overly popped collar. Commonly worn by the members of the 80s tribe."
+	icon_state = "eighties_armour_light"
+	item_state = "eighties_armour_light"
+	body_parts_hidden = CHEST|ARMS
+
+/obj/item/clothing/suit/armor/light/tribal/bonedancers
+	name = "Bone Dancers light armour"
+	desc = "A chestplate, pauldrons and thigh guards made from bone and sinew. Commonly worn by members of the Bone Dancers tribe."
+	icon_state = "eighties_armour_light"
+	item_state = "eighties_armour_light"
+	body_parts_hidden = CHEST
 
 /// to be refactored to work with the New Tier System (tm)
 /obj/item/clothing/suit/hooded/cloak
@@ -268,6 +301,15 @@
 	item_state = "leather_jacket_fighter"
 	body_parts_hidden = ARMS | GROIN
 
+/obj/item/clothing/suit/armor/light/raider/wastewar
+	name = "wasteland warrior armor"
+	desc = "a mad attempt to recreate armor based of images of japanese samurai, using a sawn up old car tire as shoulder pads, bits of chain to cover the hips and pieces of furniture for a breastplate. Might stop a blade but nothing else, burns easily too. Comes with an enormous scabbard welded to the back!"
+	icon_state = "wastewar"
+	item_state = "wastewar"
+	resistance_flags = FLAMMABLE
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/massive/swords
+	body_parts_hidden = CHEST | GROIN
+
 /////////////////////
 // DUSTERS & COATS //
 /////////////////////
@@ -394,8 +436,8 @@
 /obj/item/clothing/suit/armor/light/leather/leathercoat
 	name = "thick leather coat"
 	desc = "Reinforced leather jacket with a overcoat. Well insulated, creaks a lot while moving."
-	icon_state = "leatherarmor"
-	item_state = "leatherarmor"
+	icon_state = "leather_suit"
+	item_state = "leather_suit"
 	siemens_coefficient = 0.8
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
 	body_parts_hidden = ARMS | CHEST
@@ -532,7 +574,7 @@
 	icon_state = "legion_prime"
 	item_state = "legion_prime"
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/light/legion/explorer
 	name = "legion explorer armor"
@@ -540,15 +582,15 @@
 	icon_state = "legion_explorer"
 	item_state = "legion_explorer"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/binocular
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
 /obj/item/clothing/suit/armor/light/legion/explorer/assassin
-	name = "legion exactor armor"
-	desc = "Issued to exactors to keep them cool during long hours of watching the slaves work in the sun."
+	name = "legion assassin armor"
+	desc = "A suit of light armor with reinforced plates and leather added to it, protecting its user. Perfect for combatants specializing in hit-and-run."
 	icon_state = "legion_praetorian"
 	item_state = "legion_praetorian"
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 //////////////////////////
 // Brotherhood of Steel //

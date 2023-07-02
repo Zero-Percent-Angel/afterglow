@@ -81,14 +81,14 @@
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_AKIMBO
 	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	init_recoil = HANDGUN_RECOIL(0.6)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION // plug em in the skull!
 	init_firemodes = list(
-		/datum/firemode/semi_auto/fastest
+		/datum/firemode/semi_auto/fast
 	)
 	can_suppress = FALSE
 	silenced = TRUE
@@ -395,42 +395,6 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto/fast
 	)
-
-
-/* * * * * * * * * * *
- * Sig P220
- * Light Mediumer pistol
- * .45
- * Less recoil
- * faster shooting
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/pistol/sig //wiggles
-	name = "Sig P220"
-	desc = "The P220 Sig Sauer. A Swiss designed pistol that is compact and has an average rate of fire for a pistol."
-	icon_state = "sig"
-	w_class = WEIGHT_CLASS_SMALL
-	init_mag_type = /obj/item/ammo_box/magazine/m45
-	mag_type = /obj/item/ammo_box/magazine/m45
-	disallowed_mags = list(/obj/item/ammo_box/magazine/m45/socom, /obj/item/ammo_box/magazine/m45/socom/empty)
-
-	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	init_recoil = HANDGUN_RECOIL(0.7)
-	init_firemodes = list(
-		/datum/firemode/semi_auto/fast
-	)
-	suppressor_state = "pistol_suppressor"
-	suppressor_x_offset = 30
-	suppressor_y_offset = 20
-	fire_sound = 'sound/f13weapons/45revolver.ogg'
 
 /* * * * * * * * * * *
  * M1911 Semi-Auto

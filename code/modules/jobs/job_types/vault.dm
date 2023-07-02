@@ -107,8 +107,7 @@ Head of Security
 	name = "Chief of Security"
 	jobtype = /datum/job/vault/f13hos
 
-	id = /obj/item/card/id/chief
-	//pda
+	id = 			/obj/item/card/id/chief
 	ears = 			/obj/item/radio/headset/headset_vault_hos/alt
 	uniform = 		/obj/item/clothing/under/f13/vault13
 	shoes = 		/obj/item/clothing/shoes/jackboots
@@ -147,8 +146,8 @@ Medical Doctor
 
 	outfit = /datum/outfit/job/vault/f13doctor
 
-	access = list(ACCESS_VAULT, ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
-	minimal_access = list(ACCESS_VAULT, ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
+	access = list(ACCESS_VAULT_F13, ACCESS_VAULT, ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
+	minimal_access = list(ACCESS_VAULT_F13, ACCESS_VAULT, ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
 
 /datum/outfit/job/vault/f13doctor
 	name = "Medical Doctor"
@@ -192,8 +191,8 @@ Scientist
 
 	outfit = /datum/outfit/job/vault/f13vaultscientist
 
-	access = list(ACCESS_ROBOTICS, ACCESS_RESEARCH, ACCESS_MINERAL_STOREROOM, ACCESS_TECH_STORAGE, ACCESS_CARGO)
-	minimal_access = list(ACCESS_ROBOTICS, ACCESS_RESEARCH, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
+	access = list(ACCESS_VAULT_F13, ACCESS_ROBOTICS, ACCESS_RESEARCH, ACCESS_MINERAL_STOREROOM, ACCESS_TECH_STORAGE, ACCESS_CARGO)
+	minimal_access = list(ACCESS_VAULT_F13, ACCESS_ROBOTICS, ACCESS_RESEARCH, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO)
 
 /datum/outfit/job/vault/f13vaultscientist
 	name = "Scientist"
@@ -307,8 +306,8 @@ Vault Engineer
 
 	outfit = /datum/outfit/job/vault/f13vaultengineer
 
-	access = list(ACCESS_VAULT, ACCESS_CARGO, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_ATMOSPHERICS, ACCESS_TCOMSAT, ACCESS_MINERAL_STOREROOM)
-	minimal_access = list(ACCESS_VAULT, ACCESS_CARGO, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MINERAL_STOREROOM)
+	access = list(ACCESS_VAULT_F13, ACCESS_VAULT, ACCESS_CARGO, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_ATMOSPHERICS, ACCESS_TCOMSAT, ACCESS_MINERAL_STOREROOM)
+	minimal_access = list(ACCESS_VAULT_F13, ACCESS_VAULT, ACCESS_CARGO, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MINERAL_STOREROOM)
 
 /datum/outfit/job/vault/f13vaultengineer
 	name = "Vault-tec Engineer"

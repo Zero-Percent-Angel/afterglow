@@ -85,6 +85,7 @@
 /obj/item/ammo_box/magazine/m10mm
 	name = "pistol magazine (10mm)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
+	icon_state = "m10mm"
 	desc = "A gun magazine."
 	caliber = list(CALIBER_10MM)
 	custom_materials = list(/datum/material/iron = MATS_MEDIUM_PISTOL_MAGAZINE)

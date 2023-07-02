@@ -11,7 +11,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/legiongate
 	name = "Legion iron gate"
@@ -21,7 +21,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/gate_bos
 	name = "Brotherhood steel door"
@@ -31,7 +31,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/gate_khanate
 	name = "Khans steel-reinforced wood door"
@@ -42,7 +42,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/plant
 	name = "Potted plant"
@@ -52,7 +52,7 @@
 	time = 20
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = VERY_EASY_CHECK
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/toilet
 	name = "Toilet"
@@ -62,7 +62,7 @@
 	time = 50
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/sink
 	name = "Sink"
@@ -72,7 +72,7 @@
 	time = 50
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/shower
 	name = "Shower"
@@ -83,7 +83,7 @@
 	time = 80
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/showercurtain
 	name = "Shower Curtains"
@@ -93,7 +93,7 @@
 	result = /obj/structure/curtain
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = VERY_EASY_CHECK
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/curtain
 	name = "Curtains"
@@ -102,7 +102,7 @@
 	result = /obj/structure/curtain
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = VERY_EASY_CHECK
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/dogbed
 	name = "Dog Bed"
@@ -112,7 +112,7 @@
 	time = 10
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = VERY_EASY_CHECK
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/junk_table
 	name = "Makeshift Bar Table"
@@ -122,7 +122,7 @@
 	time = 10
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = VERY_EASY_CHECK
+	skill_level = VERY_EASY_CHECK
 
 ///////////////////////////
 //Scavenging and Tinkering//

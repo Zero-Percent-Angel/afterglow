@@ -181,13 +181,13 @@
 			add_overlay("[base_state]-s")
 			setAnchored(TRUE)
 			power_change()
-			proximity_monitor.SetRange(range)
+			proximity_monitor.set_range(range)
 		else
 			to_chat(user, span_notice("[src] can now be moved."))
 			cut_overlays()
 			setAnchored(FALSE)
 			power_change()
-			proximity_monitor.SetRange(0)
+			proximity_monitor.set_range(0)
 
 	else
 		return ..()

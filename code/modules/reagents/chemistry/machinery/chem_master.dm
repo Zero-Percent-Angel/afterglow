@@ -321,17 +321,16 @@
 		if(vol_each <= 0)
 			return FALSE
 		// Get item name
-		var/name = params["name"]
+		var/name = null
 		var/name_has_units = item_type == "pill" || item_type == "patch"
-		if(!name)
-			var/name_default = reagents.get_master_reagent_name()
-			if (name_has_units)
-				name_default += " ([vol_each]u)"
-			name = stripped_input(usr,
-				"Name:",
-				"Give it a name!",
-				name_default,
-				MAX_NAME_LEN)
+		var/name_default = reagents.get_master_reagent_name()
+		if (name_has_units)
+			name_default += " ([vol_each]u)"
+		name = stripped_input(usr,
+			"Name:",
+			"Give it a name!",
+			name_default,
+			MAX_NAME_LEN)
 		if(!name || !reagents.total_volume || !src || QDELETED(src) || !usr.canUseTopic(src, !issilicon(usr)))
 			return FALSE
 		// Start filling

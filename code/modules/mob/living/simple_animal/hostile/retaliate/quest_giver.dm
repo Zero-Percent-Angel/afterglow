@@ -76,7 +76,7 @@
 	casingtype = /obj/item/ammo_casing/c9mm
 	projectiletype = /obj/item/projectile/bullet/c9mm/improvised
 	projectilesound = 'sound/weapons/gunshot_smg.ogg'
-	loot = list(/obj/item/gun/ballistic/automatic/hobo/destroyer)
+	loot = list(/obj/item/gun/ballistic/automatic/smg/mini_uzi)
 	generate_find_item = TRUE
 	generate_kill_person = TRUE
 	generate_kill_animal = TRUE

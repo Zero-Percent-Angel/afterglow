@@ -139,7 +139,7 @@
 	var/list/hearers = get_hearers_in_view(vision_distance, src) //caches the hearers and then removes ignored mobs.
 	if(!length(hearers))
 		return
-	hearers -= ignored_mobs
+	hearers.Remove(ignored_mobs)
 
 	if(target_message && target && istype(target) && target.client)
 		hearers -= target

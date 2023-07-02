@@ -1011,7 +1011,7 @@ Raider
 	name = "Wasteland Warrior"
 	uniform = /obj/item/clothing/under/f13/settler
 	shoes = /obj/item/clothing/shoes/f13/raidertreads
-	suit = /obj/item/clothing/suit/armor/medium/raider/wastewar
+	suit = /obj/item/clothing/suit/armor/light/raider/wastewar
 	head = /obj/item/clothing/head/helmet/f13/wastewarhat
 	glasses = /obj/item/clothing/glasses/legiongoggles
 	l_hand = /obj/item/shield/riot/buckler/stop
@@ -1757,7 +1757,7 @@ datum/job/wasteland/f13dendoctor
 	/datum/outfit/loadout/wayfarershaman,
 	/datum/outfit/loadout/shaman,
 	/datum/outfit/loadout/lostvillager,
-	/datum/outfit/loadout/whitelegsranged,
+	/datum/outfit/loadout/whitelegsmelee,
 	/datum/outfit/loadout/whitelegsshaman,
 	/datum/outfit/loadout/eightiesmelee,
 	/datum/outfit/loadout/eightiesranged,
@@ -1896,16 +1896,14 @@ datum/job/wasteland/f13dendoctor
 		/obj/item/book/granter/trait/tribaltraditions =1,
 		)
 
-/datum/outfit/loadout/whitelegsranged
-	name = "White Legs Storm-Drummer"
+/datum/outfit/loadout/whitelegsmelee
+	name = "White Leg Warrior"
 	suit = /obj/item/clothing/suit/armor/medium/tribal/whitelegs
 	backpack_contents = list(
 		/obj/item/clothing/under/f13/whitelegs = 1,
 		/obj/item/clothing/under/f13/female/whitelegs = 1,
-		/obj/item/gun/ballistic/automatic/smg/tommygun/whitelegs = 1,
-		///obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 1,
-		///obj/item/ammo_box/magazine/tommygunm45/stick = 2
+		/obj/item/twohanded/spear/bonespear = 1,
 	)
 
 /datum/outfit/loadout/whitelegsshaman
@@ -2218,7 +2216,7 @@ datum/job/wasteland/f13dendoctor
 		/obj/item/clothing/suit/armor/medium/raider/yankee, \
 		/obj/item/clothing/suit/armor/light/raider/leather, \
 		/obj/item/clothing/suit/armor/medium/raider/blastmaster, \
-		/obj/item/clothing/suit/armor/medium/raider/wastewar, \
+		/obj/item/clothing/suit/armor/light/raider/wastewar, \
 		/obj/item/clothing/suit/armor/medium/raider/rebel)
 	if(prob(10))
 		mask = pick(

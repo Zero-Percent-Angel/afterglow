@@ -34,6 +34,7 @@
 		/obj/item/toy/toy_dagger = ARCADE_WEIGHT_TRICK,
 		/obj/item/toy/toy_xeno = ARCADE_WEIGHT_TRICK,
 		/obj/item/toy/windupToolbox = ARCADE_WEIGHT_TRICK,
+		/obj/item/storage/box/syndie/fakepa = ARCADE_WEIGHT_TRICK,
 
 		/mob/living/simple_animal/bot/secbot/grievous/toy = ARCADE_WEIGHT_RARE,
 		/obj/item/gun/ballistic/automatic/toy/pistol/unrestricted = ARCADE_WEIGHT_TRICK,

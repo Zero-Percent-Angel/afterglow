@@ -572,3 +572,8 @@
 /datum/config_entry/number/validball_count
 	config_entry_value = 1
 	min_val = 0
+
+/datum/config_entry/flag/enable_inplace_matrix
+
+/datum/config_entry/number/inplace_matrix_grace_period
+	config_entry_value = 5 MINUTES

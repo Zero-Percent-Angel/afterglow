@@ -133,7 +133,7 @@
 ///Stores the visible portion of the FoV shadow cone.
 /obj/screen/plane_master/field_of_vision_visual
 	name = "field of vision visual plane master"
-	plane = FIELD_OF_VISION_VISUAL_PLANE
+	plane = ABOVE_GAME_PLANE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/screen/plane_master/field_of_vision_visual/Initialize()

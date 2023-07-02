@@ -39,7 +39,6 @@
 		/obj/item/gun/ballistic/automatic/pistol/type17,
 		/obj/item/gun/ballistic/automatic/pistol/ninemil,
 		/obj/item/gun/ballistic/automatic/pistol/pistol22,
-		/obj/item/gun/ballistic/automatic/pistol/sig,
 		/obj/item/gun/ballistic/automatic/pistol/beretta,
 		/obj/item/gun/ballistic/revolver/detective,
 		/obj/item/gun/ballistic/revolver/colt357,
@@ -57,7 +56,6 @@
 		/obj/item/gun/energy/laser/pistol,
 		/obj/item/gun/ballistic/automatic/pistol/m1911/custom,
 		/obj/item/gun/ballistic/automatic/pistol/mk23,
-		/obj/item/gun/ballistic/automatic/pistol/sig,
 		)
 
 /datum/export/item/advpistol
@@ -65,7 +63,6 @@
 	unit_name = "advanced pistol"
 	export_types = list(
 		/obj/item/gun/ballistic/automatic/pistol/deagle,
-		/obj/item/gun/ballistic/automatic/pistol/sig,
 		/obj/item/gun/ballistic/automatic/pistol/pistol14,
 		/obj/item/gun/ballistic/revolver/revolver45,
 		/obj/item/gun/ballistic/revolver/m29,
