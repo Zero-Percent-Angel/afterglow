@@ -144,7 +144,7 @@
 
 /obj/machinery/telecomms/server/presets/khans
 	id = "Khans Server"
-	freq_listening = list(FREQ_TOWN_COMMERCE)
+	freq_listening = list(FREQ_KHANS)
 	autolinkers = list("khans")
 
 /obj/machinery/telecomms/server/presets/town_pd
