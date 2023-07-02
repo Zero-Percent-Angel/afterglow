@@ -189,7 +189,7 @@
 	var/clot_rate = 0.20
 	var/clot_coeff_per_wound = 0.9
 
-/datum/reagent/medicine/healing_powder/poultice/on_mob_metabolize(mob/living/carbon/M) // a painful remedy!
+/* /datum/reagent/medicine/healing_powder/poultice/on_mob_metabolize(mob/living/carbon/M) // a painful remedy!
 	. = ..()
 	M.add_movespeed_modifier(/datum/movespeed_modifier/healing_poultice_slowdown)
 	to_chat(M, span_alert("You feel a burning pain spread through your skin, concentrating around your wounds."))
@@ -197,7 +197,7 @@
 /datum/reagent/medicine/healing_powder/poultice/on_mob_end_metabolize(mob/living/carbon/M)
 	. = ..()
 	M.remove_movespeed_modifier(/datum/movespeed_modifier/healing_poultice_slowdown)
-	to_chat(M, span_notice("The poultice's burning subsides."))
+	to_chat(M, span_notice("The poultice's burning subsides.")) */
 
 /datum/reagent/medicine/healing_powder/poultice/on_mob_life(mob/living/carbon/M)
 	. = ..()

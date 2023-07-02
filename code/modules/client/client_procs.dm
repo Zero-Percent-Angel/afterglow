@@ -919,7 +919,8 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		add_verb(src, /client/proc/self_notes)
 	if(CONFIG_GET(flag/use_exp_tracking))
 		add_verb(src, /client/proc/self_playtime)
-
+	if(CONFIG_GET(flag/enable_inplace_matrix))
+		add_verb(src, /client/proc/matrix_inplace)
 
 #undef UPLOAD_LIMIT
 

@@ -236,9 +236,9 @@ GLOBAL_LIST_INIT(trash_money, list(
 ))
 
 GLOBAL_LIST_INIT(trash_mob, list(
-	/obj/effect/spawner/bundle/mobs/rat/one = 30,
-	/obj/effect/spawner/bundle/mobs/rat/three = 9,
-	/obj/effect/spawner/bundle/mobs/rat/five = 1
+	///obj/effect/spawner/bundle/mobs/rat/one = 30,
+	///obj/effect/spawner/bundle/mobs/rat/three = 9,
+	///obj/effect/spawner/bundle/mobs/rat/five = 1
 ))
 
 GLOBAL_LIST_INIT(trash_tool, list(
@@ -366,14 +366,12 @@ GLOBAL_LIST_INIT(loot_t1_armor, list(
 ))
 
 GLOBAL_LIST_INIT(loot_t2_armor, list(
-	/obj/item/clothing/head/helmet/f13/raider,
 	/obj/item/clothing/head/helmet/f13/raider/arclight,
 	/obj/item/clothing/suit/armor/medium/raider/blastmaster,
 	/obj/item/clothing/head/helmet/f13/raider/blastmaster,
 	/obj/item/clothing/suit/armor/medium/raider/yankee,
 	/obj/item/clothing/head/helmet/f13/raider/yankee,
 	/obj/item/clothing/head/helmet/f13/fiend,
-	/obj/item/clothing/head/helmet/f13/raider,
 	/obj/item/clothing/suit/armor/medium/raider/iconoclast
 ))
 

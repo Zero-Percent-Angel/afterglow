@@ -149,7 +149,7 @@
 	name ="plasma rifle"
 	item_state = "plasma"
 	icon_state = "plasma"
-	desc = "A miniaturized plasma caster that fires bolts of magnetically accelerated toroidal plasma towards an unlucky target."
+	desc = "An urban plasma rifle manufactured by REPCONN aerospace. It fires bolts of magnetically accelerated toroidal plasma towards an unlucky target."
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
@@ -205,6 +205,7 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
+	init_recoil = RIFLE_RECOIL(5)
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
@@ -213,3 +214,43 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slower
 	)
+
+
+//FNV plasma caster
+//High damage, fast rate of fire,10rnd capacity
+//very heavy
+//deliberately OP
+/obj/item/gun/energy/laser/plasma/caster
+	name = "Plasma caster"
+	icon = 'icons/fallout/objects/guns/bar.dmi'
+	item_state = "plasmacaster_fnv"
+	icon_state = "plasmacaster_fnv"
+	desc = "A model P94 plasma caster.An industrial-grade energy weapon, firing superheated bolts of plasma down a superconducting barrel.Some people call it a plasma rifle despite looking nothing like one."
+	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/caster)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+
+	slowdown = GUN_SLOWDOWN_RIFLE_LMG //heavy weapon
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY //bludgeon
+	weapon_weight = GUN_TWO_HAND_ONLY
+	draw_time = GUN_DRAW_LONG
+	fire_delay = GUN_FIRE_DELAY_FAST //yes, it is a fast weapon. wait till you get the turbo
+	autofire_shot_delay =GUN_AUTOFIRE_DELAY_FAST
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	burst_size = 1
+	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION //weapon long range in FO1/2
+	init_firemodes = list(
+		/datum/firemode/semi_auto/fast
+	)
+
+//for the love of god, make sure this is the only one to spawn normally
+//50 damage, 8 shots
+//fires faster, its only upside
+/obj/item/gun/energy/laser/plasma/caster/balanced
+	name = "worn-out Plasma caster"
+	desc = "A model P94 plasma caster.An industrial-grade energy weapon, firing superheated bolts of plasma down a superconducting barrel.Some people call it a plasma rifle despite looking nothing like one.Given the rarity of these things, count yourself lucky you have one at all."
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/caster/balanced)
+	worn_out = TRUE
+	fire_delay = GUN_FIRE_DELAY_FASTER
+
+

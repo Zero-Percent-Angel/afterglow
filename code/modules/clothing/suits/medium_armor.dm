@@ -75,24 +75,34 @@
 
 /obj/item/clothing/suit/armor/medium/tribal/rustwalkers
 	name = "Rustwalkers armor"
-	desc = "A car seat leather duster, a timing belt bandolier, and armour plating made from various parts of a car, it surely would weigh the wearer down. Commonly worn by members of the Rustwalkers tribe."
+	desc = "A timing belt bandolier and armour plating made from various parts of a car, it can't be comfortable. Commonly worn by members of the Rustwalkers tribe."
 	icon_state = "rustwalkers_armour"
 	item_state = "rustwalkers_armour"
 	body_parts_hidden = CHEST
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1)
 
 /obj/item/clothing/suit/armor/medium/tribal/whitelegs
 	name = "White Legs armour"
-	desc = "A series of tan and khaki armour plates, held in place with a considerable amount of strapping and possibly duct tape. Commonly worn by members of the White Legs tribe."
+	desc = "A series of tan and khaki armour plates, held in place with a fair amount of strapping and a hint of duct tape. Commonly worn by members of the White Legs tribe."
 	icon_state = "white_legs_armour"
 	item_state = "white_legs_armour"
 	body_parts_hidden = ARMS | LEGS
 
+/obj/item/clothing/suit/armor/medium/tribal/sorrows
+	name = "Sorrows armour"
+	desc = "A simple ballistic vest, adorned with blue feathers."
+	icon_state = "sorrows_armour"
+	item_state = "sorrows_armour"
+	body_parts_hidden = ARMS | LEGS
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1)
+
 /obj/item/clothing/suit/armor/medium/tribal/eighties
 	name = "80s armour"
-	desc = "A ballistic duster with the number 80 stitched onto the back worn over a breastplate made from a motorcycle's engine housing, with kneepads made from stirrups. Worn by the members of the 80s tribe."
+	desc = "A ballistic jacket with the number 80 stitched onto the back worn with bracers made using exhausts. Worn by the members of the 80s tribe."
 	icon_state = "80s_armour"
 	item_state = "80s_armour"
 	body_parts_hidden = ARMS | CHEST
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1)
 
 /obj/item/clothing/suit/armor/medium/tribal/deadhorses
 	name = "Dead Horses armour"
@@ -100,6 +110,14 @@
 	icon_state = "dead_horses_armour"
 	item_state = "dead_horses_armour"
 	body_parts_hidden = 0
+
+/obj/item/clothing/suit/armor/medium/tribal/bonedancers
+	name = "Bone Dancers armour"
+	desc = "A chestplate, pauldrons, bracers and thigh guards made from bone and sinew. Commonly worn by members of the Bone Dancers tribe."
+	icon_state = "bone_dancer_armor"
+	item_state = "bone_dancer_armor"
+	body_parts_hidden = CHEST
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/medium/tribal/bone
 	name = "Reinforced Bone armor"
@@ -139,19 +157,19 @@
 	name = "ancient flak vest"
 	desc = "Poorly maintained, this patched vest will still still stop some bullets, but don't expect any miracles. The ballistic nylon used in its construction is inferior to kevlar, and very weak to acid, but still quite tough."
 	icon_state = "vest_flak"
-	item_state = "detective-armor"
+	item_state = "vest_flak"
 
 /obj/item/clothing/suit/armor/medium/vest/kevlar
 	name = "kevlar vest"
 	desc = "Worn but serviceable, the vest is is effective against ballistic impacts."
 	icon_state = "vest_kevlar"
-	item_state = "armor"
+	item_state = "vest_kevlar"
 
 /obj/item/clothing/suit/armor/medium/vest/bulletproof
 	name = "bulletproof vest"
 	desc = "This vest is in good shape, the layered kevlar lightweight yet very good at stopping bullets."
 	icon_state = "vest_bullet"
-	item_state = "bulletproof"
+	item_state = "vest_bullet"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T2, ARMOR_MODIFIER_UP_DT_T2)
 
@@ -159,13 +177,13 @@
 	name = "security vest"
 	desc = "A thick bullet-resistant vest composed of ballistic plates and padding. Common with pre-war security forces."
 	icon_state = "vest_armor"
-	item_state = "armor"
+	item_state = "vest_armor"
 
-/obj/item/clothing/suit/armor/light/vest/russian
+/obj/item/clothing/suit/armor/medium/vest/russian
 	name = "russian vest"
 	desc = "A bulletproof vest with forest camo. Good thing there's plenty of forests to hide in around here, right?"
-	icon_state = "rus_armor"
-	item_state = "detective-armor"
+	icon_state = "vest_rus"
+	item_state = "vest_rus"
 
 /obj/item/clothing/suit/armor/medium/vest/chinese
 	name = "chinese flak vest"
@@ -412,7 +430,7 @@
 	name = "rebel raider armor"
 	desc = "Rebel, rebel. Your face is a mess."
 	icon_state = "raider_rebel_icon"
-	item_state = "raider_rebel_armor"
+	item_state = "raider_rebel_icon"
 
 /obj/item/clothing/suit/armor/medium/raider/scrapcombat
 	name = "scrap combat armor"
@@ -428,15 +446,6 @@
 	resistance_flags = FIRE_PROOF
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
-
-/obj/item/clothing/suit/armor/medium/raider/wastewar
-	name = "wasteland warrior armor"
-	desc = "a mad attempt to recreate armor based of images of japanese samurai, using a sawn up old car tire as shoulder pads, bits of chain to cover the hips and pieces of furniture for a breastplate. Might stop a blade but nothing else, burns easily too. Comes with an enormous scabbard welded to the back!"
-	icon_state = "wastewar"
-	item_state = "wastewar"
-	resistance_flags = FLAMMABLE
-	pocket_storage_component_path = /datum/component/storage/concrete/pockets/massive/swords
-	body_parts_hidden = CHEST | GROIN
 
 /obj/item/clothing/suit/armor/medium/raider/blastmaster
 	name = "blastmaster raider armor"
@@ -486,28 +495,28 @@
 /obj/item/clothing/suit/armor/medium/combat/ncr
 	name = "NCR combat armor"
 	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for New California Republic."
-	icon_state = "combat_armor_ncr"
-	item_state = "combat_armor_ncr"
+	icon_state = "ncr_armor"
+	item_state = "ncr_armor"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/ncr
 	name = "reinforced NCR combat armor"
 	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for New California Republic."
-	icon_state = "combat_armor_ncr_mk2"
-	item_state = "combat_armor_ncr_mk2"
+	icon_state = "ncr_armor_mk2"
+	item_state = "ncr_armor_mk2"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
 /obj/item/clothing/suit/armor/medium/combat/legion
 	name = "legion combat armor"
 	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "combat_armor_legion"
-	item_state = "combat_armor_legion"
+	icon_state = "legion_combat"
+	item_state = "legion_combat"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/legion
 	name = "reinforced legion combat armor"
 	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "combat_armor_legion_mk2"
-	item_state = "combat_armor_legion_mk2"
+	icon_state = "legion_combat2"
+	item_state = "legion_combat2"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
@@ -584,7 +593,7 @@
 	desc = "A reinforced set of NCR mantle armour, with added padding on the groin, neck and shoulders. Intended for use by the officer class."
 	icon_state = "ncr_lt_armour"
 	item_state = "ncr_lt_armour"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)	//LT + Crapton
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)	//LT + Crapton
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //Rangers
@@ -630,7 +639,7 @@
 	icon_state = "legion_veteran"
 	item_state = "legion_veteran"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/medium/legion/vexil
 	name = "legion vexillarius armor"
@@ -638,7 +647,7 @@
 	icon_state = "legion_vex"
 	item_state = "legion_vex"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT // lighter, cus melee focus
 
 /obj/item/clothing/suit/armor/medium/legion/orator

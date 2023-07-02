@@ -521,8 +521,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
-	skill_level = SKILL_REPAIR 
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
+	skill_needed = SKILL_REPAIR 
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_surgical
@@ -535,8 +535,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
-	skill_level = SKILL_REPAIR 
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
+	skill_needed = SKILL_REPAIR 
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_janitor
@@ -549,8 +549,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
-	skill_level = SKILL_REPAIR 
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
+	skill_needed = SKILL_REPAIR 
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_service
@@ -563,8 +563,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
-	skill_level = SKILL_REPAIR 
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
+	skill_needed = SKILL_REPAIR 
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_nutriment
@@ -577,6 +577,6 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
-	skill_level = SKILL_REPAIR 
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK 
+	skill_needed = SKILL_REPAIR
 	always_available = FALSE

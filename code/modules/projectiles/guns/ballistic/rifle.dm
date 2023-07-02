@@ -186,7 +186,7 @@
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(3)
 	init_firemodes = list(
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/semi_auto
 	)
 	fire_sound = 'sound/f13weapons/cowboyrepeaterfire.ogg'
 	gun_sound_properties = list(
@@ -656,14 +656,14 @@
 	zoom_factor = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = HMG_RECOIL(3)
+	init_recoil = RIFLE_RECOIL(3.8)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slower
 	)
 	zoomable = TRUE
 	zoom_amt = 10
-	zoom_out_amt = 13
+	zoom_out_amt = 18
 	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
 	pump_sound = 'sound/f13weapons/antimaterielreload.ogg'
 	gun_sound_properties = list(

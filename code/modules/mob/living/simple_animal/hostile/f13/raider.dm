@@ -497,9 +497,21 @@
 	melee_damage_upper = 42
 	footstep_type = FOOTSTEP_MOB_SHOE
 
+/mob/living/simple_animal/hostile/raider/ranged/junker
+	name = "Junker"
+	desc = "A raider from the Junker gang."
+	faction = list("raider", "wastebot")
+	icon_state = "junker_ranged"
+	icon_living = "junker_ranged"
+	icon_dead = "junker_dead"
+	mob_armor = ARMOR_VALUE_RAIDER_COMBAT_ARMOR_RUSTY
+	maxHealth = 100
+	health = 100
+	footstep_type = FOOTSTEP_MOB_SHOE
+
 /mob/living/simple_animal/hostile/raider/ranged/boss/junker
-	name = "Junker Footman"
-	desc = "A Junker raider, outfitted in reinforced combat raider armor with extra metal plates."
+	name = "Junker Scrapper"
+	desc = "A Junker outfitted in reinforced combat raider armor with extra metal plates and an armoured duster."
 	icon_state = "junker_scrapper"
 	icon_living = "junker_scrapper"
 	icon_dead = "junker_dead"
@@ -513,9 +525,53 @@
 	melee_damage_upper = 38
 	footstep_type = FOOTSTEP_MOB_SHOE
 
+/mob/living/simple_animal/hostile/raider/ranged/junker/scavver
+	name = "Junker Scavver"
+	desc = "A Junker outfitted in an armoured duster with a Pip-Boy 2000, the screen glowing red."
+	icon_state = "junker_scavver"
+	icon_living = "junker_scavver"
+	icon_dead = "junker_dead"
+	faction = list("raider", "wastebot")
+	mob_armor = ARMOR_VALUE_RAIDER_COMBAT_ARMOR_BOSS
+	maxHealth = 165
+	health = 165
+	ranged = TRUE
+	retreat_distance = 6
+	minimum_distance = 8
+	damage_coeff = list(BRUTE = 1, BURN = 0.75, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
+	rapid_melee = 1
+	footstep_type = FOOTSTEP_MOB_SHOE
+	ranged_cooldown_time = 2 SECONDS
+	projectiletype = /obj/item/projectile/bullet/c45/op
+	projectilesound = 'sound/weapons/gunshot.ogg'
+	var/list/spawned_mobs = list()
+	var/max_mobs = 2
+	var/mob_types = list(/mob/living/simple_animal/hostile/raider/junker)
+	var/spawn_time = 5 SECONDS
+	var/spawn_text = "appears from"
+	footstep_type = FOOTSTEP_MOB_SHOE
+
+/mob/living/simple_animal/hostile/raider/ranged/junker/scavver/Initialize()
+	. = ..()
+	AddComponent(/datum/component/spawner, mob_types, spawn_time, faction, spawn_text, max_mobs, _range = 3)
+
+/mob/living/simple_animal/hostile/raider/ranged/junker/scavver/death()
+	RemoveComponentByType(/datum/component/spawner)
+	. = ..()
+
+/mob/living/simple_animal/hostile/raider/ranged/junker/scavver/Destroy()
+	RemoveComponentByType(/datum/component/spawner)
+	. = ..()
+
+/mob/living/simple_animal/hostile/raider/ranged/junker/scavver/Aggro()
+	. = ..()
+	if(.)
+		return
+	summon_backup(10)
+
 /mob/living/simple_animal/hostile/raider/junker/creator
 	name = "Junker Field Creator"
-	desc = "A Junker raider, specialized in spitting out eyebots on the fly with any scrap they can find."
+	desc = "A Junker specialized in spitting out eyebots on the fly with any scrap they can find."
 	icon_state = "junker"
 	icon_living = "junker"
 	icon_dead = "junker_dead"
@@ -558,7 +614,7 @@
 
 /mob/living/simple_animal/hostile/raider/junker/boss
 	name = "Junker Boss"
-	desc = "A Junker boss, clad in hotrod power armor, and wielding a deadly rapid-fire shrapnel cannon."
+	desc = "A Junker boss, clad in a sentry bot helmet, wielding a deadly rapid-fire shrapnel cannon."
 	icon_state = "junker_boss"
 	icon_living = "junker_boss"
 	icon_dead = "junker_dead"
@@ -577,3 +633,20 @@
 	loot = list(/obj/item/stack/f13Cash/random/high)
 	footstep_type = FOOTSTEP_MOB_SHOE
 
+/mob/living/simple_animal/hostile/raider/junker/boss/overboss
+	name = "Junker Overboss"
+	desc = "The Boss of all Junker scrapheaps, clad in armour torn from a Sentry Bot, carrying a minigun torn from the wreck."
+	icon_state = "junker_overboss"
+	icon_living = "junker_overboss"
+	icon_dead = "junker_dead"
+	mob_armor = ARMOR_VALUE_ROBOT_SECURITY
+	maxHealth = 200
+	health = 200
+	ranged = TRUE
+	rapid_melee = 1
+	ranged_cooldown_time = 1 SECONDS
+	projectiletype = /obj/item/projectile/bullet/a556/microshrapnel
+	projectilesound = 'sound/f13weapons/auto5.ogg'
+	loot = list(/obj/item/stack/f13Cash/random/high,)
+	footstep_type = FOOTSTEP_MOB_SHOE
+	environment_smash = ENVIRONMENT_SMASH_RWALLS

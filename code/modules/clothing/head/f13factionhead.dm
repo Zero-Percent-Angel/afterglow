@@ -580,7 +580,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	armor = ARMOR_VALUE_MEDIUM
 
 /obj/item/clothing/head/f13/ncr/standard/conscript
-	name = "NCR conscript helmet"
+	name = "NCR recruit helmet"
 	desc = "A standard issue NCR steel helmet. Looks like you can write on it and strap a few items on the helmet band."
 	icon_state = "ncr_steelpot"
 	item_state = "ncr_steelpot"

@@ -69,20 +69,23 @@
 			updateUsrDialog()
 			return
 	if(scantype == "create" && !engaged_in_science)
+		engaged_in_science = TRUE
 		if (!linked_console.stored_research.isNodeResearchedID("weaponry"))
 			say("Weaponry research required.")
+			engaged_in_science = FALSE
 			return
 		say("Blueprint creation begun.")
 		var/choosen_step = input(usr, "What kind of blueprint do you wish to create?", "Blueprint Creation") in blueprint_types
 		if ((choosen_step == "big energy" || choosen_step == "small energy") && !linked_console.stored_research.isNodeResearchedID("adv_weaponry"))
 			say("Advanced weaponry research required.")
+			engaged_in_science = FALSE
 			return
 		var/points_to_contribute =  input(usr, "How many research points do you wish to use as a boost?", "Blueprint Creation") in point_selections
 		if (!linked_console.stored_research.can_afford(list(TECHWEB_POINT_TYPE_GENERIC = points_to_contribute)))
 			say("Not enough points.")
+			engaged_in_science = FALSE
 			return
 		say("Creation started.")
-		engaged_in_science = TRUE
 		update_overlays()
 		if (do_after(usr, 10 SECONDS, 1, src, required_mobility_flags = MOBILITY_USE))
 			//need to make sure someone hasn't spent all the points while we were working!

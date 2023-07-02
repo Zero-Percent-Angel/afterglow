@@ -5,6 +5,13 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	armor = ARMOR_VALUE_LIGHT
 
+/obj/item/clothing/head/helmet/f13/raider
+	name = "yankee raider helmet"
+	desc = "Long time ago, it has belonged to a football player, now it belongs to wasteland."
+	icon_state = "yankee"
+	item_state = "yankee"
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE
+
 /obj/item/clothing/head/helmet/f13/raider/arclight
 	name = "arclight raider helmet"
 	desc = "Welding mask with rare polarizing glass thats somehow still in working order. A treasured item in the wasteland."
@@ -13,6 +20,7 @@
 	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	flash_protect = 2
 	tint = 0.5
+	can_toggle = 1
 
 /obj/item/clothing/head/helmet/f13/motorcycle
 	name = "motorcycle helmet"
@@ -341,7 +349,7 @@
 	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/legion/venator
-	name = "legion explorer hood"
+	name = "legion venator hood"
 	desc = "A leather hood with a sturdy metal skullcap and a gold bull insignia in the front."
 	icon_state = "legion-venator"
 	item_state = "legion-venator"
@@ -395,7 +403,8 @@
 	righthand_file = ""
 	icon = 'icons/fallout/clothing/helmets.dmi'
 	icon_state = "legheavy"
-	item_state = "legdecanvet"
+	item_state = "legheavy"
+	can_toggle = 1
 
 /////////////
 /*CENTURION*/

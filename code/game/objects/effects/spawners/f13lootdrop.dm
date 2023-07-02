@@ -316,7 +316,7 @@
 				/obj/item/clothing/suit/armor/medium/raider/rebel,
 				/obj/item/clothing/suit/armor/medium/raider/scrapcombat,
 				/obj/item/clothing/suit/armor/medium/raider/slam,
-				/obj/item/clothing/suit/armor/medium/raider/wastewar,
+				/obj/item/clothing/suit/armor/light/raider/wastewar,
 				/obj/item/clothing/suit/armor/medium/combat/mk2/raider) // da grail
 
 /obj/effect/spawner/lootdrop/f13/armor/randomraiderhead //random raider armor
@@ -766,16 +766,14 @@
 	name = "mid tier energy gun"
 	loot = list(/obj/effect/spawner/bundle/f13/aer9 = 40,
 				/obj/effect/spawner/bundle/f13/wattz2k = 30,
-				/obj/effect/spawner/bundle/f13/plasmapistol = 25,
-				/obj/effect/spawner/bundle/f13/ionrifle = 5
+				/obj/effect/spawner/bundle/f13/plasmapistol = 25
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh //overlaps with midtier
 	name = "mid-high tier energy gun"
 	loot = list(/obj/item/gun/energy/laser/aer12 = 20,
 				/obj/effect/spawner/bundle/f13/plasmapistol = 25,
-				/obj/effect/spawner/bundle/f13/wattz2k = 15,
-				/obj/effect/spawner/bundle/f13/ionrifle = 25
+				/obj/effect/spawner/bundle/f13/wattz2k = 15
 				)
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/high
 	name = "high tier energy gun"
@@ -783,7 +781,8 @@
 				/obj/effect/spawner/bundle/f13/tribeam = 20,
 				/obj/effect/spawner/bundle/f13/rcw = 20,
 				/obj/effect/spawner/bundle/f13/wattz2kext = 10, //Now a high tier gun.
-				/obj/effect/spawner/bundle/f13/plasmaglock = 20
+				/obj/effect/spawner/bundle/f13/plasmaglock = 20,
+				/obj/item/minigunpack = 20
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh
@@ -801,7 +800,8 @@
 				/obj/item/gun/energy/laser/plasma/pistol/eve,
 				/obj/item/gun/energy/laser/wattz2ks,
 				/obj/effect/spawner/bundle/f13/aer14,
-				/obj/item/gun/energy/laser/plasma/pistol/adam
+				/obj/item/gun/energy/laser/plasma/pistol/adam,
+				/obj/effect/spawner/bundle/f13/ionrifle
 				)
 
 //Ballistic Weapon Spawners
@@ -931,7 +931,8 @@
 				/obj/effect/spawner/bundle/f13/fnfal = 10,
 				/obj/item/gun/ballistic/rocketlauncher = 10,
 				/obj/item/gun/ballistic/automatic/bozar = 10,
-				/obj/effect/spawner/bundle/f13/infiltrator = 15
+				/obj/effect/spawner/bundle/f13/infiltrator = 15,
+				/obj/item/minigunpackbal5mm = 10
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhighcargo //this loot table is for the prewar cargo crate
