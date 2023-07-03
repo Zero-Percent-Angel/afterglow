@@ -146,10 +146,10 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 /obj/item/kit_spawner/follower/admin
 	name = "Science survival kit"
 	desc = "Packed with the essentials: Some kind of cool weapon."
-	allowed_flags = LOADOUT_FLAG_WASTER | LOADOUT_FLAG_PREMIUM
+	allowed_flags = LOADOUT_FLAG_WASTER
 	multiple_choice = list(
 		"Primary" = LOADOUT_ROOT_ENTRIES,
-		"Premium" = list(LOADOUT_CAT_PREMIUM)
+		"Secondary" = list(LOADOUT_CAT_PISTOL)
 	)
 
 /obj/item/kit_spawner/bos
@@ -289,7 +289,7 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 			if(GLOB.loadout_datums[loadies][LOADOUT_CLASS] == loadya && CHECK_BITFIELD(GLOB.loadout_datums[loadies][LOADOUT_BITFIELD], allowed_flags))
 				list2add[loadies] = GLOB.loadout_datums[loadies][LOADOUT_PATH]
 		if(LAZYLEN(list2add))
-			if(!islist(list_of_stuff[loadya])) 
+			if(!islist(list_of_stuff[loadya]))
 				list_of_stuff[loadya] = list()
 			list2add = sort_list(list2add)
 			list_of_stuff[loadya] |= list2add
