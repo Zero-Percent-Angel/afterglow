@@ -142,6 +142,11 @@
 	freq_listening = list(FREQ_RANGER)
 	autolinkers = list("ranger")
 
+/obj/machinery/telecomms/server/presets/commerce
+	id = "Commerce Server"
+	freq_listening = list(FREQ_TOWN_COMMERCE)
+	autolinkers = list("commerce")
+
 /obj/machinery/telecomms/server/presets/khans
 	id = "Khans Server"
 	freq_listening = list(FREQ_KHANS)
