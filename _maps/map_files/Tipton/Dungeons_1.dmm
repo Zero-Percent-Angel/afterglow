@@ -4363,6 +4363,15 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"mD" = (
+/mob/living/simple_animal/hostile/handy/robobrain{
+	faction = list("hostile");
+	health = 800;
+	name = "redline robobrain";
+	auto_fire_delay = 2
+	},
+/turf/open/floor/f13,
+/area/ruin/powered)
 "mF" = (
 /obj/structure/door_assembly/door_assembly_sec,
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -6182,7 +6191,8 @@
 	name = "ESC-2403";
 	desc = "A sentry bot armed with a modified breacher shotgun and covered in thick armor plating, this one has ESC-2403 stamped onto it's chestplate and looks alot tougher than your average sentry bot.";
 	faction = list("hostile");
-	auto_fire_delay = 2
+	auto_fire_delay = 2;
+	health = 1000
 	},
 /turf/open/floor/f13,
 /area/ruin/powered)
@@ -7789,6 +7799,7 @@
 "wR" = (
 /obj/structure/reagent_dispensers/barrel/dangerous,
 /obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/obj/item/gun/energy/gammagun,
 /turf/open/floor/f13{
 	icon_state = "yellowdirtyfull"
 	},
@@ -9595,7 +9606,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/white/corner,
 /area/ruin/powered)
 "Cv" = (
-/obj/effect/spawner/lootdrop/f13/advcrafting,
+/obj/item/gun/energy/laser/wattz/recharger/rifle{
+	desc = "An experimental weapon as the designation implies, it charges its capacitor banks over time using radioactive decay. It's weak but the trade off is it'll never need cells to fire."
+	},
 /turf/closed/indestructible/rock,
 /area/f13/tunnel)
 "Cw" = (
@@ -9919,6 +9932,12 @@
 /turf/open/water,
 /area/f13/tunnel)
 "Du" = (
+/mob/living/simple_animal/hostile/handy/robobrain{
+	faction = list("hostile");
+	health = 800;
+	name = "redline robobrain";
+	auto_fire_delay = 2
+	},
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -10801,13 +10820,14 @@
 /turf/open/floor/plasteel/floorgrime,
 /area/f13/tunnel)
 "Gl" = (
-/obj/structure/rack,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_containers/glass/bottle/mutagen,
-/obj/item/reagent_containers/glass/bottle/mutagen,
-/obj/item/reagent_containers/glass/bottle/mutagen,
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
-/area/f13/tunnel)
+/obj/machinery/porta_turret/xray{
+	faction = list("hostile");
+	scan_range = 10
+	},
+/turf/open/floor/f13{
+	icon_state = "yellowsiding"
+	},
+/area/ruin/powered)
 "Gm" = (
 /mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant,
 /obj/structure/lattice,
@@ -13104,8 +13124,15 @@
 /area/f13/tunnel)
 "Nm" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/clothing/head/helmet/f13/power_armor/t45d,
-/obj/item/clothing/suit/armor/power_armor/t45d,
+/obj/item/gun/energy/laser/wattz/recharger/rifle{
+	desc = "An experimental weapon as the designation implies, it charges its capacitor banks over time using radioactive decay. It's weak but the trade off is it'll never need cells to fire."
+	},
+/obj/item/gun/energy/laser/wattz/recharger/rifle{
+	desc = "An experimental weapon as the designation implies, it charges its capacitor banks over time using radioactive decay. It's weak but the trade off is it'll never need cells to fire."
+	},
+/obj/item/gun/energy/laser/wattz/recharger/rifle{
+	desc = "An experimental weapon as the designation implies, it charges its capacitor banks over time using radioactive decay. It's weak but the trade off is it'll never need cells to fire."
+	},
 /turf/open/floor/f13{
 	dir = 1;
 	icon_state = "yellowsiding"
@@ -28957,7 +28984,7 @@ QW
 cG
 cV
 WI
-Gl
+WI
 WI
 cV
 cG
@@ -31107,7 +31134,7 @@ aa
 aa
 aa
 aa
-Cv
+aa
 aa
 aa
 aa
@@ -32870,11 +32897,11 @@ VK
 mc
 xf
 mc
+mD
 mc
 mc
 mc
-mc
-JD
+Gl
 ZT
 VK
 mc
@@ -33131,7 +33158,7 @@ mc
 mc
 xf
 mc
-JD
+Gl
 ZT
 VK
 xf
@@ -38543,7 +38570,7 @@ aa
 aa
 aa
 aa
-aa
+Cv
 aa
 aa
 aa
