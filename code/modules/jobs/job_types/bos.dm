@@ -184,6 +184,8 @@ Head Paladin
 /datum/outfit/job/bos/f13sentinel
 	name = "Head Paladin"
 	jobtype = /datum/job/bos/f13sentinel
+	suit =			/obj/item/clothing/suit/armor/power_armor/t51b
+	head =			/obj/item/clothing/head/helmet/f13/power_armor/t51b
 	uniform = 		/obj/item/clothing/under/f13/recon
 	accessory = 	/obj/item/clothing/accessory/bos/sentinel
 	glasses =       /obj/item/clothing/glasses/sunglasses
