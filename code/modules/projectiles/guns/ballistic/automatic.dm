@@ -359,10 +359,11 @@
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
 	icon_prefix = "smg10mm"
+	wielded_icon = "smg10mm2"
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_BULKY
-	mag_type = /obj/item/ammo_box/magazine/m10mm
-	init_mag_type = /obj/item/ammo_box/magazine/m10mm/adv/ext
+	mag_type = /obj/item/ammo_box/magazine/m10mm/smg
+	init_mag_type = /obj/item/ammo_box/magazine/m10mm/smg
 
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
