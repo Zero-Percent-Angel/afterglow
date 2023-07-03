@@ -24,6 +24,7 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	"[FREQ_TOWN_COMMERCE]" = "servradio",
 	"[FREQ_TOWN_PD]" = "secradio",
 	"[FREQ_LEGION]" = "secradio",
+	"[FREQ_KHANS]" = "khanradio",
 	"[FREQ_TOWN_MAYOR]" = "comradio",
 	"[FREQ_RANGER]" = "rangerradio"
 	))
@@ -172,7 +173,7 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	var/channel_number = rand(1,9999)
 	GLOB.reverseradiochannels["[freq]"] = "CH-[channel_number]"
 	return GLOB.reverseradiochannels["[freq]"]
-	
+
 
 /atom/movable/proc/attach_spans(input, list/spans)
 	if((input[1] == "!") && (length(input) > 2))
