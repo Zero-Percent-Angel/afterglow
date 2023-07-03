@@ -602,8 +602,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	mask = /obj/item/clothing/mask/cigarette/cigar/havana
 	backpack_contents = list(
 		/obj/item/book/granter/trait/gunslinger = 1,
-		/obj/item/gun/ballistic/revolver/revolver45 = 2,
-		/obj/item/ammo_box/c45 = 1,
+		/obj/item/gun/ballistic/revolver/m29/desert_ranger = 2,
+		/obj/item/ammo_box/m44box = 3,
 		/obj/item/lighter = 1,
 		)
 
