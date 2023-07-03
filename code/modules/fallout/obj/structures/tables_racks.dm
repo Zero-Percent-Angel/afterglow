@@ -13,6 +13,8 @@
 	name = "booth table"
 	desc = "A diner style booth table."
 	icon = 'icons/obj/smooth_structures/booth_table.dmi'
+	buildstack = /obj/item/stack/sheet/mineral/wood
+	max_integrity = 80
 	icon_state = "boothtable"
 	flags_1 = NODECONSTRUCT_1
 	canSmoothWith = list(/obj/structure/table/booth)
