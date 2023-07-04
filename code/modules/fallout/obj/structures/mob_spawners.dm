@@ -244,7 +244,7 @@ GLOBAL_LIST_EMPTY(player_made_nests)
 					/mob/living/simple_animal/hostile/raider/firefighter = 2,
 					/mob/living/simple_animal/hostile/raider/baseball = 5,
 					/mob/living/simple_animal/hostile/raider/ranged = 2,
-					/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged = 1,
+					/mob/living/simple_animal/hostile/raider/ranged/metalranged = 1,
 					/mob/living/simple_animal/hostile/raider/ranged/biker = 1,
 					/mob/living/simple_animal/hostile/raider/tribal = 1)
 
@@ -257,7 +257,7 @@ GLOBAL_LIST_EMPTY(player_made_nests)
 /obj/structure/nest/raider/ranged
 	max_mobs = 1
 	mob_types = list(/mob/living/simple_animal/hostile/raider/ranged = 4,
-					/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged = 2,
+					/mob/living/simple_animal/hostile/raider/ranged/metalranged = 2,
 					/mob/living/simple_animal/hostile/raider/ranged/biker = 2)
 
 /obj/structure/nest/raider/boss
