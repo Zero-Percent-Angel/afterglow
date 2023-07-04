@@ -623,12 +623,13 @@
 	health = 165
 	ranged = TRUE
 	rapid_melee = 1
+	loot = list(/obj/item/gun/ballistic/rifle/mag/antimateriel/incinerator, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/effect/spawner/lootdrop/f13/armor/randomraiderchest, /obj/item/clothing/under/f13/ravenharness, /obj/item/stack/f13Cash/random/high)
 	retreat_distance = 4
 	minimum_distance = 6
 	extra_projectiles = 2
 	ranged_cooldown_time = 2 SECONDS
 	auto_fire_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	projectiletype = /obj/item/projectile/bullet/c22
+	projectiletype = /obj/item/projectile/incendiary/flamethrower
 	projectilesound = 'sound/f13weapons/auto5.ogg'
 	loot = list(/obj/item/stack/f13Cash/random/high)
 	footstep_type = FOOTSTEP_MOB_SHOE
@@ -645,6 +646,7 @@
 	ranged = TRUE
 	rapid_melee = 1
 	ranged_cooldown_time = 1 SECONDS
+	loot = list(/obj/item/gun/ballistic/rifle/mag/antimateriel/incinerator, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/effect/spawner/lootdrop/f13/armor/randomraiderchest, /obj/item/stack/f13Cash/random/banker)
 	projectiletype = /obj/item/projectile/bullet/a556/microshrapnel
 	projectilesound = 'sound/f13weapons/auto5.ogg'
 	loot = list(/obj/item/stack/f13Cash/random/high,)
