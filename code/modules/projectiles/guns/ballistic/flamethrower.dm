@@ -150,3 +150,11 @@
 /obj/item/gun/ballistic/m2flamethrower/dropped(mob/living/user)
 	. = ..()
 	ammo_pack.attach_gun(user)
+
+//Incinerators, because it seems appropriate to have them in here
+
+/obj/item/flamethrower/incinerator
+	name = "incinerator"
+	desc = "For those times when you really need to ruin one persons day."
+	icon_state = "incinerator"
+	item_
