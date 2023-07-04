@@ -13,7 +13,7 @@
 	item_flags = NONE
 	pin = null
 	no_pin_required = TRUE
-	trigger_guard = TRIGGER_GUARD_NONE //so ashwalkers can use it
+	trigger_guard = TRIGGER_GUARD_ALLOW_ALL //so ashwalkers can use it
 	spawnwithmagazine = TRUE
 	casing_ejector = TRUE
 	var/recentdraw
