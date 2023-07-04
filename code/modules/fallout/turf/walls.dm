@@ -280,54 +280,71 @@ turf/closed/wall/f13/wood/house/update_damage_overlay()
 	icon_state = "matrix"
 	var/in_use = FALSE
 
-/turf/closed/indestructible/f13/matrix/MouseDrop_T(atom/dropping, mob/user)
-	. = ..()
-	if(!isliving(user) || user.incapacitated())
-		return //No ghosts or incapacitated folk allowed to do this.
-	if(!ishuman(dropping))
-		return //Only humans have job slots to be freed.
-	if(in_use) // Someone's already going in.
-		return
-	var/mob/living/carbon/human/departing_mob = dropping
-	if(departing_mob != user && departing_mob.client)
-		to_chat(user, span_warning("This one retains their free will. It's their choice if they want to depart or not."))
-		return
-	if(alert("Are you sure you want to [departing_mob == user ? "depart the area for good (you" : "send this person away (they"] will be removed from the current round, the job slot freed)?", "Departing the swamps", "Confirm", "Cancel") != "Confirm")
-		return
-	if(user.incapacitated() || QDELETED(departing_mob) || (departing_mob != user && departing_mob.client) || get_dist(src, dropping) > 2 || get_dist(src, user) > 2)
-		return //Things have changed since the alert happened.
-	if(departing_mob.logout_time && departing_mob.logout_time + 2 MINUTES > world.time)
-		to_chat(user, span_warning("This mind has only recently departed. Wait at most two minutes before sending this character out of the round."))
-		return
-	user.visible_message(span_warning("[user] [departing_mob == user ? "is trying to leave the swamps!" : "is trying to send [departing_mob] away!"]"), span_notice("You [departing_mob == user ? "are trying to leave the swamps." : "are trying to send [departing_mob] away."]"))
-	icon_state = "matrix_going" // ALERT, WEE WOO
-	update_icon()
-	in_use = TRUE
-	if(!do_after(user, 50, target = src))
-		icon_state = initial(icon_state)
-		in_use = FALSE
-		return
-	icon_state = initial(icon_state)
-	in_use = FALSE
-	update_icon()
-	var/dat = "[key_name(user)] has despawned [departing_mob == user ? "themselves" : departing_mob], job [departing_mob.job], at [AREACOORD(src)]. Contents despawned along:"
-	if(!length(departing_mob.contents))
-		dat += " none."
-	else
-		var/atom/movable/content = departing_mob.contents[1]
-		dat += " [content.name]"
-		for(var/i in 2 to length(departing_mob.contents))
-			content = departing_mob.contents[i]
-			dat += ", [content.name]"
-		dat += "."
-	message_admins(dat)
-	log_admin(dat)
-	if(departing_mob.stat == DEAD)
-		departing_mob.visible_message(span_notice("[user] pushes the body of [departing_mob] over the border. They're someone else's problem now."))
-	else
-		departing_mob.visible_message(span_notice("[departing_mob == user ? "Out of their own volition, " : "Ushered by [user], "][departing_mob] crosses the border and departs the swamps."))
-	departing_mob.despawn()
+/mob/living/proc/do_matrix_checks(mob/living/user)
+	if((user != src) && !user.Adjacent(src))
+		return FALSE
 
+	if(!isliving(user) || user.stat)
+		return FALSE
+
+	if(client && user != src)
+		to_chat(span_warning("Cannot matrix someone else while they are connected."))
+		return FALSE
+
+	if(user != src)
+		var/grace = logout_time + 2 MINUTES
+		if(world.time < grace)
+			to_chat(user, span_warning("You must wait at least two minutes to matrix another player."))
+			return FALSE
+
+	return TRUE
+
+/mob/living/proc/do_matrix(mob/living/user)
+	if(!do_matrix_checks(user))
+		return
+	var/resp = tgui_alert(
+		user,
+		"Are you sure you want to matrix[((user != src) ? " them" : "")]?",
+		"Matrix",
+		list("Yes", "No"),
+		10 SECONDS
+	)
+	if(resp != "Yes")
+		return
+	if(!do_matrix_checks(user))
+		return
+	if(!do_after(user, 5 SECONDS, target=src))
+		return
+
+	var/list/items = list()
+	for(var/obj/item/item in contents)
+		items += "[item.type]"
+	var/item_string = english_list(items)
+
+	log_game("MATRIX: [key_name(user)] has matrixed [key_name(src)] at [AREACOORD(src)]")
+	message_admins("[key_name(user)] has matrixed [key_name(src)]([ADMIN_JMP(loc)]).")
+	message_admins("\tContents: '[item_string]'")
+
+	var/mob/living/carbon/human/self = src
+	self.despawn()
+
+/turf/closed/indestructible/f13/matrix/MouseDrop_T(mob/living/carbon/human/dropping, mob/user)
+	. = ..()
+	if(!istype(dropping))
+		return
+
+	if(in_use)
+		return
+	in_use = TRUE
+
+	icon_state = "matrix_going"
+	update_icon()
+
+	dropping.do_matrix(user)
+
+	icon_state = initial(icon_state)
+	update_icon()
+	in_use = FALSE
 
 /turf/closed/indestructible/f13/obsidian //Just like that one game studio that worked on the original game, or that block in Minecraft!
 	name = "obsidian"

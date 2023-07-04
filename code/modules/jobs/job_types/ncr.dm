@@ -209,7 +209,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "The Appointee"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/deagle = 2,
-		/obj/item/ammo_box/magazine/d12g = 6,
+		/obj/item/ammo_box/magazine/m44 = 6,
 		/obj/item/storage/box/ration/menu_eight = 1,
 		/obj/item/melee/onehanded/knife/trench = 1,
 		)
@@ -435,7 +435,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		/obj/item/melee/classic_baton/telescopic = 1,
 		/obj/item/storage/box/ration/menu_two = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/seatechnical
@@ -603,8 +602,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	mask = /obj/item/clothing/mask/cigarette/cigar/havana
 	backpack_contents = list(
 		/obj/item/book/granter/trait/gunslinger = 1,
-		/obj/item/gun/ballistic/revolver/revolver45 = 2,
-		/obj/item/ammo_box/c45 = 1,
+		/obj/item/gun/ballistic/revolver/m29/desert_ranger = 2,
+		/obj/item/ammo_box/m44box = 3,
 		/obj/item/lighter = 1,
 		)
 
@@ -661,7 +660,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/clothing/mask/gas/ranger = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
 		/obj/item/grenade/smokebomb = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/rangerrecon
@@ -685,6 +683,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/m556/rifle/extended = 1,
 		/obj/item/gun/ballistic/revolver/m29 = 1,
 		/obj/item/ammo_box/m44 = 2,
+		/obj/item/clothing/head/f13/ncr/patrol
 		)
 
 /datum/outfit/loadout/rangerpatrol
@@ -696,6 +695,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/w308 = 2,
 		/obj/item/gun/ballistic/revolver/m29/snub = 1,
 		/obj/item/ammo_box/m44box = 1,
+		/obj/item/clothing/head/f13/ncr/patrol
 		)
 
 // NCR Civilian Ranger
@@ -913,7 +913,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
 		/obj/item/grenade/f13/frag = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/combatengineerbuilder
@@ -932,7 +931,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/stack/sheet/glass/fifty = 1,
 		/obj/item/stack/ore/blackpowder/twenty = 1,
 		/obj/item/shovel/trench = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/combatengineertrapper
@@ -948,7 +946,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/book/granter/trait/explosives = 1,
 		/obj/item/book/granter/trait/explosives_advanced = 1,
 		/obj/item/shovel/trench = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/combatengineerflamethrower
@@ -963,7 +960,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/m2flamethrowertank = 1,
 		/obj/item/shovel/trench = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/combatengineerrocketeer
@@ -977,7 +973,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_casing/caseless/rocket/big = 1,
 		/obj/item/book/granter/trait/explosives = 1,
 		/obj/item/shovel/trench = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 // MILITARY POLICE
@@ -1012,7 +1007,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
 		/obj/item/ammo_box/shotgun/bean = 2,
 		/obj/item/melee/classic_baton/militarypolice = 1,
-		/obj/item/stack/crafting/armor_plate = 4,
 		)
 
 /datum/outfit/job/ncr/f13mp/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1064,7 +1058,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
 		/obj/item/storage/firstaid/regular = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
-		/obj/item/stack/crafting/armor_plate = 4,
 		)
 
 
@@ -1487,7 +1480,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/melee/classic_baton/telescopic = 1,
 		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		/obj/item/storage/firstaid/regular = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/job/ncr/f13medicalofficer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)

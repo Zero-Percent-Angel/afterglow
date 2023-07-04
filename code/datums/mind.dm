@@ -36,7 +36,7 @@
 	var/active = 0
 
 	var/memory
-
+	var/mind_created_at
 	var/assigned_role
 	var/special_role
 	var/list/restricted_roles = list()
@@ -77,6 +77,7 @@
 	src.key = key
 	soulOwner = src
 	martial_art = default_martial_art
+	mind_created_at = world.time
 
 /datum/mind/Destroy()
 	SSticker.minds -= src

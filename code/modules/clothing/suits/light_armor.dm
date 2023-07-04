@@ -301,6 +301,15 @@
 	item_state = "leather_jacket_fighter"
 	body_parts_hidden = ARMS | GROIN
 
+/obj/item/clothing/suit/armor/light/raider/wastewar
+	name = "wasteland warrior armor"
+	desc = "a mad attempt to recreate armor based of images of japanese samurai, using a sawn up old car tire as shoulder pads, bits of chain to cover the hips and pieces of furniture for a breastplate. Might stop a blade but nothing else, burns easily too. Comes with an enormous scabbard welded to the back!"
+	icon_state = "wastewar"
+	item_state = "wastewar"
+	resistance_flags = FLAMMABLE
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/massive/swords
+	body_parts_hidden = CHEST | GROIN
+
 /////////////////////
 // DUSTERS & COATS //
 /////////////////////
@@ -565,7 +574,7 @@
 	icon_state = "legion_prime"
 	item_state = "legion_prime"
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/light/legion/explorer
 	name = "legion explorer armor"
@@ -573,7 +582,7 @@
 	icon_state = "legion_explorer"
 	item_state = "legion_explorer"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/binocular
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
 /obj/item/clothing/suit/armor/light/legion/explorer/assassin
 	name = "legion assassin armor"

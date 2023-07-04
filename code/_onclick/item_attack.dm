@@ -120,7 +120,7 @@
 			force_modifier += (-force * 0.2)
 
 		if(HAS_TRAIT(user, TRAIT_BUFFOUT_BUFF))
-			force_modifier += (force * 0.25)
+			force_modifier += (force * 0.1)
 
 		if(HAS_TRAIT(user, TRAIT_FEV))
 			force_modifier += (force * 0.35)

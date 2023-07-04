@@ -13,7 +13,7 @@
 
 	//format is weakref of mob as key, entry is number (That way no one can steal, vending machines might be stupid, but people are not)
 	var/list/stored_caps = list()
-	
+
 /mob/living/simple_animal/hostile/retaliate/talker/trader/dialog_options(mob/talker, display_options)
 	var/dat = ""
 	if (!broken_trust.Find(WEAKREF(talker)) && !enemies.Find(WEAKREF(talker)))
@@ -68,12 +68,12 @@
 			random_list += pick(pick(list(GLOB.loot_t1_melee, GLOB.loot_t2_melee, GLOB.loot_t3_melee, GLOB.loot_t4_melee)))
 		else
 			random_list += pick(pick(list(GLOB.loot_t1_range, GLOB.loot_t2_range, GLOB.loot_t3_range, GLOB.loot_t4_range)))
-	
+
 	//our special something for high speech individuals or for expert barter skill
 	var/list/hidden_list = list()
-	hidden_list += pick(list(GLOB.loot_t5_armor))
-	hidden_list += pick(list(GLOB.loot_t5_melee))
-	hidden_list += pick(list(GLOB.loot_t5_range))
+	hidden_list += pick(GLOB.loot_t5_armor)
+	hidden_list += pick(GLOB.loot_t5_melee)
+	hidden_list += pick(GLOB.loot_t5_range)
 
 	// populate our stock
 	for(var/typepath in random_list)
@@ -89,7 +89,7 @@
 		R.custom_price = initial(temp.custom_price)
 		R.custom_premium_price = initial(temp.custom_price)
 		product_records += R
-	
+
 	for(var/typepath in hidden_list)
 		var/amount = 1
 
@@ -112,6 +112,8 @@
 /mob/living/simple_animal/hostile/retaliate/talker/trader/Topic(href, href_list)
 	if(href_list["trade"])
 		say("Alright, here take a look at what I've got.")
+		if (intimidated.Find(WEAKREF(usr)) || usr.skill_check(SKILL_BARTER, HARD_CHECK))
+			say("Couple of special things just for you.")
 		show_trade_box(usr)
 	..()
 
@@ -132,15 +134,21 @@
 			else
 				.["user"]["job"] = "No Job"
 				.["user"]["department"] = "No Department"
+		else
+			.["user"] = list()
+			.["user"]["job"] = "No Job"
+			.["user"]["department"] = "No Department"
 	.["stock"] = list()
 	if (intimidated.Find(WEAKREF(user)) || user.skill_check(SKILL_BARTER, HARD_CHECK))
-		say("Couple of special things just for you.")
-		for (var/datum/data/vending_product/R in product_records + hidden_records)
+		var/list/combined = list()
+		combined += product_records
+		combined += hidden_records
+		for (var/datum/data/vending_product/R in combined)
 			.["stock"][R.name] = R.amount
 	else
 		for (var/datum/data/vending_product/R in product_records)
 			.["stock"][R.name] = R.amount
-	.["extended_inventory"] = null
+	.["extended_inventory"] = (intimidated.Find(WEAKREF(user)) || user.skill_check(SKILL_BARTER, HARD_CHECK))
 	.["insertedCaps"] = stored_caps[WEAKREF(user)] ? stored_caps[WEAKREF(user)] : "0"
 	.["forceFree"] = FALSE
 
@@ -202,31 +210,28 @@
 				return
 			vend_ready = FALSE //One thing at a time!!
 			var/datum/data/vending_product/R = locate(params["ref"])
-			var/list/record_to_check = product_records 
+			var/list/record_to_check = product_records.Copy()
 			if(intimidated.Find(WEAKREF(usr)) || usr.skill_check(SKILL_BARTER, HARD_CHECK))
-				record_to_check = product_records + hidden_records
+				record_to_check = product_records.Copy() + hidden_records.Copy()
 			if(!R || !istype(R) || !R.product_path)
 				vend_ready = TRUE
 				return
-			
+
 			//debug
 			if(product_records.Find(R) && hidden_records.Find(R))
 				log_runtime("WARN - vendor [src] @ [loc] has Duplicate [R] accross normal and hidden product tables!")
-			
+
 			//Set price for the item we're using.
 			var/price_to_use = default_price
 			if(R.custom_price)
 				price_to_use = R.custom_price
 			if(hidden_records.Find(R))
 				price_to_use = R.custom_premium_price ? R.custom_premium_price : extra_price
-			
+
 			price_to_use = round((price_to_use * ((150 - usr.skill_value(SKILL_BARTER))/100)))
 
 			//Make sure we actually have the item.
-			if(R in hidden_records)
-				vend_ready = TRUE
-				return
-			else if (!(R in record_to_check))
+			if (!(R in record_to_check))
 				vend_ready = TRUE
 				message_admins("Vending machine exploit attempted by [ADMIN_LOOKUPFLW(usr)]!")
 				return
@@ -240,7 +245,7 @@
 				to_chat(usr, span_alert("Not enough caps to pay for [R.name]!"))
 				vend_ready = TRUE
 				return
-			
+
 			//Thank them like any megaglobal corp should.
 			say("Take good care of that.")
 
@@ -285,7 +290,7 @@
 			stored_caps[WEAKREF(user)] = num
 		else
 			stored_caps[WEAKREF(user)] += num
-	
+
 
 /mob/living/simple_animal/hostile/retaliate/talker/trader/basic
 	name = "A Trader"
@@ -342,7 +347,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/talker/trader/reluctant/dialog_options(mob/talker, display_options)
 	var/dat = ""
-	if (!broken_trust.Find(WEAKREF(talker)) && !enemies.Find(WEAKREF(talker)) && 
+	if (!broken_trust.Find(WEAKREF(talker)) && !enemies.Find(WEAKREF(talker)) &&
 		!failed.Find(WEAKREF(talker)) && (trusted.Find(WEAKREF(talker)) || intimidated.Find(WEAKREF(talker))))
 		dat += "<center><a href='?src=[REF(src)];trade=1'>Trade with [name].</a></center>"
 	return dat

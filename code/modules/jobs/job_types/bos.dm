@@ -154,8 +154,8 @@ Head Paladin
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
-
-
+*/
+/*
 /datum/outfit/job/bos/f13sentinel/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
@@ -184,9 +184,9 @@ Head Paladin
 /datum/outfit/job/bos/f13sentinel
 	name = "Head Paladin"
 	jobtype = /datum/job/bos/f13sentinel
-	uniform = 		/obj/item/clothing/under/f13/recon
-	suit = 			/obj/item/clothing/suit/armor/power_armor/t51b
+	suit =			/obj/item/clothing/suit/armor/power_armor/t51b
 	head =			/obj/item/clothing/head/helmet/f13/power_armor/t51b
+	uniform = 		/obj/item/clothing/under/f13/recon
 	accessory = 	/obj/item/clothing/accessory/bos/sentinel
 	glasses =       /obj/item/clothing/glasses/sunglasses
 	mask =			/obj/item/clothing/mask/gas/sechailer
@@ -199,6 +199,8 @@ Head Paladin
 		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
 		/obj/item/ammo_box/magazine/m10mm/adv/simple = 2,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
+		/obj/item/clothing/head/helmet/f13/power_armor/t51b = 1,
+		/obj/item/clothing/suit/armor/power_armor/t51b = 1,
 		/obj/item/storage/belt/army/assault = 1
 		)
 
