@@ -250,3 +250,6 @@
 
 /obj/item/assembly/igniter/proc/ignite_turf(obj/item/flamethrower/F,turf/open/location,release_amount = 0.05)
 	F.default_ignite(location,release_amount)
+
+//Incinerators, because it seems appropriate to have them in here
+
