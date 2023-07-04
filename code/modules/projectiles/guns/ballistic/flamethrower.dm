@@ -153,8 +153,31 @@
 
 //Incinerators, because it seems appropriate to have them in here
 
-/obj/item/flamethrower/incinerator
+/obj/item/gun/ballistic/m2flamethrower/incinerator
 	name = "incinerator"
 	desc = "For those times when you really need to ruin one persons day."
 	icon_state = "incinerator"
-	item_
+	item_state = "incinerator"
+	slowdown = 0.4
+	slot_flags = ITEM_SLOT_BACK
+	w_class = WEIGHT_CLASS_HUGE
+	custom_materials = null
+	burst_size = 1
+	burst_shot_delay = 1
+	fire_delay = 3
+	weapon_weight = GUN_TWO_HAND_ONLY
+	fire_sound = 'sound/weapons/flamethrower.ogg'
+	mag_type = /obj/item/ammo_box/magazine/internal/incinerator
+	casing_ejector = FALSE
+	item_flags = SLOWS_WHILE_IN_HAND
+	init_firemodes = list(
+		/datum/firemode/semi_auto
+	)
+
+/obj/item/gun/ballistic/m2flamethrower/incinerator/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
+	if(ammo_pack)
+		if(ammo_pack.overheat < ammo_pack.overheat_max)
+			ammo_pack.overheat += burst_size
+			..()
+		else
+			to_chat(user, "The Incinerator is extremely hot! You shouldn't fire it anymore or it might blow up!.")

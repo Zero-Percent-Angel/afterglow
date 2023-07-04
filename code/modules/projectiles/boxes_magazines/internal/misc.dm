@@ -28,6 +28,11 @@
 	caliber = list(CALIBER_FUEL)
 	max_ammo = 12 //6 bursts, iirc its about the same ammount as the IRL M2
 
+/obj/item/ammo_box/magazine/internal/incinerator
+	name = "incinerator fuel tank"
+	ammo_type = /obj/item/ammo_casing/caseless/flamethrower
+	caliber = list(CALIBER_FUEL)
+	max_ammo = 9 //You're not getting many shots here
 
 // BETA STUFF // Obsolete
 /obj/item/ammo_box/magazine/internal/shot/lethal/test
