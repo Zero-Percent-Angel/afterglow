@@ -258,6 +258,13 @@
 	build_path = /obj/item/ammo_box/tube/a357/empty
 	category = list("initial", "Basic Magazines", "Handmade Magazines")
 
+/datum/design/ammolathe/m10mm_smg
+	name = "empty 10mm SMG magazine (10mm)"
+	id = "m10mm_smg"
+	materials = list(/datum/material/iron = 6000)
+	build_path = /obj/item/ammo_box/magazine/m10mm/smg/empty
+	category = list("initial", "Basic Magazines")
+
 /datum/design/ammolathe/m10mm_adv_ext
 	name = "empty 10mm SMG magazine (10mm)"
 	id = "m10mm_adv_ext"

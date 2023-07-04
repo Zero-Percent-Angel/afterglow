@@ -134,6 +134,10 @@
 			else
 				.["user"]["job"] = "No Job"
 				.["user"]["department"] = "No Department"
+		else
+			.["user"] = list()
+			.["user"]["job"] = "No Job"
+			.["user"]["department"] = "No Department"
 	.["stock"] = list()
 	if (intimidated.Find(WEAKREF(user)) || user.skill_check(SKILL_BARTER, HARD_CHECK))
 		var/list/combined = list()
