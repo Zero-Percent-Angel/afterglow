@@ -222,9 +222,12 @@
 //deliberately OP
 /obj/item/gun/energy/laser/plasma/caster
 	name = "Plasma caster"
-	icon = 'icons/fallout/objects/guns/bar.dmi'
+	icon = 'icons/fallout/objects/guns/longguns.dmi'
 	item_state = "plasmacaster_fnv"
 	icon_state = "plasmacaster_fnv"
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+
 	desc = "A model P94 plasma caster.An industrial-grade energy weapon, firing superheated bolts of plasma down a superconducting barrel.Some people call it a plasma rifle despite looking nothing like one."
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/caster)
