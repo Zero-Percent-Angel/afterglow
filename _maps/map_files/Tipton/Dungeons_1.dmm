@@ -1114,9 +1114,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/white,
 /area/f13/vault/medical)
 "dm" = (
-/obj/effect/spawner/lootdrop/f13/junkspawners,
 /obj/structure/sign/departments/custodian{
 	pixel_y = 32
+	},
+/obj/item/trash/boritos{
+	pixel_x = 11;
+	pixel_y = -11
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/atrium)
@@ -2638,8 +2641,10 @@
 	},
 /area/f13/tunnel)
 "hw" = (
-/obj/effect/spawner/lootdrop/f13/junkspawners,
-/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
+/obj/item/trash/f13/dog,
+/turf/open/floor/plasteel/f13/vault_floor/neutral/side{
+	dir = 5
+	},
 /area/f13/vault/atrium)
 "hx" = (
 /obj/effect/spawner/lootdrop/f13/armor/tier3,
@@ -3932,7 +3937,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/effect/spawner/lootdrop/f13/junkspawners,
+/obj/item/trash/f13/c_ration_1{
+	pixel_y = 13;
+	pixel_x = 7
+	},
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault/atrium)
 "lu" = (
@@ -5694,6 +5702,14 @@
 /obj/structure/car/rubbish3,
 /turf/open/floor/plasteel/floorgrime,
 /area/f13/tunnel)
+"qD" = (
+/obj/item/trash/f13/bubblegum_large,
+/obj/item/trash/f13/bubblegum{
+	pixel_y = -7;
+	pixel_x = -5
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/vault/atrium)
 "qE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
@@ -6863,10 +6879,10 @@
 	},
 /area/f13/tunnel)
 "ug" = (
-/obj/effect/spawner/lootdrop/f13/junkspawners,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/item/trash/cheesie,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault/atrium)
 "uh" = (
@@ -11774,8 +11790,10 @@
 /area/f13/vault/reactor)
 "Jb" = (
 /obj/structure/closet/crate/bin/trash_fallout,
-/obj/effect/spawner/lootdrop/f13/junkspawners,
 /obj/effect/turf_decal/bot,
+/obj/item/trash/f13/dog,
+/obj/item/trash/f13/blamco_large,
+/obj/item/trash/cheesie,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/atrium)
 "Jc" = (
@@ -13488,6 +13506,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
+"Ol" = (
+/obj/item/trash/f13/cram_large,
+/obj/item/trash/f13/dog{
+	pixel_x = 10;
+	pixel_y = -4
+	},
+/turf/open/floor/plasteel/f13/vault_floor/neutral/side,
+/area/f13/vault/atrium)
 "Om" = (
 /obj/structure/fluff/hedge,
 /obj/machinery/light,
@@ -15315,7 +15341,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/side,
 /area/f13/vault/atrium)
 "TA" = (
@@ -15792,10 +15817,11 @@
 	},
 /area/f13/tunnel)
 "UU" = (
-/obj/effect/spawner/lootdrop/f13/junkspawners,
-/turf/open/floor/plasteel/f13/vault_floor/neutral/side{
-	dir = 1
+/obj/item/trash/f13/mechanist{
+	pixel_y = 14;
+	pixel_x = -8
 	},
+/turf/open/floor/plasteel/f13/vault_floor/neutral/side,
 /area/f13/vault/atrium)
 "UV" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -30422,7 +30448,7 @@ kt
 AL
 mR
 VD
-kN
+UU
 iH
 iu
 uT
@@ -33509,7 +33535,7 @@ dm
 kN
 iu
 iu
-UU
+uT
 wS
 wj
 ol
@@ -33763,11 +33789,11 @@ GX
 hz
 Qs
 rf
-kN
-hw
+Ol
+iu
 iu
 uT
-rZ
+qD
 wj
 Ix
 dY
@@ -34023,7 +34049,7 @@ Rl
 Ps
 lt
 sQ
-Bx
+hw
 Rl
 ji
 ji
