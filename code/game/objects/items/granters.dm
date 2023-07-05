@@ -631,8 +631,7 @@
 	icon_state = "gab3"
 	oneuse = TRUE
 	remarks = list("Always keep your gun well lubricated...", "Keep your barrel free of grime...", "Perfect fitment is the key to a good firearm...", "Maintain a proper trigger pull length...", "Keep your sights zeroed to proper range...")
-	crafting_recipe_types = list(/datum/crafting_recipe/scope, /datum/crafting_recipe/suppressor, /datum/crafting_recipe/ergonomic_grip, /datum/crafting_recipe/metal_guard, /datum/crafting_recipe/forged_barrel, /datum/crafting_recipe/booster, /datum/crafting_recipe/laserguide, /datum/crafting_recipe/gigalens, /datum/crafting_recipe/battshunt, /datum/crafting_recipe/overdrivemod, /datum/crafting_recipe/ai_tool,
-	/datum/crafting_recipe/coolant, /datum/crafting_recipe/full_auto)
+	crafting_recipe_types = list(/datum/crafting_recipe/scope, /datum/crafting_recipe/suppressor, /datum/crafting_recipe/ergonomic_grip, /datum/crafting_recipe/metal_guard, /datum/crafting_recipe/forged_barrel, /datum/crafting_recipe/booster, /datum/crafting_recipe/laserguide, /datum/crafting_recipe/gigalens, /datum/crafting_recipe/battshunt, /datum/crafting_recipe/overdrivemod, /datum/crafting_recipe/coolant)
 
 /obj/item/book/granter/crafting_recipe/gunsmith_four
 	name = "Guns and Bullets, Part 4"
@@ -785,6 +784,11 @@
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/AER9)
 	design_print = "ae9rifle"
+
+/obj/item/book/granter/crafting_recipe/blueprint/wattz2k
+	name = "wattz2k blueprint"
+	icon_state = "blueprint2"
+	crafting_recipe_types = list(/datum/crafting_recipe/gun/energy/wattz2k)
 
 /obj/item/book/granter/crafting_recipe/blueprint/plasmarifle
 	name = "plasma rifle blueprint"
@@ -1181,7 +1185,9 @@
 				traitname = "White Legs traditions"
 				granted_trait = TRAIT_WHITELEGS_TRAD
 				crafting_recipe_types = list(
+					/datum/crafting_recipe/tribalwar/whitelegs/lightarmour,
 					/datum/crafting_recipe/tribalwar/whitelegs/armour,
+					/datum/crafting_recipe/tribalwar/whitelegs/heavyarmour,
 					/datum/crafting_recipe/tribalwar/whitelegs/garb,
 					/datum/crafting_recipe/tribalwar/whitelegs/femalegarb
 					)
@@ -1190,7 +1196,9 @@
 				traitname = "Dead Horses traditions"
 				granted_trait = TRAIT_DEADHORSES_TRAD
 				crafting_recipe_types = list(
+					/datum/crafting_recipe/tribalwar/deadhorses/lightarmour,
 					/datum/crafting_recipe/tribalwar/deadhorses/armour,
+					/datum/crafting_recipe/tribalwar/deadhorses/heavyarmour,
 					/datum/crafting_recipe/tribalwar/deadhorses/garb,
 					/datum/crafting_recipe/tribalwar/deadhorses/femalegarb
 					)
@@ -1199,7 +1207,9 @@
 				traitname = "Rustwalkers traditions"
 				granted_trait = TRAIT_RUSTWALKERS_TRAD
 				crafting_recipe_types = list(
+					/datum/crafting_recipe/tribalwar/rustwalkers/lightarmour,
 					/datum/crafting_recipe/tribalwar/rustwalkers/armour,
+					/datum/crafting_recipe/tribalwar/rustwalkers/heavyarmour,
 					/datum/crafting_recipe/tribalwar/rustwalkers/garb,
 					/datum/crafting_recipe/tribalwar/rustwalkers/femalegarb
 					)
@@ -1208,7 +1218,9 @@
 				traitname = "Eighties traditions"
 				granted_trait = TRAIT_EIGHTIES_TRAD
 				crafting_recipe_types = list(
+					/datum/crafting_recipe/tribalwar/eighties/lightarmour,
 					/datum/crafting_recipe/tribalwar/eighties/armour,
+					/datum/crafting_recipe/tribalwar/eighties/heavyarmour,
 					/datum/crafting_recipe/tribalwar/eighties/garb,
 					/datum/crafting_recipe/tribalwar/eighties/femalegarb
 					)
@@ -1219,7 +1231,8 @@
 				crafting_recipe_types = list(
 					/datum/crafting_recipe/tribalwar/sorrows/garb,
 					/datum/crafting_recipe/tribalwar/sorrows/femalegarb,
-					/datum/crafting_recipe/tribalwar/sorrows/yaoguaigauntlet
+					/datum/crafting_recipe/tribalwar/sorrows/yaoguaigauntlet,
+					/datum/crafting_recipe/tribalwar/sorrows/armour
 					)
 
 			if("Wayfarer traditions")
@@ -1234,6 +1247,7 @@
 				traitname = "Bone Dancer traditions"
 				granted_trait = TRAIT_BONEDANCER_TRAD
 				crafting_recipe_types = list(
+					/datum/crafting_recipe/tribalwar/bone/lightarmour,
 					/datum/crafting_recipe/tribalwar/bone/armour,
 					/datum/crafting_recipe/tribalwar/bone/heavyarmour,
 					/datum/crafting_recipe/tribalwar/bone/garb,

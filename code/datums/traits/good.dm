@@ -25,6 +25,51 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	/datum/crafting_recipe/incendiaryrocket,
 	/datum/crafting_recipe/strongrocket))
 
+GLOBAL_LIST_INIT(whitelegs_recipes, list(
+	/datum/crafting_recipe/tribalwar/whitelegs/garb,
+	/datum/crafting_recipe/tribalwar/whitelegs/femalegarb, 
+	/datum/crafting_recipe/tribalwar/whitelegs/lightarmour,
+	/datum/crafting_recipe/tribalwar/whitelegs/armour,
+	/datum/crafting_recipe/tribalwar/whitelegs/heavyarmour))
+
+GLOBAL_LIST_INIT(deadhorses_recipes, list(
+	/datum/crafting_recipe/tribalwar/deadhorses/garb,
+	/datum/crafting_recipe/tribalwar/deadhorses/femalegarb,
+	/datum/crafting_recipe/tribalwar/deadhorses/lightarmour,
+	/datum/crafting_recipe/tribalwar/deadhorses/armour,
+	/datum/crafting_recipe/tribalwar/deadhorses/heavyarmour))
+
+GLOBAL_LIST_INIT(sorrows_recipes, list(
+	/datum/crafting_recipe/tribalwar/sorrows/armour,
+	/datum/crafting_recipe/tribalwar/sorrows/garb,
+	/datum/crafting_recipe/tribalwar/sorrows/femalegarb,
+	/datum/crafting_recipe/tribalwar/sorrows/yaoguaigauntlet))
+
+GLOBAL_LIST_INIT(rustwalkers_recipes, list(
+	/datum/crafting_recipe/tribalwar/rustwalkers/garb,
+	/datum/crafting_recipe/tribalwar/rustwalkers/femalegarb,
+	/datum/crafting_recipe/tribalwar/rustwalkers/lightarmour,
+	/datum/crafting_recipe/tribalwar/rustwalkers/armour,
+	/datum/crafting_recipe/tribalwar/rustwalkers/heavyarmour))
+
+GLOBAL_LIST_INIT(eighties_recipes, list(
+	/datum/crafting_recipe/tribalwar/eighties/garb,
+	/datum/crafting_recipe/tribalwar/eighties/femalegarb,
+	/datum/crafting_recipe/tribalwar/eighties/lightarmour,
+	/datum/crafting_recipe/tribalwar/eighties/armour,
+	/datum/crafting_recipe/tribalwar/eighties/heavyarmour))
+
+GLOBAL_LIST_INIT(wayfarer_recipes, list(
+	//datum/crafting_recipe/tribalwar/lighttribe,
+	//datum/crafting_recipe/tribalwar/heavytribe,
+	/datum/crafting_recipe/warmace))
+
+GLOBAL_LIST_INIT(bone_dancer_recipes, list(
+	/datum/crafting_recipe/tribalwar/bone/garb,
+	/datum/crafting_recipe/tribalwar/bone/lightarmour,
+	/datum/crafting_recipe/tribalwar/bone/armour, 
+	/datum/crafting_recipe/tribalwar/bone/heavyarmour))
+
 GLOBAL_LIST_INIT(tier_three_parts, list(
 	/datum/crafting_recipe/pico_manip,
 	/datum/crafting_recipe/super_matter_bin,
@@ -515,8 +560,8 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 
 /datum/quirk/iron_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow = 2
-	mob_tar.dna.species.punchdamagehigh = 12
+	mob_tar.dna.species.punchdamagelow = 4
+	mob_tar.dna.species.punchdamagehigh = 10
 
 /datum/quirk/steel_fist
 	name = "Fists of Steel"
@@ -529,8 +574,8 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 
 /datum/quirk/steel_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow = 4
-	mob_tar.dna.species.punchdamagehigh = 14
+	mob_tar.dna.species.punchdamagelow = 6
+	mob_tar.dna.species.punchdamagehigh = 12
 
 /datum/quirk/light_step
 	name = "Glass Walker"
@@ -652,6 +697,12 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/whitelegstraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.whitelegs_recipes
+
 /datum/quirk/deadhorsestraditions
 	name = "Dead Horses traditions"
 	desc = "You remember how to make your peoples ancient garments after all this time."
@@ -660,6 +711,12 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
+
+/datum/quirk/deadhorsestraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.deadhorses_recipes
 
 /datum/quirk/rustwalkerstraditions
 	name = "Rust Walkers traditions"
@@ -670,6 +727,12 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/rustwalkerstraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.rustwalkers_recipes
+
 /datum/quirk/eightiestraditions
 	name = "Eighties traditions"
 	desc = "You remember how to make your peoples ancient garments after all this time."
@@ -678,6 +741,13 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
+
+/datum/quirk/eightiestraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.eighties_recipes
 
 /datum/quirk/sorrowstraditions
 	name = "Sorrows traditions"
@@ -688,6 +758,12 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/sorrowstraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.sorrows_recipes
+
 /datum/quirk/wayfarertraditions
 	name = "Wayfarer traditions"
 	desc = "You remember how to make your peoples ancient garments after all this time."
@@ -697,6 +773,13 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/wayfarertraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.wayfarer_recipes
+
 /datum/quirk/bonedancertraditions
 	name = "Bone Dancer traditions"
 	desc = "You remember how to make your peoples ancient garments after all this time."
@@ -705,6 +788,13 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
+
+/datum/quirk/bonedancertraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.bone_dancer_recipes
 
 /datum/quirk/brickwall
 	name = "Brick wall"
@@ -859,7 +949,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/straightshooter
 	name = "Straight Shooter"
 	desc = "You're a better than average shot."
-	value = 6
+	value = 2
 	mob_trait = TRAIT_NICE_SHOT
 	gain_text = span_notice("Your aim is amazing, and you know it.")
 	lose_text = span_danger("Your aim could use some work...")
@@ -874,6 +964,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("Guns were always better...")
 	locked =  FALSE
 
+/*		- Way too fucking powerful since bolt actions and the like get literal bonus damages. Makes using a ton of guns pointless if a bolt-action from the trash is better than a semi-auto rifle.
 /datum/quirk/masterrifleman
 	name = "Bolt Worker"
 	desc = "You've spent a lot of time working the bolt of a rifle, or the pump action of a shotgun. Your skill allows you to click to work the action instead of doing it manually."
@@ -882,6 +973,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("In a sudden haze you realize that the Mosin Nagant was Gods gift to mankind.")
 	lose_text = span_danger("After picking some 250 year old cosmoline out from under one of your nails you realize that... Uh, no, the Mosin Nagant is a piece of shit.")
 	locked =  FALSE
+*/
 
 /datum/quirk/ratlord
 	name = "Beast Master - Rats (Experimental)"
