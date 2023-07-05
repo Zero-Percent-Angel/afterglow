@@ -44,7 +44,7 @@
 	message = "moans!"
 	emote_type = EMOTE_AUDIBLE
 	stat_allowed = SOFT_CRIT
-	
+
 /*
 /datum/emote/living/carbon/moan/get_sound(mob/living/M) //need better, ie. more pleasured (because these are mostly when doing drugs) moans
 	if(ishuman(M))
@@ -60,7 +60,7 @@
 				'sound/effects/male_moan2.ogg',
 				'sound/effects/male_moan3.ogg'
 			)
-		return 
+		return
 */
 /datum/emote/living/carbon/roll
 	key = "roll"
@@ -122,6 +122,7 @@
 		qdel(licky)
 
 //Biter//
+/*
 /datum/emote/living/carbon/bite
 	key = "bite"
 	key_third_person = "bites"
@@ -155,7 +156,7 @@
 		to_chat(user, span_notice("You get your claws ready to slice!"))
 	else
 		qdel(claw)
-
+*/
 
 //Shover//
 /datum/emote/living/carbon/shover
