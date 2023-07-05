@@ -130,6 +130,9 @@
 					message_admins("[user] failed at the skill check on [src]!")
 					user.visible_message(span_bad("[user] fails the skill check."))
 					return FALSE
+		else
+			added_skill_being_checked = FALSE
+			return FALSE
 	return TRUE
 
 /*
