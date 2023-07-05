@@ -89,7 +89,7 @@
 		/datum/reagent/medicine/stimpak = 3
 	)
 
-/obj/machinery/chem_lab/Initialize()
+/obj/machinery/chem_lab/Initialize(mapload)
 	. = ..()
 	dispensable_reagents = sortList(basic_chemicals, /proc/cmp_reagents_asc)
 	if(advanced_chemicals)
@@ -101,7 +101,7 @@
 	if(upgraded_chemicals2)
 		upgraded_chemicals2 = sortList(upgraded_chemicals2, /proc/cmp_reagents_asc)
 	dispensable_reagents = sortList(dispensable_reagents, /proc/cmp_reagents_asc)
-	if (!istype(cartridge))
+	if (!istype(cartridge) && mapload)
 		cartridge = new/obj/item/stock_parts/chem_cartridge/pristine(loc)
 		cartridge.forceMove(src)
 	update_icon()
@@ -195,7 +195,8 @@
 	data["amount"] = amount
 	//data["energy"] = cell.charge ? cell.charge * powerefficiency : "0" //To prevent NaN in the UI.
 	//data["maxEnergy"] = cell.maxcharge * powerefficiency
-	data["cartridgeCharge"] = cartridge.charge ? cartridge.charge * matefficiency : "0"
+	var/cartridge_exists = istype(cartridge)
+	data["cartridgeCharge"] = cartridge_exists && cartridge.charge ? cartridge.charge * matefficiency : "0"
 	data["maxCartridgeCharge"] = cartridge.maxCharge * matefficiency
 	data["isBeakerLoaded"] = beaker ? 1 : 0
 
@@ -308,6 +309,7 @@
 	if (choosen_step == next_step)
 		if (steps_left == 1)
 			to_chat(user, span_good("The mixture pleasingly comes together."))
+			playsound(src, 'sound/effects/bubbles.ogg', 50, 1, -3)
 			var/datum/reagents/R = beaker.reagents
 			var/free = R.maximum_volume - R.total_volume
 			var/actual = min(amount, (cartridge.charge * powerefficiency)*10, free)

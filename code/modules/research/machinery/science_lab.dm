@@ -11,7 +11,7 @@
 								/obj/item/book/granter/crafting_recipe/blueprint/deagle, /obj/item/book/granter/crafting_recipe/blueprint/n99)
 	var/list/obj/big_guns = list(/obj/item/book/granter/crafting_recipe/blueprint/combatrifle, /obj/item/book/granter/crafting_recipe/blueprint/r84,
 								/obj/item/book/granter/crafting_recipe/blueprint/lsw, /obj/item/book/granter/crafting_recipe/blueprint/am_rifle)
-	var/list/obj/small_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/aep7, /obj/item/book/granter/crafting_recipe/blueprint/plasmapistol, 
+	var/list/obj/small_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/aep7, /obj/item/book/granter/crafting_recipe/blueprint/plasmapistol,
 									/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol, /obj/item/book/granter/crafting_recipe/blueprint/tesla)
 	var/list/obj/big_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/tribeam,
 								/obj/item/book/granter/crafting_recipe/blueprint/plasmarifle, /obj/item/book/granter/crafting_recipe/blueprint/aer9,
@@ -229,7 +229,7 @@
 	visible_message(span_danger("[src]'s chemical chamber has sprung a leak!"))
 	var/chosenchem
 	chosenchem = pick(/datum/reagent/mutationtoxin,/datum/reagent/nanomachines,/datum/reagent/toxin/acid,/datum/reagent/radium,/datum/reagent/toxin,
-						/datum/reagent/consumable/condensedcapsaicin,/datum/reagent/drug/mushroomhallucinogen,
+						/datum/reagent/consumable/condensedcapsaicin,/datum/reagent/drug/mushroomhallucinogen,/datum/reagent/consumable/frostoil,
 						/datum/reagent/drug/space_drugs,/datum/reagent/consumable/ethanol,/datum/reagent/consumable/ethanol/beepsky_smash)
 	var/datum/reagents/R = new/datum/reagents(50)
 	R.my_atom = src
@@ -242,10 +242,11 @@
 	warn_admins(user, "[chosenchem] smoke")
 
 //4
-/obj/machinery/rnd/science_lab/proc/death_ball(user)
+/obj/machinery/rnd/science_lab/proc/death_ball(mob/user)
 	var/turf/start = get_turf(src)
 	var/mob/M = locate(/mob/living) in view(src, 3)
 	var/turf/MT = get_turf(M)
+	explosion(user.loc, -1, 1, 2, 2, 1, flame_range = 2)
 	if(MT)
 		visible_message(span_danger("[src] dangerously overheats, launching a flaming fuel orb!"))
 		var/obj/item/projectile/magic/aoe/fireball/FB = new /obj/item/projectile/magic/aoe/fireball(start)
