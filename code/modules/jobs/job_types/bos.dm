@@ -148,18 +148,20 @@ Head Paladin
 	access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
 	minimal_access = list(ACCESS_BROTHERHOOD_COMMAND, ACCESS_ROBOTICS, ACCESS_BOS, ACCESS_ENGINE_EQUIP, ACCESS_ENGINE, ACCESS_HYDROPONICS, ACCESS_KITCHEN, ACCESS_BAR, ACCESS_SEC_DOORS, ACCESS_CHANGE_IDS)
 
-/*
+
 /datum/outfit/job/bos/f13sentinel/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
 	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
-*/
-/*
+
+
 /datum/outfit/job/bos/f13sentinel/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
+	REMOVE_TRAIT(H, TRAIT_PA_WEAR, src)
+/*
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/jet)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/turbo)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/psycho)
@@ -199,8 +201,6 @@ Head Paladin
 		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
 		/obj/item/ammo_box/magazine/m10mm/adv/simple = 2,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
-		/obj/item/clothing/head/helmet/f13/power_armor/t51b = 1,
-		/obj/item/clothing/suit/armor/power_armor/t51b = 1,
 		/obj/item/storage/belt/army/assault = 1
 		)
 
@@ -1127,8 +1127,8 @@ Initiate
 	exp_requirements = 0
 
 	loadout_options = list(
-		/datum/outfit/loadout/ini_k, 
-		/datum/outfit/loadout/ini_s, 
+		/datum/outfit/loadout/ini_k,
+		/datum/outfit/loadout/ini_s,
 		/datum/outfit/loadout/jnr_scribe,
 		/datum/outfit/loadout/jnr_knight,
 		/datum/outfit/loadout/jnr_paladin,
