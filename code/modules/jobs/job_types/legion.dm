@@ -1262,8 +1262,9 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	exp_requirements = 750
 
 	loadout_options = list(
-		/datum/outfit/loadout/aupclose, // 14mm SMG, ripper
-		/datum/outfit/loadout/adeadeye, // AMR
+		/datum/outfit/loadout/aupclose, // Breacher shotgun.
+		/datum/outfit/loadout/adeadeye, // Venator sniper.
+		/datum/outfit/loadout/hitnrun,  // 10mm smg.
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13venator/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1300,6 +1301,15 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 		/obj/item/gun/ballistic/automatic/shotgun/riot = 1,
 		/obj/item/flashlight/lantern = 1,
 		)
+
+/datum/outfit/loadout/hitnrun
+	name = "Hit and Run"
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m10mm/smg = 2,
+		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
+		/obj/item/flashlight/lantern = 1,
+		)
+
 
 /datum/outfit/loadout/adeadeye
 	name = "Deadeye"
