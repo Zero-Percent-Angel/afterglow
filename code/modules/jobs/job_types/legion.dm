@@ -1296,8 +1296,8 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 /datum/outfit/loadout/aupclose
 	name = "Up-Close Killer"
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/tommygunm45/stick = 2,
-		/obj/item/gun/ballistic/automatic/smg/tommygun = 1,
+		/obj/item/ammo_box/magazine/d12g = 2,
+		/obj/item/gun/ballistic/automatic/shotgun/riot = 1,
 		/obj/item/flashlight/lantern = 1,
 		)
 
