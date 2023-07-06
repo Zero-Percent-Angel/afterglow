@@ -242,6 +242,8 @@
 	mag_type = /obj/item/ammo_box/magazine/m10mm // load any 10mm pistol ammos
 	disallowed_mags = list(
 		/obj/item/ammo_box/magazine/m10mm/adv/ext,
+		/obj/item/ammo_box/magazine/m10mm/smg,
+		/obj/item/ammo_box/magazine/m10mm/smg/empty
 		/obj/item/ammo_box/magazine/m10mm/adv/ext/empty,
 		/obj/item/ammo_box/magazine/m10mm/rifle)
 
