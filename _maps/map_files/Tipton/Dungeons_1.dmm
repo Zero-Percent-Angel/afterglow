@@ -3,10 +3,15 @@
 /turf/closed/indestructible/rock,
 /area/f13/tunnel)
 "ab" = (
-/turf/closed/indestructible/riveted,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -35
+	},
+/turf/open/floor/plasteel,
 /area/f13/tcoms)
 "ac" = (
-/turf/open/indestructible,
+/obj/machinery/telecomms/server/presets/town_pd,
+/turf/open/floor/circuit/telecomms/mainframe,
 /area/f13/tcoms)
 "ad" = (
 /mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant,
@@ -926,6 +931,15 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/mid,
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
+"cI" = (
+/obj/machinery/airalarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/obj/machinery/light,
+/obj/structure/filingcabinet/chestdrawer,
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "cJ" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
@@ -1071,6 +1085,13 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"dg" = (
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "dh" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh,
@@ -1331,6 +1352,11 @@
 /obj/structure/flora/grass/jungle,
 /turf/open/water,
 /area/f13/tunnel)
+"dQ" = (
+/obj/effect/decal/cleanable/ash/large,
+/obj/effect/decal/cleanable/ash/large,
+/turf/open/floor/f13,
+/area/ruin/powered)
 "dR" = (
 /turf/open/floor/f13{
 	icon_state = "yellowsiding"
@@ -1439,6 +1465,13 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/tunnel)
+"ee" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/plating,
+/area/f13/tcoms)
 "ef" = (
 /mob/living/simple_animal/hostile/handy/protectron{
 	extra_projectiles = 1;
@@ -1501,6 +1534,10 @@
 	dir = 4
 	},
 /area/ruin/powered)
+"eo" = (
+/obj/machinery/telecomms/server/presets/ranger,
+/turf/open/floor/circuit/telecomms/mainframe,
+/area/f13/tcoms)
 "ep" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/ausbushes,
@@ -1611,6 +1648,10 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"eC" = (
+/obj/machinery/telecomms/server/presets/medical,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "eD" = (
 /obj/machinery/light/small{
 	dir = 1;
@@ -1620,6 +1661,10 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/ruin/powered)
+"eE" = (
+/obj/machinery/telecomms/processor/preset_one,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "eF" = (
 /obj/structure/lattice/clockwork,
 /obj/structure/fence/handrail{
@@ -1677,6 +1722,10 @@
 	icon_state = "yellowsiding"
 	},
 /area/ruin/powered)
+"eK" = (
+/obj/machinery/telecomms/processor/preset_four,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "eM" = (
 /mob/living/simple_animal/hostile/megafauna/behemoth{
 	faction = list("mining","boss","supermutant");
@@ -1966,6 +2015,10 @@
 	icon_state = "grass3"
 	},
 /area/f13/tunnel)
+"fA" = (
+/obj/machinery/telecomms/server/presets/engineering,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "fB" = (
 /obj/structure/spacevine{
 	name = "Mutant Vines"
@@ -2123,6 +2176,13 @@
 	icon_state = "yellowrustyfull"
 	},
 /area/f13/tunnel)
+"fZ" = (
+/obj/structure/table,
+/obj/item/radio/off,
+/turf/open/floor/plasteel/yellow/side{
+	dir = 10
+	},
+/area/f13/tcoms)
 "ga" = (
 /obj/structure/flora/grass/jungle,
 /obj/structure/flora/ausbushes/brflowers,
@@ -2134,7 +2194,7 @@
 	},
 /area/f13/tunnel)
 "gb" = (
-/obj/effect/mob_spawn/human/corpse/charredskeleton,
+/obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/f13{
 	dir = 4;
 	icon_state = "yellowsiding"
@@ -2276,7 +2336,6 @@
 	},
 /area/f13/tunnel)
 "gv" = (
-/obj/effect/mob_spawn/human/corpse/charredskeleton,
 /mob/living/simple_animal/hostile/handy/assaultron{
 	desc = "A deadly close combat robot developed by RobCo in a vaguely feminine, yet ominous chassis. This one seems sleeker and more dangerous, with a slick red paintjob.";
 	faction = list("hostile");
@@ -2284,6 +2343,7 @@
 	name = "redline assaultron";
 	rapid_melee = 2
 	},
+/obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/f13{
 	dir = 1;
 	icon_state = "yellowsiding"
@@ -2606,6 +2666,10 @@
 /mob/living/simple_animal/hostile/trog/sporecarrier,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/tunnel)
+"hp" = (
+/obj/machinery/ntnet_relay,
+/turf/open/floor/circuit/telecomms/mainframe,
+/area/f13/tcoms)
 "hq" = (
 /obj/structure/chair/comfy/shuttle,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
@@ -2640,6 +2704,14 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"hv" = (
+/obj/structure/rack,
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "hw" = (
 /obj/item/trash/f13/dog,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/side{
@@ -2665,6 +2737,10 @@
 /obj/structure/curtain,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side,
 /area/f13/vault/medical/breakroom)
+"hB" = (
+/obj/machinery/telecomms/server/presets/supply,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "hD" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/small{
@@ -2809,6 +2885,16 @@
 	dir = 1
 	},
 /area/f13/vault/custodial)
+"ib" = (
+/obj/machinery/requests_console{
+	announcementConsole = 1;
+	department = "Telecomms Admin";
+	departmentType = 5;
+	name = "Telecomms RC";
+	pixel_x = 30
+	},
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "ic" = (
 /mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant,
 /obj/effect/decal/cleanable/dirt,
@@ -3011,6 +3097,14 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/ruin/powered)
+"iJ" = (
+/obj/machinery/door/airlock/command/glass{
+	name = "Control Room";
+	req_access_txt = "19; 61"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "iK" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/plasteel/floorgrime,
@@ -3332,6 +3426,10 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"jC" = (
+/obj/machinery/telecomms/bus/preset_four,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "jD" = (
 /obj/effect/mob_spawn/human/corpse/vault/security,
 /obj/effect/spawner/lootdrop/wrange_middle,
@@ -3366,8 +3464,7 @@
 	},
 /area/f13/tunnel)
 "jH" = (
-/obj/machinery/telecomms/relay/preset/telecomms,
-/turf/open/indestructible,
+/turf/open/floor/circuit/telecomms/mainframe,
 /area/f13/tcoms)
 "jI" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -3511,6 +3608,12 @@
 /obj/structure/flora/junglebush/b,
 /turf/open/water,
 /area/f13/tunnel)
+"kd" = (
+/obj/machinery/telecomms/hub/preset,
+/turf/open/floor/plasteel/vault/telecomms/mainframe{
+	dir = 8
+	},
+/area/f13/tcoms)
 "ke" = (
 /obj/machinery/light/fo13colored/Red{
 	dir = 4
@@ -3779,6 +3882,10 @@
 	icon_state = "redmark"
 	},
 /area/ruin/powered)
+"kU" = (
+/obj/machinery/telecomms/receiver/preset_left,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "kV" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -4201,6 +4308,15 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/ruin/powered)
+"me" = (
+/obj/machinery/computer/telecomms/monitor{
+	dir = 4;
+	network = "tcommsat"
+	},
+/turf/open/floor/plasteel/yellow/side{
+	dir = 8
+	},
+/area/f13/tcoms)
 "mf" = (
 /obj/machinery/hydroponics/constructable,
 /obj/structure/flora/ausbushes/fullgrass,
@@ -4240,6 +4356,13 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/dormitory)
+"mk" = (
+/obj/structure/sign/warning/securearea{
+	desc = "A warning sign which reads 'SERVER ROOM'.";
+	name = "SERVER ROOM"
+	},
+/turf/closed/wall,
+/area/f13/tcoms)
 "ml" = (
 /obj/structure/table,
 /obj/item/storage/toolbox/ammo,
@@ -4388,6 +4511,12 @@
 	},
 /turf/open/floor/f13,
 /area/ruin/powered)
+"mE" = (
+/turf/open/floor/f13{
+	dir = 4;
+	icon_state = "yellowsiding"
+	},
+/area/f13/tunnel)
 "mF" = (
 /obj/structure/door_assembly/door_assembly_sec,
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -4646,7 +4775,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/white/whitesolid,
 /area/f13/vault/garden)
 "nr" = (
-/obj/effect/mob_spawn/human/corpse/charredskeleton,
+/obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/f13{
 	icon_state = "yellowsiding"
 	},
@@ -4683,6 +4812,10 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"ny" = (
+/obj/structure/closet/emcloset,
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "nz" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
@@ -4851,12 +4984,9 @@
 /turf/open/water,
 /area/f13/tunnel)
 "nY" = (
-/obj/structure/reagent_dispensers/barrel/dangerous,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13{
-	icon_state = "floordirty"
-	},
-/area/f13/tunnel)
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/f13/tcoms)
 "nZ" = (
 /obj/structure/sign/departments/engineering{
 	pixel_y = -32
@@ -4869,6 +4999,12 @@
 	dir = 8
 	},
 /area/f13/vault/atrium)
+"oa" = (
+/obj/structure/table,
+/obj/item/folder/blue,
+/obj/item/pen/blue,
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "ob" = (
 /obj/structure/bed/wooden,
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
@@ -5118,6 +5254,12 @@
 /obj/structure/flora/ausbushes/fernybush,
 /turf/open/water,
 /area/f13/tunnel)
+"oQ" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "oR" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/flora/ausbushes/stalkybush,
@@ -5262,11 +5404,24 @@
 	},
 /turf/open/floor/wood_mosaic,
 /area/f13/vault/security)
+"po" = (
+/obj/structure/sign/warning/nosmoking{
+	pixel_y = -32
+	},
+/obj/machinery/light,
+/turf/open/floor/circuit/telecomms/mainframe,
+/area/f13/tcoms)
 "pp" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/vault)
+"pq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/unique,
+/obj/structure/rack,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
+/area/f13/tunnel)
 "pr" = (
 /turf/closed/indestructible/vaultdoor,
 /area/f13/vault/security/armory)
@@ -5502,7 +5657,7 @@
 /obj/structure/chair/f13chair2{
 	dir = 1
 	},
-/obj/effect/mob_spawn/human/corpse/charredskeleton,
+/obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/f13,
 /area/ruin/powered)
 "qd" = (
@@ -5827,6 +5982,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/redchess,
 /area/f13/vault/security)
+"qT" = (
+/obj/machinery/telecomms/processor/preset_three,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "qU" = (
 /turf/open/floor/plasteel/f13/vault_floor/blue/corner{
 	dir = 1
@@ -5857,6 +6016,10 @@
 	icon_state = "purplechess"
 	},
 /area/f13/tunnel)
+"qY" = (
+/obj/machinery/telecomms/server/presets/legion,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "qZ" = (
 /obj/structure/bonfire/prelit,
 /turf/open/floor/f13{
@@ -6122,6 +6285,10 @@
 /obj/effect/landmark/start/f13/vaultheadofsecurity,
 /turf/open/floor/wood_mosaic,
 /area/f13/vault/security)
+"rM" = (
+/obj/machinery/telecomms/broadcaster/preset_right,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "rN" = (
 /obj/machinery/door/airlock/silver{
 	name = "Bathroom";
@@ -6170,6 +6337,21 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/ruin/powered)
+"rU" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/machinery/door/airlock/engineering/glass{
+	name = "Server Room";
+	req_access_txt = "61"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
+/area/f13/tcoms)
 "rV" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/structure/flora/ausbushes/brflowers,
@@ -6501,6 +6683,15 @@
 	icon_state = "yellowsiding"
 	},
 /area/f13/tunnel)
+"sT" = (
+/obj/machinery/computer/telecomms/server{
+	dir = 4;
+	network = "tcommsat"
+	},
+/turf/open/floor/plasteel/yellow/side{
+	dir = 10
+	},
+/area/f13/tcoms)
 "sU" = (
 /obj/structure/flora/grass/jungle,
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -6620,6 +6811,10 @@
 	dir = 4
 	},
 /area/f13/vault/custodial)
+"tp" = (
+/obj/machinery/telecomms/message_server,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "tq" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -6774,6 +6969,12 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"tO" = (
+/obj/structure/chair/office/dark{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "tP" = (
 /obj/structure/rack,
 /obj/item/weldingtool/hugetank,
@@ -6787,6 +6988,16 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/open/floor/f13{
 	icon_state = "grass2"
+	},
+/area/f13/tunnel)
+"tR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/step_trigger/message{
+	once = 0;
+	message = "Something large is nearby, I should prepare before I run into it, I might not come out alive! (THERE IS A MOB THAT WILL GIB YOU AS A BOSS HERE. PROCEED AT YOUR OWN RISK.)"
+	},
+/turf/open/floor/f13{
+	icon_state = "floordirty"
 	},
 /area/f13/tunnel)
 "tS" = (
@@ -7549,6 +7760,10 @@
 "vV" = (
 /turf/open/floor/wood_mosaic,
 /area/f13/vault/diner)
+"vW" = (
+/obj/machinery/telecomms/server/presets/bos,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "vX" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -7658,6 +7873,10 @@
 	dir = 4
 	},
 /area/f13/vault)
+"wo" = (
+/obj/machinery/telecomms/server/presets/enclave,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "wp" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
@@ -7683,6 +7902,10 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"ws" = (
+/obj/machinery/status_display,
+/turf/closed/wall,
+/area/f13/tcoms)
 "wt" = (
 /obj/structure/chair/right,
 /obj/machinery/camera/autoname,
@@ -7695,6 +7918,10 @@
 	icon_state = "yellowsiding"
 	},
 /area/ruin/powered)
+"wv" = (
+/obj/machinery/telecomms/server/presets/khans,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "ww" = (
 /obj/item/radio/intercom{
 	frequency = 1361;
@@ -7703,6 +7930,17 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/atrium)
+"wx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/step_trigger/message{
+	once = 0;
+	message = "Something large is nearby, I should prepare before I run into it, I might not come out alive! (THERE IS A MOB THAT WILL GIB YOU AS A BOSS HERE. PROCEED AT YOUR OWN RISK.)"
+	},
+/turf/open/floor/f13{
+	dir = 4;
+	icon_state = "yellowsiding"
+	},
+/area/f13/tunnel)
 "wy" = (
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/tunnel)
@@ -7874,6 +8112,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/vault)
+"wY" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/circuit/telecomms/mainframe,
+/area/f13/tcoms)
 "wZ" = (
 /obj/structure/flora/grass/jungle,
 /obj/structure/flora/ausbushes/fullgrass,
@@ -7903,9 +8147,13 @@
 	},
 /area/f13/tunnel)
 "xf" = (
-/obj/effect/mob_spawn/human/corpse/charredskeleton,
+/obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/f13,
 /area/ruin/powered)
+"xg" = (
+/obj/machinery/telecomms/bus/preset_one,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "xh" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/open/indestructible/ground/inside/subway,
@@ -8106,6 +8354,11 @@
 	icon_state = "yellowsiding"
 	},
 /area/f13/tunnel)
+"xN" = (
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
+/area/f13/tcoms)
 "xO" = (
 /obj/structure/table,
 /obj/item/bodypart/r_arm/robot,
@@ -8361,6 +8614,10 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/tunnel)
+"yA" = (
+/obj/machinery/telecomms/bus/preset_two,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "yB" = (
 /obj/structure/table,
 /obj/item/ammo_box/shotgun/buck,
@@ -8582,6 +8839,14 @@
 	dir = 1
 	},
 /area/f13/vault/security/armory)
+"zh" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/f13/tcoms)
 "zj" = (
 /turf/open/floor/f13{
 	icon_state = "grass3"
@@ -8773,6 +9038,10 @@
 	icon_state = "bar"
 	},
 /area/f13/tunnel)
+"zS" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/tunnel,
+/area/f13/tunnel)
 "zT" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -8895,6 +9164,13 @@
 "Ai" = (
 /turf/closed/indestructible/vaultdoor,
 /area/f13/vault/garden)
+"Aj" = (
+/obj/machinery/power/smes/magical,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "Ak" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/closed/mineral/random/high_chance,
@@ -9030,6 +9306,12 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"AE" = (
+/obj/machinery/light_switch{
+	pixel_x = 27
+	},
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "AG" = (
 /mob/living/simple_animal/hostile/supermutant/meleemutant,
 /obj/structure/lattice,
@@ -9331,7 +9613,6 @@
 /turf/open/floor/wood_mosaic,
 /area/f13/vault/diner)
 "BB" = (
-/obj/effect/mob_spawn/human/corpse/charredskeleton,
 /mob/living/simple_animal/hostile/handy/assaultron{
 	desc = "A deadly close combat robot developed by RobCo in a vaguely feminine, yet ominous chassis. This one seems sleeker and more dangerous, with a slick red paintjob.";
 	faction = list("hostile");
@@ -9339,6 +9620,7 @@
 	name = "redline assaultron";
 	rapid_melee = 2
 	},
+/obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/f13{
 	icon_state = "yellowsiding"
 	},
@@ -9453,6 +9735,10 @@
 /mob/living/simple_animal/hostile/trog/sporecarrier,
 /turf/open/water,
 /area/f13/tunnel)
+"BS" = (
+/obj/machinery/telecomms/server/presets/common,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "BU" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/landmark/start/f13/vaultscientist,
@@ -9631,11 +9917,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/white/corner,
 /area/ruin/powered)
 "Cv" = (
-/obj/item/gun/energy/laser/wattz/recharger/rifle{
-	desc = "An experimental weapon as the designation implies, it charges its capacitor banks over time using radioactive decay. It's weak but the trade off is it'll never need cells to fire."
+/turf/closed/wall/r_wall/f13superstore{
+	icon_state = "supermart0"
 	},
-/turf/closed/indestructible/rock,
-/area/f13/tunnel)
+/area/f13/tcoms)
 "Cw" = (
 /obj/effect/gibspawner/human,
 /obj/machinery/light/floor,
@@ -9731,7 +10016,7 @@
 /turf/open/floor/plasteel/vault/side,
 /area/f13/vault/security/armory)
 "CI" = (
-/obj/effect/mob_spawn/human/corpse/charredskeleton,
+/obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/plasteel/f13/vault_floor/red/side,
 /area/ruin/powered)
 "CJ" = (
@@ -9902,6 +10187,10 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/ruin/powered)
+"Dl" = (
+/obj/machinery/power/terminal,
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "Dm" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/kirbyplants{
@@ -10193,6 +10482,9 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"Ec" = (
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "Ed" = (
 /turf/open/floor/plasteel/f13{
 	icon_state = "greendirtysolid"
@@ -10544,6 +10836,10 @@
 	dir = 1
 	},
 /area/f13/vault/science)
+"Fk" = (
+/obj/machinery/telecomms/server/presets/ncr,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "Fm" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/side,
@@ -10585,6 +10881,15 @@
 "Fu" = (
 /turf/open/floor/plasteel/f13/vault_floor/blue/white/side,
 /area/ruin/powered)
+"Fv" = (
+/obj/item/radio/intercom{
+	dir = 8;
+	freerange = 1;
+	name = "Station Intercom (Telecomms)";
+	pixel_y = 26
+	},
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "Fw" = (
 /obj/machinery/hydroponics/constructable,
 /obj/structure/flora/junglebush,
@@ -10751,7 +11056,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/step_trigger/message{
 	once = 0;
-	message = "Something large is nearby, I should prepare before I run into it, I might not come out alive!"
+	message = "Something large is nearby, I should prepare before I run into it, I might not come out alive! (THERE IS A MOB THAT WILL GIB YOU AS A BOSS HERE. PROCEED AT YOUR OWN RISK.)"
 	},
 /turf/open/floor/f13{
 	icon_state = "yellowsiding"
@@ -11570,6 +11875,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
 /area/f13/vault/dormitory)
+"Ir" = (
+/obj/machinery/telecomms/receiver/preset_right,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "Is" = (
 /obj/machinery/biogenerator,
 /obj/structure/window{
@@ -11598,6 +11907,13 @@
 	icon_state = "grass3"
 	},
 /area/f13/tunnel)
+"Iw" = (
+/obj/structure/table,
+/obj/item/multitool,
+/turf/open/floor/plasteel/yellow/side{
+	dir = 9
+	},
+/area/f13/tcoms)
 "Ix" = (
 /obj/machinery/smartfridge/bottlerack/lootshelf/construction,
 /obj/effect/decal/cleanable/greenglow,
@@ -11626,6 +11942,14 @@
 /obj/structure/destructible/tribal_torch,
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
+"IC" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/f13/tcoms)
 "ID" = (
 /obj/structure/flora/grass/jungle/b,
 /obj/structure/flora/grass/jungle,
@@ -12688,6 +13012,18 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/science)
+"LM" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/machinery/door/airlock/engineering/glass{
+	name = "Server Room";
+	req_access_txt = "61"
+	},
+/turf/open/floor/plasteel/vault{
+	dir = 5
+	},
+/area/f13/tcoms)
 "LN" = (
 /obj/machinery/light/broken,
 /turf/open/floor/f13{
@@ -12756,6 +13092,10 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/tunnel)
+"Ma" = (
+/obj/machinery/telecomms/server/presets/security,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "Mb" = (
 /obj/structure/table,
 /obj/item/stock_parts/cell/super,
@@ -12821,6 +13161,10 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"Mn" = (
+/obj/machinery/telecomms/server/presets/science,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "Mo" = (
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 10
@@ -12845,7 +13189,7 @@
 "Mr" = (
 /obj/structure/target_stake,
 /obj/item/target,
-/obj/effect/mob_spawn/human/corpse/charredskeleton,
+/obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/f13{
 	icon_state = "redmark"
 	},
@@ -13028,6 +13372,17 @@
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/water,
 /area/f13/tunnel)
+"MS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/step_trigger/message{
+	once = 0;
+	message = "Something large is nearby, I should prepare before I run into it, I might not come out alive! (THERE IS A MOB THAT WILL GIB YOU AS A BOSS HERE. PROCEED AT YOUR OWN RISK.)"
+	},
+/turf/open/floor/f13{
+	dir = 8;
+	icon_state = "yellowsiding"
+	},
+/area/f13/tunnel)
 "MT" = (
 /obj/structure/flora/grass/jungle,
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -13064,6 +13419,10 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"Na" = (
+/obj/machinery/telecomms/server/presets/den,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "Nb" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/lootdrop/f13/cash_random_high,
@@ -13175,6 +13534,10 @@
 	icon_state = "grass3"
 	},
 /area/f13/tunnel)
+"No" = (
+/obj/machinery/telecomms/processor/preset_two,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "Np" = (
 /obj/structure/sign/poster/prewar/poster63{
 	pixel_y = -32
@@ -13212,6 +13575,11 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/tunnel)
+"Nv" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/f13/tcoms)
 "Nw" = (
 /obj/structure/table/reinforced,
 /obj/item/stock_parts/cell/ammo/ec,
@@ -13311,7 +13679,7 @@
 	},
 /area/f13/vault/atrium)
 "NJ" = (
-/obj/effect/mob_spawn/human/corpse/charredskeleton,
+/obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/ruin/powered)
 "NK" = (
@@ -13785,6 +14153,12 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"OU" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/yellow/side{
+	dir = 9
+	},
+/area/f13/tcoms)
 "OV" = (
 /obj/structure/flora/junglebush/large,
 /mob/living/simple_animal/hostile/venus_human_trap{
@@ -14034,6 +14408,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault/overseer)
+"PD" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/circuit/telecomms/mainframe,
+/area/f13/tcoms)
 "PE" = (
 /obj/structure/bed/double,
 /obj/item/bedsheet/captain{
@@ -14143,6 +14523,10 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"PS" = (
+/obj/machinery/telecomms/server/presets/service,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "PT" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/plant_analyzer{
@@ -14290,6 +14674,10 @@
 	icon_state = "dark"
 	},
 /area/f13/tunnel)
+"Qp" = (
+/obj/machinery/telecomms/server/presets/command,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "Qq" = (
 /obj/structure/lattice/catwalk,
 /turf/closed/wall/rust,
@@ -14514,7 +14902,7 @@
 	},
 /area/f13/tunnel)
 "Rc" = (
-/obj/effect/mob_spawn/human/corpse/charredskeleton,
+/obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 8
 	},
@@ -14639,6 +15027,9 @@
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /turf/open/floor/plasteel/floorgrime,
 /area/f13/tunnel)
+"Rx" = (
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "Ry" = (
 /obj/structure/lattice/clockwork,
 /obj/structure/fence/handrail{
@@ -15142,6 +15533,12 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"SV" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/circuit/telecomms/mainframe,
+/area/f13/tcoms)
 "SW" = (
 /obj/structure/table,
 /obj/item/bodypart/l_arm/robot,
@@ -15167,6 +15564,14 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"SZ" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/f13/tcoms)
 "Ta" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
@@ -15497,6 +15902,16 @@
 /obj/structure/flora/grass/jungle,
 /turf/open/water,
 /area/f13/tunnel)
+"TQ" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plating,
+/area/f13/tcoms)
 "TR" = (
 /turf/open/floor/f13{
 	icon_state = "yellowsidingcorner";
@@ -15825,6 +16240,14 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"UT" = (
+/obj/machinery/computer/message_monitor{
+	dir = 4
+	},
+/turf/open/floor/plasteel/yellow/side{
+	dir = 8
+	},
+/area/f13/tcoms)
 "UU" = (
 /obj/item/trash/f13/mechanist{
 	pixel_y = 14;
@@ -15963,6 +16386,12 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"Vo" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "Vp" = (
 /obj/structure/spacevine{
 	name = "Mutant Vines"
@@ -16026,6 +16455,16 @@
 	icon_state = "yellowsiding"
 	},
 /area/ruin/powered)
+"Vx" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/plating,
+/area/f13/tcoms)
 "Vz" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -16191,6 +16630,10 @@
 "VW" = (
 /turf/closed/indestructible/vaultdoor,
 /area/f13/vault/medical/surgery)
+"VX" = (
+/obj/machinery/telecomms/server/presets/town,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "VY" = (
 /obj/structure/lattice,
 /obj/effect/decal/cleanable/dirt,
@@ -16208,6 +16651,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/vault/garden)
+"Wa" = (
+/obj/machinery/telecomms/broadcaster/preset_left,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "Wb" = (
 /obj/structure/spacevine{
 	name = "Mutant Vines"
@@ -16220,6 +16667,10 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
+"Wc" = (
+/obj/machinery/telecomms/bus/preset_three,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "Wd" = (
 /obj/machinery/hydroponics/constructable,
 /obj/structure/flora/tree/jungle,
@@ -16750,6 +17201,10 @@
 	icon_state = "yellowsiding"
 	},
 /area/f13/tunnel)
+"XM" = (
+/obj/machinery/blackbox_recorder,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "XN" = (
 /turf/open/floor/plasteel/f13{
 	icon_state = "rampdowntop";
@@ -16838,6 +17293,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "yellowrustyfull"
+	},
+/area/f13/tunnel)
+"Yf" = (
+/turf/open/floor/f13{
+	dir = 8;
+	icon_state = "yellowsiding"
 	},
 /area/f13/tunnel)
 "Yg" = (
@@ -16932,6 +17393,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/corner,
 /area/ruin/powered)
+"Yr" = (
+/obj/machinery/telecomms/server/presets/vault,
+/turf/open/floor/plasteel/dark/telecomms/mainframe,
+/area/f13/tcoms)
 "Ys" = (
 /mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant,
 /obj/effect/decal/cleanable/dirt,
@@ -17193,6 +17658,11 @@
 	dir = 4
 	},
 /area/f13/vault/science)
+"Zc" = (
+/obj/structure/table,
+/obj/item/paper_bin,
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "Zd" = (
 /obj/structure/table,
 /obj/item/weldingtool/advanced,
@@ -17238,6 +17708,10 @@
 	icon_state = "grass3"
 	},
 /area/f13/tunnel)
+"Zm" = (
+/obj/machinery/telecomms/server/presets/commerce,
+/turf/open/floor/circuit/telecomms/mainframe,
+/area/f13/tcoms)
 "Zn" = (
 /obj/effect/spawner/lootdrop/grille_or_trash,
 /turf/open/floor/f13{
@@ -17380,6 +17854,9 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/f13,
 /area/ruin/powered)
+"ZL" = (
+/turf/closed/wall/r_wall,
+/area/f13/tcoms)
 "ZM" = (
 /turf/open/floor/plasteel/f13/vault_floor/red/corner{
 	dir = 4
@@ -17435,6 +17912,12 @@
 "ZT" = (
 /turf/closed/indestructible/syndicate,
 /area/ruin/powered)
+"ZU" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/f13/tcoms)
 "ZV" = (
 /obj/structure/flora/tree/jungle,
 /turf/open/floor/f13{
@@ -17731,11 +18214,11 @@ aa
 "}
 (2,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -17988,11 +18471,11 @@ aa
 "}
 (3,1,1) = {"
 aa
-ab
-ac
-ac
-ac
-ab
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -18245,11 +18728,11 @@ aa
 "}
 (4,1,1) = {"
 aa
-ab
-ac
-jH
-ac
-ab
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -18502,11 +18985,11 @@ aa
 "}
 (5,1,1) = {"
 aa
-ab
-ac
-ac
-ac
-ab
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -18759,11 +19242,11 @@ aa
 "}
 (6,1,1) = {"
 aa
-ab
-ab
-ab
-ab
-ab
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -19239,7 +19722,7 @@ aC
 lz
 bh
 og
-og
+MS
 aC
 og
 cA
@@ -19496,8 +19979,8 @@ MG
 MG
 Uf
 MG
+tR
 MG
-Uf
 MG
 cB
 cn
@@ -19753,7 +20236,7 @@ sZ
 YX
 Rv
 sZ
-sZ
+wx
 sZ
 cm
 cB
@@ -21338,7 +21821,7 @@ ZT
 lU
 mc
 fR
-gb
+fR
 fR
 VJ
 sJ
@@ -29792,7 +30275,7 @@ Sk
 WI
 WI
 WI
-cV
+pq
 cG
 KN
 KN
@@ -30816,7 +31299,7 @@ wH
 eM
 KN
 xB
-aF
+lm
 Kj
 Kj
 QR
@@ -31842,9 +32325,9 @@ ic
 KN
 og
 og
-gi
+Yf
 og
-dj
+gi
 og
 og
 lz
@@ -32099,12 +32582,12 @@ KN
 nR
 KN
 Uf
-OA
 MG
-KN
+MG
+OA
 KN
 Km
-nY
+MG
 tK
 lm
 cX
@@ -32356,13 +32839,13 @@ UM
 KN
 KN
 MG
-Pk
 MG
-nR
+MG
+Pk
 KN
 KN
 WF
-yJ
+zS
 lm
 lm
 lm
@@ -32613,13 +33096,13 @@ UM
 MG
 MG
 MG
+MG
+MG
 Pk
 MG
 MG
 MG
-MG
-nY
-tK
+zS
 lm
 ic
 KN
@@ -32870,9 +33353,9 @@ UM
 KN
 nR
 MG
-Pk
+MG
 KN
-Uf
+Pk
 MG
 KN
 Uf
@@ -33127,9 +33610,9 @@ Ys
 KN
 KN
 sZ
-gi
+mE
 sZ
-KN
+gi
 KN
 sZ
 YX
@@ -33196,7 +33679,7 @@ mc
 Gl
 ZT
 VK
-xf
+dQ
 hV
 YQ
 YQ
@@ -38605,7 +39088,7 @@ aa
 aa
 aa
 aa
-Cv
+aa
 aa
 aa
 aa
@@ -78640,24 +79123,24 @@ aa
 "}
 (239,1,1) = {"
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
 aa
 aa
 aa
@@ -78897,24 +79380,24 @@ aa
 "}
 (240,1,1) = {"
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+Cv
 aa
 aa
 aa
@@ -79154,24 +79637,24 @@ aa
 "}
 (241,1,1) = {"
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+ZL
+jH
+jH
+jH
+jH
+PD
+jH
+jH
+Rx
+Rx
+hp
+Rx
+Rx
+jH
+jH
+ZL
+Cv
 aa
 aa
 aa
@@ -79411,24 +79894,24 @@ aa
 "}
 (242,1,1) = {"
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+ZL
+Yr
+vW
+wo
+VX
+Rx
+fA
+BS
+XM
+Rx
+jH
+Rx
+tp
+hB
+PS
+ZL
+Cv
 aa
 aa
 aa
@@ -79668,24 +80151,24 @@ aa
 "}
 (243,1,1) = {"
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+ZL
+Rx
+Rx
+Rx
+Rx
+Rx
+jC
+eK
+rM
+jH
+jH
+jH
+Wa
+yA
+No
+ZL
+Cv
 aa
 aa
 aa
@@ -79925,24 +80408,24 @@ aa
 "}
 (244,1,1) = {"
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+ZL
+wY
+eo
+Zm
+ac
+jH
+jH
+jH
+jH
+jH
+kd
+jH
+jH
+jH
+po
+ZL
+Cv
 aa
 aa
 aa
@@ -80182,24 +80665,24 @@ aa
 "}
 (245,1,1) = {"
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+ZL
+Rx
+Rx
+Rx
+Rx
+Rx
+qT
+Wc
+Ir
+jH
+jH
+jH
+kU
+eE
+xg
+ZL
+Cv
 aa
 aa
 aa
@@ -80439,24 +80922,24 @@ aa
 "}
 (246,1,1) = {"
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+ZL
+Na
+Fk
+qY
+wv
+Rx
+Ma
+Qp
+Rx
+Rx
+jH
+Rx
+Rx
+eC
+Mn
+ZL
+Cv
 aa
 aa
 aa
@@ -80696,24 +81179,24 @@ aa
 "}
 (247,1,1) = {"
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+ZL
+jH
+jH
+jH
+jH
+SV
+jH
+jH
+Rx
+Vx
+rU
+SZ
+Rx
+jH
+jH
+ZL
+Cv
 aa
 aa
 aa
@@ -80953,24 +81436,24 @@ aa
 "}
 (248,1,1) = {"
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ee
+IC
+IC
+zh
+xN
+TQ
+IC
+IC
+Nv
+ZL
+Cv
 aa
 aa
 aa
@@ -81210,24 +81693,24 @@ aa
 "}
 (249,1,1) = {"
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+ZL
+OU
+UT
+sT
+ws
+LM
+mk
+Iw
+me
+fZ
+ZL
+Cv
 aa
 aa
 aa
@@ -81472,19 +81955,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+ZL
+Fv
+tO
+Ec
+nY
+ZU
+Ec
+Ec
+tO
+ab
+ZL
+Cv
 aa
 aa
 aa
@@ -81729,19 +82212,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+ZL
+oQ
+Ec
+Ec
+iJ
+Ec
+Dl
+Aj
+Vo
+cI
+ZL
+Cv
 aa
 aa
 aa
@@ -81986,19 +82469,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+ZL
+ZL
+Zc
+oa
+nY
+ny
+ib
+AE
+dg
+hv
+ZL
+Cv
 aa
 aa
 aa
@@ -82243,19 +82726,19 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+Cv
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+ZL
+Cv
 aa
 aa
 aa
@@ -82501,18 +82984,18 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
+Cv
 aa
 aa
 aa
