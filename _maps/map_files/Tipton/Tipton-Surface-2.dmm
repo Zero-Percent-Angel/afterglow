@@ -2040,8 +2040,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/neutral/white/whitepurplechess,
 /area/f13/building/powered)
 "bih" = (
-/obj/structure/bed/roller,
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/chair/bench,
+/obj/effect/landmark/start/f13/ncrcombatmedic,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "bio" = (
@@ -4528,9 +4528,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/underground/mountain)
 "cJZ" = (
-/obj/structure/curtain{
-	pixel_x = 30
-	},
+/obj/structure/bed/roller,
+/obj/machinery/iv_drip,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
@@ -9481,11 +9480,19 @@
 	},
 /area/f13/building/powered)
 "fKo" = (
-/obj/structure/table,
-/obj/item/storage/firstaid/ancient,
-/obj/item/storage/firstaid/ancient,
-/obj/item/reagent_containers/medspray/synthflesh,
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/rack,
+/obj/item/reagent_containers/medspray/synthflesh{
+	pixel_y = -3;
+	pixel_x = -9
+	},
+/obj/item/reagent_containers/medspray/synthflesh{
+	pixel_y = -3;
+	pixel_x = -2
+	},
+/obj/item/reagent_containers/medspray/sterilizine{
+	pixel_y = 1;
+	pixel_x = 7
+	},
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "fKH" = (
@@ -10473,8 +10480,10 @@
 	},
 /area/f13/building/powered)
 "gqi" = (
-/obj/machinery/smartfridge/chemistry,
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/closet/crate/medical,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "gqn" = (
@@ -12824,13 +12833,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/building/powered)
 "hKf" = (
-/obj/structure/table,
-/obj/structure/curtain{
-	pixel_x = 30
-	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/defibrillator,
-/obj/item/defibrillator/loaded,
+/obj/effect/landmark/start/f13/ncrcombatmedic,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "hKB" = (
@@ -12882,6 +12886,13 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building/powered)
+"hLU" = (
+/obj/structure/stairs/north{
+	color = "#A47449";
+	dir = 4
+	},
+/turf/open/floor/f13/wood,
+/area/f13/ncr/powered)
 "hLW" = (
 /obj/effect/decal/marking{
 	icon_state = "dottedvertical"
@@ -13122,6 +13133,11 @@
 "hQL" = (
 /turf/open/floor/carpet/blue,
 /area/f13/brotherhood/powered)
+"hRj" = (
+/obj/structure/curtain,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/f13/wood,
+/area/f13/ncr/powered)
 "hRp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/destructible/tribal_torch/wall/lit,
@@ -16054,10 +16070,7 @@
 /turf/open/floor/carpet/red,
 /area/f13/casino)
 "jGJ" = (
-/obj/machinery/light/small{
-	brightness = 7
-	},
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "jGL" = (
@@ -18093,13 +18106,8 @@
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/tcoms)
 "kPB" = (
-/obj/structure/table,
-/obj/item/reagent_containers/blood/radaway,
-/obj/item/reagent_containers/blood/radaway,
-/obj/structure/curtain{
-	pixel_x = 30
-	},
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/bed/roller,
+/obj/machinery/iv_drip,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "kPD" = (
@@ -20256,8 +20264,15 @@
 	},
 /area/f13/brotherhood/powered)
 "mnq" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/table/optable,
+/obj/structure/table,
+/obj/item/storage/backpack/duffelbag/med/surgery{
+	pixel_y = 10;
+	pixel_x = 2
+	},
+/obj/item/reagent_containers/medspray/sterilizine{
+	pixel_x = -9;
+	pixel_y = 4
+	},
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "mnz" = (
@@ -20797,9 +20812,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "mDP" = (
-/obj/item/flashlight/lamp,
 /obj/structure/table,
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/reagent_containers/blood/radaway,
+/obj/item/reagent_containers/blood/radaway,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "mDS" = (
@@ -21911,9 +21926,7 @@
 	},
 /area/f13/wasteland)
 "nlj" = (
-/obj/structure/chair{
-	dir = 8
-	},
+/obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
@@ -25324,12 +25337,16 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "plt" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/chem_lab,
-/obj/machinery/light/small{
-	dir = 1;
-	light_color = "green"
+/obj/structure/table,
+/obj/item/storage/backpack/duffelbag/med/surgery{
+	pixel_y = 11;
+	pixel_x = -2
 	},
+/obj/item/reagent_containers/medspray/sterilizine{
+	pixel_x = 9;
+	pixel_y = 5
+	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "plN" = (
@@ -27009,8 +27026,11 @@
 	},
 /area/f13/brotherhood/powered)
 "qqa" = (
-/obj/structure/table/optable,
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/rack,
+/obj/item/storage/firstaid/fire{
+	pixel_y = -6;
+	pixel_x = -4
+	},
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "qqb" = (
@@ -31018,6 +31038,12 @@
 "sUk" = (
 /turf/closed/wall/r_wall/rust,
 /area/f13/tunnel)
+"sUw" = (
+/obj/machinery/sleeper,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light,
+/turf/open/floor/f13/wood,
+/area/f13/ncr/powered)
 "sUx" = (
 /obj/structure/flora/tree/pine,
 /obj/structure/flora/ausbushes/pointybush,
@@ -31490,12 +31516,9 @@
 /area/f13/building)
 "tjP" = (
 /obj/structure/table,
-/obj/item/storage/firstaid/fire,
-/obj/item/reagent_containers/medspray/synthflesh,
-/obj/structure/curtain{
-	pixel_y = 30
+/obj/item/flashlight/lamp{
+	pixel_y = 8
 	},
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "tjQ" = (
@@ -31632,8 +31655,9 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/wasteland)
 "tmT" = (
-/obj/machinery/iv_drip,
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/kirbyplants{
+	icon_state = "plant-21"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "tnk" = (
@@ -31843,10 +31867,10 @@
 /turf/open/water,
 /area/f13/klamat/powered)
 "tur" = (
-/obj/structure/curtain{
-	pixel_y = 30
+/obj/structure/table/optable,
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/machinery/chem_heater,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
@@ -34069,11 +34093,22 @@
 /turf/open/floor/carpet/red,
 /area/f13/building/powered)
 "uLf" = (
-/obj/structure/curtain{
-	pixel_y = 30
+/obj/structure/window/reinforced/tinted{
+	dir = 8
 	},
-/obj/machinery/chem_master,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/item/defibrillator/loaded{
+	pixel_x = 2;
+	pixel_y = 11
+	},
+/obj/item/defibrillator/loaded{
+	pixel_x = 2;
+	pixel_y = 11
+	},
+/obj/structure/table,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "uLn" = (
@@ -34214,11 +34249,8 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "uPP" = (
-/obj/structure/curtain{
-	pixel_y = 30
-	},
-/obj/structure/table,
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/window/fulltile/wood,
+/obj/structure/curtain,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "uQc" = (
@@ -34650,7 +34682,6 @@
 /area/f13/building)
 "vcE" = (
 /obj/machinery/sleeper,
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "vcN" = (
@@ -37975,7 +38006,8 @@
 /turf/open/floor/plating/dirt/dark,
 /area/f13/tunnel)
 "wZM" = (
-/obj/effect/landmark/start/f13/ncrcombatmedic,
+/obj/structure/table/optable,
+/obj/machinery/light,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
@@ -38340,10 +38372,9 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/wasteland)
 "xmr" = (
-/obj/structure/table,
-/obj/item/storage/backpack/duffelbag/med/surgery,
-/obj/item/reagent_containers/medspray/sterilizine,
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/rack,
+/obj/item/storage/firstaid/ancient,
+/obj/item/storage/firstaid/ancient,
 /turf/open/floor/f13/wood,
 /area/f13/ncr/powered)
 "xmH" = (
@@ -41996,9 +42027,9 @@ gCV
 gCV
 wIg
 rKW
-lmB
+yhi
 tjP
-jAr
+hKf
 nlj
 mDP
 yhi
@@ -42198,11 +42229,11 @@ cSt
 uLn
 wIg
 sGn
-lmB
+yhi
 tur
+ofS
 cSt
-cSt
-tmT
+wZM
 yhi
 xPa
 rdo
@@ -42402,7 +42433,7 @@ wIg
 lOO
 yhi
 plt
-wZM
+rme
 cSt
 mnq
 yhi
@@ -42602,11 +42633,11 @@ cSt
 nAW
 wIg
 uoV
-lmB
-uLf
-cSt
-ofS
-cyb
+yhi
+yhi
+hRj
+uHA
+yhi
 yhi
 lmU
 cSt
@@ -42804,11 +42835,11 @@ fVf
 wIg
 yhi
 uoV
-lmB
 uPP
-cSt
-cSt
-cyb
+rme
+rme
+jAr
+sUw
 yhi
 hwO
 nCz
@@ -43006,9 +43037,9 @@ ttr
 rPB
 mjM
 rPB
-mmx
-vcE
-cSt
+uPP
+hLU
+rme
 cSt
 tmT
 yhi
@@ -43209,8 +43240,8 @@ uoV
 wbQ
 lQG
 yhi
-fXh
-wZM
+uLf
+cSt
 cSt
 bih
 yhi
@@ -43410,11 +43441,11 @@ pMk
 lFl
 uoV
 lQG
-yhi
+mmx
 vcE
 cSt
-cSt
-xmr
+jqP
+bih
 yhi
 kld
 cSt
@@ -43613,8 +43644,8 @@ kRO
 gYX
 gYX
 kUx
-cSt
-ijt
+uJd
+nlj
 cSt
 gqi
 yhi
@@ -43815,7 +43846,7 @@ pMk
 pMk
 pMk
 kUx
-cSt
+rme
 cSt
 jGJ
 yhi
@@ -44016,8 +44047,8 @@ pMk
 kRO
 pMk
 vwk
-yhi
-hKf
+mmx
+cJZ
 cJZ
 kPB
 yhi
@@ -44219,9 +44250,9 @@ pMk
 pMk
 sZc
 yhi
-lmB
-lmB
-lmB
+uPP
+uPP
+yhi
 yhi
 qdr
 uHd
