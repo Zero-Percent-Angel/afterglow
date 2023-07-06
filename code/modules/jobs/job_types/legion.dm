@@ -1308,14 +1308,15 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 		/obj/item/ammo_box/magazine/m10mm/smg = 2,
 		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
 		/obj/item/flashlight/lantern = 1,
+		/obj/item/melee/powered/ripper = 1,
 		)
 
 
 /datum/outfit/loadout/adeadeye
 	name = "Deadeye"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/marksman/sniper/snipervenator = 1,
-		/obj/item/ammo_box/magazine/w308 = 3,
+		/obj/item/gun/ballistic/rifle/mag/antimateriel = 1,
+			mag_type = /obj/item/ammo_box/magazine/amr = 3,
 		/obj/item/flashlight/lantern = 1,
 		)
 
