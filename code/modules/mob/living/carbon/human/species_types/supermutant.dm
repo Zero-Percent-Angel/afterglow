@@ -24,10 +24,10 @@
 		b.max_damage = initial(b.max_damage)
 
 /datum/species/smutant/qualifies_for_rank(rank, list/features)
-	if(rank in GLOB.legion_positions) /* Legion isn't a fan of muties */
+	if(rank in GLOB.legion_positions) // Legion isn't a fan of muties.
 		return 0
-	if(rank in GLOB.brotherhood_positions) //Kill it with fire.
+	if(rank in GLOB.brotherhood_positions) //Brother get the Flamer. The Heavy Flmaer
 		return 0
-	if(rank in GLOB.vault_positions) //How did they even get in??.
+	if(rank in GLOB.vault_positions) //How did they even get in here?.
 		return 0
 	return ..()

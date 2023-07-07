@@ -194,7 +194,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/list/all_quirks = list()
 
 	//Quirk category currently selected
-	var/quirk_category = QUIRK_POSITIVE 
+	var/quirk_category = QUIRK_POSITIVE
 
 	//Job preferences 2.0 - indexed by job title , no key or value implies never
 	var/list/job_preferences = list()
@@ -1605,14 +1605,14 @@ Records disabled until a use for them is found
 
 	dat += "<center><b>Allocate points</b></center>"
 	dat += "<center>[total] out of [max_skill] possible</center><br>"
-	dat += "<b>Skill thresholds: 35(Novice), 50(Journeyman), 65(Experienced), 80(Expert)</b><BR><BR>"	
-	dat += "<b>Combat skills:</b><BR>"	
+	dat += "<b>Skill thresholds: 35(Novice), 50(Journeyman), 65(Experienced), 80(Expert)</b><BR><BR>"
+	dat += "<b>Combat skills:</b><BR>"
 	dat += "<b>Guns	       :</b> <a href='?_src_=prefs;preference=skill_guns;task=input'>[skill_guns] (Points Spent)</a>: [skill_guns_t] Skill Total<BR>"
 	dat += "<b>Energy Guns :</b> <a href='?_src_=prefs;preference=skill_energy;task=input'>[skill_energy] (Points Spent)</a>: [skill_energy_t] Skill Total<BR>"
 	dat += "<b>Unarmed     :</b> <a href='?_src_=prefs;preference=skill_unarmed;task=input'>[skill_unarmed] (Points Spent)</a>: [skill_unarmed_t] Skill Total<BR>"
 	dat += "<b>Melee       :</b> <a href='?_src_=prefs;preference=skill_melee;task=input'>[skill_melee] (Points Spent)</a>: [skill_melee_t] Skill Total<BR>"
 	dat += "<b>Throwing    :</b> <a href='?_src_=prefs;preference=skill_throwing;task=input'>[skill_throwing] (Points Spent)</a>: [skill_throwing_t] Skill Total<BR>"
-	dat += "<b>Active skills:</b><BR>"	
+	dat += "<b>Active skills:</b><BR>"
 	//dat += "<b>First Aid   :</b> <a href='?_src_=prefs;preference=skill_first_aid;task=input'>[skill_first_aid]</a>: [skill_first_aid_t]<BR>"
 	dat += "<b>Medical     :</b> <a href='?_src_=prefs;preference=skill_doctor;task=input'>[skill_doctor] (Points Spent)</a>: [skill_doctor_t] Skill Total<BR>"
 	dat += "<b>Stealth     :</b> <a href='?_src_=prefs;preference=skill_sneak;task=input'>[skill_sneak] (Points Spent)</a>: [skill_sneak_t] Skill Total<BR>"
@@ -1772,7 +1772,7 @@ Records disabled until a use for them is found
 				SetSpecial(user)
 		return TRUE
 
-		
+
 	else if(href_list["preference"] == "skill")
 		switch(href_list["task"])
 			if("close")
@@ -2191,20 +2191,29 @@ Records disabled until a use for them is found
 				if("species")
 					var/result = input(user, "Select a species", "Species Selection") as null|anything in GLOB.roundstart_race_names
 					if(result)
-						var/newtype = GLOB.species_list[GLOB.roundstart_race_names[result]]
-						pref_species = new newtype()
-						//let's ensure that no weird shit happens on species swapping.
-						custom_species = null
-						if(!parent.can_have_part("mam_body_markings"))
-							features["mam_body_markings"] = list()
-						if(parent.can_have_part("mam_body_markings"))
-							if(features["mam_body_markings"] == "None")
-								features["mam_body_markings"] = list()
-						if(parent.can_have_part("tail_lizard"))
-							features["tail_lizard"] = "Smooth"
-						if(pref_species.id == "felinid")
-							features["mam_tail"] = "Cat"
-							features["mam_ears"] = "Cat"
+						var/datum/species/to_check_wl = new newtype() //Instance of newtype specifically for checking whitelists
+						var/list/species_wl = to_check_wl.whitelist
+						var/whitelist_accept = TRUE
+						if(to_check_wl.whitelisted == 1)
+							if(species_wl.Find(user.ckey) == 0)
+								to_chat(user, SPAN_DANGER("You are not whitelisted for this species!"))
+								whitelist_accept = FALSE
+						if(whitelist_accept == TRUE)
+							pref_species = new newtype()
+							//let's ensure that no weird shit happens on species swapping.
+							custom_species = null
+							if(!parent.can_have_part("body_markings"))
+								features["body_markings"] = "None"
+							if(!parent.can_have_part("mam_body_markings"))
+								features["mam_body_markings"] = "None"
+							if(parent.can_have_part("mam_body_markings"))
+								if(features["mam_body_markings"] == "None")
+									features["mam_body_markings"] = "Plain"
+							if(parent.can_have_part("tail_lizard"))
+								features["tail_lizard"] = "Smooth"
+							if(pref_species.id == "felinid")
+								features["mam_tail"] = "Cat"
+								features["mam_ears"] = "Cat"
 
 						//Now that we changed our species, we must verify that the mutant colour is still allowed.
 						var/temp_hsv = RGBtoHSV(features["mcolor"])

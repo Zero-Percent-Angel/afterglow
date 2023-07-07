@@ -159,6 +159,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	*/
 	if(!GLOB.roundstart_races.len)
 		GLOB.roundstart_races += "human"
+		GLOB.roundstart_races += "ghoul"
+		GLOB.roundstart_races += "smutant"
 
 /datum/species/proc/check_roundstart_eligible()
 	if(id in (CONFIG_GET(keyed_list/roundstart_races)))
