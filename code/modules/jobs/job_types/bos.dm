@@ -194,7 +194,8 @@ Head Paladin
 	mask =			/obj/item/clothing/mask/gas/sechailer
 	ears =			/obj/item/radio/headset/headset_bos/command
 	id = 			/obj/item/card/id/dogtag
-	neck = 			/obj/item/clothing/neck/mantle/bos/paladin
+	belt = /obj/item/storage/belt/legholster
+	//neck = 			/obj/item/clothing/neck/mantle/bos/paladin
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/melee/powerfist/f13 = 1,
@@ -287,6 +288,8 @@ Head Scribe
 	name = "Head Scribe"
 	jobtype = /datum/job/bos/f13headscribe
 	uniform = 		/obj/item/clothing/under/syndicate/brotherhood
+	suit =			/obj/item/clothing/suit/armor/power_armor/t51b
+	head =			/obj/item/clothing/head/helmet/f13/power_armor/t51b
 	accessory = 	/obj/item/clothing/accessory/bos/headscribe
 	glasses =       /obj/item/clothing/glasses/sunglasses
 	suit = 			/obj/item/clothing/suit/armor/light/duster/bos/scribe/headscribe
@@ -380,7 +383,6 @@ Head Knight
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	accessory =		/obj/item/clothing/accessory/bos/knightcaptain
 	//belt = /obj/item/kit_spawner/bos/combat
-	l_pocket =			/obj/item/storage/belt/shoulderholster
 	mask =			/obj/item/clothing/mask/gas/sechailer
 	head =			/obj/item/clothing/head/helmet/f13/combat/brotherhood
 	id =			/obj/item/card/id/dogtag
@@ -469,8 +471,8 @@ Senior Paladin
 	accessory =	/obj/item/clothing/accessory/bos/seniorpaladin
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
-	//belt = /obj/item/kit_spawner/bos/combat
-	neck =	/obj/item/clothing/neck/mantle/bos/paladin
+	belt = /obj/item/storage/belt/legholster
+	//neck =	/obj/item/clothing/neck/mantle/bos/paladin
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
@@ -561,8 +563,8 @@ Paladin
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
-	//belt = /obj/item/kit_spawner/bos/combat
-	neck =	/obj/item/clothing/neck/mantle/bos/paladin
+	belt = /obj/item/storage/belt/legholster
+	//neck =	/obj/item/clothing/neck/mantle/bos/paladin
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/stimpak= 1,
 		/obj/item/melee/onehanded/knife/hunting = 1,
@@ -889,7 +891,7 @@ Senior Knight
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	glasses =       /obj/item/clothing/glasses/night
 	mask =			/obj/item/clothing/mask/gas/sechailer
-	//belt = /obj/item/kit_spawner/bos/combat
+	belt = /obj/item/storage/belt/legholster
 	l_pocket =			/obj/item/storage/belt/shoulderholster
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
 	id = 			/obj/item/card/id/dogtag
@@ -994,7 +996,7 @@ Knight
 	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	mask =			/obj/item/clothing/mask/gas/sechailer
-	//belt = /obj/item/kit_spawner/bos/combat
+	belt = /obj/item/storage/belt/legholster
 	l_pocket =			/obj/item/storage/belt/shoulderholster
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood
 	id = 			/obj/item/card/id/dogtag
@@ -1055,7 +1057,7 @@ Knight
 /datum/outfit/loadout/knighte
 	name = "Knight-Defender"
 	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/juniorknight=1,
+		/obj/item/clothing/accessory/bos/knight=1,
 		/obj/item/gun/ballistic/automatic/marksman=1,
 		/obj/item/ammo_box/magazine/m556/rifle=2,
 		/obj/item/gun/energy/laser/pistol=1,
@@ -1065,7 +1067,7 @@ Knight
 /datum/outfit/loadout/knightf
 	name = "Knight-Cavalry"
 	backpack_contents = list(
-		/obj/item/clothing/accessory/bos/juniorknight=1,
+		/obj/item/clothing/accessory/bos/knight=1,
 		/obj/item/gun/ballistic/shotgun/hunting = 1,
 		/obj/item/ammo_box/shotgun/buck = 1,
 		/obj/item/ammo_box/shotgun/slug = 1,

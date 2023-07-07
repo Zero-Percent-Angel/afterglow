@@ -2,7 +2,7 @@
 	name = "ion bolt"
 	icon_state = "ion"
 	damage = 25
-	armour_penetration = 0.6
+	armour_penetration = 0.3
 	damage_type = BURN
 	flag = "energy"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/ion
