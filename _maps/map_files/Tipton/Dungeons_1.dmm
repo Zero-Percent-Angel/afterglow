@@ -10412,6 +10412,18 @@
 /obj/structure/closet/secure_closet/armory1,
 /turf/open/floor/plasteel/vault,
 /area/f13/vault/security/armory)
+"DS" = (
+/obj/effect/turf_decal/delivery,
+/obj/structure/table,
+/obj/item/storage/box/disks_plantgene{
+	pixel_y = 13;
+	pixel_x = 6
+	},
+/obj/item/storage/box/disks_plantgene{
+	pixel_y = 8
+	},
+/turf/open/floor/plasteel/f13/vault_floor/white,
+/area/f13/vault/garden)
 "DT" = (
 /obj/structure/rack,
 /obj/item/seeds/amanita,
@@ -15912,15 +15924,7 @@
 	},
 /area/ruin/powered)
 "TS" = (
-/obj/structure/table,
-/obj/item/storage/box/disks_plantgene{
-	pixel_y = 8;
-	pixel_x = 6
-	},
-/obj/item/storage/box/disks_plantgene{
-	pixel_y = -2;
-	pixel_x = 6
-	},
+/obj/machinery/seed_extractor,
 /turf/open/floor/plasteel/f13/vault_floor/green,
 /area/f13/vault/garden)
 "TT" = (
@@ -17663,11 +17667,19 @@
 	},
 /area/ruin/powered)
 "Ze" = (
-/obj/structure/closet/wardrobe/botanist,
-/obj/item/reagent_containers/glass/bucket/plastic,
-/obj/effect/turf_decal/delivery/white,
-/turf/open/floor/plasteel/f13/vault_floor/white,
-/area/f13/vault/garden)
+/obj/structure/fluff/railing{
+	dir = 4;
+	layer = 3.1
+	},
+/obj/structure/lattice{
+	density = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/smes,
+/turf/open/floor/plating/tunnel,
+/area/f13/vault/reactor)
 "Zf" = (
 /obj/structure/flora/stump,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
@@ -31690,7 +31702,7 @@ sM
 Xn
 Gz
 Ai
-ZY
+DS
 rP
 Ai
 rn
@@ -31947,7 +31959,7 @@ SL
 Jd
 NT
 Ai
-Ze
+ZY
 wK
 Ai
 YA
@@ -32746,7 +32758,7 @@ eS
 JF
 fX
 oZ
-cf
+Ze
 sL
 cf
 oZ
