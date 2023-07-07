@@ -49,7 +49,8 @@ Raider
 	/datum/outfit/loadout/raider_ncr,
 	/datum/outfit/loadout/raider_legion,
 	/datum/outfit/loadout/raider_bos,
-	/datum/outfit/loadout/quack_doctor
+	/datum/outfit/loadout/quack_doctor,
+	/datum/outfit/loadout/powder_ganger
 	)
 
 
