@@ -109,6 +109,22 @@ GLOBAL_LIST_INIT(desolate_plant_spawn_list, list(
 	slowdown = 3
 	flags_1 = ADJACENCIES_OVERLAY
 
+///////////
+// GRASS //
+///////////
+
+/turf/open/indestructible/ground/outside/grass
+	name = "Grass"
+	desc = "Some actual grass."
+	icon_state = "grassfull"
+	flags_1 = CAN_HAVE_NATURE | ADJACENCIES_OVERLAY
+
+/turf/open/indestructible/ground/outside/grass/corner //change direction for different corners
+	icon_state = "grass_dirtcorner"
+
+/turf/open/indestructible/ground/outside/grass/dirtpath //change direction for different sides/corners
+	icon_state = "grass"
+
 
 //////////////
 // SAVANNAH //
