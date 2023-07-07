@@ -201,8 +201,9 @@
 	r_hand = /obj/item/twohanded/baseball/spiked
 	belt = /obj/item/storage/belt/bandolier
 	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
+		/obj/item/ammo_box/magazine/m9mm = 1,
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
-		/obj/item/book/granter/trait/bigleagues = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
 
 /datum/outfit/loadout/khanskirmisher
@@ -216,9 +217,12 @@
 /datum/outfit/loadout/khandrug
 	name = "Drug Pusher"
 	belt = /obj/item/storage/belt/bandolier
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/ninemil
 	backpack_contents = list(
-		//obj/item/book/granter/trait/midsurgery = 1,
-		/obj/item/book/granter/trait/chemistry = 1,
+		/obj/item/ammo_box/magazine/m9mm = 1,
+		/obj/item/reagent_containers/hypospray/medipen/medx = 1,
+		/obj/item/reagent_containers/hypospray/medipen/psycho = 1,
+		/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 2,
 		/obj/item/reagent_containers/pill/patch/turbo = 2)
 
 //KHORCHIN =================================================================
@@ -340,19 +344,19 @@
 	suit = /obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
 	glasses = /obj/item/clothing/glasses/sunglasses
 	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/beretta = 1,
+		/obj/item/ammo_box/magazine/m9mm = 2,
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
-		/obj/item/book/granter/trait/iron_fist  = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
-		/obj/item/book/granter/trait/bigleagues = 1)
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
 
 /datum/outfit/loadout/peopleleader
 	name = "People's leader"
-	r_hand = /obj/item/gun/ballistic/revolver/revolver45
 	head = /obj/item/clothing/head/helmet/f13/khan/fullhelm
 	suit = /obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
 	glasses = /obj/item/clothing/glasses/sunglasses
 	neck = /obj/item/storage/belt/shoulderholster
 	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/revolver45 = 2,
 		/obj/item/ammo_box/c45rev = 3,
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
