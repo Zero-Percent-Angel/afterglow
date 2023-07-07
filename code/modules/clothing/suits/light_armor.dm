@@ -625,6 +625,14 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
+/obj/item/clothing/suit/armor/light/duster/bos/scribe/field_coat/lancer
+	name = "Lancer's Pilot Jacket"
+	desc = "A heavy-duty flight jacket, made from a ballistic weave with a fur lining. Worn by the Lancers of the Brotherhood of Steel."
+	icon_state = "lancer_jacket"
+	item_state = "lancer_jacket"
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2)
+
+
 /obj/item/clothing/suit/armor/light/duster/bos/scribe/elder
 	name = "Brotherhood Elder's robe"
 	desc = "A blue cloth robe with some scarlet red parts, traditionally worn by the Brotherhood of Steel Elder."
