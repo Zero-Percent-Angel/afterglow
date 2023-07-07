@@ -272,7 +272,7 @@ Raider
 	gloves = /obj/item/pda
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
-		/obj/item/ammo_box/magazine/m10mm/adv/ext = 1,
+		/obj/item/ammo_box/magazine/m10mm/adv/simple = 1,
 		/obj/item/pda = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
 		)
