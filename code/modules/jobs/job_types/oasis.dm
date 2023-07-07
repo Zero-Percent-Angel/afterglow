@@ -144,7 +144,8 @@ Mayor
 	shoes = /obj/item/clothing/shoes/f13/fancy
 	uniform = /obj/item/clothing/under/suit/black
 	backpack_contents = list(
-		/obj/item/storage/pill_bottle/chem_tin/radx,
+		/obj/item/storage/pill_bottle/chem_tin/radx = 1,
+		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
 		/obj/item/ammo_box/magazine/m9mm = 1,
 		/obj/item/melee/onehanded/knife/switchblade = 1,
 		/obj/item/pda = 1
@@ -257,8 +258,8 @@ Mayor
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 
 	backpack_contents = list(
-	/obj/item/ammo_box/tube/c4570 = 3,
-	/obj/item/gun_upgrade/scope/watchman = 1
+		/obj/item/ammo_box/tube/c4570 = 3,
+		/obj/item/gun_upgrade/scope/watchman = 1
 	)
 
 /datum/outfit/loadout/thechief
@@ -697,9 +698,9 @@ Mayor
 	uniform = /obj/item/clothing/under/f13/worn
 	gloves = /obj/item/clothing/gloves/f13/leather
 	backpack_contents = list(/obj/item/reagent_containers/food/drinks/flask = 1,
-	/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
-	/obj/item/ammo_box/magazine/m22 = 1,
-	/obj/item/stack/f13Cash/caps/twofivezero = 1,
+		/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
+		/obj/item/ammo_box/magazine/m22 = 1,
+		/obj/item/stack/f13Cash/caps/twofivezero = 1,
 	)
 
 /datum/outfit/loadout/resident
@@ -712,10 +713,10 @@ Mayor
 	neck = /obj/item/storage/belt/shoulderholster
 	suit_store = /obj/item/gun/ballistic/revolver/single_shotgun
 	backpack_contents = list(/obj/item/ammo_box/shotgun/buck = 1,
-	/obj/item/stack/f13Cash/caps/onezerozero = 1,
-	/obj/item/storage/box/ration/menu_two = 1,
-	/obj/item/storage/box/ration/menu_eight = 1,
-	/obj/item/reagent_containers/food/drinks/flask/survival = 1,
+		/obj/item/stack/f13Cash/caps/onezerozero = 1,
+		/obj/item/storage/box/ration/menu_two = 1,
+		/obj/item/storage/box/ration/menu_eight = 1,
+		/obj/item/reagent_containers/food/drinks/flask/survival = 1,
 	)
 
 /datum/outfit/loadout/outdoorsman
@@ -728,12 +729,12 @@ Mayor
 	gloves = /obj/item/clothing/gloves/botanic_leather
 	shoes = /obj/item/clothing/shoes/f13/peltboots
 	backpack_contents = list(
-	/obj/item/ammo_box/magazine/m22 = 2,
-	/obj/item/fishingrod = 1,
-	/obj/item/binoculars = 1,
-	/obj/item/crafting/campfirekit = 1,
-	/obj/item/storage/fancy/rollingpapers/makeshift = 1,
-	/obj/item/reagent_containers/food/drinks/flask/survival = 1,
+		/obj/item/ammo_box/magazine/m22 = 2,
+		/obj/item/fishingrod = 1,
+		/obj/item/binoculars = 1,
+		/obj/item/crafting/campfirekit = 1,
+		/obj/item/storage/fancy/rollingpapers/makeshift = 1,
+		/obj/item/reagent_containers/food/drinks/flask/survival = 1,
 	)
 
 /*----------------------------------------------------------------
