@@ -10,10 +10,10 @@
 
 //Wasteland generic areas
 
-//Ambigen sound tips for ambientsounds: 
-//1 - 2 : outside the ruined buildings, 
+//Ambigen sound tips for ambientsounds:
+//1 - 2 : outside the ruined buildings,
 //3 - 9 : inside the wasteland buildings,
-// 10 - 14 : vaults and bunkers specific, 
+// 10 - 14 : vaults and bunkers specific,
 //15-19 : caves
 //These were defined a long time ago, but we may still consider using them with our new ambient sound system ~TK
 
@@ -92,7 +92,7 @@
 
 /area/f13/building/abandoned/a
 	name = "Abandoned Building"
-	
+
 /area/f13/building/abandoned/b
 	name = "Abandoned Building"
 
@@ -613,6 +613,11 @@
 		AREA_SOUND('sound/f13ambience/ambigen_8.ogg', 10 SECONDS))
 	environment = 6
 	grow_chance = 5
+
+/area/f13/casino/powered
+	name = "Casino"
+	icon_state = "casino"
+	requires_power = FALSE
 
 /area/f13/clinic
 	name = "Clinic"
