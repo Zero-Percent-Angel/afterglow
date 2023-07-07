@@ -773,7 +773,8 @@
 	name = "mid-high tier energy gun"
 	loot = list(/obj/item/gun/energy/laser/aer12 = 20,
 				/obj/effect/spawner/bundle/f13/plasmapistol = 25,
-				/obj/effect/spawner/bundle/f13/wattz2k = 15
+				/obj/effect/spawner/bundle/f13/wattz2k = 15,
+				/obj/effect/spawner/bundle/f13/ionrifle = 25
 				)
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/high
 	name = "high tier energy gun"
@@ -800,8 +801,7 @@
 				/obj/item/gun/energy/laser/plasma/pistol/eve,
 				/obj/item/gun/energy/laser/wattz2ks,
 				/obj/effect/spawner/bundle/f13/aer14,
-				/obj/item/gun/energy/laser/plasma/pistol/adam,
-				/obj/effect/spawner/bundle/f13/ionrifle
+				/obj/item/gun/energy/laser/plasma/pistol/adam
 				)
 
 //Ballistic Weapon Spawners
@@ -1192,7 +1192,7 @@
 	name = "10mm SMG and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/smg/smg10mm,
-				/obj/item/ammo_box/magazine/m10mm/adv/ext/
+				/obj/item/ammo_box/magazine/m10mm/smg
 				)
 
 /obj/effect/spawner/bundle/f13/greasegun
