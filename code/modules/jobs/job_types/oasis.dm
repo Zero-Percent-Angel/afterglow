@@ -918,6 +918,8 @@ Mayor
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx,
+		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
+		/obj/item/ammo_box/magazine/m9mm = 1,
 		/obj/item/pda/quartermaster,
 		/obj/item/stack/f13Cash/caps/twofivezero)
 
