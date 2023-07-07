@@ -105,15 +105,15 @@
 /obj/item/clothing/suit/armor/light/tribal/eighties
 	name = "Eighties light armour"
 	desc = "A fairly simple, black leather jacket with an overly popped collar. Commonly worn by the members of the 80s tribe."
-	icon_state = "eighties_armour_light"
-	item_state = "eighties_armour_light"
+	icon_state = "80s_armour_light"
+	item_state = "80s_armour_light"
 	body_parts_hidden = CHEST|ARMS
 
 /obj/item/clothing/suit/armor/light/tribal/bonedancers
 	name = "Bone Dancers light armour"
 	desc = "A chestplate, pauldrons and thigh guards made from bone and sinew. Commonly worn by members of the Bone Dancers tribe."
-	icon_state = "eighties_armour_light"
-	item_state = "eighties_armour_light"
+	icon_state = "bone_dancer_armor_light"
+	item_state = "bone_dancer_armor_light"
 	body_parts_hidden = CHEST
 
 /// to be refactored to work with the New Tier System (tm)
@@ -594,7 +594,7 @@
 
 //////////////////////////
 // Brotherhood of Steel //
-////////////////////////// 
+//////////////////////////
 
 /obj/item/clothing/suit/armor/light/duster/bos/scribe
 	name = "Brotherhood Scribe's robe"
@@ -670,7 +670,7 @@
 // Great Khans //
 ////////////////
 
-//These are from light jackets 
+//These are from light jackets
 /obj/item/clothing/suit/toggle/labcoat/khan_jacket
 	name = "Great Khan jacket"
 	desc = "A black leather jacket. <br>There is an illustration on the back - an aggressive, red-eyed skull wearing a fur hat with horns.<br>The skull has a mongoloid moustache - it's obviously a Great Khans emblem."
