@@ -936,6 +936,16 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("Your fists no longer feel so powerful.")
 	locked =  FALSE
 */
+
+/datum/quirk/paintrain
+	name = "Pain Train"
+	desc = "The Power Armour Train has left the station, and those in it's way will be sent flying."
+	value = 2
+	mob_trait = TRAIT_PAIN_TRAIN
+	gain_text = span_notice("The Pain Train has left the station.")
+	lose_text = span_danger("Please mind the gap between the timetable, and reality.")
+	locked = FALSE
+
 /datum/quirk/quietstep
 	name = "Quiet Step"
 	desc = "Your steps just don't make any noise at all."

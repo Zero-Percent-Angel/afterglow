@@ -8,8 +8,7 @@
 		/datum/reagent/drug/crank = 4,
 		/datum/reagent/drug/heroin = 4,
 		/datum/reagent/medicine/spaceacillin = 3,
-		/datum/reagent/medicine/ephedrine = 3,
-		/datum/reagent/drug/skooma = 3
+		/datum/reagent/medicine/ephedrine = 3
 	)
 	//These become available once upgraded.
 	advanced_chemicals = list(
