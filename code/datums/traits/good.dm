@@ -945,7 +945,6 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You're pretty sure that's the sound of your asscheeks clapping, but it might be footsteps.")
 	locked =  FALSE
 
-
 /datum/quirk/deadeye
 	name = "Dead Eye"
 	desc = "You hit the shots you aim, even those around corners. Well, most of the time."
