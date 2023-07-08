@@ -27,7 +27,7 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 
 GLOBAL_LIST_INIT(whitelegs_recipes, list(
 	/datum/crafting_recipe/tribalwar/whitelegs/garb,
-	/datum/crafting_recipe/tribalwar/whitelegs/femalegarb, 
+	/datum/crafting_recipe/tribalwar/whitelegs/femalegarb,
 	/datum/crafting_recipe/tribalwar/whitelegs/lightarmour,
 	/datum/crafting_recipe/tribalwar/whitelegs/armour,
 	/datum/crafting_recipe/tribalwar/whitelegs/heavyarmour))
@@ -67,7 +67,7 @@ GLOBAL_LIST_INIT(wayfarer_recipes, list(
 GLOBAL_LIST_INIT(bone_dancer_recipes, list(
 	/datum/crafting_recipe/tribalwar/bone/garb,
 	/datum/crafting_recipe/tribalwar/bone/lightarmour,
-	/datum/crafting_recipe/tribalwar/bone/armour, 
+	/datum/crafting_recipe/tribalwar/bone/armour,
 	/datum/crafting_recipe/tribalwar/bone/heavyarmour))
 
 GLOBAL_LIST_INIT(tier_three_parts, list(
@@ -939,8 +939,8 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /* temp removed for now! Might rework later
 /datum/quirk/deadeye
 	name = "Dead Eye"
-	desc = "You hit the shots you aim. No ifs, ands, or buts."
-	value = 12 //WIP for sure, lmfao ~TK
+	desc = "You hit the shots you aim, even those around corners. Well, most of the time."
+	value = 5 //WIP for sure, lmfao ~TK
 	mob_trait = TRAIT_INSANE_AIM
 	gain_text = span_notice("Your aim is legendary, and you know it.")
 	lose_text = span_danger("Your aim could use some work...")
