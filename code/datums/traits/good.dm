@@ -945,7 +945,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You're pretty sure that's the sound of your asscheeks clapping, but it might be footsteps.")
 	locked =  FALSE
 
-/* temp removed for now! Might rework later
+
 /datum/quirk/deadeye
 	name = "Dead Eye"
 	desc = "You hit the shots you aim, even those around corners. Well, most of the time."
@@ -954,7 +954,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("Your aim is legendary, and you know it.")
 	lose_text = span_danger("Your aim could use some work...")
 	locked =  FALSE
-*/
+
 /datum/quirk/straightshooter
 	name = "Straight Shooter"
 	desc = "You're a better than average shot."
