@@ -346,12 +346,12 @@ datum/chemical_reaction/fermi/eigenstate
 	if(!Fb)
 		return
 	Fb.data = 14
-	
+
 /datum/chemical_reaction/fermi/furranium
 	name = "Furranium"
 	id = /datum/reagent/fermi/furranium
 	results = list(/datum/reagent/fermi/furranium = 5)
-	required_reagents = list(/datum/reagent/drug/aphrodisiac = 1, /datum/reagent/moonsugar = 1, /datum/reagent/silver = 2, /datum/reagent/medicine/salglu_solution = 1)
+	required_reagents = list(/datum/reagent/drug/aphrodisiac = 1, /datum/reagent/rawgetaway = 1, /datum/reagent/silver = 2, /datum/reagent/medicine/salglu_solution = 1)
 	mix_message = "You think you can hear a howl come from the beaker."
 	//FermiChem vars:
 	OptimalTempMin 	= 350
