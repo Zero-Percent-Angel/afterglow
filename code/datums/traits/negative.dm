@@ -564,15 +564,6 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/blindness/remove()
 	quirk_holder?.cure_blind(ROUNDSTART_TRAIT)
 
-/datum/quirk/coldblooded
-	name = "Cold-blooded"
-	desc = "Your body doesn't create its own internal heat, requiring external heat regulation."
-	value = -1
-	medical_record_text = "Patient is ectothermic."
-	mob_trait = TRAIT_COLDBLOODED
-	gain_text = span_notice("You feel cold-blooded.")
-	lose_text = span_notice("You feel more warm-blooded.")
-
 /datum/quirk/monophobia
 	name = "Monophobia"
 	desc = "You will become increasingly stressed when not in company of others, triggering panic reactions ranging from sickness to heart attacks."

@@ -823,6 +823,15 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You know? Being cold kind of sucks actually.")
 	locked =  FALSE
 
+/datum/quirk/coldblooded
+	name = "Cold-blooded"
+	desc = "Your body doesn't create its own internal heat, requiring external heat regulation. As a result, your blood clots slightly faster." //Cold-Blooded animals tend not to bleed as much
+	value = 1
+	medical_record_text = "Patient is ectothermic."
+	mob_trait = TRAIT_COLDBLOODED
+	gain_text = span_notice("You feel cold-blooded.")
+	lose_text = span_notice("You feel more warm-blooded.")
+
 /* You can't be that immune, unless you're like a ghoul!
 /datum/quirk/radimmune
 	name = "Radiation - Immune"
