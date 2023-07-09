@@ -95,3 +95,13 @@
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 8, /datum/reagent/consumable/nutriment/vitamin = 1)
 	tastes = list("noodle" = 1, "butter" = 1)
 	foodtype = GRAIN | DAIRY
+
+/obj/item/reagent_containers/food/snacks/pestospaghetti
+	name = "pesto spaghetti"
+	desc = "Noodles covered in Pesto sauce, giving it a herb-y flavour.."
+	icon = 'icons/obj/food/pizzaspaghetti.dmi'
+	icon_state = "pestospaghetti"
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 8, /datum/reagent/consumable/nutriment/vitamin = 6)
+	tastes = list("noodle" = 1, "pesto" = 1)
+	foodtype = GRAIN | VEGETABLES
+

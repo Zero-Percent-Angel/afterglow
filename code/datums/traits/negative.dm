@@ -393,7 +393,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	description = span_warning("Sometimes eye contact makes me so nervous...")
 	mood_change = -5
 	timeout = 3 MINUTES
-
+/*
 /datum/quirk/spiderphobia
 	name = "Phobia - Spiders"
 	desc = "You've had a traumatic past, one that has scarred you for life, and it had something to do with spiders."
@@ -453,7 +453,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
 	H?.cure_trauma_type(/datum/brain_trauma/mild/phobia/strangers, TRAUMA_RESILIENCE_ABSOLUTE)
-
+*/
 /datum/quirk/doctorphobia
 	name = "Phobia - Doctors"
 	desc = "You've had a traumatic past, one that has scarred you for life, and it had something to do with doctors."
@@ -468,7 +468,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.gain_trauma(/datum/brain_trauma/mild/phobia/doctors, TRAUMA_RESILIENCE_ABSOLUTE)
-
+/*
 /datum/quirk/maskphobia/remove()
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -513,7 +513,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
 	H?.cure_trauma_type(/datum/brain_trauma/mild/phobia/eye, TRAUMA_RESILIENCE_ABSOLUTE)
-
+*/
 
 /datum/quirk/mute
 	name = "Mute"
