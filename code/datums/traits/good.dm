@@ -452,6 +452,15 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how to slaughter animals.")
 	locked = FALSE
 
+/datum/quirk/bigleagues
+	name = "Melee - Big Leagues"
+	desc = "Swing for the fences! You deal even more additional damage with melee weapons."
+	value = 3
+	mob_trait = TRAIT_BIG_LEAGUES
+	gain_text = span_notice("You feel like swinging for the fences!")
+	lose_text = span_danger("You feel like bunting.")
+	locked = FALSE
+
 /datum/quirk/littleleagues
 	name = "Melee - Little Leagues"
 	desc = "Swing for the outfield! You deal additional damage with melee weapons."
@@ -491,7 +500,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("You realize how to use Power Armor.")
 	lose_text = span_danger("You forget how Power Armor works.")
 	locked = FALSE
-/*
+
 /datum/quirk/hard_yards
 	name = "Mobility - Wasteland Trekker"
 	desc = "You've spent a lot of time wandering the wastes, and for your hard work you out pace most folks when travelling across them."
@@ -500,7 +509,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("Rain or shine, nothing slows you down.")
 	lose_text = span_danger("You walk with a less sure gait, the ground seeming less firm somehow.")
 	locked = FALSE
-*/
+
 /datum/quirk/soft_yards
 	name = "Mobility - Wasteland Wanderer"
 	desc = "You've spent some time in the wastes, and can move a bit better around them for it."
@@ -576,7 +585,6 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("You walk with a little more litheness.")
 	lose_text = span_danger("You start tromping around like a barbarian.")
 
-/*
 /datum/quirk/surgerylow
 	name = "Minor Surgery"
 	desc = "You are a somewhat adequate medical practicioner, capable of performing minor surgery in a pinch."
@@ -585,7 +593,6 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("You feel yourself discovering the basics of the human body.")
 	lose_text = span_danger("You forget how to perform even the simplest surgery.")
 	locked = FALSE
-*/
 
 /datum/quirk/explosive_crafting
 	name = "Explosives Crafting"
