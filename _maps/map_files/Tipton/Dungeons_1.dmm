@@ -186,22 +186,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/tunnel)
-"aA" = (
-/obj/structure/table/abductor,
-/obj/item/grenade/f13/incendiary{
-	pixel_y = 5;
-	pixel_x = 9
-	},
-/obj/item/grenade/f13/incendiary{
-	pixel_y = 5
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
-	},
-/area/ruin/powered)
 "aB" = (
 /obj/effect/gibspawner/human,
 /mob/living/simple_animal/hostile/supermutant/legendary,
@@ -744,16 +728,6 @@
 /obj/structure/debris/v3,
 /turf/closed/mineral/random/low_chance,
 /area/f13/tunnel)
-"cd" = (
-/obj/machinery/light/floor{
-	light_color = "#ff4500";
-	light_range = 12
-	},
-/turf/open/floor/f13{
-	dir = 5;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "ce" = (
 /mob/living/simple_animal/hostile/supermutant/meleemutant,
 /mob/living/simple_animal/hostile/supermutant/meleemutant,
@@ -868,16 +842,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
-"cw" = (
-/obj/structure/table/abductor,
-/obj/item/defibrillator/compact/combat/loaded,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
-	},
-/area/ruin/powered)
 "cx" = (
 /obj/structure/janitorialcart,
 /obj/effect/decal/cleanable/dirt,
@@ -1651,7 +1615,6 @@
 /area/f13/vault/security/armory)
 "ew" = (
 /obj/machinery/power/emitter/anchored,
-/obj/machinery/light/small,
 /turf/open/floor/f13{
 	icon_state = "yellowsiding"
 	},
@@ -1933,14 +1896,6 @@
 "ff" = (
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault)
-"fg" = (
-/obj/machinery/light/floor{
-	light_color = "#ff4500";
-	light_range = 12
-	},
-/obj/effect/spawner/structure/window,
-/turf/open/floor/f13,
-/area/ruin/powered)
 "fh" = (
 /obj/effect/decal/cleanable/glass,
 /obj/structure/flora/grass/jungle,
@@ -2004,14 +1959,7 @@
 	},
 /area/f13/vault/atrium)
 "fo" = (
-/obj/structure/table/abductor,
-/obj/item/grenade/plastic/c4{
-	pixel_y = 2;
-	pixel_x = 6
-	},
-/obj/item/grenade/plastic/c4{
-	pixel_y = 2
-	},
+/obj/machinery/harvester,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "bcircuit1";
 	light_color = "#0076bc";
@@ -2044,16 +1992,6 @@
 /obj/machinery/door/airlock/maintenance_hatch,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/vault/atrium)
-"fu" = (
-/obj/structure/table/abductor,
-/obj/item/stack/sheet/mineral/plastitanium/fifty,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
-	},
-/area/ruin/powered)
 "fv" = (
 /obj/structure/flora/grass/jungle,
 /obj/structure/flora/grass/jungle,
@@ -2143,9 +2081,6 @@
 /area/f13/tunnel)
 "fI" = (
 /obj/machinery/power/emitter/anchored,
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/open/floor/f13{
 	dir = 1;
 	icon_state = "yellowsiding"
@@ -2201,13 +2136,6 @@
 /obj/structure/flora/grass/jungle/b,
 /turf/open/water,
 /area/f13/tunnel)
-"fQ" = (
-/obj/structure/table,
-/obj/effect/spawner/bundle/f13/armor/combat/mk2/dark,
-/turf/open/floor/f13{
-	icon_state = "yellowdirtyfull"
-	},
-/area/ruin/powered)
 "fR" = (
 /turf/open/floor/f13{
 	dir = 4;
@@ -3162,10 +3090,7 @@
 	proj_pass_rate = 100
 	},
 /obj/structure/table/reinforced,
-/turf/open/floor/f13{
-	dir = 1;
-	icon_state = "yellowsiding"
-	},
+/turf/open/floor/f13,
 /area/ruin/powered)
 "iA" = (
 /turf/closed/wall/f13/wood/house,
@@ -3624,7 +3549,8 @@
 	},
 /area/ruin/powered)
 "jN" = (
-/obj/machinery/gear_painter,
+/obj/structure/table/abductor,
+/obj/machinery/plantgenes/seedvault,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "bcircuit1";
 	light_color = "#0076bc";
@@ -3903,18 +3829,16 @@
 	},
 /area/f13/tunnel)
 "kB" = (
-/obj/structure/window/reinforced/fulltile/indestructable{
-	can_be_unanchored = 0
+/obj/machinery/porta_turret/xray{
+	faction = list("hostile");
+	name = "40mm turret";
+	desc = "A explosive machine gun auto-turret.";
+	stun_projectile = /obj/item/projectile/bullet/a40mm
 	},
-/obj/structure/grille/indestructable,
-/obj/machinery/light/floor{
-	light_color = "#ff4500";
-	light_range = 12
+/turf/open/floor/f13{
+	dir = 5;
+	icon_state = "yellowsiding"
 	},
-/obj/machinery/door/poddoor/shutters{
-	id = "DungeonRange"
-	},
-/turf/open/floor/plating/tunnel,
 /area/ruin/powered)
 "kC" = (
 /turf/open/floor/plasteel/f13/vault_floor/green/side{
@@ -4142,12 +4066,6 @@
 	},
 /turf/open/floor/carpet/royalblue,
 /area/f13/vault/security)
-"lj" = (
-/obj/structure/simple_door/metal/iron,
-/turf/open/floor/f13{
-	icon_state = "yellowdirtyfull"
-	},
-/area/ruin/powered)
 "lk" = (
 /obj/structure/table,
 /obj/item/reagent_containers/glass/beaker/large{
@@ -4178,16 +4096,6 @@
 "lm" = (
 /turf/closed/wall/r_wall/rust,
 /area/f13/tunnel)
-"ln" = (
-/obj/machinery/light/floor{
-	light_color = "#ff4500";
-	light_range = 12
-	},
-/turf/open/floor/f13{
-	dir = 6;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "lo" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -4203,8 +4111,11 @@
 /turf/open/floor/plasteel/vault,
 /area/f13/vault/security/armory)
 "lq" = (
-/obj/effect/spawner/structure/window,
-/turf/open/floor/f13,
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/blueprintLowMid,
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
 /area/ruin/powered)
 "lr" = (
 /obj/structure/rack,
@@ -4385,22 +4296,6 @@
 	icon_state = "yellowsiding"
 	},
 /area/f13/tunnel)
-"lP" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/stock_parts/cell/ammo/mfc,
-/obj/item/stock_parts/cell/ammo/mfc,
-/obj/item/stock_parts/cell/ammo/mfc,
-/obj/item/stock_parts/cell/ammo/mfc,
-/obj/item/stock_parts/cell/ammo/mfc,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/unique,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/f13{
-	dir = 1;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "lR" = (
 /obj/structure/bed,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
@@ -5013,22 +4908,6 @@
 	icon_state = "bar"
 	},
 /area/f13/tunnel)
-"nw" = (
-/obj/machinery/porta_turret/xray{
-	faction = list("hostile");
-	name = "40mm turret";
-	desc = "A explosive machine gun auto-turret.";
-	stun_projectile = /obj/item/projectile/bullet/a40mm
-	},
-/obj/machinery/light/floor{
-	light_color = "#ff4500";
-	light_range = 12
-	},
-/turf/open/floor/f13{
-	dir = 5;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "nx" = (
 /obj/structure/flora/junglebush/large,
 /obj/structure/flora/grass/jungle,
@@ -5447,10 +5326,6 @@
 	icon_state = "floordirtysolid"
 	},
 /area/f13/tunnel)
-"oJ" = (
-/obj/structure/simple_door/metal/ventilation,
-/turf/open/floor/plating/tunnel,
-/area/f13/tunnel)
 "oK" = (
 /mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant,
 /obj/effect/decal/cleanable/dirt,
@@ -5565,7 +5440,8 @@
 /area/f13/tunnel)
 "pc" = (
 /obj/structure/table,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/highmid,
+/obj/item/ammo_box/magazine/w308,
+/obj/item/ammo_box/magazine/w308,
 /turf/open/floor/f13{
 	dir = 8;
 	icon_state = "yellowsiding"
@@ -5679,16 +5555,6 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
-"pu" = (
-/obj/structure/table/abductor,
-/obj/item/reagent_containers/hypospray/combat/omnizine,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
-	},
-/area/ruin/powered)
 "pv" = (
 /obj/structure/table,
 /obj/item/storage/bag/bio,
@@ -5777,13 +5643,6 @@
 /area/f13/tunnel)
 "pH" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/storage/belt/durathread,
-/obj/item/storage/belt/durathread,
-/obj/item/clothing/suit/armor/medium/vest/bulletproof/big,
-/obj/item/clothing/head/helmet/alt,
-/obj/item/gun/ballistic/automatic/pistol/n99,
-/obj/item/storage/belt/shoulderholster,
-/obj/machinery/light/small,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "yellowsiding"
@@ -5812,16 +5671,6 @@
 	},
 /turf/open/water,
 /area/f13/tunnel)
-"pM" = (
-/obj/machinery/light/small{
-	dir = 1;
-	light_color = "red"
-	},
-/turf/open/floor/f13{
-	dir = 5;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "pN" = (
 /obj/machinery/chem_lab,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/white,
@@ -6162,15 +6011,16 @@
 	},
 /area/f13/tunnel)
 "qH" = (
-/obj/structure/table/abductor,
-/obj/machinery/plantgenes/seedvault{
-	pixel_y = 7
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
+/obj/structure/rack/shelf_metal,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/unique,
+/turf/open/floor/f13{
+	dir = 1;
+	icon_state = "yellowsiding"
 	},
 /area/ruin/powered)
 "qI" = (
@@ -6450,19 +6300,6 @@
 /obj/item/storage/toolbox/mechanical/old,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
-"ru" = (
-/obj/structure/table/abductor,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/glass/fifty,
-/obj/item/stack/sheet/plasteel/fifty,
-/obj/item/stack/sheet/lead/fifty,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
-	},
-/area/ruin/powered)
 "rv" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -6867,10 +6704,6 @@
 /obj/structure/barricade/wooden/strong,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/tunnel)
-"sE" = (
-/mob/living/simple_animal/hostile/deathclaw,
-/turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
 "sF" = (
 /obj/structure/flora/tree/jungle/small,
@@ -7647,21 +7480,6 @@
 /obj/structure/simple_door/metal/barred,
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
-"uM" = (
-/obj/structure/table/abductor,
-/obj/item/surgicaldrill/alien{
-	pixel_y = 8
-	},
-/obj/item/scalpel/alien{
-	pixel_y = 1
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
-	},
-/area/ruin/powered)
 "uN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
@@ -7691,12 +7509,6 @@
 	rapid_melee = 2
 	},
 /turf/open/floor/f13,
-/area/ruin/powered)
-"uS" = (
-/obj/machinery/light/small,
-/turf/open/floor/f13{
-	icon_state = "yellowsiding"
-	},
 /area/ruin/powered)
 "uT" = (
 /turf/open/floor/plasteel/f13/vault_floor/neutral/side{
@@ -7867,7 +7679,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/storage)
 "vt" = (
-/obj/machinery/shieldwallgen,
+/obj/machinery/shieldgen,
 /turf/open/floor/f13{
 	icon_state = "yellowsiding"
 	},
@@ -8396,13 +8208,6 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
-"wN" = (
-/obj/machinery/shieldgen,
-/turf/open/floor/f13{
-	dir = 6;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "wO" = (
 /obj/item/storage/box/strange_seeds_5pack,
 /obj/effect/decal/cleanable/dirt,
@@ -8557,15 +8362,6 @@
 /obj/structure/flora/grass/jungle,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
-"xn" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/f13{
-	dir = 5;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "xo" = (
 /obj/structure/spacevine{
 	name = "Mutant Vines"
@@ -9294,15 +9090,6 @@
 	icon_state = "greenfull"
 	},
 /area/f13/tunnel)
-"zq" = (
-/mob/living/simple_animal/hostile/handy/gutsy{
-	faction = list("hostile")
-	},
-/obj/machinery/light/small,
-/turf/open/floor/f13{
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "zr" = (
 /obj/structure/spacevine{
 	name = "Mutant Vines"
@@ -9921,12 +9708,11 @@
 	},
 /area/f13/tunnel)
 "Bg" = (
-/obj/machinery/light/floor{
-	light_color = "#ff4500";
-	light_range = 12
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "engine"
+/obj/structure/table,
+/obj/item/wrench/advanced,
+/obj/effect/spawner/bundle/f13/armor/combat/mk2/dark,
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
 	},
 /area/ruin/powered)
 "Bh" = (
@@ -10041,19 +9827,6 @@
 	dir = 5
 	},
 /area/f13/vault/atrium)
-"By" = (
-/obj/structure/table/abductor,
-/obj/item/stack/sheet/mineral/concrete/fifty,
-/obj/item/stack/sheet/mineral/concrete/fifty,
-/obj/item/stack/sheet/plastic/fifty,
-/obj/item/stack/sheet/prewar/fifty,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
-	},
-/area/ruin/powered)
 "Bz" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
@@ -10249,10 +10022,6 @@
 	icon_state = "greenfull"
 	},
 /area/f13/tunnel)
-"Cd" = (
-/obj/structure/flora/rock/pile/largejungle,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/tunnel)
 "Ce" = (
 /obj/structure/railing/corner{
 	dir = 4
@@ -10288,18 +10057,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/yellow/white,
 /area/f13/vault/medical/chemistry)
-"Ch" = (
-/obj/structure/table/abductor,
-/obj/item/retractor/alien{
-	pixel_y = 7
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
-	},
-/area/ruin/powered)
 "Ci" = (
 /obj/machinery/computer/security{
 	network = list("vault");
@@ -10535,14 +10292,6 @@
 	},
 /turf/open/floor/plating/tunnel,
 /area/f13/sewer/powered)
-"CQ" = (
-/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/high,
-/obj/structure/rack/shelf_metal,
-/turf/open/floor/f13{
-	dir = 5;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "CR" = (
 /obj/structure/spacevine{
 	name = "Mutant Vines"
@@ -10641,13 +10390,6 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
-"Dd" = (
-/obj/machinery/shieldgen,
-/turf/open/floor/f13{
-	dir = 10;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "De" = (
 /obj/effect/turf_decal/weather/snow/corner,
 /obj/structure/closet/fridge/meat,
@@ -11023,13 +10765,11 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
 "Eg" = (
-/obj/structure/table/abductor,
-/obj/item/stealthboy,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/blueprintVHigh,
+/obj/effect/spawner/bundle/f13/armor/combat/mk2/dark,
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
 	},
 /area/ruin/powered)
 "Eh" = (
@@ -11189,26 +10929,13 @@
 	},
 /area/ruin/powered)
 "ED" = (
-/obj/structure/flora/rock/jungle,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/tunnel)
-"EE" = (
 /obj/structure/table/abductor,
-/obj/item/storage/box/stockparts/deluxe,
-/obj/item/storage/box/stockparts/deluxe,
+/obj/machinery/cell_charger,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "bcircuit1";
 	light_color = "#0076bc";
 	light_power = 3;
 	light_range = 4
-	},
-/area/ruin/powered)
-"EF" = (
-/obj/structure/table,
-/obj/item/wrench/advanced,
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b,
-/turf/open/floor/f13{
-	icon_state = "yellowdirtyfull"
 	},
 /area/ruin/powered)
 "EG" = (
@@ -11248,10 +10975,6 @@
 /obj/effect/landmark/start/f13/vaultdweller,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/dormitory)
-"EM" = (
-/obj/machinery/door/locked/hard,
-/turf/open/floor/plating/tunnel,
-/area/f13/tunnel)
 "EN" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
@@ -11451,16 +11174,6 @@
 /obj/machinery/door/airlock/maintenance_hatch,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/vault)
-"Fs" = (
-/obj/structure/table/abductor,
-/obj/item/stack/sheet/plastitaniumglass/fifty,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
-	},
-/area/ruin/powered)
 "Ft" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ppflowers,
@@ -11674,10 +11387,6 @@
 	dir = 8
 	},
 /area/ruin/powered)
-"FX" = (
-/obj/item/reagent_containers/food/snacks/f13/deathclawegg,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/tunnel)
 "FY" = (
 /obj/structure/flora/ausbushes/leafybush,
 /mob/living/simple_animal/hostile/trog/sporecarrier,
@@ -12268,11 +11977,8 @@
 /area/f13/tunnel)
 "HG" = (
 /obj/structure/table/reinforced,
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/open/floor/f13{
-	dir = 9;
+	dir = 8;
 	icon_state = "yellowsiding"
 	},
 /area/ruin/powered)
@@ -12355,6 +12061,10 @@
 /area/f13/tunnel)
 "HS" = (
 /obj/structure/table,
+/obj/item/gun/ballistic/automatic/marksman/sniper{
+	name = "gobi campaign sniper rifle";
+	desc = "A DKS 501, chambered in .308 Winchester.  With a light polymer body, it's suited for long treks through the desert. This one sports a silver and white frame."
+	},
 /turf/open/floor/f13{
 	dir = 8;
 	icon_state = "yellowsiding"
@@ -12499,14 +12209,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
 /area/f13/vault/dormitory)
-"Iq" = (
-/obj/structure/rack/shelf_metal,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/high,
-/turf/open/floor/f13{
-	dir = 9;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "Ir" = (
 /obj/machinery/telecomms/receiver/preset_right,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
@@ -12606,16 +12308,6 @@
 /obj/structure/table,
 /turf/open/floor/f13/wood,
 /area/f13/tunnel)
-"IH" = (
-/obj/machinery/light/floor{
-	light_color = "#ff4500";
-	light_range = 12
-	},
-/turf/open/floor/f13{
-	dir = 10;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "II" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/cobweb,
@@ -12860,11 +12552,6 @@
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /obj/structure/flora/grass/jungle/b,
 /turf/open/water,
-/area/f13/tunnel)
-"Jp" = (
-/mob/living/simple_animal/hostile/deathclaw/mother,
-/obj/structure/flora/rock/jungle,
-/turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
 "Jq" = (
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -13145,16 +12832,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/vault)
-"Kf" = (
-/obj/machinery/light/small{
-	dir = 1;
-	light_color = "red"
-	},
-/turf/open/floor/f13{
-	dir = 9;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "Kg" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -13199,19 +12876,12 @@
 /turf/open/floor/f13,
 /area/ruin/powered)
 "Kp" = (
-/obj/structure/table/abductor,
-/obj/item/grenade/f13/stinger{
-	pixel_y = 6;
-	pixel_x = 10
+/obj/machinery/porta_turret/f13/turret_shotgun{
+	prefire_delay = 0
 	},
-/obj/item/grenade/f13/stinger{
-	pixel_y = 6
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
+/turf/open/floor/f13{
+	dir = 8;
+	icon_state = "yellowsiding"
 	},
 /area/ruin/powered)
 "Kq" = (
@@ -13361,14 +13031,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/tunnel,
 /area/f13/tunnel)
-"KO" = (
-/obj/machinery/light/floor{
-	light_color = "#ff4500";
-	light_range = 12
-	},
-/obj/effect/spawner/structure/window,
-/turf/open/floor/plating/tunnel,
-/area/ruin/powered)
 "KP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/step_trigger/message{
@@ -13590,13 +13252,6 @@
 /area/ruin/powered)
 "Ls" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/storage/belt/durathread,
-/obj/item/storage/belt/durathread,
-/obj/item/clothing/suit/armor/medium/vest/bulletproof/big,
-/obj/item/clothing/head/helmet/alt,
-/obj/item/gun/ballistic/automatic/pistol/n99,
-/obj/item/storage/belt/shoulderholster,
-/obj/machinery/light/small,
 /turf/open/floor/f13{
 	dir = 6;
 	icon_state = "yellowsiding"
@@ -13701,8 +13356,13 @@
 	},
 /area/f13/vault)
 "LJ" = (
-/obj/structure/simple_door/metal/ventilation,
-/turf/open/floor/plating/tunnel,
+/obj/machinery/rnd/server/vault,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "bcircuit1";
+	light_color = "#0076bc";
+	light_power = 3;
+	light_range = 4
+	},
 /area/ruin/powered)
 "LK" = (
 /turf/open/floor/plasteel/f13/vault_floor/green,
@@ -14236,19 +13896,19 @@
 	},
 /area/f13/tunnel)
 "Nm" = (
-/obj/structure/table/abductor,
-/obj/item/grenade/frag{
-	pixel_y = 5;
-	pixel_x = -8
+/obj/structure/rack/shelf_metal,
+/obj/item/gun/energy/laser/wattz/recharger/rifle{
+	desc = "An experimental weapon as the designation implies, it charges its capacitor banks over time using radioactive decay. It's weak but the trade off is it'll never need cells to fire."
 	},
-/obj/item/grenade/frag{
-	pixel_y = 5
+/obj/item/gun/energy/laser/wattz/recharger/rifle{
+	desc = "An experimental weapon as the designation implies, it charges its capacitor banks over time using radioactive decay. It's weak but the trade off is it'll never need cells to fire."
 	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
+/obj/item/gun/energy/laser/wattz/recharger/rifle{
+	desc = "An experimental weapon as the designation implies, it charges its capacitor banks over time using radioactive decay. It's weak but the trade off is it'll never need cells to fire."
+	},
+/turf/open/floor/f13{
+	dir = 1;
+	icon_state = "yellowsiding"
 	},
 /area/ruin/powered)
 "Nn" = (
@@ -14690,7 +14350,11 @@
 /area/f13/vault/garden)
 "Ov" = (
 /obj/structure/rack,
-/obj/item/stack/spacecash/c1000,
+/obj/item/reagent_containers/food/drinks/bottle/holywater{
+	name = "flask of saint tears";
+	list_reagents = list(/datum/reagent/water=100);
+	desc = "A flask of of some unnamed saints tears, surly it can be used to heal wounds....or maybe it's just some old water."
+	},
 /turf/open/floor/f13{
 	dir = 4;
 	icon_state = "yellowsiding"
@@ -14857,21 +14521,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/vault/medical/breakroom)
 "OR" = (
-/obj/structure/table/abductor,
-/obj/item/grenade/f13/radiation{
-	pixel_y = 5;
-	pixel_x = -4
+/mob/living/simple_animal/hostile/handy/robobrain{
+	faction = list("hostile");
+	health = 800;
+	name = "redline robobrain";
+	auto_fire_delay = 2
 	},
-/obj/item/grenade/f13/plasma{
-	pixel_y = 7;
-	pixel_x = 7
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
-	},
+/turf/open/floor/plasteel/f13/vault_floor/blue/white/whitebluechess,
 /area/ruin/powered)
 "OS" = (
 /obj/structure/lattice{
@@ -15312,22 +14968,6 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
-"PY" = (
-/obj/structure/table/abductor,
-/obj/item/cautery/alien{
-	pixel_y = 8
-	},
-/obj/item/circular_saw/alien,
-/obj/item/hemostat/alien{
-	pixel_y = -10
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
-	},
-/area/ruin/powered)
 "PZ" = (
 /obj/structure/table,
 /turf/open/floor/f13{
@@ -15464,19 +15104,6 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/lowmid,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
-"Qv" = (
-/obj/machinery/porta_turret/f13/turret_shotgun{
-	prefire_delay = 0
-	},
-/obj/machinery/light/floor{
-	light_color = "#ff4500";
-	light_range = 12
-	},
-/turf/open/floor/f13{
-	dir = 10;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "Qw" = (
 /obj/effect/landmark/start/f13/vaultdweller,
 /turf/open/floor/plasteel/f13/vault_floor/green/side{
@@ -15584,15 +15211,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/tunnel)
-"QM" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/f13{
-	dir = 9;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "QN" = (
 /turf/open/floor/f13{
 	icon_state = "yellowsiding"
@@ -16046,20 +15664,7 @@
 	password = "Delta Alpha Bravo Bravo Charlie";
 	proj_pass_rate = 45
 	},
-/turf/open/floor/f13{
-	icon_state = "yellowdirtyfull"
-	},
-/area/ruin/powered)
-"Sd" = (
-/obj/machinery/nuclearbomb/beer{
-	pixel_x = -2
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
-	},
+/turf/open/floor/f13,
 /area/ruin/powered)
 "Se" = (
 /obj/machinery/light/small{
@@ -16540,8 +16145,14 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/vault/reactor)
 "Tv" = (
-/mob/living/simple_animal/hostile/handy/gutsy{
-	faction = list("hostile")
+/mob/living/simple_animal/hostile/handy/protectron{
+	extra_projectiles = 1;
+	faction = list("hostile");
+	emp_flags = null;
+	auto_fire_delay = 2;
+	rapid_fire_delay = 1;
+	name = "redline protectron";
+	health = 250
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/side,
 /area/ruin/powered)
@@ -17064,15 +16675,6 @@
 	icon_state = "grass2"
 	},
 /area/f13/tunnel)
-"US" = (
-/mob/living/simple_animal/hostile/handy/robobrain{
-	faction = list("hostile");
-	health = 200;
-	name = "redline robobrain";
-	auto_fire_delay = 2
-	},
-/turf/open/floor/plating/tunnel,
-/area/ruin/powered)
 "UT" = (
 /obj/machinery/computer/message_monitor{
 	dir = 4
@@ -17312,11 +16914,6 @@
 	icon_state = "bar"
 	},
 /area/f13/tunnel)
-"VB" = (
-/obj/structure/flora/rock/jungle,
-/obj/item/reagent_containers/food/snacks/f13/deathclawegg,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/tunnel)
 "VC" = (
 /obj/structure/lattice{
 	density = 1
@@ -17549,11 +17146,6 @@
 	dir = 4
 	},
 /area/f13/vault/custodial)
-"Wk" = (
-/obj/structure/flora/rock/pile/largejungle,
-/obj/item/reagent_containers/food/snacks/f13/deathclawegg,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/tunnel)
 "Wl" = (
 /obj/structure/flora/junglebush/b,
 /obj/structure/flora/ausbushes/leafybush,
@@ -17905,15 +17497,6 @@
 	icon_state = "greenfull"
 	},
 /area/f13/tunnel)
-"Xr" = (
-/obj/machinery/rnd/experimentor,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "bcircuit1";
-	light_color = "#0076bc";
-	light_power = 3;
-	light_range = 4
-	},
-/area/ruin/powered)
 "Xs" = (
 /obj/machinery/mineral/ore_redemption{
 	output_dir = 8
@@ -18015,17 +17598,6 @@
 /area/f13/tunnel)
 "XH" = (
 /obj/structure/table/abductor,
-/obj/item/seeds/cotton/durathread,
-/obj/item/seeds/ambrosia/deus,
-/obj/item/seeds/ambrosia/gaia,
-/obj/item/seeds/berry/death,
-/obj/item/seeds/cannabis/white,
-/obj/item/seeds/grass/fairy,
-/obj/item/seeds/nettle/death,
-/obj/item/seeds/poppy/lily/trumpet,
-/obj/item/seeds/watermelon/holy,
-/obj/item/seeds/poppy/geranium/forgetmenot,
-/obj/item/storage/bag/plants/portaseeder,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "bcircuit1";
 	light_color = "#0076bc";
@@ -18039,8 +17611,13 @@
 /turf/closed/indestructible/rock,
 /area/f13/tunnel)
 "XJ" = (
-/obj/structure/simple_door/metal/iron,
-/turf/open/floor/f13,
+/obj/machinery/porta_turret/f13/turret_shotgun{
+	prefire_delay = 0
+	},
+/turf/open/floor/f13{
+	dir = 9;
+	icon_state = "yellowsiding"
+	},
 /area/ruin/powered)
 "XK" = (
 /obj/machinery/door/airlock/medical{
@@ -18130,10 +17707,6 @@
 /obj/machinery/chem_heater,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/white,
 /area/f13/vault/science)
-"Ya" = (
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot,
-/turf/open/floor/f13,
-/area/ruin/powered)
 "Yb" = (
 /obj/structure/flora/junglebush/large,
 /turf/open/floor/f13{
@@ -18372,19 +17945,6 @@
 	icon_state = "tunnelchess"
 	},
 /area/f13/vault)
-"YE" = (
-/obj/machinery/porta_turret/f13/turret_shotgun{
-	prefire_delay = 0
-	},
-/obj/machinery/light/floor{
-	light_color = "#ff4500";
-	light_range = 12
-	},
-/turf/open/floor/f13{
-	dir = 9;
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "YF" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/weapon/melee/random,
@@ -18715,16 +18275,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood_wide,
 /area/f13/vault/diner)
-"ZA" = (
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot{
-	name = "ESC-2403";
-	desc = "A sentry bot armed with a modified breacher shotgun and covered in thick armor plating, this one has ESC-2403 stamped onto it's chestplate and looks alot tougher than your average sentry bot.";
-	faction = list("hostile");
-	auto_fire_delay = 2;
-	health = 1000
-	},
-/turf/open/floor/plating/tunnel,
-/area/ruin/powered)
 "ZB" = (
 /obj/structure/reagent_dispensers/barrel/four,
 /obj/effect/decal/cleanable/dirt,
@@ -24857,7 +24407,7 @@ aa
 aa
 aa
 aa
-cm
+aa
 aa
 aa
 aa
@@ -25113,9 +24663,9 @@ aa
 aa
 aa
 aa
-cm
-ED
-Jh
+aa
+aa
+aa
 aa
 aa
 aa
@@ -25369,11 +24919,11 @@ aa
 aa
 aa
 aa
-ED
-Wk
-cm
-cm
-ED
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -25625,13 +25175,13 @@ aa
 aa
 aa
 aa
-cm
-VB
-Jp
-FX
-Cd
-cm
-Jh
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -25881,13 +25431,13 @@ aa
 aa
 aa
 aa
-Jh
-cm
-Wk
-cm
-cm
-ED
-cm
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -26139,11 +25689,11 @@ aa
 aa
 aa
 aa
-cm
-cm
-cm
-Wk
-cm
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -26397,9 +25947,9 @@ aa
 aa
 aa
 aa
-ve
-cm
-cm
+aa
+aa
+aa
 aa
 aa
 aa
@@ -26639,6 +26189,7 @@ aa
 aa
 aa
 aa
+aa
 ZT
 ZT
 ZT
@@ -26653,9 +26204,8 @@ aa
 aa
 aa
 aa
-gG
-ve
-ve
+aa
+aa
 aa
 aa
 aa
@@ -26896,6 +26446,7 @@ aa
 aa
 aa
 aa
+aa
 ZT
 YM
 ZT
@@ -26910,9 +26461,8 @@ aa
 aa
 aa
 aa
-gG
-ve
-gG
+aa
+aa
 aa
 aa
 aa
@@ -27152,6 +26702,7 @@ aa
 aa
 aa
 aa
+aa
 ZT
 ZT
 Qk
@@ -27167,9 +26718,8 @@ aa
 aa
 aa
 aa
-gG
-oJ
-gG
+aa
+aa
 aa
 aa
 aa
@@ -27408,6 +26958,7 @@ aa
 aa
 aa
 aa
+aa
 ZT
 ZT
 Gu
@@ -27424,9 +26975,8 @@ aa
 aa
 aa
 aa
-gG
-ve
-gG
+aa
+aa
 aa
 aa
 aa
@@ -27573,7 +27123,7 @@ lm
 lm
 lm
 lm
-aL
+NR
 lm
 lm
 lm
@@ -27660,10 +27210,11 @@ VK
 mc
 QN
 ZT
-ZT
-ZT
-ZT
-ZT
+aa
+aa
+aa
+aa
+aa
 ZT
 ZT
 Gu
@@ -27681,9 +27232,8 @@ aa
 aa
 aa
 aa
-gG
-ve
-gG
+aa
+aa
 aa
 aa
 aa
@@ -27917,9 +27467,10 @@ VK
 mc
 QN
 ZT
-ZT
-Ya
-ZT
+aa
+aa
+aa
+aa
 ZT
 ZT
 Gu
@@ -27937,11 +27488,10 @@ aa
 aa
 aa
 aa
-gG
-gG
-ve
-gG
-gG
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -28147,25 +27697,25 @@ ZT
 VK
 QN
 ZT
-kB
-kB
-kB
-kB
+YM
+YM
+YM
+YM
 ZT
-kB
-kB
-kB
-kB
+YM
+YM
+YM
+YM
 ZT
-kB
-kB
-kB
-kB
+YM
+YM
+YM
+YM
 ZT
-kB
-kB
-kB
-kB
+YM
+YM
+YM
+YM
 ZT
 sJ
 ZT
@@ -28175,7 +27725,8 @@ mc
 QN
 ZT
 ZT
-fg
+ZT
+ZT
 ZT
 ZT
 Cu
@@ -28191,17 +27742,16 @@ ZT
 ZT
 aa
 aa
-gG
-gG
-gG
-gG
-ve
-ve
-ve
-gG
-gG
-gG
-gG
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -28434,10 +27984,11 @@ ZK
 tZ
 zc
 tZ
+dN
 ZK
 Fu
 Jy
-Jy
+OR
 Jy
 Sl
 Jy
@@ -28448,17 +27999,16 @@ YM
 ZT
 aa
 aa
-gG
-ve
-ve
-EM
-ve
-sE
-ve
-oJ
-ve
-ve
-gG
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -28691,6 +28241,7 @@ Bv
 mc
 mc
 mc
+QN
 Bv
 Fu
 Jy
@@ -28705,17 +28256,16 @@ Xx
 ZT
 aa
 aa
-gG
-ve
-gG
-gG
-ve
-ve
-ve
-gG
-gG
-ve
-gG
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -28856,7 +28406,7 @@ sm
 bf
 KN
 xF
-NR
+aL
 UM
 MG
 gj
@@ -28948,6 +28498,7 @@ mc
 mc
 mc
 mc
+QN
 mc
 Fu
 Jy
@@ -28962,17 +28513,16 @@ vg
 ZT
 aa
 aa
-gG
-ve
-gG
-gG
-gG
-ve
-gG
-gG
-gG
-ve
-gG
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -29205,6 +28755,7 @@ ZK
 nC
 fR
 nC
+nW
 ZK
 Fu
 Jy
@@ -29219,18 +28770,17 @@ YM
 ZT
 aa
 aa
-gG
-ve
-gG
-ZT
-ZT
-LJ
-ZT
-ZT
-gG
-ve
-gG
-gG
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -29460,7 +29010,8 @@ mc
 QN
 ZT
 ZT
-fg
+ZT
+ZT
 ZT
 ZT
 FW
@@ -29475,20 +29026,19 @@ nU
 ZT
 ZT
 aa
-ZT
-ZT
-LJ
-ZT
-ZT
-YE
-zc
-Qv
-ZT
-gG
-ve
-ve
-gG
-gG
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -29716,9 +29266,10 @@ VK
 mc
 QN
 ZT
-ZT
-Ya
-ZT
+aa
+aa
+aa
+aa
 ZT
 ZT
 MY
@@ -29732,20 +29283,19 @@ ZT
 ZT
 aa
 aa
-ZT
-Iq
-zc
-dN
-ZT
-VK
-mc
-QN
-ZT
-gG
-gG
-ve
-ve
-gG
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -29973,10 +29523,11 @@ VK
 mc
 QN
 ZT
-ZT
-ZT
-ZT
-ZT
+aa
+aa
+aa
+aa
+aa
 ZT
 ZT
 MY
@@ -29989,20 +29540,19 @@ ZT
 aa
 aa
 aa
-ZT
-lP
-mc
-QN
-lj
-VK
-mc
-QN
-ZT
 aa
-gG
-gG
-ve
-gG
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -30235,6 +29785,7 @@ aa
 aa
 aa
 aa
+aa
 ZT
 ZT
 MY
@@ -30246,19 +29797,18 @@ aa
 aa
 aa
 aa
-ZT
-CQ
-fR
-nW
-ZT
-cd
-fR
-ln
+aa
+aa
+aa
+aa
 ZT
 ZT
 ZT
 ZT
-LJ
+ZT
+ZT
+ZT
+ZT
 ZT
 ZT
 ZT
@@ -30493,6 +30043,7 @@ aa
 aa
 aa
 aa
+aa
 ZT
 ZT
 Qk
@@ -30503,15 +30054,14 @@ aa
 aa
 aa
 aa
-ZT
-ZT
-ZT
-ZT
-ZT
+aa
+aa
+aa
+aa
 ZT
 XJ
-ZT
-ZT
+zc
+Kp
 ZT
 HG
 zc
@@ -30751,11 +30301,11 @@ aa
 aa
 aa
 aa
+aa
 ZT
 YM
 ZT
 aa
-aa
 ZT
 ZT
 ZT
@@ -30763,12 +30313,12 @@ ZT
 ZT
 ZT
 aa
+aa
+aa
 ZT
-YE
-zc
-zc
-zc
-IH
+Nm
+mc
+mc
 ZT
 iz
 qc
@@ -31008,10 +30558,10 @@ aa
 aa
 aa
 aa
-ZT
-ZT
-ZT
 aa
+ZT
+ZT
+ZT
 aa
 ZT
 nQ
@@ -31020,14 +30570,14 @@ ZT
 nQ
 ZT
 aa
+aa
+aa
 ZT
-VK
+qH
 mc
 mc
-mc
-QN
 Sc
-CW
+uR
 mc
 mc
 mc
@@ -31277,14 +30827,14 @@ MO
 dq
 ZT
 ZT
+aa
+aa
 ZT
-nw
+kB
 fR
 fR
-fR
-ln
 ZT
-xn
+fR
 fR
 fR
 fR
@@ -31535,7 +31085,7 @@ TR
 dN
 ZT
 ZT
-ZT
+aa
 ZT
 ZT
 ZT
@@ -31793,16 +31343,16 @@ TR
 ZX
 ZT
 ZT
-ZT
-ZT
-ZT
-ZT
-ZT
+aa
+aa
+aa
+aa
+aa
 ZT
 Co
 dN
 ZT
-aa
+nu
 aa
 aa
 aa
@@ -32059,7 +31609,7 @@ ZT
 VK
 QN
 ZT
-aa
+nu
 aa
 aa
 aa
@@ -32295,7 +31845,7 @@ aa
 aa
 ZT
 ZT
-QM
+Co
 nD
 mc
 KT
@@ -32316,7 +31866,7 @@ ZT
 VK
 QN
 ZT
-aa
+nu
 aa
 aa
 aa
@@ -32522,16 +32072,16 @@ ZT
 Yz
 TZ
 ZT
-lq
-lq
+ZK
+ZK
 ZT
 ZT
 YM
 YM
 ZT
 ZT
-lq
-lq
+ZK
+ZK
 ZT
 NG
 KW
@@ -32559,20 +32109,21 @@ PP
 XH
 YQ
 YQ
-AX
+XH
 se
 KT
 mc
 TR
-Dd
+dN
 ZT
-ZT
-ZT
-ZT
+aa
+aa
+aa
 ZT
 VK
 QN
 ZT
+nu
 aa
 aa
 aa
@@ -32600,15 +32151,14 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
 iC
 iC
 iC
@@ -32812,31 +32362,23 @@ JV
 mc
 KT
 PP
-fu
-qH
+XH
+Ki
 YQ
 YQ
-DB
-Wz
+ED
+XH
 ex
 KT
 mc
 ew
 ZT
-ZT
-sc
-ZT
+aa
+nu
+nu
 ZT
 VK
-zq
-ZT
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+zO
 ZT
 ZT
 ZT
@@ -32855,9 +32397,7 @@ ZT
 ZT
 ZT
 ZT
-aa
-aa
-aa
+ZT
 ZT
 ZT
 ZT
@@ -32866,6 +32406,16 @@ ZT
 ZT
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
 iC
 iC
 iC
@@ -33068,32 +32618,25 @@ ZT
 Tw
 mc
 Vc
-EE
-Fs
-Bg
+XH
+XH
 YQ
 YQ
-Bg
-Oe
-Er
+YQ
+YQ
+XH
+XH
 Ij
 mc
 vt
 ZT
 ZT
-KO
+ZT
 ZT
 ZT
 VK
 QN
 ZT
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 Ny
 Co
 zc
@@ -33112,9 +32655,6 @@ kM
 lZ
 SW
 ZT
-aa
-aa
-aa
 ZT
 UN
 fJ
@@ -33123,6 +32663,16 @@ mY
 Fa
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
 iC
 iC
 iC
@@ -33335,7 +32885,7 @@ YQ
 YQ
 Pj
 mc
-ef
+QN
 sJ
 Co
 zc
@@ -33343,15 +32893,8 @@ zc
 zc
 nD
 QN
-ZT
-aa
-aa
-ZT
-ZT
-ZT
-aa
-aa
-ZT
+nQ
+NG
 gv
 tx
 mc
@@ -33369,9 +32912,6 @@ zc
 nG
 nS
 ZT
-aa
-aa
-aa
 ZT
 eD
 Co
@@ -33380,6 +32920,16 @@ fF
 dN
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
 iC
 jJ
 iC
@@ -33573,7 +33123,7 @@ ZT
 ZT
 ZT
 ZT
-lq
+ZK
 ZT
 ZT
 ZT
@@ -33582,7 +33132,7 @@ ZT
 hl
 mc
 QS
-Ki
+VF
 YQ
 YQ
 YQ
@@ -33600,15 +33150,8 @@ HL
 gb
 Tq
 QN
-ZT
-aa
-aa
-ZT
-US
-ZT
-aa
-aa
-ZT
+nQ
+NG
 Wx
 tx
 mc
@@ -33627,9 +33170,6 @@ Nc
 xO
 Ny
 ZT
-ZT
-ZT
-ZT
 hR
 VK
 mc
@@ -33637,6 +33177,16 @@ jY
 nW
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
 iC
 iC
 iC
@@ -33854,18 +33404,11 @@ ZT
 ZT
 ZT
 ZT
-nQ
+ZT
 VK
-uS
+QN
 ZT
-aa
-ZT
-ZT
-KO
-ZT
-ZT
-aa
-ZT
+NG
 VK
 mc
 mc
@@ -33884,9 +33427,6 @@ QN
 Gf
 ZT
 ZT
-ZA
-ZT
-ZT
 PK
 VK
 mc
@@ -33894,6 +33434,16 @@ QN
 CE
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
 iC
 iC
 jJ
@@ -34099,14 +33649,14 @@ hV
 YQ
 YQ
 YQ
-Sd
+ly
 YQ
 YQ
 YQ
-ru
+tu
 iI
 mc
-uS
+QN
 ZT
 nu
 nu
@@ -34114,13 +33664,6 @@ nu
 ZT
 VK
 QN
-ZT
-ZT
-ZT
-Kf
-zc
-BK
-ZT
 ZT
 ZT
 dW
@@ -34141,9 +33684,6 @@ QN
 Dk
 ZT
 ZT
-KO
-ZT
-ZT
 Bw
 VK
 mc
@@ -34151,6 +33691,16 @@ QN
 gS
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
 iC
 iC
 iC
@@ -34356,11 +33906,11 @@ hV
 YQ
 YQ
 YQ
-ly
+LJ
 pT
 YQ
 YQ
-By
+tu
 iI
 mc
 QN
@@ -34371,16 +33921,9 @@ nu
 ZT
 TE
 TR
-dA
-zc
-zc
-nD
-mc
-TR
-zc
-zc
-dA
-nD
+dN
+sJ
+VK
 mc
 lX
 BB
@@ -34395,19 +33938,26 @@ ZT
 gr
 xi
 TR
-zc
-dA
-zc
-zc
-zc
+dN
 sJ
-zc
+sJ
+Co
 nD
 mc
 Nc
-mY
+Eg
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
 iC
 iC
 iC
@@ -34613,11 +34163,11 @@ hV
 YQ
 YQ
 iO
-Xr
+jW
 YQ
 YQ
 YQ
-Eg
+tu
 iI
 mc
 QN
@@ -34628,16 +34178,9 @@ nu
 ZT
 VK
 dz
-ei
-fR
-fR
-Tq
-mc
-dz
-fR
-fR
-ei
-Tq
+nW
+sJ
+VK
 mc
 tx
 QN
@@ -34652,19 +34195,26 @@ ZT
 Sh
 xi
 dz
-fR
-ei
-fR
-fR
-fR
-ei
-fR
+nW
+sJ
+sJ
+CV
 Tq
 mc
 Nc
-EF
+Bg
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
 iC
 iC
 jJ
@@ -34874,10 +34424,10 @@ tu
 YQ
 YQ
 YQ
-ru
+tu
 iI
 mc
-uS
+QN
 ZT
 nu
 nu
@@ -34885,13 +34435,6 @@ nu
 ZT
 VK
 QN
-ZT
-ZT
-ZT
-pM
-fR
-AZ
-ZT
 ZT
 ZT
 dW
@@ -34912,9 +34455,6 @@ QN
 gk
 ZT
 ZT
-KO
-ZT
-ZT
 hR
 VK
 mc
@@ -34922,6 +34462,16 @@ QN
 vU
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
 iC
 iC
 iC
@@ -35127,11 +34677,11 @@ hV
 YQ
 YQ
 YQ
-jW
 YQ
 YQ
 YQ
-Pf
+YQ
+tu
 Ij
 mc
 JD
@@ -35139,18 +34689,11 @@ ZT
 ZT
 ZT
 ZT
-nQ
+ZT
 VK
-uS
+QN
 ZT
-aa
-ZT
-ZT
-KO
-ZT
-ZT
-aa
-ZT
+NG
 VK
 tx
 mc
@@ -35169,16 +34712,23 @@ QZ
 NP
 ZT
 ZT
-ZA
-ZT
-ZT
-gO
+Sj
 VK
 mc
 QN
 Sj
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
 iC
 iC
 iC
@@ -35372,7 +34922,7 @@ ZT
 ZT
 ZT
 ZT
-lq
+ZK
 ZT
 ZT
 ZT
@@ -35381,7 +34931,7 @@ ZT
 hl
 mc
 QS
-VF
+Wz
 YQ
 YQ
 YQ
@@ -35399,15 +34949,8 @@ zc
 zc
 nD
 zO
-ZT
-aa
-aa
-ZT
-US
-ZT
-aa
-aa
-ZT
+nQ
+NG
 VK
 tx
 mc
@@ -35426,9 +34969,6 @@ Nc
 TO
 Ny
 ZT
-ZT
-ZT
-ZT
 AK
 VK
 mc
@@ -35436,6 +34976,16 @@ hX
 dN
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+jJ
 iC
 iC
 iC
@@ -35638,7 +35188,7 @@ Ny
 fI
 mc
 Vc
-Kp
+Er
 YQ
 YQ
 YQ
@@ -35648,7 +35198,7 @@ YQ
 YQ
 Pj
 mc
-ef
+QN
 sJ
 CV
 HL
@@ -35656,15 +35206,8 @@ fR
 fR
 Tq
 QN
-ZT
-aa
-aa
-ZT
-ZT
-ZT
-aa
-aa
-ZT
+nQ
+NG
 gv
 qz
 mc
@@ -35682,9 +35225,6 @@ fR
 sf
 nS
 ZT
-aa
-aa
-aa
 ZT
 eD
 CV
@@ -35693,6 +35233,16 @@ HL
 nW
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+jJ
 iC
 iC
 iC
@@ -35895,32 +35445,25 @@ ZT
 Tw
 mc
 Vc
-Nm
-aA
-Bg
+Oe
+tu
 YQ
 YQ
-Bg
-PY
-uM
+YQ
+YQ
+tu
+tu
 Ij
 mc
 vt
 ZT
 ZT
-KO
+ZT
 ZT
 ZT
 VK
 QN
 ZT
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 Ny
 CV
 jM
@@ -35931,25 +35474,32 @@ eA
 lv
 gO
 sG
-fQ
-fQ
+gO
+gO
 ZT
 NO
 PK
 Mb
 Pg
 ZT
-aa
-aa
-aa
 ZT
-mY
+lq
 UN
 PV
 Zd
-mY
+gO
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+jJ
 iC
 iC
 iC
@@ -36154,30 +35704,23 @@ mc
 KT
 Ry
 fo
-OR
+AX
 YQ
 YQ
-cw
-Ch
+DB
+tu
 eF
 KT
 mc
 ew
 ZT
-ZT
-sc
-ZT
+nu
+nu
+nu
 ZT
 VK
 QN
 ZT
-aa
-aa
-aa
-aa
-aa
-aa
-aa
 ZT
 ZT
 ZT
@@ -36196,9 +35739,6 @@ ZT
 ZT
 ZT
 ZT
-aa
-aa
-aa
 ZT
 ZT
 ZT
@@ -36207,6 +35747,16 @@ ZT
 ZT
 ZT
 aa
+aa
+aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
 iC
 iC
 iC
@@ -36377,16 +35927,16 @@ ZT
 nQ
 NG
 ZT
-lq
-lq
+ZK
+ZK
 ZT
 ZT
 YM
 YM
 ZT
 ZT
-lq
-lq
+ZK
+ZK
 ZT
 NG
 nQ
@@ -36414,20 +35964,21 @@ Ry
 jN
 YQ
 YQ
-pu
+tu
 eF
 KT
 mc
 dz
-wN
+nW
 ZT
-ZT
-ZT
-ZT
+aa
+aa
+aa
 ZT
 xi
 QN
 ZT
+nu
 aa
 aa
 aa
@@ -36455,15 +36006,14 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
 iC
 iC
 iC
@@ -36664,7 +36214,7 @@ aa
 aa
 ZT
 ZT
-xn
+CV
 Tq
 mc
 KT
@@ -36685,7 +36235,7 @@ ZT
 VK
 QN
 ZT
-aa
+nu
 aa
 aa
 aa
@@ -36942,7 +36492,7 @@ ZT
 CV
 nW
 ZT
-aa
+nu
 aa
 aa
 aa
