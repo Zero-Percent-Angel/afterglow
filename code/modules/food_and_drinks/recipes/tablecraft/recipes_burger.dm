@@ -139,6 +139,18 @@
 	result = /obj/item/reagent_containers/food/snacks/pizza/sassysage
 	subcategory = CAT_BURGER
 
+/datum/crafting_recipe/food/margheritapizza
+	name = "Four Cheeses pizza"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/pizzabread = 1,
+		/obj/item/reagent_containers/food/snacks/cheesewedge = 1,
+		/obj/item/reagent_containers/food/snacks/firm_cheese_slice = 1,
+		/obj/item/reagent_containers/food/snacks/mozzarella = 1,
+		/obj/item/reagent_containers/food/snacks/herby_cheese = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/pizza/fourcheese
+	subcategory = CAT_BURGER
+
 /datum/crafting_recipe/food/vegetablepizza
 	name = "Vegetable pizza"
 	reqs = list(

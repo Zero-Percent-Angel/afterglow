@@ -31,3 +31,12 @@
 	projectile_type = /obj/item/projectile/incendiary/flamethrower
 	pellets = 3
 	variance = 20
+
+/obj/item/ammo_casing/caseless/incinerator
+	name = "napalm thermite mixture"
+	desc = "a bunch of napalm fuel for a flamethrower. A bit useless now that it's been spilt on the ground."
+	caliber = CALIBER_FUEL
+	icon = 'icons/mob/robots.dmi'
+	icon_state = "floor1"
+	projectile_type = /obj/item/projectile/incendiary/flamethrower
+	pellets = 2
