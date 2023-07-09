@@ -312,7 +312,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/spiritual
 	name = "Spiritual"
 	desc = "You're in tune with the gods, and your prayers may be more likely to be heard. Or not."
-	value = 0
+	value = 1
 	mob_trait = TRAIT_SPIRITUAL
 	gain_text = span_notice("You feel a little more faithful to the gods today.")
 	lose_text = span_danger("You feel less faithful in the gods.")
@@ -321,7 +321,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/tagger
 	name = "Tagger"
 	desc = "You're an experienced artist. While drawing graffiti, you can get twice as many uses out of drawing supplies."
-	value = 0
+	value = 1
 	mob_trait = TRAIT_TAGGER
 	gain_text = span_notice("You know how to tag walls efficiently.")
 	lose_text = span_danger("You forget how to tag walls properly.")
@@ -562,7 +562,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.dna.species.punchdamagelow = 4
 	mob_tar.dna.species.punchdamagehigh = 10
-
+/*
 /datum/quirk/steel_fist
 	name = "Fists of Steel"
 	desc = "You have MASSIVE fists of kung-fury! Even MORE increases unarmed damage."
@@ -576,7 +576,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.dna.species.punchdamagelow = 6
 	mob_tar.dna.species.punchdamagehigh = 12
-
+*/
 /datum/quirk/light_step
 	name = "Glass Walker"
 	desc = "When it comes to stepping on glass, you're pretty die hard.  You'll make less noise when you do so, but it'd still suck without shoes."

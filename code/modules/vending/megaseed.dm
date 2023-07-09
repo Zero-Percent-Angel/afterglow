@@ -21,6 +21,7 @@
 					/obj/item/seeds/corn = 3,
 					/obj/item/seeds/cucumber = 3,
 					/obj/item/seeds/eggplant = 3,
+					/obj/item/seeds/garlic = 3,
 					/obj/item/seeds/grape = 3,
 					/obj/item/seeds/grass = 3,
 					/obj/item/seeds/greenbean = 3,
