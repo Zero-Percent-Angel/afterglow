@@ -148,6 +148,12 @@
 /mob/living/simple_animal/hostile/renegade/defender,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer/powered)
+"ahs" = (
+/obj/machinery/light/small{
+	light_color = "red"
+	},
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/brotherhood/powered)
 "ahx" = (
 /obj/structure/disposalpipe/junction/yjunction,
 /obj/effect/decal/fakelattice,
@@ -678,6 +684,14 @@
 	},
 /turf/open/floor/plating/tunnel,
 /area/f13/sewer/powered)
+"aDW" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/brotherhood/powered)
 "aDZ" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/clothing_low,
@@ -768,13 +782,13 @@
 	},
 /area/f13/bunker)
 "aHX" = (
-/obj/structure/fence/wooden{
-	dir = 1;
-	pixel_x = 13
+/obj/machinery/light/small{
+	light_color = "red"
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood_common,
-/area/f13/sewer/powered)
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/brotherhood/powered)
 "aHY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/f13/rotten{
@@ -1384,7 +1398,7 @@
 	id = "prospector1open";
 	name = "gate shutters";
 	pixel_y = 32;
-	req_access_txt = "135"
+	req_access_txt = "136"
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer/powered)
@@ -2045,10 +2059,10 @@
 /obj/structure/decoration/hatch{
 	dir = 8
 	},
-/obj/effect/overlay/junk/shower{
+/obj/effect/overlay/junk/curtain,
+/obj/machinery/shower{
 	dir = 4
 	},
-/obj/effect/overlay/junk/curtain,
 /turf/open/floor/plating/rust,
 /area/f13/legioncamp)
 "bDk" = (
@@ -5135,6 +5149,9 @@
 	pixel_y = 32;
 	req_access_txt = "120"
 	},
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -6616,6 +6633,15 @@
 /obj/structure/table,
 /turf/open/water,
 /area/f13/sewer/powered)
+"eWQ" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/brotherhood/powered)
 "eXk" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/attachments,
@@ -8007,10 +8033,10 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/overlay/junk/shower{
+/obj/effect/overlay/junk/curtain,
+/obj/machinery/shower{
 	dir = 4
 	},
-/obj/effect/overlay/junk/curtain,
 /turf/open/floor/plating/rust,
 /area/f13/legioncamp)
 "fXQ" = (
@@ -13911,7 +13937,7 @@
 	},
 /area/f13/bunker)
 "kqF" = (
-/obj/machinery/door/locked/easy,
+/obj/structure/simple_door/metal/iron,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "krg" = (
@@ -16786,6 +16812,13 @@
 /obj/structure/chair/sofa/left,
 /turf/open/floor/carpet/royalblue,
 /area/f13/ncr)
+"mtK" = (
+/obj/structure/fence/wooden{
+	dir = 1;
+	pixel_x = -14
+	},
+/turf/open/water,
+/area/f13/sewer/powered)
 "mtX" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -18415,7 +18448,7 @@
 	id = "prospector1open";
 	name = "gate shutters";
 	pixel_x = 32;
-	req_access_txt = "135"
+	req_access_txt = "136"
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer/powered)
@@ -18662,11 +18695,12 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker)
 "nNn" = (
-/obj/structure/barricade/concrete,
-/turf/open/floor/f13{
-	icon_state = "darkrusty"
+/obj/structure/fence/wooden{
+	dir = 1;
+	pixel_x = 13
 	},
-/area/f13/brotherhood/powered)
+/turf/open/water,
+/area/f13/sewer/powered)
 "nNr" = (
 /mob/living/simple_animal/hostile/ghoul,
 /turf/open/floor/plasteel/f13/stone/rugged,
@@ -20991,13 +21025,15 @@
 	},
 /area/f13/sewer/powered)
 "pEs" = (
-/obj/structure/fence/wooden{
-	dir = 1;
-	pixel_x = -14
+/obj/structure/closet/anchored,
+/obj/machinery/light/small{
+	brightness = 7;
+	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood_common,
-/area/f13/sewer/powered)
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/brotherhood/powered)
 "pEN" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -23537,6 +23573,15 @@
 	},
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/radiation)
+"rAA" = (
+/obj/structure/table,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/brotherhood/powered)
 "rBc" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -24787,6 +24832,15 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer/powered)
+"szr" = (
+/obj/structure/table,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/brotherhood/powered)
 "szL" = (
 /obj/item/reagent_containers/food/snacks/meat/slab/human,
 /obj/item/reagent_containers/food/snacks/meat/slab/human,
@@ -27256,6 +27310,10 @@
 	name = "shutters button";
 	pixel_x = -32;
 	req_access_txt = "120"
+	},
+/obj/machinery/light/small{
+	brightness = 3;
+	dir = 8
 	},
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
@@ -60740,7 +60798,7 @@ efQ
 efQ
 vNj
 vNj
-hcl
+szr
 gwa
 fDy
 efQ
@@ -61142,11 +61200,11 @@ vKr
 vKr
 efQ
 efQ
-hcl
+rAA
 rUO
 fwd
 rUO
-rUO
+aHX
 efQ
 efQ
 vKr
@@ -62356,8 +62414,8 @@ vKr
 vKr
 efQ
 rUO
-nNn
-nNn
+rUO
+rUO
 efQ
 vKr
 vKr
@@ -62557,9 +62615,9 @@ vKr
 vKr
 vKr
 efQ
+aDW
 rUO
-rUO
-rUO
+aHX
 efQ
 vKr
 vKr
@@ -62759,8 +62817,8 @@ vKr
 vKr
 vKr
 efQ
-nNn
-nNn
+rUO
+rUO
 rUO
 efQ
 vKr
@@ -63565,11 +63623,11 @@ htC
 rdi
 rdi
 rdi
-rdi
+ahs
 efQ
 dOt
 rUO
-rUO
+aHX
 efQ
 vKr
 vKr
@@ -64573,13 +64631,13 @@ htC
 htC
 htC
 efQ
-xKZ
+eWQ
 rUO
 xKZ
 xKZ
 xKZ
 rUO
-rUO
+aHX
 efQ
 vKr
 vKr
@@ -64980,7 +65038,7 @@ efQ
 xKZ
 xKZ
 xKZ
-aWP
+pEs
 aWP
 aWP
 xKZ
@@ -82087,7 +82145,7 @@ htC
 htC
 htC
 vWz
-rUl
+nNn
 woj
 klv
 iBp
@@ -82289,7 +82347,7 @@ htC
 htC
 htC
 htC
-pEs
+ryd
 htC
 bUM
 bUM
@@ -82693,7 +82751,7 @@ htC
 htC
 htC
 htC
-aHX
+ryd
 htC
 aFO
 bUM
@@ -82895,7 +82953,7 @@ pMD
 lLW
 jEj
 htC
-rUl
+mtK
 htC
 aFO
 bUM
@@ -85105,8 +85163,8 @@ nUU
 klv
 mLD
 nyz
-rUl
-rUl
+nNn
+nNn
 pzO
 htC
 pMD
@@ -85307,8 +85365,8 @@ nUU
 klv
 mLD
 nyz
-pEs
-pEs
+ryd
+ryd
 nyz
 htC
 pMD
@@ -85509,8 +85567,8 @@ nUU
 klv
 mLD
 nyz
-aHX
-aHX
+ryd
+ryd
 nyz
 htC
 pMD
@@ -85711,8 +85769,8 @@ nUU
 klv
 dYf
 nyz
-rUl
-rUl
+mtK
+mtK
 nyz
 htC
 htC
@@ -86338,7 +86396,7 @@ bUM
 bUM
 bUM
 bUM
-fOO
+dro
 vPj
 dro
 dro
@@ -86364,7 +86422,7 @@ jne
 jne
 rwM
 lPP
-dro
+fOO
 fPE
 ozt
 ozt
@@ -87172,7 +87230,7 @@ jne
 lFe
 sPW
 lPP
-dro
+fOO
 wbT
 qFa
 qFa
@@ -87550,7 +87608,7 @@ bKo
 pZQ
 ctR
 bUM
-fOO
+dro
 pqs
 nds
 lPP
