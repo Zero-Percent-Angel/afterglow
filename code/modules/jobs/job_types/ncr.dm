@@ -379,7 +379,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/sergeantcqc
 	name = "Assault Leader"
-	suit_store = /obj/item/gun/ballistic/shotgun/trench //Over thereee over thereeeee spread the spread the word over thereeee
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/combat/auto5
 	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/reinf/mant
 	head = /obj/item/clothing/head/helmet/f13/ncr
 	backpack_contents = list(
@@ -601,7 +601,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Gunslinger"
 	mask = /obj/item/clothing/mask/cigarette/cigar/havana
 	backpack_contents = list(
-		/obj/item/book/granter/trait/gunslinger = 1,
 		/obj/item/gun/ballistic/revolver/m29/desert_ranger = 2,
 		/obj/item/ammo_box/m44box = 3,
 		/obj/item/lighter = 1,
@@ -666,7 +665,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Trail Ranger"
 	suit = /obj/item/clothing/suit/armor/light/ncr/trailranger
 	belt = /obj/item/storage/belt/military/reconbandolier
-	neck = /obj/item/clothing/neck/mantle/ranger
+	//neck = /obj/item/clothing/neck/mantle/ranger
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44 = 3,
@@ -752,7 +751,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/loadout/civicqc
 	name = "CQC Ranger"
 	belt = /obj/item/storage/belt/army/assault/ncr
-	neck = /obj/item/clothing/neck/mantle/ranger
+	//neck = /obj/item/clothing/neck/mantle/ranger
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/revolver45 = 2,
 		/obj/item/ammo_box/c45rev = 4,
