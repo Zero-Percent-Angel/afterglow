@@ -49,11 +49,11 @@
 	item_state = "black_white_turtleskirt"
 
 /obj/item/clothing/under/sweater/turtleskirt/blackpink
-	name = "pink turtleskirt"
+	name = "black and pink turtleskirt"
 	icon_state = "pink_turtleskirt"
 	item_state = "pink_turtleskirt"
 
 /obj/item/clothing/under/sweater/turtleskirt/grey
-	name = "grey turtleskirt"
+	name = "grey and white turtleskirt"
 	icon_state = "grey_turtleskirt"
 	item_state = "grey_turtleskirt"
