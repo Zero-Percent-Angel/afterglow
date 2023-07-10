@@ -340,7 +340,7 @@
 		))
 
 // RANGED RAIDER WITH ARMOR
-/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged
+/mob/living/simple_animal/hostile/raider/ranged/metalranged
 	icon_state = "metal_raider"
 	icon_living = "metal_raider"
 	icon_dead = "metal_raider_dead"
@@ -464,19 +464,64 @@
 //////////////
 
 /mob/living/simple_animal/hostile/raider/sulphite
-	name = "Sulphite Brawler"
-	desc = "A raider with low military grade armor and a shishkebab"
+	name = "Sulphite Salter"
+	desc = "A raider with armour that for some reason, has a small diesel generator installed. Wields a ripper"
 	icon_state = "sulphite"
 	icon_living = "sulphite"
-	icon_dead= "sulphite_dead"
+	icon_dead = "sulphite_dead"
 	mob_armor = ARMOR_VALUE_RAIDER_COMBAT_ARMOR_RUSTY
 	maxHealth = 135
 	health = 135
 	rapid_melee = 1
 	melee_damage_lower = 15
 	melee_damage_upper = 37
-	loot = list(/obj/item/stack/f13Cash/random/med)
+	loot = list(/obj/item/stack/f13Cash/random/low)
 	footstep_type = FOOTSTEP_MOB_SHOE
+
+/mob/living/simple_animal/hostile/raider/ranged/sulphite
+	name = "Sulphite Pepperer"
+	desc = "A raider with armour that for some reason, has a small diesel generator installed. Wields an uzi"
+	icon_state = "sulphite_ranged"
+	icon_living = "sulphite_ranged"
+	icon_dead = "sulphite_dead"
+	mob_armor = ARMOR_VALUE_RAIDER_METAL_ARMOR
+	maxHealth = 80
+	health = 80
+	extra_projectiles = 2
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911/custom, /obj/item/clothing/suit/armor/heavy/metal/sulphite, /obj/item/clothing/head/helmet/f13/sulphitehelm, /obj/item/stack/f13Cash/random/med)
+
+/mob/living/simple_animal/hostile/raider/ranged/sulphite/heavy
+	name = "Sulphite Seasoner"
+	desc = "A raider with a fully sealed suit of armour that for some reason, has a small diesel generator and a gas mask installed. Carries an incinerator."
+	icon_state = "sulphite_heavy"
+	icon_living = "sulphite_heavy"
+	icon_dead = "sulphite_dead"
+	mob_armor = ARMOR_VALUE_RAIDER_COMBAT_ARMOR_BOSS
+	maxHealth = 155
+	health = 155
+	rapid_melee = 1
+	melee_damage_lower = 15
+	melee_damage_upper = 37
+	loot = list(/obj/item/stack/f13Cash/random/low)
+	footstep_type = FOOTSTEP_MOB_SHOE
+	projectiletype = /obj/item/projectile/incendiary/flamethrower
+	projectilesound = 'sound/weapons/flamethrower.ogg'
+
+/mob/living/simple_animal/hostile/raider/sulphite/boss
+	name = "Sulphite Boss"
+	desc = "A Sulphite Boss, decked out in salvaged T-45b. The port for the fusion core has been torn away, replaced with a lead-lined fission generator. He... Hasn't got a weapon?"
+	icon_state = "sulphite_boss"
+	icon_living = "sulhpite_boss"
+	icon_dead = "sulphite_boss_dead"
+	mob_armor = ARMOR_VALUE_ROBOT_SECURITY
+	maxHealth = 300
+	health = 300
+	rapid_melee = 1
+	loot = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/hotrod, /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/hotrod, /obj/item/stack/f13Cash/random/banker)
+	melee_damage_lower = 30
+	melee_damage_upper = 49 //would be higher, but I think it'll deal 50 of each type
+	melee_damage_type = list(BRUTE, BURN)//his punches are literally steampowered
+	environment_smash = ENVIRONMENT_SMASH_RWALLS
 
 /////////////
 // JUNKERS //
@@ -614,7 +659,7 @@
 
 /mob/living/simple_animal/hostile/raider/junker/boss
 	name = "Junker Boss"
-	desc = "A Junker boss, clad in a sentry bot helmet, wielding a deadly rapid-fire shrapnel cannon."
+	desc = "A Junker boss, clad in a sentry bot helmet, wielding a deadly incinerator."
 	icon_state = "junker_boss"
 	icon_living = "junker_boss"
 	icon_dead = "junker_dead"
@@ -623,14 +668,14 @@
 	health = 165
 	ranged = TRUE
 	rapid_melee = 1
+	loot = list(/obj/item/gun/ballistic/rifle/mag/antimateriel/incinerator, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/effect/spawner/lootdrop/f13/armor/randomraiderchest, /obj/item/clothing/under/f13/ravenharness, /obj/item/stack/f13Cash/random/high)
 	retreat_distance = 4
 	minimum_distance = 6
 	extra_projectiles = 2
 	ranged_cooldown_time = 2 SECONDS
 	auto_fire_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	projectiletype = /obj/item/projectile/bullet/c22
-	projectilesound = 'sound/f13weapons/auto5.ogg'
-	loot = list(/obj/item/stack/f13Cash/random/high)
+	projectiletype = /obj/item/projectile/incendiary/flamethrower
+	projectilesound = 'sound/weapons/flamethrower.ogg'
 	footstep_type = FOOTSTEP_MOB_SHOE
 
 /mob/living/simple_animal/hostile/raider/junker/boss/overboss
@@ -647,6 +692,5 @@
 	ranged_cooldown_time = 1 SECONDS
 	projectiletype = /obj/item/projectile/bullet/a556/microshrapnel
 	projectilesound = 'sound/f13weapons/auto5.ogg'
-	loot = list(/obj/item/stack/f13Cash/random/high,)
 	footstep_type = FOOTSTEP_MOB_SHOE
 	environment_smash = ENVIRONMENT_SMASH_RWALLS

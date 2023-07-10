@@ -396,7 +396,7 @@
 	display_name = "Cryostasis Technology"
 	description = "Smart freezing of objects to preserve them!"
 	prereq_ids = list("adv_engi", "biotech")
-	design_ids = list("splitbeaker", "noreactsyringe", "cryotube", "cryo_Grenade")
+	design_ids = list("splitbeaker", "noreactsyringe", "cryotube")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2000)
 	export_price = 4000
 	skill_level_needed = REGULAR_CHECK
@@ -406,7 +406,7 @@
 	display_name = "Subdermal Implants"
 	description = "Electronic implants buried beneath the skin."
 	prereq_ids = list("biotech")
-	design_ids = list("implanter", "implantcase", "implant_chem", "implant_tracking", "implant_auth", "implant_loyal")
+	design_ids = list("implanter", "implantcase", "implant_chem", "implant_tracking")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	export_price = 5000
 	skill_level_needed = REGULAR_CHECK
@@ -548,7 +548,7 @@
 	display_name = "Advanced Weapon Development Technology"
 	description = "Our weapons are breaking the rules of reality by now."
 	prereq_ids = list("adv_engi", "weaponry")
-	design_ids = list("pin_loyalty", "ecp", "bullet_shield")
+	design_ids = list("ecp", "bullet_shield")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 	skill_level_needed = REGULAR_CHECK

@@ -38,6 +38,15 @@
 	result = /obj/item/reagent_containers/food/snacks/pastatomato
 	subcategory = CAT_SPAGHETTI
 
+/datum/crafting_recipe/food/pestospaghetti
+	name = "Pesto spaghetti"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/boiledspaghetti = 1,
+		/obj/item/reagent_containers/food/snacks/pesto = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/pestospaghetti
+	subcategory = CAT_SPAGHETTI
+
 ////////////NOODLES///////////
 
 /datum/crafting_recipe/food/beefnoodle
@@ -70,3 +79,27 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/butternoodles
 	subcategory = CAT_SPAGHETTI
+
+
+/datum/crafting_recipe/food/lasagna
+	name = "Lasagna"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/boiledspaghetti = 1,
+		/obj/item/reagent_containers/food/snacks/meat/cutlet = 2,
+		/obj/item/reagent_containers/food/snacks/grown/tomato = 2,
+		/obj/item/reagent_containers/food/snacks/cheesewedge = 2
+	)
+	result = /obj/item/reagent_containers/food/snacks/lasagna
+	subcategory = CAT_SPAGHETTI
+
+/datum/crafting_recipe/food/greenlasagna
+	name = "Green Lasagna"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/boiledspaghetti = 1,
+		/obj/item/reagent_containers/food/snacks/bechamel_sauce = 1,
+		/obj/item/reagent_containers/food/snacks/pesto = 1,
+		/obj/item/reagent_containers/food/snacks/firm_cheese_slice = 2
+	)
+	result = /obj/item/reagent_containers/food/snacks/pizza/greenlasagna
+	subcategory = CAT_SPAGHETTI
+
