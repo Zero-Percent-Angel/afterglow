@@ -7,6 +7,17 @@
 	name = "BoS Recon Suit"
 	path = /obj/item/clothing/under/f13/recon
 	cost = 1
+	restricted_desc = "BoS"
+	restricted_roles = list("Head Paladin",
+							"Senior Paladin",
+							"Paladin",
+							"Senior Knight",
+							"Knight",
+							"Initiate",
+							"Head Scribe",
+							"Senior Scribe",
+							"Scribe"
+							)
 
 /datum/gear/uniform/legskirt
 	name = "burgundy fatigues"
@@ -583,22 +594,34 @@
 //Factions
 //NCR
 
-/datum/gear/uniform/ncr_fatigue_pants
+/datum/gear/uniform/ncr
 	name = "NCR fatigue pants"
 	path = /obj/item/clothing/under/f13/ncr/pants
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
+	restricted_desc = "NCRA"
+	restricted_roles = list("NCR Colonel",
+							"NCR Captain",
+							"NCR Lieutenant",
+							"NCR Sergeant",
+							"NCR Heavy Trooper",
+							"NCR Corporal",
+							"NCR Trooper",
+							"NCR Recruit",
+							"NCR Rear Echelon",
+							"NCR Off-Duty"
+							)
 
-/datum/gear/uniform/ncr_shorts
+/datum/gear/uniform/ncr/shorts
 	name = "NCR fatigue shorts"
 	path = /obj/item/clothing/under/f13/ncr/ncr_shorts
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 
-/datum/gear/uniform/ncr_officer_dress
+/datum/gear/uniform/ncr/officer_dress
 	name = "NCR Officer Dress"
 	path = /obj/item/clothing/under/f13/ncr_female_officer
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 
-/datum/gear/uniform/sniper
+/datum/gear/uniform/ncr/sniper
 	name = "NCR sniper outfit"
 	path = /obj/item/clothing/under/f13/ncr/sniper
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
@@ -607,6 +630,11 @@
 	name = "ranger outfit"
 	path = /obj/item/clothing/under/f13/ranger
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
+	restricted_roles = "NCR Rangers"
+	restricted_roles = list("NCR Veteran Ranger",
+							"NCR Ranger",
+							"NCR Civilian Ranger"
+							)
 
 /datum/gear/uniform/ranger/trail
 	name = "trail ranger outfit"
@@ -627,7 +655,7 @@
 	path = /obj/item/clothing/under/rank/security/officer/blueshirt
 	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
-	restricted_desc = "Nash"
+	restricted_desc = "Ripley"
 	restricted_roles = list("Mayor",
 							"Secretary",
 							"Chief of Police",
@@ -643,24 +671,28 @@
 
 //Khans
 
-/datum/gear/uniform/denimuniform
-	name = "denim uniform"
+/datum/gear/uniform/khans
+	name = "Khan uniform"
 	path = /obj/item/clothing/under/f13/khan
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
+	restricted_desc = "Khans"
+	restricted_roles = list("Great Khan",
+							"Khan"
+							)
 
-/datum/gear/uniform/denim
-	name = "denim jorts"
+/datum/gear/uniform/khans/denim
+	name = "Khan jorts"
 	path = /obj/item/clothing/under/f13/khan/shorts
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 
-/datum/gear/uniform/denim/booty
-	name = "denim booty shorts"
+/datum/gear/uniform/khans/denim/booty
+	name = "Khan booty shorts"
 	path = /obj/item/clothing/under/f13/khan/booty
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 
 //Skirts
 
-/datum/gear/uniform/skirt/white
+/datum/gear/uniform/skirt
 	name = "white suitskirt"
 	path = /obj/item/clothing/under/suit/white_on_white/skirt
 	cost = 1
@@ -669,146 +701,100 @@
 /datum/gear/uniform/skirt/polychromic
 	name = "polychromic skirt"
 	path = /obj/item/clothing/under/dress/skirt/polychromic
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/polychromic/pleated
 	name = "polychromic pleated skirt"
 	path = /obj/item/clothing/under/dress/skirt/polychromic/pleated
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/plaid/red
 	name = "red plaid skirt"
 	path = /obj/item/clothing/under/dress/skirt/plaid
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/plaid/green
 	name = "green plaid skirt"
 	path = /obj/item/clothing/under/dress/skirt/plaid/green
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/plaid/blue
 	name = "blue plaid skirt"
 	path = /obj/item/clothing/under/dress/skirt/plaid/blue
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/plaid/purple
 	name = "purple plaid skirt"
 	path = /obj/item/clothing/under/dress/skirt/plaid/purple
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/black
 	name = "black skirt"
 	path = /obj/item/clothing/under/dress/skirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/vcity
 	name = "VTCC jumpskirt"
 	path = /obj/item/clothing/under/f13/vault/vcity/skirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/tac
 	name = "''tactical'' combat skirt"
 	path = /obj/item/clothing/under/f13/legskirt/tac
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/swept
 	name = "swept skirt"
 	path = /obj/item/clothing/under/dress/skirt/swept
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/red
 	name = "red skirt"
 	path = /obj/item/clothing/under/dress/skirt/red
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/blue
 	name = "blue skirt"
 	path = /obj/item/clothing/under/dress/skirt/blue
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/purple
 	name = "purple skirt"
 	path = /obj/item/clothing/under/dress/skirt/purple
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/denim
 	name = "denim skirt"
 	path = /obj/item/clothing/under/pants/denimskirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/curator
 	name = "sensible suitskirt"
 	path = /obj/item/clothing/under/rank/civilian/curator/skirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/blue/suit
 	name = "blue suitskirt"
 	path = /obj/item/clothing/under/rank/civilian/lawyer/bluesuit/skirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/purple/suit
 	name = "purple suitskirt"
 	path = /obj/item/clothing/under/rank/civilian/lawyer/purpsuit/skirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/blue/lawyer
 	name = "blue lawyer suitskirt"
 	path = /obj/item/clothing/under/rank/civilian/lawyer/blue/skirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/red/lawyer
 	name = "red lawyer suitskirt"
 	path = /obj/item/clothing/under/rank/civilian/lawyer/red/skirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/executive/suit
 	name = "executive suitskirt"
 	path = /obj/item/clothing/under/rank/civilian/lawyer/really_black/skirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/black/female/suit
 	name = "black female suitskirt"
 	path = /obj/item/clothing/under/rank/civilian/lawyer/female/skirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/black/suit
 	name = "black lawyer suitskirt"
 	path = /obj/item/clothing/under/rank/civilian/lawyer/black/skirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/black/suit/alt
 	name = "black alt suitskirt"
 	path = /obj/item/clothing/under/rank/civilian/lawyer/black/alt/skirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
 
 /datum/gear/uniform/skirt/bartender
 	name = "bartender's skirt"
 	path = /obj/item/clothing/under/rank/civilian/bartender/skirt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_SKIRTS
+
+
 
 // Wasteland catagory
 
