@@ -31,9 +31,9 @@
 
 	upgraded_chemicals = list(
 		/datum/reagent/drug/happiness = 4,
-		/datum/reagent/drug/heroin = 5,
+		/datum/reagent/drug/heroin = 5
 		//datum/reagent/drug/aphrodisiac = 3,
-		/datum/reagent/drug/anaphrodisiac = 3
+		//datum/reagent/drug/anaphrodisiac = 3
 	)
 
 	upgraded_chemicals2 = list(
