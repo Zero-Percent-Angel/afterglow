@@ -33,17 +33,18 @@
 	item_state = "b_suit"
 
 /obj/item/clothing/under/sweater/turtleskirt
-	name = "black turtleskirt"
+	name = "black and white turtleskirt"
+	desc = "Why trade style for comfort? Now you can go commando down south, be cozy up north, and no-one would know!."
 	icon_state = "turtleskirt"
 	item_state = "turtleskirt"
 
 /obj/item/clothing/under/sweater/turtleskirt/whitepink
-	name = "black and white turtleskirt"
+	name = "black, white and pink turtleskirt"
 	icon_state = "white_pink_turtleskirt"
 	item_state = "white_pink_turtleskirt"
 
 /obj/item/clothing/under/sweater/turtleskirt/blackwhite
-	name = "black turtleskirt"
+	name = "black and white striped turtleskirt"
 	icon_state = "black_white_turtleskirt"
 	item_state = "black_white_turtleskirt"
 
