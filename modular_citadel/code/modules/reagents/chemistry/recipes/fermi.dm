@@ -347,7 +347,7 @@ datum/chemical_reaction/fermi/eigenstate
 		return
 	Fb.data = 14
 
-/datum/chemical_reaction/fermi/furranium
+/*datum/chemical_reaction/fermi/furranium
 	name = "Furranium"
 	id = /datum/reagent/fermi/furranium
 	results = list(/datum/reagent/fermi/furranium = 5)
@@ -367,4 +367,4 @@ datum/chemical_reaction/fermi/eigenstate
 	HIonRelease 	= -0.1
 	RateUpLim 		= 2
 	FermiChem 		= TRUE
-	PurityMin		= 0.3
+	PurityMin		= 0.3*/
