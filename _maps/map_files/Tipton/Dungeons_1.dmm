@@ -9399,14 +9399,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
 /area/f13/vault/medical/surgery)
-"zI" = (
-/mob/living/simple_animal/hostile/renegade/engie,
-/turf/open/floor/f13{
-	color = "#ffe9de";
-	icon_state = "darkrusty";
-	name = "dirty floor"
-	},
-/area/f13/sewer/powered)
 "zJ" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -18131,7 +18123,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow/white,
 /area/f13/vault/science)
 "Ya" = (
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot,
+/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot{
+	faction = list("hostile")
+	},
 /turf/open/floor/f13,
 /area/ruin/powered)
 "Yb" = (
@@ -18154,7 +18148,6 @@
 /obj/structure/railing/corner{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/renegade/soldier,
 /turf/open/floor/f13{
 	color = "#ffe9de";
 	icon_state = "darkrusty";
@@ -19558,7 +19551,7 @@ AY
 AY
 HJ
 mQ
-MV
+jQ
 kY
 LO
 aa
@@ -20329,7 +20322,7 @@ CS
 SC
 sl
 jQ
-zI
+jQ
 kY
 LO
 aa
