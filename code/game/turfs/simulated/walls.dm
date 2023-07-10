@@ -15,7 +15,7 @@
 
 	baseturfs = /turf/open/floor/plating
 
-	var/hardness = 40 //lower numbers are harder. Used to determine the probability of a hulk smashing through.
+	var/hardness = 35 //lower numbers are harder. Used to determine the probability of a hulk smashing through.
 	var/slicing_duration = 100  //default time taken to slice the wall
 	var/sheet_type = /obj/item/stack/sheet/metal
 	var/sheet_amount = 2
@@ -200,7 +200,7 @@
 	return ..()
 
 /turf/closed/wall/proc/try_clean(obj/item/W, mob/user, turf/T)
-	if((user.a_intent != INTENT_HELP) || !LAZYLEN(dent_decals))
+	if((user.a_intent != INTENT_HELP) || !(LAZYLEN(dent_decals) || damage))
 		return FALSE
 
 	if(istype(W, /obj/item/weldingtool))
@@ -209,10 +209,11 @@
 
 		to_chat(user, span_notice("You begin fixing dents on the wall..."))
 		if(W.use_tool(src, user, max(1, 75 - user.skill_value(SKILL_REPAIR)), volume=100))
+			to_chat(user, span_notice("You fix some dents on the wall."))
 			if(iswallturf(src) && LAZYLEN(dent_decals))
-				to_chat(user, span_notice("You fix some dents on the wall."))
 				cut_overlay(dent_decals)
 				dent_decals.Cut()
+			damage = 0
 			return TRUE
 
 	return FALSE

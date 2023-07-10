@@ -139,7 +139,7 @@
 	result = /obj/item/reagent_containers/food/snacks/pizza/sassysage
 	subcategory = CAT_BURGER
 
-/datum/crafting_recipe/food/margheritapizza
+/datum/crafting_recipe/food/fourcheesepizza
 	name = "Four Cheeses pizza"
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/pizzabread = 1,

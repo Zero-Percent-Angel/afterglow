@@ -178,7 +178,7 @@
 	icon_state = "iced"
 	desc = "A wall covered in a thick sheet of ice."
 	canSmoothWith = null
-	hardness = 35
+	hardness = 34
 	slicing_duration = 150 //welding through the ice+metal
 	bullet_sizzle = TRUE
 
@@ -195,7 +195,7 @@
 	name = "rusted reinforced wall"
 	desc = "A huge chunk of rusted reinforced metal."
 	icon = 'icons/turf/walls/rusty_reinforced_wall.dmi'
-	hardness = 50
+	hardness = 30
 
 /turf/closed/wall/r_wall/rust/rust_heretic_act()
 	if(prob(50))
