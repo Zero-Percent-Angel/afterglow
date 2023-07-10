@@ -1499,11 +1499,21 @@
 	resistance_flags = UNACIDABLE
 	body_parts_covered = LEGS
 
+/////////////////
+// Brotherhood //
+/////////////////
+
 /obj/item/clothing/under/f13/bos/fatigues
 	name = "Brotherhood fatigues"
 	desc = "A dry cleaned set of grey fatigues with a brown belt, commonly worn by the off-duty members of the Brotherhood of Steel."
 	icon_state = "bos_fatigues"
 	item_state = "bos_fatigues"
+
+/obj/item/clothing/under/f13/bos/fatigues
+	name = "Lancer's flight suit"
+	desc = "A close-fit uniform fitted with a harness to hold the wearer in place whilst experiencing turbulance. Worn by the Lancers of the Brotherhood of Steel."
+	icon_state = "bos_flightsuit"
+	item_state = "bos_flightsuit"
 
 /obj/item/clothing/under/f13/bos/bodysuit
 	name = "Brotherhood Knight fatigues"
