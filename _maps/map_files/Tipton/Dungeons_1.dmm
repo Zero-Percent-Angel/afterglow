@@ -241,6 +241,11 @@
 /obj/structure/simple_door/bunker,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"aG" = (
+/turf/closed/wall/r_wall/f13vault{
+	icon_state = "2-i"
+	},
+/area/f13/tunnel)
 "aH" = (
 /obj/machinery/computer/terminal{
 	dir = 1
@@ -1775,6 +1780,11 @@
 /obj/machinery/telecomms/processor/preset_four,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/tcoms)
+"eL" = (
+/turf/closed/wall/r_wall/f13vault{
+	icon_state = "2-i"
+	},
+/area/f13/vault/dormitory)
 "eM" = (
 /mob/living/simple_animal/hostile/megafauna/behemoth{
 	faction = list("mining","boss","supermutant");
@@ -3087,6 +3097,10 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/tunnel)
+"ip" = (
+/obj/effect/landmark/start/f13/cyborg,
+/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
+/area/f13/vault/atrium)
 "iq" = (
 /turf/open/floor/plasteel/f13/vault_floor/neutral/side{
 	dir = 10
@@ -3414,12 +3428,6 @@
 /obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
-"jl" = (
-/obj/effect/landmark/start/f13/cyborg,
-/turf/open/floor/plasteel/f13/vault_floor/neutral/side{
-	dir = 9
-	},
-/area/f13/vault/atrium)
 "jm" = (
 /obj/machinery/light/fo13colored/Red{
 	dir = 8
@@ -3539,10 +3547,6 @@
 	dir = 6
 	},
 /area/ruin/powered)
-"jz" = (
-/obj/effect/landmark/start/f13/cyborg,
-/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
-/area/f13/vault/atrium)
 "jA" = (
 /obj/structure/flora/tree/jungle/small,
 /obj/structure/spacevine{
@@ -4738,6 +4742,12 @@
 	},
 /turf/open/floor/plating/tunnel,
 /area/f13/sewer/powered)
+"mI" = (
+/obj/effect/landmark/start/f13/cyborg,
+/turf/open/floor/plasteel/f13/vault_floor/neutral/side{
+	dir = 9
+	},
+/area/f13/vault/atrium)
 "mJ" = (
 /obj/effect/gibspawner/human,
 /obj/structure/lattice,
@@ -5443,11 +5453,6 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/storage)
-"oG" = (
-/turf/closed/wall/r_wall/f13vault{
-	icon_state = "2-i"
-	},
-/area/f13/tunnel)
 "oH" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/open/floor/f13{
@@ -5480,7 +5485,7 @@
 /area/f13/tunnel)
 "oM" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/gibber,
+/obj/structure/frame/machine,
 /turf/open/floor/plasteel/airless/floorgrime,
 /area/f13/tunnel)
 "oN" = (
@@ -5584,6 +5589,11 @@
 	icon_state = "yellowsiding"
 	},
 /area/ruin/powered)
+"pd" = (
+/turf/closed/wall/r_wall/f13vault{
+	icon_state = "2-i"
+	},
+/area/f13/vault)
 "pe" = (
 /obj/structure/flora/ausbushes/fernybush,
 /obj/structure/flora/ausbushes/fullgrass,
@@ -5971,11 +5981,6 @@
 	},
 /turf/open/floor/plating/tunnel,
 /area/f13/vault/reactor)
-"qf" = (
-/turf/closed/wall/r_wall/f13vault{
-	icon_state = "2-i"
-	},
-/area/f13/vault/dormitory)
 "qg" = (
 /obj/structure/railing/handrail/rusty{
 	dir = 8
@@ -6064,6 +6069,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/f13/vault_floor/purple/whitepurplefull,
 /area/f13/vault/science)
+"qq" = (
+/obj/structure/decoration/warning{
+	name = "WARNING: LEADER AHEAD"
+	},
+/turf/closed/indestructible/f13vaultrusted,
+/area/f13/sewer/powered)
 "qr" = (
 /obj/structure/reagent_dispensers/barrel/four,
 /obj/effect/decal/cleanable/dirt,
@@ -10201,12 +10212,6 @@
 /obj/machinery/telecomms/server/presets/common,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/tcoms)
-"BT" = (
-/obj/structure/decoration/warning{
-	name = "WARNING: LEADER AHEAD"
-	},
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/sewer/powered)
 "BU" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/landmark/start/f13/vaultscientist,
@@ -11274,11 +11279,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault/overseer)
-"EO" = (
-/turf/closed/wall/r_wall/f13vault{
-	icon_state = "2-i"
-	},
-/area/f13/vault)
 "EP" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -19571,7 +19571,7 @@ ZC
 ZC
 Mc
 xJ
-BT
+qq
 EW
 LO
 AY
@@ -20599,7 +20599,7 @@ ZC
 ZC
 Mc
 xJ
-BT
+qq
 QE
 LO
 AY
@@ -23657,15 +23657,15 @@ iC
 iC
 iC
 iC
-oG
-oG
-oG
-oG
-oG
-oG
-oG
-oG
-oG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
 AO
 AO
 AO
@@ -23914,15 +23914,15 @@ iC
 iC
 iC
 iC
-oG
-EO
-EO
-EO
-EO
-EO
-EO
-EO
-oG
+aG
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+aG
 AO
 AM
 aK
@@ -24171,15 +24171,15 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 Ac
 OS
 YD
 OS
 VC
-EO
-oG
+pd
+aG
 AO
 GZ
 GZ
@@ -24427,16 +24427,16 @@ iC
 iC
 iC
 iC
-oG
-oG
-EO
+aG
+aG
+pd
 Ek
 qg
 qg
 LY
 Vr
-EO
-EO
+pd
+pd
 AO
 ob
 eb
@@ -24684,9 +24684,9 @@ iC
 iC
 iC
 iC
-oG
-EO
-EO
+aG
+pd
+pd
 KQ
 KQ
 oU
@@ -24941,8 +24941,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 II
 pp
 xQ
@@ -25195,11 +25195,11 @@ iC
 iC
 iC
 iC
-oG
-oG
-oG
-oG
-EO
+aG
+aG
+aG
+aG
+pd
 nF
 xQ
 xQ
@@ -25452,11 +25452,11 @@ iC
 iC
 iC
 iC
-oG
-EO
-EO
-EO
-EO
+aG
+pd
+pd
+pd
+pd
 oU
 xQ
 Ym
@@ -25707,10 +25707,10 @@ iC
 iC
 iC
 iC
-oG
-oG
-oG
-EO
+aG
+aG
+aG
+pd
 oU
 KQ
 KQ
@@ -25964,10 +25964,10 @@ iC
 iC
 iC
 iC
-oG
-EO
-EO
-EO
+aG
+pd
+pd
+pd
 hD
 fj
 dE
@@ -26221,8 +26221,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 LU
 HU
 KQ
@@ -26236,9 +26236,9 @@ xQ
 xQ
 xQ
 JA
-jz
-jz
-jl
+ip
+ip
+mI
 Rl
 AO
 NB
@@ -26477,9 +26477,9 @@ iC
 iC
 iC
 iC
-oG
-oG
-EO
+aG
+aG
+pd
 qK
 Ab
 Ab
@@ -26734,9 +26734,9 @@ iC
 iC
 iC
 iC
-oG
-EO
-EO
+aG
+pd
+pd
 Kd
 Ab
 xS
@@ -26991,8 +26991,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 Ie
 NY
 Ab
@@ -27248,8 +27248,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 bg
 KQ
 Ab
@@ -27505,8 +27505,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 Oj
 oU
 Ab
@@ -27762,8 +27762,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 Hk
 Sm
 Ab
@@ -28014,13 +28014,13 @@ iC
 iC
 iC
 iC
-oG
-oG
-oG
-oG
-oG
-oG
-EO
+aG
+aG
+aG
+aG
+aG
+aG
+pd
 Ot
 oU
 Fr
@@ -28271,13 +28271,13 @@ iC
 iC
 iC
 iC
-oG
-EO
-EO
-EO
-EO
-EO
-EO
+aG
+pd
+pd
+pd
+pd
+pd
+pd
 dE
 dE
 dE
@@ -28528,8 +28528,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 dE
 dE
 II
@@ -28565,7 +28565,7 @@ ey
 ey
 ey
 ey
-qf
+eL
 gG
 iC
 iC
@@ -28785,8 +28785,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 Ur
 hD
 rY
@@ -28822,8 +28822,8 @@ Uy
 ey
 so
 Io
-qf
-oG
+eL
+aG
 jJ
 jJ
 iC
@@ -29038,12 +29038,12 @@ iC
 iC
 iC
 iC
-oG
-oG
-oG
-oG
-oG
-EO
+aG
+aG
+aG
+aG
+aG
+pd
 oU
 KQ
 BZ
@@ -29079,8 +29079,8 @@ xV
 ey
 OK
 zw
-qf
-oG
+eL
+aG
 jJ
 jJ
 jJ
@@ -29295,13 +29295,13 @@ iC
 jJ
 jJ
 jJ
-oG
-EO
-EO
-EO
-EO
-EO
-EO
+aG
+pd
+pd
+pd
+pd
+pd
+pd
 Fr
 BZ
 IJ
@@ -29336,9 +29336,9 @@ ct
 ey
 Ud
 tV
-qf
-oG
-oG
+eL
+aG
+aG
 iC
 iC
 iC
@@ -29552,8 +29552,8 @@ iC
 jJ
 jJ
 jJ
-oG
-EO
+aG
+pd
 nF
 oU
 oU
@@ -29593,9 +29593,9 @@ ey
 ey
 rN
 ey
-qf
-qf
-oG
+eL
+eL
+aG
 iC
 iC
 iC
@@ -29809,8 +29809,8 @@ iC
 jJ
 jJ
 jJ
-oG
-EO
+aG
+pd
 KQ
 DH
 DH
@@ -29851,8 +29851,8 @@ MP
 EL
 Pi
 ij
-qf
-oG
+eL
+aG
 iC
 iC
 iC
@@ -30066,8 +30066,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 KQ
 DH
 KC
@@ -30108,8 +30108,8 @@ tM
 tM
 EL
 ij
-qf
-oG
+eL
+aG
 iC
 iC
 iC
@@ -30323,8 +30323,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 KQ
 DH
 Zr
@@ -30364,9 +30364,9 @@ SN
 jh
 VH
 sn
-qf
-qf
-oG
+eL
+eL
+aG
 iC
 iC
 iC
@@ -30580,8 +30580,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 GQ
 DH
 zd
@@ -30619,11 +30619,11 @@ tA
 Lc
 uX
 tA
-qf
-qf
-qf
-qf
-oG
+eL
+eL
+eL
+eL
+aG
 iC
 iC
 iC
@@ -30837,8 +30837,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 oU
 DH
 lE
@@ -30876,11 +30876,11 @@ tA
 uA
 IK
 tA
-qf
+eL
 XX
 XX
-oG
-oG
+aG
+aG
 iC
 iC
 iC
@@ -31094,8 +31094,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 oU
 DH
 DH
@@ -31136,7 +31136,7 @@ he
 he
 he
 dE
-oG
+aG
 iC
 iC
 iC
@@ -31351,8 +31351,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 nF
 oU
 KQ
@@ -31393,9 +31393,9 @@ yI
 ge
 he
 dE
-oG
-oG
-oG
+aG
+aG
+aG
 iC
 iC
 iC
@@ -31608,9 +31608,9 @@ iC
 iC
 iC
 iC
-oG
-EO
-EO
+aG
+pd
+pd
 oU
 Hf
 KQ
@@ -31651,8 +31651,8 @@ VO
 he
 Vr
 Vr
-EO
-oG
+pd
+aG
 iC
 iC
 iC
@@ -31865,11 +31865,11 @@ iC
 iC
 iC
 iC
-oG
-oG
-EO
-EO
-EO
+aG
+aG
+pd
+pd
+pd
 dE
 oU
 Ai
@@ -31908,8 +31908,8 @@ Ul
 he
 WR
 Nx
-EO
-oG
+pd
+aG
 iC
 iC
 iC
@@ -32123,11 +32123,11 @@ iC
 iC
 iC
 iC
-oG
-oG
-oG
-EO
-EO
+aG
+aG
+aG
+pd
+pd
 Ug
 Ai
 Ai
@@ -32165,8 +32165,8 @@ Pd
 he
 Qg
 rH
-EO
-oG
+pd
+aG
 iC
 iC
 iC
@@ -32382,9 +32382,9 @@ iC
 iC
 iC
 iC
-oG
-oG
-EO
+aG
+aG
+pd
 hD
 KQ
 Ai
@@ -32422,9 +32422,9 @@ VE
 he
 zl
 sA
-EO
-oG
-oG
+pd
+aG
+aG
 iC
 iC
 iC
@@ -32640,8 +32640,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 gN
 sM
 Xn
@@ -32679,10 +32679,10 @@ he
 he
 HV
 Fr
-EO
-EO
-oG
-oG
+pd
+pd
+aG
+aG
 iC
 iC
 iC
@@ -32897,9 +32897,9 @@ iC
 iC
 iC
 iC
-oG
-EO
-EO
+aG
+pd
+pd
 SL
 Jd
 NT
@@ -32937,9 +32937,9 @@ QV
 KQ
 KQ
 ZN
-EO
-EO
-oG
+pd
+pd
+aG
 iC
 iC
 iC
@@ -33154,9 +33154,9 @@ iC
 iC
 iC
 iC
-oG
-oG
-EO
+aG
+aG
+pd
 DW
 eh
 KQ
@@ -33195,8 +33195,8 @@ pa
 tg
 oU
 hO
-EO
-oG
+pd
+aG
 iC
 iC
 iC
@@ -33412,10 +33412,10 @@ iC
 iC
 iC
 iC
-oG
-EO
-EO
-EO
+aG
+pd
+pd
+pd
 Fr
 Ai
 np
@@ -33452,8 +33452,8 @@ oZ
 oZ
 KQ
 ZN
-EO
-oG
+pd
+aG
 iC
 iC
 iC
@@ -33669,10 +33669,10 @@ iC
 iC
 iC
 iC
-oG
-oG
-oG
-EO
+aG
+aG
+aG
+pd
 Mf
 Ai
 Ai
@@ -33709,8 +33709,8 @@ cf
 oZ
 oZ
 WS
-EO
-oG
+pd
+aG
 iC
 iC
 iC
@@ -33928,8 +33928,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 jO
 Gt
 oU
@@ -33966,8 +33966,8 @@ vP
 DO
 oZ
 QC
-EO
-oG
+pd
+aG
 iC
 iC
 iC
@@ -34185,9 +34185,9 @@ iC
 iC
 iC
 iC
-oG
-EO
-EO
+aG
+pd
+pd
 wX
 IZ
 Ez
@@ -34223,8 +34223,8 @@ mP
 wB
 oZ
 QC
-EO
-oG
+pd
+aG
 iC
 iC
 iC
@@ -34443,10 +34443,10 @@ iC
 iC
 iC
 iC
-oG
-EO
-EO
-EO
+aG
+pd
+pd
+pd
 Vr
 ZW
 dE
@@ -34480,8 +34480,8 @@ fM
 DO
 oZ
 QC
-EO
-oG
+pd
+aG
 iC
 iC
 iC
@@ -34700,10 +34700,10 @@ iC
 iC
 iC
 iC
-oG
-oG
-oG
-EO
+aG
+aG
+aG
+pd
 zZ
 kv
 dE
@@ -34737,8 +34737,8 @@ qe
 oZ
 oZ
 Ik
-EO
-oG
+pd
+aG
 iC
 iC
 iC
@@ -34959,8 +34959,8 @@ iC
 iC
 iC
 iC
-oG
-EO
+aG
+pd
 om
 Yn
 dE
@@ -34994,8 +34994,8 @@ oZ
 oZ
 KQ
 ZN
-EO
-oG
+pd
+aG
 iC
 iC
 iC
@@ -35216,12 +35216,12 @@ iC
 iC
 iC
 iC
-oG
-EO
-EO
-EO
-EO
-EO
+aG
+pd
+pd
+pd
+pd
+pd
 Fr
 Vr
 Qs
@@ -35250,9 +35250,9 @@ KV
 Uv
 KQ
 KQ
-EO
-EO
-oG
+pd
+pd
+aG
 iC
 iC
 iC
@@ -35473,12 +35473,12 @@ jJ
 jJ
 iC
 iC
-oG
-oG
-oG
-oG
-oG
-EO
+aG
+aG
+aG
+aG
+aG
+pd
 wc
 ZN
 Qs
@@ -35504,12 +35504,12 @@ oZ
 Ow
 KQ
 yQ
-EO
-EO
-EO
-EO
-oG
-oG
+pd
+pd
+pd
+pd
+aG
+aG
 iC
 iC
 iC
@@ -35734,9 +35734,9 @@ iC
 iC
 iC
 iC
-oG
-EO
-EO
+aG
+pd
+pd
 oU
 oU
 Fr
@@ -35761,11 +35761,11 @@ Pb
 KQ
 KQ
 PB
-EO
-oG
-oG
-oG
-oG
+pd
+aG
+aG
+aG
+aG
 iC
 iC
 iC
@@ -35991,13 +35991,13 @@ iC
 iC
 iC
 iC
-oG
-oG
-EO
-EO
-EO
-EO
-EO
+aG
+aG
+pd
+pd
+pd
+pd
+pd
 Dv
 Ve
 gl
@@ -36017,9 +36017,9 @@ Ah
 QP
 KQ
 oU
-EO
-EO
-oG
+pd
+pd
+aG
 iC
 iC
 iC
@@ -36249,33 +36249,33 @@ iC
 iC
 iC
 iC
-oG
-oG
-oG
-oG
-oG
-EO
-EO
-EO
-EO
-EO
-EO
-EO
-EO
-EO
-EO
-EO
-EO
-EO
-EO
-EO
+aG
+aG
+aG
+aG
+aG
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
+pd
 Mp
 Fq
-EO
-EO
-EO
-EO
-oG
+pd
+pd
+pd
+pd
+aG
 iC
 iC
 iC
@@ -36510,29 +36510,29 @@ iC
 iC
 iC
 iC
-oG
-oG
-oG
-oG
-oG
-oG
-oG
-oG
-oG
-oG
-oG
-oG
-oG
-oG
-oG
-EO
-EO
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+aG
+pd
+pd
 Vr
-EO
-oG
-oG
-oG
-oG
+pd
+aG
+aG
+aG
+aG
 iC
 iC
 iC
@@ -36781,12 +36781,12 @@ iC
 iC
 iC
 iC
-oG
-oG
-oG
-oG
-oG
-oG
+aG
+aG
+aG
+aG
+aG
+aG
 iC
 iC
 iC
