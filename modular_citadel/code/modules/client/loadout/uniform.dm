@@ -2,26 +2,6 @@
 	category = LOADOUT_CATEGORY_UNIFORM
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_GENERAL
 	slot = SLOT_W_UNIFORM
-
-/datum/gear/uniform/recon
-	name = "BoS Recon Suit"
-	path = /obj/item/clothing/under/f13/recon
-	cost = 1
-	restricted_desc = "BoS"
-	restricted_roles = list("Head Paladin",
-							"Senior Paladin",
-							"Paladin",
-							"Senior Knight",
-							"Knight",
-							"Initiate",
-							"Head Scribe",
-							"Senior Scribe",
-							"Scribe"
-							)
-
-/datum/gear/uniform/legskirt
-	name = "burgundy fatigues"
-	path = /obj/item/clothing/under/f13/legskirt
 	cost = 1
 
 /datum/gear/uniform/vault
@@ -592,6 +572,24 @@
 	cost = 3
 
 //Factions
+//BoS
+/datum/gear/uniform/bos
+	name = "BoS Recon Suit"
+	path = /obj/item/clothing/under/f13/recon
+	cost = 1
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
+	restricted_desc = "BoS"
+	restricted_roles = list("Head Paladin",
+							"Senior Paladin",
+							"Paladin",
+							"Senior Knight",
+							"Knight",
+							"Initiate",
+							"Head Scribe",
+							"Senior Scribe",
+							"Scribe"
+							)
+
 //NCR
 
 /datum/gear/uniform/ncr
@@ -614,17 +612,14 @@
 /datum/gear/uniform/ncr/shorts
 	name = "NCR fatigue shorts"
 	path = /obj/item/clothing/under/f13/ncr/ncr_shorts
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 
 /datum/gear/uniform/ncr/officer_dress
 	name = "NCR Officer Dress"
 	path = /obj/item/clothing/under/f13/ncr_female_officer
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 
 /datum/gear/uniform/ncr/sniper
 	name = "NCR sniper outfit"
 	path = /obj/item/clothing/under/f13/ncr/sniper
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 
 /datum/gear/uniform/ranger
 	name = "ranger outfit"
@@ -658,10 +653,10 @@
 	restricted_desc = "Ripley"
 	restricted_roles = list("Mayor",
 							"Secretary",
-							"Chief of Police",
+							"Sheriff",
+							"Deputy",
 							"Doctor",
 							"Citizen",
-							"Officer",
 							"Shopkeeper",
 							"Farmer",
 							"Prospector",
@@ -683,11 +678,17 @@
 /datum/gear/uniform/khans/denim
 	name = "Khan jorts"
 	path = /obj/item/clothing/under/f13/khan/shorts
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 
 /datum/gear/uniform/khans/denim/booty
 	name = "Khan booty shorts"
 	path = /obj/item/clothing/under/f13/khan/booty
+
+//Legion
+
+/datum/gear/uniform/legskirt
+	name = "Legionary fatigues"
+	path = /obj/item/clothing/under/f13/legskirt
+	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 
 //Skirts
