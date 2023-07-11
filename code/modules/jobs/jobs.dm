@@ -232,7 +232,7 @@ GLOBAL_LIST_INIT(vault_positions, list(
 	"Chief of Security",
 	"Vault-tec Doctor",
 	"Vault-tec Scientist",
-	"Vault-tec Security Specialist"
+	"Vault-tec Security Specialist",
 	"Vault-tec Security",
 	"Vault-tec Engineer",
 	"Vault Dweller",
@@ -278,6 +278,7 @@ GLOBAL_LIST_INIT(enclave_positions, list(
 GLOBAL_LIST_INIT(security_positions, list(
 	"Vault-tec Security",
 	"Officer",
+	"Vault-tec Security Specialist"
 ))
 GLOBAL_LIST_INIT(silicon_positions, list(
 	"Mr. Handy",
