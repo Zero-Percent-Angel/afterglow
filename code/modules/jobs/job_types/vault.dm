@@ -132,7 +132,7 @@ Head of Security
 loadout_options = list(
 		/datum/outfit/loadout/sec_riot_suppression,
 		/datum/outfit/loadout/sec_daily_duty
-)
+	)
 
 /datum/outfit/loadout/sec_riot_suppression
 	name = "Riot Suppression"
@@ -269,8 +269,6 @@ Security Specialist
 
 /datum/outfit/loadout/sec_combat_medic
 	name = "Combat Medic"
-	suit = /obj/item/clothing/suit/armor/power_armor/vaulttec
-	head = /obj/item/clothing/head/helmet/f13/power_armor/vaulttec
 	belt =/obj/item/defibrillator/compact
 	glasses = /obj/item/clothing/glasses/hud/health
 	backpack_contents = list(
