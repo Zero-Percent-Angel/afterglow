@@ -778,6 +778,22 @@
 	name = "bartender's skirt"
 	path = /obj/item/clothing/under/rank/civilian/bartender/skirt
 
+/datum/gear/uniform/skirt/turtleskirt
+	name = "turtleskirt"
+	path = /obj/item/clothing/under/sweater/turtleskirt
+
+/datum/gear/uniform/skirt/turtleskirt/whitepink
+	path = /obj/item/clothing/under/sweater/turtleskirt/whitepink
+
+/datum/gear/uniform/skirt/turtleskirt/blackwhite
+	path = /obj/item/clothing/under/sweater/turtleskirt/blackwhite
+
+/datum/gear/uniform/skirt/turtleskirt/blackpink
+	path = /obj/item/clothing/under/sweater/turtleskirt/blackpink
+
+/datum/gear/uniform/skirt/turtleskirt/grey
+	path = /obj/item/clothing/under/sweater/turtleskirt/grey
+
 // Wasteland catagory
 
 /datum/gear/uniform/wasteland
