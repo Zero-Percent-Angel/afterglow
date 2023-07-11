@@ -210,32 +210,26 @@
 /datum/gear/uniform/dress/sun/white
 	name = "white sundress"
 	path = /obj/item/clothing/under/dress/sundress/white
-	cost = 2
 
 /datum/gear/uniform/dress/sun
 	name = "sundress"
 	path = /obj/item/clothing/under/dress/sundress
-	cost = 2
 
 /datum/gear/uniform/dress/green
 	name = "green dress"
 	path = /obj/item/clothing/under/f13/greendress
-	cost = 2
 
 /datum/gear/uniform/dress/pink
 	name = "pink dress"
 	path = /obj/item/clothing/under/f13/pinkdress
-	cost = 2
 
 /datum/gear/uniform/dress/blue
 	name = "blue dress"
 	path = /obj/item/clothing/under/f13/bluedress
-	cost = 2
 
 /datum/gear/uniform/dress/orange
 	name = "flower dress"
 	path = /obj/item/clothing/under/dress/flower
-	cost = 2
 
 /datum/gear/uniform/dress/bustle
 	name = "western bustle dress"
@@ -456,33 +450,22 @@
 /datum/gear/uniform/qipao/white
 	name = "Qipao, White"
 	path = /obj/item/clothing/under/costume/qipao/white
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
 
 /datum/gear/uniform/qipao/red
 	name = "Qipao, Red"
 	path = /obj/item/clothing/under/costume/qipao/red
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
 
 /datum/gear/uniform/cheongsam
 	name = "Cheongsam, Black"
 	path = /obj/item/clothing/under/costume/cheongsam
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
 
 /datum/gear/uniform/cheongsam/white
 	name = "Cheongsam, White"
 	path = /obj/item/clothing/under/costume/cheongsam/white
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
 
 /datum/gear/uniform/cheongsam/red
 	name = "Cheongsam, Red"
 	path = /obj/item/clothing/under/costume/cheongsam/red
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_DRESSES
-	cost = 3
-
 
 /datum/gear/uniform/dress/black
 	name = "black dress"
@@ -799,357 +782,246 @@
 
 // Wasteland catagory
 
-/datum/gear/uniform/wasteland/warboy
+/datum/gear/uniform/wasteland
 	name = "War boy pants"
 	path = /obj/item/clothing/under/pants/f13/warboy
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/ghoul
 	name = "Ripped pants"
 	path = /obj/item/clothing/under/pants/f13/ghoul
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/caravan
 	name = "Caravanner pants"
 	path = /obj/item/clothing/under/pants/f13/caravan
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/clothing
 	name = "Cloth pants"
 	path = /obj/item/clothing/under/pants/f13/cloth
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/masonduds
 	name = "Vagabond's gang attire"
 	path = /obj/item/clothing/under/f13/masonduds
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/helenduds
 	name = "Gambler's gang attire"
 	path = /obj/item/clothing/under/f13/helenduds
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/ikeduds
 	name = "Gunfighter's gang attire"
 	path = /obj/item/clothing/under/f13/ikeduds
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/marlowduds
 	name = "Marlow gang attire"
 	path = /obj/item/clothing/under/f13/marlowduds
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/locust
 	name = "Locust Uniform"
 	path = /obj/item/clothing/under/f13/locust
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/keksweater
 	name = "Red sweater"
 	path = /obj/item/clothing/under/f13/keksweater
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/jamrock
 	name = "Disco shirt and pants"
 	path = /obj/item/clothing/under/f13/jamrock
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/ravenharness
 	name = "Raven harness"
 	path = /obj/item/clothing/under/f13/ravenharness
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/raiderharness
 	name = "Raider harness"
 	path = /obj/item/clothing/under/f13/raiderharness
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/worn
 	name = "Worn outfit"
 	path = /obj/item/clothing/under/f13/worn
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/merchant
 	name = "Merchant outfit"
 	path = /obj/item/clothing/under/f13/merchant
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/caravaneer
 	name = "Caravaneer outfit"
 	path = /obj/item/clothing/under/f13/caravaneer
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/mechanic
 	name = "Worn blue jumpsuit"
 	path = /obj/item/clothing/under/f13/mechanic
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/mercharm
 	name = "Merc charmer outfit"
 	path = /obj/item/clothing/under/f13/merccharm
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/doctor
 	name = "Doctor fatigues"
 	path = /obj/item/clothing/under/f13/doctor
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/brahminskin
 	name = "brahmin skin outfit"
 	path = /obj/item/clothing/under/f13/brahminm
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/brahminskin/female
 	name = "female brahmin skin outfit"
 	path = /obj/item/clothing/under/f13/female/brahmin
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/rag
 	name = "Torn rags"
 	path = /obj/item/clothing/under/f13/rag
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/westender
 	name = "Classic tender outfit"
 	path = /obj/item/clothing/under/f13/westender
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/female/mercadv
 	name = "Female mercenary outfit"
 	path = /obj/item/clothing/under/f13/female/mercadv
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/merca
 	name = "Mercenary outfit"
 	path = /obj/item/clothing/under/f13/merca
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/bodyguard
 	name = "Bodyguard outfit"
 	path = /obj/item/clothing/under/f13/bodyguard
-	cost = 2
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/formal
 	name = "Pre-war formal wear"
 	path = /obj/item/clothing/under/f13/formal
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/spring
 	name = "Pre-war spring outfit"
 	path = /obj/item/clothing/under/f13/spring
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/relax
 	name = "Pre-war relax outfit"
 	path = /obj/item/clothing/under/f13/relaxedwear
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/bennys
 	name = "Fancy suit"
 	path = /obj/item/clothing/under/f13/bennys
 	cost = 2
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/batter
 	name = "Worn baseball uniform"
 	path = /obj/item/clothing/under/f13/batter
 	cost = 2
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/cowboyt
 	name = "Dusty prospector outfit"
 	path = /obj/item/clothing/under/f13/cowboyt
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/police
 	name = "Police uniform"
 	path = /obj/item/clothing/under/f13/police
 	cost = 3 //Its 3 because it has some small armor against damage
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/trooper
 	name = "State police uniform"
 	path = /obj/item/clothing/under/f13/police/trooper
 	cost = 2
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/formal
 	name = "Police formal uniform"
 	path = /obj/item/clothing/under/f13/police/formal
 	cost = 2
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/roving
 	name = "Roving trader outfit"
 	path = /obj/item/clothing/under/f13/roving
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/machinist
 	name = "Workman outfit"
 	path = /obj/item/clothing/under/f13/machinist
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/sleazeball
 	name = "Loanshark outfit"
 	path = /obj/item/clothing/under/f13/sleazeball
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /// Tribal stuff in wasteland tab below
 
 /datum/gear/uniform/wasteland/loincloth
 	name = "Loincloth outfit"
 	path = /obj/item/clothing/under/f13/wayfarer
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/loincloth/hunter
 	name = "Rugged loincloth outfit"
 	path = /obj/item/clothing/under/f13/wayfarer/hunter
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/loincloth/exiled
 	name = "Disleveled loincloth"
 	path = /obj/item/clothing/under/f13/exile/tribal
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/loincloth/rags
 	name = "Tribal Rags outfit"
 	path = /obj/item/clothing/under/f13/tribe
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/loincloth/razorclaw
 	name = "Razorclaw robes outfit"
 	path = /obj/item/clothing/under/f13/tribe_Hhunter
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/loincloth/shamanrobes
 	name = "Tribal shaman robes outfit"
 	path = /obj/item/clothing/under/f13/tribe_shaman
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/loincloth/shamanred
 	name = "Red shaman robes outfit"
 	path = /obj/item/clothing/under/f13/wayfarer/shamanred
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/loincloth/shamanblue
 	name = "Blue shaman robes outfit"
 	path = /obj/item/clothing/under/f13/wayfarer/shamanblue
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/loincloth/chiefrobes
 	name = "Tribal chief robes outfit"
 	path = /obj/item/clothing/under/f13/tribe_chief
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/loincloth/maletribal
 	name = "male tribal outfit"
 	path = /obj/item/clothing/under/f13/tribal
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/loincloth/femaletribal
 	name = "female tribal outfit"
 	path = /obj/item/clothing/under/f13/female/tribal
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/bone/dancer
 	name = "Bone dancer outfit"
 	path = /obj/item/clothing/under/f13/bone
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/sorrows
 	name = "Sorrows garb"
 	path = /obj/item/clothing/under/f13/sorrows
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/sorrows/female
 	name = "Sorrows female garb"
 	path = /obj/item/clothing/under/f13/female/sorrows
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/deadhorses
 	name = "Dead horses garb"
 	path = /obj/item/clothing/under/f13/deadhorses
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/deadhorses/female
 	name = "Dead horses female garb"
 	path = /obj/item/clothing/under/f13/female/deadhorses
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/rustwalker
 	name = "Rust walkers outfit"
 	path = /obj/item/clothing/under/f13/rustwalkers
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/rustwalker/female
 	name = "Rust walkers female outfit"
 	path = /obj/item/clothing/under/f13/female/rustwalkers
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/whitelegs
 	name = "White legs outfit"
 	path = /obj/item/clothing/under/f13/whitelegs
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/whitelegs/female
 	name = "White legs female outfit"
 	path = /obj/item/clothing/under/f13/female/whitelegs
-	cost = 1
-	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
-/datum/gear/uniform/kimono/red
+/datum/gear/uniform/kimono
 	name = "Red Kimono"
 	path = /obj/item/clothing/under/kimono/red
 	cost = 0
@@ -1157,40 +1029,32 @@
 /datum/gear/uniform/kimono/orange
 	name = "Orange Kimono"
 	path = /obj/item/clothing/under/kimono/orange
-	cost = 0
 
 /datum/gear/uniform/kimono/yellow
 	name = "Yellow Kimono"
 	path = /obj/item/clothing/under/kimono/yellow
-	cost = 0
 
 /datum/gear/uniform/kimono/green
 	name = "Green Kimono"
 	path = /obj/item/clothing/under/kimono/green
-	cost = 0
 
 /datum/gear/uniform/kimono/blue
 	name = "Blue Kimono"
 	path = /obj/item/clothing/under/kimono/blue
-	cost = 0
 
 /datum/gear/uniform/kimono/purple
 	name = "Purple Kimono"
 	path = /obj/item/clothing/under/kimono/purple
-	cost = 0
 
 /datum/gear/uniform/kimono/violet
 	name = "Violet Kimono"
 	path = /obj/item/clothing/under/kimono/violet
-	cost = 0
 
 /datum/gear/uniform/kimono/pink
 	name = "Pink Kimono"
 	path = /obj/item/clothing/under/kimono/pink
-	cost = 0
 
 /datum/gear/uniform/kimono/earth
 	name = "Earth Kimono"
 	path = /obj/item/clothing/under/kimono/earth
-	cost = 0
 
