@@ -778,8 +778,6 @@
 	name = "bartender's skirt"
 	path = /obj/item/clothing/under/rank/civilian/bartender/skirt
 
-
-
 // Wasteland catagory
 
 /datum/gear/uniform/wasteland
@@ -939,7 +937,7 @@
 	name = "Loanshark outfit"
 	path = /obj/item/clothing/under/f13/sleazeball
 
-/// Tribal stuff in wasteland tab below
+// Tribal stuff in wasteland tab below
 
 /datum/gear/uniform/wasteland/loincloth
 	name = "Loincloth outfit"
@@ -1021,6 +1019,8 @@
 	name = "White legs female outfit"
 	path = /obj/item/clothing/under/f13/female/whitelegs
 
+// Kimonos
+
 /datum/gear/uniform/kimono
 	name = "Red Kimono"
 	path = /obj/item/clothing/under/kimono/red
@@ -1058,3 +1058,29 @@
 	name = "Earth Kimono"
 	path = /obj/item/clothing/under/kimono/earth
 
+// Goth
+
+/datum/gear/uniform/goth
+	name = "goth outfit"
+	path = /obj/item/clothing/under/f13/goth
+
+/datum/gear/uniform/goth/female
+	name = "female goth outfit"
+	path = /obj/item/clothing/under/f13/female/goth
+
+/datum/gear/uniform/goth/skimpy
+	name = "skimpy goth outfit"
+	path = /obj/item/clothing/under/f13/goth/skimpy
+
+/datum/gear/uniform/goth/female/skimpy
+	name = "skimpy female goth outfit"
+	path = /obj/item/clothing/under/f13/female/goth/skimpy
+
+// Scavs
+
+/datum/gear/uniform/scav
+	name = "scav outfit"
+	path = /obj/item/clothing/under/f13/scav
+
+/datum/gear/uniform/scav/female
+	path = /obj/item/clothing/under/f13/female/scav
