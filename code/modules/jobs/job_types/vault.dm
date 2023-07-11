@@ -240,6 +240,23 @@ Security Specialist
 						ACCESS_MORGUE, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CARGO,
 						ACCESS_MINERAL_STOREROOM)
 
+	loadout_options = list(
+		/datum/outfit/loadout/riot_suppression,
+		/datum/outfit/loadout/daily_duty
+	)
+
+/datum/outfit/loadout/riot_suppression
+	name = "Riot Suppression"
+	suit = /obj/item/clothing/suit/armor/medium/raider/yankee
+	head = /obj/item/clothing/head/helmet/f13/raider/yankee
+	backpack_contents = list(
+		/obj/item/shishkebabpack = 1,
+		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
+		/obj/item/ammo_box/magazine/m9mm = 2,
+		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1,
+		/obj/item/megaphone=1,
+		/obj/item/storage/pill_bottle/chem_tin/buffout = 1)
+
 /*
 Security Officer
 */
