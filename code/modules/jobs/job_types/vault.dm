@@ -96,6 +96,11 @@ Head of Security
 
 	outfit = /datum/outfit/job/vault/f13hos
 
+	loadout_options = list(
+			/datum/outfit/loadout/sec_riot_suppression,
+			/datum/outfit/loadout/sec_daily_duty
+		)
+
 	access = list(ACCESS_VAULT_F13, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_WEAPONS,ACCESS_FORENSICS_LOCKERS,
 						ACCESS_MORGUE, ACCESS_MAINT_TUNNELS, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_MINING, ACCESS_MEDICAL,
 						ACCESS_CARGO, ACCESS_HEADS, ACCESS_HOS, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_MINERAL_STOREROOM)
@@ -128,11 +133,6 @@ Head of Security
 		/obj/item/crowbar = 1)
 
 	implants = list(/obj/item/implant/mindshield)
-
-	loadout_options = list(
-			/datum/outfit/loadout/sec_riot_suppression,
-			/datum/outfit/loadout/sec_daily_duty
-		)
 
 /datum/outfit/loadout/sec_riot_suppression
 	name = "Riot Suppression"
@@ -309,6 +309,12 @@ Security Officer
 	minimal_access = list(ACCESS_VAULT_F13, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_WEAPONS, ACCESS_FORENSICS_LOCKERS,
 						ACCESS_MORGUE, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CARGO,
 						ACCESS_MINERAL_STOREROOM)
+
+	loadout_options = list(
+		/datum/outfit/loadout/sec_ratting,
+		/datum/outfit/loadout/sec_policing
+	)
+
 /datum/outfit/job/vault/f13security
 	name = "Vault-tec Security"
 	jobtype = /datum/job/vault/f13officer
@@ -358,11 +364,6 @@ Security Officer
 /obj/item/radio/headset/headset_sec/alt/department/sci
 	keyslot = new /obj/item/encryptionkey/headset_vault_security
 	keyslot2 = new /obj/item/encryptionkey/headset_sci
-
-	loadout_options = list(
-		/datum/outfit/loadout/sec_ratting,
-		/datum/outfit/loadout/sec_policing
-	)
 
 /datum/outfit/loadout/sec_ratting
 	name = "Rat Hunting"
