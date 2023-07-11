@@ -58,8 +58,8 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Legion Centurion",
 
 	"Chief of Police",
-	
-	"Overseer",
+
+	"Vault Coordinator",
 	"Chief of Security",
 
 	"Enclave Lieutenant",
@@ -134,7 +134,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Town Paramedic",
 
 "Cyborg",
-"Overseer",
+"Vault Coordinator",
 "Chief of Security",
 "Vault-tec Doctor",
 "Vault-tec Scientist",
@@ -155,7 +155,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Initiate",
 	"BoS Off-Duty"
 ))
-//Nash/Oasis
+//Nash/Oasis/Ripley
 GLOBAL_LIST_INIT(oasis_positions, list(
 	"Mayor",
 	"Secretary",
@@ -226,11 +226,13 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Off-Duty"
 ))
 
+//Vault
 GLOBAL_LIST_INIT(vault_positions, list(
-	"Overseer",
+	"Vault Coordinator",
 	"Chief of Security",
 	"Vault-tec Doctor",
 	"Vault-tec Scientist",
+	"Vault-tec Security Specialist"
 	"Vault-tec Security",
 	"Vault-tec Engineer",
 	"Vault Dweller",

@@ -1,6 +1,6 @@
 /*
 Vault access doors
-Overseer/Chief of security: 19 ACCESS_HEADS
+Vault Coordinator/Chief of security: 19 ACCESS_HEADS
 Security: 1 ACCESS_SECURITY
 General access: 31 ACCESS_CARGO
 Engineering: 10, 11 ACCESS_ENGINE_EQUIP, ACCESS_ENGINE
@@ -25,14 +25,14 @@ Science: 47 ACCESS_RESEARCH
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 /*
-Overseer
+Vault Coordinator
 */
 
 /datum/job/vault
 	objectivesList = list("Leadership recommends the following goal for this week: Establish trade with the wasteland","Leadership recommends the following goal for this week: Acquire blueprints and interesting artifacts for research", "Leadership recommends the following goal for this week: Expand operations outside the vault")
 
 /datum/job/vault/f13overseer
-	title = "Overseer"
+	title = "Vault Coordinator"
 	flag = F13OVERSEER
 	head_announce = list("Security")
 	total_positions = 1 //was 1-1
@@ -54,7 +54,7 @@ Overseer
 	return get_all_accesses()
 
 /datum/outfit/job/vault/f13overseer
-	name = "Overseer"
+	name = "Vault Coordinator"
 	jobtype = /datum/job/vault/f13overseer
 
 	implants = list(/obj/item/implant/mindshield)
@@ -81,7 +81,7 @@ Head of Security
 /datum/job/vault/f13hos
 	title = "Chief of Security"
 	flag = F13HOS
-	department_head = list("Overseer")
+	department_head = list("Vault Coordinator")
 	department_flag = VAULT
 	head_announce = list("Security")
 	total_positions = 1 //was 1-1
@@ -156,7 +156,7 @@ Medical Doctor
 /datum/job/vault/f13doctor
 	title = "Vault-tec Doctor"
 	flag = F13DOCTOR
-	department_head = list("Overseer")
+	department_head = list("Vault Coordinator")
 	total_positions = 3 //was 5-4
 	spawn_positions = 3
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
@@ -201,13 +201,13 @@ Scientist
 /datum/job/vault/f13vaultscientist
 	title = "Vault-tec Scientist"
 	flag = F13VAULTSCIENTIST
-	department_head = list("Overseer")
+	department_head = list("Vault Coordinator")
 	total_positions = 3 //was 5-5
 	spawn_positions = 3
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Overseer. You are tasked with researching new technologies, conducting mining expeditions (with the approval of Security or the Overseer), and upgrading the machinery of the Vault."
-	supervisors = "the Overseer"
+	supervisors = "the Vault Coordinator"
 	selection_color = "#ddffdd"
 
 	outfit = /datum/outfit/job/vault/f13vaultscientist
@@ -388,7 +388,7 @@ Vault Engineer
 /datum/job/vault/f13vaultengineer
 	title = "Vault-tec Engineer"
 	flag = F13VAULTENGINEER
-	department_head = list("Overseer")
+	department_head = list("Vault Coordinator")
 	total_positions = 3 //was 4-4
 	spawn_positions = 3
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
