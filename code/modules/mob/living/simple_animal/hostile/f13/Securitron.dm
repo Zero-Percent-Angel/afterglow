@@ -232,7 +232,7 @@
 	move_to_delay = 3.0 //Is deceptively quick
 	retreat_distance = 0 //Is going to punch you
 	rapid_melee = 2 //Punches faster
-	color = "#00008B" //dark blue
+	color = "#3444C8" //dark blue
 	emp_flags = list() //no emp instakill for you
 	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/chew/strong
 
