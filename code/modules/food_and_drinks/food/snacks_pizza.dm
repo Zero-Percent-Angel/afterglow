@@ -168,7 +168,7 @@
 /obj/item/reagent_containers/food/snacks/pizzaslice/greenlasagna
 	name = "green lasagna slice"
 	desc = "A slice of pesto lasagna."
-	icon_state = "fourcheesepizzaslice"
+	icon_state = "greenlasagnaslice"
 	filling_color = "#1B961F"
 	tastes = list("pasta" = 1, "pesto" = 1, "bechamel" = 1)
 	foodtype = GRAIN | VEGETABLES | DAIRY
