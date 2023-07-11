@@ -215,14 +215,40 @@ Scientist
 	//ADD_TRAIT(H, TRAIT_SURGERY_MID, src) //they need this for dissections
 
 /*
+Security Specialist
+*/
+
+/datum/job/vault/f13specialistofficer
+	title = "Vault-tec Security Specialist"
+	flag = F13SPECIALISTOFFICER
+	department_head = list("Chief of Security")
+	total_positions = 1
+	spawn_positions = 1
+	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
+	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
+	description = "You answer directly to the Chief of Security, and in their absence, the Overseer. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Overseer and proactively seek out potential threats to the safety of Vault residents."
+	supervisors = "the head of security"
+	selection_color = "#ddffdd"
+	exp_requirements = 600
+
+	outfit = /datum/outfit/job/vault/f13security
+
+	access = list(ACCESS_VAULT_F13, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_WEAPONS,ACCESS_FORENSICS_LOCKERS,
+						ACCESS_MORGUE, ACCESS_MAINT_TUNNELS, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_MINING, ACCESS_MEDICAL,
+						ACCESS_CARGO, ACCESS_MINERAL_STOREROOM)
+	minimal_access = list(ACCESS_VAULT_F13, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_WEAPONS, ACCESS_FORENSICS_LOCKERS,
+						ACCESS_MORGUE, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_MINING, ACCESS_MEDICAL, ACCESS_CARGO,
+						ACCESS_MINERAL_STOREROOM)
+
+/*
 Security Officer
 */
 /datum/job/vault/f13officer
 	title = "Vault-tec Security"
 	flag = F13OFFICER
 	department_head = list("Chief of Security")
-	total_positions = 5 //was 5-5 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
-	spawn_positions = 4 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
+	total_positions = 4
+	spawn_positions = 4
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
 	description = "You answer directly to the Chief of Security, and in their absence, the Overseer. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Overseer and proactively seek out potential threats to the safety of Vault residents."
