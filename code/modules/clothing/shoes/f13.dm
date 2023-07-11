@@ -71,7 +71,7 @@
 	icon_state = "diesel_f"
 	item_state = "diesel_f"
 
-/obj/item/clothing/shoes/f13/thighboot
+/obj/item/clothing/shoes/f13/heels
 	name = "high heels"
 	desc = "A pair of black high heels."
 	icon_state = "high_heel"
