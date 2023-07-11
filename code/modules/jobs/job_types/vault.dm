@@ -129,6 +129,27 @@ Head of Security
 
 	implants = list(/obj/item/implant/mindshield)
 
+loadout_options = list(
+		/datum/outfit/loadout/sec_riot_suppression,
+		/datum/outfit/loadout/sec_daily_duty
+)
+
+/datum/outfit/loadout/sec_riot_suppression
+	name = "Riot Suppression"
+	suit = /obj/item/clothing/suit/armor/power_armor/vaulttec
+	head = /obj/item/clothing/head/helmet/f13/power_armor/vaulttec
+	backpack_contents = list(
+		/obj/item/book/granter/trait/pa_wear = 1
+	)
+
+/datum/outfit/loadout/sec_daily_duty
+	name = "Daily Duty"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/combat = 1,
+		/obj/item/ammo_box/magazine/tommygunm45/stick = 3,
+		/obj/item/grenade/flashbang = 2
+	)
+
 /*
 Medical Doctor
 */
@@ -241,21 +262,30 @@ Security Specialist
 						ACCESS_MINERAL_STOREROOM)
 
 	loadout_options = list(
-		/datum/outfit/loadout/riot_suppression,
-		/datum/outfit/loadout/daily_duty
+		/datum/outfit/loadout/sec_riot_suppression,
+		/datum/outfit/loadout/sec_combat_medic,
+		/datum/outfit/loadout/sec_fire_support
 	)
 
-/datum/outfit/loadout/riot_suppression
-	name = "Riot Suppression"
-	suit = /obj/item/clothing/suit/armor/medium/raider/yankee
-	head = /obj/item/clothing/head/helmet/f13/raider/yankee
+/datum/outfit/loadout/sec_combat_medic
+	name = "Combat Medic"
+	suit = /obj/item/clothing/suit/armor/power_armor/vaulttec
+	head = /obj/item/clothing/head/helmet/f13/power_armor/vaulttec
+	belt =/obj/item/defibrillator/compact
+	glasses = /obj/item/clothing/glasses/hud/health
 	backpack_contents = list(
-		/obj/item/shishkebabpack = 1,
-		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
-		/obj/item/ammo_box/magazine/m9mm = 2,
-		/obj/item/storage/fancy/cigarettes/cigpack_cannabis=1,
-		/obj/item/megaphone=1,
-		/obj/item/storage/pill_bottle/chem_tin/buffout = 1)
+		/obj/item/clothing/gloves/color/latex/nitrile = 1,
+		/obj/item/storage/survivalkit/medical = 1,
+		/obj/item/storage/box/medicine/stimpaks/stimpaks5 = 1
+		)
+
+/datum/outfit/loadout/sec_fire_support
+	name = "Fire Support"
+	mask = /obj/item/clothing/mask/gas/sechailer
+	backpack_contents = list(
+		/obj/item/gun/energy/laser/aer9 = 1,
+		/obj/item/stock_parts/cell/ammo/mfc = 2
+		)
 
 /*
 Security Officer
@@ -330,6 +360,26 @@ Security Officer
 /obj/item/radio/headset/headset_sec/alt/department/sci
 	keyslot = new /obj/item/encryptionkey/headset_vault_security
 	keyslot2 = new /obj/item/encryptionkey/headset_sci
+
+loadout_options = list(
+	/datum/outfit/loadout/sec_ratting,
+	/datum/outfit/loadout/sec_policing
+)
+
+/datum/outfit/loadout/sec_ratting
+	name = "Rat Hunting"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/combat = 1,
+		/obj/item/ammo_box/magazine/tommygunm45/stick = 3
+	)
+
+/datum/outfit/loadout/sec_policing
+	name = "Policing"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/smg/smg10mm = 1,
+		/obj/item/ammo_box/magazine/m10mm/smg = 2,
+		/obj/item/shield/riot/tele = 1
+	)
 
 /*
 Vault Engineer
