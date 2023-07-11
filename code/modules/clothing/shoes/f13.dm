@@ -77,12 +77,14 @@
 	icon_state = "high_heel"
 	item_state = "high_heel"
 	offset = 2
+	body_parts_hidden = FEET
 
 /obj/item/clothing/shoes/f13/thighboot
 	name = "thigh high boots"
 	desc = "A pair of black boots that reach up to a person's thigh."
 	icon_state = "thigh_high"
 	item_state = "thigh_high"
+	body_parts_hidden = FEET
 
 /obj/item/clothing/shoes/f13/thighboot/blue
 	name = "thigh high boots"

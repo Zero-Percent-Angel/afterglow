@@ -131,6 +131,7 @@
 	path = /obj/item/clothing/shoes/f13/thighboot
 
 /datum/gear/shoes/thighhigh/blue
+	name = "blue thigh high boots"
 	path = /obj/item/clothing/shoes/f13/thighboot/blue
 
 /datum/gear/shoes/thighhigh/heels
@@ -138,6 +139,7 @@
 	path = /obj/item/clothing/shoes/f13/thighboot/platform
 
 /datum/gear/shoes/thighhigh/heels/blue
+	name = "blue thigh high boots"
 	path = /obj/item/clothing/shoes/f13/thighboot/platform/blue
 
 /datum/gear/shoes/thighhigh/heels/stiletto
