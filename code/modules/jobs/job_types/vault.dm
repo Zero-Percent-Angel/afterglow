@@ -129,10 +129,10 @@ Head of Security
 
 	implants = list(/obj/item/implant/mindshield)
 
-loadout_options = list(
-		/datum/outfit/loadout/sec_riot_suppression,
-		/datum/outfit/loadout/sec_daily_duty
-	)
+	loadout_options = list(
+			/datum/outfit/loadout/sec_riot_suppression,
+			/datum/outfit/loadout/sec_daily_duty
+		)
 
 /datum/outfit/loadout/sec_riot_suppression
 	name = "Riot Suppression"
@@ -359,10 +359,10 @@ Security Officer
 	keyslot = new /obj/item/encryptionkey/headset_vault_security
 	keyslot2 = new /obj/item/encryptionkey/headset_sci
 
-loadout_options = list(
-	/datum/outfit/loadout/sec_ratting,
-	/datum/outfit/loadout/sec_policing
-)
+	loadout_options = list(
+		/datum/outfit/loadout/sec_ratting,
+		/datum/outfit/loadout/sec_policing
+	)
 
 /datum/outfit/loadout/sec_ratting
 	name = "Rat Hunting"
