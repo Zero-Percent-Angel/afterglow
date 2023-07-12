@@ -69,6 +69,9 @@
 	ambientmusic = null
 	grow_chance = 5
 
+/area/f13/wasteland/powered
+	requires_power = FALSE
+
 
 /area/f13/building
 	name = "Building"
