@@ -297,7 +297,7 @@
 /area/f13/wasteland)
 "bE" = (
 /obj/structure/guncase/shotgun,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/highmid,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/high,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -1779,6 +1779,7 @@
 /area/f13/building)
 "jU" = (
 /obj/structure/table/wood,
+/obj/item/clothing/suit/armor/medium/combat/duster,
 /turf/open/floor/wood_wide,
 /area/f13/building/powered)
 "jW" = (
@@ -5891,6 +5892,11 @@
 /obj/machinery/telecomms/server/presets/enclave,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/tcoms)
+"HE" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/renegade,
+/turf/open/floor/wood_wide,
+/area/f13/building/powered)
 "HF" = (
 /obj/structure/dresser,
 /turf/open/floor/plating/f13/outside/roof/wood,
@@ -7198,6 +7204,9 @@
 	},
 /area/f13/brotherhood/powered)
 "Pq" = (
+/obj/machinery/porta_turret/f13/turret_shotgun/raider{
+	dir = 6
+	},
 /turf/open/floor/f13{
 	icon_state = "darkdirtysolid"
 	},
@@ -8062,6 +8071,13 @@
 	},
 /turf/closed/wall,
 /area/f13/tcoms)
+"Vg" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/renegade/defender,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid"
+	},
+/area/f13/building/powered)
 "Vi" = (
 /obj/structure/fluff/railing/corner{
 	dir = 1
@@ -67133,7 +67149,7 @@ kv
 eZ
 bO
 fY
-Vw
+Vg
 rx
 rx
 Fw
@@ -67939,7 +67955,7 @@ Ol
 ej
 Ol
 jU
-yS
+HE
 Ol
 ek
 yS
