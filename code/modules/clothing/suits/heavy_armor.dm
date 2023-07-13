@@ -177,6 +177,7 @@
 	armor_tier_desc = ARMOR_CLOTHING_SALVAGE
 	custom_price = PRICE_ULTRA_EXPENSIVE
 	strip_delay = 50
+
 // T-45B
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
 	name = "salvaged T-45d power armor"
