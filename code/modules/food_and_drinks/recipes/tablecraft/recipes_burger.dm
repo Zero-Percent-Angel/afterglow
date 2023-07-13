@@ -163,6 +163,19 @@
 	result = /obj/item/reagent_containers/food/snacks/pizza/vegetable
 	subcategory = CAT_BURGER
 
+/datum/crafting_recipe/food/caprese_salad
+	name = "Caprese salad"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/mozzarella = 1,
+		/datum/reagent/consumable/quality_oil = 2,
+		/datum/reagent/consumable/vinegar = 2,
+		/obj/item/reagent_containers/food/snacks/grown/tomato = 1,
+		/obj/item/reagent_containers/food/snacks/grown/herbs = 1
+	)
+	result = /obj/item/reagent_containers/food/snacks/caprese_salad
+	subcategory = CAT_BURGER
+
+
 /datum/crafting_recipe/food/superbiteburger
 	name = "Super bite burger"
 	reqs = list(

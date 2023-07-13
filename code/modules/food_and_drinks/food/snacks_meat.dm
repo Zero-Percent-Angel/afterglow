@@ -425,6 +425,16 @@
 	tastes = list("\"chicken\"" = 1)
 	foodtype = MEAT | PINEAPPLE
 
+/obj/item/reagent_containers/food/snacks/friedchicken
+	name = "fried chicken"
+	desc = "A chicken fried fried chicken. No, wait...."
+	icon_state = "friedchicken"
+	filling_color = "#B22222"
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/nutriment/vitamin = 1)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 9, /datum/reagent/consumable/nutriment/vitamin = 2)
+	tastes = list("chicken" = 1, "chicken fried" = 1)
+	foodtype = MEAT
+
 /obj/item/reagent_containers/food/snacks/pigblanket
 	name = "pig in a blanket"
 	desc = "A tiny sausage wrapped in a flakey, buttery roll. Free this pig from its blanket prison by eating it."
