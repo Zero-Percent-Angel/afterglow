@@ -205,6 +205,20 @@
 	subcategory = CAT_SCAVENGING
 	skill_level = HARD_CHECK
 
+/datum/crafting_recipe/pa_kit
+	name = "Power Armor Servo Repair Kit"
+	time = 5
+	reqs = list(/obj/item/stack/sheet/mineral/titanium = 10,
+				/obj/item/advanced_crafting_components/flux = 1,
+				/obj/item/advanced_crafting_components/conductors = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/stack/crafting/electronicparts = 20)
+	tools = list(TOOL_AWORKBENCH)
+	result = /obj/item/pa_kit
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_level = EXPERT_CHECK
+
 /datum/crafting_recipe/set_vrboard
 	category = CAT_CRAFTING
 	subcategory = CAT_SCAVENGING
