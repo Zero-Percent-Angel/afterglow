@@ -2498,8 +2498,8 @@
 		to_chat(M, "You should sit down and take a rest...")
 	..()
 
-/datum/reagent/moonsugar
-	name = "Moonsugar"
+/datum/reagent/rawgetaway
+	name = "Unrefined GetAway"
 	description = "An unstable slurry consisting of moonshine and sugar, made by stirring at high speeds."
 	color = "#FAEAFF"
 	taste_description = "sugar and moonshine"

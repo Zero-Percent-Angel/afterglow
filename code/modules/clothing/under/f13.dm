@@ -1352,6 +1352,40 @@
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 
+/obj/item/clothing/under/f13/scav //male
+	name = "scavvers gear"
+	desc = "A sturdy, warm set of jeans, tee and a belt, often worn by scavengers."
+	icon_state = "scav"
+	item_state = "scav"
+
+/obj/item/clothing/under/f13/female/scav //female... Obviously
+	name = "scavvers gear"
+	desc = "A sturdy, warm set of legwear, tee and a belt, often worn by scavengers."
+	icon_state = "scav_f"
+	item_state = "scav_f"
+
+/obj/item/clothing/under/f13/goth //male
+	name = "goth outfit"
+	desc = "A darker pair of jeans, blackened tee and a studded white belt. For when you really need to sharpen your edge."
+	icon_state = "goth"
+	item_state = "goth"
+
+/obj/item/clothing/under/f13/female/goth //female... Obviously
+	name = "goth outfit"
+	desc = "A darker set of legwear, blackened, strappy tee and a studded white belt. For when you really need to sharpen your edge."
+	icon_state = "goth_f"
+	item_state = "goth_f"
+
+/obj/item/clothing/under/f13/goth/skimpy //male
+	desc = "A pair of ripped black jeans and unbuttoned shirt. For when you really need to sharpen your edge with very little."
+	icon_state = "skimpy_goth"
+	item_state = "skimpy_goth"
+
+/obj/item/clothing/under/f13/female/goth/skimpy //female... Obviously
+	desc = "A black harness, a grey buckled top, a pair of shorts that really stretch the definition, and a mesh bodysuit underneath. For when you really need to sharpen your edge while leaving very little to the imagination."
+	icon_state = "skimpy_goth_f"
+	item_state = "skimpy_goth_f"
+
 //Fluff
 
 /obj/item/clothing/under/f13/agent47
@@ -1465,11 +1499,21 @@
 	resistance_flags = UNACIDABLE
 	body_parts_covered = LEGS
 
+/////////////////
+// Brotherhood //
+/////////////////
+
 /obj/item/clothing/under/f13/bos/fatigues
 	name = "Brotherhood fatigues"
 	desc = "A dry cleaned set of grey fatigues with a brown belt, commonly worn by the off-duty members of the Brotherhood of Steel."
 	icon_state = "bos_fatigues"
 	item_state = "bos_fatigues"
+
+/obj/item/clothing/under/f13/bos/fatigues
+	name = "Lancer's flight suit"
+	desc = "A close-fit uniform fitted with a harness to hold the wearer in place whilst experiencing turbulance. Worn by the Lancers of the Brotherhood of Steel."
+	icon_state = "bos_flightsuit"
+	item_state = "bos_flightsuit"
 
 /obj/item/clothing/under/f13/bos/bodysuit
 	name = "Brotherhood Knight fatigues"

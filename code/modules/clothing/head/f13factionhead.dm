@@ -392,7 +392,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	item_state = "legion-decrec"
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1)
-	
+
 
 /obj/item/clothing/head/helmet/f13/legion/prime/decan
 	name = "legion prime decanus helmet"
@@ -812,6 +812,17 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	icon_state = "boscap"
 	item_state = "boscap"
 	strip_delay = 20
+
+/obj/item/clothing/head/f13/boscap/flight
+	name = "lancers flight cap"
+	desc = "A hat typically worn by the Lancers of the local Brotherhood of Steel Chapter.""
+	item_state = "brotherhood_flight_soft_hat"
+	icon_state = "brotherhood_flight_soft_hat"
+
+/obj/item/clothing/head/f13/boscap/flight
+	name = "lancers soft hat"
+	item_state = "brotherhood_flight_cap"
+	icon_state = "brotherhood_flight_cap"
 
 /obj/item/clothing/head/f13/boscap/beret
 	name = "brotherhood beret"
