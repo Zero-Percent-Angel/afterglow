@@ -86,10 +86,10 @@ Head of Security
 	head_announce = list("Security")
 	total_positions = 1 //was 1-1
 	spawn_positions = 1
-	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
-	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
-	description = "You answer directly to the Overseer. You are tasked with organising the safety, security and readiness of the Vault, as well as managing the Security team. It is also your duty to secure the Vault against outside invasion. At your discretion, you are encouraged to train capable dwellers in the usage of firearms and issue weapon permits accordingly."
-	supervisors = "the Overseer"
+	forbids = "The Vault forbids: Disobeying the Vault Coordinator. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
+	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Vault Coordinator."
+	description = "You answer directly to the Vault Coordinator. You are tasked with organising the safety, security and readiness of the Vault, as well as managing the Security team. It is also your duty to secure the Vault against outside invasion. At your discretion, you are encouraged to train capable dwellers in the usage of firearms and issue weapon permits accordingly."
+	supervisors = "the Vault Coordinator"
 	selection_color = "#ccffcc"
 	req_admin_notify = 1
 	exp_requirements = 750
@@ -159,10 +159,10 @@ Medical Doctor
 	department_head = list("Vault Coordinator")
 	total_positions = 3 //was 5-4
 	spawn_positions = 3
-	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
-	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
-	description = "You answer directly to the Overseer. You are tasked with providing medical care to Vault Dwellers and ensuring the medical well-being of everyone in the Vault."
-	supervisors = "the Overseer"
+	forbids = "The Vault forbids: Disobeying the Vault Coordinator. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
+	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Vault Coordinator."
+	description = "You answer directly to the Vault Coordinator. You are tasked with providing medical care to Vault Dwellers and ensuring the medical well-being of everyone in the Vault."
+	supervisors = "the Vault Coordinator"
 	selection_color = "#ddffdd"
 
 	outfit = /datum/outfit/job/vault/f13doctor
@@ -204,9 +204,9 @@ Scientist
 	department_head = list("Vault Coordinator")
 	total_positions = 3 //was 5-5
 	spawn_positions = 3
-	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
-	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
-	description = "You answer directly to the Overseer. You are tasked with researching new technologies, conducting mining expeditions (with the approval of Security or the Overseer), and upgrading the machinery of the Vault."
+	forbids = "The Vault forbids: Disobeying the Vault Coordinator. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
+	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Vault Coordinator."
+	description = "You answer directly to the Vault Coordinator. You are tasked with researching new technologies, conducting mining expeditions (with the approval of Security or the Vault Coordinator), and upgrading the machinery of the Vault."
 	supervisors = "the Vault Coordinator"
 	selection_color = "#ddffdd"
 
@@ -245,9 +245,9 @@ Security Specialist
 	department_head = list("Chief of Security")
 	total_positions = 1
 	spawn_positions = 1
-	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
-	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
-	description = "You answer directly to the Chief of Security, and in their absence, the Overseer. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Overseer and proactively seek out potential threats to the safety of Vault residents."
+	forbids = "The Vault forbids: Disobeying the Vault Coordinator. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
+	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Vault Coordinator."
+	description = "You answer directly to the Chief of Security, and in their absence, the Vault Coordinator. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Vault Coordinator and proactively seek out potential threats to the safety of Vault residents."
 	supervisors = "the head of security"
 	selection_color = "#ddffdd"
 	exp_requirements = 600
@@ -294,9 +294,9 @@ Security Officer
 	department_head = list("Chief of Security")
 	total_positions = 4
 	spawn_positions = 4
-	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
-	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
-	description = "You answer directly to the Chief of Security, and in their absence, the Overseer. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Overseer and proactively seek out potential threats to the safety of Vault residents."
+	forbids = "The Vault forbids: Disobeying the Vault Coordinator. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
+	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Vault Coordinator."
+	description = "You answer directly to the Chief of Security, and in their absence, the Vault Coordinator. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Vault Coordinator and proactively seek out potential threats to the safety of Vault residents."
 	supervisors = "the head of security"
 	selection_color = "#ddffdd"
 	exp_requirements = 300
@@ -390,10 +390,10 @@ Vault Engineer
 	department_head = list("Vault Coordinator")
 	total_positions = 3 //was 4-4
 	spawn_positions = 3
-	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
-	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
-	description = "You answer directly to the Overseer. You are tasked with overseeing the Reactor, maintaining Vault defenses and machinery, and engaging in construction projects to improve the Vault as a whole."
-	supervisors = "the Overseer"
+	forbids = "The Vault forbids: Disobeying the Vault Coordinator. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
+	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Vault Coordinator."
+	description = "You answer directly to the Vault Coordinator. You are tasked with overseeing the Reactor, maintaining Vault defenses and machinery, and engaging in construction projects to improve the Vault as a whole."
+	supervisors = "the Vault Coordinator"
 	selection_color = "#ddffdd"
 
 	outfit = /datum/outfit/job/vault/f13vaultengineer
@@ -423,9 +423,9 @@ Vault Engineer
 	flag = ASSISTANT
 	total_positions = 11 //was 12-11
 	spawn_positions = 10
-	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
-	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Overseer."
-	description = "You answer directly to the Overseer, being assigned to fulfill whatever menial tasks are required. You lack an assignment, but may be given one the Overseer if required or requested. You should otherwise busy yourself with assisting personnel with tasks around the Vault."
+	forbids = "The Vault forbids: Disobeying the Vault Coordinator. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
+	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Vault Coordinator."
+	description = "You answer directly to the Vault Coordinator, being assigned to fulfill whatever menial tasks are required. You lack an assignment, but may be given one the Vault Coordinator if required or requested. You should otherwise busy yourself with assisting personnel with tasks around the Vault."
 	supervisors = "absolutely everyone"
 	selection_color = "#ddffdd"
 	access = list()			//See /datum/job/vault/assistant/get_access()
