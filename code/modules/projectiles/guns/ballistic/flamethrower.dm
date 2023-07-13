@@ -163,15 +163,13 @@
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_HUGE
 	custom_materials = null
-	burst_size = 1
-	burst_shot_delay = 1
-	fire_delay = 3
 	var/obj/item/gun/ballistic/rifle/mag/antimateriel/incinerator/ammo_pack
 	weapon_weight = GUN_TWO_HAND_ONLY
 	fire_sound = 'sound/weapons/flamethrower.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/incinerator
 	casing_ejector = TRUE
 	item_flags = SLOWS_WHILE_IN_HAND
+	zoomable = FALSE
 	var/overheat = 0
 	var/overheat_max = 6
 	var/heat_diffusion = 1
