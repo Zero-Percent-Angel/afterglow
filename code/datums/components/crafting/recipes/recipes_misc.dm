@@ -124,6 +124,21 @@
 	category = CAT_MISC
 	skill_level = VERY_EASY_CHECK
 
+/datum/crafting_recipe/icecreamvat
+	name = "Ice Cream Vat"
+	reqs = list(/obj/item/stack/crafting/electronicparts = 5,
+				/obj/item/stack/sheet/metal = 20,
+				/obj/item/stack/crafting/goodparts = 10,
+				/datum/reagent/consumable/ice = 60,
+				/datum/reagent/consumable/flour = 60,
+				/datum/reagent/consumable/milk = 60)
+	tools = list(TOOL_SCREWDRIVER,TOOL_WORKBENCH)
+	result = /obj/machinery/icecream_vat
+	time = 80
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+	skill_level = REGULAR_CHECK
+
 ///////////////////////////
 //Scavenging and Tinkering//
 ///////////////////////////

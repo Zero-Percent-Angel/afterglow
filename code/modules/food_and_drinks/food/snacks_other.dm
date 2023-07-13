@@ -897,3 +897,14 @@
 	tastes = list("peppers" = 1, "salsa" = 3, "tortilla chips" = 1, "onion" = 1)
 	foodtype = VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/reagent_containers/food/snacks/caprese_salad
+	name = "caprese salad"
+	desc = "A salad made of mozzarella and tomato slices, covered in olive oil and balsamic vinegar."
+	icon_state = "caprese_salad"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/consumable/nutriment/vitamin = 8)
+	tastes = list("tomato" = 1, "mozzarella" = 1, "balsamic" = 1)
+	foodtype = VEGETABLES
+	w_class = WEIGHT_CLASS_SMALL
+
+

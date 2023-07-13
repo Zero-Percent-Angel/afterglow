@@ -8,6 +8,16 @@
 	tastes = list("ice cream" = 1)
 	foodtype = GRAIN | DAIRY
 
+/obj/item/reagent_containers/food/snacks/cornuto
+	name = "cornuto"
+	desc = "A neapolitan vanilla and chocolate icecream cone. It menaces with a sprinkling of caramelized nuts."
+	icon = 'icons/obj/food/food.dmi'
+	icon_state = "cornuto"
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 1, /datum/reagent/consumable/ice = 2)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/consumable/cream = 2, /datum/reagent/consumable/hot_coco = 4)
+	tastes = list("ice cream" = 1, "chocolate" = 1)
+	foodtype = GRAIN | DAIRY
+
 /obj/item/reagent_containers/food/snacks/sundae
 	name = "sundae"
 	desc = "A classic dessert."
