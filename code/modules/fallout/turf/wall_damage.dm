@@ -10,7 +10,7 @@
 	if(dam)
 		damage = max(0, damage + dam)
 		update_icon()
-	if(hardness > 0 && damage > 1600/hardness)
+	if(!unbreakable && hardness > 0 && damage > 1600/hardness)
 		dismantle_wall(1)
 		playsound(src, 'sound/effects/meteorimpact.ogg', rand(50,100), 1)
 		return 1
