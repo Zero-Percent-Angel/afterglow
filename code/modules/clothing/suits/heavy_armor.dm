@@ -178,28 +178,36 @@
 	custom_price = PRICE_ULTRA_EXPENSIVE
 	strip_delay = 50
 
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, low_velocity, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+	if((attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
+		if(prob(25) && (low_velocity = 1)) // Low velocity is a variable set on each individual bullet type/caliber. If you want, say, 9mm to not have a chance to deflect anymore, then remove the low_velocity = TRUE tag.
+			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
+			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
+	return ..()
+
 // T-45B
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
-	name = "salvaged T-45b power armor"
+	name = "salvaged T-45d power armor"
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and stripped out servomotors. Bulky and slow, but almost as good as the real thing."
 	icon_state = "t45b_salvaged"
 	item_state = "t45b_salvaged"
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/raider
 	name = "salvaged raider power armor"
-	desc = "A destroyed T-45b power armor has been brought back to life with the help of a welder and lots of scrap metal."
+	desc = "A destroyed T-45d power armor has been brought back to life with the help of a welder and lots of scrap metal."
 	icon_state = "raider_salvaged"
 	item_state = "raider_salvaged"
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/hotrod
-	name = "salvaged hotrod T-45b power armor"
-	desc = " It's a set of T-45b power armor with a with some of its plating removed. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
+	name = "salvaged hotrod T-45d power armor"
+	desc = " It's a set of T-45d power armor with a with some of its plating removed. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
 	icon_state = "t45hotrod"
 	item_state = "t45hotrod"
 	armor_tokens = list(ARMOR_MODIFIER_UP_FIRE_T3)
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/tribal
-	name = "salvaged tribal T45-b power armor"
+	name = "salvaged tribal T45-d power armor"
 	desc = "A set of salvaged power armor, with certain bits of plating stripped out to retain more freedom of movement. No cooling module, though."
 	icon_state = "tribal_power_armor"
 	item_state = "tribal_power_armor"
@@ -269,7 +277,7 @@
 	icon_state = "legion_heavy"
 	item_state = "legion_heavy"
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 *ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2)
 
 /obj/item/clothing/suit/armor/heavy/legion/centurion //good all around
 	name = "legion centurion armor"
