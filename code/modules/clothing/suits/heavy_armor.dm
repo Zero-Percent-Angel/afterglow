@@ -177,14 +177,6 @@
 	armor_tier_desc = ARMOR_CLOTHING_SALVAGE
 	custom_price = PRICE_ULTRA_EXPENSIVE
 	strip_delay = 50
-
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, low_velocity, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
-	if((attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
-		if(prob(25) && (low_velocity = 1)) // Low velocity is a variable set on each individual bullet type/caliber. If you want, say, 9mm to not have a chance to deflect anymore, then remove the low_velocity = TRUE tag.
-			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
-			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
-	return ..()
-
 // T-45B
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
 	name = "salvaged T-45d power armor"
