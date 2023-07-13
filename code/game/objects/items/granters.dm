@@ -645,6 +645,7 @@
 	name = "SCAV! Issue 1"
 	desc = "A popular post-war comic series detailing the trials and tribulations of scavengers and their tools."
 	oneuse = TRUE
+	icon_state = "scav1"
 	remarks = list("And it was here that I stabbed a man over a desk fan...", "The paint was chipping, but that didn't matter when he lay dead...", "A tank here, a pipe there...", "A bit of duct tape wrapped around everything...", "My flamethrower spat fire! Wait, where are my eyebrows...")
 	crafting_recipe_types = list(/datum/crafting_recipe/chainsaw, /datum/crafting_recipe/tools/forged/entrenching_tool, /datum/crafting_recipe/durathread_vest, /datum/crafting_recipe/steeltower)
 
@@ -652,6 +653,7 @@
 	name = "SCAV! Issue 2"
 	desc = "A popular post-war comic series detailing the trials and tribulations of scavengers and their tools."
 	oneuse = TRUE
+	icon_state = "scav2"
 	remarks = list("And it was here that I stabbed a man over a desk fan...", "The paint was chipping, but that didn't matter when he lay dead...", "A tank here, a pipe there...", "A bit of duct tape wrapped around everything...", "My flamethrower spat fire! Wait, where are my eyebrows...")
 	crafting_recipe_types = list(/datum/crafting_recipe/steelsaw)
 
@@ -659,6 +661,7 @@
 	name = "SCAV! Issue 3"
 	desc = "A popular post-war comic series detailing the trials and tribulations of scavengers and their tools."
 	oneuse = TRUE
+	icon_state = "scav3"
 	remarks = list("And it was here that I stabbed a man over a desk fan...", "The paint was chipping, but that didn't matter when he lay dead...", "A tank here, a pipe there...", "A bit of duct tape wrapped around everything...", "My flamethrower spat fire! Wait, where are my eyebrows...")
 	crafting_recipe_types = list(/datum/crafting_recipe/autoaxe)
 

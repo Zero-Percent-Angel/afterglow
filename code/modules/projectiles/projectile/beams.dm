@@ -311,11 +311,19 @@
 /obj/item/projectile/beam/laser/pistol/ultraweak
 	damage = 15 //quantity over quality
 
-//Chewchews Beam
-/obj/item/projectile/beam/laser/pistol/ultraweak/chewchew
-	damage = 13 //less dam..
-	armour_penetration = 0.75 //..more pen
+//Chews Beam
+/obj/item/projectile/beam/laser/pistol/ultraweak/chew
+	damage = 14 //less dam..
+	armour_penetration = 0.9 //..more pen
 	is_reflectable = FALSE
+
+//Big Chews Beam
+/obj/item/projectile/beam/laser/pistol/ultraweak/chew/strong
+	damage = 18 //it fucks
+	icon_state = "gaussstrong"
+	movement_type = FLYING | UNSTOPPABLE //stopping for nothing except its range
+	pixels_per_second = TILES_TO_PIXELS(15) //slow
+	range = 16
 
 //Alrem's plasmacaster
 /obj/item/projectile/f13plasma/plasmacaster/arlem

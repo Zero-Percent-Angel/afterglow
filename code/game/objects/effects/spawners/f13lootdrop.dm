@@ -595,13 +595,13 @@
 		)
 
 /obj/effect/spawner/lootdrop/f13/medical/random_fev
-	name = "random FEV bottle"	//for when you can't decide what is worse
+	name = "2% FEV, 98% Polonium"	//Curling-B-Gone
 	lootcount = 1
 
 	loot = list(
 		/obj/item/reagent_containers/glass/bottle/FEV_solution = 1,
 		/obj/item/reagent_containers/glass/bottle/FEV_solution/two = 1,
-		/obj/item/reagent_containers/glass/bottle/FEV_solution/curling = 1,
+		/obj/item/reagent_containers/glass/bottle/polonium = 98,
 		)
 
 /*	------------------------------------------------

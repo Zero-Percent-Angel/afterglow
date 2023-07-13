@@ -305,3 +305,76 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 				/obj/item/advanced_crafting_components/flux,
 				/obj/item/blueprint/research)
 
+/obj/item/pa_kit
+	name = "servo repair kit"
+	desc = "These appear to be used for repairing powerarmor sets..."
+	icon = 'icons/obj/assemblies.dmi'
+	icon_state = "radio-multitool"
+
+/obj/item/pa_kit/attackby(obj/item/W, mob/user, params)
+	. = ..()
+	if(istype(W, /obj/item/gun/ballistic/shotgun))
+		to_chat(usr, "You can't improve [W.name]...")
+		return
+	if(istype(W, /obj/item/gun/ballistic))
+		to_chat(usr, "You can't improve [W.name]...")
+		return
+	if(istype(W, /obj/item/gun/energy))
+		to_chat(usr, "You can't improve [W.name]...")
+		return
+	if(istype(W, /obj/item/clothing/suit/armor/heavy/salvaged_pa/))
+		parmor(W, user)
+		return
+	if(istype(W, /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa))
+		pahat(W, user)
+		return
+	if(istype(W, /obj/item/clothing/suit/armor))
+		to_chat(usr, "You can't improve [W.name]...")
+		return
+
+/obj/item
+	var/tinkered = 0
+	var/untinkerable = FALSE
+
+/obj/item/pa_kit/proc/parmor(obj/item/W, mob/user)
+	var/obj/item/clothing/suit/armor/f13/power_armor/A = W
+	//upgrades basic salvaged PA to full PA. t45b should not be in use anymore, but is covered anyways.
+	//You either need 140 combined or 120 and technophreak to repair t45d.
+	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 120 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
+		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b))
+			new /obj/item/clothing/suit/armor/power_armor/t45d(user.loc)
+			qdel(A)
+			qdel(src)
+			return
+		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d))
+			new /obj/item/clothing/suit/armor/power_armor/t45d(user.loc)
+			qdel(A)
+			qdel(src)
+			return
+	//You either need 160 combined or 140 and technophreak to repair t51b.
+	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 160) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
+		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b))
+			new /obj/item/clothing/suit/armor/power_armor/t51b(user.loc)
+			qdel(A)
+			qdel(src)
+			return
+	to_chat(usr, "You have no idea how you would restore [W.name]...")
+
+/obj/item/pa_kit/proc/pahat(obj/item/W, mob/user)
+	var/obj/item/clothing/head/helmet/f13/power_armor/H = W
+	//servo kits are not destroyed on repairing helmets
+	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 120 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
+		if(istype(H,/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b))
+			new /obj/item/clothing/head/helmet/f13/power_armor/t45d(user.loc)
+			qdel(H)
+			return
+		if(istype(H,/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d))
+			new /obj/item/clothing/head/helmet/f13/power_armor/t45d(user.loc)
+			qdel(H)
+			return
+	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 160) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
+		if(istype(H, /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b))
+			new /obj/item/clothing/head/helmet/f13/power_armor/t51b(user.loc)
+			qdel(H)
+			return
+	to_chat(usr, "You have no idea how you would restore [W.name]...")
