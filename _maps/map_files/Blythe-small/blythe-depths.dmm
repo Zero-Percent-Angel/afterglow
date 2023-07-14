@@ -131,7 +131,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/mining{
-	name = "Storage Bay"
+	name = "Storage Bay";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
 /area/f13/vault/storageoffice)
@@ -557,7 +558,8 @@
 "bP" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "vaultd1";
-	name = "Dorm 1"
+	name = "Dorm 1";
+	req_access_txt = "31"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -589,7 +591,9 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/f13/bunker/bunkerthree)
 "bV" = (
-/obj/machinery/vending/sovietsoda,
+/obj/machinery/vending/sovietsoda{
+	force_free = 1
+	},
 /turf/open/floor/f13/wood,
 /area/library)
 "bX" = (
@@ -688,7 +692,8 @@
 /area/f13/bunker/bunkerthree)
 "co" = (
 /obj/machinery/door/airlock{
-	name = "Custodial Closet"
+	name = "Custodial Closet";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/f13/vault)
@@ -737,6 +742,9 @@
 /obj/machinery/camera/autoname{
 	dir = 6;
 	network = list("vault")
+	},
+/obj/machinery/vending/wardrobe/curator_wardrobe{
+	force_free = 1
 	},
 /turf/open/floor/f13/wood,
 /area/library)
@@ -826,11 +834,13 @@
 	},
 /area/f13/bunker)
 "cK" = (
-/obj/machinery/vending/wardrobe/sec_wardrobe{
-	force_free = 1
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay Foyer";
+	req_access_txt = "31"
 	},
-/turf/open/floor/plasteel/dark,
-/area/f13/vault/security)
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/vault/medical)
 "cM" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -999,7 +1009,8 @@
 /area/f13/ambientlighting/building/m)
 "dt" = (
 /obj/machinery/door/airlock{
-	name = "Bar Backroom"
+	name = "Bar Backroom";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/diner)
@@ -1635,7 +1646,9 @@
 	},
 /area/f13/bunker)
 "fD" = (
-/obj/machinery/vending/cola/random,
+/obj/machinery/vending/cola/random{
+	force_free = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
 "fE" = (
@@ -1733,7 +1746,7 @@
 "fU" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Generator Room";
-	req_access_txt = "31"
+	req_access_txt = "10"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -1779,7 +1792,8 @@
 "ge" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "vaultd6";
-	name = "Dorm 6"
+	name = "Dorm 6";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/vault/dormitory)
@@ -1887,7 +1901,7 @@
 "gE" = (
 /obj/machinery/door/airlock/command{
 	name = "Overseer's Quarters";
-	req_access_txt = "19"
+	req_access_txt = "20"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/vault/overseer)
@@ -1906,7 +1920,10 @@
 	},
 /area/f13/bunker)
 "gI" = (
-/obj/machinery/door/airlock/public,
+/obj/machinery/door/airlock/public{
+	req_access_txt = "31";
+	name = "Library"
+	},
 /turf/open/floor/f13/wood,
 /area/library)
 "gJ" = (
@@ -1931,7 +1948,6 @@
 /obj/item/clothing/under/f13/vault,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/gloves/color/black,
-/obj/item/melee/classic_baton/telescopic,
 /obj/item/assembly/flash/handheld,
 /obj/item/restraints/handcuffs,
 /obj/item/gun/ballistic/automatic/pistol/n99,
@@ -1942,7 +1958,8 @@
 /obj/item/storage/belt/army/security,
 /obj/item/ammo_box/magazine/m10mm/adv,
 /obj/item/ammo_box/magazine/m10mm/adv,
-/obj/item/gun/energy/taser,
+/obj/item/reagent_containers/spray/pepper,
+/obj/item/melee/classic_baton/police,
 /turf/open/floor/plasteel/dark,
 /area/f13/vault/security)
 "gN" = (
@@ -2049,7 +2066,8 @@
 /area/f13/caves)
 "hd" = (
 /obj/machinery/door/airlock/mining{
-	name = "Casp Bay"
+	name = "Storage Bay";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault/storageoffice)
@@ -2133,6 +2151,7 @@
 	name = "Vault Intercom";
 	pixel_y = -30
 	},
+/obj/machinery/vending/wardrobe/sec_wardrobe/free,
 /turf/open/floor/carpet/black,
 /area/f13/vault/security)
 "hu" = (
@@ -2142,21 +2161,15 @@
 /area/f13/ambientlighting/building/m)
 "hw" = (
 /obj/structure/rack,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/glass/fifty{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/stack/sheet/glass/fifty{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/stack/sheet/plasteel/twenty,
+/obj/item/stack/sheet/glass/ten,
+/obj/item/stack/sheet/plasteel/five,
+/obj/item/stack/sheet/metal/ten,
 /turf/open/floor/plasteel/dark,
 /area/f13/vault/science)
 "hx" = (
-/obj/machinery/vending/dinnerware,
+/obj/machinery/vending/dinnerware{
+	force_free = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/diner)
 "hy" = (
@@ -2227,7 +2240,7 @@
 	},
 /obj/machinery/door/airlock/command{
 	name = "Overseer Office";
-	req_access_txt = "19"
+	req_access_txt = "20"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/vault/overseer)
@@ -3070,7 +3083,6 @@
 /obj/item/clothing/under/f13/vault,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/gloves/color/black,
-/obj/item/melee/classic_baton/telescopic,
 /obj/item/assembly/flash/handheld,
 /obj/item/restraints/handcuffs,
 /obj/item/gun/ballistic/automatic/pistol/n99,
@@ -3081,7 +3093,8 @@
 /obj/item/storage/belt/army/security,
 /obj/item/ammo_box/magazine/m10mm/adv,
 /obj/item/ammo_box/magazine/m10mm/adv,
-/obj/item/gun/energy/taser,
+/obj/item/reagent_containers/spray/pepper,
+/obj/item/melee/classic_baton/police,
 /turf/open/floor/plasteel/dark,
 /area/f13/vault/security)
 "kn" = (
@@ -3450,6 +3463,7 @@
 /obj/effect/turf_decal/arrows{
 	dir = 8
 	},
+/obj/machinery/light,
 /turf/open/floor/plasteel/f13/vault_floor/yellow,
 /area/f13/vault)
 "lm" = (
@@ -3517,7 +3531,7 @@
 "lC" = (
 /obj/machinery/door/airlock/command{
 	name = "Bot Control";
-	req_access_txt = "19"
+	req_access_txt = "20"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -4401,7 +4415,8 @@
 /area/f13/vault)
 "oQ" = (
 /obj/machinery/door/airlock{
-	name = "Gym"
+	name = "Gym";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
@@ -4464,11 +4479,12 @@
 /turf/open/floor/f13/wood,
 /area/library)
 "pc" = (
-/obj/machinery/door/airlock/science/glass{
-	name = "Science"
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/science/glass{
+	name = "Science";
+	req_access_txt = "47"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/science)
@@ -4569,7 +4585,7 @@
 "pt" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Overseer Office";
-	req_access_txt = "19"
+	req_access_txt = "20"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -4580,7 +4596,8 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/brigdoor{
 	dir = 4;
-	req_one_access_txt = "31"
+	req_one_access_txt = "47";
+	name = "Science"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/science)
@@ -4638,6 +4655,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/plasteel/darkred/side{
 	dir = 8
 	},
@@ -4655,7 +4675,9 @@
 	},
 /area/f13/bunker/bunkerthree)
 "pH" = (
-/obj/machinery/door/airlock/wood,
+/obj/machinery/door/airlock/wood{
+	req_access_txt = "31"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/security)
 "pI" = (
@@ -5572,7 +5594,8 @@
 "sM" = (
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay"
+	name = "Medbay";
+	req_one_access_txt = "1; 5"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault/medical)
@@ -6224,7 +6247,8 @@
 "vz" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "vaultd5";
-	name = "Dorm 5"
+	name = "Dorm 5";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/vault/dormitory)
@@ -6291,12 +6315,12 @@
 	},
 /area/f13/bunker/bunkerthree)
 "vL" = (
-/obj/machinery/door/airlock/security{
-	name = "Brig";
-	req_access_txt = "1"
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/security{
+	name = "Security Equipment";
+	req_access_txt = "1"
 	},
 /turf/open/floor/plasteel/dark,
 /area/f13/vault/security)
@@ -6403,7 +6427,7 @@
 "we" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Generator Room";
-	req_access_txt = "31"
+	req_access_txt = "10"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/reactor)
@@ -6432,12 +6456,12 @@
 /turf/closed/wall/r_wall/rust,
 /area/f13/bunker)
 "wi" = (
-/obj/machinery/door/airlock/science/glass{
-	name = "Science";
-	req_access_txt = "31"
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/science/glass{
+	name = "Science";
+	req_access_txt = "47"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/science)
@@ -6539,13 +6563,9 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/vault/security)
 "wE" = (
-/obj/machinery/door/airlock/medical{
-	name = "Morgue";
-	req_access_txt = "45; 5";
-	req_one_access_txt = ""
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor,
-/area/f13/vault/medical/morgue)
+/obj/machinery/autolathe/ammo/unlocked_basic,
+/turf/open/floor/plasteel/dark,
+/area/f13/vault/security)
 "wF" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 1;
@@ -6761,10 +6781,10 @@
 /turf/open/floor/f13/wood,
 /area/library)
 "xp" = (
-/obj/machinery/workbench,
 /obj/effect/spawner/lootdrop/f13/blueprintVHigh,
 /obj/effect/spawner/lootdrop/f13/blueprintHigh,
 /obj/effect/spawner/lootdrop/f13/blueprintMid,
+/obj/machinery/workbench/advanced,
 /turf/open/floor/plasteel/darkpurple/side{
 	dir = 9
 	},
@@ -7092,7 +7112,8 @@
 /area/f13/bunker/bunkerthree)
 "yx" = (
 /obj/machinery/door/airlock/hatch{
-	name = "Crematorium"
+	name = "Crematorium";
+	req_one_access_txt = "1; 5"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/medical/morgue)
@@ -7244,7 +7265,7 @@
 /area/f13/vault/chiefoffice)
 "za" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Armory";
+	name = "Command Armory";
 	req_access_txt = "19"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
@@ -7308,11 +7329,6 @@
 	pixel_y = 3
 	},
 /obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/glass/fifty{
-	pixel_x = 3;
-	pixel_y = 3
-	},
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /obj/effect/spawner/lootdrop/f13/advcrafting,
@@ -8058,7 +8074,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "BW" = (
-/obj/machinery/blackbox_recorder,
+/obj/machinery/rnd/server/vault,
 /turf/open/floor/plasteel/dark,
 /area/f13/vault/science)
 "BX" = (
@@ -8133,7 +8149,9 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker)
 "Ck" = (
-/obj/machinery/vending/snack/random,
+/obj/machinery/vending/snack/random{
+	force_free = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
 "Cl" = (
@@ -8790,6 +8808,11 @@
 	dir = 4;
 	req_one_access_txt = "31"
 	},
+/obj/machinery/door/window/brigdoor{
+	dir = 4;
+	req_one_access_txt = "47";
+	name = "Science"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/science)
 "EC" = (
@@ -9140,7 +9163,6 @@
 /obj/item/clothing/under/f13/vault,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/gloves/color/black,
-/obj/item/melee/classic_baton/telescopic,
 /obj/item/assembly/flash/handheld,
 /obj/item/restraints/handcuffs,
 /obj/item/gun/ballistic/automatic/pistol/n99,
@@ -9151,7 +9173,8 @@
 /obj/item/storage/belt/army/security,
 /obj/item/ammo_box/magazine/m10mm/adv,
 /obj/item/ammo_box/magazine/m10mm/adv,
-/obj/item/gun/energy/taser,
+/obj/item/reagent_containers/spray/pepper,
+/obj/item/melee/classic_baton/police,
 /turf/open/floor/plasteel/dark,
 /area/f13/vault/security)
 "FM" = (
@@ -9581,7 +9604,8 @@
 /area/f13/caves)
 "Hk" = (
 /obj/machinery/door/airlock/wood{
-	name = "Bathrooms"
+	name = "Bathrooms";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/security)
@@ -9921,7 +9945,8 @@
 "Iv" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "vaultd4";
-	name = "Dorm 4"
+	name = "Dorm 4";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/vault/dormitory)
@@ -10024,7 +10049,8 @@
 "IN" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "vaultd2";
-	name = "Dorm 2"
+	name = "Dorm 2";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/vault/dormitory)
@@ -10128,7 +10154,7 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/brigdoor{
 	icon_state = "rightsecure";
-	req_access_txt = "10, 11"
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/diner)
@@ -10331,7 +10357,8 @@
 "JT" = (
 /obj/machinery/door/airlock/wood{
 	id_tag = "vaultd3";
-	name = "Dorm 3"
+	name = "Dorm 3";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/vault/dormitory)
@@ -10371,7 +10398,9 @@
 	},
 /area/f13/bunker)
 "Kd" = (
-/obj/machinery/vending/wardrobe/jani_wardrobe,
+/obj/machinery/vending/wardrobe/jani_wardrobe{
+	force_free = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/purple,
 /area/f13/vault)
 "Ke" = (
@@ -10433,6 +10462,7 @@
 	dir = 10;
 	network = list("vault")
 	},
+/obj/machinery/light,
 /turf/open/floor/plasteel/darkred/side,
 /area/f13/vault/security/armory)
 "Kq" = (
@@ -10766,9 +10796,6 @@
 /turf/open/floor/f13,
 /area/f13/tunnel)
 "Lu" = (
-/obj/structure/chair/comfy/brown{
-	dir = 4
-	},
 /obj/effect/landmark/start/f13/vaultdweller,
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -11036,7 +11063,7 @@
 "Mr" = (
 /obj/machinery/door/airlock/medical{
 	name = "Operating Theatre";
-	req_access_txt = "45; 5"
+	req_access_txt = "45"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -11104,7 +11131,7 @@
 "MG" = (
 /obj/machinery/door/window/brigdoor{
 	icon_state = "rightsecure";
-	req_access_txt = "31"
+	req_access_txt = "11"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -11283,7 +11310,10 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/window/brigdoor/security/cell/left,
+/obj/machinery/door/window/brigdoor/security/cell/left{
+	id = "vaultc1";
+	name = "Cell 1"
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/f13/vault/security)
 "Nl" = (
@@ -11351,13 +11381,16 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/diner)
 "Nw" = (
-/obj/machinery/computer/cargo{
-	dir = 4
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/yellow/side{
-	dir = 8
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay";
+	req_one_access_txt = "1; 5"
 	},
-/area/f13/vault/storageoffice)
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/vault/medical)
 "Nx" = (
 /obj/structure/chair/wood,
 /mob/living/simple_animal/hostile/raider/legendary,
@@ -11701,7 +11734,8 @@
 /area/f13/bunker)
 "OM" = (
 /obj/machinery/door/airlock/mining{
-	name = "Storage Bay"
+	name = "Storage Bay";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
 /area/f13/vault)
@@ -11847,7 +11881,6 @@
 /area/f13/vault)
 "Pm" = (
 /obj/structure/table,
-/obj/item/book/manual/wiki/security_space_law,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -12062,7 +12095,8 @@
 /area/f13/bunker)
 "Qe" = (
 /obj/machinery/door/airlock{
-	name = "Hydroponics"
+	name = "Hydroponics";
+	req_access_txt = "31"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -12071,7 +12105,7 @@
 /area/hydroponics)
 "Qf" = (
 /obj/machinery/door/airlock/security{
-	name = "Brig";
+	name = "Security Equipment";
 	req_access_txt = "1"
 	},
 /turf/open/floor/plasteel/dark,
@@ -12287,7 +12321,9 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/vault/botcontrol)
 "QQ" = (
-/obj/machinery/vending/coffee,
+/obj/machinery/vending/coffee{
+	force_free = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
 "QR" = (
@@ -12771,10 +12807,12 @@
 "SA" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/bot,
-/obj/item/melee/classic_baton/police,
-/obj/item/melee/classic_baton/police,
-/obj/item/melee/classic_baton/police,
-/obj/item/melee/classic_baton/police,
+/obj/item/melee/classic_baton/telescopic,
+/obj/item/melee/classic_baton/telescopic,
+/obj/item/melee/classic_baton/telescopic,
+/obj/item/shield/riot,
+/obj/item/shield/riot,
+/obj/item/shield/riot,
 /turf/open/floor/plasteel/darkred/side{
 	dir = 10
 	},
@@ -13071,7 +13109,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/public/glass{
-	name = "Diner"
+	name = "Diner";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/diner)
@@ -13105,10 +13144,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/cmo,
 /area/f13/vault/medical)
 "TK" = (
-/obj/machinery/door/airlock/medical{
-	name = "Operating Theatre";
-	req_access_txt = "";
-	req_one_access_txt = ""
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Operating Theater Observation";
+	req_one_access_txt = "1; 5"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/medical)
@@ -13150,7 +13189,7 @@
 "TQ" = (
 /obj/machinery/door/airlock/science/glass{
 	name = "Science";
-	req_access_txt = "31"
+	req_access_txt = "47"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/science)
@@ -13234,7 +13273,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/window/brigdoor/security/cell/left{
-	id = "vaultc2"
+	id = "vaultc2";
+	name = "Cell 2"
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/f13/vault/security)
@@ -13319,8 +13359,8 @@
 /area/f13/caves)
 "Ut" = (
 /obj/machinery/door/airlock/medical{
-	name = "Clinic";
-	req_one_access_txt = "25"
+	name = "Morgue";
+	req_one_access_txt = "5; 1"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/medical/morgue)
@@ -13631,12 +13671,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow,
 /area/f13/vault)
 "VB" = (
-/obj/machinery/door/airlock/research{
-	name = "Research Office";
-	req_access_txt = "47"
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/science/glass{
+	name = "Research Storage";
+	req_access_txt = "47"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/science)
@@ -14276,8 +14316,8 @@
 	},
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_access_txt = "5"
+	name = "Chemistry";
+	req_access_txt = "33"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault/medical/chemistry)
@@ -14428,7 +14468,9 @@
 	},
 /area/f13/bunker)
 "Yq" = (
-/obj/machinery/vending/nukacolavendfull,
+/obj/machinery/vending/nukacolavendfull{
+	force_free = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
 "Yr" = (
@@ -14686,7 +14728,8 @@
 	},
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay"
+	name = "Medbay Foyer";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault/medical)
@@ -24286,7 +24329,7 @@ QR
 iY
 mC
 RT
-Nw
+RT
 eX
 Cw
 BJ
@@ -30374,7 +30417,7 @@ vA
 vA
 xu
 gy
-sM
+cK
 Zl
 vA
 vA
@@ -30981,7 +31024,7 @@ vA
 sM
 vA
 sM
-Zl
+Nw
 vA
 vA
 sp
@@ -34202,7 +34245,7 @@ Rr
 GX
 QV
 UG
-cK
+wD
 hf
 UG
 sp
@@ -34611,7 +34654,7 @@ fb
 UG
 sp
 wN
-wE
+Ut
 mX
 wN
 wN
@@ -34808,7 +34851,7 @@ UG
 el
 QV
 UG
-wD
+wE
 fb
 UG
 sp
