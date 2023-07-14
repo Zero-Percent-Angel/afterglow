@@ -734,6 +734,7 @@ SUBSYSTEM_DEF(ticker)
 		'sound/roundend/whereisyourpowerarmor.ogg',
 		'sound/roundend/timetodie.ogg',
 		'sound/roundend/ishouldkickyourass.ogg',
+		'sound/roundend/triumphantvictory.ogg',
 		'sound/roundend/evilmrnv.ogg'\
 		)
 
