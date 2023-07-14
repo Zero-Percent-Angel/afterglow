@@ -17,8 +17,9 @@
 		if (istype(brain))
 			brain.maxHealth += ((special_c + special_i + special_p)*2 - 25)
 		update_special_speed((5-special_a)/40)//SPECIAL Integration
+		SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "charisma", /datum/mood_event/charisma, (special_c-5)*2)
 		SPECIAL_SET = TRUE
-	
+
 	//SHOULD_NOT_SLEEP(TRUE)
 	if(mob_transforming)
 		return

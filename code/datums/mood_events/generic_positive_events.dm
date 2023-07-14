@@ -1,3 +1,14 @@
+/datum/mood_event/charisma
+	description = span_nicegreen("I feel better about the way people treat me in general!")
+
+/datum/mood_event/charisma/add_effects(param)
+	if (IS_FINITE(param))
+		mood_change = param
+		if (param < 0)
+			description = span_warning("People don't seem to like me as much as others in general.")
+		if (param == 0)
+			description = span_notice("So this is how average popularity feels.")
+
 /datum/mood_event/hug
 	description = span_nicegreen("Closeness with another, even if unwanted, reminds you that maybe people can be okay.")
 	mood_change = list(0,1,2)
