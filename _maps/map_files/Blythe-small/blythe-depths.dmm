@@ -834,9 +834,13 @@
 	},
 /area/f13/bunker)
 "cK" = (
-/obj/machinery/autolathe/ammo/unlocked_basic,
-/turf/open/floor/plasteel/dark,
-/area/f13/vault/security)
+/obj/machinery/newscaster/security_unit{
+	pixel_x = 30
+	},
+/turf/closed/wall/r_wall/f13vault{
+	icon_state = "2-i"
+	},
+/area/f13/vault/storage)
 "cM" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -5590,8 +5594,8 @@
 "sM" = (
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_one_access_txt = "1; 5"
+	name = "Medbay Foyer";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault/medical)
@@ -9193,16 +9197,9 @@
 	},
 /area/f13/bunker/bunkerthree)
 "FP" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/medical/glass{
-	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_one_access_txt = "1; 5"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/vault/medical)
+/obj/machinery/autolathe/ammo/unlocked_basic,
+/turf/open/floor/plasteel/dark,
+/area/f13/vault/security)
 "FR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13{
@@ -10623,14 +10620,6 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
 /area/f13/vault/storage)
-"KN" = (
-/obj/machinery/door/airlock/medical/glass{
-	id_tag = "MedbayFoyer";
-	name = "Medbay Foyer";
-	req_access_txt = "31"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/vault/medical)
 "KO" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 5
@@ -11389,13 +11378,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/diner)
 "Nw" = (
-/obj/machinery/newscaster/security_unit{
-	pixel_x = 30
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay";
+	req_one_access_txt = "1; 5"
 	},
-/turf/closed/wall/r_wall/f13vault{
-	icon_state = "2-i"
-	},
-/area/f13/vault/storage)
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/vault/medical)
 "Nx" = (
 /obj/structure/chair/wood,
 /mob/living/simple_animal/hostile/raider/legendary,
@@ -11702,14 +11691,16 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker/bunkerthree)
 "OG" = (
-/obj/machinery/light{
-	light_color = "#e8eaff"
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
-/turf/closed/indestructible/opshuttle{
-	icon = 'icons/turf/walls/reinforced_wall.dmi';
-	icon_state = "r_wall"
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay";
+	req_one_access_txt = "1; 5"
 	},
-/area/f13/caves)
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/vault/medical)
 "OH" = (
 /obj/machinery/shower{
 	dir = 8
@@ -19518,7 +19509,7 @@ ZO
 ZO
 ZO
 ZO
-OG
+ZO
 ZO
 ZO
 ZO
@@ -24137,7 +24128,7 @@ xH
 xH
 xH
 iY
-Nw
+cK
 uy
 Pu
 Ou
@@ -30424,7 +30415,7 @@ vA
 vA
 xu
 gy
-KN
+sM
 Zl
 vA
 vA
@@ -31028,10 +31019,10 @@ QR
 sp
 vA
 vA
-sM
+Nw
 vA
-sM
-FP
+Nw
+OG
 vA
 vA
 sp
@@ -34858,7 +34849,7 @@ UG
 el
 QV
 UG
-cK
+FP
 fb
 UG
 sp
