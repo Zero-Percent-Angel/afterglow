@@ -2014,6 +2014,8 @@
 /area/f13/vault/lavatory)
 "gV" = (
 /obj/structure/table,
+/obj/item/stamp/denied,
+/obj/item/stamp,
 /turf/open/floor/plasteel/f13/vault_floor/blue/white,
 /area/f13/vault/overseer)
 "gW" = (
@@ -3861,8 +3863,6 @@
 	dir = 4;
 	req_access_txt = "31"
 	},
-/obj/item/stamp,
-/obj/item/stamp/denied,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -5590,8 +5590,8 @@
 "sM" = (
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay Foyer";
-	req_access_txt = "31"
+	name = "Medbay";
+	req_one_access_txt = "1; 5"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault/medical)
@@ -9193,6 +9193,9 @@
 	},
 /area/f13/bunker/bunkerthree)
 "FP" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
 	name = "Medbay";
@@ -10621,13 +10624,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
 /area/f13/vault/storage)
 "KN" = (
-/obj/machinery/newscaster/security_unit{
-	pixel_x = 30
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay Foyer";
+	req_access_txt = "31"
 	},
-/turf/closed/wall/r_wall/f13vault{
-	icon_state = "2-i"
-	},
-/area/f13/vault/storage)
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/vault/medical)
 "KO" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 5
@@ -11386,16 +11389,13 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/diner)
 "Nw" = (
-/obj/structure/cable{
-	icon_state = "4-8"
+/obj/machinery/newscaster/security_unit{
+	pixel_x = 30
 	},
-/obj/machinery/door/airlock/medical/glass{
-	id_tag = "MedbayFoyer";
-	name = "Medbay Foyer";
-	req_access_txt = "31"
+/turf/closed/wall/r_wall/f13vault{
+	icon_state = "2-i"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/vault/medical)
+/area/f13/vault/storage)
 "Nx" = (
 /obj/structure/chair/wood,
 /mob/living/simple_animal/hostile/raider/legendary,
@@ -14735,8 +14735,8 @@
 	},
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_one_access_txt = "1; 5"
+	name = "Medbay Foyer";
+	req_access_txt = "31"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault/medical)
@@ -24137,7 +24137,7 @@ xH
 xH
 xH
 iY
-KN
+Nw
 uy
 Pu
 Ou
@@ -30424,8 +30424,8 @@ vA
 vA
 xu
 gy
-sM
-Nw
+KN
+Zl
 vA
 vA
 OK
@@ -31028,10 +31028,10 @@ QR
 sp
 vA
 vA
-FP
+sM
 vA
+sM
 FP
-Zl
 vA
 vA
 sp
