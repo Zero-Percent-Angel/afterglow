@@ -833,14 +833,6 @@
 	icon_state = "housewood2"
 	},
 /area/f13/bunker)
-"cK" = (
-/obj/machinery/door/airlock/medical/glass{
-	id_tag = "MedbayFoyer";
-	name = "Medbay Foyer";
-	req_access_txt = "31"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/vault/medical)
 "cM" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -6563,9 +6555,13 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/vault/security)
 "wE" = (
-/obj/machinery/autolathe/ammo/unlocked_basic,
-/turf/open/floor/plasteel/dark,
-/area/f13/vault/security)
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay Foyer";
+	req_access_txt = "31"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/vault/medical)
 "wF" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 1;
@@ -9198,8 +9194,16 @@
 	},
 /area/f13/bunker/bunkerthree)
 "FP" = (
-/turf/closed/indestructible/vaultdoor,
-/area/f13/vault/security/armory)
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay Foyer";
+	req_access_txt = "31"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/vault/medical)
 "FR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13{
@@ -10252,7 +10256,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
 "Jz" = (
-/turf/closed/indestructible/vaultdoor,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/vault)
 "JB" = (
 /obj/effect/turf_decal/bot,
@@ -10620,9 +10624,6 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
 /area/f13/vault/storage)
-"KN" = (
-/turf/closed/indestructible/vaultdoor,
-/area/f13/vault/medical/chemistry)
 "KO" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 5
@@ -11381,16 +11382,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/diner)
 "Nw" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/medical/glass{
-	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_one_access_txt = "1; 5"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/vault/medical)
+/obj/machinery/autolathe/ammo/unlocked_basic,
+/turf/open/floor/plasteel/dark,
+/area/f13/vault/security)
 "Nx" = (
 /obj/structure/chair/wood,
 /mob/living/simple_animal/hostile/raider/legendary,
@@ -12475,7 +12469,9 @@
 /area/f13/caves)
 "Rq" = (
 /obj/structure/sign/warning/securearea,
-/turf/closed/indestructible/vaultdoor,
+/turf/closed/wall/r_wall/f13vault{
+	icon_state = "2-i"
+	},
 /area/f13/vault)
 "Rr" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -14728,8 +14724,8 @@
 	},
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay Foyer";
-	req_access_txt = "31"
+	name = "Medbay";
+	req_one_access_txt = "1; 5"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault/medical)
@@ -27803,8 +27799,8 @@ Ws
 jh
 BN
 pz
-Jz
-Jz
+QR
+QR
 RB
 RB
 RB
@@ -28005,8 +28001,8 @@ zp
 zp
 Ko
 pz
-Jz
-Jz
+QR
+QR
 RB
 RB
 RB
@@ -28207,8 +28203,8 @@ OO
 OO
 Wq
 pz
-Jz
-Jz
+QR
+QR
 RB
 RB
 RB
@@ -28409,8 +28405,8 @@ za
 za
 bR
 pz
-Jz
-Jz
+QR
+QR
 RB
 RB
 RB
@@ -28610,10 +28606,10 @@ yG
 PN
 PN
 YL
-FP
+pz
 QR
-Jz
-Jz
+QR
+QR
 RB
 RB
 RB
@@ -28812,10 +28808,10 @@ Md
 PC
 ij
 nY
-FP
+pz
 QR
-Jz
-Jz
+QR
+QR
 RB
 RB
 RB
@@ -29016,8 +29012,8 @@ CY
 qa
 qa
 qa
-Jz
-Jz
+QR
+QR
 RB
 RB
 RB
@@ -29218,9 +29214,9 @@ nf
 IH
 sP
 qa
-Jz
-Jz
-Jz
+QR
+QR
+QR
 RB
 RB
 RB
@@ -29420,9 +29416,9 @@ JB
 GG
 KD
 qa
-Jz
-Jz
-Jz
+QR
+QR
+QR
 RB
 RB
 RB
@@ -29622,9 +29618,9 @@ LT
 LT
 qa
 iV
-Jz
-Jz
-Jz
+QR
+QR
+QR
 Rq
 KZ
 KZ
@@ -30417,8 +30413,8 @@ vA
 vA
 xu
 gy
-cK
-Zl
+wE
+FP
 vA
 vA
 OK
@@ -30430,9 +30426,9 @@ QR
 QR
 QR
 TD
-Jz
-Jz
-Jz
+QR
+QR
+QR
 Rq
 KZ
 KZ
@@ -31024,7 +31020,7 @@ vA
 sM
 vA
 sM
-Nw
+Zl
 vA
 vA
 sp
@@ -31239,7 +31235,7 @@ QR
 QR
 QR
 QR
-Jz
+QR
 RB
 RB
 RB
@@ -31440,8 +31436,8 @@ Uo
 QR
 QR
 QR
-Jz
-Jz
+QR
+QR
 RB
 RB
 RB
@@ -31642,7 +31638,7 @@ QR
 QR
 QR
 QR
-Jz
+QR
 RB
 RB
 RB
@@ -31844,7 +31840,7 @@ ai
 QR
 QR
 QR
-Jz
+QR
 RB
 RB
 RB
@@ -32046,7 +32042,7 @@ wC
 QR
 QR
 QR
-Jz
+QR
 RB
 RB
 PO
@@ -32247,8 +32243,8 @@ FB
 QR
 QR
 QR
-Jz
-Jz
+QR
+QR
 RB
 RB
 PO
@@ -32449,7 +32445,7 @@ VM
 QR
 QR
 QR
-Jz
+QR
 RB
 RB
 RB
@@ -32591,7 +32587,7 @@ RB
 RB
 RB
 RB
-Jz
+QR
 QR
 QR
 WN
@@ -32650,8 +32646,8 @@ sp
 kX
 QR
 QR
-Jz
-Jz
+QR
+QR
 RB
 RB
 RB
@@ -32793,7 +32789,7 @@ RB
 RB
 RB
 RB
-Jz
+QR
 QR
 QR
 QR
@@ -32852,7 +32848,7 @@ sp
 Zj
 QR
 QR
-Jz
+QR
 RB
 RB
 RB
@@ -32995,7 +32991,7 @@ RB
 RB
 RB
 RB
-Jz
+QR
 QR
 QR
 sp
@@ -33053,8 +33049,8 @@ QR
 QR
 QR
 QR
-Jz
-Jz
+QR
+QR
 RB
 RB
 RB
@@ -33197,7 +33193,7 @@ RB
 RB
 RB
 PO
-Jz
+QR
 QR
 QR
 sp
@@ -33253,9 +33249,9 @@ GO
 QR
 QR
 QR
-Jz
-Jz
-Jz
+QR
+QR
+QR
 RB
 RB
 RB
@@ -33399,8 +33395,8 @@ RB
 RB
 RB
 RB
-Jz
-Jz
+QR
+QR
 QR
 QR
 QR
@@ -33454,9 +33450,9 @@ Ze
 GO
 QR
 QR
-Jz
-Jz
-Jz
+QR
+QR
+QR
 RB
 RB
 RB
@@ -33602,7 +33598,7 @@ RB
 RB
 RB
 RB
-Jz
+QR
 QR
 QR
 kI
@@ -33654,9 +33650,9 @@ uT
 QR
 QR
 QR
-Jz
-Jz
-Jz
+QR
+QR
+QR
 RB
 RB
 RB
@@ -33804,8 +33800,8 @@ RB
 RB
 RB
 RB
-Jz
-Jz
+QR
+QR
 QR
 QR
 sp
@@ -33855,8 +33851,8 @@ DW
 uT
 QR
 QR
-Jz
-Jz
+QR
+QR
 RB
 RB
 RB
@@ -34007,8 +34003,8 @@ RB
 RB
 RB
 RB
-Jz
-Jz
+QR
+QR
 QR
 QR
 sp
@@ -34055,9 +34051,9 @@ aF
 LD
 ww
 uT
-Jz
-Jz
-Jz
+QR
+QR
+QR
 RB
 RB
 RB
@@ -34210,8 +34206,8 @@ RB
 RB
 RB
 RB
-Jz
-Jz
+QR
+QR
 QR
 sp
 sp
@@ -34257,7 +34253,7 @@ ju
 ZS
 ep
 uT
-Jz
+QR
 RB
 RB
 PO
@@ -34413,8 +34409,8 @@ RB
 RB
 RB
 RB
-Jz
-Jz
+QR
+QR
 QR
 sp
 sp
@@ -34458,8 +34454,8 @@ uT
 uT
 uT
 uT
-KN
-Jz
+uT
+QR
 RB
 RB
 PO
@@ -34616,8 +34612,8 @@ RB
 RB
 RB
 RB
-Jz
-Jz
+QR
+QR
 QR
 QR
 QR
@@ -34819,9 +34815,9 @@ RB
 RB
 RB
 RB
-Jz
-Jz
-Jz
+QR
+QR
+QR
 QR
 QR
 sp
@@ -34851,7 +34847,7 @@ UG
 el
 QV
 UG
-wE
+Nw
 fb
 UG
 sp
@@ -35023,9 +35019,9 @@ RB
 RB
 RB
 RB
-Jz
-Jz
-Jz
+QR
+QR
+QR
 QR
 sp
 sp
@@ -35226,8 +35222,8 @@ RB
 RB
 RB
 RB
-Jz
-Jz
+QR
+QR
 QR
 QR
 sp
@@ -35429,7 +35425,7 @@ RB
 RB
 RB
 RB
-Jz
+QR
 QR
 QR
 sp
@@ -35631,7 +35627,7 @@ RB
 RB
 RB
 RB
-Jz
+QR
 QR
 QR
 sp
@@ -35833,8 +35829,8 @@ RB
 RB
 RB
 RB
-Jz
-Jz
+QR
+QR
 QR
 QR
 QR
@@ -36036,8 +36032,8 @@ RB
 RB
 RB
 RB
-Jz
-Jz
+QR
+QR
 QR
 QR
 QR
@@ -36239,16 +36235,16 @@ RB
 RB
 RB
 RB
-Jz
-Jz
-Jz
-Jz
-Jz
-Jz
-Jz
-Jz
-Jz
-Jz
+QR
+QR
+QR
+QR
+QR
+QR
+QR
+QR
+QR
+QR
 QR
 Bp
 tq
@@ -36449,9 +36445,9 @@ RB
 RB
 RB
 RB
-Jz
-Jz
-Jz
+QR
+QR
+QR
 QR
 QR
 sp
@@ -36653,7 +36649,7 @@ RB
 RB
 RB
 RB
-Jz
+QR
 QR
 QR
 vQ
@@ -36855,7 +36851,7 @@ RB
 RB
 RB
 RB
-Jz
+QR
 QR
 QR
 sp
@@ -37057,7 +37053,7 @@ RB
 RB
 RB
 RB
-Jz
+QR
 QR
 QR
 sp
@@ -37259,8 +37255,8 @@ RB
 RB
 RB
 RB
-Jz
-Jz
+QR
+QR
 QR
 sp
 UG
@@ -37461,8 +37457,8 @@ RB
 RB
 RB
 RB
-Jz
-Jz
+QR
+QR
 QR
 sp
 sp
@@ -37664,7 +37660,7 @@ RB
 RB
 RB
 RB
-Jz
+QR
 QR
 QR
 QR
@@ -37866,10 +37862,6 @@ RB
 RB
 RB
 RB
-Jz
-Jz
-Jz
-Jz
 QR
 QR
 QR
@@ -37884,7 +37876,11 @@ QR
 QR
 QR
 QR
-Jz
+QR
+QR
+QR
+QR
+QR
 QR
 RB
 RB
@@ -38070,12 +38066,6 @@ RB
 RB
 RB
 RB
-Jz
-Jz
-Jz
-Jz
-Jz
-Jz
 QR
 QR
 QR
@@ -38084,9 +38074,15 @@ QR
 QR
 QR
 QR
-Jz
-Jz
-Jz
+QR
+QR
+QR
+QR
+QR
+QR
+QR
+QR
+QR
 RB
 RB
 RB
@@ -38277,16 +38273,16 @@ RB
 RB
 RB
 RB
-Jz
-Jz
-Jz
-Jz
-Jz
-Jz
-Jz
-Jz
-Jz
-Jz
+QR
+QR
+QR
+QR
+QR
+QR
+QR
+QR
+QR
+QR
 RB
 RB
 RB
