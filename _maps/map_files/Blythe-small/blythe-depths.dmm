@@ -834,13 +834,9 @@
 	},
 /area/f13/bunker)
 "cK" = (
-/obj/machinery/door/airlock/medical/glass{
-	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_one_access_txt = "1; 5"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/vault/medical)
+/obj/structure/sign/departments/security,
+/turf/closed/indestructible/vaultdoor,
+/area/f13/vault)
 "cM" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -5593,8 +5589,8 @@
 "sM" = (
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay Foyer";
-	req_access_txt = "31"
+	name = "Medbay";
+	req_one_access_txt = "1; 5"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault/medical)
@@ -6094,6 +6090,14 @@
 	name = "dirty floor"
 	},
 /area/f13/bunker/bunkerthree)
+"uM" = (
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay Foyer";
+	req_access_txt = "31"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/vault/medical)
 "uO" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -10256,7 +10260,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
 "Jz" = (
-/turf/open/indestructible/ground/outside/desert,
+/turf/closed/indestructible/vaultdoor,
 /area/f13/vault)
 "JB" = (
 /obj/effect/turf_decal/bot,
@@ -10628,13 +10632,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
 /area/f13/vault/storage)
 "KN" = (
-/obj/machinery/newscaster/security_unit{
-	pixel_x = 30
-	},
-/turf/closed/wall/r_wall/f13vault{
-	icon_state = "2-i"
-	},
-/area/f13/vault/storage)
+/obj/structure/sign/warning/radiation/rad_area,
+/turf/closed/indestructible/vaultdoor,
+/area/f13/vault/security/checkpoint)
 "KO" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 5
@@ -11393,16 +11393,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/diner)
 "Nw" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/medical/glass{
-	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_one_access_txt = "1; 5"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/vault/medical)
+/turf/closed/indestructible/vaultdoor,
+/area/f13/vault/security/checkpoint)
 "Nx" = (
 /obj/structure/chair/wood,
 /mob/living/simple_animal/hostile/raider/legendary,
@@ -12482,9 +12474,7 @@
 /area/f13/caves)
 "Rq" = (
 /obj/structure/sign/warning/securearea,
-/turf/closed/wall/r_wall/f13vault{
-	icon_state = "2-i"
-	},
+/turf/closed/indestructible/vaultdoor,
 /area/f13/vault)
 "Rr" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -13109,9 +13099,7 @@
 /area/f13/bunker)
 "TD" = (
 /obj/structure/sign/warning/radiation/rad_area,
-/turf/closed/wall/r_wall/f13vault{
-	icon_state = "2-i"
-	},
+/turf/closed/indestructible/vaultdoor,
 /area/f13/vault)
 "TE" = (
 /obj/structure/cable{
@@ -13437,6 +13425,17 @@
 	icon_state = "2-i"
 	},
 /area/f13/vault/security)
+"UH" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay Foyer";
+	req_access_txt = "31"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/vault/medical)
 "UI" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/destructible/tribal_torch/wall/lit{
@@ -13586,6 +13585,14 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault)
+"Vi" = (
+/obj/machinery/newscaster/security_unit{
+	pixel_x = 30
+	},
+/turf/closed/wall/r_wall/f13vault{
+	icon_state = "2-i"
+	},
+/area/f13/vault/storage)
 "Vj" = (
 /mob/living/simple_animal/hostile/raider/baseball,
 /turf/open/floor/f13{
@@ -14737,8 +14744,8 @@
 	},
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
-	name = "Medbay Foyer";
-	req_access_txt = "31"
+	name = "Medbay";
+	req_one_access_txt = "1; 5"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/vault/medical)
@@ -24139,7 +24146,7 @@ xH
 xH
 xH
 iY
-KN
+Vi
 uy
 Pu
 Ou
@@ -29229,7 +29236,7 @@ sP
 qa
 QR
 QR
-QR
+Jz
 RB
 RB
 RB
@@ -29431,7 +29438,7 @@ KD
 qa
 QR
 QR
-QR
+Jz
 RB
 RB
 RB
@@ -29623,17 +29630,17 @@ wi
 DM
 Kg
 oe
-Kg
+cK
 iV
 qa
 LT
 LT
 LT
-qa
-iV
-QR
-QR
-QR
+Nw
+KN
+Jz
+Jz
+Jz
 Rq
 KZ
 KZ
@@ -30426,22 +30433,22 @@ vA
 vA
 xu
 gy
-sM
-Zl
+uM
+UH
 vA
 vA
 OK
 QR
 TD
-QR
-QR
-QR
-QR
-QR
+Jz
+Jz
+Jz
+Jz
+Jz
 TD
-QR
-QR
-QR
+Jz
+Jz
+Jz
 Rq
 KZ
 KZ
@@ -30641,7 +30648,7 @@ QR
 QR
 QR
 QR
-QR
+Jz
 RB
 RB
 RB
@@ -30843,7 +30850,7 @@ sp
 QR
 QR
 QR
-QR
+Jz
 RB
 RB
 RB
@@ -31030,10 +31037,10 @@ QR
 sp
 vA
 vA
-cK
+sM
 vA
-cK
-Nw
+sM
+Zl
 vA
 vA
 sp
@@ -31045,7 +31052,7 @@ sp
 QR
 QR
 QR
-QR
+Jz
 RB
 RB
 RB
