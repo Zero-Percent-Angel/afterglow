@@ -1099,4 +1099,5 @@
 	path = /obj/item/clothing/under/f13/scav
 
 /datum/gear/uniform/scav/female
+	name = "female scav outfit"
 	path = /obj/item/clothing/under/f13/female/scav
