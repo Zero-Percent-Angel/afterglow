@@ -834,13 +834,13 @@
 	},
 /area/f13/bunker)
 "cK" = (
-/obj/machinery/newscaster/security_unit{
-	pixel_x = 30
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay";
+	req_one_access_txt = "1; 5"
 	},
-/turf/closed/wall/r_wall/f13vault{
-	icon_state = "2-i"
-	},
-/area/f13/vault/storage)
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/vault/medical)
 "cM" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2094,8 +2094,7 @@
 /turf/open/floor/f13,
 /area/f13/bunker)
 "hh" = (
-/obj/machinery/chem_master,
-/obj/structure/table,
+/obj/machinery/chem_master/advanced,
 /turf/open/floor/plasteel/f13/vault_floor/purple/purplechess,
 /area/f13/vault/science)
 "hi" = (
@@ -7185,7 +7184,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/security)
 "yJ" = (
-/obj/machinery/chem_master/advanced,
+/obj/structure/table,
+/obj/machinery/reagentgrinder,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/science)
 "yL" = (
@@ -8262,6 +8262,9 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/recharge_station,
+/obj/machinery/status_display/ai{
+	pixel_y = 32
+	},
 /turf/open/floor/plasteel/dark,
 /area/f13/vault/botcontrol)
 "CG" = (
@@ -8515,6 +8518,7 @@
 	pixel_x = 6;
 	pixel_y = 10
 	},
+/obj/item/reagent_containers/glass/beaker/plastic,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/science)
 "Dq" = (
@@ -10471,6 +10475,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/vault/security)
 "Kr" = (
+/obj/structure/chair/office/dark{
+	dir = 8
+	},
 /turf/open/floor/plasteel/f13/vault_floor/purple/purplechess,
 /area/f13/vault/science)
 "Ks" = (
@@ -10619,6 +10626,14 @@
 "KM" = (
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess/yellowchess2,
+/area/f13/vault/storage)
+"KN" = (
+/obj/machinery/newscaster/security_unit{
+	pixel_x = 30
+	},
+/turf/closed/wall/r_wall/f13vault{
+	icon_state = "2-i"
+	},
 /area/f13/vault/storage)
 "KO" = (
 /obj/effect/turf_decal/weather/snow/corner{
@@ -11378,6 +11393,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault/diner)
 "Nw" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
 	name = "Medbay";
@@ -11691,16 +11709,9 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/bunker/bunkerthree)
 "OG" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/medical/glass{
-	id_tag = "MedbayFoyer";
-	name = "Medbay";
-	req_one_access_txt = "1; 5"
-	},
+/obj/machinery/chem_master,
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
-/area/f13/vault/medical)
+/area/f13/vault/medical/chemistry)
 "OH" = (
 /obj/machinery/shower{
 	dir = 8
@@ -24128,7 +24139,7 @@ xH
 xH
 xH
 iY
-cK
+KN
 uy
 Pu
 Ou
@@ -31019,10 +31030,10 @@ QR
 sp
 vA
 vA
-Nw
+cK
 vA
+cK
 Nw
-OG
 vA
 vA
 sp
@@ -33849,7 +33860,7 @@ uO
 XQ
 da
 DW
-DW
+OG
 uT
 QR
 QR
