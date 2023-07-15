@@ -76,6 +76,18 @@
 	item_state = "vickyred"
 	body_parts_hidden = ARMS
 
+/obj/item/clothing/suit/scarlet
+	name = "scarlet coat"
+	desc = "With a scarlet coat and a fine cocked hat, and a musket at your shoulder..."
+	icon_state = "scarlet_coat"
+	item_state = "scarlet_coat"
+
+/obj/item/clothing/suit/gothjacket
+	name = "goth jacket"
+	desc = "a black jacket with gautlets made from metal strapped to it... You can almost hear a cry of 'edge'"
+	icon_state = "goth_jacket"
+	item_state = "goth_jacket"
+
 /obj/item/clothing/suit/apron/overalls
 	name = "coveralls"
 	desc = "A set of denim overalls."
@@ -273,7 +285,7 @@
 	dog_fashion = /datum/dog_fashion/back
 
 /obj/item/clothing/suit/armor/power_armor/t51b/costume
-	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. Now with clanking action!" 
+	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. Now with clanking action!"
 	requires_training = FALSE
 	deflect_damage = 1
 	armor = ARMOR_VALUE_CLOTHES

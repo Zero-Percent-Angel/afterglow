@@ -89,9 +89,9 @@
 	description = "A chemical compound that, when inhaled, vastly increases the user's reflexes and slows their perception of time. Carries a risk of addiction and extreme nausea and toxin damage if overdosed."
 	reagent_state = LIQUID
 	color = "#FAFAFA"
-	overdose_threshold = 14
-	addiction_threshold = 9
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	overdose_threshold = 12
+	addiction_threshold = 8
+	metabolization_rate = 0.7 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
 
 /datum/reagent/drug/turbo/on_mob_add(mob/M)

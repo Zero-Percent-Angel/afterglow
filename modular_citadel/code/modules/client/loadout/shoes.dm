@@ -120,6 +120,32 @@
 	name = "jackboots"
 	path = /obj/item/clothing/shoes/jackboots
 
+//Heels and goths
+
+/datum/gear/shoes/heels
+	name = "high heels"
+	path = /obj/item/clothing/shoes/f13/heels
+
+/datum/gear/shoes/thighhigh
+	name = "thigh high boots"
+	path = /obj/item/clothing/shoes/f13/thighboot
+
+/datum/gear/shoes/thighhigh/blue
+	name = "blue thigh high boots"
+	path = /obj/item/clothing/shoes/f13/thighboot/blue
+
+/datum/gear/shoes/thighhigh/heels
+	name = "thigh high heels"
+	path = /obj/item/clothing/shoes/f13/thighboot/platform
+
+/datum/gear/shoes/thighhigh/heels/blue
+	name = "blue thigh high boots"
+	path = /obj/item/clothing/shoes/f13/thighboot/platform/blue
+
+/datum/gear/shoes/thighhigh/heels/stiletto
+	name = "thigh high stilettos"
+	path = /obj/item/clothing/shoes/f13/thighboot/stilettos
+
 /// Factions Shoes or well NCR boots.
 
 /datum/gear/shoes/patrol_boots

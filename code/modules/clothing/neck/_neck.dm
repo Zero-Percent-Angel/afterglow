@@ -218,6 +218,11 @@
 	icon_state = "choker"
 	poly_colors = list("#222222")
 
+/obj/item/clothing/neck/petcollar/choker/goth
+	name = "gothic choker"
+	item_state = "cross-choker"
+	icon_state = "cross-choker"
+
 /obj/item/clothing/neck/petcollar/locked
 	name = "locked collar"
 	desc = "A collar that has a small lock on it to keep it from being removed."

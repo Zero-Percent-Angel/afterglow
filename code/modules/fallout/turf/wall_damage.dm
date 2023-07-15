@@ -10,7 +10,7 @@
 	if(dam)
 		damage = max(0, damage + dam)
 		update_icon()
-	if(hardness > 0 && damage > 1600/hardness)
+	if(!unbreakable && hardness > 0 && damage > 1600/hardness)
 		dismantle_wall(1)
 		playsound(src, 'sound/effects/meteorimpact.ogg', rand(50,100), 1)
 		return 1
@@ -44,7 +44,7 @@
 			return
 		if(SEND_SIGNAL(W, COMSIG_LICK_RETURN, src, user)) // so I can lick walls like a frickin frick
 			return
-		if(holdHardness && W.force > 1200/holdHardness && !holdUnbreakable)
+		if(holdHardness && W.force > 1200/(holdHardness + (holdHardness * W.armour_penetration)) && !holdUnbreakable)
 			take_damage(W.force * hardness/800)
 			to_chat(user, span_warning("You smash the wall with [W]."))
 			playsound(src, 'sound/effects/bang.ogg', 50, 1)
@@ -54,5 +54,5 @@
 
 /turf/closed/wall/bullet_act(obj/item/projectile/P)
 	. = ..()
-	if (!unbreakable && hardness > 0 && P.damage > 900/hardness)
-		take_damage(P.damage * hardness/800)
+	if (!unbreakable && hardness > 0 && P.damage >= 750/(hardness + (hardness * P.armour_penetration)))
+		take_damage(P.damage * (hardness**2)/(19600))
