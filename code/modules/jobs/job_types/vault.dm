@@ -25,18 +25,14 @@ Science: 47 ACCESS_RESEARCH
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 
 /*
-Vault Coordinator
+Overseer
 */
-
-/datum/job/vault
-	objectivesList = list("Leadership recommends the following goal for this week: Establish trade with the wasteland","Leadership recommends the following goal for this week: Acquire blueprints and interesting artifacts for research", "Leadership recommends the following goal for this week: Expand operations outside the vault")
-
 /datum/job/vault/f13overseer
-	title = "Vault Coordinator"
+	title = "Overseer"
 	flag = F13OVERSEER
 	head_announce = list("Security")
-	total_positions = 1 //was 1-1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations."
 	description = "You are the leader of the Vault, and your word is law. Working with the Security team and your fellow Vault Dwellers, your goal is to ensure the continued prosperity and survival of the vault, through any and all means necessary."
@@ -54,8 +50,59 @@ Vault Coordinator
 	return get_all_accesses()
 
 /datum/outfit/job/vault/f13overseer
-	name = "Vault Coordinator"
+	name = "Overseer"
 	jobtype = /datum/job/vault/f13overseer
+
+	implants = list(/obj/item/implant/mindshield)
+
+	id = 			/obj/item/card/id/gold
+	uniform = 		/obj/item/clothing/under/f13/vault13
+	shoes = 		/obj/item/clothing/shoes/jackboots
+	glasses = 		/obj/item/clothing/glasses/sunglasses
+	ears = 			/obj/item/radio/headset/headset_overseer
+	neck = 			/obj/item/clothing/neck/mantle/overseer
+	backpack = 		/obj/item/storage/backpack/satchel/leather
+	backpack_contents = list(
+		/obj/item/storage/box/ids = 1,
+
+		/obj/item/gun/ballistic/automatic/pistol/n99/executive = 1,
+		/obj/item/ammo_box/magazine/m10mm/adv/simple = 3,
+		/obj/item/book/granter/trait/chemistry = 1,
+		/obj/item/crowbar = 1)
+
+
+/*
+Vault Coordinator
+*/
+
+/datum/job/vault
+	objectivesList = list("Leadership recommends the following goal for this week: Establish trade with the wasteland","Leadership recommends the following goal for this week: Acquire blueprints and interesting artifacts for research", "Leadership recommends the following goal for this week: Expand operations outside the vault")
+
+/datum/job/vault/f13vaultcoord
+	title = "Vault Coordinator"
+	flag = F13VAULTCOORD
+	head_announce = list("Security")
+	total_positions = 1 //was 1-1
+	spawn_positions = 1
+	forbids = "The Vault forbids: Disobeying the Overseer. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
+	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations."
+	description = "You are the leader of the Vault, and your word is law. Working with the Security team and your fellow Vault Dwellers, your goal is to ensure the continued prosperity and survival of the vault, through any and all means necessary."
+	supervisors = "Vault-tec"
+	selection_color = "#ccffcc"
+	req_admin_notify = 1
+	exp_requirements = 750
+
+	outfit = /datum/outfit/job/vault/f13vaultcoord
+
+	access = list()
+	minimal_access = list()
+
+/datum/job/vault/f13vaultcoord/get_access()
+	return get_all_accesses()
+
+/datum/outfit/job/vault/f13vaultcoord
+	name = "Vault Coordinator"
+	jobtype = /datum/job/vault/f13vaultcoord
 
 	implants = list(/obj/item/implant/mindshield)
 

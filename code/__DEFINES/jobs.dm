@@ -146,6 +146,7 @@
 #define F13AI			(1<<7)
 #define F13CYBORG		(1<<8)
 #define F13SPECIALISTOFFICER (1<<9)
+#define F13VAULTCOORD	(1<<10)
 
 #define WASTELAND		(1<<8)
 
