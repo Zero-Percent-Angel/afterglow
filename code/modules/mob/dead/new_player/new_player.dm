@@ -4,7 +4,7 @@
 	invisibility = INVISIBILITY_ABSTRACT
 	density = FALSE
 	stat = DEAD
-	
+
 	//is there a result we want to read from the age gate
 	var/age_gate_result
 
@@ -460,7 +460,7 @@
 	if(SSticker.late_join_disabled)
 		alert(src, "An administrator has disabled late join spawning.")
 		return FALSE
-	
+
 	if((length_char(client.prefs.features["flavor_text"])) < MIN_FLAVOR_LEN)
 		to_chat(client.mob, span_danger("Your flavortext does not meet the minimum of [MIN_FLAVOR_LEN] characters."))
 		return FALSE
@@ -724,3 +724,64 @@
 	// Add verb for re-opening the interview panel, and re-init the verbs for the stat panel
 	add_verb(src, /mob/dead/new_player/proc/open_interview)
 
+
+#define AGE_VERIFY_I_AM_18 "I am 18 or older"
+#define AGE_VERIFY_I_AM_UNDER_18 "I am under 18"
+
+/mob/dead/new_player/proc/perform_age_verification()
+	var/age_verification_response = alert(src, "Age Verification", "Are you 18 or older?", AGE_VERIFY_I_AM_18, AGE_VERIFY_I_AM_UNDER_18)
+
+	if(age_verification_response == AGE_VERIFY_I_AM_18)
+		update_flag_db(DB_FLAG_AGE_CONFIRMATION_COMPLETE, TRUE)
+		set_db_player_flags()
+		return TRUE
+
+	var/responded_wrong = age_verification_response == AGE_VERIFY_I_AM_UNDER_18
+	message_admins("[key_name_admin(src)] has failed age verification: [(responded_wrong ? "Under 18" : "No response")]. They have been [(responded_wrong ? "banned" : "kicked")]")
+
+	if(responded_wrong)
+		var/who
+		for(var/client/C in GLOB.clients)
+			if(!who)
+				who = "[C]"
+			else
+				who += ", [C]"
+
+		var/adminwho
+		for(var/client/C in GLOB.admins)
+			if(!adminwho)
+				adminwho = "[C]"
+			else
+				adminwho += ", [C]"
+
+		var/datum/db_query/query_add_ban = SSdbcore.NewQuery(
+			"INSERT INTO [format_table_name("ban")] (`bantime`,`server_ip`,`server_port`,`round_id`,`bantype`,`reason`,`job`,`duration`,`expiration_time`,`ckey`,`computerid`,`ip`,`a_ckey`,`a_computerid`,`a_ip`,`who`,`adminwho`) VALUES (Now(), INET_ATON(:internet_address), :port, :round_id, :bantype, :reason, :job, IFNULL(:duration, \"0\"), Now() + INTERVAL IF(:duration > 0, :duration, 0) MINUTE, :ckey, :computerid, INET_ATON(:ip), :a_ckey, :a_computerid, INET_ATON(:a_ip), :who, :adminwho)",
+			list(
+				"internet_address" = world.internet_address || "0",
+				"port" = world.port,
+				"round_id" = GLOB.round_id,
+				"bantype" = "PERMABAN",
+				"reason" = sanitizeSQL("Age verification failure"),
+				"job" = "",
+				"duration" = -1,
+				"ckey" = ckey,
+				"computerid" = computer_id,
+				"ip" = address || "0.0.0.0",
+				"a_ckey" = "server",
+				"a_computerid" = 0,
+				"a_ip" = "0.0.0.0",
+				"who" = who,
+				"adminwho" = adminwho
+			)
+		)
+		var/tgs_channel_string = CONFIG_GET(string/tgs_ban_channel_identifier) || "ban"
+		if(!query_add_ban.warn_execute())
+			send2chat(new /datum/tgs_message_content("**FAILED** to add an age verification ban for `[ckey]`."), tgs_channel_string)
+			qdel(query_add_ban)
+		else
+			send2chat(new /datum/tgs_message_content("Added an age verification ban for `[ckey]`."), tgs_channel_string)
+			qdel(query_add_ban)
+	qdel(client)
+
+#undef AGE_VERIFY_I_AM_18
+#undef AGE_VERIFY_I_AM_UNDER_18
