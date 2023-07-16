@@ -21,7 +21,7 @@
 	var/sheet_amount = 2
 	var/girder_type = /obj/structure/girder
 	/// Wall breaks on light blast
-	var/weak_wall = TRUE
+	var/weak_wall = FALSE
 
 	canSmoothWith = list(
 	/turf/closed/wall,
@@ -78,6 +78,9 @@
 	if(target == src)
 		dismantle_wall(1,1)
 		return
+	if (hardness <= 0)
+		return
+	var/destroy_wall =  prob(hardness/5)
 	switch(severity)
 		if(1)
 			//SN src = null
@@ -85,12 +88,12 @@
 			NT.contents_explosion(severity, target)
 			return
 		if(2)
-			if (prob(50))
+			if (destroy_wall || weak_wall)
 				dismantle_wall(0,1)
 			else
-				dismantle_wall(1,1)
+				take_damage(hardness/50)
 		if(3)
-			if (weak_wall && prob(hardness))
+			if (destroy_wall && weak_wall)
 				dismantle_wall(0,1)
 	if(!density)
 		..()

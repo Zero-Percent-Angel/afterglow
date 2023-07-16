@@ -130,6 +130,7 @@
 	icon_state = "wood"
 	sheet_type = /obj/item/stack/sheet/mineral/wood
 	hardness = 70
+	weak_wall = TRUE
 	explosion_block = 0
 	smooth = SMOOTH_FALSE
 	//canSmoothWith = list(/turf/closed/wall/mineral/wood, /obj/structure/falsewall/wood)
@@ -183,6 +184,7 @@
 	icon = 'icons/turf/walls/snow_wall.dmi'
 	icon_state = "snow"
 	hardness = 80
+	weak_wall = TRUE
 	sheet_type = /obj/item/stack/sheet/mineral/snow
 	canSmoothWith = null
 

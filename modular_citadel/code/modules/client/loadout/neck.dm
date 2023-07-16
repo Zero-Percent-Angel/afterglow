@@ -111,6 +111,10 @@
 	name = "choker"
 	path = /obj/item/clothing/neck/petcollar/choker
 
+/datum/gear/neck/choker/cross
+	name = "gothic choker"
+	path = /obj/item/clothing/neck/petcollar/choker/goth
+
 /datum/gear/neck/scarf
 	name = "white scarf"
 	subcategory = LOADOUT_SUBCATEGORY_NECK_SCARVES

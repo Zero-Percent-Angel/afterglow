@@ -1,6 +1,6 @@
 /obj/machinery/mecha_part_fabricator
 	icon = 'icons/obj/robotics.dmi'
-	icon_state = "fab-idle"
+	icon_state = "robot-fab-idle"
 	name = "exosuit fabricator"
 	desc = "Nothing is being built."
 	density = TRUE
@@ -218,7 +218,7 @@
  * Adds the overlay to show the fab working and sets active power usage settings.
  */
 /obj/machinery/mecha_part_fabricator/proc/on_start_printing()
-	add_overlay("fab-active")
+	add_overlay("robot-fab-active")
 	use_power = ACTIVE_POWER_USE
 
 /**
@@ -227,7 +227,7 @@
  * Removes the overlay to show the fab working and sets idle power usage settings. Additionally resets the description and turns off queue processing.
  */
 /obj/machinery/mecha_part_fabricator/proc/on_finish_printing()
-	cut_overlay("fab-active")
+	cut_overlay("robot-fab-active")
 	use_power = IDLE_POWER_USE
 	desc = initial(desc)
 	process_queue = FALSE
@@ -649,7 +649,7 @@
 	if(being_built)
 		to_chat(user, span_warning("\The [src] is currently processing! Please wait until completion."))
 		return FALSE
-	return default_deconstruction_screwdriver(user, "fab-o", "fab-idle", I)
+	return default_deconstruction_screwdriver(user, "robot-fab-o", "robot-fab-idle", I)
 
 /obj/machinery/mecha_part_fabricator/crowbar_act(mob/living/user, obj/item/I)
 	if(..())

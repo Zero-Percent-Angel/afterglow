@@ -8,8 +8,7 @@
 		/datum/reagent/drug/crank = 4,
 		/datum/reagent/drug/heroin = 4,
 		/datum/reagent/medicine/spaceacillin = 3,
-		/datum/reagent/medicine/ephedrine = 3,
-		/datum/reagent/drug/skooma = 3
+		/datum/reagent/medicine/ephedrine = 3
 	)
 	//These become available once upgraded.
 	advanced_chemicals = list(
@@ -26,14 +25,15 @@
 		/datum/reagent/medicine/medx = 6,
 		/datum/reagent/drug/turbo = 6,
 		/datum/reagent/drug/psycho = 6,
-		/datum/reagent/drug/buffout = 6
+		/datum/reagent/drug/buffout = 6,
+		/datum/reagent/drug/getaway = 3
 	)
 
 	upgraded_chemicals = list(
 		/datum/reagent/drug/happiness = 4,
-		/datum/reagent/drug/heroin = 5,
-		/datum/reagent/drug/aphrodisiac = 3,
-		/datum/reagent/drug/anaphrodisiac = 3
+		/datum/reagent/drug/heroin = 5
+		//datum/reagent/drug/aphrodisiac = 3,
+		//datum/reagent/drug/anaphrodisiac = 3
 	)
 
 	upgraded_chemicals2 = list(

@@ -63,6 +63,16 @@
 	result = /obj/item/reagent_containers/food/snacks/nugget
 	subcategory = CAT_MEAT
 
+/datum/crafting_recipe/food/friedchicken
+	name = "Fried Chicken"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/meat/cutlet/chicken = 1,
+		/datum/reagent/consumable/corn_starch = 5,
+		/datum/reagent/consumable/flour = 5
+	)
+	result = /obj/item/reagent_containers/food/snacks/friedchicken
+	subcategory = CAT_MEAT
+
 /datum/crafting_recipe/food/sweet_and_sour
 	name = "Sweet and sour \"chicken\""
 	reqs = list(

@@ -71,7 +71,7 @@
 GLOBAL_LIST_INIT(lush_plant_spawn_list, list(
 	/obj/structure/flora/grass/wasteland = 10,
 	/obj/structure/flora/wasteplant/wild_horsenettle = 5,
-	/obj/structure/flora/wasteplant/fever_blossom = 3,
+	//obj/structure/flora/wasteplant/fever_blossom = 3,
 	/obj/structure/flora/wasteplant/wild_broc = 7,
 	/obj/structure/flora/wasteplant/wild_mesquite = 4,
 	/obj/structure/flora/wasteplant/wild_feracactus = 5,
@@ -108,6 +108,22 @@ GLOBAL_LIST_INIT(desolate_plant_spawn_list, list(
 	desc = "A river."
 	slowdown = 3
 	flags_1 = ADJACENCIES_OVERLAY
+
+///////////
+// GRASS //
+///////////
+
+/turf/open/indestructible/ground/outside/grass
+	name = "Grass"
+	desc = "Some actual grass."
+	icon_state = "grassfull"
+	flags_1 = CAN_HAVE_NATURE | ADJACENCIES_OVERLAY
+
+/turf/open/indestructible/ground/outside/grass/corner //change direction for different corners
+	icon_state = "grass_dirtcorner"
+
+/turf/open/indestructible/ground/outside/grass/dirtpath //change direction for different sides/corners
+	icon_state = "grass"
 
 
 //////////////
