@@ -732,8 +732,8 @@
 	var/age_verification_response = alert(src, "Age Verification", "Are you 18 or older?", AGE_VERIFY_I_AM_18, AGE_VERIFY_I_AM_UNDER_18)
 
 	if(age_verification_response == AGE_VERIFY_I_AM_18)
-		update_flag_db(DB_FLAG_AGE_CONFIRMATION_COMPLETE, TRUE)
-		set_db_player_flags()
+		client?.update_flag_db(DB_FLAG_AGE_CONFIRMATION_COMPLETE, TRUE)
+		client?.set_db_player_flags()
 		return TRUE
 
 	var/responded_wrong = age_verification_response == AGE_VERIFY_I_AM_UNDER_18
@@ -766,7 +766,7 @@
 				"duration" = -1,
 				"ckey" = ckey,
 				"computerid" = computer_id,
-				"ip" = address || "0.0.0.0",
+				"ip" = client?.address || "0.0.0.0",
 				"a_ckey" = "server",
 				"a_computerid" = 0,
 				"a_ip" = "0.0.0.0",
