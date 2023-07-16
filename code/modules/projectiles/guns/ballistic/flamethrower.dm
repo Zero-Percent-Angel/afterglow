@@ -163,23 +163,8 @@
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_HUGE
 	custom_materials = null
-	burst_size = 1
-	burst_shot_delay = 1
-	fire_delay = 3
-	var/obj/item/gun/ballistic/rifle/mag/antimateriel/incinerator/ammo_pack
 	weapon_weight = GUN_TWO_HAND_ONLY
 	fire_sound = 'sound/weapons/flamethrower.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/incinerator
 	casing_ejector = TRUE
 	item_flags = SLOWS_WHILE_IN_HAND
-	var/overheat = 0
-	var/overheat_max = 6
-	var/heat_diffusion = 1
-
-/obj/item/gun/ballistic/rifle/mag/antimateriel/incinerator/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
-	if(ammo_pack)
-		if(ammo_pack.overheat < ammo_pack.overheat_max)
-			ammo_pack.overheat += 1
-			..()
-		else
-			to_chat(user, "The Incinerator is extremely hot! You shouldn't fire it anymore or it might blow up!.")
