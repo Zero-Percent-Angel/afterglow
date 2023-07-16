@@ -27,3 +27,4 @@
 	desc = "A rotting hunk of wood."
 	icon = 'icons/turf/walls/f13wood_wall.dmi'
 	hardness = 70
+	weak_wall = TRUE
