@@ -25,7 +25,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = VERY_EASY_CHECK  
+	skill_level = VERY_EASY_CHECK
 	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/combat_coat
@@ -72,7 +72,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = VERY_EASY_CHECK 
+	skill_level = VERY_EASY_CHECK
 	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/leatherarmor2
@@ -96,7 +96,7 @@
 	time = 60
 	category = CAT_CLOTHING
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = VERY_EASY_CHECK 
+	skill_level = VERY_EASY_CHECK
 	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/metalarmor
@@ -1115,7 +1115,7 @@ datum/crafting_recipe/steelbib/heavy
 	always_available = FALSE
 
 /datum/crafting_recipe/ncrsalvagedhelmetconversion
-	name = "NCR salvaged T-45b helmet"
+	name = "NCR salvaged T-45d helmet"
 	result = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr
 	reqs = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b = 1,
 				/obj/item/toy/crayon/spraycan)

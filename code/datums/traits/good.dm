@@ -958,7 +958,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/deadeye
 	name = "Dead Eye"
 	desc = "You hit the shots you aim, even those around corners. Well, most of the time."
-	value = 5 //WIP for sure, lmfao ~TK
+	value = 4 //WIP for sure, lmfao ~TK
 	mob_trait = TRAIT_INSANE_AIM
 	gain_text = span_notice("Your aim is legendary, and you know it.")
 	lose_text = span_danger("Your aim could use some work...")

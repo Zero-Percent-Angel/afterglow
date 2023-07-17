@@ -139,7 +139,7 @@
 	path = /obj/item/clothing/shoes/f13/thighboot/platform
 
 /datum/gear/shoes/thighhigh/heels/blue
-	name = "blue thigh high boots"
+	name = "blue thigh high heels"
 	path = /obj/item/clothing/shoes/f13/thighboot/platform/blue
 
 /datum/gear/shoes/thighhigh/heels/stiletto
