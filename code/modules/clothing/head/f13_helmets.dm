@@ -759,33 +759,33 @@
 
 // T-45B
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b
-	name = "salvaged T-45b helmet"
-	desc = "It's a salvaged T-45b power armor helmet."
+	name = "salvaged T-45d helmet"
+	desc = "It's a salvaged T-45d power armor helmet."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
 
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/raider
-	name = "raider T-45b power helmet"
+	name = "raider T-45d power helmet"
 	desc = "a raider's attempt to duplicate a power armor helmet. The result is a fuzed mass of metal and ceramic that nonetheless provides protection"
 	icon_state = "raiderpa_helm"
 	item_state = "raiderpa_helm"
 
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr
-	name = "ncr salvaged T-45b helmet"
-	desc = "It's an NCR salvaged T-45b power armor helmet, better repaired than regular salvaged PA, and decorated with the NCR flag and other markings for an NCR Heavy Trooper."
+	name = "ncr salvaged T-45d helmet"
+	desc = "It's an NCR salvaged T-45d power armor helmet, better repaired than regular salvaged PA, and decorated with the NCR flag and other markings for an NCR Heavy Trooper."
 	icon_state = "t45bhelmet_ncr"
 	item_state = "t45bhelmet_ncr"
 
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/hotrod
-	name = "hotrod T-45b power helmet"
+	name = "hotrod T-45d power helmet"
 	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm."
 	icon_state = "t45hotrod_helm"
 	item_state = "t45hotrod_helm"
 	armor_tokens = list(ARMOR_MODIFIER_UP_FIRE_T3)
 
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/tribal
-	name = "tribal t-45b headdress"
-	desc = "A salvaged T-45b powered armor, with the servos removed and a feathered headdress. Certain bits of plating have been stripped out to retain more freedom of movement."
+	name = "tribal t-45d headdress"
+	desc = "A salvaged T-45d powered armor, with the servos removed and a feathered headdress. Certain bits of plating have been stripped out to retain more freedom of movement."
 	icon_state = "tribal"
 	item_state = "tribal"
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2)
@@ -963,8 +963,8 @@
 			return "<span class='warning'>The connections ports have been <i>unanchored</i> and only <i>wires</i> remain.</span>"
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45b
-	name = "T-45b helmet"
-	desc = "It's a T-45b power armor helmet."
+	name = "T-45d helmet"
+	desc = "It's a T-45d power armor helmet."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b
@@ -1000,7 +1000,7 @@
 	desc = "The helmet of the excavator power armor suit."
 	icon_state = "excavator"
 	item_state = "excavator"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T3, ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/head/helmet/f13/power_armor/vaulttec
 	name = "Vault Tec power helmet"

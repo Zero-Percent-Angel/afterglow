@@ -120,42 +120,44 @@
  * Great defense
  * Lots of DT
  *
- * +90 effective HP
+ * +80 effective HP
  * +10 laser HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_SALVAGE list(\
-		"linemelee" = 90, \
-		"linebullet" = 90, \
-		"linelaser" = 100, \
+		"linemelee" = 80, \
+		"linebullet" = 80, \
+		"linelaser" = 90, \
 		"energy" = 30, \
-		"bomb" = 60, \
-		"bio" = 80, \
+		"bomb" = 70, \
+		"bio" = 100, \
 		"rad" = 50, \
-		"fire" = 80, \
-		"acid" = 80, \
-		"wound" = 45, \
-		"damage_threshold" = 10)
+		"fire" = 70, \
+		"acid" = 70, \
+		"wound" = 70, \
+		"damage_threshold" = 7)
 
 /* Power armor values
- * High mobility
+ * Low mobility
  * Amazing environmental resistances
- * OP defense
+ * Great defense
+ * Lots of DT
  *
- * +125 effective HP
- * +25 laser HP
+ * +80 effective HP
+ * +20 laser HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_PA list(\
-		"linemelee" = 125, \
-		"linebullet" = 125, \
-		"linelaser" = 150, \
+		"linemelee" = 80, \
+		"linebullet" = 80, \
+		"linelaser" = 100, \
 		"energy" = 40, \
-		"bomb" = 90, \
+		"bomb" = 70, \
 		"bio" = 100, \
 		"rad" = 55, \
 		"fire" = 95, \
 		"acid" = 95, \
 		"wound" = 100, \
-		"damage_threshold" = 12)
+		"damage_threshold" = 10)
+
 /* * * * * * * * * * * * * * *
  * MOB SPECIFIC ARMOR VALUES *
  * * * * * * * * * * * * * * */

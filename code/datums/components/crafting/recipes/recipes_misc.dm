@@ -124,6 +124,21 @@
 	category = CAT_MISC
 	skill_level = VERY_EASY_CHECK
 
+/datum/crafting_recipe/icecreamvat
+	name = "Ice Cream Vat"
+	reqs = list(/obj/item/stack/crafting/electronicparts = 5,
+				/obj/item/stack/sheet/metal = 20,
+				/obj/item/stack/crafting/goodparts = 10,
+				/datum/reagent/consumable/ice = 60,
+				/datum/reagent/consumable/flour = 60,
+				/datum/reagent/consumable/milk = 60)
+	tools = list(TOOL_SCREWDRIVER,TOOL_WORKBENCH)
+	result = /obj/machinery/icecream_vat
+	time = 80
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+	skill_level = REGULAR_CHECK
+
 ///////////////////////////
 //Scavenging and Tinkering//
 ///////////////////////////
@@ -204,6 +219,20 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_SCAVENGING
 	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/pa_kit
+	name = "Power Armor Servo Repair Kit"
+	time = 5
+	reqs = list(/obj/item/stack/sheet/mineral/titanium = 10,
+				/obj/item/advanced_crafting_components/flux = 1,
+				/obj/item/advanced_crafting_components/conductors = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/stack/crafting/electronicparts = 20)
+	tools = list(TOOL_AWORKBENCH)
+	result = /obj/item/pa_kit
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_level = EXPERT_CHECK
 
 /datum/crafting_recipe/set_vrboard
 	category = CAT_CRAFTING

@@ -157,8 +157,10 @@
 	name = "incinerator"
 	desc = "For those times when you really need to ruin one persons day."
 	icon = 'icons/obj/guns/flamethrower.dmi'
+	lefthand_file = 'icons/obj/guns/flamethrower.dmi'
+	righthand_file = 'icons/obj/guns/flamethrower.dmi'
 	icon_state = "incinerator"
-	item_state = "incinerator"
+	item_state = "incinerator_"
 	slowdown = 0.4
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_HUGE

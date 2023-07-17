@@ -164,6 +164,7 @@
 	icon = 'icons/turf/walls/snow_wall.dmi'
 	icon_state = "snow"
 	hardness = 80
+	weak_wall = TRUE
 	explosion_block = 0
 	slicing_duration = 30
 	sheet_type = /obj/item/stack/sheet/mineral/snow

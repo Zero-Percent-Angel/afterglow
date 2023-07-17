@@ -729,7 +729,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "A modified detoriated armor kit consisting of Legion gear and scrap metal."
 	icon_state = "legexile"
 	item_state = "legexile"
-	
+
 
 /obj/item/clothing/suit/armor/medium/tribal/legion/forgemaster
 	name = "forgemaster armor"
@@ -1041,7 +1041,7 @@ Just leaving this here for quick copy-pasting, for future contributors.
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr
 	name = "salvaged NCR power armor"
-	desc = "It's a set of T-45b power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and the two headed bear painted onto the chestplate shows it belongs to the NCR."
+	desc = "It's a set of T-45d power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and the two headed bear painted onto the chestplate shows it belongs to the NCR."
 	icon_state = "ncr_salvaged"
 	item_state = "ncr_salvaged"
 

@@ -55,36 +55,29 @@
 	required_reagents = list(/datum/reagent/nitrous_oxide = 2, /datum/reagent/medicine/epinephrine = 1, /datum/reagent/consumable/ethanol = 1)
 	required_catalysts = list(/datum/reagent/toxin/plasma = 5)
 
-/datum/chemical_reaction/skooma
+/datum/chemical_reaction/getaway
 	name = "Getaway"
-	id = /datum/reagent/drug/skooma
-	results = list(/datum/reagent/drug/skooma = 2, /datum/reagent/consumable/ethanol/moonshine = 4, /datum/reagent/consumable/sugar = 4)
+	id = /datum/reagent/drug/getaway
+	results = list(/datum/reagent/drug/getaway = 2, /datum/reagent/consumable/ethanol/moonshine = 4, /datum/reagent/consumable/sugar = 4)
 	required_temp = 280
 	is_cold_recipe = TRUE
-	required_reagents = list(/datum/reagent/moonsugar = 10, /datum/reagent/medicine/morphine = 5)
+	required_reagents = list(/datum/reagent/rawgetaway = 10, /datum/reagent/medicine/morphine = 5)
 
-/datum/chemical_reaction/skoomarevert
-	name = "skoomarevert"
-	id = "skoomarevert"
-	results = list(/datum/reagent/moonsugar = 1, /datum/reagent/medicine/morphine = 2.5)
-	required_temp = 315 //a little above normal body temperature
-	required_reagents = list(/datum/reagent/drug/skooma = 1)
-	
-/datum/chemical_reaction/aphro
+/*datum/chemical_reaction/aphro
 	name = "crocin"
 	id = /datum/reagent/drug/aphrodisiac
 	results = list(/datum/reagent/drug/aphrodisiac = 6)
 	required_reagents = list(/datum/reagent/carbon = 2, /datum/reagent/hydrogen = 2, /datum/reagent/oxygen = 2, /datum/reagent/water = 1)
 	required_temp = 400
 	mix_message = "The mixture boils off a pink vapor..."//The water boils off, leaving the crocin
-	
+
 /datum/chemical_reaction/aphroplus
 	name = "hexacrocin"
 	id = /datum/reagent/drug/aphrodisiacplus
 	results = list(/datum/reagent/drug/aphrodisiacplus = 1)
 	required_reagents = list(/datum/reagent/drug/aphrodisiac = 6, /datum/reagent/phenol = 1)
 	required_temp = 400
-	mix_message = "The mixture rapidly condenses and darkens in color..."
+	mix_message = "The mixture rapidly condenses and darkens in color..."*/
 
 /datum/chemical_reaction/anaphro
 	name = "camphor"

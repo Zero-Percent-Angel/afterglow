@@ -16,6 +16,7 @@
 	icon_state = "ruins"
 	icon_type_smooth = "ruins"
 	hardness = 70
+	weak_wall = TRUE
 	explosion_block = 2
 	smooth = SMOOTH_TRUE
 	//	disasemblable = 0
@@ -33,6 +34,7 @@
 	icon_state = "wood0"
 	icon_type_smooth = "wood"
 	hardness = 60
+	weak_wall = TRUE
 	smooth = SMOOTH_OLD
 	unbreakable = 0
 	baseturfs = /turf/open/floor/plating/wooden
@@ -47,13 +49,14 @@
 	icon = 'icons/fallout/turfs/walls/house.dmi'
 	icon_state = "house0"
 	icon_type_smooth = "house"
-	hardness = 50
+	hardness = 60
 	var/broken = 0
 	canSmoothWith = list(/turf/closed/wall/f13/wood/house, /turf/closed/wall/f13/wood/house/broken, /turf/closed/wall, /turf/closed/wall/f13/wood/house/clean)
 
 /turf/closed/wall/f13/wood/house/broken
 	broken = 1
-	damage = 21
+	damage = 15
+	hardness = 65
 	icon_state = "house0-broken"
 
 /turf/closed/wall/f13/wood/house/broken/attackby(obj/item/W, mob/user, params)
@@ -100,6 +103,7 @@ turf/closed/wall/f13/wood/house/update_damage_overlay()
 	icon_state = "interior0"
 	icon_type_smooth = "interior"
 	hardness = 100
+	weak_wall = TRUE
 	smooth = SMOOTH_OLD
 	canSmoothWith = list(/turf/closed/wall/f13/wood/interior, /turf/closed/wall)
 
@@ -124,6 +128,7 @@ turf/closed/wall/f13/wood/house/update_damage_overlay()
 	icon_state = "tent0"
 	icon_type_smooth = "tent"
 	hardness = 100
+	weak_wall = TRUE
 	unbreakable = 0
 	smooth = SMOOTH_OLD
 	//	disasemblable = 0
@@ -139,6 +144,7 @@ turf/closed/wall/f13/wood/house/update_damage_overlay()
 	icon_state = "scrap0"
 	icon_type_smooth = "scrap"
 	hardness = 60
+	weak_wall = TRUE
 	smooth = SMOOTH_OLD
 	girder_type = 0
 	sheet_type = null

@@ -180,26 +180,27 @@
 
 // T-45B
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
-	name = "salvaged T-45b power armor"
+	name = "salvaged T-45d power armor"
 	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and stripped out servomotors. Bulky and slow, but almost as good as the real thing."
 	icon_state = "t45b_salvaged"
 	item_state = "t45b_salvaged"
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/raider
 	name = "salvaged raider power armor"
-	desc = "A destroyed T-45b power armor has been brought back to life with the help of a welder and lots of scrap metal."
+	desc = "A destroyed T-45d power armor has been brought back to life with the help of a welder and lots of scrap metal."
 	icon_state = "raider_salvaged"
 	item_state = "raider_salvaged"
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/hotrod
-	name = "salvaged hotrod T-45b power armor"
-	desc = " It's a set of T-45b power armor with a with some of its plating removed. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
+	name = "salvaged hotrod T-45d power armor"
+	desc = " It's a set of T-45d power armor with a with some of its plating removed. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
 	icon_state = "t45hotrod"
 	item_state = "t45hotrod"
 	armor_tokens = list(ARMOR_MODIFIER_UP_FIRE_T3)
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/tribal
-	name = "salvaged tribal T45-b power armor"
+	name = "salvaged tribal T45-d power armor"
 	desc = "A set of salvaged power armor, with certain bits of plating stripped out to retain more freedom of movement. No cooling module, though."
 	icon_state = "tribal_power_armor"
 	item_state = "tribal_power_armor"
@@ -245,11 +246,11 @@
 
 /////////
 // NCR //
-///////// 
+/////////
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr
 	name = "salvaged NCR power armor"
-	desc = "It's a set of T-45b power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and the two headed bear painted onto the chestplate shows it belongs to the NCR."
+	desc = "It's a set of T-45d power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and the two headed bear painted onto the chestplate shows it belongs to the NCR."
 	icon = 'icons/fallout/clothing/armored_heavy.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 	icon_state = "ncr_salvaged"
@@ -269,7 +270,7 @@
 	icon_state = "legion_heavy"
 	item_state = "legion_heavy"
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 *ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2)
 
 /obj/item/clothing/suit/armor/heavy/legion/centurion //good all around
 	name = "legion centurion armor"
@@ -285,7 +286,7 @@
 	item_state = "legion_palacent"
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2)
-	
+
 /obj/item/clothing/suit/armor/heavy/legion/legate
 	name = "legion legate armor"
 	desc = "Made by the most skilled blacksmiths in Arizona, the bronzed steel of this rare armor offers good protection, and the scars on its metal proves it has seen use on the field."

@@ -509,7 +509,7 @@
 
 /mob/living/simple_animal/hostile/raider/sulphite/boss
 	name = "Sulphite Boss"
-	desc = "A Sulphite Boss, decked out in salvaged T-45b. The port for the fusion core has been torn away, replaced with a lead-lined fission generator. He... Hasn't got a weapon?"
+	desc = "A Sulphite Boss, decked out in salvaged T-45d. The port for the fusion core has been torn away, replaced with a lead-lined fission generator. He... Hasn't got a weapon?"
 	icon_state = "sulphite_boss"
 	icon_living = "sulhpite_boss"
 	icon_dead = "sulphite_boss_dead"
