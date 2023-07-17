@@ -64,10 +64,10 @@
 		if(BB.zone_accuracy_type == ZONE_WEIGHT_GUNS_CHOICE)
 			BB.zone_accuracy_type = G.get_zone_accuracy_type()
 		if(HAS_TRAIT(user, TRAIT_INSANE_AIM))
-			BB.ricochets_max = max(BB.ricochets_max, 5) //bouncy!
+			BB.ricochets_max = max(BB.ricochets_max, 10) //bouncy!
 			BB.ricochet_chance = max(BB.ricochet_chance, 100) //it wont decay so we can leave it at 100 for always bouncing
 			BB.ricochet_auto_aim_range = max(BB.ricochet_auto_aim_range, 3)
-			BB.ricochet_auto_aim_angle = max(BB.ricochet_auto_aim_angle, 360) //it can turn full circle and shoot you in the face because our aim? is insane.
+			BB.ricochet_auto_aim_angle = max(BB.ricochet_auto_aim_angle, 180)
 			BB.ricochet_decay_chance = 0.1
 			BB.ricochet_decay_damage = max(BB.ricochet_decay_damage, 0.2)
 			BB.ricochet_incidence_leeway = 0
