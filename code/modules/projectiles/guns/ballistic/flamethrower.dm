@@ -168,3 +168,4 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/incinerator
 	casing_ejector = TRUE
 	item_flags = SLOWS_WHILE_IN_HAND
+	zoomable = FALSE
