@@ -993,6 +993,8 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	locked =  FALSE
 */
 
+/*
+I'm sorry my rat loving friends friends
 /datum/quirk/ratlord
 	name = "Beast Master - Rats (Experimental)"
 	desc = "Whenever by psychic means or not, you gained ability to call forth friendly type of rats. <u>Do note they will attack <b>only</b> the hostile mobs</u>."
@@ -1029,3 +1031,4 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 		QDEL_NULL(build)
 		H.RemoveAbility(clear)
 		QDEL_NULL(clear)
+*/
