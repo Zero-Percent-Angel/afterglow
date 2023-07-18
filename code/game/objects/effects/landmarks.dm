@@ -726,8 +726,8 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 // Vault
 
 /obj/effect/landmark/start/f13/overseer
-	name = "Overseer"
-	icon_state = "Overseer"
+	name = "Vault Coordinator"
+	icon_state = "Vault Coordinator"
 
 /obj/effect/landmark/start/f13/vaultheadofsecurity
 	name = "Chief of Security"
@@ -740,6 +740,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/vaultscientist
 	name = "Vault-tec Scientist"
 	icon_state = "Vault-tec Scientist"
+
+/obj/effect/landmark/start/f13/vaultsecurityofficer
+	name = "Vault-tec Security Specialist"
+	icon_state = "Vault-tec Security"
 
 /obj/effect/landmark/start/f13/vaultsecurityofficer
 	name = "Vault-tec Security"
