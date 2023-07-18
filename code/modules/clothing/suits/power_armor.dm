@@ -358,6 +358,13 @@ Most bullets literally DO NOT have fucking armor pen, so it deflects nearly all 
 	item_state = "excavator"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_UP_DT_T1)
 
+/obj/item/clothing/suit/armor/power_armor/vaulttec
+	name = "Vault Tec power armor"
+	desc = "Developed by Vault-Tec personnel following the Great war by reverse engineering Excavator Power Armour, Vault-Tec Power Armour is designed to provide better protection than it's mining-suit origins in close-quarters combat."
+	icon_state = "vaultpa"
+	item_state = "vaultpa"
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_UP_DT_T1)
+
 /obj/item/clothing/suit/armor/power_armor/advanced
 	name = "advanced power armor"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for its user's comfort."
