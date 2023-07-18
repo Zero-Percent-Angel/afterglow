@@ -741,7 +741,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Vault-tec Scientist"
 	icon_state = "Vault-tec Scientist"
 
-/obj/effect/landmark/start/f13/vaultsecurityofficer
+/obj/effect/landmark/start/f13/vaultsecurityspec
 	name = "Vault-tec Security Specialist"
 	icon_state = "Vault-tec Security"
 
