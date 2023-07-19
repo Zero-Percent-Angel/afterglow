@@ -21,7 +21,7 @@
 	var/working_state = "dispenser_working"
 	var/nopower_state = "dispenser_nopower"
 
-	var/list/possible_steps = list ("Heat", "Cool", "Add", "Mix")
+	var/list/possible_steps = list ("Heat", "Cool", "Add", "Mix", "Cancel")
 	var/list/dispensable_reagents = list()
 	var/list/basic_chemicals = list(
 		/datum/reagent/medicine/potass_iodide = 1,
@@ -306,6 +306,13 @@
 		to_chat(user, span_bad("What was the next step again....?"))
 	var/choosen_step = input(user, "What is the next step you wish to take?", "Chemistry") in possible_steps
 	work_animation()
+	if (choosen_step == "Cancel")
+		to_chat(user, span_notice("You attempt to purge the system, deciding not to finish the chemical."))
+		if (!user.skill_roll(SKILL_SCIENCE, DIFFICULTY_EASY + trait_buff))
+			do_chemical_bad_thing(user)
+			return
+		to_chat(user, span_good("You purge the system."))
+		return
 	if (choosen_step == next_step)
 		if (steps_left == 1)
 			to_chat(user, span_good("The mixture pleasingly comes together."))

@@ -204,7 +204,7 @@
 	desc = "A set of salvaged power armor, with certain bits of plating stripped out to retain more freedom of movement. No cooling module, though."
 	icon_state = "tribal_power_armor"
 	item_state = "tribal_power_armor"
-	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT // zooom
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT // zooom
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2)
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
