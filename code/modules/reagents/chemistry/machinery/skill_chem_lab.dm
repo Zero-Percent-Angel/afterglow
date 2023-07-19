@@ -277,9 +277,9 @@
 			var/reagent = GLOB.name2reagent[reagent_name]
 			if(beaker && dispensable_reagents.Find(reagent))
 				do_chemical_creation(reagent, usr, amount, dispensable_reagents[reagent])
-			if(beaker && advanced_chemicals.Find(reagent))
+			else if(beaker && advanced_chemicals.Find(reagent))
 				do_chemical_creation(reagent, usr, amount, advanced_chemicals[reagent], HARD_CHECK, DIFFICULTY_CHALLENGE)
-			if(beaker && expert_chemicals.Find(reagent))
+			else if(beaker && expert_chemicals.Find(reagent))
 				do_chemical_creation(reagent, usr, amount, expert_chemicals[reagent], EXPERT_CHECK, DIFFICULTY_EXPERT)
 		if("remove")
 			if(!is_operational())
@@ -299,7 +299,7 @@
 	if (!steps_left)
 		steps_left = biglist[r]
 	var/trait_buff = HAS_TRAIT(user, TRAIT_CHEMWHIZ) ? -50 : 0
-	var/next_step = pick(possible_steps)
+	var/next_step = pick(possible_steps.Copy(1, 5))
 	if (user.skill_check(SKILL_SCIENCE, difficulty + trait_buff) || user.skill_roll(SKILL_SCIENCE, roll_difficulty + trait_buff))
 		to_chat(user, span_good("You know the next step is to " + next_step + "."))
 	else
