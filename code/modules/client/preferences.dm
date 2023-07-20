@@ -2197,7 +2197,7 @@ Records disabled until a use for them is found
 						var/whitelist_accept = TRUE
 						if(to_check_wl.whitelisted == 1)
 							if(species_wl.Find(user.ckey) == 0)
-								to_chat(user, SPAN_DANGER("You are not whitelisted for this species!"))
+								to_chat(user, span_danger("You are not whitelisted for this species!"))
 								whitelist_accept = FALSE
 						if(whitelist_accept == TRUE)
 							pref_species = new newtype()

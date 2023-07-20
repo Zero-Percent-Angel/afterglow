@@ -41,3 +41,8 @@
 	if(rank in GLOB.vault_positions) //How did they even get in here?.
 		return 0
 	return ..()
+
+/datum/species/smutant/nightkin
+	name = "Nightkin"
+	id = "nightkin"
+	limbs_id = "nightkin"
