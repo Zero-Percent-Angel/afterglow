@@ -1109,7 +1109,7 @@
 		return
 
 	amount -= RAD_BACKGROUND_RADIATION // This will always be at least 1 because of how skin protection is calculated
-	
+
 	if(HAS_TRAIT(src, TRAIT_75_RAD_RESIST))
 		amount *= 0.25
 	else if(HAS_TRAIT(src, TRAIT_50_RAD_RESIST))
@@ -1398,7 +1398,7 @@
 		to_chat(src, span_warning("[target] is in no condition to handle items!"))
 		return
 
-	if(!gift.mob_can_equip(src, target, SLOT_HANDS, TRUE, TRUE))
+	if(!gift.mob_can_equip(target, src, SLOT_HANDS, TRUE, TRUE))
 		to_chat(src, span_warning("[target] is unable to receive \a [gift] right now."))
 		return
 
