@@ -510,7 +510,7 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
 
-/obj/item/clothing/suit/armor/light/mutantkit
+/obj/item/clothing/suit/armor/light/mutie
 	name = "oversized armor kit"
 	desc = "Bits of armor fitted to a giant harness. Clearly not made for use by humans."
 	icon = 'icons/fallout/clothing/armored_light.dmi'
@@ -519,6 +519,19 @@
 	item_state = "mutie_armorkit"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 1.1
+	species_restricted = list("exclude","Huamn","Ghoul")
+
+/obj/item/clothing/suit/armor/light/mutie/poncho
+	name = "mutant poncho"
+	desc = "An oversized poncho, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
+	icon_state = "mutie_poncho"
+	item_state = "mutie_poncho"
+
+/obj/item/clothing/suit/armor/light/mutie/poncho
+	name = "mutant poncho"
+	desc = "An oversized poncho, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
+	icon_state = "mutie_poncho_weathered"
+	item_state = "mutie_poncho_weathered"
 
 ///////////////////////////
 // !!!FACTION SECTION!!! //
@@ -549,11 +562,12 @@
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //Mutie NCR Armor
-/obj/item/clothing/suit/armor/light/ncr/mutant
+/obj/item/clothing/suit/armor/light/ncr/mutie
 	name = "NCR mutant scraps"
 	desc = "So-called 'armor' given to mutant members of the NCR military. Though.. this equates to little more than scraps of armor."
 	icon_state = "mutie_ncr_scrap"
 	item_state = "mutie_ncr_scrap"
+	species_restricted = list("exclude","Huamn","Ghoul")
 
 ////////////
 // Legion //

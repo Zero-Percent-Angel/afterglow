@@ -249,12 +249,20 @@
 	item_state = "combat_chestpiece"
 	mutantrace_variation = NONE
 
-/obj/item/clothing/suit/armor/medium/vest/breastplate/scrap/mutant
+/obj/item/clothing/suit/armor/medium/vest/breastplate/scrap/mutie
 	name = "mutant armour"
-	desc = "Metal plates rigged to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
-	icon_state = "mutie_heavy_metal"
-	item_state = "mutie_heavy_metal"
-	mutantrace_variation = NONE
+	desc = "An oversized set of metal armour, made to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
+	icon = 'icons/obj/clothing/suits.dmi'
+	icon_state = "mutie_metal_armour"
+	item_state = "mutie_metal_armour"
+	species_restricted = list("exclude","Huamn","Ghoul")
+
+/obj/item/clothing/suit/armor/medium/vest/breastplate/scrap/mutie/reinforced
+	name = "reinforced mutant armour"
+	desc = "An oversized set of metal armour, made to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
+	icon_state = "mutie_metal_armour_mk2"
+	item_state = "mutie_metal_armour_mk2"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T1)
 
 ///////////////////////
 //// MEDIUM DUSTER ////

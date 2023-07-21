@@ -114,21 +114,22 @@
 	siemens_coefficient = 0.5
 	permeability_coefficient = 0.1
 
-/obj/item/clothing/gloves/f13/mutant
+/obj/item/clothing/gloves/f13/mutie
 	name = "mutant bracers"
 	desc = "A pair of metal tubes with rope on the inside."
 	icon_state = "mutie_bracer"
 	item_state = "mutie_bracer"
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T2)
+	species_restricted = list("exclude","Huamn","Ghoul")
 
-/obj/item/clothing/gloves/f13/mutant/mk2
+/obj/item/clothing/gloves/f13/mutie/mk2
 	name = "mutant bracers"
 	desc = "A pair of giant metal tubes with rope on the inside."
 	icon_state = "mutie_bracer_mk2"
 	item_state = "mutie_bracer_mk2"
 
-/obj/item/clothing/gloves/f13/mutant/sign
+/obj/item/clothing/gloves/f13/mutie/sign
 	name = "mutant sign bracers"
 	desc = "See this sign? It's a sign to move on."
 	icon_state = "mutie_bracer_sign"
