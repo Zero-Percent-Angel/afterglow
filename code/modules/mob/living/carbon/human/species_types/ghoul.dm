@@ -8,10 +8,10 @@
 	id = "ghoul"
 	say_mod = "rasps"
 	limbs_id = "ghoul"
-	species_traits = list(HAIR,FACEHAIR,HAS_BONE, NOBLOOD, MUTCOLORS, EYECOLOR,LIPS, HORNCOLOR,WINGCOLOR)
-	inherent_traits = list(TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NOBREATH, TRAIT_NOSOFTCRIT, TRAIT_GHOULMELEE, TRAIT_EASYDISMEMBER, TRAIT_EASYLIMBDISABLE, TRAIT_LIMBATTACHMENT, TRAIT_FAKEDEATH)
-	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID, MOB_BEAST)
-	mutant_bodyparts = list("mcolor" = "FFFFFF","mcolor2" = "FFFFFF","mcolor3" = "FFFFFF", "mam_snouts" = "Husky", "mam_tail" = "Husky", "mam_ears" = "Husky", "deco_wings" = "None", "mam_body_markings" = "Husky", "taur" = "None", "horns" = "None", "legs" = "Plantigrade", "meat_type" = "Mammalian")
+	species_traits = list(HAIR,FACEHAIR, HAS_BONE, NOBLOOD, EYECOLOR, LIPS)
+	inherent_traits = list(TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NOBREATH, TRAIT_NOSOFTCRIT, TRAIT_GHOULMELEE, TRAIT_EASYDISMEMBER, TRAIT_EASYLIMBDISABLE, TRAIT_LIMBATTACHMENT)
+	inherent_biotypes = list(MOB_ORGANIC, MOB_HUMANOID)
+	mutant_bodyparts = list("mcolor" = "FFFFFF", "mcolor2" = "FFFFFF","mcolor3" = "FFFFFF","tail_human" = "None", "ears" = "None", "taur" = "None", "deco_wings" = "None", "legs" = "Plantigrade", "mam_body_markings" = list())
 	attack_verb = "claw"
 	punchstunthreshold = 9
 	tail_type = "tail_human"
@@ -20,9 +20,8 @@
 
 	allowed_limb_ids = list("human","mammal","aquatic","avian")
 	use_skintones = 0
-	speedmod = 0.3 //slightly slower than humans
 	sexes = 1
-	sharp_blunt_mod = 1.5	//Lost their 'no hard crit' stuff so, in return, gives them back some defense. Slightly less damage; only 50% extra instead of 100% extra.
+	sharp_blunt_mod = 1.5
 	sharp_edged_mod = 1.5
 	disliked_food = NONE
 	liked_food = NONE
@@ -79,7 +78,7 @@
 
 /datum/species/ghoul/handle_chemicals(datum/reagent/chem, mob/living/carbon/human/H)
 	if(istype(chem) && !chem.ghoulfriendly)
-		H.reagents.remove_reagent(chem.type, REAGENTS_METABOLISM * 1000)
+		H.reagents.remove_reagent(chem.type, REAGENTS_METABOLISM * 200)
 		return TRUE
 	if(chem.type == /datum/reagent/medicine/radaway)
 		H.adjustBruteLoss(2)
@@ -92,9 +91,9 @@
 			to_chat(H, span_warning("You feel sick..."))
 		H.reagents.remove_reagent(chem.type, REAGENTS_METABOLISM)
 	if(chem.type == /datum/reagent/medicine/stimpak)
-		H.adjustBruteLoss(1.5) //this is a very shitty way of making it so that they heal at a reduced rate for the emergency fix, i'll make the code cleaner tomorrow
+		H.adjustBruteLoss(0.5)
 	if(chem.type == /datum/reagent/medicine/super_stimpak)
-		H.adjustBruteLoss(2.5)
+		H.adjustBruteLoss(1.5)
 	return ..()
 
 /datum/species/ghoul/spec_life(mob/living/carbon/human/H)
@@ -105,12 +104,12 @@
 		is_healing = FALSE
 		return
 	switch(H.radiation)
-		if(0)
+		if(150)
 			healpwr = 0
 			is_healing = FALSE
 			H.set_light(0)
 		else
-			healpwr = 3
+			healpwr = 1
 			is_healing = TRUE
 			H.set_light(2, 15, LIGHT_COLOR_GREEN)
 	H.adjustCloneLoss(-healpwr)
