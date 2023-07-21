@@ -549,7 +549,7 @@
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //Mutie NCR Armor
-/obj/item/cloathing/suit/armor/light/ncr/mutant
+/obj/item/clothing/suit/armor/light/ncr/mutant
 	name = "NCR mutant scraps"
 	desc = "So-called 'armor' given to mutant members of the NCR military. Though.. this equates to little more than scraps of armor."
 	icon_state = "mutie_ncr_scrap"
