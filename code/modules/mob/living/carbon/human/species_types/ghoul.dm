@@ -104,7 +104,7 @@
 		is_healing = FALSE
 		return
 	switch(H.radiation)
-		if(150)
+		if(50)
 			healpwr = 0
 			is_healing = FALSE
 			H.set_light(0)
