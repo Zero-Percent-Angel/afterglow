@@ -788,8 +788,9 @@
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh
 	name = "superhigh tier energy gun"
-	loot = list(/obj/effect/spawner/bundle/f13/multiplas,
-				/obj/item/gun/energy/laser/plasma/pistol/alien
+	loot = list(/obj/item/gun/energy/laser/plasma/caster/balanced,
+				/obj/item/minigunpack,
+				/obj/item/gun/energy/laser/aer14
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/unique
