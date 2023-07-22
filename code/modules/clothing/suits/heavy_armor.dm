@@ -157,6 +157,14 @@
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
 
+/obj/item/clothing/suit/armor/heavy/riot/combat
+	name = "combat body armor"
+	icon_state = "combat_coat"
+	item_state = "combat_coat"
+	desc = "A heavy armor with ballistic inserts, sewn into a padded riot police coat."
+	armor = list("melee" = 55, "bullet" = 55, "laser" = 45, "energy" = 35, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 5, "acid" = 35, "wound" = 45)
+	slowdown = 0.15
+
 //////////////////////////
 // Salvaged Power Armor //
 //////////////////////////
