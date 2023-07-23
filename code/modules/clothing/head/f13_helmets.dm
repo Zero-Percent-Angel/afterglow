@@ -781,7 +781,7 @@
 	desc = "This power armor helmet is so decrepit and battle-worn that it have lost most of its capability to protect the wearer from harm."
 	icon_state = "t45hotrod_helm"
 	item_state = "t45hotrod_helm"
-	armor_tokens = list(ARMOR_MODIFIER_UP_FIRE_T3)
+	armor_tokens = list(ARMOR_MODIFIER_UP_FIRE_T2)
 
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/tribal
 	name = "tribal t-45d headdress"
@@ -798,7 +798,6 @@
 	desc = "It's a salvaged T-45d power armor helmet."
 	icon_state = "t45dhelmet0"
 	item_state = "t45dhelmet0"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
 // T-51B
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b
@@ -975,7 +974,6 @@
 	icon_state = "t45dhelmet0"
 	item_state = "t45dhelmet0"
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45d/update_icon_state()

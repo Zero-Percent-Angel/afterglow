@@ -325,8 +325,7 @@ Most bullets literally DO NOT have fucking armor pen, so it deflects nearly all 
 /obj/item/clothing/suit/armor/power_armor/t45b
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
-	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_MELEE_T1)
+	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
 
 /obj/item/clothing/suit/armor/power_armor/t45d
 	name = "T-45d power armor"
@@ -334,7 +333,6 @@ Most bullets literally DO NOT have fucking armor pen, so it deflects nearly all 
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
 	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_MELEE_T1)
 
 /obj/item/clothing/suit/armor/power_armor/t51b
 	name = "T-51b power armor"
