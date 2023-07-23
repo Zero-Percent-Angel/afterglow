@@ -815,7 +815,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/gun/ballistic/automatic/m1garand
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/garand308 = 2,
-		/obj/item/gun_upgrade/scope/watchman = 1,
+		/obj/item/gun_upgrade/scope/killer = 1,			//About equal to a DKS's scope with this one. Watchman is lower-zoom.
 		/obj/item/melee/onehanded/knife/throwing = 2,
 		/obj/item/reagent_containers/pill/bitterdrink = 1,
 		/obj/item/restraints/legcuffs/beartrap = 1,
