@@ -305,7 +305,9 @@
 				/obj/effect/spawner/bundle/f13/armor/combat,
 				/obj/effect/spawner/bundle/f13/armor/bulletproof,
 				/obj/effect/spawner/bundle/f13/armor/sulphite,
-				/obj/effect/spawner/bundle/f13/armor/vault
+				/obj/effect/spawner/bundle/f13/armor/vault,
+				/obj/item/clothing/suit/armor/medium/combat/duster,
+				/obj/item/clothing/suit/armor/medium/duster/armoredcoat
 				)
 
 /obj/effect/spawner/lootdrop/f13/armor/randomraiderchest //random raider armor
@@ -385,7 +387,7 @@
 /obj/effect/spawner/bundle/f13/armor/riot
 	name = "riot armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/heavy/riot,
+				/obj/item/clothing/suit/armor/heavy/riot/combat,
 				/obj/item/clothing/head/helmet/f13/combat/rangerbroken
 				)
 
