@@ -247,6 +247,12 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	desc = "A general crafting part, a craftsman might want to have this."
 	icon_state = "alloys"
 
+//advanced electronics crafting
+/obj/item/advanced_crafting_components/p_circuits
+	name = "Pristine circuits"
+	desc = "Advanced electronic circuits from before the war, a craftsman might want to have this."
+	icon_state = "frame"
+
 //salvage
 /obj/item/salvage
 	name = "salvage"
