@@ -782,14 +782,14 @@
 				/obj/effect/spawner/bundle/f13/tribeam = 20,
 				/obj/effect/spawner/bundle/f13/rcw = 20,
 				/obj/effect/spawner/bundle/f13/wattz2kext = 10, //Now a high tier gun.
-				/obj/effect/spawner/bundle/f13/plasmaglock = 20,
-				/obj/item/minigunpack = 20
+				/obj/effect/spawner/bundle/f13/plasmaglock = 20
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh
 	name = "superhigh tier energy gun"
-	loot = list(/obj/effect/spawner/bundle/f13/multiplas,
-				/obj/item/gun/energy/laser/plasma/pistol/alien
+	loot = list(/obj/item/gun/energy/laser/plasma/caster/balanced,
+				/obj/item/minigunpack,
+				/obj/item/gun/energy/laser/aer14
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/unique
@@ -801,7 +801,8 @@
 				/obj/item/gun/energy/laser/plasma/pistol/eve,
 				/obj/item/gun/energy/laser/wattz2ks,
 				/obj/effect/spawner/bundle/f13/aer14,
-				/obj/item/gun/energy/laser/plasma/pistol/adam
+				/obj/item/gun/energy/laser/plasma/pistol/adam,
+				/obj/item/minigunpack
 				)
 
 //Ballistic Weapon Spawners
