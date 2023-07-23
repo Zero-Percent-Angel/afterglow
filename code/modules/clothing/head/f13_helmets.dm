@@ -816,6 +816,22 @@
 	item_state = "advanced"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T3)
 
+// Legion T-45D
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/legion
+	name = "salvaged parma T-45d helmet"
+	desc = "It's a reforged T-45d power armor helmet worn by the Legion. The faceplate has been removed and red paint has been applied on the forehead."
+	icon_state = "parmahelm"
+	item_state = "parmahelm"
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
+
+// Legion T-51B
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b/legion
+	name = "salvaged scutum T-51b helmet"
+	desc = "It's a reforged T-51b power armor helmet worn by the Legion. The mouthplate has been removed and gold wreaths have been inlaid on its front."
+	icon_state = "scutumhelm"
+	item_state = "scutumhelm"
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1)
+
 
 /////////////////
 // Power Armor //
