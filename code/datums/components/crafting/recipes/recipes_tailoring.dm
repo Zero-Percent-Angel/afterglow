@@ -17,10 +17,8 @@
 /datum/crafting_recipe/combat_jacket
 	name = "Combat Jacket"
 	result = /obj/item/clothing/suit/armor/light/leather/leather_jacket
-	reqs = list(/obj/item/clothing/suit/armor/light/leather/leather_jacket = 1,
-				/obj/item/stack/sheet/animalhide/brahmin = 1,
-				/obj/item/stack/sheet/animalhide/gecko = 1,
-				/obj/item/stack/sheet/leather = 1)
+	reqs = list(/obj/item/clothing/suit/armor/light/leather/leathercoat = 1,
+				/obj/item/stack/sheet/animalhide/deathclaw  = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
@@ -31,8 +29,10 @@
 /datum/crafting_recipe/combat_coat
 	name = "Combat Coat"
 	result = /obj/item/clothing/suit/armor/light/leather/leathercoat
-	reqs = list(/obj/item/clothing/suit/armor/light/leather/leather_jacket = 1,
-				/obj/item/stack/sheet/animalhide/deathclaw  = 1)
+	reqs = list(/obj/item/clothing/suit/armor/light/leather/leathersuit = 1,
+				/obj/item/stack/sheet/animalhide/brahmin = 1,
+				/obj/item/stack/sheet/animalhide/gecko = 1,
+				/obj/item/stack/sheet/leather = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
