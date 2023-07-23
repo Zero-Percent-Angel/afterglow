@@ -292,7 +292,7 @@
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_VAULTGUNS
 	cost = 2
 	restricted_desc = "Vault 113"
-	restricted_roles = list("Overseer",
+	restricted_roles = list("Vault Coordinator",
 							"Chief of Security",
 							"Vault-tec Security",
 							"Vault-tec Doctor",
@@ -307,7 +307,7 @@
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_VAULTGUNS
 	cost = 1
 	restricted_desc = "Vault 113"
-	restricted_roles = list("Overseer",
+	restricted_roles = list("Vault Coordinator",
 							"Chief of Security",
 							"Vault-tec Security",
 							"Vault-tec Doctor",
@@ -322,7 +322,7 @@
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_VAULTGUNS
 	cost = 3
 	restricted_desc = "Vault 113"
-	restricted_roles = list("Overseer",
+	restricted_roles = list("Vault Coordinator",
 							"Chief of Security",
 							"Vault-tec Security",
 							"Vault-tec Doctor",
@@ -335,7 +335,7 @@
 
 //Skirt Accessories
 
-/datum/gear/backpack/pinkishskirt 
+/datum/gear/backpack/pinkishskirt
 	name = "Pinkish Skirt"
 	path = /obj/item/clothing/accessory/pinkishskirt
 	cost = 1
