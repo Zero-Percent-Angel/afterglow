@@ -888,6 +888,7 @@ GLOBAL_LIST_INIT(loot_craft_advanced, list(
 	/obj/item/advanced_crafting_components/receiver,
 	/obj/item/advanced_crafting_components/assembly,
 	/obj/item/advanced_crafting_components/alloys
+	/obj/item/advanced_crafting_components/p_circuits
 ))
 
 GLOBAL_LIST_INIT(loot_attachment, list(
