@@ -443,7 +443,7 @@
 	body_parts_hidden = ARMS | CHEST
 
 /obj/item/clothing/suit/armor/light/leather/leather_jacket
-	name = "thick leather jacket"
+	name = "thick leather combat jacket"
 	desc = "This heavily padded leather jacket is unusual in that it has two sleeves. You'll definitely make a fashion statement whenever, and wherever, you rumble."
 	icon_state = "leather_jacket_thick"
 	item_state = "leather_jacket_thick"
