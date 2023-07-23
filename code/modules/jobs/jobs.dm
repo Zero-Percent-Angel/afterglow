@@ -197,6 +197,7 @@ GLOBAL_LIST_INIT(legion_elite_positions, list(
 	"Legion Assassin",
 	"Legion Vexillarius",
 	"Legion Prime Decanus",
+	"Veteran Legionary",
 ))
 
 GLOBAL_LIST_INIT(legion_positions, list(
