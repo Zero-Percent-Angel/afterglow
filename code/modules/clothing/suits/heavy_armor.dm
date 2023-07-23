@@ -287,6 +287,22 @@
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2)
 
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/legion //Legion T45d SPA from recipe
+	name = "salvaged parma T-45d power armor"
+	desc = "Reforged armor made from the husk of T45d power armor. It seems faster, at the cost of some protection. It is fitting that it has the icons of the Legion, as it takes the strength of a brahmin to wear."
+	icon_state = "legion_parma"
+	item_state = "legion_parma"
+	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_DT_T1)
+
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b/legion //Legion T51b SPA from recipe
+	name = "salvaged scutum T-51b power armor"
+	desc = "Reforged armor made from the husk of T51b power armor. It seems faster, at the cost of some protection. It is fitting that it has the icons of the Legion, as it takes the strength of a brahmin to wear."
+	icon_state = "legion_scutum"
+	item_state = "legion_scutum"
+	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1)
+
 /obj/item/clothing/suit/armor/heavy/legion/legate
 	name = "legion legate armor"
 	desc = "Made by the most skilled blacksmiths in Arizona, the bronzed steel of this rare armor offers good protection, and the scars on its metal proves it has seen use on the field."
