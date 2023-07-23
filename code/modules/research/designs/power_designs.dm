@@ -56,7 +56,7 @@
 	build_path = /obj/item/stock_parts/cell/bluespace/empty
 	category = list("Misc","Power Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE | DEPARTMENTAL_FLAG_ENGINEERING
-
+/*
 /datum/design/inducer
 	name = "Inducer"
 	desc = "The NT-75 Electromagnetic Power Inducer can wirelessly induce electric charge in an object, allowing you to recharge power cells without having to remove them."
@@ -76,7 +76,7 @@
 	build_path = /obj/item/inducer/sci/combat/dry
 	category = list("Power Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
+*/
 /datum/design/board/pacman
 	name = "Machine Design (PACMAN-type Generator Board)"
 	desc = "The circuit board that for a PACMAN-type portable generator."

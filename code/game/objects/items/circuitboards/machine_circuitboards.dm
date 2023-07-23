@@ -791,6 +791,7 @@
 	name = "Chem Lab (Machine Board)"
 	build_path = /obj/machinery/chem_lab
 	req_components = list(
+		/obj/item/stock_parts/chem_cartridge = 1,
 		/obj/item/reagent_containers/glass/beaker = 2,
 		/obj/item/stock_parts/manipulator = 1,
 		/obj/item/stack/sheet/glass = 1)
@@ -800,6 +801,7 @@
 	name = "Drug Lab (Machine Board)"
 	build_path = /obj/machinery/chem_lab/drug_lab
 	req_components = list(
+		/obj/item/stock_parts/chem_cartridge = 1,
 		/obj/item/reagent_containers/glass/beaker = 2,
 		/obj/item/stock_parts/manipulator = 1,
 		/obj/item/stack/sheet/glass = 1)

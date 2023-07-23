@@ -1034,21 +1034,21 @@ GLOBAL_LIST_EMPTY(random_mob_nest_spawner_datums)
 	mob_respawn_time_easy = MOB_SPAWNER_TIME_LONG
 	mob_list_easy = list(
 		/mob/living/simple_animal/hostile/raider/ranged = 5,
-		/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged = 1,
+		/mob/living/simple_animal/hostile/raider/ranged/metalranged = 1,
 		/mob/living/simple_animal/hostile/raider/ranged/biker = 1
 		)
 	num_mobs_to_spawn_medium = 2
 	mob_respawn_time_medium = MOB_SPAWNER_TIME_LONG
 	mob_list_medium = list(
 		/mob/living/simple_animal/hostile/raider/ranged = 5,
-		/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged = 3,
+		/mob/living/simple_animal/hostile/raider/ranged/metalranged = 3,
 		/mob/living/simple_animal/hostile/raider/ranged/biker = 3
 		)
 	num_mobs_to_spawn_hard = 2
 	mob_respawn_time_hard = MOB_SPAWNER_TIME_LONG
 	mob_list_hard = list(
 		/mob/living/simple_animal/hostile/raider/ranged = 5,
-		/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged = 7,
+		/mob/living/simple_animal/hostile/raider/ranged/metalranged = 7,
 		/mob/living/simple_animal/hostile/raider/ranged/biker = 7
 		)
 
@@ -1064,7 +1064,7 @@ GLOBAL_LIST_EMPTY(random_mob_nest_spawner_datums)
 	mob_respawn_time_easy = MOB_SPAWNER_TIME_LONG
 	mob_list_easy = list(
 		/mob/living/simple_animal/hostile/raider/ranged = 3,
-		/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged = 1,
+		/mob/living/simple_animal/hostile/raider/ranged/metalranged = 1,
 		/mob/living/simple_animal/hostile/raider/ranged/biker = 1,
 		/mob/living/simple_animal/hostile/raider = 3,
 		/mob/living/simple_animal/hostile/raider/firefighter = 2,
@@ -1075,7 +1075,7 @@ GLOBAL_LIST_EMPTY(random_mob_nest_spawner_datums)
 	mob_respawn_time_medium = MOB_SPAWNER_TIME_LONG
 	mob_list_medium = list(
 		/mob/living/simple_animal/hostile/raider/ranged = 5,
-		/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged = 3,
+		/mob/living/simple_animal/hostile/raider/ranged/metalranged = 3,
 		/mob/living/simple_animal/hostile/raider/ranged/biker = 3,
 		/mob/living/simple_animal/hostile/raider = 10,
 		/mob/living/simple_animal/hostile/raider/firefighter = 5,
@@ -1086,7 +1086,7 @@ GLOBAL_LIST_EMPTY(random_mob_nest_spawner_datums)
 	mob_respawn_time_hard = MOB_SPAWNER_TIME_LONG
 	mob_list_hard = list(
 		/mob/living/simple_animal/hostile/raider/ranged = 5,
-		/mob/living/simple_animal/hostile/raider/ranged/sulphiteranged = 10,
+		/mob/living/simple_animal/hostile/raider/ranged/metalranged = 10,
 		/mob/living/simple_animal/hostile/raider/ranged/biker = 10,
 		/mob/living/simple_animal/hostile/raider = 5,
 		/mob/living/simple_animal/hostile/raider/firefighter = 5,

@@ -129,7 +129,7 @@
 	icon = 'icons/turf/walls/wood_wall.dmi'
 	icon_state = "wood"
 	sheet_type = /obj/item/stack/sheet/mineral/wood
-	hardness = 70
+	hardness = 45
 	explosion_block = 0
 	canSmoothWith = list(/turf/closed/wall/mineral/wood, /obj/structure/falsewall/wood, /turf/closed/wall/mineral/wood/nonmetal)
 
@@ -164,6 +164,7 @@
 	icon = 'icons/turf/walls/snow_wall.dmi'
 	icon_state = "snow"
 	hardness = 80
+	weak_wall = TRUE
 	explosion_block = 0
 	slicing_duration = 30
 	sheet_type = /obj/item/stack/sheet/mineral/snow
@@ -190,6 +191,7 @@
 	desc = "A light-weight titanium wall used in shuttles."
 	icon = 'icons/turf/walls/shuttle_wall.dmi'
 	icon_state = "map-shuttle"
+	hardness = 32
 	explosion_block = 3
 	flags_1 = CAN_BE_DIRTY_1 | DEFAULT_RICOCHET_1
 	flags_ricochet = RICOCHET_SHINY | RICOCHET_HARD

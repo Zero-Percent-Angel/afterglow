@@ -120,7 +120,7 @@
 /datum/outfit/russiancorpse/ranged/trooper
 	name = "Ranged Russian Trooper Corpse"
 	uniform = /obj/item/clothing/under/syndicate/camo
-	suit = /obj/item/clothing/suit/armor/light/vest/russian
+	suit = /obj/item/clothing/suit/armor/medium/vest/russian
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/tackler/combat
 	ears = /obj/item/radio/headset

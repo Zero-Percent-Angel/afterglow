@@ -105,15 +105,15 @@
 /obj/item/clothing/suit/armor/light/tribal/eighties
 	name = "Eighties light armour"
 	desc = "A fairly simple, black leather jacket with an overly popped collar. Commonly worn by the members of the 80s tribe."
-	icon_state = "eighties_armour_light"
-	item_state = "eighties_armour_light"
+	icon_state = "80s_armour_light"
+	item_state = "80s_armour_light"
 	body_parts_hidden = CHEST|ARMS
 
 /obj/item/clothing/suit/armor/light/tribal/bonedancers
 	name = "Bone Dancers light armour"
 	desc = "A chestplate, pauldrons and thigh guards made from bone and sinew. Commonly worn by members of the Bone Dancers tribe."
-	icon_state = "eighties_armour_light"
-	item_state = "eighties_armour_light"
+	icon_state = "bone_dancer_armor_light"
+	item_state = "bone_dancer_armor_light"
 	body_parts_hidden = CHEST
 
 /// to be refactored to work with the New Tier System (tm)
@@ -300,6 +300,15 @@
 	icon_state = "leather_jacket_fighter"
 	item_state = "leather_jacket_fighter"
 	body_parts_hidden = ARMS | GROIN
+
+/obj/item/clothing/suit/armor/light/raider/wastewar
+	name = "wasteland warrior armor"
+	desc = "a mad attempt to recreate armor based of images of japanese samurai, using a sawn up old car tire as shoulder pads, bits of chain to cover the hips and pieces of furniture for a breastplate. Might stop a blade but nothing else, burns easily too. Comes with an enormous scabbard welded to the back!"
+	icon_state = "wastewar"
+	item_state = "wastewar"
+	resistance_flags = FLAMMABLE
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/massive/swords
+	body_parts_hidden = CHEST | GROIN
 
 /////////////////////
 // DUSTERS & COATS //
@@ -565,7 +574,7 @@
 	icon_state = "legion_prime"
 	item_state = "legion_prime"
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/light/legion/explorer
 	name = "legion explorer armor"
@@ -573,7 +582,7 @@
 	icon_state = "legion_explorer"
 	item_state = "legion_explorer"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/binocular
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
 /obj/item/clothing/suit/armor/light/legion/explorer/assassin
 	name = "legion assassin armor"
@@ -585,7 +594,7 @@
 
 //////////////////////////
 // Brotherhood of Steel //
-////////////////////////// 
+//////////////////////////
 
 /obj/item/clothing/suit/armor/light/duster/bos/scribe
 	name = "Brotherhood Scribe's robe"
@@ -615,6 +624,14 @@
 	item_state = "scribecoat"
 	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+
+/obj/item/clothing/suit/armor/light/duster/bos/scribe/field_coat/lancer
+	name = "Lancer's Pilot Jacket"
+	desc = "A heavy-duty flight jacket, made from a ballistic weave with a fur lining. Worn by the Lancers of the Brotherhood of Steel."
+	icon_state = "lancer_jacket"
+	item_state = "lancer_jacket"
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T2)
+
 
 /obj/item/clothing/suit/armor/light/duster/bos/scribe/elder
 	name = "Brotherhood Elder's robe"
@@ -661,7 +678,7 @@
 // Great Khans //
 ////////////////
 
-//These are from light jackets 
+//These are from light jackets
 /obj/item/clothing/suit/toggle/labcoat/khan_jacket
 	name = "Great Khan jacket"
 	desc = "A black leather jacket. <br>There is an illustration on the back - an aggressive, red-eyed skull wearing a fur hat with horns.<br>The skull has a mongoloid moustache - it's obviously a Great Khans emblem."

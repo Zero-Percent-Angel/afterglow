@@ -13,8 +13,8 @@
 	max_integrity = 1200
 	armor = ARMOR_VALUE_MEDIUM
 	resistance_flags = FIRE_PROOF
-	damage_deflection = 73
-	proj_resist = 100
+	damage_deflection = 44
+	proj_resist = 30
 
 	var/datum/crafting_recipe/recipe_type = /datum/crafting_recipe/blast_doors
 	var/deconstruction = BLASTDOOR_FINISHED // deconstruction step

@@ -81,14 +81,14 @@
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_AKIMBO
 	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	init_recoil = HANDGUN_RECOIL(0.6)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION // plug em in the skull!
 	init_firemodes = list(
-		/datum/firemode/semi_auto/fastest
+		/datum/firemode/semi_auto/fast
 	)
 	can_suppress = FALSE
 	silenced = TRUE
@@ -242,6 +242,8 @@
 	mag_type = /obj/item/ammo_box/magazine/m10mm // load any 10mm pistol ammos
 	disallowed_mags = list(
 		/obj/item/ammo_box/magazine/m10mm/adv/ext,
+		/obj/item/ammo_box/magazine/m10mm/smg,
+		/obj/item/ammo_box/magazine/m10mm/smg/empty,
 		/obj/item/ammo_box/magazine/m10mm/adv/ext/empty,
 		/obj/item/ammo_box/magazine/m10mm/rifle)
 

@@ -5,9 +5,9 @@
 	desc = "A .50MG bullet casing."
 	caliber = CALIBER_50MG
 	icon_state = "50mg2"
-	projectile_type = /obj/item/projectile/bullet/a50MG
+	projectile_type = /obj/item/projectile/bullet/a50MG/surplus
 	material_class = BULLET_IS_HEAVY_RIFLE
-	casing_quality = BULLET_IS_MATCH
+	casing_quality = BULLET_IS_SURPLUS
 	custom_materials = list(
 		/datum/material/iron = (MATS_RIFLE_HEAVY_CASING * MATS_AMMO_CASING_MATCH_MULT) + (MATS_RIFLE_HEAVY_BULLET * MATS_AMMO_BULLET_MATCH_MULT),
 		/datum/material/blackpowder = MATS_RIFLE_HEAVY_POWDER * MATS_AMMO_POWDER_MATCH_MULT)
@@ -20,7 +20,7 @@
 	icon_state = "50mg2"
 	projectile_type = /obj/item/projectile/bullet/a50MG/improvised
 	material_class = BULLET_IS_HEAVY_RIFLE
-	casing_quality = BULLET_IS_SURPLUS
+	casing_quality = BULLET_IS_HANDLOAD
 	custom_materials = list(
 		/datum/material/iron = MATS_RIFLE_HEAVY_CASING + MATS_RIFLE_HEAVY_BULLET,
 		/datum/material/blackpowder = MATS_RIFLE_HEAVY_POWDER)

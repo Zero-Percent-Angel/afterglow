@@ -99,9 +99,9 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTEST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_LESS_DAMAGE_T4
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = LMG_RECOIL(0.5)
+	init_recoil = LMG_RECOIL(1)
 	init_firemodes = list(
 		/datum/firemode/automatic/rpm300
 	)

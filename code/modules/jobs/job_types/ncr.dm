@@ -209,7 +209,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "The Appointee"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/deagle = 2,
-		/obj/item/ammo_box/magazine/d12g = 6,
+		/obj/item/ammo_box/magazine/m44 = 6,
 		/obj/item/storage/box/ration/menu_eight = 1,
 		/obj/item/melee/onehanded/knife/trench = 1,
 		)
@@ -379,7 +379,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/sergeantcqc
 	name = "Assault Leader"
-	suit_store = /obj/item/gun/ballistic/shotgun/trench //Over thereee over thereeeee spread the spread the word over thereeee
+	suit_store = /obj/item/gun/ballistic/shotgun/automatic/combat/auto5
 	suit = /obj/item/clothing/suit/armor/medium/vest/ncr/reinf/mant
 	head = /obj/item/clothing/head/helmet/f13/ncr
 	backpack_contents = list(
@@ -435,7 +435,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		/obj/item/melee/classic_baton/telescopic = 1,
 		/obj/item/storage/box/ration/menu_two = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/seatechnical
@@ -602,9 +601,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "Gunslinger"
 	mask = /obj/item/clothing/mask/cigarette/cigar/havana
 	backpack_contents = list(
-		/obj/item/book/granter/trait/gunslinger = 1,
-		/obj/item/gun/ballistic/revolver/revolver45 = 2,
-		/obj/item/ammo_box/c45 = 1,
+		/obj/item/gun/ballistic/revolver/m29/desert_ranger = 2,
+		/obj/item/ammo_box/m44box = 3,
 		/obj/item/lighter = 1,
 		)
 
@@ -618,6 +616,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	spawn_positions = 3
 	description = "As an NCR Ranger, you are the premier special forces unit of the NCR. You are the forward observations and support the Army in it's campaigns, as well as continuing the tradition of stopping slavery in it's tracks."
 	supervisors = "Veteran Ranger"
+	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY)
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_RANGER
 	outfit = /datum/outfit/job/ncr/f13ranger
@@ -644,9 +643,10 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "NCR Ranger"
 	jobtype	= /datum/job/ncr/f13ranger
 	id = /obj/item/card/id/dogtag/ncrranger
-	uniform	= /datum/gear/uniform/ranger/patrol
-	head = /obj/item/clothing/head/f13/ncr/patrol
-	gloves = /obj/item/clothing/gloves/patrol
+	uniform	= /obj/item/clothing/under/f13/ranger/trail
+	suit = /obj/item/clothing/suit/armor/light/ncr/trailranger
+	head = /obj/item/clothing/head/f13/ncr/ranger
+	gloves = /obj/item/clothing/gloves/rifleman
 	shoes = /obj/item/clothing/shoes/f13/military/leather
 	glasses	= /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/headset_ranger
@@ -659,14 +659,13 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/clothing/mask/gas/ranger = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
 		/obj/item/grenade/smokebomb = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/rangerrecon
 	name = "Trail Ranger"
 	suit = /obj/item/clothing/suit/armor/light/ncr/trailranger
 	belt = /obj/item/storage/belt/military/reconbandolier
-	neck = /obj/item/clothing/neck/mantle/ranger
+	//neck = /obj/item/clothing/neck/mantle/ranger
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/m44 = 3,
@@ -683,6 +682,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/m556/rifle/extended = 1,
 		/obj/item/gun/ballistic/revolver/m29 = 1,
 		/obj/item/ammo_box/m44 = 2,
+		/obj/item/clothing/head/f13/ncr/patrol
 		)
 
 /datum/outfit/loadout/rangerpatrol
@@ -694,6 +694,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/w308 = 2,
 		/obj/item/gun/ballistic/revolver/m29/snub = 1,
 		/obj/item/ammo_box/m44box = 1,
+		/obj/item/clothing/head/f13/ncr/patrol
 		)
 
 // NCR Civilian Ranger
@@ -705,6 +706,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	spawn_positions = 2
 	description = "As an NCR Civilian Ranger, you are a low-ranking member of the premier special forces of the NCR. You are to aid the Rangers and Veteran Ranger in scouting operations and acting as support for Ranger activites."
 	supervisors = "Rangers and the Veteran Ranger"
+	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY)
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_CIVILIANRANGER
 	outfit = /datum/outfit/job/ncr/f13civilianranger
@@ -749,7 +751,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/loadout/civicqc
 	name = "CQC Ranger"
 	belt = /obj/item/storage/belt/army/assault/ncr
-	neck = /obj/item/clothing/neck/mantle/ranger
+	//neck = /obj/item/clothing/neck/mantle/ranger
 	backpack_contents = list(
 		/obj/item/gun/ballistic/revolver/revolver45 = 2,
 		/obj/item/ammo_box/c45rev = 4,
@@ -910,7 +912,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
 		/obj/item/grenade/f13/frag = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/combatengineerbuilder
@@ -929,7 +930,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/stack/sheet/glass/fifty = 1,
 		/obj/item/stack/ore/blackpowder/twenty = 1,
 		/obj/item/shovel/trench = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/combatengineertrapper
@@ -945,7 +945,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/book/granter/trait/explosives = 1,
 		/obj/item/book/granter/trait/explosives_advanced = 1,
 		/obj/item/shovel/trench = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/combatengineerflamethrower
@@ -960,7 +959,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/m2flamethrowertank = 1,
 		/obj/item/shovel/trench = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/loadout/combatengineerrocketeer
@@ -974,7 +972,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_casing/caseless/rocket/big = 1,
 		/obj/item/book/granter/trait/explosives = 1,
 		/obj/item/shovel/trench = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 // MILITARY POLICE
@@ -1009,7 +1006,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
 		/obj/item/ammo_box/shotgun/bean = 2,
 		/obj/item/melee/classic_baton/militarypolice = 1,
-		/obj/item/stack/crafting/armor_plate = 4,
 		)
 
 /datum/outfit/job/ncr/f13mp/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1061,7 +1057,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/storage/bag/money/small/ncrenlisted = 1,
 		/obj/item/storage/firstaid/regular = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
-		/obj/item/stack/crafting/armor_plate = 4,
 		)
 
 
@@ -1484,7 +1479,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/melee/classic_baton/telescopic = 1,
 		/obj/item/storage/bag/money/small/ncrofficers = 1,
 		/obj/item/storage/firstaid/regular = 1,
-		/obj/item/stack/crafting/armor_plate = 5
 		)
 
 /datum/outfit/job/ncr/f13medicalofficer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1653,7 +1647,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 
 /datum/job/ncr/f13ncroffduty
-	title = "NCR Off Duty"
+	title = "NCR Off-Duty"
 	flag = F13NCROFFDUTY
 	total_positions = 4
 	spawn_positions = 4
@@ -1666,7 +1660,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 0
 
 /datum/outfit/job/ncr/f13ncroffduty
-	name = "NCR Off Duty"
+	name = "NCR Off-Duty"
 	jobtype	= /datum/job/ncr/f13ncroffduty
 	id = /obj/item/card/id/dogtag/ncrtrooper
 	uniform = /obj/item/clothing/under/f13/ncr

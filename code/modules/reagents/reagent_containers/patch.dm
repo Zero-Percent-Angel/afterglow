@@ -78,7 +78,6 @@
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_healingpowder"
 	list_reagents = list(/datum/reagent/medicine/healing_powder = 10)
-	self_delay = 1
 
 // ---------------------------------
 // CUSTOM POWDER
@@ -100,8 +99,8 @@
 	desc = "A concoction of broc flower, cave fungus, agrave fruit and xander root."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	list_reagents = list(/datum/reagent/medicine/healing_powder/poultice = 10, /datum/reagent/medicine/healing_powder = 10, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5)
-	icon_state = "patch_healingpoultice"
 	self_delay = 1
+	icon_state = "patch_healingpoultice"
 
 // ---------------------------------
 // BITTER DRINK
@@ -111,8 +110,7 @@
 	desc = "A strong herbal healing concoction invented and created by the Twin Mothers tribe."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_bitterdrink"
-	list_reagents = list(/datum/reagent/medicine/healing_powder = 5, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5) 
-	self_delay = 1
+	list_reagents = list(/datum/reagent/medicine/healing_powder = 5, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5)
 
 // ---------------------------------
 // HYDRA - never a thing, make it something. Sprites done.

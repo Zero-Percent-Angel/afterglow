@@ -27,7 +27,7 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 
 GLOBAL_LIST_INIT(whitelegs_recipes, list(
 	/datum/crafting_recipe/tribalwar/whitelegs/garb,
-	/datum/crafting_recipe/tribalwar/whitelegs/femalegarb, 
+	/datum/crafting_recipe/tribalwar/whitelegs/femalegarb,
 	/datum/crafting_recipe/tribalwar/whitelegs/lightarmour,
 	/datum/crafting_recipe/tribalwar/whitelegs/armour,
 	/datum/crafting_recipe/tribalwar/whitelegs/heavyarmour))
@@ -67,7 +67,7 @@ GLOBAL_LIST_INIT(wayfarer_recipes, list(
 GLOBAL_LIST_INIT(bone_dancer_recipes, list(
 	/datum/crafting_recipe/tribalwar/bone/garb,
 	/datum/crafting_recipe/tribalwar/bone/lightarmour,
-	/datum/crafting_recipe/tribalwar/bone/armour, 
+	/datum/crafting_recipe/tribalwar/bone/armour,
 	/datum/crafting_recipe/tribalwar/bone/heavyarmour))
 
 GLOBAL_LIST_INIT(tier_three_parts, list(
@@ -312,7 +312,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/spiritual
 	name = "Spiritual"
 	desc = "You're in tune with the gods, and your prayers may be more likely to be heard. Or not."
-	value = 0
+	value = 1
 	mob_trait = TRAIT_SPIRITUAL
 	gain_text = span_notice("You feel a little more faithful to the gods today.")
 	lose_text = span_danger("You feel less faithful in the gods.")
@@ -321,7 +321,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/tagger
 	name = "Tagger"
 	desc = "You're an experienced artist. While drawing graffiti, you can get twice as many uses out of drawing supplies."
-	value = 0
+	value = 1
 	mob_trait = TRAIT_TAGGER
 	gain_text = span_notice("You know how to tag walls efficiently.")
 	lose_text = span_danger("You forget how to tag walls properly.")
@@ -501,6 +501,15 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how Power Armor works.")
 	locked = FALSE
 
+/*datum/quirk/paintrain
+	name = "Pain Train"
+	desc = "The Power Armour Train has left the station, and those in it's way will be sent flying."
+	value = 2
+	mob_trait = TRAIT_PAIN_TRAIN
+	gain_text = span_notice("The Pain Train has left the station.")
+	lose_text = span_danger("Please mind the gap between the timetable, and reality.")
+	locked = FALSE*/
+
 /datum/quirk/hard_yards
 	name = "Mobility - Wasteland Trekker"
 	desc = "You've spent a lot of time wandering the wastes, and for your hard work you out pace most folks when travelling across them."
@@ -560,9 +569,9 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 
 /datum/quirk/iron_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow = 2
-	mob_tar.dna.species.punchdamagehigh = 12
-
+	mob_tar.dna.species.punchdamagelow = 4
+	mob_tar.dna.species.punchdamagehigh = 10
+/*
 /datum/quirk/steel_fist
 	name = "Fists of Steel"
 	desc = "You have MASSIVE fists of kung-fury! Even MORE increases unarmed damage."
@@ -574,9 +583,9 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 
 /datum/quirk/steel_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow = 4
-	mob_tar.dna.species.punchdamagehigh = 14
-
+	mob_tar.dna.species.punchdamagelow = 6
+	mob_tar.dna.species.punchdamagehigh = 12
+*/
 /datum/quirk/light_step
 	name = "Glass Walker"
 	desc = "When it comes to stepping on glass, you're pretty die hard.  You'll make less noise when you do so, but it'd still suck without shoes."
@@ -823,6 +832,15 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You know? Being cold kind of sucks actually.")
 	locked =  FALSE
 
+/datum/quirk/coldblooded
+	name = "Cold-blooded"
+	desc = "Your body doesn't create its own internal heat, requiring external heat regulation. As a result, your blood clots slightly faster." //Cold-Blooded animals tend not to bleed as much
+	value = 1
+	medical_record_text = "Patient is ectothermic."
+	mob_trait = TRAIT_COLDBLOODED
+	gain_text = span_notice("You feel cold-blooded.")
+	lose_text = span_notice("You feel more warm-blooded.")
+
 /* You can't be that immune, unless you're like a ghoul!
 /datum/quirk/radimmune
 	name = "Radiation - Immune"
@@ -927,6 +945,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("Your fists no longer feel so powerful.")
 	locked =  FALSE
 */
+
 /datum/quirk/quietstep
 	name = "Quiet Step"
 	desc = "Your steps just don't make any noise at all."
@@ -936,20 +955,19 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You're pretty sure that's the sound of your asscheeks clapping, but it might be footsteps.")
 	locked =  FALSE
 
-/* temp removed for now! Might rework later
 /datum/quirk/deadeye
 	name = "Dead Eye"
-	desc = "You hit the shots you aim. No ifs, ands, or buts."
-	value = 12 //WIP for sure, lmfao ~TK
+	desc = "You hit the shots you aim, even those around corners. Well, most of the time."
+	value = 4 //WIP for sure, lmfao ~TK
 	mob_trait = TRAIT_INSANE_AIM
 	gain_text = span_notice("Your aim is legendary, and you know it.")
 	lose_text = span_danger("Your aim could use some work...")
 	locked =  FALSE
-*/
+
 /datum/quirk/straightshooter
 	name = "Straight Shooter"
 	desc = "You're a better than average shot."
-	value = 6
+	value = 2
 	mob_trait = TRAIT_NICE_SHOT
 	gain_text = span_notice("Your aim is amazing, and you know it.")
 	lose_text = span_danger("Your aim could use some work...")
@@ -964,6 +982,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("Guns were always better...")
 	locked =  FALSE
 
+/*		- Way too fucking powerful since bolt actions and the like get literal bonus damages. Makes using a ton of guns pointless if a bolt-action from the trash is better than a semi-auto rifle.
 /datum/quirk/masterrifleman
 	name = "Bolt Worker"
 	desc = "You've spent a lot of time working the bolt of a rifle, or the pump action of a shotgun. Your skill allows you to click to work the action instead of doing it manually."
@@ -972,7 +991,10 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("In a sudden haze you realize that the Mosin Nagant was Gods gift to mankind.")
 	lose_text = span_danger("After picking some 250 year old cosmoline out from under one of your nails you realize that... Uh, no, the Mosin Nagant is a piece of shit.")
 	locked =  FALSE
+*/
 
+/*
+I'm sorry my rat loving friends friends
 /datum/quirk/ratlord
 	name = "Beast Master - Rats (Experimental)"
 	desc = "Whenever by psychic means or not, you gained ability to call forth friendly type of rats. <u>Do note they will attack <b>only</b> the hostile mobs</u>."
@@ -1009,3 +1031,4 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 		QDEL_NULL(build)
 		H.RemoveAbility(clear)
 		QDEL_NULL(clear)
+*/

@@ -57,8 +57,8 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Legion Centurion",
 
 	"Chief of Police",
-	
-	"Overseer",
+
+	"Vault Coordinator",
 	"Chief of Security",
 
 	"Enclave Lieutenant",
@@ -132,7 +132,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Town Paramedic",
 
 "Cyborg",
-"Overseer",
+"Vault Coordinator",
 "Chief of Security",
 "Vault-tec Doctor",
 "Vault-tec Scientist",
@@ -163,6 +163,7 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Initiate",
 	"BoS Off-Duty"
 ))
+
 //Town
 GLOBAL_LIST_INIT(town_command_positions, list(
 	"Mayor",
@@ -250,11 +251,11 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Corporal",
 	"NCR Specialist",
 	"NCR Trooper",
-	"NCR Conscript",
+	"NCR Recruit",
 	"NCR Medical Officer",
 	"NCR Logistics Officer",
 	"NCR Rear Echelon",
-	"NCR Off Duty"
+	"NCR Off-Duty"
 ))
 //Vault
 GLOBAL_LIST_INIT(vault_command_positions, list(
@@ -266,11 +267,13 @@ GLOBAL_LIST_INIT(vault_science_positions, list(
 	"Vault-tec Scientist"
 ))
 
+//Vault
 GLOBAL_LIST_INIT(vault_positions, list(
-	"Overseer",
+	"Vault Coordinator",
 	"Chief of Security",
 	"Vault-tec Doctor",
 	"Vault-tec Scientist",
+	"Vault-tec Security Specialist",
 	"Vault-tec Security",
 	"Vault-tec Engineer",
 	"Vault Dweller",
@@ -316,6 +319,7 @@ GLOBAL_LIST_INIT(enclave_positions, list(
 GLOBAL_LIST_INIT(security_positions, list(
 	"Vault-tec Security",
 	"Officer",
+	"Vault-tec Security Specialist"
 ))
 GLOBAL_LIST_INIT(silicon_positions, list(
 	"Mr. Handy",

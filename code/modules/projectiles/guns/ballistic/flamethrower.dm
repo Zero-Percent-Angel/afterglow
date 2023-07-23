@@ -150,3 +150,24 @@
 /obj/item/gun/ballistic/m2flamethrower/dropped(mob/living/user)
 	. = ..()
 	ammo_pack.attach_gun(user)
+
+//Incinerators, because it seems appropriate to have them in here
+
+/obj/item/gun/ballistic/rifle/mag/antimateriel/incinerator
+	name = "incinerator"
+	desc = "For those times when you really need to ruin one persons day."
+	icon = 'icons/obj/guns/flamethrower.dmi'
+	lefthand_file = 'icons/obj/guns/flamethrower.dmi'
+	righthand_file = 'icons/obj/guns/flamethrower.dmi'
+	icon_state = "incinerator"
+	item_state = "incinerator_"
+	slowdown = 0.4
+	slot_flags = ITEM_SLOT_BACK
+	w_class = WEIGHT_CLASS_HUGE
+	custom_materials = null
+	weapon_weight = GUN_TWO_HAND_ONLY
+	fire_sound = 'sound/weapons/flamethrower.ogg'
+	mag_type = /obj/item/ammo_box/magazine/internal/incinerator
+	casing_ejector = TRUE
+	item_flags = SLOWS_WHILE_IN_HAND
+	zoomable = FALSE

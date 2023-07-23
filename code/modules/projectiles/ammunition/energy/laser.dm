@@ -110,14 +110,14 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/scatter/tribeam/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/tribeam/hitscan
 	pellets = 3
-	variance = 38
+	variance = SHOTGUN_SPREAD_BASE
 	select_name = "tribeam"
 	e_cost = 200 //10 shots
 
 /obj/item/ammo_casing/energy/laser/scatter/tribeam/laserbuss
 	projectile_type = /obj/item/projectile/beam/laser/tribeam/laserbuss
 	pellets = 8
-	variance = 14
+	variance = SHOTGUN_SPREAD_BASE
 	select_name = "scatter"
 	e_cost = 187.5 //8 shots
 	fire_sound = 'sound/f13weapons/tribeamfire.ogg'
@@ -300,7 +300,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 
 /obj/item/ammo_casing/energy/laser/aer14/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/aer14/hitscan
-	e_cost = 133.33 //15 shots, i hate the decimal value too trust me
+	e_cost = 100 //10 shots
 
 /obj/item/ammo_casing/energy/laser/aer12
 	projectile_type = /obj/item/projectile/beam/laser/aer12
@@ -310,7 +310,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 
 /obj/item/ammo_casing/energy/laser/aer12/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/aer12/hitscan
-	e_cost = 250 //8 shots.
+	e_cost = 133.33 //15 shots.
 	fire_sound = 'sound/f13weapons/aer9fire.ogg'
 	damage_threshold_penetration = 10 //Overcharged AF, lets at minimum 1/3rd of the damage it puts out burn through armor.
 

@@ -4,7 +4,7 @@
 		client.set_db_player_flags()
 	if(CONFIG_GET(flag/use_role_whitelist))
 		client.set_job_whitelist_from_db()
-	
+
 	if(!mind)
 		mind = new /datum/mind(key)
 		mind.active = 1
@@ -37,6 +37,10 @@
 		if (required_living_minutes >= living_minutes)
 			client.interviewee = TRUE
 			register_for_interview()
+			return
+
+	if(!(client.prefs.db_flags & DB_FLAG_AGE_CONFIRMATION_COMPLETE))
+		if(!perform_age_verification())
 			return
 
 	new_player_panel()
