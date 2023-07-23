@@ -297,8 +297,7 @@ Head Scribe
 	id = 			/obj/item/card/id/dogtag
 	backpack_contents = list(
 		/obj/item/melee/onehanded/knife/survival = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
-		/obj/item/kit_spawner/bos/scientist = 1
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3
 		)
 
 /datum/outfit/loadout/hsword
@@ -307,6 +306,8 @@ Head Scribe
 		/obj/item/gun/energy/laser/plasma/glock = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
 		/obj/item/book/granter/crafting_recipe/blueprint/wattz2k = 1,
+		/obj/item/book/granter/crafting_recipe/blueprint/aer9 = 1,
+		/obj/item/book/granter/crafting_recipe/blueprint/aep7 = 1,
 		)
 
 /datum/outfit/loadout/hshield
@@ -314,8 +315,7 @@ Head Scribe
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/plasma/glock = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
-		/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b = 1,
-		/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b = 1,
+		/obj/item/construction/rcd/combat = 1,
 		)
 
 /datum/outfit/loadout/hquill
@@ -686,6 +686,7 @@ Senior Scribe
 	name = "Order of the Sword"
 	backpack_contents = list(
 		/obj/item/book/granter/crafting_recipe/blueprint/aer9 = 1,
+		/obj/item/book/granter/crafting_recipe/blueprint/aep7 = 1,
 		/obj/item/gun/energy/laser/pistol=1,
 		/obj/item/stock_parts/cell/ammo/ec=2,
 		)
