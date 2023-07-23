@@ -193,9 +193,9 @@ GLOBAL_LIST_INIT(legion_command_positions, list(
 ))
 
 GLOBAL_LIST_INIT(legion_elite_positions, list(
+	"Legion Assassin",
 	"Legion Vexillarius",
 	"Legion Prime Decanus",
-	"Veteran Legionary",
 ))
 
 GLOBAL_LIST_INIT(legion_positions, list(
@@ -339,10 +339,9 @@ GLOBAL_LIST_INIT(followers_positions, list(
 	"Nurse",
 	"Town Scientist",
 ))
-//Outlaw / Tribal - Combined because some tribal backgrounds are basically antag options
-GLOBAL_LIST_INIT(tribe_outlaw_positions, list(
-	"Outlaw",
-	"Far-Lands Tribals"
+//Outlaw
+GLOBAL_LIST_INIT(outlaw_positions, list(
+	"Outlaw"
 ))
 // job categories for rendering the late join menu
 GLOBAL_LIST_INIT(position_categories, list(
