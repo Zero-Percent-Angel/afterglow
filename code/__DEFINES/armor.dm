@@ -64,7 +64,7 @@
 		"linebullet" = 15, \
 		"linelaser" = 15, \
 		"energy" = 0, \
-		"bomb" = 0, \
+		"bomb" = 15, \
 		"bio" = 10, \
 		"rad" = 10, \
 		"fire" = 10, \
@@ -85,7 +85,7 @@
 		"linebullet" = 35, \
 		"linelaser" = 35, \
 		"energy" = 5, \
-		"bomb" = 10, \
+		"bomb" = 30, \
 		"bio" = 25, \
 		"rad" = 25, \
 		"fire" = 25, \
@@ -106,7 +106,7 @@
 		"linebullet" = 50, \
 		"linelaser" = 50, \
 		"energy" = 10, \
-		"bomb" = 25, \
+		"bomb" = 50, \
 		"bio" = 25, \
 		"rad" = 25, \
 		"fire" = 35, \
@@ -142,12 +142,12 @@
  * Great defense
  * Lots of DT
  *
- * +80 effective HP
- * +20 laser HP
+ * +90 effective HP
+ * +10 laser HP
  * * * * * * * * * * * */
 #define ARMOR_VALUE_PA list(\
-		"linemelee" = 80, \
-		"linebullet" = 80, \
+		"linemelee" = 90, \
+		"linebullet" = 90, \
 		"linelaser" = 100, \
 		"energy" = 40, \
 		"bomb" = 70, \
