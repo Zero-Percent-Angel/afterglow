@@ -31,10 +31,10 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	new/datum/stack_recipe("metal parts", /obj/item/stack/crafting/metalparts, 5, skill_threshold = REGULAR_CHECK), \
 	new/datum/stack_recipe("length of chain", /obj/item/blacksmith/chain, 1, time = 50), \
 	null, \
-	new/datum/stack_recipe("lock", /obj/item/lock_construct, 1, skill_threshold = EASY_CHECK), \
+	new/datum/stack_recipe("lock", /obj/item/lock_construct, 1, skill_threshold = VERY_EASY_CHECK), \
 	new/datum/stack_recipe("coffee pot", /obj/item/crafting/coffee_pot, 1), \
 	new/datum/stack_recipe("lunchbox", /obj/item/crafting/lunchbox, 1), \
-	new/datum/stack_recipe("key", /obj/item/key, 1, skill_threshold = EASY_CHECK), \
+	new/datum/stack_recipe("key", /obj/item/key, 1, skill_threshold = VERY_EASY_CHECK), \
 	new/datum/stack_recipe("key chain", /obj/item/storage/keys_set, 1), \
 	null, \
 	new/datum/stack_recipe("seed extractor", /obj/structure/legion_extractor, 6, one_per_turf = TRUE, on_floor = TRUE), \
