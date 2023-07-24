@@ -5,7 +5,10 @@
 	say_mod = "yells"
 	limbs_id = "smutant"
 	whitelisted = 1
-	whitelist = list("asterixcodix", "yecrowbarman", "tzula", "spensara", "bengalninja")
+	whitelist = list("asterixcodix","yecrowbarman","tzula","spensara","bengalninja","wotzizname",
+					"tamedachilles","southernsaint","zeropercentangel","melodicdeity","brainbodger",
+					"afroterk","theetneralflame","myrios","omnisalad","zephyrtfa","daemontinadel",
+					"sb208")
 	species_traits = list(NOTRANSSTING,NOAROUSAL,NOGENITALS,EYECOLOR,NO_UNDERWEAR)
 	inherent_traits = list(TRAIT_RADIMMUNE,TRAIT_VIRUSIMMUNE,TRAIT_SMUTANT)
 	inherent_biotypes = list(MOB_HUMANOID)
