@@ -1732,7 +1732,7 @@
 	desc = "An incredibly damaged pair of shorts, large enough to fit a super mutant."
 	icon_state = "mutie_shorts"
 	item_state = "mutie_shorts"
-	species_restricted = list("exclude","Huamn","Ghoul")
+	species_restricted = list("exclude","Human","Ghoul")
 
 /obj/item/clothing/under/f13/mutie/santa
 	name = "red and white jumpsuit"

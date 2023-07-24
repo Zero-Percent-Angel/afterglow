@@ -121,7 +121,7 @@
 	item_state = "mutie_bracer"
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T2)
-	species_restricted = list("exclude","Huamn","Ghoul")
+	species_restricted = list("exclude","Human","Ghoul")
 
 /obj/item/clothing/gloves/f13/mutie/mk2
 	name = "mutant bracers"

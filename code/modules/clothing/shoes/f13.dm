@@ -341,7 +341,7 @@
 	name = "super mutant sandals"
 	desc = "A pair of oversized sandals, likely designed for super mutants."
 	icon_state = "mutie_sandals"
-	species_restricted = list("exclude","Huamn","Ghoul")
+	species_restricted = list("exclude","Human","Ghoul")
 
 /obj/item/clothing/shoes/f13/mutie/boots
 	name = "super mutant boots"
