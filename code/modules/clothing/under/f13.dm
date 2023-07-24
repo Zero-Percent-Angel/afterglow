@@ -1746,9 +1746,15 @@
 	icon_state = "mutie_vault_jumspuit"
 	item_state = "mutie_vault_jumspuit"
 
-/obj/item/clothing/under/f13/mutie/ranger
+/obj/item/clothing/under/f13/mutie/ncr
+	name = "mutant trooper clothing"
+	desc = "Specially made for Super Mutants living in the NCR, this large piece of clothing is simply a pair of shorts."
+	icon_state = "mutie_ranger_under"
+	item_state = "mutie_ranger_under"
+
+/obj/item/clothing/under/f13/mutie/ncr/ranger
 	name = "mutant ranger clothing"
-	desc = "Specially made for Super Mutants living in the NCR, this large piece of clothing is well pressed and suited for any NCR Super Mutant personnel"
+	desc = "Specially made for Super Mutants living in the NCR, this large piece of clothing is well pressed and suited for any NCR Super Mutant personnel."
 	icon_state = "mutie_ranger_under"
 	item_state = "mutie_ranger_under"
 

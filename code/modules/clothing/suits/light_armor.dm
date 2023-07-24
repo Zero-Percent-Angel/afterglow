@@ -511,27 +511,34 @@
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/light/mutie
-	name = "oversized armor kit"
-	desc = "Bits of armor fitted to a giant harness. Clearly not made for use by humans."
+	name = "oversized armour"
+	desc = "A large boiler that's been dismantled and reshaped into crude armour. Clearly not made for use by humans."
 	icon = 'icons/fallout/clothing/armored_light.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
-	icon_state = "mutie_armorkit"
-	item_state = "mutie_armorkit"
+	icon_state = "mutie_armour"
+	item_state = "mutie_armour"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	siemens_coefficient = 1.1
 	species_restricted = list("exclude","Human","Ghoul")
 
-/obj/item/clothing/suit/armor/light/mutie/poncho
+/obj/item/clothing/suit/hooded/cloak/mutie/poncho
 	name = "mutant poncho"
 	desc = "An oversized poncho, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
 	icon_state = "mutie_poncho"
 	item_state = "mutie_poncho"
+	hoodtype = /obj/item/clothing/head/hooded/cloakhood/mutie/poncho
 
-/obj/item/clothing/suit/armor/light/mutie/poncho
+/obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered
 	name = "mutant poncho"
 	desc = "An oversized poncho, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
 	icon_state = "mutie_poncho_weathered"
 	item_state = "mutie_poncho_weathered"
+	hoodtype = /obj/item/clothing/head/hooded/cloakhood/mutie/poncho
+
+/obj/item/clothing/head/hooded/cloakhood/mutie/poncho
+	name = "mutant poncho hood"
+	desc = "An oversized hood from an oversized poncho."
+	icon_state = "mutie_poncho"
+	item_state = "mutie_poncho"
 
 ///////////////////////////
 // !!!FACTION SECTION!!! //
@@ -564,7 +571,7 @@
 //Mutie NCR Armor
 /obj/item/clothing/suit/armor/light/ncr/mutie
 	name = "NCR mutant scraps"
-	desc = "So-called 'armor' given to mutant members of the NCR military. Though.. this equates to little more than scraps of armor."
+	desc = "So-called 'armor' given to mutant members of the NCR military. Though, it equates to little more than scraps of armor strapped together."
 	icon_state = "mutie_ncr_scrap"
 	item_state = "mutie_ncr_scrap"
 	species_restricted = list("exclude","Human","Ghoul")
