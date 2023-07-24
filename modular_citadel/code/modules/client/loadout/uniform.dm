@@ -799,6 +799,7 @@
 /datum/gear/uniform/wasteland
 	name = "War boy pants"
 	path = /obj/item/clothing/under/pants/f13/warboy
+	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_WASTELAND
 
 /datum/gear/uniform/wasteland/ghoul
 	name = "Ripped pants"
