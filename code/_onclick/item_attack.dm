@@ -107,10 +107,10 @@
 	var/force_modifier = 0
 	force_modifier += max((user.special_s - 5), (0 - force))
 	if(force >= 5)
-		if(HAS_TRAIT(user, TRAIT_BIG_LEAGUES)||HAS_TRAIT(user, TRAIT_BUFFOUT_BUFF))
+		if(HAS_TRAIT(user, TRAIT_BIG_LEAGUES) || HAS_TRAIT(user, TRAIT_BUFFOUT_BUFF))
 			force_modifier += (force * 0.2)
 
-		if(HAS_TRAIT(user, TRAIT_LITTLE_LEAGUES))
+		else if(HAS_TRAIT(user, TRAIT_LITTLE_LEAGUES))
 			force_modifier += (force * 0.1)
 
 		if(HAS_TRAIT(user, TRAIT_GENTLE))
