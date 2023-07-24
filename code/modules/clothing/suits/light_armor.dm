@@ -519,7 +519,7 @@
 	item_state = "mutie_armorkit"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 1.1
-	species_restricted = list("exclude","Huamn","Ghoul")
+	species_restricted = list("exclude","Human","Ghoul")
 
 /obj/item/clothing/suit/armor/light/mutie/poncho
 	name = "mutant poncho"
@@ -567,7 +567,7 @@
 	desc = "So-called 'armor' given to mutant members of the NCR military. Though.. this equates to little more than scraps of armor."
 	icon_state = "mutie_ncr_scrap"
 	item_state = "mutie_ncr_scrap"
-	species_restricted = list("exclude","Huamn","Ghoul")
+	species_restricted = list("exclude","Human","Ghoul")
 
 ////////////
 // Legion //
