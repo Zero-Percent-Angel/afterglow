@@ -8,10 +8,10 @@
 #define MODE_ROBOT "robot"
 
 #define MODE_R_HAND "right hand"
-#define MODE_KEY_R_HAND "r"
+#define MODE_KEY_R_HAND "1"
 
 #define MODE_L_HAND "left hand"
-#define MODE_KEY_L_HAND "l"
+#define MODE_KEY_L_HAND "2"
 
 #define MODE_INTERCOM "intercom"
 #define MODE_KEY_INTERCOM "i"
