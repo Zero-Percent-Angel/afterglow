@@ -292,6 +292,37 @@
 	item_state = "metalhelmet_r"
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_MELEE_T3)
 
+//Mutie
+
+/obj/item/clothing/head/helmet/f13/mutie
+	name = "mutant aviator helmet"
+	desc = "A leather hat worn by Super Mutants, with a large set of goggles attached to the forehead."
+	icon_state = "muite_aviator"
+	item_state = "muite_aviator"
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_MELEE_T2)
+	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/head/helmet/knight/f13/metal/mutie
+	name = "bladed mutant helmet"
+	desc = "A metal helmet forged by Super Mutants, with a large blade on the forehead."
+	icon_state = "mutie_bladed_helmet"
+	item_state = "mutie_bladed_helmet"
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_MELEE_T1)
+	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/head/helmet/knight/f13/metal/mutie/knight
+	name = "mutant knight helmet"
+	desc = "A metal helmet forged by Super Mutants, reminisient of the helmets worn by the Knights of old."
+	icon_state = "mutie_knight"
+	item_state = "mutie_knight"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/head/helmet/knight/f13/metal/mutie/knight/crown
+	name = "mutant crown helmet"
+	desc = "A metal helmet forged by Super Mutants, reminisient of the helmets worn by the Knights of old."
+	icon_state = "mutie_crown"
+	item_state = "mutie_crown"
+
 //////////
 //LEGION//
 //////////

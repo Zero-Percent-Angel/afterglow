@@ -42,6 +42,7 @@
 							"NCR Rear Echelon",
 							"NCR Off-Duty"
 							)
+	cost = 5
 
 /datum/gear/donator/kits/muite/ncr
 	name = "Mutant NCR Heavy Trooper"
@@ -62,6 +63,29 @@
 	restricted_roles = list("NCR Ranger",
 							"NCR Civilian Ranger")
 
+/datum/gear/donator/mutie
+	subcategory = LOADOUT_SUBCATEGORY_DONATOR_MUTIE
+	ckeywhitelist = list("asterixcodix","yecrowbarman","tzula","spensara","bengalninja","wotzizname",
+					"tamedachilles","southernsaint","zeropercentangel","melodicdeity","brainbodger",
+					"afroterk","theetneralflame","myrios","omnisalad","zephyrtfa","daemontinadel",
+					"sb208")
+
+/datum/gear/donator/mutie/helmet
+	name = "Mutant Aviator Hat"
+	path = /obj/item/clothing/head/helmet/f13/mutie
+	cost = 1
+
+/datum/gear/donator/mutie/helmet/metal
+	name = "Mutant Bladed Helmet"
+	path = /obj/item/clothing/head/helmet/knight/f13/metal/mutie
+
+/datum/gear/donator/mutie/helmet/metal/knight
+	name = "Mutant Kngiht Helmet"
+	path = /obj/item/clothing/head/helmet/knight/f13/metal/mutie/knight
+
+/datum/gear/donator/mutie/helmet/metal/crown
+	name = "Mutant Crowned Helmet"
+	path = /obj/item/clothing/head/helmet/knight/f13/metal/mutie/knight/crown
 
 /////////////////////
 ///Loadout Boxes///// See kits.dm, use this model for loadouts that have more than one item per character.
