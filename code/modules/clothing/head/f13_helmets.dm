@@ -814,6 +814,20 @@
 	slowdown = 0
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
+// Mutie Salvage
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/mutie
+	name = "large power armour helmet"
+	desc = "It's a salvaged power armour helmet... That could've been made from any functional suit."
+	icon_state = "mutie_power_armor_helmet"
+	item_state = "mutie_power_armor_helmet"
+	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/mutie/ncr
+	name = "large NCR power armour helmet"
+	desc = "It's a salvaged power armour helmet... That could've been made from any functional suit. This one sports the trappings of an NCR Heavy Trooper."
+	icon_state = "mutie_ncr_power_helmet"
+	item_state = "mutie_ncr_power_helmet"
+
 // T-45D
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d
 	name = "salvaged T-45d helmet"

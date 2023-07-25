@@ -43,6 +43,12 @@
 							"NCR Off-Duty"
 							)
 
+/datum/gear/donator/kits/muite/ncr
+	name = "Mutant NCR Heavy Trooper"
+	path = /obj/item/storage/box/large/custom_kit/mutie/ncr_heavy_trooper
+	restricted_desc = "NCR Heavy Trooper"
+	restricted_roles = list("NCR Heavy Trooper")
+
 /datum/gear/donator/kits/muite/ncr/ranger/vet
 	name = "Mutant Veteran Ranger"
 	path = /obj/item/storage/box/large/custom_kit/mutie/vet_ranger

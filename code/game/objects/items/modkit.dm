@@ -76,3 +76,13 @@
 	name = "Mutie Trooper Helmet modkit"
 	target_items = list(/obj/item/clothing/head/helmet/f13/ncr)
 	result_item = /obj/item/clothing/head/helmet/f13/ncr/mutie
+
+/obj/item/modkit/mutie/ncr_heavy_trooper_armour
+	name = "Mutie Heavy Trooper Armour modkit"
+	target_items = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr)
+	result_item = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/mutie/ncr
+
+/obj/item/modkit/mutie/ncr_heavy_trooper_helmet
+	name = "Mutie Heavy Trooper Helmet modkit"
+	target_items = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr)
+	result_item = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/mutie/ncr

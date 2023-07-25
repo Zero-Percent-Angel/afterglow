@@ -263,6 +263,12 @@
 	item_state = "mutie_power_armor"
 	species_restricted = list("exclude","Human","Ghoul")
 
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/mutie/ncr
+	name = "large NCR Salvaged Power Armour"
+	desc = "It's unclear just want kind of power armour this once was. Was it T-51? Was it APA? Maybe it was just a suit of excavator armor? There's no way of knowing. What is clear though, is that the suit cannot be repaired or restored to what it once was, and it's far too large for a normal human to wear. Decorated with the NCR flag."
+	icon_state = "mutie_ncr_salvaged"
+	item_state = "mutie_ncr_salvaged"
+
 ///////////////////////////
 // !!!FACTION SECTION!!! //
 ///////////////////////////

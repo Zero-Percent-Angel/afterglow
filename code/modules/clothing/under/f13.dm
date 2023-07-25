@@ -1747,14 +1747,26 @@
 	item_state = "mutie_vault_jumspuit"
 
 /obj/item/clothing/under/f13/mutie/ncr
-	name = "mutant trooper clothing"
-	desc = "Specially made for Super Mutants living in the NCR, this large piece of clothing is simply a pair of shorts."
-	icon_state = "mutie_ranger_under"
-	item_state = "mutie_ranger_under"
+	name = "NCR Mutant Trooper uniform"
+	desc = "Specially made for Super Mutants serving the NCRA, this large piece of clothing is simply a pair of shorts."
+	icon_state = "mutie_ncr_short"
+	item_state = "mutie_ncr_short"
+
+/obj/item/clothing/under/f13/mutie/ncr/heavy
+	name = "NCR Mutant Heavy Trooper uniform"
+	desc = "Specially made for Super Mutants servng in the NCRA as Heavy Troopers; more of a true uniform, reflecting the better budget of the Heavy Trooper programme."
+	icon_state = "mutie_ncr_heavy"
+	item_state = "mutie_ncr_heavy"
+
+/obj/item/clothing/under/f13/mutie/ncr/offiver
+	name = "NCR Mutant Officer uniform"
+	desc = "Specially made for Super Mutants servng in the NCRA as Officers; more of a true uniform, this large piece of clothing is well pressed and suited for any NCR Super Mutant personnel."
+	icon_state = "mutie_ncr_officer"
+	item_state = "mutie_ncr_officer"
 
 /obj/item/clothing/under/f13/mutie/ncr/ranger
-	name = "mutant ranger clothing"
-	desc = "Specially made for Super Mutants living in the NCR, this large piece of clothing is well pressed and suited for any NCR Super Mutant personnel."
+	name = "NCR Mutant Ranger uniform"
+	desc = "Specially made for Super Mutants serving in the NCR Rangers, this large piece of clothing is well pressed and suited for any NCR Super Mutant personnel."
 	icon_state = "mutie_ranger_under"
 	item_state = "mutie_ranger_under"
 
