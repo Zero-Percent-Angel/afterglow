@@ -27,6 +27,8 @@
 					"afroterk","theetneralflame","myrios","omnisalad","zephyrtfa","daemontinadel",
 					"sb208")
 
+//NCR
+
 /datum/gear/donator/kits/muite/ncr
 	name = "Mutant NCR Trooper"
 	path = /obj/item/storage/box/large/custom_kit/mutie/ncr_trooper
@@ -44,17 +46,20 @@
 							)
 	cost = 5
 
-/datum/gear/donator/kits/muite/ncr
+/datum/gear/donator/kits/muite/heavy
 	name = "Mutant NCR Heavy Trooper"
 	path = /obj/item/storage/box/large/custom_kit/mutie/ncr_heavy_trooper
 	restricted_desc = "NCR Heavy Trooper"
 	restricted_roles = list("NCR Heavy Trooper")
 
-/datum/gear/donator/kits/muite/ncr/ranger/vet
-	name = "Mutant Veteran Ranger"
-	path = /obj/item/storage/box/large/custom_kit/mutie/vet_ranger
-	restricted_roles = "NCR Veteran Ranger"
-	restricted_roles = list("NCR Veteran Ranger")
+/datum/gear/donator/kits/muite/ncr/officer
+	name = "Mutant NCR Officer"
+	path = /obj/item/storage/box/large/custom_kit/mutie/ncr_officer
+	restricted_desc = "NCR"
+	restricted_roles = list("NCR Colonel",
+							"NCR Captain",
+							"NCR Lieutenant"
+							)
 
 /datum/gear/donator/kits/muite/ncr/ranger
 	name = "Mutant Ranger"
@@ -62,6 +67,16 @@
 	restricted_roles = "NCR Rangers"
 	restricted_roles = list("NCR Ranger",
 							"NCR Civilian Ranger")
+
+/datum/gear/donator/kits/muite/ncr/ranger/vet
+	name = "Mutant Veteran Ranger"
+	path = /obj/item/storage/box/large/custom_kit/mutie/vet_ranger
+	restricted_roles = "NCR Veteran Ranger"
+	restricted_roles = list("NCR Veteran Ranger")
+
+//Mutownie
+
+//Other Mutie
 
 /datum/gear/donator/mutie
 	subcategory = LOADOUT_SUBCATEGORY_DONATOR_MUTIE
@@ -80,7 +95,7 @@
 	path = /obj/item/clothing/head/helmet/knight/f13/metal/mutie
 
 /datum/gear/donator/mutie/helmet/metal/knight
-	name = "Mutant Kngiht Helmet"
+	name = "Mutant Knight Helmet"
 	path = /obj/item/clothing/head/helmet/knight/f13/metal/mutie/knight
 
 /datum/gear/donator/mutie/helmet/metal/crown

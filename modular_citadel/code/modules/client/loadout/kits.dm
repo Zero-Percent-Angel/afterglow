@@ -31,6 +31,17 @@
 	new /obj/item/clothing/shoes/f13/mutie/boots/ncr/ranger(src)
 	new /obj/item/clothing/gloves/f13/mutie/gloves(src)
 
+/obj/item/storage/box/large/custom_kit/mutie/ncr_officer
+	name = "Mutant NCR Officer"
+	desc = "Contains the necessary equipment to modify the armour and helmet of an NCR Officer to better fit a Mutant. Also contains their uniform."
+
+/obj/item/storage/box/large/custom_kit/mutie/ncr_officer/PopulateContents()
+	new /obj/item/modkit/mutie/ncr_officer_helmet(src)
+	new /obj/item/modkit/mutie/ncr_officer_armour(src)
+	new /obj/item/clothing/under/f13/mutie/ncr/officer(src)
+	new /obj/item/clothing/shoes/f13/mutie/boots/ncr(src)
+	new /obj/item/clothing/gloves/f13/mutie/gloves(src)
+
 /obj/item/storage/box/large/custom_kit/mutie/ncr_heavy_trooper
 	name = "Mutant NCR Heavy Trooper"
 	desc = "Contains the necessary equipment to modify the NCR Salvaged Power Armour and Helmet, to better fit a Mutant. Also contains their uniform."
