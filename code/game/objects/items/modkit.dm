@@ -19,7 +19,8 @@
 	else
 		return ..()
 
-/*
+/*Examples
+
 /obj/item/modkit/custom_excess
 	name = "champion of kanab's armor modkit"
 	target_items = list(/obj/item/clothing/suit/armor/legion/centurion,
@@ -33,7 +34,6 @@
 						/obj/item/clothing/head/helmet/f13/legion/rangercent,
 						/obj/item/clothing/head/helmet/f13/legion/palacent)
 	result_item = /obj/item/clothing/head/helmet/f13/legion/palacent/custom_excess
-*/
 
 //YEEHAWGUVNAH/Trinity Kemble
 /obj/item/modkit/kemblevest
@@ -45,3 +45,34 @@
 	name = "ranger slouch hat modkit"
 	target_items = list(/obj/item/clothing/head/f13/trailranger)
 	result_item = /obj/item/clothing/head/f13/trailranger/kemble
+*/
+
+/obj/item/modkit/mutie/vet_ranger_armour
+	name = "Mutie Veteran Ranger Armour modkit"
+	target_items = list(/obj/item/clothing/suit/armor/medium/combat/mk2/ncr/vetranger)
+	result_item = /obj/item/clothing/suit/armor/medium/combat/mk2/ncr/vetranger/mutie
+
+/obj/item/modkit/mutie/vet_ranger_helmet
+	name = "Mutie Veteran Ranger Helmet modkit"
+	target_items = list(/obj/item/clothing/head/helmet/f13/ncr/veteran)
+	result_item = /obj/item/clothing/head/helmet/f13/ncr/veteran/mutie
+
+/obj/item/modkit/mutie/ranger_armour
+	name = "Mutie Veteran Ranger Armour modkit"
+	target_items = list(/obj/item/clothing/suit/armor/medium/combat/patrol)
+	result_item = /obj/item/clothing/suit/armor/medium/combat/patrol/mutie
+
+/obj/item/modkit/mutie/ranger_helmet
+	name = "Mutie Ranger Helmet modkit"
+	target_items = list(/obj/item/clothing/head/f13/ncr/patrol)
+	result_item = /obj/item/clothing/head/f13/ncr/patrol/mutie
+
+/obj/item/modkit/mutie/ncr_trooper_armour
+	name = "Mutie Trooper Armour modkit"
+	target_items = list(/obj/item/clothing/suit/armor/light/ncr)
+	result_item = /obj/item/clothing/suit/armor/light/ncr/mutie
+
+/obj/item/modkit/mutie/vet_ranger_helmet
+	name = "Mutie Trooper Helmet modkit"
+	target_items = list(/obj/item/clothing/head/helmet/f13/ncr)
+	result_item = /obj/item/clothing/head/helmet/f13/ncr/mutie

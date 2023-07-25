@@ -124,7 +124,7 @@
 	species_restricted = list("exclude","Human","Ghoul")
 
 /obj/item/clothing/gloves/f13/mutie/mk2
-	name = "mutant bracers"
+	name = "reinforced mutant bracers"
 	desc = "A pair of giant metal tubes with rope on the inside."
 	icon_state = "mutie_bracer_mk2"
 	item_state = "mutie_bracer_mk2"
@@ -134,6 +134,12 @@
 	desc = "See this sign? It's a sign to move on."
 	icon_state = "mutie_bracer_sign"
 	item_state = "mutie_bracer_sign"
+
+/obj/item/clothing/gloves/f13/mutie/gloves
+	name = "mutant gloves"
+	desc = "A pair of oversized gloves."
+	icon_state = "mutie_ranger_gloves"
+	item_state = "mutie_ranger_gloves"
 
 /obj/item/clothing/gloves/botanic_leather
 	name = "farmers gloves"

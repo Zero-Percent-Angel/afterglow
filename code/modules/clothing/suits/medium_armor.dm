@@ -611,6 +611,13 @@
 	item_state = "ncr_ranger_patrol"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
+/obj/item/clothing/suit/armor/medium/combat/patrol/mutie
+	name = "NCR Mutant Patrol Ranger Combat Armour"
+	desc ="A modified set of combat armor specifically for use of Mutie rangers."
+	icon_state = "mutie_ranger_armour"
+	item_state = "mutie_ranger_armour"
+	species_restricted = list("exclude","Human","Ghoul")
+
 /obj/item/clothing/suit/armor/medium/combat/mk2/ncr/vetranger
 	name = "NCR veteran ranger combat armor"
 	desc = "The NCR veteran ranger combat armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Considered one of the most prestigious suits of armor to earn and wear while in service of the NCR Rangers."

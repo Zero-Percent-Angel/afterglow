@@ -570,11 +570,19 @@
 
 //Mutie NCR Armor
 /obj/item/clothing/suit/armor/light/ncr/mutie
-	name = "NCR mutant scraps"
+	name = "NCR Mutant armour"
 	desc = "So-called 'armor' given to mutant members of the NCR military. Though, it equates to little more than scraps of armor strapped together."
 	icon_state = "mutie_ncr_scrap"
 	item_state = "mutie_ncr_scrap"
 	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/suit/armor/light/ncr/mutie
+	name = "NCR Mutant Ranger Armour"
+	desc = "So-called 'armor' given to mutant members of the NCR military. Though, it equates to little more than scraps of armor strapped together."
+	icon_state = "mutie_ncr_scrap"
+	item_state = "mutie_ncr_scrap"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 ////////////
 // Legion //
