@@ -1758,7 +1758,7 @@
 	icon_state = "mutie_ncr_heavy"
 	item_state = "mutie_ncr_heavy"
 
-/obj/item/clothing/under/f13/mutie/ncr/offiver
+/obj/item/clothing/under/f13/mutie/ncr/officer
 	name = "NCR Mutant Officer uniform"
 	desc = "Specially made for Super Mutants servng in the NCRA as Officers; more of a true uniform, this large piece of clothing is well pressed and suited for any NCR Super Mutant personnel."
 	icon_state = "mutie_ncr_officer"

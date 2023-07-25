@@ -82,6 +82,11 @@
 	target_items = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr)
 	result_item = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/mutie/ncr
 
+/obj/item/modkit/mutie/ncr_heavy_trooper_helmet
+	name = "Mutie Heavy Trooper Helmet modkit"
+	target_items = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr)
+	result_item = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/mutie/ncr
+
 /obj/item/modkit/mutie/ncr_officer_helmet
 	name = "Mutie Officer Helmet modkit"
 	target_items = list(/obj/item/clothing/head/beret/ncr)
@@ -89,5 +94,5 @@
 
 /obj/item/modkit/mutie/ncr_officer_armour
 	name = "Mutie Officer Armour modkit"
-	target_items = list(/obj/item/clothing/suit/armor/medium/vest/ncr/officerr)
+	target_items = list(/obj/item/clothing/suit/armor/medium/vest/ncr/officer)
 	result_item = /obj/item/clothing/suit/armor/light/ncr/mutie
