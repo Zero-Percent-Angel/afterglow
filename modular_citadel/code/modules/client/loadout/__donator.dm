@@ -17,7 +17,7 @@
 
 
 /////////////////////
-/// MUTIE LOADOUTS/// Do not touch these unless you know what it is you are changing. Please and thank you - Asterix
+///MUTIE LOADOUTS//// Do not touch these unless you know what it is you are changing. Please and thank you - Asterix
 /////////////////////
 
 /datum/gear/donator/kits/mutie
@@ -27,13 +27,35 @@
 					"afroterk","theetneralflame","myrios","omnisalad","zephyrtfa","daemontinadel",
 					"sb208")
 
-/datum/gear/donator/kits/muite/vetranger
-	name = "Mutant Veteran Ranger"
-	path = /obj/item/storage/box/large/custom_kit/mutie/vet_ranger_armour
-
-/datum/gear/donator/kits/muite/ncrtrooper
+/datum/gear/donator/kits/muite/ncr
 	name = "Mutant NCR Trooper"
 	path = /obj/item/storage/box/large/custom_kit/mutie/ncr_trooper
+	restricted_desc = "NCR"
+	restricted_roles = list("NCR Colonel",
+							"NCR Captain",
+							"NCR Lieutenant",
+							"NCR Sergeant",
+							"NCR Heavy Trooper",
+							"NCR Corporal",
+							"NCR Trooper",
+							"NCR Recruit",
+							"NCR Rear Echelon",
+							"NCR Off-Duty"
+							)
+
+/datum/gear/donator/kits/muite/ncr/ranger/vet
+	name = "Mutant Veteran Ranger"
+	path = /obj/item/storage/box/large/custom_kit/mutie/vet_ranger
+	restricted_roles = "NCR Veteran Ranger"
+	restricted_roles = list("NCR Veteran Ranger")
+
+/datum/gear/donator/kits/muite/ncr/ranger
+	name = "Mutant Ranger"
+	path = /obj/item/storage/box/large/custom_kit/mutie/ranger
+	restricted_roles = "NCR Rangers"
+	restricted_roles = list("NCR Ranger",
+							"NCR Civilian Ranger")
+
 
 /////////////////////
 ///Loadout Boxes///// See kits.dm, use this model for loadouts that have more than one item per character.

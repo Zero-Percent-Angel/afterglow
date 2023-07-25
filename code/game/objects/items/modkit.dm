@@ -72,7 +72,7 @@
 	target_items = list(/obj/item/clothing/suit/armor/light/ncr)
 	result_item = /obj/item/clothing/suit/armor/light/ncr/mutie
 
-/obj/item/modkit/mutie/vet_ranger_helmet
+/obj/item/modkit/mutie/ncr_trooper_helmet
 	name = "Mutie Trooper Helmet modkit"
 	target_items = list(/obj/item/clothing/head/helmet/f13/ncr)
 	result_item = /obj/item/clothing/head/helmet/f13/ncr/mutie
