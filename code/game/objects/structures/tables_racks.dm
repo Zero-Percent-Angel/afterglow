@@ -454,7 +454,7 @@
 	desc = "A stylish wooden table with a circular design."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "club"
-	canSmoothWith = null
+	smooth = SMOOTH_FALSE
 	buildstack = null
 	max_integrity = 70
 
