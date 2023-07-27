@@ -46,8 +46,8 @@
 #define RADIO_TOKEN_CENTCOM ":y"
 
 #define RADIO_CHANNEL_VAULT "Vault"
-#define RADIO_KEY_VAULT "b"
-#define RADIO_TOKEN_VAULT ":b"
+#define RADIO_KEY_VAULT "^"
+#define RADIO_TOKEN_VAULT ":^"
 
 #define RADIO_CHANNEL_NCR "NCR"
 #define RADIO_KEY_NCR "w"
@@ -82,8 +82,8 @@
 #define RADIO_TOKEN_TOWN_MAYOR ":y"
 
 #define RADIO_CHANNEL_REDWATER "Sheriff"
-#define RADIO_KEY_REDWATER "i"
-#define RADIO_TOKEN_REDWATER ":i"
+#define RADIO_KEY_REDWATER "$"
+#define RADIO_TOKEN_REDWATER ":$"
 
 #define RADIO_CHANNEL_KHANS "Khans"
 #define RADIO_KEY_KHANS "k"
