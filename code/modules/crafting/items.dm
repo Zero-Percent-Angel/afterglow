@@ -386,7 +386,7 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 			return
 	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 160) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
 		if(istype(H, /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b,
-					 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b/legion))
+					/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b/legion))
 			new /obj/item/clothing/head/helmet/f13/power_armor/t51b(user.loc)
 			qdel(H)
 			return
