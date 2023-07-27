@@ -475,14 +475,10 @@ Vault Engineer
 	description = "You answer directly to the Vault Coordinator, being assigned to fulfill whatever menial tasks are required. You lack an assignment, but may be given one the Vault Coordinator if required or requested. You should otherwise busy yourself with assisting personnel with tasks around the Vault."
 	supervisors = "absolutely everyone"
 	selection_color = "#ddffdd"
-	access = list()			//See /datum/job/vault/assistant/get_access()
-	minimal_access = list()	//See /datum/job/vault/assistant/get_access()
+	access = list(ACCESS_CARGO, ACCESS_VAULT_F13)
+	minimal_access = list(ACCESS_CARGO, ACCESS_VAULT_F13)
 
 	outfit = /datum/outfit/job/vault/f13vaultDweller
-
-/datum/job/vault/f13vaultDweller/get_access()
-	access = list(ACCESS_CARGO)
-	minimal_access = list(ACCESS_CARGO)
 
 /datum/outfit/job/vault/f13vaultDweller
 	name = "Vault Dweller"
