@@ -347,19 +347,22 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	//upgrades basic salvaged PA to full PA. t45b should not be in use anymore, but is covered anyways.
 	//You either need 140 combined or 120 and technophreak to repair t45d.
 	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 120 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
-		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b))
-			new /obj/item/clothing/suit/armor/power_armor/t45d(user.loc)
-			qdel(A)
-			qdel(src)
-			return
-		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d))
+		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b,
+					/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d,
+					/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/tribal,
+					/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/hotrod,
+					/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/raider,
+					/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr,
+					/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/palacent,
+					/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/legion))
 			new /obj/item/clothing/suit/armor/power_armor/t45d(user.loc)
 			qdel(A)
 			qdel(src)
 			return
 	//You either need 160 combined or 140 and technophreak to repair t51b.
 	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 160) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
-		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b))
+		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b,
+					/obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b/legion))
 			new /obj/item/clothing/suit/armor/power_armor/t51b(user.loc)
 			qdel(A)
 			qdel(src)
@@ -370,16 +373,20 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	var/obj/item/clothing/head/helmet/f13/power_armor/H = W
 	//servo kits are not destroyed on repairing helmets
 	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 120 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
-		if(istype(H,/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b))
-			new /obj/item/clothing/head/helmet/f13/power_armor/t45d(user.loc)
-			qdel(H)
-			return
-		if(istype(H,/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d))
+		if(istype(H,/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b,
+					/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d,
+					/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/raider,
+					/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr,
+					/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/hotrod,
+					/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/tribal,
+					/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/legion,
+					/obj/item/clothing/head/helmet/f13/legion/palacent))
 			new /obj/item/clothing/head/helmet/f13/power_armor/t45d(user.loc)
 			qdel(H)
 			return
 	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 160) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
-		if(istype(H, /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b))
+		if(istype(H, /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b,
+					 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b/legion))
 			new /obj/item/clothing/head/helmet/f13/power_armor/t51b(user.loc)
 			qdel(H)
 			return
