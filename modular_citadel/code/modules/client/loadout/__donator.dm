@@ -64,17 +64,22 @@
 /datum/gear/donator/kits/muite/ncr/ranger
 	name = "Mutant Ranger"
 	path = /obj/item/storage/box/large/custom_kit/mutie/ranger
-	restricted_roles = "NCR Rangers"
+	restricted_desc = "NCR Rangers"
 	restricted_roles = list("NCR Ranger",
 							"NCR Civilian Ranger")
 
 /datum/gear/donator/kits/muite/ncr/ranger/vet
 	name = "Mutant Veteran Ranger"
 	path = /obj/item/storage/box/large/custom_kit/mutie/vet_ranger
-	restricted_roles = "NCR Veteran Ranger"
+	restricted_desc = "NCR Veteran Ranger"
 	restricted_roles = list("NCR Veteran Ranger")
 
 //Mutownie
+
+/datum/gear/donator/kits/muite/townie
+	name = "Mutant Townie"
+	restricted_desc = "Ripley/Klamat"
+	restricted_roles = list()
 
 //Other Mutie
 

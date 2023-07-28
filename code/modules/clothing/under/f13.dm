@@ -1778,6 +1778,12 @@
 	item_state = "scoutclothes"
 	item_color = "scoutclothes"
 
+/obj/item/clothing/under/f13/mutie/townie
+	name = "oversized slacks"
+	desc = "An incredibly large pair of slacks, large enough to fit a super mutant."
+	icon_state = "mutie_slacks"
+	item_state = "mutie_slacks"
+
 /obj/item/clothing/under/f13/densuit
 	name = "the den outfit"
 	desc = "A dark grey, and finely pressed suit, complete with kneepads and a suspiciously golden silk shirt, only the best."

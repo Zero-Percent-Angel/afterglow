@@ -534,11 +534,24 @@
 	item_state = "mutie_poncho_weathered"
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/mutie/poncho
 
+/obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered/townie
+	name = "mutant townie poncho"
+	desc = "An oversized poncho, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
+	icon_state = "mutie_townie"
+	item_state = "mutie_townie"
+	hoodtype = /obj/item/clothing/head/hooded/cloakhood/mutie/poncho/townie
+
 /obj/item/clothing/head/hooded/cloakhood/mutie/poncho
 	name = "mutant poncho hood"
 	desc = "An oversized hood from an oversized poncho."
 	icon_state = "mutie_poncho"
 	item_state = "mutie_poncho"
+
+/obj/item/clothing/head/hooded/cloakhood/mutie/poncho/townie
+	name = "mutant poncho hood"
+	desc = "An oversized hood from an oversized poncho."
+	icon_state = "mutie_townie_poncho"
+	item_state = "mutie_townie_poncho"
 
 ///////////////////////////
 // !!!FACTION SECTION!!! //
