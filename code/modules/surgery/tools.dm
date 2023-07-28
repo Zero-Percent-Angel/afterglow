@@ -151,6 +151,7 @@
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "surgicaldrill_a"
 	hitsound = 'sound/items/welder.ogg'
+	w_class = WEIGHT_CLASS_TINY
 	light_system = MOVABLE_LIGHT
 	light_range = 1
 
