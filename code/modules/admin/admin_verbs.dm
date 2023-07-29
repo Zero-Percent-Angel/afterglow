@@ -89,6 +89,8 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/datum/admins/proc/open_borgopanel,
 	/datum/admins/proc/toggle_sleep,
 	/datum/admins/proc/toggle_sleep_area,
+	/datum/admins/proc/add_ckey_to_whitelist,
+	/datum/admins/proc/remove_ckey_from_whitelist
 	)
 GLOBAL_LIST_INIT(admin_verbs_ban, list(/client/proc/unban_panel, /client/proc/DB_ban_panel, /client/proc/stickybanpanel))
 GLOBAL_PROTECT(admin_verbs_ban)
