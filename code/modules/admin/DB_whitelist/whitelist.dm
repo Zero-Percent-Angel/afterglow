@@ -31,7 +31,7 @@ GLOBAL_LIST_INIT(whitelist_jobs_combined_list, list(LEADERSHIP, LEADERSHIP_BOS, 
 	if (confirm != "yes")
 		return
 	var/datum/db_query/query_add_whitelist = SSdbcore.NewQuery(
-		"INSERT INTO [format_table_name("role_whitelist")] (`whitelist`,`ckey`) VALUES (:choosen_whitelist, :choosen_ckey))",
+		"INSERT INTO [format_table_name("role_whitelist")] (whitelist, ckey) VALUES (:choosen_whitelist, :choosen_ckey))",
 		list("choosen_whitelist" = choosen_whitelist, "choosen_ckey" = choosen_ckey)
 	)
 	if(!query_add_whitelist.warn_execute())
