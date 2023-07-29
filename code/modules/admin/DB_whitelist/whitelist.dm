@@ -61,7 +61,7 @@ GLOBAL_LIST_INIT(whitelist_jobs_combined_list, list(LEADERSHIP, LEADERSHIP_BOS, 
 	if (confirm != "yes")
 		return
 	var/datum/db_query/query_remove_whitelist = SSdbcore.NewQuery(
-		"DELETE FROM [format_table_name("role_whitelist")] WHERE whitelist = :choosen_whitelist AND ckey = :choosen_ckey)",
+		"DELETE FROM [format_table_name("role_whitelist")] WHERE whitelist = :choosen_whitelist AND ckey = :choosen_ckey",
 		list("choosen_whitelist" = choosen_whitelist, "choosen_ckey" = choosen_ckey)
 	)
 	if(!query_remove_whitelist.warn_execute())
