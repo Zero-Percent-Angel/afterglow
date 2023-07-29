@@ -495,8 +495,8 @@
 /obj/item/clothing/suit/armor/medium/combat/ncr
 	name = "NCR combat armor"
 	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for New California Republic."
-	icon_state = "ncr_armor"
-	item_state = "ncr_armor"
+	icon_state = "combat_armor_ncr"
+	item_state = "combat_armor_ncr"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/ncr
 	name = "reinforced NCR combat armor"
@@ -509,14 +509,14 @@
 /obj/item/clothing/suit/armor/medium/combat/legion
 	name = "legion combat armor"
 	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "legion_combat"
-	item_state = "legion_combat"
+	icon_state = "combat_armor_legion"
+	item_state = "combat_armor_legion"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/legion
 	name = "reinforced legion combat armor"
 	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "legion_combat2"
-	item_state = "legion_combat2"
+	icon_state = "combat_armor_legion_mk2"
+	item_state = "combat_armor_legion_mk2"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
 
