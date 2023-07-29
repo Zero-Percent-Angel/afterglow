@@ -6,7 +6,6 @@
 //	var/active = null
 	canSmoothWith = null
 	smooth = SMOOTH_TRUE
-	weak_wall = TRUE
 
 /turf/closed/wall/mineral/gold
 	name = "gold wall"
