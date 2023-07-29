@@ -33,99 +33,99 @@
 		play_records[rtype] = rtype
 
 	qdel(whitelist_read)
-	
-	if(!whitelists["ncr_elite"])							//if they do not have ncr_elite whitelist, remove ncr_elite whitelist positions
+
+	if(!whitelists[ELITE_NCR])							//if they do not have ncr_elite whitelist, remove ncr_elite whitelist positions
 		for (var/rtypeWL in GLOB.ncr_elite_positions)
 			play_records[rtypeWL] = 0
 
-	if(!whitelists["bos_elite"])					// if they do not have bos_elite whitelist, remove bos_elite whitelist positions
+	if(!whitelists[ELITE_BOS])					// if they do not have bos_elite whitelist, remove bos_elite whitelist positions
 		for(var/rtypeWL in GLOB.bos_elite_positions)
 			play_records[rtypeWL] = 0
-	
-	if(!whitelists["leg_elite"])					// if they do not have leg_elite whitelist, remove leg_elite whitelist positions
+
+	if(!whitelists[ELITE_LEGION])					// if they do not have leg_elite whitelist, remove leg_elite whitelist positions
 		for(var/rtypeWL in GLOB.legion_elite_positions)
 			play_records[rtypeWL] = 0
 
-	if(!whitelists["leadership"])					// if they do not have leadership whitelist, remove leadership whitelist positions
+	if(!whitelists[LEADERSHIP])					// if they do not have leadership whitelist, remove leadership whitelist positions
 		for(var/rtypeWL in GLOB.command_positions)
 			play_records[rtypeWL] = 0
 
-	if(!whitelists["leadership_ncr"])					// if they do not have leadership_ncr whitelist, remove leadership_ncr whitelist positions
+	if(!whitelists[LEADERSHIP_NCR])					// if they do not have leadership_ncr whitelist, remove leadership_ncr whitelist positions
 		for(var/rtypeWL in GLOB.ncr_command_positions)
 			play_records[rtypeWL] = 0
 
-	if(!whitelists["leadership_bos"])					// if they do not have leadership_bos whitelist, remove leadership_bos whitelist positions
+	if(!whitelists[LEADERSHIP_BOS])					// if they do not have leadership_bos whitelist, remove leadership_bos whitelist positions
 		for(var/rtypeWL in GLOB.bos_command_positions)
 			play_records[rtypeWL] = 0
 
-	if(!whitelists["leadership_legion"])				// if they do not have leadership_leg whitelist, remove leadership_leg whitelist positions
+	if(!whitelists[LEADERSHIP_LEGION])				// if they do not have leadership_leg whitelist, remove leadership_leg whitelist positions
 		for(var/rtypeWL in GLOB.legion_command_positions)
 			play_records[rtypeWL] = 0
 
-	if(!whitelists["leadership_town"])					// if they do not have leadership_town whitelist, remove leadership_town whitelist positions
+	if(!whitelists[LEADERSHIP_TOWN])					// if they do not have leadership_town whitelist, remove leadership_town whitelist positions
 		for(var/rtypeWL in GLOB.town_command_positions)
 			play_records[rtypeWL] = 0
 
-	if(!whitelists["vault_scientist"])
+	if(!whitelists[VAULT_SCIENTIST])
 		for(var/rtypeWL in GLOB.vault_science_positions)
 			play_records[rtypeWL] = 0
 
-	if(!whitelists["leadership_vault"])					// if they do not have leadership_legion vault, remove leadership_vault whitelist positions
+	if(!whitelists[LEADERSHIP_VAULT])					// if they do not have leadership_legion vault, remove leadership_vault whitelist positions
 		for(var/rtypeWL in GLOB.vault_command_positions)
 			play_records[rtypeWL] = 0
 
-	if(!whitelists["outlaw_positions"])
+	if(!whitelists[OUTLAW])
 		for(var/rtypeWL in GLOB.outlaw_positions)
 			play_records[rtypeWL] = 0
 
 	//This section is for IF the personh has a whitelist, then it allows them to play the job. For every '!whitelists' entry, you WILL need one of these too.
 
-	if(whitelists["ncr_elite"])
+	if(whitelists[ELITE_NCR])
 		for(var/rtypeWL in GLOB.ncr_elite_positions)
 			play_records[rtypeWL] = rtypeWL
 
-	if(whitelists["bos_elite"])
+	if(whitelists[ELITE_BOS])
 		for(var/rtypeWL in GLOB.bos_elite_positions)
 			play_records[rtypeWL] = rtypeWL
 
-	if(whitelists["leg_elite"])
+	if(whitelists[ELITE_LEGION])
 		for(var/rtypeWL in GLOB.legion_elite_positions)
 			play_records[rtypeWL] = rtypeWL
 
-	if(whitelists["leadership"])
+	if(whitelists[LEADERSHIP])
 		for(var/rtypeWL in GLOB.command_positions)
 			play_records[rtypeWL] = rtypeWL
-	
-	if(whitelists["leadership_ncr"])
+
+	if(whitelists[LEADERSHIP_NCR])
 		for(var/rtypeWL in GLOB.ncr_command_positions)
 			play_records[rtypeWL] = rtypeWL
-	
-	if(whitelists["leadership_bos"])
+
+	if(whitelists[LEADERSHIP_BOS])
 		for(var/rtypeWL in GLOB.bos_command_positions)
 			play_records[rtypeWL] = rtypeWL
-	
-	if(whitelists["leadership_legion"])
+
+	if(whitelists[LEADERSHIP_LEGION])
 		for(var/rtypeWL in GLOB.legion_command_positions)
 			play_records[rtypeWL] = rtypeWL
-	
-	if(whitelists["leadership_town"])
+
+	if(whitelists[LEADERSHIP_TOWN])
 		for(var/rtypeWL in GLOB.town_command_positions)
 			play_records[rtypeWL] = rtypeWL
-	
-	if(!whitelists["vault_scientist"])
+
+	if(!whitelists[VAULT_SCIENTIST])
 		for(var/rtypeWL in GLOB.vault_science_positions)
 			play_records[rtypeWL] = rtypeWL
 
-	if(whitelists["leadership_vault"])
+	if(whitelists[LEADERSHIP_VAULT])
 		for(var/rtypeWL in GLOB.vault_command_positions)
 			play_records[rtypeWL] = rtypeWL
-	
-	if(whitelists["outlaw_positions"])
+
+	if(whitelists[OUTLAW])
 		for(var/rtypeWL in GLOB.outlaw_positions)
 			play_records[rtypeWL] = rtypeWL
-	
+
 	/* - Old shit, don't activate this. I'm just too lazy to remove it and keeping it incase I fucked something up. - Rebel0
-	
+
 	if(!whitelists["faction_legion"])					// if they do not have faction_legion whitelist, remove faction_legion whitelist positions
 		for(var/rtypeWL in GLOB.legion_positions)
 			play_records[rtypeWL] = 0
