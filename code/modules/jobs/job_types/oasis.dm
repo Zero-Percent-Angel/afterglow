@@ -750,8 +750,8 @@ Mayor
 	selection_color = "#dcba97"
 	outfit = /datum/outfit/job/oasis/f13detective
 
-	access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
-	minimal_access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS)
+	access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS, ACCESS_OFFICER)
+	minimal_access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS, ACCESS_OFFICER)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/wasteland/f13wastelander,

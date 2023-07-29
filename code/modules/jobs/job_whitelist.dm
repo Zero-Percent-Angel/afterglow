@@ -6,7 +6,9 @@
 	return TRUE
 
 /datum/job/proc/whitelist_locked(client/C, jobname)
-	if((C.prefs.job_whitelists[jobname]) || (!CONFIG_GET(flag/use_role_whitelist)))
+	if(check_rights_for(C,R_ADMIN))
+		return FALSE
+	if((C.prefs.job_whitelists[jobname]) || !(CONFIG_GET(flag/use_role_whitelist) && SSdbcore.Connect() && job_is_whitelist_locked(jobname)))
 		return FALSE
 	return TRUE
 
