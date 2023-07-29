@@ -700,7 +700,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm = 2,
+		/obj/item/ammo_box/magazine/m10mm/smg = 3,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/grenade/homemade/coffeepotbomb = 1,
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
@@ -794,7 +794,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
 	backpack_contents = list(
 		/obj/item/twohanded/spear/lance = 1,
-		/obj/item/ammo_box/magazine/m10mm/adv/ext = 2,
+		/obj/item/ammo_box/magazine/m10mm/smg = 3,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		/obj/item/melee/onehanded/machete/gladius = 1,
 		)
