@@ -10,7 +10,7 @@
 	if(dam)
 		damage = max(0, damage + dam)
 		update_icon()
-	if(!unbreakable && hardness > 0 && damage > 1600/hardness)
+	if(!unbreakable && hardness > 0 && damage > 3200/hardness)
 		dismantle_wall(1)
 		playsound(src, 'sound/effects/meteorimpact.ogg', rand(50,100), 1)
 		return 1
@@ -55,4 +55,5 @@
 /turf/closed/wall/bullet_act(obj/item/projectile/P)
 	. = ..()
 	if (!unbreakable && hardness > 0 && P.damage >= 750/(hardness + (hardness * P.armour_penetration)))
-		take_damage(P.damage * (hardness**2)/(19600))
+		var/damTaken = weak_wall ? P.damage * (hardness**2)/(19600) : min(P.damage * (hardness**2)/(39200), 0.5)
+		take_damage(damTaken)
