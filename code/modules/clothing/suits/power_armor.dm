@@ -59,11 +59,12 @@
 	if (!HAS_TRAIT(H, TRAIT_PA_WEAR) && slot == SLOT_WEAR_SUIT && requires_training)
 		to_chat(user, span_warning("You don't have the proper training to operate the power armor!"))
 		return FALSE
-	var/datum/job/job = SSjob.GetJob(M.mind.assigned_role)
-	if(istype(job))
-		if(FACTION_LEGION)
-			to_chat(user, span_warning("You would make Mars shed tears of fire by wearing the armor of the weak!"))
-			return FALSE
+	if(M.mind)
+		var/datum/job/job = SSjob.GetJob(M.mind.assigned_role)
+		if(istype(job))
+			if(FACTION_LEGION)
+				to_chat(user, span_warning("You would make Mars shed tears of fire by wearing the armor of the weak!"))
+				return FALSE
 	if(slot == SLOT_WEAR_SUIT)
 		return ..()
 	return
