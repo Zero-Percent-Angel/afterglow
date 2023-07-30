@@ -524,12 +524,6 @@
 	slot_flags = ITEM_SLOT_NECK
 	component_type = /datum/component/storage/concrete/neckpron/specialized/gun
 
-/obj/item/storage/belt/shoulderholster/mutie
-	name = "mutant's shoulder holster"
-	desc = "An over the shoulder shooter holder for Mutants. WARNING: Overly Large Badasses only."
-	item_state = "mutie_holster_shoulder"
-	species_restricted = list("exclude","Human","Ghoul")
-
 //////////////////
 /// Neck medibelt
 
