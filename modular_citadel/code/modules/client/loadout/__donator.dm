@@ -92,6 +92,7 @@
 							"Detective",
 							"Barkeep"
 							)
+	cost = 4
 
 /datum/gear/donator/kits/muite/townie/deputy
 	name = "Mutant Police"
@@ -100,9 +101,10 @@
 	restricted_roles = list("Mayor",
 							"Secretary",
 							"Sheriff",
-							"Deputy"
+							"Deputy",
 							"Detective"
 							)
+	cost = 4
 
 //Other Mutie
 
@@ -112,11 +114,11 @@
 					"tamedachilles","southernsaint","zeropercentangel","melodicdeity","brainbodger",
 					"afroterk","theetneralflame","myrios","omnisalad","zephyrtfa","daemontinadel",
 					"sb208")
+	cost = 4
 
 /datum/gear/donator/mutie/helmet
 	name = "Mutant Aviator Hat"
 	path = /obj/item/clothing/head/helmet/f13/mutie
-	cost = 1
 
 /datum/gear/donator/mutie/helmet/metal
 	name = "Mutant Bladed Helmet"
