@@ -129,6 +129,7 @@
 /datum/gear/donator/mutie/helmet
 	name = "Mutant Aviator Hat"
 	path = /obj/item/clothing/head/helmet/f13/mutie
+	slot = SLOT_HEAD
 
 /datum/gear/donator/mutie/helmet/metal
 	name = "Mutant Bladed Helmet"
@@ -145,6 +146,7 @@
 /datum/gear/donator/mutie/under
 	name = "Mutant Shorts"
 	path = /obj/item/clothing/under/f13/mutie
+	slot = SLOT_W_UNIFORM
 
 /datum/gear/donator/mutie/under/santa
 	name = "Mutant Red and White Jumpsuit"
@@ -185,6 +187,7 @@
 /datum/gear/donator/mutie/armour/light
 	name = "Mutant Forged Armour"
 	path = /obj/item/clothing/suit/armor/light/mutie
+	slot = SLOT_WEAR_SUIT
 
 /datum/gear/donator/mutie/armour
 	name = "Mutant Metal Armour"
@@ -205,6 +208,7 @@
 /datum/gear/donator/mutie/gloves
 	name = "Mutant Bracers"
 	path = /obj/item/clothing/gloves/f13/mutie
+	slot = SLOT_GLOVES
 
 /datum/gear/donator/mutie/gloves/signs
 	name = "Mutant Sign Bracers"
@@ -217,6 +221,7 @@
 /datum/gear/donator/mutie/shoes
 	name = "Mutant Sandals"
 	path = /obj/item/clothing/shoes/f13/mutie
+	slot = SLOT_SHOES
 
 /datum/gear/donator/mutie/shoes
 	name = "Mutant Boots"
