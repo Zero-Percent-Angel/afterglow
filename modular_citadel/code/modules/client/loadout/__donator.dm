@@ -96,7 +96,7 @@
 
 /datum/gear/donator/kits/muite/townie/deputy
 	name = "Mutant Police"
-	path = /obj/item/storage/box/large/custom_kit/mutie/townie/deputy
+	path = /obj/item/storage/box/large/custom_kit/mutie/townie/police
 	restricted_desc = "Ripley/Klamat"
 	restricted_roles = list("Mayor",
 							"Secretary",
@@ -104,7 +104,17 @@
 							"Deputy",
 							"Detective"
 							)
-	cost = 4
+
+/datum/gear/donator/kits/muite/townie/labourer
+	name = "Mutant Labourer"
+	path = /obj/item/storage/box/large/custom_kit/mutie/labourer
+	restricted_desc = "Ripley/Klamat"
+	restricted_roles = list("Citizen",
+							"Ripley Trade Worker",
+							"Farmer",
+							"Prospector",
+							"Barkeep"
+							)
 
 //Other Mutie
 
@@ -114,7 +124,7 @@
 					"tamedachilles","southernsaint","zeropercentangel","melodicdeity","brainbodger",
 					"afroterk","theetneralflame","myrios","omnisalad","zephyrtfa","daemontinadel",
 					"sb208")
-	cost = 4
+	cost = 1
 
 /datum/gear/donator/mutie/helmet
 	name = "Mutant Aviator Hat"
@@ -131,6 +141,66 @@
 /datum/gear/donator/mutie/helmet/metal/crown
 	name = "Mutant Crowned Helmet"
 	path = /obj/item/clothing/head/helmet/knight/f13/metal/mutie/knight/crown
+
+/datum/gear/donator/mutie/under
+	name = "Mutant Shorts"
+	path = /obj/item/clothing/under/f13/mutie
+
+/datum/gear/donator/mutie/under/santa
+	name = "Mutant Red and White Jumpsuit"
+	path = /obj/item/clothing/under/f13/mutie/santa
+
+/datum/gear/donator/mutie/under/vault
+	name = "Mutant Vault Jumpsuit"
+	path = /obj/item/clothing/under/f13/mutie/vault
+
+/datum/gear/donator/mutie/under/loincloth
+	name = "Mutant Loincloth"
+	path = /obj/item/clothing/under/f13/mutie/cloth
+
+/datum/gear/donator/mutie/under/suit
+	name = "Mutant Suit"
+	path = /obj/item/clothing/under/f13/mutie/suit
+
+/datum/gear/donator/mutie/under/suit/burgundy
+	name = "Mutant Burgundy Suit"
+	path = /obj/item/clothing/under/f13/mutie/suit/burgundy
+
+/datum/gear/donator/mutie/under/suit/purple
+	name = "Mutant Purple Suit"
+	path = /obj/item/clothing/under/f13/mutie/suit/purple
+
+/datum/gear/donator/mutie/under/suit/purple/pinstripe
+	name = "Mutant Purple Zootsuit"
+	path = /obj/item/clothing/under/f13/mutie/suit/purple/pinstripe
+
+/datum/gear/donator/mutie/under/suit/purple/pinstripe/torn
+	name = "Mutant Torn Purple Zootsuit"
+	path = /obj/item/clothing/under/f13/mutie/suit/purple/pinstripe/torn
+
+/datum/gear/donator/mutie/under/police
+	name = "Mutant Police"
+	path = /obj/item/clothing/under/f13/mutie/townie/police
+
+/datum/gear/donator/mutie/armour/light
+	name = "Mutant Forged Armour"
+	path = /obj/item/clothing/suit/armor/light/mutie
+
+/datum/gear/donator/mutie/armour
+	name = "Mutant Metal Armour"
+	path = /obj/item/clothing/suit/armor/medium/vest/breastplate/scrap/mutie
+
+/datum/gear/donator/mutie/cloak
+	name = "Mutant Cloak"
+	path = /obj/item/clothing/suit/hooded/cloak/mutie
+
+/datum/gear/donator/mutie/poncho
+	name = "Mutant Poncho"
+	path = /obj/item/clothing/suit/hooded/cloak/mutie/poncho
+
+/datum/gear/donator/mutie/poncho
+	name = "Mutant Poncho"
+	path = /obj/item/clothing/suit/hooded/cloak/mutie/weathered
 
 /////////////////////
 ///Loadout Boxes///// See kits.dm, use this model for loadouts that have more than one item per character.

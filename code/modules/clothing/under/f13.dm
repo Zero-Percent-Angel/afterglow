@@ -1734,6 +1734,12 @@
 	item_state = "mutie_shorts"
 	species_restricted = list("exclude","Human","Ghoul")
 
+/obj/item/clothing/under/f13/mutie/cloth
+	name = "large loincloth"
+	desc = "An incredibly large loincloth, large enough to fit a super mutant."
+	icon_state = "mutie_loincloth"
+	item_state = "mutie_loincloth"
+
 /obj/item/clothing/under/f13/mutie/santa
 	name = "red and white jumpsuit"
 	desc = "A fairly damaged red and white shirt with matching shorts, large enough to fit a super mutant."
@@ -1792,7 +1798,7 @@
 
 /obj/item/clothing/under/f13/mutie/townie/overalls
 	name = "oversized overalls"
-	desc = "An incredibly large set of overall.
+	desc = "An incredibly large set of overalls."
 	icon_state = "mutie_overalls"
 	item_state = "mutie_overalls"
 
