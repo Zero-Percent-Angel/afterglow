@@ -21,6 +21,8 @@
 /////////////////////
 
 /datum/gear/donator/kits/mutie
+	name = "Mutie Coin"
+	path = /obj/item/coin/silver
 	subcategory = LOADOUT_SUBCATEGORY_DONATOR_MUTIE
 	ckeywhitelist = list("asterixcodix","yecrowbarman","tzula","spensara","bengalninja","wotzizname",
 					"tamedachilles","southernsaint","zeropercentangel","melodicdeity","brainbodger",
