@@ -208,7 +208,7 @@
 
 /datum/gear/donator/mutie/gloves/signs
 	name = "Mutant Sign Bracers"
-	path = /obj/item/clothing/gloves/f13/mutie/signs
+	path = /obj/item/clothing/gloves/f13/mutie/sign
 
 /datum/gear/donator/mutie/gloves/gloves
 	name = "Mutant Gloves"
