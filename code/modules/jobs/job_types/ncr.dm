@@ -820,9 +820,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	uniform = /obj/item/clothing/under/f13/ncr
 	accessory =	/obj/item/clothing/accessory/ncr/SGT
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
-	head = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/ncr
+	head = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/ncr
 	belt = /obj/item/storage/belt/legholster
-	suit = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr
+	suit = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/ncr
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
 		/obj/item/ammo_box/magazine/m10mm/adv/simple = 2,
