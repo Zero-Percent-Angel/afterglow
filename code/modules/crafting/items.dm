@@ -344,14 +344,9 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 
 /obj/item/pa_kit/proc/parmor(obj/item/W, mob/user)
 	var/obj/item/clothing/suit/armor/f13/power_armor/A = W
-	//upgrades basic salvaged PA to full PA. t45b should not be in use anymore, but is covered anyways.
+	//upgrades basic salvaged PA to full PA.
 	//You either need 140 combined or 120 and technophreak to repair t45d.
 	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 120 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
-		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b))
-			new /obj/item/clothing/suit/armor/power_armor/t45d(user.loc)
-			qdel(A)
-			qdel(src)
-			return
 		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d))
 			new /obj/item/clothing/suit/armor/power_armor/t45d(user.loc)
 			qdel(A)
@@ -370,10 +365,6 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	var/obj/item/clothing/head/helmet/f13/power_armor/H = W
 	//servo kits are not destroyed on repairing helmets
 	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 120 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
-		if(istype(H,/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b))
-			new /obj/item/clothing/head/helmet/f13/power_armor/t45d(user.loc)
-			qdel(H)
-			return
 		if(istype(H,/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d))
 			new /obj/item/clothing/head/helmet/f13/power_armor/t45d(user.loc)
 			qdel(H)
