@@ -41,6 +41,10 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/leg_combat_mk2)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/leg_combat_helm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/leg_combat_helm_mk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionparmaarmorconversion)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionparmahelmetconversion)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionscutumarmorconversion)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionscutumhelmetconversion)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire
 	belt = /obj/item/storage/belt/army/assault/legion
