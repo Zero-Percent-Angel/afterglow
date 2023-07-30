@@ -882,13 +882,13 @@ GLOBAL_LIST_INIT(loot_skillbook, list(
 ))
 
 GLOBAL_LIST_INIT(loot_craft_advanced, list(
-	/obj/item/advanced_crafting_components/flux,
-	/obj/item/advanced_crafting_components/lenses,
-	/obj/item/advanced_crafting_components/conductors,
-	/obj/item/advanced_crafting_components/receiver,
-	/obj/item/advanced_crafting_components/assembly,
-	/obj/item/advanced_crafting_components/alloys
-	/obj/item/advanced_crafting_components/p_circuits
+	/obj/item/advanced_crafting_components/flux = 1,
+	/obj/item/advanced_crafting_components/lenses = 1,
+	/obj/item/advanced_crafting_components/conductors = 1,
+	/obj/item/advanced_crafting_components/receiver = 1,
+	/obj/item/advanced_crafting_components/assembly = 1,
+	/obj/item/advanced_crafting_components/alloys = 1,
+	/obj/item/advanced_crafting_components/p_circuits = 2
 ))
 
 GLOBAL_LIST_INIT(loot_attachment, list(
