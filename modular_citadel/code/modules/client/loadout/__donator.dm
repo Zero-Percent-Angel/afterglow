@@ -97,7 +97,7 @@
 /datum/gear/donator/kits/muite/townie/deputy
 	name = "Mutant Police"
 	path = /obj/item/storage/box/large/custom_kit/mutie/townie/police
-	restricted_desc = "Ripley/Klamat"
+	restricted_desc = "Ripley/Klamat Sheriff and Mayoral Departments"
 	restricted_roles = list("Mayor",
 							"Secretary",
 							"Sheriff",
@@ -108,7 +108,7 @@
 /datum/gear/donator/kits/muite/townie/labourer
 	name = "Mutant Labourer"
 	path = /obj/item/storage/box/large/custom_kit/mutie/labourer
-	restricted_desc = "Ripley/Klamat"
+	restricted_desc = "Ripley/Klamat Peoples"
 	restricted_roles = list("Citizen",
 							"Ripley Trade Worker",
 							"Farmer",
