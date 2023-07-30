@@ -441,7 +441,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
 	armor = ARMOR_VALUE_MEDIUM
 
-/obj/item/clothing/head/helmet/f13/legion/palacent
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/palacent
 	name = "paladin-slayer centurion helmet"
 	desc = "The once-marvelous helmet of the T-45d power armor set, repurposed by the Legion into a symbol of its might. It has a large plume of red horse hair across the top of it going horizontally, donoting the rank of Centurion."
 	icon_state = "legion-palacent"
