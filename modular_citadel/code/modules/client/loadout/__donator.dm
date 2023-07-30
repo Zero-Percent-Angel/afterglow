@@ -190,17 +190,41 @@
 	name = "Mutant Metal Armour"
 	path = /obj/item/clothing/suit/armor/medium/vest/breastplate/scrap/mutie
 
-/datum/gear/donator/mutie/cloak
+/datum/gear/donator/mutie/armour/cloak
 	name = "Mutant Cloak"
 	path = /obj/item/clothing/suit/hooded/cloak/mutie
 
-/datum/gear/donator/mutie/poncho
+/datum/gear/donator/mutie/armour/poncho
 	name = "Mutant Poncho"
 	path = /obj/item/clothing/suit/hooded/cloak/mutie/poncho
 
-/datum/gear/donator/mutie/poncho
+/datum/gear/donator/mutie/armour/poncho
 	name = "Mutant Poncho"
 	path = /obj/item/clothing/suit/hooded/cloak/mutie/weathered
+
+/datum/gear/donator/mutie/gloves
+	name = "Mutant Bracers"
+	path = /obj/item/clothing/gloves/f13/mutie
+
+/datum/gear/donator/mutie/gloves/signs
+	name = "Mutant Sign Bracers"
+	path = /obj/item/clothing/gloves/f13/mutie/signs
+
+/datum/gear/donator/mutie/gloves/gloves
+	name = "Mutant Gloves"
+	path = /obj/item/clothing/gloves/f13/mutie/gloves
+
+/datum/gear/donator/mutie/shoes
+	name = "Mutant Sandals"
+	path = /obj/item/clothing/shoes/f13/mutie
+
+/datum/gear/donator/mutie/shoes
+	name = "Mutant Boots"
+	path = /obj/item/clothing/shoes/f13/mutie/boots
+
+/datum/gear/donator/mutie/shoes/dark
+	name = "Mutant Dark Boots"
+	path = /obj/item/clothing/shoes/f13/mutie/boots/dark
 
 /////////////////////
 ///Loadout Boxes///// See kits.dm, use this model for loadouts that have more than one item per character.
