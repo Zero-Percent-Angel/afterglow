@@ -509,13 +509,13 @@
 /obj/item/clothing/suit/armor/medium/combat/legion
 	name = "legion combat armor"
 	desc = "Pre-war military style armor, patched and missing some parts. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "combat_armor_legion"
+	icon_state = "legion_combat"
 	item_state = "legion_combat"
 
 /obj/item/clothing/suit/armor/medium/combat/mk2/legion
 	name = "reinforced legion combat armor"
 	desc = "Pre-war military style armor, a full set with bracers and reinforcements. Modified and repainted to declare the user a fighter for Caesar's Legion."
-	icon_state = "combat_armor_legion_mk2"
+	icon_state = "legion_combat2"
 	item_state = "legion_combat2"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
