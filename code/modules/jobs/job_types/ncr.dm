@@ -48,6 +48,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncr_combat_mk2)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncr_combat_helm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncr_combat_helm_mk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedarmorconversion)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedhelmetconversion)
 
 
 ///////////////////////
@@ -884,9 +886,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/servicerifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/scoutcarbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1garand)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedarmorconversion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tools/forged/entrenching_tool)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedhelmetconversion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ninemil)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1911)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingrifle)
@@ -1108,9 +1108,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/servicerifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/scoutcarbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1garand)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedarmorconversion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tools/forged/entrenching_tool)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedhelmetconversion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ninemil)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/m1911)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/huntingrifle)
@@ -1529,9 +1527,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/scoutcarbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rangemaster)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/servicerifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedarmorconversion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tools/forged/entrenching_tool)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedhelmetconversion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/concussion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/incendiaryrocket)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/empgrenade)
@@ -1610,10 +1606,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	if(visualsOnly)
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tailor/ncruniform)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedarmorconversion)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/tools/forged/entrenching_tool)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/servicerifle)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/ncrsalvagedhelmetconversion)
 
 // Logistics soldier
 /datum/outfit/loadout/rearlog
