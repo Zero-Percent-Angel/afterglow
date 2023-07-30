@@ -78,8 +78,31 @@
 
 /datum/gear/donator/kits/muite/townie
 	name = "Mutant Townie"
+	path = /obj/item/storage/box/large/custom_kit/mutie/townie
 	restricted_desc = "Ripley/Klamat"
-	restricted_roles = list()
+	restricted_roles = list("Mayor",
+							"Secretary",
+							"Sheriff",
+							"Deputy",
+							"Doctor",
+							"Citizen",
+							"Shopkeeper",
+							"Farmer",
+							"Prospector",
+							"Detective",
+							"Barkeep"
+							)
+
+/datum/gear/donator/kits/muite/townie/deputy
+	name = "Mutant Police"
+	path = /obj/item/storage/box/large/custom_kit/mutie/townie/deputy
+	restricted_desc = "Ripley/Klamat"
+	restricted_roles = list("Mayor",
+							"Secretary",
+							"Sheriff",
+							"Deputy"
+							"Detective"
+							)
 
 //Other Mutie
 

@@ -520,19 +520,22 @@
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	species_restricted = list("exclude","Human","Ghoul")
 
+/obj/item/clothing/suit/hooded/cloak/mutie
+	name = "mutant cloak"
+	desc = "An oversized cloak, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
+	icon_state = "mutie_cloak"
+	item_state = "mutie_cloak"
+	hoodtype = /obj/item/clothing/head/hooded/cloakhood/mutie/poncho
+
 /obj/item/clothing/suit/hooded/cloak/mutie/poncho
 	name = "mutant poncho"
 	desc = "An oversized poncho, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
 	icon_state = "mutie_poncho"
 	item_state = "mutie_poncho"
-	hoodtype = /obj/item/clothing/head/hooded/cloakhood/mutie/poncho
 
 /obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered
-	name = "mutant poncho"
-	desc = "An oversized poncho, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
 	icon_state = "mutie_poncho_weathered"
 	item_state = "mutie_poncho_weathered"
-	hoodtype = /obj/item/clothing/head/hooded/cloakhood/mutie/poncho
 
 /obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered/townie
 	name = "mutant townie poncho"
@@ -548,8 +551,6 @@
 	item_state = "mutie_poncho"
 
 /obj/item/clothing/head/hooded/cloakhood/mutie/poncho/townie
-	name = "mutant poncho hood"
-	desc = "An oversized hood from an oversized poncho."
 	icon_state = "mutie_townie_poncho"
 	item_state = "mutie_townie_poncho"
 
@@ -589,13 +590,12 @@
 	item_state = "mutie_ncr"
 	species_restricted = list("exclude","Human","Ghoul")
 
-/obj/item/clothing/suit/armor/light/ncr/mutie
+/obj/item/clothing/suit/armor/light/ncr/trailranger/mutie
 	name = "NCR Mutant Ranger Armour"
-	desc = "So-called 'armor' given to mutant members of the NCR military. Though, it equates to little more than scraps of armor strapped together."
+	desc = "Actual armour issued to mutant Rangers."
 	icon_state = "mutie_ranger_armour"
 	item_state = "mutie_ranger_armour"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
-	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	species_restricted = list("exclude","Human","Ghoul")
 
 ////////////
 // Legion //

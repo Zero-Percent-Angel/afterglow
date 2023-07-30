@@ -1784,6 +1784,24 @@
 	icon_state = "mutie_slacks"
 	item_state = "mutie_slacks"
 
+/obj/item/clothing/under/f13/mutie/townie/deputy
+	name = "oversized vest and slacks"
+	desc = "An incredibly large pair of slacks, a shirt and a vest, large enough to fit a super mutant."
+	icon_state = "mutie_vest_and_slacks"
+	item_state = "mutie_vest_and_slacks"
+
+/obj/item/clothing/under/f13/mutie/townie/overalls
+	name = "oversized overalls"
+	desc = "An incredibly large set of overall.
+	icon_state = "mutie_overalls"
+	item_state = "mutie_overalls"
+
+/obj/item/clothing/under/f13/mutie/townie/police
+	name = "oversized police uniform"
+	desc = "An incredibly large police uniform."
+	icon_state = "mutie_police"
+	item_state = "mutie_police"
+
 /obj/item/clothing/under/f13/densuit
 	name = "the den outfit"
 	desc = "A dark grey, and finely pressed suit, complete with kneepads and a suspiciously golden silk shirt, only the best."

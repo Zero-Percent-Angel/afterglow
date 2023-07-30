@@ -6,60 +6,92 @@
 	w_class = WEIGHT_CLASS_BULKY
 
 //And here we get into the mutie shite
+//NCR
 
 /obj/item/storage/box/large/custom_kit/mutie/vet_ranger
 	name = "Mutant Veteran Ranger"
-	desc = "Contains the necessary equipment to modify the Veteran Ranger Combat Armour and Helmet, to better fit a Mutant. Also contains their uniform."
+	desc = "Contains a set of Mutant Veteran Ranger Combat Armour and a Helmet. Also contains their uniform."
 
 /obj/item/storage/box/large/custom_kit/mutie/vet_ranger/PopulateContents()
-	new /obj/item/modkit/mutie/vet_ranger_helmet(src)
-	new /obj/item/modkit/mutie/vet_ranger_armour(src)
+	new /obj/item/clothing/head/helmet/f13/ncr/veteran/mutie(src)
+	new /obj/item/clothing/suit/armor/medium/combat/mk2/ncr/vetranger/mutie(src)
 	new /obj/item/clothing/under/f13/mutie/ncr/ranger(src)
 	new /obj/item/clothing/shoes/f13/mutie/boots/ncr/ranger(src)
 	new /obj/item/clothing/gloves/f13/mutie/gloves(src)
 
-/obj/item/clothing/suit/armor/medium/combat/patrol/mutie
-
 /obj/item/storage/box/large/custom_kit/mutie/ranger
 	name = "Mutant Ranger"
-	desc = "Contains the necessary equipment to modify the standard issue Ranger armour and helmet, to better fit a Mutant. Also contains their uniform."
+	desc = "Contains a set of Mutant Ranger Armour and a Helmet. Also contains their uniform."
 
 /obj/item/storage/box/large/custom_kit/mutie/ranger/PopulateContents()
-	new /obj/item/modkit/mutie/ranger_helmet(src)
-	new /obj/item/modkit/mutie/ranger_armour(src)
+	new /obj/item/clothing/head/f13/ncr/patrol/mutie(src)
+	new /obj/item/clothing/suit/armor/medium/combat/patrol/mutie(src)
+	new /obj/item/clothing/under/f13/mutie/ncr/ranger(src)
+	new /obj/item/clothing/shoes/f13/mutie/boots/ncr/ranger(src)
+	new /obj/item/clothing/gloves/f13/mutie/gloves(src)
+
+/obj/item/storage/box/large/custom_kit/mutie/civ_ranger
+	name = "Mutant Civilian Ranger"
+	desc = "Contains a set of Mutant Civilian Ranger Combat Armour and a Helmet. Also contains their uniform."
+
+/obj/item/storage/box/large/custom_kit/mutie/civ_ranger/PopulateContents()
+	new /obj/item/clothing/head/f13/ncr/patrol/mutie(src)
+	new /obj/item/clothing/suit/armor/light/ncr/trailranger/mutie(src)
 	new /obj/item/clothing/under/f13/mutie/ncr/ranger(src)
 	new /obj/item/clothing/shoes/f13/mutie/boots/ncr/ranger(src)
 	new /obj/item/clothing/gloves/f13/mutie/gloves(src)
 
 /obj/item/storage/box/large/custom_kit/mutie/ncr_officer
 	name = "Mutant NCR Officer"
-	desc = "Contains the necessary equipment to modify the armour and helmet of an NCR Officer to better fit a Mutant. Also contains their uniform."
+	desc = "Contains the armour and helmet of a Mutant NCR Officer. Also contains their uniform."
 
 /obj/item/storage/box/large/custom_kit/mutie/ncr_officer/PopulateContents()
-	new /obj/item/modkit/mutie/ncr_officer_helmet(src)
-	new /obj/item/modkit/mutie/ncr_officer_armour(src)
+	new /obj/item/clothing/head/helmet/f13/ncr/mutie(src)
+	new /obj/item/clothing/suit/armor/light/ncr/mutie(src)
 	new /obj/item/clothing/under/f13/mutie/ncr/officer(src)
 	new /obj/item/clothing/shoes/f13/mutie/boots/ncr(src)
 	new /obj/item/clothing/gloves/f13/mutie/gloves(src)
 
 /obj/item/storage/box/large/custom_kit/mutie/ncr_heavy_trooper
 	name = "Mutant NCR Heavy Trooper"
-	desc = "Contains the necessary equipment to modify the NCR Salvaged Power Armour and Helmet, to better fit a Mutant. Also contains their uniform."
+	desc = "Contains the armour and helmet of a Mutant NCR Heavy Trooper. Also contains their uniform."
 
 /obj/item/storage/box/large/custom_kit/mutie/ncr_heavy_trooper/PopulateContents()
-	new /obj/item/modkit/mutie/ncr_heavy_trooper_helmet(src)
-	new /obj/item/modkit/mutie/ncr_heavy_trooper_armour(src)
+	new /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/mutie/ncr(src)
+	new /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/mutie/ncr(src)
 	new /obj/item/clothing/under/f13/mutie/ncr/heavy(src)
 	new /obj/item/clothing/shoes/f13/mutie/boots/ncr(src)
 	new /obj/item/clothing/gloves/f13/mutie/gloves(src)
 
 /obj/item/storage/box/large/custom_kit/mutie/ncr_trooper
 	name = "Mutant NCR Trooper"
-	desc = "Contains the necessary equipment to modify the standard issue NCR armour and helmet, to better fit a Mutant. Also contains their uniform."
+	desc = "Contains the armour and helmet of a Mutant NCR Trooper. Also contains their uniform."
 
 /obj/item/storage/box/large/custom_kit/mutie/ncr_trooper/PopulateContents()
-	new /obj/item/modkit/mutie/ncr_trooper_helmet(src)
-	new /obj/item/modkit/mutie/ncr_trooper_armour(src)
+	new /obj/item/clothing/head/helmet/f13/ncr/mutie(src)
+	new /obj/item/clothing/suit/armor/light/ncr/mutie(src)
 	new /obj/item/clothing/under/f13/mutie/ncr(src)
 	new /obj/item/clothing/shoes/f13/mutie/boots/ncr(src)
 	new /obj/item/clothing/gloves/f13/mutie/gloves(src)
+
+//Townies
+
+/obj/item/storage/box/large/custom_kit/mutie/townie
+	name = "Mutant Townie"
+	desc = "Contains the necessary equipment to modify the standard issue NCR armour and helmet, to better fit a Mutant. Also contains their uniform."
+
+/obj/item/storage/box/large/custom_kit/mutie/ncr_trooper/PopulateContents()
+	new /obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered/townie(src)
+	new /obj/item/clothing/under/f13/mutie/townie(src)
+	new /obj/item/clothing/shoes/f13/mutie/boots(src)
+	new /obj/item/clothing/gloves/f13/mutie/sign(src)
+
+/obj/item/storage/box/large/custom_kit/mutie/townie/deputy
+	name = "Mutant Deputy"
+	desc = "Contains the necessary equipment to modify the standard issue NCR armour and helmet, to better fit a Mutant. Also contains their uniform."
+
+/obj/item/storage/box/large/custom_kit/mutie/ncr_trooper/PopulateContents()
+	new /obj/item/clothing/suit/armor/medium/duster/mutie(src)
+	new /obj/item/clothing/under/f13/mutie/townie/deputy(src)
+	new /obj/item/clothing/shoes/f13/mutie/boots(src)
+	new /obj/item/clothing/gloves/f13/mutie/sign(src)
