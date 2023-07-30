@@ -420,7 +420,7 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	armor = ARMOR_VALUE_HEAVY
 
-/obj/item/clothing/head/helmet/f13/legion/palacent
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/palacent
 	name = "legion centurion paladin-slayer helmet"
 	desc = "The once-marvelous helmet of the T-45d power armor set, repurposed by the Legion into a symbol of its might. It has a large plume of red horse hair across the top of it going horizontally, donoting the rank of Centurion."
 	lefthand_file = ""
