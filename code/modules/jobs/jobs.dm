@@ -49,8 +49,7 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 
 GLOBAL_LIST_INIT(command_positions, list(
 	"Head Paladin",
-	"Head Knight",
-	"Head Scribe", //Wasn't here before. Still technically command, I put it here - Kitsunemitsu
+	"Head Scribe",
 
 	"NCR Captain",
 	"NCR Veteran Ranger",
@@ -69,7 +68,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 	))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
-"Mr. Handy"))
+	"Mr. Handy"))
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"faction"
 //NCR Assistant and Legion Camp Follower re-added to whitelisting.  BoS Initiate removed from whitelist.
 
@@ -77,7 +76,6 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Head Scribe",
 "Elder",
 "Head Paladin",
-"Head Knight",
 "Head Scribe",
 "Senior Paladin",
 "Paladin",
@@ -142,6 +140,16 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Vault-tec Engineer",
 ))
 //Brotherhood
+GLOBAL_LIST_INIT(bos_command_positions, list(
+	"Head Paladin",
+	"Head Scribe"
+))
+
+GLOBAL_LIST_INIT(bos_elite_positions, list(
+	"Senior Paladin",
+	"Paladin"
+))
+
 GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Head Paladin",
 	"Head Knight",
@@ -155,8 +163,14 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 	"Initiate",
 	"BoS Off-Duty"
 ))
-//Nash/Oasis/Ripley
-GLOBAL_LIST_INIT(oasis_positions, list(
+
+//Town
+GLOBAL_LIST_INIT(town_command_positions, list(
+	"Mayor",
+	"Sheriff",
+))
+
+GLOBAL_LIST_INIT(town_positions, list(
 	"Mayor",
 	"Secretary",
 	"Sheriff",
@@ -171,12 +185,19 @@ GLOBAL_LIST_INIT(oasis_positions, list(
 	"Barkeep",
 	"Citizen",
 ))
-
+//Legion
 GLOBAL_LIST_INIT(legion_command_positions, list(
 	"Legate",
 	"Legion Orator",
 	"Legion Centurion",
 	"Legion Veteran Decanus",
+))
+
+GLOBAL_LIST_INIT(legion_elite_positions, list(
+	"Legion Assassin",
+	"Legion Vexillarius",
+	"Legion Prime Decanus",
+	"Veteran Legionary",
 ))
 
 GLOBAL_LIST_INIT(legion_positions, list(
@@ -199,11 +220,23 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Camp Follower",
 	//"Legion Slavemaster"
 ))
-
-GLOBAL_LIST_INIT(ncr_rangervet_positions, list(
-	"NCR Veteran Ranger",
-))
 //NCR
+GLOBAL_LIST_INIT(ncr_command_positions, list(
+	"NCR Veteran Ranger",
+	"NCR Captain",
+	"NCR Lieutenant",
+	"NCR Medical Officer",
+	"NCR Representative"
+))
+
+GLOBAL_LIST_INIT(ncr_elite_positions, list(
+	"NCR Ranger",
+	"NCR Heavy Trooper",
+	"NCR Logistics Officer",
+	"NCR Sergeant First Class",
+	//"NCR Senior Enlisted Advisor",
+))
+
 GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Captain",
 	"NCR Lieutenant",
@@ -224,6 +257,15 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Logistics Officer",
 	"NCR Rear Echelon",
 	"NCR Off-Duty"
+))
+//Vault
+GLOBAL_LIST_INIT(vault_command_positions, list(
+	"Overseer",
+	"Chief of Security"
+))
+
+GLOBAL_LIST_INIT(vault_science_positions, list(
+	"Vault-tec Scientist"
 ))
 
 //Vault
@@ -302,7 +344,10 @@ GLOBAL_LIST_INIT(followers_positions, list(
 	"Nurse",
 	"Town Scientist",
 ))
-
+//Outlaw
+GLOBAL_LIST_INIT(outlaw_positions, list(
+	"Outlaw"
+))
 // job categories for rendering the late join menu
 GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#ffeeaa"),
@@ -313,7 +358,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
 	// EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#323232"),
 	EXP_TYPE_KHAN = list("jobs" = khan_positions, "color" = "#006666"),
-	"Ripley" = list("jobs" = oasis_positions, "color" = "#d7b088"),
+	"Ripley" = list("jobs" = town_positions, "color" = "#d7b088"),
 	//EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#006666"),
 	//"Redwater" = list("jobs" = redwater_positions, "color" = "#f81717"),
 ))
@@ -329,11 +374,11 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_SILICON = list("titles" = list("AI","Cyborg")),
 	EXP_TYPE_SERVICE = list("titles" = civilian_positions),
 
-	EXP_TYPE_FALLOUT = list("titles" = brotherhood_positions | oasis_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions | enclave_positions),
+	EXP_TYPE_FALLOUT = list("titles" = brotherhood_positions | town_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions | enclave_positions),
 
 	EXP_TYPE_OUTLAW = list("titles" = list("Outlaw","Den Mob Boss","Den Mob Enforcer","Den Doctor",)),
 	EXP_TYPE_BROTHERHOOD = list("titles" = brotherhood_positions),
-	EXP_TYPE_OASIS = list("titles" = oasis_positions ),
+	EXP_TYPE_OASIS = list("titles" = town_positions ),
 	EXP_TYPE_LEGION = list("titles" = legion_positions),
 	EXP_TYPE_NCR = list("titles" = ncr_positions),
 	EXP_TYPE_VAULT = list("titles" = vault_positions),
