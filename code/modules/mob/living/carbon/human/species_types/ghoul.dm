@@ -1,5 +1,5 @@
 //ghouls-heal from radiation, do not breathe. do not go into crit. terrible at melee, easily dismembered.
-//cannot use medical chemicals to heal brute or burn, must heal from rads, sutures. can use antitoxin chemicals.  //actually changed my mind i'll give stims reduced effect instead
+//stims have reduced effect, but they can heal from rads, sutures. can use antitoxin chemicals.
 //Slower than humans at combat armor speed, appear dead. rotted organs unable to use for transplant.
 //like before, they cannot take piercing wounds or burn wounds or slash wounds, but they can have their bones broken by any source of wound now instead of being impervious
 
