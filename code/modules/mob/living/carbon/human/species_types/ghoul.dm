@@ -115,7 +115,7 @@
 	H.adjustCloneLoss(-healpwr)
 	H.adjustToxLoss(-0.3) //ghouls always heal toxin very slowly no matter what
 	H.adjustStaminaLoss(-20) //ghouls don't get tired ever
-	H.heal_overall_damage(healpwr, healpwr, healpwr)
+	H.heal_overall_damage(healpwr, healpwr)
 	if(is_healing)
 		H.apply_status_effect(/datum/status_effect/ghoulheal)
 	else
