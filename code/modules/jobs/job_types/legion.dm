@@ -76,6 +76,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		return
 	ADD_TRAIT(H, TRAIT_TRIBAL, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	ADD_TRAIT(H, TRAIT_MARS_TEACH, src)
 	//ADD_TRAIT(H, TRAIT_FEARLESS, src) //no phobias for legion!
 	//ADD_TRAIT(H, TRAIT_BERSERKER, src)
 
