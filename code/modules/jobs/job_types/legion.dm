@@ -247,7 +247,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/outfit/loadout/palacent
 	name = "Paladin-Slayer Centurion"
 	suit = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/palacent
-	head = /obj/item/clothing/head/helmet/f13/legion/palacent
+	head = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/palacent
 	suit_store = /obj/item/gun/ballistic/automatic/bar
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m762/ext = 2,
