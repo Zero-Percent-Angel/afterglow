@@ -307,6 +307,7 @@
 	desc = "A metal helmet forged by Super Mutants, with a large blade on the forehead."
 	icon_state = "mutie_bladed_helmet"
 	item_state = "mutie_bladed_helmet"
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_MELEE_T1)
 	species_restricted = list("exclude","Human","Ghoul")
 
