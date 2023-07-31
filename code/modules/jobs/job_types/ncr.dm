@@ -801,8 +801,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 375
 
 	loadout_options = list(
-		/datum/outfit/loadout/shockht,	// Minigun
-		/datum/outfit/loadout/supportht, // R84
+		/datum/outfit/loadout/shockht,	// R84
+		/datum/outfit/loadout/supportht, // minigun
+		/datum/outfit/loadout/flamerht //flamethrower
 		)
 
 /datum/outfit/job/ncr/f13heavytrooper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -837,11 +838,18 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/melee/onehanded/knife/bayonet = 1,
 		)
 
-/datum/outfit/loadout/supportht
-	name = "Support Heavy Trooper"
+/datum/outfit/loadout/flamerht
+	name = "Flamer Heavy Trooper"
 	backpack_contents = list(
 		/obj/item/m2flamethrowertank = 1,
 		/obj/item/ammo_box/jerrycan = 1,
+		/obj/item/melee/onehanded/knife/bowie = 1,
+		)
+
+/datum/outfit/loadout/supportht
+	name = "Support Heavy Trooper"
+	backpack_contents = list(
+		/obj/item/minigunpackbal5mm = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
 		)
 
