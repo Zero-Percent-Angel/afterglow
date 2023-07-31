@@ -5479,6 +5479,13 @@
 /obj/structure/ore_box,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/vault)
+"gwr" = (
+/obj/structure/table,
+/obj/item/wirecutters/power,
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/ruin/powered)
 "gwX" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/f13/vault_floor/blue/white/whitebluechess,
@@ -12241,10 +12248,6 @@
 	dir = 1
 	},
 /area/f13/vault/security/armory)
-"oIe" = (
-/obj/effect/spawner/lootdrop/f13/advcrafting,
-/turf/open/floor/plasteel/f13/vault_floor/plating,
-/area/f13/tunnel)
 "oIn" = (
 /obj/machinery/light/floor{
 	light_color = "#ff4500";
@@ -12678,12 +12681,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault/overseer)
 "pkD" = (
-/obj/structure/table,
-/obj/item/wirecutters/power,
-/turf/open/floor/f13{
-	icon_state = "yellowdirtyfull"
-	},
-/area/ruin/powered)
+/obj/effect/spawner/lootdrop/f13/advcrafting,
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/tunnel)
 "pkF" = (
 /obj/structure/flora/grass/jungle,
 /mob/living/simple_animal/hostile/venus_human_trap{
@@ -17332,7 +17332,7 @@
 /obj/structure/table/glass,
 /obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/machinery/camera/autoname{
-	dir = 10;
+	dir = 4;
 	network = list("vault")
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
@@ -19105,7 +19105,9 @@
 	},
 /area/f13/tcoms)
 "xaj" = (
-/obj/structure/bodycontainer/crematorium,
+/obj/structure/bodycontainer/crematorium{
+	dir = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault/medical/surgery)
 "xax" = (
@@ -36624,7 +36626,7 @@ lLc
 lLc
 lLc
 lLc
-pkD
+gwr
 tHf
 jow
 lvv
@@ -89380,7 +89382,7 @@ wNY
 erB
 wNY
 wNY
-oIe
+pkD
 wJA
 wJA
 pnx
@@ -89579,7 +89581,7 @@ cIL
 wNY
 wNY
 ucj
-oIe
+pkD
 dDn
 mEn
 jyW
