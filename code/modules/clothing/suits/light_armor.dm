@@ -525,7 +525,10 @@
 	desc = "An oversized cloak, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
 	icon_state = "mutie_cloak"
 	item_state = "mutie_cloak"
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/mutie/poncho
+	species_restricted = list("exclude","Human","Ghoul")
 
 /obj/item/clothing/suit/hooded/cloak/mutie/poncho
 	name = "mutant poncho"

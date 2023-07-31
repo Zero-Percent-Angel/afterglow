@@ -80,7 +80,7 @@
 	name = "Mutant Townie"
 	desc = "Contains the clothing typically worn by Mutant townies. Also contains their under clothes."
 
-/obj/item/storage/box/large/custom_kit/mutie/ncr_trooper/PopulateContents()
+/obj/item/storage/box/large/custom_kit/mutie/townie/PopulateContents()
 	new /obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered/townie(src)
 	new /obj/item/clothing/under/f13/mutie/townie(src)
 	new /obj/item/clothing/shoes/f13/mutie/boots(src)
@@ -90,7 +90,7 @@
 	name = "Mutant Townie Labourer"
 	desc = "Contains the clothing typically worn by Mutant Farmers, Prospectors, or even traders. Also contains their under clothes."
 
-/obj/item/storage/box/large/custom_kit/mutie/ncr_trooper/PopulateContents()
+/obj/item/storage/box/large/custom_kit/mutie/labourer/PopulateContents()
 	new /obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered/townie(src)
 	new /obj/item/clothing/under/f13/mutie/townie/overalls(src)
 	new /obj/item/clothing/shoes/f13/mutie(src)
@@ -100,7 +100,7 @@
 	name = "Mutant Deputy"
 	desc = "Contains the clothing typically worn by Mutant Deputies and Sheriffs. Also contains their under clothes."
 
-/obj/item/storage/box/large/custom_kit/mutie/ncr_trooper/PopulateContents()
+/obj/item/storage/box/large/custom_kit/mutie/townie/police/PopulateContents()
 	new /obj/item/clothing/suit/armor/medium/duster/mutie(src)
 	new /obj/item/clothing/under/f13/mutie/townie/deputy(src)
 	new /obj/item/clothing/shoes/f13/mutie/boots(src)
