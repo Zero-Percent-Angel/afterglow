@@ -496,6 +496,10 @@
 	user.visible_message(span_suicide("[user] begins tightening \the [src] around [user.p_their()] neck! It looks like [user.p_they()] forgot how to use medical supplies!"))
 	return OXYLOSS
 
+/obj/item/stack/medical/gauze/one
+	amount = 1
+
+
 /// Low tier bandage
 /obj/item/stack/medical/gauze/improvised
 	name = "improvised bandages"

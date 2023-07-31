@@ -11,7 +11,7 @@
 	heat_proof = TRUE
 	safe = FALSE
 	max_integrity = 1200
-	armor = ARMOR_VALUE_MEDIUM
+	armor = ARMOR_VALUE_PA
 	resistance_flags = FIRE_PROOF
 	damage_deflection = 44
 	proj_resist = 30

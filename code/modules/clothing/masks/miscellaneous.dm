@@ -481,7 +481,7 @@
 
 /obj/item/clothing/mask/society
 	name = "golden facemask"
-	desc = "A burlap sack with eyeholes."
+	desc = "A creepy white and gold mask."
 	icon_state = "societymask"
 	item_state = "societymask"
 	flags_inv = HIDEFACE

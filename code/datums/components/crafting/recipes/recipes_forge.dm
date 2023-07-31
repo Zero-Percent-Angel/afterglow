@@ -169,7 +169,7 @@
 /datum/crafting_recipe/melee/forged/bayonet
 	name = "Bayonet Knife"
 	result = /obj/item/melee/onehanded/knife/bayonet
-	time = 300
+	time = 100
 	reqs = list(
 		/obj/item/stack/sheet/metal = 6,
 		/obj/item/blacksmith/swordhandle = 1,

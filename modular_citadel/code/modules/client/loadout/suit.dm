@@ -141,7 +141,7 @@
 
 /datum/gear/suit/fieldscribe/coat
 	name = "Fieldscribe coat"
-	path = /obj/item/clothing/suit/toggle/labcoat/scribecoat
+	path = /obj/item/clothing/suit/armor/light/duster/bos/scribe/field_coat
 
 /datum/gear/suit/town
 	name = "Town Trenchcoat"

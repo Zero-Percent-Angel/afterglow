@@ -6,7 +6,6 @@
 //	var/active = null
 	canSmoothWith = null
 	smooth = SMOOTH_TRUE
-	weak_wall = TRUE
 
 /turf/closed/wall/mineral/gold
 	name = "gold wall"
@@ -129,8 +128,7 @@
 	icon = 'icons/fallout/turfs/walls/wood_crafted.dmi'
 	icon_state = "wood"
 	sheet_type = /obj/item/stack/sheet/mineral/wood
-	hardness = 70
-	weak_wall = TRUE
+	hardness = 45
 	explosion_block = 0
 	smooth = SMOOTH_FALSE
 	//canSmoothWith = list(/turf/closed/wall/mineral/wood, /obj/structure/falsewall/wood)
