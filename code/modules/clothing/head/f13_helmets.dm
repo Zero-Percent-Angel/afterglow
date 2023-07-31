@@ -885,7 +885,7 @@
 	if (!HAS_TRAIT(H, TRAIT_PA_WEAR) && slot == SLOT_HEAD && requires_training)
 		to_chat(user, span_warning("You don't have the proper training to operate the power armor!"))
 		return 0
-	if (HAS_TRAIT(H, TRAIT_MARS_TEACH) && slot == SLOT_WEAR_SUIT && requires_training)
+	if (HAS_TRAIT(H, TRAIT_MARS_TEACH) && slot == SLOT_HEAD && requires_training)
 		to_chat(user, span_warning("You would make Mars shed tears of fire by wearing the armor of the weak!"))
 		return 0
 	if(slot == SLOT_HEAD)
