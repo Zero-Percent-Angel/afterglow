@@ -45,6 +45,17 @@
 		return 0
 	return ..()
 
+/datum/species/smutant/before_equip_job(datum/job/J, mob/living/carbon/human/H, visualsOnly = FALSE)
+	var/datum/outfit/smutant/O = new /datum/outfit/smutant
+	if(J)
+		if(J.smutant_outfit)
+			O = new J.smutant_outfit
+
+	H.equipOutfit(O, visualsOnly)
+	H.internal = H.get_item_for_held_index(2)
+	H.update_internals_hud_icon(1)
+	return 0
+
 /datum/species/smutant/nightkin
 	name = "Nightkin"
 	id = "nightkin"
