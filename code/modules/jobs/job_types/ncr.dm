@@ -654,7 +654,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	suit = /obj/item/clothing/suit/armor/medium/combat/patrol/mutie
 	uniform = /obj/item/clothing/under/f13/mutie/ncr/ranger
 	shoes = /obj/item/clothing/shoes/f13/mutie/boots/ncr/ranger
-	gloves /obj/item/clothing/gloves/f13/mutie/gloves
+	gloves = /obj/item/clothing/gloves/f13/mutie/gloves
 
 /datum/outfit/job/ncr/f13ranger
 	name = "NCR Ranger"
