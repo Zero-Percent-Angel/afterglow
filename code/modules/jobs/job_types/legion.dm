@@ -41,6 +41,10 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/leg_combat_mk2)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/leg_combat_helm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/leg_combat_helm_mk2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionparmaarmorconversion)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionparmahelmetconversion)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionscutumarmorconversion)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/legionscutumhelmetconversion)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire
 	belt = /obj/item/storage/belt/army/assault/legion
@@ -72,6 +76,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		return
 	ADD_TRAIT(H, TRAIT_TRIBAL, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
+	ADD_TRAIT(H, TRAIT_MARS_TEACH, src)
 	//ADD_TRAIT(H, TRAIT_FEARLESS, src) //no phobias for legion!
 	//ADD_TRAIT(H, TRAIT_BERSERKER, src)
 
@@ -246,8 +251,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/palacent
 	name = "Paladin-Slayer Centurion"
-	suit = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/palacent
-	head = /obj/item/clothing/head/helmet/f13/legion/palacent
+	suit = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/palacent
+	head = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/palacent
 	suit_store = /obj/item/gun/ballistic/automatic/bar
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m762/ext = 2,
@@ -700,7 +705,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
 	glasses = /obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm = 2,
+		/obj/item/ammo_box/magazine/m10mm/smg = 3,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/grenade/homemade/coffeepotbomb = 1,
 		/obj/item/restraints/legcuffs/bola/tactical = 1,
@@ -794,7 +799,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	suit_store = /obj/item/gun/ballistic/automatic/smg/smg10mm
 	backpack_contents = list(
 		/obj/item/twohanded/spear/lance = 1,
-		/obj/item/ammo_box/magazine/m10mm/adv/ext = 2,
+		/obj/item/ammo_box/magazine/m10mm/smg = 3,
 		/obj/item/reagent_containers/pill/patch/healpoultice = 2,
 		/obj/item/melee/onehanded/machete/gladius = 1,
 		)

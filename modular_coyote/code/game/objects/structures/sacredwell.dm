@@ -44,7 +44,7 @@ GLOBAL_LIST_INIT(sacredwellitems_high, typecacheof(list(/obj/item/gun/energy/las
 /obj/effect/spawner/lootdrop/f13/sacredwell
 	lootcount = 1
 	lootdoubles = FALSE
-	loot = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/tribal,
+	loot = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/tribal,
 				/obj/item/gun/energy/laser/wattz/sacredpistol,
 				/obj/item/gun/energy/laser/wattz/sacred,
 				/obj/item/gun/energy/laser/wattz2k/extended/blessed,
