@@ -21,6 +21,7 @@ Raider
 	exp_type = EXP_TYPE_WASTELAND
 
 	outfit = /datum/outfit/job/wasteland/f13raider
+	smutant_outfit = /datum/outfit/smutant/wastes/raider
 
 	access = list()
 	minimal_access = list()
@@ -58,6 +59,10 @@ Raider
 	/datum/outfit/loadout/eightiesshaman,
 	)
 
+/datum/outfit/smutant/wastes/raider
+	uniform = /obj/item/clothing/under/f13/mutie/cloth
+	suit = /obj/item/clothing/suit/armor/light/mutie
+	head = /obj/item/clothing/head/helmet/knight/f13/metal/mutie
 
 /datum/outfit/job/wasteland/f13raider
 	name = "Outlaw"
@@ -906,6 +911,7 @@ Raider
 	selection_color = "#dddddd"
 
 	outfit = /datum/outfit/job/wasteland/f13wastelander
+	smutant_outfit = /datum/outfit/smutant/wastes
 
 	access = list()		//we can expand on this and make alterations as people suggest different loadouts
 	minimal_access = list()
@@ -950,6 +956,13 @@ Raider
 //	/datum/outfit/loadout/ncrcitizen,
 //	/datum/outfit/loadout/legioncivilian,
 //	/datum/outfit/loadout/wastelander_desert_ranger)
+
+/datum/outfit/smutant/wastes
+	uniform = /obj/item/clothing/under/f13/mutie
+	gloves = /obj/item/clothing/gloves/f13/mutie
+	shoes = /obj/item/clothing/shoes/f13/mutie
+	suit = /obj/item/clothing/suit/armor/medium/vest/breastplate/scrap/mutie
+	head = /obj/item/clothing/head/helmet/f13/mutie
 
 /datum/outfit/job/wasteland/f13wastelander
 	name = "Wastelander"

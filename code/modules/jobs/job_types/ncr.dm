@@ -529,6 +529,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	display_order = JOB_DISPLAY_ORDER_VETRANGER
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR_COMMAND)
 	outfit = /datum/outfit/job/ncr/f13vetranger
+	smutant_outfit = /datum/outfit/smutant/ranger/veteran
 	exp_requirements = 1750
 
 	loadout_options = list( // ALL: Binoculars, Bowie knife
@@ -549,6 +550,10 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	//var/datum/martial_art/rangertakedown/RT = new
 	//RT.teach(H)
+
+/datum/outfit/smutant/ranger/veteran
+	head = /obj/item/clothing/head/helmet/f13/ncr/veteran/mutie
+	suit = /obj/item/clothing/suit/armor/medium/combat/mk2/ncr/vetranger/mutie
 
 /datum/outfit/job/ncr/f13vetranger
 	name = "NCR Veteran Ranger"
@@ -644,6 +649,12 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	//var/datum/martial_art/rangertakedown/RT = new
 	//RT.teach(H)
 
+/datum/outfit/smutant/ranger
+	head = /obj/item/clothing/head/f13/ncr/patrol/mutie
+	suit = /obj/item/clothing/suit/armor/medium/combat/patrol/mutie
+	uniform = /obj/item/clothing/under/f13/mutie/ncr/ranger
+	shoes = /obj/item/clothing/shoes/f13/mutie/boots/ncr/ranger
+	gloves /obj/item/clothing/gloves/f13/mutie/gloves
 
 /datum/outfit/job/ncr/f13ranger
 	name = "NCR Ranger"
@@ -716,6 +727,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_CIVILIANRANGER
 	outfit = /datum/outfit/job/ncr/f13civilianranger
+	smutant_outfit = /datum/outfit/smutant/ranger
 	exp_requirements = 500
 
 	loadout_options = list( // ALL: Binoculars, Bowie knife
@@ -734,6 +746,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	//var/datum/martial_art/rangertakedown/RT = new
 	//RT.teach(H)
 
+/datum/outfit/smutant/ranger/civilian
+	head = /obj/item/clothing/head/f13/ncr/patrol/mutie
+	suit = /obj/item/clothing/suit/armor/light/ncr/trailranger/mutie
 
 /datum/outfit/job/ncr/f13civilianranger
 	name = "NCR Civilian Ranger"

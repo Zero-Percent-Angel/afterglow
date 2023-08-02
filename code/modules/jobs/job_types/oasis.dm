@@ -209,6 +209,7 @@ Mayor
 	exp_requirements = 750
 
 	outfit = /datum/outfit/job/den/f13sheriff
+	smutant_outfit = /datum/outfit/smutant/town/police
 
 	loadout_options = list(
 	/datum/outfit/loadout/thelaw,
@@ -226,6 +227,12 @@ Mayor
 			/datum/job/oasis
 		)
 	)
+
+/datum/outfit/smutant/town/police
+	suit = /obj/item/clothing/suit/armor/medium/duster/mutie
+	uniform = /obj/item/clothing/under/f13/mutie/townie/deputy
+	shoes = /obj/item/clothing/shoes/f13/mutie/boots
+	gloves = /obj/item/clothing/gloves/f13/mutie/sign
 
 /datum/outfit/job/den/f13sheriff
 	name = "Sheriff"
@@ -306,6 +313,7 @@ Mayor
 	)
 
 	outfit = /datum/outfit/job/den/f13deputy
+	smutant_outfit = /datum/outfit/smutant/town/police
 	access = list(ACCESS_BAR, ACCESS_GATEWAY, ACCESS_OFFICER)
 	minimal_access = list(ACCESS_BAR, ACCESS_GATEWAY, ACCESS_OFFICER)
 	matchmaking_allowed = list(
@@ -393,6 +401,7 @@ Mayor
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13prospector
+	smutant_outfit = /datum/outfit/smutant/town/labourer
 
 	access = list(ACCESS_BAR, ACCESS_MINING)
 	minimal_access = list(ACCESS_BAR, ACCESS_MINING)
@@ -408,6 +417,12 @@ Mayor
 	loadout_options = list(
 	/datum/outfit/loadout/engineer,
 	/datum/outfit/loadout/miner,)
+
+/datum/outfit/smutant/town/labourer
+	suit = /obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered/townie
+	uniform = /obj/item/clothing/under/f13/mutie/townie/overalls
+	shoes = /obj/item/clothing/shoes/f13/mutie
+	gloves = /obj/item/clothing/gloves/f13/mutie
 
 /datum/outfit/job/den/f13prospector
 	name = "Prospector"
@@ -549,6 +564,7 @@ Mayor
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13barkeep
+	smutant_outfit = /datum/outfit/smutant/town/labourer
 
 	loadout_options = list(
 	/datum/outfit/loadout/rugged,
@@ -633,6 +649,7 @@ Mayor
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13settler
+	smutant_outfit = /datum/outfit/smutant/town
 
 	loadout_options = list(
 		/datum/outfit/loadout/gambler,
@@ -650,6 +667,11 @@ Mayor
 		)
 	)
 
+/datum/outfit/smutant/town
+	suit = /obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered/townie
+	uniform = /obj/item/clothing/under/f13/mutie/townie
+	shoes = /obj/item/clothing/shoes/f13/mutie/boots
+	gloves = /obj/item/clothing/gloves/f13/mutie/sign
 
 /datum/outfit/job/den/f13settler
 	name = "Citizen"
@@ -749,6 +771,7 @@ Mayor
 	supervisors = "paying clients and Ripley's laws"
 	selection_color = "#dcba97"
 	outfit = /datum/outfit/job/oasis/f13detective
+	smutant_outfit = /datum/outfit/smutant/town/police/detective
 
 	access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS, ACCESS_OFFICER)
 	minimal_access = list(ACCESS_BAR, ACCESS_FORENSICS_LOCKERS, ACCESS_OFFICER)
@@ -766,6 +789,9 @@ Mayor
 		)
 	)
 
+/datum/outfit/smutant/town/police/detective
+	uniform = /obj/item/clothing/under/f13/mutie/suit
+	gloves = /obj/item/clothing/gloves/f13/mutie/gloves
 
 /datum/outfit/job/oasis/f13detective
 	name = "Detective"
