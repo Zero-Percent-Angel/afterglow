@@ -517,7 +517,7 @@
 	maxHealth = 300
 	health = 300
 	rapid_melee = 1
-	loot = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/hotrod, /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/hotrod, /obj/item/stack/f13Cash/random/banker)
+	loot = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/hotrod, /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/hotrod, /obj/item/stack/f13Cash/random/banker)
 	melee_damage_lower = 30
 	melee_damage_upper = 49 //would be higher, but I think it'll deal 50 of each type
 	melee_damage_type = list(BRUTE, BURN)//his punches are literally steampowered

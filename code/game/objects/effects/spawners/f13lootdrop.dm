@@ -371,17 +371,17 @@
 /obj/effect/spawner/lootdrop/f13/armor/tier4 //TIER 4 ARMOR
 	name = "tier 4 armor"
 	loot = list(
-				/obj/effect/spawner/bundle/f13/armor/t45b_salvaged,
+				/obj/effect/spawner/bundle/f13/armor/t45d_salvaged,
 				/obj/effect/spawner/bundle/f13/armor/riot,
 				/obj/effect/spawner/bundle/f13/armor/combat/mk2,
 				/obj/effect/spawner/bundle/f13/armor/combat/mk2/dark,
 				)
 
-/obj/effect/spawner/bundle/f13/armor/t45b_salvaged
-	name = "salvaged t45b power armor spawner"
+/obj/effect/spawner/bundle/f13/armor/t45d_salvaged
+	name = "salvaged t45d power armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b,
-				/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b
+				/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d,
+				/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d
 				)
 
 /obj/effect/spawner/bundle/f13/armor/riot
@@ -415,15 +415,15 @@
 /obj/effect/spawner/bundle/f13/armor/raiderpa
 	name = "raider power armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/raider,
-				/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/raider
+				/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/raider,
+				/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/raider
 				)
 
 /obj/effect/spawner/bundle/f13/armor/hotrodpa
 	name = "hotrod power armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/hotrod,
-				/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/hotrod
+				/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/hotrod,
+				/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/hotrod
 				)
 
 
