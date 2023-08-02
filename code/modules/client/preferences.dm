@@ -194,7 +194,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/list/all_quirks = list()
 
 	//Quirk category currently selected
-	var/quirk_category = QUIRK_POSITIVE 
+	var/quirk_category = QUIRK_POSITIVE
 
 	//Job preferences 2.0 - indexed by job title , no key or value implies never
 	var/list/job_preferences = list()
@@ -1537,7 +1537,6 @@ Records disabled until a use for them is found
 	var/list/dat = list()
 
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
-
 	dat += "<center><b>Allocate points</b></center>"
 	dat += "<center>Note: SPECIAL has mechanical effects on gameplay and governs skills too.</center><br>"
 	dat += "<center>[total] out of 40 possible</center><br>"
@@ -1603,16 +1602,17 @@ Records disabled until a use for them is found
 	var/total = skill_guns + skill_energy + skill_unarmed + skill_melee + skill_throwing + skill_doctor + skill_sneak + skill_science + skill_repair + skill_speech + skill_outdoorsman
 	var/max_skill = skill_points + (special_i*2)
 
+	dat += "<center>If you need help figuring out what the skills are for, <a href='?_src_=prefs;preference=help_skill'>Click here!</a></center>"
 	dat += "<center><b>Allocate points</b></center>"
 	dat += "<center>[total] out of [max_skill] possible</center><br>"
-	dat += "<b>Skill thresholds: 35(Novice), 50(Journeyman), 65(Experienced), 80(Expert)</b><BR><BR>"	
-	dat += "<b>Combat skills:</b><BR>"	
+	dat += "<b>Skill thresholds: 35(Novice), 50(Journeyman), 65(Experienced), 80(Expert)</b><BR><BR>"
+	dat += "<b>Combat skills:</b><BR>"
 	dat += "<b>Guns	       :</b> <a href='?_src_=prefs;preference=skill_guns;task=input'>[skill_guns] (Points Spent)</a>: [skill_guns_t] Skill Total<BR>"
 	dat += "<b>Energy Guns :</b> <a href='?_src_=prefs;preference=skill_energy;task=input'>[skill_energy] (Points Spent)</a>: [skill_energy_t] Skill Total<BR>"
 	dat += "<b>Unarmed     :</b> <a href='?_src_=prefs;preference=skill_unarmed;task=input'>[skill_unarmed] (Points Spent)</a>: [skill_unarmed_t] Skill Total<BR>"
 	dat += "<b>Melee       :</b> <a href='?_src_=prefs;preference=skill_melee;task=input'>[skill_melee] (Points Spent)</a>: [skill_melee_t] Skill Total<BR>"
 	dat += "<b>Throwing    :</b> <a href='?_src_=prefs;preference=skill_throwing;task=input'>[skill_throwing] (Points Spent)</a>: [skill_throwing_t] Skill Total<BR>"
-	dat += "<b>Active skills:</b><BR>"	
+	dat += "<b>Active skills:</b><BR>"
 	//dat += "<b>First Aid   :</b> <a href='?_src_=prefs;preference=skill_first_aid;task=input'>[skill_first_aid]</a>: [skill_first_aid_t]<BR>"
 	dat += "<b>Medical     :</b> <a href='?_src_=prefs;preference=skill_doctor;task=input'>[skill_doctor] (Points Spent)</a>: [skill_doctor_t] Skill Total<BR>"
 	dat += "<b>Stealth     :</b> <a href='?_src_=prefs;preference=skill_sneak;task=input'>[skill_sneak] (Points Spent)</a>: [skill_sneak_t] Skill Total<BR>"
@@ -1772,7 +1772,7 @@ Records disabled until a use for them is found
 				SetSpecial(user)
 		return TRUE
 
-		
+
 	else if(href_list["preference"] == "skill")
 		switch(href_list["task"])
 			if("close")
@@ -1993,6 +1993,8 @@ Records disabled until a use for them is found
 						skill_outdoorsman = 0
 					SetSkills(user)
 					return 1
+				if ("help_skill")
+					user.check_skills()
 				if("ghostform")
 					if(unlock_content)
 						var/new_form = input(user, "Thanks for supporting BYOND - Choose your ghostly form:","Thanks for supporting BYOND",null) as null|anything in GLOB.ghost_forms
