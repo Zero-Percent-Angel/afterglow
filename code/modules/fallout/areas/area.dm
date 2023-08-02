@@ -10,10 +10,10 @@
 
 //Wasteland generic areas
 
-//Ambigen sound tips for ambientsounds: 
-//1 - 2 : outside the ruined buildings, 
+//Ambigen sound tips for ambientsounds:
+//1 - 2 : outside the ruined buildings,
 //3 - 9 : inside the wasteland buildings,
-// 10 - 14 : vaults and bunkers specific, 
+// 10 - 14 : vaults and bunkers specific,
 //15-19 : caves
 //These were defined a long time ago, but we may still consider using them with our new ambient sound system ~TK
 
@@ -69,6 +69,9 @@
 	ambientmusic = null
 	grow_chance = 5
 
+/area/f13/wasteland/powered
+	requires_power = FALSE
+
 
 /area/f13/building
 	name = "Building"
@@ -92,7 +95,7 @@
 
 /area/f13/building/abandoned/a
 	name = "Abandoned Building"
-	
+
 /area/f13/building/abandoned/b
 	name = "Abandoned Building"
 
@@ -410,6 +413,9 @@
 	name = "Bighorn Bunker"
 	icon_state = "bighornbunker"
 
+/area/f13/building/powered
+	requires_power = FALSE
+
 /area/f13/farm
 	name = "Farm"
 	icon_state = "farm"
@@ -611,6 +617,11 @@
 	environment = 6
 	grow_chance = 5
 
+/area/f13/casino/powered
+	name = "Casino"
+	icon_state = "casino"
+	requires_power = FALSE
+
 /area/f13/clinic
 	name = "Clinic"
 	icon_state = "clinic"
@@ -769,6 +780,9 @@
 		AREA_SOUND('sound/f13effects/steam_long.ogg', 10 SECONDS))
 	environment = 21
 	grow_chance = 50
+
+/area/f13/sewer/powered
+	requires_power = FALSE
 
 /area/f13/caves
 	name = "Caves"
@@ -1030,6 +1044,9 @@
 /area/f13/brotherhood/mining
 	name = "Brotherhood of Steel Mining"//Brother Hood
 	icon_state = "brotherhoodmining"
+
+/area/f13/brotherhood/powered
+	requires_power = FALSE
 
 /area/f13/enclave
 	name = "Enclave Bunker"
