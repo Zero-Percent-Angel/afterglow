@@ -1537,7 +1537,6 @@ Records disabled until a use for them is found
 	var/list/dat = list()
 
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
-
 	dat += "<center><b>Allocate points</b></center>"
 	dat += "<center>Note: SPECIAL has mechanical effects on gameplay and governs skills too.</center><br>"
 	dat += "<center>[total] out of 40 possible</center><br>"
@@ -1603,6 +1602,7 @@ Records disabled until a use for them is found
 	var/total = skill_guns + skill_energy + skill_unarmed + skill_melee + skill_throwing + skill_doctor + skill_sneak + skill_science + skill_repair + skill_speech + skill_outdoorsman
 	var/max_skill = skill_points + (special_i*2)
 
+	dat += "<center>If you need help figuring out what the skills are for, <a href='?_src_=prefs;preference=help_skill;task=input'>Click here!</a></center>"
 	dat += "<center><b>Allocate points</b></center>"
 	dat += "<center>[total] out of [max_skill] possible</center><br>"
 	dat += "<b>Skill thresholds: 35(Novice), 50(Journeyman), 65(Experienced), 80(Expert)</b><BR><BR>"
@@ -1992,6 +1992,9 @@ Records disabled until a use for them is found
 					else
 						skill_outdoorsman = 0
 					SetSkills(user)
+					return 1
+				if ("help_skill")
+					user.check_skills()
 					return 1
 				if("ghostform")
 					if(unlock_content)
