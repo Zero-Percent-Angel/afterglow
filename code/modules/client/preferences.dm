@@ -1602,7 +1602,7 @@ Records disabled until a use for them is found
 	var/total = skill_guns + skill_energy + skill_unarmed + skill_melee + skill_throwing + skill_doctor + skill_sneak + skill_science + skill_repair + skill_speech + skill_outdoorsman
 	var/max_skill = skill_points + (special_i*2)
 
-	dat += "<center>If you need help figuring out what the skills are for, <a href='?_src_=prefs;preference=help_skill'>Click here!</a></center>"
+	dat += "<center>If you need help figuring out what the skills are for, <a href='?_src_=prefs;preference=help_skill;task=input'>Click here!</a></center>"
 	dat += "<center><b>Allocate points</b></center>"
 	dat += "<center>[total] out of [max_skill] possible</center><br>"
 	dat += "<b>Skill thresholds: 35(Novice), 50(Journeyman), 65(Experienced), 80(Expert)</b><BR><BR>"
@@ -1995,6 +1995,7 @@ Records disabled until a use for them is found
 					return 1
 				if ("help_skill")
 					user.check_skills()
+					return 1
 				if("ghostform")
 					if(unlock_content)
 						var/new_form = input(user, "Thanks for supporting BYOND - Choose your ghostly form:","Thanks for supporting BYOND",null) as null|anything in GLOB.ghost_forms
