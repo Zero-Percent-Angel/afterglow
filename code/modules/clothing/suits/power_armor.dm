@@ -59,6 +59,9 @@
 	if (!HAS_TRAIT(H, TRAIT_PA_WEAR) && slot == SLOT_WEAR_SUIT && requires_training)
 		to_chat(user, span_warning("You don't have the proper training to operate the power armor!"))
 		return FALSE
+	if (HAS_TRAIT(H, TRAIT_MARS_TEACH) && slot == SLOT_WEAR_SUIT && requires_training)
+		to_chat(user, span_warning("You would make Mars shed tears of fire by wearing the armor of the weak!"))
+		return FALSE
 	if(slot == SLOT_WEAR_SUIT)
 		return ..()
 	return
@@ -322,11 +325,6 @@ Most bullets literally DO NOT have fucking armor pen, so it deflects nearly all 
 			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return ..()
 */
-/obj/item/clothing/suit/armor/power_armor/t45b
-	name = "T-45d power armor"
-	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
-	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
-
 /obj/item/clothing/suit/armor/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
