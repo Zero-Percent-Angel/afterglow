@@ -103,15 +103,14 @@
 	if(H.stat == DEAD)
 		is_healing = FALSE
 		return
-	switch(H.radiation)
-		if(50)
-			healpwr = 0
-			is_healing = FALSE
-			H.set_light(0)
-		else
-			healpwr = 1
-			is_healing = TRUE
-			H.set_light(2, 15, LIGHT_COLOR_GREEN)
+	if(H.radiation > 50)
+		healpwr = 1
+		is_healing = TRUE
+		H.set_light(2, 15, LIGHT_COLOR_GREEN)
+	else
+		healpwr = 0
+		is_healing = FALSE
+		H.set_light(0)
 	H.adjustCloneLoss(-healpwr)
 	H.adjustToxLoss(-0.3) //ghouls always heal toxin very slowly no matter what
 	H.adjustStaminaLoss(-20) //ghouls don't get tired ever
