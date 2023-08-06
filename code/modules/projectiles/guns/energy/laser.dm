@@ -695,17 +695,17 @@
 		/datum/firemode/semi_auto/slow
 	)
 
-//Tri-Focus AER9 - Burst Fire AER9 with lower damage
-/obj/item/gun/energy/laser/aer9
+//Tri-Focus AER9 - Automatic AER9 with lower damage
+/obj/item/gun/energy/laser/aer9/auto
 	name = "\improper Tri-Focus AER9 laser rifle"
-	desc = "A sturdy pre-war laser rifle. Rapidly emits beams of concentrated light to kill targets. Burst fire, but not very powerful."
-	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
+	desc = "A sturdy pre-war laser rifle. Rapidly emits beams of concentrated light to kill targets. Automatic, but not very powerful."
 	icon_state = "tri_focus_aer9"
-	item_state = "laser-rifle9"
 	slot_flags = ITEM_SLOT_BACK
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan) //40 shots per MFC, so 10 bursts
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan)
+	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	init_firemodes = list(
-		/datum/firemode/burst/four
+		/datum/firemode/automatic/rpm300,
+		/datum/firemode/semi_auto/slow
 	)
 
 //AER-12 - basically stronger AP/damage AER-9 but with higher power consumption.
