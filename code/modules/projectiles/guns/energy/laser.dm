@@ -704,7 +704,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan)
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm300,
+		/datum/firemode/automatic/rpm200,
 		/datum/firemode/semi_auto/slow
 	)
 
