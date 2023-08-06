@@ -431,7 +431,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan/revolver)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
 	can_scope = FALSE
-	draw_time = GUN_DRAW_FAST
+	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_SLOW
 
 
