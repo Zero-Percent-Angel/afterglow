@@ -419,6 +419,22 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto
 	)
+
+//AEP9
+/obj/item/gun/energy/laser/pistol/revolver
+	name = "\improper AEP9 laser revolver"
+	desc = "A basic energy-based laser gun that fires concentrated beams of light. 'Revolver' version of the AEP7. Armor-penetrating beams dealing more damage, but acting with far less efficiency."
+	icon_state = "AEP9"
+	item_state = "laser-pistol"
+	w_class = WEIGHT_CLASS_SMALL
+	slot_flags = ITEM_SLOT_BELT
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan/revolver)
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	can_scope = FALSE
+	draw_time = GUN_DRAW_FAST
+	fire_delay = GUN_FIRE_DELAY_SLOW
+
+
 // Debug laser pistol that does 10 damage and 0 DT piercing
 /obj/item/gun/energy/laser/pistol/debug_10_damage_0_dt_pierce
 	name = "\improper Debug laser pistol that does 10 damage and 0 DT piercing"
