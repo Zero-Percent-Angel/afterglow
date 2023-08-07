@@ -433,6 +433,7 @@
 	can_scope = FALSE
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_SLOW
+	weapon_weight = GUN_ONE_HAND_ONLY
 
 
 // Debug laser pistol that does 10 damage and 0 DT piercing
