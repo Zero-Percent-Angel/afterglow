@@ -292,6 +292,38 @@
 	item_state = "metalhelmet_r"
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_MELEE_T3)
 
+//Mutie
+
+/obj/item/clothing/head/helmet/f13/mutie
+	name = "mutant aviator helmet"
+	desc = "A leather hat worn by Super Mutants, with a large set of goggles attached to the forehead."
+	icon_state = "muite_aviator"
+	item_state = "muite_aviator"
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_MELEE_T2)
+	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/head/helmet/knight/f13/metal/mutie
+	name = "bladed mutant helmet"
+	desc = "A metal helmet forged by Super Mutants, with a large blade on the forehead."
+	icon_state = "mutie_bladed_helmet"
+	item_state = "mutie_bladed_helmet"
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_MELEE_T1)
+	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/head/helmet/knight/f13/metal/mutie/knight
+	name = "mutant knight helmet"
+	desc = "A metal helmet forged by Super Mutants, reminisient of the helmets worn by the Knights of old."
+	icon_state = "mutie_knight"
+	item_state = "mutie_knight"
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/head/helmet/knight/f13/metal/mutie/knight/crown
+	name = "mutant crown helmet"
+	desc = "A metal helmet forged by Super Mutants, reminisient of the helmets worn by the Knights of old."
+	icon_state = "mutie_crown"
+	item_state = "mutie_crown"
+
 //////////
 //LEGION//
 //////////
@@ -535,6 +567,14 @@
 	icon_state = "ncr_helmet_mp"
 	item_state = "ncr_helmet_mp"
 
+/obj/item/clothing/head/helmet/f13/ncr/mutie
+	name = "NCR Mutie Helmet"
+	desc = "A Mutie issue NCR pith helmet made out of scrap and covered over with leather."
+	icon_state = "mutie_ncr_helmet"
+	item_state = "mutie_ncr_helmet"
+	unique_reskin = list()
+	species_restricted = list("exclude","Human","Ghoul")
+
 //Ranger
 //Yes, nearly all of these are not helmets - but this is because they ACT as helmets for balance-purposes.
 
@@ -556,6 +596,13 @@
 	item_state = "ncr_ranger_patrol"
 	armor = ARMOR_VALUE_MEDIUM
 
+/obj/item/clothing/head/f13/ncr/patrol/mutie
+	name = "NCR Mutant Ranger Hat"
+	desc = "An NCR Mutant Ranger hat, standard issue amongst all but the most elite Mutie rangers."
+	icon_state = "mutie_ncr_ranger"
+	item_state = "mutie_ncr_ranger"
+	species_restricted = list("exclude","Human","Ghoul")
+
 /obj/item/clothing/head/helmet/f13/ncr/veteran
 	name = "NCR veteran ranger combat helmet"
 	desc = "An old combat helmet, out of use around the time of the war."
@@ -571,6 +618,13 @@
 	glass_colour_type = /datum/client_colour/glass_colour/red
 	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
 	darkness_view = 24
+
+/obj/item/clothing/head/helmet/f13/ncr/veteran/mutie
+	name = "NCR Mutant Veteran Ranger Combat Helmet"
+	desc = "An old combat helmet, out of use around the time of the war. Slightly altered to better fit a Super Mutant."
+	icon_state = "mutie_vet_ranger"
+	item_state = "mutie_vet_ranger"
+	species_restricted = list("exclude","Human","Ghoul")
 
 ///////
 /*BOS*/
@@ -784,6 +838,20 @@
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2)
 	slowdown = 0
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
+
+// Mutie Salvage
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/mutie
+	name = "large power armour helmet"
+	desc = "It's a salvaged power armour helmet... That could've been made from any functional suit."
+	icon_state = "mutie_power_armor_helmet"
+	item_state = "mutie_power_armor_helmet"
+	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/mutie/ncr
+	name = "large NCR power armour helmet"
+	desc = "It's a salvaged power armour helmet... That could've been made from any functional suit. This one sports the trappings of an NCR Heavy Trooper."
+	icon_state = "mutie_ncr_power_helmet"
+	item_state = "mutie_ncr_power_helmet"
 
 // T-45D
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d

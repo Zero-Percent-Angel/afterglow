@@ -510,15 +510,52 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T1)
 
-/obj/item/clothing/suit/armor/light/mutantkit
-	name = "oversized armor kit"
-	desc = "Bits of armor fitted to a giant harness. Clearly not made for use by humans."
+/obj/item/clothing/suit/armor/light/mutie
+	name = "oversized armour"
+	desc = "A large boiler that's been dismantled and reshaped into crude armour. Clearly not made for use by humans."
 	icon = 'icons/fallout/clothing/armored_light.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
-	icon_state = "mutie_armorkit"
-	item_state = "mutie_armorkit"
+	icon_state = "mutie_armour"
+	item_state = "mutie_armour"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	siemens_coefficient = 1.1
+	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/suit/hooded/cloak/mutie
+	name = "mutant cloak"
+	desc = "An oversized cloak, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
+	icon_state = "mutie_cloak"
+	item_state = "mutie_cloak"
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
+	hoodtype = /obj/item/clothing/head/hooded/cloakhood/mutie/poncho
+	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/suit/hooded/cloak/mutie/poncho
+	name = "mutant poncho"
+	desc = "An oversized poncho, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
+	icon_state = "mutie_poncho"
+	item_state = "mutie_poncho"
+
+/obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered
+	icon_state = "mutie_poncho_weathered"
+	item_state = "mutie_poncho_weathered"
+
+/obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered/townie
+	name = "mutant townie poncho"
+	desc = "An oversized poncho, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
+	icon_state = "mutie_townie"
+	item_state = "mutie_townie"
+	hoodtype = /obj/item/clothing/head/hooded/cloakhood/mutie/poncho/townie
+
+/obj/item/clothing/head/hooded/cloakhood/mutie/poncho
+	name = "mutant poncho hood"
+	desc = "An oversized hood from an oversized poncho."
+	icon_state = "mutie_poncho"
+	item_state = "mutie_poncho"
+
+/obj/item/clothing/head/hooded/cloakhood/mutie/poncho/townie
+	icon_state = "mutie_townie_poncho"
+	item_state = "mutie_townie_poncho"
 
 ///////////////////////////
 // !!!FACTION SECTION!!! //
@@ -549,11 +586,19 @@
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //Mutie NCR Armor
-/obj/item/cloathing/suit/armor/light/ncr/mutant
-	name = "NCR mutant scraps"
-	desc = "So-called 'armor' given to mutant members of the NCR military. Though.. this equates to little more than scraps of armor."
-	icon_state = "mutie_ncr_scrap"
-	item_state = "mutie_ncr_scrap"
+/obj/item/clothing/suit/armor/light/ncr/mutie
+	name = "NCR Mutant armour"
+	desc = "So-called 'armor' given to mutant members of the NCR military. Though, it equates to little more than scraps of armor strapped together."
+	icon_state = "mutie_ncr"
+	item_state = "mutie_ncr"
+	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/suit/armor/light/ncr/trailranger/mutie
+	name = "NCR Mutant Ranger Armour"
+	desc = "Actual armour issued to mutant Rangers."
+	icon_state = "mutie_ranger_armour"
+	item_state = "mutie_ranger_armour"
+	species_restricted = list("exclude","Human","Ghoul")
 
 ////////////
 // Legion //

@@ -249,12 +249,19 @@
 	item_state = "combat_chestpiece"
 	mutantrace_variation = NONE
 
-/obj/item/clothing/suit/armor/medium/vest/breastplate/scrap/mutant
+/obj/item/clothing/suit/armor/medium/vest/breastplate/scrap/mutie
 	name = "mutant armour"
-	desc = "Metal plates rigged to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
-	icon_state = "mutie_heavy_metal"
-	item_state = "mutie_heavy_metal"
-	mutantrace_variation = NONE
+	desc = "An oversized set of metal armour, made to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
+	icon_state = "mutie_metal_armour"
+	item_state = "mutie_metal_armour"
+	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/suit/armor/medium/vest/breastplate/scrap/mutie/reinforced
+	name = "reinforced mutant armour"
+	desc = "An oversized set of metal armour, made to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
+	icon_state = "mutie_metal_armour_mk2"
+	item_state = "mutie_metal_armour_mk2"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T1)
 
 ///////////////////////
 //// MEDIUM DUSTER ////
@@ -604,11 +611,25 @@
 	item_state = "ncr_ranger_patrol"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
+/obj/item/clothing/suit/armor/medium/combat/patrol/mutie
+	name = "NCR Mutant Patrol Ranger Combat Armour"
+	desc ="A modified set of combat armor specifically for use of Mutie rangers."
+	icon_state = "mutie_ranger_armour"
+	item_state = "mutie_ranger_armour"
+	species_restricted = list("exclude","Human","Ghoul")
+
 /obj/item/clothing/suit/armor/medium/combat/mk2/ncr/vetranger
 	name = "NCR veteran ranger combat armor"
 	desc = "The NCR veteran ranger combat armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Considered one of the most prestigious suits of armor to earn and wear while in service of the NCR Rangers."
 	icon_state = "ncr_ranger_veteran"
 	icon_state = "ncr_ranger_veteran"
+
+/obj/item/clothing/suit/armor/medium/combat/mk2/ncr/vetranger/mutie
+	name = "NCR Mutant Veteran Ranger Combat Armor"
+	desc = "The NCR Veteran Ranger Combat Armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Or in this instance, is about three times the size of a regular man."
+	icon_state = "mutie_vet_ranger"
+	icon_state = "mutie_vet_ranger"
+	species_restricted = list("exclude","Human","Ghoul")
 
 //Event
 /obj/item/clothing/suit/armor/medium/combat/desert_ranger/officer/colonel
@@ -715,6 +736,13 @@
 	desc = "A weathered coat made for most part out of ballistic fiber and stuffed with ceramic plates underneath, it provides more than enough protection for the big gun of the town."
 	icon_state = "towntrench_heavy"
 	item_state = "towntrench_heavy"
+
+/obj/item/clothing/suit/armor/medium/duster/mutie
+	name = "mutant's trenchcoat"
+	desc = "A trenchcoat which doesn't need to hide any armour, because the bastard wearing it is a bit big."
+	icon_state = "mutie_towntrench"
+	item_state = "mutie_towntrench"
+	species_restricted = list("exclude","Human","Ghoul")
 
 /////////////
 // Enclave //
