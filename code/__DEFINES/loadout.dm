@@ -75,6 +75,8 @@
 
 //donator items
 #define LOADOUT_CATEGORY_DONATOR	"Special"
+#define LOADOUT_SUBCATEGORY_DONATOR_DONATOR	"Donator"
+#define LOADOUT_SUBCATEGORY_DONATOR_MUTIE	"Muties"
 
 //how many prosthetics can we have
 #define MAXIMUM_LOADOUT_PROSTHETICS	4

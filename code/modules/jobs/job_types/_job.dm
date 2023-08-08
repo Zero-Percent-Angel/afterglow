@@ -47,6 +47,7 @@
 
 	var/outfit = null
 	var/plasma_outfit = null //the outfit given to plasmamen
+	var/smutant_outfit = null
 
 	var/exp_requirements = 0
 

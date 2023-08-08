@@ -17,6 +17,7 @@
 	var/allow_ai_retrieve = FALSE
 	var/list/initial_contents
 	var/visible_contents = TRUE
+	var/powered_icon_state = TRUE
 
 /obj/machinery/smartfridge/Initialize()
 	. = ..()
@@ -56,7 +57,8 @@
 		else
 			icon_state = "[initial(icon_state)]"
 	else
-		icon_state = "[initial(icon_state)]-off"
+		if (powered_icon_state)
+			icon_state = "[initial(icon_state)]-off"
 
 
 
@@ -247,6 +249,7 @@
 	pass_flags = LETPASSTHROW
 	pass_flags_self = PASSTABLE | LETPASSTHROW
 	var/drying = FALSE
+	powered_icon_state = FALSE
 
 /obj/machinery/smartfridge/drying_rack/Initialize()
 	. = ..()

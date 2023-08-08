@@ -438,6 +438,7 @@
 	scope_state = "scope_long"
 	scope_x_offset = 11
 	scope_y_offset = 14
+	gun_skill_used = SKILL_ENERGY
 	fire_sound = 'sound/f13weapons/lasmusket_fire.ogg'
 	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'

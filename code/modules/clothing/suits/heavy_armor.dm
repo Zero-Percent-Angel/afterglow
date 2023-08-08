@@ -236,6 +236,32 @@
 	icon_state = "recycled_power"
 	item_state = "recycled_power"
 
+//Mutie
+/obj/item/clothing/suit/armor/heavy/vest/breastplate/scrap/mutie
+	name = "mutant armour"
+	desc = "Metal plates rigged to fit the frame of a super mutant. Maybe he's the big iron with a ranger on his hip?"
+	icon_state = "mutie_heavy_armour"
+	item_state = "mutie_heavy_armour"
+	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/suit/armor/heavy/vest/breastplate/scrap/mutie/knight
+	name = "mutant knightly armour"
+	desc = "Metal plates rigged to fit the frame of a super mutant, with a tabbard that somehow fits beneath them."
+	icon_state = "mutie_knight"
+	item_state = "mutie_knight"
+
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/mutie
+	name = "large damaged power armor"
+	desc = "It's unclear just want kind of power armour this once was. Was it T-51? Was it APA? Maybe it was just a suit of excavator armor? There's no way of knowing. What is clear though, is that the suit cannot be repaired or restored, and it's far too large for a normal human to wear."
+	icon_state = "mutie_power_armor"
+	item_state = "mutie_power_armor"
+	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/mutie/ncr
+	name = "large NCR Salvaged Power Armour"
+	desc = "It's unclear just want kind of power armour this once was. Was it T-51? Was it APA? Maybe it was just a suit of excavator armor? There's no way of knowing. What is clear though, is that the suit cannot be repaired or restored to what it once was, and it's far too large for a normal human to wear. Decorated with the NCR flag."
+	icon_state = "mutie_ncr_salvaged"
+	item_state = "mutie_ncr_salvaged"
 
 ///////////////////////////
 // !!!FACTION SECTION!!! //
