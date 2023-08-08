@@ -419,6 +419,23 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto
 	)
+
+//AEP9
+/obj/item/gun/energy/laser/pistol/revolver
+	name = "\improper AEP9 laser revolver"
+	desc = "A basic energy-based laser gun that fires concentrated beams of light. 'Revolver' version of the AEP7. Armor-penetrating beams dealing more damage, but acting with far less efficiency."
+	icon_state = "AEP9"
+	item_state = "laser-pistol"
+	w_class = WEIGHT_CLASS_SMALL
+	slot_flags = ITEM_SLOT_BELT
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan/revolver)
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	can_scope = FALSE
+	draw_time = GUN_DRAW_QUICK
+	fire_delay = GUN_FIRE_DELAY_SLOW
+	weapon_weight = GUN_ONE_HAND_ONLY
+
+
 // Debug laser pistol that does 10 damage and 0 DT piercing
 /obj/item/gun/energy/laser/pistol/debug_10_damage_0_dt_pierce
 	name = "\improper Debug laser pistol that does 10 damage and 0 DT piercing"
@@ -676,6 +693,19 @@
 	gun_tags = list(GUN_SCOPE)
 	can_scope = TRUE
 	init_firemodes = list(
+		/datum/firemode/semi_auto/slow
+	)
+
+//Tri-Focus AER9 - Automatic AER9 with lower damage
+/obj/item/gun/energy/laser/aer9/auto
+	name = "\improper Tri-Focus AER9 laser rifle"
+	desc = "A sturdy pre-war laser rifle. Rapidly emits beams of concentrated light to kill targets. Automatic, but not very powerful."
+	icon_state = "tri_focus_aer9"
+	slot_flags = ITEM_SLOT_BACK
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan)
+	cell_type = /obj/item/stock_parts/cell/ammo/ecp
+	init_firemodes = list(
+		/datum/firemode/automatic/rpm200,
 		/datum/firemode/semi_auto/slow
 	)
 

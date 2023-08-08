@@ -167,6 +167,10 @@ also: most hitscan weapons have more charge than their normal projectile counter
 	e_cost = 1
 	damage_threshold_penetration = 10
 
+/obj/item/ammo_casing/energy/laser/pistol/hitscan/revolver
+	projectile_type = /obj/item/projectile/beam/laser/pistol/hitscan/revolver
+	e_cost = 250 //6 shots. You're really not getting much mileage outta this one
+
 /obj/item/ammo_casing/energy/laser/ultra_pistol
 	projectile_type = /obj/item/projectile/beam/laser/ultra_pistol
 	e_cost = 75 //20 shots
