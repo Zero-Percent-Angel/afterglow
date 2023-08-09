@@ -44,7 +44,7 @@
 		if (do_message)
 			to_chat(src, span_red("You fail the skill check using: [check]"))
 		return FALSE
-	
+
 	//Maybe we'll use the flat formula later.
 	//var/the_val = (skill_value(check) + special_l)
 	//prob((the_val-difficulty)*(the_val-difficulty)/100+((100+difficulty-the_val)*the_val)/100*2)
@@ -134,7 +134,7 @@
 	if (SKILL_OUTDOORSMAN == skill)
 		skill_outdoorsman = value
 	invalidate_skill_caches()
-	
+
 /mob/proc/invalidate_skill_caches()
 	cached_knowable_recipies = list()
 	cached_unknowable_recipies = list()
@@ -171,7 +171,7 @@
 	if(!(A in view(client ? client.view : world.view, src)) || !m.will_talk)
 		// shift-click catcher may issue examinate() calls for out-of-sight turfs
 		return
-	
+
 	m.talk_to(src)
 
 /mob/living/verb/sneak()
@@ -192,7 +192,7 @@
 		to_chat(src, span_notice("You start sneaking."))
 		if (m_intent != MOVE_INTENT_WALK)
 			toggle_move_intent()
-		
+
 
 /mob/living/proc/stop_sneaking(cooldown = FALSE)
 	if (sneaking)
@@ -201,7 +201,7 @@
 		to_chat(src, span_warning("You stop sneaking."))
 		if (!sneaking_cooldown && cooldown)
 			sneaking_cooldown = TRUE
-			addtimer(CALLBACK(src, /mob/living/proc/clear_cooldown), 8 SECONDS)
+			addtimer(CALLBACK(src, /mob/living/proc/clear_cooldown), 12 SECONDS)
 
 /mob/living/proc/clear_cooldown()
 	sneaking_cooldown = FALSE
