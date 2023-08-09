@@ -2208,6 +2208,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/advanced_crafting_components/assembly,
 		/obj/item/advanced_crafting_components/alloys,
 		/obj/item/ingot/adamantine, // Valuable for smithing
+		/obj/item/advanced_crafting_components/p_circuits = 2
 	)
 
 /obj/effect/spawner/lootdrop/f13/attachments
