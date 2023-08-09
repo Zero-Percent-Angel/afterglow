@@ -28,7 +28,7 @@
 					"tamedachilles","southernsaint","zeropercentangel","melodicdeity","brainbodger",
 					"afroterk","theetneralflame","myrios","omnisalad","zephyrtfa","daemontinadel",
 					"sb208","oblivionandbeyondthestars","sanshoom","medalis","wh0t00kthejam","theman1178",
-					"spockeye")
+					"spockye")
 	cost = 1
 
 /datum/gear/donator/mutie/helmet
