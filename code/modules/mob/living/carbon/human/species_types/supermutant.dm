@@ -32,10 +32,16 @@
 	..()
 	for(var/obj/item/bodypart/b in C.bodyparts)
 		b.max_damage += 80
+	C.maxHealth += 50
+	C.health += 50
+
 /datum/species/smutant/on_species_loss(mob/living/carbon/C)
 	..()
 	for(var/obj/item/bodypart/b in C.bodyparts)
 		b.max_damage = initial(b.max_damage)
+	C.maxHealth -= 50
+	C.health -= 50
+
 
 /datum/species/smutant/qualifies_for_rank(rank, list/features)
 	if(rank in GLOB.legion_positions) // Legion isn't a fan of muties.
