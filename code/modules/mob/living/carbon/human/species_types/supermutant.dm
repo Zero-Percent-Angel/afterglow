@@ -9,7 +9,7 @@
 					"tamedachilles","southernsaint","zeropercentangel","melodicdeity","brainbodger",
 					"afroterk","theetneralflame","myrios","omnisalad","zephyrtfa","daemontinadel",
 					"sb208","oblivionandbeyondthestars","sanshoom","medalis","wh0t00kthejam","theman1178",
-					"spockye","xenonia")
+					"spockye","xenonia","breensecuter")
 	species_traits = list(NOTRANSSTING,NOAROUSAL,NOGENITALS,EYECOLOR,NO_UNDERWEAR)
 	inherent_traits = list(TRAIT_RADIMMUNE,TRAIT_VIRUSIMMUNE,TRAIT_SMUTANT)
 	inherent_biotypes = list(MOB_HUMANOID)
@@ -25,7 +25,7 @@
 		OFFSET_EYES = list(1,6)
 		)
 	sexes = 0
-	armor = 10
+	armor = 15
 	liked_food = JUNKFOOD | FRIED | RAW
 
 /datum/species/smutant/on_species_gain(mob/living/carbon/C, datum/species/old_species)
