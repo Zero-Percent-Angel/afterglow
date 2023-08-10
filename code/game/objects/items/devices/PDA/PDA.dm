@@ -262,7 +262,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	if(!user.IsAdvancedToolUser())
 		to_chat(user, span_warning("You don't have the dexterity to do this!"))
 		return
-	if(user.is_literate())
+	if(!user.is_literate())
 		to_chat(user, span_bad("You can't read, how are you going to work it?"))
 		return
 	..()
