@@ -750,7 +750,7 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 
 /obj/item/storage/box/gun/hobo/piperifle/PopulateContents()
 	new /obj/item/gun/ballistic/revolver/hobo/piperifle(src)
-	new /obj/item/ammo_box/a762/doublestacked(src) //it's like a box but smaller
+	new /obj/item/ammo_box/a556/doublestacked(src) //it's like a box but smaller
 
 /obj/item/storage/box/gun/hobo/pepperbox
 	name = "pepperbox gun case"
