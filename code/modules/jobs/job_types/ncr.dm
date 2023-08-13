@@ -1428,6 +1428,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	selection_color = "#fff5cc"
 	display_order = JOB_DISPLAY_ORDER_TROOPER
 	outfit = /datum/outfit/job/ncr/f13conscript
+	smutant_outfit = /datum/outfit/smutant/ncr
 
 	loadout_options = list(
 		/datum/outfit/loadout/conscriptvarmint, // Service Rifle, Bayonet
@@ -1633,6 +1634,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_type = EXP_TYPE_NCR
 	display_order = JOB_DISPLAY_ORDER_REAR_ECHELON
 	outfit = /datum/outfit/job/ncr/f13rearechelon
+	smutant_outfit = /datum/outfit/smutant/ncr
 	exp_requirements = 60
 
 	loadout_options = list( // ALL: Very limited blueprints
@@ -1699,6 +1701,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_type = EXP_TYPE_NCR
 	display_order = JOB_DISPLAY_ORDER_NCR_OFF_DUTY
 	outfit = /datum/outfit/job/ncr/f13ncroffduty
+	smutant_outfit = /datum/outfit/smutant/ncr
 	exp_requirements = 0
 
 /datum/outfit/job/ncr/f13ncroffduty
