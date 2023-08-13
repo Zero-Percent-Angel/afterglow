@@ -773,10 +773,11 @@
 //takes from medium armor
 /obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	name = "Great Khan armored jacket"
 	desc = "A black leather jacket with ballistic plates and a big Great Khan logo on the back. Some prefer to wear a leather vest (alt-click)."
-	icon_state = "khan_battlecoat"
-	item_state = "khanbattle"
+	icon_state = "khan_jacket_armored"
+	item_state = "khan_jacket_armored"
 	slowdown = 0.5
 	cold_protection = CHEST|GROIN
 	heat_protection = CHEST|GROIN
@@ -786,7 +787,20 @@
 	equip_delay_other = 50
 	max_integrity = 200
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/armor
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_MEDIUM
+	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
+	stiffness = MEDIUM_STIFFNESS
+
+/obj/item/clothing/suit/toggle/labcoat/khan_jacket/coat
+	name = "Leather battle coat"
+	desc = "Heavy leather coat lined with a patchwork of metal plates on the inside."
+	icon_state = "khan_battlecoat"
+	item_state = "khan_battlecoat"
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_DT_T2)
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
 	stiffness = MEDIUM_STIFFNESS

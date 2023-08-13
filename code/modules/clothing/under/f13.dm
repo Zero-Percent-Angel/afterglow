@@ -664,6 +664,14 @@
 	item_state = "khan_short"
 	body_parts_hidden = GROIN|LEGS
 
+/obj/item/clothing/under/f13/khan/skirt
+	name = "denim skirt"
+	desc = "Denim skirt!"
+	icon = 'icons/fallout/clothing/khans.dmi'
+	icon_state = "khan_skirt"
+	item_state = "khan_skirt"
+	body_parts_hidden = GROIN|LEGS
+
 /obj/item/clothing/under/f13/khan/booty
 	name = "denim shorts"
 	desc = "Denim pants, But this pair doesn't seem to leave much to the imagination."
