@@ -722,6 +722,7 @@
 	desc = "A piece of headwear commonly worn by the horned tribals that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a pre-War motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
 	icon_state = "khan_helmet"
 	item_state = "khan_helmet"
+	icon = 'icons/fallout/clothing/helmets.dmi'
 	flags_inv = null
 	flags_cover = null
 	strip_delay = 20

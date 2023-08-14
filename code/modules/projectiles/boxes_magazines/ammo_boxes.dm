@@ -795,6 +795,16 @@
 	custom_materials = list(/datum/material/iron = MATS_STRIPPER)
 	w_class = WEIGHT_CLASS_TINY
 
+/obj/item/ammo_box/a556/doublestacked
+	name = "double stack stripper clip (5.56x45mm)"
+	desc = "A stripper clip."
+	icon_state = "762a"
+	ammo_type = /obj/item/ammo_casing/a556
+	max_ammo = 10
+	multiple_sprites = 1
+	w_class = WEIGHT_CLASS_SMALL
+	custom_materials = list(/datum/material/iron = MATS_STRIPPER)
+
 
 //Needler
 /obj/item/ammo_box/needle

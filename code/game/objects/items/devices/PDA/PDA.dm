@@ -262,7 +262,9 @@ GLOBAL_LIST_EMPTY(PDAs)
 	if(!user.IsAdvancedToolUser())
 		to_chat(user, span_warning("You don't have the dexterity to do this!"))
 		return
-
+	if(!user.is_literate())
+		to_chat(user, span_bad("You can't read, how are you going to work it?"))
+		return
 	..()
 
 	var/datum/asset/spritesheet/assets = get_asset_datum(/datum/asset/spritesheet/simple/pda)
@@ -468,7 +470,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 				dat += "<a href='?src=[REF(src)];rfreq=2'>+</a>"
 				dat += "<a href='?src=[REF(src)];rfreq=10'>+</a>"
 				dat += " | <a href='?src=[REF(src)];rsavefreq=[radio.frequency]'>Save Frequency</a><br><br>"
-				
+
 				if(saved_frequencies)
 					dat += "<b>Saved Frequencies</b>"
 					dat += "<ul>"
@@ -504,7 +506,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	if(usr.canUseTopic(src, BE_CLOSE, FALSE, NO_TK, FALSE) && !href_list["close"])
 		add_fingerprint(U)
 		U.set_machine(src)
-		
+
 		if(href_list["choice"])
 
 			switch(href_list["choice"])
@@ -786,7 +788,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 			loaded_frequency = sanitize_frequency(text2num(loaded_frequency))
 			radio.set_frequency(loaded_frequency)
 			Boop()
-		
+
 		if (href_list["rrenfreq"])
 			var/renamed_frequency = href_list["rrenfreq"]
 			renamed_frequency = text2num(renamed_frequency)
