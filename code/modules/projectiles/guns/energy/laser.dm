@@ -775,6 +775,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
+	added_spread = GUN_SPREAD_POOR //Adds some base inaccuracy, separate from recoil
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slow
 	)

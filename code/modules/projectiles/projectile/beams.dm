@@ -536,10 +536,10 @@
 
 /obj/item/projectile/beam/laser/tribeam/hitscan
 	name = "tribeam laser"
-	recoil = 25
-	damage = 25 //if all bullets connect, this will do 75.
+	recoil = 7 // I had to reduce this SO MUCH before it started being usable OH MY GOD
+	damage = 25 //if all bullets connect, this will do 75. //Was going to nerf, but this is actually LESS damage than buckshot
 	hitscan = TRUE
-	bare_wound_bonus = -30 //tribeam is bad at wounding, as basically its only real downside
+	bare_wound_bonus = -30 //tribeam is bad at wounding, as basically its only real downside //lmao that was a lie
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
@@ -568,7 +568,7 @@
 	wound_bonus = 90 //being hit with plasma is horrific
 	eyeblur = 0
 	is_reflectable = TRUE
-	pixels_per_second =  TILES_TO_PIXELS(10) //same as 40mm grenade
+	pixels_per_second =  TILES_TO_PIXELS(15) //About half the base speed of bullets, so still real slow
 
 /obj/item/projectile/f13plasma/balanced //the kind you are meant to use
 	damage = 50 //2-hit KO, 3 with armor, 4 with good armor
@@ -583,7 +583,7 @@
 	wound_bonus = 50 //let's not make the carbine horrifying // nah lets make it horrifying
 	eyeblur = 0
 	is_reflectable = TRUE
-	pixels_per_second = TILES_TO_PIXELS(10)
+	pixels_per_second = TILES_TO_PIXELS(15)
 
 /obj/item/projectile/f13plasma/repeater //Plasma repeater
 	name = "plasma stream"
