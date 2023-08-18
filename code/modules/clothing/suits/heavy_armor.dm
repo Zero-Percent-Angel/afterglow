@@ -256,6 +256,7 @@
 	icon_state = "mutie_power_armor"
 	item_state = "mutie_power_armor"
 	species_restricted = list("exclude","Human","Ghoul")
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2)
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/mutie/ncr
 	name = "large NCR Salvaged Power Armour"
