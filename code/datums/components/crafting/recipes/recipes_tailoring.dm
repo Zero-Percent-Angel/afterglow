@@ -369,6 +369,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_WASTELAND
 	skill_level = HARD_CHECK
+	skill_needed = SKILL_SCIENCE
 
 /datum/crafting_recipe/tailor/ncruniform
 	name = "NCR Uniform"
