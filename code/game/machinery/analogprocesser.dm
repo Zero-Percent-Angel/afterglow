@@ -73,6 +73,7 @@
 	icon_state = "chopibobut"
 	density = FALSE
 	circuit = null
+	use_power = NO_POWER_USE
 
 /obj/machinery/processor/chopping_block/Initialize()
 	. = ..()

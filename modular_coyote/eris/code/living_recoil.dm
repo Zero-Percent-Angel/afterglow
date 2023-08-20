@@ -13,8 +13,12 @@
 			highest_gun_or_energy_cache = highest_skill_value(SKILL_GUNS, SKILL_ENERGY)
 		if(HAS_TRAIT(src, SPREAD_CONTROL))
 			recoil_buildup *= 0.8
-		recoil += (recoil_buildup * min((50/highest_gun_or_energy_cache), 1))
-		update_recoil()
+		if (recoil < MAX_ACCURACY_OFFSET)
+			recoil += (recoil_buildup * min((50/highest_gun_or_energy_cache), 1))
+		else
+			if (prob(20))
+				to_chat(src, span_danger("Because of built up recoil You struggle to keep your aim on target."))
+		//update_recoil()
 
 /mob/living/proc/calc_recoil()
 	on_the_move = FALSE
@@ -32,7 +36,7 @@
 		else
 			recoil -= base
 			recoil *= scale
-	update_recoil()
+	//update_recoil()
 
 /mob/living/proc/calculate_offset(var/offset = 0, skill_used = SKILL_GUNS)
 	var/the_skill_val = skill_value(skill_used)
@@ -66,8 +70,8 @@
 			remove_cursor()
 			return
 		client.mouse_pointer_icon = initial(client.mouse_pointer_icon)
-		var/offset = round(calculate_offset(G.added_spread) * 0.8)
-		var/icon/base = find_cursor_icon('modular_coyote/eris/icons/standard.dmi', offset)
+		//var/offset = round(calculate_offset(G.added_spread) * 0.8)
+		var/icon/base = find_cursor_icon('modular_coyote/eris/icons/standard.dmi', 0)
 		ASSERT(isicon(base))
 		client.mouse_pointer_icon = base
 
