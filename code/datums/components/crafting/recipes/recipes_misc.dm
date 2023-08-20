@@ -143,6 +143,51 @@
 //Scavenging and Tinkering//
 ///////////////////////////
 
+/datum/crafting_recipe/basic_manip
+	name = "Basic Mechanism"
+	result = /obj/item/stock_parts/manipulator/simple
+	reqs = list(/obj/item/stack/crafting/metalparts = 2)
+	time = 5
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/basic_matter_bin
+	name = "Basic Mechanism"
+	result = /obj/item/stock_parts/matter_bin/simple
+	reqs = list(/obj/item/stack/crafting/metalparts = 2)
+	time = 5
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/basic_scanning
+	name = "Basic Antenna"
+	result = /obj/item/stock_parts/scanning_module/simple
+	reqs = list(/obj/item/stack/crafting/goodparts = 1)
+	time = 5
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/basic_capacitor
+	name = "Basic Capacitor"
+	result = /obj/item/stock_parts/capacitor/simple
+	reqs = list(/obj/item/stack/crafting/goodparts = 1)
+	time = 5
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/basic_laser
+	name = "Basic Laser Diode"
+	result = /obj/item/stock_parts/micro_laser/simple
+	reqs = list(/obj/item/stack/crafting/goodparts = 2)
+	time = 5
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_level = HARD_CHECK
+
 /datum/crafting_recipe/pico_manip
 	name = "Delicate Mechanism"
 	result = /obj/item/stock_parts/manipulator/pico

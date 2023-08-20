@@ -1084,19 +1084,18 @@
 /obj/item/clothing/head/helmet/f13/power_armor/advanced
 	name = "advanced power helmet"
 	desc = "It's an advanced power armor MK1 helmet, typically used by the Enclave. It looks somewhat threatening."
-	icon_state = "advhelmet1"
-	item_state = "advhelmet1"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2)
+	icon_state = "advanced"
+	item_state = "advanced"
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_UP_BOMB_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 
 //Part of the peacekeeper enclave stuff, adjust values as needed.
 /obj/item/clothing/head/helmet/f13/power_armor/x02helmet
 	name = "Enclave power armor helmet"
 	desc = "The Enclave Mark II Powered Combat Armor helmet."
-	icon_state = "advanced"
-	item_state = "advanced"
-	slowdown = 0.1
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T3)
+	icon_state = "superadvanced"
+	item_state = "superadvanced"
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T3, ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_UP_BOMB_T1, ARMOR_MODIFIER_UP_DT_T1)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/x02
 

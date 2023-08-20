@@ -17,7 +17,7 @@
 	var/list/enemy_factions = list()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/dialog_options(mob/talker, display_options)
-	var/dat = "" 
+	var/dat = ""
 	if (!friends.Find(WEAKREF(talker)) && (intimidated.Find(WEAKREF(talker)) || introduced.Find(WEAKREF(talker))))
 		dat += "<center><a href='?src=[REF(src)];together=1'>Try to convince them to follow you (Speech - persuade)</a></center>"
 	if (friends.Find(WEAKREF(talker)) && !trust_no_one)
@@ -49,7 +49,7 @@
 			failed |= WEAKREF(usr)
 			friends -= WEAKREF(usr)
 	..(href, href_list)
-	
+
 /mob/living/simple_animal/hostile/retaliate/talker/follower/Hear(message, atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, message_mode, atom/movable/source)
 	. = ..()
 	if (friends.Find(WEAKREF(speaker)))
@@ -309,7 +309,7 @@
 	for(var/mob/living/simple_animal/hostile/retaliate/H in around)
 		if(faction_check_mob(H) && !attack_same && !H.attack_same)
 			H.enemies |= enemies
-	
+
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/attackby(obj/item/O, mob/user)
 	..()
 	target_mob = null
@@ -347,7 +347,7 @@
 	return ..()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/dialog_options(mob/talker, display_options)
-	var/dat = "" 
+	var/dat = ""
 	if (faction_check_mob(talker))
 		dat += "<center><a href='?src=[REF(src)];post=1'>Order them back to thier post</a></center>"
 	return dat
@@ -355,7 +355,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/Hear(message, atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, message_mode, atom/movable/source)
 	. = ..()
-	if (faction_check_mob(speaker))
+	if (istype(speaker, /mob/living) && faction_check_mob(speaker))
 		listen(speaker, raw_message)
 	return ..()
 
