@@ -80,7 +80,7 @@
 	ADD_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
 	ADD_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
 	ADD_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait") // General effects from being in PA
-	add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/pa_speedmod, multiplicative_slowdown = ARMOR_SLOWDOWN_PA * ARMOR_SLOWDOWN_GLOBAL_MULT)
+	user.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/pa_speedmod, multiplicative_slowdown = ARMOR_SLOWDOWN_PA * ARMOR_SLOWDOWN_GLOBAL_MULT)
 
 /obj/item/clothing/suit/armor/power_armor/dropped(mob/user)
 	..()
@@ -93,7 +93,7 @@
 	REMOVE_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
 	REMOVE_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
 	REMOVE_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait")
-	remove_movespeed_modifier(/datum/movespeed_modifier/pa_speedmod, update=TRUE)
+	user.remove_movespeed_modifier(/datum/movespeed_modifier/pa_speedmod, update=TRUE)
 
 /obj/item/clothing/suit/armor/power_armor/Destroy()
 	. = ..()
