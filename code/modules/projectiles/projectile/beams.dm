@@ -536,8 +536,7 @@
 
 /obj/item/projectile/beam/laser/tribeam/hitscan
 	name = "tribeam laser"
-	recoil = 7 // I had to reduce this SO MUCH before it started being usable OH MY GOD
-	damage = 25 //if all bullets connect, this will do 75. //Was going to nerf, but this is actually LESS damage than buckshot
+	damage = 25 //if all bullets connect, this will do 75. //If it turns out to be too strong, change this to 22
 	hitscan = TRUE
 	bare_wound_bonus = -30 //tribeam is bad at wounding, as basically its only real downside //lmao that was a lie
 	tracer_type = /obj/effect/projectile/tracer/laser
@@ -550,7 +549,6 @@
 
 /obj/item/projectile/beam/laser/tribeam/laserbuss/hitscan
 	name = "tribeam laser"
-	recoil = 25
 	damage = 20
 	hitscan = TRUE
 	bare_wound_bonus = -30 //tribeam is bad at wounding, as basically its only real downside
@@ -643,7 +641,6 @@
 
 /obj/item/projectile/f13plasma/scatter //Multiplas, fires 3 shots, will melt you
 	damage = 35
-	recoil = 25
 
 /obj/item/projectile/beam/laser/rcw //RCW
 	name = "rapidfire beam"
