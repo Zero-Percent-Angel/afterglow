@@ -35,6 +35,10 @@
 	variable = TRUE
 	blacklisted_movetypes = FLOATING
 
+/datum/movespeed_modifier/pa_speedmod
+	variable = TRUE
+	blacklisted_movetypes = FLOATING
+
 /datum/movespeed_modifier/grab_slowdown
 	id = MOVESPEED_ID_MOB_GRAB_STATE
 	blacklisted_movetypes = FLOATING
@@ -132,11 +136,11 @@
 
 /datum/movespeed_modifier/super_stimpak_slowdown
 	flags = IGNORE_NOSLOW
-	multiplicative_slowdown = 0.8
+	multiplicative_slowdown = 0.4
 
 /datum/movespeed_modifier/healing_poultice_slowdown
 	flags = IGNORE_NOSLOW
-	multiplicative_slowdown = 0.8
+	multiplicative_slowdown = 0.4
 
 /datum/movespeed_modifier/bloodloss_slowdown
 	flags = IGNORE_NOSLOW
