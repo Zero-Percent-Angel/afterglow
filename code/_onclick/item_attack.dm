@@ -130,7 +130,7 @@
 
 		if(HAS_TRAIT(user, TRAIT_GHOULMELEE)) //negative trait
 			force_modifier += (-force * 0.25)
-
+	force_modifier *= 0.5
 	var/force_out = force + force_modifier
 	var/hit_helper = !CHECK_MOBILITY(M, MOBILITY_STAND) ? -30 : -10
 	if(M != user && !M.IsUnconscious() && !user.skill_roll_kind(SKILL_MELEE, M.special_a + hit_helper, 0))
