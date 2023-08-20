@@ -371,7 +371,7 @@ Most bullets literally DO NOT have fucking armor pen, so it deflects nearly all 
 /obj/item/clothing/suit/armor/power_armor/advanced/x02
 	name = "Enclave power armor"
 	desc = "Upgraded pre-war power armor design used by the Enclave. It is mildly worn due to it's age and lack of maintenance after the fall of the Enclave."
-	icon_state = "advanced"
-	item_state = "advanced"
+	icon_state = "PA_x02"
+	item_state = "PA_x02"
 	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/x02 // Oh the misery
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T3, ARMOR_MODIFIER_UP_DT_T3)
