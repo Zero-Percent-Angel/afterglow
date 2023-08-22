@@ -1184,7 +1184,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	flag = F13LEGIONSLAVE
 	total_positions = 3
 	spawn_positions = 3
-	description = "A slave that survives the breaking camps is given a Legion appropriate name (latin-tribal inspired) and bull tattoo. Be obedient, respectful, stay inside the camp. Work the farm, mine, make food, clean and help injured men. Do NOT escape on your own, up to you how to handle it if forcibly freed by outside forces."
+	description = "Be obedient, respectful, stay inside the camp. Work the farm, mine, make food, clean and help injured men."
 	supervisors = "Officers first, then Auxilia, then warriors."
 	display_order = JOB_DISPLAY_ORDER_LEGIONSLAVE
 	exp_requirements = 0
@@ -1212,8 +1212,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/outfit/job/CaesarsLegion/slave
 	name = "Camp Follower"
 	jobtype = /datum/outfit/job/CaesarsLegion/slave
-	id = /obj/item/card/id/legionbrand
-	uniform = /obj/item/clothing/under/f13/legslavef
+	id = /obj/item/card/id/dogtag/legfollower
+	uniform = /obj/item/clothing/under/f13/campfollowermale
 	shoes =	null
 	l_pocket = /obj/item/radio
 
@@ -1222,7 +1222,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/outfit/loadout/slaveservant
 	name = "Servant"
 	head = /obj/item/clothing/head/f13/servant
-	uniform	= /obj/item/clothing/under/f13/campfollowermale
+	uniform	= /obj/item/clothing/under/f13/campfollowerfemale
 	gloves = /obj/item/clothing/gloves/f13/crudemedical
 	shoes =	/obj/item/clothing/shoes/roman
 	r_pocket = /obj/item/flashlight/lantern

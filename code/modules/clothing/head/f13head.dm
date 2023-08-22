@@ -234,8 +234,8 @@
 	desc = "A simple uncoloured linen cloth wrapped around the head, the mark of a servant slave trained in household work."
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = "legion-servant"
-	item_state = "legion-servant"
+	icon_state = "leg_slave"
+	item_state = "leg_slave"
 	flags_inv = HIDEEARS
 	flags_cover = null
 
