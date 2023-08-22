@@ -1094,6 +1094,13 @@
 	item_state = "card-id_leg"
 	assignment = "recruit medallion"
 
+/obj/item/card/id/dogtag/legfollower
+	name = "camp follower medallion"
+	desc = "A silver disc stamped with the Legion's Bull insignia. Belongs to a camp follower."
+	icon_state = "legionmedallionrecruit"
+	item_state = "card-id_leg"
+	assignment = "follower medallion"
+
 /obj/item/card/id/dogtag/legprime
 	name = "prime medallion"
 	desc = "A marked silver disc stamped with the Legion's Bull insignia. Belongs to a prime."

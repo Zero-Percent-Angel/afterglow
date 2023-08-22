@@ -1128,7 +1128,7 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 /mob/proc/equipped_speed_mods()
 	for(var/obj/item/I in held_items)
 		if(I.item_flags & SLOWS_WHILE_IN_HAND)
-			. += I.slowdown
+			. += (I.slowdown * (1.5 - special_s/10))
 
 
 /mob/proc/set_stat(new_stat)

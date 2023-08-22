@@ -23,6 +23,11 @@
 	set hidden = 1
 	SEND_SOUND(usr, sound('sound/machines/button4.ogg', repeat = 0, wait = 0, volume = 100, channel = 512))
 	var/discordurl = CONFIG_GET(string/discordurl)
+	if(alert("Do you wish to view the rules here or go to the discord?",,"Rules","Discord")!="Discord")
+		var/datum/browser/popup = new(src, "rules", "Rules")
+		popup.set_content(global.config.display_rules)
+		popup.open(FALSE)
+		return
 	if(discordurl)
 		if(alert("This will open the Discord in your browser. Are you sure?",,"Yes","No")!="Yes")
 			return
