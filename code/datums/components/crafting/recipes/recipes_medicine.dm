@@ -150,7 +150,6 @@
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 20
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_OUTDOORSMAN
 	skill_level = REGULAR_CHECK
 
@@ -165,7 +164,7 @@
 	time = 10
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = EASY_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/healpoultice5
 	name = "Batch of healing poultice (x5)"
@@ -178,7 +177,7 @@
 	time = 20
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = EASY_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/smell_salts
 	name = "Smelling salts"
@@ -251,7 +250,6 @@
 	tools = list(TOOL_AWORKBENCH)
 	time = 10
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_SCIENCE
 	skill_level = HARD_CHECK
 
@@ -266,7 +264,6 @@
 	tools = list(TOOL_AWORKBENCH)
 	time = 20
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_SCIENCE
 	skill_level = HARD_CHECK
 
