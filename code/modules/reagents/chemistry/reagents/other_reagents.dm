@@ -2824,13 +2824,12 @@
 	ghoulfriendly = TRUE
 
 /datum/reagent/red_ichor/on_mob_life(mob/living/carbon/M)
-	M.adjustBruteLoss(-50)
-	M.adjustOxyLoss(-50)
-	M.adjustBruteLoss(-50)
-	M.adjustFireLoss(-50)
-	M.adjustToxLoss(-50, TRUE) //heals TOXINLOVERs
-	M.adjustCloneLoss(-50)
-	M.adjustStaminaLoss(-50)
+	M.adjustBruteLoss(-5 * metabolization_rate)
+	M.adjustOxyLoss(-5 * metabolization_rate)
+	M.adjustFireLoss(-5 * metabolization_rate)
+	M.adjustToxLoss(-3 * metabolization_rate, TRUE) //heals TOXINLOVERs
+	M.adjustCloneLoss(-1 * metabolization_rate)
+	M.adjustStaminaLoss(-2 * metabolization_rate)
 	..()
 
 /datum/reagent/green_ichor
@@ -2842,13 +2841,13 @@
 	ghoulfriendly = TRUE
 
 /datum/reagent/green_ichor/on_mob_life(mob/living/carbon/M)
-	M.adjustOrganLoss(ORGAN_SLOT_LUNGS, -100)
-	M.adjustOrganLoss(ORGAN_SLOT_HEART, -100)
-	M.adjustOrganLoss(ORGAN_SLOT_LIVER, -100)
-	M.adjustOrganLoss(ORGAN_SLOT_EARS, -100)
-	M.adjustOrganLoss(ORGAN_SLOT_STOMACH, -100)
-	M.adjustOrganLoss(ORGAN_SLOT_TONGUE, -100)
-	M.adjustOrganLoss(ORGAN_SLOT_EYES, -100)
+	M.adjustOrganLoss(ORGAN_SLOT_LUNGS, -2 * metabolization_rate)
+	M.adjustOrganLoss(ORGAN_SLOT_HEART, -2 * metabolization_rate)
+	M.adjustOrganLoss(ORGAN_SLOT_LIVER, -2 * metabolization_rate)
+	M.adjustOrganLoss(ORGAN_SLOT_EARS, -2 * metabolization_rate)
+	M.adjustOrganLoss(ORGAN_SLOT_STOMACH, -2 * metabolization_rate)
+	M.adjustOrganLoss(ORGAN_SLOT_TONGUE, -2 * metabolization_rate)
+	M.adjustOrganLoss(ORGAN_SLOT_EYES, -2 * metabolization_rate)
 	..()
 
 /datum/reagent/blue_ichor
@@ -2860,15 +2859,16 @@
 	ghoulfriendly = TRUE
 
 /datum/reagent/blue_ichor/on_mob_life(mob/living/carbon/M)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -100)
-	M.cure_all_traumas(TRAUMA_RESILIENCE_MAGIC)
-	M.hallucination = 0
-	M.dizziness = 0
-	M.disgust = 0
-	M.drowsyness = 0
-	M.stuttering = 0
-	M.confused = 0
-	M.SetSleeping(0, 0)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -3 * metabolization_rate)
+	if (volume > 20)
+		M.cure_all_traumas(TRAUMA_RESILIENCE_WOUND)
+		M.hallucination = 0
+		M.dizziness = 0
+		M.disgust = 0
+		M.drowsyness = 0
+		M.stuttering = 0
+		M.confused = 0
+		M.SetSleeping(0, 0)
 	..()
 
 /datum/reagent/nutracid
