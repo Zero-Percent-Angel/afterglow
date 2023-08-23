@@ -404,3 +404,14 @@
 /obj/item/storage/box/medicine/bitterdrink5/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/bitterdrink(src)
+
+// Hydra box
+/obj/item/storage/box/medicine/hydra5
+	name = "box of hydras"
+	desc = "A box full of hydra."
+	icon_state = "medicinebox_simple"
+	illustration = "overlay_bitter"
+
+/obj/item/storage/box/medicine/hydra5/PopulateContents()
+	for(var/i in 1 to 5)
+		new /obj/item/reagent_containers/pill/patch/hydra(src)

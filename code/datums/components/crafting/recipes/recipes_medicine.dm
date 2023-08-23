@@ -128,6 +128,27 @@
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
 
+/datum/crafting_recipe/hydra  //keep the number of plants needed low so picking wild plants is viable. balance botany instead.
+	name = "Hydra - Anesthetic"
+	result = /obj/item/reagent_containers/pill/patch/hydra
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fungus = 1,
+				/obj/item/reagent_containers/food/snacks/meat/slab/radscorpion_meat = 1,
+				/obj/item/reagent_containers/food/snacks/meat/slab/nightstalker_meat = 1)
+	time = 5
+	category = CAT_MEDICAL
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = REGULAR_CHECK
+
+/datum/crafting_recipe/hydra5
+	name = "Hydra - Anesthetic (x5)"
+	result = /obj/item/storage/box/medicine/hydra5
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fungus = 5,
+				/obj/item/reagent_containers/food/snacks/meat/slab/radscorpion_meat = 5,
+				/obj/item/reagent_containers/food/snacks/meat/slab/nightstalker_meat = 5)
+	time = 15
+	category = CAT_MEDICAL
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = HARD_CHECK
 
 /datum/crafting_recipe/bitterdrink
 	name = "Bottle bitterdrink"

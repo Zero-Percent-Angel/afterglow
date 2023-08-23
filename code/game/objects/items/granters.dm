@@ -925,6 +925,14 @@
 		/datum/crafting_recipe/buffout,
 		/datum/crafting_recipe/steady)
 
+/obj/item/book/granter/trait/legionalchemy
+	name = "Teachings of Mars"
+	desc = "A crude, handmade book containing the essentials on how to work alchemy tables. The cover is stamped with a brass bull."
+	oneuse = TRUE
+	granted_trait = TRAIT_MARS_TEACH
+	traitname = "legion medicine"
+	remarks = list("Sapere aude.","Ad astra per auspera.","Mars favours the bold.","Ars longa, vita brevis.","Vivamus, moriendum est.","Sic gorgiamus allos subjectatos nunc.","Aere perennius.","Bis dat qui cito dat.","Finis coronat opus.","Nullem magnum ingenium sine demmentia fuit.","Nemo mortalium omnibus horis sapit.")
+
 /obj/item/book/granter/trait/bigleagues
 	name = "Grognak the Barbarian"
 	desc = "A pulp fiction paperback detailing the adventures of a violent barbarian. Surprisingly, this was sold to children."
