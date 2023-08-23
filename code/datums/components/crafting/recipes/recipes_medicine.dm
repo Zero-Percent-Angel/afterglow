@@ -9,7 +9,7 @@
 	time = 10
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = HARD_CHECK
+	skill_level = EXPERT_CHECK
 
 /datum/crafting_recipe/bluepotion
 	name = "Blue Potion"
@@ -22,7 +22,7 @@
 	time = 10
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = HARD_CHECK
+	skill_level = EXPERT_CHECK
 
 /datum/crafting_recipe/greenpotion
 	name = "Green Potion"
@@ -35,7 +35,7 @@
 	time = 10
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = HARD_CHECK
+	skill_level = EXPERT_CHECK
 
 /datum/crafting_recipe/regular_gauze
 	name = "Regular Gauze"
@@ -128,6 +128,27 @@
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
 
+/datum/crafting_recipe/hydra  //keep the number of plants needed low so picking wild plants is viable. balance botany instead.
+	name = "Hydra - Anesthetic"
+	result = /obj/item/reagent_containers/pill/patch/hydra
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fungus = 1,
+				/obj/item/reagent_containers/food/snacks/meat/slab/radscorpion_meat = 1,
+				/obj/item/reagent_containers/food/snacks/meat/slab/nightstalker_meat = 1)
+	time = 5
+	category = CAT_MEDICAL
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = REGULAR_CHECK
+
+/datum/crafting_recipe/hydra5
+	name = "Hydra - Anesthetic (x5)"
+	result = /obj/item/storage/box/medicine/hydra5
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fungus = 5,
+				/obj/item/reagent_containers/food/snacks/meat/slab/radscorpion_meat = 5,
+				/obj/item/reagent_containers/food/snacks/meat/slab/nightstalker_meat = 5)
+	time = 15
+	category = CAT_MEDICAL
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = HARD_CHECK
 
 /datum/crafting_recipe/bitterdrink
 	name = "Bottle bitterdrink"
@@ -150,7 +171,6 @@
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 20
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_OUTDOORSMAN
 	skill_level = REGULAR_CHECK
 
@@ -165,7 +185,7 @@
 	time = 10
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = EASY_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/healpoultice5
 	name = "Batch of healing poultice (x5)"
@@ -178,7 +198,7 @@
 	time = 20
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = EASY_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/smell_salts
 	name = "Smelling salts"
@@ -251,7 +271,6 @@
 	tools = list(TOOL_AWORKBENCH)
 	time = 10
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_SCIENCE
 	skill_level = HARD_CHECK
 
@@ -266,7 +285,6 @@
 	tools = list(TOOL_AWORKBENCH)
 	time = 20
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_SCIENCE
 	skill_level = HARD_CHECK
 
@@ -543,7 +561,7 @@
 	time = 15
 	category = CAT_MEDICAL
 	skill_level = REGULAR_CHECK
-	skill_needed = SKILL_REPAIR 
+	skill_needed = SKILL_REPAIR
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_surgical
@@ -557,7 +575,7 @@
 	time = 15
 	category = CAT_MEDICAL
 	skill_level = REGULAR_CHECK
-	skill_needed = SKILL_REPAIR 
+	skill_needed = SKILL_REPAIR
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_janitor
@@ -571,7 +589,7 @@
 	time = 15
 	category = CAT_MEDICAL
 	skill_level = REGULAR_CHECK
-	skill_needed = SKILL_REPAIR 
+	skill_needed = SKILL_REPAIR
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_service
@@ -585,7 +603,7 @@
 	time = 15
 	category = CAT_MEDICAL
 	skill_level = REGULAR_CHECK
-	skill_needed = SKILL_REPAIR 
+	skill_needed = SKILL_REPAIR
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_nutriment
@@ -598,6 +616,6 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
-	skill_level = REGULAR_CHECK 
+	skill_level = REGULAR_CHECK
 	skill_needed = SKILL_REPAIR
 	always_available = FALSE
