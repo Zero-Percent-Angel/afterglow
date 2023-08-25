@@ -1320,6 +1320,7 @@ Raider
 
 	loadout_options = list(	//This is kinda a given. You bet.
 	/datum/outfit/loadout/samaritan, 	//Water and food to share with the wastes.
+	///datum/outfit/loadout/priest_of_mars,
 	/datum/outfit/loadout/cleanser		//Just some bombs.
 	)
 
@@ -1355,6 +1356,14 @@ Raider
 		/obj/item/reagent_containers/glass/beaker/waterbottle/wataur = 1
 	)	//Matthew 14:17 RSVCE and KJV - Kitsunemitsu
 				//Nerd shit, wataur time. ~TK
+
+/datum/outfit/loadout/priest_of_mars
+	name = "Priest of mars"
+	backpack_contents = list(
+		/obj/item/clothing/under/f13/pmarsrobe = 1, //this is for the asthetic add it to orator if you want
+		/obj/item/clothing/under/f13/priestess = 1,
+		/obj/item/book/granter/trait/legionalchemy = 1 //gives them the same trait auxillas have
+	)
 
 /datum/outfit/loadout/cleanser
 	name = "Cleanser"
