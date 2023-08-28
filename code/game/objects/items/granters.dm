@@ -1183,7 +1183,7 @@
 	granted_trait = null
 	pages_to_mastery = 0
 	time_per_page = 0
-/*
+
 /obj/item/book/granter/trait/tribaltraditions/attack_self(mob/user)
 	var/list/choices = list("Dead Horses traditions","White Legs traditions","Rustwalkers traditions","Eighties traditions","Sorrows traditions","Wayfarer traditions","Bone Dancer traditions")
 	if(granted_trait == null)
@@ -1279,7 +1279,7 @@
 					/datum/crafting_recipe/tribal/bonebag
 					)
 		return ..()
-*/
+
 
 /obj/item/book/granter/trait/tribaltraditions/Initialize()
 	. = ..()
