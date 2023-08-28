@@ -338,7 +338,7 @@
 	if(!QDELETED(H))
 		H.remove_language(/datum/language/chinese)
 
-/datum/quirk/tribespeak
+/datum/quirk/spanish
 	name = "Spanish Language Comprehension"
 	desc = "You're somehow capable of understanding and speaking the common tribal languages in the area."
 	value = 0
