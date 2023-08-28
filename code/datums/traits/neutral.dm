@@ -338,6 +338,23 @@
 	if(!QDELETED(H))
 		H.remove_language(/datum/language/chinese)
 
+/datum/quirk/tribespeak
+	name = "Spanish Language Comprehension"
+	desc = "You're somehow capable of understanding and speaking the common tribal languages in the area."
+	value = 0
+	gain_text = span_notice("You remember the old ways of the mexican cartels..")
+	lose_text = span_notice("You've forgotten the ways of the mexican cartels..")
+
+
+/datum/quirk/tribespeak/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/spanish)
+
+/datum/quirk/tribespeak/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/spanish)
+
 /datum/quirk/in_heat
 	name = "ERP Receptive"
 	desc = "Your character, for whatever reason, is PASSIVELY seeking out attention from those who match your OOC Prefences. Remember to set your OOC notes!"
