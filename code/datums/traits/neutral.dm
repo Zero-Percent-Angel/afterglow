@@ -338,6 +338,23 @@
 	if(!QDELETED(H))
 		H.remove_language(/datum/language/chinese)
 
+/datum/quirk/spanish
+	name = "Spanish Language Comprehension"
+	desc = "You're somehow capable of understanding and speaking spanish."
+	value = 0
+	gain_text = span_notice("You speak spanish.")
+	lose_text = span_notice("You've forgotten how to speak spanish.")
+
+
+/datum/quirk/spanish/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/spanish)
+
+/datum/quirk/spanish/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/spanish)
+
 /datum/quirk/in_heat
 	name = "ERP Receptive"
 	desc = "Your character, for whatever reason, is PASSIVELY seeking out attention from those who match your OOC Prefences. Remember to set your OOC notes!"
