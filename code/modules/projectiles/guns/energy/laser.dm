@@ -771,10 +771,11 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	init_recoil = RIFLE_RECOIL(5)
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER * 0.9 //too slow.
+	fire_delay = (GUN_FIRE_DELAY_SLOWER * 0.9) //too slow
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
+	added_spread = (GUN_SPREAD_AWFUL*3) //Adds some base inaccuracy, separate from recoil
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slow
 	)
@@ -799,6 +800,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
+	added_spread = (GUN_SPREAD_AWFUL*3) //Adding this here in case we ever want to reimplement this bad boy.
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slow
 	)
