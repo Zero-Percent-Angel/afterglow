@@ -340,7 +340,7 @@
 
 /datum/quirk/spanish
 	name = "Spanish Language Comprehension"
-	desc = "You're somehow capable of understanding and speaking the common tribal languages in the area."
+	desc = "You're somehow capable of understanding and speaking the common language of the mexican cartels in the south"
 	value = 0
 	gain_text = span_notice("You remember the old ways of the mexican cartels..")
 	lose_text = span_notice("You've forgotten the ways of the mexican cartels..")
