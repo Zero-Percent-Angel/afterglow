@@ -215,7 +215,7 @@
 	health = 650
 	melee_damage_lower = 20
 	melee_damage_upper = 47
-	extra_projectiles = 2 
+	extra_projectiles = 2
 	retreat_distance = 3
 	minimum_distance = 5
 	ranged_cooldown_time = 12
@@ -412,7 +412,7 @@
 	suit = /obj/item/clothing/suit/armor/medium/vest/ncr
 	belt = /obj/item/storage/belt/army/assault/ncr
 	shoes = /obj/item/clothing/shoes/f13/military/ncr
-	head = /obj/item/clothing/head/f13/ncr
+	head = /obj/item/clothing/head/helmet/f13/ncr
 
 /mob/living/simple_animal/hostile/ncr/trooper
 	name = "NCR Trooper"
