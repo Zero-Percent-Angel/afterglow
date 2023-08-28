@@ -343,7 +343,7 @@
 	desc = "You're somehow capable of understanding and speaking spanish."
 	value = 0
 	gain_text = span_notice("You speak spanish.")
-	lose_text = span_notice("You've forgotten how to speak chinese.")
+	lose_text = span_notice("You've forgotten how to speak spanish.")
 
 
 /datum/quirk/spanish/add()
