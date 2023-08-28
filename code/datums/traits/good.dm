@@ -60,8 +60,8 @@ GLOBAL_LIST_INIT(eighties_recipes, list(
 	/datum/crafting_recipe/tribalwar/eighties/heavyarmour))
 
 GLOBAL_LIST_INIT(wayfarer_recipes, list(
-	//datum/crafting_recipe/tribalwar/lighttribe,
-	//datum/crafting_recipe/tribalwar/heavytribe,
+	/datum/crafting_recipe/tribalwar/wayfarers/lightarmour,
+	/datum/crafting_recipe/tribalwar/wayfarers/heavyarmor,
 	/datum/crafting_recipe/warmace))
 
 GLOBAL_LIST_INIT(bone_dancer_recipes, list(
