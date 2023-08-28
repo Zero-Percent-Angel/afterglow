@@ -1306,12 +1306,12 @@
 	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/sorrows/garb, /datum/crafting_recipe/tribalwar/sorrows/femalegarb, /datum/crafting_recipe/tribalwar/sorrows/yaoguaigauntlet)
 
 /obj/item/book/granter/crafting_recipe/tribal/wayfarer
-    name = "Wayfarer traditions"
-    crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/wayfarers/lightarmour, /datum/crafting_recipe/tribalwar/wayfarers/heavyarmor, /datum/crafting_recipe/warmace)
+	name = "Wayfarer traditions"
+	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/wayfarers/lightarmour, /datum/crafting_recipe/tribalwar/wayfarers/heavyarmor, /datum/crafting_recipe/warmace)
 
 /obj/item/book/granter/crafting_recipe/tribal/bone
-    name = "Bone Dancer traditions"
-    crafting_recipe_types = list( /datum/crafting_recipe/tribalwar/bone/lightarmour, /datum/crafting_recipe/tribalwar/bone/armour, /datum/crafting_recipe/tribalwar/bone/heavyarmour, /datum/crafting_recipe/tribalwar/bone/garb)
+	name = "Bone Dancer traditions"
+	crafting_recipe_types = list( /datum/crafting_recipe/tribalwar/bone/lightarmour, /datum/crafting_recipe/tribalwar/bone/armour, /datum/crafting_recipe/tribalwar/bone/heavyarmour, /datum/crafting_recipe/tribalwar/bone/garb)
 
 /obj/item/book/granter/crafting_recipe/bitters
 	name = "Healing techniques of the midwestern tribes"
