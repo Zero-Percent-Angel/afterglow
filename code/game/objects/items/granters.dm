@@ -1250,7 +1250,8 @@
 				traitname = "Wayfarer traditions"
 				granted_trait = TRAIT_WAYFARER_TRAD
 				crafting_recipe_types = list(
-					/datum/crafting_recipe/tribalwar/heavytribe,
+					/datum/crafting_recipe/tribalwar/wayfarers/lightarmour,
+					/datum/crafting_recipe/tribalwar/wayfarers/heavyarmor,
 					/datum/crafting_recipe/warmace
 					)
 
