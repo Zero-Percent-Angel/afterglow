@@ -346,11 +346,11 @@
 	lose_text = span_notice("You've forgotten the ways of the mexican cartels..")
 
 
-/datum/quirk/tribespeak/add()
+/datum/quirk/spanish/add()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.grant_language(/datum/language/spanish)
 
-/datum/quirk/tribespeak/remove()
+/datum/quirk/spanish/remove()
 	var/mob/living/carbon/human/H = quirk_holder
 	if(!QDELETED(H))
 		H.remove_language(/datum/language/spanish)
