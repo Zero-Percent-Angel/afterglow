@@ -50,8 +50,8 @@ SUBSYSTEM_DEF(nightcycle)
 	var/sunset_sun_power = 120
 	var/fullsunset_sun_color = "#f37588"
 	var/fullsunset_sun_power = 70
-	var/nighttime_sun_color = "#676b74"
-	var/nighttime_sun_power = 40
+	var/nighttime_sun_color = "#faf7cb"
+	var/nighttime_sun_power = 5
 
 	/// If defined with any number besides null it will determine how long each cycle lasts.
 //	var/custom_cycle_wait = 1600 SECONDS

@@ -656,11 +656,11 @@
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(20, STAMINA, null, 0)
+	M.apply_damage(20, STAMINA, null, M.run_armor_check("chest", "melee"))
 
 ///////////////////
 // GLOVE WEAPONS //
-///////////////////		-faster attack speed
+///////////////////
 
 
 /obj/item/melee/unarmed
@@ -669,12 +669,10 @@
 	icon = 'icons/fallout/objects/melee/melee.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/melee1h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
-	attack_speed = CLICK_CD_MELEE * 0.9
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_GLOVES
 	w_class = WEIGHT_CLASS_SMALL
 	flags_1 = CONDUCT_1
 	sharpness = SHARP_NONE
-	armour_penetration = 0.05
 	throwforce = 10
 	throw_range = 5
 	attack_verb = list("punched", "jabbed", "whacked")
@@ -768,7 +766,7 @@
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(10, STAMINA, "head", M.run_armor_check("head", "melee"))
+	M.apply_damage(10, STAMINA, "chest", M.run_armor_check("chest", "melee"))
 
 // Tiger claws		Keywords: Damage 33, Pointy
 /obj/item/melee/unarmed/tigerclaw
@@ -813,7 +811,7 @@
 	icon_state = "punch_dagger"
 	item_state = "punch_dagger"
 	force = 29
-	armour_penetration = 0.12
+	armour_penetration = 0.1
 	sharpness = SHARP_POINTY
 	attack_verb = list("stabbed", "sliced", "pierced", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -834,7 +832,7 @@ obj/item/melee/unarmed/punchdagger/cyborg
 	slot_flags = ITEM_SLOT_GLOVES
 	w_class = WEIGHT_CLASS_NORMAL
 	force = 35
-	armour_penetration = 1
+	armour_penetration = 0.15
 	sharpness = SHARP_EDGED
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
