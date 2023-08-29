@@ -143,13 +143,12 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 		..(FULLTILE_WINDOW_DIR)
 
 /obj/structure/window/CanAllowThrough(atom/movable/mover, border_dir)
-	. = ..()
-	if(.)
-		return
-
 	if(fulltile)
 		return FALSE
 
+	. = ..()
+	if(.)
+		return
 	if(border_dir == dir)
 		return FALSE
 
