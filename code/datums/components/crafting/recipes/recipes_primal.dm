@@ -5,7 +5,7 @@
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 4)
 	category = CAT_PRIMAL
 	falls_back_on_outdoors = TRUE
-	
+
 /datum/crafting_recipe/handheld_torch
 	name = "Handheld Torch"
 	result = /obj/item/flashlight/flare/torch
@@ -14,7 +14,7 @@
 				/obj/item/stack/sheet/cloth = 1)
 	category = CAT_PRIMAL
 	falls_back_on_outdoors = TRUE
-	
+
 /datum/crafting_recipe/bonfire
 	name = "Bonfire"
 	time = 60
@@ -60,6 +60,80 @@
 				/obj/item/stack/sheet/sinew = 3)
 	result = /obj/item/crafting/wonderglue
 	category = CAT_PRIMAL
+
+/datum/crafting_recipe/primitive_cautery
+	name = "Primitive cautery"
+	time = 60
+	always_available = TRUE
+	tools = list(TOOL_WORKBENCH)
+	reqs = list(/obj/item/weldingtool = 1,
+				/obj/item/stack/sheet/metal = 1)
+	result = /obj/item/cautery/primitive
+	category = CAT_PRIMAL
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/primitive_bone_gel
+	name = "Primitive Bone Gel"
+	time = 60
+	always_available = TRUE
+	tools = list(TOOL_WORKBENCH)
+	reqs = list(/obj/item/crafting/wonderglue = 1)
+	result = /obj/item/stack/medical/bone_gel/superglue
+	category = CAT_PRIMAL
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = EASY_CHECK
+
+/datum/crafting_recipe/primitive_handsaw
+	name = "Surgical Handsaw"
+	time = 60
+	always_available = TRUE
+	tools = list(TOOL_WORKBENCH)
+	reqs = list(/obj/item/crafting/wonderglue = 1,
+				/obj/item/stack/sheet/metal = 1,
+				/obj/item/stack/sheet/bone = 3)
+	result = /obj/item/circular_saw/primitive
+	category = CAT_PRIMAL
+	skill_needed = SKILL_REPAIR
+	skill_level = HARD_CHECK
+	falls_back_on_outdoors = TRUE
+
+/datum/crafting_recipe/primitive_sterilizer
+	name = "Surgical Sterilizer"
+	time = 60
+	always_available = TRUE
+	tools = list(TOOL_WORKBENCH)
+	reqs = list(/datum/reagent/consumable/honey = 20,
+				/obj/item/stack/sheet/glass = 1)
+	result = /obj/item/reagent_containers/medspray/sterilizine/honey
+	category = CAT_PRIMAL
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/primitive_hemo
+	name = "Primitive Hemostat"
+	time = 60
+	always_available = TRUE
+	tools = list(TOOL_WORKBENCH)
+	reqs = list(/obj/item/stack/sheet/bone = 2,
+				/obj/item/stack/sheet/sinew = 2)
+	result = /obj/item/hemostat/tribal
+	category = CAT_PRIMAL
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/primitive_retractor
+	name = "Primitive Retractor"
+	time = 60
+	always_available = TRUE
+	tools = list(TOOL_WORKBENCH)
+	reqs = list(/obj/item/stack/sheet/bone = 2,
+				/obj/item/stack/sheet/sinew = 2,
+				/obj/item/weaponcrafting/string = 1)
+	result = /obj/item/retractor/tribal
+	category = CAT_PRIMAL
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = HARD_CHECK
 
 /datum/crafting_recipe/food/pemmican
 	name = "Pemmican"
@@ -152,7 +226,7 @@
 	result = /obj/structure/statue/bone/skull/half
 	category = CAT_PRIMAL
 	falls_back_on_outdoors = TRUE
-	
+
 /datum/crafting_recipe/boneshovel
 	name = "Serrated Bone Shovel"
 	always_available = TRUE
@@ -163,7 +237,7 @@
 	result = /obj/item/shovel/serrated
 	category = CAT_PRIMAL
 	falls_back_on_outdoors = TRUE
-	
+
 /datum/crafting_recipe/punji_sticks
 	name = "Punji stick Trap"
 	time = 30
@@ -172,7 +246,7 @@
 	result = /obj/structure/punji_sticks
 	category = CAT_PRIMAL
 	falls_back_on_outdoors = TRUE
-	
+
 /datum/crafting_recipe/tribal_pa
 	name = "Tribal Salvaged Power Armor"
 	time = 120
@@ -509,7 +583,7 @@
 	category = CAT_TRIBAL
 	tools = list(TOOL_WORKBENCH)
 	skill_needed = SKILL_REPAIR
-	skill_level = EASY_CHECK  
+	skill_level = EASY_CHECK
 	falls_back_on_outdoors = TRUE
 /* tdo
 /datum/crafting_recipe/beartrap

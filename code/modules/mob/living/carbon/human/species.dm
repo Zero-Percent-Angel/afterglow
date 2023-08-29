@@ -1520,17 +1520,17 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		if(user.limb_destroyer)
 			target.dismembering_strike(user, affecting.body_zone)
 
-		if(atk_verb == ATTACK_EFFECT_KICK)//kicks deal 1.5x raw damage + 0.5x stamina damage
-			target.apply_damage(damage*1.5, attack_type, affecting, armor_block)
-			target.apply_damage(damage*0.5, STAMINA, affecting, armor_block)
+		if(atk_verb == ATTACK_EFFECT_KICK)//kicks deal 1.4x raw damage + 0.2x stamina damage
+			target.apply_damage(damage*1.4, attack_type, affecting, armor_block)
+			target.apply_damage(damage*0.2, STAMINA, affecting, armor_block)
 			log_combat(user, target, "kicked")
-		else//other attacks deal full raw damage + 50% more in stamina damage
+		else//other attacks deal full raw damage + stamina damage
 			target.apply_damage(damage, attack_type, affecting, armor_block)
-			target.apply_damage(damage*1.5, STAMINA, affecting, armor_block)
+			target.apply_damage(damage, STAMINA, affecting, armor_block)
 			log_combat(user, target, "punched")
 
 		if((target.stat != DEAD) && damage >= user.dna.species.punchstunthreshold)
-			if((punchedstam > 50) && prob(punchedstam*0.5)) //If our punch victim has been hit above the threshold, and they have more than 50 stamina damage, roll for stun, probability of 1% per 2 stamina damage
+			if((punchedstam > 50) && prob(punchedstam*0.25)) //If our punch victim has been hit above the threshold, and they have more than 50 stamina damage, roll for stun, probability of 1% per 4 stamina damage
 
 				target.visible_message(span_danger("[user] knocks [target] down!"), \
 								span_userdanger("You're knocked down by [user]!"),
@@ -1741,7 +1741,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/def_zone = affecting.body_zone
 
 	var/armor_block = H.run_armor_check(affecting, "melee", span_notice("Your armor has protected your [hit_area]."), span_notice("Your armor has softened a hit to your [hit_area]."),I.armour_penetration)
-	armor_block = min(90,armor_block) //cap damage reduction at 90%
+	armor_block = min(ARMOR_CAP_DR,armor_block) //cap damage reduction at DR CAP (95% at time of writing)
 	var/dt = max(H.run_armor_check(def_zone, "damage_threshold") - I.damage_threshold_penetration, 0)
 	var/Iforce = I.force //to avoid runtimes on the forcesay checks at the bottom. Some items might delete themselves if you drop them. (stunning yourself, ninja swords)
 	var/Iwound_bonus = I.wound_bonus

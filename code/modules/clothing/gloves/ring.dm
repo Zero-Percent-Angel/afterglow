@@ -14,7 +14,7 @@
 
 /obj/item/clothing/gloves/ring/equipped(mob/user, slot)
 	. = ..()
-	if (slot == SLOT_GLOVES && istype(user))
+	if (slot == SLOT_GLOVES && istype(user) && HAS_TRAIT(user, TRAIT_BLING_LOVER))
 		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "ringbuff", mood_event_on_equip)
 	else
 		SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "ringbuff")

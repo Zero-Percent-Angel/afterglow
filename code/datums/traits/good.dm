@@ -60,8 +60,8 @@ GLOBAL_LIST_INIT(eighties_recipes, list(
 	/datum/crafting_recipe/tribalwar/eighties/heavyarmour))
 
 GLOBAL_LIST_INIT(wayfarer_recipes, list(
-	//datum/crafting_recipe/tribalwar/lighttribe,
-	//datum/crafting_recipe/tribalwar/heavytribe,
+	/datum/crafting_recipe/tribalwar/wayfarers/lightarmour,
+	/datum/crafting_recipe/tribalwar/wayfarers/heavyarmor,
 	/datum/crafting_recipe/warmace))
 
 GLOBAL_LIST_INIT(bone_dancer_recipes, list(
@@ -981,6 +981,64 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("You feel like all that training with bows has paid off.")
 	lose_text = span_danger("Guns were always better...")
 	locked =  FALSE
+
+/datum/quirk/blinglover
+	name = "Bling Lover"
+	desc = "You just enjoy wearing, rings and other accessories."
+	value = 1
+	mob_trait = TRAIT_BLING_LOVER
+	gain_text = span_notice("You realise that having shiney things does make you happy.")
+	lose_text = span_danger("What's the point in wearing these trinkets, they're just cosmetic.")
+	locked =  FALSE
+
+/datum/quirk/tribespeak
+	name = "Tribal Language Comprehension"
+	desc = "You're somehow capable of understanding and speaking the common tribal languages in the area."
+	value = 1
+	gain_text = span_notice("You remember the old ways of your tribe..")
+	lose_text = span_notice("You've forgotten the ways of your ancestors..")
+
+/datum/quirk/tribespeak/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+
+/datum/quirk/tribespeak/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/tribal)
+
+/datum/quirk/chinese
+	name = "Chinese Language Comprehension"
+	desc = "You're somehow capable of understanding and speaking chinese."
+	value = 1
+	gain_text = span_notice("You speak chinese.")
+	lose_text = span_notice("You've forgotten how to speak chinese.")
+
+/datum/quirk/chinese/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/chinese, TRUE, TRUE)
+
+/datum/quirk/chinese/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/chinese)
+
+/datum/quirk/spanish
+	name = "Spanish Language Comprehension"
+	desc = "You're somehow capable of understanding and speaking spanish."
+	value = 1
+	gain_text = span_notice("You speak spanish.")
+	lose_text = span_notice("You've forgotten how to speak spanish.")
+
+
+/datum/quirk/spanish/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/spanish)
+
+/datum/quirk/spanish/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/spanish)
 
 /*		- Way too fucking powerful since bolt actions and the like get literal bonus damages. Makes using a ton of guns pointless if a bolt-action from the trash is better than a semi-auto rifle.
 /datum/quirk/masterrifleman

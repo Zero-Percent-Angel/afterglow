@@ -166,7 +166,12 @@
 	desc = "A flag with a two headed bear, the symbol of the New California Republic."
 	icon_state = "ncrflag"
 	item_state = "ncrflag"
-	faction = "NCR"
+	faction = FACTION_NCR
+
+/obj/item/flag/ncr/snow
+	name = "NCR snow flag"
+	icon_state = "ncrflag_snow"
+	item_state = "ncrflag_snow"
 
 /obj/item/flag/bos
 	name = "Brotherhood of Steel flag"
@@ -175,6 +180,11 @@
 	item_state = "bosflag"
 	faction = FACTION_BROTHERHOOD
 
+/obj/item/flag/bos/snow
+	name = "Brotherhood of Steel snow flag"
+	icon_state = "bosflag_snow"
+	item_state = "bosflag_snow"
+
 /obj/item/flag/legion
 	name = "Legion flag"
 	desc = "A flag with a golden bull, the symbol of Caesar's Legion."
@@ -182,11 +192,22 @@
 	item_state = "legionflag"
 	faction = FACTION_LEGION
 
+/obj/item/flag/legion/snow
+	name = "Legion snow flag"
+	icon_state = "legionflag_snow"
+	item_state = "legionflag_snow"
+
 /obj/item/flag/oasis
 	name = "Ripley flag"
 	desc = "A flag depicting a stylised pink flower on a green background. It's the symbol of the town of Ripley."
 	icon_state = "oasisflag"
 	item_state = "oasisflag"
+
+/obj/item/flag/oasis/snow
+	name = "Ripley snow flag"
+	desc = "A flag depicting a stylised pink flower on a green background. It's the symbol of the town of Ripley."
+	icon_state = "oasisflag_snow"
+	item_state = "oasisflag_snow"
 
 /obj/item/flag/followers
 	name = "Clinic flag"
@@ -194,6 +215,12 @@
 	icon_state = "followersflag"
 	item_state = "followersflag"
 	faction = FACTION_FOLLOWERS
+
+/obj/item/flag/followers/snow
+	name = "Clinic snow flag"
+	desc = "A white flag with a turqoise cross on it representing the clinic doctors."
+	icon_state = "followersflag_snow"
+	item_state = "followersflag_snow"
 
 /// Locust flag but renamed to bandit.
 
@@ -244,7 +271,7 @@
 		if(do_after(user, 60, target = src))
 			var/obj/item/stack/sheet/leather/H = I
 			if(H.use(1))
-				var/list/choices = list("Bandit", "Outlaw", "BOS", "Followers")
+				var/list/choices = list("Bandit", "Outlaw", "BOS", "BOS Snow", "Followers", "Followers Snow", "NCR", "NCR Snow", "Ripley", "Ripley Snow", "Great Khans")
 				var/flag = input("Please choose which faction flag you wish to create.") in choices
 				switch(flag)
 					if("Bandit")
@@ -265,12 +292,66 @@
 						icon_state = "bosflag"
 						item_state = "bosflag"
 						faction = FACTION_BROTHERHOOD
+					if("BOS Snow")
+						name = "BOS snow flag"
+						desc = "A red and black flag with a sword surrounded in gears and wings, in a dazzling gold."
+						icon_state = "bosflag_snow"
+						item_state = "bosflag_snow"
+						faction = FACTION_BROTHERHOOD
 					if("Followers")
 						name = "Clinic flag"
 						desc = "A white flag with a turqoise cross on it representing the clinic doctors."
 						icon_state = "followersflag"
 						item_state = "followersflag"
 						faction = FACTION_FOLLOWERS
+					if("Followers Snow")
+						name = "Clinic snow flag"
+						desc = "A white flag with a turqoise cross on it representing the clinic doctors."
+						icon_state = "followersflag_snow"
+						item_state = "followersflag_snow"
+						faction = FACTION_FOLLOWERS
+					if(FACTION_NCR)
+						name = "NCR flag"
+						desc = "A flag with a two headed bear, the symbol of the New California Republic."
+						icon_state = "ncrflag"
+						item_state = "ncrflag"
+						faction = FACTION_NCR
+					if("NCR Snow")
+						name = "NCR snow flag"
+						desc = "A flag with a two headed bear, the symbol of the New California Republic."
+						icon_state = "ncrflag_snow"
+						item_state = "ncrflag_snow"
+						faction = FACTION_NCR
+					if(FACTION_LEGION)
+						name = "Legion flag"
+						desc = "A flag with a golden bull, the symbol of Caesar's Legion."
+						icon_state = "legionflag"
+						item_state = "legionflag"
+						faction = FACTION_LEGION
+					if("Legion Snow")
+						name = "Legion snow flag"
+						desc = "A flag with a golden bull, the symbol of Caesar's Legion."
+						icon_state = "legionflag_snow"
+						item_state = "legionflag_snow"
+						faction = FACTION_LEGION
+					if("Ripley")
+						name = "Ripley flag"
+						desc = "A banner depicting three rivers meeting at its center, overlaid with an ear of corn."
+						icon_state = "oasisflag"
+						item_state = "oasisflag"
+						faction = FACTION_OASIS
+					if("Ripley Snow")
+						name = "Ripley snow flag"
+						desc = "A banner depicting three rivers meeting at its center, overlaid with an ear of corn."
+						icon_state = "oasisflag_snow"
+						item_state = "oasisflag_snow"
+						faction = FACTION_OASIS
+					if("Great Khans")
+						name = "Great Khans flag"
+						desc = "A flag worn and weathered from a long cherished history. A decorated smiling skull smiles mockingly upon those who challenge it."
+						icon_state = "khanflag"
+						item_state = "khanflag"
+						faction = "Great Khans"
 				update_icon()
 	else
 		attack_hand(user)

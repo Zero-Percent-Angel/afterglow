@@ -287,57 +287,6 @@
 
 */
 
-/datum/quirk/sheltered
-	name = "Sheltered"
-	desc = "For one reason or another, you either can't or haven't learned English."
-	value = 0
-	mob_trait = TRAIT_SHELTERED
-	gain_text = "<span class='danger'>The words of others begin to blur together...</span>"
-	lose_text = "<span class='notice'>You start putting together what people are saying!</span>"
-	medical_record_text = "Patient has shown an inability to use common speaking languages."
-
-/datum/quirk/sheltered/on_spawn()
-	var/mob/living/carbon/human/H = quirk_holder
-	H.remove_language(/datum/language/common)
-// You can pick languages for your character, if you don't pick anything, enjoy the rest of the round understanding nothing.
-
-/datum/quirk/sheltered/remove() //i mean, the lose text explains it, so i'm making it actually work
-	var/mob/living/carbon/human/H = quirk_holder
-	H.grant_language(/datum/language/common)
-
-/datum/quirk/tribespeak
-	name = "Tribal Language Comprehension"
-	desc = "You're somehow capable of understanding and speaking the common tribal languages in the area."
-	value = 0
-	gain_text = span_notice("You remember the old ways of your tribe..")
-	lose_text = span_notice("You've forgotten the ways of your ancestors..")
-
-
-/datum/quirk/tribespeak/add()
-	var/mob/living/carbon/human/H = quirk_holder
-	H.grant_language(/datum/language/tribal)
-
-/datum/quirk/tribespeak/remove()
-	var/mob/living/carbon/human/H = quirk_holder
-	if(!QDELETED(H))
-		H.remove_language(/datum/language/tribal)
-
-/datum/quirk/chinese
-	name = "Chinese Language Comprehension"
-	desc = "You're somehow capable of understanding and speaking chinese."
-	value = 0
-	gain_text = span_notice("You speak chinese.")
-	lose_text = span_notice("You've forgotten how to speak chinese.")
-
-/datum/quirk/chinese/add()
-	var/mob/living/carbon/human/H = quirk_holder
-	H.grant_language(/datum/language/chinese, TRUE, TRUE)
-
-/datum/quirk/chinese/remove()
-	var/mob/living/carbon/human/H = quirk_holder
-	if(!QDELETED(H))
-		H.remove_language(/datum/language/chinese)
-
 /datum/quirk/in_heat
 	name = "ERP Receptive"
 	desc = "Your character, for whatever reason, is PASSIVELY seeking out attention from those who match your OOC Prefences. Remember to set your OOC notes!"
