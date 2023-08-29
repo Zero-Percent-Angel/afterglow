@@ -97,6 +97,8 @@
 /obj/item/clothing/suit/armor/heavy/tribal/westernwayfarer
 	name = "Western Wayfarer heavy armor"
 	desc = "A Suit of armor crafted by Tribals using pieces of scrap metals and the armor of fallen foes, a bighorner's skull sits on the right pauldron along with bighorner fur lining the collar of the leather bound chest. Along the leather straps adoring it are multiple bone charms with odd markings on them."
+	icon_state = "western_wayfarer_armor_heavy"
+	item_state = "western_wayfarer_armor_heavy"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HANDS
 
 /////////////////////
