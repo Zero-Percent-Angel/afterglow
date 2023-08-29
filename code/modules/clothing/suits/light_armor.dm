@@ -116,6 +116,13 @@
 	item_state = "bone_dancer_armor_light"
 	body_parts_hidden = CHEST
 
+/obj/item/clothing/suit/armor/light/tribal/westernwayfarer
+	name = "Western Wayfarer salvaged armor"
+	desc = "A set of scrap and banded metal armor forged by the Wayfarer tribe, due to it's lightweight and unrestrictive nature,  it's used by scouts and agile hunters. A torn cloak hangs around its neck, protecting the user from the harsh desert sands."
+	icon_state = "western_wayfarer_armor"
+	item_state = "western_wayfarer_armor"
+	body_parts_hidden = CHEST
+
 /// to be refactored to work with the New Tier System (tm)
 /obj/item/clothing/suit/hooded/cloak
 	name = "cloak"

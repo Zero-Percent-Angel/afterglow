@@ -1250,7 +1250,8 @@
 				traitname = "Wayfarer traditions"
 				granted_trait = TRAIT_WAYFARER_TRAD
 				crafting_recipe_types = list(
-					/datum/crafting_recipe/tribalwar/heavytribe,
+					/datum/crafting_recipe/tribalwar/wayfarers/lightarmour,
+					/datum/crafting_recipe/tribalwar/wayfarers/heavyarmor,
 					/datum/crafting_recipe/warmace
 					)
 
@@ -1287,15 +1288,15 @@
 
 /obj/item/book/granter/crafting_recipe/tribal/whitelegs
 	name = "White Legs traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/whitelegs/armour, /datum/crafting_recipe/tribalwar/whitelegs/garb, /datum/crafting_recipe/tribalwar/whitelegs/femalegarb)
+	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/whitelegs/lightarmour, /datum/crafting_recipe/tribalwar/whitelegs/armour, /datum/crafting_recipe/tribalwar/whitelegs/heavyarmour, /datum/crafting_recipe/tribalwar/whitelegs/garb, /datum/crafting_recipe/tribalwar/whitelegs/femalegarb)
 
 /obj/item/book/granter/crafting_recipe/tribal/deadhorses
 	name = "Dead Horses traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/deadhorses/armour, /datum/crafting_recipe/tribalwar/deadhorses/garb, /datum/crafting_recipe/tribalwar/deadhorses/femalegarb)
+	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/deadhorses/lightarmour, /datum/crafting_recipe/tribalwar/deadhorses/armour, /datum/crafting_recipe/tribalwar/deadhorses/heavyarmour, /datum/crafting_recipe/tribalwar/deadhorses/garb, /datum/crafting_recipe/tribalwar/deadhorses/femalegarb)
 
 /obj/item/book/granter/crafting_recipe/tribal/rustwalkers
 	name = "Rustwalkers traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/rustwalkers/armour, /datum/crafting_recipe/tribalwar/rustwalkers/garb, /datum/crafting_recipe/tribalwar/rustwalkers/femalegarb,)
+	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/eighties/lightarmour, /datum/crafting_recipe/tribalwar/rustwalkers/armour, /datum/crafting_recipe/tribalwar/eighties/heavyarmour, /datum/crafting_recipe/tribalwar/rustwalkers/garb, /datum/crafting_recipe/tribalwar/rustwalkers/femalegarb,)
 
 /obj/item/book/granter/crafting_recipe/tribal/eighties
 	name = "Eighties traditions"
@@ -1303,16 +1304,15 @@
 
 /obj/item/book/granter/crafting_recipe/tribal/sorrows
 	name = "Sorrows traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/sorrows/garb, /datum/crafting_recipe/tribalwar/sorrows/femalegarb,
-								/datum/crafting_recipe/tribalwar/sorrows/yaoguaigauntlet)
+	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/sorrows/garb, /datum/crafting_recipe/tribalwar/sorrows/femalegarb, /datum/crafting_recipe/tribalwar/sorrows/yaoguaigauntlet)
 
 /obj/item/book/granter/crafting_recipe/tribal/wayfarer
 	name = "Wayfarer traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/heavytribe, /datum/crafting_recipe/warmace)
+	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/wayfarers/lightarmour, /datum/crafting_recipe/tribalwar/wayfarers/heavyarmor, /datum/crafting_recipe/warmace)
 
 /obj/item/book/granter/crafting_recipe/tribal/bone
 	name = "Bone Dancer traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/bone/armour, /datum/crafting_recipe/tribalwar/bone/heavyarmour, /datum/crafting_recipe/tribalwar/bone/garb)
+	crafting_recipe_types = list( /datum/crafting_recipe/tribalwar/bone/lightarmour, /datum/crafting_recipe/tribalwar/bone/armour, /datum/crafting_recipe/tribalwar/bone/heavyarmour, /datum/crafting_recipe/tribalwar/bone/garb)
 
 /obj/item/book/granter/crafting_recipe/bitters
 	name = "Healing techniques of the midwestern tribes"
