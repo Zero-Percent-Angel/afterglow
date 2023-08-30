@@ -424,7 +424,7 @@
 /obj/item/gun/energy/laser/pistol/revolver
 	name = "\improper AEP9 laser revolver"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light. 'Revolver' version of the AEP7. Armor-penetrating beams dealing more damage, but acting with far less efficiency."
-	icon_state = "AEP9"
+	icon_state = "aep9"
 	item_state = "laser-pistol"
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_BELT
