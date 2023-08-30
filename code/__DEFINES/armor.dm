@@ -133,7 +133,7 @@
 		"fire" = 70, \
 		"acid" = 70, \
 		"wound" = 70, \
-		"damage_threshold" = 7)
+		"damage_threshold" = 8)
 
 /* Power armor values
  * Low mobility
