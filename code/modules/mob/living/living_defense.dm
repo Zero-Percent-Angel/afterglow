@@ -147,7 +147,8 @@
 			visible_message(span_danger("[src] is narrowly missed by [I]!"), \
 				span_userdanger("You're missed by [I]!"))
 			playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-			return
+			throwingdatum.dodged = TRUE
+			return TRUE
 		var/nosell_hit = SEND_SIGNAL(I, COMSIG_MOVABLE_IMPACT_ZONE, src, impacting_zone, throwingdatum, FALSE, blocked)
 		if(nosell_hit)
 			skipcatch = TRUE

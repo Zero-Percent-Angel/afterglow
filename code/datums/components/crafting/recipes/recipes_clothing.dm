@@ -15,7 +15,7 @@
 	subcategory = CAT_BELTS
 	falls_back_on_outdoors = TRUE
 
-/datum/crafting_recipe/belt
+/datum/crafting_recipe/fannypack
 	name = "Fannypack"
 	result = /obj/item/storage/belt/fannypack
 	reqs = list(/obj/item/stack/sheet/metal = 3,
@@ -27,6 +27,18 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
 	falls_back_on_outdoors = TRUE
+
+/datum/crafting_recipe/belt
+	name = "belt"
+	result = /obj/item/storage/belt
+	reqs = list(/obj/item/stack/sheet/metal = 3,
+				/obj/item/stack/crafting/metalparts = 2,
+				/obj/item/stack/sheet/cloth = 2,
+				/obj/item/stack/sheet/leather = 3)
+	tools = list(TOOL_WORKBENCH)
+	time = 20
+	category = CAT_CLOTHING
+	subcategory = CAT_BELTS
 
 /datum/crafting_recipe/chestrig
 	name = "Chest Rig"
