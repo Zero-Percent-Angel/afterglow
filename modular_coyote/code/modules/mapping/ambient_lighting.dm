@@ -37,7 +37,7 @@
 		return
 
 	E.see_in_dark = initial(E.see_in_dark)
-	E.lighting_alpha = 256 - user.special_p
+	E.lighting_alpha = 256 - (C.special_p * 2)
 
 	C.update_sight()
 
