@@ -1296,7 +1296,7 @@
 
 /obj/item/book/granter/crafting_recipe/tribal/rustwalkers
 	name = "Rustwalkers traditions"
-	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/eighties/lightarmour, /datum/crafting_recipe/tribalwar/rustwalkers/armour, /datum/crafting_recipe/tribalwar/eighties/heavyarmour, /datum/crafting_recipe/tribalwar/rustwalkers/garb, /datum/crafting_recipe/tribalwar/rustwalkers/femalegarb,)
+	crafting_recipe_types = list(/datum/crafting_recipe/tribalwar/rustwalkers/lightarmour, /datum/crafting_recipe/tribalwar/rustwalkers/armour, /datum/crafting_recipe/tribalwar/rustwalkers/heavyarmour, /datum/crafting_recipe/tribalwar/rustwalkers/garb, /datum/crafting_recipe/tribalwar/rustwalkers/femalegarb,)
 
 /obj/item/book/granter/crafting_recipe/tribal/eighties
 	name = "Eighties traditions"

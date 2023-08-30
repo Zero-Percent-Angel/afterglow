@@ -343,8 +343,8 @@
 
 /obj/item/projectile/beam/laser/lasgun/hitscan //hitscan aer9 test
 	name = "laser beam"
-	damage = 30
-	armour_penetration = 0.08 //mostly just to allow scratch damage, so you arent SOL just mostly fucced
+	damage = 25
+	armour_penetration = 0.1 // 10% so you can get through tougher stuff
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser

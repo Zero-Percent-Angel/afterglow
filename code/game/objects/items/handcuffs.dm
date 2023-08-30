@@ -255,7 +255,7 @@
 /obj/item/restraints/legcuffs/beartrap/Initialize()
 	. = ..()
 	icon_state = "[initial(icon_state)][armed]"
-	
+
 	var/static/list/loc_connections = list(
 		COMSIG_ATOM_ENTERED = .proc/spring_trap,
 	)
@@ -395,7 +395,7 @@
 	breakouttime = 60
 
 /obj/item/restraints/legcuffs/bola/energy/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
-	if(iscarbon(hit_atom))
+	if(iscarbon(hit_atom) && !throwingdatum.dodged)
 		var/obj/item/restraints/legcuffs/beartrap/B = new /obj/item/restraints/legcuffs/beartrap/energy/cyborg(get_turf(hit_atom))
 		B.Crossed(hit_atom)
 		qdel(src)

@@ -424,7 +424,7 @@
 /obj/item/gun/energy/laser/pistol/revolver
 	name = "\improper AEP9 laser revolver"
 	desc = "A basic energy-based laser gun that fires concentrated beams of light. 'Revolver' version of the AEP7. Armor-penetrating beams dealing more damage, but acting with far less efficiency."
-	icon_state = "AEP9"
+	icon_state = "aep9"
 	item_state = "laser-pistol"
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_BELT
@@ -682,11 +682,11 @@
 	scope_y_offset = 20
 	equipsound = 'sound/f13weapons/equipsounds/aer9equip.ogg'
 
-	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
+	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
+	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1

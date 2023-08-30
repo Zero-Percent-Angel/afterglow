@@ -144,7 +144,8 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 
 /obj/structure/window/CanAllowThrough(atom/movable/mover, border_dir)
 	if(fulltile)
-		return FALSE
+		if (!istype(mover, /obj/item/projectile/beam/laser) || opacity)
+			return FALSE
 
 	. = ..()
 	if(.)

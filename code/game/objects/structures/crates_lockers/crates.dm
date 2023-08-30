@@ -130,7 +130,7 @@
 	desc = "A heavy, metal trashcart with wheels."
 	name = "trash cart"
 	icon_state = "trashcart"
-	drag_delay = 0.0 SECONDS //Heavy, but wheeled.
+	drag_delay = 0.1 SECONDS //Heavy, but wheeled.
 
 /obj/structure/closet/crate/medical
 	desc = "A medical crate."
