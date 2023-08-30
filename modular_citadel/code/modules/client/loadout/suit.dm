@@ -20,8 +20,8 @@
 	cost = 1
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Veteran Ranger",
-				"NCR Ranger
-		)
+				"NCR Ranger"
+			)
 
 /datum/gear/suit/bomber
 	name = "Bomber jacket"
