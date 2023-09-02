@@ -592,4 +592,5 @@ obj/item/storage/bag/chemistry/tribal
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.max_combined_w_class = 100
 	STR.max_items = 100
+	STR.display_numerical_stacking = TRUE
 	STR.can_hold = typecacheof(list(/obj/item/toy/plush,/obj/item/choice_beacon/box/plushie))
