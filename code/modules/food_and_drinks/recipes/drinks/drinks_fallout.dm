@@ -443,3 +443,9 @@
 	results = list(/datum/reagent/consumable/tea/fever_blossom_tea = 3)
 	required_reagents = list(/datum/reagent/consumable/fever_blossom_juice = 1, /datum/reagent/water = 2)
 	required_temp = 315
+
+/datum/chemical_reaction/spiritcleanser
+	name = "Spirit Cleanser"
+	id = /datum/reagent/consumable/ethanol/spiritcleanser
+	results = list(/datum/reagent/consumable/ethanol/spiritcleanser = 2)
+	required_reagents = list(/datum/reagent/medicine/punga_extract = 1, /datum/reagent/consumable/ethanol/daturatea = 1)
