@@ -578,10 +578,6 @@ obj/item/storage/bag/chemistry/tribal
 	icon_state = "sack"
 	item_state = "sack"
 
-/*
-*Plushie satchel because removing it is a tragedy
-*/
-
 /obj/item/storage/bag/plushie
 	name = "Plushie Satchel"
 	desc = "An ugly yet adorable handmade satchel that seems to only serve the purpose of storing plushies. It is entirely made of a plush fabric and has absolutely no structure."
