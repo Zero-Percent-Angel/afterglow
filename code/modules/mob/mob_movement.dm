@@ -107,7 +107,7 @@
 
 	if((direction & (direction - 1)) && mob.loc == n) //moved diagonally successfully
 		add_delay *= SQRT_2
-	
+
 	if(visual_delay)
 		mob.set_glide_size(visual_delay)
 	else
@@ -116,7 +116,7 @@
 	if(.) // If mob is null here, we deserve the runtime
 		if(mob.throwing)
 			mob.throwing.finalize(FALSE)
-		
+
 		SEND_SIGNAL(mob, COMSIG_MOB_CLIENT_MOVED)
 
 	var/atom/movable/AM = L.pulling
@@ -471,7 +471,7 @@
 	layer -= MOB_LAYER_SHIFT_INCREMENT
 	var/layer_priority = (layer - MOB_LAYER) * 100 // Just for text feedback
 	to_chat(src, span_notice("Your layer priority is now [layer_priority]."))
-	
+
 /mob/verb/up()
 	set name = "Move Upwards"
 	set category = "IC"
@@ -502,3 +502,12 @@
 	if(zMove(DOWN, z_move_flags = ZMOVE_FLIGHT_FLAGS|ZMOVE_FEEDBACK|ventcrawling_flag))
 		to_chat(src, span_notice("You move down."))
 	return FALSE
+
+
+/mob/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
+	. = ..()
+	if (istype(hit_atom, /turf/open/transparent/openspace))
+		var/turf/t
+		t.zFall(src, falling_from_move = TRUE)
+	return .
+

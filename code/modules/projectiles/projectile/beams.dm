@@ -343,7 +343,7 @@
 
 /obj/item/projectile/beam/laser/lasgun/hitscan //hitscan aer9 test
 	name = "laser beam"
-	damage = 25
+	damage = 27
 	armour_penetration = 0.1 // 10% so you can get through tougher stuff
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
@@ -536,7 +536,7 @@
 
 /obj/item/projectile/beam/laser/tribeam/hitscan
 	name = "tribeam laser"
-	damage = 25 //if all bullets connect, this will do 75. //If it turns out to be too strong, change this to 22
+	damage = 20 //if all bullets connect, this will do 60
 	hitscan = TRUE
 	bare_wound_bonus = -30 //tribeam is bad at wounding, as basically its only real downside //lmao that was a lie
 	tracer_type = /obj/effect/projectile/tracer/laser

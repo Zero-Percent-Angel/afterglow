@@ -693,7 +693,7 @@
 	gun_tags = list(GUN_SCOPE)
 	can_scope = TRUE
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 
 //Tri-Focus AER9 - Automatic AER9 with lower damage
