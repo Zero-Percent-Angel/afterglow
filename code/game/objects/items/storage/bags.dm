@@ -13,6 +13,7 @@
  *      Biowaste Bag
  *
  *	-Sayu
+ *	AND PLUSHIE BAG - Metrius
  */
 
 //  Generic non-item
@@ -543,7 +544,7 @@ obj/item/storage/bag/chemistry/tribal
 /obj/item/storage/bag/tribe_quiver/bone
 	name = "hunters quiver"
 	desc = "A simple leather quiver designed for holding arrows, this one seems to hold deadlier arrows for hunting."
-	
+
 
 /obj/item/storage/bag/tribe_quiver/bone/PopulateContents()
 	new /obj/item/ammo_casing/caseless/arrow/bone(src)
@@ -577,3 +578,22 @@ obj/item/storage/bag/chemistry/tribal
 	icon_state = "sack"
 	item_state = "sack"
 
+/*
+*Plushie satchel because removing it is a tragedy
+*/
+
+/obj/item/storage/bag/plushie
+	name = "Plushie Satchel"
+	desc = "An ugly yet adorable handmade satchel that seems to only serve the purpose of storing plushies. It is entirely made of a plush fabric and has absolutely no structure."
+	icon = 'icons/obj/plushes.dmi'
+	icon_state = "plushbag"
+	w_class = WEIGHT_CLASS_TINY
+	resistance_flags = FLAMMABLE
+
+/obj/item/storage/bag/plushie/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.max_combined_w_class = 100
+	STR.max_items = 100
+	STR.can_hold = typecacheof(list(/obj/item/toy/plush,/obj/item/choice_beacon/box/plushie))
