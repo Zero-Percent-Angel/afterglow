@@ -271,7 +271,7 @@
 		if(do_after(user, 60, target = src))
 			var/obj/item/stack/sheet/leather/H = I
 			if(H.use(1))
-				var/list/choices = list("Bandit", "Outlaw", "BOS", "BOS Snow", "Followers", "Followers Snow", "NCR", "NCR Snow", "Ripley", "Ripley Snow", "Great Khans")
+				var/list/choices = list("Bandit", "Outlaw", "BOS", "BOS Snow", "Followers", "Followers Snow", "NCR", "NCR Snow", "Legion", "Legion Snow", "Ripley", "Ripley Snow", "Great Khans")
 				var/flag = input("Please choose which faction flag you wish to create.") in choices
 				switch(flag)
 					if("Bandit")

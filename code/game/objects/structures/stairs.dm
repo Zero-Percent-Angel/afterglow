@@ -149,3 +149,6 @@
 		if(S.dir == dir)
 			return FALSE
 	return TRUE
+
+/obj/structure/stairs/ex_act(severity, target)
+	return

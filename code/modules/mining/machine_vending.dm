@@ -23,7 +23,7 @@
 		new /datum/data/mining_equipment("Nuka Bombdrop",				/obj/item/reagent_containers/food/drinks/drinkingglass/filled/nukabomb,	100),
 		new /datum/data/mining_equipment("Vim Captains Blend",			/obj/item/reagent_containers/food/drinks/drinkingglass/filled/vimcap,	500),
 		new /datum/data/mining_equipment("Cigar",						/obj/item/clothing/mask/cigarette/cigar/havana,						150),
-//		new /datum/data/mining_equipment("Soap",						/obj/item/soap/nanotrasen,											200),
+		new /datum/data/mining_equipment("Soap",						/obj/item/soap/nanotrasen,											200),
 //		new /datum/data/mining_equipment("Laser Pointer",				/obj/item/laser_pointer,											300),
 		new /datum/data/mining_equipment("Plushie Choice",				/obj/item/choice_beacon/box/plushie,								300),
 //		new /datum/data/mining_equipment("Stabilizing Serum",			/obj/item/hivelordstabilizer,										400),
