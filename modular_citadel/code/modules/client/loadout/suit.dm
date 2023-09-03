@@ -13,7 +13,7 @@
 	name = "Labcoat"
 	path = /obj/item/clothing/suit/toggle/labcoat
 	cost = 2
-
+/*
 /datum/gear/suit/rangercape
 	name = "Ranger cape"
 	path = /obj/item/clothing/neck/mantle/ranger
@@ -22,7 +22,7 @@
 	restricted_roles = list("NCR Veteran Ranger",
 				"NCR Ranger",
 			)
-
+*/
 /datum/gear/suit/bomber
 	name = "Bomber jacket"
 	path = /obj/item/clothing/suit/jacket
