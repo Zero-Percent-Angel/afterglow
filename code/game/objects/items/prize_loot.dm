@@ -95,7 +95,7 @@
 		. += "[src] appears to be unlocked."
 	if(fragile)
 		. += "There are cracks, [src] may crumble from any sudden movements."
-	if(user.client.prefs.special_p >= 8 || user.skill_check(SKILL_TRAPS, REGULAR_CHECK))
+	if(user.special_p >= 8 || user.skill_check(SKILL_TRAPS, REGULAR_CHECK))
 		if(trapped)
 			. += "The lock looks tampered with."
 		. += "There [prize_amount > 1 ? "are" : "is"] [prize_amount] [prize_amount > 1 ? "objects" : "object"]."

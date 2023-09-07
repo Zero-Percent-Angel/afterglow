@@ -6,6 +6,7 @@
 	icon_prefix = "bow"
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = GUN_TWO_HAND_ONLY //need both hands to fire
+	gun_skill_used = SKILL_THROWING
 	force = 5
 	mag_type = /obj/item/ammo_box/magazine/internal/bow
 	fire_sound = 'sound/weapons/bowfire.wav'
