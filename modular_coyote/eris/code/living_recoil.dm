@@ -1,11 +1,25 @@
 /mob/living/proc/handle_recoil(var/obj/item/gun/G, var/recoil_buildup)
-	add_recoil(recoil_buildup)
+	return
+	//add_recoil(recoil_buildup)
 
 /mob/living/proc/external_recoil(var/recoil_buildup) // Used in human_attackhand.dm
-	add_recoil(recoil_buildup)
+	return
+	//add_recoil(recoil_buildup)
 
 /mob/proc/handle_movement_recoil() // Used in movement/mob.dm
 	return // Ghosts and roaches have no movement recoil
+
+
+/mob/proc/handle_equipment_stiffness()
+	var/mob/living/carbon/human/H = src
+	var/suit_stiffness = 0
+	var/uniform_stiffness = 0
+	if(istype(H))
+		if(H.wear_suit)
+			suit_stiffness = H.wear_suit.stiffness
+		if(H.w_uniform)
+			uniform_stiffness = H.w_uniform.stiffness
+		H.suit_recoil = suit_stiffness + suit_stiffness * uniform_stiffness
 
 /mob/living/proc/add_recoil(var/recoil_buildup)
 	if(recoil_buildup)
@@ -22,6 +36,7 @@
 
 /mob/living/proc/calc_recoil()
 	on_the_move = FALSE
+	/*
 	if (recoil)
 		if (!highest_gun_or_energy_cache)
 			highest_gun_or_energy_cache = highest_skill_value(SKILL_GUNS, SKILL_ENERGY)
@@ -36,10 +51,17 @@
 		else
 			recoil -= base
 			recoil *= scale
+	*/
 	//update_recoil()
 
 /mob/living/proc/calculate_offset(var/offset = 0, skill_used = SKILL_GUNS)
-	var/the_skill_val = skill_value(skill_used)
+	var/the_skill_val = (105 - skill_value(skill_used))/15
+	offset += max(the_skill_val, 0.3)
+	if (on_the_move)
+		offset += (the_skill_val + suit_recoil)
+	if(HAS_TRAIT(src, SPREAD_CONTROL))
+		offset -= 0.3
+	/*
 	if (skill_used == SKILL_GUNS)
 		offset += max((80 - the_skill_val)/12, 0)
 	if (on_the_move)
@@ -50,8 +72,9 @@
 		var/mob/living/carbon/human/H = src
 		if(H.head)
 			offset += H.head.obscuration
+	offset = round(offset)
+	*/
 
-	offset = round(RECOIL_SPREAD_CALC(offset))
 	offset = CLAMP(offset, 0, MAX_ACCURACY_OFFSET)
 	return offset
 

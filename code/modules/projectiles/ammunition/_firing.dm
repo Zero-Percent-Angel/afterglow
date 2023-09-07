@@ -13,14 +13,14 @@
 			var/max_spread = spread + distro + (pellets == 1 ? variance : 0) // hooray vars doing double duty
 			if(istype(BB))
 				max_spread += BB.spread
-			if(HAS_TRAIT(user,TRAIT_FEV)) //You really shouldn't try this at home.
-				max_spread += 3 //YOU AINT HITTING SHIT BROTHA. REALLY.
-			if(HAS_TRAIT(user,TRAIT_NEARSIGHT)) //Yes.
-				max_spread += 0.2 //You're slightly less accurate because you can't see well - as an upside, lasers don't suffer these penalties!
-			if(HAS_TRAIT(user,TRAIT_POOR_AIM)) //You really shouldn't try this at home.
-				max_spread += 1.5//This is cripplingly bad. Trust me.
-			if(HAS_TRAIT(user, TRAIT_NICE_SHOT) || HAS_TRAIT(user, TRAIT_INSANE_AIM)) // Reduces inaccuracy by 15%
-				max_spread *= 0.85 // Nice shot!
+			if(HAS_TRAIT(user,TRAIT_FEV))
+				max_spread += 3
+			if(HAS_TRAIT(user,TRAIT_NEARSIGHT))
+				max_spread += 0.5
+			if(HAS_TRAIT(user,TRAIT_POOR_AIM))
+				max_spread += 2
+			if(HAS_TRAIT(user, TRAIT_NICE_SHOT) || HAS_TRAIT(user, TRAIT_INSANE_AIM))
+				max_spread *= 0.85
 			angle_out = clamp(rand(-max_spread, max_spread), -MAX_ACCURACY_OFFSET, MAX_ACCURACY_OFFSET)
 
 	var/targloc = get_turf(target)
