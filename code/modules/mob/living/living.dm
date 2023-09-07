@@ -919,6 +919,7 @@
 		src << browse(null,"window=mob[REF(who)]")
 
 	who.update_equipment_speed_mods() // Updates speed in case stripped speed affecting item
+	who.handle_equipment_stiffness()
 
 // The src mob is trying to place an item on someone
 // Override if a certain mob should be behave differently when placing items (can't, for example)
