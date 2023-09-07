@@ -21,6 +21,7 @@
 				max_spread += 2
 			if(HAS_TRAIT(user, TRAIT_NICE_SHOT) || HAS_TRAIT(user, TRAIT_INSANE_AIM))
 				max_spread *= 0.85
+			max_spread *= (1.3 - (user.special_p/20))
 			angle_out = clamp(rand(-max_spread, max_spread), -MAX_ACCURACY_OFFSET, MAX_ACCURACY_OFFSET)
 
 	var/targloc = get_turf(target)
