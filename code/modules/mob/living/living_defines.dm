@@ -12,6 +12,9 @@
 	var/last_click_move = 0 // Stores the previous next_move value.
 
 	var/resize = 1 //Badminnery resize
+	var/resize_height = 1
+	var/resize_width = 1
+	var/current_height_transform = 0
 	var/lastattacker = null
 	var/lastattackerckey = null
 
