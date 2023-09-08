@@ -1,4 +1,5 @@
 /mob/living/proc/handle_recoil(var/obj/item/gun/G, var/recoil_buildup)
+	recoil = recoil_buildup
 	return
 	//add_recoil(recoil_buildup)
 
@@ -59,6 +60,8 @@
 	offset += max(the_skill_val, 0.3)
 	if (on_the_move)
 		offset += (the_skill_val + suit_recoil)
+	if ((last_fire_time + recoil) > world.time)
+		offset += (recoil * max(the_skill_val/2.5, 1))
 	if(HAS_TRAIT(src, SPREAD_CONTROL))
 		offset -= 0.3
 	/*
@@ -74,7 +77,7 @@
 			offset += H.head.obscuration
 	offset = round(offset)
 	*/
-
+	last_fire_time = world.time
 	offset = CLAMP(offset, 0, MAX_ACCURACY_OFFSET)
 	return offset
 

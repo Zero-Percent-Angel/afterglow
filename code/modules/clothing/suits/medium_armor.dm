@@ -572,22 +572,24 @@
 	icon_state = "ncr_infantry_vest"
 	item_state = "ncr_infantry_vest"
 	armor = ARMOR_VALUE_MEDIUM
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_BULLET_T1)		//Too strong to give to Troopers vs primes witohut this.
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/medium/vest/ncr/mant
 	name = "NCR mantle vest"
 	desc = "A standard issue NCR Infantry vest with a mantle on the shoulder."
 	icon_state = "ncr_standard_mantle"
 	item_state = "ncr_standard_mantle"
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1)		//For corporals so it's better.
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/medium/vest/ncr/reinf
 	name = "NCR reinforced armor vest"
 	desc = "A standard issue NCR Infantry vest reinforced with a groinpad."
 	icon_state = "ncr_reinforced_vest"
 	item_state = "ncr_reinforced_vest"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)	//Sergeants +
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/suit/armor/medium/vest/ncr/reinf/mant
 	name = "NCR reinforced mantle vest"
@@ -600,8 +602,8 @@
 	desc = "A reinforced set of NCR mantle armour, with added padding on the groin, neck and shoulders. Intended for use by the officer class."
 	icon_state = "ncr_lt_armour"
 	item_state = "ncr_lt_armour"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)	//LT + Crapton
-	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
+	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //Rangers
 /obj/item/clothing/suit/armor/medium/combat/patrol
