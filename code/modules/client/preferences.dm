@@ -2823,25 +2823,19 @@ Records disabled until a use for them is found
 							features["body_model"] = chosengender
 					gender = chosengender
 				if ("height")
-					var/new_height = input(user, "Choose your desired height.", "Character Preference", "average") as null|anything in list("very short", "short", "average","tall", "very tall")
-					if (new_height == "very short")
-						features["height"] = 0.93
-					if (new_height == "short")
-						features["height"] = 0.96
-					if (new_height == "average")
-						features["height"] = 1
-					if (new_height == "tall")
-						features["height"] = 1.04
-					if (new_height == "very tall")
-						features["height"] = 1.07
+					var/min = CONFIG_GET(number/body_size_min)
+					var/max = CONFIG_GET(number/body_size_max)
+					var/new_height = input(user, "Choose your desired width sprite size: ([min*100]%-[max*100]%)\nWarning: This may make your character look distorted!", "Character Preference", features["height"]*100) as num|null
+					if (new_height)
+						new_height = clamp(new_height * 0.01, 0.8, 1.2)
+						features["height"] = new_height
 				if ("width")
-					var/new_width = input(user, "Choose your desired width.", "Character Preference", "average") as null|anything in list("thin", "average", "wide")
-					if (new_width == "thin")
-						features["width"] = 0.93
-					if (new_width == "average")
-						features["width"] = 1
-					if (new_width == "wide")
-						features["width"] = 1.07
+					var/min = CONFIG_GET(number/body_size_min)
+					var/max = CONFIG_GET(number/body_size_max)
+					var/new_width = input(user, "Choose your desired width sprite size: ([min*100]%-[max*100]%)\nWarning: This may make your character look distorted!", "Character Preference", features["width"]*100) as num|null
+					if (new_width)
+						new_width = clamp(new_width * 0.01, 0.8, 1.2)
+						features["width"] = new_width
 				/*
 				if("body_size")
 					var/min = CONFIG_GET(number/body_size_min)

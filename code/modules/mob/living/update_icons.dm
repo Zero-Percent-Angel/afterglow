@@ -21,7 +21,7 @@
 	if(resize != RESIZE_DEFAULT_SIZE || resize_width != RESIZE_DEFAULT_SIZE || resize_height != RESIZE_DEFAULT_SIZE)
 		changed++
 		ntransform.Scale(resize_width * resize, resize_height * resize)
-		if ( resize_height != RESIZE_DEFAULT_SIZE)
+		if (resize_height != RESIZE_DEFAULT_SIZE)
 			ntransform.Translate(0, (16 * (resize_height - 1)) - current_height_transform)
 			current_height_transform =  16 * (resize_height - 1)
 		resize = RESIZE_DEFAULT_SIZE
