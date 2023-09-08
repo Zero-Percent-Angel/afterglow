@@ -529,6 +529,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		"taste" = "something salty",
 		"body_model" = MALE,
 		"body_size" = RESIZE_DEFAULT_SIZE,
+		"height" = RESIZE_DEFAULT_SIZE,
+		"width" = RESIZE_DEFAULT_SIZE,
 		"color_scheme" = OLD_CHARACTER_COLORING)
 
 	S.cd = "/"
@@ -573,6 +575,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["gender"]					>> gender
 	S["body_model"]				>> features["body_model"]
 	S["body_size"]				>> features["body_size"]
+	S["height"]					>> features["height"]
+	S["width"]					>> features["width"]
 	S["age"]					>> age
 	S["hair_color"]				>> hair_color
 	S["facial_hair_color"]		>> facial_hair_color
@@ -732,11 +736,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["skill_energy"] >> skill_energy
 	S["skill_unarmed"] >> skill_unarmed
 	S["skill_melee"] >> skill_melee
-	S["skill_throwing"] >> skill_throwing 
+	S["skill_throwing"] >> skill_throwing
 
 	//Active
 	S["skill_first_aid"] >> skill_first_aid
-	S["skill_doctor"] >> skill_doctor 
+	S["skill_doctor"] >> skill_doctor
 	S["skill_sneak"] >> skill_sneak
 	S["skill_lockpick"] >> skill_lockpick
 	S["skill_traps"] >> skill_traps
@@ -860,6 +864,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(!size_max)
 		size_max = CONFIG_GET(number/body_size_max)
 	features["body_size"]			= sanitize_num_clamp(features["body_size"], size_min, size_max, RESIZE_DEFAULT_SIZE, 0.01)
+	features["height"]				= sanitize_num_clamp(features["height"], size_min, size_max, RESIZE_DEFAULT_SIZE, 0.001)
+	features["width"]				= sanitize_num_clamp(features["width"], size_min, size_max, RESIZE_DEFAULT_SIZE, 0.001)
 
 	var/static/list/B_sizes
 	if(!B_sizes)
@@ -997,6 +1003,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["gender"]					, gender)
 	WRITE_FILE(S["body_model"]				, features["body_model"])
 	WRITE_FILE(S["body_size"]				, features["body_size"])
+	WRITE_FILE(S["width"]				, features["width"])
+	WRITE_FILE(S["height"]				, features["height"])
 	WRITE_FILE(S["age"]						, age)
 	WRITE_FILE(S["hair_color"]				, hair_color)
 	WRITE_FILE(S["facial_hair_color"]		, facial_hair_color)
@@ -1091,7 +1099,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["skill_energy"], skill_energy)
 	WRITE_FILE(S["skill_unarmed"], skill_unarmed)
 	WRITE_FILE(S["skill_melee"], skill_melee)
-	WRITE_FILE(S["skill_throwing"], skill_throwing) 
+	WRITE_FILE(S["skill_throwing"], skill_throwing)
 
 	//Active
 	WRITE_FILE(S["skill_first_aid"], skill_first_aid)

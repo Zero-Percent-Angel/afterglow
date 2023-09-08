@@ -172,6 +172,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		"taste" = "something",
 		"body_model" = MALE,
 		"body_size" = RESIZE_DEFAULT_SIZE,
+		"height" = RESIZE_DEFAULT_SIZE,
+		"width" = RESIZE_DEFAULT_SIZE,
 		"color_scheme" = OLD_CHARACTER_COLORING
 		)
 
@@ -582,10 +584,12 @@ Records disabled until a use for them is found
 				dat += "<b>Tertiary Color:</b><BR>"
 				dat += "<span style='border: 1px solid #161616; background-color: #[features["mcolor3"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=mutant_color3;task=input'>Change</a><BR>"
 				mutant_colors = TRUE
-
+				dat += "<b>Height:</b> <a href='?_src_=prefs;preference=height;task=input'>[features["height"]*100]%</a><br>"
+				dat += "<b>Width:</b> <a href='?_src_=prefs;preference=width;task=input'>[features["width"]*100]%</a><br>"
+			/*
 			if (CONFIG_GET(number/body_size_min) != CONFIG_GET(number/body_size_max))
 				dat += "<b>Sprite Size:</b> <a href='?_src_=prefs;preference=body_size;task=input'>[features["body_size"]*100]%</a><br>"
-
+			*/
 			if(!(NOEYES in pref_species.species_traits))
 				dat += "<h3>Eye Type</h3>"
 				dat += "</b><a style='display:block;width:100px' href='?_src_=prefs;preference=eye_type;task=input'>[eye_type]</a><BR>"
@@ -2818,7 +2822,26 @@ Records disabled until a use for them is found
 						else
 							features["body_model"] = chosengender
 					gender = chosengender
-
+				if ("height")
+					var/new_height = input(user, "Choose your desired height.", "Character Preference", "average") as null|anything in list("very short", "short", "average","tall", "very tall")
+					if (new_height == "very short")
+						features["height"] = 0.93
+					if (new_height == "short")
+						features["height"] = 0.96
+					if (new_height == "average")
+						features["height"] = 1
+					if (new_height == "tall")
+						features["height"] = 1.04
+					if (new_height == "very tall")
+						features["height"] = 1.07
+				if ("width")
+					var/new_width = input(user, "Choose your desired width.", "Character Preference", "average") as null|anything in list("thin", "average", "wide")
+					if (new_width == "thin")
+						features["width"] = 0.93
+					if (new_width == "average")
+						features["width"] = 1
+					if (new_width == "wide")
+						features["width"] = 1.07
 				if("body_size")
 					var/min = CONFIG_GET(number/body_size_min)
 					var/max = CONFIG_GET(number/body_size_max)
@@ -3437,6 +3460,8 @@ Records disabled until a use for them is found
 		save_character()
 
 	var/old_size = character.dna.features["body_size"]
+	var/old_height = character.dna.features["height"]
+	var/old_width = character.dna.features["width"]
 
 	character.dna.features = features.Copy()
 	character.set_species(chosen_species, icon_update = FALSE, pref_load = TRUE)
@@ -3462,7 +3487,7 @@ Records disabled until a use for them is found
 
 	character.give_genitals(TRUE) //character.update_genitals() is already called on genital.update_appearance()
 
-	character.dna.update_body_size(old_size)
+	character.dna.update_body_size(old_size, old_height, old_width)
 
 	//speech stuff
 	if(custom_tongue != "default")
