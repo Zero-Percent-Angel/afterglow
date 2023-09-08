@@ -2842,6 +2842,7 @@ Records disabled until a use for them is found
 						features["width"] = 1
 					if (new_width == "wide")
 						features["width"] = 1.07
+				/*
 				if("body_size")
 					var/min = CONFIG_GET(number/body_size_min)
 					var/max = CONFIG_GET(number/body_size_max)
@@ -2858,7 +2859,7 @@ Records disabled until a use for them is found
 								return
 						if(dorfy != "No")
 							features["body_size"] = new_body_size
-				/*
+
 				if("tongue")
 					var/selected_custom_tongue = input(user, "Choose your desired tongue (none means your species tongue)", "Character Preference") as null|anything in GLOB.roundstart_tongues
 					if(selected_custom_tongue)

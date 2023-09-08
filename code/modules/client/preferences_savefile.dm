@@ -863,7 +863,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	var/static/size_max
 	if(!size_max)
 		size_max = CONFIG_GET(number/body_size_max)
-	features["body_size"]			= sanitize_num_clamp(features["body_size"], size_min, size_max, RESIZE_DEFAULT_SIZE, 0.01)
+	features["body_size"]			= RESIZE_DEFAULT_SIZE
 	features["height"]				= sanitize_num_clamp(features["height"], size_min, size_max, RESIZE_DEFAULT_SIZE, 0.001)
 	features["width"]				= sanitize_num_clamp(features["width"], size_min, size_max, RESIZE_DEFAULT_SIZE, 0.001)
 
