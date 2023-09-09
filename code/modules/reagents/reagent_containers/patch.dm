@@ -94,11 +94,11 @@
 // ---------------------------------
 // HEALING POULTICE
 
-/obj/item/reagent_containers/pill/patch/healpoultice // 100hp over 50 seconds. a bit more potent than just bitters.
+/obj/item/reagent_containers/pill/patch/healpoultice // 80hp over 50 seconds. a bit more potent than just bitters. with maybe another 12~ ish Tricord allowing
 	name = "Healing poultice"
 	desc = "A concoction of broc flower, cave fungus, agrave fruit and xander root."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
-	list_reagents = list(/datum/reagent/medicine/healing_powder/poultice = 10, /datum/reagent/medicine/healing_powder = 10, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5)
+	list_reagents = list(/datum/reagent/medicine/healing_powder/poultice = 11, /datum/reagent/medicine/healing_powder = 5, /datum/reagent/medicine/tricordrazine = 5)
 	self_delay = 1
 	icon_state = "patch_healingpoultice"
 
