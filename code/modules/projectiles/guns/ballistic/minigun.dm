@@ -103,9 +103,9 @@
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = LMG_RECOIL(1)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm300
+		/datum/firemode/automatic/rpm600
 	)
-	
+
 	flags_1 = CONDUCT_1
 	slot_flags = null
 	w_class = WEIGHT_CLASS_HUGE

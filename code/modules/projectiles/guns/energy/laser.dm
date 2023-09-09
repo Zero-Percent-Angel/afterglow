@@ -774,7 +774,6 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
-	added_spread = (GUN_SPREAD_AWFUL*3) //Adds some base inaccuracy, separate from recoil
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slow
 	)
@@ -1043,7 +1042,7 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
 	burst_size = 1
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm300
+		/datum/firemode/automatic/rpm600
 	)
 
 /obj/item/gun/energy/minigun/Initialize()

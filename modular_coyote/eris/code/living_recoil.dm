@@ -60,7 +60,7 @@
 	offset += max(the_skill_val, 0.3)
 	if (on_the_move)
 		offset += (the_skill_val + suit_recoil)
-	if ((last_fire_time + recoil) > world.time)
+	if (skill_used == SKILL_GUNS && (last_fire_time + recoil) > world.time)
 		offset += (recoil * max(the_skill_val/2.5, 1))
 	if(HAS_TRAIT(src, SPREAD_CONTROL))
 		offset -= 0.3
