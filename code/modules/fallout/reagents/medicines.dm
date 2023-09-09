@@ -1,4 +1,4 @@
-/* 
+/*
  * Stimpak Juice
  * Initial insta-heal
  * Some lingering heal over time
@@ -45,7 +45,7 @@
 	..()
 	. = TRUE
 
-/* 
+/*
  * Super Stimpak Juice
  * Initial insta-heal
  * Fixes up cuts like a weaker sanguirite
@@ -71,9 +71,9 @@
 		if(method != INJECT)
 			return
 		if(M.getBruteLoss())
-			M.adjustBruteLoss(-reac_volume)
+			M.adjustBruteLoss(-reac_volume * 1.5)
 		if(M.getFireLoss())
-			M.adjustFireLoss(-reac_volume)
+			M.adjustFireLoss(-reac_volume * 1.5)
 	..()
 
 /// Slows you down and tells you that your heart's gonna get wrecked if you keep taking more
@@ -91,6 +91,10 @@
 /// Seals up bleeds like a weaker sanguirite, doesnt do any passive heals though
 /datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/carbon/M) // Heals fleshwounds like a weak sanguirite
 	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
+	if(M.getBruteLoss() > M.getFireLoss())	//Less effective at healing mixed damage types.
+		M.adjustBruteLoss(-1 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
+	else
+		M.adjustFireLoss(-1 * metabolization_rate *REAGENTS_EFFECT_MULTIPLIER)
 	. = TRUE
 	..()
 
@@ -99,7 +103,7 @@
 	M.adjustOrganLoss(ORGAN_SLOT_HEART, 4)
 	if((M.getOrganLoss(ORGAN_SLOT_HEART) >= 20) && prob(8))
 		var/superstim_od_message = pick(
-			"You feel like someone punched you in the chest, but from the inside.", 
+			"You feel like someone punched you in the chest, but from the inside.",
 			"You breathe heavily, yet still feel winded.",
 			"Your heart stops for a moment.",
 			"You feel an agonizing shudder in your chest.")
@@ -142,7 +146,7 @@
 	..()
 	. = TRUE
 
-/* 
+/*
  * Healing Powder
  * Bicaridine and Kelotane, in one chem
  * Heals either brute or burn, whichever's higher
@@ -173,7 +177,7 @@
 	. = TRUE
 	..()
 
-/* 
+/*
  * Healing Poultice
  * Heals both brute and burn
  * Seals up cuts
@@ -213,7 +217,7 @@
 	M.adjustToxLoss(4)
 	if((M.getToxLoss() >= 30) && prob(8))
 		var/poultice_od_message = pick(
-			"Burning red streaks form on your skin.", 
+			"Burning red streaks form on your skin.",
 			"You feel a searing pain shoot through your skin.",
 			"You feel like your blood's been replaced with acid. It burns.")
 		to_chat(M, span_notice("[poultice_od_message]"))
@@ -650,7 +654,7 @@
 		var/datum/reagent/R = A
 		if(R != src)
 			M.reagents.remove_reagent(R.type,3)
-	
+
 	M.disgust = max(M.disgust, 100) // instant violent pain
 	M.Dizzy(5)
 	M.Jitter(5)

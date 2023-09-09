@@ -136,11 +136,11 @@
 
 /datum/movespeed_modifier/super_stimpak_slowdown
 	flags = IGNORE_NOSLOW
-	multiplicative_slowdown = 0.4
+	multiplicative_slowdown = 0.1
 
 /datum/movespeed_modifier/healing_poultice_slowdown
 	flags = IGNORE_NOSLOW
-	multiplicative_slowdown = 0.4
+	multiplicative_slowdown = 0.1
 
 /datum/movespeed_modifier/bloodloss_slowdown
 	flags = IGNORE_NOSLOW
