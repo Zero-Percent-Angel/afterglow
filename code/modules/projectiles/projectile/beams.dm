@@ -114,8 +114,7 @@
 	icon_state = "xray"
 	damage = 15 //makes it more useful against mobs
 	flag = "energy"
-	armour_penetration = 1 //it only does 5 damage.
-	damage_type = "burn"
+	armour_penetration = 0.85 //it only does 15 damage.
 	irradiate = 100 //incase friendly fire
 	range = 15
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE | PASSCLOSEDTURF
