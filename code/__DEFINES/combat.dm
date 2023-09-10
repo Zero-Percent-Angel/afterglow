@@ -321,13 +321,13 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 
 /// Bullet wounding modifier defines
 #define BULLET_MATCH_MULT_WOUND 1.25
-#define BULLET_SURPLUS_MULT_WOUND 1 
-#define BULLET_HANDLOAD_MULT_WOUND 0.75 
+#define BULLET_SURPLUS_MULT_WOUND 1
+#define BULLET_HANDLOAD_MULT_WOUND 0.75
 
 /// Bullet recoil modifier defines
 #define BULLET_MATCH_MULT_RECOIL 1.25
-#define BULLET_SURPLUS_MULT_RECOIL 1 
-#define BULLET_HANDLOAD_MULT_RECOIL 0.75 
+#define BULLET_SURPLUS_MULT_RECOIL 1
+#define BULLET_HANDLOAD_MULT_RECOIL 0.75
 
 /// Rubber bullet lethal damage multiplier
 #define RUBBERY_DAMAGE_MULT 0.1
@@ -942,7 +942,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define GUN_COCK_RIFLE_LIGHTNING (GUN_COCK_BASE * 0.5)
 
 /// Refire speed multiplier for manual action guns, cus we no longer care about your cock length
-#define GUN_RIFLEMAN_REFIRE_DELAY_MULT 0.8
+#define GUN_RIFLEMAN_REFIRE_DELAY_MULT 1.6
 
 /// Refire speed multiplier for manual action guns if you're not a pr0 and click-to-cycle it
 #define GUN_AUTOPUMP_REFIRE_DELAY_MULT 1.8
