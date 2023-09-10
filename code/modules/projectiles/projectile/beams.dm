@@ -343,7 +343,7 @@
 /obj/item/projectile/beam/laser/lasgun/hitscan //hitscan aer9 test
 	name = "laser beam"
 	damage = 30
-	armour_penetration = 0.25 // 25% so you can get through tougher stuff
+	armour_penetration = 0.33 // 33% so you can get through tougher stuff
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
@@ -356,8 +356,8 @@
 
 /obj/item/projectile/beam/laser/gatling/hitscan //Gatling Laser
 	name = "laser beam"
-	damage = 15
-	armour_penetration = 0.1
+	damage = 17
+	armour_penetration = 0.15
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
