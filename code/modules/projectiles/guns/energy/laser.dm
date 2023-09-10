@@ -706,7 +706,7 @@
 	cell_type = /obj/item/stock_parts/cell/ammo/ecp
 	init_firemodes = list(
 		/datum/firemode/automatic/rpm200,
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 
 //AER-12 - basically stronger AP/damage AER-9 but with higher power consumption.
@@ -1042,7 +1042,7 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
 	burst_size = 1
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm600
+		/datum/firemode/automatic/rpm400
 	)
 
 /obj/item/gun/energy/minigun/Initialize()

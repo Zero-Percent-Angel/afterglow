@@ -343,7 +343,7 @@
 /obj/item/projectile/beam/laser/lasgun/hitscan //hitscan aer9 test
 	name = "laser beam"
 	damage = 30
-	armour_penetration = 0.25 // 25% so you can get through tougher stuff
+	armour_penetration = 0.33 // 33% so you can get through tougher stuff
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
@@ -356,8 +356,8 @@
 
 /obj/item/projectile/beam/laser/gatling/hitscan //Gatling Laser
 	name = "laser beam"
-	damage = 15
-	armour_penetration = 0.1
+	damage = 17
+	armour_penetration = 0.15
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
@@ -703,9 +703,9 @@
 	light_color = LIGHT_COLOR_BLUE
 
 /obj/item/projectile/beam/laser/aer14/hitscan
-	damage = 32
+	damage = 34
 	wound_bonus = 20
-	armour_penetration = 0.2
+	armour_penetration = 0.5
 	tracer_type = /obj/effect/projectile/tracer/pulse
 	muzzle_type = /obj/effect/projectile/muzzle/pulse
 	impact_type = /obj/effect/projectile/impact/pulse
@@ -756,7 +756,7 @@
 	damage = 50
 	wound_bonus = 10
 	bare_wound_bonus = 20
-	armour_penetration = 0.4
+	armour_penetration = 0.33
 	tracer_type = /obj/effect/projectile/tracer/heavy_laser
 	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
 	impact_type = /obj/effect/projectile/impact/heavy_laser
@@ -783,7 +783,7 @@
 	damage = 45
 	wound_bonus = 5
 	bare_wound_bonus = 15
-	armour_penetration = 0.15
+	armour_penetration = 0.2
 	tracer_type = /obj/effect/projectile/tracer/heavy_laser
 	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
 	impact_type = /obj/effect/projectile/impact/heavy_laser

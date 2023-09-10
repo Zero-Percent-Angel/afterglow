@@ -21,13 +21,13 @@
 #define WEAPON_FORCE_TOOL_LARGE 10
 
 /// An axe designed as a tool
-#define WEAPON_FORCE_AXE_TOOL 15
+#define WEAPON_FORCE_AXE_TOOL 8
 /// A small hatchet
-#define WEAPON_FORCE_AXE_SMALL 18
+#define WEAPON_FORCE_AXE_SMALL 13
 /// A big axe
-#define WEAPON_FORCE_AXE_LARGE 20
+#define WEAPON_FORCE_AXE_LARGE 18
 /// Two-handed axe multiplier
-#define WEAPON_AXE_TWOHAND_MULT 1.8
+#define WEAPON_AXE_TWOHAND_MULT 1.6
 
 /// A cutting thing designed as a tool (wirecutters)
 #define WEAPON_FORCE_SLASH_TOOL 5
@@ -56,6 +56,6 @@
 /// A huge club
 #define WEAPON_FORCE_BLUNT_LARGE 15
 /// Two-handed blade multiplier
-#define WEAPON_BLUNT_TWOHAND_MULT 1
+#define WEAPON_BLUNT_TWOHAND_MULT 1.6
 /// Blunt wound addition
 #define WEAPON_BLUNT_WOUND_ADD 100 // limb wrecker
