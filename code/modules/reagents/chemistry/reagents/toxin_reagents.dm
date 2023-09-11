@@ -47,6 +47,7 @@
 	overdose_threshold = 18 // So, someone drinking 20 units will FOR SURE get overdosed
 	taste_description = "horrific agony"
 	taste_mult = 0.9
+	can_synth = FALSE
 	var/datum/disease/fev_disease = /datum/disease/transformation/mutant
 
 /datum/reagent/toxin/FEV_solution/overdose_process(mob/living/carbon/C)
