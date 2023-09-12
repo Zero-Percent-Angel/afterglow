@@ -811,6 +811,8 @@
 	desc = "It's a salvaged power armor helmet of what..? YOU CAN'T SEE ME! STOP! REPORT TO CODERS!!"
 	slowdown = ARMOR_SLOWDOWN_NONE * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_SALVAGE
+	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
+	flags_cover = HEADCOVERSEYES
 
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/raider
 	name = "raider T-45d power helmet"
