@@ -116,9 +116,17 @@
 
 /obj/item/clothing/neck/mantle/poncho
 	name = "poncho"
-	desc = "Plain and rugged piece of clothing, put it over your suit and make sure your gear don't get soaked through when it rains."
+	desc = "Plain and rugged piece of clothing, put it over your suit and make sure your gear don't get soaked through when it rains. (Alt click it has alternative skins)"
 	icon_state = "poncho"
 	body_parts_covered = CHEST|GROIN|ARMS
+	always_reskinnable = TRUE
+	unique_reskin = list(
+						"Poncho" = "poncho",
+						"Old Poncho" = "poncho_old",
+						"Cowboy Poncho" = "ponchocowboy",
+						"Cowboy Poncho Open" = "ponchocowboyopen"
+						)
+
 
 /obj/item/clothing/neck/mantle/umbo
 	name = "Roman mantle"
