@@ -563,7 +563,7 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	icon_state = "plasmawindow"
 	reinf = FALSE
 	heat_resistance = 25000
-	armor = ARMOR_VALUE_HEAVY
+	armor = ARMOR_VALUE_MEDIUM
 	max_integrity = 150
 	explosion_block = 1
 	glass_type = /obj/item/stack/sheet/plasmaglass
@@ -588,7 +588,7 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	icon_state = "plasmarwindow"
 	reinf = TRUE
 	heat_resistance = 50000
-	armor = ARMOR_VALUE_PA
+	armor = ARMOR_VALUE_HEAVY
 	max_integrity = 500
 	explosion_block = 2
 	glass_type = /obj/item/stack/sheet/plasmarglass
@@ -737,7 +737,7 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	flags_1 = PREVENT_CLICK_UNDER_1
 	reinf = TRUE
 	heat_resistance = 1600
-	armor = ARMOR_VALUE_PA
+	armor = ARMOR_VALUE_HEAVY
 	smooth = SMOOTH_TRUE
 	canSmoothWith = null
 	explosion_block = 3
@@ -763,7 +763,7 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 	icon_state = "clockwork_window_single"
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	max_integrity = 80
-	armor = ARMOR_VALUE_PA
+	armor = ARMOR_VALUE_HEAVY
 	explosion_block = 2 //fancy AND hard to destroy. the most useful combination.
 	decon_speed = 40
 	glass_type = /obj/item/stack/tile/brass
