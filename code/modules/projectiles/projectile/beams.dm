@@ -356,8 +356,8 @@
 
 /obj/item/projectile/beam/laser/gatling/hitscan //Gatling Laser
 	name = "laser beam"
-	damage = 17
-	armour_penetration = 0.15
+	damage = 16
+	armour_penetration = 0.14
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
@@ -732,7 +732,7 @@
 	name = "laser beam"
 	damage = 32
 	hitscan = TRUE
-	armour_penetration = 0.4
+	armour_penetration = 0.37
 	tracer_type = /obj/effect/projectile/tracer/xray
 	muzzle_type = /obj/effect/projectile/muzzle/xray
 	impact_type = /obj/effect/projectile/impact/xray
@@ -756,7 +756,7 @@
 	damage = 50
 	wound_bonus = 10
 	bare_wound_bonus = 20
-	armour_penetration = 0.33
+	armour_penetration = 0.25
 	tracer_type = /obj/effect/projectile/tracer/heavy_laser
 	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
 	impact_type = /obj/effect/projectile/impact/heavy_laser
@@ -767,7 +767,7 @@
 	damage = 40
 	wound_bonus = 10
 	bare_wound_bonus = 20
-	armour_penetration = 0.2
+	armour_penetration = 0.15
 	tracer_type = /obj/effect/projectile/tracer/heavy_laser
 	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
 	impact_type = /obj/effect/projectile/impact/heavy_laser
@@ -783,7 +783,7 @@
 	damage = 45
 	wound_bonus = 5
 	bare_wound_bonus = 15
-	armour_penetration = 0.2
+	armour_penetration = 0.15
 	tracer_type = /obj/effect/projectile/tracer/heavy_laser
 	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
 	impact_type = /obj/effect/projectile/impact/heavy_laser
