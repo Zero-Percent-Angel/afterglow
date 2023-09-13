@@ -205,8 +205,8 @@
 	desc = "A set of salvaged power armor, with certain bits of plating stripped out to retain more freedom of movement. No cooling module, though."
 	icon_state = "tribal_power_armor"
 	item_state = "tribal_power_armor"
-	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT // zooom
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_DT_T2)
+	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT // zooom
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T3, ARMOR_MODIFIER_DOWN_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T3)
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
 	name = "salvaged T-45d power armor"
@@ -296,7 +296,7 @@
 	desc = "An armor worn by veteran legionary decanus who have proven their combat prowess in many battles, strapped to it is various forms of kevlar and other bullet-proof armors."
 	icon_state = "legion_heavy"
 	item_state = "legion_heavy"
-	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 *ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2)
 
 /obj/item/clothing/suit/armor/heavy/legion/centurion //good all around
@@ -304,14 +304,14 @@
 	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
 	icon_state = "legion_centurion"
 	item_state = "legion_centurion"
-	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/palacent //laser resist spec
 	name = "legion centurion paladin-slayer armor"
 	desc = "A Centurion able to defeat a Brotherhood Paladin gets the honorific title 'Paladin-Slayer', and adds bits of the looted armor to his own."
 	icon_state = "legion_palacent"
 	item_state = "legion_palacent"
-	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2)
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/legion //Legion T45d SPA from recipe
@@ -319,8 +319,8 @@
 	desc = "Reforged armor made from the husk of T45d power armor. It seems faster, at the cost of some protection. It is fitting that it has the icons of the Legion, as it takes the strength of a brahmin to wear."
 	icon_state = "legion_parma"
 	item_state = "legion_parma"
-	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_DT_T1)
+	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b/legion //Legion T51b SPA from recipe
 	name = "salvaged scutum T-51b power armor"
@@ -328,7 +328,7 @@
 	icon_state = "legion_scutum"
 	item_state = "legion_scutum"
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1)
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_BULLET_T1)
 
 /obj/item/clothing/suit/armor/heavy/legion/legate
 	name = "legion legate armor"
