@@ -4,6 +4,7 @@
 	icon = 'icons/fallout/clothing/hats.dmi'					// Someone should repath all helmets to here at some point. I cannot be fucked to rn though, holy shit. -Rebel0
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	armor = ARMOR_VALUE_LIGHT
+	slowdown = HELMET_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/raider
 	name = "yankee raider helmet"
@@ -122,6 +123,7 @@
 	icon_state = "combat_helmet"
 	item_state = "combat_helmet"
 	armor = ARMOR_VALUE_MEDIUM
+	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	strip_delay = 50
 	flags_inv = HIDEEARS|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -451,6 +453,7 @@
 	item_state = "legion-centurion"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	armor = ARMOR_VALUE_HEAVY
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/palacent
 	name = "legion centurion paladin-slayer helmet"
@@ -461,6 +464,7 @@
 	item_state = "legcentpal"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	armor = ARMOR_VALUE_SALVAGE
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/legion/rangercent
 	name = "legion centurion ranger-hunter helmet"
@@ -471,6 +475,7 @@
 	item_state = "legcentrang"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	armor = ARMOR_VALUE_MEDIUM
+	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //Don't give this to anything outside of event crap
 /obj/item/clothing/head/helmet/f13/legion/legate
@@ -595,6 +600,7 @@
 	icon_state = "ncr_ranger_patrol"
 	item_state = "ncr_ranger_patrol"
 	armor = ARMOR_VALUE_MEDIUM
+	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/f13/ncr/patrol/mutie
 	name = "NCR Mutant Ranger Hat"
@@ -636,6 +642,7 @@
 	icon_state = "brotherhood_helmet_knight"
 	item_state = "brotherhood_helmet_knight"
 	armor = ARMOR_VALUE_MEDIUM
+	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
 	name = "brotherhood senior knight helmet"
@@ -643,6 +650,7 @@
 	icon_state = "brotherhood_helmet_senior"
 	item_state = "brotherhood_helmet_senior"
 	armor = ARMOR_VALUE_HEAVY
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	name = "initiate helmet"
@@ -703,6 +711,7 @@
 	icon_state = "town_marshal_riot"
 	item_state = "town_marshal_riot"
 	armor = ARMOR_VALUE_HEAVY
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -740,6 +749,7 @@
 	icon_state = "khanhelmet"
 	item_state = "khanhelmet"
 	armor = ARMOR_VALUE_MEDIUM
+	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 20
@@ -793,7 +803,6 @@
 /obj/item/clothing/head/helmet/riot/vaultsec
 	name = "security helmet"
 	desc = "A standard issue vault security helmet, pretty robust."
-	slowdown = 0.01
 
 
 /obj/item/clothing/head/helmet/riot/vaultsec/vc
@@ -809,7 +818,7 @@
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa
 	name = "salvaged power helmet"
 	desc = "It's a salvaged power armor helmet of what..? YOU CAN'T SEE ME! STOP! REPORT TO CODERS!!"
-	slowdown = ARMOR_SLOWDOWN_NONE * ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_SALVAGE
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
 	flags_cover = HEADCOVERSEYES
@@ -906,7 +915,7 @@
 	ispowerarmor = 1 //TRUE
 	strip_delay = 200
 	equip_delay_self = 20
-	slowdown = 0.05
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK|HIDEJUMPSUIT
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	clothing_flags = THICKMATERIAL

@@ -24,7 +24,7 @@
 // 0 for a challenging roll
 // +20 for an expert roll
 /mob/proc/skill_roll(check, difficulty = DIFFICULTY_NORMAL, do_message = 1)
-	if ((skill_value(check) + special_l) >= (rand(1,100) + difficulty))
+	if ((skill_value(check) + getLuckModifier()) >= (rand(1,100) + difficulty))
 		if (do_message)
 			to_chat(src, span_green("You succeed the skill check using: [check]"))
 		return TRUE
@@ -36,7 +36,7 @@
 // rolling with advantage, should use this when we kind of want the check to pass
 /mob/proc/skill_roll_kind(check, difficulty = DIFFICULTY_NORMAL, do_message = 1)
 	var/lowest_random = min(rand(1,100), rand(1,100)) + difficulty
-	if ((skill_value(check) + special_l) >= lowest_random)
+	if ((skill_value(check) + getLuckModifier()) >= lowest_random)
 		if (do_message)
 			to_chat(src, span_green("You succeed the skill check using: [check]"))
 		return TRUE
@@ -46,13 +46,13 @@
 		return FALSE
 
 	//Maybe we'll use the flat formula later.
-	//var/the_val = (skill_value(check) + special_l)
+	//var/the_val = (skill_value(check) + getLuckModifier())
 	//prob((the_val-difficulty)*(the_val-difficulty)/100+((100+difficulty-the_val)*the_val)/100*2)
 
 // You have sinned, now you must pay
 /mob/proc/skill_roll_evil(check, difficulty = DIFFICULTY_NORMAL, do_message = 1)
 	var/highest_random = max(rand(1,100), rand(1,100)) + difficulty
-	if ((skill_value(check) + special_l) >= highest_random && prob(special_l*9))
+	if ((skill_value(check) + getLuckModifier()) >= highest_random && prob(special_l*9))
 		if (do_message)
 			to_chat(src, span_green("You succeed the skill check using: [check]"))
 		return TRUE
@@ -60,6 +60,9 @@
 		if (do_message)
 			to_chat(src, span_red("You fail the skill check using: [check]"))
 		return FALSE
+
+mob/proc/getLuckModifier()
+	return (special_l - 5)*2
 
 /mob/proc/skill_roll_under(check, difficulty = DIFFICULTY_NORMAL)
 	return  ((rand(1,100) + difficulty) - (skill_value(check)))

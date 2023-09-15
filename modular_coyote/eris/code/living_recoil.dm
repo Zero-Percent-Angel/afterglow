@@ -88,7 +88,7 @@
 		G.check_safety_cursor(src)
 
 /mob/living/proc/update_cursor(var/obj/item/gun/G)
-	if(!(istype(get_active_held_item(), /obj/item/gun) || recoil > 0))
+	if(!istype(get_active_held_item(), /obj/item/gun))
 		remove_cursor()
 		return
 	if(client)
