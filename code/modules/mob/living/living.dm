@@ -1437,7 +1437,7 @@
 		to_chat(target, span_warning("\The [src] seems to have given up on passing \the [gift] to you."))
 		return
 
-	if(!gift.mob_can_equip(src, target, SLOT_HANDS, TRUE, TRUE))
+	if(!gift.mob_can_equip(target, src, SLOT_HANDS, TRUE, TRUE))
 		to_chat(src, span_warning("[target] is unable to receive \a [gift] right now."))
 		to_chat(target, span_warning("\The [src] seems to have given up on passing \the [gift] to you."))
 		return
