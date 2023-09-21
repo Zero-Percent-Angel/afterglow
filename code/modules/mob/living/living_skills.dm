@@ -260,7 +260,7 @@ mob/proc/getLuckModifier()
 			inspiree.modify_special(bonus, special_in_question)
 			inspiree.inspired = TRUE
 			addtimer(CALLBACK(inspiree, /mob/living/proc/modify_special, (-bonus), special_in_question), 20 MINUTES)
-			addtimer(CALLBACK(src, /mob/living/proc/clear_inspired), 20 MINUTES)
+			addtimer(CALLBACK(inspiree, /mob/living/proc/clear_inspired), 20 MINUTES)
 	return good_speech
 
 /mob/living/proc/clear_inspire_cooldown()
