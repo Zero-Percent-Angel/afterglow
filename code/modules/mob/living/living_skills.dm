@@ -18,6 +18,8 @@
 	var/sneaking = FALSE
 	var/sneaking_cooldown = 0
 	var/highest_gun_or_energy_cache = 0
+	var/inspire_cooldown = 0
+	var/inspired = 0
 
 // -20 for an easy roll
 // -10 for difficulty on a 'normal' roll
@@ -208,3 +210,77 @@ mob/proc/getLuckModifier()
 
 /mob/living/proc/clear_cooldown()
 	sneaking_cooldown = FALSE
+
+/mob/living/carbon/human/verb/inspire()
+	set name = "Inspire"
+	set category = "IC"
+	if (inspire_cooldown)
+		to_chat(src, span_warning("You can't do that again so soon."))
+		return
+	if (!skill_check(SKILL_SPEECH, EASY_CHECK))
+		to_chat(src, span_warning("Your speeches probably aren't going to inspire anyone."))
+		return
+	var/choices = skill_check(SKILL_SPEECH, HARD_CHECK) ? list("Everyone in earshot", "One person") : list("One person")
+	var/how_many_to_inspire = input(src, "How many people do you wish to inspire?", "Inspire", null) as null|anything in choices
+
+	if (how_many_to_inspire != null)
+		var/special_in_question = input(src, "Which S.P.E.C.I.A.L are you trying to inspire?", "Inspire", "s") as anything in list("s","p","e","c","i","a","l")
+		var/speech_given = input(src, "Please type the speech you intend to give to inspire your choosen target(s). Keep in mind roleplaying standards.", "Inspire", "") as text
+		var/mob/living/carbon/targeted_mob = null
+		var/list/mob/living/carbon/peeps = list()
+		if (how_many_to_inspire == "One person")
+			var/list/mob/living/carbon/people = list()
+			for(var/mob/living/carbon/A  in oview(src))
+				people.Add(A)
+			targeted_mob = input(src, "Who are you talking to?", "Inspire") as mob in people
+			if (targeted_mob)
+				peeps = list(targeted_mob)
+			else
+				return
+		else if (how_many_to_inspire == "Everyone in earshot")
+			for (var/mob/living/carbon/A  in oview(src))
+				peeps.Add(A)
+		var/our_speech_skill = skill_value(SKILL_SPEECH)
+		var/bonus = round(our_speech_skill/30, 1)
+		if (do_inspire_for_targets(peeps, special_in_question, bonus))
+			say(speech_given, spans = list("hypnophrase"))
+		else
+			say(speech_given)
+
+/mob/living/proc/do_inspire_for_targets(list/mob/living/carbon/inpirees, special_in_question, bonus)
+	inspire_cooldown = TRUE
+	var/good_speech = skill_roll_kind(SKILL_SPEECH, DIFFICULTY_NORMAL)
+	addtimer(CALLBACK(src, /mob/living/proc/clear_inspire_cooldown), 20 MINUTES)
+	if (good_speech)
+		SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "speech", /datum/mood_event/inspiring_speech)
+		for (var/mob/living/carbon/inspiree  in inpirees)
+			if (inspiree.inspired || inspiree == src)
+				return
+			SEND_SIGNAL(inspiree, COMSIG_ADD_MOOD_EVENT, "speech", /datum/mood_event/inspiring_speech)
+			inspiree.modify_special(bonus, special_in_question)
+			inspiree.inspired = TRUE
+			addtimer(CALLBACK(inspiree, /mob/living/proc/modify_special, (-bonus), special_in_question), 20 MINUTES)
+			addtimer(CALLBACK(inspiree, /mob/living/proc/clear_inspired), 20 MINUTES)
+	return good_speech
+
+/mob/living/proc/clear_inspire_cooldown()
+	inspire_cooldown = FALSE
+
+/mob/living/proc/clear_inspired()
+	inspired = FALSE
+
+/mob/living/proc/modify_special(val, spec)
+	if ("s" == spec)
+		special_s += val
+	if ("p" == spec)
+		special_p += val
+	if ("e" == spec)
+		special_e += val
+	if ("c" == spec)
+		special_c += val
+	if ("i" == spec)
+		special_i += val
+	if ("a" == spec)
+		special_a += val
+	if ("l" == spec)
+		special_l += val
