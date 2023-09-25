@@ -225,9 +225,9 @@
 /mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong //For use as a main bunker boss. Essentially a mildly edited OverSEER port
 	name = "big chew-chew"
 	desc = "An oddly scorched pre-war military robot armed with a deadly gatling laser firing high-penetration experimental lasers and covered in thick, dark blue armor plating, the name Big Chew-Chew scratched onto it's front armour crudely, highlighted by small bits of white paint. There seems to be an odd pack on the monstrosity of a sentrie's back, a chute at the bottom of it - there's the most scorch-marks on the robot here, so it's safe to assume this robot is capable of explosions. Better watch out!"
-	extra_projectiles = 4 //Fires a bit less
 	health = 1500 //more HP than its smaller brother
 	maxHealth = 1500
+	mob_armor = ARMOR_VALUE_ROBOT_CHEW //tanky. no more ez cheese
 	armour_penetration = 0.8 //Punches harder
 	move_to_delay = 3.0 //Is deceptively quick
 	retreat_distance = 0 //Is going to punch you
@@ -235,6 +235,8 @@
 	color = "#3444C8" //dark blue
 	emp_flags = list() //no emp instakill for you
 	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/chew/strong
+	auto_fire_delay = GUN_AUTOFIRE_DELAY_FAST
+	stat_attack = UNCONSCIOUS //you are dead. notbigsuprise.
 
 //Raider friendly Sentry bot
 /mob/living/simple_animal/hostile/securitron/sentrybot/nsb
