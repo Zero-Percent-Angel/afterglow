@@ -318,7 +318,7 @@
 
 //Big Chews Beam
 /obj/item/projectile/beam/laser/pistol/ultraweak/chew/strong
-	damage = 18 //it fucks
+	damage = 20 //it fucks
 	icon_state = "gaussstrong"
 	movement_type = FLYING | UNSTOPPABLE //stopping for nothing except its range
 	pixels_per_second = TILES_TO_PIXELS(15) //slow
