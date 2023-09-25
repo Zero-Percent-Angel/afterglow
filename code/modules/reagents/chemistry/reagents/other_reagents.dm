@@ -695,6 +695,7 @@
 									"You feel as though you're about to change at any moment!" = MUT_MSG_ABOUT2TURN)
 	var/mutationtext
 	var/cycles_to_turn = 20 //the current_cycle threshold / iterations needed before one can transform
+	can_synth = FALSE
 	ghoulfriendly = TRUE
 
 /datum/reagent/mutationtoxin/on_mob_life(mob/living/carbon/human/H)
@@ -891,6 +892,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	taste_description = "slime"
 	metabolization_rate = 0.2
+	can_synth = FALSE
 	value = REAGENT_VALUE_RARE
 
 /datum/reagent/slime_toxin/on_mob_life(mob/living/carbon/human/H)
@@ -930,6 +932,7 @@
 	metabolization_rate = INFINITY
 	taste_description = "slime"
 	value = REAGENT_VALUE_RARE
+	can_synth = FALSE
 	ghoulfriendly = TRUE
 
 /datum/reagent/mulligan/on_mob_life(mob/living/carbon/human/H)
@@ -947,6 +950,7 @@
 	color = "#13BC5E" // rgb: 19, 188, 94
 	taste_description = "slime"
 	value = REAGENT_VALUE_VERY_RARE
+	can_synth = FALSE
 	ghoulfriendly = TRUE
 
 /datum/reagent/aslimetoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
@@ -960,6 +964,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	taste_description = "decay"
 	value = REAGENT_VALUE_GLORIOUS
+	can_synth = FALSE
 	ghoulfriendly = TRUE
 
 /datum/reagent/gluttonytoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
