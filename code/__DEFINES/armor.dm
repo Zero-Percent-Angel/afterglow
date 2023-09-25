@@ -375,17 +375,17 @@
  * Lot of DT
  * * * * * * * * * * * */
 #define ARMOR_VALUE_ROBOT_CHEW list(\
-		"melee" = 60, \
-		"bullet" = 75, \
-		"laser" = 60, \
-		"energy" = 10, \
-		"bomb" = 80, \
+		"melee" = 75, \
+		"bullet" = 85, \
+		"laser" = 90, \
+		"energy" = 15, \
+		"bomb" = 95, \
 		"bio" = 100, \
 		"rad" = 100, \
 		"fire" = 0, \
 		"acid" = 0, \
 		"wound" = 0, \
-		"damage_threshold" = 15)
+		"damage_threshold" = 8)
 
 /* Deathclaw Commonboy
  * Just about impervious to bullets
