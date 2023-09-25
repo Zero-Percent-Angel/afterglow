@@ -2433,6 +2433,16 @@
 /area/f13/tunnel)
 "cYr" = (
 /obj/item/shard,
+/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot{
+	name = "ESC-2402";
+	desc = "A sentry bot armed with a modified breacher shotgun and covered in thick armor plating, this one has ESC-2403 stamped onto it's chestplate and looks alot tougher than your average sentry bot.";
+	faction = list("hostile");
+	auto_fire_delay = 1;
+	health = 1000;
+	extra_projectiles = 2;
+	projectiletype = /obj/item/projectile/bullet/incendiary/shotgun;
+	color = "#FFCCCB"
+	},
 /turf/open/floor/f13,
 /area/ruin/powered)
 "cYs" = (
@@ -6143,6 +6153,20 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
+"heU" = (
+/obj/item/shard,
+/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot{
+	name = "ESC-2400";
+	desc = "A sentry bot armed with a modified breacher shotgun and covered in thick armor plating, this one has ESC-2403 stamped onto it's chestplate and looks alot tougher than your average sentry bot.";
+	faction = list("hostile");
+	auto_fire_delay = 1;
+	health = 1000;
+	extra_projectiles = 2;
+	projectiletype = /obj/item/projectile/bullet/incendiary/shotgun;
+	color = "#FFCCCB"
+	},
+/turf/open/floor/f13,
+/area/ruin/powered)
 "hfh" = (
 /obj/structure/table,
 /turf/open/floor/f13/wood,
@@ -6417,7 +6441,9 @@
 	},
 /area/f13/tunnel)
 "hvx" = (
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong,
+/mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong{
+	faction = list("hostile")
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "engine"
 	},
@@ -19679,6 +19705,20 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/vault)
+"xLF" = (
+/obj/item/shard,
+/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot{
+	name = "ESC-2401";
+	desc = "A sentry bot armed with a modified breacher shotgun and covered in thick armor plating, this one has ESC-2403 stamped onto it's chestplate and looks alot tougher than your average sentry bot.";
+	faction = list("hostile");
+	auto_fire_delay = 1;
+	health = 1000;
+	extra_projectiles = 2;
+	projectiletype = /obj/item/projectile/bullet/incendiary/shotgun;
+	color = "#FFCCCB"
+	},
+/turf/open/floor/f13,
+/area/ruin/powered)
 "xLR" = (
 /obj/structure/door_assembly/door_assembly_eng,
 /obj/structure/barricade/wooden/crude,
@@ -32126,7 +32166,7 @@ jow
 vCe
 lLc
 lLc
-cYr
+heU
 lLc
 lLc
 lLc
@@ -33540,7 +33580,7 @@ jow
 vCe
 lLc
 lLc
-cYr
+xLF
 lLc
 lLc
 lLc
