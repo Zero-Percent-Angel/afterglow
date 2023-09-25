@@ -369,6 +369,24 @@
 		"wound" = 0, \
 		"damage_threshold" = 11)
 
+/* Robot Chew Chew
+ * Tanky bossmob fight armour
+ * Will fuck you up
+ * Lot of DT
+ * * * * * * * * * * * */
+#define ARMOR_VALUE_ROBOT_CHEW list(\
+		"melee" = 75, \
+		"bullet" = 85, \
+		"laser" = 90, \
+		"energy" = 15, \
+		"bomb" = 95, \
+		"bio" = 100, \
+		"rad" = 100, \
+		"fire" = 0, \
+		"acid" = 0, \
+		"wound" = 0, \
+		"damage_threshold" = 8)
+
 /* Deathclaw Commonboy
  * Just about impervious to bullets
  * Melee is... okay ish
