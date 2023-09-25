@@ -456,6 +456,7 @@
 	else
 		approaching_target = FALSE
 	set_glide_size(DELAY_TO_GLIDE_SIZE(move_to_delay))
+	/*
 	var/distance_to_target = get_dist(targets_from, target)
 	if ((approaching_target && istype(target, /mob/living/carbon/human)) && (actively_moving || distance_to_target < 4))
 		// if we're close we can do an A* Pathfind to not get stuck in place, to really put the I in AI
@@ -463,7 +464,8 @@
 		path_to(target, minimum_distance, 8, delay)
 	else
 		moving_halt()
-		walk_to(src, target, minimum_distance, delay)
+	*/
+	walk_to(src, target, minimum_distance, delay)
 
 
 	if(variation_list[MOB_MINIMUM_DISTANCE_CHANCE] && LAZYLEN(variation_list[MOB_MINIMUM_DISTANCE]) && prob(variation_list[MOB_MINIMUM_DISTANCE_CHANCE]))
