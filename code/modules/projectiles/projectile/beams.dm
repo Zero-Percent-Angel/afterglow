@@ -321,8 +321,8 @@
 	damage = 20 //it fucks
 	icon_state = "gaussstrong"
 	movement_type = FLYING | UNSTOPPABLE //stopping for nothing except its range
-	pixels_per_second = TILES_TO_PIXELS(15) //slow
-	range = 16
+	pixels_per_second = TILES_TO_PIXELS(12) //slow
+	range = 18
 
 //Alrem's plasmacaster
 /obj/item/projectile/f13plasma/plasmacaster/arlem
