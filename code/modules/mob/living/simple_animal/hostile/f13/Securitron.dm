@@ -228,14 +228,13 @@
 	health = 1500 //more HP than its smaller brother
 	maxHealth = 1500
 	mob_armor = ARMOR_VALUE_ROBOT_CHEW //tanky. no more ez cheese
+	extra_projectiles = 4
 	armour_penetration = 0.8 //Punches harder
-	move_to_delay = 3.0 //Is deceptively quick
 	retreat_distance = 0 //Is going to punch you
 	rapid_melee = 2 //Punches faster
 	color = "#3444C8" //dark blue
 	emp_flags = list() //no emp instakill for you
 	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/chew/strong
-	auto_fire_delay = GUN_AUTOFIRE_DELAY_FAST
 	stat_attack = UNCONSCIOUS //you are dead. notbigsuprise.
 
 //Raider friendly Sentry bot
