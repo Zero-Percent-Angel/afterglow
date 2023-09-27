@@ -234,7 +234,7 @@
 		if(!multiplier || multiplier < 1 || !IS_FINITE(multiplier)) //href exploit protection
 			stack_trace("Invalid multiplier value in stack creation [multiplier], [usr] is likely attempting an exploit")
 			return
-		if(!building_checks(R, multiplier) && !usr.skill_check(SKILL_REPAIR, R.skill_threshold))
+		if(!building_checks(R, multiplier) || !usr.skill_check(SKILL_REPAIR, R.skill_threshold))
 			return
 		if (R.time)
 			var/adjusted_time = 0
