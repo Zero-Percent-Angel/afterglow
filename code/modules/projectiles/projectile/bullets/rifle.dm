@@ -671,7 +671,7 @@
 	stamina = BULLET_STAMINA_RIFLE_50MG
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG_MATCH
-	armour_penetration = 0.3
+	armour_penetration = 0.45
 
 	wound_bonus = BULLET_WOUND_RIFLE_50MG_MATCH
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT
@@ -693,7 +693,7 @@
 	stamina = BULLET_STAMINA_RIFLE_50MG
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG
-	armour_penetration = 0.4
+	armour_penetration = 0.55
 
 	wound_bonus = BULLET_WOUND_RIFLE_50MG
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT
@@ -817,7 +817,7 @@
 	stamina = BULLET_STAMINA_RIFLE_50MG
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG
-	armour_penetration = 0.5
+	armour_penetration = 0.7
 
 	wound_bonus = BULLET_WOUND_RIFLE_50MG
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT
