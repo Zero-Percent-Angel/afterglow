@@ -160,7 +160,6 @@ Head Paladin
 	..()
 	if(visualsOnly)
 		return
-	REMOVE_TRAIT(H, TRAIT_PA_WEAR, src)
 /*
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/jet)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/turbo)
