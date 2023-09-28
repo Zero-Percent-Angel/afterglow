@@ -1,5 +1,6 @@
 /mob/living/proc/handle_recoil(var/obj/item/gun/G, var/recoil_buildup)
-	recoil = recoil_buildup
+	var/the_skill_val = (100 - skill_value(G.gun_skill_used)) / REGULAR_CHECK
+	recoil = (recoil_buildup * max(the_skill_val, 0.7))
 	return
 	//add_recoil(recoil_buildup)
 
@@ -61,7 +62,7 @@
 	if (on_the_move)
 		offset += (the_skill_val + suit_recoil)
 	if (skill_used == SKILL_GUNS && (last_fire_time + recoil) > world.time)
-		offset += (recoil * max(the_skill_val/2.5, 1))
+		offset += recoil
 	if(HAS_TRAIT(src, SPREAD_CONTROL))
 		offset -= 0.3
 	/*

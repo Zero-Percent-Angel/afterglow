@@ -1,5 +1,5 @@
 /obj/item/ammo_casing/energy/plasma
-	projectile_type = /obj/item/projectile/plasmacarbine
+	projectile_type = /obj/item/projectile/f13plasma/balanced
 	select_name = "plasma burst"
 	fire_sound = 'sound/f13weapons/plasma_rifle.ogg'
 	e_cost = 100
