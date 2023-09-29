@@ -86,7 +86,8 @@
 		/datum/reagent/medicine/modafinil = 2,
 		/datum/reagent/medicine/psicodine = 2,
 		/datum/reagent/medicine/mentat = 3,
-		/datum/reagent/medicine/stimpak = 3
+		/datum/reagent/medicine/stimpak = 3,
+		/datum/reagent/pax = 3
 	)
 
 /obj/machinery/chem_lab/Initialize(mapload)
