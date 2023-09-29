@@ -23,8 +23,10 @@
 	immunity_type = "snow"
 
 	barometer_predictable = TRUE
+	obscures_sight = TRUE // try seeing stuff now! YOU CANT!
 
 
 /datum/weather/snow_storm/weather_act(mob/living/L)
-	L.adjust_bodytemperature(-rand(5,15))
+	var/armour = L.run_armor_check(null, "fire", silent = TRUE)
+	L.adjust_bodytemperature(-rand(10,20) * (100 - armour)/100)
 
