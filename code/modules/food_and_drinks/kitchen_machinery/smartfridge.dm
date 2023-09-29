@@ -241,9 +241,9 @@
 	desc = "A sandstone oven with racks above for hanging produce, used to dry plant products, food and hide."
 	icon = 'icons/fallout/farming/farming_structures.dmi'
 	icon_state = "drying_rack"
-	use_power = IDLE_POWER_USE
-	idle_power_usage = 15
-	active_power_usage = 600
+	use_power = NO_POWER_USE
+	idle_power_usage = 0
+	active_power_usage = 0
 	visible_contents = FALSE
 	proj_pass_rate = 30
 	pass_flags = LETPASSTHROW
@@ -292,6 +292,7 @@
 // 		return FALSE
 // 	return ..()
 
+/*
 /obj/machinery/smartfridge/drying_rack/power_change()
 	if(powered() && anchored)
 		stat &= ~NOPOWER
@@ -303,6 +304,7 @@
 	// . = ..()
 	// if(!powered())
 	// 	toggle_drying(TRUE)
+*/
 
 /obj/machinery/smartfridge/drying_rack/load() //For updating the filled overlay
 	..()
@@ -334,10 +336,8 @@
 /obj/machinery/smartfridge/drying_rack/proc/toggle_drying(forceoff)
 	if(drying || forceoff)
 		drying = FALSE
-		use_power = IDLE_POWER_USE
 	else
 		drying = TRUE
-		use_power = ACTIVE_POWER_USE
 	update_icon()
 
 /obj/machinery/smartfridge/drying_rack/proc/rack_dry()

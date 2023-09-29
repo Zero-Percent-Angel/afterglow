@@ -47,6 +47,10 @@
 		/obj/item/stock_parts/manipulator = 1,
 		/obj/item/stack/sheet/glass = 1)
 
+/obj/item/circuitboard/machine/autolathe/manual
+	name = "Manual Lathe (Machine Board)"
+	build_path = /obj/machinery/autolathe/manual
+
 /obj/item/circuitboard/machine/autolathe/secure
 	name = "Secure Autolathe (Machine Board)"
 	build_path = /obj/machinery/autolathe/secure
