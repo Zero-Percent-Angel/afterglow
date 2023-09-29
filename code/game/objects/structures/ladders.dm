@@ -176,17 +176,21 @@
 	if(!ladder)
 		to_chat(user, span_warning("there's nothing that way!"))
 		return
-	
+
 	if(!is_ghost)
 		user.visible_message("[user] begins to climb [going_up ? "up" : "down"] [src].", span_notice("You begin to climb [going_up ? "up" : "down"] [src]."))
-	if(!do_after(user, timetouse, target = src))	
+	else
+		var/turf/target = get_turf(ladder)
+		user.forceMove(target)
+		return
+	if(!do_after(user, timetouse, target = src))
 		in_use = FALSE
 		return
 
 	var/response = SEND_SIGNAL(user, COMSIG_LADDER_TRAVEL, src, ladder, going_up)
 	if(response & LADDER_TRAVEL_BLOCK)
 		return
-	
+
 	var/turf/target = get_turf(ladder)
 	user.zMove(target = target, z_move_flags = ZMOVE_CHECK_PULLEDBY|ZMOVE_ALLOW_BUCKLED|ZMOVE_INCLUDE_PULLED)
 
@@ -364,7 +368,7 @@
 /obj/structure/ladder/unbreakable/binary/unlinked //Crew gets to complete one
 	id = "unlinked_binary"
 	area_to_place = null
-	
+
 /obj/structure/ladder/unbreakable/transition
 	name = "transition zone"
 	desc = "<font color='#6eaa2c'>Head to the other side.</font>"
