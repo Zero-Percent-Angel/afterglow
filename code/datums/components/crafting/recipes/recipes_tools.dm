@@ -134,3 +134,15 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_TOOL
 	skill_level = REGULAR_CHECK
+
+/datum/crafting_recipe/manual_lathe
+	name = "Manual Lathe"
+	result = /obj/item/circuitboard/machine/autolathe/manual
+	time = 80
+	reqs = list(/obj/item/stack/crafting/metalparts = 1,
+				/obj/item/stack/sheet/metal = 2,
+				/obj/item/stack/rods = 2)
+	category = CAT_CRAFTING
+	subcategory = CAT_TOOL
+	skill_level = REGULAR_CHECK
+	falls_back_on_outdoors = TRUE

@@ -356,7 +356,7 @@
 
 /obj/item/projectile/beam/laser/gatling/hitscan //Gatling Laser
 	name = "laser beam"
-	damage = 16
+	damage = 15
 	armour_penetration = 0.14
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
@@ -653,7 +653,7 @@
 	name = "rapidfire beam"
 	icon_state = "emitter"
 	damage = 15
-	armour_penetration = 0.1
+	armour_penetration = 0.12
 	hitscan = TRUE
 	muzzle_type = /obj/effect/projectile/muzzle/laser/emitter
 	tracer_type = /obj/effect/projectile/tracer/laser/emitter

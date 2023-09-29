@@ -42,6 +42,19 @@
 	weather_tags = list(WEATHER_ALL)
 	always_unpowered = TRUE
 
+/area/f13/wasteland/cold
+	name = "Frozen Wasteland"
+	ambience_area = list(
+		/datum/looping_sound/ambient/critters,
+		/datum/looping_sound/ambient/critters/frogs,
+		/datum/looping_sound/ambient/forest,
+		/datum/looping_sound/ambient/general,
+	)
+	weather_tags = list(WEATHER_ALL_MINUS_HEAT)
+
+/area/f13/wasteland/cold/power
+	requires_power = FALSE
+
 /area/f13/wasteland/city
 	name = "City"
 	icon_state = "yellow"

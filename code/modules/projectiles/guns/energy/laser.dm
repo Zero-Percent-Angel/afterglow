@@ -866,17 +866,17 @@
 	equipsound = 'sound/f13weapons/equipsounds/RCWequip.ogg'
 	custom_price = PRICE_REALLY_EXPENSIVE
 	custom_premium_price = PRICE_REALLY_EXPENSIVE
-	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	slowdown = GUN_SLOWDOWN_SMG_HEAVY
+	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
+	draw_time = GUN_DRAW_NORMAL
 	fire_delay = GUN_FIRE_DELAY_SLOW
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
 	init_firemodes = list(
 		/datum/firemode/automatic/rpm300,
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 
 
