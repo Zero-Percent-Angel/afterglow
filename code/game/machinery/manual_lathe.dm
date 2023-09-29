@@ -3,7 +3,18 @@
 	use_power = NO_POWER_USE
 	idle_power_usage = 0
 	active_power_usage = 0
-	interaction_flags_machine = INTERACT_MACHINE_OFFLINE
+	stored_research = /datum/techweb/specialized/autounlocking/autolathe/public
+	categories = list(
+							"Tools",
+							"Construction",
+							"T-Comm",
+							"Security",
+							"Machinery",
+							"Medical",
+							"Misc",
+							"Dinnerware",
+							"Imported"
+							)
 
 /obj/machinery/autolathe/manual/use_power(amount, chan = -1)
 	return
