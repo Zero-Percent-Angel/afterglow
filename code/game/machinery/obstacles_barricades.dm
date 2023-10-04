@@ -17,7 +17,6 @@
 	density = TRUE
 	obj_integrity = 150
 	max_integrity = 150
-	pass_flags_self = LETPASSTHROW
 //	var/proj_pass_rate = 50 //How many projectiles will pass the cover. Lower means stronger cover
 	var/bar_material = METAL
 
@@ -368,7 +367,8 @@
 	obj_integrity = 400
 	max_integrity = 400
 	proj_pass_rate = 90
-	pass_flags = LETPASSTHROW | PASSGRILLE //Feed the prisoners, or not.
+	pass_flags_self = LETPASSTHROW | BLOCKMOBTHROW
+	pass_flags = LETPASSTHROW | PASSGRILLE  //Feed the prisoners, or not.
 
 /obj/structure/barricade/train
 	name = "train siding"

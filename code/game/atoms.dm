@@ -224,7 +224,7 @@
 	//SHOULD_BE_PURE(TRUE)
 	if(mover.pass_flags & pass_flags_self)
 		return TRUE
-	if(mover.throwing && (pass_flags_self & LETPASSTHROW))
+	if(mover.throwing && (pass_flags_self & LETPASSTHROW) && !(pass_flags_self & BLOCKMOBTHROW && ismob(mover)))
 		return TRUE
 	return !density
 

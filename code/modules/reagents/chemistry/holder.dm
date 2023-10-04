@@ -193,6 +193,8 @@
 	var/part = amount / src.total_volume
 	var/trans_data = null
 	var/list/transferred = list()
+	if (part < 0 || amount < 0)
+		return
 	for(var/reagent in cached_reagents)
 		var/datum/reagent/T = reagent
 		var/transfer_amount = T.volume * part
@@ -867,7 +869,7 @@
 
 	if(amount < CHEMICAL_QUANTISATION_LEVEL)//To prevent small ammount problems.
 		return FALSE
-	
+
 	if(!IS_FINITE(amount))
 		stack_trace("non finite amount passed to add reagent [amount] [reagent]")
 		return FALSE

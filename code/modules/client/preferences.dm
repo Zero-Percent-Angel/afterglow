@@ -1542,6 +1542,7 @@ Records disabled until a use for them is found
 
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
 	dat += "<center><b>Allocate points</b></center>"
+	dat += "<center>If you need help figuring out what the specials are for, <a href='?_src_=prefs;preference=help_special;task=input'>Click here!</a></center>"
 	dat += "<center>Note: SPECIAL has mechanical effects on gameplay and governs skills too.</center><br>"
 	dat += "<center>[total] out of 40 possible</center><br>"
 	dat += "<b>Strength	   :</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
@@ -1670,6 +1671,24 @@ Records disabled until a use for them is found
 		var/client/C = usr.client
 		if(C)
 			C.clear_character_previews()
+
+/datum/preferences/proc/show_special_help(mob/user)
+	var/list/dat = list()
+	dat += "<center><b>Special Help</b></center>"
+	dat += "All SPECIAL stats influence different skills, have a play with them to see how your total skill values change!"
+	dat += "<b>Strength	   :</b> Strength effects melee damage, armor slowdown, held item slowdown<BR>"
+	dat += "<b>Perception  :</b> Perception effects bullet spread, night sight, and finding items in trash and spotting things.<BR>"
+	dat += "<b>Endurance   :</b> Endurance increases your health and stamina buffer.<BR>"
+	dat += "<b>Charisma    :</b> Charisma effects mood, it also increases brain health.<BR>"
+	dat += "<b>Intelligence:</b> Intelligence gives extra skill points to allocate.<BR>"
+	dat += "<b>Agility     :</b> Agility gives extra movement speed, slightly increased chance for attacks to miss you and lets you recover from climbing faster.<BR>"
+	dat += "<b>Luck        :</b> Luck acts as a modifier on every roll being made if you're below 5 it'll bring you down, above 5 it'll buff you up. It also helps with finding items in trash piles.<BR>"
+	user << browse(null, "window=preferences")
+	var/datum/browser/popup = new(user, "special_help", "<div align='center'>Special Help</div>", 400, 500)
+	popup.set_window_options("can_close=1")
+	popup.set_content(dat.Join())
+	popup.open(0)
+	return
 
 /datum/preferences/proc/process_link(mob/user, list/href_list)
 	if(href_list["jobbancheck"])
@@ -1876,6 +1895,9 @@ Records disabled until a use for them is found
 					if(new_point)
 						special_l = max(min(round(text2num(new_point)), min(9, remainingSpecialBalance() + special_l)),1)
 					SetSpecial(user)
+					return 1
+				if("help_special")
+					show_special_help(user)
 					return 1
 				if("skill_guns")
 					var/new_point = input(user, "Choose Amount(0-99)", "Guns") as num|null
