@@ -58,7 +58,7 @@ GLOBAL_LIST_INIT(fish_rates, list(
 		return
 	if(inuse)
 		if(current_wait <= world.time && world.time <= current_waitfail)
-			var/fish_result = complete_fishing()
+			var/fish_result = complete_fishing(user)
 			switch(fish_result)
 				if(1)
 					to_chat(current_user, span_warning("You got trash, lame..."))
@@ -85,17 +85,17 @@ GLOBAL_LIST_INIT(fish_rates, list(
 		playsound(src.loc, 'sound/f13items/fishready.ogg', 100, TRUE, -1)
 		to_chat(current_user,"You've got something...")
 
-/obj/item/fishingrod/proc/complete_fishing()
-	var/fish_got = prob(trash_chance)
+/obj/item/fishingrod/proc/complete_fishing(mob/user)
+	var/fish_got = user.skill_roll(SKILL_OUTDOORSMAN, DIFFICULTY_CHALLENGE)
 	switch(fish_got)
 		if(FALSE)
 			if(prob(trash_chance))
 				var/junk_item = pick(GLOB.loot_garbage)
 				new junk_item(current_turf)
 				return 1
-			if(prob(10))
+			if(prob(user.special_l))
 				new /obj/item/salvage/low(current_turf)
-				if(prob(5))
+				if(prob(user.special_l))
 					new /obj/item/salvage/high(current_turf)
 				return 1
 			return 2
