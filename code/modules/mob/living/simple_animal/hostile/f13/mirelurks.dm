@@ -14,7 +14,7 @@
 	icon_living = "mirelurk"
 	icon_dead = "mirelurk_d"
 	speed = 1
-	can_ghost_into = TRUE
+	can_ghost_into = FALSE
 	move_to_delay = 3
 	// m2d 3 = standard, less is fast, more is slower.
 

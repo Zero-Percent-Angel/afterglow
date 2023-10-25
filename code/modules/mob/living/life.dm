@@ -16,9 +16,13 @@
 		var/obj/item/organ/brain/brain = getorgan(/obj/item/organ/brain)
 		if (istype(brain))
 			brain.maxHealth += ((special_c + special_i + special_p)*2 - 25)
-		update_special_speed((5-special_a)/20)//SPECIAL Integration
+		var/obj/item/organ/eyes/eyes = getorgan(/obj/item/organ/eyes)
+		if (istype(eyes))
+			lighting_alpha = 256 - (special_p * 2)
+		update_special_speed((5-special_a)/40)//SPECIAL Integration
+		SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "charisma", /datum/mood_event/charisma, (special_c-5)*2)
 		SPECIAL_SET = TRUE
-	
+
 	//SHOULD_NOT_SLEEP(TRUE)
 	if(mob_transforming)
 		return

@@ -36,9 +36,9 @@
 		nextcombatpopup = world.time + 10 SECONDS
 		if(state)
 			if (prob(50))
-				playsound(src, 'modular_coyote/sound/combatintent/waawaa2.ogg', 50)
+				playsound(src, 'modular_coyote/sound/combatintent/waawaa2.ogg', 25)
 			else
-				playsound(src, 'modular_coyote/sound/combatintent/waawaa1.ogg', 50)
+				playsound(src, 'modular_coyote/sound/combatintent/waawaa1.ogg', 25)
 			//flick_overlay(src, "combat", 20)
 			visible_message(span_warning("[src] gets ready for combat!"))
 		else if(!state)

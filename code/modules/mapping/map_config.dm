@@ -5,7 +5,7 @@
 
 /datum/map_config
 	// Metadata
-	var/config_filename = "_maps/pahrump.json"
+	var/config_filename = "_maps/tipton.json"
 	var/defaulted = TRUE  // set to FALSE by LoadConfig() succeeding
 	// Config from maps.txt
 	var/config_max_users = 0
@@ -17,8 +17,8 @@
 
 	// Config actually from the JSON - should default to Box
 	var/map_name = "Yuma"
-	var/map_path = "map_files/Pahrump-Sunset"
-	var/map_file = list("Dungeons.dmm", "Pahrump-Sunset-Lower.dmm", "Pahrump-Sunset.dmm", "Pahrump-Sunset-Upper.dmm", "Pahrump-Sunset-Upper-2.dmm", "RockSprings.dmm", "RedRiver.dmm")
+	var/map_path = "map_files/Tipton"
+	var/map_file = list("Dungeons_1.dmm", "Tipton-Underground-1.dmm", "Tipton-Surface-2.dmm", "Tipton-Sky-3.dmm")
 	var/list/added_jobs = list()     //Overrides the "none" faction using job name
 	var/list/removed_jobs = list()   //Removes the "none" faction using job name - can also use #all# (case sensitive)
 
@@ -46,7 +46,8 @@
 	var/shuttles = list(
 		"cargo" = "cargo_pahrump",
 		"ferry" = "ferry_fancy",
-		"emergency" = "emergency_pahrump")
+		"emergency" = "emergency_pahrump"
+		)
 
 	var/year_offset = 257 //The offset of ingame year from the actual IRL year. You know you want to make a map that takes place in the 90's. Don't lie.
 

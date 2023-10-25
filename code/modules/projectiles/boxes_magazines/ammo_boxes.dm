@@ -82,13 +82,13 @@
 	name = "ammo box (.22lr rubber)"
 	desc = "A box of .22 rubber rounds. For when you want to be useless."
 	ammo_type = /obj/item/ammo_casing/a22/rubber
-
+/*
 /obj/item/ammo_box/m22/shock
 	name = "ammo box (.22lr electroshock)"
 	icon_state = "22shockbox"
 	desc = "A box of .22 electroshock rounds."
 	ammo_type = /obj/item/ammo_casing/a22/shock
-
+*/
 //9mm and .38
 /obj/item/ammo_box/c9mm
 	name = "ammo box (9mm)"
@@ -119,37 +119,6 @@
 	icon_state = "improvshotbag"
 	multiple_sprites = 3
 	ammo_type = /obj/item/ammo_casing/c9mm/improvised
-
-/obj/item/ammo_box/c38box
-	name = "ammo box (.38)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "38box"
-	multiple_sprites = 2
-	caliber = list(CALIBER_38)
-	ammo_type = /obj/item/ammo_casing/c38
-	max_ammo = 25
-	w_class = WEIGHT_CLASS_SMALL
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SMALL_BOX)
-
-/obj/item/ammo_box/c38box/rubber
-	name = "ammo box (.38 rubber)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "38box"
-	multiple_sprites = 2
-	ammo_type = /obj/item/ammo_casing/c38/rubber
-
-/obj/item/ammo_box/c38box/incendiary
-	name = "ammo box (.38 incendiary-tipped)"
-	desc = "A box of .38 incendiary-tipped rounds. This'll burn."
-	ammo_type = /obj/item/ammo_casing/c38/incendiary
-
-/obj/item/ammo_box/c38box/improvised
-	name = "bag with reloaded .38 bullets"
-	desc = "The casings are worn, the gunpowder some homebrew mix of dubious quality. At least it goes bang."
-	icon_state = "improvshotbag"
-	multiple_sprites = 3
-	ammo_type = /obj/item/ammo_casing/c38/improvised
-
 
 //10mm
 /obj/item/ammo_box/c10mm
@@ -186,7 +155,7 @@
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "357box"
 	multiple_sprites = 2
-	caliber = list(CALIBER_357, CALIBER_38)
+	caliber = list(CALIBER_357)
 	ammo_type = /obj/item/ammo_casing/a357
 	max_ammo = 25
 	custom_materials = list(/datum/material/iron = MATS_PISTOL_HEAVY_BOX)
@@ -235,22 +204,6 @@
 	ammo_type = /obj/item/ammo_casing/m44/improvised
 	multiple_sprites = 3
 
-/obj/item/ammo_box/a45lcbox
-	name = "ammo box (.45 Long Colt)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "ammobox"
-	caliber = list(CALIBER_45LC)
-	ammo_type = /obj/item/ammo_casing/a45lc
-	max_ammo = 30
-	w_class = WEIGHT_CLASS_SMALL
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_MEDIUM_BOX)
-
-/obj/item/ammo_box/a45lcbox/improvised
-	name = "bag with reloaded .45 Long Colt bullets"
-	icon_state = "improvshotbag"
-	ammo_type = /obj/item/ammo_casing/a45lc/improvised
-	multiple_sprites = 3
-
 
 // .45 ACP
 /obj/item/ammo_box/c45
@@ -295,7 +248,7 @@
 	max_ammo = 15
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_MEDIUM_BOX)
-
+/*
 /obj/item/ammo_box/c4570box/explosive
 	name = "ammo box (.45-70 HE)"
 	desc = ".45-70 Goverment rounds with explosive tips. Surely an archaic blackpowder cartridge with an explosive payload is completely safe."
@@ -305,7 +258,7 @@
 	name = "ammo box (.45-70 ultradense)"
 	desc = ".45-70 Goverment rounds with heavy, blunt bullets. Sure to knock even an elephant off their footing."
 	ammo_type = /obj/item/ammo_casing/c4570/knockback
-
+*/
 /obj/item/ammo_box/c4570box/improvised
 	name = "bag with reloaded .45-70 bullets"
 	ammo_type = /obj/item/ammo_casing/c4570/improvised
@@ -326,12 +279,12 @@
 	max_ammo = 30
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_SMALL_BOX)
-
+/*
 /obj/item/ammo_box/m5mmbox/shock
 	name = "ammo box (5mm ESD)"
 	desc = "Advanced 5mm bullets with electrostatic discharger tips."
 	ammo_type = /obj/item/ammo_casing/m5mm/shock
-
+*/
 /obj/item/ammo_box/m5mmbox/improvised
 	name = "bag with reloaded 5mm bullets"
 	ammo_type = /obj/item/ammo_casing/m5mm/improvised
@@ -436,12 +389,12 @@
 	STOP_PROCESSING(SSradiation,src)
 	..()
 */
-
+/*
 /obj/item/ammo_box/a762box/microshrapnel
 	name = "ammo box (7.62x51 microshrapnel)"
 	desc = "Now with EVEN MORE fragments!"
 	ammo_type = /obj/item/ammo_casing/a762/microshrapnel
-
+*/
 /obj/item/ammo_box/a762box/rubber
 	name = "ammo box (7.62x51 rubber)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
@@ -461,27 +414,27 @@
 	max_ammo = 12
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_HEAVY_BOX)
-
+/*
 /obj/item/ammo_box/a50MGbox/rubber
 	name = "ammo box (.50 rubber)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "50box"
 	multiple_sprites = 2
 	ammo_type = /obj/item/ammo_casing/a50MG/rubber
-
+*/
 /obj/item/ammo_box/a50MGbox/improvised
 	name = "bag with reloaded .50MG slugs"
 	ammo_type = /obj/item/ammo_casing/a50MG/improvised
 	icon_state = "improvshotbag"
 	max_ammo = 10
 	multiple_sprites = 3
-
+/*
 /obj/item/ammo_box/a50MGbox/contam
 	name = "ammo box (12.7mm contaminated)"
 	max_ammo = 12
 	desc = "12.7mm bullets loaded with a gaseous hepatoxic payload, which reduces the effectiveness of medicine and toxins."
 	ammo_type = /obj/item/ammo_casing/a50MG/contam
-
+*/
 /*
 /obj/item/ammo_box/a50MGbox/uraniumtipped
 	name = "ammo box (12.7mm uranium-tipped)"
@@ -500,12 +453,12 @@
 	max_ammo = 18
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron = MATS_PISTOL_HEAVY_BOX)
-
+/*
 /obj/item/ammo_box/m14mm/contam
 	name = "ammo box (14mm contaminated)"
 	desc = "14mm bullets loaded with a gaseous hepatoxic payload, which reduces the effectiveness of medicine and toxins."
 	ammo_type = /obj/item/ammo_casing/p14mm/contam
-
+*/
 /obj/item/ammo_box/m14mm/improvised
 	name = "bag with reloaded 14mm bullets"
 	icon_state = "improvshotbag"
@@ -542,7 +495,7 @@
 /obj/item/ammo_box/m473/dumdum
 	name = "ammo box (4.73mm flat-nose)"
 	ammo_type = /obj/item/ammo_casing/caseless/g11/dumdum
-
+/*
 /obj/item/ammo_box/m473/explosive
 	name = "ammo box (4.73mm explosive)"
 	desc = "Explosive caseless rounds. Very safe."
@@ -551,7 +504,7 @@
 /obj/item/ammo_box/m473/shock
 	name = "ammo box (4.73mm ESD)"
 	ammo_type = /obj/item/ammo_casing/caseless/g11/shock
-
+*/
 /obj/item/ammo_box/m473/hv
 	name = "ammo box (4.73mm high-velocity)"
 	ammo_type = /obj/item/ammo_casing/caseless/g11/hv
@@ -564,17 +517,6 @@
 	ammo_type = /obj/item/ammo_casing/caseless/lasermusket
 	caliber = list(CALIBER_MUSKET_LASER)
 	max_ammo = 18
-	custom_materials = list(/datum/material/iron = MATS_RIFLE_SMALL_BOX)
-	w_class = WEIGHT_CLASS_SMALL
-
-/obj/item/ammo_box/plasmamusket
-	name = "Canister box (Plasma musket)"
-	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "plasmusketbox"
-	multiple_sprites = 2
-	ammo_type = /obj/item/ammo_casing/caseless/plasmacaster
-	max_ammo = 6
-	caliber = list(CALIBER_MUSKET_PLASMA)
 	custom_materials = list(/datum/material/iron = MATS_RIFLE_SMALL_BOX)
 	w_class = WEIGHT_CLASS_SMALL
 
@@ -598,21 +540,6 @@
 	custom_materials = list(/datum/material/iron = MATS_TUBE)
 	w_class = WEIGHT_CLASS_SMALL
 	multiple_sprites = 1
-
-//.38
-/obj/item/ammo_box/c38
-	name = "speed loader (.38)"
-	desc = "Designed to quickly reload revolvers."
-	icon_state = "357"
-	caliber = list(CALIBER_38)
-	ammo_type = /obj/item/ammo_casing/c38
-	max_ammo = 6
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
-
-/obj/item/ammo_box/c38/empty
-	start_empty = 1
 
 //.22
 /obj/item/ammo_box/c22
@@ -648,10 +575,10 @@
 //.357
 /obj/item/ammo_box/a357
 	name = "speed loader (.357)"
-	desc = "Designed to quickly reload revolvers. Also accepts .38!"
+	desc = "Designed to quickly reload revolvers."
 	icon_state = "357"
 	ammo_type = /obj/item/ammo_casing/a357
-	caliber = list(CALIBER_357, CALIBER_38)
+	caliber = list(CALIBER_357)
 	max_ammo = 6
 	multiple_sprites = 1
 	w_class = WEIGHT_CLASS_TINY
@@ -670,9 +597,9 @@
 
 /obj/item/ammo_box/tube/a357
 	name = "speed loader tube (.357)"
-	desc = "Designed to quickly reload repeaters. Also accepts .38!"
+	desc = "Designed to quickly reload repeaters."
 	icon_state = "357tube"
-	caliber = list(CALIBER_357, CALIBER_38)
+	caliber = list(CALIBER_357)
 	ammo_type = /obj/item/ammo_casing/a357
 	max_ammo = 12
 
@@ -721,20 +648,6 @@
 	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
 
 /obj/item/ammo_box/c45rev/empty
-	start_empty = 1
-
-/obj/item/ammo_box/a45lcrev
-	name = "speed loader (.45 LC)"
-	desc = "Designed to quickly reload revolvers."
-	icon_state = "44"
-	caliber = list(CALIBER_45LC)
-	ammo_type = /obj/item/ammo_casing/a45lc
-	max_ammo = 6
-	multiple_sprites = 1
-	w_class = WEIGHT_CLASS_TINY
-	custom_materials = list(/datum/material/iron = MATS_PISTOL_SPEEDLOADER)
-
-/obj/item/ammo_box/a45lcrev/empty
 	start_empty = 1
 
 // 308
@@ -882,6 +795,16 @@
 	custom_materials = list(/datum/material/iron = MATS_STRIPPER)
 	w_class = WEIGHT_CLASS_TINY
 
+/obj/item/ammo_box/a556/doublestacked
+	name = "double stack stripper clip (5.56x45mm)"
+	desc = "A stripper clip."
+	icon_state = "762a"
+	ammo_type = /obj/item/ammo_casing/a556
+	max_ammo = 10
+	multiple_sprites = 1
+	w_class = WEIGHT_CLASS_SMALL
+	custom_materials = list(/datum/material/iron = MATS_STRIPPER)
+
 
 //Needler
 /obj/item/ammo_box/needle
@@ -915,8 +838,7 @@
 	ammo_type = /obj/item/ammo_casing/a50MG/incendiary
 	max_ammo = 5
 	multiple_sprites = 1
-
-
+/*
 /obj/item/ammo_box/a50MG/explosive
 	name = "anti-materiel explosive ammo rack (.50MG)"
 	desc = "5 rounds of explosive .50 MG. More then enough to kill anything that moves."
@@ -924,7 +846,7 @@
 	ammo_type = /obj/item/ammo_casing/a50MG/explosive
 	max_ammo = 5
 	multiple_sprites = 1
-
+*/
 /obj/item/ammo_box/a50MG/penetrator
 	name = "anti-materiel penetrator ammo rack (.50MG)"
 	desc = "5 rounds of penetrator .50 MG, when you really want something dead and it's on the other side of a wall."

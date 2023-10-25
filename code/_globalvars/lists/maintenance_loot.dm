@@ -171,8 +171,6 @@ GLOBAL_LIST_INIT(trash_part, list(
 GLOBAL_LIST_INIT(trash_clothing, list(
 	/obj/item/clothing/glasses/sunglasses/big = 5,
 	/obj/item/clothing/glasses/sunglasses = 5,
-	/obj/item/clothing/suit/armor/medium/vest/breastplate/light = 5,
-	/obj/item/clothing/head/helmet/knight/f13/rider = 5,
 	/obj/item/clothing/shoes/f13/cowboy = 5,
 	/obj/item/clothing/shoes/f13/explorer = 5,
 	/obj/item/clothing/shoes/f13/diesel = 5,
@@ -194,7 +192,6 @@ GLOBAL_LIST_INIT(trash_ammo, list(
 	/obj/item/ammo_box/c10mm/improvised = 5,
 	/obj/item/ammo_box/c9mm/improvised = 5,
 	/obj/item/ammo_casing/shotgun/improvised = 1,
-	/obj/item/ammo_box/c38box/improvised = 3,
 	/obj/item/ammo_box/m44box/improvised = 1,
 	/obj/item/ammo_box/c45/improvised = 5,
 	/obj/item/ammo_box/m14mm/improvised = 1,
@@ -223,7 +220,7 @@ GLOBAL_LIST_INIT(trash_craft, list(
 
 GLOBAL_LIST_INIT(trash_gun, list(
 	/obj/item/gun/ballistic/automatic/hobo/zipgun = 2,
-	/obj/item/gun/ballistic/revolver/shotpistol = 1,
+	/obj/item/gun/ballistic/revolver/single_shotgun = 1,
 	/obj/item/gun/ballistic/revolver/hobo/pepperbox = 2,
 	/obj/item/gun/ballistic/automatic/varmint = 1,
 	/obj/item/gun/ballistic/automatic/sportcarbine = 1,
@@ -239,9 +236,9 @@ GLOBAL_LIST_INIT(trash_money, list(
 ))
 
 GLOBAL_LIST_INIT(trash_mob, list(
-	/obj/effect/spawner/bundle/mobs/rat/one = 30,
-	/obj/effect/spawner/bundle/mobs/rat/three = 9,
-	/obj/effect/spawner/bundle/mobs/rat/five = 1
+	///obj/effect/spawner/bundle/mobs/rat/one = 30,
+	///obj/effect/spawner/bundle/mobs/rat/three = 9,
+	///obj/effect/spawner/bundle/mobs/rat/five = 1
 ))
 
 GLOBAL_LIST_INIT(trash_tool, list(
@@ -369,19 +366,12 @@ GLOBAL_LIST_INIT(loot_t1_armor, list(
 ))
 
 GLOBAL_LIST_INIT(loot_t2_armor, list(
-	/obj/item/clothing/suit/armor/light/raider/supafly,
-	/obj/item/clothing/head/helmet/f13/raider,
-	/obj/item/clothing/suit/armor/light/raider/sadist,
 	/obj/item/clothing/head/helmet/f13/raider/arclight,
 	/obj/item/clothing/suit/armor/medium/raider/blastmaster,
 	/obj/item/clothing/head/helmet/f13/raider/blastmaster,
 	/obj/item/clothing/suit/armor/medium/raider/yankee,
 	/obj/item/clothing/head/helmet/f13/raider/yankee,
 	/obj/item/clothing/head/helmet/f13/fiend,
-	/obj/item/clothing/suit/armor/light/raider/painspike,
-	/obj/item/clothing/head/helmet/f13/raider/psychotic,
-	/obj/item/clothing/suit/armor/light/raider/supafly,
-	/obj/item/clothing/head/helmet/f13/raider,
 	/obj/item/clothing/suit/armor/medium/raider/iconoclast
 ))
 
@@ -389,21 +379,18 @@ GLOBAL_LIST_INIT(loot_t3_armor, list(
 	/obj/item/clothing/suit/armor/heavy/metal,
 	/obj/item/clothing/head/helmet/knight/f13/metal,
 	/obj/item/clothing/suit/armor/heavy/metal,
-	/obj/item/clothing/head/helmet/f13/metalmask,
 	/obj/item/clothing/suit/armor/light/leather,
-	/obj/item/clothing/suit/armor/light/leather/leather_jacketmk2,
+	/obj/item/clothing/suit/armor/light/leather/leather_jacket,
 	/obj/item/clothing/suit/armor/light/leather/leathercoat
 ))
 
 GLOBAL_LIST_INIT(loot_t4_armor, list(
 	/obj/item/clothing/suit/armor/heavy/metal/reinforced,
-	/obj/item/clothing/head/helmet/f13/metalmask/mk2,
 	/obj/item/clothing/suit/armor/light/leather/leathercoat,
 	/obj/item/clothing/head/helmet/f13/combat/swat,
-	/obj/item/clothing/suit/armor/medium/combat/swat,
 	/obj/item/clothing/suit/armor/medium/combat,
 	/obj/item/clothing/head/helmet/f13/combat,
-	/obj/item/clothing/suit/armor/heavy/vest/bulletproof,
+	/obj/item/clothing/suit/armor/medium/vest/bulletproof,
 	/obj/item/clothing/head/helmet/alt,
 	/obj/item/clothing/suit/armor/medium/combat/dark,
 	/obj/item/clothing/head/helmet/f13/combat/dark,
@@ -414,9 +401,10 @@ GLOBAL_LIST_INIT(loot_t4_armor, list(
 ))
 
 GLOBAL_LIST_INIT(loot_t5_armor, list(
-	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b,
-	/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b,
-	/obj/item/clothing/suit/armor/heavy/riot/combat,
+	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d,
+	/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d,
+	/obj/item/clothing/suit/armor/heavy/riot,
+	/obj/item/clothing/suit/armor/heavy/riot/police,
 	/obj/item/clothing/head/helmet/f13/combat/rangerbroken,
 	/obj/item/clothing/suit/armor/medium/combat/mk2,
 	/obj/item/clothing/head/helmet/f13/combat/mk2
@@ -526,7 +514,6 @@ GLOBAL_LIST_INIT(loot_t1_range, list(
 	/obj/item/gun/ballistic/rifle/mosin,
 	/obj/item/ammo_box/a762,
 	/obj/item/gun/ballistic/revolver/police,
-	/obj/item/ammo_box/c38,
 	/obj/item/gun/ballistic/revolver/hobo/pepperbox,
 	/obj/item/gun/ballistic/rifle/hunting,
 	/obj/item/ammo_box/a308,
@@ -555,17 +542,13 @@ GLOBAL_LIST_INIT(loot_t2_range, list(
 	/obj/item/ammo_box/a308,
 	/obj/item/ammo_box/m44,
 	/obj/item/gun/ballistic/rifle/repeater/cowboy,
-	/obj/item/ammo_box/c38,
-	/obj/item/ammo_box/c38,
 	/obj/item/gun/ballistic/revolver/colt357,
-	/obj/item/ammo_box/c38,
 	/obj/item/gun/ballistic/automatic/service,
 	/obj/item/ammo_box/magazine/m556/rifle,
 	/obj/item/gun/energy/laser/pistol,
 	/obj/item/stock_parts/cell/ammo/ec,
 	/obj/item/gun/ballistic/automatic/m1carbine,
 	/obj/item/ammo_box/magazine/m10mm/adv/simple,
-	/obj/item/gun/ballistic/automatic/delisle,
 	/obj/item/ammo_box/magazine/m9mm/doublestack
 ))
 
@@ -646,7 +629,6 @@ GLOBAL_LIST_INIT(loot_t1_ammo, list(
 	/obj/item/ammo_box/magazine/m9mm,
 	/obj/item/ammo_box/shotgun/buck,
 	/obj/item/ammo_box/shotgun/bean,
-	/obj/item/ammo_box/c38,
 	/obj/item/ammo_box/magazine/m10mm/adv/simple,
 	/obj/item/ammo_box/magazine/m556/rifle/small
 ))
@@ -657,7 +639,6 @@ GLOBAL_LIST_INIT(loot_t2_ammo, list(
 	/obj/item/ammo_box/a308,
 	/obj/item/ammo_box/magazine/m10mm/adv/simple,
 	/obj/item/ammo_box/magazine/m556/rifle,
-	/obj/item/ammo_box/c38,
 	/obj/item/ammo_box/magazine/m9mm,
 	/obj/item/ammo_box/m44,
 	/obj/item/ammo_box/tube/a357,
@@ -901,12 +882,13 @@ GLOBAL_LIST_INIT(loot_skillbook, list(
 ))
 
 GLOBAL_LIST_INIT(loot_craft_advanced, list(
-	/obj/item/advanced_crafting_components/flux,
-	/obj/item/advanced_crafting_components/lenses,
-	/obj/item/advanced_crafting_components/conductors,
-	/obj/item/advanced_crafting_components/receiver,
-	/obj/item/advanced_crafting_components/assembly,
-	/obj/item/advanced_crafting_components/alloys
+	/obj/item/advanced_crafting_components/flux = 1,
+	/obj/item/advanced_crafting_components/lenses = 1,
+	/obj/item/advanced_crafting_components/conductors = 1,
+	/obj/item/advanced_crafting_components/receiver = 1,
+	/obj/item/advanced_crafting_components/assembly = 1,
+	/obj/item/advanced_crafting_components/alloys = 1,
+	/obj/item/advanced_crafting_components/p_circuits = 2
 ))
 
 GLOBAL_LIST_INIT(loot_attachment, list(

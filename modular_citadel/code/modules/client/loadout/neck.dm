@@ -111,6 +111,10 @@
 	name = "choker"
 	path = /obj/item/clothing/neck/petcollar/choker
 
+/datum/gear/neck/choker/cross
+	name = "gothic choker"
+	path = /obj/item/clothing/neck/petcollar/choker/goth
+
 /datum/gear/neck/scarf
 	name = "white scarf"
 	subcategory = LOADOUT_SUBCATEGORY_NECK_SCARVES
@@ -159,3 +163,14 @@
 /datum/gear/neck/scarf/stripedgreen
 	name = "striped green scarf"
 	path = /obj/item/clothing/neck/stripedgreenscarf
+
+/datum/gear/neck/paladin_cape
+	name = "Paladin Cape"
+	path = /obj/item/clothing/neck/mantle/bos/paladin
+	subcategory = LOADOUT_SUBCATEGORY_NECK_FACTIONS
+	cost = 1
+	restricted_desc = "BOS"
+	restricted_roles = list("Head Paladin",
+							"Senior Paladin",
+							"Paladin",
+						)

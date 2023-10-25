@@ -19,7 +19,7 @@
 	design_ids = list("mech_drill", "mech_mscanner", "mech_extinguisher", "mech_cable_layer", "mech_hydraulic_clamp")
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-
+/*
 /datum/techweb_node/ripley
 	id = "mech_ripley"
 	display_name = "EXOSUIT: Ripley"
@@ -29,7 +29,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-
+*/
 /datum/techweb_node/clarke
 	id = "mech_clarke"
 	display_name = "EXOSUIT: Clarke"
@@ -49,7 +49,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-
+/*
 /datum/techweb_node/odysseus
 	id = "mecha_odysseus"
 	display_name = "EXOSUIT: Odysseus"
@@ -104,7 +104,6 @@
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
 
-/*
 /datum/techweb_node/phazon
 	id = "mecha_phazon"
 	display_name = "EXOSUIT: Phazon"
@@ -123,7 +122,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-
+/*
 /datum/techweb_node/med_mech_tools
 	id = "med_mech_tools"
 	display_name = "Medical Exosuit Equipment"
@@ -144,7 +143,7 @@
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
 
-/* ## Uncomment it after projectiles don't runtime anymore
+## Uncomment it after projectiles don't runtime anymore
 /datum/techweb_node/mech_scattershot
 	id = "mecha_tools"
 	display_name = "Exosuit Weapon (LBX AC 10 \"Scattershot\")"
@@ -176,7 +175,6 @@
 	prereq_ids = list("adv_weaponry")
 	design_ids = list("mech_lmg", "mech_lmg_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-*/
 
 /datum/techweb_node/mech_ion
 	id = "mmech_ion"
@@ -258,7 +256,6 @@
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
 
-/*
 /datum/techweb_node/clusterbang_launcher
 	id = "clusterbang_launcher"
 	display_name = "Exosuit Module (SOB-3 Clusterbang Launcher)"
@@ -266,7 +263,7 @@
 	prereq_ids = list("adv_weaponry")
 	design_ids = list("clusterbang_launcher", "clusterbang_launcher_ammo")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-*/
+
 /datum/techweb_node/mech_teleporter
 	id = "mech_teleporter"
 	display_name = "Exosuit Module (Teleporter Module)"
@@ -276,7 +273,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-/*
+
 /datum/techweb_node/mech_wormhole_gen
 	id = "mech_wormhole_gen"
 	display_name = "Exosuit Module (Localized Wormhole Generator)"
@@ -284,7 +281,7 @@
 	prereq_ids = list("adv_bluespace")
 	design_ids = list("mech_wormhole_gen")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
-*/
+
 /datum/techweb_node/mech_taser
 	id = "mech_taser"
 	display_name =  "Exosuit Weapon (PBT \"Pacifier\" Mounted Taser)"
@@ -294,7 +291,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
-
+*/ 
 /datum/techweb_node/mech_diamond_drill
 	id = "mech_diamond_drill"
 	display_name =  "Exosuit Diamond Drill"
@@ -304,3 +301,4 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = HARD_CHECK
+

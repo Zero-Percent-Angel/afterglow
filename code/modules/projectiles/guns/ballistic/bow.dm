@@ -6,6 +6,7 @@
 	icon_prefix = "bow"
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = GUN_TWO_HAND_ONLY //need both hands to fire
+	gun_skill_used = SKILL_THROWING
 	force = 5
 	mag_type = /obj/item/ammo_box/magazine/internal/bow
 	fire_sound = 'sound/weapons/bowfire.wav'
@@ -13,7 +14,7 @@
 	item_flags = NONE
 	pin = null
 	no_pin_required = TRUE
-	trigger_guard = TRIGGER_GUARD_NONE //so ashwalkers can use it
+	trigger_guard = TRIGGER_GUARD_ALLOW_ALL //so ashwalkers can use it
 	spawnwithmagazine = TRUE
 	casing_ejector = TRUE
 	var/recentdraw

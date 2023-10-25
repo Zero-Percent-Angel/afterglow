@@ -304,8 +304,8 @@
 		if(O.obj_flags & FROZEN)
 			O.make_unfrozen()
 
-	if(!AM.zfalling && !istype(src, /turf/open/transparent/openspace))
-		zFall(AM)
+	//if(!AM.zfalling && !istype(src, /turf/open/transparent/openspace))
+	//	zFall(AM)
 
 /turf/proc/is_plasteel_floor()
 	return FALSE

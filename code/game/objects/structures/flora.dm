@@ -71,7 +71,7 @@
 /obj/structure/flora/tree/pine/xmas/presents
 	icon_state = "pinepresents"
 	desc = "A wondrous decorated Christmas tree. It has presents!"
-	var/gift_type = /obj/item/a_gift/anything
+	var/gift_type = /obj/item/a_gift
 	var/list/ckeys_that_took = list()
 
 /obj/structure/flora/tree/pine/xmas/presents/on_attack_hand(mob/living/user, act_intent = user.a_intent, unarmed_attack_flags)
@@ -335,8 +335,11 @@
 /obj/item/kirbyplants/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/tactical)
-	addtimer(CALLBACK(src, /datum.proc/_AddElement, list(/datum/element/beauty, 500)), 0)
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE, force_unwielded=10, force_wielded=10)
+
+/obj/item/kirbyplants/LateInitialize()
+	. = ..()
+	AddElement(/datum/element/beauty, 500)
 
 /obj/item/kirbyplants/random
 	icon = 'icons/obj/flora/_flora.dmi'

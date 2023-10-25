@@ -49,7 +49,7 @@
 	var/dynamic_fhair_suffix = ""//mask > head for facial hair
 
 	//basically a restriction list.
-	var/list/species_restricted = null
+	var/list/species_restricted = list("exclude","Super Mutant","Nightkin")
 	//Basically syntax is species_restricted = list("Species Name","Species Name")
 	//Add a "exclude" string to do the opposite, making it only only species listed that can't wear it.
 	//You append this to clothing objects
@@ -329,12 +329,6 @@
 			for(var/dam_type in armor_list)
 				var/armor_amount = armor_list[dam_type]
 				readout += "\n[dam_type] [armor_amount]" //e.g. MELEE 27
-		if(LAZYLEN(armor_tokens))
-			readout += "\n<b>ARMOR MODIFICATIONS</b>"
-			for(var/list/inner in armor_tokens)
-				for(var/dam_type in inner)
-					var/armor_amount = inner[dam_type]
-					readout += "\n[dam_type] [armor_amount]" //e.g. MELEE 27
 		if(LAZYLEN(environmental_list))
 			readout += "\n<b>ENVIRONMENTAL</b>"
 			for(var/dam_type in environmental_list)

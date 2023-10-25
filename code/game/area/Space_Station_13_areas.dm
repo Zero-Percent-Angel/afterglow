@@ -1665,6 +1665,11 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "ncr_main"
 	requires_power = TRUE
 
+/area/f13/ncr/powered
+	name = "NCR Outpost"
+	icon_state = "ncr"
+	requires_power = FALSE
+
 /area/f13/raider_mall
 	name = "Raider Mall"
 	icon_state = "raider_mall"
@@ -1684,6 +1689,11 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Klamat"
 	icon_state = "klamat"
 	requires_power = TRUE
+
+/area/f13/klamat/powered
+	name = "Klamat"
+	icon_state = "klamat"
+	requires_power = FALSE
 
 /area/f13/klamat/mine
 	name = "Klamat mine"
@@ -1758,6 +1768,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/shuttle/bunker_elevator
 	name = "Bunker Elevator"
+
+
+/area/shuttle/junker_train
+	name = "Junker Train"
 
 
 /area/shuttle/entrance_elevator

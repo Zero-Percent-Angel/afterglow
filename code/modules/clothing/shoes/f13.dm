@@ -71,6 +71,46 @@
 	icon_state = "diesel_f"
 	item_state = "diesel_f"
 
+/obj/item/clothing/shoes/f13/heels
+	name = "high heels"
+	desc = "A pair of black high heels."
+	icon_state = "high_heel"
+	item_state = "high_heel"
+	offset = 2
+	body_parts_hidden = FEET
+
+/obj/item/clothing/shoes/f13/thighboot
+	name = "thigh high boots"
+	desc = "A pair of black boots that reach up to a person's thigh."
+	icon_state = "thigh_high"
+	item_state = "thigh_high"
+	body_parts_hidden = FEET
+
+/obj/item/clothing/shoes/f13/thighboot/blue
+	name = "thigh high boots"
+	desc = "A pair of black boots with blue buckles, that reach up to a person's thigh."
+	icon_state = "thigh_high_blue"
+	item_state = "thigh_high_blue"
+
+/obj/item/clothing/shoes/f13/thighboot/platform
+	name = "thigh high platform"
+	desc = "A pair of chunky platform heels that reach up to a person's thigh."
+	icon_state = "thigh_high_heel"
+	item_state = "thigh_high_heel"
+	offset = 2
+
+/obj/item/clothing/shoes/f13/thighboot/platform/blue
+	desc = "A pair of chunky platform heels with blue buckles that reach up to a person's thigh."
+	icon_state = "thigh_high_heel_blue"
+	item_state = "thigh_high_heel_blue"
+
+/obj/item/clothing/shoes/f13/thighboot/stilettos
+	name = "thigh high stilettos"
+	desc = "A pair of boots with stiletto heels, that reach up to a person's thigh."
+	icon_state = "thigh_high_stiletto"
+	item_state = "thigh_high_stiletto"
+	offset = 3
+
 /obj/item/clothing/shoes/f13/military
 	name = "military boots"
 	desc = "High speed, no-drag combat boots, designed for use by the U.S. Army before the Great War."
@@ -169,7 +209,7 @@
 	icon_state = "legion_legate"
 	item_state = "legion_legate"
 	armor = ARMOR_VALUE_LIGHT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T3 )
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
 // ---------------------------------------------------------
 // Great Khan boots
@@ -301,6 +341,7 @@
 	name = "super mutant sandals"
 	desc = "A pair of oversized sandals, likely designed for super mutants."
 	icon_state = "mutie_sandals"
+	species_restricted = list("exclude","Human","Ghoul")
 
 /obj/item/clothing/shoes/f13/mutie/boots
 	name = "super mutant boots"

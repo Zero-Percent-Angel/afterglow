@@ -12,6 +12,9 @@
 	var/last_click_move = 0 // Stores the previous next_move value.
 
 	var/resize = 1 //Badminnery resize
+	var/resize_height = 1
+	var/resize_width = 1
+	var/current_height_transform = 0
 	var/lastattacker = null
 	var/lastattackerckey = null
 
@@ -163,6 +166,8 @@
 
 	//Used in living/recoil.dm
 	var/recoil = 0 //What our current recoil level is
-	var/recoil_reduction_timer
+	var/last_fire_time = 0
+	var/on_the_move = FALSE
+	var/suit_recoil
 
 	var/disconnect_time //how long have we been dc'd for

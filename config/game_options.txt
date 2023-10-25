@@ -446,16 +446,18 @@ SILICON_MAX_LAW_AMOUNT 12
 ## You probably want humans on your space station, but technically speaking you can turn them off without any ill effect
 ROUNDSTART_RACES human
 ROUNDSTART_RACES ghoul
+ROUNDSTART_RACES smutant
+ROUNDSTART_RACES nightkin
 
 ## Races that are strictly worse than humans that could probably be turned on without balance concerns
-ROUNDSTART_RACES lizard
-ROUNDSTART_RACES synthliz
-ROUNDSTART_RACES fly
+#ROUNDSTART_RACES lizard
+#ROUNDSTART_RACES synthliz
+#ROUNDSTART_RACES fly
 #ROUNDSTART_RACES insect
 #ROUNDSTART_RACES plasmaman
 #ROUNDSTART_RACES shadow
-ROUNDSTART_RACES felinid
-ROUNDSTART_RACES dwarf
+#ROUNDSTART_RACES felinid
+#ROUNDSTART_RACES dwarf
 #ROUNDSTART_RACES ethereal
 
 ## Races that are better than humans in some ways, but worse in others
@@ -479,19 +481,19 @@ ROUNDSTART_RACES dwarf
 #ROUNDSTART_RACES agent
 
 ## CITADEL Races
-ROUNDSTART_RACES mammal
-ROUNDSTART_RACES avian
-ROUNDSTART_RACES aquatic
-ROUNDSTART_RACES insect
+#ROUNDSTART_RACES mammal
+#ROUNDSTART_RACES avian
+#ROUNDSTART_RACES aquatic
+#ROUNDSTART_RACES insect
 #ROUNDSTART_RACES xeno
-ROUNDSTART_RACES slimeperson
+#ROUNDSTART_RACES slimeperson
 #ROUNDSTART_RACES guilmon
-ROUNDSTART_RACES ipc
-ROUNDSTART_RACES arachnid
+#ROUNDSTART_RACES ipc
+#ROUNDSTART_RACES arachnid
 
 
 ## CUSTOM Races
-ROUNDSTART_RACES shadekin
+#ROUNDSTART_RACES shadekin
 
 
 ##-------------------------------------------------------------------------------------------
@@ -705,3 +707,9 @@ QUIRK_POINTS 5
 
 ## Sets how many validballs to try and spawn
 VALIDBALL_COUNT 0
+
+## Whether or not matrix in place, matrix anywhere, is enabled.
+#ENABLE_INPLACE_MATRIX
+
+## How many ticks, 1/10th second, can elapse since first joining as a mob before you can no longer inplace matrix
+#INPLACE_MATRIX_GRACE_PERIOD 3000

@@ -8,10 +8,10 @@
 #define MODE_ROBOT "robot"
 
 #define MODE_R_HAND "right hand"
-#define MODE_KEY_R_HAND "r"
+#define MODE_KEY_R_HAND "1"
 
 #define MODE_L_HAND "left hand"
-#define MODE_KEY_L_HAND "l"
+#define MODE_KEY_L_HAND "2"
 
 #define MODE_INTERCOM "intercom"
 #define MODE_KEY_INTERCOM "i"
@@ -104,3 +104,16 @@
 #define ONLY_OVERHEAD (1<<1)
 // Append the player's name to the front
 #define PUT_NAME_IN (1<<2)
+
+#define EMOTE_HEADER_TEXT "\
+	The Following Chat Functions Exist \n\
+	- _text_ underlines text, +text+ bolds text, and |text| italicizes text. \n\
+	-- Works in Emote, Anti-Ghost, Say, Whisper and Radio chat. \n\
+	\n\
+	- @ moves your name to that position. - Only works in Emotes and Anti-Ghost. \n\
+	-- Example: Takes a deep breath, @(this becomes your characters name) sure is tired. \n\
+	\n\
+	- ! does an audible-emote, acting as if your character is talking. Works on radio (e.g: ;! sneezes!) \n\
+	"
+//put space before the \ so it reads properly
+// use \ for readability, but one big line. \n for a new line. \n\ for a new line and readability.

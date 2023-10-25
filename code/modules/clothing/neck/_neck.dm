@@ -9,7 +9,7 @@
 
 /obj/item/clothing/neck/equipped(mob/user, slot)
 	. = ..()
-	if (slot == SLOT_NECK && istype(user))
+	if (slot == SLOT_NECK && istype(user) && HAS_TRAIT(user, TRAIT_BLING_LOVER))
 		SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "necklacebuff", mood_event_on_equip)
 	else
 		SEND_SIGNAL(user, COMSIG_CLEAR_MOOD_EVENT, "necklacebuff")
@@ -217,6 +217,11 @@
 	name = "choker"
 	icon_state = "choker"
 	poly_colors = list("#222222")
+
+/obj/item/clothing/neck/petcollar/choker/goth
+	name = "gothic choker"
+	item_state = "cross-choker"
+	icon_state = "cross-choker"
 
 /obj/item/clothing/neck/petcollar/locked
 	name = "locked collar"

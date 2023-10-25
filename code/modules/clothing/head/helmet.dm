@@ -3,7 +3,7 @@
 	desc = "Standard Security gear. Protects the head from impacts."
 	icon_state = "helmet"
 	item_state = "helmet"
-	slowdown = ARMOR_SLOWDOWN_NONE * ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tokens = list()
 	flags_inv = HIDEEARS | HIDEHAIR
@@ -226,7 +226,7 @@
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_MELEE_T2)
 
 /obj/item/clothing/head/helmet/roman/legionnaire
-	name = "\improper Roman legionnaire helmet"
+	name = "\improper Roman legionary helmet"
 	desc = "An ancient helmet made of bronze and leather. Has a red crest on top of it."
 	icon_state = "roman_c"
 	item_state = "roman_c"

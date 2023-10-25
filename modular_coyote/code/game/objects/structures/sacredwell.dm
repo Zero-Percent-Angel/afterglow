@@ -44,7 +44,7 @@ GLOBAL_LIST_INIT(sacredwellitems_high, typecacheof(list(/obj/item/gun/energy/las
 /obj/effect/spawner/lootdrop/f13/sacredwell
 	lootcount = 1
 	lootdoubles = FALSE
-	loot = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/tribal,
+	loot = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/tribal,
 				/obj/item/gun/energy/laser/wattz/sacredpistol,
 				/obj/item/gun/energy/laser/wattz/sacred,
 				/obj/item/gun/energy/laser/wattz2k/extended/blessed,
@@ -52,7 +52,7 @@ GLOBAL_LIST_INIT(sacredwellitems_high, typecacheof(list(/obj/item/gun/energy/las
 				/obj/item/gun/ballistic/automatic/smg/tommygun/whitelegs,
 				/obj/item/gun/ballistic/bow/claw,
 				/obj/item/gun/ballistic/bow/sturdy,
-				/obj/item/clothing/suit/armor/medium/tribal/tribe_heavy_armor,
+				/obj/item/clothing/suit/armor/heavy/tribal,
 				/obj/item/clothing/suit/armor/light/tribal/simple,
 				/obj/item/clothing/suit/hooded/cloak)
 

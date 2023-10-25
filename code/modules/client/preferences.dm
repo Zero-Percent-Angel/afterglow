@@ -172,6 +172,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		"taste" = "something",
 		"body_model" = MALE,
 		"body_size" = RESIZE_DEFAULT_SIZE,
+		"height" = RESIZE_DEFAULT_SIZE,
+		"width" = RESIZE_DEFAULT_SIZE,
 		"color_scheme" = OLD_CHARACTER_COLORING
 		)
 
@@ -194,7 +196,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/list/all_quirks = list()
 
 	//Quirk category currently selected
-	var/quirk_category = QUIRK_POSITIVE 
+	var/quirk_category = QUIRK_POSITIVE
 
 	//Job preferences 2.0 - indexed by job title , no key or value implies never
 	var/list/job_preferences = list()
@@ -582,10 +584,12 @@ Records disabled until a use for them is found
 				dat += "<b>Tertiary Color:</b><BR>"
 				dat += "<span style='border: 1px solid #161616; background-color: #[features["mcolor3"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=mutant_color3;task=input'>Change</a><BR>"
 				mutant_colors = TRUE
-
+				dat += "<b>Height:</b> <a href='?_src_=prefs;preference=height;task=input'>[features["height"]*100]%</a><br>"
+				dat += "<b>Width:</b> <a href='?_src_=prefs;preference=width;task=input'>[features["width"]*100]%</a><br>"
+			/*
 			if (CONFIG_GET(number/body_size_min) != CONFIG_GET(number/body_size_max))
 				dat += "<b>Sprite Size:</b> <a href='?_src_=prefs;preference=body_size;task=input'>[features["body_size"]*100]%</a><br>"
-
+			*/
 			if(!(NOEYES in pref_species.species_traits))
 				dat += "<h3>Eye Type</h3>"
 				dat += "</b><a style='display:block;width:100px' href='?_src_=prefs;preference=eye_type;task=input'>[eye_type]</a><BR>"
@@ -1144,12 +1148,10 @@ Records disabled until a use for them is found
 			dat += "<h2>Adult content prefs</h2>"
 			dat += "<b>Arousal:</b><a href='?_src_=prefs;preference=arousable'>[arousable == TRUE ? "Enabled" : "Disabled"]</a><BR>"
 			dat += "<b>Genital examine text</b>:<a href='?_src_=prefs;preference=genital_examine'>[(cit_toggles & GENITAL_EXAMINE) ? "Enabled" : "Disabled"]</a><BR>"
-			dat += "<b>Hypno:</b> <a href='?_src_=prefs;preference=never_hypno'>[(cit_toggles & NEVER_HYPNO) ? "Disallowed" : "Allowed"]</a><br>"
 			dat += "<b>Ass Slapping:</b> <a href='?_src_=prefs;preference=ass_slap'>[(cit_toggles & NO_ASS_SLAP) ? "Disallowed" : "Allowed"]</a><br>"
-			dat += "<b>Automatic Wagging:</b> <a href='?_src_=prefs;preference=auto_wag'>[(cit_toggles & NO_AUTO_WAG) ? "Disabled" : "Enabled"]</a><br>"
+			//dat += "<b>Automatic Wagging:</b> <a href='?_src_=prefs;preference=auto_wag'>[(cit_toggles & NO_AUTO_WAG) ? "Disabled" : "Enabled"]</a><br>"
 			dat += "<b>Forced Feminization:</b> <a href='?_src_=prefs;preference=feminization'>[(cit_toggles & FORCED_FEM) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "<b>Forced Masculinization:</b> <a href='?_src_=prefs;preference=masculinization'>[(cit_toggles & FORCED_MASC) ? "Allowed" : "Disallowed"]</a><br>"
-			dat += "<b>Lewd Hypno:</b> <a href='?_src_=prefs;preference=hypno'>[(cit_toggles & HYPNO) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "<b>Bimbofication:</b> <a href='?_src_=prefs;preference=bimbo'>[(cit_toggles & BIMBOFICATION) ? "Allowed" : "Disallowed"]</a><br>"
 			dat += "</td>"
 			dat +="<td width='300px' height='300px' valign='top'>"
@@ -1539,8 +1541,8 @@ Records disabled until a use for them is found
 	var/list/dat = list()
 
 	var/total = special_s + special_p + special_e + special_c + special_i + special_a + special_l
-
 	dat += "<center><b>Allocate points</b></center>"
+	dat += "<center>If you need help figuring out what the specials are for, <a href='?_src_=prefs;preference=help_special;task=input'>Click here!</a></center>"
 	dat += "<center>Note: SPECIAL has mechanical effects on gameplay and governs skills too.</center><br>"
 	dat += "<center>[total] out of 40 possible</center><br>"
 	dat += "<b>Strength	   :</b> <a href='?_src_=prefs;preference=special_s;task=input'>[special_s]</a><BR>"
@@ -1605,16 +1607,17 @@ Records disabled until a use for them is found
 	var/total = skill_guns + skill_energy + skill_unarmed + skill_melee + skill_throwing + skill_doctor + skill_sneak + skill_science + skill_repair + skill_speech + skill_outdoorsman
 	var/max_skill = skill_points + (special_i*2)
 
+	dat += "<center>If you need help figuring out what the skills are for, <a href='?_src_=prefs;preference=help_skill;task=input'>Click here!</a></center>"
 	dat += "<center><b>Allocate points</b></center>"
 	dat += "<center>[total] out of [max_skill] possible</center><br>"
-	dat += "<b>Skill thresholds: 35(Novice), 50(Journeyman), 65(Experienced), 80(Expert)</b><BR><BR>"	
-	dat += "<b>Combat skills:</b><BR>"	
+	dat += "<b>Skill thresholds: 35(Novice), 50(Journeyman), 65(Experienced), 80(Expert)</b><BR><BR>"
+	dat += "<b>Combat skills:</b><BR>"
 	dat += "<b>Guns	       :</b> <a href='?_src_=prefs;preference=skill_guns;task=input'>[skill_guns] (Points Spent)</a>: [skill_guns_t] Skill Total<BR>"
 	dat += "<b>Energy Guns :</b> <a href='?_src_=prefs;preference=skill_energy;task=input'>[skill_energy] (Points Spent)</a>: [skill_energy_t] Skill Total<BR>"
 	dat += "<b>Unarmed     :</b> <a href='?_src_=prefs;preference=skill_unarmed;task=input'>[skill_unarmed] (Points Spent)</a>: [skill_unarmed_t] Skill Total<BR>"
 	dat += "<b>Melee       :</b> <a href='?_src_=prefs;preference=skill_melee;task=input'>[skill_melee] (Points Spent)</a>: [skill_melee_t] Skill Total<BR>"
 	dat += "<b>Throwing    :</b> <a href='?_src_=prefs;preference=skill_throwing;task=input'>[skill_throwing] (Points Spent)</a>: [skill_throwing_t] Skill Total<BR>"
-	dat += "<b>Active skills:</b><BR>"	
+	dat += "<b>Active skills:</b><BR>"
 	//dat += "<b>First Aid   :</b> <a href='?_src_=prefs;preference=skill_first_aid;task=input'>[skill_first_aid]</a>: [skill_first_aid_t]<BR>"
 	dat += "<b>Medical     :</b> <a href='?_src_=prefs;preference=skill_doctor;task=input'>[skill_doctor] (Points Spent)</a>: [skill_doctor_t] Skill Total<BR>"
 	dat += "<b>Stealth     :</b> <a href='?_src_=prefs;preference=skill_sneak;task=input'>[skill_sneak] (Points Spent)</a>: [skill_sneak_t] Skill Total<BR>"
@@ -1668,6 +1671,24 @@ Records disabled until a use for them is found
 		var/client/C = usr.client
 		if(C)
 			C.clear_character_previews()
+
+/datum/preferences/proc/show_special_help(mob/user)
+	var/list/dat = list()
+	dat += "<center><b>Special Help</b></center>"
+	dat += "All SPECIAL stats influence different skills, have a play with them to see how your total skill values change!"
+	dat += "<b>Strength	   :</b> Strength effects melee damage, armor slowdown, held item slowdown<BR>"
+	dat += "<b>Perception  :</b> Perception effects bullet spread, night sight, and finding items in trash and spotting things.<BR>"
+	dat += "<b>Endurance   :</b> Endurance increases your health and stamina buffer.<BR>"
+	dat += "<b>Charisma    :</b> Charisma effects mood, it also increases brain health.<BR>"
+	dat += "<b>Intelligence:</b> Intelligence gives extra skill points to allocate.<BR>"
+	dat += "<b>Agility     :</b> Agility gives extra movement speed, slightly increased chance for attacks to miss you and lets you recover from climbing faster.<BR>"
+	dat += "<b>Luck        :</b> Luck acts as a modifier on every roll being made if you're below 5 it'll bring you down, above 5 it'll buff you up. It also helps with finding items in trash piles.<BR>"
+	user << browse(null, "window=preferences")
+	var/datum/browser/popup = new(user, "special_help", "<div align='center'>Special Help</div>", 400, 500)
+	popup.set_window_options("can_close=1")
+	popup.set_content(dat.Join())
+	popup.open(0)
+	return
 
 /datum/preferences/proc/process_link(mob/user, list/href_list)
 	if(href_list["jobbancheck"])
@@ -1774,7 +1795,7 @@ Records disabled until a use for them is found
 				SetSpecial(user)
 		return TRUE
 
-		
+
 	else if(href_list["preference"] == "skill")
 		switch(href_list["task"])
 			if("close")
@@ -1874,6 +1895,9 @@ Records disabled until a use for them is found
 					if(new_point)
 						special_l = max(min(round(text2num(new_point)), min(9, remainingSpecialBalance() + special_l)),1)
 					SetSpecial(user)
+					return 1
+				if("help_special")
+					show_special_help(user)
 					return 1
 				if("skill_guns")
 					var/new_point = input(user, "Choose Amount(0-99)", "Guns") as num|null
@@ -1994,6 +2018,9 @@ Records disabled until a use for them is found
 					else
 						skill_outdoorsman = 0
 					SetSkills(user)
+					return 1
+				if ("help_skill")
+					user.check_skills()
 					return 1
 				if("ghostform")
 					if(unlock_content)
@@ -2194,28 +2221,38 @@ Records disabled until a use for them is found
 					var/result = input(user, "Select a species", "Species Selection") as null|anything in GLOB.roundstart_race_names
 					if(result)
 						var/newtype = GLOB.species_list[GLOB.roundstart_race_names[result]]
-						pref_species = new newtype()
-						//let's ensure that no weird shit happens on species swapping.
-						custom_species = null
-						if(!parent.can_have_part("mam_body_markings"))
-							features["mam_body_markings"] = list()
-						if(parent.can_have_part("mam_body_markings"))
-							if(features["mam_body_markings"] == "None")
-								features["mam_body_markings"] = list()
-						if(parent.can_have_part("tail_lizard"))
-							features["tail_lizard"] = "Smooth"
-						if(pref_species.id == "felinid")
-							features["mam_tail"] = "Cat"
-							features["mam_ears"] = "Cat"
+						var/datum/species/to_check_wl = new newtype() //Instance of newtype specifically for checking whitelists
+						var/list/species_wl = to_check_wl.whitelist
+						var/whitelist_accept = TRUE
+						if(to_check_wl.whitelisted == 1)
+							if(species_wl.Find(user.ckey) == 0)
+								to_chat(user, span_danger("You are not whitelisted for this species!"))
+								whitelist_accept = FALSE
+						if(whitelist_accept == TRUE)
+							pref_species = new newtype()
+							//let's ensure that no weird shit happens on species swapping.
+							custom_species = null
+							if(!parent.can_have_part("body_markings"))
+								features["body_markings"] = "None"
+							if(!parent.can_have_part("mam_body_markings"))
+								features["mam_body_markings"] = "None"
+							if(parent.can_have_part("mam_body_markings"))
+								if(features["mam_body_markings"] == "None")
+									features["mam_body_markings"] = "Plain"
+							if(parent.can_have_part("tail_lizard"))
+								features["tail_lizard"] = "Smooth"
+							if(pref_species.id == "felinid")
+								features["mam_tail"] = "Cat"
+								features["mam_ears"] = "Cat"
 
-						//Now that we changed our species, we must verify that the mutant colour is still allowed.
-						var/temp_hsv = RGBtoHSV(features["mcolor"])
-						if(features["mcolor"] == "#000000" || (!(MUTCOLORS_PARTSONLY in pref_species.species_traits) && ReadHSV(temp_hsv)[3] < ReadHSV("#202020")[3]))
-							features["mcolor"] = pref_species.default_color
-						if(features["mcolor2"] == "#000000" || (!(MUTCOLORS_PARTSONLY in pref_species.species_traits) && ReadHSV(temp_hsv)[3] < ReadHSV("#202020")[3]))
-							features["mcolor2"] = pref_species.default_color
-						if(features["mcolor3"] == "#000000" || (!(MUTCOLORS_PARTSONLY in pref_species.species_traits) && ReadHSV(temp_hsv)[3] < ReadHSV("#202020")[3]))
-							features["mcolor3"] = pref_species.default_color
+							//Now that we changed our species, we must verify that the mutant colour is still allowed.
+							var/temp_hsv = RGBtoHSV(features["mcolor"])
+							if(features["mcolor"] == "#000000" || (!(MUTCOLORS_PARTSONLY in pref_species.species_traits) && ReadHSV(temp_hsv)[3] < ReadHSV("#202020")[3]))
+								features["mcolor"] = pref_species.default_color
+							if(features["mcolor2"] == "#000000" || (!(MUTCOLORS_PARTSONLY in pref_species.species_traits) && ReadHSV(temp_hsv)[3] < ReadHSV("#202020")[3]))
+								features["mcolor2"] = pref_species.default_color
+							if(features["mcolor3"] == "#000000" || (!(MUTCOLORS_PARTSONLY in pref_species.species_traits) && ReadHSV(temp_hsv)[3] < ReadHSV("#202020")[3]))
+								features["mcolor3"] = pref_species.default_color
 
 						//switch to the type of eyes the species uses
 						eye_type = pref_species.eye_type
@@ -2807,7 +2844,21 @@ Records disabled until a use for them is found
 						else
 							features["body_model"] = chosengender
 					gender = chosengender
-
+				if ("height")
+					var/min = CONFIG_GET(number/body_size_min)
+					var/max = CONFIG_GET(number/body_size_max)
+					var/new_height = input(user, "Choose your desired width sprite size: ([min*100]%-[max*100]%)\nWarning: This may make your character look distorted!", "Character Preference", features["height"]*100) as num|null
+					if (new_height)
+						new_height = clamp(new_height * 0.01, 0.8, 1.2)
+						features["height"] = new_height
+				if ("width")
+					var/min = CONFIG_GET(number/body_size_min)
+					var/max = CONFIG_GET(number/body_size_max)
+					var/new_width = input(user, "Choose your desired width sprite size: ([min*100]%-[max*100]%)\nWarning: This may make your character look distorted!", "Character Preference", features["width"]*100) as num|null
+					if (new_width)
+						new_width = clamp(new_width * 0.01, 0.8, 1.2)
+						features["width"] = new_width
+				/*
 				if("body_size")
 					var/min = CONFIG_GET(number/body_size_min)
 					var/max = CONFIG_GET(number/body_size_max)
@@ -2824,7 +2875,7 @@ Records disabled until a use for them is found
 								return
 						if(dorfy != "No")
 							features["body_size"] = new_body_size
-				/*
+
 				if("tongue")
 					var/selected_custom_tongue = input(user, "Choose your desired tongue (none means your species tongue)", "Character Preference") as null|anything in GLOB.roundstart_tongues
 					if(selected_custom_tongue)
@@ -3426,6 +3477,8 @@ Records disabled until a use for them is found
 		save_character()
 
 	var/old_size = character.dna.features["body_size"]
+	var/old_height = character.dna.features["height"]
+	var/old_width = character.dna.features["width"]
 
 	character.dna.features = features.Copy()
 	character.set_species(chosen_species, icon_update = FALSE, pref_load = TRUE)
@@ -3451,7 +3504,7 @@ Records disabled until a use for them is found
 
 	character.give_genitals(TRUE) //character.update_genitals() is already called on genital.update_appearance()
 
-	character.dna.update_body_size(old_size)
+	character.dna.update_body_size(old_size, old_height, old_width)
 
 	//speech stuff
 	if(custom_tongue != "default")

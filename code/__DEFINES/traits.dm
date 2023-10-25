@@ -196,6 +196,7 @@
 #define TRAIT_LIGHT_STEP		"light_step"
 #define TRAIT_SILENT_STEP		"silent_step"
 #define TRAIT_SPEEDY_STEP		"speedy_step"
+#define TRAIT_PAIN_TRAIN		"pain_train"
 #define TRAIT_SPIRITUAL			"spiritual"
 #define TRAIT_VORACIOUS			"voracious"
 #define TRAIT_SELF_AWARE		"self_aware"
@@ -240,11 +241,13 @@
 #define TRAIT_MUTATION_STASIS			"mutation_stasis" //Prevents processed genetics mutations from processing.
 #define TRAIT_FAST_PUMP				"fast_pump"
 #define TRAIT_AUTO_DRAW				"auto_draw" //can use bows good
+#define TRAIT_BLING_LOVER			"bling_lover" //can use bows good
 #define TRAIT_NO_PROCESS_FOOD	"no-process-food" // You don't get benefits from nutriment, nor nutrition from reagent consumables
 #define TRAIT_NICE_SHOT			"nice_shot" //hnnnnnnnggggg..... you're pretty good...
 #define TRAIT_PERFECT_ATTACKER	"perfect_attacker"
 #define TRAIT_BUFFOUT_BUFF		"buffout_buff"
 #define TRAIT_UNARMED_WEAPON	"unarmed_weapon"
+#define TRAIT_TIME_STOP_IMMUNE "time_stop_immune"
 /// Prevents usage of manipulation appendages (picking, holding or using items, manipulating storage).
 #define TRAIT_HANDS_BLOCKED "handsblocked"
 #define TRAIT_ILLITERATE "illiterate"

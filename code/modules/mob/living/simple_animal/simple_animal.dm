@@ -326,7 +326,7 @@ GLOBAL_LIST_EMPTY(playmob_cooldowns)
 	var/turf/T = get_turf(src)
 	if (T && AIStatus == AI_Z_OFF)
 		SSidlenpcpool.idle_mobs_by_zlevel[T.z] -= src
-	
+
 	QDEL_NULL(access_card)
 
 	return ..()
@@ -336,7 +336,7 @@ GLOBAL_LIST_EMPTY(playmob_cooldowns)
 	if(lazarused)
 		. += span_danger("This creature looks like it has been revived!")
 	. += mob_armor_description
-	
+
 /// If user is set, the mob will be told to be loyal to that mob
 /mob/living/simple_animal/proc/make_ghostable(mob/user)
 	can_ghost_into = TRUE
@@ -369,7 +369,7 @@ GLOBAL_LIST_EMPTY(playmob_cooldowns)
 		return // cant do much without a key!
 	if(!islist(GLOB.playmob_cooldowns[key]))
 		GLOB.playmob_cooldowns[key] = list()
-	GLOB.playmob_cooldowns[key][ghost_mob_id] = world.time + ghost_cooldown_time	
+	GLOB.playmob_cooldowns[key][ghost_mob_id] = world.time + ghost_cooldown_time
 
 /mob/living/simple_animal/updatehealth()
 	..()
@@ -844,7 +844,7 @@ GLOBAL_LIST_EMPTY(playmob_cooldowns)
 	. = ..()
 	if(stat)
 		return
-	if (idlesound)
+	if (idlesound && !(islist(idlesound) && LAZYLEN(idlesound) == 0))
 		if (prob(5))
 			var/chosen_sound = pick(idlesound)
 			playsound(src, chosen_sound, 60, FALSE, ignore_walls = FALSE)
@@ -1010,7 +1010,7 @@ GLOBAL_LIST_EMPTY(playmob_cooldowns)
 		return
 	if(length(mob_armor_tokens) < 1)
 		return // all done!
-	
+
 	for(var/list/token in mob_armor_tokens)
 		for(var/modifier in token)
 			switch(GLOB.armor_token_operation_legend[modifier])

@@ -563,6 +563,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Great Khan jacket",			/obj/item/clothing/suit/toggle/labcoat/khan_jacket,				50),
 		new /datum/data/wasteland_equipment("Great Khan uniform",			/obj/item/clothing/under/f13/khan,									10),
 		new /datum/data/wasteland_equipment("Great Khan Jorts",				/obj/item/clothing/under/f13/khan/shorts,							10),
+		new /datum/data/wasteland_equipment("Great Khan Skirt",				/obj/item/clothing/under/f13/khan/skirt,							10),
 		new /datum/data/wasteland_equipment("Great Khan Booty Shorts",		/obj/item/clothing/under/f13/khan/booty,							10),
 		new /datum/data/wasteland_equipment("Great Khan boots",				/obj/item/clothing/shoes/f13/military/khan,							15),
 		new /datum/data/wasteland_equipment("Great Khan pelt boots",		/obj/item/clothing/shoes/f13/military/khan_pelt,					15)
@@ -584,6 +585,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Great Khan jacket",			/obj/item/clothing/suit/toggle/labcoat/khan_jacket,				50),
 		new /datum/data/wasteland_equipment("Great Khan uniform",			/obj/item/clothing/under/f13/khan,									10),
 		new /datum/data/wasteland_equipment("Great Khan Jorts",				/obj/item/clothing/under/f13/khan/shorts,							10),
+		new /datum/data/wasteland_equipment("Great Khan Skirt",				/obj/item/clothing/under/f13/khan/skirt,							10),
 		new /datum/data/wasteland_equipment("Great Khan Booty Shorts",		/obj/item/clothing/under/f13/khan/booty,							10),
 		new /datum/data/wasteland_equipment("Great Khan boots",				/obj/item/clothing/shoes/f13/military/khan,							15),
 		new /datum/data/wasteland_equipment("Great Khan pelt boots",		/obj/item/clothing/shoes/f13/military/khan_pelt,					15)
@@ -695,7 +697,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Smoke Bomb",					/obj/item/grenade/smokebomb,										70),
 		new /datum/data/wasteland_equipment("Explosives Crafting Guide",	/obj/item/book/granter/trait/explosives,							150),
 		new /datum/data/wasteland_equipment("Firebomb",						/obj/item/grenade/homemade/firebomb,								75),
-		new /datum/data/wasteland_equipment("Advanced Explosives Crafting Guide",	/obj/item/book/granter/trait/explosives_advanced,							275),				
+		new /datum/data/wasteland_equipment("Advanced Explosives Crafting Guide",	/obj/item/book/granter/trait/explosives_advanced,							275),
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("Handgun magazine (.45)",		/obj/item/ammo_box/magazine/m45,									50),

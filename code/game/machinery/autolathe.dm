@@ -71,6 +71,8 @@
 	return ..()
 
 /obj/machinery/autolathe/ui_interact(mob/user)
+	if (!anchored)
+		return FALSE
 	if(isliving(user))
 		var/mob/living/L = user
 		if(tooadvanced == TRUE)
@@ -123,6 +125,8 @@
 		return TRUE
 
 	if(user.a_intent == INTENT_HARM) //so we can hit the machine
+		if(default_unfasten_wrench(user, O))
+			return
 		return ..()
 
 	if(stat)
@@ -216,7 +220,7 @@
 				use_power(power)
 				icon_state = "[icon_state]_n"
 				var/time = is_stack ? 10 : base_print_speed * coeff * multiplier
-				addtimer(CALLBACK(src, .proc/make_item, power, materials_used, custom_materials, multiplier, coeff, is_stack), time)
+				begin_item_creation(power, materials_used, custom_materials, multiplier, coeff, is_stack, usr, time)
 			else
 				to_chat(usr, "<span class=\"alert\">Not enough materials for this operation.</span>")
 
@@ -234,6 +238,9 @@
 	updateUsrDialog()
 
 	return
+
+/obj/machinery/autolathe/proc/begin_item_creation(power, list/materials_used, list/picked_materials, multiplier, coeff, is_stack, mob/user, time)
+	addtimer(CALLBACK(src, .proc/make_item, power, materials_used, custom_materials, multiplier, coeff, is_stack), time)
 
 /obj/machinery/autolathe/proc/make_item(power, list/materials_used, list/picked_materials, multiplier, coeff, is_stack)
 	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
@@ -275,6 +282,10 @@
 	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
 	if(in_range(user, src) || isobserver(user))
 		. += "<span class='notice'>The status display reads: Storing up to <b>[materials.max_amount]</b> material units.<br>Material consumption at <b>[prod_coeff*100]%</b>.</span>"
+		if(anchored)
+			. += "<span class='notice'>It's secured.</span>"
+		else
+			. += "<span class='notice'>It's unsecured.</span>"
 
 /obj/machinery/autolathe/proc/main_win(mob/user)
 	var/dat = "<div class='statusDisplay'><h3>Autolathe Menu:</h3><br>"

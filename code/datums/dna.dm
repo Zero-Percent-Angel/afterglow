@@ -43,6 +43,8 @@
 	if(!istype(destination))
 		return
 	var/old_size = destination.dna.features["body_size"]
+	var/old_height = destination.dna.features["height"]
+	var/old_width = destination.dna.features["width"]
 	destination.dna.unique_enzymes = unique_enzymes
 	destination.dna.uni_identity = uni_identity
 	destination.dna.blood_type = blood_type
@@ -60,7 +62,7 @@
 		destination.dna.mutation_index = mutation_index
 		destination.dna.default_mutation_genes = default_mutation_genes
 
-	destination.dna.update_body_size(old_size)
+	destination.dna.update_body_size(old_size, old_height, old_width)
 
 	SEND_SIGNAL(destination, COMSIG_CARBON_IDENTITY_TRANSFERRED_TO, src, transfer_SE)
 
@@ -413,8 +415,10 @@
 
 	if(newfeatures)
 		var/old_size = dna.features["body_size"]
+		var/old_height = dna.features["height"]
+		var/old_width = dna.features["width"]
 		dna.features = newfeatures
-		dna.update_body_size(old_size)
+		dna.update_body_size(old_size, old_height, old_width)
 
 	if(mrace)
 		var/datum/species/newrace = new mrace.type
@@ -688,10 +692,12 @@
 				else
 					set_species(/datum/species/dullahan)
 
-/datum/dna/proc/update_body_size(old_size)
-	if(!holder || features["body_size"] == old_size)
+/datum/dna/proc/update_body_size(old_size, old_height, old_width)
+	if(!holder || (features["body_size"] == old_size && features["height"] == old_height && features["width"] == old_width))
 		return
 	holder.resize = features["body_size"] / old_size
+	holder.resize_height = features["height"] / old_height
+	holder.resize_width = features["width"] / old_width
 	holder.update_transform()
 	var/danger = CONFIG_GET(number/threshold_body_size_slowdown)
 	if(features["body_size"] < danger)

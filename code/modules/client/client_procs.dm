@@ -527,7 +527,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if(movingmob != null)
 		movingmob.client_mobs_in_contents -= mob
 		UNSETEMPTY(movingmob.client_mobs_in_contents)
-	// seen_messages = null
+	seen_messages = null
 	Master.UpdateTickRate()
 	. = ..() //Even though we're going to be hard deleted there are still some things that want to know the destroy is happening
 	return QDEL_HINT_HARDDEL_NOW
@@ -618,13 +618,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		if(!set_db_player_flags())
 			message_admins(usr, span_danger("ERROR: Unable to read player flags from database. Please check logs."))
 			return
-		else
-			var/dbflags = prefs.db_flags
-			if(!(dbflags & DB_FLAG_AGE_CONFIRMATION_COMPLETE)) //they have not completed age verification
-				if((ckey in GLOB.bunker_passthrough)) //they're verified in the panic bunker though
-					update_flag_db(DB_FLAG_AGE_CONFIRMATION_COMPLETE, TRUE)
-				else
-					update_flag_db(DB_FLAG_AGE_CONFIRMATION_INCOMPLETE, TRUE)
 
 	qdel(query_client_in_db)
 	var/datum/db_query/query_get_client_age = SSdbcore.NewQuery(
@@ -919,7 +912,8 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		add_verb(src, /client/proc/self_notes)
 	if(CONFIG_GET(flag/use_exp_tracking))
 		add_verb(src, /client/proc/self_playtime)
-
+	if(CONFIG_GET(flag/enable_inplace_matrix))
+		add_verb(src, /client/proc/matrix_inplace)
 
 #undef UPLOAD_LIMIT
 

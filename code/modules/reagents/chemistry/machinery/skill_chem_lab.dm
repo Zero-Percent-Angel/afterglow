@@ -21,7 +21,7 @@
 	var/working_state = "dispenser_working"
 	var/nopower_state = "dispenser_nopower"
 
-	var/list/possible_steps = list ("Heat", "Cool", "Add", "Mix")
+	var/list/possible_steps = list ("Heat", "Cool", "Add", "Mix", "Cancel")
 	var/list/dispensable_reagents = list()
 	var/list/basic_chemicals = list(
 		/datum/reagent/medicine/potass_iodide = 1,
@@ -86,10 +86,11 @@
 		/datum/reagent/medicine/modafinil = 2,
 		/datum/reagent/medicine/psicodine = 2,
 		/datum/reagent/medicine/mentat = 3,
-		/datum/reagent/medicine/stimpak = 3
+		/datum/reagent/medicine/stimpak = 3,
+		/datum/reagent/pax = 3
 	)
 
-/obj/machinery/chem_lab/Initialize()
+/obj/machinery/chem_lab/Initialize(mapload)
 	. = ..()
 	dispensable_reagents = sortList(basic_chemicals, /proc/cmp_reagents_asc)
 	if(advanced_chemicals)
@@ -101,7 +102,7 @@
 	if(upgraded_chemicals2)
 		upgraded_chemicals2 = sortList(upgraded_chemicals2, /proc/cmp_reagents_asc)
 	dispensable_reagents = sortList(dispensable_reagents, /proc/cmp_reagents_asc)
-	if (!istype(cartridge))
+	if (!istype(cartridge) && mapload)
 		cartridge = new/obj/item/stock_parts/chem_cartridge/pristine(loc)
 		cartridge.forceMove(src)
 	update_icon()
@@ -195,7 +196,8 @@
 	data["amount"] = amount
 	//data["energy"] = cell.charge ? cell.charge * powerefficiency : "0" //To prevent NaN in the UI.
 	//data["maxEnergy"] = cell.maxcharge * powerefficiency
-	data["cartridgeCharge"] = cartridge.charge ? cartridge.charge * matefficiency : "0"
+	var/cartridge_exists = istype(cartridge)
+	data["cartridgeCharge"] = cartridge_exists && cartridge.charge ? cartridge.charge * matefficiency : "0"
 	data["maxCartridgeCharge"] = cartridge.maxCharge * matefficiency
 	data["isBeakerLoaded"] = beaker ? 1 : 0
 
@@ -276,9 +278,9 @@
 			var/reagent = GLOB.name2reagent[reagent_name]
 			if(beaker && dispensable_reagents.Find(reagent))
 				do_chemical_creation(reagent, usr, amount, dispensable_reagents[reagent])
-			if(beaker && advanced_chemicals.Find(reagent))
+			else if(beaker && advanced_chemicals.Find(reagent))
 				do_chemical_creation(reagent, usr, amount, advanced_chemicals[reagent], HARD_CHECK, DIFFICULTY_CHALLENGE)
-			if(beaker && expert_chemicals.Find(reagent))
+			else if(beaker && expert_chemicals.Find(reagent))
 				do_chemical_creation(reagent, usr, amount, expert_chemicals[reagent], EXPERT_CHECK, DIFFICULTY_EXPERT)
 		if("remove")
 			if(!is_operational())
@@ -298,16 +300,24 @@
 	if (!steps_left)
 		steps_left = biglist[r]
 	var/trait_buff = HAS_TRAIT(user, TRAIT_CHEMWHIZ) ? -50 : 0
-	var/next_step = pick(possible_steps)
+	var/next_step = pick(possible_steps.Copy(1, 5))
 	if (user.skill_check(SKILL_SCIENCE, difficulty + trait_buff) || user.skill_roll(SKILL_SCIENCE, roll_difficulty + trait_buff))
 		to_chat(user, span_good("You know the next step is to " + next_step + "."))
 	else
 		to_chat(user, span_bad("What was the next step again....?"))
 	var/choosen_step = input(user, "What is the next step you wish to take?", "Chemistry") in possible_steps
 	work_animation()
+	if (choosen_step == "Cancel")
+		to_chat(user, span_notice("You attempt to purge the system, deciding not to finish the chemical."))
+		if (!user.skill_roll(SKILL_SCIENCE, DIFFICULTY_EASY + trait_buff))
+			do_chemical_bad_thing(user)
+			return
+		to_chat(user, span_good("You purge the system."))
+		return
 	if (choosen_step == next_step)
 		if (steps_left == 1)
 			to_chat(user, span_good("The mixture pleasingly comes together."))
+			playsound(src, 'sound/effects/bubbles.ogg', 50, 1, -3)
 			var/datum/reagents/R = beaker.reagents
 			var/free = R.maximum_volume - R.total_volume
 			var/actual = min(amount, (cartridge.charge * powerefficiency)*10, free)

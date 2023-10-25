@@ -17,7 +17,6 @@
 	density = TRUE
 	obj_integrity = 150
 	max_integrity = 150
-	pass_flags_self = LETPASSTHROW
 //	var/proj_pass_rate = 50 //How many projectiles will pass the cover. Lower means stronger cover
 	var/bar_material = METAL
 
@@ -80,7 +79,7 @@
 	opacity = TRUE
 /*
 /obj/structure/barricade/wooden
-	name = "wooden barricade" 
+	name = "wooden barricade"
 	desc = "This space is blocked off by a wooden barricade."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "woodenbarricade"
@@ -137,7 +136,7 @@
 		G.gun_brace(user, src)
 		return
 	return ..()*/
-	
+
 /obj/structure/barricade/sandbags/make_debris()
 	new /obj/item/stack/ore/glass(get_turf(src), drop_amount)
 
@@ -368,7 +367,15 @@
 	obj_integrity = 400
 	max_integrity = 400
 	proj_pass_rate = 90
-	pass_flags = LETPASSTHROW | PASSGRILLE //Feed the prisoners, or not.
+	pass_flags_self = LETPASSTHROW | BLOCKMOBTHROW
+	pass_flags = LETPASSTHROW | PASSGRILLE  //Feed the prisoners, or not.
+
+/obj/structure/barricade/train
+	name = "train siding"
+	desc = "The side of an ancient train, the vehicles that tamed the West. Now, it's little more than an armoured coffin wall."
+	icon = 'icons/turf/walls/f13composite.dmi'
+	icon_state = "trainwall"
+	icon_type_smooth = "trainwall"
 
 /*
 /obj/structure/barricade/sandbags
@@ -458,7 +465,7 @@
 	return TRUE
 
 /obj/structure/obstacle/barbedwire/proc/shock(mob/user, prb) 	// war crime mode, if you can find an electrical generator
-	
+
 	if(!in_range(src, user))//To prevent TK and mech users from getting shocked
 		return FALSE
 	var/turf/T = get_turf(src)
@@ -604,7 +611,7 @@
 	name = "junk"
 	icon = 'icons/fallout/objects/furniture/junk.dmi'
 	icon_state = "junk_clock"
-	
+
 /obj/effect/overlay/junk/wrench_act(mob/user, obj/item/tool)
 	if(tool.use_tool(src, user, 30, volume=100))
 		to_chat(user, span_notice("You dismantle the junk."))

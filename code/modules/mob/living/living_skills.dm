@@ -18,13 +18,15 @@
 	var/sneaking = FALSE
 	var/sneaking_cooldown = 0
 	var/highest_gun_or_energy_cache = 0
+	var/inspire_cooldown = 0
+	var/inspired = 0
 
 // -20 for an easy roll
 // -10 for difficulty on a 'normal' roll
 // 0 for a challenging roll
 // +20 for an expert roll
 /mob/proc/skill_roll(check, difficulty = DIFFICULTY_NORMAL, do_message = 1)
-	if ((skill_value(check) + special_l) >= (rand(1,100) + difficulty))
+	if ((skill_value(check) + getLuckModifier()) >= (rand(1,100) + difficulty))
 		if (do_message)
 			to_chat(src, span_green("You succeed the skill check using: [check]"))
 		return TRUE
@@ -36,7 +38,7 @@
 // rolling with advantage, should use this when we kind of want the check to pass
 /mob/proc/skill_roll_kind(check, difficulty = DIFFICULTY_NORMAL, do_message = 1)
 	var/lowest_random = min(rand(1,100), rand(1,100)) + difficulty
-	if ((skill_value(check) + special_l) >= lowest_random)
+	if ((skill_value(check) + getLuckModifier()) >= lowest_random)
 		if (do_message)
 			to_chat(src, span_green("You succeed the skill check using: [check]"))
 		return TRUE
@@ -44,10 +46,25 @@
 		if (do_message)
 			to_chat(src, span_red("You fail the skill check using: [check]"))
 		return FALSE
-	
+
 	//Maybe we'll use the flat formula later.
-	//var/the_val = (skill_value(check) + special_l)
+	//var/the_val = (skill_value(check) + getLuckModifier())
 	//prob((the_val-difficulty)*(the_val-difficulty)/100+((100+difficulty-the_val)*the_val)/100*2)
+
+// You have sinned, now you must pay
+/mob/proc/skill_roll_evil(check, difficulty = DIFFICULTY_NORMAL, do_message = 1)
+	var/highest_random = max(rand(1,100), rand(1,100)) + difficulty
+	if ((skill_value(check) + getLuckModifier()) >= highest_random && prob(special_l*9))
+		if (do_message)
+			to_chat(src, span_green("You succeed the skill check using: [check]"))
+		return TRUE
+	else
+		if (do_message)
+			to_chat(src, span_red("You fail the skill check using: [check]"))
+		return FALSE
+
+mob/proc/getLuckModifier()
+	return (special_l - 5)*2
 
 /mob/proc/skill_roll_under(check, difficulty = DIFFICULTY_NORMAL)
 	return  ((rand(1,100) + difficulty) - (skill_value(check)))
@@ -122,7 +139,7 @@
 	if (SKILL_OUTDOORSMAN == skill)
 		skill_outdoorsman = value
 	invalidate_skill_caches()
-	
+
 /mob/proc/invalidate_skill_caches()
 	cached_knowable_recipies = list()
 	cached_unknowable_recipies = list()
@@ -135,7 +152,7 @@
 	list("name" = SKILL_ENERGY, "value" = num2text(skill_energy + special_a), "description" = "Applies to energy weapons. Controls things like recoil and dispersion. Higher values slower recoil buildup, Also important for failure to fire chance and aim fumbles."),
 	list("name" = SKILL_UNARMED, "value" = num2text(skill_unarmed + round((special_a + special_s)/2)), "description" = "Hit chance when unarmed, also determines chances to disarm and break out of grabs and the like."),
 	list("name" = SKILL_MELEE, "value" = num2text(skill_melee + round((special_a + special_s)/2)), "description" = "Hit chance when using any melee weapon. Also influnces blocking."),
-	list("name" = SKILL_THROWING, "value" = num2text(skill_throwing + special_a), "description" = "Hit chance for projectiles thrown by your character."),
+	list("name" = SKILL_THROWING, "value" = num2text(skill_throwing + special_a), "description" = "Hit chance for projectiles thrown by your character. Also acts as the gun skill for bows."),
 	//list("name" = SKILL_FIRST_AID, "value" = num2text(skill_first_aid + round((special_p*2 + special_i)/2)), "description" = "Bandage, Suture, Salves, basic medicine effectiveness, higher values means longer lifetimes and more healing. Also can be used to read from health scanners."),
 	list("name" = SKILL_DOCTOR, "value" = num2text(skill_doctor + round((special_p*2 + special_i)/2)), "description" = "Surgical success chance, higher values also unlock more surgeries. Can also be used to control various medical devices autosurgeons and the like. [SKILL_FIRST_AID] Bandage, Suture, Salves, basic medicine effectiveness."),
 	list("name" = SKILL_SNEAK, "value" = num2text(skill_sneak  + round((special_p*2 + special_a)/2)), "description" = "Determines what happens when using the sneak verb. Higher values make your sprite more transparent and lower mob dectection chance. [SKILL_TRAPS] Used for disarming traps. [SKILL_LOCKPICK] Success chance for opening locks both on doors and for lock boxes."),
@@ -159,7 +176,7 @@
 	if(!(A in view(client ? client.view : world.view, src)) || !m.will_talk)
 		// shift-click catcher may issue examinate() calls for out-of-sight turfs
 		return
-	
+
 	m.talk_to(src)
 
 /mob/living/verb/sneak()
@@ -176,20 +193,94 @@
 /mob/living/proc/start_sneaking()
 	if (!sneaking)
 		sneaking = TRUE
-		src.alpha = (255 - min(src.skill_value(SKILL_SNEAK) * 2, 210))
+		src.alpha = (255 - min(src.skill_value(SKILL_SNEAK) * 2, 200))
 		to_chat(src, span_notice("You start sneaking."))
 		if (m_intent != MOVE_INTENT_WALK)
 			toggle_move_intent()
-		
+
 
 /mob/living/proc/stop_sneaking(cooldown = FALSE)
 	if (sneaking)
 		sneaking = FALSE
 		src.alpha = 255
 		to_chat(src, span_warning("You stop sneaking."))
-		if (cooldown)
+		if (!sneaking_cooldown && cooldown)
 			sneaking_cooldown = TRUE
-			addtimer(CALLBACK(src, /mob/living/proc/clear_cooldown), 5 SECONDS)
+			addtimer(CALLBACK(src, /mob/living/proc/clear_cooldown), 12 SECONDS)
 
 /mob/living/proc/clear_cooldown()
 	sneaking_cooldown = FALSE
+
+/mob/living/carbon/human/verb/inspire()
+	set name = "Inspire"
+	set category = "IC"
+	if (inspire_cooldown)
+		to_chat(src, span_warning("You can't do that again so soon."))
+		return
+	if (!skill_check(SKILL_SPEECH, EASY_CHECK))
+		to_chat(src, span_warning("Your speeches probably aren't going to inspire anyone."))
+		return
+	var/choices = skill_check(SKILL_SPEECH, HARD_CHECK) ? list("Everyone in earshot", "One person") : list("One person")
+	var/how_many_to_inspire = input(src, "How many people do you wish to inspire?", "Inspire", null) as null|anything in choices
+
+	if (how_many_to_inspire != null)
+		var/special_in_question = input(src, "Which S.P.E.C.I.A.L are you trying to inspire?", "Inspire", "s") as anything in list("s","p","e","c","i","a","l")
+		var/speech_given = input(src, "Please type the speech you intend to give to inspire your choosen target(s). Keep in mind roleplaying standards.", "Inspire", "") as text
+		var/mob/living/carbon/targeted_mob = null
+		var/list/mob/living/carbon/peeps = list()
+		if (how_many_to_inspire == "One person")
+			var/list/mob/living/carbon/people = list()
+			for(var/mob/living/carbon/A  in oview(src))
+				people.Add(A)
+			targeted_mob = input(src, "Who are you talking to?", "Inspire") as mob in people
+			if (targeted_mob)
+				peeps = list(targeted_mob)
+			else
+				return
+		else if (how_many_to_inspire == "Everyone in earshot")
+			for (var/mob/living/carbon/A  in oview(src))
+				peeps.Add(A)
+		var/our_speech_skill = skill_value(SKILL_SPEECH)
+		var/bonus = round(our_speech_skill/30, 1)
+		if (do_inspire_for_targets(peeps, special_in_question, bonus))
+			say(speech_given, spans = list("hypnophrase"))
+		else
+			say(speech_given)
+
+/mob/living/proc/do_inspire_for_targets(list/mob/living/carbon/inpirees, special_in_question, bonus)
+	inspire_cooldown = TRUE
+	var/good_speech = skill_roll_kind(SKILL_SPEECH, DIFFICULTY_NORMAL)
+	addtimer(CALLBACK(src, /mob/living/proc/clear_inspire_cooldown), 20 MINUTES)
+	if (good_speech)
+		SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "speech", /datum/mood_event/inspiring_speech)
+		for (var/mob/living/carbon/inspiree  in inpirees)
+			if (inspiree.inspired || inspiree == src)
+				return
+			SEND_SIGNAL(inspiree, COMSIG_ADD_MOOD_EVENT, "speech", /datum/mood_event/inspiring_speech)
+			inspiree.modify_special(bonus, special_in_question)
+			inspiree.inspired = TRUE
+			addtimer(CALLBACK(inspiree, /mob/living/proc/modify_special, (-bonus), special_in_question), 20 MINUTES)
+			addtimer(CALLBACK(inspiree, /mob/living/proc/clear_inspired), 20 MINUTES)
+	return good_speech
+
+/mob/living/proc/clear_inspire_cooldown()
+	inspire_cooldown = FALSE
+
+/mob/living/proc/clear_inspired()
+	inspired = FALSE
+
+/mob/living/proc/modify_special(val, spec)
+	if ("s" == spec)
+		special_s += val
+	if ("p" == spec)
+		special_p += val
+	if ("e" == spec)
+		special_e += val
+	if ("c" == spec)
+		special_c += val
+	if ("i" == spec)
+		special_i += val
+	if ("a" == spec)
+		special_a += val
+	if ("l" == spec)
+		special_l += val

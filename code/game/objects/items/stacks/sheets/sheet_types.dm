@@ -31,10 +31,10 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	new/datum/stack_recipe("metal parts", /obj/item/stack/crafting/metalparts, 5, skill_threshold = REGULAR_CHECK), \
 	new/datum/stack_recipe("length of chain", /obj/item/blacksmith/chain, 1, time = 50), \
 	null, \
-	new/datum/stack_recipe("lock", /obj/item/lock_construct, 1, skill_threshold = EASY_CHECK), \
+	new/datum/stack_recipe("lock", /obj/item/lock_construct, 1, skill_threshold = VERY_EASY_CHECK), \
 	new/datum/stack_recipe("coffee pot", /obj/item/crafting/coffee_pot, 1), \
 	new/datum/stack_recipe("lunchbox", /obj/item/crafting/lunchbox, 1), \
-	new/datum/stack_recipe("key", /obj/item/key, 1, skill_threshold = EASY_CHECK), \
+	new/datum/stack_recipe("key", /obj/item/key, 1, skill_threshold = VERY_EASY_CHECK), \
 	new/datum/stack_recipe("key chain", /obj/item/storage/keys_set, 1), \
 	null, \
 	new/datum/stack_recipe("seed extractor", /obj/structure/legion_extractor, 6, one_per_turf = TRUE, on_floor = TRUE), \
@@ -537,7 +537,8 @@ GLOBAL_LIST_INIT(cardboard_recipes, list ( \
 	new/datum/stack_recipe("folder", /obj/item/folder),											\
 	// holy fuck why are there so many boxes
 	new/datum/stack_recipe_list("fancy boxes", list ( \
-		new /datum/stack_recipe("donut box", /obj/item/storage/fancy/donut_box), 				\
+		new /datum/stack_recipe("donut box", /obj/item/storage/fancy/donut_box),				\
+		new /datum/stack_recipe("pizza box", /obj/item/pizzabox, 2), 							\
 		new /datum/stack_recipe("egg box", /obj/item/storage/fancy/egg_box), 					\
 		new /datum/stack_recipe("nugget box", /obj/item/storage/fancy/nugget_box),				\
 		new /datum/stack_recipe("security-styled box", /obj/item/storage/box/seclooking), 		\
@@ -693,7 +694,7 @@ GLOBAL_LIST_INIT(brass_recipes, list ( \
 	throw_range = 3
 	turf_type = /turf/open/floor/clockwork
 	novariants = FALSE
-	grind_results = list(/datum/reagent/iron = 5, /datum/reagent/teslium = 15, /datum/reagent/fuel/holyoil = 1)
+	grind_results = list(/datum/reagent/iron = 5, /datum/reagent/fuel/holyoil = 1)
 	merge_type = /obj/item/stack/tile/brass
 	tableVariant = /obj/structure/table/reinforced/brass
 
@@ -792,7 +793,7 @@ GLOBAL_LIST_INIT(bronze_recipes, list ( \
 GLOBAL_LIST_INIT(bone_recipes, list(
 	new /datum/stack_recipe("bone dagger", /obj/item/melee/onehanded/knife/bone, 2, time = 20),
 	null, \
-	new /datum/stack_recipe("bone armor", /obj/item/clothing/suit/armor/light/tribal/bone, 6, time = 30),
+	new /datum/stack_recipe("bone armor", /obj/item/clothing/suit/armor/medium/tribal/bone, 6, time = 30),
 	new /datum/stack_recipe("skull helmet", /obj/item/clothing/head/helmet/skull, 4, time = 30),
 	null, \
 	new/datum/stack_recipe_list("medicine", list( \

@@ -225,7 +225,7 @@
 		var/list/copyOfList = heardm.Copy()
 		for (var/mob/living/A in copyOfList)
 			if (A.sneaking)
-				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier, 0)))
+				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier, 0)) && prob((100 - 20 + (2*A.special_l))))
 					to_chat(A, span_notice("[name] has not spotted you."))
 					heardm -= A
 				else
@@ -247,7 +247,7 @@
 		for (var/mob/living/A in oview(vision_range, targets_from)) //mob/dead/observers arent possible targets
 			CHECK_TICK
 			if (A.sneaking)
-				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier, 0)))
+				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier, 0)) && prob((100 - 20 + (2*A.special_l))))
 					to_chat(A, span_notice("[name] has not spotted you."))
 				else
 					A.stop_sneaking(TRUE)
@@ -456,6 +456,7 @@
 	else
 		approaching_target = FALSE
 	set_glide_size(DELAY_TO_GLIDE_SIZE(move_to_delay))
+	/*
 	var/distance_to_target = get_dist(targets_from, target)
 	if ((approaching_target && istype(target, /mob/living/carbon/human)) && (actively_moving || distance_to_target < 4))
 		// if we're close we can do an A* Pathfind to not get stuck in place, to really put the I in AI
@@ -463,8 +464,9 @@
 		path_to(target, minimum_distance, 8, delay)
 	else
 		moving_halt()
-		walk_to(src, target, minimum_distance, delay)
-		
+	*/
+	walk_to(src, target, minimum_distance, delay)
+
 
 	if(variation_list[MOB_MINIMUM_DISTANCE_CHANCE] && LAZYLEN(variation_list[MOB_MINIMUM_DISTANCE]) && prob(variation_list[MOB_MINIMUM_DISTANCE_CHANCE]))
 		minimum_distance = vary_from_list(variation_list[MOB_MINIMUM_DISTANCE])
@@ -704,7 +706,7 @@ mob/living/simple_animal/hostile/proc/DestroySurroundings() // for use with mega
 /mob/living/simple_animal/hostile/proc/GainPatience()
 	if(QDELETED(src))
 		return
-	
+
 	if(lose_patience_timeout)
 		LosePatience()
 		lose_patience_timer_id = addtimer(CALLBACK(src, .proc/LoseTarget), lose_patience_timeout, TIMER_STOPPABLE)
@@ -718,7 +720,7 @@ mob/living/simple_animal/hostile/proc/DestroySurroundings() // for use with mega
 /mob/living/simple_animal/hostile/proc/LoseSearchObjects()
 	if(QDELETED(src))
 		return
-	
+
 	search_objects = 0
 	deltimer(search_objects_timer_id)
 	search_objects_timer_id = addtimer(CALLBACK(src, .proc/RegainSearchObjects), search_objects_regain_time, TIMER_STOPPABLE)
@@ -871,7 +873,7 @@ mob/living/simple_animal/hostile/proc/DestroySurroundings() // for use with mega
 
 
 /* Follow a path given to us by the game.
-	
+
 	Byonds walk_to doesn't check orthogonally adjacent tiles to see if a diagonal move is valid.
 	SS13 does check both shared Orthogonal neighbours to see if a diagonal move is valid.
 	So mobs get stuck on corners when using byonds walk_to.

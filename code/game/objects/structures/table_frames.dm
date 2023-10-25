@@ -93,6 +93,8 @@
 			toConstruct = /obj/structure/table/wood
 		else if(istype(I, /obj/item/stack/tile/carpet))
 			toConstruct = /obj/structure/table/wood/poker
+		else if(istype(I, /obj/item/stack/sheet/metal))
+			toConstruct =/obj/structure/table/booth
 
 		if (toConstruct)
 			if(material.get_amount() < 1)

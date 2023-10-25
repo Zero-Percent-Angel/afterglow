@@ -359,10 +359,11 @@
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
 	icon_prefix = "smg10mm"
+	wielded_icon = "smg10mm2"
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_BULKY
-	mag_type = /obj/item/ammo_box/magazine/m10mm
-	init_mag_type = /obj/item/ammo_box/magazine/m10mm/adv/ext
+	mag_type = /obj/item/ammo_box/magazine/m10mm/smg
+	init_mag_type = /obj/item/ammo_box/magazine/m10mm/smg
 
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
@@ -533,56 +534,6 @@
 	//actions_types = list(/datum/action/item_action/toggle_firemode)
 
 /* * * * * * * * * * *
- * Carl Gustaf 10mm SMG
- * Another 10mm SMG
- * 10mm
- * Slower firing
- * Less damage
- * No akimbo
- * Common? ive never seen one
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/smg/cg45
-	name = "Carl Gustaf 10mm"
-	desc = "Post-war submachine gun made in workshops in Phoenix, a copy of a simple old foreign design."
-	icon_state = "cg45"
-	item_state = "cg45"
-	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
-	w_class = WEIGHT_CLASS_BULKY
-	mag_type = /obj/item/ammo_box/magazine/cg45
-	init_mag_type = /obj/item/ammo_box/magazine/cg45
-
-	slowdown = GUN_SLOWDOWN_SMG_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_FASTER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = SMG_RECOIL(0.8)
-	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
-		/datum/firemode/semi_auto/faster
-	)
-
-	is_automatic = TRUE
-	automatic = 1
-	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(PISTOL_MEDIUM_VOLUME),
-		SP_VOLUME_SILENCED(PISTOL_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(PISTOL_MEDIUM_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
-		SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
-	)
-
-/* * * * * * * * * * *
  * Thompson SMG
  * Baseline .45 SMG
  * .45ACP
@@ -603,15 +554,15 @@
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(1)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
+		/datum/firemode/automatic/rpm150,
 		/datum/firemode/semi_auto/fast
 	)
 
@@ -652,8 +603,8 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
+	is_automatic = FALSE
 
 /* * * * * * * * * * *
  * P90c SMG
@@ -845,261 +796,6 @@
 		SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
 	)
 
-/* * * * * * * * * * *
- * Sidewinder SMG
- * Multiammo SMG
- * 9mm / 10mm / .45 / .22
- * Click a button while its empty to change what mags it accepts!
- * Low damage
- * Two-handed
- * Slow firing
- * Inaccurate
- * Uncommon?
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/smg/sidewinder
-	name = "multi-caliber smg"
-	desc = "The answer to all your ammo-scrounging problems! The TwisTactical Spindoctor SMMG (sub-machine multi-gun) integrates \
-			rotation-reactive metalmers in the upper assembly to change what ammunition it accepts, from .22LR to .45ACP with a \
-			simple twist of the mechanism. Surprisingly easy to maintain and assemble, given the right high-tech Rotosteel parts, \
-			making it a common sight for Boxcar Vixens in the Heap, where the short sightlines more than make up for the gun's \
-			inherently poor accuracy. Doesn't accept awkwardly shaped magazines, though. That's for the PRO model, which isn't \
-			available out here."
-	icon_state = "sidewinder"
-	slowdown = GUN_SLOWDOWN_SMG_LIGHT
-	w_class = WEIGHT_CLASS_BULKY
-	mag_type = /obj/item/ammo_box/magazine/uzim9mm
-	extra_mag_types = /obj/item/ammo_box/magazine/m9mm
-	init_mag_type = /obj/item/ammo_box/magazine/m9mm/doublestack
-	var/current_caliber = "9mm"
-	added_spread = GUN_SPREAD_POOR
-	slowdown = GUN_SLOWDOWN_SMG_LIGHT
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_firemodes = list(
-		/datum/firemode/semi_auto/fast,
-		/datum/firemode/burst/three/fast
-	)
-
-	gun_tags = list(GUN_SCOPE, GUN_SILENCABLE)
-	can_scope = TRUE
-	scope_state = "AEP7_scope"
-	scope_x_offset = 10
-	scope_y_offset = 22
-	can_flashlight = TRUE
-
-	can_flashlight = TRUE
-	scope_state = "flight"
-	flight_x_offset = 16
-	flight_y_offset = 18
-
-	can_suppress = TRUE
-	suppressor_state = "pistol_suppressor"
-	suppressor_x_offset = 31
-	suppressor_y_offset = 17
-
-	actions_types = list(/datum/action/item_action/toggle_sidewinder)
-	fire_sound = 'sound/f13weapons/9mm.ogg'
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(PISTOL_LIGHT_VOLUME),
-		SP_VOLUME_SILENCED(PISTOL_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(PISTOL_LIGHT_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(PISTOL_LIGHT_DISTANT_SOUND),
-		SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
-	)
-
-/obj/item/gun/ballistic/automatic/smg/sidewinder/update_icon_state()
-	icon_state = "[initial(icon_state)][magazine ? "-[current_caliber]" : ""][chambered ? "" : "-e"]"
-
-/obj/item/gun/ballistic/automatic/smg/sidewinder/proc/change_ammo(mob/user)
-	if(user)
-		if(magazine)
-			user.show_message(span_alert("[src] needs to be completely unloaded before working the TwistForm mechanism!"))
-			return
-		if(chambered)
-			user.show_message(span_alert("[src] needs to be <u>completely</u> unloaded before working the TwistForm mechanism!"))
-			return
-
-	allowed_mags = list()
-	change_the_ammo(user)
-
-/obj/item/gun/ballistic/automatic/smg/sidewinder/proc/change_the_ammo(mob/user)
-	var/message2self = "You wrench the upper receiver of [src] out of its socket and give it one full turn."
-	var/message2everyone = "[user] spins [user.p_their()] their gun around. It makes a wierd click."
-	switch(current_caliber)
-		if("22LR")
-			current_caliber = "9mm"
-			allowed_mags |= typesof(/obj/item/ammo_box/magazine/m9mm, /obj/item/ammo_box/magazine/uzim9mm)
-			fire_sound = 'sound/f13weapons/9mm.ogg'
-			message2self += "The panel on the side now reads: \"9mm Mode\""
-			gun_sound_properties = list(
-				SP_VARY(FALSE),
-				SP_VOLUME(PISTOL_LIGHT_VOLUME),
-				SP_VOLUME_SILENCED(PISTOL_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-				SP_NORMAL_RANGE(PISTOL_LIGHT_RANGE),
-				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-				SP_IGNORE_WALLS(TRUE),
-				SP_DISTANT_SOUND(PISTOL_LIGHT_DISTANT_SOUND),
-				SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
-			)
-		if("9mm")
-			current_caliber = "10mm"
-			allowed_mags |= typesof(/obj/item/ammo_box/magazine/m10mm, /obj/item/ammo_box/magazine/cg45)
-			fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
-			message2self += "The panel on the side now reads: \"10mm Mode\""
-			gun_sound_properties = list(
-				SP_VARY(FALSE),
-				SP_VOLUME(PISTOL_MEDIUM_VOLUME),
-				SP_VOLUME_SILENCED(PISTOL_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-				SP_NORMAL_RANGE(PISTOL_MEDIUM_RANGE),
-				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-				SP_IGNORE_WALLS(TRUE),
-				SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
-				SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
-			)
-		if("10mm")
-			current_caliber = "45ACP"
-			allowed_mags |= typesof(/obj/item/ammo_box/magazine/greasegun, /obj/item/ammo_box/magazine/m45, /obj/item/ammo_box/magazine/tommygunm45/stick)
-			fire_sound = 'sound/weapons/gunshot_smg.ogg'
-			message2self += "The panel on the side now reads: \".45ACP Mode\""
-			gun_sound_properties = list(
-				SP_VARY(FALSE),
-				SP_VOLUME(PISTOL_MEDIUM_VOLUME),
-				SP_VOLUME_SILENCED(PISTOL_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-				SP_NORMAL_RANGE(PISTOL_MEDIUM_RANGE),
-				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-				SP_IGNORE_WALLS(TRUE),
-				SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
-				SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
-			)
-		if("45ACP")
-			current_caliber = "22LR"
-			allowed_mags |= typesof(/obj/item/ammo_box/magazine/m22)
-			fire_sound = 'sound/f13weapons/ServiceRifle.ogg'
-			message2self += "The panel on the side now reads: \".22LR Mode\""
-			gun_sound_properties = list(
-				SP_VARY(FALSE),
-				SP_VOLUME(PISTOL_LIGHT_VOLUME),
-				SP_VOLUME_SILENCED(PISTOL_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-				SP_NORMAL_RANGE(PISTOL_LIGHT_RANGE),
-				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-				SP_IGNORE_WALLS(TRUE),
-				SP_DISTANT_SOUND(PISTOL_LIGHT_DISTANT_SOUND),
-				SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
-			)
-	playsound(get_turf(src), 'sound/f13weapons/equipsounds/riflequip.ogg', 60, 1)
-	if(user)
-		user.visible_message(message2everyone,span_notice(message2self))
-
-/obj/item/gun/ballistic/automatic/smg/sidewinder/examine(mob/user)
-	. = ..()
-	switch(current_caliber)
-		if("22LR")
-			. += "<br><span class='notice'>The readout displays \".22LR Mode\", indicating it'll accept most .22 SMG and pistol mags.</span>"
-		if("9mm")
-			. += "<br><span class='notice'>The readout displays \"9mm Mode\", indicating it'll accept most 9mm SMG and pistol mags.</span>"
-		if("10mm")
-			. += "<br><span class='notice'>The readout displays \"10mm Mode\", indicating it'll accept most 10mm SMG and pistol mags.</span>"
-		if("45ACP")
-			. += "<br><span class='notice'>The readout displays \".45ACP Mode\", indicating it'll accept most .45 SMG and pistol mags.</span>"
-	. += "<br><span class='notice'>Unload the gun and click the action button to change the caliber.</span>"
-
-//worn sidewinder
-
-/obj/item/gun/ballistic/automatic/smg/sidewinder/worn
-	name = "multi-caliber carbine"
-	desc = "The answer to all your ammo-scrounging problems! The TwisTactical Spindoctor MGC (multi-gun carbine) integrates \
-			rotation-reactive metalmers in the upper assembly to change what ammunition it accepts, from .22LR to .45ACP with a \
-			simple twist of the mechanism. Surprisingly easy to maintain and assemble, given the right high-tech Rotosteel parts, \
-			making it a common sight for Boxcar Vixens in the Heap, where the short sightlines more than make up for the gun's \
-			inherently poor accuracy. Doesn't accept awkwardly shaped magazines, though. That's for the PRO model, which isn't \
-			available out here. This model is locked to semi-auto!"
-	icon_state = "sidewinder"
-	init_firemodes = list(
-		/datum/firemode/semi_auto/fast
-	)
-
-/// multical-magnum
-/obj/item/gun/ballistic/automatic/smg/sidewinder/magnum
-	name = "multi-caliber magnum"
-	desc = "A heavier, more robust multi-caliber carbine! The TwisTactical Magnum uses a thicker-walled roto-mechanism that allows its \
-			rotation-reactive metalmers to withstand higher pressures, now able to safely fire anything from .45ACP to 14mm with a \
-			simple twist of the mechanism. Surprisingly easy to maintain and assemble, given the right high-tech Rotosteel parts, \
-			making it a common sight for Boxcar Vixens in the Heap, where the short sightlines more than make up for the gun's \
-			inherently poor accuracy. Only accepts small magazines. This model is locked to semi-auto!"
-	icon_state = "sidewinder-magnum"
-	mag_type = /obj/item/ammo_box/magazine/m44
-	extra_mag_types = /obj/item/ammo_box/magazine/m44/automag
-	init_mag_type = /obj/item/ammo_box/magazine/m44
-	current_caliber = "44"
-	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
-	)
-	fire_sound = 'sound/f13weapons/44mag.ogg'
-
-/obj/item/gun/ballistic/automatic/smg/sidewinder/magnum/change_the_ammo(mob/user)
-	var/message2self = "You wrench the upper receiver of [src] out of its socket and give it one full turn. "
-	var/message2everyone = "[user] spins [user.p_their()] their gun around. It makes a wierd click."
-	switch(current_caliber)
-		if("44")
-			current_caliber = "14mm"
-			allowed_mags |= typesof(/obj/item/ammo_box/magazine/m14mm)
-			fire_sound = 'sound/f13weapons/magnum_fire.ogg'
-			message2self += "The panel on the side now reads: \"14mm Mode\""
-			gun_sound_properties = list(
-				SP_VARY(FALSE),
-				SP_VOLUME(PISTOL_HEAVY_VOLUME),
-				SP_VOLUME_SILENCED(PISTOL_HEAVY_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-				SP_NORMAL_RANGE(PISTOL_HEAVY_RANGE),
-				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-				SP_IGNORE_WALLS(TRUE),
-				SP_DISTANT_SOUND(PISTOL_HEAVY_DISTANT_SOUND),
-				SP_DISTANT_RANGE(PISTOL_HEAVY_RANGE_DISTANT)
-			)
-		if("14mm")
-			current_caliber = "45ACP"
-			allowed_mags |= typesof(/obj/item/ammo_box/magazine/m45)
-			fire_sound = 'sound/weapons/gunshot_smg.ogg'
-			message2self += "The panel on the side now reads: \".45ACP Mode\""
-			gun_sound_properties = list(
-				SP_VARY(FALSE),
-				SP_VOLUME(PISTOL_MEDIUM_VOLUME),
-				SP_VOLUME_SILENCED(PISTOL_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-				SP_NORMAL_RANGE(PISTOL_MEDIUM_RANGE),
-				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-				SP_IGNORE_WALLS(TRUE),
-				SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
-				SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
-			)
-		if("45ACP")
-			current_caliber = "44"
-			allowed_mags |= typesof(/obj/item/ammo_box/magazine/m44)
-			fire_sound = 'sound/f13weapons/44mag.ogg'
-			message2self += "The panel on the side now reads: \".44 Magnum Mode\""
-			gun_sound_properties = list(
-				SP_VARY(FALSE),
-				SP_VOLUME(PISTOL_HEAVY_VOLUME),
-				SP_VOLUME_SILENCED(PISTOL_HEAVY_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-				SP_NORMAL_RANGE(PISTOL_HEAVY_RANGE),
-				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-				SP_IGNORE_WALLS(TRUE),
-				SP_DISTANT_SOUND(PISTOL_HEAVY_DISTANT_SOUND),
-				SP_DISTANT_RANGE(PISTOL_HEAVY_RANGE_DISTANT)
-			)
-	playsound(get_turf(src), 'sound/f13weapons/revolverspin.ogg', 60, 1)
-	if(user)
-		user.visible_message(message2everyone,span_notice(message2self))
-
-
 /* * * * * * *
  * Carbines  *
  * * * * * * */
@@ -1172,30 +868,6 @@
 	)
 
 /* * * * * * * * * * *
- * M1/N Carbine
- * 10mm
- * Higher damage
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/m1carbine/m1n
-	name = "M1/N carbine"
-	desc = "An M1 Carbine with faded military markings. Looks beat up but functional."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	icon_state = "ncr-m1carbine"
-	item_state = "rifle"
-
-	slowdown = GUN_SLOWDOWN_CARBINE
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
-	cock_delay = GUN_COCK_RIFLE_BASE
-
-/* * * * * * * * * * *
  * M1A1 Carbine
  * 10mm
  * Folds up!
@@ -1246,98 +918,6 @@
 	icon_state = "[initial(icon_state)][magazine ? "-[magazine.max_ammo]" : ""][chambered ? "" : "-e"][stock ? "" : "-f"]"
 
 /* * * * * * * * * * *
- * De Lisle Carbine
- * Silent 9mm carbine
- * Silent!
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/delisle
-	name = "De Lisle carbine"
-	desc = "A integrally suppressed carbine, known for being one of the quietest firearms ever made. Chambered in 9mm."
-	icon_state = "delisle"
-	item_state = "varmintrifle"
-	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
-	mag_type = /obj/item/ammo_box/magazine/m9mm
-	init_mag_type = /obj/item/ammo_box/magazine/m9mm/doublestack
-
-	slowdown = GUN_SLOWDOWN_CARBINE
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = CARBINE_RECOIL(1.1)
-	init_firemodes = list(
-		/datum/firemode/semi_auto
-	)
-	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION // tacticool
-
-	can_scope = TRUE
-	silenced = TRUE
-	fire_sound_silenced = 'sound/weapons/Gunshot_large_silenced.ogg'
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(PISTOL_LIGHT_VOLUME),
-		SP_VOLUME_SILENCED(PISTOL_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(PISTOL_LIGHT_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(PISTOL_LIGHT_DISTANT_SOUND),
-		SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
-	)
-
-/* * * * * * * * * * *
- * Commando Carbine
- * Silent .45 carbine
- * Silent!
- * Common?
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/delisle/commando
-	name = "commando carbine"
-	desc = "A integrally suppressed carbine, known for being one of the quietest firearms ever made. This modified version is often used by the Brotherhood of Steel. Its stock has been replaced by post-war polymer furniture, with space to mount a scope. Chambered in .45 ACP."
-	icon_state = "commando"
-	item_state = "commando"
-	mag_type = /obj/item/ammo_box/magazine/m45
-	init_mag_type = /obj/item/ammo_box/magazine/m45/socom
-
-	slowdown = GUN_SLOWDOWN_CARBINE
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = CARBINE_RECOIL(1)
-	init_firemodes = list(
-		/datum/firemode/semi_auto
-	)
-	silenced = TRUE
-	can_scope = TRUE
-	semi_auto = TRUE
-	automatic_burst_overlay = FALSE
-	scope_state = "scope_medium"
-	scope_x_offset = 6
-	scope_y_offset = 14
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(PISTOL_MEDIUM_VOLUME),
-		SP_VOLUME_SILENCED(PISTOL_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(PISTOL_MEDIUM_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
-		SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
-	)
-
-/* * * * * * * * * * *
  * Combat Carbine
  * Baseline .45 carbine
  * Common
@@ -1384,76 +964,16 @@
 	)
 
 /* * * * * * * * * * *
- * Trusty Combat Carbine
- * Slightly softer .45 carbine
- * Less damage
- * less accurate
- * Powerful melee
- * With love
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/combat/worn/brim
-	name = "Trusty Combat Carbine"
-	desc = "A well loved .45 semi-automatic combat carbine, with so many parts replaced and fixed up that it wouldn't give the artisan who \
-		maintained this thing enough credit to say it's a pre-war design. Covered in forge marks where repairs were needed. While everything \
-		looks to be of high-quality crafting, the precision of such parts look a bit... off, like a master swordsmith were asked to forge a \
-		gun by hand. As such, the internal mechanisms and rifling are not <i>quite</i> the right size for a .45ACP round, and the sight \
-		picture is a bit <i>Fuzzy</i>. Every part is, however, built as rugged as its maker, and can be used as a very effective melee \
-		weapon without any risk of damaging it."
-	icon_state = "combat_rifle"
-	item_state = "combatrifle"
-	icon_prefix = "combatrifle"
-	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
-	mag_type = /obj/item/ammo_box/magazine/tommygunm45
-	init_mag_type = /obj/item/ammo_box/magazine/tommygunm45/stick
-
-	slowdown = GUN_SLOWDOWN_CARBINE
-	force = GUN_MELEE_FORCE_RIFLE_HEAVIER
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	init_recoil = CARBINE_RECOIL(1)
-	added_spread = GUN_SPREAD_POOR
-
-/* * * * * * * * * * *
- * Worn Combat Carbine
- * Slightly softer .45 carbine
- * Less damage
- * less accurate
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/combat/worn
-	name = "Combat Carbine"
-	desc = "A .45 semi-automatic combat carbine, produced pre-war for National Guard forces. This one seems aged..."
-	icon_state = "combat_rifle"
-	item_state = "combatrifle"
-	icon_prefix = "combatrifle"
-	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
-	mag_type = /obj/item/ammo_box/magazine/tommygunm45
-	init_mag_type = /obj/item/ammo_box/magazine/tommygunm45/stick
-
-	slowdown = GUN_SLOWDOWN_CARBINE
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	damage_multiplier = GUN_LESS_DAMAGE_T2
-	init_recoil = CARBINE_RECOIL(1)
-	added_spread = GUN_SPREAD_POOR
-
-/* * * * * * * * * * *
- * 10/22ish carbine
+ * Varmint Carbine
  * .22 LR
  * Higher damage
- * Found all over the place
+ * Found all over the place; based off Fallout: NV cut content - Varmint was supposed to be in .22 originally. Doing this for cheap, easy rifles for crap spawns.
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/sportcarbine
-	name = "sport carbine"
-	desc = "One of the many .22 LR carbines that were all the rage before the war. While lacking in firepower, it more than makes up for it with its modularity and cheapness to fire."
-	icon_state = "surplus"
+	name = "varmint carbine"
+	desc = "One of the many .22 LR carbine used for hunting vermin that were all the rage before the war. While lacking in firepower, it more than makes up for it with its modularity and cheapness to fire."
+	icon_state = "varmint"
 	item_state = "rifle"
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	mag_type = /obj/item/ammo_box/magazine/m22
@@ -1503,56 +1023,6 @@
 		SP_DISTANT_SOUND(PISTOL_LIGHT_DISTANT_SOUND),
 		SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
 	)
-
-
-/* * * * * * * * * * *
- * M1-22 carbine
- * .22 LR
- * Higher damage
- * One, owned by a fox
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/sportcarbine/m1_22
-	name = "M1-22 carbine"
-	desc = "A one-of-a-kind M1 carbine chambered in .22 LR. Where it lacks in stopping power, it more than makes up for it with modularity and full auto support. Looks well cared for, if a bit fuzzy."
-	icon_state = "m1carbine"
-	item_state = "rifle"
-	mag_type = /obj/item/ammo_box/magazine/m22
-	init_mag_type = /obj/item/ammo_box/magazine/m22/extended
-
-	slowdown = GUN_SLOWDOWN_CARBINE
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_SLOW
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1 // its a weakass cartridge
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = CARBINE_RECOIL(1.2)
-	init_firemodes = list(
-		/datum/firemode/semi_auto,
-		/datum/firemode/automatic/rpm200
-	)
-
-	max_upgrades = 3
-
-	automatic = TRUE
-	automatic_burst_overlay = FALSE
-	can_bayonet = TRUE
-	bayonet_state = "bayonet"
-	knife_x_offset = 22
-	knife_y_offset = 21
-	can_scope = TRUE
-	scope_state = "scope_medium"
-	scope_x_offset = 5
-	scope_y_offset = 14
-	semi_auto = TRUE
-	can_suppress = TRUE
-	suppressor_state = "rifle_suppressor"
-	suppressor_x_offset = 26
-	suppressor_y_offset = 31
-	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 
 /* * * * * * * * * * *
  * Semi-auto Rifles  *
@@ -1625,19 +1095,6 @@
 	)
 
 /* * * * * * * * * * *
- * Varmint Rifle w/ 20rd mag
- * Light semi-auto rifle
- * .223 / 5.56mm
- * Slow to fire
- * Literally the above, but it spawns with a bigger magazine
- *
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/varmint/extended
-	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
-
-/* * * * * * * * * * *
  * Verminkiller Rifle
  * Tricked out semi-auto rifle
  * .223 / 5.56mm
@@ -1705,91 +1162,6 @@
 	fire_sound_silenced = 'sound/weapons/Gunshot_large_silenced.ogg'
 
 /* * * * * * * * * * *
- * Bushmaster Arm Gun
- * Light semi-auto rifle... pistol thing
- * .223 / 5.56mm
- * Slow to fire
- * Inaccurate
- * Kicks all over the place
- * Suuuuuucks
- * But it makes a click!
- * And is tactical!
- * Unique (thankfully)
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/varmint/bushmaster_arm_gun
-	name = ".223 arm pistol"
-	desc = "Be the envy of your platoon with comfortable firepower in a compact form factor, \
-		the Operator's Choice Arm Pistol tactically molds its bullpup feed system to the user's physique, \
-		able to swivel the patented Twistical Receivest to accommodate being held with its recommended \
-		Point'N'Clik SwampWarrior stance. Arm yourself with the Arm Pistol!"
-	icon_state = "arm_rifle"
-	item_state = "m90"
-	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	/// sets if the gun is turnt
-	var/turnt = FALSE
-	max_upgrades = 6
-
-	slowdown = GUN_SLOWDOWN_PISTOL_MEDIUM
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_SLOWER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOWER
-	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T2
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(3)
-	init_firemodes = list(
-		/datum/firemode/semi_auto
-	)
-	gun_accuracy_zone_type = ZONE_WEIGHT_SEMI_AUTO
-
-	gun_tags = list(GUN_SCOPE)
-
-	semi_auto = TRUE
-	automatic_burst_overlay = FALSE
-
-	can_bayonet = TRUE
-	bayonet_state = "bayonet"
-	knife_x_offset = 18
-	knife_y_offset = 17
-
-	can_scope = TRUE
-	scope_state = "scope_long"
-	scope_x_offset = 4
-	scope_y_offset = 12
-
-	can_suppress = TRUE
-	suppressor_state = "rifle_suppressor"
-	suppressor_x_offset = 22
-	suppressor_y_offset = 24
-
-	can_flashlight = TRUE
-	gunlight_state = "flightangle"
-	flight_x_offset = 12
-	flight_y_offset = 16
-	actions_types = list(/datum/action/item_action/toggle_armgun)
-	fire_sound = 'sound/f13weapons/ServiceRifle.ogg'
-
-/// Silly proc that makes a click
-/obj/item/gun/ballistic/automatic/varmint/bushmaster_arm_gun/proc/rotate_the_stupid_gun(mob/user)
-	if(user)
-		if(turnt)
-			user.visible_message(
-				"[user] snaps [user.p_their()] [src.name] back into place.",
-				span_notice("With a quick, professional slap of the base of your palm, you deliver a precise karate-chop to the rear of your Arm Gun and snap that sucker back into place!")
-			)
-		else
-			user.visible_message(
-				"[user] clicks [user.p_their()] [src.name] to the side.",
-				span_notice("With a tactical flourish, you grip the rear assembly of your Arm Gun and wrench that sucker to the side, snapping the receiver into comfortable operator mode!")
-			)
-	playsound(get_turf(src), 'sound/f13weapons/equipsounds/riflequip.ogg', 60, 1)
-	turnt = !turnt
-
-/* * * * * * * * * * *
  * Service Rifle
  * Baseline semi-auto rifle
  * .223 / 5.56mm
@@ -1808,15 +1180,15 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
 	init_firemodes = list(
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/semi_auto
 	)
 	gun_tags = list(GUN_FA_MODDABLE)
 
@@ -1837,37 +1209,6 @@
 		SP_DISTANT_SOUND(RIFLE_LIGHT_DISTANT_SOUND),
 		SP_DISTANT_RANGE(RIFLE_LIGHT_RANGE_DISTANT)
 	)
-
-/* * * * * * * * * * *
- * ALR15 Rifle
- * Tacticool semi-auto rifle
- * .223 / 5.56mm
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/service/alr
-	name = "ALR15"
-	desc = "A 5.56x45mm rifle custom built off of a reproduction model AR15-style weapon. Sports a fancy holographic sight picture, forward grip, and a comfortable synthetic thumbhole stock. Bang bang."
-	icon_state = "alr15"
-	item_state = "alr15"
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
-
-	automatic_burst_overlay = FALSE
-	semi_auto = TRUE
-	can_bayonet = TRUE
-	bayonet_state = "bayonet"
-	knife_x_offset = 22
-	knife_y_offset = 21
-	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
 
 /* * * * * * * * * * *
  * Scout carbine
@@ -2060,64 +1401,6 @@
 	item_state = "308"
 	icon_prefix = "308"
 	force = 20
-	mag_type = /obj/item/ammo_box/magazine/m762
-	init_mag_type = /obj/item/ammo_box/magazine/m762
-
-	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1.2)
-	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
-	)
-	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
-	automatic_burst_overlay = FALSE
-	semi_auto = TRUE
-	can_scope = TRUE
-	can_bayonet = TRUE
-	bayonet_state = "bayonet"
-	knife_x_offset = 24
-	knife_y_offset = 21
-	scope_state = "scope_long"
-	scope_x_offset = 4
-	scope_y_offset = 11
-	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(RIFLE_MEDIUM_VOLUME),
-		SP_VOLUME_SILENCED(RIFLE_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(RIFLE_MEDIUM_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(RIFLE_MEDIUM_DISTANT_SOUND),
-		SP_DISTANT_RANGE(RIFLE_MEDIUM_RANGE_DISTANT)
-	)
-
-/* * * * * * * * * * *
- * Enfield SLR Rifle
- * Baseline semi-auto 7.62mm rifle
- * .308 / 7.62mm
- * Scope!
- * Bayonet!
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/slr
-	name = "Enfield SLR"
-	desc = "A self-loading rifle in 7.62mm NATO. Semi-auto only."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	icon_state = "slr"
-	item_state = "slr"
 	mag_type = /obj/item/ammo_box/magazine/m762
 	init_mag_type = /obj/item/ammo_box/magazine/m762
 
@@ -2355,9 +1638,9 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T4
+	damage_multiplier = GUN_EXTRA_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1)
+	init_recoil = RIFLE_RECOIL(3.6)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 
 	init_firemodes = list(/datum/firemode/semi_auto/slower)
@@ -2366,7 +1649,7 @@
 	can_bayonet = FALSE
 	can_scope = FALSE
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-	zoom_factor = 2
+	zoom_factor = 1.5
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(RIFLE_MEDIUM_VOLUME),
@@ -2426,6 +1709,7 @@
 	icon_state = "venator_sniper"
 	item_state = "venator_sniper"
 
+	zoom_factor = 2.5
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
@@ -2434,33 +1718,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
-
-/* * * * * * * * * * *
- * Compact Sniper Rifle
- * Sniper semi-auto 7.62mm rifle
- * .308 / 7.62mm
- * Less damage
- * Less slowdown
- * Scope!
- * Bayonet!
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/marksman/sniper/sniperranger
-	name = "compact sniper rifle"
-	desc = "A DKS 501, chambered in .308 Winchester.  With a light polymer body, it's suited for long treks through the desert. This particular model is lighter and faster."
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_EXTRA_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
 
 /* * * * * * * * * * *
@@ -2476,52 +1734,6 @@
  * Deadly in the right hands
  * Common
  * * * * * * * * * * */
-
-/* * * * * * * * * * *
- * R82 heavy service rifle
- * Baseline 5.56mm autorifle
- * .223 / 5.56mm
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/service/r82
-	name = "R82 heavy service rifle"
-	desc = "The assault rifle variant of the R84, based off the pre-war FN FNC. Issued to high-ranking troopers and specialized units. Chambered in 5.56."
-	icon_state = "R82"
-	item_state = "R84"
-	icon_prefix = "r82"
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(0.8)
-	init_firemodes = list(
-		/datum/firemode/automatic/rpm150,
-		/datum/firemode/semi_auto
-	)
-
-	is_automatic = TRUE
-	automatic = 1
-	can_suppress = TRUE
-	suppressor_state = "rifle_suppressor"
-	suppressor_x_offset = 27
-	suppressor_y_offset = 28
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(RIFLE_LIGHT_VOLUME),
-		SP_VOLUME_SILENCED(RIFLE_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(RIFLE_LIGHT_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(RIFLE_LIGHT_DISTANT_SOUND),
-		SP_DISTANT_RANGE(RIFLE_LIGHT_RANGE_DISTANT)
-	)
 
 /* * * * * * * * * * *
  * R91 assault rifle
@@ -2613,52 +1825,6 @@
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound_silenced = 'sound/weapons/Gunshot_large_silenced.ogg'
 	zoom_factor = 0.8
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(RIFLE_LIGHT_VOLUME),
-		SP_VOLUME_SILENCED(RIFLE_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(RIFLE_LIGHT_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(RIFLE_LIGHT_DISTANT_SOUND),
-		SP_DISTANT_RANGE(RIFLE_LIGHT_RANGE_DISTANT)
-	)
-
-/* * * * * * * * * * *
- * R93 PDW rifle
- * Baseline 5.56mm autorifle
- * .223 / 5.56mm
- * Uncommon
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/r93
-	name = "R93 PDW"
-	desc = "A lightweight assault rifle manufactured by the Brotherhood of Steel with a folding stock, based on weapons from the R-series platforms. It is generally issued to Brotherhood Knights for scouting missions."
-	icon_state = "r93"
-	item_state = "r93"
-	mag_type = /obj/item/ammo_box/magazine/m556/rifle
-	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1.2)
-	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
-		/datum/firemode/semi_auto/fast
-	)
-
-	semi_auto = TRUE
-	automatic_burst_overlay = FALSE
-	can_scope = FALSE
-	can_bayonet = FALSE
-	fire_sound = 'sound/weapons/Gunshot_large_silenced.ogg'
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(RIFLE_LIGHT_VOLUME),
@@ -2814,6 +1980,7 @@
 /obj/item/gun/ballistic/automatic/assault_carbine
 	name = "assault carbine"
 	desc = "The U.S. army carbine version of the R91, made by Colt and issued to special forces."
+	icon = 'icons/fallout/objects/guns/longguns.dmi'
 	icon_state = "assault_carbine"
 	item_state = "assault_carbine"
 	icon_prefix = "assault_carbine"
@@ -2865,19 +2032,17 @@
 	)
 
 /* * * * * * * * * * *
- * Police Assault Rifle
+ * AK-112
  * Baseline 5mm autorifle
  * 5mm
  * Uncommon
  * * * * * * * * * * */
 
-/obj/item/gun/ballistic/automatic/assault_carbine/policerifle
-	name = "Police Assault Rifle"
-	desc = "A pre-war Rifle that has been constantly repaired and rebuilt by the Nash Police Department. Held together by duct tape and prayers, it somehow still shoots."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-	icon_state = "rifle-police"
+/obj/item/gun/ballistic/automatic/assault_carbine/ak112
+	name = "AK-112 assault rifle"
+	desc = "A pre-war rifle produced by Colt onced used by the U.S military. These models were well out of date even before the war. Fast firing, reliable, but nothing to brag about."
+	icon = 'icons/fallout/objects/guns/longguns.dmi'
+	icon_state = "ak112"
 
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
@@ -2888,13 +2053,11 @@
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1)
+	init_recoil = RIFLE_RECOIL(1.2)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
+		/datum/firemode/automatic/rpm300,
 		/datum/firemode/semi_auto
 	)
-	gun_tags = list(GUN_SCOPE)
-	can_scope = TRUE
 
 /* * * * * * * * * * *
  * Police Assault Rifle
@@ -2906,25 +2069,30 @@
  * Uncommon
  * * * * * * * * * * */
 
-/obj/item/gun/ballistic/automatic/assault_carbine/worn
-	name = "worn assault carbine"
-	desc = "The U.S. army carbine version of the R91, made by Colt and issued to special forces. This one is beat-up and falling apart."
-	icon_state = "assault_carbine"
+/obj/item/gun/ballistic/automatic/assault_carbine/policerifle
+	name = "Police Assault Rifle"
+	desc = "A pre-war Rifle that has been constantly repaired, rebuilt, and butchered by some wasteland madman. Held together by duct tape and prayers, it somehow still shoots."
+	icon = 'icons/fallout/objects/guns/ballistic.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+	icon_state = "rifle-police"
 
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOW
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(1.2)
 	init_firemodes = list(
-		/datum/firemode/burst/five/fast,
+		/datum/firemode/burst/three/fast,
 		/datum/firemode/semi_auto
 	)
+	gun_tags = list(GUN_SCOPE)
+	can_scope = TRUE
 
 /* * * * * * * * * * *
  * FN FAL Rifle
@@ -2971,42 +2139,13 @@
 	)
 
 /* * * * * * * * * * *
- * AR-10 Armalite
- * .308 semi-auto rifle
- * .308 / 7.62
- * Uncommon
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/armalite
-	name = "AR-10 Armalite"
-	desc = "A blast from the past as a ruggled, reliable rifle. Accurate and packs a punch, but recoil picks up quick, and it's heavy. Makes it suitable for bashing skulls, at least..."
-	icon_state = "armalite"
-	item_state = "assault_carbine"
-	mag_type = /obj/item/ammo_box/magazine/m762
-	init_mag_type = /obj/item/ammo_box/magazine/m762
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LMG
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_FIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T2 // still a medium-rarity item. can't be better than the snipers.
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1.2)
-	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
-	)
-
-/* * * * * * * * * * *
  * Browning Automatic BAR Rifle
  * Baseline 7.62 autorifle
  * .308 / 7.62
  * Uncommon
  * * * * * * * * * * */
 
-obj/item/gun/ballistic/automatic/bar
+/obj/item/gun/ballistic/automatic/bar
 	name = "automatic rifle (.308)"
 	desc = "An ancient machine gun that looks like outdated even by pre-war standards. It has Colt etched on one-side and Sierra Madre on the other. It is alarmingly heavy for a rifle."
 	icon = 'icons/fallout/objects/guns/bar.dmi'
@@ -3141,53 +2280,6 @@ obj/item/gun/ballistic/automatic/bar
 		SP_DISTANT_RANGE(RIFLE_LIGHT_RANGE_DISTANT)
 	)
 
-/* * * * * * * * * * *
- * WT-550 Carbine
- * 4.73mm caseless
- * Spaceman gun
- * Unique
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/wt550
-	name = "4.73mm carbine"
-	desc = "A WT-550 Personal Defense Weapon, manufactured by West Tek. It fires 4.73mm caseless rounds."
-	item_state = "m90"
-	icon_state = "WT550"
-	w_class = WEIGHT_CLASS_NORMAL
-	mag_type = /obj/item/ammo_box/magazine/m473/small
-	init_mag_type = /obj/item/ammo_box/magazine/m473/small
-
-	slowdown = GUN_SLOWDOWN_CARBINE
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = CARBINE_RECOIL(1.2)
-	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
-		/datum/firemode/semi_auto/fast
-	)
-
-	is_automatic = TRUE
-	automatic = TRUE
-	can_bayonet = TRUE
-	knife_x_offset = 25
-	knife_y_offset = 12
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(RIFLE_LIGHT_VOLUME),
-		SP_VOLUME_SILENCED(RIFLE_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(RIFLE_LIGHT_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(RIFLE_LIGHT_DISTANT_SOUND),
-		SP_DISTANT_RANGE(RIFLE_LIGHT_RANGE_DISTANT)
-	)
-
 /* * * * *
  * LMGs  *
  * * * * */
@@ -3227,9 +2319,9 @@ obj/item/gun/ballistic/automatic/bar
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = LMG_RECOIL(1)
+	init_recoil = LMG_RECOIL(1.4)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200
+		/datum/firemode/automatic/rpm150
 	)
 
 	is_automatic = TRUE
@@ -3493,3 +2585,260 @@ obj/item/gun/ballistic/automatic/bar
 		SP_DISTANT_SOUND(RIFLE_LIGHT_DISTANT_SOUND),
 		SP_DISTANT_RANGE(RIFLE_LIGHT_RANGE_DISTANT)
 	)
+
+
+//Not used code; this thing is cool code-wise but trivializes many guns and ammo-calibers due to being flexible. Maybe use for events or admin testing, don't use otherwise.
+
+/* * * * * * * * * * *
+ * Sidewinder SMG
+ * Multiammo SMG
+ * 9mm / 10mm / .45 / .22
+ * Click a button while its empty to change what mags it accepts!
+ * Low damage
+ * Two-handed
+ * Slow firing
+ * Inaccurate
+ * Uncommon?
+ * * * * * * * * * * */
+
+/obj/item/gun/ballistic/automatic/smg/sidewinder
+	name = "multi-caliber smg"
+	desc = "The answer to all your ammo-scrounging problems! The TwisTactical Spindoctor SMMG (sub-machine multi-gun) integrates \
+			rotation-reactive metalmers in the upper assembly to change what ammunition it accepts, from .22LR to .45ACP with a \
+			simple twist of the mechanism. Surprisingly easy to maintain and assemble, given the right high-tech Rotosteel parts, \
+			making it a common sight for Boxcar Vixens in the Heap, where the short sightlines more than make up for the gun's \
+			inherently poor accuracy. Doesn't accept awkwardly shaped magazines, though. That's for the PRO model, which isn't \
+			available out here."
+	icon_state = "sidewinder"
+	slowdown = GUN_SLOWDOWN_SMG_LIGHT
+	w_class = WEIGHT_CLASS_BULKY
+	mag_type = /obj/item/ammo_box/magazine/uzim9mm
+	extra_mag_types = /obj/item/ammo_box/magazine/m9mm
+	init_mag_type = /obj/item/ammo_box/magazine/m9mm/doublestack
+	var/current_caliber = "9mm"
+	added_spread = GUN_SPREAD_POOR
+	slowdown = GUN_SLOWDOWN_SMG_LIGHT
+	force = GUN_MELEE_FORCE_PISTOL_LIGHT
+	draw_time = GUN_DRAW_LONG
+	fire_delay = GUN_FIRE_DELAY_FAST
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	burst_size = 1
+	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	cock_delay = GUN_COCK_RIFLE_BASE
+	init_firemodes = list(
+		/datum/firemode/semi_auto/fast,
+		/datum/firemode/burst/three/fast
+	)
+
+	gun_tags = list(GUN_SCOPE, GUN_SILENCABLE)
+	can_scope = TRUE
+	scope_state = "AEP7_scope"
+	scope_x_offset = 10
+	scope_y_offset = 22
+	can_flashlight = TRUE
+
+	can_flashlight = TRUE
+	scope_state = "flight"
+	flight_x_offset = 16
+	flight_y_offset = 18
+
+	can_suppress = TRUE
+	suppressor_state = "pistol_suppressor"
+	suppressor_x_offset = 31
+	suppressor_y_offset = 17
+
+	actions_types = list(/datum/action/item_action/toggle_sidewinder)
+	fire_sound = 'sound/f13weapons/9mm.ogg'
+	gun_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(PISTOL_LIGHT_VOLUME),
+		SP_VOLUME_SILENCED(PISTOL_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(PISTOL_LIGHT_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(PISTOL_LIGHT_DISTANT_SOUND),
+		SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
+	)
+
+/obj/item/gun/ballistic/automatic/smg/sidewinder/update_icon_state()
+	icon_state = "[initial(icon_state)][magazine ? "-[current_caliber]" : ""][chambered ? "" : "-e"]"
+
+/obj/item/gun/ballistic/automatic/smg/sidewinder/proc/change_ammo(mob/user)
+	if(user)
+		if(magazine)
+			user.show_message(span_alert("[src] needs to be completely unloaded before working the TwistForm mechanism!"))
+			return
+		if(chambered)
+			user.show_message(span_alert("[src] needs to be <u>completely</u> unloaded before working the TwistForm mechanism!"))
+			return
+
+	allowed_mags = list()
+	change_the_ammo(user)
+
+/obj/item/gun/ballistic/automatic/smg/sidewinder/proc/change_the_ammo(mob/user)
+	var/message2self = "You wrench the upper receiver of [src] out of its socket and give it one full turn."
+	var/message2everyone = "[user] spins [user.p_their()] their gun around. It makes a wierd click."
+	switch(current_caliber)
+		if("22LR")
+			current_caliber = "9mm"
+			allowed_mags |= typesof(/obj/item/ammo_box/magazine/m9mm, /obj/item/ammo_box/magazine/uzim9mm)
+			fire_sound = 'sound/f13weapons/9mm.ogg'
+			message2self += "The panel on the side now reads: \"9mm Mode\""
+			gun_sound_properties = list(
+				SP_VARY(FALSE),
+				SP_VOLUME(PISTOL_LIGHT_VOLUME),
+				SP_VOLUME_SILENCED(PISTOL_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+				SP_NORMAL_RANGE(PISTOL_LIGHT_RANGE),
+				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+				SP_IGNORE_WALLS(TRUE),
+				SP_DISTANT_SOUND(PISTOL_LIGHT_DISTANT_SOUND),
+				SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
+			)
+		if("9mm")
+			current_caliber = "10mm"
+			allowed_mags |= typesof(/obj/item/ammo_box/magazine/m10mm)
+			fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
+			message2self += "The panel on the side now reads: \"10mm Mode\""
+			gun_sound_properties = list(
+				SP_VARY(FALSE),
+				SP_VOLUME(PISTOL_MEDIUM_VOLUME),
+				SP_VOLUME_SILENCED(PISTOL_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+				SP_NORMAL_RANGE(PISTOL_MEDIUM_RANGE),
+				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+				SP_IGNORE_WALLS(TRUE),
+				SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
+				SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
+			)
+		if("10mm")
+			current_caliber = "45ACP"
+			allowed_mags |= typesof(/obj/item/ammo_box/magazine/greasegun, /obj/item/ammo_box/magazine/m45, /obj/item/ammo_box/magazine/tommygunm45/stick)
+			fire_sound = 'sound/weapons/gunshot_smg.ogg'
+			message2self += "The panel on the side now reads: \".45ACP Mode\""
+			gun_sound_properties = list(
+				SP_VARY(FALSE),
+				SP_VOLUME(PISTOL_MEDIUM_VOLUME),
+				SP_VOLUME_SILENCED(PISTOL_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+				SP_NORMAL_RANGE(PISTOL_MEDIUM_RANGE),
+				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+				SP_IGNORE_WALLS(TRUE),
+				SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
+				SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
+			)
+		if("45ACP")
+			current_caliber = "22LR"
+			allowed_mags |= typesof(/obj/item/ammo_box/magazine/m22)
+			fire_sound = 'sound/f13weapons/ServiceRifle.ogg'
+			message2self += "The panel on the side now reads: \".22LR Mode\""
+			gun_sound_properties = list(
+				SP_VARY(FALSE),
+				SP_VOLUME(PISTOL_LIGHT_VOLUME),
+				SP_VOLUME_SILENCED(PISTOL_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+				SP_NORMAL_RANGE(PISTOL_LIGHT_RANGE),
+				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+				SP_IGNORE_WALLS(TRUE),
+				SP_DISTANT_SOUND(PISTOL_LIGHT_DISTANT_SOUND),
+				SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
+			)
+	playsound(get_turf(src), 'sound/f13weapons/equipsounds/riflequip.ogg', 60, 1)
+	if(user)
+		user.visible_message(message2everyone,span_notice(message2self))
+
+/obj/item/gun/ballistic/automatic/smg/sidewinder/examine(mob/user)
+	. = ..()
+	switch(current_caliber)
+		if("22LR")
+			. += "<br><span class='notice'>The readout displays \".22LR Mode\", indicating it'll accept most .22 SMG and pistol mags.</span>"
+		if("9mm")
+			. += "<br><span class='notice'>The readout displays \"9mm Mode\", indicating it'll accept most 9mm SMG and pistol mags.</span>"
+		if("10mm")
+			. += "<br><span class='notice'>The readout displays \"10mm Mode\", indicating it'll accept most 10mm SMG and pistol mags.</span>"
+		if("45ACP")
+			. += "<br><span class='notice'>The readout displays \".45ACP Mode\", indicating it'll accept most .45 SMG and pistol mags.</span>"
+	. += "<br><span class='notice'>Unload the gun and click the action button to change the caliber.</span>"
+
+//worn sidewinder
+
+/obj/item/gun/ballistic/automatic/smg/sidewinder/worn
+	name = "multi-caliber carbine"
+	desc = "The answer to all your ammo-scrounging problems! The TwisTactical Spindoctor MGC (multi-gun carbine) integrates \
+			rotation-reactive metalmers in the upper assembly to change what ammunition it accepts, from .22LR to .45ACP with a \
+			simple twist of the mechanism. Surprisingly easy to maintain and assemble, given the right high-tech Rotosteel parts, \
+			making it a common sight for Boxcar Vixens in the Heap, where the short sightlines more than make up for the gun's \
+			inherently poor accuracy. Doesn't accept awkwardly shaped magazines, though. That's for the PRO model, which isn't \
+			available out here. This model is locked to semi-auto!"
+	icon_state = "sidewinder"
+	init_firemodes = list(
+		/datum/firemode/semi_auto/fast
+	)
+
+/// multical-magnum
+/obj/item/gun/ballistic/automatic/smg/sidewinder/magnum
+	name = "multi-caliber magnum"
+	desc = "A heavier, more robust multi-caliber carbine! The TwisTactical Magnum uses a thicker-walled roto-mechanism that allows its \
+			rotation-reactive metalmers to withstand higher pressures, now able to safely fire anything from .45ACP to 14mm with a \
+			simple twist of the mechanism. Surprisingly easy to maintain and assemble, given the right high-tech Rotosteel parts, \
+			making it a common sight for Boxcar Vixens in the Heap, where the short sightlines more than make up for the gun's \
+			inherently poor accuracy. Only accepts small magazines. This model is locked to semi-auto!"
+	icon_state = "sidewinder-magnum"
+	mag_type = /obj/item/ammo_box/magazine/m44
+	extra_mag_types = /obj/item/ammo_box/magazine/m44/automag
+	init_mag_type = /obj/item/ammo_box/magazine/m44
+	current_caliber = "44"
+	init_firemodes = list(
+		/datum/firemode/semi_auto/slow
+	)
+	fire_sound = 'sound/f13weapons/44mag.ogg'
+
+/obj/item/gun/ballistic/automatic/smg/sidewinder/magnum/change_the_ammo(mob/user)
+	var/message2self = "You wrench the upper receiver of [src] out of its socket and give it one full turn. "
+	var/message2everyone = "[user] spins [user.p_their()] their gun around. It makes a wierd click."
+	switch(current_caliber)
+		if("44")
+			current_caliber = "14mm"
+			allowed_mags |= typesof(/obj/item/ammo_box/magazine/m14mm)
+			fire_sound = 'sound/f13weapons/magnum_fire.ogg'
+			message2self += "The panel on the side now reads: \"14mm Mode\""
+			gun_sound_properties = list(
+				SP_VARY(FALSE),
+				SP_VOLUME(PISTOL_HEAVY_VOLUME),
+				SP_VOLUME_SILENCED(PISTOL_HEAVY_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+				SP_NORMAL_RANGE(PISTOL_HEAVY_RANGE),
+				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+				SP_IGNORE_WALLS(TRUE),
+				SP_DISTANT_SOUND(PISTOL_HEAVY_DISTANT_SOUND),
+				SP_DISTANT_RANGE(PISTOL_HEAVY_RANGE_DISTANT)
+			)
+		if("14mm")
+			current_caliber = "45ACP"
+			allowed_mags |= typesof(/obj/item/ammo_box/magazine/m45)
+			fire_sound = 'sound/weapons/gunshot_smg.ogg'
+			message2self += "The panel on the side now reads: \".45ACP Mode\""
+			gun_sound_properties = list(
+				SP_VARY(FALSE),
+				SP_VOLUME(PISTOL_MEDIUM_VOLUME),
+				SP_VOLUME_SILENCED(PISTOL_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+				SP_NORMAL_RANGE(PISTOL_MEDIUM_RANGE),
+				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+				SP_IGNORE_WALLS(TRUE),
+				SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
+				SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
+			)
+		if("45ACP")
+			current_caliber = "44"
+			allowed_mags |= typesof(/obj/item/ammo_box/magazine/m44)
+			fire_sound = 'sound/f13weapons/44mag.ogg'
+			message2self += "The panel on the side now reads: \".44 Magnum Mode\""
+			gun_sound_properties = list(
+				SP_VARY(FALSE),
+				SP_VOLUME(PISTOL_HEAVY_VOLUME),
+				SP_VOLUME_SILENCED(PISTOL_HEAVY_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+				SP_NORMAL_RANGE(PISTOL_HEAVY_RANGE),
+				SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+				SP_IGNORE_WALLS(TRUE),
+				SP_DISTANT_SOUND(PISTOL_HEAVY_DISTANT_SOUND),
+				SP_DISTANT_RANGE(PISTOL_HEAVY_RANGE_DISTANT)
+			)
+	playsound(get_turf(src), 'sound/f13weapons/revolverspin.ogg', 60, 1)
+	if(user)
+		user.visible_message(message2everyone,span_notice(message2self))

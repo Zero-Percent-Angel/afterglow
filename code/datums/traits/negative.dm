@@ -16,6 +16,24 @@
 	else
 		quirk_holder.blood_volume -= 0.2
 
+/datum/quirk/sheltered
+	name = "Sheltered"
+	desc = "For one reason or another, you either can't or haven't learned English."
+	value = -1
+	mob_trait = TRAIT_SHELTERED
+	gain_text = "<span class='danger'>The words of others begin to blur together...</span>"
+	lose_text = "<span class='notice'>You start putting together what people are saying!</span>"
+	medical_record_text = "Patient has shown an inability to use common speaking languages."
+
+/datum/quirk/sheltered/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.remove_language(/datum/language/common)
+// You can pick languages for your character, if you don't pick anything, enjoy the rest of the round understanding nothing.
+
+/datum/quirk/sheltered/remove() //i mean, the lose text explains it, so i'm making it actually work
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/common)
+
 /datum/quirk/depression
 	name = "Mood - Depressive"
 	desc = "You sometimes just hate life, and get a mood debuff for it."
@@ -76,9 +94,9 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 			heirloom_type = pick(/obj/item/clothing/neck/stethoscope,/obj/item/toy/tragicthegarnering)
 		if("Senior Doctor")
 			heirloom_type = pick(/obj/item/toy/nuke, /obj/item/wrench/medical, /obj/item/clothing/neck/tie/horrible)
-		if("Prime Legionnaire")
+		if("Prime Legionary")
 			heirloom_type = pick(/obj/item/melee/onehanded/machete, /obj/item/melee/onehanded/club/warclub, /obj/item/clothing/accessory/talisman, /obj/item/toy/plush/mr_buckety)
-		if("Recruit Legionnaire")
+		if("Recruit Legionary")
 			heirloom_type = pick(/obj/item/melee/onehanded/machete, /obj/item/melee/onehanded/club/warclub, /obj/item/clothing/accessory/talisman,/obj/item/clothing/accessory/skullcodpiece/fake)
 		if("Den Mob Boss")
 			heirloom_type = /obj/item/lighter/gold
@@ -86,6 +104,8 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 			heirloom_type = /obj/item/card/id/dogtag/MDfakepermit
 		if("Farmer")
 			heirloom_type = pick(/obj/item/hatchet, /obj/item/shovel/spade, /obj/item/toy/plush/beeplushie)
+		if("Far-Lands Tribals")
+			heirloom_type = pick(/obj/item/clothing/accessory/talisman, /obj/item/clothing/accessory/skullcodpiece/fake)
 		if("Janitor")
 			heirloom_type = /obj/item/mop
 		if("Security Officer")
@@ -393,7 +413,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	description = span_warning("Sometimes eye contact makes me so nervous...")
 	mood_change = -5
 	timeout = 3 MINUTES
-
+/*
 /datum/quirk/spiderphobia
 	name = "Phobia - Spiders"
 	desc = "You've had a traumatic past, one that has scarred you for life, and it had something to do with spiders."
@@ -453,7 +473,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
 	H?.cure_trauma_type(/datum/brain_trauma/mild/phobia/strangers, TRAUMA_RESILIENCE_ABSOLUTE)
-
+*/
 /datum/quirk/doctorphobia
 	name = "Phobia - Doctors"
 	desc = "You've had a traumatic past, one that has scarred you for life, and it had something to do with doctors."
@@ -468,7 +488,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.gain_trauma(/datum/brain_trauma/mild/phobia/doctors, TRAUMA_RESILIENCE_ABSOLUTE)
-
+/*
 /datum/quirk/maskphobia/remove()
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
@@ -513,12 +533,12 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
 	H?.cure_trauma_type(/datum/brain_trauma/mild/phobia/eye, TRAUMA_RESILIENCE_ABSOLUTE)
-
+*/
 
 /datum/quirk/mute
 	name = "Mute"
 	desc = "Due to some accident, medical condition, or simply by choice, you are completely unable to speak."
-	value = -1 //HALP MAINTS
+	value = -3 //HALP MAINTS
 	gain_text = span_danger("You find yourself unable to speak!")
 	lose_text = span_notice("You feel a growing strength in your vocal chords.")
 	medical_record_text = "Functionally mute, patient is unable to use their voice in any capacity."
@@ -533,6 +553,24 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/mute/remove()
 	var/mob/living/carbon/human/H = quirk_holder
 	H?.cure_trauma_type(mute, TRAUMA_RESILIENCE_ABSOLUTE)
+
+/datum/quirk/deaf
+	name = "Deaf"
+	desc = "Due to some accident, medical condition or simply by explosion. You are simply completely unable to hear."
+	value = -2 // You are deaf. Not a license to grief.
+	gain_text = span_danger("You find yourself unable to ear at all!")
+	lose_text = span_notice("You somehow can hear again, even the slight sound of the wind.")
+	medical_record_text = "Functionally deaf, patient is unable to hear."
+
+/datum/quirk/deaf/post_add()
+	. = ..()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.gain_trauma(/datum/brain_trauma/severe/deaf, TRAUMA_RESILIENCE_ABSOLUTE)
+
+/datum/quirk/deaf/remove()
+	. = ..()
+	var/mob/living/carbon/human/H = quirk_holder
+	H?.cure_trauma_type(/datum/brain_trauma/severe/deaf, TRAUMA_RESILIENCE_ABSOLUTE)
 
 /datum/quirk/unstable
 	name = "Unstable"
@@ -563,15 +601,6 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 
 /datum/quirk/blindness/remove()
 	quirk_holder?.cure_blind(ROUNDSTART_TRAIT)
-
-/datum/quirk/coldblooded
-	name = "Cold-blooded"
-	desc = "Your body doesn't create its own internal heat, requiring external heat regulation."
-	value = -1
-	medical_record_text = "Patient is ectothermic."
-	mob_trait = TRAIT_COLDBLOODED
-	gain_text = span_notice("You feel cold-blooded.")
-	lose_text = span_notice("You feel more warm-blooded.")
 
 /datum/quirk/monophobia
 	name = "Monophobia"
@@ -649,30 +678,21 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 
 /datum/quirk/masked_mook/on_process()
 	var/mob/living/carbon/human/H = quirk_holder
-	var/obj/item/clothing/mask/maskmask = H.get_item_by_slot(ITEM_SLOT_MASK)
-	if(istype(maskmask) && !istype(maskmask, /obj/item/clothing/mask/cigarette))
-		SEND_SIGNAL(quirk_holder, COMSIG_CLEAR_MOOD_EVENT, mood_category, /datum/mood_event/masked_mook_incomplete)
-		SEND_SIGNAL(quirk_holder, COMSIG_ADD_MOOD_EVENT, mood_category, /datum/mood_event/masked_mook)
+	var/obj/item/clothing/mask/maskmask = H.get_item_by_slot(SLOT_WEAR_MASK)
+	if(istype(maskmask) && !(istype(maskmask, /obj/item/clothing/mask/cigarette) || istype(maskmask, /obj/item/clothing/mask/vape)))
+		SEND_SIGNAL(H, COMSIG_CLEAR_MOOD_EVENT, mood_category)
+		SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, mood_category, /datum/mood_event/masked_mook)
 	else
-		SEND_SIGNAL(quirk_holder, COMSIG_CLEAR_MOOD_EVENT, mood_category, /datum/mood_event/masked_mook)
-		SEND_SIGNAL(quirk_holder, COMSIG_ADD_MOOD_EVENT, mood_category, /datum/mood_event/masked_mook_incomplete)
+		SEND_SIGNAL(H, COMSIG_CLEAR_MOOD_EVENT, mood_category)
+		SEND_SIGNAL(H, COMSIG_ADD_MOOD_EVENT, mood_category, /datum/mood_event/masked_mook_incomplete)
 
 /datum/mood_event/masked_mook
 	description = span_nicegreen("I'm safe in my protective mask.")
-	mood_change = 3
-	timeout = 0
+	mood_change = 0
 
 /datum/mood_event/masked_mook_incomplete
 	description = span_warning("I'm forced to breathe the horrors of the wastes!")
 	mood_change = -3
-	timeout = 0
-
-/datum/quirk/masked_mook/on_spawn()
-	. = ..()
-	var/mob/living/carbon/human/H = quirk_holder
-	var/obj/item/clothing/mask/gas/gasmask = new(get_turf(quirk_holder))
-	H.equip_to_slot(gasmask, ITEM_SLOT_MASK)
-	H.regenerate_icons()
 
 /datum/quirk/paper_skin
 	name = "Paper Skin"

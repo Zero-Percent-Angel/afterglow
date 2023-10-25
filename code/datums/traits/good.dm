@@ -25,6 +25,51 @@ GLOBAL_LIST_INIT(adv_explosive_recipes, list(
 	/datum/crafting_recipe/incendiaryrocket,
 	/datum/crafting_recipe/strongrocket))
 
+GLOBAL_LIST_INIT(whitelegs_recipes, list(
+	/datum/crafting_recipe/tribalwar/whitelegs/garb,
+	/datum/crafting_recipe/tribalwar/whitelegs/femalegarb,
+	/datum/crafting_recipe/tribalwar/whitelegs/lightarmour,
+	/datum/crafting_recipe/tribalwar/whitelegs/armour,
+	/datum/crafting_recipe/tribalwar/whitelegs/heavyarmour))
+
+GLOBAL_LIST_INIT(deadhorses_recipes, list(
+	/datum/crafting_recipe/tribalwar/deadhorses/garb,
+	/datum/crafting_recipe/tribalwar/deadhorses/femalegarb,
+	/datum/crafting_recipe/tribalwar/deadhorses/lightarmour,
+	/datum/crafting_recipe/tribalwar/deadhorses/armour,
+	/datum/crafting_recipe/tribalwar/deadhorses/heavyarmour))
+
+GLOBAL_LIST_INIT(sorrows_recipes, list(
+	/datum/crafting_recipe/tribalwar/sorrows/armour,
+	/datum/crafting_recipe/tribalwar/sorrows/garb,
+	/datum/crafting_recipe/tribalwar/sorrows/femalegarb,
+	/datum/crafting_recipe/tribalwar/sorrows/yaoguaigauntlet))
+
+GLOBAL_LIST_INIT(rustwalkers_recipes, list(
+	/datum/crafting_recipe/tribalwar/rustwalkers/garb,
+	/datum/crafting_recipe/tribalwar/rustwalkers/femalegarb,
+	/datum/crafting_recipe/tribalwar/rustwalkers/lightarmour,
+	/datum/crafting_recipe/tribalwar/rustwalkers/armour,
+	/datum/crafting_recipe/tribalwar/rustwalkers/heavyarmour))
+
+GLOBAL_LIST_INIT(eighties_recipes, list(
+	/datum/crafting_recipe/tribalwar/eighties/garb,
+	/datum/crafting_recipe/tribalwar/eighties/femalegarb,
+	/datum/crafting_recipe/tribalwar/eighties/lightarmour,
+	/datum/crafting_recipe/tribalwar/eighties/armour,
+	/datum/crafting_recipe/tribalwar/eighties/heavyarmour))
+
+GLOBAL_LIST_INIT(wayfarer_recipes, list(
+	/datum/crafting_recipe/tribalwar/wayfarers/lightarmour,
+	/datum/crafting_recipe/tribalwar/wayfarers/heavyarmor,
+	/datum/crafting_recipe/warmace))
+
+GLOBAL_LIST_INIT(bone_dancer_recipes, list(
+	/datum/crafting_recipe/tribalwar/bone/garb,
+	/datum/crafting_recipe/tribalwar/bone/lightarmour,
+	/datum/crafting_recipe/tribalwar/bone/armour,
+	/datum/crafting_recipe/tribalwar/bone/heavyarmour))
+
 GLOBAL_LIST_INIT(tier_three_parts, list(
 	/datum/crafting_recipe/pico_manip,
 	/datum/crafting_recipe/super_matter_bin,
@@ -267,7 +312,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/spiritual
 	name = "Spiritual"
 	desc = "You're in tune with the gods, and your prayers may be more likely to be heard. Or not."
-	value = 0
+	value = 1
 	mob_trait = TRAIT_SPIRITUAL
 	gain_text = span_notice("You feel a little more faithful to the gods today.")
 	lose_text = span_danger("You feel less faithful in the gods.")
@@ -276,7 +321,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/tagger
 	name = "Tagger"
 	desc = "You're an experienced artist. While drawing graffiti, you can get twice as many uses out of drawing supplies."
-	value = 0
+	value = 1
 	mob_trait = TRAIT_TAGGER
 	gain_text = span_notice("You know how to tag walls efficiently.")
 	lose_text = span_danger("You forget how to tag walls properly.")
@@ -456,6 +501,15 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how Power Armor works.")
 	locked = FALSE
 
+/*datum/quirk/paintrain
+	name = "Pain Train"
+	desc = "The Power Armour Train has left the station, and those in it's way will be sent flying."
+	value = 2
+	mob_trait = TRAIT_PAIN_TRAIN
+	gain_text = span_notice("The Pain Train has left the station.")
+	lose_text = span_danger("Please mind the gap between the timetable, and reality.")
+	locked = FALSE*/
+
 /datum/quirk/hard_yards
 	name = "Mobility - Wasteland Trekker"
 	desc = "You've spent a lot of time wandering the wastes, and for your hard work you out pace most folks when travelling across them."
@@ -515,9 +569,9 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 
 /datum/quirk/iron_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow = 6
-	mob_tar.dna.species.punchdamagehigh = 12
-
+	mob_tar.dna.species.punchdamagelow = 4
+	mob_tar.dna.species.punchdamagehigh = 10
+/*
 /datum/quirk/steel_fist
 	name = "Fists of Steel"
 	desc = "You have MASSIVE fists of kung-fury! Even MORE increases unarmed damage."
@@ -529,9 +583,9 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 
 /datum/quirk/steel_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
-	mob_tar.dna.species.punchdamagelow = 10
-	mob_tar.dna.species.punchdamagehigh = 16
-
+	mob_tar.dna.species.punchdamagelow = 6
+	mob_tar.dna.species.punchdamagehigh = 12
+*/
 /datum/quirk/light_step
 	name = "Glass Walker"
 	desc = "When it comes to stepping on glass, you're pretty die hard.  You'll make less noise when you do so, but it'd still suck without shoes."
@@ -652,6 +706,12 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/whitelegstraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.whitelegs_recipes
+
 /datum/quirk/deadhorsestraditions
 	name = "Dead Horses traditions"
 	desc = "You remember how to make your peoples ancient garments after all this time."
@@ -660,6 +720,12 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
+
+/datum/quirk/deadhorsestraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.deadhorses_recipes
 
 /datum/quirk/rustwalkerstraditions
 	name = "Rust Walkers traditions"
@@ -670,6 +736,12 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/rustwalkerstraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.rustwalkers_recipes
+
 /datum/quirk/eightiestraditions
 	name = "Eighties traditions"
 	desc = "You remember how to make your peoples ancient garments after all this time."
@@ -678,6 +750,13 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
+
+/datum/quirk/eightiestraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.eighties_recipes
 
 /datum/quirk/sorrowstraditions
 	name = "Sorrows traditions"
@@ -688,6 +767,12 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/sorrowstraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.sorrows_recipes
+
 /datum/quirk/wayfarertraditions
 	name = "Wayfarer traditions"
 	desc = "You remember how to make your peoples ancient garments after all this time."
@@ -697,6 +782,13 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
 
+/datum/quirk/wayfarertraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.wayfarer_recipes
+
 /datum/quirk/bonedancertraditions
 	name = "Bone Dancer traditions"
 	desc = "You remember how to make your peoples ancient garments after all this time."
@@ -705,6 +797,13 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("The mysteries of your ancestors are revealed to you.")
 	lose_text = span_danger("You forget how your ancestors have created their garments.")
 	locked =  FALSE
+
+/datum/quirk/bonedancertraditions/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+	if(!H.mind.learned_recipes)
+		H.mind.learned_recipes = list()
+	H.mind.learned_recipes |= GLOB.bone_dancer_recipes
 
 /datum/quirk/brickwall
 	name = "Brick wall"
@@ -732,6 +831,15 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("It could be a little colder in here.")
 	lose_text = span_danger("You know? Being cold kind of sucks actually.")
 	locked =  FALSE
+
+/datum/quirk/coldblooded
+	name = "Cold-blooded"
+	desc = "Your body doesn't create its own internal heat, requiring external heat regulation. As a result, your blood clots slightly faster." //Cold-Blooded animals tend not to bleed as much
+	value = 1
+	medical_record_text = "Patient is ectothermic."
+	mob_trait = TRAIT_COLDBLOODED
+	gain_text = span_notice("You feel cold-blooded.")
+	lose_text = span_notice("You feel more warm-blooded.")
 
 /* You can't be that immune, unless you're like a ghoul!
 /datum/quirk/radimmune
@@ -809,6 +917,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("What's a two by four again?")
 	locked =  FALSE
 
+/*
 /datum/quirk/grappler
 	name = "Trained Grappler"
 	desc = "You've got real skills when it comes to grabbing people by the bits!"
@@ -835,6 +944,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("They are already dead.")
 	lose_text = span_danger("Your fists no longer feel so powerful.")
 	locked =  FALSE
+*/
 
 /datum/quirk/quietstep
 	name = "Quiet Step"
@@ -847,8 +957,8 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 
 /datum/quirk/deadeye
 	name = "Dead Eye"
-	desc = "You hit the shots you aim. No ifs, ands, or buts."
-	value = 12 //WIP for sure, lmfao ~TK
+	desc = "You hit the shots you aim, even those around corners. Well, most of the time."
+	value = 4 //WIP for sure, lmfao ~TK
 	mob_trait = TRAIT_INSANE_AIM
 	gain_text = span_notice("Your aim is legendary, and you know it.")
 	lose_text = span_danger("Your aim could use some work...")
@@ -857,7 +967,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/straightshooter
 	name = "Straight Shooter"
 	desc = "You're a better than average shot."
-	value = 6
+	value = 2
 	mob_trait = TRAIT_NICE_SHOT
 	gain_text = span_notice("Your aim is amazing, and you know it.")
 	lose_text = span_danger("Your aim could use some work...")
@@ -872,6 +982,64 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("Guns were always better...")
 	locked =  FALSE
 
+/datum/quirk/blinglover
+	name = "Bling Lover"
+	desc = "You just enjoy wearing, rings and other accessories."
+	value = 1
+	mob_trait = TRAIT_BLING_LOVER
+	gain_text = span_notice("You realise that having shiney things does make you happy.")
+	lose_text = span_danger("What's the point in wearing these trinkets, they're just cosmetic.")
+	locked =  FALSE
+
+/datum/quirk/tribespeak
+	name = "Tribal Language Comprehension"
+	desc = "You're somehow capable of understanding and speaking the common tribal languages in the area."
+	value = 1
+	gain_text = span_notice("You remember the old ways of your tribe..")
+	lose_text = span_notice("You've forgotten the ways of your ancestors..")
+
+/datum/quirk/tribespeak/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+
+/datum/quirk/tribespeak/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/tribal)
+
+/datum/quirk/chinese
+	name = "Chinese Language Comprehension"
+	desc = "You're somehow capable of understanding and speaking chinese."
+	value = 1
+	gain_text = span_notice("You speak chinese.")
+	lose_text = span_notice("You've forgotten how to speak chinese.")
+
+/datum/quirk/chinese/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/chinese, TRUE, TRUE)
+
+/datum/quirk/chinese/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/chinese)
+
+/datum/quirk/spanish
+	name = "Spanish Language Comprehension"
+	desc = "You're somehow capable of understanding and speaking spanish."
+	value = 1
+	gain_text = span_notice("You speak spanish.")
+	lose_text = span_notice("You've forgotten how to speak spanish.")
+
+
+/datum/quirk/spanish/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/spanish)
+
+/datum/quirk/spanish/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(!QDELETED(H))
+		H.remove_language(/datum/language/spanish)
+
 /datum/quirk/masterrifleman
 	name = "Bolt Worker"
 	desc = "You've spent a lot of time working the bolt of a rifle, or the pump action of a shotgun. Your skill allows you to click to work the action instead of doing it manually."
@@ -881,6 +1049,8 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("After picking some 250 year old cosmoline out from under one of your nails you realize that... Uh, no, the Mosin Nagant is a piece of shit.")
 	locked =  FALSE
 
+/*
+I'm sorry my rat loving friends friends
 /datum/quirk/ratlord
 	name = "Beast Master - Rats (Experimental)"
 	desc = "Whenever by psychic means or not, you gained ability to call forth friendly type of rats. <u>Do note they will attack <b>only</b> the hostile mobs</u>."
@@ -917,3 +1087,4 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 		QDEL_NULL(build)
 		H.RemoveAbility(clear)
 		QDEL_NULL(clear)
+*/

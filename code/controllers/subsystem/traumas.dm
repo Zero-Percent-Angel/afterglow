@@ -164,7 +164,7 @@ SUBSYSTEM_DEF(traumas)
 
 					"skeletons" = typecacheof(list(
 						/obj/item/organ/tongue/bone,
-						/obj/item/clothing/suit/armor/light/tribal/bone/cool,
+						/obj/item/clothing/suit/armor/medium/tribal/bone,
 						/obj/item/stack/sheet/bone,
 						/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/skeleton,
 						/obj/effect/decal/remains/human)
@@ -232,7 +232,6 @@ SUBSYSTEM_DEF(traumas)
 						/obj/item/surgicaldrill,
 						/obj/item/scalpel,
 						/obj/item/circular_saw,
-						/obj/item/clothing/suit/bio_suit/plaguedoctorsuit,
 						/obj/item/clothing/head/plaguedoctorhat,
 						/obj/item/clothing/mask/gas/plaguedoctor)
 						),

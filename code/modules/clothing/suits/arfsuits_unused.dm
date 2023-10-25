@@ -729,7 +729,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "A modified detoriated armor kit consisting of Legion gear and scrap metal."
 	icon_state = "legexile"
 	item_state = "legexile"
-	
+
 
 /obj/item/clothing/suit/armor/medium/tribal/legion/forgemaster
 	name = "forgemaster armor"
@@ -793,7 +793,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 /obj/item/clothing/suit/toggle/labcoat/khan_jacket
 	name = "Great Khan jacket"
 	desc = "A black leather jacket. <br>There is an illustration on the back - an aggressive, red-eyed skull wearing a fur hat with horns.<br>The skull has a mongoloid moustache - it's obviously a Great Khans emblem."
-	icon = 'icons/fallout/clothing/khans.dmi'
+	icon = 'icons/fallout/clothing/armored_light.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/khaans.dmi'
 	icon_state = "khan_jacket"
 	item_state = "khan_jacket"
@@ -815,6 +815,7 @@ Suits. 0-10 in its primary value, slowdown 0, various utility
 	desc = "Heavy leather coat lined with a patchwork of metal plates on the inside."
 	icon_state = "khan_heavy"
 	item_state = "khan_heavy"
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
@@ -1038,9 +1039,9 @@ Just leaving this here for quick copy-pasting, for future contributors.
 	icon_state = "cowboyrang"
 	item_state = "cowboyrang"
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/ncr
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/ncr
 	name = "salvaged NCR power armor"
-	desc = "It's a set of T-45b power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and the two headed bear painted onto the chestplate shows it belongs to the NCR."
+	desc = "It's a set of T-45d power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and the two headed bear painted onto the chestplate shows it belongs to the NCR."
 	icon_state = "ncr_salvaged"
 	item_state = "ncr_salvaged"
 

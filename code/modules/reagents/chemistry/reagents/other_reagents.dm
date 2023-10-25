@@ -695,6 +695,7 @@
 									"You feel as though you're about to change at any moment!" = MUT_MSG_ABOUT2TURN)
 	var/mutationtext
 	var/cycles_to_turn = 20 //the current_cycle threshold / iterations needed before one can transform
+	can_synth = FALSE
 	ghoulfriendly = TRUE
 
 /datum/reagent/mutationtoxin/on_mob_life(mob/living/carbon/human/H)
@@ -891,6 +892,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	taste_description = "slime"
 	metabolization_rate = 0.2
+	can_synth = FALSE
 	value = REAGENT_VALUE_RARE
 
 /datum/reagent/slime_toxin/on_mob_life(mob/living/carbon/human/H)
@@ -930,6 +932,7 @@
 	metabolization_rate = INFINITY
 	taste_description = "slime"
 	value = REAGENT_VALUE_RARE
+	can_synth = FALSE
 	ghoulfriendly = TRUE
 
 /datum/reagent/mulligan/on_mob_life(mob/living/carbon/human/H)
@@ -947,6 +950,7 @@
 	color = "#13BC5E" // rgb: 19, 188, 94
 	taste_description = "slime"
 	value = REAGENT_VALUE_VERY_RARE
+	can_synth = FALSE
 	ghoulfriendly = TRUE
 
 /datum/reagent/aslimetoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
@@ -960,6 +964,7 @@
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	taste_description = "decay"
 	value = REAGENT_VALUE_GLORIOUS
+	can_synth = FALSE
 	ghoulfriendly = TRUE
 
 /datum/reagent/gluttonytoxin/reaction_mob(mob/living/L, method=TOUCH, reac_volume)
@@ -2426,13 +2431,15 @@
 	pH = 15
 	ghoulfriendly = TRUE
 
-/datum/reagent/pax/on_mob_metabolize(mob/living/L)
-	..()
-	ADD_TRAIT(L, TRAIT_PACIFISM, type)
-
 /datum/reagent/pax/on_mob_end_metabolize(mob/living/L)
 	REMOVE_TRAIT(L, TRAIT_PACIFISM, type)
 	..()
+
+/datum/reagent/pax/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1, touch_protection = 0)
+	if(!HAS_TRAIT(M, TRAIT_PACIFISM) && method == INJECT)
+		ADD_TRAIT(M, TRAIT_PACIFISM, type)
+		to_chat(M, span_notice("Maybe violence isn't the answer."))
+	return ..()
 
 /datum/reagent/bz_metabolites
 	name = "BZ metabolites"
@@ -2498,8 +2505,8 @@
 		to_chat(M, "You should sit down and take a rest...")
 	..()
 
-/datum/reagent/moonsugar
-	name = "Moonsugar"
+/datum/reagent/rawgetaway
+	name = "Unrefined GetAway"
 	description = "An unstable slurry consisting of moonshine and sugar, made by stirring at high speeds."
 	color = "#FAEAFF"
 	taste_description = "sugar and moonshine"
@@ -2547,14 +2554,14 @@
 	color = "#BCC740" //RGB: 188, 199, 64
 	taste_description = "plant dust"
 	ghoulfriendly = TRUE
-
+/*
 /datum/reagent/pax/catnip
 	name = "catnip"
 	taste_description = "grass"
 	description = "A colorless liquid that makes people more peaceful and felines more happy."
 	metabolization_rate = 1.75 * REAGENTS_METABOLISM
 	value = REAGENT_VALUE_COMMON
-
+*/
 /datum/reagent/preservahyde
 	name = "Preservahyde"
 	description = "A powerful preservation agent, utilizing the preservative effects of formaldehyde with significantly less of the histamine."
@@ -2824,13 +2831,12 @@
 	ghoulfriendly = TRUE
 
 /datum/reagent/red_ichor/on_mob_life(mob/living/carbon/M)
-	M.adjustBruteLoss(-50)
-	M.adjustOxyLoss(-50)
-	M.adjustBruteLoss(-50)
-	M.adjustFireLoss(-50)
-	M.adjustToxLoss(-50, TRUE) //heals TOXINLOVERs
-	M.adjustCloneLoss(-50)
-	M.adjustStaminaLoss(-50)
+	M.adjustBruteLoss(-5 * metabolization_rate)
+	M.adjustOxyLoss(-5 * metabolization_rate)
+	M.adjustFireLoss(-5 * metabolization_rate)
+	M.adjustToxLoss(-3 * metabolization_rate, TRUE) //heals TOXINLOVERs
+	M.adjustCloneLoss(-1 * metabolization_rate)
+	M.adjustStaminaLoss(-2 * metabolization_rate)
 	..()
 
 /datum/reagent/green_ichor
@@ -2842,13 +2848,13 @@
 	ghoulfriendly = TRUE
 
 /datum/reagent/green_ichor/on_mob_life(mob/living/carbon/M)
-	M.adjustOrganLoss(ORGAN_SLOT_LUNGS, -100)
-	M.adjustOrganLoss(ORGAN_SLOT_HEART, -100)
-	M.adjustOrganLoss(ORGAN_SLOT_LIVER, -100)
-	M.adjustOrganLoss(ORGAN_SLOT_EARS, -100)
-	M.adjustOrganLoss(ORGAN_SLOT_STOMACH, -100)
-	M.adjustOrganLoss(ORGAN_SLOT_TONGUE, -100)
-	M.adjustOrganLoss(ORGAN_SLOT_EYES, -100)
+	M.adjustOrganLoss(ORGAN_SLOT_LUNGS, -2 * metabolization_rate)
+	M.adjustOrganLoss(ORGAN_SLOT_HEART, -2 * metabolization_rate)
+	M.adjustOrganLoss(ORGAN_SLOT_LIVER, -2 * metabolization_rate)
+	M.adjustOrganLoss(ORGAN_SLOT_EARS, -2 * metabolization_rate)
+	M.adjustOrganLoss(ORGAN_SLOT_STOMACH, -2 * metabolization_rate)
+	M.adjustOrganLoss(ORGAN_SLOT_TONGUE, -2 * metabolization_rate)
+	M.adjustOrganLoss(ORGAN_SLOT_EYES, -2 * metabolization_rate)
 	..()
 
 /datum/reagent/blue_ichor
@@ -2860,15 +2866,16 @@
 	ghoulfriendly = TRUE
 
 /datum/reagent/blue_ichor/on_mob_life(mob/living/carbon/M)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -100)
-	M.cure_all_traumas(TRAUMA_RESILIENCE_MAGIC)
-	M.hallucination = 0
-	M.dizziness = 0
-	M.disgust = 0
-	M.drowsyness = 0
-	M.stuttering = 0
-	M.confused = 0
-	M.SetSleeping(0, 0)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -3 * metabolization_rate)
+	if (volume > 20)
+		M.cure_all_traumas(TRAUMA_RESILIENCE_WOUND)
+		M.hallucination = 0
+		M.dizziness = 0
+		M.disgust = 0
+		M.drowsyness = 0
+		M.stuttering = 0
+		M.confused = 0
+		M.SetSleeping(0, 0)
 	..()
 
 /datum/reagent/nutracid

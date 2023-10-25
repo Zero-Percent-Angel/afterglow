@@ -336,7 +336,7 @@
 	build_path = /obj/item/gun/ballistic/automatic/pistol/deagle
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-	
+
 /datum/design/combatc
 	name = "Combat Carbine"
 	desc = "A .45 carbine."
@@ -414,16 +414,6 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/titanium = 10000, /datum/material/lead = 10000, /datum/material/plasma = 10000)
 	build_path = /obj/item/gun/energy/tesla_revolver
-	category = list("Weapons")
-	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
-/datum/design/stuntribeam
-	name = "Stun Tri-beam"
-	desc = "A stub tri-beam."
-	id = "stuntribeam"
-	build_type = PROTOLATHE
-	materials = list(/datum/material/titanium = 20000, /datum/material/lead = 13000, /datum/material/gold = 3000, /datum/material/silver = 3000)
-	build_path = /obj/item/gun/energy/laser/scatter/nonlethal
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
@@ -577,7 +567,7 @@
 ///////////
 //Grenades/
 ///////////
-
+/*
 /datum/design/large_grenade
 	name = "Large Grenade"
 	desc = "A grenade that affects a larger area and use larger containers."
@@ -617,6 +607,7 @@
 	build_path = /obj/item/grenade/chem_grenade/adv_release
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY | DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_SCIENCE
+*/
 
 ///////////
 //Shields//

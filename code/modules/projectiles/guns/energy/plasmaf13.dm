@@ -42,7 +42,7 @@
 	icon = 'icons/fallout/objects/guns/energy.dmi'
 	item_state = "plasma-pistol"
 	icon_state = "eve"
-	desc = "A Plasmophiles wet dream. This meticulously modified pistol has seen every part serviced or improved in some manner."
+	desc = "A plasma-lover's wet dream. This meticulously modified pistol has seen every part serviced or improved in some manner."
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/eve)
@@ -69,37 +69,6 @@
 	)
 	init_firemodes = list(
 		/datum/firemode/semi_auto
-	)
-//Eve, Worn version
-/obj/item/gun/energy/laser/plasma/pistol/eve/worn
-	name ="eve"
-	icon = 'icons/fallout/objects/guns/energy.dmi'
-	item_state = "plasma-pistol"
-	icon_state = "eve"
-	desc = "A Plasmophiles wet dream. This meticulously modified pistol has seen every part serviced or improved in some manner. This one has seen some age..."
-	w_class = WEIGHT_CLASS_NORMAL
-	slot_flags = ITEM_SLOT_BELT
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/eve/worn)
-	cell_type = /obj/item/stock_parts/cell/ammo/ec
-	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
-
-	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(PLASMA_VOLUME),
-		SP_VOLUME_SILENCED(PLASMA_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(PLASMA_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(PLASMA_DISTANT_SOUND),
-		SP_DISTANT_RANGE(PLASMA_RANGE_DISTANT)
 	)
 
 //Plasma pistol: Adam
@@ -134,39 +103,6 @@
 		SP_DISTANT_RANGE(PLASMA_RANGE_DISTANT)
 	)
 
-//BoS knight craftable plasma pistol
-/obj/item/gun/energy/laser/plasma/pistol/light
-	name = "lightweight plasma pistol"
-	icon_state = "light-plasma-pistol"
-	desc = "A lightweight modification of the common REPCONN-built plasma pistol. Fires heavy low penetration plasma clots at a slower rate than the regular design due to reduced cooling."
-
-	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
-	)
-/obj/item/gun/energy/laser/plasma/pistol/worn
-	name ="shoddy plasma pistol"
-	desc = "A pistol-sized miniaturized plasma caster built by REPCONN. It fires a bolt of superhot ionized gas. This one's internal parts have loose seals and corroded electronics."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/worn)
-
-	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
-	force = GUN_MELEE_FORCE_PISTOL_LIGHT
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	burst_size = 1
-	init_firemodes = list(
-		/datum/firemode/semi_auto/slower
-	)
 //Glock 86 Plasma pistol
 /obj/item/gun/energy/laser/plasma/glock
 	name = "glock 86"
@@ -213,16 +149,16 @@
 	name ="plasma rifle"
 	item_state = "plasma"
 	icon_state = "plasma"
-	desc = "A miniaturized plasma caster that fires bolts of magnetically accelerated toroidal plasma towards an unlucky target."
+	desc = "An urban plasma rifle manufactured by REPCONN aerospace. It fires bolts of magnetically accelerated toroidal plasma towards an unlucky target."
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
-
+	damage_multiplier = 1.1 //For some reason this shares a projectile with the plasma carbine. I could give it its own, but I'm lazy
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER
+	fire_delay = (GUN_FIRE_DELAY_SLOWER*0.8) //1200ms fire delay. Slower than the plasma pistol, but a big improvement
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
@@ -249,7 +185,7 @@
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER
+	fire_delay = (GUN_FIRE_DELAY_SLOWER*0.8) //To not be slower than the plasma rifle. Does this thing even spawn?
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 2
@@ -269,49 +205,56 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
+	init_recoil = RIFLE_RECOIL(5)
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	added_spread = (GUN_SPREAD_AWFUL*3) //Added as part of egun recoil removal
 	burst_size = 1
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slower
 	)
 
-/obj/item/gun/energy/laser/plasma/spear
-	name = "ergonomic plasmacaster"
-	icon = 'icons/fallout/objects/melee/twohanded.dmi'
-	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
-	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
-	item_state = "plasma"
-	icon_state = "plasma"
-	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = ITEM_SLOT_BACK
-	desc = "An ergonomic pre-war plasmacaster designed for precision mining work. This one appears to be built into a single thick staff, with a bulbous hilt and sharp saturnite alloy blades ringing the caster assembly- strongly resembling sort of spear."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma/miner)
-	cell_type = /obj/item/stock_parts/cell/ammo/ecp
-	sharpness = SHARP_EDGED
-	max_reach = 2
-	scope_y_offset = 16
-	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
 
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
+//FNV plasma caster
+//High damage, fast rate of fire,10rnd capacity
+//very heavy
+//deliberately OP
+/obj/item/gun/energy/laser/plasma/caster
+	name = "Plasma caster"
+	icon = 'icons/fallout/objects/guns/longguns.dmi'
+	item_state = "plasmacaster_fnv"
+	icon_state = "plasmacaster_fnv"
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
+
+	desc = "A model P94 plasma caster.An industrial-grade energy weapon, firing superheated bolts of plasma down a superconducting barrel.Some people call it a plasma rifle despite looking nothing like one."
+	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/caster)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+
+	slowdown = GUN_SLOWDOWN_RIFLE_LMG //heavy weapon
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY //bludgeon
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	fire_delay = GUN_FIRE_DELAY_FAST //yes, it is a fast weapon. wait till you get the turbo
+	autofire_shot_delay =GUN_AUTOFIRE_DELAY_FAST
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	automatic = 1
-	force_unwielded = GUN_MELEE_FORCE_RIFLE_LIGHT
-	force_wielded = GUN_MELEE_FORCE_RIFLE_LIGHT * 2
-	wielded_icon = "plasma2"
+	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION //weapon long range in FO1/2
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slower
+		/datum/firemode/semi_auto/fast
 	)
 
-/obj/item/gun/energy/laser/plasma/spear/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/update_icon_updates_onmob)
+//for the love of god, make sure this is the only one to spawn normally
+//50 damage, 8 shots
+//fires faster, its only upside
+/obj/item/gun/energy/laser/plasma/caster/balanced
+	name = "worn-out Plasma caster"
+	desc = "A model P94 plasma caster.An industrial-grade energy weapon, firing superheated bolts of plasma down a superconducting barrel.Some people call it a plasma rifle despite looking nothing like one.Given the rarity of these things, count yourself lucky you have one at all."
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/caster/balanced)
+	worn_out = TRUE
+	fire_delay = GUN_FIRE_DELAY_FASTER
+
+

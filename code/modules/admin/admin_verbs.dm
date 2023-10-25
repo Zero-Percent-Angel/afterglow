@@ -6,6 +6,7 @@ GLOBAL_PROTECT(admin_verbs_default)
 	return list(
 	/client/proc/deadmin,				/*destroys our own admin datum so we can play as a regular player*/
 	/client/proc/cmd_admin_say,			/*admin-only ooc chat*/
+	/client/proc/cmd_admin_add_skill_check,
 	/client/proc/dsay,					/*talk in deadchat using our ckey/fakekey*/
 	/client/proc/deadchat,
 	/client/proc/investigate_show,		/*various admintools for investigation. Such as a singulo grief-log*/
@@ -88,6 +89,8 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/datum/admins/proc/open_borgopanel,
 	/datum/admins/proc/toggle_sleep,
 	/datum/admins/proc/toggle_sleep_area,
+	/datum/admins/proc/add_ckey_to_whitelist,
+	/datum/admins/proc/remove_ckey_from_whitelist
 	)
 GLOBAL_LIST_INIT(admin_verbs_ban, list(/client/proc/unban_panel, /client/proc/DB_ban_panel, /client/proc/stickybanpanel))
 GLOBAL_PROTECT(admin_verbs_ban)

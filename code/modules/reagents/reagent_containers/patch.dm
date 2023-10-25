@@ -78,7 +78,6 @@
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_healingpowder"
 	list_reagents = list(/datum/reagent/medicine/healing_powder = 10)
-	self_delay = 5
 
 // ---------------------------------
 // CUSTOM POWDER
@@ -89,19 +88,19 @@
 	list_reagents = null
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_healingpowder"
-	self_delay = 5
+	self_delay = 2
 	color = COLOR_PALE_GREEN_GRAY
 
 // ---------------------------------
 // HEALING POULTICE
 
-/obj/item/reagent_containers/pill/patch/healpoultice // 100hp over 50 seconds. a bit more potent than just bitters.
+/obj/item/reagent_containers/pill/patch/healpoultice // 80hp over 50 seconds. a bit more potent than just bitters. with maybe another 12~ ish Tricord allowing
 	name = "Healing poultice"
 	desc = "A concoction of broc flower, cave fungus, agrave fruit and xander root."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
-	list_reagents = list(/datum/reagent/medicine/healing_powder/poultice = 10, /datum/reagent/medicine/healing_powder = 10, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5)
+	list_reagents = list(/datum/reagent/medicine/healing_powder/poultice = 11, /datum/reagent/medicine/healing_powder = 5, /datum/reagent/medicine/tricordrazine = 5)
+	self_delay = 1
 	icon_state = "patch_healingpoultice"
-	self_delay = 5
 
 // ---------------------------------
 // BITTER DRINK
@@ -111,17 +110,16 @@
 	desc = "A strong herbal healing concoction invented and created by the Twin Mothers tribe."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_bitterdrink"
-	list_reagents = list(/datum/reagent/medicine/healing_powder = 5, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5) 
-	self_delay = 5
+	list_reagents = list(/datum/reagent/medicine/healing_powder = 5, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5)
 
 // ---------------------------------
-// HYDRA - never a thing, make it something. Sprites done.
+// HYDRA
 
-/* /obj/item/reagent_containers/pill/patch/hydra
+/obj/item/reagent_containers/pill/patch/hydra
 	name = "Hydra"
-	desc = "Hydra is a drug developed from antivenom. Due to the Legion's disapproval of using modern medicine, some Legionaries attempted to develop a different means to help them heal damaged limbs. To do that, they combined cave fungus, nightstalker blood and the poison from a radscorpion poison gland with antivenom before use. This resulted in the development of Hydra, a curative agent that both anesthetizes and restores crippled limbs over time."
+	desc = "Hydra is a drug developed from antivenom. Due to the Legion's disapproval of using modern medicine, some Legionaries attempted to develop a different means to help them heal damaged limbs. To do that, they combined cave fungus, nightstalker blood and the poison from a radscorpion poison gland with antivenom before use. This resulted in the development of Hydra, a curative agent that both anesthetizes and acts as a mild anti-poison."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_hydra"
-	list_reagents = null
-	self_delay = 0
- */
+	list_reagents = list(/datum/reagent/medicine/morphine = 10, /datum/reagent/medicine/antitoxin = 5)
+	self_delay = 5
+

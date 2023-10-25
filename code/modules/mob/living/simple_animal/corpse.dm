@@ -20,7 +20,7 @@
 	uniform = /obj/item/clothing/under/syndicate
 	suit = /obj/item/clothing/suit/armor/medium/vest
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas
 	head = /obj/item/clothing/head/helmet/swat
@@ -39,7 +39,7 @@
 	uniform = /obj/item/clothing/under/syndicate
 	suit = /obj/item/clothing/suit/space/hardsuit/syndi
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas/syndicate
 	back = /obj/item/tank/jetpack/oxygen
@@ -59,7 +59,7 @@
 	uniform = /obj/item/clothing/under/syndicate
 	suit = /obj/item/clothing/suit/space/hardsuit/syndi/elite
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/tackler/combat
+	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas/syndicate
 	back = /obj/item/tank/jetpack/oxygen/harness
@@ -120,9 +120,9 @@
 /datum/outfit/russiancorpse/ranged/trooper
 	name = "Ranged Russian Trooper Corpse"
 	uniform = /obj/item/clothing/under/syndicate/camo
-	suit = /obj/item/clothing/suit/armor/heavy/vest/bulletproof
+	suit = /obj/item/clothing/suit/armor/medium/vest/russian
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/tackler/combat
+	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset
 	head = /obj/item/clothing/head/helmet/alt
 	mask = /obj/item/clothing/mask/balaclava
@@ -169,7 +169,7 @@
 	uniform = /obj/item/clothing/under/rank/security/officer
 	suit = /obj/item/clothing/suit/armor/medium/vest
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/tackler/combat
+	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
 	head = /obj/item/clothing/head/helmet/swat/nanotrasen
@@ -213,7 +213,7 @@ obj/effect/mob_spawn/human/corpse/raider
 	uniform = /obj/item/clothing/under/jabroni
 	suit = /obj/item/clothing/suit/armor/heavy/metal
 	shoes = /obj/item/clothing/shoes/jackboots
-	head = /obj/item/clothing/head/helmet/f13/metalmask
+	head = /obj/item/clothing/head/helmet/knight/f13/metal
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
 
@@ -240,7 +240,7 @@ obj/effect/mob_spawn/human/corpse/raidermelee
 	uniform = /obj/item/clothing/under/f13/raiderharness
 	suit = /obj/item/clothing/suit/armor/heavy/metal/reinforced
 	shoes = /obj/item/clothing/shoes/f13/explorer
-	head = /obj/item/clothing/head/helmet/f13/metalmask/mk2
+	head = /obj/item/clothing/head/helmet/f13/sulphitehelm
 	hair_style = "Bald"
 	facial_hair_style = "Shaved"
 

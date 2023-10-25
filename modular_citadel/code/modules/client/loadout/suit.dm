@@ -2,6 +2,7 @@
 	category = LOADOUT_CATEGORY_SUIT
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_GENERAL
 	slot = SLOT_WEAR_SUIT
+	cost = 1
 
 /datum/gear/suit/redhood
 	name = "Red cloak"
@@ -17,12 +18,15 @@
 	name = "Ranger cape"
 	path = /obj/item/clothing/neck/mantle/ranger
 	cost = 1
+	restricted_desc = "NCR"
+	restricted_roles = list("NCR Veteran Ranger",
+				"NCR Ranger",
+			)
 
 /datum/gear/suit/bomber
 	name = "Bomber jacket"
 	path = /obj/item/clothing/suit/jacket
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
-	cost = 1
 
 /datum/gear/suit/bomber/oldjacketbomber
 	name = "Old bomber jacket"
@@ -34,7 +38,6 @@
 	name = "Red flannel jacket"
 	path = /obj/item/clothing/suit/jacket/flannel/red
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
-	cost = 1
 
 /datum/gear/suit/flannel/jacketflannelblack
 	name = "Black flannel jacket"
@@ -48,6 +51,14 @@
 	name = "Brown flannel jacket"
 	path = /obj/item/clothing/suit/jacket/flannel/brown
 
+/datum/gear/suit/scarletcoat
+	name = "Scarlet Coat"
+	path = /obj/item/clothing/suit/scarlet
+
+/datum/gear/suit/gothjacket
+	name = "Goth Jacket"
+	path = /obj/item/clothing/suit/gothjacket
+
 /datum/gear/suit/jacketleather
 	name = "Leather jacket"
 	path = /obj/item/clothing/suit/armor/light/leather/leather_jacket
@@ -58,43 +69,31 @@
 	name = "Leather overcoat"
 	path = /obj/item/clothing/suit/jacket/leather/overcoat
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
-	cost = 1
 
 /datum/gear/suit/jacketpuffer
 	name = "Puffer jacket"
 	path = /obj/item/clothing/suit/jacket/puffer
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
-	cost = 1
 
 /datum/gear/suit/vestpuffer
 	name = "Puffer vest"
 	path = /obj/item/clothing/suit/jacket/puffer/vest
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
-	cost = 1
 
 /datum/gear/suit/jacketlettermanbrown
 	name = "Brown letterman jacket"
 	path = /obj/item/clothing/suit/jacket/letterman
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
-	cost = 1
 
 /datum/gear/suit/jacketlettermanred
 	name = "Red letterman jacket"
 	path = /obj/item/clothing/suit/jacket/letterman_red
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
-	cost = 1
 
 /datum/gear/suit/militaryjacket
 	name = "Military Jacket"
 	path = /obj/item/clothing/suit/jacket/miljacket
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
-	cost = 1
-
-/datum/gear/suit/flakjack
-	name = "Flak Jacket"
-	path = /obj/item/clothing/suit/armor/outfit/vest/flakjack
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
-	cost = 2
 
 /datum/gear/suit/armorkit
 	name = "Armor Kit"
@@ -114,12 +113,6 @@
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 2
 
-/datum/gear/suit/ncrcfjacket
-	name = "NCRCF jacket"
-	path = /obj/item/clothing/suit/armor/outfit/jacket/ncrcfjacket
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
-	cost = 1
-
 /datum/gear/suit/samurai  //added by TK420634 ~ 5/29/2022 "Samurai Wasteland WeebShit Edition (tm)
 	name = "Rusted Samurai Armor"
 	path = /obj/item/clothing/suit/samurai
@@ -133,62 +126,10 @@
 	cost = 2
 
 /// 	Beginning of Coats/Armor section
-// 	Below are one points as they are cosmetics
-
-/datum/gear/suit/coat/leatherbattlecoat
-	name = "Leather battle coat"
-	path = /obj/item/clothing/suit/armor/medium/vest/breastplate/khan
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_COATS
-	cost = 3
-
-/datum/gear/suit/coat/marlow
-	name = "Marlow gang overcoat"
-	path = /obj/item/clothing/suit/armor/light/duster/marlowsuit
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_COATS
-	cost = 1
-
-/datum/gear/suit/coat/marlow/ikesuit
-	name = "Gunfighter's overcoat"
-	path = /obj/item/clothing/suit/armor/light/duster/marlowsuit/ikesuit
-
-/datum/gear/suit/coat/marlow/masonsuit
-	name = "Vagabond's vest"
-	path = /obj/item/clothing/suit/armor/light/duster/marlowsuit/masonsuit
-
-/datum/gear/suit/coat/marlow/blackformaljacket
-	name = "Black Formal Jacket"
-	path = /obj/item/clothing/suit/armor/outfit/jacket/blackformaljacket
-/// End of Coats/Armor section
-
-/datum/gear/suit/NCRutilityvest
-	name = "Utility Vest"
-	path = /obj/item/clothing/suit/armor/outfit/vest/utility
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_GENERAL
-	cost = 1  /// Has no armor so its cosmetic as heck.
-/*	restricted_desc = "NCR"
-	restricted_roles = list("NCR Captain",
-							"NCR Lieutenant",
-							"NCR Medical Officer",
-							"NCR Veteran Ranger",
-							"NCR Lieutenant",
-							"NCR Heavy Trooper",
-							"NCR Sergeant First Class",
-							"NCR Sergeant",
-							"NCR Corporal",
-							"NCR Combat Engineer",
-							"NCR Combat Medic",
-							"NCR Trooper",
-							"NCR Rear Echelon",
-							"NCR Off-Duty",
-							"NCR Ranger"
-						)
-*/
-
 
 /datum/gear/suit/chestgearharness
 	name = "Chest gear harness"
 	path = /obj/item/clothing/suit/armor/light/leather/rig
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 2
 
 /datum/gear/suit/fieldscribe
@@ -196,29 +137,22 @@
 	path = /obj/item/clothing/suit/toggle/labcoat/fieldscribe
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 2
-/*	restricted_desc = "Scribes"
+	restricted_desc = "Scribes"
 	restricted_roles = list("Head Scribe",
 							"Senior Scribe",
-							"Scribe",
+							"Scribe"
 							)
-*/
-/datum/gear/suit/scribecoat
+
+/datum/gear/suit/fieldscribe/coat
 	name = "Fieldscribe coat"
-	path = /obj/item/clothing/suit/toggle/labcoat/scribecoat
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
-	cost = 2
-/*	restricted_desc = "Scribes"
-	restricted_roles = list("Head Scribe",
-							"Senior Scribe",
-							"Scribe",
-							)
-*/
+	path = /obj/item/clothing/suit/armor/light/duster/bos/scribe/field_coat
+
 /datum/gear/suit/town
 	name = "Town Trenchcoat"
 	path = /obj/item/clothing/suit/armor/light/duster/town
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 2
-	restricted_desc = "Nash"
+	restricted_desc = "Ripley"
 	restricted_roles = list("Mayor",
 							"Secretary",
 							"Sheriff",
@@ -232,28 +166,9 @@
 							"Barkeep",
 							)
 
-/datum/gear/suit/deputyvest
-	name = "NPD armor vest"
-	path = /obj/item/clothing/suit/armor/medium/vest/oasis
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
-	cost = 3
-	restricted_desc = "Nash Police, Nash Officials"
-	restricted_roles = list("Chief of Police",
-							"Officer",
-							"Mayor",
-							"Detective",
-							"Secretary",
-							"Shopkeeper",
-						)
-
-/datum/gear/suit/hazardvest
+/datum/gear/suit/town/hazardvest
 	name = "Hazard Vest"
 	path = /obj/item/clothing/suit/hazardvest
-	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
-	cost = 2
-	restricted_roles = list("Citizen",
-							"Prospector",
-							)
 
 //These should be left commented out until the holidays or special events.
 /*

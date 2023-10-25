@@ -6,14 +6,14 @@
 	circuit = /obj/item/circuitboard/machine/science_lab
 	var/engaged_in_science = FALSE
 	var/list/blueprint_types = list("small energy", "big energy", "small guns", "big guns")
-	var/list/point_selections = list(200, 500, 1000, 5000)
+	var/list/point_selections = list(2000, 5000, 10000, 50000)
 	var/list/obj/small_guns = list(/obj/item/book/granter/crafting_recipe/blueprint/thatgun, /obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
 								/obj/item/book/granter/crafting_recipe/blueprint/deagle, /obj/item/book/granter/crafting_recipe/blueprint/n99)
 	var/list/obj/big_guns = list(/obj/item/book/granter/crafting_recipe/blueprint/combatrifle, /obj/item/book/granter/crafting_recipe/blueprint/r84,
 								/obj/item/book/granter/crafting_recipe/blueprint/lsw, /obj/item/book/granter/crafting_recipe/blueprint/am_rifle)
-	var/list/obj/small_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/aep7, /obj/item/book/granter/crafting_recipe/blueprint/plasmapistol, 
-									/obj/item/book/granter/crafting_recipe/blueprint/lightplasmapistol, /obj/item/book/granter/crafting_recipe/blueprint/tesla)
-	var/list/obj/big_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/tribeam_stun, /obj/item/book/granter/crafting_recipe/blueprint/tribeam,
+	var/list/obj/small_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/aep7, /obj/item/book/granter/crafting_recipe/blueprint/plasmapistol,
+									/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol, /obj/item/book/granter/crafting_recipe/blueprint/tesla)
+	var/list/obj/big_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/tribeam,
 								/obj/item/book/granter/crafting_recipe/blueprint/plasmarifle, /obj/item/book/granter/crafting_recipe/blueprint/aer9,
 								/obj/item/book/granter/crafting_recipe/blueprint/gauss)
 	var/attempts = 0
@@ -69,20 +69,23 @@
 			updateUsrDialog()
 			return
 	if(scantype == "create" && !engaged_in_science)
+		engaged_in_science = TRUE
 		if (!linked_console.stored_research.isNodeResearchedID("weaponry"))
 			say("Weaponry research required.")
+			engaged_in_science = FALSE
 			return
 		say("Blueprint creation begun.")
 		var/choosen_step = input(usr, "What kind of blueprint do you wish to create?", "Blueprint Creation") in blueprint_types
 		if ((choosen_step == "big energy" || choosen_step == "small energy") && !linked_console.stored_research.isNodeResearchedID("adv_weaponry"))
 			say("Advanced weaponry research required.")
+			engaged_in_science = FALSE
 			return
 		var/points_to_contribute =  input(usr, "How many research points do you wish to use as a boost?", "Blueprint Creation") in point_selections
 		if (!linked_console.stored_research.can_afford(list(TECHWEB_POINT_TYPE_GENERIC = points_to_contribute)))
 			say("Not enough points.")
+			engaged_in_science = FALSE
 			return
 		say("Creation started.")
-		engaged_in_science = TRUE
 		update_overlays()
 		if (do_after(usr, 10 SECONDS, 1, src, required_mobility_flags = MOBILITY_USE))
 			//need to make sure someone hasn't spent all the points while we were working!
@@ -91,7 +94,7 @@
 				engaged_in_science = FALSE
 				update_overlays()
 				return
-			var/difficulty_selected = 50 - (points_to_contribute/100) - attempts
+			var/difficulty_selected = 50 - (points_to_contribute/1000) - attempts
 			if (usr.skill_roll(SKILL_SCIENCE, difficulty_selected))
 				if (choosen_step == "small energy")
 					var/obj/i = pick(small_energy)
@@ -226,7 +229,7 @@
 	visible_message(span_danger("[src]'s chemical chamber has sprung a leak!"))
 	var/chosenchem
 	chosenchem = pick(/datum/reagent/mutationtoxin,/datum/reagent/nanomachines,/datum/reagent/toxin/acid,/datum/reagent/radium,/datum/reagent/toxin,
-						/datum/reagent/consumable/condensedcapsaicin,/datum/reagent/drug/mushroomhallucinogen,
+						/datum/reagent/consumable/condensedcapsaicin,/datum/reagent/drug/mushroomhallucinogen,/datum/reagent/consumable/frostoil,
 						/datum/reagent/drug/space_drugs,/datum/reagent/consumable/ethanol,/datum/reagent/consumable/ethanol/beepsky_smash)
 	var/datum/reagents/R = new/datum/reagents(50)
 	R.my_atom = src
@@ -239,10 +242,11 @@
 	warn_admins(user, "[chosenchem] smoke")
 
 //4
-/obj/machinery/rnd/science_lab/proc/death_ball(user)
+/obj/machinery/rnd/science_lab/proc/death_ball(mob/user)
 	var/turf/start = get_turf(src)
 	var/mob/M = locate(/mob/living) in view(src, 3)
 	var/turf/MT = get_turf(M)
+	explosion(user.loc, -1, 1, 2, 2, 1, flame_range = 2)
 	if(MT)
 		visible_message(span_danger("[src] dangerously overheats, launching a flaming fuel orb!"))
 		var/obj/item/projectile/magic/aoe/fireball/FB = new /obj/item/projectile/magic/aoe/fireball(start)

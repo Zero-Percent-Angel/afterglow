@@ -177,7 +177,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 		GLOB.areas_by_type[type] = src
 	return ..()
 
-/area/Initialize()
+/area/Initialize(mapload)
 	icon_state = ""
 	layer = AREA_LAYER
 	map_name = name // Save the initial (the name set in the map) name of the area.

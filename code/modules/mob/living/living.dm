@@ -410,16 +410,6 @@
 /mob/living/verb/succumb()
 	set name = "Succumb"
 	set category = "IC"
-	if(src.has_status_effect(/datum/status_effect/chem/enthrall))
-		var/datum/status_effect/chem/enthrall/E = src.has_status_effect(/datum/status_effect/chem/enthrall)
-		if(E.phase < 3)
-			if(HAS_TRAIT(src, TRAIT_MINDSHIELD))
-				to_chat(src, span_notice("Your mindshield prevents your mind from giving in!"))
-			else if(src.mind.assigned_role in GLOB.command_positions)
-				to_chat(src, span_notice("Your dedication to your department prevents you from giving in!"))
-			else
-				E.enthrallTally += 20
-				to_chat(src, span_notice("You give into [E.master]'s influence."))
 	if (InCritical())
 		log_message("Has succumbed to death while in [InFullCritical() ? "hard":"soft"] critical with [round(health, 0.1)] points of health!", LOG_ATTACK)
 		adjustOxyLoss(health - HEALTH_THRESHOLD_DEAD)
@@ -929,6 +919,7 @@
 		src << browse(null,"window=mob[REF(who)]")
 
 	who.update_equipment_speed_mods() // Updates speed in case stripped speed affecting item
+	who.handle_equipment_stiffness()
 
 // The src mob is trying to place an item on someone
 // Override if a certain mob should be behave differently when placing items (can't, for example)
@@ -1089,7 +1080,7 @@
 		return TRUE
 	return FALSE
 
-/mob/living/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback)
+/mob/living/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback, force = MOVE_FORCE_STRONG, gentle = FALSE, quickstart = TRUE)
 	stop_pulling()
 	. = ..()
 
@@ -1119,7 +1110,7 @@
 		return
 
 	amount -= RAD_BACKGROUND_RADIATION // This will always be at least 1 because of how skin protection is calculated
-	
+
 	if(HAS_TRAIT(src, TRAIT_75_RAD_RESIST))
 		amount *= 0.25
 	else if(HAS_TRAIT(src, TRAIT_50_RAD_RESIST))
@@ -1408,7 +1399,7 @@
 		to_chat(src, span_warning("[target] is in no condition to handle items!"))
 		return
 
-	if(!gift.mob_can_equip(src, target, SLOT_HANDS, TRUE, TRUE))
+	if(!gift.mob_can_equip(target, src, SLOT_HANDS, TRUE, TRUE))
 		to_chat(src, span_warning("[target] is unable to receive \a [gift] right now."))
 		return
 
@@ -1446,7 +1437,7 @@
 		to_chat(target, span_warning("\The [src] seems to have given up on passing \the [gift] to you."))
 		return
 
-	if(!gift.mob_can_equip(src, target, SLOT_HANDS, TRUE, TRUE))
+	if(!gift.mob_can_equip(target, src, SLOT_HANDS, TRUE, TRUE))
 		to_chat(src, span_warning("[target] is unable to receive \a [gift] right now."))
 		to_chat(target, span_warning("\The [src] seems to have given up on passing \the [gift] to you."))
 		return

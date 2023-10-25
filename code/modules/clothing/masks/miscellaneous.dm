@@ -408,6 +408,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	flags_inv = HIDEFACE
 	flags_cover = MASKCOVERSMOUTH
+	visor_flags_inv = HIDEFACE
 	visor_flags_cover = MASKCOVERSMOUTH
 	gas_transfer_coefficient = 0.9
 	permeability_coefficient = 0.01
@@ -480,7 +481,7 @@
 
 /obj/item/clothing/mask/society
 	name = "golden facemask"
-	desc = "A burlap sack with eyeholes."
+	desc = "A creepy white and gold mask."
 	icon_state = "societymask"
 	item_state = "societymask"
 	flags_inv = HIDEFACE

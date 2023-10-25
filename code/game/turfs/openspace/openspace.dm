@@ -68,6 +68,10 @@ Prevents players on higher Zs from seeing into buildings they arent meant to.
 		zFall(AM, falling_from_move = TRUE)
 
 
+/turf/open/transparent/openspace/hitby(atom/movable/AM, skipcatch, hitpush, blocked, datum/thrownthing/throwingdatum)
+	. = ..()
+	zFall(AM, falling_from_move = TRUE)
+
 /turf/open/transparent/openspace/can_have_cabling()
 	if(locate(/obj/structure/lattice/catwalk, src))
 		return TRUE

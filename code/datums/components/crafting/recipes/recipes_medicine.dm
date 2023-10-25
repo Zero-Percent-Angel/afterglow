@@ -9,7 +9,7 @@
 	time = 10
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = HARD_CHECK
+	skill_level = EXPERT_CHECK
 
 /datum/crafting_recipe/bluepotion
 	name = "Blue Potion"
@@ -22,7 +22,7 @@
 	time = 10
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = HARD_CHECK
+	skill_level = EXPERT_CHECK
 
 /datum/crafting_recipe/greenpotion
 	name = "Green Potion"
@@ -35,14 +35,45 @@
 	time = 10
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = HARD_CHECK
+	skill_level = EXPERT_CHECK
+
+/datum/crafting_recipe/regular_gauze
+	name = "Regular Gauze"
+	result = /obj/item/stack/medical/gauze/one
+	time = 10
+	reqs = list(/obj/item/stack/medical/gauze/improvised = 1,
+				/datum/reagent/abraxo_cleaner = 5)
+	category = CAT_MEDICAL
+	skill_needed = SKILL_SCIENCE
+	skill_level = EASY_CHECK
+
+/datum/crafting_recipe/regular_gauze10
+	name = "Regular Gauze (x10)"
+	result = /obj/item/stack/medical/gauze
+	time = 50
+	reqs = list(/obj/item/stack/medical/gauze/improvised = 10,
+				/datum/reagent/abraxo_cleaner = 50)
+	category = CAT_MEDICAL
+	skill_needed = SKILL_SCIENCE
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/upgraded_gauze
 	name = "Improved Gauze"
 	result = /obj/item/stack/medical/gauze/adv/one
-	time = 50
+	time = 10
 	reqs = list(/obj/item/stack/medical/gauze = 1,
 				/datum/reagent/abraxo_cleaner/sterilizine = 10)
+	category = CAT_MEDICAL
+	blacklist = list(/obj/item/stack/medical/gauze/improvised)
+	skill_needed = SKILL_SCIENCE
+	skill_level = REGULAR_CHECK
+
+/datum/crafting_recipe/upgraded_gauze10
+	name = "Improved Gauze (x10)"
+	result = /obj/item/stack/medical/gauze/adv
+	time = 50
+	reqs = list(/obj/item/stack/medical/gauze = 10,
+				/datum/reagent/abraxo_cleaner/sterilizine = 100)
 	category = CAT_MEDICAL
 	blacklist = list(/obj/item/stack/medical/gauze/improvised)
 	skill_needed = SKILL_SCIENCE
@@ -97,6 +128,27 @@
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
 
+/datum/crafting_recipe/hydra  //keep the number of plants needed low so picking wild plants is viable. balance botany instead.
+	name = "Hydra - Anesthetic"
+	result = /obj/item/reagent_containers/pill/patch/hydra
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fungus = 1,
+				/obj/item/reagent_containers/food/snacks/meat/slab/radscorpion_meat = 1,
+				/obj/item/reagent_containers/food/snacks/meat/slab/nightstalker_meat = 1)
+	time = 5
+	category = CAT_MEDICAL
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = REGULAR_CHECK
+
+/datum/crafting_recipe/hydra5
+	name = "Hydra - Anesthetic (x5)"
+	result = /obj/item/storage/box/medicine/hydra5
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fungus = 5,
+				/obj/item/reagent_containers/food/snacks/meat/slab/radscorpion_meat = 5,
+				/obj/item/reagent_containers/food/snacks/meat/slab/nightstalker_meat = 5)
+	time = 15
+	category = CAT_MEDICAL
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = HARD_CHECK
 
 /datum/crafting_recipe/bitterdrink
 	name = "Bottle bitterdrink"
@@ -119,7 +171,6 @@
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 20
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_OUTDOORSMAN
 	skill_level = REGULAR_CHECK
 
@@ -134,7 +185,7 @@
 	time = 10
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = EASY_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/healpoultice5
 	name = "Batch of healing poultice (x5)"
@@ -147,7 +198,7 @@
 	time = 20
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = EASY_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/smell_salts
 	name = "Smelling salts"
@@ -220,7 +271,6 @@
 	tools = list(TOOL_AWORKBENCH)
 	time = 10
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_SCIENCE
 	skill_level = HARD_CHECK
 
@@ -235,7 +285,6 @@
 	tools = list(TOOL_AWORKBENCH)
 	time = 20
 	category = CAT_MEDICAL
-	always_available = FALSE
 	skill_needed = SKILL_SCIENCE
 	skill_level = HARD_CHECK
 
@@ -381,7 +430,8 @@
 	time = 100
 	tools = list(TOOL_WORKBENCH, TOOL_SCREWDRIVER, TOOL_CROWBAR)
 	category = CAT_MEDICAL
-	skill_level = HARD_CHECK
+	skill_level = EASY_CHECK
+	skill_needed = SKILL_SCIENCE
 
 /datum/crafting_recipe/crafted_chem_cartridge
 	name = "Crafted chemical Cartridge"
@@ -398,6 +448,7 @@
 	tools = list(TOOL_WORKBENCH, TOOL_SCREWDRIVER, TOOL_CROWBAR)
 	category = CAT_MEDICAL
 	skill_level = HARD_CHECK
+	skill_needed = SKILL_SCIENCE
 
 /datum/crafting_recipe/fiery_purgative
 	name = "Fiery purgative"
@@ -408,6 +459,9 @@
 	tools = list(TOOL_ALCHEMY_TABLE)
 	time = 10
 	category = CAT_MEDICAL
+	falls_back_on_outdoors = TRUE
+	skill_needed = SKILL_SCIENCE
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/fiery_purgative5
 	name = "Fiery purgative (x5)"
@@ -506,8 +560,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
-	skill_level = SKILL_REPAIR 
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
+	skill_needed = SKILL_REPAIR
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_surgical
@@ -520,8 +574,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
-	skill_level = SKILL_REPAIR 
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
+	skill_needed = SKILL_REPAIR
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_janitor
@@ -534,8 +588,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
-	skill_level = SKILL_REPAIR 
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
+	skill_needed = SKILL_REPAIR
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_service
@@ -548,8 +602,8 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
-	skill_level = SKILL_REPAIR 
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
+	skill_needed = SKILL_REPAIR
 	always_available = FALSE
 
 /datum/crafting_recipe/cyberimp_nutriment
@@ -562,6 +616,6 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 15
 	category = CAT_MEDICAL
-	skill_level = SKILL_REPAIR 
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
+	skill_needed = SKILL_REPAIR
 	always_available = FALSE

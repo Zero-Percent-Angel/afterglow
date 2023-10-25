@@ -519,3 +519,12 @@
 // via send2chat("Hello world.", CONFIG_GET(string/discord_channel_serverstatus))
 /datum/config_entry/string/discord_channel_serverstatus
 	config_entry_value = "server_status"
+
+/datum/config_entry/string/discord_roundend_role_id
+	config_entry_value = ""
+
+/datum/config_entry/flag/enable_tgs_ban_channel
+	config_entry_value = FALSE
+
+/datum/config_entry/string/tgs_ban_channel_identifier
+	config_entry_value = "ban"

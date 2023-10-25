@@ -47,6 +47,13 @@
 	. = ..()
 	AddComponent(/datum/component/wearertargeting/earprotection, list(SLOT_HEAD))*/
 
+
+
+
+//Note: ALL OF THIS SHIT NEEDS TO BE TRANSFERED!!!!
+//Either put it all into f13head, or f13helmets depending if it's  FUCKING HELMET OR NOT!!!
+//We DO NOT need a fucking faction file. If we're going to have one, make one .dm file PER FACTION. - By Rebel0, 5/15/2023
+
 //Raider
 /obj/item/clothing/head/helmet/f13/raider
 	name = "base raider helmet"
@@ -385,7 +392,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	item_state = "legion-decrec"
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1)
-	
+
 
 /obj/item/clothing/head/helmet/f13/legion/prime/decan
 	name = "legion prime decanus helmet"
@@ -434,7 +441,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 3)
 	armor = ARMOR_VALUE_MEDIUM
 
-/obj/item/clothing/head/helmet/f13/legion/palacent
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/palacent
 	name = "paladin-slayer centurion helmet"
 	desc = "The once-marvelous helmet of the T-45d power armor set, repurposed by the Legion into a symbol of its might. It has a large plume of red horse hair across the top of it going horizontally, donoting the rank of Centurion."
 	icon_state = "legion-palacent"
@@ -573,7 +580,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	armor = ARMOR_VALUE_MEDIUM
 
 /obj/item/clothing/head/f13/ncr/standard/conscript
-	name = "NCR conscript helmet"
+	name = "NCR recruit helmet"
 	desc = "A standard issue NCR steel helmet. Looks like you can write on it and strap a few items on the helmet band."
 	icon_state = "ncr_steelpot"
 	item_state = "ncr_steelpot"
@@ -806,6 +813,17 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	item_state = "boscap"
 	strip_delay = 20
 
+/obj/item/clothing/head/f13/boscap/flight
+	name = "lancers flight cap"
+	desc = "A hat typically worn by the Lancers of the local Brotherhood of Steel Chapter.""
+	item_state = "brotherhood_flight_soft_hat"
+	icon_state = "brotherhood_flight_soft_hat"
+
+/obj/item/clothing/head/f13/boscap/flight
+	name = "lancers soft hat"
+	item_state = "brotherhood_flight_cap"
+	icon_state = "brotherhood_flight_cap"
+
 /obj/item/clothing/head/f13/boscap/beret
 	name = "brotherhood beret"
 	desc = "A beret typically worn with the standard fatigues of the local Brotherhood of Steel Chapter."
@@ -815,6 +833,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 //Oasis/Town
 
 /obj/item/clothing/head/f13/town
+	icon = 'icons/obj/clothing/hats.dmi'
 	name = "town tricorn"
 	desc = "Why are there tricorns in the desert again?"
 	icon_state = "tricorn"

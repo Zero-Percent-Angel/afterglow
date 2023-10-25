@@ -664,6 +664,14 @@
 	item_state = "khan_short"
 	body_parts_hidden = GROIN|LEGS
 
+/obj/item/clothing/under/f13/khan/skirt
+	name = "denim skirt"
+	desc = "Denim skirt!"
+	icon = 'icons/fallout/clothing/khans.dmi'
+	icon_state = "khan_skirt"
+	item_state = "khan_skirt"
+	body_parts_hidden = GROIN|LEGS
+
 /obj/item/clothing/under/f13/khan/booty
 	name = "denim shorts"
 	desc = "Denim pants, But this pair doesn't seem to leave much to the imagination."
@@ -1352,6 +1360,40 @@
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 
+/obj/item/clothing/under/f13/scav //male
+	name = "scavvers gear"
+	desc = "A sturdy, warm set of jeans, tee and a belt, often worn by scavengers."
+	icon_state = "scav"
+	item_state = "scav"
+
+/obj/item/clothing/under/f13/female/scav //female... Obviously
+	name = "scavvers gear"
+	desc = "A sturdy, warm set of legwear, tee and a belt, often worn by scavengers."
+	icon_state = "scav_f"
+	item_state = "scav_f"
+
+/obj/item/clothing/under/f13/goth //male
+	name = "goth outfit"
+	desc = "A darker pair of jeans, blackened tee and a studded white belt. For when you really need to sharpen your edge."
+	icon_state = "goth"
+	item_state = "goth"
+
+/obj/item/clothing/under/f13/female/goth //female... Obviously
+	name = "goth outfit"
+	desc = "A darker set of legwear, blackened, strappy tee and a studded white belt. For when you really need to sharpen your edge."
+	icon_state = "goth_f"
+	item_state = "goth_f"
+
+/obj/item/clothing/under/f13/goth/skimpy //male
+	desc = "A pair of ripped black jeans and unbuttoned shirt. For when you really need to sharpen your edge with very little."
+	icon_state = "skimpy_goth"
+	item_state = "skimpy_goth"
+
+/obj/item/clothing/under/f13/female/goth/skimpy //female... Obviously
+	desc = "A black harness, a grey buckled top, a pair of shorts that really stretch the definition, and a mesh bodysuit underneath. For when you really need to sharpen your edge while leaving very little to the imagination."
+	icon_state = "skimpy_goth_f"
+	item_state = "skimpy_goth_f"
+
 //Fluff
 
 /obj/item/clothing/under/f13/agent47
@@ -1465,11 +1507,21 @@
 	resistance_flags = UNACIDABLE
 	body_parts_covered = LEGS
 
+/////////////////
+// Brotherhood //
+/////////////////
+
 /obj/item/clothing/under/f13/bos/fatigues
 	name = "Brotherhood fatigues"
 	desc = "A dry cleaned set of grey fatigues with a brown belt, commonly worn by the off-duty members of the Brotherhood of Steel."
 	icon_state = "bos_fatigues"
 	item_state = "bos_fatigues"
+
+/obj/item/clothing/under/f13/bos/fatigues
+	name = "Lancer's flight suit"
+	desc = "A close-fit uniform fitted with a harness to hold the wearer in place whilst experiencing turbulance. Worn by the Lancers of the Brotherhood of Steel."
+	icon_state = "bos_flightsuit"
+	item_state = "bos_flightsuit"
 
 /obj/item/clothing/under/f13/bos/bodysuit
 	name = "Brotherhood Knight fatigues"
@@ -1683,27 +1735,52 @@
 
 //Super Mutants
 
-/obj/item/clothing/under/f13/mutieshorts
+/obj/item/clothing/under/f13/mutie
 	name = "large torn shorts"
 	desc = "An incredibly damaged pair of shorts, large enough to fit a super mutant."
 	icon_state = "mutie_shorts"
 	item_state = "mutie_shorts"
+	species_restricted = list("exclude","Human","Ghoul")
 
-/obj/item/clothing/under/f13/mutiesanta
+/obj/item/clothing/under/f13/mutie/cloth
+	name = "large loincloth"
+	desc = "An incredibly large loincloth, large enough to fit a super mutant."
+	icon_state = "mutie_loincloth"
+	item_state = "mutie_loincloth"
+
+/obj/item/clothing/under/f13/mutie/santa
 	name = "red and white jumpsuit"
 	desc = "A fairly damaged red and white shirt with matching shorts, large enough to fit a super mutant."
 	icon_state = "mutie_santa"
 	item_state = "mutie_santa"
 
-/obj/item/clothing/under/f13/vaultmutie
+/obj/item/clothing/under/f13/mutie/vault
 	name = "torn vault 113 jumpsuit"
 	desc = "Once, it was a blue jumpsuit with a yellow vault pattern and the number 11 printed on it, now torn and ripped."
 	icon_state = "mutie_vault_jumspuit"
 	item_state = "mutie_vault_jumspuit"
 
-/obj/item/clothing/under/f13/mutieranger
-	name = "mutant ranger clothing"
-	desc = "Specially made for Super Mutants living in the NCR, this large piece of clothing is well pressed and suited for any NCR Super Mutant personnel"
+/obj/item/clothing/under/f13/mutie/ncr
+	name = "NCR Mutant Trooper uniform"
+	desc = "Specially made for Super Mutants serving the NCRA, this large piece of clothing is simply a pair of shorts."
+	icon_state = "mutie_ncr_short"
+	item_state = "mutie_ncr_short"
+
+/obj/item/clothing/under/f13/mutie/ncr/heavy
+	name = "NCR Mutant Heavy Trooper uniform"
+	desc = "Specially made for Super Mutants servng in the NCRA as Heavy Troopers; more of a true uniform, reflecting the better budget of the Heavy Trooper programme."
+	icon_state = "mutie_ncr_heavy"
+	item_state = "mutie_ncr_heavy"
+
+/obj/item/clothing/under/f13/mutie/ncr/officer
+	name = "NCR Mutant Officer uniform"
+	desc = "Specially made for Super Mutants servng in the NCRA as Officers; more of a true uniform, this large piece of clothing is well pressed and suited for any NCR Super Mutant personnel."
+	icon_state = "mutie_ncr_officer"
+	item_state = "mutie_ncr_officer"
+
+/obj/item/clothing/under/f13/mutie/ncr/ranger
+	name = "NCR Mutant Ranger uniform"
+	desc = "Specially made for Super Mutants serving in the NCR Rangers, this large piece of clothing is well pressed and suited for any NCR Super Mutant personnel."
 	icon_state = "mutie_ranger_under"
 	item_state = "mutie_ranger_under"
 
@@ -1715,6 +1792,30 @@
 	item_state = "scoutclothes"
 	item_color = "scoutclothes"
 
+/obj/item/clothing/under/f13/mutie/townie
+	name = "oversized slacks"
+	desc = "An incredibly large pair of slacks, large enough to fit a super mutant."
+	icon_state = "mutie_slacks"
+	item_state = "mutie_slacks"
+
+/obj/item/clothing/under/f13/mutie/townie/deputy
+	name = "oversized vest and slacks"
+	desc = "An incredibly large pair of slacks, a shirt and a vest, large enough to fit a super mutant."
+	icon_state = "mutie_vest_and_slacks"
+	item_state = "mutie_vest_and_slacks"
+
+/obj/item/clothing/under/f13/mutie/townie/overalls
+	name = "oversized overalls"
+	desc = "An incredibly large set of overalls."
+	icon_state = "mutie_overalls"
+	item_state = "mutie_overalls"
+
+/obj/item/clothing/under/f13/mutie/townie/police
+	name = "oversized police uniform"
+	desc = "An incredibly large police uniform."
+	icon_state = "mutie_police"
+	item_state = "mutie_police"
+
 /obj/item/clothing/under/f13/densuit
 	name = "the den outfit"
 	desc = "A dark grey, and finely pressed suit, complete with kneepads and a suspiciously golden silk shirt, only the best."
@@ -1722,31 +1823,31 @@
 	icon_state = "den_suit"
 	item_state = "den_suit"
 
-/obj/item/clothing/under/f13/mutie_suit
+/obj/item/clothing/under/f13/mutie/suit
 	name = "large black suit"
 	desc = "A fairly damaged black suit, large enough to fit a super mutant."
 	icon_state = "mutie_suit"
 	item_state = "mutie_suit"
 
-/obj/item/clothing/under/f13/mutie_burgundy_suit
+/obj/item/clothing/under/f13/mutie/suit/burgundy
 	name = "large burgundy suit"
 	desc = "A fairly damaged burgundy suit, large enough to fit a super mutant."
 	icon_state = "mutie_burgundy_suit"
 	item_state = "mutie_burgundy_suit"
 
-/obj/item/clothing/under/f13/mutie_purple_suit
+/obj/item/clothing/under/f13/mutie/suit/purple
 	name = "large purple suit"
 	desc = "A fairly damaged purple suit, large enough to fit a super mutant."
 	icon_state = "mutie_purple_suit"
 	item_state = "mutie_purple_suit"
 
-/obj/item/clothing/under/f13/mutie_purple_suit_pinstripe
+/obj/item/clothing/under/f13/mutie/suit/purple/pinstripe
 	name = "Large striped zootsuit"
 	desc = "A fairly damaged pinstripe suit, large enough to fit a super mutant."
 	icon_state = "mutie_purple_suit_pinstripe"
 	item_state = "mutie_purple_suit_pinstripe"
 
-/obj/item/clothing/under/f13/mutie_purple_suit_pinstripe_d
+/obj/item/clothing/under/f13/mutie/suit/purple/pinstripe/torn
 	name = "large sleaveless striped zootsuit"
 	desc = "A fairly damaged pinstripe suit, large enough to fit a super mutant this one has his sleeves ripped off."
 	icon_state = "mutie_purple_suit_pinstripe_d"

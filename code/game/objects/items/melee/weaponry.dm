@@ -102,10 +102,10 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	if(ishuman(owner))
 		var/mob/living/carbon/human/flynn = owner
 		flynn.emote("smirk")
-	new /obj/effect/timestop/magic(get_turf(owner), 1, 50, list(owner)) // null roddies counter
+	new /obj/effect/timestop(get_turf(owner), 1, 50, list(owner)) // null roddies counter
 
 /obj/item/katana/timestop/suicide_act(mob/living/user) // stolen from hierophant staff
-	new /obj/effect/timestop/magic(get_turf(user), 1, 50, list(user)) // free usage for dying
+	new /obj/effect/timestop(get_turf(user), 1, 50, list(user)) // free usage for dying
 	user.visible_message(span_suicide("[user] poses menacingly with the [src]! It looks like [user.p_theyre()] trying to teleport behind someone!"))
 	user.say("Heh.. Nothing personnel, kid..", forced = "temporal katana suicide")
 	sleep(20)
@@ -436,7 +436,10 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 /obj/item/statuebust/Initialize()
 	. = ..()
 	AddElement(/datum/element/art, impressiveness)
-	addtimer(CALLBACK(src, /datum.proc/_AddElement, list(/datum/element/beauty, 1000)), 0)
+
+/obj/item/statuebust/LateInitialize()
+	. = ..()
+	AddElement(/datum/element/beauty, 1000)
 
 /obj/item/tailclub
 	name = "tail club"

@@ -85,6 +85,8 @@ All foods are distributed among various categories. Use common sense.
 /obj/item/reagent_containers/food/snacks/proc/On_Consume(mob/living/eater)
 	if(!eater)
 		return
+	if(!loc)
+		return
 	if(!reagents.total_volume)
 		var/mob/living/location = loc
 		var/obj/item/trash_item = generate_trash(location)
@@ -128,47 +130,47 @@ All foods are distributed among various categories. Use common sense.
 				if(-INFINITY to 50)
 					if(HAS_TRAIT(M, TRAIT_VORACIOUS))
 						M.visible_message(
-							span_notice("[M] ravenously [eatverb]s \the [src], gobbling it down!"), 
+							span_notice("[M] ravenously [eatverb]s \the [src], gobbling it down!"),
 							span_notice("You ravenously [eatverb] \the [src], gobbling it down!"))
 					else
 						M.visible_message(
-							span_notice("[M] hungrily [eatverb]s \the [src], gobbling it down!"), 
+							span_notice("[M] hungrily [eatverb]s \the [src], gobbling it down!"),
 							span_notice("You hungrily [eatverb] \the [src], gobbling it down!"))
 				if(50 to 200)
 					if(HAS_TRAIT(M, TRAIT_VORACIOUS))
 						M.visible_message(
-							span_notice("[M] ravenously [eatverb]s \the [src]!"), 
+							span_notice("[M] ravenously [eatverb]s \the [src]!"),
 							span_notice("You ravenously [eatverb] \the [src]!"))
 					else
 						M.visible_message(
-							span_notice("[M] hungrily [eatverb]s \the [src]."), 
+							span_notice("[M] hungrily [eatverb]s \the [src]."),
 							span_notice("You hungrily [eatverb] \the [src]."))
 				if(200 to 500)
 					if(HAS_TRAIT(M, TRAIT_VORACIOUS))
 						M.visible_message(
-							span_notice("[M] vigorously [eatverb]s \the [src]!"), 
+							span_notice("[M] vigorously [eatverb]s \the [src]!"),
 							span_notice("You vigorously [eatverb] \the [src]!"))
 					else
 						M.visible_message(
-							span_notice("[M] [eatverb]s \the [src]."), 
+							span_notice("[M] [eatverb]s \the [src]."),
 							span_notice("You [eatverb] \the [src]."))
 				if(500 to 650)
 					if(HAS_TRAIT(M, TRAIT_VORACIOUS))
 						M.visible_message(
-							span_notice("[M] gluttonously [eatverb]s \the [src]!"), 
+							span_notice("[M] gluttonously [eatverb]s \the [src]!"),
 							span_notice("You gluttonously [eatverb] \the [src]!"))
 					else
 						M.visible_message(
-							span_notice("[M] unwillingly [eatverb]s \the [src]."), 
+							span_notice("[M] unwillingly [eatverb]s \the [src]."),
 							span_notice("You unwillingly [eatverb] \the [src]."))
 				if((600 * (1 + M.overeatduration / 1000)) to INFINITY)
 					if(HAS_TRAIT(M, TRAIT_VORACIOUS))
 						M.visible_message(
-							span_notice("[M] gluttonously [eatverb]s \the [src], cramming it down [M.p_their()] throat!"), 
+							span_notice("[M] gluttonously [eatverb]s \the [src], cramming it down [M.p_their()] throat!"),
 							span_notice("You gluttonously [eatverb] \the [src], cramming it down your throat!"))
 					else
 						M.visible_message(
-							span_warning("[M] cannot force any more of \the [src] to go down [M.p_their()] throat!"), 
+							span_warning("[M] cannot force any more of \the [src] to go down [M.p_their()] throat!"),
 							span_warning("You cannot force any more of \the [src] to go down your throat!"))
 						return
 		else

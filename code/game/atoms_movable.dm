@@ -61,7 +61,7 @@
 	var/list/affected_dynamic_lights
 	///Highest-intensity light affecting us, which determines our visibility.
 	var/affecting_dynamic_lumi = 0
-	
+
 	/// Whether this atom should have its dir automatically changed when it moves. Setting this to FALSE allows for things such as directional windows to retain dir on moving without snowflake code all of the place.
 	var/set_dir_on_move = TRUE
 	///how many times a this movable had movement procs called on it since Moved() was last called
@@ -338,6 +338,13 @@
 	pulling.Move(get_step(pulling.loc, move_dir), move_dir, glide_size)
 	return TRUE
 
+/mob/living/Move_Pulled(atom/moving_atom)
+	. = ..()
+	if(!. || !isliving(moving_atom))
+		return
+	var/mob/living/pulled_mob = moving_atom
+	set_pull_offsets(pulled_mob, grab_state)
+
 /atom/movable/proc/check_pulling(only_pulling = FALSE, z_allowed = FALSE)
 	if(pulling)
 		if(get_dist(src, pulling) > 1 || (z != pulling.z && !z_allowed))
@@ -418,7 +425,7 @@
 	if(impact_signal & COMPONENT_MOVABLE_IMPACT_FLIP_HITPUSH)
 		hitpush = FALSE // hacky, tie this to something else or a proper workaround later
 
-	if(impact_signal & ~COMPONENT_MOVABLE_IMPACT_NEVERMIND) // in case a signal interceptor broke or deleted the thing before we could process our hit
+	if((impact_signal & ~COMPONENT_MOVABLE_IMPACT_NEVERMIND) || (isturf(hit_atom) && hit_atom != null)) // in case a signal interceptor broke or deleted the thing before we could process our hit
 		return hit_atom.hitby(src, throwingdatum = throwingdatum, hitpush = hitpush)
 
 /atom/movable/hitby(atom/movable/AM, skipcatch, hitpush = TRUE, blocked, datum/thrownthing/throwingdatum)

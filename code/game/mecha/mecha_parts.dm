@@ -332,8 +332,7 @@
 
 /obj/item/circuitboard/mecha/ripley/main
 	name = "Ripley Central Control module (Exosuit Board)"
-	icon_state = "mainboard"
-
+	icon_state = "mainboard" 
 
 /obj/item/circuitboard/mecha/gygax/peripherals
 	name = "Gygax Peripherals Control module (Exosuit Board)"

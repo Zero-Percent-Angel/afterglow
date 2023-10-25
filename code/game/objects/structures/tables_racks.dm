@@ -442,7 +442,7 @@
 
 /obj/structure/table/wood/junk
 	name = "makeshift bar table"
-	desc = "An improvised table made from a wooden plank and as barrel. Try not to lean on it."
+	desc = "An improvised table made from a wooden plank and a barrel. Try not to lean on it."
 	icon = 'icons/fallout/objects/structures/junk_table.dmi'
 	icon_state = "bar"
 	canSmoothWith = list(/obj/structure/table/wood/junk)
@@ -454,7 +454,7 @@
 	desc = "A stylish wooden table with a circular design."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "club"
-	canSmoothWith = null
+	smooth = SMOOTH_FALSE
 	buildstack = null
 	max_integrity = 70
 

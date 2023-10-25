@@ -79,7 +79,7 @@
 /obj/item/ammo_box/magazine/internal/shot/tube357
 	name = ".357 magnum internal tube magazine" //cowboy repeater
 	ammo_type = /obj/item/ammo_casing/a357
-	caliber = list(CALIBER_357, CALIBER_38)
+	caliber = list(CALIBER_357)
 	max_ammo = 12
 	multiload = 1
 
@@ -103,12 +103,4 @@
 	ammo_type = /obj/item/ammo_casing/caseless/lasermusket
 	caliber = list(CALIBER_MUSKET_LASER)
 	max_ammo = 6
-	multiload = 1
-
-/obj/item/ammo_box/magazine/internal/plasmacaster
-	name = "plasmacaster magazine"
-	desc = "Oh god, this shouldn't be here"
-	ammo_type = /obj/item/ammo_casing/caseless/plasmacaster
-	caliber = list(CALIBER_MUSKET_PLASMA)
-	max_ammo = 2
 	multiload = 1

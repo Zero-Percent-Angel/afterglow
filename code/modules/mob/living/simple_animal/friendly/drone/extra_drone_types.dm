@@ -217,5 +217,5 @@
 
 /mob/living/simple_animal/drone/ancient
 	name = "RobCo Drone"
-	default_hatmask = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45b/tribal
+	default_hatmask = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/tribal
 

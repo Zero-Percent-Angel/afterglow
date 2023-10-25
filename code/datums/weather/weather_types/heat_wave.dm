@@ -1,7 +1,7 @@
 /datum/weather/heat_wave
 	name = "heat wave"
 	desc = "Harsh heat wave will grip an entire area."
-	probability = 0
+	probability = 10
 
 	telegraph_message = span_notice("The temperature outside starts to rise unfavorably.")
 	telegraph_duration = 300
@@ -29,4 +29,5 @@
 	carbons_only = TRUE
 
 /datum/weather/heat_wave/weather_act(mob/living/L)
-	L.adjust_bodytemperature(rand(10, 20))
+	var/armour = L.run_armor_check(null, "fire", silent = TRUE)
+	L.adjust_bodytemperature(rand(10, 20) * (100 - armour)/100)

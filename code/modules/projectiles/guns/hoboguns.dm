@@ -380,7 +380,7 @@
 	name = "Auto-pipe rifle"
 	desc = "The pride of wasteland engineering, a fully automatic, belt fed pipe machine gun. Despite looking like the scrap heap it was \
 		made from, and its eagerness to fire before fully chambering, many wasters swear by its overwhelming firepower, capable of delivering \
-		24 or so .357 magnum bullets into some unlucky beast before needing to reload. Not only does its loose receiver accept 9mm, .38 special, \
+		24 or so .357 magnum bullets into some unlucky beast before needing to reload. Not only does its loose receiver accept 9mm \
 		and .357 magnum with ease, but it also can survive dozens of premature detonations without a scratch!"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
@@ -392,7 +392,7 @@
 
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_ONE_HAND_AKIMBO
+	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_SLOW
@@ -414,10 +414,9 @@
 
 
 
-/////////////////////
-//PREMIUM HOBO GUNS//
-/////////////////////
-
+////////////////////
+//PREMIUM HOBO GUN//
+////////////////////
 
 //Laser musket
 /obj/item/gun/ballistic/rifle/hobo/lasmusket
@@ -439,6 +438,7 @@
 	scope_state = "scope_long"
 	scope_x_offset = 11
 	scope_y_offset = 14
+	gun_skill_used = SKILL_ENERGY
 	fire_sound = 'sound/f13weapons/lasmusket_fire.ogg'
 	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
@@ -447,68 +447,6 @@
 	)
 	misfire_possibilities = list(
 		GUN_MISFIRE_HURTS_USER(2, 5, 10, FIRELOSS | TOXLOSS | RADIATIONLOSS | EMPLOSS)
-	)
-
-
-//Plasma musket.
-/obj/item/gun/ballistic/rifle/hobo/plasmacaster
-	name = "Plasma Musket"
-	desc = "The cooling looks dubious and is that a empty can of beans used as a safety valve? Pray the plasma goes towards the enemy and not your face when you pull the trigger."
-	icon_state = "plasmamusket"
-	item_state = "plasmamusket"
-	mag_type = /obj/item/ammo_box/magazine/internal/plasmacaster
-	fire_delay = 20
-	var/bolt_open = FALSE
-	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'
-	dryfire_text = "*power failure*"
-	scope_state = "scope_medium"
-	scope_x_offset = 9
-	scope_y_offset = 20
-	fire_sound = 'sound/f13weapons/lasmusket_fire.ogg'
-	pump_sound = 'sound/f13weapons/lasmusket_crank.ogg'
-	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
-	init_firemodes = list(
-		/datum/firemode/semi_auto
-	)
-	misfire_possibilities = list(
-		GUN_MISFIRE_HURTS_USER(1, 30, 35, FIRELOSS | TOXLOSS | RADIATIONLOSS | EMPLOSS)
-	)
-
-/* * * * * * * * * * *
- * Destroyer Carbine
- * Hobo semi-auto
- * 9mm
- * Awful accuracy
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/hobo/destroyer
-	name = "destroyer carbine"
-	desc = "There are many ways to describe this, very few of them nice. This is a .45ACP silenced bolt action rifle - that via the expertise of a gun runner mainlining 50 liters of psycho, mentats, and turbo - has been converted into a semi auto."
-	icon_state = "destroyer-carbine"
-	item_state = "varmintrifle"
-	mag_type = /obj/item/ammo_box/magazine/greasegun
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_SLOW
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOWER
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
-	cock_delay = GUN_COCK_RIFLE_BASE
-
-	automatic_burst_overlay = TRUE
-	can_scope = FALSE
-	scope_state = "scope_medium"
-	scope_x_offset = 6
-	scope_y_offset = 14
-	semi_auto = FALSE
-	init_recoil = CARBINE_RECOIL(2.3)
-	init_firemodes = list(
-		/datum/firemode/semi_auto
 	)
 
 

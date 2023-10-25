@@ -23,6 +23,19 @@
 	)
 	result = /obj/item/reagent_containers/food/snacks/icecreamsandwich
 	subcategory = CAT_ICE
+
+/datum/crafting_recipe/food/cornuto
+	name = "Cornuto"
+	reqs = list(
+		/datum/reagent/consumable/cream = 5,
+		/datum/reagent/consumable/ice = 5,
+		/obj/item/reagent_containers/food/snacks/icecream = 1,
+		/obj/item/reagent_containers/food/snacks/chocolatebar = 1,
+		/datum/reagent/consumable/sugar = 5
+	)
+	result = /obj/item/reagent_containers/food/snacks/cornuto
+	subcategory = CAT_ICE
+
 /*
 /datum/crafting_recipe/food/honkdae
 	name ="Honkdae"

@@ -371,7 +371,6 @@
 	name = "Hotel Secuirty"
 	uniform = /obj/item/clothing/under/rank/security/officer/blueshirt
 	shoes = /obj/item/clothing/shoes/jackboots
-	suit = /obj/item/clothing/suit/armor/medium/vest/blueshirt
 	head = /obj/item/clothing/head/helmet/blueshirt
 	back = /obj/item/storage/backpack/security
 	belt = /obj/item/storage/belt/army/security/full
@@ -498,7 +497,6 @@
 /datum/outfit/syndicate_empty/SBC/assault/captain
 	name = "Syndicate Battlecruiser Captain"
 	r_pocket = /obj/item/melee/classic_baton/telescopic
-	suit = /obj/item/clothing/suit/armor/medium/vest/capcarapace/syndicate
 	back = /obj/item/storage/backpack/satchel/leather
 	head = /obj/item/clothing/head/HoS/syndicate
 	mask = /obj/item/clothing/mask/cigarette/cigar/havana
@@ -743,17 +741,17 @@
 	flavour_text = "Rangers lead the way!"
 	assignedrole = "NCR Ranger"
 	outfit = /datum/outfit/job/ncr/f13ranger
-	suit = /obj/item/clothing/suit/armor/medium/combat/desert_ranger/patrol
+	suit = /obj/item/clothing/suit/armor/light/ncr/trailranger
 	belt = /obj/item/storage/belt/army/assault/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
-	head = /obj/item/clothing/head/f13/ranger
+	head = /obj/item/clothing/head/f13/ncr/ranger
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/assault = 1,
-		/obj/item/clothing/head/helmet/f13/combat/ncr_patrol = 1,
+		/obj/item/clothing/head/f13/ncr/ranger = 1,
 		/obj/item/storage/survivalkit = 1,
 		/obj/item/storage/survivalkit/medical = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
-		/obj/item/gun/ballistic/revolver/revolver44 = 1,
+		/obj/item/gun/ballistic/revolver/m29 = 1,
 		/obj/item/ammo_box/m44 = 2,
 		/obj/item/clothing/mask/gas/ranger = 1,
 		/obj/item/melee/onehanded/knife/bowie = 1,
@@ -763,14 +761,14 @@
 	new_spawn.real_name = random_unique_name(gender)
 
 /obj/effect/mob_spawn/human/fallout13/legion
-	name = "Prime Legionnaire Spawn"
+	name = "Prime Legionary Spawn"
 	desc = "An entry point for prime legionaries of Caesar's Legion to join a battle."
 	faction = "Legion"
-	mob_name = "Prime Legionnaire"
-	job_description = "Prime Legionnaire"
+	mob_name = "Prime Legionary"
+	job_description = "Prime Legionary"
 	short_desc = "You are a might warrior of Caesar's Legion. Retribution!"
 	flavour_text = "True to Caesar!"
-	assignedrole = "Prime Legionnaire"
+	assignedrole = "Prime Legionary"
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13legionary
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/cowboy
 	backpack_contents = list(
@@ -780,11 +778,11 @@
 		)
 
 /obj/effect/mob_spawn/human/fallout13/legion/veteran
-	name = "Veteran Legionnaire Spawn"
+	name = "Veteran Legionary Spawn"
 	desc = "An entry point for veteran legionaries of Caesar's Legion to join a battle."
-	mob_name = "Veteran Legionnaire"
-	job_description = "Veteran Legionnaire"
-	assignedrole = "Veteran Legionnaire"
+	mob_name = "Veteran Legionary"
+	job_description = "Veteran Legionary"
+	assignedrole = "Veteran Legionary"
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/vetlegionnaire
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(

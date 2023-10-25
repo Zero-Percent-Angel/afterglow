@@ -1,4 +1,4 @@
-/mob/living/simple_animal/hostile/retaliate/talker/buyer 
+/mob/living/simple_animal/hostile/retaliate/talker/buyer
 	var/myplace = null
 	var/my_original_loc = null
 	var/walking = FALSE
@@ -47,7 +47,7 @@
 		if (pulledby)
 			pulledby.stop_pulling()
 			walk_to(src, myplace, 0 , move_to_delay)
-		if (!walking)
+		if (AIStatus == AI_IDLE)
 			walking = TRUE
 			walk_to(src, myplace, 0 , move_to_delay)
 	else
@@ -86,6 +86,9 @@
 				var/our_answer = input(user, "Do you accept the offer of: [num2text(calc_price)] caps?", "Trade agreement") in list("Yes", "No")
 				if (our_answer == "Yes")
 					if (get_dist(src, user) <= 1)
+						if (user.get_active_held_item() != item_in_hand)
+							say("That ain't the thing I agreed to buy.")
+							return
 						qdel(item_in_hand)
 						say("Pleasure doing business with you.")
 						var/obj/item/stack/f13Cash/C = new /obj/item/stack/f13Cash/caps

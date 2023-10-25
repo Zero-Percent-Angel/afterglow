@@ -110,14 +110,14 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/scatter/tribeam/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/tribeam/hitscan
 	pellets = 3
-	variance = 38
+	variance = (SHOTGUN_SPREAD_IMPROVISED*4)
 	select_name = "tribeam"
 	e_cost = 200 //10 shots
 
 /obj/item/ammo_casing/energy/laser/scatter/tribeam/laserbuss
 	projectile_type = /obj/item/projectile/beam/laser/tribeam/laserbuss
 	pellets = 8
-	variance = 14
+	variance = SHOTGUN_SPREAD_BASE
 	select_name = "scatter"
 	e_cost = 187.5 //8 shots
 	fire_sound = 'sound/f13weapons/tribeamfire.ogg'
@@ -167,6 +167,10 @@ also: most hitscan weapons have more charge than their normal projectile counter
 	e_cost = 1
 	damage_threshold_penetration = 10
 
+/obj/item/ammo_casing/energy/laser/pistol/hitscan/revolver
+	projectile_type = /obj/item/projectile/beam/laser/pistol/hitscan/revolver
+	e_cost = 250 //6 shots. You're really not getting much mileage outta this one
+
 /obj/item/ammo_casing/energy/laser/ultra_pistol
 	projectile_type = /obj/item/projectile/beam/laser/ultra_pistol
 	e_cost = 75 //20 shots
@@ -180,6 +184,11 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/recharger/hitscan
 	e_cost = 75 //20 shots
+	fire_sound = 'sound/f13weapons/RechargerFire.ogg'
+
+/obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan/rifle
+	projectile_type = /obj/item/projectile/beam/laser/recharger/hitscan/rifle
+	e_cost = 150 //10 shots
 	fire_sound = 'sound/f13weapons/RechargerFire.ogg'
 
 /obj/item/ammo_casing/energy/laser/stun  //compliance regulator
@@ -295,18 +304,19 @@ also: most hitscan weapons have more charge than their normal projectile counter
 
 /obj/item/ammo_casing/energy/laser/aer14/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/aer14/hitscan
-	e_cost = 133.33 //15 shots, i hate the decimal value too trust me
+	e_cost = 100 //10 shots
 
 /obj/item/ammo_casing/energy/laser/aer12
 	projectile_type = /obj/item/projectile/beam/laser/aer12
-	e_cost = 100 //20 shots
+	e_cost = 200 //10 shots.
+	damage_threshold_penetration = 6 //Upgraded gun lets more damage through than a typical rifle.
 	fire_sound = 'sound/f13weapons/aer9fire.ogg'
 
 /obj/item/ammo_casing/energy/laser/aer12/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/aer12/hitscan
-	e_cost = 80 //25 shots
+	e_cost = 133.33 //15 shots.
 	fire_sound = 'sound/f13weapons/aer9fire.ogg'
-	damage_threshold_penetration = 6 //Upgraded gun lets more damage through than a typical rifle.
+	damage_threshold_penetration = 10 //Overcharged AF, lets at minimum 1/3rd of the damage it puts out burn through armor.
 
 /obj/item/ammo_casing/energy/gammagun
 	projectile_type = /obj/item/projectile/beam/gamma

@@ -269,7 +269,7 @@
 	desc = "Rule the underworld like the Den Mob of old."
 
 /obj/item/storage/box/bundledenboss/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/assault_carbine/worn(src)
+	new /obj/item/gun/ballistic/automatic/assault_carbine/policerifle(src)
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
 	new /obj/item/reagent_containers/hypospray/medipen/medx(src)
@@ -329,5 +329,5 @@
 	new /obj/item/gun/ballistic/rifle/repeater/cowboy(src)
 	new /obj/item/ammo_box/a357box/ricochet(src)
 	new /obj/item/gun/ballistic/revolver/colt357(src)
-	new /obj/item/clothing/head/f13/ranger_hat(src)
+	new /obj/item/clothing/head/f13/ncr/ranger(src)
 	new /obj/item/clothing/suit/armor/light/leather/leathercoat(src)

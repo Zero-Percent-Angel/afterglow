@@ -1,14 +1,3 @@
-/datum/crafting_recipe/binoculars
-	name = "Binoculars"
-	result = /obj/item/binoculars
-	time = 60
-	reqs = list(/obj/item/stack/sheet/metal = 10,
-				/obj/item/stack/sheet/glass = 5)
-	tools = list(TOOL_SCREWDRIVER,TOOL_WORKBENCH)
-	subcategory = CAT_MISCELLANEOUS
-	category = CAT_MISC
-	skill_needed = HARD_CHECK
-
 /////////////////
 //Large Objects//
 /////////////////
@@ -22,7 +11,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/legiongate
 	name = "Legion iron gate"
@@ -32,7 +21,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/gate_bos
 	name = "Brotherhood steel door"
@@ -42,7 +31,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/gate_khanate
 	name = "Khans steel-reinforced wood door"
@@ -53,7 +42,7 @@
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
 	always_available = FALSE
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/plant
 	name = "Potted plant"
@@ -63,7 +52,7 @@
 	time = 20
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = VERY_EASY_CHECK
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/toilet
 	name = "Toilet"
@@ -73,7 +62,7 @@
 	time = 50
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/sink
 	name = "Sink"
@@ -83,7 +72,7 @@
 	time = 50
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/shower
 	name = "Shower"
@@ -94,7 +83,7 @@
 	time = 80
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = REGULAR_CHECK
+	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/showercurtain
 	name = "Shower Curtains"
@@ -104,7 +93,7 @@
 	result = /obj/structure/curtain
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = VERY_EASY_CHECK
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/curtain
 	name = "Curtains"
@@ -113,7 +102,7 @@
 	result = /obj/structure/curtain
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = VERY_EASY_CHECK
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/dogbed
 	name = "Dog Bed"
@@ -123,7 +112,7 @@
 	time = 10
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = VERY_EASY_CHECK
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/junk_table
 	name = "Makeshift Bar Table"
@@ -133,11 +122,71 @@
 	time = 10
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
-	skill_needed = VERY_EASY_CHECK
+	skill_level = VERY_EASY_CHECK
+
+/datum/crafting_recipe/icecreamvat
+	name = "Ice Cream Vat"
+	reqs = list(/obj/item/stack/crafting/electronicparts = 5,
+				/obj/item/stack/sheet/metal = 20,
+				/obj/item/stack/crafting/goodparts = 10,
+				/datum/reagent/consumable/ice = 60,
+				/datum/reagent/consumable/flour = 60,
+				/datum/reagent/consumable/milk = 60)
+	tools = list(TOOL_SCREWDRIVER,TOOL_WORKBENCH)
+	result = /obj/machinery/icecream_vat
+	time = 80
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+	skill_level = REGULAR_CHECK
 
 ///////////////////////////
 //Scavenging and Tinkering//
 ///////////////////////////
+
+/datum/crafting_recipe/basic_manip
+	name = "Basic Mechanism"
+	result = /obj/item/stock_parts/manipulator/simple
+	reqs = list(/obj/item/stack/crafting/metalparts = 2)
+	time = 5
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/basic_matter_bin
+	name = "Basic Mechanism"
+	result = /obj/item/stock_parts/matter_bin/simple
+	reqs = list(/obj/item/stack/crafting/metalparts = 2)
+	time = 5
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/basic_scanning
+	name = "Basic Antenna"
+	result = /obj/item/stock_parts/scanning_module/simple
+	reqs = list(/obj/item/stack/crafting/goodparts = 1)
+	time = 5
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/basic_capacitor
+	name = "Basic Capacitor"
+	result = /obj/item/stock_parts/capacitor/simple
+	reqs = list(/obj/item/stack/crafting/goodparts = 1)
+	time = 5
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/basic_laser
+	name = "Basic Laser Diode"
+	result = /obj/item/stock_parts/micro_laser/simple
+	reqs = list(/obj/item/stack/crafting/goodparts = 2)
+	time = 5
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_level = HARD_CHECK
 
 /datum/crafting_recipe/pico_manip
 	name = "Delicate Mechanism"
@@ -215,6 +264,35 @@
 	category = CAT_CRAFTING
 	subcategory = CAT_SCAVENGING
 	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/pa_kit_rep
+	name = "Power Armor Servo Repair Kit (Repair)"
+	time = 5
+	reqs = list(/obj/item/stack/sheet/mineral/titanium = 10,
+				/obj/item/advanced_crafting_components/flux = 1,
+				/obj/item/advanced_crafting_components/conductors = 1,
+				/obj/item/advanced_crafting_components/p_circuits = 1,
+				/obj/item/stack/crafting/electronicparts = 20)
+	tools = list(TOOL_AWORKBENCH)
+	result = /obj/item/pa_kit
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_level = EXPERT_CHECK
+
+/datum/crafting_recipe/pa_kit_sci
+	name = "Power Armor Servo Repair Kit (Science)"
+	time = 5
+	reqs = list(/obj/item/stack/sheet/mineral/titanium = 10,
+				/obj/item/advanced_crafting_components/flux = 1,
+				/obj/item/advanced_crafting_components/conductors = 1,
+				/obj/item/advanced_crafting_components/p_circuits = 1,
+				/obj/item/stack/crafting/electronicparts = 20)
+	tools = list(TOOL_AWORKBENCH)
+	result = /obj/item/pa_kit
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_needed = SKILL_SCIENCE
+	skill_level = EXPERT_CHECK
 
 /datum/crafting_recipe/set_vrboard
 	category = CAT_CRAFTING
@@ -404,6 +482,18 @@
 				/obj/item/stack/sheet/cardboard = 2)
 	time = 80
 	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+	skill_level = VERY_EASY_CHECK
+
+/datum/crafting_recipe/binoculars
+	name = "Binoculars"
+	result = /obj/item/binoculars
+	reqs = list(/obj/item/stack/rods = 2,
+				/obj/item/stack/sheet/rglass = 4,
+				/obj/item/stack/sheet/metal = 2)
+	time = 20
+	subcategory = CAT_MISCELLANEOUS
+	tools = list(TOOL_SCREWDRIVER, TOOL_MULTITOOL, TOOL_WIRECUTTER, TOOL_WELDER)
 	category = CAT_MISC
 	skill_level = VERY_EASY_CHECK
 

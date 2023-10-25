@@ -107,10 +107,10 @@
 	var/force_modifier = 0
 	force_modifier += max((user.special_s - 5), (0 - force))
 	if(force >= 5)
-		if(HAS_TRAIT(user, TRAIT_BIG_LEAGUES))
+		if(HAS_TRAIT(user, TRAIT_BIG_LEAGUES) || HAS_TRAIT(user, TRAIT_BUFFOUT_BUFF))
 			force_modifier += (force * 0.2)
 
-		if(HAS_TRAIT(user, TRAIT_LITTLE_LEAGUES))
+		else if(HAS_TRAIT(user, TRAIT_LITTLE_LEAGUES))
 			force_modifier += (force * 0.1)
 
 		if(HAS_TRAIT(user, TRAIT_GENTLE))
@@ -119,18 +119,18 @@
 		if(HAS_TRAIT(user, TRAIT_WIMPY))
 			force_modifier += (-force * 0.2)
 
-		if(HAS_TRAIT(user, TRAIT_BUFFOUT_BUFF))
-			force_modifier += (force * 0.25)
+		/*if(HAS_TRAIT(user, TRAIT_BUFFOUT_BUFF))
+			force_modifier += (force * 0.1)*/
 
 		if(HAS_TRAIT(user, TRAIT_FEV))
 			force_modifier += (force * 0.35)
 
-		if(HAS_TRAIT(user, TRAIT_SMUTANT))
-			force_modifier += (force * 0.25)
+		/*if(HAS_TRAIT(user, TRAIT_SMUTANT))
+			force_modifier += (force * 0.25)*/
 
 		if(HAS_TRAIT(user, TRAIT_GHOULMELEE)) //negative trait
 			force_modifier += (-force * 0.25)
-
+	force_modifier *= 0.5
 	var/force_out = force + force_modifier
 	var/hit_helper = !CHECK_MOBILITY(M, MOBILITY_STAND) ? -30 : -10
 	if(M != user && !M.IsUnconscious() && !user.skill_roll_kind(SKILL_MELEE, M.special_a + hit_helper, 0))

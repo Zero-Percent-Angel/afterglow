@@ -2711,7 +2711,7 @@
 	It's literally not meant to be here, you are just wasting your time reading some text that someone wrote for you \
 	because he thought it'd be funny, or expected someone to check GitHub for once, hello by the way. \
 	If you still don't understand - it's a 'master' item, basically main type/parent object or something. \
-	It isn't meant to be used, it just dictates procs and all that stuff to the subtypes, such as t45b and so on. \
+	It isn't meant to be used, it just dictates procs and all that stuff to the subtypes. \
 	Now begone, report this to coders. NOW!"
 	icon = 'icons/fallout/clothing/armored_heavy.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
@@ -2721,20 +2721,14 @@
 	armor_tier_desc = ARMOR_CLOTHING_SALVAGE
 	custom_price = PRICE_ULTRA_EXPENSIVE
 
-// T-45B
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
-	name = "salvaged T-45b power armor"
-	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and stripped out servomotors. Bulky and slow, but almost as good as the real thing."
-	icon_state = "t45b_salvaged"
-	item_state = "t45b_salvaged"
-
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/raider
+// T-45D
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/raider
 	name = "salvaged raider power armor"
 	desc = "A destroyed T-45b power armor has been brought back to life with the help of a welder and lots of scrap metal."
 	icon_state = "raider_salvaged"
 	item_state = "raider_salvaged"
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/hotrod
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/hotrod
 	name = "salvaged hotrod T-45b power armor"
 	desc = " It's a set of T-45b power armor with a with some of its plating removed. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
 	mob_overlay_icon = 'icons/fallout/clothing/armored_heavy.dmi'
@@ -2743,7 +2737,7 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_FIRE_T3, ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_DT_T1)
 
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/tribal
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/tribal
 	name = "salvaged tribal T45-b power armor"
 	desc = "A set of salvaged power armor, with certain bits of plating stripped out to retain more freedom of movement. No cooling module, though."
 	icon_state = "tribal_power_armor"
@@ -2752,7 +2746,7 @@
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT // zooom
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2)
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/tribal/junk
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/tribal/junk
 	name = "salvaged weathered tribal T45-b power armor"
 	desc = "A set of salvaged tribal power armor, one that's seen better days. Proof that power armor doesn't age like wine, especially dragged through the swamp as much as this one has. All that weathered off armor plating's sure made it light, though!"
 	icon_state = "tribal_power_armor"
@@ -3114,12 +3108,6 @@
 			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
 			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return ..()
-
-/obj/item/clothing/suit/armor/power_armor/t45b
-	name = "T-45b power armor"
-	desc = "It's a set of early-model T-45 power armor with a custom air conditioning module and restored servomotors. Bulky, but almost as good as the real thing."
-	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b
-
 /obj/item/clothing/suit/armor/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
@@ -3170,7 +3158,7 @@
 	desc = "Developed by Garrahan Mining Co. in collaboration with West Tek, the Excavator-class power armor was designed to protect miners from rockfalls and airborne contaminants while increasing the speed at which they could work. "
 	icon_state = "excavator"
 	item_state = "excavator"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T3, ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T3, ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_DOWN_DT_T1)
 
 /obj/item/clothing/suit/armor/power_armor/advanced
 	name = "advanced power armor"

@@ -139,6 +139,40 @@
 	tastes = list("crust" = 1, "tomato" = 1, "cheese" = 1, "meat" = 1)
 	foodtype = GRAIN | VEGETABLES | FRUIT | DAIRY | ANTITOXIC
 
+/obj/item/reagent_containers/food/snacks/pizza/fourcheese
+	name = "four cheese pizza"
+	desc = "A pizza made with four kinds of cheeses."
+	icon_state = "fourcheesepizza"
+	slice_path = /obj/item/reagent_containers/food/snacks/pizzaslice/fourcheese
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/consumable/nutriment/vitamin = 6)
+	tastes = list("crust" = 1, "herb cheese" = 1, "cheese" = 1, "firm cheese" = 1, "mozzarella" = 1)
+	foodtype = GRAIN | VEGETABLES | DAIRY
+
+/obj/item/reagent_containers/food/snacks/pizzaslice/fourcheese
+	name = "four cheese pizza slice"
+	desc = "The cheeses stretch where it's been cut."
+	icon_state = "fourcheesepizzaslice"
+	filling_color = "#FFFFFF"
+	tastes = list("crust" = 1, "herb cheese" = 1, "cheese" = 1, "firm cheese" = 1, "mozzarella" = 1)
+	foodtype = GRAIN | VEGETABLES | DAIRY
+
+/obj/item/reagent_containers/food/snacks/pizza/greenlasagna //I know it's not a pizza but this makes it easier to make it sliceable so fuck it
+	name = "green lasagna"
+	desc = "A fine lasagne made with pesto and a herby white sauce. Good for multiple servings"
+	icon_state = "greenlasagna"
+	slice_path = /obj/item/reagent_containers/food/snacks/pizzaslice/greenlasagna
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/consumable/nutriment/vitamin = 6)
+	tastes = list("pasta" = 1, "pesto" = 1, "bechamel" = 1)
+	foodtype = GRAIN | VEGETABLES | DAIRY
+
+/obj/item/reagent_containers/food/snacks/pizzaslice/greenlasagna
+	name = "green lasagna slice"
+	desc = "A slice of pesto lasagna."
+	icon_state = "greenlasagnaslice"
+	filling_color = "#1B961F"
+	tastes = list("pasta" = 1, "pesto" = 1, "bechamel" = 1)
+	foodtype = GRAIN | VEGETABLES | DAIRY
+
 /obj/item/reagent_containers/food/snacks/pizza/sassysage
 	name = "sausage pizza"
 	desc = "You can really smell the sausage."
@@ -189,7 +223,6 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/pizzaslice/arnold
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = 30, /datum/reagent/consumable/nutriment/vitamin = 6, /datum/reagent/iron = 10, /datum/reagent/medicine/omnizine = 30)
 	tastes = list("crust" = 1, "tomato" = 1, "cheese" = 1, "pepperoni" = 2, "9 millimeter bullets" = 2)
-	
 
 /obj/item/reagent_containers/food/snacks/proc/try_break_off(mob/living/M, mob/living/user) //maybe i give you a pizza maybe i break off your arm
 	var/obj/item/bodypart/l_arm = user.get_bodypart(BODY_ZONE_L_ARM)

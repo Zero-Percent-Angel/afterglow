@@ -8,7 +8,6 @@
 	var/list/allowed_targets = list() //WHO CAN I KILL D:
 	var/retribution = 1 //whether or not they will attack us if we attack them like some kinda dick.
 	var/list/heard_list = list("Okay.", "Got it.", "Yep.", "Yup.", "Yes.")
-	var/mob/target_mob = null
 	var/followingAFriend = FALSE
 	var/trust_no_one = FALSE
 	var/ordered_attack = FALSE
@@ -18,7 +17,7 @@
 	var/list/enemy_factions = list()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/dialog_options(mob/talker, display_options)
-	var/dat = "" 
+	var/dat = ""
 	if (!friends.Find(WEAKREF(talker)) && (intimidated.Find(WEAKREF(talker)) || introduced.Find(WEAKREF(talker))))
 		dat += "<center><a href='?src=[REF(src)];together=1'>Try to convince them to follow you (Speech - persuade)</a></center>"
 	if (friends.Find(WEAKREF(talker)) && !trust_no_one)
@@ -50,7 +49,7 @@
 			failed |= WEAKREF(usr)
 			friends -= WEAKREF(usr)
 	..(href, href_list)
-	
+
 /mob/living/simple_animal/hostile/retaliate/talker/follower/Hear(message, atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, message_mode, atom/movable/source)
 	. = ..()
 	if (friends.Find(WEAKREF(speaker)))
@@ -186,24 +185,25 @@
 		return ..()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/Retaliate()
-	var/list/around = view(vision_range, src)
+	if (ordered_attack)
+		var/list/around = view(vision_range, src)
 
-	for(var/atom/movable/A in around)
-		if(A == src)
-			continue
-		if(isliving(A))
-			var/mob/living/M = A
-			if(!friends.Find(WEAKREF(M)))
-				enemies |= WEAKREF(M)
-		else if(ismecha(A))
-			var/obj/mecha/M = A
-			if(M.occupant && !friends.Find(WEAKREF(M.occupant)))
-				enemies |= WEAKREF(M)
-				enemies |= WEAKREF(M.occupant)
+		for(var/atom/movable/A in around)
+			if(A == src)
+				continue
+			if(isliving(A))
+				var/mob/living/M = A
+				if(!friends.Find(WEAKREF(M)))
+					enemies |= WEAKREF(M)
+			else if(ismecha(A))
+				var/obj/mecha/M = A
+				if(M.occupant && !friends.Find(WEAKREF(M.occupant)))
+					enemies |= WEAKREF(M)
+					enemies |= WEAKREF(M.occupant)
 
-	for(var/mob/living/simple_animal/hostile/retaliate/H in around)
-		if(faction_check_mob(H) && !attack_same && !H.attack_same)
-			H.enemies |= enemies
+		for(var/mob/living/simple_animal/hostile/retaliate/H in around)
+			if(faction_check_mob(H) && !attack_same && !H.attack_same)
+				H.enemies |= enemies
 	return 0
 
 
@@ -211,20 +211,6 @@
 	var/en_weak_ref = WEAKREF(maybe_enemy)
 	if (!friends.Find(en_weak_ref))
 		enemies |= en_weak_ref
-
-/mob/living/simple_animal/hostile/retaliate/talker/follower/bullet_act(obj/item/projectile/P, def_zone)
-	..()
-	target_mob = null
-	if (friends.Find(WEAKREF(P.firer)))
-		friends -= WEAKREF(P.firer)
-		say("Friendly fire!")
-
-/mob/living/simple_animal/hostile/retaliate/talker/follower/attackby(obj/item/O, mob/user)
-	..()
-	target_mob = null
-	if(friends.Find(WEAKREF(user)))
-		friends -= WEAKREF(user)
-		say("You bastard...")
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/hitby(atom/movable/AM, skipcatch, hitpush = TRUE, blocked = FALSE, datum/thrownthing/throwingdatum)//Standardization and logging -Sieve
 	..()
@@ -304,7 +290,7 @@
 	casingtype = /obj/item/ammo_casing/c9mm
 	projectiletype = /obj/item/projectile/bullet/c9mm/improvised
 	projectilesound = 'sound/weapons/gunshot_smg.ogg'
-	loot = list(/obj/item/gun/ballistic/automatic/hobo/destroyer)
+	loot = list(/obj/item/gun/ballistic/automatic/smg/mini_uzi)
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction
 	var/myplace = null
@@ -323,7 +309,7 @@
 	for(var/mob/living/simple_animal/hostile/retaliate/H in around)
 		if(faction_check_mob(H) && !attack_same && !H.attack_same)
 			H.enemies |= enemies
-	
+
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/attackby(obj/item/O, mob/user)
 	..()
 	target_mob = null
@@ -361,7 +347,7 @@
 	return ..()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/dialog_options(mob/talker, display_options)
-	var/dat = "" 
+	var/dat = ""
 	if (faction_check_mob(talker))
 		dat += "<center><a href='?src=[REF(src)];post=1'>Order them back to thier post</a></center>"
 	return dat
@@ -369,7 +355,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/Hear(message, atom/movable/speaker, datum/language/message_language, raw_message, radio_freq, list/spans, message_mode, atom/movable/source)
 	. = ..()
-	if (faction_check_mob(speaker))
+	if (istype(speaker, /mob/living) && faction_check_mob(speaker))
 		listen(speaker, raw_message)
 	return ..()
 

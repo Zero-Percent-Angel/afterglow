@@ -61,8 +61,8 @@
 		log_world("No matching holodeck area found")
 		qdel(src)
 		return
-	var/area/AS = get_area(src)
-	if(istype(AS, /area/holodeck))
+	var/area/current_area = get_area(src)
+	if(istype(current_area, /area/holodeck))
 		log_mapping("Holodeck computer cannot be in a holodeck, This would cause circular power dependency.")
 		qdel(src)
 		return
@@ -322,8 +322,8 @@
 
 /obj/machinery/computer/holodeck/virtual/derez(obj/O, silent = TRUE, forced = FALSE)
 	// We don't want to ever despawn things that got out of the holodeck area in this case
-	var/area/AS = get_area(O)
-	if(!istype(AS, /area/holodeck))
+	var/area/current_area = get_area(O)
+	if(!istype(current_area, /area/holodeck))
 		return
 
 	if(O && !stat && !forced)

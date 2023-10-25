@@ -77,7 +77,7 @@ ENABLE_LOCALHOST_RANK
 #USE_AGE_RESTRICTION_FOR_JOBS
 
 ## Uncomment the following line to enable the role whitelisting system.  You will also need the table from role_whitelist.sql in the SQL directory.
-#USE_ROLE_WHITELIST
+USE_ROLE_WHITELIST
 
 ## Uncomment this to have the job system use the player's account creation date, rather than the when they first joined the server for job timers.
 #USE_ACCOUNT_AGE_FOR_JOBS
@@ -557,3 +557,8 @@ BORDER_CONTROL 2
 # DISCORDIMAGE_P https://media.discordapp.net/attachments/
 # DISCORDIMAGE_S .png
 
+## Whether or not bans are sent to tgs
+#ENABLE_TGS_BAN_CHANNEL
+
+## The tgs channel identifier used for bans
+#TGS_BAN_CHANNEL_IDENTIFIER bans

@@ -18,10 +18,15 @@
 				if(dir & (EAST|WEST)) //Facing east or west
 					setDir(pick(NORTH, SOUTH)) //So you fall on your side rather than your face or ass
 
-	if(resize != RESIZE_DEFAULT_SIZE)
+	if(resize != RESIZE_DEFAULT_SIZE || resize_width != RESIZE_DEFAULT_SIZE || resize_height != RESIZE_DEFAULT_SIZE)
 		changed++
-		ntransform.Scale(resize)
+		ntransform.Scale(resize_width * resize, resize_height * resize)
+		if (resize_height != RESIZE_DEFAULT_SIZE)
+			ntransform.Translate(0, (16 * (resize_height - 1)) - current_height_transform)
+			current_height_transform =  16 * (resize_height - 1)
 		resize = RESIZE_DEFAULT_SIZE
+		resize_height = RESIZE_DEFAULT_SIZE
+		resize_width = RESIZE_DEFAULT_SIZE
 
 	if(changed)
 		animate(src, transform = ntransform, time = 2, pixel_y = final_pixel_y, easing = EASE_IN|EASE_OUT)

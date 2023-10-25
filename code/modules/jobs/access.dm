@@ -451,11 +451,11 @@
 /proc/get_all_jobs()
 	return list("Centurion", "NCR Captain", "Overseer", "Sheriff",
 				"Sentinel", "Senior Paladin", "Paladin", "Knight-Captain", "Senior Knight", "Knight", "Head Scribe", "Senior Scribe", "Scribe", "Initiate",
-				"Veteran Decanus", "Vexillarius", "Decanus", "Veteran Legionnaire", "Prime Legionnaire",
+				"Veteran Decanus", "Vexillarius", "Decanus", "Veteran Legionary", "Prime Legionary",
 				"NCR Lieutenant", "NCR Medical Officer", "NCR Sergeant First Class", "NCR Sergeant", ,"NCR Corporal", "NCR Combat Medic", "NCR Combat Engineer", "NCR Trooper",
 				"NCR Veteran Ranger", "NCR Patrol Ranger", "NCR Recon Ranger",
 				"NCR Scout", "NCR Scout Sergeant", "NCR Scout Lieutenant",
-				"Chief of Security", "Vault-tec Doctor", "Vault-tec Scientist",
+				"Chief of Security", "Vault-tec Doctor", "Vault-tec Scientist", "Vault-tec Security Specialist",
 				"Vault-tec Security", "Vault-tec Engineer", "Vault Dweller", "Settler",
 				"Wastelander", "Raider", "Great Khan", "Preacher", "Head Hunter", "Chief", "Shaman", "Villager", "Hunter")
 

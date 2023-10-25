@@ -51,12 +51,12 @@
 /obj/item/clothing/neck/mantle/bos/paladin
 	name = "Paladin cape"
 	desc = "This stylish deep crimson cape is made to be worn below a power armor pauldron, a shoulder holster is added for utility."
-	icon_state = "paladin"
+	icon_state = "palcapes"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bos/paladin
 
 /obj/item/clothing/neck/mantle/legion
 	name = "Legion Cape"
-	desc = "A deep crimson cape woven by fine legionnaire craftsmanship. A shoulder holster is added beneath for utility."
+	desc = "A deep crimson cape woven by fine legionary craftsmanship. A shoulder holster is added beneath for utility."
 	icon_state = "legion"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/bos/paladin
 
@@ -116,9 +116,17 @@
 
 /obj/item/clothing/neck/mantle/poncho
 	name = "poncho"
-	desc = "Plain and rugged piece of clothing, put it over your suit and make sure your gear don't get soaked through when it rains."
+	desc = "Plain and rugged piece of clothing, put it over your suit and make sure your gear don't get soaked through when it rains. (Alt click it has alternative skins)"
 	icon_state = "poncho"
 	body_parts_covered = CHEST|GROIN|ARMS
+	always_reskinnable = TRUE
+	unique_reskin = list(
+						"Poncho" = "poncho",
+						"Old Poncho" = "poncho_old",
+						"Cowboy Poncho" = "ponchocowboy",
+						"Cowboy Poncho Open" = "ponchocowboyopen"
+						)
+
 
 /obj/item/clothing/neck/mantle/umbo
 	name = "Roman mantle"

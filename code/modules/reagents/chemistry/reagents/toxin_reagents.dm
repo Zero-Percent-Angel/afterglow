@@ -47,6 +47,7 @@
 	overdose_threshold = 18 // So, someone drinking 20 units will FOR SURE get overdosed
 	taste_description = "horrific agony"
 	taste_mult = 0.9
+	can_synth = FALSE
 	var/datum/disease/fev_disease = /datum/disease/transformation/mutant
 
 /datum/reagent/toxin/FEV_solution/overdose_process(mob/living/carbon/C)
@@ -506,7 +507,7 @@
 /datum/reagent/toxin/mutetoxin/on_mob_life(mob/living/carbon/M)
 	M.silent = max(M.silent, 3)
 	..()
-
+/*
 /datum/reagent/toxin/staminatoxin
 	name = "Tirizene"
 	description = "A nonlethal poison that causes extreme fatigue and weakness in its victim."
@@ -520,7 +521,7 @@
 	data = max(data - 1, 5)
 	..()
 	. = 1
-
+*/
 /datum/reagent/toxin/polonium
 	name = "Polonium"
 	description = "An extremely radioactive material in liquid form. Ingestion results in fatal irradiation."

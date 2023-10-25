@@ -169,7 +169,7 @@ datum/reagent/fermi/nanite_b_gone/reaction_obj(obj/O, reac_volume)
 	holder.remove_reagent(type, volume, ignore_pH = TRUE)
 	..()
 
-/datum/reagent/fermi/furranium
+/*datum/reagent/fermi/furranium
 	name = "Furranium"
 	description = "OwO whats this?"
 	color = "#f9b9bc" // rgb: , 0, 255
@@ -248,7 +248,7 @@ datum/reagent/fermi/nanite_b_gone/reaction_obj(obj/O, reac_volume)
 		to_chat(M, span_notice("You feel your tongue.... unfluffify...?"))
 		M.say("Pleh!")
 	else
-		log_reagent("FERMICHEM: [M] ckey: [M.key]'s tongue has been made permanent")
+		log_reagent("FERMICHEM: [M] ckey: [M.key]'s tongue has been made permanent") */
 
 
 /datum/reagent/fermi/plushmium

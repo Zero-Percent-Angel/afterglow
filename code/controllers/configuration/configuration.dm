@@ -21,6 +21,7 @@
 
 	var/motd
 	// var/policy
+	var/display_rules
 
 	var/static/regex/ic_filter_regex
 
@@ -52,6 +53,7 @@
 				break
 	loadmaplist(CONFIG_MAPS_FILE)
 	LoadMOTD()
+	load_rules(CONFIG_RULES_FILE)
 	// LoadPolicy()
 	LoadChatFilter()
 
@@ -360,6 +362,12 @@ Example config:
 				currentmap = null
 			else
 				log_config("Unknown command in map vote config: '[command]'")
+
+
+/datum/controller/configuration/proc/load_rules(filename)
+	log_config("Loading config file [filename]...")
+	filename = "[directory]/[filename]"
+	display_rules = trim(wrap_file2text(filename))
 
 
 /datum/controller/configuration/proc/pick_mode(mode_name)

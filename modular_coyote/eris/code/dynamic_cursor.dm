@@ -20,7 +20,7 @@
 	. = ..()
 
 /obj/item/gun/afterattack(atom/A, mob/living/user, adjacent, params)
-	check_safety_cursor(user)
+	//check_safety_cursor(user)
 	. = ..()
 
 /obj/item/gun/Destroy()

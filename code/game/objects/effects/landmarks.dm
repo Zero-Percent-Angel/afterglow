@@ -580,7 +580,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "NCR Trooper"
 
 /obj/effect/landmark/start/f13/ncrconscript
-	name = "NCR Conscript"
+	name = "NCR Recruit"
 	icon_state = "NCR Conscript"
 
 /obj/effect/landmark/start/f13/ncrveteranranger
@@ -589,6 +589,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/ncrranger
 	name = "NCR Ranger"
+	icon_state = "NCR Patrol Ranger"
+
+/obj/effect/landmark/start/f13/ncrcivilianranger
+	name = "NCR Civilian Ranger"
 	icon_state = "NCR Patrol Ranger"
 
 /obj/effect/landmark/start/f13/ncrrearechelon
@@ -613,7 +617,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Legion Orator"
 
 /obj/effect/landmark/start/f13/immune
-	name = "Legion Immune"
+	name = "Legion Off-Duty"
 
 /obj/effect/landmark/start/f13/priestess
 	name = "Priestess of Mars"
@@ -627,34 +631,34 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Vexillarius"
 
 /obj/effect/landmark/start/f13/vetlegionary
-	name = "Veteran Legionnaire"
-	icon_state = "Veteran Legionnaire"
+	name = "Veteran Legionary"
+	icon_state = "Veteran Legionary"
 
 /obj/effect/landmark/start/f13/decan
 	name = "Legion Prime Decanus"
 	icon_state = "Decanus"
 
 /obj/effect/landmark/start/f13/legionary
-	name = "Prime Legionnaire"
-	icon_state = "Veteran Legionnaire"
+	name = "Prime Legionary"
+	icon_state = "Veteran Legionary"
 
 /obj/effect/landmark/start/f13/decanrec
 	name = "Legion Recruit Decanus"
 	icon_state = "Decanus"
 
 /obj/effect/landmark/start/f13/recleg
-	name = "Recruit Legionnaire"
+	name = "Recruit Legionary"
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/slavemaster
 	name = "Legion Slavemaster"
 
 /obj/effect/landmark/start/f13/explorer
-	name = "Legion Scout"
+	name = "Legion Explorer"
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/venator
-	name = "Legion Explorer"
+	name = "Legion Assassin"
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/auxilia
@@ -722,8 +726,8 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 // Vault
 
 /obj/effect/landmark/start/f13/overseer
-	name = "Overseer"
-	icon_state = "Overseer"
+	name = "Vault Coordinator"
+	icon_state = "Vault Coordinator"
 
 /obj/effect/landmark/start/f13/vaultheadofsecurity
 	name = "Chief of Security"
@@ -736,6 +740,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/vaultscientist
 	name = "Vault-tec Scientist"
 	icon_state = "Vault-tec Scientist"
+
+/obj/effect/landmark/start/f13/vaultsecurityspec
+	name = "Vault-tec Security Specialist"
+	icon_state = "Vault-tec Security"
 
 /obj/effect/landmark/start/f13/vaultsecurityofficer
 	name = "Vault-tec Security"
@@ -921,7 +929,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Medical Doctor"
 
 /obj/effect/landmark/start/f13/followersguard
-	name = "Nash Paramedic"
+	name = "Town Paramedic"
 	icon_state = "Security Officer"
 
 /obj/effect/landmark/start/f13/followersvolunteer

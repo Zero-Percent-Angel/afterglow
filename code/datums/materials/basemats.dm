@@ -109,11 +109,11 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 
 /datum/material/uranium/on_applied(atom/source, amount, material_flags)
 	. = ..()
-	source.AddComponent(/datum/component/radioactive, amount / 60, source, 0) //half-life of 0 because we keep on going.
+	//source.AddComponent(/datum/component/radioactive, amount / 60, source, 0) //half-life of 0 because we keep on going.
 
 /datum/material/uranium/on_removed(atom/source, material_flags)
 	. = ..()
-	qdel(source.GetComponent(/datum/component/radioactive))
+	//qdel(source.GetComponent(/datum/component/radioactive))
 
 
 ///Adds firestacks on hit (Still needs support to turn into gas on destruction)
@@ -256,14 +256,13 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	name = "adamantine"
 	desc = "A powerful material made out of magic, I mean science!"
 	color = "#6d7e8e"
-	strength_modifier = 1.3
 	categories = list(MAT_CATEGORY_RIGID = TRUE, MAT_CATEGORY_BASE_RECIPES = TRUE)
 	sheet_type = /obj/item/stack/sheet/mineral/adamantine
 	value_per_unit = 0.25
 	beauty_modifier = 0.4
 	armor_modifiers = list("melee" = 1.5, "bullet" = 1.5, "laser" = 1.3, "energy" = 1.3, "bomb" = 1, "bio" = 1, "rad" = 1, "fire" = 2.5, "acid" = 1)
-	strength_modifier = 1.5
-	integrity_modifier = 1.5
+	strength_modifier = 1.2
+	integrity_modifier = 1.2
 	material_density = 1.2
 
 ///RPG Magic. (Admin only)

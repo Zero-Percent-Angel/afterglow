@@ -138,7 +138,7 @@
 
 /* 9mm rubber
  * DAMAGE: 2
- * STAMIN: 40
+ * STAMIN: 20
  * RECOIL: 0.5
  * WOUNDS: 5
  * WNAKED: 2.5
@@ -261,128 +261,6 @@
 	pixels_per_second = BULLET_SPEED_PISTOL_9MM * 0.5
 	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
 
-
-
-/////////////////
-// .38 SPECIAL //
-/////////////////
-
-/* * * * * * * *
- * Wound-focused Light Pistol Bullet
- * Surplus
- * Improvised, no match (yet)
- * Rubber
- * Fire rounds
- * * * * * * * */
-
-/* .38
- * DAMAGE: 36
- * STAMIN: 10
- * RECOIL: 0.5
- * WOUNDS: 5
- * WNAKED: 3.75
- */
-
-/obj/item/projectile/bullet/c38
-	name = ".38 bullet"
-	damage = BULLET_DAMAGE_PISTOL_38
-	stamina = BULLET_STAMINA_PISTOL_38
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_PISTOL_38
-
-	wound_bonus = BULLET_WOUND_PISTOL_38
-	bare_wound_bonus = BULLET_WOUND_PISTOL_38_NAKED_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-	
-	pixels_per_second = BULLET_SPEED_PISTOL_38
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
-
-/obj/item/projectile/bullet/c38/rubber
-	name = ".38 rubber bullet"
-	damage = RUBBERY_DAMAGE_PISTOL_38
-	stamina = RUBBERY_STAMINA_PISTOL_38
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = RUBBERY_RECOIL_PISTOL_38
-
-	wound_bonus = RUBBERY_WOUND_PISTOL_38
-	bare_wound_bonus = BULLET_WOUND_PISTOL_38_NAKED_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-	
-	pixels_per_second = BULLET_SPEED_PISTOL_38
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
-
-	sharpness = SHARP_NONE
-	zone_accuracy_type = ZONE_WEIGHT_PRECISION // Rubbers go where you want
-
-/obj/item/projectile/bullet/c38/improvised
-	name = "handloaded .38 bullet"
-	damage = BULLET_DAMAGE_PISTOL_38_HANDLOAD
-	stamina = BULLET_STAMINA_PISTOL_38
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_PISTOL_38_HANDLOAD
-
-	wound_bonus = BULLET_WOUND_PISTOL_38_HANDLOAD
-	bare_wound_bonus = BULLET_WOUND_PISTOL_38_NAKED_MULT
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-	
-	pixels_per_second = BULLET_SPEED_PISTOL_38_HANDLOAD
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
-
-/obj/item/projectile/bullet/c38/acid
-	name = ".38 acid-tipped bullet"
-	damage = BULLET_DAMAGE_PISTOL_38 * BULLET_DAMAGE_ACID
-	stamina = BULLET_STAMINA_PISTOL_38 * BULLET_STAMINA_ACID
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_PISTOL_38
-
-	wound_bonus = BULLET_WOUND_PISTOL_38 * BULLET_WOUND_ACID
-	bare_wound_bonus = BULLET_WOUND_PISTOL_38_NAKED_MULT * BULLET_NAKED_WOUND_ACID
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-	
-	pixels_per_second = BULLET_SPEED_PISTOL_38
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
-
-	damage_type = BURN // still checks bullet resist
-	sharpness = SHARP_NONE
-	var/acid_type = /datum/reagent/toxin/acid/fluacid
-
-/obj/item/projectile/bullet/c38/acid/Initialize()
-	. = ..()
-	create_reagents(5, NO_REACT, NO_REAGENTS_VALUE)
-	reagents.add_reagent(acid_type, 5)
-
-/obj/item/projectile/bullet/c38/acid/on_hit(atom/target, blocked = FALSE)
-	..()
-	if(isliving(target))
-		var/mob/living/M = target
-		reagents.reaction(M, TOUCH)
-		reagents.trans_to(M, reagents.total_volume)
-
-/obj/item/projectile/bullet/c38/incendiary
-	name = ".38 incendiary bullet"
-	damage = BULLET_DAMAGE_PISTOL_38 * BULLET_DAMAGE_FIRE
-	stamina = BULLET_STAMINA_PISTOL_38 * BULLET_STAMINA_FIRE
-	spread = BULLET_SPREAD_SURPLUS
-	recoil = BULLET_RECOIL_PISTOL_38
-
-	wound_bonus = BULLET_WOUND_PISTOL_38 * BULLET_WOUND_FIRE
-	bare_wound_bonus = BULLET_WOUND_PISTOL_38_NAKED_MULT * BULLET_NAKED_WOUND_FIRE
-	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-	
-	pixels_per_second = BULLET_SPEED_PISTOL_38
-	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
-
-	damage_type = BURN // still checks bullet resist
-	sharpness = SHARP_NONE
-	var/fire_stacks = 1
-
-/obj/item/projectile/bullet/c38/incendiary/on_hit(atom/target, blocked = FALSE)
-	. = ..()
-	if(iscarbon(target))
-		var/mob/living/carbon/M = target
-		M.adjust_fire_stacks(fire_stacks)
-		M.IgniteMob()
-
 /////////////
 // NEEDLER //
 /////////////
@@ -446,7 +324,7 @@
 
 /* 10mm
  * DAMAGE: 30
- * STAMIN: 30
+ * STAMIN: 15
  * RECOIL: 1
  * WOUNDS: 5
  * WNAKED: 3.75
@@ -509,7 +387,7 @@
 
 /* 10mm rubber
  * DAMAGE: 2.5
- * STAMIN: 90
+ * STAMIN: 30
  * RECOIL: 1
  * WOUNDS: 7.5
  * WNAKED: 3.75
@@ -577,8 +455,8 @@
  * * * * * * * */
 
 /* 45
- * DAMAGE: 30
- * STAMIN: 39
+ * DAMAGE: 36
+ * STAMIN: 18
  * RECOIL: 3
  * WOUNDS: 6.5
  * WNAKED: 5
@@ -637,7 +515,7 @@
 
 /* 45 rubber
  * DAMAGE: 3
- * STAMIN: 117
+ * STAMIN: 36
  * RECOIL: 1
  * WOUNDS: 9.75
  * WNAKED: 4.8
@@ -707,15 +585,15 @@
  * * * * * * * */
 
 /* 357 fmj
- * DAMAGE: 45
+ * DAMAGE: 36
  * STAMIN: 40
- * RECOIL: 1
- * WOUNDS: 10
+ * RECOIL: 3.75
+ * WOUNDS: 6.25
  * WNAKED: 7.5
  */
 /obj/item/projectile/bullet/a357
 	name = ".357 FMJ bullet"
-	damage = BULLET_DAMAGE_PISTOL_38_MATCH
+	damage = BULLET_DAMAGE_PISTOL_38
 	stamina = BULLET_STAMINA_PISTOL_38
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_PISTOL_38_MATCH
@@ -728,7 +606,7 @@
 	damage_falloff = BULLET_FALLOFF_DEFAULT_PISTOL_LIGHT
 
 /* 357 handload
- * DAMAGE: 30
+ * DAMAGE: 36
  * STAMIN: 30
  * RECOIL: 1
  * WOUNDS: 7.5
@@ -855,8 +733,8 @@
 
 /* 44 fmj
  * DAMAGE: 44
- * STAMIN: 52
- * RECOIL: 1
+ * STAMIN: 22
+ * RECOIL: 4
  * WOUNDS: 20
  * WNAKED: 15
  */
@@ -961,7 +839,7 @@
 
 /* 14mm fmj
  * DAMAGE: 50
- * STAMIN: 80
+ * STAMIN: 25
  * RECOIL: 3
  * WOUNDS: 20
  * WNAKED: 15

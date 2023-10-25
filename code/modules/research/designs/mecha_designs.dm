@@ -1,7 +1,7 @@
 ///////////////////////////////////
 //////////Mecha Module Disks///////
 ///////////////////////////////////
-
+/*
 /datum/design/board/ripley_main
 	name = "APLU \"Ripley\" Central Control module"
 	desc = "Allows for the construction of a \"Ripley\" Central Control module."
@@ -108,7 +108,7 @@
 	build_path = /obj/item/circuitboard/mecha/phazon/targeting
 	category = list("Exosuit Modules")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
-
+*/
 /datum/design/board/clarke_main
 	name = "\"Clarke\" Central Control module"
 	desc = "Allows for the construction of a \"Clarke\" Central Control module."
@@ -124,7 +124,7 @@
 	build_path = /obj/item/circuitboard/mecha/clarke/peripherals
 	category = list("Exosuit Modules")
 	departmental_flags = DEPARTMENTAL_FLAG_SCIENCE
-
+/*
 /datum/design/board/marauder_main
 	name = "\"Marauder\" Central Control module"
 	desc = "Allows for the construction of a \"Marauder\" Central Control module."
@@ -358,7 +358,7 @@
 	materials = list(/datum/material/iron=10000,/datum/material/diamond=10000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-
+*/ 
 /datum/design/mech_rcd
 	name = "Exosuit Module (RCD Module)"
 	desc = "An exosuit-mounted Rapid Construction Device."
@@ -368,7 +368,7 @@
 	materials = list(/datum/material/iron=30000,/datum/material/gold=20000,/datum/material/plasma=25000,/datum/material/silver=20000)
 	construction_time = 1200
 	category = list("Exosuit Equipment")
-
+/* 
 /datum/design/mech_gravcatapult
 	name = "Exosuit Module (Gravitational Catapult Module)"
 	desc = "An exosuit mounted Gravitational Catapult."
@@ -378,7 +378,7 @@
 	materials = list(/datum/material/iron=10000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-
+*/
 /datum/design/mech_repair_droid
 	name = "Exosuit Module (Repair Droid Module)"
 	desc = "Automated Repair Droid. BEEP BOOP"
@@ -388,7 +388,7 @@
 	materials = list(/datum/material/iron=10000,/datum/material/glass=5000,/datum/material/gold=1000,/datum/material/silver=2000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-
+/*
 /datum/design/mech_energy_relay
 	name = "Exosuit Module (Tesla Energy Relay)"
 	desc = "Tesla Energy Relay"
@@ -418,7 +418,7 @@
 	materials = list(/datum/material/iron=20000,/datum/material/gold=5000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-
+*/
 /datum/design/mech_diamond_drill
 	name = "Exosuit Module (Diamond Mining Drill)"
 	desc = "An upgraded version of the standard drill."
@@ -428,7 +428,7 @@
 	materials = list(/datum/material/iron=10000,/datum/material/diamond=6500)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-
+/*
 /datum/design/mech_generator_nuclear
 	name = "Exosuit Module (ExoNuclear Reactor)"
 	desc = "Compact nuclear reactor module."
@@ -438,7 +438,7 @@
 	materials = list(/datum/material/iron=10000,/datum/material/glass=1000,/datum/material/silver=500)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-
+*/
 /datum/design/mech_plasma_cutter
 	name = "Exosuit Module Design (217-D Heavy Plasma Cutter)"
 	desc = "A device that shoots resonant plasma bursts at extreme velocity. The blasts are capable of crushing rock and demolishing solid obstacles."
@@ -448,7 +448,7 @@
 	materials = list(/datum/material/iron = 8000, /datum/material/glass = 1000, /datum/material/plasma = 2000)
 	construction_time = 100
 	category = list("Exosuit Equipment")
-
+/*
 /datum/design/mech_taser
 	name = "Exosuit Weapon (PBT \"Pacifier\" Mounted Taser)"
 	desc = "A weapon for combat exosuits. Shoots non-lethal stunning electrodes."
@@ -509,3 +509,4 @@
 	construction_time = 250
 	build_path = /obj/item/mecha_parts/mecha_equipment/medical/mechmedbeam
 	category = list("Exosuit Equipment")
+*/ 

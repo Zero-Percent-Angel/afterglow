@@ -15,6 +15,7 @@
 	var/list/failures = list()
 	var/terminal_has_pass = FALSE
 	var/door_id = ""
+	var/is_busy = FALSE
 
 /obj/machinery/door/password/voice
 	voice_activated = TRUE
@@ -73,13 +74,17 @@
 			return TRUE
 		return FALSE
 	else
-		if(!failures.Find(WEAKREF(user)) && do_after(user, 10 SECONDS, target = src) && user.skill_roll(SKILL_SCIENCE, DIFFICULTY_CHALLENGE))
-			user.visible_message(span_good("[user] hacks the door!"), span_good("Got it!"))
-			return TRUE
-		else
-			failures |= WEAKREF(user)
-			user.visible_message(span_warning("[user] fails to hack the door!"), span_warning("Dang, looks like it's locked itself down from me."))
-			return FALSE
+		if (!is_busy)
+			is_busy = TRUE
+			if(!failures.Find(WEAKREF(user)) && do_after(user, 10 SECONDS, target = src) && user.skill_roll(SKILL_SCIENCE, DIFFICULTY_CHALLENGE))
+				user.visible_message(span_good("[user] hacks the door!"), span_good("Got it!"))
+				is_busy = FALSE
+				return TRUE
+			else
+				failures |= WEAKREF(user)
+				user.visible_message(span_warning("[user] fails to hack the door!"), span_warning("Dang, looks like it's locked itself down from me."))
+				is_busy = FALSE
+				return FALSE
 
 /obj/machinery/door/password/emp_act(severity)
 	return

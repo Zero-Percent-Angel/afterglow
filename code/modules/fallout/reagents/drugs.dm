@@ -89,9 +89,9 @@
 	description = "A chemical compound that, when inhaled, vastly increases the user's reflexes and slows their perception of time. Carries a risk of addiction and extreme nausea and toxin damage if overdosed."
 	reagent_state = LIQUID
 	color = "#FAFAFA"
-	overdose_threshold = 14
-	addiction_threshold = 9
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	overdose_threshold = 12
+	addiction_threshold = 8
+	metabolization_rate = 0.7 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
 
 /datum/reagent/drug/turbo/on_mob_add(mob/M)
@@ -289,7 +289,6 @@
 	if(isliving(M))
 		to_chat(M, span_notice("You feel stronger, and like you're able to endure more."))
 		ADD_TRAIT(M, TRAIT_BUFFOUT_BUFF, "buffout")
-		ADD_TRAIT(M, TRAIT_PERFECT_ATTACKER, "buffout")
 		M.maxHealth += 25
 		M.health += 25
 
@@ -298,7 +297,6 @@
 	if(isliving(M))
 		to_chat(M, span_notice("You feel weaker."))
 		REMOVE_TRAIT(M, TRAIT_BUFFOUT_BUFF, "buffout")
-		REMOVE_TRAIT(M, TRAIT_PERFECT_ATTACKER, "buffout")
 		M.maxHealth -= 25
 		M.health -= 25
 
