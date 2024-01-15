@@ -297,3 +297,4 @@
 	if ("l" == spec)
 		special_l += val
 	set_special()
+	update_equipment_speed_mods()

@@ -31,6 +31,7 @@
 		/datum/reagent/medicine/calomel = 4,
 		/datum/reagent/medicine/perfluorodecalin = 5,
 		/datum/reagent/medicine/bicaridine = 4,
+		/datum/reagent/medicine/coagulant/weak = 4,
 		/datum/reagent/medicine/kelotane = 4,
 		/datum/reagent/medicine/antitoxin = 4,
 		/datum/reagent/medicine/salglu_solution = 2,
@@ -85,10 +86,12 @@
 		/datum/reagent/toxin/carpotoxin = 2,
 		/datum/reagent/toxin/histamine = 2,
 		/datum/reagent/toxin/slimejelly = 2,
-		/datum/reagent/medicine/modafinil = 2,
+		/datum/reagent/medicine/modafinil = 4,
 		/datum/reagent/medicine/psicodine = 2,
 		/datum/reagent/medicine/mentat = 3,
 		/datum/reagent/medicine/stimpak = 3,
+		/datum/reagent/medicine/polypyr = 4,
+		/datum/reagent/medicine/silibinin = 5,
 		/datum/reagent/pax = 3
 	)
 

@@ -176,6 +176,7 @@
 	color = "#FF0000"
 	overdose_threshold = 15
 	addiction_threshold = 12.5
+	addiction_chance = 3
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 	ghoulfriendly = TRUE
@@ -200,9 +201,11 @@
 		var/mob/living/carbon/C = L
 		rage = new()
 		C.gain_trauma(rage, TRAUMA_RESILIENCE_ABSOLUTE)
+		C.modify_special(5, "s")
 
 /datum/reagent/drug/psycho/on_mob_delete(mob/living/L)
 	REMOVE_TRAIT(L, TRAIT_SLEEPIMMUNE, "[type]")
+	L.modify_special(-5, "s")
 	if(rage)
 		QDEL_NULL(rage)
 	..()

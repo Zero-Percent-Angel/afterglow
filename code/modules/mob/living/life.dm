@@ -50,14 +50,15 @@
 /mob/living/proc/set_special()
 	if (HAS_TRAIT(src, TRAIT_DUMB))
 		special_i = max(special_i - 5, 1)
-	maxHealth = initial(maxHealth) + (special_e*3 - 14)//SPECIAL Integration
-	health = initial(health) + (special_e*3 - 14)//SPECIAL Integration
+	var/endurance_health = special_e*3 - 14
+	maxHealth = initial(maxHealth) + endurance_health//SPECIAL Integration
 	default_sprint_buffer_max = initial(default_sprint_buffer_max) + (special_e*3) * CONFIG_GET(number/movedelay/sprint_buffer_max)/13
 	stambuffer = initial(stambuffer) + (round(special_e/2) - 2)
 	update_config_movespeed()
 	var/obj/item/organ/brain/brain = getorgan(/obj/item/organ/brain)
 	if (istype(brain))
 		brain.maxHealth = initial(brain.maxHealth) + ((special_c + special_i + special_p)*2 - 25)
+	updatehealth()
 	var/obj/item/organ/eyes/eyes = getorgan(/obj/item/organ/eyes)
 	if (istype(eyes))
 		eyes.lighting_alpha = 256 - (special_p * 2)

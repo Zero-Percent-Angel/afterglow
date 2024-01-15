@@ -210,7 +210,6 @@
 	M.adjustToxLoss(-2 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
 	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
 	. = TRUE
-	..()
 
 
 /datum/reagent/medicine/healing_powder/poultice/overdose_process(mob/living/carbon/M)
@@ -332,15 +331,13 @@
 	..()
 	if(isliving(M))
 		to_chat(M, span_alert("You feel a dull warmth spread throughout your body, masking all sense of pain with a not-unpleasant tingle. Injuries don't seem to hurt as much."))
-		M.maxHealth += 30
-		M.health += 30
+		M.modify_special(10, "e")
 		M.add_movespeed_mod_immunities(type, list(/datum/movespeed_modifier/damage_slowdown, /datum/movespeed_modifier/damage_slowdown_flying, /datum/movespeed_modifier/monkey_health_speedmod))
 
 /datum/reagent/medicine/medx/on_mob_end_metabolize(mob/living/carbon/human/M)
 	if(isliving(M))
 		to_chat(M, span_danger("The warmth fades, and every injury you you had slams into you like a truck."))
-		M.maxHealth -= 30
-		M.health -= 30
+		M.modify_special(-10, "e")
 		M.remove_movespeed_mod_immunities(type, list(/datum/movespeed_modifier/damage_slowdown, /datum/movespeed_modifier/damage_slowdown_flying, /datum/movespeed_modifier/monkey_health_speedmod))
 	..()
 
