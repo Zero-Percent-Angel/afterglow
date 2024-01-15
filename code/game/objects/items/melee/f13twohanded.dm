@@ -418,7 +418,7 @@
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(15, STAMINA, null, 0)
+	M.apply_damage(15, STAMINA, null, M.run_armor_check("chest", "melee"))
 
 // Golf Club		Keywords: Damage 22/32, Damage bonus Stamina
 /obj/item/twohanded/baseball/golfclub
