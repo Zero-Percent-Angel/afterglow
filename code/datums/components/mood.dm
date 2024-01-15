@@ -267,10 +267,10 @@
 		addtimer(CALLBACK(src, .proc/clear_event, null, category), the_event.timeout, TIMER_UNIQUE|TIMER_OVERRIDE)
 
 /datum/component/mood/proc/clear_event(datum/source, category)
-	var/event = mood_events.Find(category)
+	var/datum/mood_event/event = mood_events.Find(category)
 	mood_events.Remove(category)
 	update_mood()
-	if(!event)
+	if(!istype(event))
 		return 0
 	qdel(event)
 	update_mood()
