@@ -20,7 +20,7 @@
 	var/turned_on = FALSE
 	var/knockdown = TRUE
 	var/obj/item/stock_parts/cell/cell
-	var/hitcost = 750
+	var/hitcost = 150
 	var/throw_hit_chance = 35
 	var/preload_cell_type //if not empty the baton starts with this type of cell
 
@@ -166,7 +166,7 @@
 	if(turned_on)
 		if(baton_stun(M, user, disarming))
 			user.do_attack_animation(M)
-			user.adjustStaminaLossBuffered(getweight(user, STAM_COST_BATON_MOB_MULT))
+			//user.adjustStaminaLossBuffered(getweight(user, STAM_COST_BATON_MOB_MULT))
 	else if(user.a_intent != INTENT_HARM)			//they'll try to bash in the last proc.
 		M.visible_message(span_warning("[user] has prodded [M] with [src]. Luckily it was off."), \
 						span_warning("[user] has prodded you with [src]. Luckily it was off"))
@@ -177,8 +177,9 @@
 	if(L.mob_run_block(src, 0, "[user]'s [name]", ATTACK_TYPE_MELEE, 0, user, null, return_list) & BLOCK_SUCCESS) //No message; check_shields() handles that
 		playsound(L, 'sound/weapons/genhit.ogg', 50, 1)
 		return FALSE
+	var/armour = L.run_armor_check(silent = TRUE)
 	var/stunpwr = stamforce
-	stunpwr = block_calculate_resultant_damage(stunpwr, return_list)
+	stunpwr = block_calculate_resultant_damage(stunpwr, return_list) * ((100 - armour)/100)
 	var/obj/item/stock_parts/cell/our_cell = get_cell()
 	if(!our_cell)
 		switch_status(FALSE)
@@ -195,10 +196,10 @@
 		stunpwr *= round(stuncharge/hitcost, 0.1)
 
 	if(!disarming)
-		if(knockdown)
+		if(knockdown && stunpwr == stamforce)
 			L.DefaultCombatKnockdown(50, override_stamdmg = 0)		//knockdown
 		L.adjustStaminaLoss(stunpwr)
-	else
+	else if (stunpwr == stamforce)
 		L.drop_all_held_items()					//no knockdown/stamina damage, instead disarm.
 
 	L.apply_effect(EFFECT_STUTTER, stamforce)

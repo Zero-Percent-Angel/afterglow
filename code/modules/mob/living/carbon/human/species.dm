@@ -62,8 +62,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/coldmod = 1		// multiplier for cold damage
 	var/heatmod = 1		// multiplier for heat damage
 	var/stunmod = 1		// multiplier for stun duration
-	var/punchdamagelow = 1       //lowest possible punch damage. if this is set to 0, punches will always miss
-	var/punchdamagehigh = 10      //highest possible punch damage
+	var/punchdamagelow = 2       //lowest possible punch damage. if this is set to 0, punches will always miss
+	var/punchdamagehigh = 6      //highest possible punch damage
 	var/punchstunthreshold = 10//damage at which punches from this race will stun //yes it should be to the attacked race but it's not useful that way even if it's logical
 	var/siemens_coeff = 1 //base electrocution coefficient
 	var/damage_overlay_type = "human" //what kind of damage overlays (if any) appear on our species when wounded?
@@ -1442,7 +1442,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			target_message = span_warning("[target] blocks your attack!"))
 		return FALSE
 	var/hit_helper = !CHECK_MOBILITY(target, MOBILITY_STAND) ? -30 : -10
-	if(target != user && !target.IsUnconscious() && !user.skill_roll_kind(SKILL_UNARMED, target.special_a + hit_helper, 0))
+	if(target != user && !target.IsUnconscious() && target.stat < UNCONSCIOUS && !user.skill_roll_kind(SKILL_UNARMED, target.special_a + hit_helper, 0))
 		target.visible_message(span_warning("[user]'s attack misses!"), target = user, \
 			target_message = span_warning("You missed your attack!"))
 		playsound(user, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
@@ -1473,22 +1473,27 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				user.do_attack_animation(target, ATTACK_EFFECT_PUNCH)
 
 		var/damage = rand(user.dna.species.punchdamagelow, user.dna.species.punchdamagehigh)
+		var/penetration = 0
+		var/staminaDown = 0
+		var/sharpness = SHARP_NONE
 		if(HAS_TRAIT(user, TRAIT_PERFECT_ATTACKER)) // unit test no-miss trait
 			damage = user.dna.species.punchdamagehigh
+		if(HAS_TRAIT(user, TRAIT_UNARMED_WEAPON))
+			damage += user.gloves.force
+			penetration = user.gloves.armour_penetration
+			staminaDown = user.gloves.force
+			sharpness = user.gloves.sharpness
 		var/punchedstam = target.getStaminaLoss()
 		var/punchedbrute = target.getBruteLoss()
 
-		//CITADEL CHANGES - makes resting and disabled combat mode reduce punch damage, makes being out of combat mode result in you taking more damage
-		if(!SEND_SIGNAL(target, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
-			damage *= 1.2
 		if(!CHECK_MOBILITY(user, MOBILITY_STAND))
 			damage *= 0.65
-		if(SEND_SIGNAL(user, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
-			damage *= 0.8
+			staminaDown *= 0.65
 		//END OF CITADEL CHANGES
 
 		//SPECIAL CHANGES
 		damage *= (0.5 + (user.special_s)/10)
+		staminaDown *= (0.5 + (user.special_s)/10)
 		//END OF SPECIAL CHANGES
 
 		var/obj/item/bodypart/affecting = target.get_bodypart(ran_zone(user.zone_selected))
@@ -1505,7 +1510,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			return FALSE
 
 
-		var/armor_block = target.run_armor_check(affecting, "melee")
+		var/armor_block = target.run_armor_check(affecting, "melee", armour_penetration = penetration)
 
 		playsound(target.loc, user.dna.species.attack_sound, 25, 1, -1)
 
@@ -1521,15 +1526,15 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			target.dismembering_strike(user, affecting.body_zone)
 
 		if(atk_verb == ATTACK_EFFECT_KICK)//kicks deal 1.4x raw damage + 0.2x stamina damage
-			target.apply_damage(damage*1.4, attack_type, affecting, armor_block)
-			target.apply_damage(damage*0.2, STAMINA, affecting, armor_block)
+			target.apply_damage((damage - staminaDown)*1.4, attack_type, affecting, armor_block)
+			target.apply_damage((damage - staminaDown)*0.2, STAMINA, affecting, armor_block)
 			log_combat(user, target, "kicked")
 		else//other attacks deal full raw damage + stamina damage
-			target.apply_damage(damage, attack_type, affecting, armor_block)
-			target.apply_damage(damage, STAMINA, affecting, armor_block)
+			target.apply_damage(damage, attack_type, affecting, armor_block, sharpness = sharpness)
+			target.apply_damage(damage - staminaDown, STAMINA, affecting, armor_block)
 			log_combat(user, target, "punched")
 
-		if((target.stat != DEAD) && damage >= user.dna.species.punchstunthreshold)
+		if((target.stat != DEAD) && damage >= (user.dna.species.punchstunthreshold + staminaDown))
 			if((punchedstam > 50) && prob(punchedstam*0.25)) //If our punch victim has been hit above the threshold, and they have more than 50 stamina damage, roll for stun, probability of 1% per 4 stamina damage
 
 				target.visible_message(span_danger("[user] knocks [target] down!"), \
@@ -1648,12 +1653,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			log_combat(user, target, "disarmed out of grab from")
 			return
 		var/randn = rand(1, 100)
-		if(SEND_SIGNAL(target, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE)) // CITADEL CHANGE
-			randn += -10 //CITADEL CHANGE - being out of combat mode makes it easier for you to get disarmed
 		if(!CHECK_MOBILITY(user, MOBILITY_STAND)) //CITADEL CHANGE
 			randn += 100 //CITADEL CHANGE - No kosher disarming if you're resting
-		if(SEND_SIGNAL(user, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE)) //CITADEL CHANGE
-			randn += 25 //CITADEL CHANGE - Makes it harder to disarm outside of combat mode
 		if(user.pulling == target)
 			randn -= 20 //If you have the time to get someone in a grab, you should have a greater chance at snatching the thing in their hand. Will be made completely obsolete by the grab rework but i've got a poor track record for releasing big projects on time so w/e i guess
 		if(HAS_TRAIT(user, TRAIT_PUGILIST))

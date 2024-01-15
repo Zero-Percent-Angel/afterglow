@@ -39,7 +39,7 @@
 	desc = "Heavy axe, for chopping trees and people. Swings very slowly, but with deadly effect."
 	icon_state = "legionaxe"
 	icon_prefix = "legionaxe"
-	force = 30
+	force = 28
 	throwforce = 15
 	wound_bonus = 10
 	bare_wound_bonus = 10
@@ -48,8 +48,8 @@
 	attack_verb = list("axed", "chopped", "cleaved", "torn", "hacked")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	wielded_icon = "legionaxe2"
-	force_unwielded = 30
-	force_wielded = 65
+	force_unwielded = 28
+	force_wielded = 56
 	attack_speed = CLICK_CD_MELEE * 1.3  //10.4
 
 /obj/item/twohanded/legionaxe/ComponentInitialize()
@@ -83,7 +83,7 @@
 	desc = "Heavy fireman axe from the old world, with its distinctive red colour and excellent quality steel. Excellent for smashing doors. A bit slow."
 	icon_state = "fireaxe"
 	icon_prefix = "fireaxe"
-	force = 28
+	force = 27
 	throwforce = 15
 	wound_bonus = 10
 	bare_wound_bonus = 10
@@ -92,8 +92,8 @@
 	attack_verb = list("axed", "chopped", "cleaved", "torn", "hacked")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	wielded_icon = "fireaxe2"
-	force_unwielded = 28
-	force_wielded = 55
+	force_unwielded = 27
+	force_wielded = 50
 	attack_speed = CLICK_CD_MELEE * 1.25 //10
 
 /obj/item/twohanded/fireaxe/ComponentInitialize()
@@ -314,7 +314,7 @@
 	force = 21
 	throwforce = 25
 	throw_speed = 4
-	armour_penetration = 0.10
+	armour_penetration = 0.05
 	max_reach = 2
 	embedding = list("embedded_impact_pain_multiplier" = 3)
 	custom_materials = null
@@ -331,7 +331,7 @@
 	icon_state = "spear-claw"
 	icon_prefix = "spear-claw"
 	force = 22
-	armour_penetration = 0.15
+	armour_penetration = 0.10
 	sharpness = SHARP_EDGED
 	wielded_icon = "spear-claw2"
 	force_unwielded = 22
@@ -379,7 +379,7 @@
 	sharpness = SHARP_NONE
 	wielded_icon = "baseball2"
 	force_unwielded = 25
-	force_wielded = 38
+	force_wielded = 35
 	attack_speed = CLICK_CD_MELEE //8. swing as fast as one-handed weapons, and do more damage, but with the inconvenience of worse storage.
 
 // Spiked Baseball Bat		Keywords: Damage 26/40, Damage bonus Stamina, Sharp
@@ -394,7 +394,7 @@
 	sharpness = SHARP_POINTY
 	wielded_icon = "baseballspike2"
 	force_unwielded = 26
-	force_wielded = 40
+	force_wielded = 38
 
 /obj/item/twohanded/baseball/spiked/attack(mob/living/M, mob/living/user)
 	. = ..()
@@ -412,13 +412,13 @@
 	wielded_icon = "louisville2"
 	force = 25
 	force_unwielded = 25
-	force_wielded = 34
+	force_wielded = 35
 
 /obj/item/twohanded/baseball/louisville/attack(mob/living/M, mob/living/user)
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(25, STAMINA, null, 0)
+	M.apply_damage(15, STAMINA, null, 0)
 
 // Golf Club		Keywords: Damage 22/32, Damage bonus Stamina
 /obj/item/twohanded/baseball/golfclub
@@ -430,13 +430,13 @@
 	wielded_icon = "golfclub2"
 	force = 22
 	force_unwielded = 22
-	force_wielded = 32
+	force_wielded = 34
 
 /obj/item/twohanded/baseball/golfclub/attack(mob/living/M, mob/living/user)
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(20, STAMINA, "chest", M.run_armor_check("chest", "melee"))
+	M.apply_damage(10, STAMINA, "chest", M.run_armor_check("chest", "melee"))
 
 
 
@@ -462,7 +462,7 @@
 	icon_prefix = "hammer-sledge"
 	var/qualitymod = 0
 	wielded_icon = "hammer-sledge2"
-	force_wielded = 65
+	force_wielded = 50
 
 /obj/item/twohanded/sledgehammer/simple/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -488,7 +488,7 @@
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	damtype = "fire"
-	force = 5
+	force = 15
 	armour_penetration = 0.3
 	throwforce = 5
 	throw_speed = 2
@@ -496,8 +496,8 @@
 	attack_verb = list("burned", "welded", "cauterized", "melted", "charred")
 	hitsound = 'sound/items/welder2.ogg'
 	wielded_icon = "thermiclance2"
-	force_unwielded = 5
-	force_wielded = 69
+	force_unwielded = 15
+	force_wielded = 65
 
 /obj/item/twohanded/thermic_lance/afterattack(atom/A, mob/living/user, proximity)
 	. = ..()
@@ -533,10 +533,10 @@
 	icon_state_on = "protonaxe_on"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = null
-	force = 20
+	force = 10
 	force_on = 32
 	armour_penetration = 0.7
-	throwforce = 15
+	throwforce = 10
 	throwforce_on = 30
 
 /obj/item/melee/transforming/energy/axe/protonaxe/ComponentInitialize()
@@ -655,12 +655,12 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	icon_prefix = "hammer-war"
 	force = 25
 	throwforce = 20
-	armour_penetration = 0.2
+	armour_penetration = 0.15
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
 	wielded_icon = "hammer-war2"
-	force_unwielded = 34
+	force_unwielded = 25
 	force_wielded = 55
-	attack_speed = CLICK_CD_MELEE
+	attack_speed = CLICK_CD_MELEE * 1.2
 
 // Shaman staff				Keywords: Damage 15/30, Big stamina damage buff
 /obj/item/twohanded/sledgehammer/shamanstaff
@@ -720,7 +720,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
 	icon_state = "chainsaw"
 	icon_prefix = "chainsaw"
-	force = 8
+	force = 15
 	wound_bonus = 15
 	bare_wound_bonus = 15
 	sharpness = SHARP_EDGED
@@ -733,8 +733,8 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	tool_behaviour = TOOL_SAW
 	hitsound = 'sound/weapons/chainsawhit.ogg'
 	wielded_icon = "chainsaw2"
-	force_unwielded = 8
-	force_wielded = 55
+	force_unwielded = 15
+	force_wielded = 52
 
 /obj/item/twohanded/chainsaw/ComponentInitialize()
 	. = ..()
@@ -766,7 +766,9 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	icon_state = "steelsaw"
 	item_state = "steelsaw"
 	icon_prefix = "steelsaw"
-	force = 4
+	force = 10
+	force_unwielded = 10
+	force_wielded = 15
 	toolspeed = 0.5
 	wound_bonus = 20
 	bare_wound_bonus = 20
@@ -807,6 +809,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 		force = force_off
 		attack_verb = list("poked", "scraped")
 		attack_speed = CLICK_CD_MELEE * 1.2
+	force_wielded = round(force * 1.2)
 	add_fingerprint(user)
 
 /obj/item/twohanded/steelsaw/ComponentInitialize()
@@ -875,6 +878,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 		force = force_off
 		attack_verb = list("poked", "scraped")
 		attack_speed = CLICK_CD_MELEE * 1.5
+	force_wielded = round(force * 1.2)
 	add_fingerprint(user)
 /*
 CODE ARCHIVE

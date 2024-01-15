@@ -330,7 +330,8 @@
 	make_a_nest = /obj/effect/proc_holder/mob_common/make_nest/rat/tame
 
 /mob/living/simple_animal/hostile/rat/Destroy()
-	SSmobs.cheeserats -= src
+	if (src != null)
+		SSmobs.cheeserats -= src
 	return ..()
 
 /mob/living/simple_animal/hostile/rat/examine(mob/user)

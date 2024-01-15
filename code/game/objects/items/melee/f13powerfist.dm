@@ -2,7 +2,7 @@
 // POWER FISTS //
 /////////////////		-Uses power (gas currently) for knockback. Heavy AP, specialized for attacking heavy armor
 
-// Power Fist			Throws targets. Max damage 44. Full AP.
+// Power Fist			Throws targets. Max damage 66. half AP.
 /obj/item/melee/powerfist/f13
 	name = "power fist"
 	desc = "A metal gauntlet with a piston-powered ram on top for that extra 'oomph' in your punch."
@@ -12,7 +12,8 @@
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	flags_1 = CONDUCT_1
 	attack_verb = list("whacked", "fisted", "power-punched")
-	force = 22
+	force = 33
+	armour_penetration = 0.5
 	throwforce = 10
 	throw_range = 3
 	w_class = WEIGHT_CLASS_NORMAL
@@ -20,6 +21,14 @@
 	var/transfer_prints = TRUE //prevents runtimes with forensics when held in glove slot
 	var/throw_distance = 1
 	attack_speed = CLICK_CD_MELEE
+
+/obj/item/melee/powerfist/f13/equipped(mob/user, slot)
+	. = ..()
+	var/mob/living/carbon/human/H = user
+	if(ishuman(user) && slot == SLOT_GLOVES)
+		ADD_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove")
+	if(ishuman(user) && slot != SLOT_GLOVES && !H.gloves)
+		REMOVE_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove")
 
 /obj/item/melee/powerfist/f13/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/wrench))
@@ -43,7 +52,8 @@
 	if(!T)
 		return FALSE
 	var/totalitemdamage = target.pre_attacked_by(src, user)
-	target.apply_damage(totalitemdamage * fisto_setting, BRUTE, wound_bonus = -25*fisto_setting**2)
+	var/armor = target.run_armor_check(armour_penetration = 0.5)
+	target.apply_damage(totalitemdamage * fisto_setting, BRUTE, blocked = armor, wound_bonus = -25*fisto_setting**2)
 	target.visible_message(span_danger("[user]'s powerfist lets out a loud hiss as [user.p_they()] punch[user.p_es()] [target.name]!"), \
 		span_userdanger("You cry out in pain as [user]'s punch flings you backwards!"))
 	new /obj/effect/temp_visual/kinetic_blast(target.loc)
@@ -62,7 +72,7 @@
 	righthand_file = 'icons/fallout/onmob/weapons/melee1h_righthand.dmi'
 	icon_state = "goliath"
 	item_state = "goliath"
-	force = 25
+	force = 35
 	throw_distance = 3
 
 
@@ -85,6 +95,13 @@
 	fire_delay = 0
 	var/transfer_prints = TRUE //prevents runtimes with forensics when held in glove slot
 
+/obj/item/gun/ballistic/revolver/ballisticfist/equipped(mob/user, slot)
+	. = ..()
+	var/mob/living/carbon/human/H = user
+	if(ishuman(user) && slot == SLOT_GLOVES)
+		ADD_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove")
+	if(ishuman(user) && slot != SLOT_GLOVES && !H.gloves)
+		REMOVE_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove")
 
 // Mole Miner
 /obj/item/melee/powerfist/f13/moleminer
@@ -95,7 +112,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	flags_1 = CONDUCT_1
-	force = 15
+	force = 28
 	throwforce = 10
 	throw_range = 7
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")

@@ -694,6 +694,7 @@
 	name = "marksman carbine blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/marksmancarbine)
+	design_print = "marksman"
 
 /obj/item/book/granter/crafting_recipe/blueprint/combatrifle
 	name = "combat rifle blueprint"
@@ -711,6 +712,7 @@
 	name = "service rifle blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/servicerifle)
+	design_print = "servicerifle"
 
 /obj/item/book/granter/crafting_recipe/blueprint/aep7
 	name = "aep7 blueprint"
@@ -722,11 +724,13 @@
 	name = "lever action shotgun blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/lever_action)
+	design_print = "leveraction"
 
 /obj/item/book/granter/crafting_recipe/blueprint/trailcarbine
 	name = "trail carbine blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/trail_carbine)
+	design_print = "trailcarbine"
 
 /obj/item/book/granter/crafting_recipe/blueprint/thatgun
 	name = ".308 pistol blueprint"
@@ -744,6 +748,7 @@
 	name = "mini uzi blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/uzi)
+	design_print = "miniuzi"
 
 /obj/item/book/granter/crafting_recipe/blueprint/smg10mm
 	name = "10mm smg blueprint"
@@ -755,26 +760,31 @@
 	name = "m3a1 grease gun blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/grease_gun)
+	design_print = "m3a1"
 
 /obj/item/book/granter/crafting_recipe/blueprint/brushgun
 	name = "brush gun blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/brush)
+	design_print = "bushgun"
 
 /obj/item/book/granter/crafting_recipe/blueprint/r91
 	name = "r91 assault rifle blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/r91)
+	design_print = "r91"
 
 /obj/item/book/granter/crafting_recipe/blueprint/riotshotgun
 	name = "riot shotgun blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/riotshotgun)
+	design_print = "riotshotgun"
 
 /obj/item/book/granter/crafting_recipe/blueprint/sniper
 	name = "sniper rifle blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/sniper)
+	design_print = "sniper"
 
 /obj/item/book/granter/crafting_recipe/blueprint/deagle
 	name = "desert eagle blueprint"
@@ -825,11 +835,13 @@
 	name = "bozar blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/bozar)
+	design_print = "bozar"
 
 /obj/item/book/granter/crafting_recipe/blueprint/m1garand
 	name = "battle rifle blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/m1garand)
+	design_print = "m1garand"
 
 /obj/item/book/granter/crafting_recipe/blueprint/infiltrator
 	name = "infiltrator blueprint"
@@ -846,11 +858,13 @@
 	name = "m1 carbine blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/m1carbine)
+	design_print = "m1carbine"
 
 /obj/item/book/granter/crafting_recipe/blueprint/pps
 	name = "ppsh-41 blueprint"
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/pps)
+	design_print = "ppsh"
 
 /obj/item/book/granter/crafting_recipe/blueprint/trapper
 	name = "guide to minelaying"

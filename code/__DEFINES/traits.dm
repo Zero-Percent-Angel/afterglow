@@ -258,6 +258,7 @@
 #define TRAIT_HEADPAT_SLUT "headpat_sluuuuut"
 #define TRAIT_HYDRA_HEADS "hydra_heads"
 #define TRAIT_SHELTERED "sheltered"
+#define TRAIT_JET_JUNKY "jet_junky"
 #define TRAIT_PIEDPIPER "rat_lord"
 
 // mobility flag traits

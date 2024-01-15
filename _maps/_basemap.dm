@@ -12,6 +12,9 @@
 		#include "map_files/Tipton/Tipton-Underground-1.dmm"
 		#include "map_files/Tipton/Tipton-Surface-2.dmm"
 		#include "map_files/Tipton/Tipton-Sky-3.dmm"
+		#include "map_files/Vegas Valley/Vegas_Valley_Sky.dmm"
+		#include "map_files/Vegas Valley/Vegas_Valley_Surface.dmm"
+		#include "map_files/Vegas Valley/Vegas_Valley_Underground.dmm"
 		#ifdef TRAVISBUILDING
 			#include "templates.dm"
 		#endif

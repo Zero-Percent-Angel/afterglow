@@ -952,10 +952,10 @@ Raider
 	/datum/outfit/loadout/aviator,
 	/datum/outfit/loadout/trapper,
 	/datum/outfit/loadout/trouper,
-	/datum/outfit/loadout/monk)
+	/datum/outfit/loadout/monk,
 //	/datum/outfit/loadout/ncrcitizen,
 //	/datum/outfit/loadout/legioncivilian,
-//	/datum/outfit/loadout/wastelander_desert_ranger)
+	/datum/outfit/loadout/wastelander_desert_ranger)
 
 /datum/outfit/smutant/wastes
 	uniform = /obj/item/clothing/under/f13/mutie
@@ -1269,18 +1269,19 @@ Raider
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle=2)
 */
-/*
+
 /datum/outfit/loadout/wastelander_desert_ranger
 	name = "Desert Ranger Scout"
 	uniform = /obj/item/clothing/under/f13/desert_ranger_scout
+	suit = /obj/item/clothing/suit/armor/light/duster/herbertranger
 	shoes = /obj/item/clothing/shoes/f13/cowboy
-	head = /obj/item/clothing/head/f13/cowboy
+	head = /obj/item/clothing/head/cowboyhat
 	gloves = /obj/item/clothing/gloves/color/brown
 	l_hand = /obj/item/gun/ballistic/revolver/colt357
 	backpack_contents = list(
 		/obj/item/ammo_box/a357=2,
 		/obj/item/binoculars=1,
-		/obj/item/radio=1)*/
+		/obj/item/radio=1)
 
 /*/datum/job/wasteland/f13enforcer
 	title = "Den Mob Enforcer"
@@ -1835,8 +1836,8 @@ datum/job/wasteland/f13dendoctor
 	flag = F13TRIBAL
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_TRIBE
-	total_positions = -1
-	spawn_positions = -1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are a member of the of a tribe who has wandered to this area, but does not belong to the Sulphur Bottom tribe.  From where you came is up to you, why you are here is your own, and it is up to you to survive on your own and attempt to thrive."
 	supervisors = "the Ways of your own tribe."
 

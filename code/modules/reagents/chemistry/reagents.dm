@@ -40,6 +40,8 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	var/overrides_metab = 0
 	var/overdose_threshold = 0
 	var/addiction_threshold = 0
+	//Percent chance per unit
+	var/addiction_chance = 0
 	var/addiction_stage = 0
 	var/addiction_stage1_end = 10
 	var/addiction_stage2_end = 20
@@ -133,6 +135,10 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 		return
 	var/mob/living/carbon/M = L
 	var/turf/T = get_turf(M)
+	if (prob((addiction_chance * volume)))
+		var/datum/reagent/new_reagent = new type()
+		on_addiction_start(M)
+		M.reagents.addiction_list.Add(new_reagent)
 	log_reagent("MOB ADD: on_mob_add(): [key_name(M)] at [AREACOORD(T)] - [volume] of [type] with [purity] purity")
 	if (purity == 1)
 		return

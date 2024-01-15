@@ -508,10 +508,11 @@
 
 	if(humanc)	//These procs all expect humans
 		GLOB.data_core.manifest_inject(humanc, humanc.client, humanc.client.prefs)
-		if(SSshuttle.arrivals)
-			SSshuttle.arrivals.QueueAnnounce(humanc, rank)
-		else
-			AnnounceArrival(humanc, rank)
+		if(job && job.announce_join)
+			if(SSshuttle.arrivals)
+				SSshuttle.arrivals.QueueAnnounce(humanc, rank)
+			else
+				AnnounceArrival(humanc, rank)
 		AddEmploymentContract(humanc)
 		if(GLOB.highlander)
 			to_chat(humanc, "<span class='userdanger'><i>THERE CAN BE ONLY ONE!!!</i></span>")
@@ -591,7 +592,7 @@
 			dat += "</td><td valign='top'>"
 	dat += "</td></tr></table></center>"
 	dat += "</div></div>"
-	var/datum/browser/popup = new(src, "latechoices", "Choose Profession", 680, 580)
+	var/datum/browser/popup = new(src, "latechoices", "Choose Profession", 880, 580)
 	popup.add_stylesheet("playeroptions", 'html/browser/playeroptions.css')
 	popup.set_content(jointext(dat, ""))
 	popup.open(FALSE) // 0 is passed to open so that it doesn't use the onclose() proc

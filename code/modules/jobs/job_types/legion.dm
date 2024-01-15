@@ -48,7 +48,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/job/CaesarsLegion/Legionnaire
 	belt = /obj/item/storage/belt/army/assault/legion
-	ears = /obj/item/radio/headset/headset_legion
+	//ears = /obj/item/radio/headset/headset_legion
 	backpack = /obj/item/storage/backpack/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	uniform = /obj/item/clothing/under/f13/legskirt
@@ -915,16 +915,16 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/job/CaesarsLegion/Legionnaire/f13recleg
 	title = "Recruit Legionary"
 	flag = F13RECRUITLEG
-	total_positions = 4
-	spawn_positions = 4
-	description = "You have recently come of age or been inducted into Caesar's Legion. You have absolutely no training, and are expected to follow every whim of the Decanii and your Centurion. Respect the soldiers of higher rank."
+	total_positions = -1
+	spawn_positions = -1
+	description = "You have recently come of age or been inducted into Caesar's Legion. You are expected to follow every whim of the Decanii and your Centurion. Respect the soldiers of higher rank."
 	supervisors = "the Decani and Centurion."
 	display_order = JOB_DISPLAY_ORDER_RECRUITLEG
 	outfit = /datum/outfit/job/CaesarsLegion/Legionnaire/f13recleg
 
 	loadout_options = list(	//ALL: Machete
-		/datum/outfit/loadout/recruittribal,	// Fire Axe, Bola, Trekking
-		/datum/outfit/loadout/recruitlegion,	// .357 Revolver, 2 x prefilled Molotovs
+		//datum/outfit/loadout/recruittribal,	// Fire Axe, Bola, Trekking
+		//datum/outfit/loadout/recruitlegion,	// .357 Revolver, 2 x prefilled Molotovs
 		)
 
 	matchmaking_allowed = list(
@@ -986,8 +986,8 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/job/CaesarsLegion/Legionnaire/f13immune
 	title = "Legion Off-Duty"
 	flag = F13IMMUNE
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 0
+	spawn_positions = 0
 	description = "An Immune is a legionnaire temporarily assigned to keeping the camp in order, according to their tasking on any given week."
 	supervisors = "the Centurion."
 	display_order = JOB_DISPLAY_ORDER_IMMUNE
@@ -1110,7 +1110,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	head = /obj/item/clothing/head/f13/auxilia
 	uniform = /obj/item/clothing/under/f13/legauxiliaf
 	shoes = /obj/item/clothing/shoes/roman
-	ears = /obj/item/radio/headset/headset_legion
+	//ears = /obj/item/radio/headset/headset_legion
 	gloves = null
 	belt = null
 	r_pocket = /obj/item/flashlight/lantern
@@ -1180,10 +1180,10 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 // Both get Mars teachings to help out when normal work is done.
 
 /datum/job/CaesarsLegion/slave
-	title = "Camp Follower"
+	title = "Legion Slave"
 	flag = F13LEGIONSLAVE
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = -1
+	spawn_positions = -1
 	description = "Be obedient, respectful, stay inside the camp. Work the farm, mine, make food, clean and help injured men."
 	supervisors = "Officers first, then Auxilia, then warriors."
 	display_order = JOB_DISPLAY_ORDER_LEGIONSLAVE
@@ -1212,8 +1212,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 /datum/outfit/job/CaesarsLegion/slave
 	name = "Camp Follower"
 	jobtype = /datum/outfit/job/CaesarsLegion/slave
-	id = /obj/item/card/id/dogtag/legfollower
-	uniform = /obj/item/clothing/under/f13/campfollowermale
+	id = /obj/item/card/id/legionbrand
+	uniform = /obj/item/clothing/under/f13/legslave
+	neck = /obj/item/electropack/shockcollar
 	shoes =	null
 	l_pocket = /obj/item/radio
 
@@ -1249,6 +1250,30 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 			var/obj/item/card/id/dogtag/L = H.wear_id
 			L.registered_name = H.name
 			L.update_label()
+
+/datum/job/CaesarsLegion/capture
+	title = "Legion Capture"
+	flag = F13LEGIONSLAVE
+	total_positions = 0
+	spawn_positions = 0
+	description = "You're a recent Legion capture you probably still hold onto hope you can escape."
+	supervisors = "Officers first, then Auxilia, then warriors."
+	display_order = JOB_DISPLAY_ORDER_LEGIONSLAVE
+	exp_requirements = 0
+	outfit = /datum/outfit/job/CaesarsLegion/slave
+
+	loadout_options = list(
+		/datum/outfit/loadout/slaveservant
+		)
+
+	matchmaking_allowed = list(
+		/datum/matchmaking_pref/friend = list(
+			/datum/job/CaesarsLegion/slave,
+		),
+		/datum/matchmaking_pref/rival = list(
+			/datum/job/CaesarsLegion/slave,
+		),
+	)
 
 /*
 Post Scriptum
@@ -1331,8 +1356,8 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 /datum/job/CaesarsLegion/Legionnaire/f13slavemaster
 	title = "Legion Slavemaster"
 	flag = F13SLAVEMASTER
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	description = "You are the feared and respected disciplinary corps of the Legion. Acting as both master of the Slaves and de-facto executioner of the Centurion's will within his ranks, you are a faceless and undoubtedly cruel torturer... but be careful to not let your hubris and malice lead to a strikeback from those you thought broken."
 	supervisors = "the Decani and Centurion"
 	exp_requirements = 150

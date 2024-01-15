@@ -24,6 +24,8 @@
 	stamina = BULLET_STAMINA_RIFLE_223
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_223_MATCH
+	armour_penetration = 0.20
+	damage_threshold_penetration = 5
 
 	wound_bonus = BULLET_WOUND_RIFLE_223_MATCH
 	bare_wound_bonus = BULLET_WOUND_RIFLE_223_NAKED_MULT
@@ -189,6 +191,8 @@
 	stamina = BULLET_STAMINA_RIFLE_473
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_473
+	armour_penetration = 0.20
+	damage_threshold_penetration = 5
 
 	wound_bonus = BULLET_WOUND_RIFLE_473
 	bare_wound_bonus = BULLET_WOUND_RIFLE_473_NAKED_MULT
@@ -274,6 +278,8 @@
 	stamina = BULLET_STAMINA_RIFLE_473
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_473
+	armour_penetration = 0
+	damage_threshold_penetration = 0
 
 	wound_bonus = BULLET_WOUND_RIFLE_473
 	bare_wound_bonus = BULLET_WOUND_RIFLE_473_NAKED_MULT
@@ -385,6 +391,8 @@
 	stamina = BULLET_STAMINA_RIFLE_5MM
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_5MM
+	armour_penetration = 0.20
+	damage_threshold_penetration = 5
 
 	wound_bonus = BULLET_WOUND_RIFLE_5MM
 	bare_wound_bonus = BULLET_WOUND_RIFLE_5MM_NAKED_MULT
@@ -526,6 +534,8 @@
 	stamina = BULLET_STAMINA_RIFLE_308
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_308_MATCH
+	armour_penetration = 0.15
+	damage_threshold_penetration = 6
 
 	wound_bonus = BULLET_WOUND_RIFLE_308_MATCH
 	bare_wound_bonus = BULLET_WOUND_RIFLE_308_NAKED_MULT
@@ -671,7 +681,8 @@
 	stamina = BULLET_STAMINA_RIFLE_50MG
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG_MATCH
-	armour_penetration = 0.45
+	armour_penetration = 0.55
+	damage_threshold_penetration = 9
 
 	wound_bonus = BULLET_WOUND_RIFLE_50MG_MATCH
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT
@@ -693,7 +704,7 @@
 	stamina = BULLET_STAMINA_RIFLE_50MG
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG
-	armour_penetration = 0.55
+	armour_penetration = 0.45
 
 	wound_bonus = BULLET_WOUND_RIFLE_50MG
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT
@@ -715,6 +726,7 @@
 	stamina = BULLET_STAMINA_RIFLE_50MG
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG_HANDLOAD
+	armour_penetration = 0.35
 
 	wound_bonus = BULLET_WOUND_RIFLE_50MG_HANDLOAD
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT
@@ -736,6 +748,7 @@
 	stamina = BULLET_STAMINA_RIFLE_50MG * BULLET_STAMINA_FIRE
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG
+	armour_penetration = 0.35
 
 	wound_bonus = BULLET_WOUND_RIFLE_50MG * BULLET_WOUND_FIRE
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT * BULLET_NAKED_WOUND_FIRE
@@ -768,6 +781,7 @@
 	stamina = BULLET_STAMINA_RIFLE_50MG * BULLET_STAMINA_EXPLOSIVE
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG
+	armour_penetration = 0.35
 
 	wound_bonus = BULLET_WOUND_RIFLE_50MG * BULLET_WOUND_EXPLOSIVE
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT * BULLET_NAKED_WOUND_EXPLOSIVE
@@ -793,6 +807,7 @@
 	stamina = RUBBERY_STAMINA_RIFLE_50MG
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = RUBBERY_RECOIL_RIFLE_50MG
+	armour_penetration = 0.35
 
 	wound_bonus = RUBBERY_WOUND_RIFLE_50MG
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT
@@ -848,6 +863,7 @@
 	stamina = BULLET_STAMINA_RIFLE_50MG * BULLET_STAMINA_POISON
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG
+	armour_penetration = 0.35
 
 	wound_bonus = BULLET_WOUND_RIFLE_50MG * BULLET_WOUND_POISON
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT * BULLET_NAKED_WOUND_POISON
@@ -900,6 +916,8 @@
 	stamina = BULLET_STAMINA_RIFLE_4570
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_4570
+	armour_penetration = 0.35
+	damage_threshold_penetration = 7
 
 	wound_bonus = BULLET_WOUND_RIFLE_4570
 	bare_wound_bonus = BULLET_WOUND_RIFLE_4570_NAKED_MULT
@@ -1084,6 +1102,7 @@
 	movement_type = FLYING | UNSTOPPABLE
 	hitscan = TRUE
 	armour_penetration = 0.4
+	damage_threshold_penetration = 9
 	tracer_type = /obj/effect/projectile/tracer/laser/blue
 	muzzle_type = /obj/effect/projectile/muzzle/laser/blue
 	impact_type = /obj/effect/projectile/impact/laser/blue

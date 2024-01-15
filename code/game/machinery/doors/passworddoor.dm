@@ -16,6 +16,11 @@
 	var/terminal_has_pass = FALSE
 	var/door_id = ""
 	var/is_busy = FALSE
+	var/difficulty = DIFFICULTY_CHALLENGE
+
+/obj/machinery/door/password/enclave
+	terminal_has_pass = TRUE
+	difficulty = 55
 
 /obj/machinery/door/password/voice
 	voice_activated = TRUE
@@ -68,6 +73,8 @@
 
 /obj/machinery/door/password/proc/ask_for_pass(mob/user)
 	var/hack = input(user, "Do you wish to hack or guess the password?", "Hack") in list("Hack", "Guess")
+	if (get_dist(user, src) > 1)
+		return
 	if (hack == "Guess")
 		var/guess = stripped_input(user,"Enter the password:", "Password", "")
 		if(guess == password)
@@ -76,7 +83,7 @@
 	else
 		if (!is_busy)
 			is_busy = TRUE
-			if(!failures.Find(WEAKREF(user)) && do_after(user, 10 SECONDS, target = src) && user.skill_roll(SKILL_SCIENCE, DIFFICULTY_CHALLENGE))
+			if(!failures.Find(WEAKREF(user)) && do_after(user, 10 SECONDS, target = src) && user.skill_roll(SKILL_SCIENCE, difficulty))
 				user.visible_message(span_good("[user] hacks the door!"), span_good("Got it!"))
 				is_busy = FALSE
 				return TRUE

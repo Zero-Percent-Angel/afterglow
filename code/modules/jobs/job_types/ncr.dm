@@ -146,8 +146,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	title = "NCR Captain"
 	flag = F13CAPTAIN
 	head_announce = list("Security")
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are the commanding officer of your company and direct superior to the Veteran Ranger and Lieutenant. Coordinating with your staff, you must ensure that the objectives of High Command are completed to the letter. Working closely with your subordinates on logistics, mission planning and special operations with the Rangers, you are here to establish a strong foothold for the NCR within the region."
 	supervisors = "Colonel"
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_CHANGE_IDS, ACCESS_NCRREP, ACCESS_NCR_COMMAND)
@@ -310,8 +310,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13sergeant
 	title = "NCR Sergeant"
 	flag = F13SERGEANT
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	description = "You are the direct superior to the enlisted troops, working with the chain of command you echo the orders of your superiors and ensure that the enlisted follow them to the letter. Additionally, you are responsible for the wellbeing of the troops and their ongoing training with the NCR."
 	supervisors = "Sergeant First Class and Above"
 	selection_color = "#fff5cc"
@@ -482,8 +482,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	title = "NCR Representative"
 	flag = F13REP
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCRREP)
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are an influential representative for the NCR and experienced bureaucrat. You are here to further the objective and ensure the interests of the NCR, your company or own enterprise are met through thick and thin, and have been supplied with ample amounts of money to do so."
 	supervisors = "The Captain and the NCR"
 	display_order = JOB_DISPLAY_ORDER_REPRESENTATIVE
@@ -523,8 +523,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13vetranger
 	title = "NCR Veteran Ranger"
 	flag = F13VETRANGER
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You answer directly to the Captain, working either independently or in a team to complete your mission objectives however required, operating either alone, in a squad or with the NCR Army. Your primary mission is to improve general opinion of the Republic and to neutralize slavers and raiders operating in the area."
 	supervisors = "NCRA Captain, High Command"
 	selection_color = "#ffeeaa"
@@ -625,8 +625,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13ranger
 	title = "NCR Ranger"
 	flag = F13RANGER
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 0
+	spawn_positions = 0
 	description = "As an NCR Ranger, you are the premier special forces unit of the NCR. You are the forward observations and support the Army in it's campaigns, as well as continuing the tradition of stopping slavery in it's tracks."
 	supervisors = "Veteran Ranger"
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY)
@@ -721,8 +721,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13civilianranger
 	title = "NCR Civilian Ranger"
 	flag = F13CIVILIANRANGER
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	description = "As an NCR Civilian Ranger, you are a low-ranking member of the premier special forces of the NCR. You are to aid the Rangers and Veteran Ranger in scouting operations and acting as support for Ranger activites."
 	supervisors = "Rangers and the Veteran Ranger"
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY)
@@ -813,8 +813,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13heavytrooper
 	title = "NCR Heavy Trooper"
 	flag = F13HEAVYTROOPER
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are the most elite of the enlisted, sergeant in rank but forgoing regular command roles to lead in battle only. You are expected to be on the frontlines of every engagement, and to provide firing support for the rank and file. Your power armor lacks the protection the full working sets have, but you have trained with it and can use it in battle well. General Oliver praises you and your other Heavy Troopers, prove to him you're no exception to the rule."
 	supervisors = "Lieutenant and Above"
 	access = list(ACCESS_NCR, ACCESS_NCR_ARMORY, ACCESS_NCR_COMMAND)
@@ -1213,8 +1213,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13corporal
 	title = "NCR Corporal"
 	flag = F13CORPORAL
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 2
+	spawn_positions = 2
 	description = "You are a junior NCO. You are expected to lead from the frontlines with your sergeant. Keep the troopers in order and keep your squad coherent."
 	supervisors = "Sergeant and above"
 	selection_color = "#fff5cc"
@@ -1325,8 +1325,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13trooper
 	title = "NCR Trooper"
 	flag = F13TROOPER
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 3
+	spawn_positions = 3
 	description = "You are a professional soldier of the NCR Army. Obey your the NCOs and officers, no matter what you are expected to follow military discipline."
 	supervisors = "Corporals and Above"
 	selection_color = "#fff5cc"
@@ -1448,7 +1448,6 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	name = "NCR Recruit"
 	jobtype	= /datum/job/ncr/f13conscript
 	id = /obj/item/card/id/dogtag/ncrtrooper
-	accessory = /obj/item/clothing/accessory/ncr/REC
 	head = /obj/item/clothing/head/helmet/f13/ncr
 	uniform = /obj/item/clothing/under/f13/ncr/conscript
 	suit = /obj/item/clothing/suit/armor/medium/vest/ncr
@@ -1459,10 +1458,11 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 
 /datum/outfit/loadout/conscripthunting
 	name = "Assault"
-	suit_store = /obj/item/gun/ballistic/revolver/caravan_shotgun
+	suit_store = /obj/item/gun/ballistic/automatic/service
 	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/ammo_box/magazine/m556/rifle = 2,
 		/obj/item/storage/box/ration/menu_two = 1,
+		/obj/item/clothing/accessory/ncr/REC2 = 1,
 		)
 
 /datum/outfit/loadout/conscriptvarmint
@@ -1473,6 +1473,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/shovel/trench = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 2,
 		/obj/item/storage/box/ration/menu_eight = 1,
+		/obj/item/clothing/accessory/ncr/REC = 1,
 		)
 
 
@@ -1626,8 +1627,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13rearechelon
 	title = "NCR Rear Echelon"
 	flag = F13REARECHELON
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are the support element sent to assist the Camp Miller garrison. You are essential specialized support staff to help sustain the base via supply or specialized skills. You are not allowed to leave base unless given an explicit order by the CO or the current acting CO."
 	supervisors = "Logistics/Medical officer first, regular chain of command after that."
 	selection_color = "#fff5cc"
@@ -1693,8 +1694,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/job/ncr/f13ncroffduty
 	title = "NCR Off-Duty"
 	flag = F13NCROFFDUTY
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 0
+	spawn_positions = 0
 	description = "You are a member of the NCR spending your off-duty time on the local base. Be it your day off, requested off-duty time, or otherwise relived from active duty. You are not to interfere with the duty of active-servicemen."
 	supervisors = "On-Duty members of the NCR."
 	selection_color = "#fff5cc"

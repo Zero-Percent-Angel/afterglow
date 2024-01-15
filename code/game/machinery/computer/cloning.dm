@@ -78,7 +78,7 @@
 		if(pod.occupant)
 			continue	//how though?
 
-		if(pod.growclone(R.fields["ckey"], R.fields["name"], R.fields["UI"], R.fields["SE"], R.fields["mind"], R.fields["blood_type"], R.fields["mrace"], R.fields["features"], R.fields["factions"], R.fields["quirks"], R.fields["bank_account"], R.fields["traumas"]))
+		if(pod.growclone(R.fields["ckey"], R.fields["name"], R.fields["UI"], R.fields["SE"], R.fields["mind"], R.fields["blood_type"], R.fields["mrace"], R.fields["features"], R.fields["factions"], R.fields["quirks"], R.fields["bank_account"], R.fields["traumas"], R.fields["special"], R.fields["skill"]))
 			temp = "[R.fields["name"]] => <font class='good'>Cloning cycle in progress...</font>"
 			records -= R
 
@@ -156,7 +156,9 @@
 	. = ..()
 
 	updatemodules(TRUE)
-
+	if (!user.skill_check(SKILL_SCIENCE, EXPERT_CHECK, TRUE))
+		to_chat(user, span_bad("You lack the skill required to use that."))
+		return
 	var/dat = ""
 	dat += "<a href='byond://?src=[REF(src)];refresh=1'>Refresh</a>"
 
@@ -424,7 +426,7 @@
 			else if(pod.occupant)
 				temp = "<font class='bad'>Cloning cycle already in progress.</font>"
 				playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, 0)
-			else if(pod.growclone(C.fields["ckey"], C.fields["name"], C.fields["UI"], C.fields["SE"], C.fields["mind"], C.fields["blood_type"], C.fields["mrace"], C.fields["features"], C.fields["factions"], C.fields["quirks"], C.fields["bank_account"], C.fields["traumas"]))
+			else if(pod.growclone(C.fields["ckey"], C.fields["name"], C.fields["UI"], C.fields["SE"], C.fields["mind"], C.fields["blood_type"], C.fields["mrace"], C.fields["features"], C.fields["factions"], C.fields["quirks"], C.fields["bank_account"], C.fields["traumas"], C.fields["special"], C.fields["skill"]))
 				temp = "[C.fields["name"]] => <font class='good'>Cloning cycle in progress...</font>"
 				playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
 				records.Remove(C)
@@ -444,6 +446,7 @@
 		menu = text2num(href_list["menu"])
 		playsound(src, "terminal_type", 25, 0)
 		. = TRUE
+	src.updateUsrDialog()
 
 /obj/machinery/computer/cloning/proc/finish_scan(mob/living/L, prev_locked)
 	if(!scanner || !L)
@@ -494,6 +497,8 @@
 
 	R.fields["ckey"] = mob_occupant.ckey
 	R.fields["name"] = mob_occupant.real_name
+	R.fields["special"] = create_special_list_from_occupant(occupant)
+	R.fields["skill"] = create_skill_list_from_occupant(occupant)
 	R.fields["id"] = copytext_char(md5(mob_occupant.real_name), 2, 6)
 	R.fields["UE"] = dna.unique_enzymes
 	R.fields["UI"] = dna.uni_identity
@@ -514,7 +519,7 @@
 
 	R.fields["bank_account"] = has_bank_account
 	if (!isnull(mob_occupant.mind)) //Save that mind so traitors can continue traitoring after cloning.
-		R.fields["mind"] = "[REF(mob_occupant.mind)]"
+		R.fields["mind"] = REF(mob_occupant.mind)
 
 	//Add an implant if needed
 	var/obj/item/implant/health/imp
@@ -531,6 +536,29 @@
 	board.records = records
 	scantemp = "Subject successfully scanned."
 	playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
+
+/obj/machinery/computer/cloning/proc/create_special_list_from_occupant(occupant)
+	var/mob/living/mob_occupant = get_mob_or_brainmob(occupant)
+	return list(mob_occupant.special_s, mob_occupant.special_p, mob_occupant.special_e, mob_occupant.special_c, mob_occupant.special_i,
+				mob_occupant.special_a, mob_occupant.special_l)
+
+/obj/machinery/computer/cloning/proc/create_skill_list_from_occupant(occupant)
+	var/mob/living/mob_occupant = get_mob_or_brainmob(occupant)
+	return list(SKILL_BARTER = mob_occupant.skill_barter,
+									SKILL_DOCTOR = mob_occupant.skill_doctor,
+									SKILL_UNARMED = mob_occupant.skill_unarmed,
+									SKILL_GUNS = mob_occupant.skill_guns,
+									SKILL_ENERGY = mob_occupant.skill_energy,
+									SKILL_THROWING = mob_occupant.skill_throwing,
+									SKILL_FIRST_AID = mob_occupant.skill_first_aid,
+									SKILL_LOCKPICK = mob_occupant.skill_lockpick,
+									SKILL_SNEAK = mob_occupant.skill_sneak,
+									SKILL_TRAPS = mob_occupant.skill_traps,
+									SKILL_SCIENCE = mob_occupant.skill_science,
+									SKILL_REPAIR = mob_occupant.skill_repair,
+									SKILL_MELEE = mob_occupant.skill_melee,
+									SKILL_OUTDOORSMAN = mob_occupant.skill_outdoorsman,
+									SKILL_SPEECH = mob_occupant.skill_speech)
 
 //Used by the experimental cloning computer.
 /obj/machinery/computer/cloning/proc/clone_occupant(occupant)
@@ -565,7 +593,7 @@
 		temp = "<font class='bad'>Cloning cycle already in progress.</font>"
 		playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, 0)
 	else
-		pod.growclone(null, mob_occupant.real_name, dna.uni_identity, dna.mutation_index, null, dna.blood_type, clone_species, dna.features, mob_occupant.faction)
+		pod.growclone(null, mob_occupant.real_name, dna.uni_identity, dna.mutation_index, null, dna.blood_type, clone_species, dna.features, mob_occupant.faction, special = create_special_list_from_occupant(occupant), skills = create_skill_list_from_occupant(occupant))
 		temp = "[mob_occupant.real_name] => <font class='good'>Cloning data sent to pod.</font>"
 		playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
 

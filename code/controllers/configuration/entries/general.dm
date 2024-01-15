@@ -218,7 +218,7 @@
 	config_entry_value = ""
 
 /datum/config_entry/string/discordurl
-	config_entry_value = "https://discord.gg/KGC5cxHv"
+	config_entry_value = "https://discord.gg/X6rCWR3buu"
 
 /datum/config_entry/string/wikiurltg
 	config_entry_value = "https://tgstation13.org/wiki/Main_Page"
@@ -230,7 +230,7 @@
 	config_entry_value = null
 
 /datum/config_entry/string/githuburl
-	config_entry_value = "https://github.com/Afterglow-Ss13/afterglow-ss13"
+	config_entry_value = "https://github.com/Zero-Percent-Angel/afterglow"
 
 /datum/config_entry/string/roundstatsurl
 

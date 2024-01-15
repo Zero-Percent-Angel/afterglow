@@ -38,6 +38,7 @@
 	force = WEAPON_FORCE_TOOL_LARGE
 	wielded_mult = WEAPON_SLASH_TWOHAND_MULT
 	w_class = WEIGHT_CLASS_BULKY
+	attack_speed = CLICK_CD_MELEE + 4
 	var/icon_prefix = null
 
 /obj/item/melee/smith/twohand/Initialize()
@@ -47,9 +48,11 @@
 
 /obj/item/melee/smith/twohand/proc/on_wield(obj/item/source, mob/user)
 	wielded = TRUE
+	attack_speed = CLICK_CD_MELEE + 2
 
 /obj/item/melee/smith/twohand/proc/on_unwield(obj/item/source, mob/user)
 	wielded = FALSE
+	attack_speed = CLICK_CD_MELEE + 4
 
 /obj/item/melee/smith/twohand/update_icon_state()
 	icon_state = "[icon_prefix]"
@@ -404,7 +407,7 @@
 
 
 // Good throwing, thats about it (27, 40)
-/obj/item/melee/smith/javelin 
+/obj/item/melee/smith/javelin
 	name = "rebar throwing spike"
 	icon_state = "javelin_smith"
 	overlay_state = "shaft_javelin"

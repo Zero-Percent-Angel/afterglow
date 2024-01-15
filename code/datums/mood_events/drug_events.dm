@@ -19,8 +19,13 @@
 
 /datum/mood_event/jet_euphoria
 	description = span_nicegreen("I feel like i'm flying...")
-	mood_change = 5
+	mood_change = 40
 	timeout = 15 MINUTES
+
+/datum/mood_event/jet_come_down
+	description = span_redtext("Another hit wouldn't hurt, would it?")
+	mood_change = -15
+	timeout = 5 MINUTES
 
 /datum/mood_event/overdose
 	mood_change = -8
@@ -42,13 +47,13 @@
 	description = span_warning("I really need [drug_name]")
 
 /datum/mood_event/withdrawal_severe
-	mood_change = -8
+	mood_change = -10
 
 /datum/mood_event/withdrawal_severe/add_effects(drug_name)
 	description = span_boldwarning("Oh god I need some [drug_name]")
 
 /datum/mood_event/withdrawal_critical
-	mood_change = -10
+	mood_change = -20
 
 /datum/mood_event/withdrawal_critical/add_effects(drug_name)
 	description = span_boldwarning("[drug_name]! [drug_name]! [drug_name]!")

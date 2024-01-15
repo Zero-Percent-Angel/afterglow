@@ -172,7 +172,7 @@
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[enclave[name]]</td></tr>"
 			even = !even
 	if(length(oasis))
-		dat += "<tr><th colspan=3>Nash</th></tr>"
+		dat += "<tr><th colspan=3>Family</th></tr>"
 		for(var/name in oasis)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[oasis[name]]</td></tr>"
 			even = !even
@@ -187,7 +187,7 @@
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[ncr[name]]</td></tr>"
 			even = !even
 	if(length(flw))
-		dat += "<tr><th colspan=3>Nash Clinic</th></tr>"
+		dat += "<tr><th colspan=3>Followers Clinic</th></tr>"
 		for(var/name in flw)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[flw[name]]</td></tr>"
 			even = !even

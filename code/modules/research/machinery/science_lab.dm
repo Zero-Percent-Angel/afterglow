@@ -5,17 +5,23 @@
 	icon_state = "HPLCempty"
 	circuit = /obj/item/circuitboard/machine/science_lab
 	var/engaged_in_science = FALSE
-	var/list/blueprint_types = list("small energy", "big energy", "small guns", "big guns")
-	var/list/point_selections = list(2000, 5000, 10000, 50000)
+	var/list/blueprint_types = list("small guns", "big guns")
+	var/list/point_selections = list(2000, 6000, 12000, 24000, 48000)
 	var/list/obj/small_guns = list(/obj/item/book/granter/crafting_recipe/blueprint/thatgun, /obj/item/book/granter/crafting_recipe/blueprint/smg10mm,
+								/obj/item/book/granter/crafting_recipe/blueprint/uzi,/obj/item/book/granter/crafting_recipe/blueprint/greasegun,
+								/obj/item/book/granter/crafting_recipe/blueprint/pps,
 								/obj/item/book/granter/crafting_recipe/blueprint/deagle, /obj/item/book/granter/crafting_recipe/blueprint/n99)
 	var/list/obj/big_guns = list(/obj/item/book/granter/crafting_recipe/blueprint/combatrifle, /obj/item/book/granter/crafting_recipe/blueprint/r84,
-								/obj/item/book/granter/crafting_recipe/blueprint/lsw, /obj/item/book/granter/crafting_recipe/blueprint/am_rifle)
+								/obj/item/book/granter/crafting_recipe/blueprint/brushgun, /obj/item/book/granter/crafting_recipe/blueprint/r91,
+								/obj/item/book/granter/crafting_recipe/blueprint/riotshotgun, /obj/item/book/granter/crafting_recipe/blueprint/m1garand,
+								/obj/item/book/granter/crafting_recipe/blueprint/marksman, /obj/item/book/granter/crafting_recipe/blueprint/m1carbine,
+								/obj/item/book/granter/crafting_recipe/blueprint/service, /obj/item/book/granter/crafting_recipe/blueprint/leveraction,
+								/obj/item/book/granter/crafting_recipe/blueprint/lsw, /obj/item/book/granter/crafting_recipe/blueprint/sniper)
 	var/list/obj/small_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/aep7, /obj/item/book/granter/crafting_recipe/blueprint/plasmapistol,
 									/obj/item/book/granter/crafting_recipe/blueprint/plasmapistol, /obj/item/book/granter/crafting_recipe/blueprint/tesla)
-	var/list/obj/big_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/tribeam,
+	var/list/obj/big_energy = list(/obj/item/book/granter/crafting_recipe/blueprint/tribeam, /obj/item/book/granter/crafting_recipe/blueprint/bozar,
 								/obj/item/book/granter/crafting_recipe/blueprint/plasmarifle, /obj/item/book/granter/crafting_recipe/blueprint/aer9,
-								/obj/item/book/granter/crafting_recipe/blueprint/gauss)
+								/obj/item/book/granter/crafting_recipe/blueprint/gauss, /obj/item/book/granter/crafting_recipe/blueprint/am_rifle)
 	var/attempts = 0
 
 /obj/machinery/rnd/science_lab/Initialize()
@@ -76,10 +82,6 @@
 			return
 		say("Blueprint creation begun.")
 		var/choosen_step = input(usr, "What kind of blueprint do you wish to create?", "Blueprint Creation") in blueprint_types
-		if ((choosen_step == "big energy" || choosen_step == "small energy") && !linked_console.stored_research.isNodeResearchedID("adv_weaponry"))
-			say("Advanced weaponry research required.")
-			engaged_in_science = FALSE
-			return
 		var/points_to_contribute =  input(usr, "How many research points do you wish to use as a boost?", "Blueprint Creation") in point_selections
 		if (!linked_console.stored_research.can_afford(list(TECHWEB_POINT_TYPE_GENERIC = points_to_contribute)))
 			say("Not enough points.")
@@ -94,25 +96,31 @@
 				engaged_in_science = FALSE
 				update_overlays()
 				return
-			var/difficulty_selected = 50 - (points_to_contribute/1000) - attempts
-			if (usr.skill_roll(SKILL_SCIENCE, difficulty_selected))
-				if (choosen_step == "small energy")
-					var/obj/i = pick(small_energy)
-					new i(get_turf(src))
-				if (choosen_step == "big energy")
-					var/obj/i = pick(big_energy)
-					new i(get_turf(src))
-				if (choosen_step == "small guns")
-					var/obj/i = pick(small_guns)
-					new i(get_turf(src))
-				if (choosen_step == "big guns")
-					var/obj/i = pick(big_guns)
-					new i(get_turf(src))
+			var/difficulty_selected = 36 - (points_to_contribute/2000) - attempts
+			if (usr.skill_roll_evil(SKILL_SCIENCE, difficulty_selected))
+				if (linked_console.stored_research.isNodeResearchedID("adv_weaponry"))
+					if (choosen_step == "small guns")
+						var/list/combined = small_guns.Copy()
+						combined.Add(small_energy)
+						var/obj/i = pick(combined)
+						new i(get_turf(src))
+					if (choosen_step == "big guns")
+						var/list/combined = big_guns.Copy()
+						combined.Add(big_energy)
+						var/obj/i = pick(combined)
+						new i(get_turf(src))
+				else
+					if (choosen_step == "small guns")
+						var/obj/i = pick(small_guns)
+						new i(get_turf(src))
+					if (choosen_step == "big guns")
+						var/obj/i = pick(big_guns)
+						new i(get_turf(src))
 				say("Blueprint confirmed valid.")
 				to_chat(usr, span_notice("Eureka!"))
 				attempts = 0
 			else
-				attempts += round(usr.skill_value(SKILL_SCIENCE)/20)
+				attempts += round((usr.skill_value(SKILL_SCIENCE)/25) + (points_to_contribute/2000))
 				say("Blueprint invalid design, try input again.")
 				to_chat(usr, span_notice("Almost had it..."))
 			linked_console.stored_research.remove_point_list(list(TECHWEB_POINT_TYPE_GENERIC = points_to_contribute))
@@ -155,11 +163,11 @@
 		if (difficulty == DIFFICULTY_EASY)
 			successful_experiment(1000)
 		if (difficulty == DIFFICULTY_NORMAL)
-			successful_experiment(3000)
+			successful_experiment(4000)
 		if (difficulty == DIFFICULTY_CHALLENGE)
-			successful_experiment(9000)
+			successful_experiment(11000)
 		if (difficulty == DIFFICULTY_EXPERT)
-			successful_experiment(22000)
+			successful_experiment(26000)
 	else
 		//oh no we failed!
 		if (difficulty == DIFFICULTY_EASY)

@@ -51,6 +51,10 @@
 		return 0
 	if(rank in GLOB.vault_positions) //How did they even get in here?.
 		return 0
+	if(rank in GLOB.town_positions)
+		return 0
+	if(rank in GLOB.enclave_positions)
+		return 0
 	return ..()
 
 /datum/species/smutant/before_equip_job(datum/job/J, mob/living/carbon/human/H, visualsOnly = FALSE)

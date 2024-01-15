@@ -62,6 +62,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 	"Chief of Security",
 
 	"Enclave Lieutenant",
+	"Enclave Remnant",
 
 	"Noyan",
 	"Steward",
@@ -114,6 +115,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Enclave Scientist",
 "Enclave Private",
 "Enclave Bunker Duty",
+"Enclave Remnant",
 
 "Chief",
 "Shaman",
@@ -127,9 +129,9 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Khorchin",
 "Kipchak",
 
-"Senior Doctor",
-"Town Doctor",
-"Town Paramedic",
+"Lead Practitioner",
+"Followers Doctor",
+"Followers Guard",
 
 "Cyborg",
 "Vault Coordinator",
@@ -184,6 +186,9 @@ GLOBAL_LIST_INIT(town_positions, list(
 	"Ripley Trade Worker",
 	"Barkeep",
 	"Citizen",
+	"Family Member",
+	"Family Head",
+	"Farm Hand"
 ))
 //Legion
 GLOBAL_LIST_INIT(legion_command_positions, list(
@@ -217,8 +222,8 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Forgemaster",
 	"Legion Off-Duty",
 	"Legion Auxilia",
-	"Camp Follower",
-	//"Legion Slavemaster"
+	"Legion Slave",
+	"Legion Slavemaster"
 ))
 //NCR
 GLOBAL_LIST_INIT(ncr_command_positions, list(
@@ -315,6 +320,7 @@ GLOBAL_LIST_INIT(enclave_positions, list(
 	"Enclave Scientist",
 	"Enclave Private",
 	"Enclave Bunker Duty",
+	"Enclave Remnant"
 ))
 
 GLOBAL_LIST_INIT(security_positions, list(
@@ -338,9 +344,9 @@ GLOBAL_LIST_INIT(tribal_positions, list(
 ))
 //Followers
 GLOBAL_LIST_INIT(followers_positions, list(
-	"Senior Doctor",
-	"Town Doctor",
-	"Town Paramedic",
+	"Lead Practitioner",
+	"Followers Doctor",
+	"Followers Guard",
 	"Nurse",
 	"Town Scientist",
 ))
@@ -351,15 +357,15 @@ GLOBAL_LIST_INIT(outlaw_positions, list(
 // job categories for rendering the late join menu
 GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_NCR = list("jobs" = ncr_positions, "color" = "#ffeeaa"),
-	EXP_TYPE_VAULT = list("jobs" = vault_positions, "color" = "##fdee00"),
-	EXP_TYPE_FOLLOWERS = list("jobs" = followers_positions, "color" = "#ffeeaa"),
+	EXP_TYPE_VAULT = list("jobs" = vault_positions, "color" = "#3c8aff"),
+	EXP_TYPE_FOLLOWERS = list("jobs" = followers_positions, "color" = "#ffffff"),
 	EXP_TYPE_BROTHERHOOD = list("jobs" = brotherhood_positions, "color" = "#95a5a6"),
 	EXP_TYPE_LEGION = list("jobs" = legion_positions, "color" = "#f81717"),
-	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#5a5a5a"),
-	// EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#323232"),
-	EXP_TYPE_KHAN = list("jobs" = khan_positions, "color" = "#006666"),
-	"Ripley" = list("jobs" = town_positions, "color" = "#d7b088"),
-	//EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#006666"),
+	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#6d613f"),
+	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#0026ff"),
+	EXP_TYPE_KHAN = list("jobs" = khan_positions, "color" = "#b77dee"),
+	"The Family" = list("jobs" = town_positions, "color" = "#d7b088"),
+	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#05ffff"),
 	//"Redwater" = list("jobs" = redwater_positions, "color" = "#f81717"),
 ))
 
@@ -392,7 +398,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_DECANUS = list("titles" = list("Legion Decanus")),
 
 	EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman","Head Hunter")),
-	EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Senior Doctor")),
+	EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Senior Doctor, Lead Practitioner")),
 	EXP_TYPE_NCRCOMMAND = list("titles" = list("NCR Lieutenant","NCR Sergeant First Class","NCR Captain", "NCR Veteran Ranger"))
 ))
 

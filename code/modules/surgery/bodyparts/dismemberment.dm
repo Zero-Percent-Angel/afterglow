@@ -23,7 +23,7 @@
 	drop_limb()
 	C.update_equipment_speed_mods() // Update in case speed affecting item unequipped by dismemberment
 	C.handle_equipment_stiffness()
-
+	C.update_skill_from_limbs()
 	C.bleed(40)
 
 	if(QDELETED(src)) //Could have dropped into lava/explosion/chasm/whatever
@@ -371,6 +371,7 @@
 	C.update_hair()
 	C.update_damage_overlays()
 	C.update_mobility()
+	C.update_skill_from_limbs()
 
 /obj/item/bodypart/head/attach_limb(mob/living/carbon/C, special)
 	//Transfer some head appearance vars over

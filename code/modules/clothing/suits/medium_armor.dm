@@ -350,6 +350,12 @@
 	desc = "An old military grade pre war combat armor. Now in dark, and extra-crispy!"
 	color = "#514E4E"
 
+/obj/item/clothing/suit/armor/medium/combat/swat
+	name = "SWAT combat armor"
+	desc = "A custom version of the pre-war combat armor, slimmed down and minimalist for domestic S.W.A.T. teams."
+	icon_state = "armoralt"
+	item_state = "armoralt"
+
 /obj/item/clothing/suit/armor/medium/combat/tribal
 	name = "tribal reinforced combat armor"
 	desc = "An old military grade pre-war reinforced combat armor, now decorated with sinew and the bones of the hunted for its new wearer."
@@ -411,6 +417,12 @@
 	name = "combat armor Mk II"
 	desc = "A reinforced model based of the pre-war combat armor. Now in dark, light, and smoky barbeque!"
 	color = "#302E2E"
+
+/obj/item/clothing/suit/armor/medium/combat/mk2/remnant
+	name = "remnant combat armor"
+	desc = "A dark armor, used commonly in espionage or shadow ops."
+	icon_state = "remnant"
+	item_state = "remnant"
 
 ///////////////////
 // MEDIUM RAIDER //

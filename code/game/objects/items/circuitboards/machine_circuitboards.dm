@@ -781,6 +781,15 @@
 	req_components = list(
 		/obj/item/stock_parts/micro_laser = 1,
 		/obj/item/stack/sheet/glass = 1)
+
+/obj/item/circuitboard/machine/chem_research_station
+	name = "Chemical Research Station (Machine Board)"
+	build_path = /obj/machinery/chem_research_station
+	req_components = list(
+		/obj/item/reagent_containers/glass/beaker = 2,
+		/obj/item/stock_parts/micro_laser = 1,
+		/obj/item/stack/sheet/glass = 1)
+
 /obj/item/circuitboard/machine/chem_master
 	name = "ChemMaster 3000 (Machine Board)"
 	build_path = /obj/machinery/chem_master

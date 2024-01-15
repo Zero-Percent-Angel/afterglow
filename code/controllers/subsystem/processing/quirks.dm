@@ -42,7 +42,8 @@ PROCESSING_SUBSYSTEM_DEF(quirks)
 			list("Heavy Sleeper","Can Not Sleep"),
 			list("Dead Eye", "Straight Shooter", "Poor Aim"),
 			list("Health - Very Flimsy", "Health - Tougher", "Health - Flimsy"),
-			list("Super Mutant", "Health-Tougher")
+			list("Super Mutant", "Health-Tougher"),
+			list("Dead Eye", "Straight Shooter", "Poor Aim")
 			)
 	return ..()
 

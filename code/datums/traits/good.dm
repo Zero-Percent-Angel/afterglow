@@ -337,7 +337,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/technophreak
 	name = "Technophreak"
 	desc = "You're skilled at breaking down old-war rubble more precisely and therefor you gain more salvage from cars and piles than before."
-	value = 2
+	value = 4
 	mob_trait = TRAIT_TECHNOPHREAK
 	gain_text = span_notice("Old-War rubble seems considerably more generous to you.")
 	lose_text = span_danger("Old-War rubble suddenly seems less generous to you.")
@@ -357,7 +357,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/gunsmith
 	name = "Weaponsmith"
 	desc = "You know how to make various weapons and protective vests. The list is too large to try and put here."
-	value = 2
+	value = 4
 	gain_text = span_notice("You are adept at crafting makeshift weapons.")
 	lose_text = span_danger("You seem less adept at crafting makeshift weapons.")
 
@@ -455,7 +455,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/bigleagues
 	name = "Melee - Big Leagues"
 	desc = "Swing for the fences! You deal even more additional damage with melee weapons."
-	value = 3
+	value = 5
 	mob_trait = TRAIT_BIG_LEAGUES
 	gain_text = span_notice("You feel like swinging for the fences!")
 	lose_text = span_danger("You feel like bunting.")
@@ -464,7 +464,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/littleleagues
 	name = "Melee - Little Leagues"
 	desc = "Swing for the outfield! You deal additional damage with melee weapons."
-	value = 1
+	value = 3
 	mob_trait = TRAIT_LITTLE_LEAGUES
 	gain_text = span_notice("You feel like swinging for the outfield!")
 	lose_text = span_danger("You feel like skipping practice.")
@@ -473,7 +473,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/chemwhiz
 	name = "Chem Whiz"
 	desc = "You've been playing around with chemicals all your life. You know how to use chemistry machinery."
-	value = 3
+	value = 5
 	mob_trait = TRAIT_CHEMWHIZ
 	gain_text = span_notice("The mysteries of chemistry are revealed to you.")
 	lose_text = span_danger("You forget how the periodic table works.")
@@ -495,7 +495,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/pa_wear
 	name = "Power Armor Training"
 	desc = "You've been around the wastes and have learned the wonders of wearing high tech armor from somewhere or something."
-	value = 2
+	value = 8
 	mob_trait = TRAIT_PA_WEAR
 	gain_text = span_notice("You realize how to use Power Armor.")
 	lose_text = span_danger("You forget how Power Armor works.")
@@ -513,7 +513,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/hard_yards
 	name = "Mobility - Wasteland Trekker"
 	desc = "You've spent a lot of time wandering the wastes, and for your hard work you out pace most folks when travelling across them."
-	value = 3
+	value = 4
 	mob_trait = TRAIT_HARD_YARDS
 	gain_text = span_notice("Rain or shine, nothing slows you down.")
 	lose_text = span_danger("You walk with a less sure gait, the ground seeming less firm somehow.")
@@ -531,7 +531,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/lifegiver
 	name = "Health - Tough"
 	desc = "You embody wellness! Instantly gain +10 maximum Health."
-	value = 1
+	value = 2
 	mob_trait = TRAIT_LIFEGIVER
 	gain_text = span_notice("You feel more healthy than usual.")
 	lose_text = span_danger("You feel less healthy than usual.")
@@ -546,7 +546,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/lifegiverplus
 	name = "Health - Tougher"
 	desc = "You embody wellness to the MAX! Instantly gain +20 maximum Health."
-	value = 3
+	value = 4
 	mob_trait = TRAIT_LIFEGIVERPLUS
 	gain_text = span_notice("You feel much more healthy than usual.")
 	lose_text = span_danger("You feel much less healthy than usual.")
@@ -561,7 +561,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/iron_fist
 	name = "Fists of Iron"
 	desc = "You have fists of kung-fury! Increases unarmed damage."
-	value = 1
+	value = 2
 	mob_trait = TRAIT_IRONFIST
 	gain_text = span_notice("Your fists feel furious!")
 	lose_text = span_danger("Your fists feel calm again.")
@@ -570,12 +570,12 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/iron_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.dna.species.punchdamagelow = 4
-	mob_tar.dna.species.punchdamagehigh = 10
-/*
+	mob_tar.dna.species.punchdamagehigh = 8
+
 /datum/quirk/steel_fist
 	name = "Fists of Steel"
 	desc = "You have MASSIVE fists of kung-fury! Even MORE increases unarmed damage."
-	value = 2
+	value = 4
 	mob_trait = TRAIT_STEELFIST
 	gain_text = span_notice("Your fists feel MASSIVELY furious!")
 	lose_text = span_danger("Your fists feel calm again, what a relief.")
@@ -584,8 +584,8 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/steel_fist/on_spawn()
 	var/mob/living/carbon/human/mob_tar = quirk_holder
 	mob_tar.dna.species.punchdamagelow = 6
-	mob_tar.dna.species.punchdamagehigh = 12
-*/
+	mob_tar.dna.species.punchdamagehigh = 10
+
 /datum/quirk/light_step
 	name = "Glass Walker"
 	desc = "When it comes to stepping on glass, you're pretty die hard.  You'll make less noise when you do so, but it'd still suck without shoes."
@@ -594,6 +594,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("You walk with a little more litheness.")
 	lose_text = span_danger("You start tromping around like a barbarian.")
 
+/*
 /datum/quirk/surgerylow
 	name = "Minor Surgery"
 	desc = "You are a somewhat adequate medical practicioner, capable of performing minor surgery in a pinch."
@@ -602,6 +603,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("You feel yourself discovering the basics of the human body.")
 	lose_text = span_danger("You forget how to perform even the simplest surgery.")
 	locked = FALSE
+*/
 
 /datum/quirk/explosive_crafting
 	name = "Explosives Crafting"
@@ -673,6 +675,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 		return //welp
 	QDEL_NULL(our_tongue.lick_bandage)
 */
+
 /datum/quirk/advanced_explosive_crafting
 	name = "Advanced Explosive Crafting"
 	desc = "Decades of engineering knowledge have taught you to make all kinds of horrible explosives."
@@ -817,7 +820,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/heatresist
 	name = "Heat Resistant"
 	desc = "Heat doesn't bother you too much."
-	value = 1
+	value = 2
 	mob_trait = TRAIT_RESISTHEAT
 	gain_text = span_notice("It could be a little warmer in here.")
 	lose_text = span_danger("You know? Being hot kind of sucks actually.")
@@ -826,7 +829,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/coldresist
 	name = "Cold Resistant"
 	desc = "Cold doesn't bother you too much."
-	value = 1
+	value = 2
 	mob_trait = TRAIT_RESISTCOLD
 	gain_text = span_notice("It could be a little colder in here.")
 	lose_text = span_danger("You know? Being cold kind of sucks actually.")
@@ -850,16 +853,17 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	gain_text = span_notice("You've decided radiation just doesn't matter.")
 	lose_text = span_danger("You no longer feel like you could probably live in a microwave while its on.")
 	locked =  FALSE
+*/
 
 /datum/quirk/radimmuneish
 	name = "Radiation - Mostly Immune"
 	desc = "Gieger Counters are for suckers, mostly."
-	value = 4
+	value = 5
 	mob_trait = TRAIT_75_RAD_RESIST
 	gain_text = span_notice("You've decided radiation just doesn't matter much.")
 	lose_text = span_danger("You no longer feel like you could roll around in a rad puddle for a while.")
 	locked =  FALSE
-*/
+
 
 /datum/quirk/radimmunesorta
 	name = "Radiation - Sorta Immune"
@@ -958,7 +962,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/deadeye
 	name = "Dead Eye"
 	desc = "You hit the shots you aim, even those around corners. Well, most of the time."
-	value = 4 //WIP for sure, lmfao ~TK
+	value = 6 //WIP for sure, lmfao ~TK
 	mob_trait = TRAIT_INSANE_AIM
 	gain_text = span_notice("Your aim is legendary, and you know it.")
 	lose_text = span_danger("Your aim could use some work...")
@@ -967,7 +971,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/straightshooter
 	name = "Straight Shooter"
 	desc = "You're a better than average shot."
-	value = 2
+	value = 3
 	mob_trait = TRAIT_NICE_SHOT
 	gain_text = span_notice("Your aim is amazing, and you know it.")
 	lose_text = span_danger("Your aim could use some work...")
@@ -976,7 +980,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/bowtrained
 	name = "Bow Trained"
 	desc = "You've trained quite a bit with bows of many types, and are pretty good with them for it."
-	value = 2
+	value = 1
 	mob_trait = TRAIT_AUTO_DRAW
 	gain_text = span_notice("You feel like all that training with bows has paid off.")
 	lose_text = span_danger("Guns were always better...")

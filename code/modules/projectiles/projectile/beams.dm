@@ -23,6 +23,7 @@
 	impact_type = /obj/effect/projectile/impact/laser
 	wound_bonus = -30
 	bare_wound_bonus = 40
+	damage_threshold_penetration = 3
 
 /obj/item/projectile/beam/laser/mech
 	hitscan = TRUE
@@ -313,7 +314,7 @@
 //Chews Beam
 /obj/item/projectile/beam/laser/pistol/ultraweak/chew
 	damage = 14 //less dam..
-	armour_penetration = 0.9 //..more pen
+	armour_penetration = 0.7 //..more pen
 	is_reflectable = FALSE
 
 //Big Chews Beam
@@ -344,6 +345,7 @@
 	name = "laser beam"
 	damage = 30
 	armour_penetration = 0.33 // 33% so you can get through tougher stuff
+	damage_threshold_penetration = 5
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
@@ -353,6 +355,7 @@
 	name = "overcharged laser beam"
 	damage = 34
 	armour_penetration = 0.6
+	damage_threshold_penetration = 7
 
 /obj/item/projectile/beam/laser/gatling/hitscan //Gatling Laser
 	name = "laser beam"
@@ -369,7 +372,7 @@
 
 /obj/item/projectile/beam/laser/pistol/hitscan //Actual AEP7
 	name = "laser beam"
-	damage = 24
+	damage = 18
 	hitscan = TRUE
 	armour_penetration = 0.02
 	tracer_type = /obj/effect/projectile/tracer/laser
@@ -412,7 +415,7 @@
 
 /obj/item/projectile/beam/laser/recharger/hitscan //hitscan recharger pistol
 	name = "recharger beam"
-	damage = 26
+	damage = 18
 	hitscan = TRUE
 	armour_penetration = 0.02
 	tracer_type = /obj/effect/projectile/tracer/pulse
@@ -445,7 +448,7 @@
 
 /obj/item/projectile/beam/laser/pistol/wattz/hitscan //hitscan wattz
 	name = "laser beam"
-	damage = 26 // Civilian gun hits harder but has less charge now.
+	damage = 22 // Civilian gun hits harder but has less charge now.
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
@@ -458,7 +461,7 @@
 
 /obj/item/projectile/beam/laser/pistol/wattz/magneto/hitscan
 	name = "penetrating laser beam"
-	damage = 26 // Hits less than the W1K but has innate AP/DT reduction.
+	damage = 20 // Hits less than the W1K but has innate AP/DT reduction.
 	hitscan = TRUE
 	armour_penetration = 0.2 //rare laser to keep its AP, since base model is so bad
 	tracer_type = /obj/effect/projectile/tracer/laser

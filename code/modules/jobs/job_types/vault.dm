@@ -56,7 +56,7 @@ Overseer
 	implants = list(/obj/item/implant/mindshield)
 
 	id = 			/obj/item/card/id/gold
-	uniform = 		/obj/item/clothing/under/f13/vault13
+	uniform = 		/obj/item/clothing/under/f13/vault13/alternate/f1
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	ears = 			/obj/item/radio/headset/headset_overseer
@@ -107,7 +107,7 @@ Vault Coordinator
 	implants = list(/obj/item/implant/mindshield)
 
 	id = 			/obj/item/card/id/gold
-	uniform = 		/obj/item/clothing/under/f13/vault13
+	uniform = 		/obj/item/clothing/under/f13/vault13/alternate/f1
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	ears = 			/obj/item/radio/headset/headset_overseer
@@ -161,7 +161,7 @@ Head of Security
 
 	id = 			/obj/item/card/id/chief
 	ears = 			/obj/item/radio/headset/headset_vault_hos/alt
-	uniform = 		/obj/item/clothing/under/f13/vault13
+	uniform = 		/obj/item/clothing/under/f13/vault13/alternate/f1
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	suit = 			/obj/item/clothing/suit/armor/medium/vest
 	head = 			/obj/item/clothing/head/collectable/police/cos
@@ -222,7 +222,7 @@ Medical Doctor
 	jobtype = /datum/job/vault/f13doctor
 	//chemwhiz = TRUE
 	//pda
-	uniform = 		/obj/item/clothing/under/f13/vault13
+	uniform = 		/obj/item/clothing/under/f13/vault13/alternate/f1
 	ears = 			/obj/item/radio/headset/headset_vault
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	suit =			/obj/item/clothing/suit/toggle/labcoat
@@ -268,7 +268,7 @@ Scientist
 	//chemwhiz = TRUE
 
 	//pda
-	uniform = 		/obj/item/clothing/under/f13/vault13
+	uniform = 		/obj/item/clothing/under/f13/vault13/alternate/f1
 	ears = 			/obj/item/radio/headset/headset_vault
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	suit =			/obj/item/clothing/suit/toggle/labcoat
@@ -369,7 +369,7 @@ Security Officer
 	id = /obj/item/card/id/sec
 	//pda
 	ears = 			/obj/item/radio/headset/headset_vaultsec
-	uniform = 		/obj/item/clothing/under/f13/vault13
+	uniform = 		/obj/item/clothing/under/f13/vault13/alternate/f1
 	head = 			/obj/item/clothing/head/helmet/riot/vaultsec
 	suit =			/obj/item/clothing/suit/armor/medium/vest
 	glasses = 		/obj/item/clothing/glasses/sunglasses
@@ -454,7 +454,7 @@ Vault Engineer
 
 	//pda
 	ears = 			/obj/item/radio/headset/headset_vault
-	uniform = 		/obj/item/clothing/under/f13/vault13
+	uniform = 		/obj/item/clothing/under/f13/vault13/alternate/f1
 	belt = 			/obj/item/storage/belt/utility/full/engi
 	shoes = 		/obj/item/clothing/shoes/sneakers/red
 	head = 			/obj/item/clothing/head/hardhat
@@ -489,11 +489,11 @@ Vault Engineer
 /datum/outfit/job/vault/f13vaultDweller/pre_equip(mob/living/carbon/human/H)
 	..()
 	if (CONFIG_GET(flag/grey_assistants))
-		uniform = /obj/item/clothing/under/f13/vault13
+		uniform = /obj/item/clothing/under/f13/vault13/alternate/f1
 		ears = /obj/item/radio/headset/headset_vault
 		shoes = /obj/item/clothing/shoes/jackboots
 	else
-		uniform = /obj/item/clothing/under/f13/vault13
+		uniform = /obj/item/clothing/under/f13/vault13/alternate/f1
 		ears = /obj/item/radio/headset/headset_vault
 		shoes = /obj/item/clothing/shoes/jackboots
 

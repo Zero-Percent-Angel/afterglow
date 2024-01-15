@@ -2,7 +2,7 @@
 #define WOUND_DAMAGE_EXPONENT 1.2
 
 /// an attack must do this much damage after armor in order to roll for being a wound (incremental pressure damage need not apply)
-#define WOUND_MINIMUM_DAMAGE 2
+#define WOUND_MINIMUM_DAMAGE 3
 /// an attack must do this much damage after armor in order to be eliigible to dismember a suitably mushed bodypart
 #define DISMEMBER_MINIMUM_DAMAGE 10
 /// any damage dealt over this is ignored for damage rolls unless the target has the frail quirk (35^1.4=145)
@@ -62,16 +62,12 @@
 
 // list in order of highest severity to lowest
 GLOBAL_LIST_INIT(global_wound_types, list(
-	WOUND_BLUNT = list(
-		/datum/wound/blunt/critical,
+	list(/datum/wound/blunt/critical,
 		/datum/wound/blunt/severe,
 		/datum/wound/blunt/moderate),
-	WOUND_SLASH = list(
-		/datum/wound/bleed/slash),
-	WOUND_PIERCE = list(
-		/datum/wound/bleed/pierce),
-	WOUND_BURN = list(
-		/datum/wound/burn/critical,
+	list(/datum/wound/bleed/slash),
+	list(/datum/wound/bleed/pierce),
+	list(/datum/wound/burn/critical,
 		/datum/wound/burn/severe,
 		/datum/wound/burn/moderate)
 	))

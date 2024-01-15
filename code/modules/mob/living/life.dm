@@ -9,18 +9,7 @@
 /mob/living/proc/Life(seconds, times_fired)
 
 	if(!SPECIAL_SET)
-		maxHealth += (special_e*3 - 14)//SPECIAL Integration
-		health += (special_e*3 - 14)//SPECIAL Integration
-		default_sprint_buffer_max += (special_e*3) * CONFIG_GET(number/movedelay/sprint_buffer_max)/13
-		stambuffer += (round(special_e/2) - 2)
-		var/obj/item/organ/brain/brain = getorgan(/obj/item/organ/brain)
-		if (istype(brain))
-			brain.maxHealth += ((special_c + special_i + special_p)*2 - 25)
-		var/obj/item/organ/eyes/eyes = getorgan(/obj/item/organ/eyes)
-		if (istype(eyes))
-			lighting_alpha = 256 - (special_p * 2)
-		update_special_speed((5-special_a)/40)//SPECIAL Integration
-		SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "charisma", /datum/mood_event/charisma, (special_c-5)*2)
+		set_special()
 		SPECIAL_SET = TRUE
 
 	//SHOULD_NOT_SLEEP(TRUE)
@@ -57,6 +46,25 @@
 	else if (registered_z)
 		log_game("Z-TRACKING: [src] of type [src.type] has a Z-registration despite not having a client.")
 		update_z(null)
+
+/mob/living/proc/set_special()
+	if (HAS_TRAIT(src, TRAIT_DUMB))
+		special_i = max(special_i - 5, 1)
+	maxHealth = initial(maxHealth) + (special_e*3 - 14)//SPECIAL Integration
+	health = initial(health) + (special_e*3 - 14)//SPECIAL Integration
+	default_sprint_buffer_max = initial(default_sprint_buffer_max) + (special_e*3) * CONFIG_GET(number/movedelay/sprint_buffer_max)/13
+	stambuffer = initial(stambuffer) + (round(special_e/2) - 2)
+	update_config_movespeed()
+	var/obj/item/organ/brain/brain = getorgan(/obj/item/organ/brain)
+	if (istype(brain))
+		brain.maxHealth = initial(brain.maxHealth) + ((special_c + special_i + special_p)*2 - 25)
+	var/obj/item/organ/eyes/eyes = getorgan(/obj/item/organ/eyes)
+	if (istype(eyes))
+		eyes.lighting_alpha = 256 - (special_p * 2)
+	lighting_alpha = 256 - (special_p * 2)
+	update_sight()
+	update_special_speed(special_a)//SPECIAL Integration
+	SEND_SIGNAL(src, COMSIG_ADD_MOOD_EVENT, "charisma", /datum/mood_event/charisma, (special_c-5)*2)
 
 /**
  * Handles biological life processes like chemical metabolism, breathing, etc

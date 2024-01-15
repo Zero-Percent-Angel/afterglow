@@ -133,7 +133,7 @@
 	force_modifier *= 0.5
 	var/force_out = force + force_modifier
 	var/hit_helper = !CHECK_MOBILITY(M, MOBILITY_STAND) ? -30 : -10
-	if(M != user && !M.IsUnconscious() && !user.skill_roll_kind(SKILL_MELEE, M.special_a + hit_helper, 0))
+	if(M != user && !M.IsUnconscious() && M.stat < UNCONSCIOUS && !user.skill_roll_kind(SKILL_MELEE, M.special_a + hit_helper, 0))
 		M.visible_message(span_warning("[user]'s swing of [src.name] misses!"), target = user, \
 			target_message = span_warning("You missed your attack, weapon swinging wide!"))
 		playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
@@ -177,10 +177,6 @@
 	if(stamloss > STAMINA_NEAR_SOFTCRIT) //The more tired you are, the less damage you do.
 		var/penalty = (stamloss - STAMINA_NEAR_SOFTCRIT)/(STAMINA_NEAR_CRIT - STAMINA_NEAR_SOFTCRIT)*STAM_CRIT_ITEM_ATTACK_PENALTY
 		totitemdamage *= 1 - penalty
-
-	if(SEND_SIGNAL(user, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
-		bad_trait = SKILL_COMBAT_MODE //blacklist combat skills.
-
 	if(I.used_skills && user.mind)
 		if(totitemdamage)
 			totitemdamage = user.mind.item_action_skills_mod(I, totitemdamage, I.skill_difficulty, SKILL_ATTACK_OBJ, bad_trait)
@@ -236,13 +232,6 @@
 	. *= stam_mobility_mult
 
 	var/bad_trait
-	if(!(I.item_flags & NO_COMBAT_MODE_FORCE_MODIFIER))
-		if(SEND_SIGNAL(user, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
-			bad_trait = SKILL_COMBAT_MODE //blacklist combat skills.
-			if(SEND_SIGNAL(src, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_ACTIVE))
-				. *= 0.8
-		else if(SEND_SIGNAL(src, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
-			. *= 1.2
 
 	if(!user.mind || !I.used_skills)
 		return
@@ -320,9 +309,11 @@
 	if(!user)
 		return
 	var/bad_trait
+	/*
 	if(SEND_SIGNAL(user, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_INACTIVE))
 		. *= STAM_COST_NO_COMBAT_MULT
 		bad_trait = SKILL_COMBAT_MODE
+	*/
 	if(used_skills && user.mind)
 		. = user.mind.item_action_skills_mod(src, ., skill_difficulty, trait, bad_trait, FALSE)
 	var/total_health = user.getStaminaLoss()

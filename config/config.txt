@@ -21,15 +21,15 @@ $include policy.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-@SERVERNAME Afterglow
+@SERVERNAME Auld Lang Syne
 
 ## Server tagline: This will appear right below the server's title.
-SERVERTAGLINE [18+] Fallout 1/2 Inspired HRP experience with high amounts of replayability. Join at 
+SERVERTAGLINE [18+] Fallout 1/2 Inspired HRP experience with high amounts of replayability. Join at
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 # SERVERSQLNAME fo13sql
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Afterglow
+STATIONNAME Vegas Valley
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 HUB
@@ -255,23 +255,23 @@ CHECK_RANDOMIZER
 #WEBCLIENT_ONLY_BYOND_MEMBERS
 
 ## Set to prevent anyone but those ckeys listed in config/whitelist.txt and config/admins.txt from joining your server
-# USEWHITELIST
+USEWHITELIST
 
 ## set a server location for world reboot. Don't include the byond://, just give the address and port.
 ## Don't set this to the same server, BYOND will automatically restart players to the server when it has restarted.
 # SERVER ss13.example.com:2506
 
 ## forum address
-# FORUMURL https://discord.com/channels/631225743380054025/655202265598001175
+# FORUMURL https://discord.gg/X6rCWR3buu
 
 ## Wiki address
 # WIKIURL https://f13wiki.herma.moe/index.php/Main_Page
 
 ## Rules address
-RULESURL https://discord.com/channels/631225743380054025/631226658157756417
+RULESURL https://discord.gg/X6rCWR3buu
 
 ## Github address
-GITHUBURL https://github.com/Afterglow-Ss13/afterglow-ss13
+GITHUBURL https://github.com/Zero-Percent-Angel/afterglow
 
 ## Round specific stats address
 ## Link to round specific parsed logs; IE statbus. It is appended with the RoundID automatically by ticker/Reboot()
@@ -530,7 +530,7 @@ DEFAULT_VIEW 19x15
 ### NOTE FOR LINUX HOSTS: This requires manual setup of iptables. Beware that improper configuration of this can and will irreversibly fuck up a server, so please don't tinker with it if you don't know what you're doing.
 ## Enabled
 #FAIL2TOPIC_ENABLED
-## Minimum wait time in deciseconds between valid requests 
+## Minimum wait time in deciseconds between valid requests
 FAIL2TOPIC_RATE_LIMIT 10
 ## Number of requests after breaching rate limit that triggers a ban
 FAIL2TOPIC_MAX_FAILS 5

@@ -105,10 +105,10 @@
 
 	SSblackbox.record_feedback("nested tally", "item_used_for_combat", 1, list("[I.force]", "[I.type]"))
 	SSblackbox.record_feedback("tally", "zone_targeted", 1, target_area)
-	
+
 	//we got hit, let our friends know we're in danger!
 	handle_friends(user)
-	
+
 	// the attacked_by code varies among species
 	return dna.species.spec_attacked_by(I, user, affecting, a_intent, src, attackchain_flags, damage_multiplier, damage_addition)
 
@@ -232,16 +232,20 @@
 /mob/living/carbon/human/attack_animal(mob/living/simple_animal/M)
 	. = ..()
 	if(.)
-		var/damage = .
-		var/dam_zone = dismembering_strike(M, pick(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG))
-		if(!dam_zone) //Dismemberment successful
-			return TRUE
-		var/obj/item/bodypart/affecting = get_bodypart(ran_zone(dam_zone))
-		if(!affecting)
-			affecting = get_bodypart(BODY_ZONE_CHEST)
-		var/armor = run_armor_check(affecting, "melee", armour_penetration = M.armour_penetration)
-		var/dt = max(run_armor_check(affecting, "damage_threshold") - M.damage_threshold_penetration_mob, 0)
-		apply_damage(damage, M.melee_damage_type, affecting, armor, wound_bonus = M.wound_bonus, bare_wound_bonus = M.bare_wound_bonus, sharpness = M.sharpness, damage_threshold = dt)
+		if (!prob(special_a*4))
+			var/damage = .
+			var/dam_zone = dismembering_strike(M, pick(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG))
+			if(!dam_zone) //Dismemberment successful
+				return TRUE
+			var/obj/item/bodypart/affecting = get_bodypart(ran_zone(dam_zone))
+			if(!affecting)
+				affecting = get_bodypart(BODY_ZONE_CHEST)
+			var/armor = run_armor_check(affecting, "melee", armour_penetration = M.armour_penetration)
+			var/dt = max(run_armor_check(affecting, "damage_threshold") - M.damage_threshold_penetration_mob, 0)
+			apply_damage(damage, M.melee_damage_type, affecting, armor, wound_bonus = M.wound_bonus, bare_wound_bonus = M.bare_wound_bonus, sharpness = M.sharpness, damage_threshold = dt)
+		else
+			playsound(M, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
+			src.visible_message(span_warning("[M]'s attack is dodged by [src]!"), target = M, target_message = span_warning("Your attack was dodged!"))
 		handle_friends(M)
 
 /mob/living/carbon/human/attack_slime(mob/living/simple_animal/slime/M)
@@ -800,7 +804,7 @@
 			if(prob(30))
 				burndamage += rand(30,40)
 
-		if(HAS_TRAIT(src, TRAIT_SELF_AWARE))// If whoever's beeing looked at has self-aware, you can see it too 
+		if(HAS_TRAIT(src, TRAIT_SELF_AWARE))// If whoever's beeing looked at has self-aware, you can see it too
 			var/sa_msg = span_notice("[src]'s [LB.name]: ")
 			if(brutedamage || burndamage || bleeddamage)
 				sa_msg += "<font color='red'>BRUTE: [brutedamage]</font>, \
@@ -930,7 +934,7 @@
 			if(prob(30))
 				burndamage += rand(30,40)
 
-		if(HAS_TRAIT(src, TRAIT_SELF_AWARE))// If whoever's beeing looked at has self-aware, you can see it too 
+		if(HAS_TRAIT(src, TRAIT_SELF_AWARE))// If whoever's beeing looked at has self-aware, you can see it too
 			var/sa_msg = span_notice("[src]'s [LB.name]: ")
 			if(brutedamage || burndamage || bleeddamage)
 				sa_msg += "<font color='red'>BRUTE: [brutedamage]</font>, \

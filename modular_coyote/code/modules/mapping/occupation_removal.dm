@@ -1,5 +1,5 @@
 /datum/job/enclave/config_check()
-	return FALSE
+	return TRUE
 
 /datum/job/khan/config_check()
 	return TRUE

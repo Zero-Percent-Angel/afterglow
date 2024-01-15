@@ -145,6 +145,44 @@
 /area/f13/building/abandoned/m
 	name = "Abandoned Building"
 
+/area/f13/building/abandoned/n
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/o
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/p
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/q
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/r
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/s
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/t
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/u
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/v
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/w
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/x
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/y
+	name = "Abandoned Building"
+
+/area/f13/building/abandoned/z
+	name = "Abandoned Building"
 
 /area/f13/building/hospital
 	name = "Hospital Building"

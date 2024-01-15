@@ -37,6 +37,9 @@
 	light_color = LIGHT_COLOR_GREEN
 
 /obj/machinery/computer/message_monitor/ui_interact(mob/user, datum/tgui/ui)
+	if(!user.skill_check(SKILL_SCIENCE))
+		to_chat(user, span_warning("You don't have the skill needed to use this."))
+		return
 	ui = SStgui.try_update_ui(user, src, ui)
 
 	if(!ui)
@@ -80,7 +83,7 @@
 			ref = REF(pda)
 		)
 		data_out["message_logs"] += list(data)
-	
+
 	return data_out
 
 /obj/machinery/computer/message_monitor/ui_data(mob/user)
@@ -119,7 +122,7 @@
 	if(!linkedServer)
 		data_out["selected"] = null
 		return data_out
-		
+
 	data_out["selected"] = list(
 		name = linkedServer.name,
 		id = linkedServer.id,
@@ -156,7 +159,7 @@
 			if(LAZYLEN(machinelist) > 0)
 				message = "FAILED: Cannot probe when buffer full"
 				return
-			
+
 			for(var/obj/machinery/telecomms/message_server/T in GLOB.telecomms_list)
 				if(T.network == network)
 					LAZYADD(machinelist, T)
@@ -206,7 +209,7 @@
 						message = "NOTICE: Decryption key set."
 					return
 			message = incorrectkey
-			
+
 		if("hack")
 			if(!(linkedServer.on && (linkedServer.toggled != FALSE)))
 				message = noserver
@@ -225,7 +228,7 @@
 			else if(!(linkedServer.on && (linkedServer.toggled != FALSE)))
 				message = noserver
 				return
-			
+
 			var/datum/data_ref = locate(params["ref"])
 			if(istype(data_ref, /datum/data_rc_msg))
 				LAZYREMOVE(linkedServer.rc_msgs, data_ref)
@@ -258,7 +261,7 @@
 			else if(!(linkedServer.on && (linkedServer.toggled != FALSE)))
 				message = noserver
 				return
-	
+
 			if("reset" in params)
 				ResetMessage()
 				return
@@ -311,7 +314,7 @@
 					return
 				custommessage = M
 				return
-			
+
 			if("recepient" in params)
 				// Get out list of viable PDAs
 				var/list/obj/item/pda/sendPDAs = get_viewable_pdas()
@@ -325,7 +328,7 @@
 
 /obj/machinery/computer/message_monitor/attackby(obj/item/O, mob/living/user, params)
 	if(istype(O, /obj/item/screwdriver) && CHECK_BITFIELD(obj_flags, EMAGGED))
-		//Stops people from just unscrewing the monitor and putting it back to get the console working again. 
+		//Stops people from just unscrewing the monitor and putting it back to get the console working again.
 		//Why this though, you should make it emag to a board level. (i wont do it)
 		to_chat(user, span_warning("It is too hot to mess with!"))
 	else

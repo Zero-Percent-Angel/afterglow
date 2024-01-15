@@ -670,7 +670,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Legionary"
 
 /obj/effect/landmark/start/f13/slave
-	name = "Camp Follower"
+	name = "Legion Slave"
 	icon_state = "Wastelander"
 
 // Brotherhood of Steel
@@ -785,6 +785,18 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Citizen"
 	icon_state = "Settler"
 
+/obj/effect/landmark/start/f13/farm_hand
+	name = "Farm Hand"
+	icon_state = "Settler"
+
+/obj/effect/landmark/start/f13/family_head
+	name = "Family Head"
+	icon_state = "Settler"
+
+/obj/effect/landmark/start/f13/family_member
+	name = "Family Member"
+	icon_state = "Settler"
+
 /obj/effect/landmark/start/f13/dendoc
 	name = "Doctor"
 
@@ -851,6 +863,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 // Enclave
 /obj/effect/landmark/start/f13/usspy
 	name = "Enclave Private"
+	icon_state = "uspvt"
+
+/obj/effect/landmark/start/f13/usrem
+	name = "Enclave Remnant"
 	icon_state = "uspvt"
 
 /obj/effect/landmark/start/f13/uslt
@@ -921,15 +937,15 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 //Followers of the Apocalypse -- nah, nash medical stuff
 /obj/effect/landmark/start/f13/followersadministrator
-	name = "Senior Doctor"
+	name = "Lead Practitioner"
 	icon_state = "Chief Medical Officer"
 
 /obj/effect/landmark/start/f13/followersdoctor
-	name = "Town Doctor"
+	name = "Followers Doctor"
 	icon_state = "Medical Doctor"
 
 /obj/effect/landmark/start/f13/followersguard
-	name = "Town Paramedic"
+	name = "Followers Guard"
 	icon_state = "Security Officer"
 
 /obj/effect/landmark/start/f13/followersvolunteer

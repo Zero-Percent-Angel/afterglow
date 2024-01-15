@@ -100,7 +100,7 @@
 
 /datum/mood_event/family_heirloom
 	description = span_nicegreen("My family heirloom is safe with me.")
-	mood_change = 1
+	mood_change = 0 //no free rides my guys.
 
 /datum/mood_event/goodmusic
 	description = span_nicegreen("There is something soothing about that music I heard.")
