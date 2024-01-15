@@ -65,7 +65,7 @@
 	desc = "A makeshift machete made of a lawn mower blade."
 	icon_state = "machete_imp"
 	item_state = "salvagedmachete"
-	force = 26
+	force = 27
 	block_chance = 7
 	throwforce = 20
 	wound_bonus = 10
@@ -75,7 +75,7 @@
 	name = "machete"
 	desc = "A forged machete made of high quality steel."
 	icon_state = "machete"
-	force = 28
+	force = 29
 	wound_bonus = 20
 	block_chance = 8
 
@@ -99,7 +99,7 @@
 	desc = "A heavy cutting blade, with a fairly good tip too."
 	icon_state = "gladius"
 	item_state = "gladius"
-	force = 28
+	force = 29
 	wound_bonus = 30
 	block_chance = 10
 
@@ -108,7 +108,7 @@
 	desc = "A long blade favoured by those who travel light, a finely crafted weapon with good steel and hilt made from bronze and bone."
 	icon_state = "spatha"
 	item_state = "spatha"
-	force = 28
+	force = 29
 	wound_bonus = 30
 	block_chance = 18
 
@@ -117,7 +117,7 @@
 	desc = "A long one-handed blade sporting lovingly applied wraps and a wonderfully forged and engraved guard. The blade looks to be carefully sharpened."
 	icon_state = "longblade"
 	item_state = "longblade"
-	force = 28
+	force = 32
 	block_chance = 18
 
 /obj/item/melee/onehanded/machete/scrapsabre
@@ -125,7 +125,7 @@
 	desc = "Made from materials found in the wastes, a skilled blacksmith has turned it into a thing of deadly beauty."
 	icon_state = "scrapsabre"
 	item_state = "scrapsabre"
-	force = 28
+	force = 31
 	block_chance = 15
 
 /obj/item/throwing_star/spear
@@ -720,7 +720,7 @@
 	icon_state = "brass"
 	item_state = "brass"
 	attack_verb = list("punched", "jabbed", "whacked")
-	force = 12
+	force = 13
 	custom_materials = list(/datum/material/iron = 2000)
 
 // Spiked knuckles	Keywords: Damage 28
@@ -731,7 +731,7 @@
 	item_state = "spiked"
 	sharpness = SHARP_POINTY
 	armour_penetration = 0.1
-	force = 15
+	force = 16
 
 // Sappers			Keywords: Damage 27
 /obj/item/melee/unarmed/sappers
@@ -757,7 +757,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	sharpness = SHARP_POINTY
-	force = 16
+	force = 17
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
 // Lacerator		Keywords: Damage 29, Edged, Wound bonus
@@ -767,7 +767,7 @@
 	icon_state = "lacerator"
 	item_state = "lacerator"
 	w_class = WEIGHT_CLASS_NORMAL
-	force = 16
+	force = 17
 	armour_penetration = 0 //my brother in christ it is razor blades on tape
 	bare_wound_bonus = 5
 	sharpness = SHARP_EDGED
@@ -781,7 +781,7 @@
 	icon_state = "mace_glove"
 	item_state = "mace_glove"
 	w_class = WEIGHT_CLASS_BULKY
-	force = 20
+	force = 21
 	sharpness = SHARP_NONE
 
 // Punch Dagger		Keywords: Damage 29, Pointy
@@ -790,7 +790,7 @@
 	desc = "A dagger designed to be gripped in the user�s fist with the blade protruding between the middle and ring fingers, to increase the penetration of a punch."
 	icon_state = "punch_dagger"
 	item_state = "punch_dagger"
-	force = 15
+	force = 17
 	armour_penetration = 0.1
 	sharpness = SHARP_POINTY
 	attack_verb = list("stabbed", "sliced", "pierced", "diced", "cut")
@@ -825,7 +825,7 @@ obj/item/melee/unarmed/punchdagger/cyborg
 	item_state = "deathclaw_g"
 	slot_flags = ITEM_SLOT_GLOVES
 	w_class = WEIGHT_CLASS_NORMAL
-	force = 20
+	force = 21
 	sharpness = SHARP_EDGED
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -875,7 +875,7 @@ obj/item/melee/unarmed/punchdagger/cyborg
 	icon_state = "entrenching_tool"
 	item_state = "trench"
 	w_class = WEIGHT_CLASS_NORMAL
-	force = 28
+	force = 23
 	throwforce = 15
 	toolspeed = 0.7
 	sharpness = SHARP_EDGED

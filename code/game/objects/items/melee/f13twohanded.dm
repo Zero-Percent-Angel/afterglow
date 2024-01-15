@@ -288,9 +288,9 @@
 	icon_state = "spear-lance"
 	icon_prefix = "spear-lance"
 	wielded_icon = "spear-lance2"
-	force = 25
-	force_unwielded = 25
-	force_wielded = 40
+	force = 23
+	force_unwielded = 23
+	force_wielded = 37
 
 // Scrap spear		Keywords: Damage 17/28, Reach, Throw bonus
 /obj/item/twohanded/spear/scrapspear
@@ -311,7 +311,7 @@
 	desc = "A haphazardly-constructed yet still deadly weapon. The pinnacle of modern technology."
 	icon_state = "spear-bone"
 	icon_prefix = "spear-bone"
-	force = 21
+	force = 20
 	throwforce = 25
 	throw_speed = 4
 	armour_penetration = 0.05
@@ -321,8 +321,8 @@
 	attack_verb = list("attacked", "poked", "jabbed", "torn", "gored")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	wielded_icon = "spear-bone2"
-	force_unwielded = 21
-	force_wielded = 36
+	force_unwielded = 20
+	force_wielded = 34
 
 // Deathclaw Spear		Keywords: TRIBAL, Damage 22/48, Armor-piercing +0.3, Reach
 /obj/item/twohanded/spear/bonespear/deathclaw
@@ -335,7 +335,7 @@
 	sharpness = SHARP_EDGED
 	wielded_icon = "spear-claw2"
 	force_unwielded = 22
-	force_wielded = 48
+	force_wielded = 44
 
 // Deathclaw Spear-Axe		Keywords: TRIBAL, Damage 25/30, Armor-piercing +0.25, Reach, Wound Bonus
 /obj/item/twohanded/spearaxe
@@ -357,7 +357,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT + SLOT_BACK
 	force = 20
-	force_unwielded = 25
+	force_unwielded = 20
 	force_wielded = 30
 	attack_speed = CLICK_CD_MELEE * 0.85 // 6.8
 
@@ -577,7 +577,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	and deliver a tremendously powerful impact, easily crushing concrete."
 	icon_state = "hammer-rocket"
 	icon_prefix = "hammer-rocket"
-	force = 20
+	force = 26
 	tool_behaviour = TOOL_MINING
 	toolspeed = 0.5
 	hitsound = "sound/f13effects/explosion_distant_2.ogg"
@@ -586,8 +586,8 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	var/attacksound = "sound/f13effects/explosion_distant_2.ogg"
 	var/sound = "sound/f13effects/explosion_distant_2.ogg"
 	wielded_icon = "hammer-rocket2"
-	force_unwielded = 20
-	force_wielded = 56
+	force_unwielded = 26
+	force_wielded = 58
 
 /obj/item/twohanded/sledgehammer/rockethammer/ComponentInitialize()
 	. = ..()
@@ -635,10 +635,10 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	desc = "A heavy hammer with a head that consists of leaking fusion cores. Might be unhealthy."
 	icon_state = "hammer-atom"
 	icon_prefix = "hammer-atom"
-	force = 25
+	force = 26
 	wielded_icon = "hammer-atom2"
-	force_unwielded = 25
-	force_wielded = 55
+	force_unwielded = 26
+	force_wielded = 58
 
 /obj/item/twohanded/sledgehammer/atomsjudgement/attack(mob/living/M, mob/living/user)
 	. = ..()
@@ -720,7 +720,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	desc = "A versatile power tool. Useful for limbing trees and delimbing humans."
 	icon_state = "chainsaw"
 	icon_prefix = "chainsaw"
-	force = 15
+	force = 20
 	wound_bonus = 15
 	bare_wound_bonus = 15
 	sharpness = SHARP_EDGED
@@ -733,8 +733,8 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	tool_behaviour = TOOL_SAW
 	hitsound = 'sound/weapons/chainsawhit.ogg'
 	wielded_icon = "chainsaw2"
-	force_unwielded = 15
-	force_wielded = 52
+	force_unwielded = 20
+	force_wielded = 47
 
 /obj/item/twohanded/chainsaw/ComponentInitialize()
 	. = ..()
