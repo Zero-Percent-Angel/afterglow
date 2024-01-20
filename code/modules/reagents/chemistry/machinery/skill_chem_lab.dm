@@ -72,6 +72,7 @@
 		/datum/reagent/medicine/pen_acid/pen_jelly = 3,
 		/datum/reagent/medicine/atropine = 3,
 		/datum/reagent/medicine/mutadone = 3,
+		/datum/reagent/medicine/morphine = 3,
 		/datum/reagent/medicine/haloperidol = 3,
 		/datum/reagent/medicine/regen_jelly = 3,
 		/datum/reagent/medicine/epinephrine = 3,

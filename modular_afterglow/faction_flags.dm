@@ -10,6 +10,18 @@
 	icon_state = "flag_prewarusa"
 	icon = 'modular_afterglow/icons/pre_war_american_flag.dmi'
 
+/obj/structure/sign/flag_america_pristine
+	name = "An old American Flag"
+	desc = "Them stars and bars used to mean something to so many."
+	icon_state = "pre_war_usa_pristine"
+	icon = 'modular_afterglow/icons/pre_war_american_flag.dmi'
+
+/obj/structure/sign/flag_enclave_pristine
+	name = "An old American Flag"
+	desc = "On closer inspection this one has an E on it where a star should be."
+	icon_state = "enclave"
+	icon = 'modular_afterglow/icons/pre_war_american_flag.dmi'
+
 /obj/structure/sign/flag_china
 	name = "An old Chinese Flag"
 	desc = "The dragon sleeps for now."

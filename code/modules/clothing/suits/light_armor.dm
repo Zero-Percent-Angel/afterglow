@@ -621,9 +621,6 @@
 // Legion //
 ////////////
 
-/obj/item/clothing/suit/armor/light/legion
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
-
 /obj/item/clothing/suit/armor/light/legion/recruit
 	name = "legion recruit armor"
 	desc = "The most basic legion armor, clearly inspired by gear worn by old world football players and baseball catchers, much of it restored ancient actual sports equipment, other newly made from mostly leather, tanned and boiled in oil."
@@ -636,7 +633,7 @@
 	icon_state = "legion_prime"
 	item_state = "legion_prime"
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/light/legion/explorer
 	name = "legion explorer armor"

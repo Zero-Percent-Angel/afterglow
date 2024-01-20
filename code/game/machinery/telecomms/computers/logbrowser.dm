@@ -148,6 +148,15 @@
 			for(var/obj/machinery/telecomms/T in machinelist)
 				if(T.id == params["value"])
 					SelectedMachine = T
+					if (SelectedMachine.freq_listening.len && usr.skill_roll(SKILL_SCIENCE, DIFFICULTY_CHALLENGE, FALSE))
+						var/freq = SelectedMachine.freq_listening[1]
+						var/message = "emitts a sudden hiss of static.*"
+						var/list/spans = list()
+						// Determine the identity information which will be attached to the signal.
+						var/atom/movable/virtualspeaker/speaker = new(null, SelectedMachine, src)
+						// Construct the signal
+						var/datum/signal/subspace/vocal/signal = new(src, freq, speaker, /datum/language/common, message, spans)
+						signal.send_to_receivers()
 					break
 		if("delete")
 			if(!src.allowed(usr) && !CHECK_BITFIELD(obj_flags, EMAGGED))

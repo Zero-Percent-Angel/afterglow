@@ -141,12 +141,12 @@
  * Great defense
  * Lots of DT
  *
- * 67% Damage Protection
+ * 70% Damage Protection
  * * * * * * * * * * * */
 #define ARMOR_VALUE_PA list(\
-		"linemelee" = 200, \
-		"linebullet" = 200, \
-		"linelaser" = 200, \
+		"linemelee" = 234, \
+		"linebullet" = 234, \
+		"linelaser" = 234, \
 		"energy" = 40, \
 		"bomb" = 70, \
 		"bio" = 100, \

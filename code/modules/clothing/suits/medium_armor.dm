@@ -674,7 +674,7 @@
 	icon_state = "legion_veteran"
 	item_state = "legion_veteran"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/medium/legion/vexil
 	name = "legion vexillarius armor"
@@ -682,7 +682,7 @@
 	icon_state = "legion_vex"
 	item_state = "legion_vex"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T1)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT // lighter, cus melee focus
 
 /obj/item/clothing/suit/armor/medium/legion/orator
@@ -699,7 +699,7 @@
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 //////////////////////////
 // Brotherhood of Steel //

@@ -470,7 +470,6 @@
 	item_state = "legcentpal"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	armor = ARMOR_VALUE_SALVAGE
-	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/legion/rangercent
 	name = "legion centurion ranger-hunter helmet"
@@ -764,6 +763,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 20
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2)
 
 /obj/item/clothing/head/helmet/f13/khan/bandana
 	icon = 'icons/fallout/clothing/khans.dmi'
@@ -776,6 +776,7 @@
 	dynamic_fhair_suffix = null
 	var/helmettoggled = FALSE
 	armor = ARMOR_VALUE_LIGHT
+	slowdown = HELMET_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/khan/bandana/AltClick(mob/user)
 	. = ..()
@@ -829,7 +830,7 @@
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa
 	name = "salvaged power helmet"
 	desc = "It's a salvaged power armor helmet of what..? YOU CAN'T SEE ME! STOP! REPORT TO CODERS!!"
-	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT * ARMOR_SLOWDOWN_MORE_T2
 	armor = ARMOR_VALUE_SALVAGE
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
 	flags_cover = HEADCOVERSEYES
@@ -859,7 +860,7 @@
 	icon_state = "tribal"
 	item_state = "tribal"
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2)
-	slowdown = 0
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
 // Mutie Salvage
