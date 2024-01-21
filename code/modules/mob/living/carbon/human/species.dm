@@ -1473,27 +1473,21 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				user.do_attack_animation(target, ATTACK_EFFECT_PUNCH)
 
 		var/damage = rand(user.dna.species.punchdamagelow, user.dna.species.punchdamagehigh)
-		var/penetration = 0
-		var/staminaDown = 0
-		var/sharpness = SHARP_NONE
 		if(HAS_TRAIT(user, TRAIT_PERFECT_ATTACKER)) // unit test no-miss trait
 			damage = user.dna.species.punchdamagehigh
 		if(HAS_TRAIT(user, TRAIT_UNARMED_WEAPON))
-			damage += user.gloves.force
-			penetration = user.gloves.armour_penetration
-			staminaDown = user.gloves.force
-			sharpness = user.gloves.sharpness
+			user.gloves.will_hit = TRUE
+			user.gloves.attack(target, user)
 		var/punchedstam = target.getStaminaLoss()
 		var/punchedbrute = target.getBruteLoss()
 
 		if(!CHECK_MOBILITY(user, MOBILITY_STAND))
 			damage *= 0.65
-			staminaDown *= 0.65
 		//END OF CITADEL CHANGES
 
 		//SPECIAL CHANGES
 		damage *= (0.5 + (user.special_s)/10)
-		staminaDown *= (0.5 + (user.special_s)/10)
+
 		//END OF SPECIAL CHANGES
 
 		var/obj/item/bodypart/affecting = target.get_bodypart(ran_zone(user.zone_selected))
@@ -1510,7 +1504,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			return FALSE
 
 
-		var/armor_block = target.run_armor_check(affecting, "melee", armour_penetration = penetration)
+		var/armor_block = target.run_armor_check(affecting, "melee")
 
 		playsound(target.loc, user.dna.species.attack_sound, 25, 1, -1)
 
@@ -1526,15 +1520,15 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			target.dismembering_strike(user, affecting.body_zone)
 
 		if(atk_verb == ATTACK_EFFECT_KICK)//kicks deal 1.4x raw damage + 0.2x stamina damage
-			target.apply_damage((damage - staminaDown)*1.4, attack_type, affecting, armor_block)
-			target.apply_damage((damage - staminaDown)*0.2, STAMINA, affecting, armor_block)
+			target.apply_damage((damage)*1.4, attack_type, affecting, armor_block)
+			target.apply_damage((damage)*0.2, STAMINA, affecting, armor_block)
 			log_combat(user, target, "kicked")
 		else//other attacks deal full raw damage + stamina damage
-			target.apply_damage(damage, attack_type, affecting, armor_block, sharpness = sharpness)
-			target.apply_damage(damage - staminaDown, STAMINA, affecting, armor_block)
+			target.apply_damage(damage, attack_type, affecting, armor_block)
+			target.apply_damage(damage, STAMINA, affecting, armor_block)
 			log_combat(user, target, "punched")
 
-		if((target.stat != DEAD) && damage >= (user.dna.species.punchstunthreshold + staminaDown))
+		if((target.stat != DEAD) && damage >= (user.dna.species.punchstunthreshold))
 			if((punchedstam > 50) && prob(punchedstam*0.25)) //If our punch victim has been hit above the threshold, and they have more than 50 stamina damage, roll for stun, probability of 1% per 4 stamina damage
 
 				target.visible_message(span_danger("[user] knocks [target] down!"), \

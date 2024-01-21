@@ -133,7 +133,7 @@
 	force_modifier *= 0.5
 	var/force_out = force + force_modifier
 	var/hit_helper = !CHECK_MOBILITY(M, MOBILITY_STAND) ? -30 : -10
-	if(M != user && !M.IsUnconscious() && M.stat < UNCONSCIOUS && !user.skill_roll_kind(SKILL_MELEE, M.special_a + hit_helper, 0))
+	if(M != user && !M.IsUnconscious() && M.stat < UNCONSCIOUS && !user.skill_roll_kind(SKILL_MELEE, M.special_a + hit_helper, 0) && !will_hit)
 		M.visible_message(span_warning("[user]'s swing of [src.name] misses!"), target = user, \
 			target_message = span_warning("You missed your attack, weapon swinging wide!"))
 		playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
@@ -149,7 +149,7 @@
 
 	user.do_attack_animation(M)
 	M.attacked_by(src, user, attackchain_flags, damage_multiplier, damage_addition = force_modifier)
-
+	will_hit = initial(will_hit)
 	log_combat(user, M, "attacked", src.name, "(INTENT: [uppertext(user.a_intent)]) (DAMTYPE: [uppertext(damtype)])")
 	add_fingerprint(user)
 

@@ -34,11 +34,10 @@
 								M, span_danger("You [response_harm_simple] [src]!"))
 				playsound(loc, attacked_sound, 25, 1, -1)
 				var/dam = M.dna?.species.punchdamagehigh
-				var/pen = 0
 				if (HAS_TRAIT(M, TRAIT_UNARMED_WEAPON))
-					dam += M.gloves.force
-					pen = M.gloves.armour_penetration
-				attack_threshold_check(dam, M.dna?.species.attack_type, "melee", pen)
+					M.gloves.will_hit = TRUE
+					M.gloves.attack(src, M)
+				attack_threshold_check(dam, M.dna?.species.attack_type, "melee")
 				log_combat(M, src, "attacked")
 				updatehealth()
 				return TRUE
