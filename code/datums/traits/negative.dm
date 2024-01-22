@@ -45,7 +45,9 @@
 
 /datum/quirk/addict/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
-	H.reagents.addiction_list += new /datum/reagent/drug/jet/quirk
+	var/datum/reagent/drug = new /datum/reagent/drug/jet
+	drug.addiction_stage4_end = 4000
+	H.reagents.addiction_list += drug
 
 /datum/quirk/addict/remove()
 	var/mob/living/carbon/human/H = quirk_holder

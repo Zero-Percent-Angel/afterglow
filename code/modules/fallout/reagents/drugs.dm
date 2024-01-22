@@ -8,9 +8,6 @@
 	metabolization_rate = REAGENTS_METABOLISM * 0.25
 	ghoulfriendly = TRUE
 
-/datum/reagent/drug/jet/quirk
-	addiction_stage4_end = 4000
-
 /datum/reagent/drug/jet/on_mob_add(mob/living/carbon/human/M)
 	..()
 	if(isliving(M))

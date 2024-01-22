@@ -561,7 +561,7 @@ Mayor
 	supervisors = "the free market and the khan's Laws"
 	description = "As a proprietor of Heavens Night, you are responsible for ensuring both citizens and travellers in the valley can get some food, drink and rest. Speak to the farmers for fresh produce!"
 	enforces = "Heaven's Night is a private business and you can decide who is welcome there. However, you are still subject to the overarching laws of the khan's."
-	selection_color = "#dcba97"
+	selection_color = "#ff915e"
 
 	outfit = /datum/outfit/job/den/f13barkeep
 	smutant_outfit = /datum/outfit/smutant/town/labourer
@@ -572,8 +572,8 @@ Mayor
 	/datum/outfit/loadout/richmantender,
 	/datum/outfit/loadout/diner)
 
-	access = list(ACCESS_BAR, ACCESS_KITCHEN)
-	minimal_access = list(ACCESS_BAR, ACCESS_KITCHEN)
+	access = list(ACCESS_KITCHEN)
+	minimal_access = list(ACCESS_KITCHEN)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis

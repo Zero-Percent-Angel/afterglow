@@ -14,7 +14,7 @@
 	shoes =		/obj/item/clothing/shoes/sneakers/black
 	belt = /obj/item/kit_spawner/follower
 	id =		null
-	ears =		/obj/item/radio/headset/headset_town/medical
+	ears =		/obj/item/radio/headset/headset_followers
 	uniform =	/datum/outfit/job/followers/f13followers
 
 /datum/outfit/job/followers/f13followers

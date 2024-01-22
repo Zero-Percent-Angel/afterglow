@@ -184,7 +184,6 @@ GLOBAL_LIST_INIT(town_positions, list(
 //	"Banker",
 	"Ripley Quartermaster",
 	"Ripley Trade Worker",
-	"Barkeep",
 	"Citizen",
 	"Family Member",
 	"Family Head",
@@ -307,6 +306,7 @@ GLOBAL_LIST_INIT(redwater_positions, list(
 ))
 
 GLOBAL_LIST_INIT(khan_positions, list(
+	"Barkeep",
 	"Khan",
 	"Great Khan"
 ))
