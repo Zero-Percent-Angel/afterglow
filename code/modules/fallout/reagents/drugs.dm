@@ -95,17 +95,16 @@
 /datum/reagent/drug/turbo/on_mob_add(mob/M)
 	..()
 	ADD_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
-	M.special_a += 5
 	if (istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
-		H.update_special_speed(M.special_a)
+		H.modify_special(5, "a")
+
 
 /datum/reagent/drug/turbo/on_mob_delete(mob/M)
 	REMOVE_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
-	M.special_a -= 5
 	if (istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
-		H.update_special_speed(M.special_a)
+		H.modify_special(-5, "a")
 	..()
 
 /datum/reagent/drug/turbo/on_mob_life(mob/living/carbon/M)
@@ -281,16 +280,16 @@
 	if(isliving(M))
 		to_chat(M, span_notice("You feel stronger, and like you're able to endure more."))
 		ADD_TRAIT(M, TRAIT_BUFFOUT_BUFF, "buffout")
-		M.maxHealth += 25
-		M.health += 25
+		M.modify_special(3, "e")
+		M.modify_special(3, "s")
 
 /datum/reagent/drug/buffout/on_mob_delete(mob/living/carbon/human/M)
 	..()
 	if(isliving(M))
 		to_chat(M, span_notice("You feel weaker."))
 		REMOVE_TRAIT(M, TRAIT_BUFFOUT_BUFF, "buffout")
-		M.maxHealth -= 25
-		M.health -= 25
+		M.modify_special(-3, "e")
+		M.modify_special(-3, "s")
 
 /datum/reagent/drug/buffout/on_mob_life(mob/living/carbon/M)
 	M.AdjustStun(-10*REAGENTS_EFFECT_MULTIPLIER, 0)

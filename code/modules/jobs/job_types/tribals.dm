@@ -87,9 +87,9 @@ Tribal Chief
 	spawn_positions = 1
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "The Elders of the tribe."
-	enforces = "The ways of the Sulphur River spirits."
+	enforces = "The ways of the blue spirit."
 	forbids = "Abusing technology and using Pre-Collapse weapons."
-	description = "The leader and central political figure in this village of the Suplphur Bottom Tribe. You engage in diplomatic meetings with the powers present within the Region to ensure the village's safety and independence."
+	description = "The leader and central political figure in this village of the Blue Doves Tribe. You engage in diplomatic meetings with the powers present within the Region to ensure the village's safety and independence."
 	selection_color = "#006666"
 	outfit = /datum/outfit/job/tribal/f13chief
 	exp_requirements = 1200
@@ -136,7 +136,7 @@ Tribal Shaman
 	spawn_positions = 1
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "The Elders of the tribe and the chief."
-	enforces = "The ways of the Sulphur River spirits."
+	enforces = "The ways of the blue spirit."
 	forbids = "Abusing technology and using Pre-Collapse weapons."
 	description = "The spiritual leader and cultural core of the Blue Dove Tribe. You aid villagers in their day to day lives by offering guidance and advice, while also acting as the direct aid to the chief. You are the guardian of the tribe's customs, their health, and knowledge."
 	selection_color = "#006666"
@@ -200,7 +200,7 @@ Tribal Head Hunter
 	spawn_positions = 1
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "The Elders of the tribe and the chief."
-	enforces = "The ways of the Sulphur River spirits."
+	enforces = "The ways of the Sulphur blue spirit."
 	forbids = "Abusing technology and using Pre-Collapse weapons."
 	description = "You are the village Head Hunter; you organize the hunters of the tribe and are the authority in matters of protecting the tribe and the land of the Blue Dove. You lead the Great Hunts and War-Bands in time of conflict."
 	selection_color = "#006666"
@@ -257,7 +257,7 @@ Druid
 	spawn_positions = 2
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "The Chief and the Shaman."
-	enforces = "The ways of the Sulphur River  spirits."
+	enforces = "The ways of the blue spirit."
 	forbids = "Abusing technology and using Pre-Collapse weapons."
 	description = "You are a Druid in the tribe; you perform rituals, and bless pre-collapse relics and other artifacts for the tribe to use. You also are the spiritual guides of the tribe, and work with the Shaman during rituals or other spiritual matters."
 	selection_color = "#006666"
@@ -424,7 +424,7 @@ Hunter
 	spawn_positions = 4
 	exp_type = EXP_TYPE_TRIBAL
 	supervisors = "The chief and Head Hunter."
-	enforces = "The ways of the Sulphur River spirits."
+	enforces = "The ways of the Blue spirit."
 	forbids = "Abusing technology and using Pre-Collapse weapons."
 	description = "You are a Hunter for the tribe; you bring back food and relics, anything that may house a spirit infused from the Time of Crying that can be purified by the shaman. You also are the protectors of the tribe, and work with the Head Hunter during Great Hunts or times of War."
 	selection_color = "#006666"

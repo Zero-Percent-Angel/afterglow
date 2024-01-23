@@ -755,7 +755,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/gentle
 	name = "Melee - Gentle"
 	desc = "Something about your strikes in melee is just... below average. You deal slightly less damage with melee weapons."
-	value = -1
+	value = -2
 	mob_trait = TRAIT_GENTLE
 	gain_text = span_notice("You feel like you don't really like smacking stuff.")
 	lose_text = span_danger("You feel like slapping the mess out of a gecko.")
@@ -764,7 +764,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/wimpy
 	name = "Melee - Wimpy"
 	desc = "For some reason you're just really bad at hitting things agianst things. Your melee damage is much lower than average."
-	value = -3
+	value = -4
 	mob_trait = TRAIT_WIMPY
 	gain_text = span_notice("You feel like smacking things is just a waste of time.")
 	lose_text = span_danger("You feel like slapping the mess out of a Deathclaw!")

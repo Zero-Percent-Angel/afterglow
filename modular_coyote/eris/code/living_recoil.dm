@@ -1,6 +1,6 @@
 /mob/living/proc/handle_recoil(var/obj/item/gun/G, var/recoil_buildup)
 	var/the_skill_val = (100 - skill_value(G.gun_skill_used)) / HARD_CHECK
-	if ((last_fire_time + recoil) > world.time)
+	if ((last_fire_time + max(G.fire_delay, G.autofire_shot_delay, G.burst_shot_delay) + recoil) > world.time)
 		recoil = (recoil_buildup * max(the_skill_val, 0.5) * min(consecutive_fires, 3))
 		consecutive_fires++
 	else

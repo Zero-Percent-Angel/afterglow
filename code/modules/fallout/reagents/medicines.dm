@@ -476,13 +476,13 @@
 
 /datum/reagent/medicine/mentat/on_mob_add(mob/living/L, amount)
 	. = ..()
-	L.special_p += 3
-	L.special_i += 5
+	L.modify_special(3, "p")
+	L.modify_special(5, "i")
 
 /datum/reagent/medicine/mentat/on_mob_delete(mob/living/L)
 	. = ..()
-	L.special_p -= 3
-	L.special_i -= 5
+	L.modify_special(-3, "p")
+	L.modify_special(-5, "i")
 
 /datum/reagent/medicine/mentat/on_mob_life(mob/living/carbon/M)
 	M.adjustOxyLoss(-3*REAGENTS_EFFECT_MULTIPLIER)

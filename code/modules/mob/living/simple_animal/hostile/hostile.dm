@@ -103,6 +103,7 @@
 	// sneak detection
 	var/sneak_detection_threshold = REGULAR_CHECK
 	var/sneak_roll_modifier = DIFFICULTY_EASY
+	var/dead_time = 0
 
 
 /mob/living/simple_animal/hostile/Initialize()
@@ -139,9 +140,11 @@
 	if(!(. = ..()))
 		walk(src, 0) //stops walking
 		if(decompose)
-			if(prob(1)) // 1% chance every cycle to decompose
+			if (!dead_time)
+				dead_time = times_fired
+			if(dead_time + 60 < times_fired && prob(10)) // this is effectively after a minute (assuming no lag) 10% chance every life tick
 				visible_message(span_notice("\The dead body of the [src] decomposes!"))
-				gib(FALSE, FALSE, FALSE, TRUE)
+				gib(FALSE, FALSE, FALSE)
 		return
 
 /mob/living/simple_animal/hostile/handle_automated_action()
