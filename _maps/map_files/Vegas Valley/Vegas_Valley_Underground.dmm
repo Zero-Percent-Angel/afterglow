@@ -401,6 +401,13 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/high,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/side,
 /area/f13/radiation)
+"ajO" = (
+/obj/effect/spawner/bundle/f13/armor/t45d,
+/turf/open/floor/f13{
+	dir = 6;
+	icon_state = "yellowsiding"
+	},
+/area/ruin/powered)
 "ajW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
@@ -1588,9 +1595,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/brotherhood/armory)
 "aPu" = (
-/obj/structure/simple_door/metal/iron,
+/obj/structure/table/reinforced,
 /turf/open/floor/f13{
-	icon_state = "yellowdirtyfull"
+	dir = 1;
+	icon_state = "yellowsiding"
 	},
 /area/ruin/powered)
 "aPA" = (
@@ -2372,7 +2380,6 @@
 /area/f13/bunker/bunkersix)
 "bkf" = (
 /obj/machinery/holopad,
-/obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault)
@@ -4177,6 +4184,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/brotherhood/leisure)
+"cjN" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/doorButtons/vaultButton/external,
+/turf/open/floor/f13,
+/area/f13/vault)
 "cjQ" = (
 /obj/structure/girder/reinforced,
 /obj/effect/decal/cleanable/dirt,
@@ -5668,7 +5680,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
 "dbr" = (
-/obj/machinery/door/locked/hard,
+/obj/machinery/door/locked/hard/maybe_trapped,
 /turf/open/floor/plating/tunnel,
 /area/f13/caves)
 "dby" = (
@@ -5969,6 +5981,14 @@
 /obj/item/stack/ore/blackpowder/two,
 /turf/open/floor/plating/dirt/dark,
 /area/f13/tunnel)
+"dhp" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	network = list("vault")
+	},
+/turf/open/floor/f13,
+/area/f13/vault)
 "dhx" = (
 /obj/structure/sign/departments/engineering{
 	pixel_y = -32
@@ -7126,6 +7146,19 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/ruin/powered)
+"dLB" = (
+/obj/machinery/light/floor{
+	light_color = "#ff4500";
+	light_range = 12
+	},
+/obj/machinery/porta_turret/f13/turret_shotgun{
+	prefire_delay = 0
+	},
+/turf/open/floor/f13{
+	dir = 6;
+	icon_state = "yellowsiding"
+	},
+/area/ruin/powered)
 "dLG" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -7576,9 +7609,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/red/line{
 	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault)
@@ -13523,6 +13553,13 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
+"hdj" = (
+/obj/effect/gibspawner/human,
+/obj/structure/rack,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/bundle/f13/armor/t45d_salvaged,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bunker/bunkerthree)
 "hdt" = (
 /mob/living/simple_animal/hostile/handy/assaultron{
 	desc = "A deadly close combat robot developed by RobCo in a vaguely feminine, yet ominous chassis. This one seems sleeker and more dangerous, with a slick red paintjob.";
@@ -22424,6 +22461,19 @@
 /obj/effect/spawner/bundle/f13/armor/combat/mk2,
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker/bunkersix)
+"lPd" = (
+/obj/machinery/light/floor{
+	light_color = "#ff4500";
+	light_range = 12
+	},
+/obj/machinery/porta_turret/f13/turret_shotgun{
+	prefire_delay = 0
+	},
+/turf/open/floor/f13{
+	dir = 10;
+	icon_state = "yellowsiding"
+	},
+/area/ruin/powered)
 "lPe" = (
 /obj/structure/stairs/south,
 /turf/open/floor/f13{
@@ -22437,15 +22487,9 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
 "lPz" = (
-/obj/machinery/porta_turret/f13/turret_shotgun{
-	prefire_delay = 0
-	},
-/obj/machinery/light/floor{
-	light_color = "#ff4500";
-	light_range = 12
-	},
+/obj/structure/barricade/sandbags,
 /turf/open/floor/f13{
-	dir = 10;
+	dir = 4;
 	icon_state = "yellowsiding"
 	},
 /area/ruin/powered)
@@ -24276,6 +24320,16 @@
 /obj/structure/timeddoor,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/radiation)
+"mJF" = (
+/obj/machinery/light/floor{
+	light_color = "#ff4500";
+	light_range = 12
+	},
+/turf/open/floor/f13{
+	dir = 9;
+	icon_state = "yellowsiding"
+	},
+/area/ruin/powered)
 "mJX" = (
 /obj/structure/railing/dancing_pole/top,
 /obj/structure/table/reinforced,
@@ -27120,6 +27174,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/bar,
 /area/f13/bunker/bunkerfive)
+"oiI" = (
+/obj/structure/simple_door/metal/ventilation,
+/turf/open/floor/f13,
+/area/ruin/powered)
 "oiN" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/barricade/wooden/strong,
@@ -29824,6 +29882,13 @@
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault/reactor)
+"pIa" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/f13{
+	dir = 8;
+	icon_state = "yellowsiding"
+	},
+/area/ruin/powered)
 "pId" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/vault{
@@ -35627,6 +35692,16 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/brotherhood/medical)
+"sAQ" = (
+/mob/living/simple_animal/hostile/handy/assaultron{
+	desc = "A deadly close combat robot developed by RobCo in a vaguely feminine, yet ominous chassis. This one seems sleeker and more dangerous, with a slick red paintjob.";
+	faction = list("hostile");
+	health = 800;
+	name = "redline assaultron";
+	rapid_melee = 2
+	},
+/turf/open/floor/plating/tunnel,
+/area/f13/caves)
 "sAT" = (
 /obj/structure/closet/crate{
 	anchored = 1
@@ -37282,6 +37357,13 @@
 "ttX" = (
 /turf/closed/indestructible/f13vaultrusted,
 /area/f13/bunker/bunkerseven)
+"tuv" = (
+/obj/machinery/light/small{
+	brightness = 7;
+	dir = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/vault)
 "tuy" = (
 /obj/structure/sign/poster/prewar/vault_tec{
 	pixel_y = -32
@@ -42296,13 +42378,11 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
 "weF" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/machinery/light/small{
+	dir = 4;
+	light_color = "#d8b1b1"
 	},
-/turf/open/floor/plasteel/f13{
-	icon_state = "rampdowntop"
-	},
+/turf/open/floor/f13,
 /area/f13/vault)
 "weH" = (
 /obj/machinery/light{
@@ -62855,7 +62935,7 @@ cNy
 bgK
 bgK
 vZV
-pvy
+sAQ
 vZV
 vZV
 pvy
@@ -63764,9 +63844,9 @@ cNy
 eau
 cNy
 cNy
-thJ
+mJF
 iFO
-lPz
+fTI
 cNy
 vZV
 pvy
@@ -64069,9 +64149,9 @@ cNy
 bIk
 dZm
 lwy
-cNy
-vZV
-vZV
+eau
+pvy
+pvy
 pvy
 pvy
 vZV
@@ -64367,12 +64447,12 @@ cNy
 sDh
 dZm
 lwy
-aPu
+hEN
 bIk
 dZm
 lwy
 cNy
-bgK
+vZV
 vZV
 vZV
 pvy
@@ -64668,7 +64748,7 @@ bgK
 cNy
 rQs
 hED
-yfn
+ajO
 cNy
 pgz
 hED
@@ -65271,15 +65351,15 @@ cNy
 cNy
 cNy
 cNy
-iHr
-cNy
+elo
+iFO
 thJ
+pIa
 iFO
 iFO
-iFO
-fTI
+lPd
 cNy
-qeK
+aPu
 hTC
 dZm
 dZm
@@ -65573,14 +65653,14 @@ cNy
 cNy
 oOM
 cNy
-iHr
-cNy
+qeK
+hTC
 bIk
 dZm
 dZm
 dZm
 lwy
-hEN
+oiI
 bhF
 dZm
 dZm
@@ -65878,10 +65958,10 @@ cNy
 cNy
 cNy
 oPu
+lPz
 hED
 hED
-hED
-nhT
+dLB
 cNy
 iJW
 hED
@@ -81124,7 +81204,7 @@ lUt
 lUt
 kjI
 lUt
-yhR
+lUt
 yhR
 gxT
 qmp
@@ -81426,7 +81506,7 @@ lUt
 ndE
 dno
 dno
-yhR
+lUt
 yhR
 gxT
 wEE
@@ -81728,7 +81808,7 @@ lUt
 cVp
 dno
 cVp
-yhR
+lUt
 yhR
 gxT
 wEE
@@ -82030,7 +82110,7 @@ lUt
 ndE
 dno
 dno
-yhR
+lUt
 yhR
 gxT
 yhK
@@ -82332,7 +82412,7 @@ lUt
 cVp
 ndE
 dno
-yhR
+lUt
 yhR
 gxT
 wEE
@@ -82634,7 +82714,7 @@ lUt
 cVp
 dno
 dno
-yhR
+lUt
 yhR
 gxT
 wEE
@@ -82936,7 +83016,7 @@ lUt
 ndE
 dno
 ndE
-yhR
+lUt
 yhR
 gxT
 wEE
@@ -83238,7 +83318,7 @@ lUt
 lUt
 eyM
 lUt
-yhR
+lUt
 yhR
 jyJ
 wEE
@@ -84141,7 +84221,7 @@ yfe
 lsr
 gXL
 lUt
-dno
+tuv
 dno
 lUt
 dTR
@@ -84746,7 +84826,7 @@ oox
 gXL
 lUt
 dno
-kjI
+dno
 jOz
 dTR
 pvd
@@ -84757,7 +84837,7 @@ kVq
 wEE
 dTR
 dTR
-yhR
+dTR
 yhR
 yhR
 yhR
@@ -85048,7 +85128,7 @@ gXL
 hsm
 hsm
 awN
-kjI
+eyM
 dTR
 dTR
 xwn
@@ -85057,9 +85137,9 @@ wEE
 qmp
 wEE
 wEE
+weF
 fyK
 dTR
-yhR
 yhR
 yhR
 yhR
@@ -85361,7 +85441,7 @@ jhk
 uNk
 dTR
 dTR
-yhR
+dTR
 yhR
 yhR
 yhR
@@ -85650,7 +85730,7 @@ loM
 clp
 wEE
 dXO
-weF
+cOS
 bkf
 wEE
 qmp
@@ -85661,9 +85741,9 @@ wEE
 wEE
 qes
 wEE
+weF
 fyK
 dTR
-yhR
 yhR
 yhR
 yhR
@@ -85954,9 +86034,9 @@ wfT
 eCR
 cOS
 irp
-qmp
 wEE
 qmp
+dhp
 wEE
 mVQ
 qmp
@@ -85965,7 +86045,7 @@ mVQ
 uNk
 dTR
 dTR
-yhR
+dTR
 yhR
 yhR
 yhR
@@ -86256,8 +86336,8 @@ qIC
 hsm
 hsm
 awN
-dTR
-dTR
+wEE
+qmp
 dTR
 tuN
 caL
@@ -86265,9 +86345,9 @@ iqm
 iqm
 ugI
 wEE
+weF
 fyK
 dTR
-yhR
 yhR
 yhR
 yhR
@@ -86555,11 +86635,11 @@ nSV
 pNa
 kaU
 xpR
+qIC
 yhR
-yhR
-yhR
-yhR
-yhR
+dTR
+cjN
+weF
 dTR
 cYJ
 wEE
@@ -86569,7 +86649,7 @@ hCH
 qmp
 dTR
 dTR
-yhR
+dTR
 yhR
 yhR
 yhR
@@ -86859,9 +86939,9 @@ qrU
 lAf
 pNa
 hsm
-lWI
-lWI
-yhR
+dTR
+dTR
+dTR
 dTR
 rlS
 wEE
@@ -124467,7 +124547,7 @@ bXs
 gaj
 nSP
 fSa
-xln
+hdj
 veu
 xSK
 tju

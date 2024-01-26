@@ -157,6 +157,7 @@
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
+	automatic_charge_overlays = FALSE
 	draw_time = GUN_DRAW_LONG
 	fire_delay = (GUN_FIRE_DELAY_SLOWER*0.8) //1200ms fire delay. Slower than the plasma pistol, but a big improvement
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
