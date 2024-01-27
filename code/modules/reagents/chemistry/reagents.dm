@@ -68,6 +68,8 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 	var/effective_blood_max = 0
 	/// How much this reagent slows bleeding to by while in you
 	var/bleed_mult = 1
+	var/interferes = CHEMICAL_INTERFERE_NEVER
+	var/interference_category = BODY_ALTERING_CHEMICAL
 
 /datum/reagent/New()
 	. = ..()
@@ -172,6 +174,17 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 
 // Called when this reagent first starts being metabolized by a liver
 /datum/reagent/proc/on_mob_metabolize(mob/living/L)
+	if (0 < interferes)
+		for(var/datum/reagent/rea in L.reagents.reagent_list)
+			var/chance = rea.interferes + interferes
+			if (istype(rea, /datum/reagent/consumable/ethanol) && istype(src, /datum/reagent/consumable/ethanol))
+				continue
+			if (0 < chance && rea != src)
+				if(prob(chance) && istype(L, /mob/living/carbon/human))
+					to_chat(L, span_danger("You suddenly do not feel well."))
+					var/mob/living/carbon/human/H = L
+					H.do_bad_drug_interaction(src, rea)
+					return
 	return
 
 // Called when this reagent first starts being metabolized by a synth

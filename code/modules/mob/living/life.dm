@@ -48,10 +48,18 @@
 		update_z(null)
 
 /mob/living/proc/set_special()
-	if (HAS_TRAIT(src, TRAIT_DUMB))
+	if (HAS_TRAIT(src, TRAIT_DUMB) && !SPECIAL_SET)
 		special_i = max(special_i - 5, 1)
 	var/endurance_health = special_e*3 - 14
 	maxHealth = initial(maxHealth) + endurance_health//SPECIAL Integration
+	if (HAS_TRAIT(src, TRAIT_LIFEGIVER))
+		maxHealth += 10
+	if (HAS_TRAIT(src, TRAIT_LIFEGIVERPLUS))
+		maxHealth += 20
+	if (HAS_TRAIT(src, TRAIT_FLIMSY))
+		maxHealth -= 10
+	if (HAS_TRAIT(src, TRAIT_VERYFLIMSY))
+		maxHealth -= 20
 	default_sprint_buffer_max = initial(default_sprint_buffer_max) + (special_e*3) * CONFIG_GET(number/movedelay/sprint_buffer_max)/13
 	stambuffer = initial(stambuffer) + (round(special_e/2) - 2)
 	update_config_movespeed()
@@ -61,7 +69,10 @@
 	updatehealth()
 	var/obj/item/organ/eyes/eyes = getorgan(/obj/item/organ/eyes)
 	if (istype(eyes))
-		eyes.lighting_alpha = 256 - (special_p * 2)
+		if (initial(eyes.lighting_alpha))
+			eyes.lighting_alpha = initial(eyes.lighting_alpha) - (special_p * 2)
+		else
+			eyes.lighting_alpha = 256 - (special_p * 2)
 	lighting_alpha = 256 - (special_p * 2)
 	update_sight()
 	update_special_speed(special_a)//SPECIAL Integration

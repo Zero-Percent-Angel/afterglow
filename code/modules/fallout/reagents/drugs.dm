@@ -7,6 +7,7 @@
 	addiction_chance = 3
 	metabolization_rate = REAGENTS_METABOLISM * 0.25
 	ghoulfriendly = TRUE
+	interferes = CHEMICAL_INTERFERE_IMPOSSIBLE
 
 /datum/reagent/drug/jet/on_mob_add(mob/living/carbon/human/M)
 	..()
@@ -88,23 +89,24 @@
 	color = "#FAFAFA"
 	overdose_threshold = 12
 	addiction_threshold = 8
-	addiction_chance = 2
+	addiction_chance = 4
 	metabolization_rate = 0.7 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
+	interferes = CHEMICAL_INTERFERE_VERY_OFTEN
 
 /datum/reagent/drug/turbo/on_mob_add(mob/M)
 	..()
 	ADD_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
 	if (istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
-		H.modify_special(5, "a")
+		H.modify_special(10, "a")
 
 
 /datum/reagent/drug/turbo/on_mob_delete(mob/M)
 	REMOVE_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
 	if (istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
-		H.modify_special(-5, "a")
+		H.modify_special(-10, "a")
 	..()
 
 /datum/reagent/drug/turbo/on_mob_life(mob/living/carbon/M)
@@ -172,10 +174,11 @@
 	color = "#FF0000"
 	overdose_threshold = 15
 	addiction_threshold = 12.5
-	addiction_chance = 3
+	addiction_chance = 4
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 	ghoulfriendly = TRUE
+	interferes = CHEMICAL_INTERFERE_SOMETIMES
 
 
 /datum/reagent/drug/psycho/on_mob_life(mob/living/carbon/M)
@@ -274,6 +277,7 @@
 	addiction_chance = 3
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 	ghoulfriendly = TRUE
+	interferes = CHEMICAL_INTERFERE_VERY_OFTEN
 
 /datum/reagent/drug/buffout/on_mob_add(mob/living/carbon/human/M)
 	..()
@@ -294,6 +298,7 @@
 /datum/reagent/drug/buffout/on_mob_life(mob/living/carbon/M)
 	M.AdjustStun(-10*REAGENTS_EFFECT_MULTIPLIER, 0)
 	M.AdjustKnockdown(-10*REAGENTS_EFFECT_MULTIPLIER, 0)
+	/*
 	if(M.mind)
 		var/datum/job/job = SSjob.GetJob(M.mind.assigned_role)
 		if(istype(job))
@@ -302,6 +307,7 @@
 					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "used drugs", /datum/mood_event/used_drugs, name)
 				if(FACTION_LEGION)
 					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "betrayed caesar", /datum/mood_event/betrayed_caesar, name)
+	*/
 	..()
 	. = TRUE
 
@@ -373,6 +379,7 @@
 	addiction_chance = 5
 	metabolization_rate = 0.8 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
+	interferes = CHEMICAL_INTERFERE_OFTEN
 
 /datum/reagent/drug/steady/on_mob_add(mob/living/M)
 	..()

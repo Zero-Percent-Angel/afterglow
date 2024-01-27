@@ -60,11 +60,11 @@
 
 /datum/mood_event/happiness_drug
 	description = span_nicegreen("I can't feel anything and I never want this to end.")
-	mood_change = 10
+	mood_change = 20
 
 /datum/mood_event/happiness_drug_good_od
 	description = span_nicegreen("YES! YES!! YES!!!")
-	mood_change = 20
+	mood_change = 40
 	timeout = 300
 	//special_screen_obj = "mood_happiness_good" Originally in tg, but I personally think they look dumb
 

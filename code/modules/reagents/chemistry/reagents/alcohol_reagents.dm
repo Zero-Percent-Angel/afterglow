@@ -16,6 +16,8 @@
 	pH = 7.33
 	value = REAGENT_VALUE_VERY_COMMON //don't bother tweaking all drinks values, way too many can easily be done roundstart or with an upgraded dispenser.
 	synth_metabolism_use_human = TRUE
+	interferes = CHEMICAL_INTERFERE_SOMETIMES
+	interference_category = MIND_ALTERING_CHEMICAL
 
 /*
 Boozepwr Chart

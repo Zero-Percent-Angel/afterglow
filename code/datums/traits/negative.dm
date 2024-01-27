@@ -48,6 +48,7 @@
 	var/datum/reagent/drug = new /datum/reagent/drug/jet
 	drug.addiction_stage4_end = 4000
 	H.reagents.addiction_list += drug
+	drug.on_addiction_start(H)
 
 /datum/quirk/addict/remove()
 	var/mob/living/carbon/human/H = quirk_holder

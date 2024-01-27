@@ -48,36 +48,48 @@
 		if(do_after(src, 3 SECONDS, target = h))
 			if(confirm == "Top")
 				if(h.upper_body_exposed())
-					h.undershirt = "nude"
+					if(h.undershirt != "Nude")
+						new /obj/item/underwear(get_turf(src), h.undershirt, FALSE, TRUE, FALSE)
+						h.undershirt = "Nude"
 				else
 					to_chat(src, span_alert("Their uniform is in the way."))
 
 			if(confirm == "Bottom")
 				if(h.lower_body_exposed())
-					h.underwear = "nude"
+					if(h.underwear != "Nude")
+						new /obj/item/underwear(get_turf(src), h.underwear, TRUE, FALSE, FALSE)
+						h.underwear = "Nude"
 				else
 					to_chat(src, span_alert("Their uniform is in the way."))
 
 			if(confirm == "Socks")
 				if(h.shoes == null)
-					h.socks = "nude"
+					if(h.socks != "Nude")
+						new /obj/item/underwear(get_turf(src), h.socks, FALSE, FALSE, TRUE)
+						h.socks = "Nude"
 				else
 					to_chat(src, span_alert("Their shoes are in the way."))
 
 			if(confirm == "All")
 				if(h.lower_body_exposed())
-					h.underwear = "nude"
+					if(h.underwear != "Nude")
+						new /obj/item/underwear(get_turf(src), h.underwear, TRUE, FALSE, FALSE)
+						h.underwear = "Nude"
 				else
 					to_chat(src, span_alert("Their uniform is in the way."))
 				if(h.shoes == null)
-					h.socks = "nude"
+					if(h.socks != "Nude")
+						new /obj/item/underwear(get_turf(src), h.socks, FALSE, FALSE, TRUE)
+						h.socks = "Nude"
 				else
 					to_chat(src, span_alert("Their shoes are in the way."))
 				if(h.upper_body_exposed())
-					h.undershirt = "nude"
+					if(h.undershirt != "Nude")
+						new /obj/item/underwear(get_turf(src), h.undershirt, FALSE, TRUE, FALSE)
+						h.undershirt = "Nude"
 				else
 					to_chat(src, span_alert("Their uniform is in the way."))
-				
+
 			h.update_body(TRUE)
 
 /mob/living/carbon/human/proc/lower_body_exposed()

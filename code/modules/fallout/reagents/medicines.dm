@@ -326,6 +326,7 @@
 	var/od_next_strike = 0 // there's a cool down between strikes, to give the user time to purge this stuff
 	var/od_strike_cooldown = 6 SECONDS
 	var/od_cycles = 0 // Number of cycles we've been ODing
+	interferes = CHEMICAL_INTERFERE_OFTEN
 
 /datum/reagent/medicine/medx/on_mob_metabolize(mob/living/carbon/human/M)
 	..()
@@ -343,13 +344,13 @@
 
 /datum/reagent/medicine/medx/on_mob_life(mob/living/carbon/M)
 	if(M.health < 20)
-		M.adjustToxLoss(-2 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustBruteLoss(-2 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustFireLoss(-2 * metabolization_rate *REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustToxLoss(-10 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustBruteLoss(-10 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustFireLoss(-10 * metabolization_rate *REAGENTS_EFFECT_MULTIPLIER, 0)
 	if (M.health < 0)
-		M.adjustToxLoss(-5 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustBruteLoss(-5 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustFireLoss(-5 * metabolization_rate *REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustToxLoss(-50 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustBruteLoss(-50 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustFireLoss(-50 * metabolization_rate *REAGENTS_EFFECT_MULTIPLIER, 0)
 	if(M.oxyloss > 35)
 		M.setOxyLoss(35, 0)
 	if(M.losebreath >= 4)
@@ -365,7 +366,7 @@
 /datum/reagent/medicine/medx/overdose_process(mob/living/carbon/human/M)
 	/// Dont cause the effects if they have more than 15u of mentat, and any epinephrine at all
 	/// Doesnt stop the severity ramping up, so if it goes below that... it all catches up
-	if(M.reagents.get_reagent_amount(/datum/reagent/medicine/mentat) >= 5 && M.reagents.has_reagent(/datum/reagent/medicine/epinephrine))
+	if(M.reagents.get_reagent_amount(/datum/reagent/medicine/mentat) >= 5 || M.reagents.has_reagent(/datum/reagent/medicine/epinephrine))
 		if(prob(5))
 			to_chat(M, span_danger("Your nerves buzz like a hive of angry bees, kept running by sheer force of mentat."))
 	else
@@ -473,6 +474,8 @@
 	addiction_threshold = 15
 	addiction_chance = 3
 	ghoulfriendly = TRUE
+	interference_category = MIND_ALTERING_CHEMICAL
+	interferes = CHEMICAL_INTERFERE_SOMETIMES
 
 /datum/reagent/medicine/mentat/on_mob_add(mob/living/L, amount)
 	. = ..()
@@ -562,6 +565,8 @@
 	ghoulfriendly = TRUE
 	synth_metabolism_use_human = TRUE
 	metabolization_rate = 0.1 * REAGENTS_METABOLISM
+	interferes = CHEMICAL_INTERFERE_IMPOSSIBLE
+	interference_category = MIND_ALTERING_CHEMICAL
 
 /datum/reagent/medicine/fixer/on_mob_life(mob/living/carbon/M)
 //	for(var/datum/reagent/R in M.reagents.reagent_list)
