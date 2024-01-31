@@ -5,7 +5,7 @@
 	lefthand_file = 'icons/fallout/onmob/weapons/melee2h_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/melee2h_righthand.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
-	attack_speed = CLICK_CD_MELEE * 1.15 //9.2
+	attack_speed = CLICK_CD_MELEE * 1.2 //9.2
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	max_integrity = 200
@@ -382,6 +382,12 @@
 	force_wielded = 35
 	attack_speed = CLICK_CD_MELEE //8. swing as fast as one-handed weapons, and do more damage, but with the inconvenience of worse storage.
 
+/obj/item/twohanded/baseball/attack(mob/living/M, mob/living/user)
+	. = ..()
+	if(!istype(M) || !wielded)
+		return
+	M.apply_damage(15, STAMINA, "chest", M.run_armor_check("chest", "melee"))
+
 // Spiked Baseball Bat		Keywords: Damage 26/40, Damage bonus Stamina, Sharp
 /obj/item/twohanded/baseball/spiked
 	name = "spiked baseball bat"
@@ -396,11 +402,6 @@
 	force_unwielded = 26
 	force_wielded = 38
 
-/obj/item/twohanded/baseball/spiked/attack(mob/living/M, mob/living/user)
-	. = ..()
-	if(!istype(M))
-		return
-	M.apply_damage(15, STAMINA, "chest", M.run_armor_check("chest", "melee"))
 
 // Louisville Slugger		Keywords: Damage 25/32, Damage bonus Stamina
 /obj/item/twohanded/baseball/louisville
@@ -413,12 +414,6 @@
 	force = 25
 	force_unwielded = 25
 	force_wielded = 35
-
-/obj/item/twohanded/baseball/louisville/attack(mob/living/M, mob/living/user)
-	. = ..()
-	if(!istype(M))
-		return
-	M.apply_damage(15, STAMINA, null, M.run_armor_check("chest", "melee"))
 
 // Golf Club		Keywords: Damage 22/32, Damage bonus Stamina
 /obj/item/twohanded/baseball/golfclub
@@ -448,13 +443,13 @@
 /obj/item/twohanded/sledgehammer
 	name = "sledgehammer"
 	desc = "A heavy sledgehammer that lost most of its use besides caving in heads and barricades. Swings incredibly slowly, but with deadly power."
-	attack_speed = CLICK_CD_MELEE * 1.2
 	force = 25
 	throwforce = 20 // Huge hammers aren't that great for throwing
 	sharpness = SHARP_NONE
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
 	force_unwielded = 25
-	attack_speed = CLICK_CD_MELEE * 1.8 //14.4
+	attack_speed = CLICK_CD_MELEE * 1.5
+	armour_penetration = 0.25
 
 // Sledgehammer			Keywords: Damage 25/45, Blacksmithing
 /obj/item/twohanded/sledgehammer/simple
@@ -551,7 +546,7 @@
 	desc = "A heavy sledgehammer manufacted from ultra-dense materials, developed by the Brotherhood of Steel. It looks like it could crush someone's skull with ease."
 	icon_state = "hammer-super"
 	icon_prefix = "hammer-super"
-	force = 25
+	force = 28
 	wielded_icon = "hammer-super2"
 	force_unwielded = 25
 	force_wielded = 68
@@ -660,7 +655,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	wielded_icon = "hammer-war2"
 	force_unwielded = 25
 	force_wielded = 55
-	attack_speed = CLICK_CD_MELEE * 1.2
+	attack_speed = CLICK_CD_MELEE * 1.4
 
 // Shaman staff				Keywords: Damage 15/30, Big stamina damage buff
 /obj/item/twohanded/sledgehammer/shamanstaff
@@ -735,6 +730,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	wielded_icon = "chainsaw2"
 	force_unwielded = 20
 	force_wielded = 47
+	attack_speed = CLICK_CD_MELEE
 
 /obj/item/twohanded/chainsaw/ComponentInitialize()
 	. = ..()
@@ -786,7 +782,7 @@ obj/item/twohanded/sledgehammer/supersledge/afterattack(atom/A, mob/living/user,
 	var/off_item_state = "steelsaw"
 	var/weight_class_on = WEIGHT_CLASS_HUGE
 	var/on = FALSE
-	var/force_on = 29 //10 more dps than chainsaw, but less perhit
+	var/force_on = 25 //10 more dps than chainsaw, but less perhit
 	var/force_off = 10
 	var/on_sound = 'sound/weapons/chainsawhit.ogg'
 

@@ -190,7 +190,7 @@
 	icon_state = "knife_hunting"
 	desc = "Dependable hunting knife."
 	embedding = list("pain_mult" = 4, "embed_chance" = 65, "fall_chance" = 10, "ignore_throwspeed_threshold" = TRUE)
-	force = 23
+	force = 21
 	throwforce = 25
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "cut")
 
@@ -199,7 +199,7 @@
 	icon_state = "knife_survival"
 	desc = "Multi-purpose knife with blackened steel."
 	embedding = list("pain_mult" = 4, "embed_chance" = 35, "fall_chance" = 10)
-	force = 23
+	force = 21
 	throwforce = 25
 
 /obj/item/melee/onehanded/knife/bayonet
@@ -214,7 +214,7 @@
 	icon_state = "knife_bowie"
 	item_state = "knife_bowie"
 	desc = "A large clip point fighting knife."
-	force = 25
+	force = 23
 	throwforce = 25
 	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
 
@@ -223,7 +223,7 @@
 	icon_state = "knife_trench"
 	item_state = "knife_trench"
 	desc = "This blade is designed for brutal close quarters combat."
-	force = 25
+	force = 23
 	custom_materials = list(/datum/material/iron=8000)
 	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
 
@@ -235,7 +235,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	desc = "A sharpened bone. The bare minimum in survival. Faster than other knives by a small margin due to its weight."
 	embedding = list("pain_mult" = 4, "embed_chance" = 35, "fall_chance" = 10)
-	force = 25
+	force = 23
 	throwforce = 20
 	custom_materials = null
 	attack_speed = 6.4
@@ -245,7 +245,7 @@
 	desc = "An ancient blade used to carry out the spiritual rituals of the Wayfarer people."
 	icon_state = "knife_ritual"
 	item_state = "knife_ritual"
-	force = 25
+	force = 23
 	armour_penetration = 0.1
 	custom_materials = null
 
@@ -259,7 +259,7 @@
 	attack_verb = list("stubbed", "poked")
 	var/extended = 0
 	var/extended_force = 21
-	var/extended_throwforce = 23
+	var/extended_throwforce = 20
 	var/extended_icon_state = "knife_switch_ext"
 	var/retracted_icon_state = "knife_switch"
 
@@ -350,7 +350,7 @@
 	name = "throwing knife"
 	desc = "a finely balanced knife made from a lightweight alloy, designed for being thrown. You can easily embed these in someone, and you look darn cool while doing so."
 	icon_state = "knife_throw"
-	force = 20
+	force = 18
 	throwforce = 30
 	armour_penetration = 0.25
 	bare_wound_bonus = 15 //keep your arteries covered
@@ -740,7 +740,7 @@
 	icon_state = "sapper"
 	item_state = "sapper"
 	w_class = WEIGHT_CLASS_NORMAL
-	force = 15
+	force = 17
 
 /obj/item/melee/unarmed/sappers/attack(mob/living/M, mob/living/user)
 	. = ..()
@@ -757,7 +757,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	sharpness = SHARP_POINTY
-	force = 17
+	force = 21
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
 // Lacerator		Keywords: Damage 29, Edged, Wound bonus
@@ -767,7 +767,7 @@
 	icon_state = "lacerator"
 	item_state = "lacerator"
 	w_class = WEIGHT_CLASS_NORMAL
-	force = 17
+	force = 21
 	armour_penetration = 0 //my brother in christ it is razor blades on tape
 	bare_wound_bonus = 5
 	sharpness = SHARP_EDGED

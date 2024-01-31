@@ -1101,7 +1101,7 @@
 
 	movement_type = FLYING | UNSTOPPABLE
 	hitscan = TRUE
-	armour_penetration = 0.4
+	armour_penetration = 0.5
 	damage_threshold_penetration = 9
 	tracer_type = /obj/effect/projectile/tracer/laser/blue
 	muzzle_type = /obj/effect/projectile/muzzle/laser/blue

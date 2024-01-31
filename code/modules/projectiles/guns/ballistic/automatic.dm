@@ -1756,7 +1756,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
 	init_firemodes = list(
@@ -1809,7 +1809,7 @@
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1.2)
+	init_recoil = RIFLE_RECOIL(1.1)
 	init_firemodes = list(
 		/datum/firemode/automatic/rpm200,
 		/datum/firemode/semi_auto
@@ -2517,7 +2517,7 @@
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1.2)
+	init_recoil = RIFLE_RECOIL(2)
 	init_firemodes = list(
 		/datum/firemode/semi_auto/slower
 	)
