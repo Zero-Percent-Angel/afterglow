@@ -128,7 +128,7 @@
 	healable = TRUE
 	maxHealth = 300
 	health = 300
-	mob_armor = ARMOR_VALUE_DEATHCLAW_MOTHER
+	mob_armor = ARMOR_VALUE_PA
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 15

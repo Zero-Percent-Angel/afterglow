@@ -312,7 +312,7 @@
 	stat_attack = CONSCIOUS
 	ranged_cooldown_time = 22
 	ranged = TRUE
-	mob_armor = ARMOR_VALUE_DEATHCLAW_MOTHER
+	mob_armor = ARMOR_VALUE_PA
 	robust_searching = TRUE
 	healable = TRUE
 	maxHealth = 300

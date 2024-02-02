@@ -1124,6 +1124,8 @@
 "aDc" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/gun/ballistic/automatic/assault_carbine,
+/obj/item/gun/ballistic/automatic/assault_carbine,
+/obj/item/gun/ballistic/automatic/assault_carbine,
 /turf/open/floor/plasteel/darkred,
 /area/f13/enclave)
 "aDn" = (
@@ -2381,6 +2383,7 @@
 "bkf" = (
 /obj/machinery/holopad,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/vault)
 "bkk" = (
@@ -3124,6 +3127,14 @@
 /obj/structure/rack/shelf_metal,
 /obj/item/clothing/shoes/f13/enclave/serviceboots,
 /obj/item/clothing/shoes/f13/enclave/serviceboots,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/shoes/jackboots,
+/obj/item/clothing/shoes/winterboots,
+/obj/item/clothing/shoes/workboots,
+/obj/item/clothing/shoes/cowboyboots,
+/obj/item/clothing/shoes/cowboyboots/black,
+/obj/item/clothing/shoes/f13/brownie,
+/obj/item/clothing/shoes/sneakers/black,
 /turf/open/floor/plasteel/darkred,
 /area/f13/enclave)
 "bHV" = (
@@ -5047,6 +5058,12 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/brotherhood/armory)
+"cJa" = (
+/obj/effect/turf_decal/caution/stand_clear{
+	pixel_y = -10
+	},
+/turf/open/floor/f13,
+/area/f13/vault)
 "cJl" = (
 /obj/structure/decoration/vent/rusty,
 /obj/machinery/shower{
@@ -9932,6 +9949,11 @@
 /obj/structure/sign/poster/prewar/poster72,
 /turf/closed/indestructible/f13vaultrusted,
 /area/f13/vault)
+"fjj" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/stripes/red/line,
+/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
+/area/f13/vault/atrium)
 "fjp" = (
 /obj/machinery/light{
 	dir = 1;
@@ -13933,6 +13955,10 @@
 /obj/effect/turf_decal/delivery/white,
 /obj/item/trash/f13/tin{
 	pixel_x = 6
+	},
+/obj/machinery/light{
+	dir = 1;
+	flickering = 1
 	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/vault/garden)
@@ -23880,6 +23906,14 @@
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/brotherhood/operations)
+"mAf" = (
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#c1caff"
+	},
+/obj/effect/turf_decal/stripes/red/line,
+/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
+/area/f13/vault/atrium)
 "mAp" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
@@ -24904,7 +24938,6 @@
 /obj/effect/turf_decal/delivery/white,
 /obj/item/seeds/coffee/robusta,
 /obj/item/reagent_containers/glass/bucket/plastic,
-/obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/vault/garden)
 "mZw" = (
@@ -31721,6 +31754,8 @@
 /area/f13/vault/dormitory)
 "qxM" = (
 /obj/structure/rack/shelf_metal,
+/obj/item/gun/ballistic/automatic/assault_rifle,
+/obj/item/gun/ballistic/automatic/assault_rifle,
 /obj/item/gun/ballistic/automatic/assault_rifle,
 /turf/open/floor/plasteel/darkred,
 /area/f13/enclave)
@@ -43918,6 +43953,10 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/radiation)
+"wQr" = (
+/obj/effect/turf_decal/stripes/red/line,
+/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
+/area/f13/vault/atrium)
 "wQv" = (
 /obj/structure/bed/mattress{
 	icon_state = "mattress3"
@@ -46683,6 +46722,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/item/clothing/suit/armor/medium/vest,
+/obj/item/clothing/suit/armor/medium/vest,
+/obj/item/clothing/suit/armor/medium/vest,
+/obj/item/clothing/suit/armor/medium/vest,
 /turf/open/floor/plasteel/vault,
 /area/f13/vault/security/armory)
 "ymc" = (
@@ -85424,7 +85467,7 @@ qxu
 gcg
 fgd
 loM
-fgd
+wQr
 oWM
 xYS
 gJk
@@ -85726,9 +85769,9 @@ qxu
 gcg
 fgd
 jwi
-loM
+fjj
 clp
-wEE
+cJa
 dXO
 cOS
 bkf
@@ -86028,7 +86071,7 @@ qxu
 gcg
 qDz
 fgd
-qDz
+mAf
 oWM
 wfT
 eCR

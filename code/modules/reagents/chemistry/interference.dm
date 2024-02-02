@@ -12,6 +12,7 @@
 		addtimer(CALLBACK(src, .proc/vomit), 5 SECONDS)
 		addtimer(CALLBACK(src, .proc/vomit), 10 SECONDS)
 		addtimer(CALLBACK(src, .proc/vomit), 15 SECONDS)
+		adjustToxLoss(rng)
 
 	//addiction
 	else if (rng < 40)
@@ -45,12 +46,14 @@
 
 	//sleep time
 	else if (rng < 140)
-		to_chat(src, span_danger("You suddenly pass out."))
+		to_chat(src, span_danger("You suddenly pass out, feeling very faint."))
 		AdjustUnconscious(30, TRUE, TRUE)
 		adjustStaminaLossBuffered(150)
+		if (prob(50))
+			addtimer(CALLBACK(src, .proc/AdjustUnconscious, 30, TRUE, TRUE), 20 SECONDS)
 
 	//stam damage
 	else
 		to_chat(src, span_danger("You feel extremely exhausted."))
-		adjustStaminaLossBuffered(150)
+		adjustStaminaLossBuffered(200)
 
