@@ -35,6 +35,7 @@
 	var/brute_dam = 0
 	var/burn_dam = 0
 	var/stamina_dam = 0
+	var/capped_dam = 0
 	/// Skin/meat damage, relating to bleedable damage
 	var/bleed_dam = 0
 	var/max_stamina_damage = 0

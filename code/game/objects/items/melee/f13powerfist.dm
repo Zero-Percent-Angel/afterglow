@@ -22,6 +22,8 @@
 	var/transfer_prints = TRUE //prevents runtimes with forensics when held in glove slot
 	var/throw_distance = 1
 	attack_speed = CLICK_CD_MELEE
+	custom_price = PRICE_ABOVE_EXPENSIVE
+	custom_premium_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/melee/powerfist/f13/equipped(mob/user, slot)
 	. = ..()

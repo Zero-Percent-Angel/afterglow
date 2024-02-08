@@ -26,8 +26,8 @@
 	)
 	handedness = GUN_EJECTOR_ANY
 
-
-	var/select = 0
+	var/datum/firemode/automatic/fanning/fan = null
+	var/can_fan = 0
 	equipsound = 'sound/f13weapons/equipsounds/pistolequip.ogg'
 
 /obj/item/gun/ballistic/revolver/Initialize()
@@ -120,6 +120,28 @@
 /obj/item/gun/ballistic/revolver/examine(mob/user)
 	. = ..()
 	. += "[get_ammo(0,0)] of those are live rounds."
+
+/obj/item/gun/ballistic/revolver/equipped(mob/living/H)
+	. = ..()
+	if(H.get_active_held_item() == src && HAS_TRAIT(H, TRAIT_FANNING) && can_fan && H.get_inactive_held_item() == null)
+		if (fan)
+			firemodes.Add(fan)
+		else
+			fan = new /datum/firemode/automatic/fanning(src)
+			firemodes.Add(fan)
+	else
+		disable_fan()
+
+/obj/item/gun/ballistic/revolver/dropped(mob/living/user)
+	. = ..()
+	disable_fan()
+
+
+/obj/item/gun/ballistic/revolver/proc/disable_fan()
+	if (fan)
+		firemodes.Remove(fan)
+		sel_mode = 1
+		set_firemode(sel_mode)
 
 /* * * * * * * * * *
  * LIGHT REVOLVERS *
@@ -214,6 +236,8 @@
 		SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
 		SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
 	)
+	can_fan = TRUE
+
 /* * * * * * * * * *
  * HEAVY REVOLVERS *
  * * * * * * * * * */
@@ -255,6 +279,7 @@
 		SP_DISTANT_SOUND(PISTOL_MEDIUM_DISTANT_SOUND),
 		SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
 	)
+	can_fan = TRUE
 
 /* * * * * * * * * * *
  * Lucky revolver
@@ -428,10 +453,9 @@
 	init_firemodes = list(
 		/datum/firemode/semi_auto
 	)
-	automatic = 0
-	autofire_shot_delay = 0
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	can_scope = FALSE
+	can_fan = TRUE
 
 /* * * * * * * * * * *
  * Snubnose .44 revolver
@@ -711,7 +735,7 @@
 	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_NORMAL
+	draw_time = GUN_DRAW_FAST
 	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
@@ -749,7 +773,7 @@
 	slowdown = GUN_SLOWDOWN_REVOLVER_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_NORMAL
+	draw_time = GUN_DRAW_FAST
 	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
@@ -773,7 +797,7 @@
 	slowdown = GUN_SLOWDOWN_REVOLVER_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_NORMAL
+	draw_time = GUN_DRAW_FAST
 	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL

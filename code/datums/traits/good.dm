@@ -1053,6 +1053,15 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("After picking some 250 year old cosmoline out from under one of your nails you realize that... Uh, no, the Mosin Nagant is a piece of shit.")
 	locked =  FALSE
 
+/datum/quirk/fanner
+	name = "Hammer Fanner"
+	desc = "You're ace at fanning a single action revolver hammer."
+	value = 2
+	mob_trait = TRAIT_FANNING
+	gain_text = span_notice("In a sudden haze you realize that the revolver was the pinnacle of firearms design.")
+	lose_text = span_danger("Uh, no, the revolver is shocking, why would anyone bother trying to fan them.")
+	locked =  FALSE
+
 /*
 I'm sorry my rat loving friends friends
 /datum/quirk/ratlord

@@ -596,9 +596,16 @@
 	var/total_stamina = 0
 	for(var/X in bodyparts)	//hardcoded to streamline things a bit
 		var/obj/item/bodypart/BP = X
-		total_brute	+= (BP.brute_dam * BP.body_damage_coeff)
-		total_burn	+= (BP.burn_dam * BP.body_damage_coeff)
-		total_stamina += (BP.stamina_dam * BP.stam_damage_coeff)
+		if (BP.status == BODYPART_ROBOTIC)
+			continue
+		if (!BP.capped_dam)
+			total_brute	+= (BP.brute_dam * BP.body_damage_coeff)
+			total_burn	+= (BP.burn_dam * BP.body_damage_coeff)
+			total_stamina += (BP.stamina_dam * BP.stam_damage_coeff)
+		else
+			total_brute	+= min(BP.brute_dam * BP.body_damage_coeff, BP.capped_dam)
+			total_burn	+= min(BP.burn_dam * BP.body_damage_coeff, BP.capped_dam)
+			total_stamina += min(BP.stamina_dam * BP.stam_damage_coeff, BP.capped_dam)
 	health = round(maxHealth - getOxyLoss() - getToxLoss() - getCloneLoss() - total_burn - total_brute, DAMAGE_PRECISION)
 	staminaloss = round(total_stamina, DAMAGE_PRECISION)
 	update_stat()

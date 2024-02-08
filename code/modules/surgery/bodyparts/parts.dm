@@ -67,11 +67,12 @@
 	onmob_layer = ARMS_PART_LAYER
 	onmob_markings_layer = MARKING_LAYER_ARMS
 	aux_icons = list(BODY_ZONE_PRECISE_L_HAND = HANDS_PART_LAYER, "l_hand_behind" = BODY_BEHIND_LAYER)
-	body_damage_coeff = 0.75
+	body_damage_coeff = 0.5
 	held_index = 1
 	px_x = -6
 	px_y = 0
 	stam_heal_tick = STAM_RECOVERY_LIMB
+	capped_dam = 10
 
 /obj/item/bodypart/l_arm/is_disabled()
 	if(HAS_TRAIT(owner, TRAIT_PARALYSIS_L_ARM))
@@ -129,12 +130,13 @@
 	onmob_layer = ARMS_PART_LAYER
 	onmob_markings_layer = MARKING_LAYER_ARMS
 	aux_icons = list(BODY_ZONE_PRECISE_R_HAND = HANDS_PART_LAYER, "r_hand_behind" = BODY_BEHIND_LAYER)
-	body_damage_coeff = 0.75
+	body_damage_coeff = 0.5
 	held_index = 2
 	px_x = 6
 	px_y = 0
 	stam_heal_tick = STAM_RECOVERY_LIMB
 	max_stamina_damage = 50
+	capped_dam = 10
 
 /obj/item/bodypart/r_arm/is_disabled()
 	if(HAS_TRAIT(owner, TRAIT_PARALYSIS_R_ARM))
@@ -195,6 +197,7 @@
 	px_y = 12
 	stam_heal_tick = STAM_RECOVERY_LIMB
 	max_stamina_damage = 50
+	capped_dam = 15
 
 /obj/item/bodypart/l_leg/is_disabled()
 	if(HAS_TRAIT(owner, TRAIT_PARALYSIS_L_LEG))
@@ -252,6 +255,7 @@
 	px_y = 12
 	max_stamina_damage = 50
 	stam_heal_tick = STAM_RECOVERY_LIMB
+	capped_dam = 15
 
 /obj/item/bodypart/r_leg/is_disabled()
 	if(HAS_TRAIT(owner, TRAIT_PARALYSIS_R_LEG))

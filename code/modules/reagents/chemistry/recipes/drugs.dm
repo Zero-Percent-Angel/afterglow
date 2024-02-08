@@ -63,7 +63,7 @@
 	is_cold_recipe = TRUE
 	required_reagents = list(/datum/reagent/rawgetaway = 10, /datum/reagent/medicine/morphine = 5)
 
-datum/chemical_reaction/aphro
+/datum/chemical_reaction/aphro
 	name = "crocin"
 	id = /datum/reagent/drug/aphrodisiac
 	results = list(/datum/reagent/drug/aphrodisiac = 6)
