@@ -1,5 +1,7 @@
 /mob/living/carbon
 	blood_volume = BLOOD_VOLUME_NORMAL
+	var/true_health = 0
+	var/legs_disabled = 0
 
 /mob/living/carbon/Initialize()
 	. = ..()
@@ -594,19 +596,26 @@
 	var/total_burn	= 0
 	var/total_brute	= 0
 	var/total_stamina = 0
+	var/real_dam = 0
+	var/legs_that_are_disabled = 0
 	for(var/X in bodyparts)	//hardcoded to streamline things a bit
 		var/obj/item/bodypart/BP = X
+		real_dam += ((BP.burn_dam + BP.brute_dam) * BP.body_damage_coeff)
+		if ((BP.body_zone == BODY_ZONE_R_LEG || BP.body_zone == BODY_ZONE_L_LEG) && BP.is_disabled())
+			legs_that_are_disabled++
 		if (BP.status == BODYPART_ROBOTIC)
 			continue
 		if (!BP.capped_dam)
 			total_brute	+= (BP.brute_dam * BP.body_damage_coeff)
 			total_burn	+= (BP.burn_dam * BP.body_damage_coeff)
-			total_stamina += (BP.stamina_dam * BP.stam_damage_coeff)
 		else
-			total_brute	+= min(BP.brute_dam * BP.body_damage_coeff, BP.capped_dam)
-			total_burn	+= min(BP.burn_dam * BP.body_damage_coeff, BP.capped_dam)
-			total_stamina += min(BP.stamina_dam * BP.stam_damage_coeff, BP.capped_dam)
+			total_brute	+= min((BP.brute_dam * BP.body_damage_coeff), BP.capped_dam)
+			total_burn	+= min((BP.burn_dam * BP.body_damage_coeff), BP.capped_dam)
+		total_stamina += (BP.stamina_dam * BP.stam_damage_coeff)
+
+	legs_disabled = legs_that_are_disabled
 	health = round(maxHealth - getOxyLoss() - getToxLoss() - getCloneLoss() - total_burn - total_brute, DAMAGE_PRECISION)
+	true_health = round(maxHealth - real_dam - getOxyLoss() - getToxLoss() - getCloneLoss(), DAMAGE_PRECISION)
 	staminaloss = round(total_stamina, DAMAGE_PRECISION)
 	update_stat()
 	//if(((maxHealth - total_burn) < HEALTH_THRESHOLD_DEAD*2) && stat == DEAD )
