@@ -495,7 +495,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/pa_wear
 	name = "Power Armor Training"
 	desc = "You've been around the wastes and have learned the wonders of wearing high tech armor from somewhere or something."
-	value = 8
+	value = 6
 	mob_trait = TRAIT_PA_WEAR
 	gain_text = span_notice("You realize how to use Power Armor.")
 	lose_text = span_danger("You forget how Power Armor works.")

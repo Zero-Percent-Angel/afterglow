@@ -1650,7 +1650,7 @@ Records disabled until a use for them is found
 	return skill_points + (special_i*2) - (skill_guns + skill_energy + skill_unarmed + skill_melee + skill_throwing + skill_doctor + skill_sneak + skill_science + skill_repair + skill_speech + skill_outdoorsman)
 
 /datum/preferences/proc/GetQuirkBalance()
-	var/bal = 2
+	var/bal = 3
 	for(var/V in all_quirks)
 		var/datum/quirk/T = SSquirks.quirks[V]
 		bal -= initial(T.value)

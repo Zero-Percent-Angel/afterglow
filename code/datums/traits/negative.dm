@@ -783,7 +783,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/slower
 	name = "Mobility - Wasteland Molasses"
 	desc = "You don't get around well off road. Like. At all."
-	value = -4
+	value = -5
 	mob_trait = TRAIT_SLOWAF
 	gain_text = span_notice("You feel like staying at home.")
 	lose_text = span_danger("Wow! You feel like you could run around the whole WORLD!")
