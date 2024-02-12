@@ -9,7 +9,6 @@
 
 	var/list/riding_offsets = list()	//position_of_user = list(dir = list(px, py)), or RIDING_OFFSET_ALL for a generic one.
 	var/list/directional_vehicle_layers = list()	//["[DIRECTION]"] = layer. Don't set it for a direction for default, set a direction to null for no change.
-	var/list/directional_vehicle_planes = list()	//["[DIRECTION]"] = plane. Don't set it for a direction for default, set a direction to null for no change.
 	var/list/directional_vehicle_offsets = list()	//same as above but instead of layer you have a list(px, py)
 	var/list/allowed_turf_typecache
 	var/list/forbid_turf_typecache					//allow typecache for only certain turfs, forbid to allow all but those. allow only certain turfs will take precedence.
@@ -26,9 +25,9 @@
 /datum/component/riding/Initialize()
 	if(!ismovable(parent))
 		return COMPONENT_INCOMPATIBLE
-	RegisterSignal(parent, COMSIG_MOVABLE_BUCKLE, .proc/vehicle_mob_buckle)
-	RegisterSignal(parent, COMSIG_MOVABLE_UNBUCKLE, .proc/vehicle_mob_unbuckle)
-	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, .proc/vehicle_moved)
+	RegisterSignal(parent, COMSIG_MOVABLE_BUCKLE, PROC_REF(vehicle_mob_buckle))
+	RegisterSignal(parent, COMSIG_MOVABLE_UNBUCKLE, PROC_REF(vehicle_mob_unbuckle))
+	RegisterSignal(parent, COMSIG_MOVABLE_MOVED, PROC_REF(vehicle_moved))
 
 /datum/component/riding/proc/vehicle_mob_unbuckle(datum/source, mob/living/M, force = FALSE)
 	var/atom/movable/AM = parent
@@ -54,17 +53,8 @@
 		. = AM.layer
 	AM.layer = .
 
-	var/planeValue = initial(AM.plane)
-	if(directional_vehicle_planes["[AM.dir]"])
-		planeValue = directional_vehicle_planes["[AM.dir]"]
-	if(isnull(.))	//you can set it to null to not change it.
-		planeValue = AM.plane
-	AM.plane = planeValue
-
-/datum/component/riding/proc/set_vehicle_dir_layer(dir, layer, plane = null)
+/datum/component/riding/proc/set_vehicle_dir_layer(dir, layer)
 	directional_vehicle_layers["[dir]"] = layer
-	if(plane)
-		directional_vehicle_planes["[dir]"] = plane
 
 /datum/component/riding/proc/vehicle_moved(datum/source, dir)
 	var/atom/movable/movable_parent = parent
@@ -82,7 +72,7 @@
 	var/atom/movable/AM = parent
 	var/mob/AMM = AM
 	if((ride_check_rider_restrained && M.restrained(TRUE)) || (ride_check_rider_incapacitated && M.incapacitated(FALSE, TRUE)) || (ride_check_ridden_incapacitated && istype(AMM) && AMM.incapacitated(FALSE, TRUE)))
-		AM.visible_message(span_warning("[M] falls off of [AM]!"))
+		AM.visible_message("<span class='warning'>[M] falls off of [AM]!</span>")
 		AM.unbuckle_mob(M)
 	return TRUE
 
@@ -175,11 +165,6 @@
 	if(user.incapacitated())
 		Unbuckle(user)
 		return
-	if(isliving(parent))
-		var/mob/living/critterthing = parent
-		if(critterthing.stat != CONSCIOUS || critterthing.health <= 0)
-			Unbuckle(user)
-			return
 	if(world.time < last_vehicle_move + ((last_move_diagonal? 2 : 1) * vehicle_move_delay))
 		return
 	last_vehicle_move = world.time
@@ -204,10 +189,10 @@
 		handle_vehicle_offsets()
 		handle_vehicle_layer()
 	else
-		to_chat(user, span_notice("You'll need the keys in one of your hands to [drive_verb] [AM]."))
+		to_chat(user, "<span class='notice'>You'll need the keys in one of your hands to [drive_verb] [AM].</span>")
 
 /datum/component/riding/proc/Unbuckle(atom/movable/M)
-	addtimer(CALLBACK(parent, /atom/movable/.proc/unbuckle_mob, M), 0, TIMER_UNIQUE)
+	addtimer(CALLBACK(parent, TYPE_PROC_REF(/atom/movable, unbuckle_mob), M), 0, TIMER_UNIQUE)
 
 /datum/component/riding/proc/Process_Spacemove(direction)
 	var/atom/movable/AM = parent
@@ -229,7 +214,7 @@
 /datum/component/riding/human/Initialize()
 	. = ..()
 	directional_vehicle_layers = list(TEXT_NORTH = MOB_LOWER_LAYER, TEXT_SOUTH = MOB_UPPER_LAYER, TEXT_EAST = MOB_UPPER_LAYER, TEXT_WEST = MOB_UPPER_LAYER)
-	RegisterSignal(parent, COMSIG_HUMAN_MELEE_UNARMED_ATTACK, .proc/on_host_unarmed_melee)
+	RegisterSignal(parent, COMSIG_HUMAN_MELEE_UNARMED_ATTACK, PROC_REF(on_host_unarmed_melee))
 
 /datum/component/riding/human/vehicle_mob_unbuckle(datum/source, mob/living/M, force = FALSE)
 	var/mob/living/carbon/human/H = parent
@@ -237,7 +222,7 @@
 		H.remove_movespeed_modifier(/datum/movespeed_modifier/human_carry)
 	if(!fireman_carrying)
 		M.Daze(25)
-	REMOVE_TRAIT(M, TRAIT_MOBILITY_NOUSE, src)
+	REMOVE_TRAIT(M, TRAIT_MOBILITY_NOUSE,  REF(src))
 	return ..()
 
 /datum/component/riding/human/vehicle_mob_buckle(datum/source, mob/living/M, force = FALSE)
@@ -246,7 +231,7 @@
 	if(length(H.buckled_mobs))
 		H.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/human_carry, TRUE, fireman_carrying? FIREMAN_CARRY_SLOWDOWN : PIGGYBACK_CARRY_SLOWDOWN)
 	if(fireman_carrying)
-		ADD_TRAIT(M, TRAIT_MOBILITY_NOUSE, src)
+		ADD_TRAIT(M, TRAIT_MOBILITY_NOUSE,  REF(src))
 
 /datum/component/riding/human/proc/on_host_unarmed_melee(atom/target)
 	var/mob/living/carbon/human/H = parent
@@ -288,7 +273,7 @@
 	AM.unbuckle_mob(user)
 	user.DefaultCombatKnockdown(60)
 	user.Daze(50)
-	user.visible_message(span_warning("[AM] pushes [user] off of [AM.p_them()]!"))
+	user.visible_message("<span class='warning'>[AM] pushes [user] off of [AM.p_them()]!</span>")
 
 /datum/component/riding/cyborg
 	del_on_unbuckle_all = TRUE
@@ -306,14 +291,14 @@
 			if(R.module && R.module.ride_allow_incapacitated)
 				kick = FALSE
 		if(kick)
-			to_chat(user, span_userdanger("You fall off of [AM]!"))
+			to_chat(user, "<span class='userdanger'>You fall off of [AM]!</span>")
 			Unbuckle(user)
 			return
 	if(iscarbon(user))
 		var/mob/living/carbon/carbonuser = user
 		if(!carbonuser.get_num_arms())
 			Unbuckle(user)
-			to_chat(user, span_userdanger("You can't grab onto [AM] with no hands!"))
+			to_chat(user, "<span class='userdanger'>You can't grab onto [AM] with no hands!</span>")
 			return
 
 /datum/component/riding/cyborg/handle_vehicle_layer()
@@ -348,7 +333,7 @@
 	var/turf/target = get_edge_target_turf(AM, AM.dir)
 	var/turf/targetm = get_step(get_turf(AM), AM.dir)
 	M.Move(targetm)
-	M.visible_message(span_warning("[M] is thrown clear of [AM]!"))
+	M.visible_message("<span class='warning'>[M] is thrown clear of [AM]!</span>")
 	M.throw_at(target, 14, 5, AM)
 	M.DefaultCombatKnockdown(60)
 

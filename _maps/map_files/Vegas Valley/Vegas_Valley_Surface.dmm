@@ -677,8 +677,8 @@
 /area/f13/building/abandoned/h)
 "avT" = (
 /obj/structure/chair/bench{
-	dir = 8;
-	pixel_x = 14
+	dir = 4;
+	pixel_x = -16
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 9;
@@ -1352,6 +1352,7 @@
 	color = "#363636"
 	},
 /obj/structure/table/booth,
+/obj/item/key/motorcycle,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/a)
 "aTP" = (
@@ -2180,11 +2181,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/red/white,
 /area/f13/ambientlighting/building/j)
 "bvj" = (
-/obj/structure/wreck/car{
-	dir = 4;
-	icon_state = "buggy_olive";
-	layer = 2;
-	pixel_y = -11
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/vehicle/ridden/fuel/motorcycle/buggy{
+	dir = 4
 	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain1"
@@ -5978,8 +5978,8 @@
 /area/f13/building/powered)
 "dTz" = (
 /obj/structure/chair/bench{
-	dir = 4;
-	pixel_x = -16
+	dir = 8;
+	pixel_x = 14
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 6;
@@ -12511,8 +12511,8 @@
 /area/f13/ambientlighting/building/j)
 "hNu" = (
 /obj/structure/chair/bench{
-	dir = 4;
-	pixel_x = -16
+	dir = 8;
+	pixel_x = 14
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 10;
@@ -13005,8 +13005,8 @@
 /area/f13/building/abandoned/r)
 "iff" = (
 /obj/structure/chair/bench{
-	dir = 4;
-	pixel_x = -16
+	dir = 8;
+	pixel_x = 14
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "outerpavementcorner"
@@ -13863,11 +13863,11 @@
 	},
 /area/f13/ambientlighting/building/f)
 "iFW" = (
-/obj/effect/landmark/start/f13/followersdoctor,
 /obj/machinery/light{
 	dir = 1;
 	light_color = "#706891"
 	},
+/obj/structure/closet/crate/freezer/blood/anchored,
 /turf/open/floor/wood_common/wood_common_dark,
 /area/f13/followers)
 "iFX" = (
@@ -14884,8 +14884,8 @@
 "jnf" = (
 /obj/structure/flora/twig2,
 /obj/structure/chair/bench{
-	dir = 8;
-	pixel_x = 14
+	dir = 4;
+	pixel_x = -16
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
@@ -18155,7 +18155,8 @@
 /area/f13/ambientlighting/building/o)
 "llL" = (
 /obj/machinery/light/sign/heaven{
-	pixel_y = 32
+	pixel_y = 32;
+	layer = 4.2
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaltopbordertop0"
@@ -24855,6 +24856,10 @@
 /obj/item/lockpick_set/bobby_pin,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/k)
+"pFx" = (
+/obj/effect/landmark/start/f13/followersdoctor,
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/followers)
 "pGw" = (
 /obj/structure/tires/two,
 /turf/open/indestructible/ground/outside/desert,
@@ -28757,6 +28762,14 @@
 	icon_state = "horizontaloutermain0"
 	},
 /area/f13/ambientlighting/building/o)
+"rVx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/wood/bar,
+/obj/item/key/motorcycle,
+/turf/open/floor/f13{
+	icon_state = "yellowrustychess"
+	},
+/area/f13/ambientlighting/building/b)
 "rVI" = (
 /obj/structure/stairs/west,
 /turf/open/floor/f13/wood,
@@ -35024,8 +35037,8 @@
 /area/f13/building/abandoned/a)
 "vLb" = (
 /obj/structure/chair/bench{
-	dir = 4;
-	pixel_x = -16
+	dir = 8;
+	pixel_x = 14
 	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 8;
@@ -35707,8 +35720,8 @@
 /area/f13/wasteland)
 "wkh" = (
 /obj/structure/chair/bench{
-	dir = 8;
-	pixel_x = 14
+	dir = 4;
+	pixel_x = -16
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
@@ -37319,12 +37332,9 @@
 	},
 /area/f13/wasteland)
 "xdN" = (
-/obj/structure/chair/bench{
-	dir = 8;
-	pixel_x = 14
-	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "verticaloutermain2"
+/obj/vehicle/ridden/fuel/motorcycle/flamy,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain2"
 	},
 /area/f13/wasteland)
 "xdT" = (
@@ -39005,11 +39015,11 @@
 /turf/open/floor/wood_common,
 /area/f13/followers)
 "ybS" = (
-/obj/structure/wreck/car/bike{
-	dir = 8
+/obj/machinery/light/lampost{
+	dir = 4
 	},
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "horizontaltopborderbottom2"
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontalbottomborderbottom0"
 	},
 /area/f13/wasteland)
 "ycg" = (
@@ -62554,8 +62564,8 @@ qBW
 iXG
 uVn
 nQO
-eSr
-eVk
+kDw
+tmQ
 kAJ
 fZR
 azA
@@ -65275,7 +65285,7 @@ fye
 fye
 fye
 nQO
-kDw
+eSr
 avT
 qzm
 fyv
@@ -65571,8 +65581,8 @@ azA
 dec
 oVP
 ydO
-tmQ
-xdN
+eVk
+bmr
 xcL
 xcL
 fye
@@ -85350,8 +85360,8 @@ jUa
 aTo
 yjy
 lmd
-ybS
-cKE
+snK
+xdN
 cKE
 eUj
 eUj
@@ -85365,7 +85375,7 @@ xpG
 smK
 smK
 smK
-ahs
+ybS
 uVn
 edT
 edT
@@ -85670,7 +85680,7 @@ smK
 ahs
 rAo
 eqv
-bvj
+wwh
 hkX
 pEZ
 hkX
@@ -85972,7 +85982,7 @@ smK
 rzw
 nFz
 sfM
-kGA
+bvj
 hkX
 wwh
 kXz
@@ -86286,7 +86296,7 @@ ltQ
 qSQ
 qSQ
 qSQ
-aKD
+rVx
 aKD
 aKD
 jQH
@@ -89895,7 +89905,7 @@ xpG
 smK
 smK
 smK
-ahs
+ybS
 lmd
 gYt
 mzS
@@ -92907,7 +92917,7 @@ xXx
 xXx
 xXx
 ahs
-lmd
+hbf
 smK
 smK
 smK
@@ -99853,7 +99863,7 @@ yaZ
 xXx
 rxs
 ahs
-lmd
+hbf
 smK
 smK
 smK
@@ -108284,7 +108294,7 @@ kSO
 iFW
 eJh
 dUR
-eJh
+pFx
 eJh
 eJh
 kSO
