@@ -187,6 +187,8 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	/// extra special transform
 	var/matrix/special_transform
 
+	var/will_hit = FALSE
+
 /obj/item/Initialize()
 
 	if(attack_verb)

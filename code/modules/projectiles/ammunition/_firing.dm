@@ -54,7 +54,8 @@
 	else
 		BB.def_zone = user.zone_selected
 	BB.suppressed = quiet
-	BB.damage_threshold_penetration = damage_threshold_penetration
+	if (damage_threshold_penetration)
+		BB.damage_threshold_penetration = damage_threshold_penetration
 
 	if(isgun(fired_from))
 		var/obj/item/gun/G = fired_from

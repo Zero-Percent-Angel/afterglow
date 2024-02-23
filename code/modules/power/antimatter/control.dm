@@ -269,6 +269,9 @@
 	stored_core_stability_delay = 0
 
 /obj/machinery/power/am_control_unit/ui_interact(mob/user)
+	if (!(user.skill_check(SKILL_SCIENCE, HARD_CHECK) || user.skill_check(SKILL_REPAIR, EXPERT_CHECK)))
+		to_chat(user, span_warning("You don't even know where to start with that."))
+		return
 	. = ..()
 	if((get_dist(src, user) > 1) || (stat & (BROKEN|NOPOWER)))
 		if(!isAI(user))

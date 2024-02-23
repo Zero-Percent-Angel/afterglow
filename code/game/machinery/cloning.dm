@@ -12,8 +12,8 @@
 	name = "cloning pod"
 	desc = "An electronically-lockable pod for growing organic tissue."
 	density = TRUE
-	icon = 'icons/obj/machines/cloning.dmi'
-	icon_state = "pod_0"
+	icon = 'icons/obj/cryogenics.dmi'
+	icon_state = "pod-off"
 	req_access = list(ACCESS_CLONING) //FOR PREMATURE UNLOCKING.
 	verb_say = "states"
 	circuit = /obj/item/circuitboard/machine/clonepod
@@ -110,31 +110,38 @@
 	return examine(user)
 
 //Start growing a human clone in the pod!
-/obj/machinery/clonepod/proc/growclone(ckey, clonename, ui, mutation_index, mindref, blood_type, datum/species/mrace, list/features, factions, list/quirks, datum/bank_account/insurance, list/traumas)
+/obj/machinery/clonepod/proc/growclone(ckey, clonename, ui, mutation_index, mindref, blood_type, datum/species/mrace, list/features, factions, list/quirks, datum/bank_account/insurance, list/traumas, list/special, list/skills)
 	if(panel_open)
 		return FALSE
 	if(mess || attempting)
 		return FALSE
 	if(get_clone_mind == CLONEPOD_GET_MIND)
-		clonemind = locate(mindref) in SSticker.minds
+		clonemind = locate(mindref)
 		if(!istype(clonemind))	//not a mind
+			say("Mindlink failed, could not download mind into template.")
 			return FALSE
 		if(!QDELETED(clonemind.current))
 			if(clonemind.current.stat != DEAD)	//mind is associated with a non-dead body
+				say("Rejecting clone of living target.")
 				return FALSE
 			if(clonemind.current.suiciding) // Mind is associated with a body that is suiciding.
+				say("Subject has lost the will to live.")
 				return FALSE
 			if(AmBloodsucker(clonemind.current)) //If the mind is a bloodsucker
+				say("Unknown error.")
 				return FALSE
-		if(clonemind.active)	//somebody is using that mind
-			if( ckey(clonemind.key)!=ckey )
-				return FALSE
+			if(clonemind.active)	//somebody is using that mind
+				if( ckey(clonemind.key)!=ckey )
+					say("Mindlink error, subject has multiple interfaces.")
+					return FALSE
 		else
 			// get_ghost() will fail if they're unable to reenter their body
-			var/mob/dead/observer/G = clonemind.get_ghost()
+			var/mob/dead/observer/G = clonemind.get_ghost(TRUE)
 			if(!G)
+				say("Mindlink failed, target not located.")
 				return FALSE
 			if(G.suiciding) // The ghost came from a body that is suiciding.
+				say("Subject has lost the will to live.")
 				return FALSE
 		if(clonemind.damnation_type) //Can't clone the damned.
 			INVOKE_ASYNC(src, .proc/horrifyingsound)
@@ -148,10 +155,13 @@
 	var/mob/living/carbon/human/H = new /mob/living/carbon/human(src)
 
 	H.hardset_dna(ui, mutation_index, H.real_name, blood_type, mrace, features)
-
 	H.easy_randmut(NEGATIVE+MINOR_NEGATIVE) //100% bad mutation. Can be cured with mutadone.
 
 	H.silent = 20 //Prevents an extreme edge case where clones could speak if they said something at exactly the right moment.
+	set_special(H, special)
+	set_skills(H, skills)
+	H.set_special()
+	H.invalidate_skill_caches()
 	occupant = H
 
 	if(!clonename)	//to prevent null names
@@ -205,6 +215,34 @@
 		H.suiciding = FALSE
 	attempting = FALSE
 	return TRUE
+
+
+/obj/machinery/clonepod/proc/set_special(mob/living/carbon/human/H, list/special)
+	H.special_s = special[1]
+	H.special_p = special[2]
+	H.special_e = special[3]
+	H.special_c = special[4]
+	H.special_i = special[5]
+	H.special_a = special[6]
+	H.special_l = special[7]
+
+/obj/machinery/clonepod/proc/set_skills(mob/living/carbon/human/H, list/skills)
+	H.skill_barter = skills[SKILL_BARTER]
+	H.skill_doctor = skills[SKILL_DOCTOR]
+	H.skill_energy = skills[SKILL_ENERGY]
+	H.skill_first_aid = skills[SKILL_FIRST_AID]
+	H.skill_guns = skills[SKILL_GUNS]
+	H.skill_melee = skills[SKILL_MELEE]
+	H.skill_science = skills[SKILL_SCIENCE]
+	H.skill_repair = skills[SKILL_REPAIR]
+	H.skill_outdoorsman = skills[SKILL_OUTDOORSMAN]
+	H.skill_repair = skills[SKILL_REPAIR]
+	H.skill_sneak = skills[SKILL_SNEAK]
+	H.skill_unarmed = skills[SKILL_UNARMED]
+	H.skill_speech = skills[SKILL_SPEECH]
+	H.skill_lockpick = skills[SKILL_LOCKPICK]
+	H.skill_traps = skills[SKILL_TRAPS]
+	H.skill_throwing = skills[SKILL_THROWING]
 
 //Grow clones to maturity then kick them out.  FREELOADERS
 /obj/machinery/clonepod/process()
@@ -488,18 +526,15 @@
 	flesh_number = unattached_flesh.len
 
 /obj/machinery/clonepod/update_icon_state()
-	if(mess)
-		icon_state = "pod_g"
-	else if(occupant)
-		icon_state = "pod_1"
+	if(occupant)
+		icon_state = "pod-on"
 	else
-		icon_state = "pod_0"
-
-	if(panel_open)
-		icon_state = "pod_0_maintenance"
+		icon_state = "pod-off"
 
 /obj/machinery/clonepod/update_overlays()
 	. = ..()
+	if(panel_open)
+		add_overlay("pod-panel")
 	if(mess)
 		var/mutable_appearance/gib1 = mutable_appearance(CRYOMOBS, "gibup")
 		var/mutable_appearance/gib2 = mutable_appearance(CRYOMOBS, "gibdown")

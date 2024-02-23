@@ -146,6 +146,8 @@
 			. += span_deadsay("[t_He] [t_is] limp and unresponsive; there are no signs of life...")
 		else
 			. += span_deadsay("[t_He] [t_is] limp and unresponsive; there are no signs of life and [t_his] soul has departed...")
+		if(real_name == user.real_name)
+			SEND_SIGNAL(user, COMSIG_ADD_MOOD_EVENT, "cloned_corpse", /datum/mood_event/cloned_corpse, src)
 
 	if(get_bodypart(BODY_ZONE_HEAD) && !getorgan(/obj/item/organ/brain))
 		. += span_deadsay("It appears that [t_his] brain is missing...")

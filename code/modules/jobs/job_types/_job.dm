@@ -97,6 +97,10 @@
 	/// Which kind of matchmaking this job allows, and with which departments. Associative list:  matchmaking_allowed[matchmaking datum typepath] -> list(job datum typepaths allowed)
 	var/list/matchmaking_allowed
 
+	var/announce_join = TRUE
+
+	var/datum/job/display_alternate
+
 
 /datum/job/proc/after_spawn(mob/living/spawner, mob/client_holder, latejoin = FALSE)
 	SHOULD_CALL_PARENT(TRUE)
@@ -159,7 +163,7 @@
 			H.set_species(/datum/species/human)
 			H.apply_pref_name("human", preference_source)
 	// F13 EDIT: GHOULS CANNOT BE LEGION, BROTHERHOOD, TRIBAL OR VAULT
-	if((title in GLOB.legion_positions) || (title in GLOB.vault_positions) || (title in GLOB.brotherhood_positions) || (title in GLOB.tribal_positions))
+	if((title in GLOB.legion_positions) || (title in GLOB.vault_positions) || (title in GLOB.enclave_positions) ||(title in GLOB.brotherhood_positions) || (title in GLOB.tribal_positions))
 		if(H.dna.species.id == "ghoul")
 			H.set_species(/datum/species/human)
 			H.apply_pref_name("human", H.client)
@@ -251,7 +255,7 @@
 
 	uniform = /obj/item/clothing/under/color/grey
 	id = /obj/item/card/id
-	ears = /obj/item/radio/headset
+	//ears = /obj/item/radio/headset
 	belt = /obj/item/pda
 	back = /obj/item/storage/backpack
 	shoes = /obj/item/clothing/shoes/sneakers/black

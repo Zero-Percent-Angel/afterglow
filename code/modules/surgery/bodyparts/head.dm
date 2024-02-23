@@ -35,7 +35,7 @@
 	//If the head is a special sprite
 	var/custom_head
 
-	wound_resistance = 10
+	wound_resistance = 15
 	scars_covered_by_clothes = FALSE
 
 /obj/item/bodypart/head/can_dismember(obj/item/I)

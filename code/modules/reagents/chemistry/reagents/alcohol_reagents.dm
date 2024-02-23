@@ -16,6 +16,8 @@
 	pH = 7.33
 	value = REAGENT_VALUE_VERY_COMMON //don't bother tweaking all drinks values, way too many can easily be done roundstart or with an upgraded dispenser.
 	synth_metabolism_use_human = TRUE
+	interferes = CHEMICAL_INTERFERE_SOMETIMES
+	interference_category = MIND_ALTERING_CHEMICAL
 
 /*
 Boozepwr Chart
@@ -698,7 +700,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	var/real_dorf = isdwarf(M) //_species(H, /datum/species/dwarf)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		if(HAS_TRAIT(H, TRAIT_DWARF) || HAS_TRAIT(H, TRAIT_ALCOHOL_TOLERANCE || real_dorf))
+		if(HAS_TRAIT(H, TRAIT_DWARF) || HAS_TRAIT(H, TRAIT_ALCOHOL_TOLERANCE) || real_dorf)
 			to_chat(H, span_notice("Now THAT is MANLY!"))
 			if(real_dorf)
 				boozepwr = 100 // Don't want dwarves to die because of a low booze power

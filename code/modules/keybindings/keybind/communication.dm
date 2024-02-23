@@ -71,3 +71,26 @@
 	M.toggle_typing_indicator()
 	return TRUE
 
+/datum/keybinding/client/communication/inspire
+	hotkey_keys = list("Unbound")
+	name = "inspire"
+	full_name = "Use Inspire verb"
+	description = ""
+
+/datum/keybinding/client/communication/inspire/down(client/user)
+	var/mob/living/carbon/human/M = user.mob
+	if (istype(M))
+		M.inspire()
+	return TRUE
+
+/datum/keybinding/client/communication/talk_to
+	hotkey_keys = list("Unbound")
+	name = "talk_to"
+	full_name = "Use Talk To Verb"
+	description = ""
+
+/datum/keybinding/client/communication/talk_to/down(client/user)
+	var/mob/living/carbon/human/M = user.mob
+	if (istype(M))
+		M.try_to_talk_to()
+	return TRUE

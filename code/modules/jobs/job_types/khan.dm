@@ -41,7 +41,7 @@
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
+	//H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
@@ -90,7 +90,7 @@
 	..()
 	if(visualsOnly)
 		return
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
+	//H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/den)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/trail_carbine)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/varmintrifle)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/combatrifle)
@@ -102,8 +102,8 @@
 	title = "Khan"
 	flag = F13MANGUDAI
 	faction = FACTION_KHAN
-	total_positions = 6
-	spawn_positions = 6
+	total_positions = 8
+	spawn_positions = 8
 	description = "You are a Khan, who has passed the Trial of Position within the arena and earned their place. While your combat skills are to be respected, remember your position as a soldier - protect the Khan Fortress and Bighorn, show loyalty, and you may find chances yet to prove your greater worth."
 	supervisors = "the great khan."
 	selection_color = "#ff915e"

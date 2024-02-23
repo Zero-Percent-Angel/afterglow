@@ -11,7 +11,7 @@
 	reagent_state = LIQUID
 	color = "#eb0000"
 	taste_description = "numbness"
-	metabolization_rate = 5 * REAGENTS_METABOLISM
+	metabolization_rate = 2.5 * REAGENTS_METABOLISM
 	overdose_threshold = 60
 	value = REAGENT_VALUE_COMMON
 	ghoulfriendly = TRUE
@@ -24,17 +24,17 @@
 		if(method != INJECT) // Gotta be injected
 			return
 		if(M.getBruteLoss())
-			M.adjustBruteLoss(-reac_volume)
+			M.adjustBruteLoss(-reac_volume/2)
 		if(M.getFireLoss())
-			M.adjustFireLoss(-reac_volume)
+			M.adjustFireLoss(-reac_volume/2)
 	..()
 
 // heals 1 damage of either brute or burn on life, whichever's higher
 /datum/reagent/medicine/stimpak/on_mob_life(mob/living/carbon/M)
 	if(M.getBruteLoss() > M.getFireLoss())	//Less effective at healing mixed damage types.
-		M.adjustBruteLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustBruteLoss(-1* metabolization_rate *REAGENTS_EFFECT_MULTIPLIER)
 	else
-		M.adjustFireLoss(-1*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustFireLoss(-1* metabolization_rate *REAGENTS_EFFECT_MULTIPLIER)
 	. = TRUE
 	..()
 
@@ -133,7 +133,7 @@
 		is_longporklover = TRUE
 	if(M.getBruteLoss() == 0 && M.getFireLoss() == 0)
 		metabolization_rate = 3 * REAGENTS_METABOLISM //metabolizes much quicker if not injured
-	var/longpork_heal_rate = (is_longporklover ? longpork_lover_healing : longpork_hurting) * REAGENTS_EFFECT_MULTIPLIER
+	var/longpork_heal_rate = (is_longporklover ? longpork_lover_healing : longpork_hurting) * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER
 	if(!M.reagents.has_reagent(/datum/reagent/medicine/stimpak) && !M.reagents.has_reagent(/datum/reagent/medicine/healing_powder))
 		M.adjustFireLoss(longpork_heal_rate)
 		M.adjustBruteLoss(longpork_heal_rate)
@@ -142,7 +142,7 @@
 		..()
 
 /datum/reagent/medicine/longpork_stew/overdose_process(mob/living/M)
-	M.adjustToxLoss(2*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustToxLoss(2 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
 	..()
 	. = TRUE
 
@@ -166,9 +166,9 @@
 
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
 	if(M.getBruteLoss() > M.getFireLoss())	//Less effective at healing mixed damage types.
-		M.adjustBruteLoss(-4*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustBruteLoss(-4 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
 	else
-		M.adjustFireLoss(-4*REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustFireLoss(-4 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
 	. = TRUE
 	..()
 
@@ -205,16 +205,15 @@
 
 /datum/reagent/medicine/healing_powder/poultice/on_mob_life(mob/living/carbon/M)
 	. = ..()
-	M.adjustBruteLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
-	M.adjustFireLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
-	M.adjustToxLoss(-2*REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustBruteLoss(-2 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustFireLoss(-2 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustToxLoss(-2 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
 	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
 	. = TRUE
-	..()
 
 
 /datum/reagent/medicine/healing_powder/poultice/overdose_process(mob/living/carbon/M)
-	M.adjustToxLoss(4)
+	M.adjustToxLoss(4 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
 	if((M.getToxLoss() >= 30) && prob(8))
 		var/poultice_od_message = pick(
 			"Burning red streaks form on your skin.",
@@ -306,7 +305,7 @@
 
 /datum/reagent/medicine/radaway/on_mob_life(mob/living/carbon/M)
 	M.radiation = max(M.radiation - 3, 0) //the other 60% works if drank or otherwise overtime
-	M.adjustToxLoss(-1*metabolization_rate*0.4)
+	M.adjustToxLoss(-1 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
 	. = TRUE
 	..()
 
@@ -322,30 +321,36 @@
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	overdose_threshold = 25
 	addiction_threshold = 15
+	addiction_chance = 5
 	var/od_strikes = 0 // So we dont get roflstomped by a sudden massive dose of medx
 	var/od_next_strike = 0 // there's a cool down between strikes, to give the user time to purge this stuff
 	var/od_strike_cooldown = 6 SECONDS
 	var/od_cycles = 0 // Number of cycles we've been ODing
+	interferes = CHEMICAL_INTERFERE_OFTEN
 
 /datum/reagent/medicine/medx/on_mob_metabolize(mob/living/carbon/human/M)
 	..()
 	if(isliving(M))
 		to_chat(M, span_alert("You feel a dull warmth spread throughout your body, masking all sense of pain with a not-unpleasant tingle. Injuries don't seem to hurt as much."))
-		M.maxHealth += 30
-		M.health += 30
+		M.modify_special(10, "e")
+		M.add_movespeed_mod_immunities(type, list(/datum/movespeed_modifier/damage_slowdown, /datum/movespeed_modifier/damage_slowdown_flying, /datum/movespeed_modifier/monkey_health_speedmod))
 
 /datum/reagent/medicine/medx/on_mob_end_metabolize(mob/living/carbon/human/M)
 	if(isliving(M))
 		to_chat(M, span_danger("The warmth fades, and every injury you you had slams into you like a truck."))
-		M.maxHealth -= 30
-		M.health -= 30
+		M.modify_special(-10, "e")
+		M.remove_movespeed_mod_immunities(type, list(/datum/movespeed_modifier/damage_slowdown, /datum/movespeed_modifier/damage_slowdown_flying, /datum/movespeed_modifier/monkey_health_speedmod))
 	..()
 
 /datum/reagent/medicine/medx/on_mob_life(mob/living/carbon/M)
-	if(M.health < 0)
-		M.adjustToxLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustBruteLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
-		M.adjustFireLoss(-0.5*REAGENTS_EFFECT_MULTIPLIER, 0)
+	if(M.health < 20)
+		M.adjustToxLoss(-10 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustBruteLoss(-10 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustFireLoss(-10 * metabolization_rate *REAGENTS_EFFECT_MULTIPLIER, 0)
+	if (M.health < 0)
+		M.adjustToxLoss(-50 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustBruteLoss(-50 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER, 0)
+		M.adjustFireLoss(-50 * metabolization_rate *REAGENTS_EFFECT_MULTIPLIER, 0)
 	if(M.oxyloss > 35)
 		M.setOxyLoss(35, 0)
 	if(M.losebreath >= 4)
@@ -356,20 +361,12 @@
 		M.AdjustAllImmobility(-20, 0)
 		M.AdjustUnconscious(-20, 0)
 	..()
-	if(M.mind)
-		var/datum/job/job = SSjob.GetJob(M.mind.assigned_role)
-		if(istype(job))
-			switch(job.faction)
-				if(FACTION_LEGION)
-					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "betrayed caesar", /datum/mood_event/betrayed_caesar, name)
-				if(FACTION_NCR, FACTION_ENCLAVE, FACTION_BROTHERHOOD)
-					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "used drugs", /datum/mood_event/used_drugs, name)
 	. = TRUE
 
 /datum/reagent/medicine/medx/overdose_process(mob/living/carbon/human/M)
 	/// Dont cause the effects if they have more than 15u of mentat, and any epinephrine at all
 	/// Doesnt stop the severity ramping up, so if it goes below that... it all catches up
-	if(M.reagents.get_reagent_amount(/datum/reagent/medicine/mentat) >= 5 && M.reagents.has_reagent(/datum/reagent/medicine/epinephrine))
+	if(M.reagents.get_reagent_amount(/datum/reagent/medicine/mentat) >= 5 || M.reagents.has_reagent(/datum/reagent/medicine/epinephrine))
 		if(prob(5))
 			to_chat(M, span_danger("Your nerves buzz like a hive of angry bees, kept running by sheer force of mentat."))
 	else
@@ -432,13 +429,13 @@
 	..()
 
 /datum/reagent/medicine/medx/addiction_act_stage1(mob/living/M)
-	if(prob(33))
+	if(prob(11))
 		M.drop_all_held_items()
 		M.Jitter(2)
 	..()
 
 /datum/reagent/medicine/medx/addiction_act_stage2(mob/living/M)
-	if(prob(33))
+	if(prob(22))
 		M.drop_all_held_items()
 		M.adjustToxLoss(1*REAGENTS_EFFECT_MULTIPLIER)
 		. = TRUE
@@ -456,7 +453,7 @@
 	..()
 
 /datum/reagent/medicine/medx/addiction_act_stage4(mob/living/M)
-	if(prob(33))
+	if(prob(44))
 		M.drop_all_held_items()
 		M.adjustToxLoss(3*REAGENTS_EFFECT_MULTIPLIER)
 		. = TRUE
@@ -475,7 +472,20 @@
 	reagent_state = SOLID
 	overdose_threshold = 25
 	addiction_threshold = 15
+	addiction_chance = 3
 	ghoulfriendly = TRUE
+	interference_category = MIND_ALTERING_CHEMICAL
+	interferes = CHEMICAL_INTERFERE_SOMETIMES
+
+/datum/reagent/medicine/mentat/on_mob_add(mob/living/L, amount)
+	. = ..()
+	L.modify_special(3, "p")
+	L.modify_special(5, "i")
+
+/datum/reagent/medicine/mentat/on_mob_delete(mob/living/L)
+	. = ..()
+	L.modify_special(-3, "p")
+	L.modify_special(-5, "i")
 
 /datum/reagent/medicine/mentat/on_mob_life(mob/living/carbon/M)
 	M.adjustOxyLoss(-3*REAGENTS_EFFECT_MULTIPLIER)
@@ -506,7 +516,7 @@
 	. = TRUE
 
 /datum/reagent/medicine/mentat/overdose_process(mob/living/M)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 15)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5 * metabolization_rate)
 	if(prob(33))
 		M.Dizzy(2)
 		M.Jitter(2)
@@ -554,18 +564,24 @@
 	color = "#C8A5DC"
 	ghoulfriendly = TRUE
 	synth_metabolism_use_human = TRUE
+	metabolization_rate = 0.1 * REAGENTS_METABOLISM
+	interferes = CHEMICAL_INTERFERE_IMPOSSIBLE
+	interference_category = MIND_ALTERING_CHEMICAL
 
 /datum/reagent/medicine/fixer/on_mob_life(mob/living/carbon/M)
 //	for(var/datum/reagent/R in M.reagents.reagent_list)
 //		if(R != src)
 //			M.reagents.remove_reagent(R.id,2)
 	for(var/datum/reagent/R in M.reagents.addiction_list)
-		M.reagents.addiction_list.Remove(R)
-		to_chat(M, span_notice("You feel like you've gotten over your need for [R.name]."))
+		//Speed runs you through the addiction stages
+		if (R.addiction_stage < R.addiction_stage3_end)
+			M.reagents.addiction_tick = 6
+			R.addiction_stage++
 	M.confused = max(M.confused, 4)
 	if(ishuman(M) && prob(5))
 		var/mob/living/carbon/human/H = M
 		H.vomit(10)
+		H.adjustToxLoss(-10)
 	..()
 	. = TRUE
 
@@ -602,6 +618,7 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	taste_description = "refreshing citrus"
 	addiction_threshold = 11 //safe to eat two whole fruits or one farm grown fruit
+	addiction_chance = 2
 	pH = 5 //mild citrus
 	ghoulfriendly = TRUE
 	var/punga_power = 4

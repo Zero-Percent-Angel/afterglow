@@ -102,7 +102,7 @@ GLOBAL_LIST_INIT(desolate_plant_spawn_list, list(
 	slowdown = 3
 	flags_1 = ADJACENCIES_OVERLAY
 
-/turf/open/indestructible/ground/outside/river
+/turf/open/indestructible/ground/outside/water/river
 	name = "river"
 	icon_state = "riverwateruhh"
 	desc = "A river."
@@ -418,6 +418,36 @@ GLOBAL_LIST_INIT(desolate_plant_spawn_list, list(
 	barefootstep = FOOTSTEP_WATER
 	clawfootstep = FOOTSTEP_WATER
 	heavyfootstep = FOOTSTEP_WATER
+	var/water_overlay_type = /obj/item/overlay/water/river
+	var/water_overlay
+
+/turf/open/indestructible/ground/outside/water/running/Initialize()
+	. = ..()
+	var/found = FALSE
+	for(var/obj/structure in src)
+		found = TRUE
+	if (!found)
+		water_overlay = new water_overlay_type(src)
+
+/obj/structure/overlay/water/river/Initialize()
+	density = FALSE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	layer = ABOVE_MOB_LAYER
+	plane = MOB_PLANE
+	anchored = TRUE
+	resistance_flags = INDESTRUCTIBLE
+	. = ..()
+
+/obj/item/overlay/water/river
+	name = "water"
+	icon = 'icons/fallout/turfs/ground.dmi'
+	icon_state = "riverwateroverlay"
+	density = FALSE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	layer = ABOVE_MOB_LAYER
+	plane = MOB_PLANE
+	anchored = TRUE
+	resistance_flags = INDESTRUCTIBLE
 
 /turf/open/indestructible/ground/outside/water/Initialize()
 	. = ..()
@@ -434,13 +464,13 @@ GLOBAL_LIST_INIT(desolate_plant_spawn_list, list(
 	AM.water_act(5)
 	..()
 
-/turf/open/indestructible/ground/outside/water/Exited(atom/movable/AM, atom/newloc)
+/turf/open/indestructible/ground/outside/water/Exited(atom/movable/AM, newloc)
 	if(istype(AM, /mob/living))
 		var/mob/living/L = AM
 		L.update_water()
 		if(L.check_submerged() <= 0)
 			return
-		if(!istype(newloc, /turf/open/indestructible/ground/outside/water))
+		if(!istype(get_step(AM, newloc), /turf/open/indestructible/ground/outside/water))
 			to_chat(L, span_warning("You climb out of \the [src]."))
 	..()
 

@@ -91,7 +91,7 @@
 	name = "Curling 13"
 	desc = "A modified version of Forced Evolutionary Virus specifically engineered to kill every irradiated lifeform. The more radiation you have stored - the faster you'll die."
 	max_stages = 5
-	stage_prob = 100 // It's handled below
+	stage_prob = 70 // It's handled below
 	spread_text = "Airborne"
 	agent = "Forced Evolutionary Virus"
 	viable_mobtypes = list(/mob/living/carbon/human)

@@ -16,13 +16,14 @@
 	var/firerate_burst = GUN_AUTOFIRE_DELAY_NORMAL
 	var/firerate_auto = GUN_BURSTFIRE_DELAY_NORMAL
 	var/burst_count = 1
+	var/accuracy_mod = 0
 	var/obj/item/gun/gun = null
 
 /datum/firemode/New(obj/item/gun/_gun, list/properties = null)
 	..()
 	gun = _gun
-	
-	if(!properties || !properties.len) 
+
+	if(!properties || !properties.len)
 		return
 
 	for(var/propname in properties)
@@ -56,6 +57,7 @@
 	gun.fire_delay = firerate_semi
 	gun.autofire_shot_delay = firerate_auto
 	gun.burst_shot_delay = firerate_burst
+	gun.added_spread = initial(gun.added_spread) + accuracy_mod
 
 	for(var/obj/I in gun.item_upgrades)
 		var/datum/component/item_upgrade/IU = I.GetComponent(/datum/component/item_upgrade)
@@ -65,6 +67,8 @@
 			gun.fire_delay *= IU.weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT]
 			gun.autofire_shot_delay *= IU.weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT]
 			gun.burst_shot_delay *= IU.weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT]
+		if(IU.weapon_upgrades[GUN_UPGRADE_OFFSET])
+			gun.added_spread = max(0, gun.added_spread + IU.weapon_upgrades[GUN_UPGRADE_OFFSET])
 
 //Called whenever the firemode is switched to, or the gun is picked up while its active
 /datum/firemode/proc/update()
@@ -152,7 +156,14 @@
 	name = "Fully Automatic"
 	desc = "Automatic - 150 RPM."
 	fire_type = GUN_FIREMODE_AUTO
-	firerate_auto = GUN_FIRE_RATE_200
+	firerate_auto = GUN_FIRE_RATE_150
+
+/datum/firemode/automatic/fanning
+	name = "Fan the hammer"
+	desc = "Shoot as many bullets as possible."
+	fire_type = GUN_FIREMODE_AUTO
+	firerate_auto = GUN_FIRE_RATE_600
+	accuracy_mod = 5
 
 /datum/firemode/burst
 	name = "Burstfire"

@@ -165,6 +165,18 @@
 	item_state = "combat_coat"
 	desc = "A heavy armor with ballistic inserts, sewn into a padded riot police coat."
 
+/obj/item/clothing/suit/armor/heavy/vest/bulletproof
+	name = "heavy bulletproof armor"
+	desc = "A heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry."
+	icon_state = "bulletproof_heavy"
+	item_state = "bulletproof_heavy"
+	blood_overlay_type = "armor"
+	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T2, ARMOR_MODIFIER_UP_DT_T3)
+	custom_price = PRICE_REALLY_EXPENSIVE
+
 //////////////////////////
 // Salvaged Power Armor //
 //////////////////////////
@@ -221,6 +233,13 @@
 	icon_state = "t51b_salvaged"
 	item_state = "t51b_salvaged"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T1)
+
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/advanced
+	name = "salvaged Enclave power armor"
+	desc = "X-02 power armor with servomotors and all valuable components stripped out of it."
+	icon_state = "advanced_salvaged"
+	item_state = "advanced_salvaged"
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T1)
 
 // X-02
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/x02

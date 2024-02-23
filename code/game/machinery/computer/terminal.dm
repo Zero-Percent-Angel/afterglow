@@ -206,3 +206,30 @@
 	doc_title_2 = "Password updated"
 	doc_content_2 = "Hi " + pick(GLOB.first_names_male + GLOB.first_names_female) + ", \n" + "Just wanted to give you a heads up about the password change on the door controller. \n New password is: " + our_door.password + " \n remember to delete this when you have it memorized. \n " + pick(GLOB.first_names_male + GLOB.first_names_female)
 
+/obj/machinery/computer/terminal/stored_password/enclave/Initialize()
+	var/the_password = random_string(8, GLOB.alphabet)
+	for (var/obj/machinery/door/password/enclave/pass_door in world)
+		pass_door.password = the_password
+		our_door = pass_door
+	. = ..()
+
+/obj/machinery/computer/terminal/telecoms_cracker/Initialize()
+	. = ..()
+	doc_title_1 = "Telecommunications Hack"
+	doc_content_1 = "<a href='byond://?src=[REF(src)];choice=decypher'>\> Decypher Encryption Key - (Science)</a><br>"
+
+
+/obj/machinery/computer/terminal/telecoms_cracker/Topic(href, href_list)
+	..()
+	var/mob/living/U = usr
+	switch(href_list["choice"])
+		if ("decypher")
+			if (U.skill_check(SKILL_SCIENCE, HARD_CHECK, TRUE))
+				doc_content_1 = "Hack Successful <br>"
+				for(var/obj/machinery/telecomms/message_server/T in GLOB.telecomms_list)
+					doc_content_1 += "[T] with key [T.decryptkey] <br>"
+				loaded_content = doc_content_1
+			else
+				to_chat(U, span_bad("You lack the skill needed to do that."))
+	updateUsrDialog()
+	return

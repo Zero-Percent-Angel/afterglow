@@ -184,7 +184,7 @@
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(3)
+	init_recoil = RIFLE_RECOIL(1)
 	init_firemodes = list(
 		/datum/firemode/semi_auto
 	)
@@ -223,7 +223,7 @@
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(3)
+	init_recoil = RIFLE_RECOIL(1)
 	init_firemodes = list(
 		/datum/firemode/semi_auto/fast
 	)
@@ -261,8 +261,9 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	projectile_speed_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(3.3)
+	init_recoil = RIFLE_RECOIL(1.2)
 	init_firemodes = list(
 		/datum/firemode/semi_auto
 	)
@@ -301,7 +302,7 @@
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(3.3)
+	init_recoil = RIFLE_RECOIL(1.2)
 	init_firemodes = list(
 		/datum/firemode/semi_auto
 	)
@@ -436,7 +437,7 @@
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(3)
+	init_recoil = RIFLE_RECOIL(2)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 	gun_tags = list(GUN_SCOPE)
 	can_scope = TRUE
@@ -495,7 +496,7 @@
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T5
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(2.2)
+	init_recoil = RIFLE_RECOIL(2)
 
 	zoomable = TRUE
 	zoom_amt = 10

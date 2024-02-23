@@ -52,6 +52,10 @@
 	name = "Silver Necklace"
 	path = /obj/item/clothing/accessory/necklace
 
+/datum/gear/neck/pet_collar
+	name = "Pet Collar"
+	path = /obj/item/clothing/neck/petcollar
+
 /datum/gear/neck/gold_necklace
 	name = "Gold Necklace"
 	path = /obj/item/clothing/neck/necklace/dope

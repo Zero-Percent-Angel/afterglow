@@ -20,6 +20,7 @@
 	var/highest_gun_or_energy_cache = 0
 	var/inspire_cooldown = 0
 	var/inspired = 0
+	var/limb_modifier = 1
 
 // -20 for an easy roll
 // -10 for difficulty on a 'normal' roll
@@ -28,23 +29,23 @@
 /mob/proc/skill_roll(check, difficulty = DIFFICULTY_NORMAL, do_message = 1)
 	if ((skill_value(check) + getLuckModifier()) >= (rand(1,100) + difficulty))
 		if (do_message)
-			to_chat(src, span_green("You succeed the skill check using: [check]"))
+			to_chat(src, span_green("You succeed the skill roll using: [check]"))
 		return TRUE
 	else
 		if (do_message)
-			to_chat(src, span_red("You fail the skill check using: [check]"))
+			to_chat(src, span_red("You fail the skill roll using: [check]"))
 		return FALSE
 
 // rolling with advantage, should use this when we kind of want the check to pass
 /mob/proc/skill_roll_kind(check, difficulty = DIFFICULTY_NORMAL, do_message = 1)
 	var/lowest_random = min(rand(1,100), rand(1,100)) + difficulty
-	if ((skill_value(check) + getLuckModifier()) >= lowest_random)
+	if ((skill_value(check) + getLuckModifier()) >= lowest_random || prob(special_l*5))
 		if (do_message)
-			to_chat(src, span_green("You succeed the skill check using: [check]"))
+			to_chat(src, span_green("You succeed the skill roll using: [check]"))
 		return TRUE
 	else
 		if (do_message)
-			to_chat(src, span_red("You fail the skill check using: [check]"))
+			to_chat(src, span_red("You fail the skill roll using: [check]"))
 		return FALSE
 
 	//Maybe we'll use the flat formula later.
@@ -54,16 +55,16 @@
 // You have sinned, now you must pay
 /mob/proc/skill_roll_evil(check, difficulty = DIFFICULTY_NORMAL, do_message = 1)
 	var/highest_random = max(rand(1,100), rand(1,100)) + difficulty
-	if ((skill_value(check) + getLuckModifier()) >= highest_random && prob(special_l*9))
+	if ((skill_value(check) + getLuckModifier()) >= highest_random && prob(special_l*11))
 		if (do_message)
-			to_chat(src, span_green("You succeed the skill check using: [check]"))
+			to_chat(src, span_green("You succeed the skill roll using: [check]"))
 		return TRUE
 	else
 		if (do_message)
-			to_chat(src, span_red("You fail the skill check using: [check]"))
+			to_chat(src, span_red("You fail the skill roll using: [check]"))
 		return FALSE
 
-mob/proc/getLuckModifier()
+/mob/proc/getLuckModifier()
 	return (special_l - 5)*2
 
 /mob/proc/skill_roll_under(check, difficulty = DIFFICULTY_NORMAL)
@@ -87,9 +88,9 @@ mob/proc/getLuckModifier()
 	if (SKILL_ENERGY == check)
 		return skill_energy + special_a
 	if (SKILL_UNARMED == check)
-		return skill_unarmed + round((special_a + special_s)/2)
+		return (skill_unarmed + round((special_a + special_s)/2)) * limb_modifier
 	if (SKILL_MELEE == check)
-		return skill_melee + round((special_a + special_s)/2)
+		return skill_melee + round((special_a + special_s)/2) * limb_modifier
 	if (SKILL_THROWING == check)
 		return skill_throwing + special_a
 	if (SKILL_FIRST_AID == check || SKILL_DOCTOR == check)
@@ -144,25 +145,33 @@ mob/proc/getLuckModifier()
 	cached_knowable_recipies = list()
 	cached_unknowable_recipies = list()
 	highest_gun_or_energy_cache = 0
+	if (istype(src, /mob/living/carbon))
+		src:update_skill_from_limbs()
 
+/mob/living/carbon/proc/update_skill_from_limbs()
+	var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
+	for(var/X in bodyparts)
+		var/obj/item/bodypart/BP = X
+		missing -= BP.body_zone
+	limb_modifier = max(1 - missing.len/4, 0)
 
 /mob/proc/get_skill_all_values()
 	var/list/dat = list()
-	dat = list(list("name" = SKILL_GUNS, "value" = num2text(skill_guns + special_a), "description" = "Applies to ballistic weapons. Controls things like recoil and dispersion. Higher values; tighter firing arcs and slower recoil buildup, Less aim fumble chance."),
-	list("name" = SKILL_ENERGY, "value" = num2text(skill_energy + special_a), "description" = "Applies to energy weapons. Controls things like recoil and dispersion. Higher values slower recoil buildup, Also important for failure to fire chance and aim fumbles."),
-	list("name" = SKILL_UNARMED, "value" = num2text(skill_unarmed + round((special_a + special_s)/2)), "description" = "Hit chance when unarmed, also determines chances to disarm and break out of grabs and the like."),
-	list("name" = SKILL_MELEE, "value" = num2text(skill_melee + round((special_a + special_s)/2)), "description" = "Hit chance when using any melee weapon. Also influnces blocking."),
-	list("name" = SKILL_THROWING, "value" = num2text(skill_throwing + special_a), "description" = "Hit chance for projectiles thrown by your character. Also acts as the gun skill for bows."),
+	dat = list(list("name" = SKILL_GUNS, "value" = num2text(skill_value(SKILL_GUNS)), "description" = "Applies to ballistic weapons. Controls things like recoil and dispersion. Higher values; tighter firing arcs and slower recoil buildup, Less aim fumble chance."),
+	list("name" = SKILL_ENERGY, "value" = num2text(skill_value(SKILL_ENERGY)), "description" = "Applies to energy weapons. Controls things like recoil and dispersion. Higher values slower recoil buildup, Also important for failure to fire chance and aim fumbles."),
+	list("name" = SKILL_UNARMED, "value" = num2text(skill_value(SKILL_UNARMED)), "description" = "Hit chance when unarmed, also determines chances to disarm and break out of grabs and the like."),
+	list("name" = SKILL_MELEE, "value" = num2text(skill_value(SKILL_MELEE)), "description" = "Hit chance when using any melee weapon. Also influnces blocking."),
+	list("name" = SKILL_THROWING, "value" = num2text(skill_value(SKILL_THROWING)), "description" = "Hit chance for projectiles thrown by your character. Also acts as the gun skill for bows."),
 	//list("name" = SKILL_FIRST_AID, "value" = num2text(skill_first_aid + round((special_p*2 + special_i)/2)), "description" = "Bandage, Suture, Salves, basic medicine effectiveness, higher values means longer lifetimes and more healing. Also can be used to read from health scanners."),
-	list("name" = SKILL_DOCTOR, "value" = num2text(skill_doctor + round((special_p*2 + special_i)/2)), "description" = "Surgical success chance, higher values also unlock more surgeries. Can also be used to control various medical devices autosurgeons and the like. [SKILL_FIRST_AID] Bandage, Suture, Salves, basic medicine effectiveness."),
-	list("name" = SKILL_SNEAK, "value" = num2text(skill_sneak  + round((special_p*2 + special_a)/2)), "description" = "Determines what happens when using the sneak verb. Higher values make your sprite more transparent and lower mob dectection chance. [SKILL_TRAPS] Used for disarming traps. [SKILL_LOCKPICK] Success chance for opening locks both on doors and for lock boxes."),
+	list("name" = SKILL_DOCTOR, "value" = num2text(skill_value(SKILL_DOCTOR)), "description" = "Surgical success chance, higher values also unlock more surgeries. Can also be used to control various medical devices autosurgeons and the like. [SKILL_FIRST_AID] Bandage, Suture, Salves, basic medicine effectiveness."),
+	list("name" = SKILL_SNEAK, "value" = num2text(skill_value(SKILL_SNEAK)), "description" = "Determines what happens when using the sneak verb. Higher values make your sprite more transparent and lower mob dectection chance. [SKILL_TRAPS] Used for disarming traps. [SKILL_LOCKPICK] Success chance for opening locks both on doors and for lock boxes."),
 	//list("name" = SKILL_LOCKPICK, "value" = num2text(skill_lockpick + round((special_p*2 + special_a)/2)), "description" = "Lockpicking; success chance for opening locks both on doors and for lock boxes! Lockpicks can also be used on any unpowered/unwired locked door."),
 	//list("name" = SKILL_TRAPS, "value" = num2text(skill_traps + round((special_p*2 + special_a)/2)), "description" = "Disarming traps; such as on locked doors and locked boxes. Also lets you spot hidden traps. Used as the skill for creating explosives when crafting."),
-	list("name" = SKILL_SCIENCE, "value" = num2text(skill_science + (special_i * 2)), "description" = "Research effectiveness; determines what nodes you can research as well as how good your experiments will be. Dictates chemistry skill too higher values, more known chemicals; and is used for 'hacking'."),
-	list("name" = SKILL_REPAIR, "value" = num2text(skill_repair + special_i), "description" = "The primary construction and crafting skill, limits what you can do based on the value. Can be used for smithing too."),
-	list("name" = SKILL_SPEECH, "value" = num2text(skill_speech + (special_c * 2)), "description" = "Higher skill, better chance of convincing npcs to do what you want them to, better prices from npc traders as well as better quest rewards."),
+	list("name" = SKILL_SCIENCE, "value" = num2text(skill_value(SKILL_SCIENCE)), "description" = "Research effectiveness; determines what nodes you can research as well as how good your experiments will be. Dictates chemistry skill too higher values, more known chemicals; and is used for 'hacking'."),
+	list("name" = SKILL_REPAIR, "value" = num2text(skill_value(SKILL_REPAIR)), "description" = "The primary construction and crafting skill, limits what you can do based on the value. Can be used for smithing too."),
+	list("name" = SKILL_SPEECH, "value" = num2text(skill_value(SKILL_SPEECH)), "description" = "Higher skill, better chance of convincing npcs to do what you want them to, better prices from npc traders as well as better quest rewards."),
 	//list("name" = SKILL_BARTER, "value" = num2text(skill_barter + (special_c * 2)), "description" = "Higher skill, better prices from npc traders as well as better quest rewards."),
-	list("name" = SKILL_OUTDOORSMAN, "value" = num2text(skill_outdoorsman + round((special_i + special_e)/2)), "description" = "The primary skill for tribal crafting, can be used for smithing too. higher values will also give you more yeild from plants and butchering as well as faster mining speeds."))
+	list("name" = SKILL_OUTDOORSMAN, "value" = num2text(skill_value(SKILL_OUTDOORSMAN)), "description" = "The primary skill for tribal crafting, can be used for smithing too. higher values will also give you more yeild from plants and butchering as well as faster mining speeds."))
 	return dat
 
 
@@ -216,6 +225,9 @@ mob/proc/getLuckModifier()
 	set category = "IC"
 	if (inspire_cooldown)
 		to_chat(src, span_warning("You can't do that again so soon."))
+		return
+	if (HAS_TRAIT(src, TRAIT_MUTE))
+		to_chat(src, span_alert("You're mute, you're not going to be giving any speeches."))
 		return
 	if (!skill_check(SKILL_SPEECH, EASY_CHECK))
 		to_chat(src, span_warning("Your speeches probably aren't going to inspire anyone."))
@@ -284,3 +296,5 @@ mob/proc/getLuckModifier()
 		special_a += val
 	if ("l" == spec)
 		special_l += val
+	set_special()
+	update_equipment_speed_mods()

@@ -27,15 +27,27 @@
 			if(HAS_TRAIT(M, TRAIT_PACIFISM))
 				to_chat(M, span_notice("You don't want to hurt [src]!"))
 				return
-			M.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
-			visible_message(span_danger("[M] [response_harm_continuous] [src]!"),\
-							span_userdanger("[M] [response_harm_continuous] you!"), null, COMBAT_MESSAGE_RANGE, null, \
-							M, span_danger("You [response_harm_simple] [src]!"))
-			playsound(loc, attacked_sound, 25, 1, -1)
-			attack_threshold_check(M.dna?.species.punchdamagehigh, M.dna?.species.attack_type, "melee")
-			log_combat(M, src, "attacked")
-			updatehealth()
-			return TRUE
+			if (M.skill_roll_kind(SKILL_UNARMED, DIFFICULTY_NORMAL, 0) || stat != CONSCIOUS)
+				M.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
+				visible_message(span_danger("[M] [response_harm_continuous] [src]!"),\
+								span_userdanger("[M] [response_harm_continuous] you!"), null, COMBAT_MESSAGE_RANGE, null, \
+								M, span_danger("You [response_harm_simple] [src]!"))
+				playsound(loc, attacked_sound, 25, 1, -1)
+				var/dam = M.dna?.species.punchdamagehigh
+				if (HAS_TRAIT(M, TRAIT_UNARMED_WEAPON))
+					M.gloves.will_hit = TRUE
+					M.gloves.attack(src, M)
+				attack_threshold_check(dam, M.dna?.species.attack_type, "melee")
+				log_combat(M, src, "attacked")
+				updatehealth()
+				return TRUE
+			else
+				visible_message(span_danger("[M] misses [src]!"),\
+							span_danger("[M] misses you!"), null, COMBAT_MESSAGE_RANGE, null, \
+							M, span_danger("You miss [src]!"))
+				playsound(M, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
+				log_combat(M, src, "missed")
+				return
 
 /mob/living/simple_animal/attack_hulk(mob/living/carbon/human/user, does_attack_animation = FALSE)
 	if(user.a_intent == INTENT_HARM)
@@ -107,7 +119,7 @@
 		return
 	return ..()
 
-/mob/living/simple_animal/proc/attack_threshold_check(damage, damagetype = BRUTE, armorcheck = "melee")
+/mob/living/simple_animal/proc/attack_threshold_check(damage, damagetype = BRUTE, armorcheck = "melee", pen = 0)
 	var/temp_damage = damage
 	if(!damage_coeff[damagetype])
 		temp_damage = 0
@@ -116,8 +128,8 @@
 	if(temp_damage <= 0)
 		visible_message(span_warning("[src] looks unharmed!"))
 		return FALSE
-	
-	var/armor = run_armor_check(null, armorcheck, null, null, 0, null)
+
+	var/armor = run_armor_check(null, armorcheck, null, null, pen, null)
 	var/dt = max(run_armor_check(null, "damage_threshold", null, null, 0, null), 0)
 	apply_damage(temp_damage, damagetype, null, armor, null, null, null, damage_threshold = dt)
 	return TRUE

@@ -4,7 +4,7 @@
 	icon = 'icons/obj/vehicles.dmi'
 	icon_state = "fuckyou"
 	max_integrity = 300
-	armor = ARMOR_VALUE_MEDIUM
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 0, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
 	density = TRUE
 	anchored = FALSE
 	var/list/mob/occupants				//mob = bitflags of their control level.
@@ -23,9 +23,23 @@
 	var/list/autogrant_actions_controller	//assoc list "[bitflag]" = list(typepaths)
 	var/list/mob/occupant_actions			//assoc list mob = list(type = action datum assigned to mob)
 	var/obj/vehicle/trailer
+	var/engine_on = 0
+	var/engine_on_sound = null
+	var/engine_loop_sound = null//not used.
+	var/has_engine = 0
+	var/mutable_appearance/motorcycle
+	var/datum/looping_sound/motorcycle/soundloop //Given we only use motorbikes, for now, we'll just use this.
+
+/obj/vehicle/New()
+	..()
+	if(engine_on)
+		src.verbs += /obj/vehicle/proc/StopEngine
+	else
+		src.verbs += /obj/vehicle/proc/StartEngine
 
 /obj/vehicle/Initialize(mapload)
 	. = ..()
+	soundloop = new(src)
 	occupants = list()
 	autogrant_actions_passenger = list()
 	autogrant_actions_controller = list()
@@ -35,7 +49,7 @@
 /obj/vehicle/examine(mob/user)
 	. = ..()
 	if(resistance_flags & ON_FIRE)
-		. += span_warning("It's on fire!")
+		. += "<span class='warning'>It's on fire!</span>"
 	var/healthpercent = obj_integrity/max_integrity * 100
 	switch(healthpercent)
 		if(50 to 99)
@@ -43,7 +57,7 @@
 		if(25 to 50)
 			. += "It appears heavily damaged."
 		if(0 to 25)
-			. += span_warning("It's falling apart!")
+			. += "<span class='warning'>It's falling apart!</span>"
 
 /obj/vehicle/proc/is_key(obj/item/I)
 	return I? (key_type_exact? (I.type == key_type) : istype(I, key_type)) : FALSE
@@ -108,13 +122,15 @@
 /obj/vehicle/proc/after_remove_occupant(mob/M)
 
 /obj/vehicle/relaymove(mob/user, direction)
+	if(!engine_on && has_engine)
+		return
 	if(is_driver(user))
 		return driver_move(user, direction)
 	return FALSE
 
 /obj/vehicle/proc/driver_move(mob/user, direction)
 	if(key_type && !is_key(inserted_key))
-		to_chat(user, span_warning("[src] has no key inserted!"))
+		to_chat(user, span_warning("\The [src] has no key inserted!"))
 		return FALSE
 	if(!default_driver_move)
 		return
@@ -173,3 +189,64 @@
 		occupants[1].bullet_act(Proj) // driver dinkage
 		return BULLET_ACT_HIT
 	. = ..()
+
+
+/////////
+// Waste Procs
+/////////
+
+/obj/vehicle/proc/StartEngine()
+	set name = "Start Engine"
+	set category = "Object"
+	set src in view(1)
+
+	if(!ismob(usr) || !usr?.canUseTopic(src, BE_CLOSE, ismonkey(usr)))
+		return
+
+	start_engine(usr)
+
+/obj/vehicle/proc/StopEngine()
+	set name = "Stop Engine"
+	set category = "Object"
+	set src in view(1)
+
+	if(!ismob(usr) || !usr?.canUseTopic(src, BE_CLOSE, ismonkey(usr)))
+		return
+
+	stop_engine(usr)
+
+/obj/vehicle/proc/stop_engine(mob/living/user)
+	verbs += /obj/vehicle/proc/StartEngine
+	verbs -= /obj/vehicle/proc/StopEngine
+
+	if(user)
+		user.visible_message("[user] stops the engine of [src].", "You stop the engine.")
+
+	engine_on = FALSE
+
+	soundloop.stop()//Double take. Don't ask me why it's required, but it is.
+
+/obj/vehicle/proc/start_engine(mob/living/user)
+/*
+	if(!M.buckled)
+		usr.visible_message("<span class = 'notice'>Sit on [src] to do this.</span>")
+		return
+*/
+	if(!inserted_key)
+		if(user)
+			to_chat(user, span_notice("There is no key."))
+		return
+
+	verbs += /obj/vehicle/proc/StopEngine
+	verbs -= /obj/vehicle/proc/StartEngine
+
+	if(user)
+		visible_message("[user] starts up \the [src].", "You start the engine.")
+
+	engine_on = TRUE
+	if(engine_on_sound)
+		playsound(src, engine_on_sound, 50)
+	soundloop.start()
+//	if(engine_loop_sound)
+//		BeginAmbient(engine_loop_sound)
+//		SEND_SOUND(M, sound(pick(engine_loop_sound), repeat = 1, wait = 0, volume = 100, channel = CHANNEL_BICYCLE))

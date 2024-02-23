@@ -83,7 +83,7 @@
 #define EXP_TYPE_SCRIBE         "Scribe"
 #define EXP_TYPE_DECANUS        "Decanus"
 #define EXP_TYPE_TRIBAL			"Tribal"
-#define EXP_TYPE_FOLLOWERS		"Town Clinic"
+#define EXP_TYPE_FOLLOWERS		"Followers"
 #define EXP_TYPE_OUTLAW			"Outlaw"
 #define EXP_TYPE_KHAN			"Great Khans"
 

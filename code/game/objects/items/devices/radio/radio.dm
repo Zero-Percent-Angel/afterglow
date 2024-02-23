@@ -493,6 +493,30 @@
 	canhear_range = 2
 	w_class = WEIGHT_CLASS_NORMAL
 
+/obj/item/radio/old
+	name = "old radio"
+	desc = "An old radio that seems to have a lot of weather damage. Maybe if you got it working it could send messages to the channel it's tuned too."
+	icon_state = "radio"
+	item_state = "radio"
+	canhear_range = 2
+	listening = FALSE
+	broadcasting = FALSE
+	w_class = WEIGHT_CLASS_NORMAL
+	added_skill_check = SKILL_SCIENCE
+	added_skill_difficulty = 20
+	added_skill_check_is_a_roll = TRUE
+	added_skill_can_be_retried = FALSE
+	added_skill_failures = list()
+	added_skill_passers = list()
+	has_a_added_skill_check = TRUE
+	freerange = TRUE
+	freqlock = TRUE
+	frequency = 1367
+
+/obj/item/radio/old/Initialize()
+	. = ..()
+	wires.cut(WIRE_RX)
+
 GLOBAL_VAR_INIT(redwater_frequency, null)
 GLOBAL_LIST_INIT(banned_redwater_freqs, list(FREQ_COMMON, 1488))
 

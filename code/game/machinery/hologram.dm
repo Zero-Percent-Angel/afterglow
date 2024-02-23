@@ -372,7 +372,7 @@ GLOBAL_LIST_EMPTY(network_holopads)
 			if(force_answer_call && world.time > (HC.call_start_time + (HOLOPAD_MAX_DIAL_TIME / 2)))
 				HC.Answer(src)
 				break
-			if(!secure) //HC.head_call && 
+			if(!secure) //HC.head_call &&
 				HC.Answer(src)
 				break
 			if(outgoing_call)
@@ -437,6 +437,12 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 
 	if(record_mode && speaker == record_user)
 		record_message(speaker,raw_message,message_language)
+
+
+/obj/machinery/holopad/proc/do_hologram_emote(mob/speaker, message, self_message, incoming_flags)
+	if(outgoing_call && speaker == outgoing_call.user)
+		outgoing_call.hologram.visible_message(message, self_message, visible_message_flags = incoming_flags)
+// Should probably implement audible_message and visible_message so that we can see emotes.
 
 /obj/machinery/holopad/proc/SetLightsAndPower()
 	var/total_users = LAZYLEN(masters) + LAZYLEN(holo_calls)

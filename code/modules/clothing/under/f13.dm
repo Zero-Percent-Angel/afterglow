@@ -65,6 +65,17 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 
+/obj/item/clothing/under/f13/vault/alternate
+	name = "vault jumpsuit"
+	desc = "A blue jumpsuit with a yellow vault pattern printed on it."
+	icon_state = "v-jumpsuit"
+	item_state = "v-jumpsuit"
+	mob_overlay_icon = 'modular_citadel/icons/mob/citadel/uniforms.dmi'
+	can_adjust = TRUE
+	has_sensor = LOCKED_SENSORS
+	sensor_mode = SENSOR_COORDS
+	random_sensor = FALSE
+
 /obj/item/clothing/under/f13/vault13
 	name = "vault 113 jumpsuit"
 	desc = "A blue jumpsuit with a yellow vault pattern and the number 113 printed on it."
@@ -76,6 +87,28 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 
+
+/obj/item/clothing/under/f13/vault13/alternate
+	name = "vault 13 jumpsuit"
+	desc = "A blue jumpsuit with a yellow vault pattern and the number 13 printed on it."
+	icon_state = "v13-jumpsuit"
+	item_state = "v13-jumpsuit"
+	mob_overlay_icon = 'modular_citadel/icons/mob/citadel/uniforms.dmi'
+	can_adjust = TRUE
+	has_sensor = LOCKED_SENSORS
+	sensor_mode = SENSOR_COORDS
+	random_sensor = FALSE
+
+/obj/item/clothing/under/f13/vault13/alternate/f1
+	name = "vault 113 jumpsuit"
+	desc = "A blue jumpsuit with a yellow vault pattern and the number 113 printed on it."
+	icon_state = "v13-f1-jumpsuit"
+	item_state = "v13-f1-jumpsuit"
+	mob_overlay_icon = 'modular_citadel/icons/mob/citadel/uniforms.dmi'
+	can_adjust = TRUE
+	has_sensor = LOCKED_SENSORS
+	sensor_mode = SENSOR_COORDS
+	random_sensor = FALSE
 
 //NCR
 

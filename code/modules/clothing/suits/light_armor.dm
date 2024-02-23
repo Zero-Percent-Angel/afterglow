@@ -338,6 +338,16 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 	// Nothing extra fancy for their storage, but they can carry an extra 2 normal-sized guns in their pockets
 
+/obj/item/clothing/suit/armor/light/duster/herbertranger //Armor wise, it's reskinned raider armor.
+	name = "weathered desert ranger armor"
+	desc = "A set of pre-unification desert ranger armor, made using parts of what was once USMC riot armor. It looks as if it has been worn for decades; the coat has become discoloured from years under the Mojave sun and has multiple tears and bullet holes in its leather. The armor plating itself seems to be in relatively good shape, though it could do with some maintenance."
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	icon_state = "usmc_riot_gear"
+	item_state = "usmc_riot_gear"
+	body_parts_hidden = CHEST|ARMS
+	icon = 'icons/obj/clothing/suits.dmi'
+	mob_overlay_icon = null
+
 /obj/item/clothing/suit/armor/light/duster/lonesome
 	name = "lonesome duster"
 	desc = "A blue leather coat with the number 21 on the back.<br><i>If war doesn't change, men must change, and so must their symbols.</i><br><i>Even if there is nothing at all, know what you follow.</i>"
@@ -611,9 +621,6 @@
 // Legion //
 ////////////
 
-/obj/item/clothing/suit/armor/light/legion
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
-
 /obj/item/clothing/suit/armor/light/legion/recruit
 	name = "legion recruit armor"
 	desc = "The most basic legion armor, clearly inspired by gear worn by old world football players and baseball catchers, much of it restored ancient actual sports equipment, other newly made from mostly leather, tanned and boiled in oil."
@@ -626,7 +633,7 @@
 	icon_state = "legion_prime"
 	item_state = "legion_prime"
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/light/legion/explorer
 	name = "legion explorer armor"

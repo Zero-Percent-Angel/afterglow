@@ -303,6 +303,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 
 	if (!owner)
 		dat += "Warning: No owner information entered.  Please swipe card.<br><br>"
+		dat += "<a href='byond://?src=[REF(src)];choice=User'>Enter Custom User</a><br><br>"
 		dat += "<a href='byond://?src=[REF(src)];choice=Refresh'>[PDAIMG(refresh)]Retry</a>"
 	else
 		switch (mode)
@@ -516,7 +517,10 @@ GLOBAL_LIST_EMPTY(PDAs)
 				if("Refresh")//Refresh, goes to the end of the proc.
 					if (!silent)
 						Boop()
-
+				if ("User")
+					owner = input(U, "Enter your desired username.", "Username") as null|text
+					ownjob = input(U, "Enter your desired role.", "Role") as null|text
+					Boop()
 				if ("Toggle_Font")
 					//CODE REVISION 2
 					font_index = (font_index + 1) % 4

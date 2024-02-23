@@ -142,6 +142,10 @@
 	flags = IGNORE_NOSLOW
 	multiplicative_slowdown = 0.1
 
+/datum/movespeed_modifier/bad_trip
+	flags = IGNORE_NOSLOW
+	multiplicative_slowdown = 3
+
 /datum/movespeed_modifier/bloodloss_slowdown
 	flags = IGNORE_NOSLOW
 	variable = TRUE

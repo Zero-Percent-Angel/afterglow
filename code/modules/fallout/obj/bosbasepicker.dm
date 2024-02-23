@@ -6,15 +6,35 @@
 	circuit = /obj/item/circuitboard/computer/bos
 	possible_destinations = "Brotherhood_Home;Bos1;Bos2;Bos3;Bos4;Bos5;Bos6;Bos7;Bos8;Bos9;Bos10;Bos11;Bos12;Bos home"
 	flags_1 = NODECONSTRUCT_1
+	var/has_moved = FALSE
+	var/base_ladder_id = ""
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
-/obj/machinery/computer/shuttle/bos/Topic(href, href_list)
-	if(href_list["move"])
-		if(!is_centcom_level(z))
+/obj/machinery/computer/shuttle/bos/ui_act(action, params)
+	if(action == "move")
+		if(!has_moved)
+			var/list/options = params2list(possible_destinations)
+			if(!(params["shuttle_id"] in options))
+				var/attempted = params["shuttle_id"]
+				var/sanitized = url_encode(attempted)
+				log_admin("[usr] attempted to href dock exploit on [src] with target location \"[attempted]\"")
+				message_admins("[usr] just attempted to href dock exploit on [src] with target location \"[sanitized]\"")
+				return
+			else
+				activate_ladder(params["shuttle_id"], base_ladder_id)
+				has_moved = TRUE
+		else
 			to_chat(usr, span_warning("The controls have malfunctioned, and you cannot seem to lock the base down!"))
 			return 0
-	..()
-	
+	. = ..()
+
+proc/activate_ladder(activation_id, new_id)
+	for(var/obj/structure/ladder/unbreakable/lad in GLOB.ladders)
+		if (lad.id == activation_id)
+			lad.id = new_id
+			lad.LateInitialize()
+
+
 /obj/docking_port/mobile/elevator/bos
 	name = "Brotherhood of Steel Foyer"
 	width = 6
@@ -62,7 +82,7 @@
 
 /obj/docking_port/stationary/bosaway/six
 	name = "Bos Base 6"
-	id = "Bos6" 
+	id = "Bos6"
 
 /obj/docking_port/stationary/bosaway/seven
 	name = "Bos Base 7"

@@ -350,6 +350,12 @@
 	desc = "An old military grade pre war combat armor. Now in dark, and extra-crispy!"
 	color = "#514E4E"
 
+/obj/item/clothing/suit/armor/medium/combat/swat
+	name = "SWAT combat armor"
+	desc = "A custom version of the pre-war combat armor, slimmed down and minimalist for domestic S.W.A.T. teams."
+	icon_state = "armoralt"
+	item_state = "armoralt"
+
 /obj/item/clothing/suit/armor/medium/combat/tribal
 	name = "tribal reinforced combat armor"
 	desc = "An old military grade pre-war reinforced combat armor, now decorated with sinew and the bones of the hunted for its new wearer."
@@ -411,6 +417,12 @@
 	name = "combat armor Mk II"
 	desc = "A reinforced model based of the pre-war combat armor. Now in dark, light, and smoky barbeque!"
 	color = "#302E2E"
+
+/obj/item/clothing/suit/armor/medium/combat/mk2/remnant
+	name = "remnant combat armor"
+	desc = "A dark armor, used commonly in espionage or shadow ops."
+	icon_state = "remnant"
+	item_state = "remnant"
 
 ///////////////////
 // MEDIUM RAIDER //
@@ -662,7 +674,7 @@
 	icon_state = "legion_veteran"
 	item_state = "legion_veteran"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 /obj/item/clothing/suit/armor/medium/legion/vexil
 	name = "legion vexillarius armor"
@@ -670,7 +682,7 @@
 	icon_state = "legion_vex"
 	item_state = "legion_vex"
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T1)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT // lighter, cus melee focus
 
 /obj/item/clothing/suit/armor/medium/legion/orator
@@ -687,7 +699,7 @@
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 8)
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 //////////////////////////
 // Brotherhood of Steel //

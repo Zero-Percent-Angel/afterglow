@@ -411,7 +411,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<center><h2>S.P.E.C.I.A.L</h2>"
 			dat += "<a href='?_src_=prefs;preference=special;task=menu'>Allocate Points</a><br></center>"
 			if (remainingSkillBalance())
-				dat += "<center><h2>Skills</h2> " + span_warning("You have unspent skill points.")
+				dat += "<center><h2>Skills</h2> " + span_warning(" You have unspent skill points.")
 			else
 				dat += "<center><h2>Skills</h2>"
 			dat += "<a href='?_src_=prefs;preference=skill;task=menu'>Allocate Points</a><br></center>"
@@ -1650,7 +1650,7 @@ Records disabled until a use for them is found
 	return skill_points + (special_i*2) - (skill_guns + skill_energy + skill_unarmed + skill_melee + skill_throwing + skill_doctor + skill_sneak + skill_science + skill_repair + skill_speech + skill_outdoorsman)
 
 /datum/preferences/proc/GetQuirkBalance()
-	var/bal = 5
+	var/bal = 3
 	for(var/V in all_quirks)
 		var/datum/quirk/T = SSquirks.quirks[V]
 		bal -= initial(T.value)

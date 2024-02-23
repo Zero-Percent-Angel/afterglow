@@ -369,6 +369,7 @@
 		/obj/item/stock_parts/cell/ammo/mfc = 10,
 		/obj/item/ammo_box/magazine/m22smg = 9,
 		/obj/item/ammo_box/magazine/amr/incindiary = 6,
+		/obj/item/ammo_box/magazine/m473 = 4,
 		)
 
 /obj/effect/spawner/lootdrop/bombparts

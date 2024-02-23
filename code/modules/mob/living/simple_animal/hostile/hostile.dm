@@ -103,6 +103,7 @@
 	// sneak detection
 	var/sneak_detection_threshold = REGULAR_CHECK
 	var/sneak_roll_modifier = DIFFICULTY_EASY
+	var/dead_time = 0
 
 
 /mob/living/simple_animal/hostile/Initialize()
@@ -139,9 +140,11 @@
 	if(!(. = ..()))
 		walk(src, 0) //stops walking
 		if(decompose)
-			if(prob(1)) // 1% chance every cycle to decompose
+			if (!dead_time)
+				dead_time = times_fired
+			if(dead_time + 60 < times_fired && prob(10)) // this is effectively after a minute (assuming no lag) 10% chance every life tick
 				visible_message(span_notice("\The dead body of the [src] decomposes!"))
-				gib(FALSE, FALSE, FALSE, TRUE)
+				gib(FALSE, FALSE, FALSE)
 		return
 
 /mob/living/simple_animal/hostile/handle_automated_action()
@@ -163,6 +166,8 @@
 /mob/living/simple_animal/hostile/handle_automated_movement()
 	. = ..()
 	if(dodging && target && in_melee && isturf(loc) && isturf(target.loc))
+		sidestep()
+		/*
 		var/datum/cb = CALLBACK(src,.proc/sidestep)
 		if(sidestep_per_cycle > 1) //For more than one just spread them equally - this could changed to some sensible distribution later
 			var/sidestep_delay = SSnpcpool.wait / sidestep_per_cycle
@@ -170,6 +175,7 @@
 				addtimer(cb, (i - 1)*sidestep_delay)
 		else //Otherwise randomize it to make the players guessing.
 			addtimer(cb,rand(1,SSnpcpool.wait))
+		*/
 
 /mob/living/simple_animal/hostile/proc/sidestep()
 	if(!target || !isturf(target.loc) || !isturf(loc) || stat == DEAD)
@@ -413,7 +419,7 @@
 		if(!Process_Spacemove()) //Drifting
 			walk(src,0)
 			return 1
-		if(retreat_distance != null) //If we have a retreat distance, check if we need to run from our target
+		if(retreat_distance != null && COOLDOWN_TIMELEFT(src, melee_cooldown)) //If we have a retreat distance, check if we need to run from our target
 			if(target_distance <= retreat_distance) //If target's closer than our retreat distance, run
 				set_glide_size(DELAY_TO_GLIDE_SIZE(move_to_delay))
 				walk_away(src,target,retreat_distance,move_to_delay)
@@ -427,7 +433,6 @@
 		if(target)
 			if(COOLDOWN_TIMELEFT(src, melee_cooldown))
 				return TRUE
-			COOLDOWN_START(src, melee_cooldown, melee_attack_cooldown)
 			if(targets_from && isturf(targets_from.loc) && target.Adjacent(targets_from)) //If they're next to us, attack
 				MeleeAction()
 			else
@@ -487,7 +492,10 @@
 
 
 /mob/living/simple_animal/hostile/proc/AttackingTarget()
+	if (COOLDOWN_TIMELEFT(src, melee_cooldown))
+		return
 	SEND_SIGNAL(src, COMSIG_HOSTILE_ATTACKINGTARGET, target)
+	COOLDOWN_START(src, melee_cooldown, melee_attack_cooldown)
 	in_melee = TRUE
 	return target.attack_animal(src)
 

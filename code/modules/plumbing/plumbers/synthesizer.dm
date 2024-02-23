@@ -58,6 +58,9 @@
 	reagents.add_reagent(reagent_id, amount)
 
 /obj/machinery/plumbing/synthesizer/ui_interact(mob/user, datum/tgui/ui)
+	if (!user.skill_check(SKILL_SCIENCE, REGULAR_CHECK))
+		to_chat(user, span_warning("You lack the required skill to interact with that."))
+		return
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "ChemSynthesizer", name)

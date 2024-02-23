@@ -320,7 +320,7 @@ const PackagingControls = (props, context) => {
           label="Stimpaks"
           amount={stimpakAmount}
           amountUnit="stimpaks"
-          sideNote="max 10u"
+          sideNote="max 15u"
           onChangeAmount={(e, value) => setstimpakAmount(value)}
           onCreate={() => act('create', {
             type: 'stimPak',
@@ -333,7 +333,7 @@ const PackagingControls = (props, context) => {
           label="Super Stimpaks"
           amount={superstimpakAmount}
           amountUnit="super stimpaks"
-          sideNote="max 20u"
+          sideNote="max 30u"
           onChangeAmount={(e, value) => setsuperstimpakAmount(value)}
           onCreate={() => act('create', {
             type: 'superStimpak',

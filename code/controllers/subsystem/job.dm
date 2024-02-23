@@ -444,8 +444,10 @@ SUBSYSTEM_DEF(job)
 		H = M
 
 	var/datum/job/job = GetJob(rank)
-
-	H.job = rank
+	if (job && job.display_alternate != null)
+		H.job = job.display_alternate.title
+	else
+		H.job = rank
 
 	//If we joined at roundstart we should be positioned at our workstation
 	if(!joined_late)

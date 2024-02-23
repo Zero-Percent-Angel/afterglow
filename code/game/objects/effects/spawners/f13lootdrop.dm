@@ -371,7 +371,6 @@
 /obj/effect/spawner/lootdrop/f13/armor/tier4 //TIER 4 ARMOR
 	name = "tier 4 armor"
 	loot = list(
-				/obj/effect/spawner/bundle/f13/armor/t45d_salvaged,
 				/obj/effect/spawner/bundle/f13/armor/riot,
 				/obj/effect/spawner/bundle/f13/armor/combat/mk2,
 				/obj/effect/spawner/bundle/f13/armor/combat/mk2/dark,
@@ -430,6 +429,7 @@
 /obj/effect/spawner/lootdrop/f13/armor/tier5 //TIER 5 ARMOR
 	name = "tier 5 armor"
 	loot = list(
+				/obj/effect/spawner/bundle/f13/armor/t45d_salvaged,
 				/obj/effect/spawner/bundle/f13/armor/t45d,
 				/obj/effect/spawner/bundle/f13/armor/t51b,
 				)

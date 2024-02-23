@@ -3,7 +3,7 @@
 /datum/quirk/blooddeficiency
 	name = "Acute Blood Deficiency"
 	desc = "Your body can't produce enough blood to sustain itself."
-	value = -1
+	value = -3
 	gain_text = span_danger("You feel your vigor slowly fading away.")
 	lose_text = span_notice("You feel vigorous again.")
 	antag_removal_text = "Your antagonistic nature has removed your blood deficiency."
@@ -19,7 +19,7 @@
 /datum/quirk/sheltered
 	name = "Sheltered"
 	desc = "For one reason or another, you either can't or haven't learned English."
-	value = -1
+	value = -2
 	mob_trait = TRAIT_SHELTERED
 	gain_text = "<span class='danger'>The words of others begin to blur together...</span>"
 	lose_text = "<span class='notice'>You start putting together what people are saying!</span>"
@@ -33,6 +33,26 @@
 /datum/quirk/sheltered/remove() //i mean, the lose text explains it, so i'm making it actually work
 	var/mob/living/carbon/human/H = quirk_holder
 	H.grant_language(/datum/language/common)
+
+/datum/quirk/addict
+	name = "Addicted - Jet"
+	desc = "You've been hooked on jet for a while, you need your fix or it won't be good for you."
+	value = -3
+	mob_trait = TRAIT_JET_JUNKY
+	gain_text = "<span class='danger'>Jet... jet... need jet.</span>"
+	lose_text = "<span class='notice'>Maybe Jet isn't so good for me.</span>"
+	medical_record_text = "Patient has shown a chemical dependency on Jet."
+
+/datum/quirk/addict/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/datum/reagent/drug = new /datum/reagent/drug/jet
+	drug.addiction_stage4_end = 4000
+	H.reagents.addiction_list += drug
+	drug.on_addiction_start(H)
+
+/datum/quirk/addict/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.reagents.addiction_list.Cut()
 
 /datum/quirk/depression
 	name = "Mood - Depressive"
@@ -90,9 +110,9 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 			heirloom_type = /obj/item/clothing/accessory/medal/bronze_heart
 		if("Ripley Trade Worker")
 			heirloom_type = /obj/item/coin/plasma
-		if("Town Doctor")
+		if("Followers Doctor")
 			heirloom_type = pick(/obj/item/clothing/neck/stethoscope,/obj/item/toy/tragicthegarnering)
-		if("Senior Doctor")
+		if("Lead Practitioner")
 			heirloom_type = pick(/obj/item/toy/nuke, /obj/item/wrench/medical, /obj/item/clothing/neck/tie/horrible)
 		if("Prime Legionary")
 			heirloom_type = pick(/obj/item/melee/onehanded/machete, /obj/item/melee/onehanded/club/warclub, /obj/item/clothing/accessory/talisman, /obj/item/toy/plush/mr_buckety)
@@ -103,6 +123,12 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 		if("Den Doctor")
 			heirloom_type = /obj/item/card/id/dogtag/MDfakepermit
 		if("Farmer")
+			heirloom_type = pick(/obj/item/hatchet, /obj/item/shovel/spade, /obj/item/toy/plush/beeplushie)
+		if("Farm Hand")
+			heirloom_type = pick(/obj/item/hatchet, /obj/item/shovel/spade, /obj/item/toy/plush/beeplushie)
+		if("Family Head")
+			heirloom_type = pick(/obj/item/hatchet, /obj/item/shovel/spade, /obj/item/toy/plush/beeplushie)
+		if("Family Member")
 			heirloom_type = pick(/obj/item/hatchet, /obj/item/shovel/spade, /obj/item/toy/plush/beeplushie)
 		if("Far-Lands Tribals")
 			heirloom_type = pick(/obj/item/clothing/accessory/talisman, /obj/item/clothing/accessory/skullcodpiece/fake)
@@ -172,7 +198,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 /datum/quirk/brainproblems
 	name = "Brain Tumor"
 	desc = "You have a little friend in your brain that is slowly destroying it. Better bring some mannitol!"
-	value = -1
+	value = -3
 	gain_text = span_danger("You feel smooth.")
 	lose_text = span_notice("You feel wrinkled again.")
 	medical_record_text = "Patient has a tumor in their brain that is slowly driving them to brain death."
@@ -258,7 +284,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 /datum/quirk/nonviolent
 	name = "Pacifist"
 	desc = "The thought of violence makes you sick. So much so, in fact, that you can't hurt anyone."
-	value = -1
+	value = -2
 	mob_trait = TRAIT_PACIFISM
 	gain_text = span_danger("You feel repulsed by the thought of violence!")
 	lose_text = span_notice("You think you can defend yourself again.")
@@ -268,7 +294,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 /datum/quirk/paraplegic
 	name = "Paraplegic"
 	desc = "Your legs do not function. Nothing will ever fix this. Luckily you found a wheelchair."
-	value = -3
+	value = -5
 	mob_trait = TRAIT_PARA
 	human_only = TRUE
 	gain_text = null // Handled by trauma.
@@ -306,7 +332,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 /datum/quirk/poor_aim
 	name = "Poor Aim"
 	desc = "You're terrible with guns and can't line up a straight shot to save your life. Dual-wielding is right out."
-	value = -1
+	value = -3
 	mob_trait = TRAIT_POOR_AIM
 	medical_record_text = "Patient possesses a strong tremor in both hands."
 
@@ -345,7 +371,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 /datum/quirk/social_anxiety
 	name = "Social Anxiety"
 	desc = "Talking to people is very difficult for you, and you often stutter or even lock up."
-	value = -1
+	value = -2
 	gain_text = span_danger("You start worrying about what you're saying.")
 	lose_text = span_notice("You feel easier about talking again.") //if only it were that easy!
 	medical_record_text = "Patient is usually anxious in social encounters and prefers to avoid them."
@@ -359,19 +385,19 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 	UnregisterSignal(quirk_holder, list(COMSIG_MOB_EYECONTACT, COMSIG_MOB_EXAMINATE))
 
 /datum/quirk/social_anxiety/on_process()
-	var/nearby_people = 3
+	var/nearby_people = 0
 	for(var/mob/living/carbon/human/H in oview(4, quirk_holder))
 		if(H.client)
-			nearby_people++
+			nearby_people += 10
 	var/mob/living/carbon/human/H = quirk_holder
-	if(prob(3 + nearby_people))
+	if(prob(nearby_people))
 		H.stuttering = max(3, H.stuttering)
-		//Murder fucking this spammy ass message.  This crap is insane.~ TK
-	// else if(prob(min(3, nearby_people)) && !H.silent)
-	//	o_chat(H, "<span class='danger'>You retreat into yourself. You <i>really</i> don't feel up to talking.</span>")
-	//	H.silent = max(10, H.silent)t
-	else if(prob(0.5) && dumb_thing)
-		to_chat(H, span_userdanger("You think of a dumb thing you said a long time ago and scream internally."))
+	else if(prob(nearby_people/5) && !H.silent)
+		to_chat(H, "<span class='danger'>You retreat into yourself. You <i>really</i> don't feel up to talking.</span>")
+		H.silent += 10
+	else if(prob(1) && dumb_thing)
+		to_chat(H, span_userdanger("You think of a dumb thing you said a long time ago and scream internally, best not to say anything for a while."))
+		H.silent = max(30, H.silent)
 		dumb_thing = FALSE //only once per life
 		if(prob(1))
 			new/obj/item/reagent_containers/food/snacks/pastatomato(get_turf(H)) //now that's what I call spaghetti code
@@ -453,15 +479,16 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
 	H?.cure_trauma_type(/datum/brain_trauma/mild/phobia/skeletons, TRAUMA_RESILIENCE_ABSOLUTE)
+*/
 
 /datum/quirk/maskphobia
 	name = "Phobia - Masked People"
 	desc = "You've had a traumatic past, one that has scarred you for life, and it had something to do with someone wearing a mask."
-	value = -2
+	value = -1
 	mob_trait = TRAIT_MASKPHOBIA
 	gain_text = span_danger("You begin to tremble as an immeasurable fear of the unknown stranger grips your mind.")
 	lose_text = span_notice("Your confidence wipes away the fear that had been plaguing you.")
-	medical_record_text = "Patient has an extreme or irrational fear and aversion to an undefined stimuli."
+	medical_record_text = "Patient has an extreme or irrational fear and aversion to an unknown people."
 	locked = FALSE
 
 /datum/quirk/maskphobia/post_add()
@@ -473,7 +500,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	. = ..()
 	var/mob/living/carbon/human/H = quirk_holder
 	H?.cure_trauma_type(/datum/brain_trauma/mild/phobia/strangers, TRAUMA_RESILIENCE_ABSOLUTE)
-*/
+
 /datum/quirk/doctorphobia
 	name = "Phobia - Doctors"
 	desc = "You've had a traumatic past, one that has scarred you for life, and it had something to do with doctors."
@@ -575,7 +602,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/unstable
 	name = "Unstable"
 	desc = "Due to past troubles, you are unable to recover your sanity if you lose it. Be very careful managing your mood!"
-	value = -1
+	value = -4
 	mob_trait = TRAIT_UNSTABLE
 	gain_text = span_danger("There's a lot on your mind right now.")
 	lose_text = span_notice("Your mind finally feels calm.")
@@ -605,7 +632,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/monophobia
 	name = "Monophobia"
 	desc = "You will become increasingly stressed when not in company of others, triggering panic reactions ranging from sickness to heart attacks."
-	value = -2 //Removed Heart attack, should be good now. :)
+	value = -3 //Removed Heart attack, should be good now. :)
 	gain_text = span_danger("You feel really lonely...")
 	lose_text = span_notice("You feel like you could be safe on your own.")
 	medical_record_text = "Patient feels sick and distressed when not around other people, leading to potentially lethal levels of stress."
@@ -624,7 +651,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/no_guns
 	name = "Fat-Fingered"
 	desc = "Due to the shape of your hands, width of your fingers or just not having fingers at all, you're unable to fire guns without accommodation."
-	value = -1
+	value = -4
 	mob_trait = TRAIT_CHUNKYFINGERS
 	gain_text = "<span class='notice'>Your fingers feel... thick.</span>"
 	lose_text = "<span class='notice'>Your fingers feel normal again.</span>"
@@ -632,7 +659,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/illiterate
 	name = "Illiterate"
 	desc = "You can't read nor write, plain and simple."
-	value = -1
+	value = -2
 	mob_trait = TRAIT_ILLITERATE
 	gain_text = "<span class='notice'>The knowledge of how to read seems to escape from you.</span>"
 	lose_text = "<span class='notice'>Written words suddenly make sense again."
@@ -692,12 +719,12 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 
 /datum/mood_event/masked_mook_incomplete
 	description = span_warning("I'm forced to breathe the horrors of the wastes!")
-	mood_change = -3
+	mood_change = -5
 
 /datum/quirk/paper_skin
 	name = "Paper Skin"
 	desc = "Your flesh is weaker, resulting in receiving cuts more easily."
-	value = -1
+	value = -2
 	mob_trait = TRAIT_PAPER_SKIN
 	gain_text = "<span class='notice'>Your flesh feels weak!</span>"
 	lose_text = "<span class='notice'>Your flesh feels more durable!</span>"
@@ -706,7 +733,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/glass_bones
 	name = "Glass Bones"
 	desc = "Your bones are far more brittle, and more vulnerable to breakage."
-	value = -1
+	value = -2
 	mob_trait = TRAIT_GLASS_BONES
 	gain_text = "<span class='notice'>Your bones feels weak!</span>"
 	lose_text = "<span class='notice'>Your bones feels more durable!</span>"
@@ -715,7 +742,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/noodle_fist
 	name = "Fists of Noodle"
 	desc = "Your punching is legendary. Legendarily bad at doing anything to anyone."
-	value = -1
+	value = -3
 	mob_trait = TRAIT_NOODLEFIST
 	gain_text = span_notice("Your fists feel weak and worthless!")
 	lose_text = span_danger("Your fists strong again.")
@@ -729,7 +756,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/gentle
 	name = "Melee - Gentle"
 	desc = "Something about your strikes in melee is just... below average. You deal slightly less damage with melee weapons."
-	value = -1
+	value = -2
 	mob_trait = TRAIT_GENTLE
 	gain_text = span_notice("You feel like you don't really like smacking stuff.")
 	lose_text = span_danger("You feel like slapping the mess out of a gecko.")
@@ -738,7 +765,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/wimpy
 	name = "Melee - Wimpy"
 	desc = "For some reason you're just really bad at hitting things agianst things. Your melee damage is much lower than average."
-	value = -3
+	value = -4
 	mob_trait = TRAIT_WIMPY
 	gain_text = span_notice("You feel like smacking things is just a waste of time.")
 	lose_text = span_danger("You feel like slapping the mess out of a Deathclaw!")
@@ -747,7 +774,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/slow
 	name = "Mobility - Wasteland Slug"
 	desc = "You've spent some time in the wastes, you don't get around great."
-	value = -1
+	value = -2
 	mob_trait = TRAIT_SLUG
 	gain_text = span_notice("Rain or shine, you might get there eventually.")
 	lose_text = span_danger("Your gait feels a little more sure!")
@@ -756,7 +783,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/slower
 	name = "Mobility - Wasteland Molasses"
 	desc = "You don't get around well off road. Like. At all."
-	value = -2
+	value = -5
 	mob_trait = TRAIT_SLOWAF
 	gain_text = span_notice("You feel like staying at home.")
 	lose_text = span_danger("Wow! You feel like you could run around the whole WORLD!")
@@ -792,7 +819,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/nosleep
 	name = "Can Not Sleep"
 	desc = "For whatever reason you literally lack the ability to sleep."
-	value = -1
+	value = -3
 	mob_trait = TRAIT_SLEEPIMMUNE
 	gain_text = span_notice("You feel like you'll never need to sleep again, for real!")
 	lose_text = span_danger("You could kind of go for a nap.")
@@ -810,7 +837,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/cantrun
 	name = "Mobility - Can not Run"
 	desc = "For whatever reason you just can't muster up the go to run."
-	value = -3
+	value = -4
 	mob_trait = TRAIT_NORUNNING
 	gain_text = span_notice("Running just isnt' worth the effort!")
 	lose_text = span_danger("You really feel like running all of a sudden!")
@@ -819,7 +846,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/luddite
 	name = "Luddite"
 	desc = "You forgo some technology, like autolathes and some other machinery."
-	value = -2
+	value = -3
 	mob_trait = TRAIT_TECHNOPHOBE
 	gain_text = span_notice("All my homies hate machines.")
 	lose_text = span_danger("Maybe industrial society isn't so bad...")

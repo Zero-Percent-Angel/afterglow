@@ -82,6 +82,14 @@
 	build_path = /obj/item/circuitboard/machine/chem_heater
 	category = list ("Medical Machinery")
 
+/datum/design/board/chem_research_station
+	name = "Machine Design (Chemical Research Station Board)"
+	desc = "The circuit board for a chemical heater."
+	id = "chem_research"
+	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_ENGINEERING
+	build_path = /obj/item/circuitboard/machine/chem_research_station
+	category = list ("Medical Machinery")
+
 /datum/design/board/smoke_machine
 	name = "Machine Design (Smoke Machine)"
 	desc = "The circuit board for a smoke machine."

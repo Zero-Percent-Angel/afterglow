@@ -78,7 +78,7 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 #define isangel(A) (is_species(A, /datum/species/angel))
 #define isvampire(A) (is_species(A, /datum/species/vampire))
 #define ismush(A) (is_species(A, /datum/species/mush))
-#define isshadow(A) (is_species(A, /datum/species/shadow))	
+#define isshadow(A) (is_species(A, /datum/species/shadow))
 #define isskeleton(A) (is_species(A, /datum/species/skeleton))
 #define isrobotic(A) (is_species(A, /datum/species/synthfurry/ipc) || is_species(A, /datum/species/synthfurry) || is_species(/datum/species/synth) || is_species(/datum/species/android))
 #define isethereal(A) (is_species(A, /datum/species/ethereal))

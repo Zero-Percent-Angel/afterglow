@@ -20,17 +20,20 @@
 	var/mutable_appearance/beaker_overlay
 	var/working_state = "dispenser_working"
 	var/nopower_state = "dispenser_nopower"
-
-	var/list/possible_steps = list ("Heat", "Cool", "Add", "Mix", "Cancel")
+	var/list/possible_add_steps = list("Add Organic", "Add Inorganic", "Add Metal")
+	var/list/possible_after_first_step = list("Heat", "Cool")
+	var/list/full_steps = list("Add Organic", "Add Inorganic", "Add Metal", "Heat", "Cool", "Mix")
+	var/list/possible_steps = list("Add Organic", "Add Inorganic", "Add Metal", "Heat", "Cool", "Mix", "Cancel")
 	var/list/dispensable_reagents = list()
 	var/list/basic_chemicals = list(
-		/datum/reagent/medicine/potass_iodide = 1,
-		/datum/reagent/medicine/styptic_powder = 3,
-		/datum/reagent/medicine/calomel = 3,
-		/datum/reagent/medicine/perfluorodecalin = 4,
-		/datum/reagent/medicine/bicaridine = 2,
-		/datum/reagent/medicine/kelotane = 2,
-		/datum/reagent/medicine/antitoxin = 2,
+		/datum/reagent/medicine/potass_iodide = 3,
+		/datum/reagent/medicine/styptic_powder = 4,
+		/datum/reagent/medicine/calomel = 4,
+		/datum/reagent/medicine/perfluorodecalin = 5,
+		/datum/reagent/medicine/bicaridine = 4,
+		/datum/reagent/medicine/coagulant/weak = 4,
+		/datum/reagent/medicine/kelotane = 4,
+		/datum/reagent/medicine/antitoxin = 4,
 		/datum/reagent/medicine/salglu_solution = 2,
 		/datum/reagent/radium = 1,
 		/datum/reagent/consumable/sugar = 3,
@@ -69,6 +72,7 @@
 		/datum/reagent/medicine/pen_acid/pen_jelly = 3,
 		/datum/reagent/medicine/atropine = 3,
 		/datum/reagent/medicine/mutadone = 3,
+		/datum/reagent/medicine/morphine = 3,
 		/datum/reagent/medicine/haloperidol = 3,
 		/datum/reagent/medicine/regen_jelly = 3,
 		/datum/reagent/medicine/epinephrine = 3,
@@ -83,10 +87,12 @@
 		/datum/reagent/toxin/carpotoxin = 2,
 		/datum/reagent/toxin/histamine = 2,
 		/datum/reagent/toxin/slimejelly = 2,
-		/datum/reagent/medicine/modafinil = 2,
+		/datum/reagent/medicine/modafinil = 4,
 		/datum/reagent/medicine/psicodine = 2,
 		/datum/reagent/medicine/mentat = 3,
 		/datum/reagent/medicine/stimpak = 3,
+		/datum/reagent/medicine/polypyr = 4,
+		/datum/reagent/medicine/silibinin = 5,
 		/datum/reagent/pax = 3
 	)
 
@@ -181,14 +187,17 @@
 			ui = new(user, src, "ChemDispenser", name)
 			ui.open()
 	else
-		if(!user.IsAdvancedToolUser())
-			to_chat(user, span_warning("The legion has no use for drugs! Better to destroy it."))
-			return
-		if(!ui)
-			ui = new(user, src, "ChemDispenser", name)
-			if(user.hallucinating())
-				ui.set_autoupdate(FALSE) //to not ruin the immersion by constantly changing the fake chemicals
-			ui.open()
+		if (user.skill_check(SKILL_SCIENCE, EASY_CHECK) || HAS_TRAIT(user, TRAIT_CHEMWHIZ))
+			if(!user.IsAdvancedToolUser())
+				to_chat(user, span_warning("The legion has no use for drugs! Better to destroy it."))
+				return
+			if(!ui)
+				ui = new(user, src, "ChemDispenser", name)
+				if(user.hallucinating())
+					ui.set_autoupdate(FALSE) //to not ruin the immersion by constantly changing the fake chemicals
+				ui.open()
+		else
+			to_chat(user, span_warning("You don't even know where to start with that."))
 
 
 /obj/machinery/chem_lab/ui_data(mob/user)
@@ -295,12 +304,23 @@
 			. = TRUE
 
 
-/obj/machinery/chem_lab/proc/do_chemical_creation(datum/reagent/r, mob/user, amount = 10,steps_left = 0, difficulty = REGULAR_CHECK, roll_difficulty = DIFFICULTY_NORMAL)
-	var/biglist = basic_chemicals + advanced_chemicals + expert_chemicals + upgraded_chemicals + upgraded_chemicals2
-	if (!steps_left)
-		steps_left = biglist[r]
+/obj/machinery/chem_lab/proc/do_chemical_creation(datum/reagent/r, mob/user, amount = 10, steps_left = 0, difficulty = REGULAR_CHECK, roll_difficulty = DIFFICULTY_NORMAL , current_step = 1)
+	if (current_step > steps_left)
+		to_chat(user, span_good("The mixture pleasingly comes together."))
+		playsound(src, 'sound/effects/bubbles.ogg', 50, 1, -3)
+		var/datum/reagents/R = beaker.reagents
+		var/free = R.maximum_volume - R.total_volume
+		var/actual = min(amount, (cartridge.charge * powerefficiency)*10, free)
+		if(!cartridge.takeMaterial(actual / matefficiency))
+			say("Not enough chemicals in storage to complete operation!")
+			return
+		R.add_reagent(r, amount)
+		log_reagent("DISPENSER: ([COORD(src)]) ([REF(src)]) [key_name(user)] dispensed [actual] of [r] to [beaker] ([REF(beaker)]).")
+		return FALSE
+	var/add_steps = steps_left > 3 ? steps_left - 2 : steps_left > 2 ? steps_left - 1 : steps_left
+	var/steps = generate_recipe(r, add_steps, steps_left)
 	var/trait_buff = HAS_TRAIT(user, TRAIT_CHEMWHIZ) ? -50 : 0
-	var/next_step = pick(possible_steps.Copy(1, 5))
+	var/next_step = steps[current_step]
 	if (user.skill_check(SKILL_SCIENCE, difficulty + trait_buff) || user.skill_roll(SKILL_SCIENCE, roll_difficulty + trait_buff))
 		to_chat(user, span_good("You know the next step is to " + next_step + "."))
 	else
@@ -315,27 +335,14 @@
 		to_chat(user, span_good("You purge the system."))
 		return
 	if (choosen_step == next_step)
-		if (steps_left == 1)
-			to_chat(user, span_good("The mixture pleasingly comes together."))
-			playsound(src, 'sound/effects/bubbles.ogg', 50, 1, -3)
-			var/datum/reagents/R = beaker.reagents
-			var/free = R.maximum_volume - R.total_volume
-			var/actual = min(amount, (cartridge.charge * powerefficiency)*10, free)
-			if(!cartridge.takeMaterial(actual / matefficiency))
-				say("Not enough chemicals in storage to complete operation!")
-				return
-			R.add_reagent(r, amount)
-			log_reagent("DISPENSER: ([COORD(src)]) ([REF(src)]) [key_name(user)] dispensed [actual] of [r] to [beaker] ([REF(beaker)]).")
-			return FALSE
-		else
-			to_chat(user, span_good("The mixture is looking good so far."))
-			do_chemical_creation(r, user, amount, (steps_left - 1), difficulty, roll_difficulty)
+		to_chat(user, span_good("The mixture is looking good so far."))
+		do_chemical_creation(r, user, amount, steps_left , difficulty, roll_difficulty, current_step + 1)
 	else
 		to_chat(user, span_bad("Uuuh, that wasn't right."))
 		// We might still save it!
 		if (user.skill_roll(SKILL_SCIENCE, roll_difficulty + trait_buff))
 			to_chat(user, span_notice("You manage to save the mixture, giving you another chance."))
-			do_chemical_creation(r, user, amount, steps_left, difficulty, roll_difficulty)
+			do_chemical_creation(r, user, amount, steps_left, difficulty, roll_difficulty, current_step)
 			return
 		//otherwise bad things happen!
 		do_chemical_bad_thing(user)
@@ -348,6 +355,7 @@
 		bad_smoke(user)
 		return
 	if(prob(30))
+		visible_message(span_danger("[src]'s tubes have built up a large static charge shocking [user]!"))
 		var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
 		s.set_up(5, 1, src)
 		s.start()
@@ -356,12 +364,13 @@
 	var/datum/reagents/R = beaker.reagents
 	var/free = R.maximum_volume - R.total_volume
 	R.add_reagent(/datum/reagent/liquidgibs/oil, free)
+	playsound(src, 'sound/effects/bubbles.ogg', 50, 1, -3)
 	to_chat(user, span_warning("The mixture turns to sludge."))
 
 /obj/machinery/chem_lab/proc/bad_smoke(user)
 	visible_message(span_danger("[src]'s seals aren't right, gas is escaping!"))
 	var/chosenchem
-	chosenchem = pick(/datum/reagent/toxin/acid,/datum/reagent/consumable/condensedcapsaicin,/datum/reagent/drug/space_drugs)
+	chosenchem = pick(/datum/reagent/toxin/acid,/datum/reagent/consumable/condensedcapsaicin, /datum/reagent/drug/space_drugs, /datum/reagent/toxin)
 	var/datum/reagents/R = new/datum/reagents(50)
 	R.my_atom = src
 	R.add_reagent(chosenchem , 50)
@@ -469,3 +478,66 @@
 	if(istype(user) && user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
 		replace_beaker(user)
 		return TRUE
+
+/obj/machinery/chem_lab/proc/generate_recipe(datum/reagent/r, total_adds, total_steps)
+
+	if(!istype(GLOB.skill_chemical_reactions))
+		GLOB.skill_chemical_reactions = list()
+		GLOB.skill_chemical_reactions_steps = list()
+
+	var/list/recipe = GLOB.skill_chemical_reactions[r]
+
+	if (istype(recipe))
+		return recipe
+
+	var/added = 0
+	var/done_steps = 0
+	var/text_id = ""
+
+	recipe = list()
+
+	while(recipe.len < total_steps)
+		var/picked = ""
+		if(!added)
+			picked = pick(possible_add_steps)
+			added += 1
+			done_steps += 1
+
+		if(total_adds > added)
+			if (done_steps == 1 && total_steps - total_adds > 1 && prob(50))
+				picked = pick(possible_after_first_step)
+				recipe.Add(picked)
+				text_id += get_id_from_step(picked)
+				done_steps += 1
+			picked = pick(possible_add_steps)
+			added += 1
+			done_steps += 1
+		else
+			picked = pick(full_steps)
+
+		recipe.Add(picked)
+		text_id += get_id_from_step(picked)
+
+	if (!GLOB.skill_chemical_reactions_steps.Find(text_id))
+		GLOB.skill_chemical_reactions[r] = recipe
+		GLOB.skill_chemical_reactions_steps[text_id] = r
+
+		return recipe
+	else
+		return generate_recipe(r, total_adds, total_steps)
+
+proc/get_id_from_step(step)
+	switch(step)
+		if("Add Organic")
+			return "O"
+		if("Add Inorganic")
+			return "I"
+		if("Add Metal")
+			return "A"
+		if("Heat")
+			return "H"
+		if("Cool")
+			return "C"
+		if("Mix")
+			return "M"
+	return "O"

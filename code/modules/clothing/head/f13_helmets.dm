@@ -154,6 +154,12 @@
 	flags_cover = HEADCOVERSEYES
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
 
+/obj/item/clothing/head/helmet/f13/combat/mk2/remnant
+	name = "remnant combat helmet"
+	desc = "A dark helmet with yellow lenses, used commonly in espionage or shadow ops."
+	icon_state = "remnant_helmet"
+	item_state = "remnant_helmet"
+
 /obj/item/clothing/head/helmet/f13/combat/mk2/dark
 	name = "reinforced combat helmet"
 	color = "#302E2E" // Dark Grey
@@ -464,7 +470,6 @@
 	item_state = "legcentpal"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 	armor = ARMOR_VALUE_SALVAGE
-	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/legion/rangercent
 	name = "legion centurion ranger-hunter helmet"
@@ -509,7 +514,8 @@
 	item_state = "ncr_helmet"
 	unique_reskin = list("M1" = "ncr_old")
 	strip_delay = 50
-	armor = ARMOR_VALUE_LIGHT
+	armor = ARMOR_VALUE_MEDIUM
+	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/ncr/gambler
 	name = "NCR gambler helmet"
@@ -591,6 +597,7 @@
 	icon_state = "ncr_ranger"
 	item_state = "ncr_ranger"
 	armor = ARMOR_VALUE_LIGHT
+	slowdown = HELMET_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/f13/ncr/patrol
 	icon = 'icons/fallout/clothing/hats.dmi'
@@ -624,6 +631,8 @@
 	glass_colour_type = /datum/client_colour/glass_colour/red
 	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
 	darkness_view = 24
+	unique_reskin = null
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/head/helmet/f13/ncr/veteran/mutie
 	name = "NCR Mutant Veteran Ranger Combat Helmet"
@@ -694,6 +703,7 @@
 	name = "town security helmet"
 	desc = "An old riot helmet reinforced with proper alloys and stripped of it's faceshield to be more usable outside of confines of a vault."
 	armor = ARMOR_VALUE_MEDIUM
+	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	icon_state = "town_helmet"
 	item_state = "town_helmet"
 	flags_inv = HIDEEARS
@@ -753,6 +763,7 @@
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 20
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2)
 
 /obj/item/clothing/head/helmet/f13/khan/bandana
 	icon = 'icons/fallout/clothing/khans.dmi'
@@ -765,6 +776,7 @@
 	dynamic_fhair_suffix = null
 	var/helmettoggled = FALSE
 	armor = ARMOR_VALUE_LIGHT
+	slowdown = HELMET_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/khan/bandana/AltClick(mob/user)
 	. = ..()
@@ -818,7 +830,7 @@
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa
 	name = "salvaged power helmet"
 	desc = "It's a salvaged power armor helmet of what..? YOU CAN'T SEE ME! STOP! REPORT TO CODERS!!"
-	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT * ARMOR_SLOWDOWN_MORE_T2
 	armor = ARMOR_VALUE_SALVAGE
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
 	flags_cover = HEADCOVERSEYES
@@ -848,7 +860,7 @@
 	icon_state = "tribal"
 	item_state = "tribal"
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2)
-	slowdown = 0
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
 // Mutie Salvage
@@ -934,7 +946,7 @@
 	//salvage_loot = list(/obj/item/stack/crafting/armor_plate = 10)
 	salvage_tool_behavior = TOOL_WELDER
 	/// Projectiles below this damage will get deflected
-	var/deflect_damage = 18
+	var/deflect_damage = 10
 	/// If TRUE - it requires PA training trait to be worn
 	var/requires_training = TRUE
 	/// If TRUE - the suit will give its user specific traits when worn

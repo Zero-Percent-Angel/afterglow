@@ -616,3 +616,8 @@
 	speak = list("For our kin!", "This will be a good hunt.", "The gods look upon me today.")
 	speak_emote = list("says")
 	speak_chance = 1
+
+/obj/effect/mob_spawn/human/corpse/town/sheriff
+	ears = /obj/item/radio/headset/headset_town/lawman
+	uniform = /obj/item/clothing/under/f13/sheriff
+	shoes = /obj/item/clothing/shoes/f13/cowboy

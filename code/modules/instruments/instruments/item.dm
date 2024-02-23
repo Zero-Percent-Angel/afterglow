@@ -10,6 +10,7 @@
 	var/datum/song/handheld/song
 	var/list/allowed_instrument_ids
 	var/tune_time_left = 0
+	var/effectiveness = 0
 
 /obj/item/instrument/Initialize(mapload)
 	. = ..()
@@ -29,9 +30,12 @@
 	if(is_tuned())
 		if (song.playing)
 			for (var/mob/living/M in song.hearing_mobs)
-				M.dizziness = max(0,M.dizziness-2)
-				M.jitteriness = max(0,M.jitteriness-2)
-				M.confused = max(M.confused-1)
+				if (effectiveness > 3)
+					M.dizziness = max(0,M.dizziness-2)
+				if (effectiveness > 5)
+					M.jitteriness = max(0,M.jitteriness-2)
+				if (effectiveness > 7)
+					M.confused = max(M.confused-1)
 				SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "goodmusic", /datum/mood_event/goodmusic)
 		tune_time_left -= wait
 	else
@@ -56,7 +60,8 @@
 		if (HAS_TRAIT(H, TRAIT_MUSICIAN))
 			if (!is_tuned())
 				H.visible_message("[H] tunes the [src] to perfection!", span_notice("You tune the [src] to perfection!"))
-				tune_time_left = 600 SECONDS
+				tune_time_left = 75 SECONDS * user.special_c
+				effectiveness = user.special_c
 				START_PROCESSING(SSprocessing, src)
 			else
 				to_chat(H, span_notice("[src] is already well tuned!"))

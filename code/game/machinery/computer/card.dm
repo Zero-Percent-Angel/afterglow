@@ -528,6 +528,7 @@ GLOBAL_VAR_INIT(time_last_changed_position, 0)
 	job_req = list(
 		"Enclave Lieutenant",
 		"Enclave Master Sergeant",
+		"Enclave Remnant"
 		)
 
 /obj/machinery/computer/card/bos

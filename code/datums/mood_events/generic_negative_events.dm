@@ -169,8 +169,6 @@
 	mood_change = -25
 	timeout = 4 MINUTES
 
-//These are unused so far but I want to remember them to use them later
-
 /datum/mood_event/cloned_corpse
 	description = span_boldwarning("I recently saw my own corpse...")
 	mood_change = -6
@@ -178,8 +176,6 @@
 /datum/mood_event/surgery
 	description = span_boldwarning("HE'S CUTTING ME OPEN!!")
 	mood_change = -8
-
-//End unused
 
 /datum/mood_event/sad_empath
 	description = span_warning("Someone seems upset...")

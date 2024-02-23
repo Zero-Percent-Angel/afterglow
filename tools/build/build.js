@@ -95,6 +95,7 @@ const DmTarget = Juke.createTarget({
   inputs: [
     '_maps/map_files/generic/**',
     '_maps/map_files/Blythe-small/**',
+	'_maps/map_files/Vegas Valley/**',
     'code/**',
     'modular_citadel/**',
     'modular_coyote/**',

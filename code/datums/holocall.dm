@@ -14,6 +14,27 @@
 	var/obj/machinery/holopad/H = origin
 	H?.move_hologram(eye_user, loc)
 
+/mob/camera/aiEye/remote/holo/emote(act, m_type = null, message = null, intentional = FALSE, only_overhead)
+	var/input_text = lowertext(act)
+	var/param = message
+	var/custom_param = findchar(input_text, " ")
+	if(custom_param)
+		param = copytext(act, custom_param + length(act[custom_param]))
+		input_text = copytext(input_text, 1, custom_param)
+
+	var/datum/emote/E
+	E = E.emote_list[input_text]
+	if(!E)
+		to_chat(src, span_notice("Unusable emote '[act]'. Say *help for a list."))
+		return
+	E.run_emote(src, param, m_type, intentional, only_overhead)
+
+/mob/camera/aiEye/remote/holo/show_message(msg, type, alt_msg, alt_type)
+	. = ..()
+	if (eye_user)
+		eye_user.show_message(msg, type, alt_msg, alt_type)
+
+
 /obj/machinery/holopad/remove_eye_control(mob/living/user)
 	if(user.client)
 		user.reset_perspective(null)

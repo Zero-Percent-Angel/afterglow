@@ -38,10 +38,10 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
-	force = 55
+	force = 35
 	throwforce = 10
 	block_chance = 20
-	armour_penetration = 0.40
+	armour_penetration = 0.20
 	w_class = WEIGHT_CLASS_BULKY
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
@@ -65,7 +65,7 @@
 	desc = "A makeshift machete made of a lawn mower blade."
 	icon_state = "machete_imp"
 	item_state = "salvagedmachete"
-	force = 35
+	force = 27
 	block_chance = 7
 	throwforce = 20
 	wound_bonus = 10
@@ -75,7 +75,7 @@
 	name = "machete"
 	desc = "A forged machete made of high quality steel."
 	icon_state = "machete"
-	force = 35
+	force = 29
 	wound_bonus = 20
 	block_chance = 8
 
@@ -99,7 +99,7 @@
 	desc = "A heavy cutting blade, with a fairly good tip too."
 	icon_state = "gladius"
 	item_state = "gladius"
-	force = 36
+	force = 29
 	wound_bonus = 30
 	block_chance = 10
 
@@ -108,7 +108,7 @@
 	desc = "A long blade favoured by those who travel light, a finely crafted weapon with good steel and hilt made from bronze and bone."
 	icon_state = "spatha"
 	item_state = "spatha"
-	force = 38
+	force = 29
 	wound_bonus = 30
 	block_chance = 18
 
@@ -117,7 +117,7 @@
 	desc = "A long one-handed blade sporting lovingly applied wraps and a wonderfully forged and engraved guard. The blade looks to be carefully sharpened."
 	icon_state = "longblade"
 	item_state = "longblade"
-	force = 38
+	force = 32
 	block_chance = 18
 
 /obj/item/melee/onehanded/machete/scrapsabre
@@ -125,7 +125,7 @@
 	desc = "Made from materials found in the wastes, a skilled blacksmith has turned it into a thing of deadly beauty."
 	icon_state = "scrapsabre"
 	item_state = "scrapsabre"
-	force = 37
+	force = 31
 	block_chance = 15
 
 /obj/item/throwing_star/spear
@@ -136,8 +136,8 @@
 	icon_state = "throw_spear"
 	item_state = "tribalspear"
 	force = 15
-	throwforce = 40 //clears threshholds for trash mobs
-	armour_penetration = 0.10
+	throwforce = 35 //clears threshholds for trash mobs
+	armour_penetration = 0.05
 	max_reach = 2
 	embedding = list("pain_mult" = 2, "embed_chance" = 40, "fall_chance" = 15)
 	w_class = WEIGHT_CLASS_NORMAL
@@ -190,7 +190,7 @@
 	icon_state = "knife_hunting"
 	desc = "Dependable hunting knife."
 	embedding = list("pain_mult" = 4, "embed_chance" = 65, "fall_chance" = 10, "ignore_throwspeed_threshold" = TRUE)
-	force = 23
+	force = 21
 	throwforce = 25
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "cut")
 
@@ -199,7 +199,7 @@
 	icon_state = "knife_survival"
 	desc = "Multi-purpose knife with blackened steel."
 	embedding = list("pain_mult" = 4, "embed_chance" = 35, "fall_chance" = 10)
-	force = 23
+	force = 21
 	throwforce = 25
 
 /obj/item/melee/onehanded/knife/bayonet
@@ -214,7 +214,7 @@
 	icon_state = "knife_bowie"
 	item_state = "knife_bowie"
 	desc = "A large clip point fighting knife."
-	force = 28
+	force = 23
 	throwforce = 25
 	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
 
@@ -223,7 +223,7 @@
 	icon_state = "knife_trench"
 	item_state = "knife_trench"
 	desc = "This blade is designed for brutal close quarters combat."
-	force = 30
+	force = 23
 	custom_materials = list(/datum/material/iron=8000)
 	attack_verb = list("slashed", "stabbed", "sliced", "shanked", "ripped", "lacerated")
 
@@ -245,7 +245,7 @@
 	desc = "An ancient blade used to carry out the spiritual rituals of the Wayfarer people."
 	icon_state = "knife_ritual"
 	item_state = "knife_ritual"
-	force = 25
+	force = 23
 	armour_penetration = 0.1
 	custom_materials = null
 
@@ -259,7 +259,7 @@
 	attack_verb = list("stubbed", "poked")
 	var/extended = 0
 	var/extended_force = 21
-	var/extended_throwforce = 23
+	var/extended_throwforce = 20
 	var/extended_icon_state = "knife_switch_ext"
 	var/retracted_icon_state = "knife_switch"
 
@@ -350,7 +350,7 @@
 	name = "throwing knife"
 	desc = "a finely balanced knife made from a lightweight alloy, designed for being thrown. You can easily embed these in someone, and you look darn cool while doing so."
 	icon_state = "knife_throw"
-	force = 20
+	force = 18
 	throwforce = 30
 	armour_penetration = 0.25
 	bare_wound_bonus = 15 //keep your arteries covered
@@ -389,7 +389,7 @@
 	icon_state = "warclub"
 	item_state = "warclub"
 	attack_verb = list("mashed", "bashed", "hit", "bludgeoned", "whacked")
-	force = 30
+	force = 28
 	throwforce = 25
 	block_chance = 5
 
@@ -397,7 +397,7 @@
 	. = ..()
 	if(!istype(M))
 		return
-	M.apply_damage(20, STAMINA, "chest", M.run_armor_check("chest", "melee"))
+	M.apply_damage(15, STAMINA, "chest", M.run_armor_check("chest", "melee"))
 
 // Tire Iron
 /obj/item/melee/onehanded/club/tireiron
@@ -405,7 +405,7 @@
 	desc = "A rusty old tire iron, normally used for loosening nuts from car tires.<br>Though it has a short reach, it has decent damage and a fast swing."
 	icon_state = "tire"
 	item_state = "tire"
-	force = 30
+	force = 28
 	custom_materials = list(/datum/material/iron = 4000)
 
 // NCR Flag			Keywords: NCR, Damage 26, Stamina damage, Block
@@ -416,7 +416,7 @@
 	item_state = "flag-ncr"
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = null
-	force = 26
+	force = 22
 	block_chance = 30
 	attack_verb = list("smacked", "thwacked", "democratized", "freedomed")
 
@@ -436,7 +436,7 @@
 	var/stun_stam_cost_coeff = 1.25
 	var/hardstun_ds = TRUE
 	var/softstun_ds = 0
-	var/stam_dmg = 30
+	var/stam_dmg = 25
 	var/cooldown_check = 0 // Used internally, you don't want to modify
 	var/cooldown = 13 // Default wait time until can stun again.
 	var/stun_time_silicon = 60 // How long it stuns silicons for - 6 seconds.
@@ -502,7 +502,7 @@
 		user.DefaultCombatKnockdown(60 * force)
 		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
-			H.apply_damage(2*force, BRUTE, BODY_ZONE_HEAD)
+			H.apply_damage(2*force, BRUTE, BODY_ZONE_HEAD, H.run_armor_check(BODY_ZONE_HEAD, "melee"))
 		else
 			user.take_bodypart_damage(2*force)
 		return
@@ -540,7 +540,9 @@
 			if(stun_animation)
 				user.do_attack_animation(target)
 			playsound(get_turf(src), on_stun_sound, 75, 1, -1)
-			target.adjustStaminaLoss(30)
+			var/armour = target.run_armor_check(armour_penetration = armour_penetration)
+			var/dt = max(target.run_armor_check(null, "damage_threshold", null, null, 0, null) - damage_threshold_penetration, 0)
+			target.adjustStaminaLoss((stam_dmg - dt) * ((100 - armour)/100))
 			additional_effects_carbon(target, user)
 			add_fingerprint(user)
 			target.visible_message(desc["visible"], desc["local"])
@@ -549,7 +551,7 @@
 			else
 				target.LAssailant = WEAKREF(user)
 			cooldown_check = world.time + cooldown
-			user.adjustStaminaLossBuffered(getweight(user, STAM_COST_BATON_MOB_MULT))
+			//user.adjustStaminaLossBuffered(getweight(user, STAM_COST_BATON_MOB_MULT))
 		else
 			var/wait_desc = get_wait_description()
 			if(wait_desc)
@@ -594,7 +596,7 @@
 	on_icon_state = "telebaton_1"
 	off_icon_state = "telebaton_0"
 	on_item_state = "nullrod"
-	force_on = 10
+	force_on = 15
 	force_off = 0
 	weight_class_on = WEIGHT_CLASS_BULKY
 	total_mass = TOTAL_MASS_NORMAL_ITEM
@@ -688,30 +690,8 @@
 		mob_overlay_icon = lefthand_file
 	if(ishuman(user) && slot == SLOT_GLOVES)
 		ADD_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove")
-		if(HAS_TRAIT(user, TRAIT_UNARMED_WEAPON))
-			H.dna.species.punchdamagehigh += force //Work around for turbo bad code here. Makes this correctly stack with your base damage. No longer makes ghouls the kings of melee.
-			H.dna.species.punchdamagelow += force
-			H.dna.species.attack_sound = hitsound
-			if(sharpness == SHARP_POINTY || sharpness ==  SHARP_EDGED)
-				H.dna.species.attack_verb = pick("slash","slice","rip","tear","cut","dice")
-			if(sharpness == SHARP_NONE)
-				H.dna.species.attack_verb = pick("punch","jab","whack")
 	if(ishuman(user) && slot != SLOT_GLOVES && !H.gloves)
 		REMOVE_TRAIT(user, TRAIT_UNARMED_WEAPON, "glove")
-		if(!HAS_TRAIT(user, TRAIT_UNARMED_WEAPON)) //removing your funny trait shouldn't make your fists infinitely stack damage.
-			H.dna.species.punchdamagehigh = 10
-			H.dna.species.punchdamagelow = 1
-		if(HAS_TRAIT(user, TRAIT_IRONFIST))
-			H.dna.species.punchdamagehigh = 10
-			H.dna.species.punchdamagelow = 4
-		if(HAS_TRAIT(user, TRAIT_STEELFIST))
-			H.dna.species.punchdamagehigh = 12
-			H.dna.species.punchdamagelow = 6
-		if(HAS_TRAIT(user, TRAIT_FEV)) //Holy shit that Supermutant had a powerfist!
-			H.dna.species.punchdamagehigh = 16
-			H.dna.species.punchdamagelow = 10
-		H.dna.species.attack_sound = 'sound/weapons/punch1.ogg'
-		H.dna.species.attack_verb = "punch"
 
 /obj/item/melee/unarmed/examine(mob/user)
 	. = ..()
@@ -740,7 +720,7 @@
 	icon_state = "brass"
 	item_state = "brass"
 	attack_verb = list("punched", "jabbed", "whacked")
-	force = 26
+	force = 13
 	custom_materials = list(/datum/material/iron = 2000)
 
 // Spiked knuckles	Keywords: Damage 28
@@ -751,7 +731,7 @@
 	item_state = "spiked"
 	sharpness = SHARP_POINTY
 	armour_penetration = 0.1
-	force = 28
+	force = 16
 
 // Sappers			Keywords: Damage 27
 /obj/item/melee/unarmed/sappers
@@ -760,7 +740,7 @@
 	icon_state = "sapper"
 	item_state = "sapper"
 	w_class = WEIGHT_CLASS_NORMAL
-	force = 27
+	force = 17
 
 /obj/item/melee/unarmed/sappers/attack(mob/living/M, mob/living/user)
 	. = ..()
@@ -777,7 +757,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	sharpness = SHARP_POINTY
-	force = 33
+	force = 21
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
 // Lacerator		Keywords: Damage 29, Edged, Wound bonus
@@ -787,7 +767,7 @@
 	icon_state = "lacerator"
 	item_state = "lacerator"
 	w_class = WEIGHT_CLASS_NORMAL
-	force = 29
+	force = 21
 	armour_penetration = 0 //my brother in christ it is razor blades on tape
 	bare_wound_bonus = 5
 	sharpness = SHARP_EDGED
@@ -801,7 +781,7 @@
 	icon_state = "mace_glove"
 	item_state = "mace_glove"
 	w_class = WEIGHT_CLASS_BULKY
-	force = 30
+	force = 21
 	sharpness = SHARP_NONE
 
 // Punch Dagger		Keywords: Damage 29, Pointy
@@ -810,7 +790,7 @@
 	desc = "A dagger designed to be gripped in the user�s fist with the blade protruding between the middle and ring fingers, to increase the penetration of a punch."
 	icon_state = "punch_dagger"
 	item_state = "punch_dagger"
-	force = 29
+	force = 17
 	armour_penetration = 0.1
 	sharpness = SHARP_POINTY
 	attack_verb = list("stabbed", "sliced", "pierced", "diced", "cut")
@@ -821,7 +801,7 @@ obj/item/melee/unarmed/punchdagger/cyborg
 	desc = "Razor sharp blades embedded into the grippers of an assaultron. Sharp."
 	icon_state = "tiger_claw"
 	item_state = "tiger_claw"
-	force = 40 //Assaultron, so, makes sense.
+	force = 32 //Assaultron, so, makes sense.
 
 // Deathclaw Gauntlet	Keywords: Damage 35, AP 1
 /obj/item/melee/unarmed/deathclawgauntlet
@@ -831,7 +811,7 @@ obj/item/melee/unarmed/punchdagger/cyborg
 	item_state = "deathclaw_g"
 	slot_flags = ITEM_SLOT_GLOVES
 	w_class = WEIGHT_CLASS_NORMAL
-	force = 35
+	force = 28
 	armour_penetration = 0.15
 	sharpness = SHARP_EDGED
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
@@ -845,7 +825,7 @@ obj/item/melee/unarmed/punchdagger/cyborg
 	item_state = "deathclaw_g"
 	slot_flags = ITEM_SLOT_GLOVES
 	w_class = WEIGHT_CLASS_NORMAL
-	force = 23
+	force = 21
 	sharpness = SHARP_EDGED
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -878,7 +858,7 @@ obj/item/melee/unarmed/punchdagger/cyborg
 	desc = "An ancient cast iron frying pan.<br>It's heavy, but fairly useful if you need to keep the mutants away, and don't have a better weapon around."
 	icon_state = "pan"
 	item_state = "pan"
-	force = 24 //Just try to swing a frying pan//BONK
+	force = 18 //Just try to swing a frying pan//BONK
 	throw_speed = 1
 	throw_range = 3
 	throwforce = 20
@@ -895,7 +875,7 @@ obj/item/melee/unarmed/punchdagger/cyborg
 	icon_state = "entrenching_tool"
 	item_state = "trench"
 	w_class = WEIGHT_CLASS_NORMAL
-	force = 30
+	force = 23
 	throwforce = 15
 	toolspeed = 0.7
 	sharpness = SHARP_EDGED

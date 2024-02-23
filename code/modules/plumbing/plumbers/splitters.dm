@@ -21,6 +21,9 @@
 	AddComponent(/datum/component/plumbing/splitter, bolt)
 
 /obj/machinery/plumbing/splitter/ui_interact(mob/user, datum/tgui/ui)
+	if (!user.skill_check(SKILL_SCIENCE, REGULAR_CHECK))
+		to_chat(user, span_warning("You lack the required skill to interact with that."))
+		return
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "ChemSplitter", name)

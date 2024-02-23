@@ -5,7 +5,6 @@
 	desc = "<i>Ain't no place for fancy cars on the wasteland.<br>No place for classy brands, but nicknames.<br>Only the rusty and trusty death machines.<br>Only fuel and blood.</i>"
 	icon = 'icons/fallout/vehicles/medium_vehicles.dmi'
 	icon_state = "buggy_dune"
-	datum_type = /datum/riding/motorcycle/buggy
 	pixel_x = -17
 	pixel_y = -2
 	obj_integrity = 600
@@ -17,6 +16,18 @@
 /obj/vehicle/ridden/fuel/motorcycle/buggy/New()
 	..()
 	name = pick(names)
+
+/obj/vehicle/ridden/fuel/motorcycle/buggy/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+	var/datum/component/riding/D = LoadComponent(/datum/component/riding)
+	D.vehicle_move_delay = 0.8
+	D.set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(0, 0), TEXT_SOUTH = list(1, -3), TEXT_EAST = list(-6, 7), TEXT_WEST = list(2, 7)))
+	D.set_vehicle_dir_offsets(NORTH, -16, -16)
+	D.set_vehicle_dir_offsets(SOUTH, -16, -16)
+	D.set_vehicle_dir_offsets(EAST, -18, 0)
+	D.set_vehicle_dir_offsets(WEST, -18, 0)
 
 /obj/item/key/buggy
 	name = "car key"
@@ -35,29 +46,6 @@
 /obj/item/key/buggy/wheel/New()
 	..()
 	icon_state = "wheel"
-
-/datum/riding/motorcycle/buggy
-	keytype = /obj/item/key/buggy
-	vehicle_move_delay = 0.8
-
-/datum/riding/motorcycle/buggy/handle_vehicle_offsets()
-	..()
-	if(ridden.has_buckled_mobs())
-		for(var/m in ridden.buckled_mobs)
-			var/mob/living/buckled_mob = m
-			switch(buckled_mob.dir)
-				if(NORTH)
-					buckled_mob.pixel_x = -1
-					buckled_mob.pixel_y = 9
-				if(EAST)
-					buckled_mob.pixel_x = -5
-					buckled_mob.pixel_y = 6
-				if(SOUTH)
-					buckled_mob.pixel_x = 0
-					buckled_mob.pixel_y = 12
-				if(WEST)
-					buckled_mob.pixel_x = 3
-					buckled_mob.pixel_y = 6
 
 /obj/vehicle/ridden/fuel/motorcycle/buggy/olive
 	icon_state = "buggy_olive"

@@ -92,7 +92,7 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 	var/rng = FALSE
 	var/debug = FALSE //vv this if you want an artifact
 	var/artifactrolled = FALSE
-	var/itemqualitymax = 20 //A quality 8 bronze spear does less damage than a regular bone spear from craftmenu, lol
+	var/itemqualitymax = 8
 
 
 /obj/structure/anvil/Initialize(mapload)
@@ -171,16 +171,16 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 /obj/structure/anvil/proc/do_shaping(mob/user, qualitychange)
 	if(!iscarbon(user))
 		return
-	
+
 	SetBusy(TRUE, user)
 
 	currentquality += qualitychange
 	workpiece_state = WORKPIECE_INPROGRESS // set it so we're working on it.
-	
+
 	// Present choice selection.
 	var/list/shapingsteps = list("weak hit", "strong hit", "heavy hit", "fold", "draw", "shrink", "bend", "punch", "upset") //weak/strong/heavy hit affect strength. All the other steps shape.
 	var/stepdone = input(user, "How would you like to work the metal?") in shapingsteps
-	
+
 
 	// if user is not in range, remove business.
 	if(!locate(src) in range(1, user))
@@ -198,7 +198,7 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 
 	if(!do_after(user, steptime, target = src))
 		return SetBusy(FALSE, user)
-	
+
 	// I hate this.
 	// I'd rather die.
 	switch(stepdone)
@@ -242,27 +242,27 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 	// Display message
 	user.visible_message(span_notice("[user] works the metal on the anvil with their hammer with a loud clang!"), \
 						span_notice("You [stepdone] the metal with a loud clang!"))
-	
+
 	// more sounds... uhhh...
 	playsound(src, 'sound/effects/clang2.ogg',40, 2)
 
 	// sparkles~
-	do_smithing_sparks(1, TRUE, src) 
+	do_smithing_sparks(1, TRUE, src)
 
 	// more fucking sounds after a timer..????????????????????????????????
 	addtimer(CALLBACK(GLOBAL_PROC, .proc/playsound, src, 'sound/effects/clang2.ogg', 40, 2), 15)
-	
+
 	// the stepsdone is a string of characters which are actions made.
 	// Once it is more or equal to 3, call try finish.
 	if(length(stepsdone) >= 3)
 		tryfinish(user)
-	
+
 	SetBusy(FALSE, user) // Set it to false, cause we're done now some how.
 
 /obj/structure/anvil/proc/tryfinish(mob/user) // Oh god before I prettify this code I just feel like I'm having a stroke at all this word garble.
 
 	var/artifactchance = 0
-	var/combinedqualitymax = max(user.skill_value(SKILL_OUTDOORSMAN), user.skill_value(SKILL_REPAIR))/16 + itemqualitymax //This is no longer as good. /2 divisor to /4 to make the max ~12 
+	var/combinedqualitymax = max(user.skill_value(SKILL_OUTDOORSMAN), user.skill_value(SKILL_REPAIR))/10 + itemqualitymax //This is no longer as good. /2 divisor to /4 to make the max ~12
 	if(!artifactrolled) // if there has not been a roll chance, do it now..?
 		artifactchance = (1+(user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing)/2))/1500 //Bumps this up as removal of high-tier smithing items and a decrease to their balance makes artifacts neccessary and worthwhile
 		//artifactrolled = TRUE --Disabled because this is a shitty mechanic.
@@ -274,7 +274,7 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 	if(user.mind.skill_holder) // Divide the failing chance based on the skillmodifier
 		var/skillmod = user.mind.get_skill_level(/datum/skill/level/dwarfy/blacksmithing) / 10 + 1
 		finalfailchance = max(0, finalfailchance / skillmod) //lv 2 gives 20% less to fail, 3 30%, etc
-	
+
 
 	///////
 	// The two main conditionals
@@ -282,9 +282,9 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 
 	// I hate this. If you hit more than 10 times, or the final piece failed and you have no artifact. Why it gotta look so awkward.
 	if((currentsteps > 10 || (rng && prob(finalfailchance))) && !artifact)
-	
+
 		to_chat(user, span_warning("You overwork the metal, causing it to turn into useless slag!"))
-		
+
 		new /obj/item/stack/ore/slag(get_turf(src)) // Spawn some slag
 
 		ResetAnvil() // Resets it to be default.
@@ -292,8 +292,8 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 		if(user.mind.skill_holder) // give them some experience
 			user.mind.auto_gain_experience(/datum/skill/level/dwarfy/blacksmithing, 50, 500000, silent = FALSE) //This shouldn't give you a full level until 3+
 
-		return SetBusy(FALSE, user) 
-	
+		return SetBusy(FALSE, user)
+
 	// IF YOU DIDN'T FUCK UP THE RECIPE
 	for(var/i in GLOB.anvil_recipes) // for each recipes.
 		if(i == stepsdone) // if... "cum" == "bbu" idfk what the fuck am I looking at why isnt this a GLOB recipe list...
@@ -306,7 +306,8 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 			// math to make quality better if its an artifact.
 			if(artifact)
 				to_chat(user, "It is an artifact, a creation whose legacy shall live on forevermore.") //todo: SSblackbox
-				currentquality = max(currentquality, 2)
+				currentquality = max(currentquality, 4)
+				combinedqualitymax += 5
 				finisheditem.artifact = TRUE
 			else
 				if(combinedqualitymax >= 0)

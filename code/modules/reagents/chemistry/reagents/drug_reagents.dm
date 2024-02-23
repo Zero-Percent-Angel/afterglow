@@ -65,6 +65,8 @@
 	addiction_threshold = 10
 	pH = 10
 	value = REAGENT_VALUE_UNCOMMON
+	interferes = CHEMICAL_INTERFERE_OFTEN
+	addiction_chance = 5
 
 /datum/reagent/drug/crank/on_mob_life(mob/living/carbon/M)
 	if(prob(5))
@@ -162,6 +164,8 @@
 	color = "#c7AB00"
 	overdose_threshold = 31
 	addiction_threshold = 20
+	addiction_chance = 3
+	interferes = CHEMICAL_INTERFERE_OFTEN
 	pH = 9
 	value = REAGENT_VALUE_UNCOMMON
 
@@ -171,6 +175,16 @@
 	if(prob(5))
 		to_chat(M, span_notice("[high_message]"))
 		M.emote(pick("twitch","drool","moan"))
+	..()
+
+/datum/reagent/drug/heroin/on_mob_metabolize(mob/living/L)
+	..()
+	SEND_SIGNAL(L, COMSIG_ADD_MOOD_EVENT, "heroin", /datum/mood_event/happiness_drug)
+	L.add_movespeed_mod_immunities(type, list(/datum/movespeed_modifier/damage_slowdown, /datum/movespeed_modifier/damage_slowdown_flying, /datum/movespeed_modifier/monkey_health_speedmod))
+
+/datum/reagent/drug/heroin/on_mob_end_metabolize(mob/living/L)
+	L.remove_movespeed_mod_immunities(type, list(/datum/movespeed_modifier/damage_slowdown, /datum/movespeed_modifier/damage_slowdown_flying, /datum/movespeed_modifier/monkey_health_speedmod))
+	SEND_SIGNAL(L, COMSIG_CLEAR_MOOD_EVENT, "heroin")
 	..()
 
 /datum/reagent/drug/heroin/overdose_process(mob/living/M)
@@ -212,6 +226,8 @@
 	var/confusion = TRUE
 	pH = 5
 	value = REAGENT_VALUE_UNCOMMON
+	interferes = CHEMICAL_INTERFERE_OFTEN
+	addiction_chance = 3
 
 /datum/reagent/drug/methamphetamine/on_mob_metabolize(mob/living/L)
 	..()
@@ -310,6 +326,8 @@
 	pH = 8.2
 	value = REAGENT_VALUE_RARE
 	ghoulfriendly = TRUE
+	interferes = CHEMICAL_INTERFERE_SOMETIMES
+	addiction_chance = 3
 
 /datum/reagent/drug/bath_salts/on_mob_metabolize(mob/living/L)
 	..()
@@ -427,8 +445,10 @@
 	color = "#FFF378"
 	addiction_threshold = 10
 	overdose_threshold = 20
+	addiction_chance = 5
 	pH = 10.5
 	value = REAGENT_VALUE_RARE
+	interferes = CHEMICAL_INTERFERE_SOMETIMES
 
 /datum/reagent/drug/happiness/on_mob_add(mob/living/L)
 	..()
@@ -509,6 +529,7 @@
 	addiction_stage4_end = 240
 	pH = 12.5
 	value = REAGENT_VALUE_EXCEPTIONAL
+	interferes = CHEMICAL_INTERFERE_SOMETIMES
 
 /datum/reagent/drug/getaway/on_mob_metabolize(mob/living/L)
 	. = ..()
@@ -516,6 +537,9 @@
 	L.action_cooldown_mod *= 1.5
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
+		H.modify_special(8, "s")
+		H.modify_special(-3, "i")
+		H.modify_special(-3, "a")
 		if(H.physiology)
 			H.physiology.stamina_mod *= 0.5
 
@@ -527,10 +551,9 @@
 		var/mob/living/carbon/human/H = L
 		if(H.physiology)
 			H.physiology.stamina_mod *= 2
-		if(H.dna && H.dna.species)
-			H.dna.species.punchdamagehigh -= 4
-			H.dna.species.punchdamagelow -= 4
-			H.dna.species.punchstunthreshold += 2
+		H.modify_special(-8, "s")
+		H.modify_special(3, "i")
+		H.modify_special(3, "a")
 
 /datum/reagent/drug/getaway/on_mob_life(mob/living/carbon/M)
 	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1*REM)

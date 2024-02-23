@@ -56,7 +56,7 @@
 
 /turf/closed/wall/bullet_act(obj/item/projectile/P)
 	. = ..()
-	if (!istype(P) || P.damage <= 0 || P.armour_penetration <= 0)
+	if (!istype(P) || P.damage <= 0 || P.armour_penetration < 0)
 		return
 	if (!unbreakable && hardness > 0 && P.damage >= 750/(hardness + (hardness * P.armour_penetration)))
 		var/damTaken = weak_wall ? P.damage * (hardness**2)/(19600) : min(P.damage * (hardness**2)/(39200), 0.5)

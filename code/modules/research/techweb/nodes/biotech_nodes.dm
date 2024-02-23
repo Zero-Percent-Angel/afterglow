@@ -5,7 +5,7 @@
 	display_name = "Biological Technology"
 	description = "What makes us tick."	//the MC, silly!
 	prereq_ids = list("base")
-	design_ids = list("medicalkit", "chem_heater", "chem_master", "chem_dispenser", "chem_lab", "drug_lab", "sleeper", "vr_sleeper", "pandemic", "defibrillator", "defibmount", "operating", "soda_dispenser", "beer_dispenser", "healthanalyzer", "blood_bag", "bloodbankgen", "telescopiciv", "medspray","genescanner","chem_pack")
+	design_ids = list("medicalkit", "chem_heater", "chem_master", "chem_dispenser", "chem_lab", "chem_research" ,"drug_lab", "sleeper", "vr_sleeper", "pandemic", "defibrillator", "defibmount", "operating", "soda_dispenser", "beer_dispenser", "healthanalyzer", "blood_bag", "bloodbankgen", "telescopiciv", "medspray","genescanner","chem_pack")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 500)
 	alt_skill = SKILL_DOCTOR
 

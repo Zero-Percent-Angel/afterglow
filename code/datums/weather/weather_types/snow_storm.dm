@@ -27,6 +27,8 @@
 
 
 /datum/weather/snow_storm/weather_act(mob/living/L)
+	if (HAS_TRAIT(L, TRAIT_RESISTCOLD))
+		return
 	var/armour = L.run_armor_check(null, "fire", silent = TRUE)
 	L.adjust_bodytemperature(-rand(10,20) * (100 - armour)/100)
 

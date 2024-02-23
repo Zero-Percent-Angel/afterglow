@@ -162,9 +162,11 @@
 	var/raw_msg = message
 	//if(visible_message_flags & EMOTE_MESSAGE)
 	//	message = "<span class='emote'><b>[src]</b> [message]</span>"
+	for(var/obj/machinery/holopad/holo in hearers)
+		holo.do_hologram_emote(src, message, self_message, visible_message_flags)
 
 	for(var/mob/M in hearers)
-		if(!M.client)
+		if(!M.client && !istype(M, /mob/camera))
 			continue
 		//This entire if/else chain could be in two lines but isn't for readabilty's sake.
 		var/msg = message
@@ -211,6 +213,9 @@ mob/visible_message(message, self_message, blind_message, vision_distance = DEFA
 		message = "<b>[src]</b> [message]"
 	//if(audible_message_flags & EMOTE_MESSAGE)
 	//	message = "<span class='emote'><b>[src]</b> [message]</span>"
+	for(var/obj/machinery/holopad/holo in hearers)
+		holo.do_hologram_emote(src, raw_msg, self_message, audible_message_flags)
+
 	for(var/mob/M in hearers)
 		if(audible_message_flags & EMOTE_MESSAGE && runechat_prefs_check(M, audible_message_flags) && M.can_hear())
 			M.create_chat_message(src, raw_message = raw_msg, runechat_flags = audible_message_flags)

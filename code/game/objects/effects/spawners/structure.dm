@@ -16,6 +16,18 @@ again.
 	return INITIALIZE_HINT_QDEL
 
 
+/obj/effect/spawner/structure/ladder
+	var/height = 0
+	var/id = ""
+	spawn_list = list(/obj/structure/ladder/unbreakable)
+
+/obj/effect/spawner/structure/ladder/Initialize()
+	. = ..()
+	for(var/obj/structure/ladder/unbreakable/unbr in get_turf(src))
+		unbr.height = height
+		unbr.id = id
+		unbr.LateInitialize()
+
 //normal windows
 
 /obj/effect/spawner/structure/window

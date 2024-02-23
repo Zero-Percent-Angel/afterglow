@@ -253,10 +253,10 @@
 	if(mood_events[category])
 		the_event = mood_events[category]
 		if(the_event.type != type)
-			clear_event(null, category)
+			clear_event(source, category)
 		else
 			if(the_event.timeout)
-				addtimer(CALLBACK(src, .proc/clear_event, null, category), the_event.timeout, TIMER_UNIQUE|TIMER_OVERRIDE)
+				addtimer(CALLBACK(src, .proc/clear_event, source, category), the_event.timeout, TIMER_UNIQUE|TIMER_OVERRIDE)
 			return 0 //Don't have to update the event.
 	the_event = new type(src, param)//This causes a runtime for some reason, was this me? No - there's an event floating around missing a definition.
 
@@ -267,11 +267,11 @@
 		addtimer(CALLBACK(src, .proc/clear_event, null, category), the_event.timeout, TIMER_UNIQUE|TIMER_OVERRIDE)
 
 /datum/component/mood/proc/clear_event(datum/source, category)
-	var/datum/mood_event/event = mood_events[category]
-	if(!event)
+	var/datum/mood_event/event = mood_events.Find(category)
+	mood_events.Remove(category)
+	update_mood()
+	if(!istype(event))
 		return 0
-
-	mood_events -= category
 	qdel(event)
 	update_mood()
 

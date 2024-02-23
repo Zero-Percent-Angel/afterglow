@@ -1,5 +1,5 @@
 /*
-	The log console for viewing the entire telecomms 
+	The log console for viewing the entire telecomms
 	network log
 */
 
@@ -15,9 +15,12 @@
 
 	var/network = "NULL"		// the network to probe
 	var/notice = ""
-	var/universal_translate = FALSE // set to TRUE(1) if it can translate nonhuman speech	
+	var/universal_translate = FALSE // set to TRUE(1) if it can translate nonhuman speech
 
 /obj/machinery/computer/telecomms/server/ui_interact(mob/user, datum/tgui/ui)
+	if(!user.skill_check(SKILL_SCIENCE))
+		to_chat(user, span_warning("You don't have the skill needed to use this."))
+		return
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "TelecommsLogBrowser", "Telecomms Server Monitor")
@@ -53,7 +56,7 @@
 
 	if(!LAZYLEN(SelectedMachine.log_entries))
 		return data_out
-	
+
 	for(var/datum/comm_log_entry/C in SelectedMachine.log_entries)
 		var/list/data = list()
 		data["name"] = C.name	//name of the file
@@ -104,7 +107,7 @@
 			data["message"] = C.parameters["message"]
 		else
 			data["message"] = "(unintelligible)"
-		
+
 		data_out["selected_logs"] += list(data)
 	return data_out
 
@@ -133,7 +136,7 @@
 			if(LAZYLEN(machinelist) > 0)
 				notice = "FAILED: Cannot probe when buffer full"
 				return
-			
+
 			for(var/obj/machinery/telecomms/T in GLOB.telecomms_list) //telecomms just went global!
 				if(T.network == network)
 					LAZYADD(machinelist, T)
@@ -145,6 +148,15 @@
 			for(var/obj/machinery/telecomms/T in machinelist)
 				if(T.id == params["value"])
 					SelectedMachine = T
+					if (SelectedMachine.freq_listening.len && usr.skill_roll(SKILL_SCIENCE, DIFFICULTY_CHALLENGE, FALSE))
+						var/freq = SelectedMachine.freq_listening[1]
+						var/message = "emitts a sudden hiss of static.*"
+						var/list/spans = list()
+						// Determine the identity information which will be attached to the signal.
+						var/atom/movable/virtualspeaker/speaker = new(null, SelectedMachine, src)
+						// Construct the signal
+						var/datum/signal/subspace/vocal/signal = new(src, freq, speaker, /datum/language/common, message, spans)
+						signal.send_to_receivers()
 					break
 		if("delete")
 			if(!src.allowed(usr) && !CHECK_BITFIELD(obj_flags, EMAGGED))
@@ -156,7 +168,7 @@
 				return
 			var/datum/comm_log_entry/D = locate(params["value"])
 			if(!istype(D))
-				notice = "NOTICE: Object not found"		
+				notice = "NOTICE: Object not found"
 				return
 			notice = "Deleted entry: [D.name]"
 			LAZYREMOVE(SelectedMachine.log_entries, D)

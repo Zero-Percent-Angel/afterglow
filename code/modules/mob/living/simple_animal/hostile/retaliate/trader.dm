@@ -68,6 +68,8 @@
 			random_list += pick(pick(list(GLOB.loot_t1_melee, GLOB.loot_t2_melee, GLOB.loot_t3_melee, GLOB.loot_t4_melee)))
 		else
 			random_list += pick(pick(list(GLOB.loot_t1_range, GLOB.loot_t2_range, GLOB.loot_t3_range, GLOB.loot_t4_range)))
+	random_list.Add(GLOB.loot_t2_ammo)
+	random_list.Add(/obj/item/ammo_box/shotgun/buck)
 
 	//our special something for high speech individuals or for expert barter skill
 	var/list/hidden_list = list()
@@ -310,7 +312,7 @@
 	stat_attack = CONSCIOUS
 	ranged_cooldown_time = 22
 	ranged = TRUE
-	mob_armor = ARMOR_VALUE_DEATHCLAW_MOTHER
+	mob_armor = ARMOR_VALUE_PA
 	robust_searching = TRUE
 	healable = TRUE
 	maxHealth = 300

@@ -384,7 +384,7 @@
 		return
 
 	regen_points_current = 0
-	regen_points_needed = 30 SECONDS * (user == victim ? 1.5 : 1) * (severity - 1)
+	regen_points_needed = 4 MINUTES * (user == victim ? 1.5 : 1) * (severity - 1)
 	I.use(1)
 	if(user != victim)
 		user.visible_message(span_notice("[user] finishes applying [I] to [victim]'s [limb.name], emitting a fizzing noise!"), span_notice("You finish applying [I] to [victim]'s [limb.name]!"), ignored_mobs=victim)

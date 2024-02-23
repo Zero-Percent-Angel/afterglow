@@ -5,7 +5,7 @@
 
 /mob/camera/aiEye
 	name = "Inactive AI Eye"
-
+	flags_1 = HEAR_1
 	icon_state = "ai_camera"
 	icon = 'icons/mob/cameramob.dmi'
 	invisibility = INVISIBILITY_MAXIMUM

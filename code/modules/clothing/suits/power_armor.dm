@@ -28,9 +28,9 @@
 	/// If TRUE - suit has ran out of charge and is currently affected by slowdown from it
 	var/no_power = FALSE
 	/// How much slowdown is added when suit is unpowered
-	var/unpowered_slowdown = 3
+	var/unpowered_slowdown = 5
 	/// Projectiles below this damage will get deflected
-	var/deflect_damage = 18
+	var/deflect_damage = 11
 	/// If TRUE - it requires PA training trait to be worn
 	var/requires_training = TRUE
 	/// If TRUE - the suit will give its user specific traits when worn
@@ -103,6 +103,10 @@
 	var/mob/living/carbon/human/user = src.loc
 	if(!user || !ishuman(user) || (user.wear_suit != src))
 		return
+	if(emped)
+		if (!no_power)
+			remove_power(user)
+		return
 	if((!cell || !cell?.use(usage_cost) || (salvage_step > 1))) // No cell, ran out of charge or we're in the process of being salvaged
 		if(!no_power)
 			remove_power(user)
@@ -114,6 +118,8 @@
 /obj/item/clothing/suit/armor/power_armor/proc/remove_power(mob/user)
 	if(salvage_step > 1) // Being salvaged
 		to_chat(user, span_warning("Components in [src] require repairs!"))
+	else if (emped)
+		to_chat(user, span_danger("\The [src] sparks wildly."))
 	else
 		to_chat(user, span_warning("\The [src] has ran out of charge!"))
 	slowdown += unpowered_slowdown
@@ -300,26 +306,22 @@
 			var/mob/living/L = loc
 			var/induced_slowdown = 0
 			if(severity >= 41) //heavy emp
-				induced_slowdown = 2
 				to_chat(L, span_boldwarning("Warning: severe electromagnetic surge detected in armor. Rerouting power to emergency systems."))
 			else
-				induced_slowdown = 1
 				to_chat(L, span_warning("Warning: light electromagnetic surge detected in armor. Rerouting power to emergency systems."))
 			emped = TRUE
-			slowdown += induced_slowdown
+			process()
 			L.update_equipment_speed_mods()
-			addtimer(CALLBACK(src, .proc/end_emp_effect, induced_slowdown), 10 SECONDS)
+			addtimer(CALLBACK(src, .proc/end_emp_effect, induced_slowdown), severity/3 SECONDS)
 	return
 
 /obj/item/clothing/suit/armor/power_armor/proc/end_emp_effect(slowdown_induced)
 	emped = FALSE
-	slowdown -= slowdown_induced // Even if armor is dropped it'll fix slowdown
 	if(isliving(loc))
+		process()
 		var/mob/living/L = loc
 		to_chat(L, span_warning("Armor power reroute successful. All systems operational."))
 		L.update_equipment_speed_mods()
-/*
-Most bullets literally DO NOT have fucking armor pen, so it deflects nearly all bullets. No, fuck that. Get fucked. - Rebel0
 
 /obj/item/clothing/suit/armor/power_armor/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if((attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
@@ -327,7 +329,7 @@ Most bullets literally DO NOT have fucking armor pen, so it deflects nearly all 
 			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
 			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return ..()
-*/
+
 /obj/item/clothing/suit/armor/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
@@ -362,13 +364,14 @@ Most bullets literally DO NOT have fucking armor pen, so it deflects nearly all 
 	desc = "Developed by Vault-Tec personnel following the Great war by reverse engineering Excavator Power Armour, Vault-Tec Power Armour is designed to provide better protection than it's mining-suit origins in close-quarters combat."
 	icon_state = "vaultpa"
 	item_state = "vaultpa"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_ENV_T3)
 
 /obj/item/clothing/suit/armor/power_armor/advanced
 	name = "advanced power armor"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for its user's comfort."
 	icon_state = "advpowerarmor1"
 	item_state = "advpowerarmor1"
+	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/advanced
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/suit/armor/power_armor/advanced/x02

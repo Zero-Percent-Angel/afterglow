@@ -145,7 +145,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/pistol/hitscan //25 damage per, with 0 near 0 AP-4 shot crit on unarmored target, significantly less useful against armored
 	projectile_type = /obj/item/projectile/beam/laser/pistol/hitscan
 	e_cost = 50 //30 shots, as per FNV
-	damage_threshold_penetration = 4 // Doesn't pierce as much armor or hit as hard, but has more ammo capacity than the 1k
+	//damage_threshold_penetration = 4 // Doesn't pierce as much armor or hit as hard, but has more ammo capacity than the 1k
 
 /obj/item/ammo_casing/energy/laser/pistol/hitscan/debug_10_damage_0_dt_pierce
 	projectile_type = /obj/item/projectile/beam/laser/pistol/hitscan/debug_10_damage_0_dt_pierce
@@ -193,7 +193,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 
 /obj/item/ammo_casing/energy/laser/stun  //compliance regulator
 	projectile_type = /obj/item/projectile/beam/laser/pistol/hitscan/stun
-	e_cost = 100
+	e_cost = 50
 	harmful = FALSE
 
 /obj/item/ammo_casing/energy/laser/pistol/wattz
@@ -203,12 +203,12 @@ also: most hitscan weapons have more charge than their normal projectile counter
 
 /obj/item/ammo_casing/energy/laser/pistol/wattz/magneto
 	projectile_type = /obj/item/projectile/beam/laser/pistol/wattz/magneto
-	damage_threshold_penetration = 7
+	//damage_threshold_penetration = 7
 
 /obj/item/ammo_casing/energy/laser/pistol/wattz/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/pistol/wattz/hitscan
 	e_cost = 100 //15 Shots. More than enough to kill anything that moves. The wattz 1k isn't even in FNV.
-	damage_threshold_penetration = 3 // Better against lightly armored targets.
+	//damage_threshold_penetration = 3 // Better against lightly armored targets.
 
 /obj/item/ammo_casing/energy/laser/pistol/wattz/magneto/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/pistol/wattz/magneto/hitscan
@@ -222,7 +222,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/pistol/wattzs/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/pistol/wattzs/hitscan
 	e_cost = 37.5 //40 Shots
-	damage_threshold_penetration = 4 // Better against slightly more armored targets
+	//damage_threshold_penetration = 4 // Better against slightly more armored targets
 
 /obj/item/ammo_casing/energy/laser/lasgun
 	projectile_type = /obj/item/projectile/beam/laser/lasgun
@@ -236,7 +236,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/lasgun/hitscan/focused
 	projectile_type = /obj/item/projectile/beam/laser/lasgun/hitscan/focused
 	e_cost = 400 //5 shots. Better hope you're accurate with this thing.
-	damage_threshold_penetration = 10 //Overcharged AF, lets at minimum 1/3rd of the damage it puts out burn through armor.
+	//damage_threshold_penetration = 10 //Overcharged AF, lets at minimum 1/3rd of the damage it puts out burn through armor.
 
 /obj/item/ammo_casing/energy/laser/solar
 	projectile_type = /obj/item/projectile/beam/laser/solar
@@ -331,7 +331,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/wattz2k/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/wattz2k/hitscan
 	e_cost = 160 //12.5 shots, yes there'll be some charge left over. Intentional.
-	damage_threshold_penetration = 7 //You're a sniper laser, act like it.
+	//damage_threshold_penetration = 7 //You're a sniper laser, act like it.
 
 /obj/item/ammo_casing/energy/wattz2k/extended
 	projectile_type = /obj/item/projectile/beam/laser/wattz2k
@@ -339,7 +339,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 
 /obj/item/ammo_casing/energy/wattz2k/extended/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/wattz2k/hitscan/weak
-	damage_threshold_penetration = 4 //The prices you pay for ammo efficiency.
+	//damage_threshold_penetration = 4 //The prices you pay for ammo efficiency.
 
 /obj/item/ammo_casing/energy/wattz2ks
 	projectile_type = /obj/item/projectile/beam/laser/wattz2ks
@@ -349,7 +349,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/wattz2ks/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/wattz2ks/hitscan
 	e_cost = 160 //12.5 shots, yes there'll be some charge left over. Intentional.
-	damage_threshold_penetration = 7 //You're a sniper laser, act like it.
+	//damage_threshold_penetration = 7 //You're a sniper laser, act like it.
 
 //musket
 

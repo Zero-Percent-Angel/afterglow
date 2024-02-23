@@ -68,7 +68,7 @@
 	new /obj/item/multitool(src)
 	new /obj/item/stack/cable_coil(src,30,pick("blue"))
 	new /obj/item/extinguisher/mini(src)
-	new /obj/item/wirecutters(src)
+	new /obj/item/t_scanner(src)
 	//much roomier now that we've managed to remove two tools
 
 /obj/item/storage/belt/utility/full/PopulateContents()

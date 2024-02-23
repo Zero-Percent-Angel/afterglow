@@ -248,7 +248,7 @@
 		outstring += " | "
 
 	//Description, OD, Addict, Meta
-	outstring += "[R.description] | <ul><li>Metabolism rate: [R.metabolization_rate/2]u/s</li> [(R.overdose_threshold?"<li>Overdose: [R.overdose_threshold]u</li>":"")] [(R.addiction_threshold?"<li>Addiction: [R.addiction_threshold]u</li>":"")] "
+	outstring += "[R.description] | <ul><li>Metabolism rate: [R.metabolization_rate/2]u/s</li> [(R.overdose_threshold?"<li>Overdose: [R.overdose_threshold]u</li>":"")] [(R.addiction_threshold?"<li>Addiction: [R.addiction_threshold]u, [R.addiction_chance]% per unit</li>":"")] "
 
 	if(R.impure_chem && R.impure_chem != /datum/reagent/impure/fermiTox)
 		R3 = GLOB.chemical_reagents_list[R.impure_chem]

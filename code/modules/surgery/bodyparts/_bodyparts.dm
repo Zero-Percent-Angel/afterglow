@@ -35,6 +35,7 @@
 	var/brute_dam = 0
 	var/burn_dam = 0
 	var/stamina_dam = 0
+	var/capped_dam = 0
 	/// Skin/meat damage, relating to bleedable damage
 	var/bleed_dam = 0
 	var/max_stamina_damage = 0
@@ -273,15 +274,15 @@
 			if(mangled_state == BODYPART_MANGLED_FLESH && sharpness)
 				playsound(src, "sound/effects/wounds/crackandbleed.ogg", 100)
 				if(wounding_type == WOUND_SLASH && !easy_dismember)
-					wounding_dmg *= 0.5 // edged weapons pass along 50% of their wounding damage to the bone since the power is spread out over a larger area
+					wounding_dmg *= 0.75 // edged weapons pass along 75% of their wounding damage to the bone since the power is spread out over a larger area
 				if(wounding_type == WOUND_PIERCE && !easy_dismember)
-					wounding_dmg *= 0.75 // piercing weapons pass along 75% of their wounding damage to the bone since it's more concentrated
+					wounding_dmg *= 0.9 // piercing weapons pass along 90% of their wounding damage to the bone since it's more concentrated
 				wounding_type = WOUND_BLUNT
 			else if(mangled_state == BODYPART_MANGLED_BOTH && try_dismember(wounding_type, wounding_dmg, wound_bonus, bare_wound_bonus))
 				return
 
 	// now we have our wounding_type and are ready to carry on with wounds and dealing the actual damage
-	
+
 	if(owner && wounding_dmg >= WOUND_MINIMUM_DAMAGE && wound_bonus != CANT_WOUND)
 		check_wounding(wounding_type, wounding_dmg, wound_bonus, bare_wound_bonus)
 
@@ -290,7 +291,6 @@
 	*/
 
 	//back to our regularly scheduled program, we now actually apply damage if there's room below limb damage cap
-
 	var/can_inflict = max_damage - get_damage()
 
 	var/total_damage = brute + burn
@@ -299,8 +299,10 @@
 		brute = round(brute * (max_damage / total_damage),DAMAGE_PRECISION)
 		burn = round(burn * (max_damage / total_damage),DAMAGE_PRECISION)
 
+
 	if(can_inflict <= 0)
-		return FALSE
+		return update_bodypart_damage_state()
+
 
 	brute_dam += brute
 	burn_dam += burn
@@ -383,14 +385,14 @@
 			return // robot parts dont get wounded yet
 
 	damage = min(damage * CONFIG_GET(number/wound_damage_multiplier), WOUND_MAX_CONSIDERED_DAMAGE)
-	
+
 	if(HAS_TRAIT(owner, TRAIT_EASYLIMBDISABLE))
 		damage *= 1.5
 	if(woundtype == WOUND_BLUNT && HAS_TRAIT(owner, TRAIT_GLASS_BONES))
 		damage *= 1.5
 	if((woundtype in PAPER_SKIN_WOUNDS) && HAS_TRAIT(owner, TRAIT_PAPER_SKIN))
 		damage *= 1.5
-	
+
 	var/base_roll = rand(
 		min(damage * WOUND_DAMAGE_RANDOM_FLOOR_MULT, WOUND_MAX_CONSIDERED_DAMAGE),
 		min(damage * WOUND_DAMAGE_RANDOM_MAX_MULT, WOUND_MAX_CONSIDERED_DAMAGE)
@@ -417,7 +419,6 @@
 			if(clothes_check.armor.getRating("wound"))
 				bare_wound_bonus = 0
 				break
-
 	var/list/wounds_checking = GLOB.global_wound_types[woundtype]
 	/// Temporary wound handling for bleeds
 	if(woundtype == WOUND_SLASH || woundtype == WOUND_PIERCE)
@@ -425,23 +426,24 @@
 			return
 
 	//cycle through the wounds of the relevant category from the most severe down
-	for(var/datum/wound/PW in wounds_checking)
-		var/datum/wound/possible_wound = PW
+	for(var/wound_to_check in wounds_checking)
+		if (!ispath(wound_to_check, /datum/wound))
+			continue
 		var/datum/wound/replaced_wound
 		for(var/i in wounds)
 			var/datum/wound/existing_wound = i
 			if(existing_wound.type in wounds_checking)
-				if(existing_wound.severity >= initial(possible_wound.severity))
+				if(existing_wound.severity >= initial(wound_to_check:severity))
 					return
 				else
 					replaced_wound = existing_wound
 
-		if(initial(possible_wound.threshold_minimum) < injury_roll)
+		if(initial(wound_to_check:threshold_minimum) - replaced_wound?.threshold_penalty < injury_roll)
 			var/datum/wound/new_wound
 			if(replaced_wound)
-				new_wound = replaced_wound.replace_wound(possible_wound)
+				new_wound = replaced_wound.replace_wound(wound_to_check)
 			else
-				new_wound = new possible_wound
+				new_wound = new wound_to_check
 				new_wound.apply_wound(src)
 				log_wound(owner, new_wound, damage, wound_bonus, bare_wound_bonus, base_roll) // dismembering wounds are logged in the apply_wound() for loss wounds since they delete themselves immediately, these will be immediately returned
 			return new_wound
@@ -512,7 +514,7 @@
 		injury_mod += W.threshold_penalty
 
 	var/part_mod = -wound_resistance
-	if(get_damage(TRUE) >= max_damage)
+	if(get_damage(FALSE) >= max_damage)
 		part_mod += disabled_wound_penalty
 
 	injury_mod += part_mod
@@ -606,8 +608,8 @@
 //Updates an organ's brute/burn states for use by update_damage_overlays()
 //Returns 1 if we need to update overlays. 0 otherwise.
 /obj/item/bodypart/proc/update_bodypart_damage_state()
-	var/tbrute	= round( (brute_dam/max_damage)*3, 1 )
-	var/tburn	= round( (burn_dam/max_damage)*3, 1 )
+	var/tbrute	= min(round( (brute_dam/max_damage)*3, 1 ), 3)
+	var/tburn	= min(round( (burn_dam/max_damage)*3, 1 ), 3)
 	if((tbrute != brutestate) || (tburn != burnstate))
 		brutestate = tbrute
 		burnstate = tburn
@@ -647,7 +649,6 @@
 		C = source
 		if(!original_owner)
 			original_owner = source
-			max_damage = (max_damage - 15) + (source.special_e * 3)
 	else if(original_owner && owner != original_owner) //Foreign limb
 		no_update = TRUE
 	else

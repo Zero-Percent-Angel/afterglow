@@ -264,7 +264,7 @@
 	build_path = /obj/item/gun/energy/laser/carbine/nopin
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
+*/
 /datum/design/stunrevolver
 	name = "Tesla Revolver"
 	desc = "A high-tech revolver that fires internal, reusable shock cartridges in a revolving cylinder. The cartridges can be recharged using conventional rechargers."
@@ -274,7 +274,7 @@
 	build_path = /obj/item/gun/energy/tesla_revolver
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
-
+/*
 /datum/design/nuclear_gun
 	name = "Advanced Energy Gun"
 	desc = "An energy gun with an experimental miniaturized reactor."
@@ -327,6 +327,36 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/grease
+	name = "M3a1 greasegun"
+	desc = "A .45 ACP SMG design."
+	id = "m3a1"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 25000)
+	build_path = /obj/item/gun/ballistic/automatic/smg/greasegun
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/uzi
+	name = "Mini-Uzi"
+	desc = "A 9mm SMG design."
+	id = "miniuzi"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 25000)
+	build_path = /obj/item/gun/ballistic/automatic/smg/mini_uzi
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/ppsh
+	name = "PPSH"
+	desc = "An ancient russian sub-machine gun design."
+	id = "ppsh"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 25000)
+	build_path = /obj/item/gun/ballistic/automatic/smg/ppsh
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /datum/design/dgal
 	name = "Desert Eagle"
 	desc = "A .44 design."
@@ -347,6 +377,97 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
+/datum/design/combatc
+	name = "Service Rifle"
+	desc = "A 5.56x45 semi-automatic service rifle, made just like the NCR make them... but with more tech."
+	id = "servicerifle"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 33000)
+	build_path = /obj/item/gun/ballistic/automatic/service
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+
+/datum/design/leveraction
+	name = "Lever Action Shotgun"
+	desc = "A Lever action shotgun with a five-shell capacity underneath plus one in chamber."
+	id = "leveraction"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 27000)
+	build_path = /obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/brushgun
+	name = "Brush Gun"
+	desc = "A heavy Lever-action rifle chambered in .45-70. its sturdy design lets it handle the largest cartridges and largest game."
+	id = "bushgun"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 27000, /datum/material/titanium = 6000)
+	build_path = /obj/item/gun/ballistic/rifle/repeater/brush
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/r91
+	name = "R91 assault rifle"
+	desc = "A 5.56 (.223) standard pre-war US military rifle."
+	id = "r91"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 27000, /datum/material/titanium = 6000)
+	build_path = /obj/item/gun/ballistic/automatic/assault_rifle
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/riotshotgun
+	name = "Riot Shotgun"
+	desc = "A compact riot shotgun with a drum mag."
+	id = "riotshotgun"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 27000, /datum/material/titanium = 6000)
+	build_path = /obj/item/gun/ballistic/automatic/shotgun/riot
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/marksman
+	name = "Marksman Carbine"
+	desc = "Built off the AR platform chambered in 5.56x45."
+	id = "marksman"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 27000, /datum/material/titanium = 6000, /datum/material/glass = 2000)
+	build_path = /obj/item/gun/ballistic/automatic/marksman
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/sniper
+	name = "sniper rifle"
+	desc = "A DKS 501, chambered in .308 Winchester."
+	id = "sniper"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 30000, /datum/material/titanium = 8000, /datum/material/glass = 2000)
+	build_path = /obj/item/gun/ballistic/automatic/marksman/sniper
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/m1garand
+	name = "M1 Garand"
+	desc = "The WWII American Classic."
+	id = "m1garand"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 35000, /datum/material/glass = 2000)
+	build_path = /obj/item/gun/ballistic/automatic/m1garand
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/m1carbine
+	name = "M1 Carbine"
+	desc = "The M1 Carbine was mass produced during some old war, rechambered to 10mm."
+	id = "m1carbine"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 35000, /datum/material/glass = 2000)
+	build_path = /obj/item/gun/ballistic/automatic/m1carbine
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
 /datum/design/r84
 	name = "R84 Light machine gun"
 	desc = "A light machine gun."
@@ -354,6 +475,16 @@
 	build_type = PROTOLATHE
 	materials = list(/datum/material/iron = 30000, /datum/material/titanium = 8000, /datum/material/glass = 2000)
 	build_path = /obj/item/gun/ballistic/automatic/r84
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
+
+/datum/design/bozar
+	name = "Bozar"
+	desc = "A light machine gun that will make nice big holes in your enemy."
+	id = "bozar"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 30000, /datum/material/titanium = 8000, /datum/material/glass = 2000)
+	build_path = /obj/item/gun/ballistic/automatic/bozar
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 

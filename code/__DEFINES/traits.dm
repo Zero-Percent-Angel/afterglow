@@ -240,6 +240,7 @@
 #define TRAIT_NO_ALCOHOL		"alcohol_intolerance"
 #define TRAIT_MUTATION_STASIS			"mutation_stasis" //Prevents processed genetics mutations from processing.
 #define TRAIT_FAST_PUMP				"fast_pump"
+#define TRAIT_FANNING				"fanning"
 #define TRAIT_AUTO_DRAW				"auto_draw" //can use bows good
 #define TRAIT_BLING_LOVER			"bling_lover" //can use bows good
 #define TRAIT_NO_PROCESS_FOOD	"no-process-food" // You don't get benefits from nutriment, nor nutrition from reagent consumables
@@ -258,6 +259,7 @@
 #define TRAIT_HEADPAT_SLUT "headpat_sluuuuut"
 #define TRAIT_HYDRA_HEADS "hydra_heads"
 #define TRAIT_SHELTERED "sheltered"
+#define TRAIT_JET_JUNKY "jet_junky"
 #define TRAIT_PIEDPIPER "rat_lord"
 
 // mobility flag traits

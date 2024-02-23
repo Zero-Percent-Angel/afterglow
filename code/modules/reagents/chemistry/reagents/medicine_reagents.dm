@@ -217,7 +217,7 @@
 
 /datum/reagent/medicine/clonexadone
 	name = "Clonexadone"
-	description = "A chemical that derives from Cryoxadone. It specializes in healing clone damage, but nothing else. Requires very cold temperatures to properly metabolize, and metabolizes quicker than cryoxadone."
+	description = "A chemical that derives from Cryoxadone. It specializes in healing clone damage. Requires very cold temperatures to properly metabolize, and metabolizes quicker than cryoxadone."
 	color = "#0000C8"
 	taste_description = "muscle"
 	metabolization_rate = 1.5 * REAGENTS_METABOLISM
@@ -226,8 +226,13 @@
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/clonexadone/on_mob_life(mob/living/carbon/M)
+	var/power = 0.00006 * (M.bodytemperature ** 2) - 6
 	if(M.bodytemperature < T0C)
-		M.adjustCloneLoss(0.00006 * (M.bodytemperature ** 2) - 6, 0)
+		M.adjustCloneLoss(power , 0)
+		M.adjustOxyLoss(power, 0)
+		M.adjustBruteLoss(power/2, 0, include_roboparts = FALSE)
+		M.adjustFireLoss(-power/2, 0, include_roboparts = FALSE)
+		M.adjustToxLoss(-power/2, 0, FALSE)
 		REMOVE_TRAIT(M, TRAIT_DISFIGURED, TRAIT_GENERIC)
 		. = 1
 	metabolization_rate = REAGENTS_METABOLISM * (0.000015 * (M.bodytemperature ** 2) + 0.75)
@@ -280,7 +285,7 @@
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/rezadone/on_mob_life(mob/living/carbon/M)
-	M.setCloneLoss(0) //Rezadone is almost never used in favor of cryoxadone. Hopefully this will change that.
+	M.adjustCloneLoss(-8) //Rezadone is almost never used in favor of cryoxadone. Hopefully this will change that.
 	M.heal_bodypart_damage(1,1)
 	REMOVE_TRAIT(M, TRAIT_DISFIGURED, TRAIT_GENERIC)
 	..()
@@ -453,20 +458,18 @@
 	taste_description = "sweetness and salt"
 	var/last_added = 0
 	var/maximum_reachable = BLOOD_VOLUME_NORMAL - 10	//So that normal blood regeneration can continue with salglu active
-	var/extra_regen = 0.25 // in addition to acting as temporary blood, also add this much to their actual blood per tick
+	var/extra_regen = 1 // in addition to acting as temporary blood, also add this much to their actual blood per tick
 	pH = 5.5
+	interferes = CHEMICAL_INTERFERE_IMPOSSIBLE
 
 /datum/reagent/medicine/salglu_solution/on_mob_life(mob/living/carbon/M)
 	if((HAS_TRAIT(M, TRAIT_NOMARROW)))
 		return
-	/* if(last_added)
+	if(last_added)
 		M.blood_volume -= last_added
 		last_added = 0
 	if(M.get_blood(FALSE) < maximum_reachable)	//Can only up to double your effective blood level.
-		var/amount_to_add = min(M.blood_volume, volume*5)
-		var/new_blood_level = min(M.blood_volume + amount_to_add, maximum_reachable)
-		last_added = new_blood_level - M.blood_volume
-		M.blood_volume = new_blood_level + extra_regen*/
+		M.blood_volume = M.blood_volume + extra_regen
 	if(prob(33))
 		M.adjustBruteLoss(-0.25*REM, 0)
 		M.adjustFireLoss(-0.25*REM, 0)
@@ -579,6 +582,7 @@
 	pH = 5
 	ghoulfriendly = TRUE
 	synth_metabolism_use_human = TRUE // they still get stuff in them that needs purging
+	interferes = CHEMICAL_INTERFERE_IMPOSSIBLE
 
 /datum/reagent/medicine/charcoal/on_mob_life(mob/living/carbon/M)
 	M.adjustToxLoss(-2*REM, 0)
@@ -598,14 +602,15 @@
 	overdose_threshold = 30
 	pH = 2
 	value = REAGENT_VALUE_UNCOMMON
-	var/healing = 0.5
+	var/healing = 4
 	ghoulfriendly = TRUE
+	interferes = CHEMICAL_INTERFERE_IMPOSSIBLE
 
 /datum/reagent/medicine/omnizine/on_mob_life(mob/living/carbon/M)
-	M.adjustToxLoss(-healing*REM, 0)
-	M.adjustOxyLoss(-healing*REM, 0)
-	M.adjustBruteLoss(-healing*REM, 0)
-	M.adjustFireLoss(-healing*REM, 0)
+	M.adjustToxLoss(-metabolization_rate*REM*healing, 0)
+	M.adjustOxyLoss(-metabolization_rate*REM*healing, 0)
+	M.adjustBruteLoss(-metabolization_rate*REM*healing, 0)
+	M.adjustFireLoss(-metabolization_rate*REM*healing, 0)
 	..()
 	. = 1
 
@@ -621,7 +626,7 @@
 	name = "Protozine"
 	description = "A less environmentally friendly and somewhat weaker variant of omnizine."
 	color = "#d8c7b7"
-	healing = 0.2
+	healing = 1
 
 /datum/reagent/medicine/calomel
 	name = "Calomel"
@@ -633,6 +638,7 @@
 	pH = 1.5
 	ghoulfriendly = TRUE
 	synth_metabolism_use_human = TRUE
+	interferes = CHEMICAL_INTERFERE_IMPOSSIBLE
 
 /datum/reagent/medicine/calomel/on_mob_life(mob/living/carbon/M)
 	for(var/A in M.reagents.reagent_list)
@@ -685,6 +691,7 @@
 	var/healtoxinlover = FALSE
 	ghoulfriendly = TRUE
 	synth_metabolism_use_human = TRUE
+	interferes = CHEMICAL_INTERFERE_IMPOSSIBLE
 
 /datum/reagent/medicine/pen_acid/on_mob_life(mob/living/carbon/M)
 	//M.radiation -= max(M.radiation-RAD_MOB_SAFE, 0)/50
@@ -739,6 +746,7 @@
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	pH = 2
 	synth_metabolism_use_human = TRUE
+	interferes = CHEMICAL_INTERFERE_IMPOSSIBLE
 
 /datum/reagent/medicine/salbutamol/on_mob_life(mob/living/carbon/M)
 	M.adjustOxyLoss(-3*REM, 0)
@@ -837,12 +845,15 @@
 
 /datum/reagent/medicine/morphine
 	name = "Morphine"
-	description = "A painkiller that allows the patient to move at full speed even in bulky objects. Causes drowsiness and eventually unconsciousness in high doses. Overdose will cause a variety of effects, ranging from minor to lethal."
+	description = "A painkiller that allows the patient to move at full speed when hurt. Causes drowsiness and eventually unconsciousness in high doses. Overdose will cause a variety of effects, ranging from minor to lethal."
 	reagent_state = LIQUID
 	color = "#A9FBFB"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 	addiction_threshold = 25
+	addiction_chance = 1
+	interference_category = BODY_ALTERING_CHEMICAL
+	interferes = CHEMICAL_INTERFERE_SOMETIMES
 	pH = 8.96
 
 /datum/reagent/medicine/morphine/on_mob_metabolize(mob/living/L)
@@ -855,11 +866,11 @@
 
 /datum/reagent/medicine/morphine/on_mob_life(mob/living/carbon/M)
 	switch(current_cycle)
-		if(11)
+		if(22)
 			to_chat(M, span_warning("You start to feel tired...") )
-		if(12 to 24)
+		if(23 to 48)
 			M.drowsyness += 1
-		if(24 to INFINITY)
+		if(48 to INFINITY)
 			M.Sleeping(40, 0)
 			. = 1
 	..()
@@ -943,14 +954,20 @@
 	overdose_threshold = 35
 	pH = 12
 	value = REAGENT_VALUE_UNCOMMON
+	interference_category = BODY_ALTERING_CHEMICAL
 
 /datum/reagent/medicine/atropine/on_mob_life(mob/living/carbon/M)
-	if(M.health < 0)
-		M.adjustToxLoss(-2*REM, 0)
-		M.adjustBruteLoss(-2*REM, 0)
-		M.adjustFireLoss(-2*REM, 0)
-		M.adjustOxyLoss(-5*REM, 0)
+	if(M.health < 10)
+		M.adjustToxLoss(-20*REM * metabolization_rate, 0)
+		M.adjustBruteLoss(-20*REM * metabolization_rate, 0)
+		M.adjustFireLoss(-20*REM * metabolization_rate, 0)
+		M.adjustOxyLoss(-50*REM * metabolization_rate, 0)
 		. = 1
+	else
+		M.adjustToxLoss(-5*REM * metabolization_rate, 0)
+		M.adjustBruteLoss(-5*REM * metabolization_rate, 0)
+		M.adjustFireLoss(-5*REM * metabolization_rate, 0)
+		M.adjustOxyLoss(-10*REM * metabolization_rate, 0)
 	M.losebreath = 0
 	if(prob(20))
 		M.Dizzy(5)
@@ -1066,6 +1083,7 @@
 	color = "#DCDCFF"
 	pH = 10.4
 	ghoulfriendly = TRUE
+	interference_category = MIND_ALTERING_CHEMICAL
 
 /datum/reagent/medicine/mannitol/on_mob_life(mob/living/carbon/C)
 	C.adjustOrganLoss(ORGAN_SLOT_BRAIN, -2*REM)
@@ -1078,6 +1096,7 @@
 	description = "Reacts with neural tissue, helping reform damaged connections. Can cure minor traumas."
 	color = "#EEFF8F"
 	ghoulfriendly = TRUE
+	interference_category = MIND_ALTERING_CHEMICAL
 
 /datum/reagent/medicine/neurine/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
 	if(!(method == INJECT))
@@ -1146,6 +1165,7 @@
 	overdose_threshold = 60
 	pH = 8.7
 	value = REAGENT_VALUE_RARE
+	interferes = CHEMICAL_INTERFERE_SOMETIMES
 
 /datum/reagent/medicine/stimulants/on_mob_metabolize(mob/living/L)
 	..()
@@ -1252,10 +1272,11 @@
 	description = "Heals toxin damage and removes toxins in the bloodstream. Overdose causes toxin damage."
 	reagent_state = LIQUID
 	color = "#6aff00"
-	overdose_threshold = 30
+	overdose_threshold = 50
 	taste_description = "a roll of gauze"
 	pH = 10
 	synth_metabolism_use_human = TRUE
+	interferes = CHEMICAL_INTERFERE_IMPOSSIBLE
 
 /datum/reagent/medicine/antitoxin/on_mob_life(mob/living/carbon/M)
 	M.adjustToxLoss(-2*REM, FALSE)
@@ -1291,8 +1312,9 @@
 	description = "Has a high chance to heal all types of damage. Overdose instead causes it."
 	reagent_state = LIQUID
 	color = "#e650c0"
-	overdose_threshold = 30
+	overdose_threshold = 60
 	taste_description = "grossness"
+	interferes = CHEMICAL_INTERFERE_IMPOSSIBLE
 
 /datum/reagent/medicine/tricordrazine/on_mob_life(mob/living/carbon/M)
 	if(prob(80))

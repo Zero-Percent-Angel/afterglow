@@ -460,6 +460,7 @@ obj/item/shield/riot/bullet_proof
 	name = "telescopic shield"
 	desc = "An advanced riot shield made of lightweight materials that collapses for easy storage."
 	icon_state = "teleriot0"
+	item_state = "teleriot0"
 	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
 	slot_flags = null
@@ -481,6 +482,7 @@ obj/item/shield/riot/bullet_proof
 /obj/item/shield/riot/tele/attack_self(mob/living/user)
 	active = !active
 	icon_state = "teleriot[active]"
+	item_state = "teleriot[active]"
 	playsound(src.loc, 'sound/weapons/batonextend.ogg', 50, TRUE)
 	if(active)
 		force = 8
@@ -496,6 +498,8 @@ obj/item/shield/riot/bullet_proof
 		w_class = WEIGHT_CLASS_NORMAL
 		slot_flags = null
 		to_chat(user, span_notice("[src] can now be concealed."))
+	update_icon()
+	user.update_overlays()
 	add_fingerprint(user)
 
 ////////////////

@@ -583,8 +583,15 @@
 	item_color = "ncrenlisted"
 	minimize_when_attached = TRUE
 
+/obj/item/clothing/accessory/ncr/REC2
+	name = "(E-2) Private 2 rank pins"
+	desc = "A conscript should wear this."
+	icon_state = "ncrenlisted"
+	item_color = "ncrenlisted"
+	minimize_when_attached = TRUE
+
 /obj/item/clothing/accessory/ncr/REC
-	name = "(E-2) Private rank pins"
+	name = "(E-1) Private rank pins"
 	desc = "A conscript should wear this."
 	icon_state = "ncrenlisted"
 	item_color = "ncrenlisted"

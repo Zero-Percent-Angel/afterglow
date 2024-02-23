@@ -29,5 +29,7 @@
 	carbons_only = TRUE
 
 /datum/weather/cold_wave/weather_act(mob/living/L)
+	if (HAS_TRAIT(L, TRAIT_RESISTCOLD))
+		return
 	var/armour = L.run_armor_check(null, "fire", silent = TRUE)
 	L.adjust_bodytemperature(-rand(5,15) * (100 - armour)/100)

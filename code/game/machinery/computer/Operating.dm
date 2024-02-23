@@ -4,8 +4,9 @@
 /obj/machinery/computer/operating
 	name = "operating computer"
 	desc = "Monitors patient vitals and displays surgery steps. Can be loaded with surgery disks to perform experimental procedures."
-	icon_screen = "crew"
-	icon_keyboard = "med_key"
+	icon_state = "fallout_console"
+	icon_screen = "fallout_screen_operating_empty"
+	icon_keyboard = "fallout_attatchments_operating"
 	circuit = /obj/item/circuitboard/computer/operating
 	var/mob/living/carbon/human/patient
 	var/obj/structure/table/optable/table
@@ -13,12 +14,36 @@
 	var/datum/techweb/linked_techweb
 	light_color = LIGHT_COLOR_BLUE
 
+/obj/machinery/computer/operating/process()
+	table.check_patient()
+	patient = table.patient
+	if (!patient)
+		icon_screen = "fallout_screen_operating_empty"
+	else
+		switch(patient.stat)
+			if(CONSCIOUS)
+				icon_screen = "fallout_screen_operating_alive"
+			if(SOFT_CRIT)
+				icon_screen = "fallout_screen_operating_crit"
+			if(UNCONSCIOUS)
+				icon_screen = "fallout_screen_operating_crit"
+			if(DEAD)
+				icon_screen = "fallout_screen_operating_dead"
+	why_overlays()
+
 /obj/machinery/computer/operating/Initialize()
 	. = ..()
 	linked_techweb = SSresearch.science_tech
 	find_table()
 
 /obj/machinery/computer/operating/bos
+
+/obj/machinery/computer/operating/followers
+
+/obj/machinery/computer/operating/followers/Initialize()
+	. = ..()
+	linked_techweb = SSresearch.followers_tech
+	find_table()
 
 /obj/machinery/computer/operating/bos/Initialize()
 	. = ..()

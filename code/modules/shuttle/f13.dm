@@ -34,6 +34,18 @@
 	flags_1 = NODECONSTRUCT_1
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
+/obj/machinery/computer/shuttle/raidertrain
+	name = "train controls"
+	desc = "Controls the train. Late 90's Nokia may well have made this console it looks completely unbreakable."
+	icon_screen = "shuttle"
+	icon_keyboard = "tech_key"
+	light_color = LIGHT_COLOR_CYAN
+	circuit = /obj/item/circuitboard/computer/raider_train
+	shuttleId = "raider_train"
+	possible_destinations = "raider_1;raider_2;"
+	flags_1 = NODECONSTRUCT_1
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+
 /obj/machinery/computer/shuttle/bosentryelevator
 	name = "elevator controls"
 	desc = "Controls the elevator."
