@@ -704,6 +704,7 @@
 	icon_state = "omnilaser"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/blue_laser
 	light_color = LIGHT_COLOR_BLUE
+	damage_threshold_penetration = 6
 
 /obj/item/projectile/beam/laser/aer14/hitscan
 	damage = 34
@@ -730,6 +731,7 @@
 	icon_state = "xray"
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
 	light_color = LIGHT_COLOR_GREEN
+	damage_threshold_penetration = 6
 
 /obj/item/projectile/beam/laser/aer12/hitscan
 	name = "laser beam"
@@ -753,6 +755,7 @@
 	name = "laser bolt"
 	damage = 35
 	armour_penetration = 0.5
+	damage_threshold_penetration = 5
 
 /obj/item/projectile/beam/laser/wattz2k/hitscan
 	name = "sniper laser bolt"

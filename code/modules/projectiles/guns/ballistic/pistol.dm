@@ -543,13 +543,14 @@
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_AKIMBO // DOUBLE DEAGLE
 	draw_time = GUN_DRAW_FAST
-	fire_delay = GUN_FIRE_DELAY_SLOW
+	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	init_recoil = HANDGUN_RECOIL(1.2)
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 	can_suppress = FALSE
 	automatic_burst_overlay = FALSE
@@ -585,13 +586,13 @@
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_AKIMBO // DOUBLE DEAGLE
 	draw_time = GUN_DRAW_FAST
-	fire_delay = GUN_FIRE_DELAY_SLOW
+	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T3 // POW
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
 
@@ -616,12 +617,12 @@
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_FAST
-	fire_delay = GUN_FIRE_DELAY_SLOWER
+	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 	can_suppress = FALSE
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
@@ -657,7 +658,7 @@
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_FAST
-	fire_delay = GUN_FIRE_DELAY_SLOWER
+	fire_delay = GUN_FIRE_DELAY_SLOW
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
@@ -685,14 +686,14 @@
 	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
-	fire_delay = GUN_FIRE_DELAY_SLOWER
+	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	init_recoil = HANDGUN_RECOIL(0.8)
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 /////////////////////////////////
 // TEMPORARY REMOVE AFTER BETA //

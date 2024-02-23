@@ -1043,7 +1043,7 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
 	burst_size = 1
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm400
+		/datum/firemode/automatic/rpm300
 	)
 
 /obj/item/gun/energy/minigun/Initialize()
