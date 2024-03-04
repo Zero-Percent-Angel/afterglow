@@ -373,7 +373,7 @@
 			if(ZONE_WEIGHT_AUTOMATIC)
 				def_zone = ran_zone(def_zone, surface_chance-(20*distance), ZONE_WEIGHT_LIST_AUTOMATIC)
 			if(ZONE_WEIGHT_SHOTGUN)
-				def_zone = ran_zone(def_zone, 0, ZONE_WEIGHT_LIST_AUTOMATIC)
+				def_zone = ran_zone(def_zone, surface_chance-(30*distance), ZONE_WEIGHT_LIST_AUTOMATIC)
 
 	if(isturf(A) && hitsound_wall)
 		var/volume = clamp(vol_by_damage() + 20, 0, 100)

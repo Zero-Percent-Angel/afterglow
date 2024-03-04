@@ -1055,11 +1055,11 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 /// Default zone weight list
 #define ZONE_WEIGHT_LIST_DEFAULT list(\
 	BODY_ZONE_HEAD = 6,\
-	BODY_ZONE_CHEST = 6,\
-	BODY_ZONE_L_ARM = 22,\
-	BODY_ZONE_R_ARM = 22,\
-	BODY_ZONE_L_LEG = 22,\
-	BODY_ZONE_R_LEG = 22)
+	BODY_ZONE_CHEST = 30,\
+	BODY_ZONE_L_ARM = 15,\
+	BODY_ZONE_R_ARM = 15,\
+	BODY_ZONE_L_LEG = 17,\
+	BODY_ZONE_R_LEG = 17)
 /// Precision zone weight list
 #define ZONE_WEIGHT_LIST_PRECISION list(\
 	BODY_ZONE_HEAD = 20,\
@@ -1070,20 +1070,20 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 	BODY_ZONE_R_LEG = 5)
 /// Autofire zone weight list
 #define ZONE_WEIGHT_LIST_AUTOMATIC list(\
-	BODY_ZONE_HEAD = 1,\
-	BODY_ZONE_CHEST = 3,\
-	BODY_ZONE_L_ARM = 22,\
-	BODY_ZONE_R_ARM = 22,\
-	BODY_ZONE_L_LEG = 22,\
-	BODY_ZONE_R_LEG = 22)
+	BODY_ZONE_HEAD = 3,\
+	BODY_ZONE_CHEST = 33,\
+	BODY_ZONE_L_ARM = 15,\
+	BODY_ZONE_R_ARM = 15,\
+	BODY_ZONE_L_LEG = 17,\
+	BODY_ZONE_R_LEG = 17)
 /// Pellet zone weight list
 #define ZONE_WEIGHT_LIST_SHOTGUN list(\
-	BODY_ZONE_HEAD = 1,\
-	BODY_ZONE_CHEST = 1,\
-	BODY_ZONE_L_ARM = 22,\
-	BODY_ZONE_R_ARM = 22,\
-	BODY_ZONE_L_LEG = 22,\
-	BODY_ZONE_R_LEG = 22)
+	BODY_ZONE_HEAD = 3,\
+	BODY_ZONE_CHEST = 37,\
+	BODY_ZONE_L_ARM = 14,\
+	BODY_ZONE_R_ARM = 14,\
+	BODY_ZONE_L_LEG = 16,\
+	BODY_ZONE_R_LEG = 16)
 
 /// Gun skill flags
 /// Gun is affected by rifleman skill
