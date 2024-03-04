@@ -29,7 +29,7 @@
 
 
 /proc/ran_zone(zone, probability = 80, list/list_type = ZONE_WEIGHT_LIST_DEFAULT)
-	if(prob(probability))
+	if(probability > 0 && prob(probability))
 		zone = check_zone(zone)
 	else
 		if(islist(list_type))
