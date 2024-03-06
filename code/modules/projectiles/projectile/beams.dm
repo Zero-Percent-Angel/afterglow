@@ -14,15 +14,15 @@
 	ricochets_max = 50	//Honk!
 	ricochet_chance = 80
 	is_reflectable = TRUE
-	wound_bonus = -20
+	wound_bonus = -10
 	bare_wound_bonus = 10
 
 /obj/item/projectile/beam/laser
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
-	wound_bonus = -30
-	bare_wound_bonus = 40
+	wound_bonus = -10
+	bare_wound_bonus = 20
 	damage_threshold_penetration = 3
 
 /obj/item/projectile/beam/laser/mech
@@ -540,7 +540,7 @@
 	name = "tribeam laser"
 	damage = 24 //if all bullets connect, this will do 72
 	hitscan = TRUE
-	bare_wound_bonus = 0
+	bare_wound_bonus = 5
 	armour_penetration = 0.05
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
@@ -554,7 +554,7 @@
 	name = "tribeam laser"
 	damage = 20
 	hitscan = TRUE
-	bare_wound_bonus = 0
+	bare_wound_bonus = 5
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
