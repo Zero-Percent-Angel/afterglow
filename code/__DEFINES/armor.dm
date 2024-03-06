@@ -90,7 +90,7 @@
 		"rad" = 25, \
 		"fire" = 25, \
 		"acid" = 25, \
-		"wound" = 35, \
+		"wound" = 20, \
 		"damage_threshold" = 5)
 
 /* Heavy armor values
@@ -111,7 +111,7 @@
 		"rad" = 25, \
 		"fire" = 35, \
 		"acid" = 35, \
-		"wound" = 50, \
+		"wound" = 35, \
 		"damage_threshold" = 7)
 
 /* Salvaged PA values
@@ -132,7 +132,7 @@
 		"rad" = 50, \
 		"fire" = 70, \
 		"acid" = 70, \
-		"wound" = 70, \
+		"wound" = 50, \
 		"damage_threshold" = 8)
 
 /* Power armor values
@@ -153,7 +153,7 @@
 		"rad" = 60, \
 		"fire" = 95, \
 		"acid" = 95, \
-		"wound" = 100, \
+		"wound" = 70, \
 		"damage_threshold" = 9)
 
 /* * * * * * * * * * * * * * *

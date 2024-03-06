@@ -260,6 +260,9 @@
 #define TRAIT_HYDRA_HEADS "hydra_heads"
 #define TRAIT_SHELTERED "sheltered"
 #define TRAIT_JET_JUNKY "jet_junky"
+#define TRAIT_ALCHOLIC "alcholic"
+#define TRAIT_MENTAT_ADDICT "mentats_addict"
+#define TRAIT_SMOKER "smoker"
 #define TRAIT_PIEDPIPER "rat_lord"
 
 // mobility flag traits

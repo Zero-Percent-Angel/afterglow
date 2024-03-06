@@ -54,6 +54,69 @@
 	var/mob/living/carbon/human/H = quirk_holder
 	H.reagents.addiction_list.Cut()
 
+/datum/quirk/addictmentat
+	name = "Addicted - mentats"
+	desc = "You've been hooked on jet for a while, you need your fix or it won't be good for you."
+	value = -3
+	mob_trait = TRAIT_MENTAT_ADDICT
+	gain_text = "<span class='danger'>mentats... mentats... need mentats.</span>"
+	lose_text = "<span class='notice'>Maybe mentats aren't so good for me.</span>"
+	medical_record_text = "Patient has shown a chemical dependency on mentats."
+
+/datum/quirk/addictmentat/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/datum/reagent/drug = new /datum/reagent/medicine/mentat
+	drug.addiction_stage4_end = 4000
+	H.reagents.addiction_list += drug
+	drug.on_addiction_start(H)
+
+/datum/quirk/addictmentat/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.reagents.addiction_list.Cut()
+
+/datum/quirk/addictalchol
+	name = "Addicted - Alchol"
+	desc = "You're a rampaging alcholic."
+	value = -1
+	mob_trait = TRAIT_ALCHOLIC
+	gain_text = "<span class='danger'>How about a stiff drink?</span>"
+	lose_text = "<span class='notice'>Alchol isn't man's best friend.</span>"
+	medical_record_text = "Patient has shown a chemical dependency on alchol."
+	mood_quirk = TRUE
+	var/drink_time = 180
+
+/datum/quirk/addictalchol/on_process()
+	var/mob/living/carbon/human/H = quirk_holder
+	for(var/datum/reagent/rea in H.reagents.reagent_list)
+		if (istype(rea, /datum/reagent/consumable/ethanol))
+			drink_time = 120
+			SEND_SIGNAL(quirk_holder, COMSIG_CLEAR_MOOD_EVENT, "alchol_need")
+			break
+	if (drink_time <= 0)
+		SEND_SIGNAL(quirk_holder, COMSIG_ADD_MOOD_EVENT, "alchol_need", /datum/mood_event/alchol_need)
+	else
+		drink_time--
+
+/datum/quirk/addictcigarette
+	name = "Addicted - Cigarettes"
+	desc = "You need your smokes."
+	value = -1
+	mob_trait = TRAIT_SMOKER
+	gain_text = "<span class='danger'>Would be a good time to spark up about now.</span>"
+	lose_text = "<span class='notice'>Maybe I don't want lung cancer.</span>"
+	medical_record_text = "Patient has shown a chemical dependency on nicotine."
+
+/datum/quirk/addictcigarette/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/datum/reagent/drug = new /datum/reagent/drug/nicotine
+	drug.addiction_stage4_end = 4000
+	H.reagents.addiction_list += drug
+	drug.on_addiction_start(H)
+
+/datum/quirk/addictcigarette/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.reagents.addiction_list.Cut()
+
 /datum/quirk/depression
 	name = "Mood - Depressive"
 	desc = "You sometimes just hate life, and get a mood debuff for it."

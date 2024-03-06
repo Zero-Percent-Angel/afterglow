@@ -54,6 +54,10 @@
 	mood_change = -12
 	timeout = 60 MINUTES
 
+/datum/mood_event/alchol_need
+	description = span_warning("I need my alchol.")
+	mood_change = -6
+
 /datum/mood_event/pessimism
 	description = span_warning("I feel kind of sad for no particular reason.")
 	mood_change = -6

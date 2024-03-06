@@ -90,7 +90,7 @@
 	if (SKILL_UNARMED == check)
 		return (skill_unarmed + round((special_a + special_s)/2)) * limb_modifier
 	if (SKILL_MELEE == check)
-		return skill_melee + round((special_a + special_s)/2) * limb_modifier
+		return (skill_melee + round((special_a + special_s)/2)) * limb_modifier
 	if (SKILL_THROWING == check)
 		return skill_throwing + special_a
 	if (SKILL_FIRST_AID == check || SKILL_DOCTOR == check)
