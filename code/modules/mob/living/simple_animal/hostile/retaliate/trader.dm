@@ -287,6 +287,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/talker/trader/proc/add_caps(mob/user, obj/item/stack/f13Cash/cash)
 	var/num = cash.amount + 1 - 1
+	num = round(num * cash.value)
 	if (cash.use(cash.amount))
 		if(!stored_caps[WEAKREF(user)])
 			stored_caps[WEAKREF(user)] = num
