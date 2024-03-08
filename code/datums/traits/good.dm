@@ -1055,7 +1055,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 
 /datum/quirk/fanner
 	name = "Hammer Fanner"
-	desc = "You're ace at fanning a single action revolver hammer."
+	desc = "You're ace at fanning a single action revolver hammer. Wield the revolver gun to fan!"
 	value = 2
 	mob_trait = TRAIT_FANNING
 	gain_text = span_notice("In a sudden haze you realize that the revolver was the pinnacle of firearms design.")

@@ -352,7 +352,7 @@ Raider
 	uniform = /obj/item/clothing/under/f13/ncrcf
 	suit = /obj/item/clothing/suit/armor/light/kit/plates
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/varmint = 1,
+		/obj/item/gun/ballistic/rifle/varmint = 1,
 		/obj/item/ammo_box/magazine/m556/rifle/small = 1,
 		/obj/item/storage/box/dynamite_box = 1,
 	)
@@ -1265,7 +1265,7 @@ Raider
 	head = /obj/item/clothing/head/f13/cowboy
 	gloves = /obj/item/clothing/gloves/color/brown
 	id = /obj/item/card/id/dogtag/town/ncr
-	l_hand = /obj/item/gun/ballistic/automatic/varmint
+	l_hand = /obj/item/gun/ballistic/rifle/varmint
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle=2)
 */

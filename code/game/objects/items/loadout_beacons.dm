@@ -643,7 +643,7 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	name = "varmint rifle case"
 
 /obj/item/storage/box/gun/rifle/varmint/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/varmint(src)
+	new /obj/item/gun/ballistic/rifle/varmint(src)
 	new /obj/item/ammo_box/magazine/m556/rifle/small(src) //no extendeds for you till you find em
 	new /obj/item/ammo_box/magazine/m556/rifle/small(src)
 
