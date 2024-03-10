@@ -465,7 +465,7 @@ Mayor
 	uniform = /obj/item/clothing/under/misc/overalls
 	belt = /obj/item/storage/belt/utility/full
 	shoes = /obj/item/clothing/shoes/workboots
-	suit_store = /obj/item/gun/ballistic/automatic/varmint
+	suit_store = /obj/item/gun/ballistic/rifle/varmint
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/small = 2,
 		/obj/item/pickaxe/mini = 1,

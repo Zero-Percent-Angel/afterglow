@@ -22,15 +22,6 @@
 #define HIGH_MIN 36
 #define HIGH_MAX 45
 
-
-// Bad Pebbles fix to NCR money fudgery
-#define TEMP3_MIN 0
-#define TEMP3_MAX 0
-#define TEMP_MIN 0
-#define TEMP_MAX 0
-#define TEMP2_MIN 0
-#define TEMP2_MAX 0
-
 // The Bankers Vault-Stash, done like this make it so it only spawns on his person to stop metarushing. Average 8500.
 #define BANKER_MIN 2000
 #define BANKER_MAX 15000
@@ -296,16 +287,16 @@
 	money_type = /obj/item/stack/f13Cash/ncr
 
 /obj/item/stack/f13Cash/random/ncr/low
-	min_qty = TEMP3_MIN / CASH_NCR
-	max_qty = TEMP3_MAX / CASH_NCR
+	min_qty = 18
+	max_qty = 48
 
 /obj/item/stack/f13Cash/random/ncr/med
-	min_qty = TEMP_MIN / CASH_NCR
-	max_qty = TEMP_MAX / CASH_NCR
+	min_qty = 50
+	max_qty = 88
 
 /obj/item/stack/f13Cash/random/ncr/high
-	min_qty = TEMP2_MIN / CASH_NCR
-	max_qty = TEMP2_MAX / CASH_NCR
+	min_qty = 90
+	max_qty = 113
 
 /obj/item/stack/f13Cash/random/ncr/ncrpay_basic
 	min_qty = LOW_MIN / CASH_NCR
@@ -333,9 +324,3 @@
 #undef HIGH_MAX
 #undef BANKER_MIN
 #undef BANKER_MAX
-#undef TEMP3_MIN
-#undef TEMP3_MAX
-#undef TEMP_MIN
-#undef TEMP_MAX
-#undef TEMP2_MIN
-#undef TEMP2_MAX

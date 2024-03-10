@@ -944,7 +944,10 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define GUN_COCK_RIFLE_LIGHTNING (GUN_COCK_BASE * 0.5)
 
 /// Refire speed multiplier for manual action guns, cus we no longer care about your cock length
-#define GUN_RIFLEMAN_REFIRE_DELAY_MULT 1.6
+#define GUN_RIFLEMAN_REFIRE_DELAY_MULT 1
+
+// Working a bolt takes a hot second!
+#define GUN_BOLT_PENALTY 1.5
 
 /// Refire speed multiplier for manual action guns if you're not a pr0 and click-to-cycle it
 #define GUN_AUTOPUMP_REFIRE_DELAY_MULT 1.8

@@ -121,27 +121,15 @@
 	. = ..()
 	. += "[get_ammo(0,0)] of those are live rounds."
 
-/obj/item/gun/ballistic/revolver/equipped(mob/living/H)
+/obj/item/gun/ballistic/revolver/wield(mob/user)
 	. = ..()
-	if(H.get_active_held_item() == src && HAS_TRAIT(H, TRAIT_FANNING) && can_fan && H.get_inactive_held_item() == null)
-		if (fan)
-			firemodes.Add(fan)
-		else
-			fan = new /datum/firemode/automatic/fanning(src)
-			firemodes.Add(fan)
-	else
-		disable_fan()
+	if (wielded && HAS_TRAIT(user, TRAIT_FANNING) && can_fan)
+		usr.visible_message("[user] gets their hand ready to fan the hammer!", span_notice("You get your hand ready to fan [src]'s hammer."))
 
-/obj/item/gun/ballistic/revolver/dropped(mob/living/user)
+/obj/item/gun/ballistic/revolver/get_fire_delay(mob/user)
 	. = ..()
-	disable_fan()
-
-
-/obj/item/gun/ballistic/revolver/proc/disable_fan()
-	if (fan)
-		firemodes.Remove(fan)
-		sel_mode = 1
-		set_firemode(sel_mode)
+	if (wielded && HAS_TRAIT(user, TRAIT_FANNING) && can_fan)
+		. = max(.*0.2, 1)
 
 /* * * * * * * * * *
  * LIGHT REVOLVERS *
@@ -208,7 +196,7 @@
 
 /obj/item/gun/ballistic/revolver/revolver45
 	name = "S&W .45 ACP revolver"
-	desc = "Smith and Wesson revolver firing .45 ACP from a seven round cylinder."
+	desc = "Smith and Wesson revolver firing .45 ACP from a seven round cylinder. Can be fanned."
 	item_state = "45revolver"
 	icon_state = "45revolver"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45
@@ -251,7 +239,7 @@
 
 /obj/item/gun/ballistic/revolver/colt357
 	name = "\improper .357 magnum revolver"
-	desc = "A no-nonsense revolver, more than likely made in some crude workshop in one of the more prosperous frontier towns."
+	desc = "A no-nonsense revolver, more than likely made in some crude workshop in one of the more prosperous frontier towns. Can be fanned."
 	icon_state = "357colt"
 	item_state = "357colt"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357
@@ -290,7 +278,7 @@
 
 /obj/item/gun/ballistic/revolver/colt357/lucky
 	name = "Lucky"
-	desc = "Just holding this gun makes you feel like an ace. This revolver was handmade from pieces of other guns in some workshop after the war. A one-of-a-kind gun, it was someone's lucky gun for many a year, it's in good condition and hasn't changed hands often."
+	desc = "Just holding this gun makes you feel like an ace. This revolver was handmade from pieces of other guns in some workshop after the war. A one-of-a-kind gun, it was someone's lucky gun for many a year, it's in good condition and hasn't changed hands often. Can be fanned."
 	icon_state = "lucky37"
 	item_state = "lucky"
 

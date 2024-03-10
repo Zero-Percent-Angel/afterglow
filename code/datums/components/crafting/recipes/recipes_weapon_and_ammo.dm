@@ -660,7 +660,7 @@
 	subcategory = CAT_WEAPON
 	always_available = FALSE
 	skill_level = HARD_CHECK
-	
+
 //medicinestick
 /datum/crafting_recipe/medicinestick
 	name = "Medicine Stick"
@@ -677,11 +677,11 @@
 	always_available = TRUE
 	skill_level = REGULAR_CHECK
 	falls_back_on_outdoors = TRUE
-	
+
 //varmint rifle
 /datum/crafting_recipe/varmintrifle
 	name = "Varmint Rifle"
-	result = /obj/item/gun/ballistic/automatic/varmint
+	result = /obj/item/gun/ballistic/rifle/varmint
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 4,
 				/obj/item/stack/sheet/metal = 1)
@@ -695,8 +695,8 @@
 //craftable psuedo-ratslayer
 /datum/crafting_recipe/verminkiller
 	name = "Upgraded Varmint Rifle"
-	result = /obj/item/gun/ballistic/automatic/varmint/verminkiller
-	reqs = list(/obj/item/gun/ballistic/automatic/varmint = 1,
+	result = /obj/item/gun/ballistic/rifle/varmint/verminkiller
+	reqs = list(/obj/item/gun/ballistic/rifle/varmint = 1,
 				/obj/item/gun_upgrade/muzzle/silencer = 1, //silencer
 				/obj/item/advanced_crafting_components/lenses = 1, //scope
 				/obj/item/stack/crafting/goodparts = 2,

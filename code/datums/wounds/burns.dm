@@ -272,8 +272,8 @@
 	occur_text = "breaks out with violent red burns"
 	severity = WOUND_SEVERITY_MODERATE
 	damage_mulitplier_penalty = 1.05
-	threshold_minimum = 50
-	threshold_penalty = 30 // burns cause significant decrease in limb integrity compared to other wounds
+	threshold_minimum = 25
+	threshold_penalty = 20 // burns cause significant decrease in limb integrity compared to other wounds
 	status_effect_type = /datum/status_effect/wound/burn/moderate
 	flesh_damage = 5
 	scar_keyword = "burnmoderate"
@@ -286,7 +286,7 @@
 	occur_text = "chars rapidly, exposing ruined tissue and spreading angry red burns"
 	severity = WOUND_SEVERITY_SEVERE
 	damage_mulitplier_penalty = 1.1
-	threshold_minimum = 90
+	threshold_minimum = 60
 	threshold_penalty = 40
 	status_effect_type = /datum/status_effect/wound/burn/severe
 	treatable_by = list(/obj/item/flashlight/pen/paramedic, /obj/item/stack/medical/ointment, /obj/item/stack/medical/mesh)

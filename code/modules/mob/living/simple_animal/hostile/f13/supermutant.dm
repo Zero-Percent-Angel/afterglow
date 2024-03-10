@@ -10,7 +10,7 @@
 	icon_dead = "hulk_113_s"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	mob_armor = ARMOR_VALUE_SUPERMUTANT_BASE
-	maxHealth = 130 
+	maxHealth = 130
 	health = 130
 	speak_chance = 10
 	speak = list(
@@ -138,7 +138,7 @@
 	icon_living = "hulk_melee_s"
 	icon_dead = "hulk_melee_s"
 	mob_armor = ARMOR_VALUE_SUPERMUTANT_MELEE
-	maxHealth = 130 
+	maxHealth = 130
 	health = 130
 	mob_armor_tokens = list(
 		ARMOR_MODIFIER_UP_MELEE_T1,
@@ -168,7 +168,7 @@
 	icon_dead = "hulk_ranged_s"
 	ranged = 1
 	mob_armor = ARMOR_VALUE_SUPERMUTANT_RANGER
-	maxHealth = 130 
+	maxHealth = 130
 	health = 130
 	retreat_distance = 1
 	minimum_distance = 1
@@ -208,7 +208,7 @@
 	extra_projectiles = 0
 	ranged_cooldown_time = 2 SECONDS
 	loot = list(
-		/obj/item/gun/ballistic/automatic/varmint
+		/obj/item/gun/ballistic/rifle/varmint
 		)
 
 /mob/living/simple_animal/hostile/supermutant/rangedmutant/death(gibbed)
@@ -222,7 +222,7 @@
 	desc = "A huge and ugly mutant humanoid.He has a faint yellow glow to him, scars adorn his body. This super mutant is a grizzled vetern of combat. Look out!"
 	color = "#FFFF00"
 	mob_armor = ARMOR_VALUE_SUPERMUTANT_LEGEND
-	maxHealth = 150 
+	maxHealth = 150
 	health = 150
 	icon_state = "hulk_113_s"
 	icon_living = "hulk_113_s"
@@ -248,7 +248,7 @@
 	icon_living = "night_s"
 	icon_dead = "night_s"
 	mob_armor = ARMOR_VALUE_SUPERMUTANT_MELEE
-	maxHealth = 140 
+	maxHealth = 140
 	health = 140
 	alpha = 80
 	force_threshold = 15
@@ -279,7 +279,7 @@
 	icon_living = "night_ranged_s"
 	icon_dead = "night_ranged_s"
 	mob_armor = ARMOR_VALUE_SUPERMUTANT_RANGER
-	maxHealth = 140 
+	maxHealth = 140
 	health = 140
 	ranged = 1
 	alpha = 80
@@ -326,7 +326,7 @@
 	icon_dead = "night_boss_s"
 	ranged = 1
 	mob_armor = ARMOR_VALUE_SUPERMUTANT_LEGEND
-	maxHealth = 130 
+	maxHealth = 130
 	health = 130
 	alpha = 80
 	force_threshold = 15
@@ -377,7 +377,7 @@
 	melee_damage_lower = 24
 	melee_damage_upper = 48
 	footstep_type = FOOTSTEP_MOB_HEAVY
-	
+
 /mob/living/simple_animal/hostile/supermutant/rangedmutant/rain
 	name = "super mutant rain cultist"
 	desc = "A super mutant covered in blue markings that has been indoctrinated into the Cult Of Rain. This one wields a hunting rifle blessed by the rain gods."

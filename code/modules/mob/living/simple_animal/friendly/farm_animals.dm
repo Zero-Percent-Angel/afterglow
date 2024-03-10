@@ -1111,7 +1111,7 @@
 	category = CAT_MISC
 	falls_back_on_outdoors = TRUE
 	skill_level = REGULAR_CHECK
-	
+
 /*
 /datum/component/storage/concrete/brahminbag
 	max_w_class = WEIGHT_CLASS_HUGE //Allows the storage of shotguns and other two handed items.

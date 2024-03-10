@@ -158,13 +158,6 @@
 	fire_type = GUN_FIREMODE_AUTO
 	firerate_auto = GUN_FIRE_RATE_150
 
-/datum/firemode/automatic/fanning
-	name = "Fan the hammer"
-	desc = "Shoot as many bullets as possible."
-	fire_type = GUN_FIREMODE_AUTO
-	firerate_auto = GUN_FIRE_RATE_600
-	accuracy_mod = 5
-
 /datum/firemode/burst
 	name = "Burstfire"
 	desc = "Shoot multiple shots per triggerpull."
