@@ -285,7 +285,6 @@
 	hydra.visible_message("<span class='notice'>[hydra.name] pulls the rest of their heads back; and puts [selhead]'s forward.</span>", \
 							"<span class='notice'>You are now talking as [selhead]!</span>", ignored_mobs=owner)
 
-*/
 
 /datum/quirk/in_heat
 	name = "ERP Receptive"
@@ -300,3 +299,4 @@
 	value = 0
 	mob_trait = TRAIT_HEAT_DETECT
 
+*/

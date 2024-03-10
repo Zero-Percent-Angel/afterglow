@@ -139,7 +139,7 @@
 	throwforce = 35 //clears threshholds for trash mobs
 	armour_penetration = 0.05
 	max_reach = 2
-	embedding = list("pain_mult" = 2, "embed_chance" = 40, "fall_chance" = 15)
+	embedding = list("pain_mult" = 2, "embed_chance" = 65, "fall_chance" = 15)
 	w_class = WEIGHT_CLASS_NORMAL
 
 

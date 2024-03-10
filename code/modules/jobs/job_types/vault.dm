@@ -290,8 +290,8 @@ Security Specialist
 	title = "Vault-tec Security Specialist"
 	flag = F13SPECIALISTOFFICER
 	department_head = list("Chief of Security")
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	forbids = "The Vault forbids: Disobeying the Vault Coordinator. Deserting the Vault unless it is rendered unhospitable. Killing fellow Vault Dwellers. Betraying the Vault and its people."
 	enforces = "The Vault expects: Contributing to Vault society. Adherence to Vault-tec Corporate Regulations. Participation in special projects, as ordered by the Vault Coordinator."
 	description = "You answer directly to the Chief of Security, and in their absence, the Vault Coordinator. You are the first line of defense against civil unrest and outside intrusion. It is your duty to enforce the laws created by the Vault Coordinator and proactively seek out potential threats to the safety of Vault residents."
