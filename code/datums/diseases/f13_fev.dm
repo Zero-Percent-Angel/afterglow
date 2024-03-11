@@ -111,6 +111,8 @@
 
 /datum/disease/curling_thirteen/stage_act()
 	..()
+	if (carrier)
+		return
 	switch(stage)
 		if(1) // Calm before the storm
 			if(prob(1))
