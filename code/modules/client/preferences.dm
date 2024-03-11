@@ -1675,7 +1675,7 @@ Records disabled until a use for them is found
 /datum/preferences/proc/show_special_help(mob/user)
 	var/list/dat = list()
 	dat += "<center><b>Special Help</b></center>"
-	dat += "All SPECIAL stats influence different skills, have a play with them to see how your total skill values change!"
+	dat += "All SPECIAL stats influence different skills, have a play with them to see how your total skill values change!<BR>"
 	dat += "<b>Strength	   :</b> Strength effects melee damage, armor slowdown, held item slowdown<BR>"
 	dat += "<b>Perception  :</b> Perception effects bullet spread, night sight, and finding items in trash and spotting things.<BR>"
 	dat += "<b>Endurance   :</b> Endurance increases your health and stamina buffer.<BR>"
