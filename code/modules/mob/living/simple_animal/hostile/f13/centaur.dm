@@ -18,7 +18,7 @@
 	speed = 2
 	harm_intent_damage = 8
 	melee_damage_lower = 4 // damage range is punch min, average is 15 when in melee
-	melee_damage_upper = 20 
+	melee_damage_upper = 20
 	ranged = TRUE
 	wound_bonus = 0
 	footstep_type = FOOTSTEP_MOB_CRAWL
@@ -30,7 +30,7 @@
 
 	retreat_distance = 0 // Mob doesn't retreat
 	//how far they pull back
-	
+
 	minimum_distance = 0 //Mob pushes up to melee, leading with its ranged attacks to soften up player.
 	// how close you can get before they try to pull back
 
@@ -106,12 +106,14 @@
 	deathmessage = "wails as its form shudders and violently comes to a stop."
 	death_sound = 'sound/voice/abomburning.ogg'
 
+/* This is kinda memery just turns people into abominations
 /mob/living/simple_animal/hostile/abomination/AttackingTarget()
 	. = ..()
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
 		var/choice = pick(1, 1, 2, 2, 3, 4)
 		H.reagents.add_reagent(/datum/reagent/toxin/FEV_solution, choice)
+*/
 
 /mob/living/simple_animal/hostile/abomination/Initialize()
 	. = ..()

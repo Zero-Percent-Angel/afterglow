@@ -47,6 +47,7 @@
 	var/mob/living/carbon/human/H = quirk_holder
 	var/datum/reagent/drug = new /datum/reagent/drug/jet
 	drug.addiction_stage4_end = 4000
+	drug.addiction_stage = - 50
 	H.reagents.addiction_list += drug
 	drug.on_addiction_start(H)
 
@@ -67,6 +68,7 @@
 	var/mob/living/carbon/human/H = quirk_holder
 	var/datum/reagent/drug = new /datum/reagent/medicine/mentat
 	drug.addiction_stage4_end = 4000
+	drug.addiction_stage = - 50
 	H.reagents.addiction_list += drug
 	drug.on_addiction_start(H)
 
@@ -109,6 +111,7 @@
 /datum/quirk/addictcigarette/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
 	var/datum/reagent/drug = new /datum/reagent/drug/nicotine
+	drug.addiction_stage = - 50
 	drug.addiction_stage4_end = 4000
 	H.reagents.addiction_list += drug
 	drug.on_addiction_start(H)

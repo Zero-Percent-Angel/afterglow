@@ -15,6 +15,15 @@
 	circuit = /obj/item/circuitboard/machine/telecomms/server
 	var/list/log_entries = list()
 	var/totaltraffic = 0 // gigabytes (if > 1024, divide by 1024 -> terrabytes)
+	var/interference = FALSE
+	var/hidden = FALSE
+
+/obj/machinery/telecomms/server/proc/disrupt()
+	interference = TRUE
+	addtimer(CALLBACK(src, .proc/recover), 2 MINUTES)
+
+/obj/machinery/telecomms/server/proc/recover()
+	interference = FALSE
 
 /obj/machinery/telecomms/server/Initialize()
 	. = ..()
@@ -55,6 +64,9 @@
 	var/identifier = num2text( rand(-1000,1000) + world.time )
 	log.name = "data packet ([md5(identifier)])"
 	log_entries.Add(log)
+
+	if(interference)
+		signal.data["message"] = Gibberish(signal.data["message"], compression + 50)
 
 	var/can_send = relay_information(signal, /obj/machinery/telecomms/hub)
 	if(!can_send)
@@ -121,6 +133,7 @@
 	id = "Enclave Server"
 	freq_listening = list(FREQ_ENCLAVE)
 	autolinkers = list("enclave")
+	hidden = TRUE
 
 /obj/machinery/telecomms/server/presets/town
 	id = "Town Server"

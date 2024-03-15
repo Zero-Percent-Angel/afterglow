@@ -323,7 +323,7 @@
 						for(var/addiction in cached_addictions)
 							var/datum/reagent/A = addiction
 							if(istype(R, A))
-								A.addiction_stage = -15 // you're satisfied for a good while.
+								A.addiction_stage = -50 // you're satisfied for a good while.
 				if(isrobotic(C) && !R.synth_metabolism_use_human)
 					need_mob_update += R.on_mob_life_synth(C)
 				else

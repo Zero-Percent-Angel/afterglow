@@ -301,6 +301,10 @@
 	name = "Telecommunications Server Monitor (Computer Board)"
 	build_path = /obj/machinery/computer/telecomms/server
 
+/obj/item/circuitboard/computer/jamming_computer
+	name = "Telecommunications Server Monitor (Computer Board)"
+	build_path = /obj/machinery/computer/telecomms/jammer
+
 /obj/item/circuitboard/computer/labor_shuttle
 	name = "Labor Shuttle (Computer Board)"
 	build_path = /obj/machinery/computer/shuttle/labor

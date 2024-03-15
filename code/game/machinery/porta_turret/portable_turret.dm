@@ -76,7 +76,8 @@
 	/// Base turret icon state
 	var/base_icon_state = "standard"
 	/// Scan range of the turret for locating targets
-	var/scan_range = 7
+	var/scan_range = 8
+	var/max_range = 19
 	/// For turrets inside other objects
 	var/atom/base = null
 	/// If the turret cover is "open" and the turret is raised
@@ -589,7 +590,7 @@
 			change_activity_state(TURRET_CAUTION_MODE)
 		else
 			INVOKE_ASYNC(src, .proc/open_fire_on_target)
-	
+
 	/// We lost sight of our target, shoot where we last saw them
 	if(activity_state == TURRET_CAUTION_MODE)
 		INVOKE_ASYNC(src, .proc/shine_laser_pointer)
@@ -608,13 +609,13 @@
 	if(turret_flags & TF_BE_REALLY_LOUD)
 		playsound(get_turf(src), interrupt_sound, 100, FALSE, SOUND_DISTANCE(scan_range + 5), ignore_walls = TRUE)
 	change_activity_state(TURRET_ALERT_MODE, TRUE)
-	
+
 /// Interrupts our current mode, and sets it to evasion
 /// For when our target is downed
 /obj/machinery/porta_turret/proc/interrupt_and_set_to_evasion()
 	clear_targets()
 	change_activity_state(TURRET_EVASION_MODE, TRUE)
-	
+
 /// Changes our mode to another, and does a thing
 /obj/machinery/porta_turret/proc/change_activity_state(new_state, force_it)
 	if(new_state == activity_state && !force_it)
@@ -702,7 +703,10 @@
 	var/atom/seeable_target = GET_WEAKREF(last_target)
 	if(!seeable_target)
 		return FALSE
-	for(var/turf/T in getline(src,seeable_target))
+	var/list/line_to_target = getline(src,seeable_target)
+	if (line_to_target.len > max_range)
+		return FALSE
+	for(var/turf/T in line_to_target)
 		if(T.opacity)
 			return FALSE
 	return TRUE
@@ -2084,7 +2088,7 @@
 
 /obj/item/turret_box/Initialize()
 	. = ..()
-	
+
 /obj/item/turret_box/Destroy()
 	. = ..()
 	QDEL_NULL(stored_mag)
@@ -2112,4 +2116,4 @@
 	user.visible_message(span_notice("[user] unpacks [src], deploying [turret_new]."))
 	stored_mag = null
 	qdel(src)
-	
+
