@@ -206,7 +206,7 @@
 			if(replace_characters)
 				letter = ""
 			for(var/j in 1 to rand(0, 2))
-				letter += pick("#", "@", "*", "&", "%", "$", "/", "<", ">", ";", "*", "*", "*", "*", "*", "*", "*")
+				letter += pick("#", "@", "&", "%", "$", "/", "<", ">", ";", "~", "£", "-", ".", ",", "|")
 		. += letter
 	return sanitize(.)
 

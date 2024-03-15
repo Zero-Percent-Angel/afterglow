@@ -16,6 +16,7 @@
 	var/network = "NULL"		// the network to probe
 	var/notice = ""
 	var/universal_translate = FALSE // set to TRUE(1) if it can translate nonhuman speech
+	var/all_seeing = FALSE
 
 /obj/machinery/computer/telecomms/server/ui_interact(mob/user, datum/tgui/ui)
 	if(!user.skill_check(SKILL_SCIENCE))
@@ -33,12 +34,13 @@
 
 	data_out["servers"] = list()
 	for(var/obj/machinery/telecomms/server/T in machinelist)
-		var/list/data = list(
-			name = T.name,
-			id = T.id,
-			ref = REF(T)
-		)
-		data_out["servers"] += list(data)
+		if (!T.hide || all_seeing)
+			var/list/data = list(
+				name = T.name,
+				id = T.id,
+				ref = REF(T)
+			)
+			data_out["servers"] += list(data)
 	data_out["servers"] = sortList(data_out["servers"]) //a-z sort
 
 	if(!SelectedMachine) //null is bad.
