@@ -1732,6 +1732,16 @@
 	turret_flags = TURRET_ROBOT_OWNED_FLAGS | TURRET_DEFAULT_UTILITY
 	faction = list("wastebot")
 
+/// 556 turret that loves robots
+/obj/machinery/porta_turret/f13/turret_556/hostile
+	name = "autonomous autorifle"
+	desc = "A juryrigged autonomous weapon system based off various pre-war Uncle ShootBang2000 designs. \
+		Countless sentry guns like these were in use before the war, valued for their ease of setup and surprising ammo efficiency. \
+		Though the stock models tend to come in 9mm, a few simple tweaks and it can fire just about anything, such as, say, 5.56mm. \
+		This one is chambered in 5.56mm and maintained by robots."
+	turret_flags = TURRET_ROBOT_OWNED_FLAGS | TURRET_DEFAULT_UTILITY
+	faction = list("hostile")
+
 /// Burstfire 5.56mm turret
 /obj/machinery/porta_turret/f13/turret_556/burstfire
 	name = "military fully-autorifle"
