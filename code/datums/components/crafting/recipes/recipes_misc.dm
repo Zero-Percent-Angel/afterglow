@@ -114,6 +114,16 @@
 	category = CAT_MISC
 	skill_level = VERY_EASY_CHECK
 
+/datum/crafting_recipe/bobby_pin
+	name = "Bobby Pin"
+	result = /obj/item/lockpick_set/bobby_pin
+	reqs = 	list(/obj/item/stack/rods)
+	time = 10
+	subcategory = CAT_MISCELLANEOUS
+	category = CAT_MISC
+	skill_level = VERY_EASY_CHECK
+
+
 /datum/crafting_recipe/junk_table
 	name = "Makeshift Bar Table"
 	reqs = list(/obj/item/stack/rods = 2,
