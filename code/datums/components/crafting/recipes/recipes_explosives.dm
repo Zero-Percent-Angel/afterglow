@@ -1,6 +1,6 @@
 /datum/crafting_recipe/compressedpowder
 	name = "Turn liquid black powder into sheets"
-	result = /obj/item/stack/ore/blackpowder
+	result = /obj/item/stack/ore/blackpowder/twenty
 	time = 5
 	reqs = list(/datum/reagent/blackpowder = 50)
 	category = CAT_EXPLOSIVE

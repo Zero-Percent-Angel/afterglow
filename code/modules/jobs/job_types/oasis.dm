@@ -572,8 +572,8 @@ Mayor
 	/datum/outfit/loadout/richmantender,
 	/datum/outfit/loadout/diner)
 
-	access = list(ACCESS_KITCHEN)
-	minimal_access = list(ACCESS_KITCHEN)
+	access = list(ACCESS_KITCHEN, ACCESS_KHAN)
+	minimal_access = list(ACCESS_KITCHEN, ACCESS_KHAN)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis
