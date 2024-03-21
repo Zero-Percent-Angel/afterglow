@@ -339,7 +339,6 @@ Raider
 	suit = /obj/item/clothing/suit/armor/medium/vest/bulletproof/big
 	uniform = /obj/item/clothing/under/f13/exile/vault
 	id = /obj/item/card/id/selfassign
-	gloves = /obj/item/pda
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
 		/obj/item/ammo_box/magazine/m10mm/adv/simple = 1,

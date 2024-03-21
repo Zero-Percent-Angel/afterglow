@@ -668,7 +668,7 @@
 	health = 165
 	ranged = TRUE
 	rapid_melee = 1
-	loot = list(/obj/item/gun/ballistic/rifle/mag/antimateriel/incinerator, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/effect/spawner/lootdrop/f13/armor/randomraiderchest, /obj/item/clothing/under/f13/ravenharness, /obj/item/stack/f13Cash/random/high)
+	loot = list(/obj/item/gun/ballistic/rifle/incinerator, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/effect/spawner/lootdrop/f13/armor/randomraiderchest, /obj/item/clothing/under/f13/ravenharness, /obj/item/stack/f13Cash/random/high)
 	retreat_distance = 4
 	minimum_distance = 6
 	extra_projectiles = 2
