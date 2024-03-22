@@ -57,7 +57,7 @@
 
 /datum/quirk/addictmentat
 	name = "Addicted - mentats"
-	desc = "You've been hooked on jet for a while, you need your fix or it won't be good for you."
+	desc = "You've been hooked on mentats for a while, you need your fix or it won't be good for you."
 	value = -3
 	mob_trait = TRAIT_MENTAT_ADDICT
 	gain_text = "<span class='danger'>mentats... mentats... need mentats.</span>"

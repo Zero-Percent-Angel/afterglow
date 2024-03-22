@@ -103,6 +103,9 @@
 /datum/firemode/semi_auto/slower
 	firerate_semi = GUN_FIRE_DELAY_SLOWER
 
+/datum/firemode/semi_auto/slowest
+	firerate_semi = GUN_FIRE_DELAY_SLOWER
+
 /datum/firemode/automatic
 	name = "Fully Automatic"
 	desc = "Spray and pray."
