@@ -219,7 +219,7 @@
 	spreadFire(AM)
 
 /mob/living/carbon/human/proc/despawn()
-	var/datum/job/job_to_free = SSjob.GetJob(job)
+	var/datum/job/job_to_free = SSjob.GetJob(real_job)
 	job_to_free?.current_positions--
 	GLOB.data_core.remove_record_by_name(real_name)
 	var/dat = "[key_name(src)] has despawned as [src], job [job], in [AREACOORD(src)]. Contents despawned along:"

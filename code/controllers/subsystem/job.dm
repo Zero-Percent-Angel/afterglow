@@ -444,6 +444,7 @@ SUBSYSTEM_DEF(job)
 		H = M
 
 	var/datum/job/job = GetJob(rank)
+	H.real_job = job
 	if (job && job.display_alternate != null)
 		H.job = job.display_alternate.title
 	else

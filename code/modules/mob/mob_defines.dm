@@ -100,6 +100,8 @@
 
 	var/job = null//Living
 
+	var/real_job = null
+
 	var/list/faction = list("neutral") //A list of factions that this mob is currently in, for hostile mob targetting, amongst other things
 	var/move_on_shuttle = 1 // Can move on the shuttle.
 
