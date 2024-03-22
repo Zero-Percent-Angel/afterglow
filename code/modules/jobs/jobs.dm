@@ -347,7 +347,7 @@ GLOBAL_LIST_INIT(followers_positions, list(
 	"Lead Practitioner",
 	"Followers Doctor",
 	"Followers Guard",
-	"Nurse",
+	"Followers Volunteer",
 	"Town Scientist",
 ))
 //Outlaw

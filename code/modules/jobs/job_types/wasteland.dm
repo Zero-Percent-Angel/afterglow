@@ -582,7 +582,6 @@ Raider
 	suit = /obj/item/clothing/suit/hooded/surgical
 	uniform = /obj/item/clothing/under/misc/pj/blue
 	l_hand = /obj/item/storage/backpack/duffelbag/med/surgery
-	r_hand = /obj/item/book/granter/trait/midsurgery
 	//suit_store = /obj/item/gun/energy/laser/wattzs
 	backpack_contents = list(
 	//	/obj/item/stock_parts/cell/ammo/ec = 1,

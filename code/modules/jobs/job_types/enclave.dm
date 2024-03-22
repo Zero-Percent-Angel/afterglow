@@ -348,7 +348,7 @@
 	backpack_contents = list(/obj/item/clothing/accessory/enclave = 1,
 							/obj/item/clothing/suit/armor/medium/combat/swat = 1,
 							/obj/item/clothing/head/helmet/f13/combat/swat = 1,
-							/obj/item/gun/ballistic/automatic/assault_carbine/ak112 = 1,
+							/obj/item/gun/ballistic/automatic/assault_carbine = 1,
 							/obj/item/ammo_box/magazine/m5mm = 2,
 							)
 
