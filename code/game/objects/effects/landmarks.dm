@@ -949,7 +949,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	icon_state = "Security Officer"
 
 /obj/effect/landmark/start/f13/followersvolunteer
-	name = "Nurse"
+	name = "Followers Volunteer"
 	icon_state = "Medical Doctor"
 
 /obj/effect/landmark/start/f13/followersscientist

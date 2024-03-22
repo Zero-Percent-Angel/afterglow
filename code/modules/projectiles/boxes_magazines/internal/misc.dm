@@ -32,7 +32,7 @@
 	name = "incinerator fuel tank"
 	ammo_type = /obj/item/ammo_casing/caseless/incinerator
 	caliber = list(CALIBER_FUEL)
-	max_ammo = 9 //You're not getting many shots here
+	max_ammo = 10 //You're not getting many shots here
 
 // BETA STUFF // Obsolete
 /obj/item/ammo_box/magazine/internal/shot/lethal/test

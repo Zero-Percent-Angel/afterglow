@@ -339,7 +339,6 @@ Raider
 	suit = /obj/item/clothing/suit/armor/medium/vest/bulletproof/big
 	uniform = /obj/item/clothing/under/f13/exile/vault
 	id = /obj/item/card/id/selfassign
-	gloves = /obj/item/pda
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/n99 = 1,
 		/obj/item/ammo_box/magazine/m10mm/adv/simple = 1,
@@ -583,7 +582,6 @@ Raider
 	suit = /obj/item/clothing/suit/hooded/surgical
 	uniform = /obj/item/clothing/under/misc/pj/blue
 	l_hand = /obj/item/storage/backpack/duffelbag/med/surgery
-	r_hand = /obj/item/book/granter/trait/midsurgery
 	//suit_store = /obj/item/gun/energy/laser/wattzs
 	backpack_contents = list(
 	//	/obj/item/stock_parts/cell/ammo/ec = 1,

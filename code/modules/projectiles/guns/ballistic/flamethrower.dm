@@ -153,7 +153,7 @@
 
 //Incinerators, because it seems appropriate to have them in here
 
-/obj/item/gun/ballistic/rifle/mag/antimateriel/incinerator
+/obj/item/gun/ballistic/rifle/incinerator
 	name = "incinerator"
 	desc = "For those times when you really need to ruin one persons day."
 	icon = 'icons/obj/guns/flamethrower.dmi'

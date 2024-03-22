@@ -30,7 +30,7 @@
 	. = ..()
 
 /turf/open/water/Entered(atom/movable/AM, atom/oldloc)
-	if(istype(AM, /mob/living))
+	if(istype(AM, /mob/living) && !(locate(/obj/structure/lattice/catwalk) in loc))
 		var/mob/living/L = AM
 		L.update_water()
 		if(L.check_submerged() <= 0)
@@ -41,7 +41,7 @@
 	..()
 
 /turf/open/water/Exited(atom/movable/AM, atom/newloc)
-	if(istype(AM, /mob/living))
+	if(istype(AM, /mob/living) && !(locate(/obj/structure/lattice/catwalk) in loc))
 		var/mob/living/L = AM
 		L.update_water()
 		if(L.check_submerged() <= 0)

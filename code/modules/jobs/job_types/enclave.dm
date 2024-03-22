@@ -46,6 +46,7 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/durathread_vest)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
 	ADD_TRAIT(H, TRAIT_TECHNOPHREAK, src)
+	ADD_TRAIT(H, TRAIT_PA_WEAR, src)
 
 
 //Lieutenant
@@ -347,7 +348,7 @@
 	backpack_contents = list(/obj/item/clothing/accessory/enclave = 1,
 							/obj/item/clothing/suit/armor/medium/combat/swat = 1,
 							/obj/item/clothing/head/helmet/f13/combat/swat = 1,
-							/obj/item/gun/ballistic/automatic/assault_carbine/ak112 = 1,
+							/obj/item/gun/ballistic/automatic/assault_carbine = 1,
 							/obj/item/ammo_box/magazine/m5mm = 2,
 							)
 

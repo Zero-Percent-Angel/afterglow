@@ -118,6 +118,7 @@
 	time = 5
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/healpowder5
 	name = "Batch of healing powders (x5)"
@@ -127,6 +128,7 @@
 	time = 10
 	category = CAT_MEDICAL
 	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/hydra  //keep the number of plants needed low so picking wild plants is viable. balance botany instead.
 	name = "Hydra - Anesthetic"

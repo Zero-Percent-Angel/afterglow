@@ -11,7 +11,7 @@
 	reagent_state = LIQUID
 	color = "#eb0000"
 	taste_description = "numbness"
-	metabolization_rate = 2.5 * REAGENTS_METABOLISM
+	metabolization_rate = 4 * REAGENTS_METABOLISM
 	overdose_threshold = 60
 	value = REAGENT_VALUE_COMMON
 	ghoulfriendly = TRUE
@@ -24,9 +24,9 @@
 		if(method != INJECT) // Gotta be injected
 			return
 		if(M.getBruteLoss())
-			M.adjustBruteLoss(-reac_volume/2)
+			M.adjustBruteLoss(-reac_volume * 0.75)
 		if(M.getFireLoss())
-			M.adjustFireLoss(-reac_volume/2)
+			M.adjustFireLoss(-reac_volume * 0.75)
 	..()
 
 // heals 1 damage of either brute or burn on life, whichever's higher
@@ -92,9 +92,9 @@
 /datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/carbon/M) // Heals fleshwounds like a weak sanguirite
 	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
 	if(M.getBruteLoss() > M.getFireLoss())	//Less effective at healing mixed damage types.
-		M.adjustBruteLoss(-1 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustBruteLoss(-2 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
 	else
-		M.adjustFireLoss(-1 * metabolization_rate *REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustFireLoss(-2 * metabolization_rate *REAGENTS_EFFECT_MULTIPLIER)
 	. = TRUE
 	..()
 
@@ -166,9 +166,9 @@
 
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
 	if(M.getBruteLoss() > M.getFireLoss())	//Less effective at healing mixed damage types.
-		M.adjustBruteLoss(-4 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustBruteLoss(-3 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
 	else
-		M.adjustFireLoss(-4 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustFireLoss(-3 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
 	. = TRUE
 	..()
 
@@ -189,7 +189,7 @@
 	name = "Healing poultice"
 	description = "Potent, stinging herbs that swiftly aid in the recovery of grevious wounds."
 	color = "#C8A5DC"
-	overdose_threshold = 12
+	overdose_threshold = 15
 	var/clot_rate = 0.20
 	var/clot_coeff_per_wound = 0.9
 
@@ -205,9 +205,9 @@
 
 /datum/reagent/medicine/healing_powder/poultice/on_mob_life(mob/living/carbon/M)
 	. = ..()
-	M.adjustBruteLoss(-2 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
-	M.adjustFireLoss(-2 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
-	M.adjustToxLoss(-2 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustBruteLoss(-4 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustFireLoss(-4 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
+	M.adjustToxLoss(-4 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
 	clot_bleed_wounds(user = M, bleed_reduction_rate = clot_rate, coefficient_per_wound = clot_coeff_per_wound, single_wound_full_effect = FALSE)
 	. = TRUE
 

@@ -159,7 +159,7 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	automatic_charge_overlays = FALSE
 	draw_time = GUN_DRAW_LONG
-	fire_delay = (GUN_FIRE_DELAY_SLOWER*0.8) //1200ms fire delay. Slower than the plasma pistol, but a big improvement
+	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
@@ -186,7 +186,7 @@
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = (GUN_FIRE_DELAY_SLOWER*0.8) //To not be slower than the plasma rifle. Does this thing even spawn?
+	fire_delay = GUN_FIRE_DELAY_SLOWER
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 2
@@ -208,13 +208,13 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	init_recoil = RIFLE_RECOIL(5)
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER
+	fire_delay = GUN_FIRE_DELAY_SLOWEST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	added_spread = (GUN_SPREAD_AWFUL*3) //Added as part of egun recoil removal
 	burst_size = 1
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slower
+		/datum/firemode/semi_auto/slowest
 	)
 
 

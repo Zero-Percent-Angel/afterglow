@@ -76,8 +76,10 @@
 			if(HAS_TRAIT(src, TRAIT_SLOWAF))
 				add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/turf_slowdown, multiplicative_slowdown = (T.slowdown * 2.5))
 				return
-		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/turf_slowdown, multiplicative_slowdown = T.slowdown)
-		return
+		else
+			if(!(locate(/obj/structure/lattice/catwalk) in loc))
+				add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/turf_slowdown, multiplicative_slowdown = T.slowdown)
+				return
 	remove_movespeed_modifier(/datum/movespeed_modifier/turf_slowdown)
 
 /mob/living/proc/update_special_speed(speed)//SPECIAL Integration

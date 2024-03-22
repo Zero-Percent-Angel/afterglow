@@ -339,14 +339,14 @@ Follower Volunteer
 */
 
 /datum/job/followers/f13followervolunteer
-	title = "Nurse"
+	title = "Followers Volunteer"
 	flag = F13FOLLOWERVOLUNTEER
 	department_flag = FOLLOWERS
 	faction = "Followers"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "Generally speaking your only actual supervisor is your own judgement, but it might not be amiss to listen to the Doctors, or anyone with more experience than you. Assuming they're around."
-	description = "You are a Nurse. As a Nurse you provide first aid to those that are injured and assist the clinic doctors as needed."
+	description = "You are a Followers Volunteer. As a Followers Volunteer you provide first aid to those that are injured and assist the clinic doctors as needed."
 	enforces = "Assist and provide medical services to those in need. Provide education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
 	outfit = /datum/outfit/job/followers/f13followervolunteer
