@@ -2155,6 +2155,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
 	},
+/obj/structure/simple_door/metal/fence/wooden,
 /turf/open/floor/plating/f13/inside/gravel,
 /area/f13/legioncamp)
 "bqj" = (
@@ -2408,6 +2409,14 @@
 /obj/structure/barricade/wooden/strong,
 /turf/closed/wall/f13/tentwall,
 /area/f13/wasteland)
+"bzu" = (
+/obj/item/reagent_containers/glass/bucket,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 12
+	},
+/turf/open/floor/plating/f13/inside/gravel,
+/area/f13/legioncamp)
 "bzT" = (
 /obj/structure/chair/bench{
 	dir = 4;
@@ -4281,6 +4290,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/machinery/autolathe,
 /turf/open/floor/wood_common,
 /area/f13/followers)
 "cHN" = (
@@ -7045,6 +7055,11 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/ambientlighting/building/j)
+"eti" = (
+/obj/item/reagent_containers/glass/bucket,
+/obj/structure/destructible/tribal_torch/wall/lit,
+/turf/open/floor/plating/f13/inside/gravel,
+/area/f13/legioncamp)
 "etk" = (
 /obj/structure/filingcabinet{
 	pixel_x = -6
@@ -8242,8 +8257,8 @@
 /obj/structure/sink/well{
 	pixel_x = -20
 	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland)
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/legioncamp)
 "ffQ" = (
 /turf/closed/wall/f13/wood,
 /area/f13/ambientlighting/building/z)
@@ -10565,6 +10580,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
 	},
+/obj/structure/simple_door/metal/fence/wooden,
 /turf/open/floor/plating/f13/inside/gravel,
 /area/f13/legioncamp)
 "guI" = (
@@ -10713,6 +10729,10 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/e)
+"gyP" = (
+/obj/machinery/workbench,
+/turf/open/floor/wood_common,
+/area/f13/followers)
 "gza" = (
 /obj/structure/campfire/barrel,
 /turf/open/indestructible/ground/outside/road{
@@ -12030,9 +12050,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/yellow,
 /area/f13/ambientlighting/building/j)
 "hmn" = (
-/obj/structure/filingcabinet/filingcabinet,
-/turf/open/floor/f13/wood,
-/area/f13/legioncamp)
+/obj/structure/reagent_dispensers/compostbin,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "hmu" = (
 /obj/structure/debris/v2,
 /turf/open/indestructible/ground/outside/desert,
@@ -15646,6 +15666,9 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/weather/dirt{
+	dir = 8
+	},
+/obj/structure/simple_door/metal/fence{
 	dir = 8
 	},
 /turf/open/floor/plating/f13/inside/gravel,
@@ -20191,6 +20214,13 @@
 /mob/living/simple_animal/cow/brahmin,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
+"mel" = (
+/obj/structure/table/glass,
+/obj/item/tank/internals/anesthetic,
+/obj/item/tank/internals/anesthetic,
+/obj/item/tank/internals/anesthetic,
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/followers)
 "meu" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/road{
@@ -21848,6 +21878,9 @@
 /obj/effect/overlay/desert_side,
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
+	},
+/obj/structure/simple_door/metal/fence{
+	dir = 8
 	},
 /turf/open/floor/plating/f13/inside/gravel,
 /area/f13/legioncamp)
@@ -27445,6 +27478,10 @@
 /obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/x)
+"qAC" = (
+/obj/machinery/autolathe,
+/turf/open/floor/wood_common,
+/area/f13/followers)
 "qAD" = (
 /obj/effect/overlay/desert_side{
 	dir = 4
@@ -89989,7 +90026,7 @@ xXx
 xXx
 avv
 kSO
-dUR
+mel
 eJh
 eJh
 eJh
@@ -90306,7 +90343,7 @@ rZc
 rZc
 rZc
 hPo
-rZc
+gyP
 kSO
 vmH
 avv
@@ -90608,7 +90645,7 @@ khI
 rZc
 rZc
 rZc
-rZc
+qAC
 kSO
 vmH
 avv
@@ -119660,7 +119697,7 @@ azA
 azA
 azA
 azA
-ffO
+azA
 azA
 azA
 azA
@@ -121179,12 +121216,12 @@ pdf
 uhN
 gZm
 uhN
-gZm
+ffO
 uhN
 gZm
 uhN
 qYR
-azA
+hmn
 ual
 tyG
 tyG
@@ -121469,11 +121506,11 @@ jwO
 gkD
 azA
 pvM
-lyg
-otw
-lyg
-otw
-lyg
+fRF
+cCM
+rcP
+rcP
+cCM
 foG
 azA
 azA
@@ -121771,11 +121808,11 @@ jwO
 gkD
 ual
 pvM
-olV
-otw
-olV
-otw
-olV
+fRF
+ebU
+aEA
+rcP
+rcP
 foG
 azA
 azA
@@ -122073,11 +122110,11 @@ jwO
 tyG
 tyG
 wwx
-otw
-otw
-kJh
-otw
-otw
+rcP
+rcP
+rcP
+rcP
+rcP
 foG
 azA
 azA
@@ -122375,11 +122412,11 @@ jwO
 gkD
 ual
 pvM
-lyg
-otw
-lyg
-otw
-lyg
+vvD
+rcP
+hBQ
+rcP
+rcP
 foG
 azA
 azA
@@ -122677,11 +122714,11 @@ jwO
 gkD
 azA
 pvM
-olV
-otw
-olV
-otw
-olV
+wjg
+rcP
+cCM
+rNY
+tAI
 foG
 azA
 azA
@@ -126020,10 +126057,10 @@ cCM
 mfr
 hRu
 mfr
-cCM
-rcP
-rcP
-cCM
+kJh
+otw
+otw
+kJh
 mfr
 upi
 pQv
@@ -126322,10 +126359,10 @@ rcP
 mfr
 azA
 mfr
-fRF
-rcP
-rcP
-rcP
+lyg
+otw
+otw
+lyg
 mfr
 azA
 pQv
@@ -126624,10 +126661,10 @@ pfI
 mfr
 azA
 mfr
-fRF
-ebU
-rcP
-rcP
+olV
+otw
+otw
+olV
 mfr
 azA
 pQv
@@ -126926,10 +126963,10 @@ qpN
 mfr
 azA
 mfr
-hmn
-rcP
-rcP
-rcP
+lyg
+otw
+otw
+lyg
 mfr
 azA
 pQv
@@ -127228,10 +127265,10 @@ qpN
 mfr
 azA
 mfr
-vvD
-rcP
-rcP
-rcP
+olV
+otw
+otw
+olV
 mfr
 azA
 pQv
@@ -127530,10 +127567,10 @@ qpN
 mfr
 azA
 mfr
-wjg
-rcP
-rcP
-rcP
+bzu
+otw
+otw
+eti
 mfr
 azA
 pQv
@@ -127832,10 +127869,10 @@ qpN
 mfr
 azA
 mfr
-rcP
-rcP
-rcP
-rcP
+olV
+otw
+otw
+olV
 mfr
 azA
 pQv
@@ -128134,10 +128171,10 @@ qpN
 mfr
 azA
 mfr
-aEA
-rcP
-rcP
-rcP
+lyg
+otw
+otw
+lyg
 mfr
 azA
 pQv
@@ -128436,10 +128473,10 @@ vkz
 mfr
 azA
 mfr
-rcP
-rcP
-rcP
-rcP
+olV
+otw
+otw
+olV
 mfr
 azA
 pQv
@@ -128738,10 +128775,10 @@ rcP
 mfr
 azA
 mfr
-hBQ
-rcP
-rcP
-rcP
+lyg
+otw
+otw
+lyg
 mfr
 azA
 pQv
@@ -129040,10 +129077,10 @@ cCM
 mfr
 azA
 mfr
-cCM
-rNY
-tAI
-cCM
+olV
+kJh
+kJh
+olV
 mfr
 azA
 pQv
