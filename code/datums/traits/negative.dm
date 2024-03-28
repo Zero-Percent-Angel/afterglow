@@ -261,6 +261,25 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 	lose_text = span_notice("You feel awake again.")
 	medical_record_text = "Patient has abnormal sleep study results and is difficult to wake up."
 
+/datum/quirk/narcoleptic
+	name = "Narcoleptic" //hard consider redesigning, since this is a flat update. ~TK
+	desc = "You periodically fall asleep without warning."
+	value = -3
+	mob_trait = TRAIT_NARCOLEPTIC
+	gain_text = span_danger("You feel sleepy.")
+	lose_text = span_notice("You feel awake again.")
+	medical_record_text = "Patient has abnormal sleep study results and might fall asleep periodically."
+	var/sleep_time = 400
+
+/datum/quirk/narcoleptic/on_process()
+	if (sleep_time > 0)
+		sleep_time--
+	else
+		sleep_time = rand(350, 600)
+		var/mob/living/carbon/human/H = quirk_holder
+		to_chat(H, span_warning("You suddenly fall asleep."))
+		H.AdjustSleeping(rand(10, 30), TRUE, TRUE)
+
 /datum/quirk/brainproblems
 	name = "Brain Tumor"
 	desc = "You have a little friend in your brain that is slowly destroying it. Better bring some mannitol!"

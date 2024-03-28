@@ -241,7 +241,7 @@
 	icon = 'icons/mob/augmentation/surplus_augments.dmi'
 	brute_reduction = 0
 	burn_reduction = 0
-	max_damage = 20
+	max_damage = 40
 
 /obj/item/bodypart/r_arm/robot/surplus
 	name = "surplus prosthetic right arm"
@@ -249,7 +249,7 @@
 	icon = 'icons/mob/augmentation/surplus_augments.dmi'
 	brute_reduction = 0
 	burn_reduction = 0
-	max_damage = 20
+	max_damage = 40
 
 /obj/item/bodypart/l_leg/robot/surplus
 	name = "surplus prosthetic left leg"
@@ -257,7 +257,7 @@
 	icon = 'icons/mob/augmentation/surplus_augments.dmi'
 	brute_reduction = 0
 	burn_reduction = 0
-	max_damage = 20
+	max_damage = 40
 
 /obj/item/bodypart/r_leg/robot/surplus
 	name = "surplus prosthetic right leg"
@@ -265,7 +265,7 @@
 	icon = 'icons/mob/augmentation/surplus_augments.dmi'
 	brute_reduction = 0
 	burn_reduction = 0
-	max_damage = 20
+	max_damage = 40
 
 // Upgraded Surplus lims - Better then robotic lims
 /obj/item/bodypart/l_arm/robot/surplus_upgraded
