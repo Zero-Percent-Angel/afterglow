@@ -28,7 +28,7 @@
 	/// If TRUE - suit has ran out of charge and is currently affected by slowdown from it
 	var/no_power = FALSE
 	/// How much slowdown is added when suit is unpowered
-	var/unpowered_slowdown = 5
+	var/unpowered_slowdown = 3
 	/// Projectiles below this damage will get deflected
 	var/deflect_damage = 11
 	/// If TRUE - it requires PA training trait to be worn
@@ -304,7 +304,6 @@
 	if(!emped)
 		if(isliving(loc))
 			var/mob/living/L = loc
-			var/induced_slowdown = 0
 			if(severity >= 41) //heavy emp
 				to_chat(L, span_boldwarning("Warning: severe electromagnetic surge detected in armor. Rerouting power to emergency systems."))
 			else
@@ -312,10 +311,10 @@
 			emped = TRUE
 			process()
 			L.update_equipment_speed_mods()
-			addtimer(CALLBACK(src, .proc/end_emp_effect, induced_slowdown), severity/3 SECONDS)
+			addtimer(CALLBACK(src, .proc/end_emp_effect), severity/1 SECONDS)
 	return
 
-/obj/item/clothing/suit/armor/power_armor/proc/end_emp_effect(slowdown_induced)
+/obj/item/clothing/suit/armor/power_armor/proc/end_emp_effect()
 	emped = FALSE
 	if(isliving(loc))
 		process()
