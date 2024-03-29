@@ -135,6 +135,18 @@
 /datum/gear/hands/lipstickblack
 	name = "black lipstick"
 	path = /obj/item/lipstick/black
+	
+/datum/gear/hands/lipstickpink
+	name = "pink lipstick"
+	path = /obj/item/lipstick/pink
+
+/datum/gear/hands/lipstickblue
+	name = "blue lipstick"
+	path = /obj/item/lipstick/blue
+
+/datum/gear/hands/lipstickwhite
+	name = "white lipstick"
+	path = /obj/item/lipstick/white
 
 /datum/gear/hands/carpetdelivery
 	name = "Carpet Delivery Service"
