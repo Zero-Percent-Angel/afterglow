@@ -40,7 +40,7 @@
 /obj/item/lipstick/random/New()
 	..()
 	icon_state = "lipstick"
-	colour = pick("red","purple","lime","black","green","blue","white", "hotpink", "skyblue")
+	colour = pick("red","purple","lime","black","green","blue","white","hotpink","skyblue")
 	name = "[colour] lipstick"
 
 /obj/item/lipstick/attack_self(mob/user)
