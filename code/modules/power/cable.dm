@@ -557,7 +557,7 @@ By design, d1 is the smallest direction and d2 is the highest
 	if(affecting && affecting.status == BODYPART_ROBOTIC)
 		//only heal to 25 if limb is damaged to or past 25 burn, otherwise heal normally
 		var/difference = affecting.burn_dam - 0
-		var/heal_amount = 15
+		var/heal_amount = (user.skill_value(SKILL_REPAIR) * 0.3)
 		if(difference >= 0)
 			heal_amount = difference
 		if(user == H)

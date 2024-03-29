@@ -70,7 +70,7 @@
 		"fire" = 10, \
 		"acid" = 10, \
 		"wound" = 10, \
-		"damage_threshold" = 3)
+		"damage_threshold" = 4)
 
 /* Medium armor values
  * Decent mobility
@@ -91,7 +91,7 @@
 		"fire" = 25, \
 		"acid" = 25, \
 		"wound" = 20, \
-		"damage_threshold" = 5)
+		"damage_threshold" = 6)
 
 /* Heavy armor values
  * Low mobility
@@ -112,7 +112,7 @@
 		"fire" = 35, \
 		"acid" = 35, \
 		"wound" = 35, \
-		"damage_threshold" = 7)
+		"damage_threshold" = 8)
 
 /* Salvaged PA values
  * Next to no mobility
@@ -133,7 +133,7 @@
 		"fire" = 70, \
 		"acid" = 70, \
 		"wound" = 50, \
-		"damage_threshold" = 8)
+		"damage_threshold" = 9)
 
 /* Power armor values
  * Low mobility
@@ -154,7 +154,7 @@
 		"fire" = 95, \
 		"acid" = 95, \
 		"wound" = 70, \
-		"damage_threshold" = 9)
+		"damage_threshold" = 10)
 
 /* * * * * * * * * * * * * * *
  * MOB SPECIFIC ARMOR VALUES *
@@ -658,7 +658,7 @@
 		"fire" = 0, \
 		"acid" = 0, \
 		"wound" = 0, \
-		"damage_threshold" = 15)
+		"damage_threshold" = 7)
 
 
 /* Ant
@@ -942,7 +942,7 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
  * Light Armor
  * Basically clothes, but more
 */
-#define ARMOR_SLOWDOWN_LIGHT 0
+#define ARMOR_SLOWDOWN_LIGHT 0.04
 
 /*
  * Medium Armor
@@ -972,7 +972,7 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
 #define ARMOR_SLOWDOWN_PA 0.55
 //Originally this was 1 on Coyete
 
-#define HELMET_SLOWDOWN_LIGHT 0
+#define HELMET_SLOWDOWN_LIGHT 0.01
 #define HELMET_SLOWDOWN_MEDIUM 0.05
 #define HELMET_SLOWDOWN_HEAVY 0.1
 
@@ -1004,7 +1004,7 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
 #define ARMOR_CLOTHING_DESC "This is just a set of clothes, light and breezy, totally unencumbering. Also totally unprotected."
 
 /// Extra tag saying what armor tier this armor is, for description purposes
-#define ARMOR_CLOTHING_LIGHT "This is a set of light armor, virtually weightless on your frame, and about as protective as you'd expect."
+#define ARMOR_CLOTHING_LIGHT "This is a set of light armor, almost weightless on your frame, and about as protective as you'd expect."
 
 /// Extra tag saying what armor tier this armor is, for description purposes
 #define ARMOR_CLOTHING_MEDIUM "This is a set of medium armor, trading a degree of mobility for increased protection."

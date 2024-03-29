@@ -219,6 +219,10 @@
 	if(!check_interactivity(usr))
 		return
 
+	if(!usr.skill_check(SKILL_SCIENCE, HARD_CHECK))
+		to_chat(usr, span_bad("You don't even know where to start with this thing."))
+		return
+
 	if(href_list["rename"])
 		rename(usr)
 

@@ -8,6 +8,18 @@
 	var/colour = "red"
 	var/open = FALSE
 
+/obj/item/lipstick/pink
+	name = "pink lipstick"
+	colour = "hotpink"
+
+/obj/item/lipstick/blue
+	name = "blue lipstick"
+	colour = "skyblue"
+
+/obj/item/lipstick/white
+	name = "white lipstick"
+	colour = "white"
+
 /obj/item/lipstick/purple
 	name = "purple lipstick"
 	colour = "purple"
@@ -28,7 +40,7 @@
 /obj/item/lipstick/random/New()
 	..()
 	icon_state = "lipstick"
-	colour = pick("red","purple","lime","black","green","blue","white")
+	colour = pick("red","purple","lime","black","green","blue","white","hotpink","skyblue")
 	name = "[colour] lipstick"
 
 /obj/item/lipstick/attack_self(mob/user)
