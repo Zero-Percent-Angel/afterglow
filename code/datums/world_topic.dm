@@ -22,12 +22,13 @@
 /datum/world_topic
 	var/keyword
 	var/log = TRUE
-	var/key_valid
+	var/key_invalid
 	var/require_comms_key = FALSE
 
 /datum/world_topic/proc/TryRun(list/input, addr)
-	key_valid = config && (CONFIG_GET(string/comms_key) == input["key"])
-	if(require_comms_key && !key_valid)
+	var/the_key = CONFIG_GET(string/comms_key)
+	key_invalid = !config || the_key == null || the_key == "" || the_key != input["key"]
+	if(require_comms_key && key_invalid)
 		return "Bad Key"
 	input -= "key"
 	. = Run(input, addr)
@@ -118,6 +119,7 @@
 
 /datum/world_topic/server_hop
 	keyword = "server_hop"
+	require_comms_key = TRUE
 
 /datum/world_topic/server_hop/Run(list/input, addr)
 	var/expected_key = input[keyword]
@@ -157,7 +159,7 @@
 	keyword = "status"
 
 /datum/world_topic/status/Run(list/input, addr)
-	if(!key_valid) //If we have a key, then it's safe to trust that this isn't a malicious packet. Also prevents the extra info from leaking
+	if(!key_invalid) //If we have a key, then it's safe to trust that this isn't a malicious packet. Also prevents the extra info from leaking
 		if(GLOB.topic_status_lastcache >= world.time)
 			return GLOB.topic_status_cache
 		GLOB.topic_status_lastcache = world.time + 5
@@ -182,7 +184,7 @@
 
 	.["map_name"] = SSmapping.config?.map_name || "Loading..."
 
-	if(key_valid)
+	if(!key_invalid)
 		.["active_players"] = get_active_player_count()
 		if(SSticker.HasRoundStarted())
 			.["real_mode"] = SSticker.mode.name
@@ -204,11 +206,12 @@
 		.["shuttle_timer"] = SSshuttle.emergency.timeLeft()
 		// Shuttle timer, in seconds
 
-	if(!key_valid)
+	if(!key_invalid)
 		GLOB.topic_status_cache = .
 
 /datum/world_topic/jsonstatus
 	keyword = "jsonstatus"
+	require_comms_key = TRUE
 
 /datum/world_topic/jsonstatus/Run(list/input, addr)
 	. = list()
@@ -226,6 +229,7 @@
 
 /datum/world_topic/jsonplayers
 	keyword = "jsonplayers"
+	require_comms_key = TRUE
 
 /datum/world_topic/jsonplayers/Run(list/input, addr)
 	. = list()
@@ -238,6 +242,7 @@
 
 /datum/world_topic/jsonmanifest
 	keyword = "jsonmanifest"
+	require_comms_key = TRUE
 
 /datum/world_topic/jsonmanifest/Run(list/input, addr)
 	var/list/whitelisted = list()
@@ -286,6 +291,7 @@
 
 /datum/world_topic/jsonrevision
 	keyword = "jsonrevision"
+	require_comms_key = TRUE
 
 /datum/world_topic/jsonrevision/Run(list/input, addr)
 	var/datum/getrev/revdata = GLOB.revdata
