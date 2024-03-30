@@ -83,10 +83,11 @@
 	else
 		if (!is_busy)
 			is_busy = TRUE
-			if(!failures.Find(WEAKREF(user)) && do_after(user, 10 SECONDS, target = src) && user.skill_roll(SKILL_SCIENCE, difficulty))
-				user.visible_message(span_good("[user] hacks the door!"), span_good("Got it!"))
-				is_busy = FALSE
-				return TRUE
+			if(!failures.Find(WEAKREF(user)) && user.skill_roll(SKILL_SCIENCE, difficulty))
+				if (do_after(user, 10 SECONDS, target = src))
+					user.visible_message(span_good("[user] hacks the door!"), span_good("Got it!"))
+					is_busy = FALSE
+					return TRUE
 			else
 				failures |= WEAKREF(user)
 				user.visible_message(span_warning("[user] fails to hack the door!"), span_warning("Dang, looks like it's locked itself down from me."))

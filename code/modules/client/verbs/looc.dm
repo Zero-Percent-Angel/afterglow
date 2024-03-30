@@ -37,9 +37,6 @@ GLOBAL_VAR_INIT(normal_looc_colour, "#6699CC")
 			to_chat(src, "<B>Advertising other servers is not allowed.</B>")
 			log_admin("[key_name(src)] has attempted to advertise in LOOC: [msg]")
 			return
-		if(mob.stat)
-			to_chat(src, span_danger("You cannot use LOOC while unconscious or dead."))
-			return
 		if(isdead(mob))
 			to_chat(src, span_danger("You cannot use LOOC while ghosting or observing. If you previously died in the round, return to your body to be able to LOOC."))
 			return
@@ -75,7 +72,7 @@ GLOBAL_VAR_INIT(normal_looc_colour, "#6699CC")
 		if (C.mob in heard)
 			prefix = "LOOC"
 			proximity = TRUE // yeah this is kinda scuffed.
-		
+
 		if(!proximity && C.prefs.chat_toggles & CHAT_REMOTE_LOOC)
 			continue
 
