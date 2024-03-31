@@ -77,13 +77,13 @@
 	H.reagents.addiction_list.Cut()
 
 /datum/quirk/addictalchol
-	name = "Addicted - Alchol"
+	name = "Addicted - Alcohol"
 	desc = "You're a rampaging alcholic."
 	value = -1
 	mob_trait = TRAIT_ALCHOLIC
 	gain_text = "<span class='danger'>How about a stiff drink?</span>"
-	lose_text = "<span class='notice'>Alchol isn't man's best friend.</span>"
-	medical_record_text = "Patient has shown a chemical dependency on alchol."
+	lose_text = "<span class='notice'>Alcohol isn't man's best friend.</span>"
+	medical_record_text = "Patient has shown a chemical dependency on alcohol."
 	mood_quirk = TRUE
 	var/drink_time = 180
 
