@@ -23,5 +23,6 @@
 	if(do_after(user, time SECONDS/2, target = src))
 		return make_item(power, materials_used, picked_materials, multiplier, coeff, is_stack)
 	else
+		icon_state = "autolathe"
 		busy = FALSE
 		updateDialog()
