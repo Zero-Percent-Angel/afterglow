@@ -12,7 +12,7 @@
 	var/agressive_to_everyone_on_attack = FALSE
 	var/mob/target_mob = null
 	desc = "Just someone out in the wastes trying to survive."
-	
+
 /mob/living/simple_animal/hostile/retaliate/talker/basic
 	name = "Nanotrasen Private Security Officer"
 	desc = "An officer part of Nanotrasen's private security force."
@@ -113,7 +113,7 @@
 	toggle_ai(AI_ON)
 	..()
 	target_mob = null
-	
+
 
 /mob/living/simple_animal/hostile/retaliate/talker/handle_automated_action()
 	..()
@@ -129,10 +129,10 @@
 		toggle_ai(AI_ON)
 		say("You bastard...")
 	return ..()
-	
+
 /mob/living/simple_animal/hostile/retaliate/talker/proc/handle_enemy(mob/maybe_enemy)
 	enemies += WEAKREF(maybe_enemy)
-	
+
 /mob/living/simple_animal/hostile/retaliate/talker/Initialize()
 	. = ..()
 	if (randomise_name)
@@ -177,7 +177,7 @@
 	if (say_hello)
 		say(dat)
 	if(!we_introduced)
-		dat += "<center><a href='?src=[REF(src)];introduce=1'>Intoduce yourself</a></center>"
+		dat += "<center><a href='?src=[REF(src)];introduce=1'>Introduce yourself</a></center>"
 	if(!friends.Find(WEAKREF(talker)) && !intimidated.Find(WEAKREF(talker)) && !failed.Find(WEAKREF(talker)))
 		dat += "<center><a href='?src=[REF(src)];stare=1'>Remain silent and stare. (Speech - Intimidate)</a></center>"
 	dat += dialog_options(talker, we_introduced || intimidated.Find(WEAKREF(talker)))
