@@ -11,8 +11,7 @@
 	insert_preposition = "in"
 	storage_flags = STORAGE_FLAGS_LEGACY_DEFAULT
 	display_numerical_stacking = TRUE
-	limited_random_access = TRUE
-	limited_random_access_stack_position = 5
+
 
 
 /// Book Bag
