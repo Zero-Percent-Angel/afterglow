@@ -965,68 +965,6 @@
 	)
 
 /* * * * * * * * * * *
- * Varmint Carbine
- * .22 LR
- * Higher damage
- * Found all over the place; based off Fallout: NV cut content - Varmint was supposed to be in .22 originally. Doing this for cheap, easy rifles for crap spawns.
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/sportcarbine
-	name = "varmint carbine"
-	desc = "One of the many .22 LR carbine used for hunting vermin that were all the rage before the war. While lacking in firepower, it more than makes up for it with its modularity and cheapness to fire."
-	icon_state = "varmint"
-	item_state = "rifle"
-	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
-	mag_type = /obj/item/ammo_box/magazine/m22
-	init_mag_type = /obj/item/ammo_box/magazine/m22/extended
-
-	slowdown = GUN_SLOWDOWN_CARBINE
-	force = GUN_MELEE_FORCE_RIFLE_LIGHT
-	weapon_weight = GUN_ONE_HAND_AKIMBO
-	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_SLOW
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
-	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T3 // its a weakass cartridge
-	projectile_speed_multiplier = GUN_EXTRA_DAMAGE_T3
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = CARBINE_RECOIL(0.5)
-	init_firemodes = list(
-		/datum/firemode/semi_auto/faster
-	)
-	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
-	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
-	max_upgrades = 5 // moddable to fuck and fack
-
-	automatic_burst_overlay = FALSE
-	can_bayonet = TRUE
-	bayonet_state = "bayonetstraight"
-	knife_x_offset = 22
-	knife_y_offset = 21
-	can_scope = TRUE
-	scope_state = "leveraction_scope"
-	scope_x_offset = 5
-	scope_y_offset = 14
-	semi_auto = TRUE
-	can_suppress = TRUE
-	suppressor_state = "suppressor"
-	suppressor_x_offset = 26
-	suppressor_y_offset = 31
-	fire_sound = 'sound/weapons/Gunshot2.ogg'
-	gun_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(PISTOL_LIGHT_VOLUME),
-		SP_VOLUME_SILENCED(PISTOL_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(PISTOL_LIGHT_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(PISTOL_LIGHT_DISTANT_SOUND),
-		SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
-	)
-
-/* * * * * * * * * * *
  * Semi-auto Rifles  *
  * * * * * * * * * * */
 

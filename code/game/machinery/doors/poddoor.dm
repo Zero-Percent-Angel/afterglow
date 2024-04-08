@@ -19,6 +19,7 @@
 	var/datum/crafting_recipe/recipe_type = /datum/crafting_recipe/blast_doors
 	var/deconstruction = BLASTDOOR_FINISHED // deconstruction step
 	var/ertblast = FALSE
+	var/obj/item/stack/sheet/sheet_type = /obj/item/stack/sheet/prewar
 
 /obj/machinery/door/poddoor/attackby(obj/item/W, mob/user, params)
 	. = ..()
@@ -65,8 +66,8 @@
 			playsound(src.loc, 'sound/items/welder.ogg', 50, 1)
 			if(W.use_tool(src, user, 150, volume=50))
 				var/datum/crafting_recipe/recipe = locate(recipe_type) in GLOB.crafting_recipes
-				var/amount = recipe.reqs[/obj/item/stack/sheet/plasteel]
-				new /obj/item/stack/sheet/plasteel(loc, amount - rand(1,4))
+				var/amount = recipe.reqs[sheet_type]
+				new sheet_type(loc, amount - rand(1,4))
 				qdel(src)
 
 /obj/machinery/door/poddoor/examine(mob/user)

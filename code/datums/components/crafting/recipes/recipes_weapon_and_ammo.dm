@@ -681,7 +681,7 @@
 //varmint rifle
 /datum/crafting_recipe/varmintrifle
 	name = "Varmint Rifle"
-	result = /obj/item/gun/ballistic/rifle/varmint
+	result = /obj/item/gun/ballistic/rifle/mag/varmint
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/crafting/metalparts = 4,
 				/obj/item/stack/sheet/metal = 1)
@@ -695,8 +695,8 @@
 //craftable psuedo-ratslayer
 /datum/crafting_recipe/verminkiller
 	name = "Upgraded Varmint Rifle"
-	result = /obj/item/gun/ballistic/rifle/varmint/verminkiller
-	reqs = list(/obj/item/gun/ballistic/rifle/varmint = 1,
+	result = /obj/item/gun/ballistic/rifle/mag/varmint/verminkiller
+	reqs = list(/obj/item/gun/ballistic/rifle/mag/varmint = 1,
 				/obj/item/gun_upgrade/muzzle/silencer = 1, //silencer
 				/obj/item/advanced_crafting_components/lenses = 1, //scope
 				/obj/item/stack/crafting/goodparts = 2,

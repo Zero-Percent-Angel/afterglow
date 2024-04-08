@@ -222,8 +222,8 @@ GLOBAL_LIST_INIT(trash_gun, list(
 	/obj/item/gun/ballistic/automatic/hobo/zipgun = 2,
 	/obj/item/gun/ballistic/revolver/single_shotgun = 1,
 	/obj/item/gun/ballistic/revolver/hobo/pepperbox = 2,
-	/obj/item/gun/ballistic/rifle/varmint = 1,
-	/obj/item/gun/ballistic/automatic/sportcarbine = 1,
+	/obj/item/gun/ballistic/rifle/mag/varmint = 1,
+	/obj/item/gun/ballistic/rifle/mag/sportcarbine = 1,
 	/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
 	/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
 	/obj/item/gun/ballistic/revolver/widowmaker = 1
@@ -525,9 +525,9 @@ GLOBAL_LIST_INIT(loot_t1_range, list(
 	/obj/item/ammo_box/magazine/m9mm,
 	/obj/item/gun/ballistic/automatic/pistol/n99,
 	/obj/item/ammo_box/magazine/m10mm/adv/simple,
-	/obj/item/gun/ballistic/rifle/varmint,
+	/obj/item/gun/ballistic/rifle/mag/varmint,
 	/obj/item/ammo_box/magazine/m556/rifle/small,
-	/obj/item/gun/ballistic/automatic/sportcarbine,
+	/obj/item/gun/ballistic/rifle/mag/sportcarbine,
 	/obj/item/ammo_box/magazine/m22/extended,
 	/obj/item/ammo_box/m22
 ))
