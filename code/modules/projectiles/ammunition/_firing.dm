@@ -36,7 +36,7 @@
 			return FALSE
 		AddComponent(/datum/component/pellet_cloud, projectile_type, pellets)
 		SEND_SIGNAL(src, COMSIG_PELLET_CLOUD_INIT, target, user, fired_from, randomspread, (variance * HAS_TRAIT(user,TRAIT_INSANE_AIM) ? 0.5 : 1), zone_override, params, angle_out)
-
+	deduct_powder_and_bullet_mats()
 	if(istype(user))
 		user.DelayNextAction(considered_action = TRUE, immediate = FALSE)
 	user.newtonian_move(get_dir(target, user))
@@ -97,7 +97,6 @@
 		BB.preparePixelProjectile(target, user, params, spread)
 	BB.fire(null, direct_target, spread)
 	BB = null
-	deduct_powder_and_bullet_mats()
 	return 1
 
 /obj/item/ammo_casing/proc/spread(turf/target, turf/current, distro)
