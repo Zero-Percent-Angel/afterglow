@@ -538,10 +538,10 @@
 
 /obj/item/projectile/beam/laser/tribeam/hitscan
 	name = "tribeam laser"
-	damage = 24 //if all bullets connect, this will do 72
+	damage = 22 //if all bullets connect, this will do 66
 	hitscan = TRUE
-	bare_wound_bonus = 5
-	armour_penetration = 0.05
+	bare_wound_bonus = 0
+	armour_penetration = 0.02
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser

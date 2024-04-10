@@ -152,19 +152,6 @@
 	path = /obj/item/clothing/suit/armor/light/duster/town
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 2
-	restricted_desc = "Ripley"
-	restricted_roles = list("Mayor",
-							"Secretary",
-							"Sheriff",
-							"Doctor",
-							"Citizen",
-							"Deputy",
-							"Shopkeeper",
-							"Farmer",
-							"Prospector",
-							"Detective",
-							"Barkeep",
-							)
 
 /datum/gear/suit/town/hazardvest
 	name = "Hazard Vest"

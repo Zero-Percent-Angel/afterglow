@@ -270,7 +270,19 @@
 	cost = 4
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
 	restricted_desc = "NCR"
-	restricted_roles = list("NCR Combat Engineer",
+	restricted_roles = list("NCR Captain",
+							"NCR Lieutenant",
+							"NCR Medical Officer",
+							"NCR Sergeant First Class",
+							"NCR Lieutenant",
+							"NCR Heavy Trooper",
+							"NCR Sergeant",
+							"NCR Corporal",
+							"NCR Combat Engineer",
+							"NCR Combat Medic",
+							"NCR Trooper",
+							"NCR Recruit",
+							"NCR Rear Echelon",
 							"NCR Off-Duty"
 						)
 
@@ -311,6 +323,9 @@
 							"NCR Combat Engineer",
 							"NCR Combat Medic",
 							"NCR Trooper",
+							"NCR Recruit",
+							"NCR Rear Echelon",
+							"NCR Off-Duty"
 						)
 
 datum/gear/head/steelpot_bandolier
@@ -330,6 +345,9 @@ datum/gear/head/steelpot_bandolier
 							"NCR Combat Engineer",
 							"NCR Combat Medic",
 							"NCR Trooper",
+							"NCR Recruit",
+							"NCR Rear Echelon",
+							"NCR Off-Duty"
 						)
 
 
@@ -351,6 +369,7 @@ datum/gear/head/steelpot_bandolier
 							"NCR Combat Engineer",
 							"NCR Combat Medic",
 							"NCR Trooper",
+							"NCR Recruit",
 							"NCR Rear Echelon",
 							"NCR Off-Duty"
 						)
@@ -372,6 +391,7 @@ datum/gear/head/steelpot_bandolier
 							"NCR Combat Engineer",
 							"NCR Combat Medic",
 							"NCR Trooper",
+							"NCR Recruit",
 							"NCR Rear Echelon",
 							"NCR Off-Duty"
 						)
@@ -391,11 +411,4 @@ datum/gear/head/steelpot_bandolier
 	path = /obj/item/clothing/head/helmet/blueshirt
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
 	cost = 3
-	restricted_desc = "Ripley PD, Ripley officials"
-	restricted_roles = list("Chief of Police",
-							"Officer",
-							"Mayor",
-							"Detective",
-							"Secretary",
-							"Shopkeeper",
-						)
+
