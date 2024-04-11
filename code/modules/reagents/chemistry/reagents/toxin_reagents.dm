@@ -23,6 +23,10 @@
 		. = TRUE
 	..()
 
+/datum/reagent/toxin/beesting
+	name = "Bee Toxin"
+	toxpwr = 0.12
+
 /datum/reagent/toxin/on_mob_life_synth(mob/living/carbon/M)
 	if(toxpwr)
 		M.adjustBruteLoss(toxpwr*REM, 0)

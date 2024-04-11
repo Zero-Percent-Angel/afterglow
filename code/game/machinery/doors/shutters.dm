@@ -73,6 +73,7 @@
 	opacity = 0
 	glass = 1
 	recipe_type = /datum/crafting_recipe/shutters/window
+	sheet_type = /obj/item/stack/sheet/rglass
 
 /obj/machinery/door/poddoor/shutters/window/preopen
 	icon_state = "open"

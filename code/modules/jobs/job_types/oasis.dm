@@ -465,7 +465,7 @@ Mayor
 	uniform = /obj/item/clothing/under/misc/overalls
 	belt = /obj/item/storage/belt/utility/full
 	shoes = /obj/item/clothing/shoes/workboots
-	suit_store = /obj/item/gun/ballistic/rifle/varmint
+	suit_store = /obj/item/gun/ballistic/rifle/mag/varmint
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/small = 2,
 		/obj/item/pickaxe/mini = 1,
@@ -745,7 +745,7 @@ Mayor
 	name = "Outdoorsman"
 	head = /obj/item/clothing/head/soft/grey
 	suit = /obj/item/clothing/suit/armor/light/leather/tanvest
-	suit_store = /obj/item/gun/ballistic/automatic/sportcarbine
+	suit_store = /obj/item/gun/ballistic/rifle/mag/sportcarbine
 	belt = /obj/item/melee/onehanded/knife/bowie
 	uniform = /obj/item/clothing/under/f13/cowboyt
 	gloves = /obj/item/clothing/gloves/botanic_leather

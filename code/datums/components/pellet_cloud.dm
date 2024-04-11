@@ -183,7 +183,7 @@
 			martyr.visible_message("<b><span class='danger'>[martyr] heroically covers \the [parent] with [martyr.p_their()] body, snuffing out the shrapnel!</span></b>", span_userdanger("You heroically cover \the [parent] with your body, snuffing out the shrapnel!"))
 			magnitude_absorbed = radius
 
-		var/pellets_absorbed = (radius ** 2) - ((radius - magnitude_absorbed - 1) ** 2)
+		var/pellets_absorbed = (radius ** 2) - ((radius - magnitude_absorbed) ** 2)
 		radius -= magnitude_absorbed
 		pellet_delta -= round(pellets_absorbed * 0.5)
 
@@ -191,7 +191,7 @@
 			LAZYADD(purple_hearts, martyr)
 			RegisterSignal(martyr, COMSIG_PARENT_QDELETING, .proc/on_target_qdel, override=TRUE)
 
-		for(var/i in 1 to round(pellets_absorbed * 0.5))
+		for(var/i in 1 to round(pellets_absorbed))
 			pew(martyr)
 
 		if(radius < 1)

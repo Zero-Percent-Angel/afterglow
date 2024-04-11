@@ -208,7 +208,7 @@
 	extra_projectiles = 0
 	ranged_cooldown_time = 2 SECONDS
 	loot = list(
-		/obj/item/gun/ballistic/rifle/varmint
+		/obj/item/gun/ballistic/rifle/mag/varmint
 		)
 
 /mob/living/simple_animal/hostile/supermutant/rangedmutant/death(gibbed)

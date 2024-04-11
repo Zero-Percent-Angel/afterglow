@@ -89,6 +89,7 @@
 	if (!(target.IsUnconscious() || target.reagents.get_reagent_amount(/datum/reagent/medicine/morphine)) && target.stat != DEAD)
 		// We used the sleep verb but somone is doing surgery on us... painful!
 		target.SetSleeping(0)
+		target.emote("scream")
 		SEND_SIGNAL(target, COMSIG_ADD_MOOD_EVENT, "awake_surgery", /datum/mood_event/surgery_while_awake)
 	return advance
 

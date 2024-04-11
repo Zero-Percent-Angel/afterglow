@@ -90,8 +90,8 @@
 	unit_name = "carbine"
 	export_types = list(
 		/obj/item/gun/ballistic/automatic/m1carbine,
-		/obj/item/gun/ballistic/automatic/sportcarbine,
-		/obj/item/gun/ballistic/rifle/varmint,
+		/obj/item/gun/ballistic/rifle/mag/sportcarbine,
+		/obj/item/gun/ballistic/rifle/mag/varmint,
 		/obj/item/gun/ballistic/rifle/repeater/cowboy,
 		/obj/item/gun/ballistic/rifle/repeater/trail,
 		/obj/item/gun/ballistic/rifle/hunting,
@@ -137,7 +137,7 @@
 	cost = 550
 	unit_name = "semi-automatic rifle"
 	export_types = list(
-		/obj/item/gun/ballistic/rifle/varmint/verminkiller,
+		/obj/item/gun/ballistic/rifle/mag/varmint/verminkiller,
 		/obj/item/gun/ballistic/automatic/combat,
 		/obj/item/gun/energy/laser/plasma/glock,
 		/obj/item/gun/energy/laser/plasma,

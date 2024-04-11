@@ -12,6 +12,7 @@
 /datum/component/storage/concrete/backpack/spear_quiver/Initialize()
 	. = ..()
 	can_hold = typecacheof(list(/obj/item/throwing_star/spear, /obj/item/restraints/legcuffs/bola, /obj/item/melee/smith/javelin))
+	cant_hold = typecacheof(list(/obj/item/storage/backpack))
 
 /// Duffelbag
 /datum/component/storage/concrete/backpack/duffelbag

@@ -105,9 +105,9 @@
 	var/matz_iron = custom_materials[SSmaterials.GetMaterialRef(/datum/material/iron)]
 	var/matz_bp = custom_materials[SSmaterials.GetMaterialRef(/datum/material/blackpowder)]
 	if(iron_to_deduct && matz_iron)
-		newmats[/datum/material/iron] = (matz_iron - iron_to_deduct)
+		newmats[/datum/material/iron] = max((matz_iron - iron_to_deduct), 0)
 	if(powder_to_deduct && matz_bp)
-		newmats[/datum/material/blackpowder] = (matz_bp - (powder_to_deduct * MATS_AMMO_POWDER_BURN_MULT))
+		newmats[/datum/material/blackpowder] = max((matz_bp - (powder_to_deduct * MATS_AMMO_POWDER_BURN_MULT)), 0)
 	if(LAZYLEN(newmats))
 		set_custom_materials(newmats)
 

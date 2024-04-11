@@ -636,14 +636,14 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	name = "sport carbine case"
 
 /obj/item/storage/box/gun/rifle/sportcarbine/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/sportcarbine(src)
+	new /obj/item/gun/ballistic/rifle/mag/sportcarbine(src)
 	new /obj/item/ammo_box/magazine/m22/extended(src) //high cap, just one
 
 /obj/item/storage/box/gun/rifle/varmint
 	name = "varmint rifle case"
 
 /obj/item/storage/box/gun/rifle/varmint/PopulateContents()
-	new /obj/item/gun/ballistic/rifle/varmint(src)
+	new /obj/item/gun/ballistic/rifle/mag/varmint(src)
 	new /obj/item/ammo_box/magazine/m556/rifle/small(src) //no extendeds for you till you find em
 	new /obj/item/ammo_box/magazine/m556/rifle/small(src)
 

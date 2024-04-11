@@ -580,17 +580,21 @@
 	path = /obj/item/clothing/under/f13/ncr/pants
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
 	restricted_desc = "NCRA"
-	restricted_roles = list("NCR Colonel",
-							"NCR Captain",
+	restricted_roles = list("NCR Captain",
 							"NCR Lieutenant",
-							"NCR Sergeant",
+							"NCR Medical Officer",
+							"NCR Sergeant First Class",
+							"NCR Lieutenant",
 							"NCR Heavy Trooper",
+							"NCR Sergeant",
 							"NCR Corporal",
+							"NCR Combat Engineer",
+							"NCR Combat Medic",
 							"NCR Trooper",
 							"NCR Recruit",
 							"NCR Rear Echelon",
 							"NCR Off-Duty"
-							)
+						)
 
 /datum/gear/uniform/ncr/shorts
 	name = "NCR fatigue shorts"
@@ -633,19 +637,6 @@
 	path = /obj/item/clothing/under/rank/security/officer/blueshirt
 	cost = 1
 	subcategory = LOADOUT_SUBCATEGORY_UNIFORM_FACTIONS
-	restricted_desc = "Ripley"
-	restricted_roles = list("Mayor",
-							"Secretary",
-							"Sheriff",
-							"Deputy",
-							"Doctor",
-							"Citizen",
-							"Shopkeeper",
-							"Farmer",
-							"Prospector",
-							"Detective",
-							"Barkeep",
-							)
 
 //Khans
 

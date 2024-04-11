@@ -117,7 +117,7 @@
 /datum/crafting_recipe/bobby_pin
 	name = "Bobby Pin"
 	result = /obj/item/lockpick_set/bobby_pin
-	reqs = 	list(/obj/item/stack/rods)
+	reqs = 	list(/obj/item/stack/rods = 1)
 	time = 10
 	subcategory = CAT_MISCELLANEOUS
 	category = CAT_MISC
@@ -674,7 +674,7 @@
 			/obj/item/stack/ore/blackpowder = 2,
 			/obj/item/assembly/prox_sensor = 2,
 			/obj/item/stack/cable_coil = 20,
-			/obj/item/gun/ballistic/automatic/sportcarbine = 1
+			/obj/item/gun/ballistic/rifle/mag/sportcarbine = 1
 	)
 	time = 5 SECONDS
 	category = CAT_ROBOT
