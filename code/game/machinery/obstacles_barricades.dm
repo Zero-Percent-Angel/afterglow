@@ -455,7 +455,7 @@
 
 /obj/structure/obstacle/barbedwire/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/caltrop, 20, 30, 100, CALTROP_BYPASS_SHOES)
+	AddComponent(/datum/component/caltrop, 20, 30, 100, CALTROP_BYPASS_SHOES|CALTROP_NOSTUN)
 
 /obj/structure/obstacle/barbedwire/wirecutter_act(mob/user, obj/item/tool)
 	user.visible_message(span_warning("[user] cuts apart [src]."), span_notice("You start to cut apart [src]."), "You hear cutting.")

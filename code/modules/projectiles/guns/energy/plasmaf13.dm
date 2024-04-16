@@ -191,7 +191,7 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 2
 	init_firemodes = list(
-		/datum/firemode/burst/two/fast
+		/datum/firemode/burst/two/slower
 	)
 //Multiplas rifle
 /obj/item/gun/energy/laser/plasma/scatter
