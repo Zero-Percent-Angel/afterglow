@@ -197,6 +197,8 @@
 	armor_tier_desc = ARMOR_CLOTHING_SALVAGE
 	custom_price = PRICE_ULTRA_EXPENSIVE
 	strip_delay = 50
+	var/pa_type = /obj/item/clothing/suit/armor/power_armor
+	var/combined_needed_fix_skill = 140
 
 // T-45d
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/raider
@@ -225,6 +227,7 @@
 	desc = "T-45d power armor with servomotors and all valuable components stripped out of it."
 	icon_state = "t45d_salvaged"
 	item_state = "t45d_salvaged"
+	pa_type = /obj/item/clothing/suit/armor/power_armor/t45d
 
 // T-51B
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b
@@ -233,6 +236,9 @@
 	icon_state = "t51b_salvaged"
 	item_state = "t51b_salvaged"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T1)
+	pa_type = /obj/item/clothing/suit/armor/power_armor/t51b
+	combined_needed_fix_skill = 160
+
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/advanced
 	name = "salvaged Enclave power armor"
@@ -240,6 +246,8 @@
 	icon_state = "advanced_salvaged"
 	item_state = "advanced_salvaged"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T1)
+	pa_type = /obj/item/clothing/suit/armor/power_armor/advanced
+	combined_needed_fix_skill = 160
 
 // X-02
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/x02
@@ -248,6 +256,8 @@
 	icon_state = "advanced_salvaged"
 	item_state = "advanced_salvaged"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
+	pa_type = /obj/item/clothing/suit/armor/power_armor/advanced/x02
+	combined_needed_fix_skill = 160
 
 
 // Just generic PA I guess??
@@ -256,6 +266,8 @@
 	desc = "Taking pieces off from a wrecked power armor will at least give you thick plating, but don't expect too much of this shot up, piecemeal armor.."
 	icon_state = "recycled_power"
 	item_state = "recycled_power"
+	pa_type = /obj/item/clothing/suit/armor/power_armor/t45d
+	combined_needed_fix_skill = 160
 
 //Mutie
 /obj/item/clothing/suit/armor/heavy/vest/breastplate/scrap/mutie
@@ -278,6 +290,7 @@
 	item_state = "mutie_power_armor"
 	species_restricted = list("exclude","Human","Ghoul")
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2)
+	pa_type = null
 
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/mutie/ncr
 	name = "large NCR Salvaged Power Armour"

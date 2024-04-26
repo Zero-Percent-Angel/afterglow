@@ -343,35 +343,24 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	var/untinkerable = FALSE
 
 /obj/item/pa_kit/proc/parmor(obj/item/W, mob/user)
-	var/obj/item/clothing/suit/armor/f13/power_armor/A = W
-	//upgrades basic salvaged PA to full PA.
-	//You either need 140 combined or 120 and technophreak to repair t45d.
-	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 120 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
-		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d))
-			new /obj/item/clothing/suit/armor/power_armor/t45d(user.loc)
-			qdel(A)
-			qdel(src)
-			return
-	//You either need 160 combined or 140 and technophreak to repair t51b.
-	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 160) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
-		if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b))
-			new /obj/item/clothing/suit/armor/power_armor/t51b(user.loc)
+	var/obj/item/clothing/suit/armor/heavy/salvaged_pa/A = W
+	if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa) && A.pa_type != null)
+		if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= A.combined_needed_fix_skill) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= (A.combined_needed_fix_skill - 20) && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
+			var/obj/item/clothing/suit/armor/power_armor/pa = new A.pa_type(user.loc)
+			pa.cell = null
+			pa.salvage_step = 4
 			qdel(A)
 			qdel(src)
 			return
 	to_chat(usr, "You have no idea how you would restore [W.name]...")
 
 /obj/item/pa_kit/proc/pahat(obj/item/W, mob/user)
-	var/obj/item/clothing/head/helmet/f13/power_armor/H = W
-	//servo kits are not destroyed on repairing helmets
-	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 120 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
-		if(istype(H,/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d))
-			new /obj/item/clothing/head/helmet/f13/power_armor/t45d(user.loc)
+	var/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/H = W
+	if(istype(H,/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa) && H.pa_type != null)
+		if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= H.combined_needed_fix_skill) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= (H.combined_needed_fix_skill - 20) && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
+			var/obj/item/clothing/head/helmet/f13/power_armor/helm = new H.pa_type(user.loc)
+			helm.salvage_step = 2
 			qdel(H)
-			return
-	if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 160) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= 140 && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
-		if(istype(H, /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b))
-			new /obj/item/clothing/head/helmet/f13/power_armor/t51b(user.loc)
-			qdel(H)
+			qdel(src)
 			return
 	to_chat(usr, "You have no idea how you would restore [W.name]...")
