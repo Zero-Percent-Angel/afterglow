@@ -834,6 +834,8 @@
 	armor = ARMOR_VALUE_SALVAGE
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
 	flags_cover = HEADCOVERSEYES
+	var/pa_type = null
+	var/combined_needed_fix_skill = 140
 
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/raider
 	name = "raider T-45d power helmet"
@@ -883,6 +885,7 @@
 	desc = "It's a salvaged T-45d power armor helmet."
 	icon_state = "t45dhelmet0"
 	item_state = "t45dhelmet0"
+	pa_type = /obj/item/clothing/head/helmet/f13/power_armor/t45d
 
 // T-51B
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b
@@ -891,6 +894,7 @@
 	icon_state = "t51bhelmet0"
 	item_state = "t51bhelmet0"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2)
+	pa_type = /obj/item/clothing/head/helmet/f13/power_armor/t51b
 
 // X-02
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/x02
@@ -899,6 +903,7 @@
 	icon_state = "advanced"
 	item_state = "advanced"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T3)
+	pa_type = /obj/item/clothing/head/helmet/f13/power_armor/x02helmet
 
 // Legion T-45D
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/legion
