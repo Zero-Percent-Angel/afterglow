@@ -250,7 +250,7 @@ GLOBAL_LIST_INIT(anvil_recipes, list(
 	do_smithing_sparks(1, TRUE, src)
 
 	// more fucking sounds after a timer..????????????????????????????????
-	addtimer(CALLBACK(GLOBAL_PROC, .proc/playsound, src, 'sound/effects/clang2.ogg', 40, 2), 15)
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), src, 'sound/effects/clang2.ogg', 40, 2), 15)
 
 	// the stepsdone is a string of characters which are actions made.
 	// Once it is more or equal to 3, call try finish.
