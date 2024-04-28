@@ -337,7 +337,7 @@
 	force_unwielded = 22
 	force_wielded = 44
 
-// Deathclaw Spear-Axe		Keywords: TRIBAL, Damage 25/30, Armor-piercing +0.25, Reach, Wound Bonus
+// Deathclaw Spear-Axe		Keywords: TRIBAL, Damage 25/32, Armor-piercing +0.25, Reach, Wound Bonus
 /obj/item/twohanded/spearaxe
 	name = "deathclaw spear-axe"
 	desc = "An exceptionally crafted, agile spear-axe with a light shaft wrapped in deathclaw leather. It is tipped with a claw from a terrifying beast and well weighted for single-hand use. Attacks fast."
@@ -358,8 +358,9 @@
 	slot_flags = ITEM_SLOT_BELT + SLOT_BACK
 	force = 20
 	force_unwielded = 20
-	force_wielded = 30
+	force_wielded = 36
 	attack_speed = CLICK_CD_MELEE * 0.85 // 6.8
+	armour_penetration = 0.05
 
 
 /////////////////
