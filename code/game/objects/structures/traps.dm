@@ -62,7 +62,7 @@
 
 /obj/structure/trap/proc/on_entered(atom/movable/AM)
 	SIGNAL_HANDLER
-	INVOKE_ASYNC(src, .proc/process_entered, AM)
+	INVOKE_ASYNC(src, PROC_REF(process_entered), AM)
 
 /obj/structure/trap/proc/process_entered(atom/movable/AM)
 	if(last_trigger + time_between_triggers > world.time)

@@ -122,7 +122,7 @@
 
 /obj/item/assembly/mousetrap/proc/on_entered(atom/movable/AM as mob|obj)
 	SIGNAL_HANDLER
-	INVOKE_ASYNC(src, .proc/handle_entered, AM)
+	INVOKE_ASYNC(src, PROC_REF(handle_entered), AM)
 
 
 /obj/item/assembly/mousetrap/on_found(mob/finder)

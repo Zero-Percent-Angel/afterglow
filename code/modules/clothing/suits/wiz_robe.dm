@@ -244,7 +244,7 @@
 		S.foes = book_of_grudges
 		RegisterSignal(S, COMSIG_PARENT_QDELETING, .proc/remove_from_list)
 	ready = FALSE
-	addtimer(CALLBACK(src, .proc/ready_again), cooldown)
+	addtimer(CALLBACK(src, PROC_REF(ready_again)), cooldown)
 
 /datum/action/item_action/stickmen/proc/remove_from_list(datum/source, forced)
 	summoned_stickmen -= source
@@ -273,7 +273,7 @@
 			var/obj/mecha/M = A
 			L = M.occupant
 		if(L && L.stat != DEAD && !HAS_TRAIT(L, TRAIT_DEATHCOMA)) //Taking revenge on the deads would be proposterous.
-			addtimer(CALLBACK(src, .proc/clear_grudge, L), 2 MINUTES, TIMER_OVERRIDE|TIMER_UNIQUE)
+			addtimer(CALLBACK(src, PROC_REF(clear_grudge), L), 2 MINUTES, TIMER_OVERRIDE|TIMER_UNIQUE)
 			if(!book_of_grudges[L])
 				RegisterSignal(L, list(COMSIG_PARENT_QDELETING, COMSIG_MOB_DEATH), .proc/grudge_settled)
 				book_of_grudges[L] = TRUE

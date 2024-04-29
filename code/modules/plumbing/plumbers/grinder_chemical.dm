@@ -46,7 +46,7 @@
 
 /obj/machinery/plumbing/grinder_chemical/proc/on_entered(atom/movable/AM)
 	SIGNAL_HANDLER
-	INVOKE_ASYNC(src, .proc/grind, AM)
+	INVOKE_ASYNC(src, PROC_REF(grind), AM)
 
 /obj/machinery/plumbing/grinder_chemical/proc/grind(atom/AM)
 	if(stat & NOPOWER)

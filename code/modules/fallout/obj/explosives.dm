@@ -135,7 +135,7 @@
 		to_chat(user, span_danger("The mine is already armed!")) //how did we get here
 	if(user.dropItemToGround(src))
 		anchored = TRUE
-		addtimer(CALLBACK(src, .proc/arm), 5 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(arm)), 5 SECONDS)
 		to_chat(user, span_notice("You drop the mine and activate the 5-second arming process."))
 		return
 
@@ -164,7 +164,7 @@
 	if(arrived.movement_type & FLYING)
 		return
 
-	INVOKE_ASYNC(src, .proc/triggermine, arrived)
+	INVOKE_ASYNC(src, PROC_REF(triggermine), arrived)
 
 /obj/item/mine/proc/triggermine(mob/victim)
 	if(triggered)

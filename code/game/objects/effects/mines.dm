@@ -30,7 +30,7 @@
 	if(AM.movement_type & FLYING)
 		return
 
-	INVOKE_ASYNC(src, .proc/triggermine, AM)
+	INVOKE_ASYNC(src, PROC_REF(triggermine), AM)
 
 /obj/effect/mine/proc/triggermine(mob/victim)
 	if(triggered)

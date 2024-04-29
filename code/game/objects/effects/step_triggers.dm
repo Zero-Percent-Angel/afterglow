@@ -26,7 +26,7 @@
 		return
 	if(!ismob(H) && mobs_only)
 		return
-	INVOKE_ASYNC(src, .proc/Trigger, H)
+	INVOKE_ASYNC(src, PROC_REF(Trigger), H)
 
 
 /obj/effect/step_trigger/singularity_act()

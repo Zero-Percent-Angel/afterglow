@@ -276,7 +276,7 @@
 
 /obj/structure/table/rolling/proc/on_entered(atom/OldLoc, Dir)
 	SIGNAL_HANDLER
-	INVOKE_ASYNC(src, .proc/on_move, OldLoc, Dir)
+	INVOKE_ASYNC(src, PROC_REF(on_move), OldLoc, Dir)
 
 /obj/structure/table/rolling/proc/on_move(atom/OldLoc, Dir)
 	for(var/mob/M in OldLoc.contents)//Kidnap everyone on top
@@ -326,7 +326,7 @@
 		return
 	// Don't break if they're just flying past
 	if(AM.throwing)
-		addtimer(CALLBACK(src, .proc/throw_check, AM), 5)
+		addtimer(CALLBACK(src, PROC_REF(throw_check), AM), 5)
 	else
 		check_break(AM)
 

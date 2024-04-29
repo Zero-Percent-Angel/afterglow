@@ -125,7 +125,7 @@ SUBSYSTEM_DEF(matchmaking)
 	for(var/mob/living/bachelor as anything in bachelors)
 		if(bachelor == pref_holder || bachelor.stat != CONSCIOUS || !bachelor.mind || !bachelor.client)
 			continue
-		
+
 		var/bachelor_ref = REF(bachelor)
 		if(bachelor_ref in SSmatchmaking.matches_made[candidate_ref])
 			continue // Already matched with this one.
@@ -161,7 +161,7 @@ SUBSYSTEM_DEF(matchmaking)
 /datum/matchmaking_pref/proc/enact_match(mob/living/target)
 	matches_found++
 	if(spawn_time > 0)
-		addtimer(CALLBACK(src, .proc/do_enact_match, WEAKREF(target)), spawn_time)
+		addtimer(CALLBACK(src, PROC_REF(do_enact_match), WEAKREF(target)), spawn_time)
 	else
 		do_enact_match(target)
 	if(matches_found >= matches_aimed)

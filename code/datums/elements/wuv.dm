@@ -42,9 +42,9 @@
 	//we want to delay the effect to be displayed after the mob is petted, not before.
 	switch(user.a_intent)
 		if(INTENT_HARM)
-			addtimer(CALLBACK(src, .proc/kick_the_dog, source, user), 1)
+			addtimer(CALLBACK(src, PROC_REF(kick_the_dog), source, user), 1)
 		if(INTENT_HELP)
-			addtimer(CALLBACK(src, .proc/pet_the_dog, source, user), 1)
+			addtimer(CALLBACK(src, PROC_REF(pet_the_dog), source, user), 1)
 
 /datum/element/wuv/proc/pet_the_dog(mob/target, mob/user)
 	if(QDELETED(target) || QDELETED(user) || target.stat != CONSCIOUS)

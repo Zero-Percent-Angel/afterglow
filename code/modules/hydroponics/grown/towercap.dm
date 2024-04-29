@@ -290,7 +290,7 @@
 /obj/structure/bonfire/proc/on_entered(atom/movable/AM)
 	SIGNAL_HANDLER
 	if(burning & !grill)
-		INVOKE_ASYNC(src, .proc/Burn)
+		INVOKE_ASYNC(src, PROC_REF(Burn))
 
 /obj/structure/bonfire/proc/Burn()
 	var/turf/current_location = get_turf(src)

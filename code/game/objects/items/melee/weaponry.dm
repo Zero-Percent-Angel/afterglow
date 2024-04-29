@@ -542,7 +542,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 /obj/item/circlegame/proc/ownerExamined(mob/living/owner, mob/living/sucker)
 	if(!istype(sucker) || !in_range(owner, sucker))
 		return
-	addtimer(CALLBACK(src, .proc/waitASecond, owner, sucker), 4)
+	addtimer(CALLBACK(src, PROC_REF(waitASecond), owner, sucker), 4)
 
 /// Stage 2: Fear sets in
 /obj/item/circlegame/proc/waitASecond(mob/living/owner, mob/living/sucker)
@@ -551,10 +551,10 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 	if(owner == sucker) // big mood
 		to_chat(owner, span_danger("Wait a second... you just looked at your own [src.name]!"))
-		addtimer(CALLBACK(src, .proc/selfGottem, owner), 10)
+		addtimer(CALLBACK(src, PROC_REF(selfGottem), owner), 10)
 	else
 		to_chat(sucker, span_danger("Wait a second... was that a-"))
-		addtimer(CALLBACK(src, .proc/GOTTEM, owner, sucker), 6)
+		addtimer(CALLBACK(src, PROC_REF(GOTTEM), owner, sucker), 6)
 
 /// Stage 3A: We face our own failures
 /obj/item/circlegame/proc/selfGottem(mob/living/owner)

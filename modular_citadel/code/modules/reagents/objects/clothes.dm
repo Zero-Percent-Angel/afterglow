@@ -45,7 +45,7 @@
 /obj/item/clothing/head/hattip/dropped(mob/M)
 	. = ..()
 	UnregisterSignal(M, COMSIG_MOB_SAY)
-	addtimer(CALLBACK(src, .proc/root_and_toot), 200)
+	addtimer(CALLBACK(src, PROC_REF(root_and_toot)), 200)
 
 /obj/item/clothing/head/hattip/proc/root_and_toot()
 	if(QDELETED(src) || isnull(loc))

@@ -3,7 +3,7 @@ SUBSYSTEM_DEF(waster_spawn)
 	wait = 20 MINUTES
 	var/successful_firing = 0
 	var/allowed_firings = 90
-	var/chance_of_fire = 80 
+	var/chance_of_fire = 80
 
 
 /datum/controller/subsystem/waster_spawn/fire(resumed = 0)
@@ -19,7 +19,7 @@ SUBSYSTEM_DEF(waster_spawn)
 	if(!prob(chance_of_fire))
 		return
 	successful_firing++
-	addtimer(CALLBACK(src, .proc/spawn_waster), 10 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(spawn_waster)), 10 SECONDS)
 
 /datum/controller/subsystem/waster_spawn/proc/spawn_waster()
 	var/list/possible_positions = list()

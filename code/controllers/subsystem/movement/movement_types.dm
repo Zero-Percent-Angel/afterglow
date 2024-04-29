@@ -378,7 +378,7 @@
 
 /datum/move_loop/has_target/jps/start_loop()
 	. = ..()
-	INVOKE_ASYNC(src, .proc/recalculate_path)
+	INVOKE_ASYNC(src, PROC_REF(recalculate_path))
 
 /datum/move_loop/has_target/jps/Destroy()
 	id = null //Kill me
@@ -399,7 +399,7 @@
 
 /datum/move_loop/has_target/jps/move()
 	if(!length(movement_path))
-		INVOKE_ASYNC(src, .proc/recalculate_path)
+		INVOKE_ASYNC(src, PROC_REF(recalculate_path))
 		if(!length(movement_path))
 			return FALSE
 
@@ -413,7 +413,7 @@
 	if(get_turf(moving) == next_step)
 		movement_path.Cut(1,2)
 	else
-		INVOKE_ASYNC(src, .proc/recalculate_path)
+		INVOKE_ASYNC(src, PROC_REF(recalculate_path))
 		return FALSE
 
 

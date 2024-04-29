@@ -64,13 +64,13 @@
 	/// The list of z-levels that can reasonably see the weather coming and get messages about it
 	var/list/impacted_z_levels = ABOVE_GROUND_Z_LEVELS
 
-	/// Since it's above everything else, this is the layer used by default. TURF_LAYER is below mobs and walls if you need to use that. 
-	var/overlay_layer = AREA_LAYER 
+	/// Since it's above everything else, this is the layer used by default. TURF_LAYER is below mobs and walls if you need to use that.
+	var/overlay_layer = AREA_LAYER
 	/// Plane for the overlay
 	var/overlay_plane = BLACKNESS_PLANE
-	/// If the weather has no purpose but aesthetics. 
+	/// If the weather has no purpose but aesthetics.
 	var/aesthetic = FALSE
-	/// Used by mobs to prevent them from being affected by the weather 
+	/// Used by mobs to prevent them from being affected by the weather
 	var/immunity_type = "storm"
 
 	/// The stage of the weather, from 1-4
@@ -85,7 +85,7 @@
 	var/barometer_predictable = FALSE
 	/// For barometers to know when the next storm will hit
 	var/next_hit_time = 0
-	
+
 	var/affects_turfs = FALSE //Does this weather affect turfs at all?
 	var/turfs_impacted = FALSE // Did this weather already impact turfs?
 	var/carbons_only = FALSE //Does this weather affect only carbon mobs?
@@ -136,7 +136,7 @@
 	START_PROCESSING(SSweather, src) //The reason this doesn't start and stop at main stage is because processing list is also used to see active running weathers (for example, you wouldn't want two ash storms starting at once.)
 	update_areas()
 	alert_players(telegraph_message, telegraph_sound)
-	addtimer(CALLBACK(src, .proc/start), telegraph_duration)
+	addtimer(CALLBACK(src, PROC_REF(start)), telegraph_duration)
 
 /**
  * Starts the actual weather and effects from it
@@ -151,7 +151,7 @@
 	stage = MAIN_STAGE
 	update_areas()
 	alert_players(weather_message, weather_sound)
-	addtimer(CALLBACK(src, .proc/wind_down), weather_duration)
+	addtimer(CALLBACK(src, PROC_REF(wind_down)), weather_duration)
 
 /**
  * Weather enters the winding down phase, stops effects
@@ -166,7 +166,7 @@
 	stage = WIND_DOWN_STAGE
 	update_areas()
 	alert_players(end_message, end_sound)
-	addtimer(CALLBACK(src, .proc/end), end_duration)
+	addtimer(CALLBACK(src, PROC_REF(end)), end_duration)
 
 /datum/weather/proc/alert_players(message, sound_play)
 	if(!message && !sound_play)

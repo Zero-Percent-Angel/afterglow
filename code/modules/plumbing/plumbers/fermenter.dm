@@ -48,7 +48,7 @@
 
 /obj/machinery/plumbing/fermenter/proc/on_entered(atom/movable/AM)
 	SIGNAL_HANDLER
-	INVOKE_ASYNC(src, .proc/ferment, AM)
+	INVOKE_ASYNC(src, PROC_REF(ferment), AM)
 
 /obj/machinery/plumbing/fermenter/proc/ferment(atom/AM)
 	if(stat & NOPOWER)

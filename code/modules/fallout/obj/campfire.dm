@@ -63,7 +63,7 @@
 /obj/structure/campfire/proc/on_entered(atom/movable/AM)
 	SIGNAL_HANDLER
 	if(fired)
-		INVOKE_ASYNC(src, .proc/burn_process)
+		INVOKE_ASYNC(src, PROC_REF(burn_process))
 
 /obj/structure/campfire/process()
 	if(fuel <= 0)

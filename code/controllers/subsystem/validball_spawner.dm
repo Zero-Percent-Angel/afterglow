@@ -8,7 +8,7 @@ SUBSYSTEM_DEF(validball)
 	var/list/valid_balls = list() // for tracking the individual object
 	var/list/valid_ball_spawners = list() // for making sure the spawners spawn the right amount of them
 	var/list/vb_reports = list() // holds a list of strings: the name of the ball, who held it last, and who else held it
-	
+
 /datum/controller/subsystem/validball/Initialize(timeofday)
 	spawn_validballs()
 	return ..()
@@ -25,7 +25,7 @@ SUBSYSTEM_DEF(validball)
 			message_admins("Validball failed to spawn after [initial(tries_left)] tries! Validball is not go!")
 			return
 		message_admins("Validball couldn't spawn, trying again in 1 second. [tries_left] tries left!")
-		addtimer(CALLBACK(src, .proc/spawn_validballs), 1 SECONDS) // try again later
+		addtimer(CALLBACK(src, PROC_REF(spawn_validballs)), 1 SECONDS) // try again later
 		return
 	if(num_to_spawn > LAZYLEN(valid_ball_spawners))
 		message_admins("Uh oh, config wants more validballs than there are available spawners! Validball is still go, but every validball spawner will spawn a validball. Have fun!")

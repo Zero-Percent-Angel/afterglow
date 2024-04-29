@@ -137,7 +137,7 @@
 		target.update_icon()
 		if(!nadeassembly)
 			to_chat(user, span_notice("You plant the bomb. Timer counting down from [det_time]."))
-			addtimer(CALLBACK(src, .proc/prime), det_time*10)
+			addtimer(CALLBACK(src, PROC_REF(prime)), det_time*10)
 		else
 			qdel(src)	//How?
 

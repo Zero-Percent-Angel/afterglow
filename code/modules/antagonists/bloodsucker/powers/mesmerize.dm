@@ -116,7 +116,7 @@
 	L.apply_status_effect(STATUS_EFFECT_MESMERIZE, 30)
 	RegisterSignal(target, COMSIG_MOVABLE_MOVED, .proc/ContinueTarget)
 	// 5 second windup
-	addtimer(CALLBACK(src, .proc/apply_effects, L, target, power_time), 6 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(apply_effects), L, target, power_time), 6 SECONDS)
 
 /datum/action/bloodsucker/targeted/mesmerize/proc/apply_effects(aggressor, victim, power_time)
 	var/mob/living/carbon/target = victim

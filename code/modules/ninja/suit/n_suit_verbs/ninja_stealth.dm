@@ -21,7 +21,7 @@ Contents:
 		animate(affecting, alpha = 15, time = 3 SECONDS)
 		affecting.visible_message(span_warning("[affecting.name] vanishes into thin air!"), \
 						span_notice("You are now mostly invisible to normal detection."))
-		addtimer(CALLBACK(src, .proc/enable_signals), 3 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(enable_signals)), 3 SECONDS)
 
 /obj/item/clothing/suit/space/space_ninja/proc/enable_signals()
 	if(!affecting)

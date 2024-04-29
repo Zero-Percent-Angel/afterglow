@@ -65,7 +65,7 @@
 		obj_flags |= EMAGGED
 		you_die_in_the_game_you_die_for_real = TRUE
 		sparks.start()
-		addtimer(CALLBACK(src, .proc/emagNotify), 150)
+		addtimer(CALLBACK(src, PROC_REF(emagNotify)), 150)
 		return TRUE
 
 /obj/machinery/vr_sleeper/update_icon_state()
@@ -269,7 +269,7 @@
 	vr_area = get_base_area(src)
 	if(!vr_area)
 		return INITIALIZE_HINT_QDEL
-	addtimer(CALLBACK(src, .proc/clean_up), 3 MINUTES, TIMER_LOOP)
+	addtimer(CALLBACK(src, PROC_REF(clean_up)), 3 MINUTES, TIMER_LOOP)
 
 /obj/effect/vr_clean_master/proc/clean_up()
 	if (!vr_area)
@@ -285,4 +285,4 @@
 		if(!QDELETED(M) && (M in contents) && M.stat == DEAD)
 			qdel(M)
 		corpse_party -= M
-	addtimer(CALLBACK(src, .proc/clean_up), 3 MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(clean_up)), 3 MINUTES)

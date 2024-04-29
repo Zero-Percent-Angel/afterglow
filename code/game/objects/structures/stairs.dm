@@ -67,7 +67,7 @@
 
 	if(!isobserver(leaving) && isTerminator() && direction == dir)
 		leaving.set_currently_z_moving(CURRENTLY_Z_ASCENDING)
-		INVOKE_ASYNC(src, .proc/stair_ascend, leaving)
+		INVOKE_ASYNC(src, PROC_REF(stair_ascend), leaving)
 		leaving.Bump(src)
 		return COMPONENT_ATOM_BLOCK_EXIT
 

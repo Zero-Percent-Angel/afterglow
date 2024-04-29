@@ -20,7 +20,7 @@
 
 /obj/machinery/telecomms/server/proc/disrupt()
 	interference = TRUE
-	addtimer(CALLBACK(src, .proc/recover), 2 MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(recover)), 2 MINUTES)
 
 /obj/machinery/telecomms/server/proc/recover()
 	interference = FALSE

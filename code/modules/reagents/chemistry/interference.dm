@@ -9,9 +9,9 @@
 	//Vomit fit
 	if (rng < 21)
 		to_chat(src, span_danger("You feel deathly ill."))
-		addtimer(CALLBACK(src, .proc/vomit), 5 SECONDS)
-		addtimer(CALLBACK(src, .proc/vomit), 10 SECONDS)
-		addtimer(CALLBACK(src, .proc/vomit), 15 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(vomit)), 5 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(vomit)), 10 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(vomit)), 15 SECONDS)
 		adjustToxLoss(rng)
 
 	//addiction
@@ -30,7 +30,7 @@
 	else if (rng < 60)
 		to_chat(src, span_danger("You feel slow and sluggish."))
 		add_movespeed_modifier(/datum/movespeed_modifier/bad_trip)
-		addtimer(CALLBACK(src, .proc/remove_movespeed_modifier, /datum/movespeed_modifier/bad_trip), 60 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(remove_movespeed_modifier), /datum/movespeed_modifier/bad_trip), 60 SECONDS)
 
 	//painful damage
 	else if (rng < 80)
@@ -50,7 +50,7 @@
 		AdjustUnconscious(30, TRUE, TRUE)
 		adjustStaminaLossBuffered(150)
 		if (prob(50))
-			addtimer(CALLBACK(src, .proc/AdjustUnconscious, 30, TRUE, TRUE), 20 SECONDS)
+			addtimer(CALLBACK(src, PROC_REF(AdjustUnconscious), 30, TRUE, TRUE), 20 SECONDS)
 
 	//stam damage
 	else

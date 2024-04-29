@@ -18,7 +18,7 @@
 	if(!IS_HERETIC(user))
 		return
 	if(!is_in_use)
-		INVOKE_ASYNC(src, .proc/activate , user)
+		INVOKE_ASYNC(src, PROC_REF(activate ), user)
 
 /obj/effect/eldritch/attackby(obj/item/I, mob/living/user)
 	. = ..()

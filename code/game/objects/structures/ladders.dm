@@ -227,7 +227,7 @@
 	if(!LAZYLEN(tool_list))
 		to_chat(user, span_warning("Well that's awkward, [src] couldn't generate a menu! This is probably a bug, please call 1-800-IMCODER"))
 		return
-	var/result = show_radial_menu(user, src, tool_list, custom_check = CALLBACK(src, .proc/check_menu, user), require_near = TRUE, tooltips = TRUE)
+	var/result = show_radial_menu(user, src, tool_list, custom_check = CALLBACK(src, PROC_REF(check_menu), user), require_near = TRUE, tooltips = TRUE)
 	if (!is_ghost && !in_range(src, user))
 		return  // nice try
 	switch(result)

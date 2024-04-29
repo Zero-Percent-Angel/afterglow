@@ -53,7 +53,7 @@
 	RegisterSignal(src, COMSIG_NOTIFY_JOIN, .proc/join_as_defective_clone)
 	notify_ghosts("[clonename] is available to play as a defective clone.", source = src, action = NOTIFY_JOIN, flashwindow = FALSE)
 
-	addtimer(CALLBACK(src, .proc/finish_cloning), 30 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(finish_cloning)), 30 SECONDS)
 
 	return TRUE
 

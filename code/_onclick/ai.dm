@@ -79,7 +79,7 @@
 		return
 	if(waypoint_mode)
 		waypoint_mode = FALSE
-		INVOKE_ASYNC(src, .proc/set_waypoint, A)
+		INVOKE_ASYNC(src, PROC_REF(set_waypoint), A)
 		return
 
 	A.attack_ai(src)
@@ -113,7 +113,7 @@
 	A.AICtrlClick(src)
 /mob/living/silicon/ai/AltClickOn(atom/A)
 	A.AIAltClick(src)
-	
+
 
 /*
 	The following criminally helpful code is just the previous code cleaned up;
