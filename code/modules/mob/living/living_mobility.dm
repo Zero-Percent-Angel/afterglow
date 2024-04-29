@@ -12,7 +12,7 @@
 			SIGNAL_ADDTRAIT(TRAIT_MOBILITY_NOUSE),
 			SIGNAL_REMOVETRAIT(TRAIT_MOBILITY_NOUSE),
 			),
-		.proc/update_mobility
+		PROC_REF(update_mobility)
 		)
 
 //Stuff like mobility flag updates, resting updates, etc.
@@ -184,7 +184,7 @@
 			add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/limbless, multiplicative_slowdown = limbless_slowdown)
 		else
 			remove_movespeed_modifier(/datum/movespeed_modifier/limbless)
-	
+
 	update_movespeed()
 
 	return mobility_flags
