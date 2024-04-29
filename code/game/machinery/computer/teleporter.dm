@@ -150,7 +150,7 @@
 			var/mob/living/M = target
 			var/obj/item/implant/tracking/I = locate() in M.implants
 			if(I)
-				RegisterSignal(I, COMSIG_IMPLANT_REMOVING, .proc/untarget_implant)
+				RegisterSignal(I, COMSIG_IMPLANT_REMOVING, PROC_REF(untarget_implant))
 				imp_t = I
 			else
 				target = null

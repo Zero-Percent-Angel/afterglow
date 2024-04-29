@@ -350,7 +350,7 @@ GLOBAL_LIST_EMPTY(playmob_cooldowns)
 		call_backup = new CB
 		AddAbility(call_backup)
 	LAZYADD(GLOB.mob_spawners[initial(name)], src)
-	RegisterSignal(src, COMSIG_MOB_GHOSTIZE_FINAL, .proc/set_ghost_timeout)
+	RegisterSignal(src, COMSIG_MOB_GHOSTIZE_FINAL, PROC_REF(set_ghost_timeout))
 	if(istype(user))
 		lazarused = TRUE
 		lazarused_by = WEAKREF(user)

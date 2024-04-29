@@ -115,7 +115,7 @@
 
 /obj/structure/closet/supplypod/proc/handleReturningClose(atom/movable/holder, returntobay)
 	opened = FALSE
-	INVOKE_ASYNC(holder, .proc/setClosed) //Use the INVOKE_ASYNC proc to call setClosed() on whatever the holder may be, without giving the atom/movable base class a setClosed() proc definition
+	INVOKE_ASYNC(holder, PROC_REF(setClosed)) //Use the INVOKE_ASYNC proc to call setClosed() on whatever the holder may be, without giving the atom/movable base class a setClosed() proc definition
 	for(var/atom/movable/O in get_turf(holder))
 		if ((ismob(O) && !isliving(O)) || (is_type_in_typecache(O, GLOB.blacklisted_cargo_types) && !isliving(O))) //We dont want to take ghosts with us, and we don't want blacklisted items going, but we allow mobs.
 			continue
@@ -196,7 +196,7 @@
 			return
 	if (openingSound)
 		playsound(get_turf(holder), openingSound, soundVolume, 0, 0) //Special admin sound to play
-	INVOKE_ASYNC(holder, .proc/setOpened) //Use the INVOKE_ASYNC proc to call setOpened() on whatever the holder may be, without giving the atom/movable base class a setOpened() proc definition
+	INVOKE_ASYNC(holder, PROC_REF(setOpened)) //Use the INVOKE_ASYNC proc to call setOpened() on whatever the holder may be, without giving the atom/movable base class a setOpened() proc definition
 	if (style == STYLE_SEETHROUGH)
 		update_icon()
 	for (var/atom/movable/O in holder.contents) //Go through the contents of the holder

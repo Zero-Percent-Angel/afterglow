@@ -17,7 +17,7 @@
 
 /obj/structure/destructible/tribal_torch/Initialize()
 	. = ..()
-	RegisterSignal(src, COMSIG_ATOM_LICKED, .proc/smooch_fire)
+	RegisterSignal(src, COMSIG_ATOM_LICKED, PROC_REF(smooch_fire))
 
 /obj/structure/destructible/tribal_torch/Destroy()
 	. = ..()

@@ -283,7 +283,7 @@ Difficulty: Extremely Hard
 		return
 	forceMove(user)
 	to_chat(user, span_notice("You feel a bit safer... but a demonic presence lurks in the back of your head..."))
-	RegisterSignal(user, COMSIG_MOB_DEATH, .proc/resurrect)
+	RegisterSignal(user, COMSIG_MOB_DEATH, PROC_REF(resurrect))
 
 /// Resurrects the target when they die by cloning them into a new duplicate body and transferring their mind to the clone on a safe station turf
 /obj/item/resurrection_crystal/proc/resurrect(mob/living/carbon/user, gibbed)
@@ -344,7 +344,7 @@ Difficulty: Extremely Hard
 	icon_state = "frozen"
 
 /datum/status_effect/ice_block_talisman/on_apply()
-	RegisterSignal(owner, COMSIG_MOVABLE_PRE_MOVE, .proc/owner_moved)
+	RegisterSignal(owner, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(owner_moved))
 	if(!owner.stat)
 		to_chat(owner, span_userdanger("You become frozen in a cube!"))
 	cube = icon('icons/effects/freeze.dmi', "ice_cube")

@@ -264,7 +264,7 @@ the new instance inside the host to be updated to the template's stats.
 /mob/camera/disease/proc/set_following(mob/living/L)
 	if(following_host)
 		UnregisterSignal(following_host, COMSIG_MOVABLE_MOVED)
-	RegisterSignal(L, COMSIG_MOVABLE_MOVED, .proc/follow_mob)
+	RegisterSignal(L, COMSIG_MOVABLE_MOVED, PROC_REF(follow_mob))
 	following_host = L
 	follow_mob()
 

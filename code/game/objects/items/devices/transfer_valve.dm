@@ -20,7 +20,7 @@
 	. = ..()
 	
 	var/static/list/loc_connections = list(
-		COMSIG_ATOM_ENTERED = .proc/on_entered,
+		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
 
@@ -85,7 +85,7 @@
 /obj/item/transfer_valve/proc/on_entered(atom/movable/AM as mob|obj)
 	SIGNAL_HANDLER
 	if(attached_device)
-		INVOKE_ASYNC(attached_device, .proc/on_entered, AM)
+		INVOKE_ASYNC(attached_device, PROC_REF(on_entered), AM)
 
 /obj/item/transfer_valve/on_attack_hand()//Triggers mousetraps
 	. = ..()

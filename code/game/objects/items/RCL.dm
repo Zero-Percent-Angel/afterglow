@@ -171,7 +171,7 @@ obj/item/rcl/proc/getMobhook(mob/to_hook)
 		return
 	if(listeningTo)
 		UnregisterSignal(listeningTo, COMSIG_MOVABLE_MOVED)
-	RegisterSignal(to_hook, COMSIG_MOVABLE_MOVED, .proc/trigger)
+	RegisterSignal(to_hook, COMSIG_MOVABLE_MOVED, PROC_REF(trigger))
 	listeningTo = to_hook
 
 /obj/item/rcl/proc/trigger(mob/user)

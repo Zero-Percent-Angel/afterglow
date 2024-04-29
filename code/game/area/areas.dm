@@ -275,7 +275,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 				A.power_light = FALSE
 				A.power_equip = FALSE
 				A.power_environ = FALSE
-			INVOKE_ASYNC(A, .proc/power_change)
+			INVOKE_ASYNC(A, PROC_REF(power_change))
 	STOP_PROCESSING(SSobj, src)
 	QDEL_NULL(ambience_area)
 	remove_from_weather_list()
@@ -537,7 +537,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 			A.power_light = power_light
 			A.power_equip = power_equip
 			A.power_environ = power_environ
-			INVOKE_ASYNC(A, .proc/power_change)
+			INVOKE_ASYNC(A, PROC_REF(power_change))
 	update_icon()
 
 /area/proc/usage(chan)

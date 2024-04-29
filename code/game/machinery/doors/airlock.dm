@@ -344,7 +344,7 @@
 			if(cyclelinkedairlock.operating)
 				cyclelinkedairlock.delayed_close_requested = TRUE
 			else
-				addtimer(CALLBACK(cyclelinkedairlock, .proc/close), 2)
+				addtimer(CALLBACK(cyclelinkedairlock, PROC_REF(close)), 2)
 	..()
 
 /obj/machinery/door/airlock/proc/isElectrified()
@@ -1071,9 +1071,9 @@
 			if(!axe.wielded)
 				to_chat(user, span_warning("You need to be wielding \the [axe] to do that!"))
 				return
-			INVOKE_ASYNC(src, (density ? .proc/open : .proc/close), 2)
+			INVOKE_ASYNC(src, (density ? PROC_REF(open) : PROC_REF(close)), 2)
 		else
-			INVOKE_ASYNC(src, (density ? .proc/open : .proc/close), 2)
+			INVOKE_ASYNC(src, (density ? PROC_REF(open) : PROC_REF(close)), 2)
 
 	if(istype(I, /obj/item/crowbar/power))
 		if(hasPower() && isElectrified())

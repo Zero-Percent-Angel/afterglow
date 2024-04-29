@@ -31,7 +31,7 @@
 	T.min_distance = 2
 	active = TRUE
 	user.toggle_throw_mode()
-	RegisterSignal(user, COMSIG_CARBON_TACKLED, .proc/DelayedDeactivatePower)
+	RegisterSignal(user, COMSIG_CARBON_TACKLED, PROC_REF(DelayedDeactivatePower))
 	while(B && ContinueActive(user))
 		B.AddBloodVolume(-0.1)
 		sleep(5)

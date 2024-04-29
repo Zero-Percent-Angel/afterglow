@@ -47,10 +47,10 @@
 	loot_restriction = restriction
 	maximum_loot_per_player = max_per_player
 	if(can_use_hands)
-		RegisterSignal(target, list(COMSIG_ATOM_ATTACK_HAND, COMSIG_ATOM_ATTACK_PAW), .proc/scavenge_barehanded)
+		RegisterSignal(target, list(COMSIG_ATOM_ATTACK_HAND, COMSIG_ATOM_ATTACK_PAW), PROC_REF(scavenge_barehanded))
 	if(tool_types)
-		RegisterSignal(target, COMSIG_PARENT_ATTACKBY, .proc/scavenge_tool)
-	RegisterSignal(target, COMSIG_PARENT_EXAMINE, .proc/on_examine)
+		RegisterSignal(target, COMSIG_PARENT_ATTACKBY, PROC_REF(scavenge_tool))
+	RegisterSignal(target, COMSIG_PARENT_EXAMINE, PROC_REF(on_examine))
 
 /datum/element/scavenging/Detach(atom/target)
 	. = ..()

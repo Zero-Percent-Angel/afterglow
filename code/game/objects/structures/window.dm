@@ -95,7 +95,7 @@ GLOBAL_LIST_EMPTY(electrochromatic_window_lookup)
 			electrochromatic_dim()
 
 	var/static/list/loc_connections = list(
-		COMSIG_ATOM_EXIT = .proc/on_exit,
+		COMSIG_ATOM_EXIT = PROC_REF(on_exit),
 	)
 
 	if (flags_1 & ON_BORDER_1)

@@ -39,7 +39,7 @@ GLOBAL_LIST_INIT(fish_rates, list(
 		return
 	if(current_user)
 		UnregisterSignal(current_user, COMSIG_MOVABLE_MOVED)
-	RegisterSignal(user, COMSIG_MOVABLE_MOVED, .proc/falsify_inuse)
+	RegisterSignal(user, COMSIG_MOVABLE_MOVED, PROC_REF(falsify_inuse))
 	current_user = user
 
 /obj/item/fishingrod/dropped(mob/user)

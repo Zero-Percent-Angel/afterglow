@@ -55,8 +55,8 @@
 		g1 = GETGREENPART(default_color)
 		b1 = GETBLUEPART(default_color)
 		spec_updatehealth(H)
-		RegisterSignal(C, COMSIG_ATOM_EMAG_ACT, .proc/on_emag_act)
-		RegisterSignal(C, COMSIG_ATOM_EMP_ACT, .proc/on_emp_act)
+		RegisterSignal(C, COMSIG_ATOM_EMAG_ACT, PROC_REF(on_emag_act))
+		RegisterSignal(C, COMSIG_ATOM_EMP_ACT, PROC_REF(on_emp_act))
 		ethereal_light = H.mob_light()
 
 /datum/species/ethereal/on_species_loss(mob/living/carbon/human/C, datum/species/new_species, pref_load)
