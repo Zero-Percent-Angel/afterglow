@@ -35,6 +35,7 @@
 	var/breakout_time = 300
 	///Cryo will continue to treat people with 0 damage but existing wounds, but will sound off when damage healing is done in case doctors want to directly treat the wounds instead
 	var/treating_wounds = FALSE
+	var/datum/gas_mixture/mock_air
 
 	fair_market_price = 10
 	payment_department = ACCOUNT_MED
@@ -48,6 +49,10 @@
 	radio.subspace_transmission = TRUE
 	radio.canhear_range = 0
 	radio.recalculateChannels()
+	mock_air = new /datum/gas_mixture(2500)
+	mock_air.set_moles(GAS_O2, 104)
+	mock_air.mark_immutable()
+	mock_air.set_temperature(80)
 
 /obj/machinery/atmospherics/components/unary/cryo_cell/on_construction()
 	..(dir, dir)
@@ -198,9 +203,17 @@
 			radio.talk_into(src, msg, radio_channel)
 			return
 
-	var/datum/gas_mixture/air1 = airs[1]
+	if(mock_air.total_moles())
+		var/temperature_delta = mock_air.return_temperature() - mob_occupant.bodytemperature
+		var/cold_protection = 0
+		if(ishuman(occupant))
+			var/mob/living/carbon/human/H = occupant
+			cold_protection = H.get_thermal_protection(mock_air.return_temperature(), TRUE)
+		if(abs(temperature_delta) > 1)
+			var/air_heat_capacity = mock_air.heat_capacity()
+			var/heat = ((1 - cold_protection) * 0.1 + conduction_coefficient) * temperature_delta * (air_heat_capacity * heat_capacity / (air_heat_capacity + heat_capacity))
+			mob_occupant.adjust_bodytemperature(heat / heat_capacity, TCMB)
 
-	if(air1.total_moles())
 		if(mob_occupant.bodytemperature < T0C) // Sleepytime. Why? More cryo magic.
 			// temperature factor goes from 1 to about 2.5
 			var/amount = max(1, (4 * log(T0C - mob_occupant.bodytemperature)) - 20) * knockout_factor * base_knockout
@@ -210,7 +223,6 @@
 			if(reagent_transfer == 0) // Magically transfer reagents. Because cryo magic.
 				beaker.reagents.trans_to(occupant, 1, efficiency * 0.25) // Transfer reagents.
 				beaker.reagents.reaction(occupant, VAPOR)
-				air1.adjust_moles(GAS_O2, -max(0,air1.get_moles(GAS_O2) - 2 / efficiency)) //Let's use gas for this
 			if(++reagent_transfer >= 10 * efficiency) // Throttle reagent transfer (higher efficiency will transfer the same amount but consume less from the beaker).
 				reagent_transfer = 0
 
@@ -221,7 +233,7 @@
 
 	if(!on)
 		return
-
+	/*
 	var/datum/gas_mixture/air1 = airs[1]
 
 	if(!nodes[1] || !airs[1] || air1.get_moles(GAS_O2) < 5) // Turn off if the machine won't work.
@@ -247,6 +259,7 @@
 			mob_occupant.adjust_bodytemperature(heat / heat_capacity, TCMB)
 
 		air1.set_temperature(max(air1.return_temperature() - 0.5 / efficiency)) // Magically consume gas? Why not, we run on cryo magic.
+		*/
 
 /obj/machinery/atmospherics/components/unary/cryo_cell/power_change()
 	..()
@@ -380,8 +393,7 @@
 		else
 			data["occupant"]["temperaturestatus"] = "bad"
 
-	var/datum/gas_mixture/air1 = airs[1]
-	data["cellTemperature"] = round(air1.return_temperature(), 1)
+	data["cellTemperature"] = round(mock_air.return_temperature(), 1)
 
 	data["isBeakerLoaded"] = beaker ? TRUE : FALSE
 	var/beakerContents = list()

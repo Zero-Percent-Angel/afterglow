@@ -174,7 +174,10 @@ we use a hook instead
 	return local_gas_mix
 /datum/gas_mixture/proc/multiply(factor)
 /datum/gas_mixture/proc/get_last_share()
+
 /datum/gas_mixture/proc/clear()
+	local_gas_mix = list()
+	temp = T20C
 
 /datum/gas_mixture/proc/adjust_moles(gas_type, amt = 0)
 	set_moles(gas_type, clamp(get_moles(gas_type) + amt,0,INFINITY))
@@ -307,6 +310,26 @@ we use a hook instead
 	//Gets how much fuel for fires (not counting trit/plasma!) this gas has, optionally at a given temperature.
 
 /proc/equalize_all_gases_in_list(list/L)
+	var/total_vol = 0
+	var/total_mol = 0
+	var/average_temp = 0
+	for (var/datum/gas_mixture/GM in L)
+		total_vol += GM.return_volume()
+		total_mol += GM.total_moles()
+
+	//fuck all here and we don't want to divide by zero
+	if (total_mol == 0)
+		return
+	for (var/datum/gas_mixture/GM in L)
+		average_temp += (GM.return_temperature() * GM.total_moles()/total_mol)
+	var/datum/gas_mixture/temp_mixer = new /datum/gas_mixture(total_vol)
+	temp_mixer.set_temperature(average_temp)
+	for (var/datum/gas_mixture/GM in L)
+		GM.transfer_to(temp_mixer, GM.total_moles())
+	for (var/datum/gas_mixture/GM in L)
+		GM.set_temperature(average_temp)
+		temp_mixer.transfer_ratio_to(GM, GM.return_volume()/temp_mixer.return_volume())
+
 	//Makes every gas in the given list have the same pressure, temperature and gas proportions.
 	//Returns: null
 
