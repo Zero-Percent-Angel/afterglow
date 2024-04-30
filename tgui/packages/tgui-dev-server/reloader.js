@@ -67,6 +67,7 @@ export const findCacheRoot = async () => {
 
 const onCacheRootFound = cacheRoot => {
   logger.log(`found cache at '${cacheRoot}'`);
+  fs.closeSync(fs.openSync(cacheRoot + '/dummy', 'w'));
 };
 
 export const reloadByondCache = async bundleDir => {

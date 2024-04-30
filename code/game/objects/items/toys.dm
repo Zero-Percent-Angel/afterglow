@@ -514,7 +514,7 @@
 
 /obj/item/toy/snappop/Initialize()
 	. = ..()
-	
+
 	var/static/list/loc_connections = list(
 		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
 	)
@@ -829,15 +829,16 @@
 	update_icon()
 
 /obj/item/toy/cards/deck/update_icon_state()
-	switch(cards.len)
-		if(original_size*0.5 to INFINITY)
-			icon_state = "deck_[deckstyle]_full"
-		if(original_size*0.25 to original_size*0.5)
-			icon_state = "deck_[deckstyle]_half"
-		if(1 to original_size*0.25)
-			icon_state = "deck_[deckstyle]_low"
-		else
-			icon_state = "deck_[deckstyle]_empty"
+	if(original_size*0.5 < cards.len)
+		icon_state = "deck_[deckstyle]_full"
+		return
+	if(original_size*0.25 < cards.len &&  cards.len <= original_size*0.5)
+		icon_state = "deck_[deckstyle]_half"
+		return
+	if(cards.len > 0 && cards.len <= original_size*0.25)
+		icon_state = "deck_[deckstyle]_low"
+	else
+		icon_state = "deck_[deckstyle]_empty"
 
 /obj/item/toy/cards/deck/attack_self(mob/user)
 	if(cooldown < world.time - 50)
@@ -1547,7 +1548,7 @@
 	icon_state = "deck_nanotrasen_full"
 	w_class = WEIGHT_CLASS_SMALL
 	attack_verb = list("declares an attack against")
-	
+
 /obj/item/toy/tragicthegarnering/attack_self(mob/user)
 	if(Adjacent(user))
 		user.visible_message("<span class='notice'>[user] resists the urge to play with his deck of Tragic", \

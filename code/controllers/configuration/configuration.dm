@@ -77,6 +77,7 @@
 	return ..()
 
 /datum/controller/configuration/proc/InitEntries()
+	log_world("MAKING THE CONFIG!")
 	var/list/_entries = list()
 	entries = _entries
 	var/list/_entries_by_type = list()
@@ -95,6 +96,7 @@
 			continue
 		_entries[esname] = E
 		_entries_by_type[I] = E
+	log_world(entries_by_type)
 
 /datum/controller/configuration/proc/RemoveEntry(datum/config_entry/CE)
 	entries -= CE.name

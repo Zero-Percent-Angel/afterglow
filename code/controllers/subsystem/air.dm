@@ -6,6 +6,7 @@ SUBSYSTEM_DEF(air)
 	flags = SS_BACKGROUND
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
 
+	can_fire = 0
 	var/cost_turfs = 0
 	var/cost_groups = 0
 	var/cost_highpressure = 0
@@ -103,12 +104,12 @@ SUBSYSTEM_DEF(air)
 	return ..()
 
 /datum/controller/subsystem/air/Initialize(timeofday)
-	map_loading = FALSE
-	setup_allturfs()
-	setup_atmos_machinery()
-	setup_pipenets()
-	gas_reactions = init_gas_reactions()
-	should_do_equalization = CONFIG_GET(flag/atmos_equalize_enabled)
+	//map_loading = FALSE
+	//setup_allturfs()
+	//setup_atmos_machinery()
+	//setup_pipenets()
+	//gas_reactions = init_gas_reactions()
+	//should_do_equalization = CONFIG_GET(flag/atmos_equalize_enabled)
 	auxtools_update_reactions()
 	return ..()
 

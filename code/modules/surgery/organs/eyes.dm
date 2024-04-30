@@ -90,15 +90,14 @@
 	if(!.)
 		return
 	var/old_damaged = eye_damaged
-	switch(damage)
-		if(INFINITY to maxHealth)
-			eye_damaged = BLIND_VISION_THREE
-		if(maxHealth to high_threshold)
-			eye_damaged = BLURRY_VISION_TWO
-		if(high_threshold to low_threshold)
-			eye_damaged = BLURRY_VISION_ONE
-		else
-			eye_damaged = FALSE
+	if(damage >= maxHealth)
+		eye_damaged = BLIND_VISION_THREE
+	if(maxHealth >= damage && damage > high_threshold)
+		eye_damaged = BLURRY_VISION_TWO
+	if(high_threshold >= damage && damage > low_threshold)
+		eye_damaged = BLURRY_VISION_ONE
+	else
+		eye_damaged = FALSE
 	if(eye_damaged == old_damaged || !owner)
 		return
 	if(old_damaged == BLIND_VISION_THREE)

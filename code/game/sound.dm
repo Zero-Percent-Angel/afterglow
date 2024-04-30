@@ -76,25 +76,6 @@
 			S.volume -= (max(distance - falloff_distance, 0) ** (1 / falloff_exponent)) / ((max(max_distance, distance) - falloff_distance) ** (1 / falloff_exponent)) * S.volume
 			//https://www.desmos.com/calculator/sqdfl8ipgf
 
-		if(pressure_affected)
-			//Atmosphere affects sound
-			var/pressure_factor = 1
-			var/datum/gas_mixture/hearer_env = T.return_air()
-			var/datum/gas_mixture/source_env = turf_source.return_air()
-
-			if(hearer_env && source_env)
-				var/pressure = min(hearer_env.return_pressure(), source_env.return_pressure())
-				if(pressure < ONE_ATMOSPHERE)
-					pressure_factor = max((pressure - SOUND_MINIMUM_PRESSURE)/(ONE_ATMOSPHERE - SOUND_MINIMUM_PRESSURE), 0)
-			else //space
-				pressure_factor = 0
-
-			if(distance <= 1)
-				pressure_factor = max(pressure_factor, 0.15) //touching the source of the sound
-
-			S.volume *= pressure_factor
-			//End Atmosphere affecting sound
-
 		if(S.volume <= 0)
 			return //No sound
 

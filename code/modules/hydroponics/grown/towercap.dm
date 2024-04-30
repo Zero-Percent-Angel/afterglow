@@ -268,13 +268,7 @@
 		return
 
 /obj/structure/bonfire/proc/CheckOxygen()
-	if(isopenturf(loc))
-		var/turf/open/O = loc
-		if(O.air)
-			var/datum/gas_mixture/loc_air = O.air
-			if(loc_air.get_moles(GAS_O2) > 13)
-				return TRUE
-	return FALSE
+	return TRUE
 
 /obj/structure/bonfire/proc/StartBurning()
 	if(!burning && CheckOxygen())
@@ -361,7 +355,7 @@
 		to_chat(user, span_warning("You have to stand still to send a smoke signal."))
 		to_chat(user, span_warning("You attempted to send: [signalmessage]"))
 		return
-	
+
 
 /obj/structure/bonfire/proc/smoke_signal(mob/living/M, message, obj/structure/bonfire/B)
 	var/log_message = "[message]"

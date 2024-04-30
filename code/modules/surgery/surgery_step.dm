@@ -55,21 +55,28 @@
 /datum/surgery_step/proc/initiate(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, try_to_fail = FALSE)
 	surgery.step_in_progress = TRUE
 	var/speed_mod = 1
+	var/tool_speed = 1
+	var/penalty = 0
 	var/advance = FALSE
+	if (squirming())
+		to_chat(user, span_danger("It's hard to do surgery on a target who is awake, they squirm around!"))
+		penalty = -10
 	if(preop(user, target, target_zone, tool, surgery) == -1)
 		surgery.step_in_progress = FALSE
 		return FALSE
 	if(tool)
 		speed_mod = tool.toolspeed //faster tools mean faster surgeries, but also less experience.
+		tool_speed = tool.toolspeed
 	if(user.mind)
 		speed_mod = user.mind.action_skill_mod(/datum/skill/numerical/surgery, speed_mod, THRESHOLD_UNTRAINED, FALSE)
 	var/delay = time * speed_mod
 	if(do_after(user, delay, target = target))
-		var/prob_chance = EXPERT_CHECK * user.skill_value(mechanical ? SKILL_REPAIR : SKILL_DOCTOR) / REGULAR_CHECK
+		var/prob_chance = HARD_CHECK * user.skill_value(mechanical ? SKILL_REPAIR : SKILL_DOCTOR) / REGULAR_CHECK
 		if(implement_type)	//this means it isn't a require hand or any item step.
-			prob_chance = implements[implement_type] * user.skill_value(mechanical ? SKILL_REPAIR : SKILL_DOCTOR)/(REGULAR_CHECK + speed_mod)
+			prob_chance = implements[implement_type] * user.skill_value(mechanical ? SKILL_REPAIR : SKILL_DOCTOR)/(REGULAR_CHECK + (tool_speed * 18))
 		prob_chance *= surgery.get_propability_multiplier()
 		prob_chance = min(prob_chance, 100)
+		prob_chance += penalty
 
 		if((prob(prob_chance) || (iscyborg(user) && !silicons_obey_prob)) && chem_check(target) && !try_to_fail)
 			if(success(user, target, target_zone, tool, surgery))
@@ -86,12 +93,16 @@
 			if(surgery.status > surgery.steps.len)
 				surgery.complete()
 	surgery.step_in_progress = FALSE
-	if (!(target.IsUnconscious() || target.reagents.get_reagent_amount(/datum/reagent/medicine/morphine)) && target.stat != DEAD)
+	if (squirming())
 		// We used the sleep verb but somone is doing surgery on us... painful!
 		target.SetSleeping(0)
-		target.emote("scream")
+		if (prob(10 - target.special_e))
+			target.emote("scream")
 		SEND_SIGNAL(target, COMSIG_ADD_MOOD_EVENT, "awake_surgery", /datum/mood_event/surgery_while_awake)
 	return advance
+
+/datum/surgery_step/proc/squirming(mob/living/target)
+	return !(target.IsUnconscious() || target.reagents.get_reagent_amount(/datum/reagent/medicine/morphine)) && target.stat != DEAD
 
 /datum/surgery_step/proc/preop(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	display_results(user, target, span_notice("You begin to perform surgery on [target]..."),

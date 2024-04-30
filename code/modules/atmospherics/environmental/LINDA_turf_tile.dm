@@ -21,7 +21,7 @@
 	var/pressure_direction = 0
 	var/turf/pressure_specific_target
 
-	var/datum/gas_mixture/turf/air
+	var/static/datum/gas_mixture/turf/air
 
 	var/obj/effect/hotspot/active_hotspot
 	var/planetary_atmos = FALSE //air will revert to initial_gas_mix over time
@@ -30,11 +30,12 @@
 
 /turf/open/Initialize()
 	if(!blocks_air)
-
-		air = new(2500,src)
-
-		air.copy_from_turf(src)
-		update_air_ref(planetary_atmos ? 1 : 2)
+		if (!air)
+			air = new(2500,src)
+			air.set_moles(GAS_O2, 22)
+			air.set_moles(GAS_N2, 82)
+			air.static_air = TRUE
+		//update_air_ref(planetary_atmos ? 1 : 2)
 	. = ..()
 
 /turf/open/Destroy()
