@@ -47,19 +47,20 @@
 
 /obj/effect/hotspot/Initialize(mapload, starting_volume, starting_temperature)
 	. = ..()
-	SSair.hotspots += src
+	//SSair.hotspots += src
 	if(!isnull(starting_volume))
 		volume = starting_volume
 	if(!isnull(starting_temperature))
 		temperature = starting_temperature
 	perform_exposure()
 	setDir(pick(GLOB.cardinals))
-	air_update_turf()
+	//air_update_turf()
 
 	var/static/list/loc_connections = list(
-		COMSIG_ATOM_ENTERED = .proc/on_entered,
+		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
+	QDEL_IN(src, 10)
 
 
 /obj/effect/hotspot/proc/perform_exposure()
@@ -70,18 +71,6 @@
 	location.active_hotspot = src
 
 	bypassing = volume > CELL_VOLUME*0.95
-
-	if(bypassing)
-		volume = location.air.reaction_results["fire"]*FIRE_GROWTH_RATE
-		temperature = location.air.return_temperature()
-	else
-		var/datum/gas_mixture/affected = location.air.remove_ratio(volume/location.air.return_volume())
-		if(affected) //in case volume is 0
-			affected.set_temperature(temperature)
-			affected.react(src)
-			temperature = affected.return_temperature()
-			volume = affected.reaction_results["fire"]*FIRE_GROWTH_RATE
-			location.assume_air(affected)
 
 	for(var/A in location)
 		var/atom/AT = A
@@ -195,7 +184,7 @@
 
 /obj/effect/hotspot/Destroy()
 	set_light(0)
-	SSair.hotspots -= src
+	//SSair.hotspots -= src
 	var/turf/open/T = loc
 	if(istype(T) && T.active_hotspot == src)
 		T.active_hotspot = null
@@ -220,7 +209,7 @@
 /obj/effect/hotspot/proc/on_entered(atom/movable/AM, oldLoc)
 	SIGNAL_HANDLER
 	if(isliving(AM))
-		INVOKE_ASYNC(AM, /atom/.proc/fire_act, temperature, volume)
+		INVOKE_ASYNC(AM, TYPE_PROC_REF(/atom/, fire_act), temperature, volume)
 
 /obj/effect/hotspot/singularity_pull()
 	return

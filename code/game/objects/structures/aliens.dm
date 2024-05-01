@@ -154,7 +154,7 @@
 		qdel(src)
 		return FALSE
 
-	for(var/turf/T in U.GetAtmosAdjacentTurfs())
+	for(var/turf/T in U.reachableAdjacentTurfs())
 		if(locate(/obj/structure/alien/weeds) in T)
 			continue
 
@@ -230,7 +230,7 @@
 	if(status == GROWING || status == GROWN)
 		child = new(src)
 	if(status == GROWING)
-		addtimer(CALLBACK(src, .proc/Grow), rand(MIN_GROWTH_TIME, MAX_GROWTH_TIME))
+		addtimer(CALLBACK(src, PROC_REF(Grow)), rand(MIN_GROWTH_TIME, MAX_GROWTH_TIME))
 	proximity_monitor = new(src, status == GROWN ? 1 : 0)
 	if(status == BURST)
 		obj_integrity = integrity_failure * max_integrity
@@ -284,7 +284,7 @@
 		status = BURST
 		update_icon()
 		flick("egg_opening", src)
-		addtimer(CALLBACK(src, .proc/finish_bursting, kill), 15)
+		addtimer(CALLBACK(src, PROC_REF(finish_bursting), kill), 15)
 
 /obj/structure/alien/egg/proc/finish_bursting(kill = TRUE)
 	if(child)

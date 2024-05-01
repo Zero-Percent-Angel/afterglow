@@ -102,7 +102,7 @@ GLOBAL_LIST_INIT(area_weather_list, list(WEATHER_ALL))
 	/// List of sounds to play. FORMAT: list(AREA_SOUND('sound/misc/sadtrombone.ogg', 3.9 SECONDS), AREA_MUSIC('sound/misc/sadtrombone.ogg', 3.9 SECONDS)) has a cooldown of 3 seconds between each play, but you can have sounds play for longer if you want
 	//var/list/ambientsounds = list(
 	//	AREA_SOUND('sound/misc/server-ready.ogg', 1 SECONDS),
-	//	AREA_SOUND('sound/misc/splort.ogg', 0.5 SECONDS)	
+	//	AREA_SOUND('sound/misc/splort.ogg', 0.5 SECONDS)
 	//	)
 	var/list/ambientsounds
 
@@ -159,7 +159,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 		if (picked && is_station_level(picked.z))
 			GLOB.teleportlocs[AR.name] = AR
 
-	sortTim(GLOB.teleportlocs, /proc/cmp_text_dsc)
+	sortTim(GLOB.teleportlocs, GLOBAL_PROC_REF(cmp_text_dsc))
 
 // ===
 
@@ -275,7 +275,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 				A.power_light = FALSE
 				A.power_equip = FALSE
 				A.power_environ = FALSE
-			INVOKE_ASYNC(A, .proc/power_change)
+			INVOKE_ASYNC(A, PROC_REF(power_change))
 	STOP_PROCESSING(SSobj, src)
 	QDEL_NULL(ambience_area)
 	remove_from_weather_list()
@@ -394,7 +394,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 				if(D.operating)
 					D.nextstate = opening ? FIREDOOR_OPEN : FIREDOOR_CLOSED
 				else if(!(D.density ^ opening))
-					INVOKE_ASYNC(D, (opening ? /obj/machinery/door/firedoor.proc/open : /obj/machinery/door/firedoor.proc/close))
+					INVOKE_ASYNC(D, (opening ? TYPE_PROC_REF(/obj/machinery/door/firedoor, open) : TYPE_PROC_REF(/obj/machinery/door/firedoor, close)))
 
 /area/proc/firealert(obj/source)
 	if(always_unpowered == 1) //no fire alarms in space/asteroid
@@ -463,7 +463,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 		var/mob/living/silicon/SILICON = i
 		if(SILICON.triggerAlarm("Burglar", src, cameras, trigger))
 			//Cancel silicon alert after 1 minute
-			addtimer(CALLBACK(SILICON, /mob/living/silicon.proc/cancelAlarm,"Burglar",src,trigger), 600)
+			addtimer(CALLBACK(SILICON, TYPE_PROC_REF(/mob/living/silicon, cancelAlarm),"Burglar",src,trigger), 600)
 
 /area/proc/set_fire_alarm_effects(boolean)
 	fire = boolean
@@ -537,7 +537,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 			A.power_light = power_light
 			A.power_equip = power_equip
 			A.power_environ = power_environ
-			INVOKE_ASYNC(A, .proc/power_change)
+			INVOKE_ASYNC(A, PROC_REF(power_change))
 	update_icon()
 
 /area/proc/usage(chan)
@@ -615,14 +615,14 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 			var/sounds_to_play = pick(ambientsounds)
 			var/sound_delay = rand(1 SECONDS, 15 SECONDS)
 			var/sound/S = sound(sounds_to_play[SL_FILE_PATH], repeat = 0, wait = 0, volume = 25, channel = SSsounds.random_available_channel())
-			addtimer(CALLBACK(src, .proc/play_ambient_sound_delayed, S, L), sound_delay, TIMER_STOPPABLE)
+			addtimer(CALLBACK(src, PROC_REF(play_ambient_sound_delayed), S, L), sound_delay, TIMER_STOPPABLE)
 			COOLDOWN_START(L.client, area_sound_effect_cooldown, sounds_to_play[SL_FILE_LENGTH] + sound_delay)
 
 		if(LAZYLEN(ambientmusic) && !COOLDOWN_TIMELEFT(L.client, area_music_cooldown) && prob(35)) //fortuna add. re-implements ambient music
 			var/music_to_play = pick(ambientmusic)
 			var/sound_delay = rand(1 SECONDS, 15 SECONDS)
 			var/sound/S = sound(music_to_play[SL_FILE_PATH], repeat = 0, wait = 0, volume = 25, channel = SSsounds.random_available_channel())
-			addtimer(CALLBACK(src, .proc/play_ambient_sound_delayed, S, L), sound_delay, TIMER_STOPPABLE)
+			addtimer(CALLBACK(src, PROC_REF(play_ambient_sound_delayed), S, L), sound_delay, TIMER_STOPPABLE)
 			COOLDOWN_START(L.client, area_music_cooldown, music_to_play[SL_FILE_LENGTH] + sound_delay)
 
 /area/proc/play_ambient_sound_delayed(sound/to_play, mob/living/play_to)

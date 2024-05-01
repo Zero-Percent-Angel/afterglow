@@ -15,7 +15,7 @@
 /obj/structure/statue/Initialize()
 	. = ..()
 	AddElement(/datum/element/art, impressiveness)
-	AddComponent(/datum/component/simple_rotation, ROTATION_ALTCLICK | ROTATION_CLOCKWISE, CALLBACK(src, .proc/can_user_rotate), CALLBACK(src, .proc/can_be_rotated), null)
+	AddComponent(/datum/component/simple_rotation, ROTATION_ALTCLICK | ROTATION_CLOCKWISE, CALLBACK(src, PROC_REF(can_user_rotate)), CALLBACK(src, PROC_REF(can_be_rotated)), null)
 
 /obj/structure/statue/LateInitialize()
 	. = ..()

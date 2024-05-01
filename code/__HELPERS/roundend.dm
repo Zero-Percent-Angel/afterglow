@@ -217,14 +217,14 @@
 		send2chat(" <@&[role_id]> ", CONFIG_GET(string/discord_channel_serverstatus))
 	world.TgsTargetedChatBroadcast("The current round has ended. Please standby for your [pick(publisher)] report!", FALSE)
 	//lonestar edit. i'm adding a timer here because i'm tired of the messages being sent out of order
-	addtimer(CALLBACK(src, .proc/send_roundinfo), 3 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(send_roundinfo)), 3 SECONDS)
 
 	CHECK_TICK
 
 	set_observer_default_invisibility(0, span_warning("The round is over! You are now visible to the living."))
 
 	CHECK_TICK
-	
+
 	//These need update to actually reflect the real antagonists
 	//Print a list of antagonists to the server log
 	var/list/total_antagonists = list()
@@ -256,7 +256,7 @@
 	end_of_round_deathmatch()
 	var/time_to_end = CONFIG_GET(number/eorg_period)
 	to_chat(world, "<span class='info'>EORD in progress, game end delayed by [time_to_end * 0.1] seconds!</a></span>")
-	addtimer(CALLBACK(src, .proc/standard_reboot), time_to_end)
+	addtimer(CALLBACK(src, PROC_REF(standard_reboot)), time_to_end)
 
 
 /datum/controller/subsystem/ticker/proc/standard_reboot()
@@ -507,7 +507,7 @@
 			report_lines += " "
 		report_lines += "<hr>"
 	if(!LAZYLEN(report_lines))
-		return "" 
+		return ""
 	return "<div class='panel stationborder'>[report_lines.Join("<br>")]</div>"
 
 /datum/controller/subsystem/ticker/proc/antag_report()
@@ -532,7 +532,7 @@
 	var/currrent_category
 	var/datum/antagonist/previous_category
 
-	sortTim(all_antagonists, /proc/cmp_antag_category)
+	sortTim(all_antagonists, GLOBAL_PROC_REF(cmp_antag_category))
 
 	for(var/datum/antagonist/A in all_antagonists)
 		if(!A.show_in_roundend)

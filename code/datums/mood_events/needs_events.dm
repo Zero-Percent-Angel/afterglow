@@ -84,7 +84,7 @@
 
 /datum/mood_event/surgery_while_awake
 	description = span_warning("I WAS CUT OPEN WHILE I WAS STILL AWAKE.")
-	mood_change = -12
+	mood_change = -18
 	timeout = 15 MINUTES
 
 /datum/mood_event/disgusting_food

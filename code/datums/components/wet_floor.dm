@@ -29,13 +29,13 @@
 	permanent = _permanent
 	if(!permanent)
 		START_PROCESSING(SSwet_floors, src)
-	addtimer(CALLBACK(src, .proc/gc, TRUE), 1)		//GC after initialization.
+	addtimer(CALLBACK(src, PROC_REF(gc), TRUE), 1)		//GC after initialization.
 	last_process = world.time
 
 /datum/component/wet_floor/RegisterWithParent()
 	. = ..()
-	RegisterSignal(parent, COMSIG_TURF_IS_WET, .proc/is_wet)
-	RegisterSignal(parent, COMSIG_TURF_MAKE_DRY, .proc/dry)
+	RegisterSignal(parent, COMSIG_TURF_IS_WET, PROC_REF(is_wet))
+	RegisterSignal(parent, COMSIG_TURF_MAKE_DRY, PROC_REF(dry))
 
 /datum/component/wet_floor/UnregisterFromParent()
 	. = ..()
@@ -96,7 +96,7 @@
 			qdel(parent.GetComponent(/datum/component/slippery))
 			return
 
-	parent.LoadComponent(/datum/component/slippery, intensity, lube_flags, CALLBACK(src, .proc/AfterSlip))
+	parent.LoadComponent(/datum/component/slippery, intensity, lube_flags, CALLBACK(src, PROC_REF(AfterSlip)))
 
 /datum/component/wet_floor/proc/dry(datum/source, strength = TURF_WET_WATER, immediate = FALSE, duration_decrease = INFINITY)
 	for(var/i in time_left_list)
@@ -114,16 +114,8 @@
 	var/turf/open/T = parent
 	var/diff = world.time - last_process
 	var/decrease = 0
-	var/t = T.GetTemperature()
-	switch(t)
-		if(-INFINITY to T0C)
-			add_wet(TURF_WET_ICE, max_time_left())			//Water freezes into ice!
-		if(T0C to T0C + 100)
-			decrease = ((T.air.return_temperature() - T0C) / SSwet_floors.temperature_coeff) * (diff / SSwet_floors.time_ratio)
-		if(T0C + 100 to INFINITY)
-			decrease = INFINITY
-	decrease = max(0, decrease)
-	if((is_wet() & TURF_WET_ICE) && t > T0C)		//Ice melts into water!
+	decrease = (20 / SSwet_floors.temperature_coeff) * (diff / SSwet_floors.time_ratio)
+	if((is_wet() & TURF_WET_ICE))		//Ice melts into water!
 		for(var/obj/O in T.contents)
 			if(O.obj_flags & FROZEN)
 				O.make_unfrozen()

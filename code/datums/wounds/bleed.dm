@@ -39,7 +39,7 @@
  * apply_wound() is used once a wound type is instantiated to assign it to a bodypart, and actually come into play.
  * Somewhat different for bleed wounds. First makes a generic wound based on either slash or pierce
  * Then runs Handle Damage to set the actual wounding values and do all the loud splortch stuff
- * 
+ *
  * if there's already a wound of this type, nothing happens and this instance of the wound is deleted
  *
  *
@@ -252,7 +252,7 @@
 
 	limb.check_gauze_time()
 	limb.check_suture_time()
-	
+
 	reduce_bloodflow()
 
 /* 	if(get_blood_flow(FALSE) < minimum_flow)
@@ -278,13 +278,13 @@
 
 /datum/wound/bleed/get_blood_flow(include_reductions = FALSE)
 	. = blood_flow
-	
+
 	if(!include_reductions)
 		return
 
 	if(victim.stat == DEAD)
 		return 0
-		
+
 	if(victim.bodytemperature < (BODYTEMP_NORMAL - 10))
 		. *= 0.5
 
@@ -304,7 +304,7 @@
 	var/owner_blood_volume = victim.get_blood(FALSE)
 	if(owner_blood_volume < low_blood_threshold)
 		. *= low_blood_multiplier
-	
+
 /datum/wound/bleed/on_stasis()
 	return
 
@@ -342,7 +342,7 @@
 /datum/wound/bleed/proc/las_cauterize(obj/item/gun/energy/laser/lasgun, mob/user)
 	var/self_penalty_mult = (user == victim ? 1.25 : 1)
 	user.visible_message(span_warning("[user] begins aiming [lasgun] directly at [victim]'s [limb.name]..."), span_userdanger("You begin aiming [lasgun] directly at [user == victim ? "your" : "[victim]'s"] [limb.name]..."))
-	if(!do_after(user, base_treat_time  * self_penalty_mult, target=victim, extra_checks = CALLBACK(src, .proc/still_exists)))
+	if(!do_after(user, base_treat_time  * self_penalty_mult, target=victim, extra_checks = CALLBACK(src, PROC_REF(still_exists))))
 		return
 	var/damage = lasgun.chambered.BB.damage
 	lasgun.chambered.BB.wound_bonus -= 30
@@ -358,7 +358,7 @@
 	var/self_penalty_mult = (user == victim ? 1.2 : 1)
 	user.visible_message(span_notice("[user] begins stitching [victim]'s [limb.name] with [I]..."), span_notice("You begin stitching [user == victim ? "your" : "[victim]'s"] [limb.name] with [I]..."))
 
-	if(!do_after(user, base_treat_time * self_penalty_mult, target=victim, extra_checks = CALLBACK(src, .proc/still_exists)))
+	if(!do_after(user, base_treat_time * self_penalty_mult, target=victim, extra_checks = CALLBACK(src, PROC_REF(still_exists))))
 		return
 	user.visible_message(span_green("[user] stitches up some of the bleeding on [victim]."), span_green("You stitch up some of the bleeding on [user == victim ? "yourself" : "[victim]"]."))
 	var/blood_sutured = I.is_bandage / self_penalty_mult
@@ -378,7 +378,7 @@
 		return
 	var/self_penalty_mult = (user == victim ? 1.5 : 1)
 	user.visible_message(span_danger("[user] begins cauterizing [victim]'s [limb.name] with [I]..."), span_danger("You begin cauterizing [user == victim ? "your" : "[victim]'s"] [limb.name] with [I]..."))
-	if(!do_after(user, base_treat_time * self_penalty_mult, target=victim, extra_checks = CALLBACK(src, .proc/still_exists)))
+	if(!do_after(user, base_treat_time * self_penalty_mult, target=victim, extra_checks = CALLBACK(src, PROC_REF(still_exists))))
 		return
 
 	user.visible_message(span_green("[user] cauterizes some of the bleeding on [victim]."), span_green("You cauterize some of the bleeding on [victim]."))
@@ -413,7 +413,7 @@
 
 	user.visible_message(span_notice("[user] begins licking the wounds on [victim]'s [limb.name]."), span_notice("You begin licking the wounds on [victim]'s [limb.name]..."), ignored_mobs=victim)
 	to_chat(victim, "<span class='notice'>[user] begins to lick the wounds on your [limb.name].</span")
-	if(!do_after(user, base_treat_time, target=victim, extra_checks = CALLBACK(src, .proc/still_exists)))
+	if(!do_after(user, base_treat_time, target=victim, extra_checks = CALLBACK(src, PROC_REF(still_exists))))
 		return
 
 	user.visible_message(span_notice("[user] licks the wounds on [victim]'s [limb.name]."), span_notice("You lick some of the wounds on [victim]'s [limb.name]"), ignored_mobs=victim)

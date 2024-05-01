@@ -174,7 +174,7 @@
 /obj/structure/bonfire/prelit/Initialize()
 	. = ..()
 	var/static/list/loc_connections = list(
-		COMSIG_ATOM_ENTERED = .proc/on_entered,
+		COMSIG_ATOM_ENTERED = PROC_REF(on_entered),
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
 
@@ -268,13 +268,7 @@
 		return
 
 /obj/structure/bonfire/proc/CheckOxygen()
-	if(isopenturf(loc))
-		var/turf/open/O = loc
-		if(O.air)
-			var/datum/gas_mixture/loc_air = O.air
-			if(loc_air.get_moles(GAS_O2) > 13)
-				return TRUE
-	return FALSE
+	return TRUE
 
 /obj/structure/bonfire/proc/StartBurning()
 	if(!burning && CheckOxygen())
@@ -290,7 +284,7 @@
 /obj/structure/bonfire/proc/on_entered(atom/movable/AM)
 	SIGNAL_HANDLER
 	if(burning & !grill)
-		INVOKE_ASYNC(src, .proc/Burn)
+		INVOKE_ASYNC(src, PROC_REF(Burn))
 
 /obj/structure/bonfire/proc/Burn()
 	var/turf/current_location = get_turf(src)
@@ -361,7 +355,7 @@
 		to_chat(user, span_warning("You have to stand still to send a smoke signal."))
 		to_chat(user, span_warning("You attempted to send: [signalmessage]"))
 		return
-	
+
 
 /obj/structure/bonfire/proc/smoke_signal(mob/living/M, message, obj/structure/bonfire/B)
 	var/log_message = "[message]"

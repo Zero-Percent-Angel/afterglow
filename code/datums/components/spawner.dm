@@ -84,10 +84,10 @@
 	if(randomizer_tag)
 		setup_random_nest()
 
-	RegisterSignal(parent, COMSIG_PARENT_QDELETING, .proc/stop_spawning)
-	RegisterSignal(parent, COMSIG_OBJ_ATTACK_GENERIC, .proc/on_attack_generic)
-	RegisterSignal(parent, COMSIG_SPAWNER_COVERED, .proc/stop_spawning)
-	RegisterSignal(parent, COMSIG_SPAWNER_UNCOVERED, .proc/start_spawning)
+	RegisterSignal(parent, COMSIG_PARENT_QDELETING, PROC_REF(stop_spawning))
+	RegisterSignal(parent, COMSIG_OBJ_ATTACK_GENERIC, PROC_REF(on_attack_generic))
+	RegisterSignal(parent, COMSIG_SPAWNER_COVERED, PROC_REF(stop_spawning))
+	RegisterSignal(parent, COMSIG_SPAWNER_UNCOVERED, PROC_REF(start_spawning))
 	start_spawning()
 
 /datum/component/spawner/process()

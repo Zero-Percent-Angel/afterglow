@@ -350,7 +350,7 @@ GLOBAL_LIST_EMPTY(playmob_cooldowns)
 		call_backup = new CB
 		AddAbility(call_backup)
 	LAZYADD(GLOB.mob_spawners[initial(name)], src)
-	RegisterSignal(src, COMSIG_MOB_GHOSTIZE_FINAL, .proc/set_ghost_timeout)
+	RegisterSignal(src, COMSIG_MOB_GHOSTIZE_FINAL, PROC_REF(set_ghost_timeout))
 	if(istype(user))
 		lazarused = TRUE
 		lazarused_by = WEAKREF(user)
@@ -572,7 +572,7 @@ GLOBAL_LIST_EMPTY(playmob_cooldowns)
 		if(death_sound)
 			playsound(get_turf(src),death_sound, 200, 1, ignore_walls = FALSE)
 		if(deathmessage || !del_on_death)
-			INVOKE_ASYNC(src, .proc/emote, "deathgasp")
+			INVOKE_ASYNC(src, PROC_REF(emote), "deathgasp")
 	if(del_on_death)
 		..()
 		//Prevent infinite loops if the mob Destroy() is overridden in such

@@ -60,7 +60,7 @@
 	var/list/mats = allowed_materials
 	if(!mats)
 		mats = SSmaterials.materialtypes_by_category[MAT_CATEGORY_RIGID]
-	AddComponent(/datum/component/material_container, mats, _show_on_examine=TRUE, _after_insert=CALLBACK(src, .proc/AfterMaterialInsert))
+	AddComponent(/datum/component/material_container, mats, _show_on_examine=TRUE, _after_insert=CALLBACK(src, PROC_REF(AfterMaterialInsert)))
 	. = ..()
 	wires = new /datum/wires/autolathe(src)
 	stored_research = new stored_research
@@ -240,7 +240,7 @@
 	return
 
 /obj/machinery/autolathe/proc/begin_item_creation(power, list/materials_used, list/picked_materials, multiplier, coeff, is_stack, mob/user, time)
-	addtimer(CALLBACK(src, .proc/make_item, power, materials_used, custom_materials, multiplier, coeff, is_stack), time)
+	addtimer(CALLBACK(src, PROC_REF(make_item), power, materials_used, custom_materials, multiplier, coeff, is_stack), time)
 
 /obj/machinery/autolathe/proc/make_item(power, list/materials_used, list/picked_materials, multiplier, coeff, is_stack)
 	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)

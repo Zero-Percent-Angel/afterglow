@@ -311,7 +311,7 @@
 			emped = TRUE
 			process()
 			L.update_equipment_speed_mods()
-			addtimer(CALLBACK(src, .proc/end_emp_effect), severity/1 SECONDS)
+			addtimer(CALLBACK(src, PROC_REF(end_emp_effect)), severity/1 SECONDS)
 	return
 
 /obj/item/clothing/suit/armor/power_armor/proc/end_emp_effect()
