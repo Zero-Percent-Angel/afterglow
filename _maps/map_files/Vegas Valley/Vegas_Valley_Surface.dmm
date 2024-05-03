@@ -1325,6 +1325,17 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/x)
+"aAc" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 28
+	},
+/turf/open/floor/carpet,
+/area/f13/legioncamp)
 "aAh" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
@@ -4417,8 +4428,9 @@
 /obj/effect/overlay/desert_side{
 	dir = 4
 	},
-/obj/structure/fence/corner/wooden{
-	dir = 8
+/obj/structure/fence/wooden{
+	dir = 4;
+	icon_state = "post_wood"
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
@@ -6326,6 +6338,9 @@
 "cFB" = (
 /obj/item/storage/money_stack/legion,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 8
+	},
 /turf/open/floor/carpet/red,
 /area/f13/legioncamp)
 "cFM" = (
@@ -7465,7 +7480,7 @@
 /obj/effect/overlay/desert_side{
 	dir = 1
 	},
-/turf/open/floor/plating/f13/inside/gravel,
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "ddx" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8282,10 +8297,11 @@
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
 "dtp" = (
-/obj/structure/destructible/tribal_torch/wall{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 4;
+	light_color = "#f4e3b0"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
 "dtu" = (
@@ -11062,6 +11078,13 @@
 	},
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland/town)
+"eBH" = (
+/obj/effect/decal/cleanable/dirt/dust{
+	dir = 4
+	},
+/mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant,
+/turf/open/floor/plating/rust,
+/area/f13/building/powered)
 "eBJ" = (
 /obj/effect/overlay/desert_side,
 /obj/structure/barricade/sandbags,
@@ -13042,14 +13065,13 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building/abandoned/g)
 "frp" = (
-/mob/living/simple_animal/hostile/securitron/sentrybot{
-	health = 550;
-	name = "annihilator sentry bot"
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/supermutant,
+/turf/open/floor/f13{
+	color = "#d9c4b9";
+	icon_state = "darkrusty";
+	name = "dirty floor"
 	},
-/obj/effect/decal/cleanable/dirt/dust{
-	dir = 4
-	},
-/turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "frA" = (
 /obj/item/reagent_containers/glass/rag,
@@ -15093,20 +15115,21 @@
 /turf/open/floor/plasteel/white,
 /area/f13/followers)
 "ggr" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/mob/living/simple_animal/hostile/supermutant/legendary{
-	color = "#c7db63";
-	desc = "A huge and ugly mutant humanoid. He has a faint yellow glow to him from experimentation, apparently - his skin looks tougher than usual. Look out!";
-	faction = list("wastebot");
-	health = 920;
-	name = "experimental super mutant"
+/obj/structure/bed/wooden{
+	pixel_y = 15
 	},
-/turf/open/floor/f13{
-	color = "#d9c4b9";
-	icon_state = "darkrusty";
-	name = "dirty floor"
+/obj/structure/bed/wooden,
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
 	},
-/area/f13/building/powered)
+/obj/item/bedsheet/blanket,
+/obj/item/bedsheet/blanket{
+	pixel_y = 13
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/destructible/tribal_torch/wall/lit,
+/turf/open/floor/carpet,
+/area/f13/legioncamp)
 "ggF" = (
 /obj/structure/rack,
 /obj/item/clothing/under/f13/bluedress,
@@ -18239,6 +18262,13 @@
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/indestructible/ground/outside/grass,
 /area/f13/wasteland)
+"hrC" = (
+/obj/effect/overlay/desert_side,
+/obj/structure/sink/well{
+	pixel_x = -20
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/legioncamp)
 "hrE" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
@@ -19194,6 +19224,16 @@
 	pixel_y = 13
 	},
 /obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13/wood,
+/area/f13/legioncamp)
+"hIR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/stairs/east,
+/obj/structure/fluff/railing{
+	dir = 2;
+	layer = 3.1;
+	color = "#A47449"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
 "hJa" = (
@@ -24136,7 +24176,14 @@
 	},
 /area/f13/ambientlighting/building/f)
 "jNE" = (
-/obj/structure/sink/well,
+/obj/effect/overlay/desert_side{
+	dir = 4
+	},
+/obj/machinery/hydroponics/soil{
+	mutmod = 0;
+	name = "ancient fertile soil";
+	yieldmod = 1.3
+	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "jNF" = (
@@ -26468,6 +26515,15 @@
 	icon_state = "common-broken5"
 	},
 /area/f13/ambientlighting/building/e)
+"kKf" = (
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 4;
+	light_color = "#f4e3b0"
+	},
+/turf/open/floor/carpet/red,
+/area/f13/legioncamp)
 "kKl" = (
 /obj/structure/rack,
 /obj/item/clothing/under/suit_jacket/navy,
@@ -29070,6 +29126,17 @@
 	},
 /obj/structure/wreck/trash/machinepile,
 /turf/open/floor/plating/rust,
+/area/f13/building/powered)
+"lPp" = (
+/obj/effect/decal/cleanable/dirt/dust{
+	dir = 4
+	},
+/mob/living/simple_animal/hostile/supermutant/nightkin/elitemutant,
+/turf/open/floor/f13{
+	color = "#d9c4b9";
+	icon_state = "darkrusty";
+	name = "dirty floor"
+	},
 /area/f13/building/powered)
 "lPu" = (
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
@@ -32487,6 +32554,15 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/k)
+"nkd" = (
+/obj/structure/dresser,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 4;
+	light_color = "#f4e3b0"
+	},
+/turf/open/floor/carpet/red,
+/area/f13/legioncamp)
 "nki" = (
 /obj/structure/table,
 /obj/machinery/chem_dispenser/drinks/beer{
@@ -33363,6 +33439,7 @@
 /obj/effect/overlay/desert_side{
 	dir = 4
 	},
+/obj/effect/overlay/desert_side,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "nAD" = (
@@ -33416,11 +33493,17 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/building/abandoned/m)
 "nBU" = (
-/obj/structure/destructible/tribal_torch/wall{
-	dir = 8
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
 	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland)
+/obj/structure/closet/crate/footlocker{
+	pixel_x = -8;
+	pixel_y = -3
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/destructible/tribal_torch/wall/lit,
+/turf/open/floor/f13/wood,
+/area/f13/legioncamp)
 "nBV" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/storage/belt/utility/gardener,
@@ -33438,16 +33521,8 @@
 	},
 /area/f13/wasteland)
 "nCs" = (
-/obj/structure/fluff/railing{
-	dir = 2;
-	layer = 3.1;
-	color = "#A47449"
-	},
-/obj/structure/stairs/east{
-	color = "#A47449"
-	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13/wood,
+/turf/closed/wall/f13/wood/house,
 /area/f13/legioncamp)
 "nCx" = (
 /obj/structure/window/reinforced/spawner/north,
@@ -33793,14 +33868,10 @@
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/wasteland)
 "nKD" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/mob/living/simple_animal/hostile/supermutant/legendary{
-	color = "#c7db63";
-	desc = "A huge and ugly mutant humanoid. He has a faint yellow glow to him from experimentation, apparently - his skin looks tougher than usual. Look out!";
-	faction = list("wastebot");
-	health = 920;
-	name = "experimental super mutant"
+/obj/effect/decal/cleanable/dirt/dust{
+	dir = 4
 	},
+/obj/structure/barricade/sandbags,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "nKE" = (
@@ -34549,6 +34620,7 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/lattice,
+/mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
 	},
@@ -37112,6 +37184,7 @@
 /obj/effect/overlay/desert_side{
 	dir = 8
 	},
+/obj/effect/overlay/desert_side,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "pdG" = (
@@ -37308,10 +37381,10 @@
 /turf/open/indestructible/ground/outside/water/running,
 /area/f13/wasteland)
 "phB" = (
-/obj/structure/destructible/tribal_torch/wall{
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
 "phE" = (
@@ -43597,15 +43670,8 @@
 /obj/effect/decal/cleanable/dirt/dust{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/securitron/sentrybot{
-	health = 550;
-	name = "annihilator sentry bot"
-	},
-/turf/open/floor/f13{
-	color = "#d9c4b9";
-	icon_state = "darkrusty";
-	name = "dirty floor"
-	},
+/mob/living/simple_animal/hostile/supermutant/nightkin,
+/turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "rMH" = (
 /obj/structure/simple_door/dirtyglass,
@@ -44102,6 +44168,18 @@
 /obj/item/card/id/rusted/brokenholodog,
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
 /area/f13/building/abandoned/m)
+"rXu" = (
+/obj/effect/decal/cleanable/dirt/dust{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/greenglow,
+/obj/structure/barricade/sandbags,
+/turf/open/floor/f13{
+	color = "#d9c4b9";
+	icon_state = "darkrusty";
+	name = "dirty floor"
+	},
+/area/f13/building/powered)
 "rXQ" = (
 /obj/structure/simple_door/metal/fence,
 /turf/open/indestructible/ground/outside/roaddirt{
@@ -45623,14 +45701,9 @@
 /turf/open/floor/carpet/green,
 /area/f13/building/abandoned/x)
 "sEU" = (
-/mob/living/simple_animal/hostile/supermutant,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/f13{
-	color = "#d9c4b9";
-	icon_state = "darkrusty";
-	name = "dirty floor"
-	},
-/area/f13/building/powered)
+/obj/effect/overlay/desert_side,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/legioncamp)
 "sEY" = (
 /obj/structure/bed/double,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -49312,8 +49385,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/building/abandoned/m)
 "ubQ" = (
-/obj/structure/fence/corner/wooden{
-	dir = 4
+/obj/structure/simple_door/tent{
+	color = "#7c0A02"
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
@@ -52587,9 +52660,6 @@
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland/town)
 "vnh" = (
-/obj/structure/destructible/tribal_torch/wall{
-	dir = 8
-	},
 /obj/structure/rack/shelf_metal,
 /obj/item/electropack/shockcollar/shimsusa_shackles,
 /obj/item/electropack/shockcollar/shimsusa_shackles,
@@ -52598,6 +52668,9 @@
 /obj/item/electropack/shockcollar,
 /obj/item/key/scollar,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 8
+	},
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
 "vnx" = (
@@ -54677,19 +54750,13 @@
 	},
 /area/f13/wasteland)
 "wjx" = (
-/mob/living/simple_animal/hostile/supermutant/legendary{
-	color = "#c7db63";
-	desc = "A huge and ugly mutant humanoid. He has a faint yellow glow to him from experimentation, apparently - his skin looks tougher than usual. Look out!";
-	faction = list("wastebot");
-	health = 920;
-	name = "experimental super mutant"
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
 	},
-/turf/open/floor/f13{
-	color = "#d9c4b9";
-	icon_state = "darkrusty";
-	name = "dirty floor"
-	},
-/area/f13/building/powered)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/destructible/tribal_torch/wall/lit,
+/turf/open/floor/f13/wood,
+/area/f13/legioncamp)
 "wjD" = (
 /turf/closed/wall/rust,
 /area/f13/building/abandoned/y)
@@ -55603,6 +55670,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/building/tribal)
+"wyu" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant,
+/turf/open/floor/f13{
+	color = "#d9c4b9";
+	icon_state = "darkrusty";
+	name = "dirty floor"
+	},
+/area/f13/building/powered)
 "wyz" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/f13/advcrafting,
@@ -57598,6 +57674,17 @@
 	icon_state = "verticaloutermain1"
 	},
 /area/f13/wasteland)
+"xmj" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 28
+	},
+/turf/open/floor/f13/wood,
+/area/f13/legioncamp)
 "xml" = (
 /obj/structure/fence/corner,
 /obj/effect/overlay/desert_side{
@@ -128439,10 +128526,10 @@ dhW
 xDP
 fqg
 hcN
-ggr
+xIE
 eDW
 giG
-pWW
+puq
 pZW
 pZW
 ocN
@@ -128737,15 +128824,15 @@ uFA
 juQ
 xIE
 nvn
-xIE
+wyu
 nvn
-nKD
+puq
 puq
 xIE
 ijg
 kiN
 fzC
-wjx
+jyd
 hcN
 qQU
 ijg
@@ -129944,7 +130031,7 @@ jyd
 jyd
 gsh
 xIE
-sEU
+xIE
 gsh
 hyk
 uLJ
@@ -132054,7 +132141,7 @@ gsh
 jDw
 jZR
 xcz
-xIE
+frp
 jyd
 jyd
 xIE
@@ -135809,7 +135896,7 @@ vvD
 azA
 azA
 qaB
-aOn
+hIR
 aOn
 aOn
 aOn
@@ -136112,7 +136199,7 @@ azA
 azA
 fTC
 nCs
-aOn
+dtp
 aOn
 dtp
 wqd
@@ -136122,7 +136209,7 @@ azA
 nfY
 xLg
 xLg
-sct
+ubQ
 uDx
 uDx
 uDx
@@ -136433,7 +136520,7 @@ uDx
 uDx
 uDx
 uDx
-sct
+ubQ
 uDx
 uDx
 uDx
@@ -136720,7 +136807,7 @@ ual
 cHF
 azA
 azA
-nBU
+cHO
 azA
 azA
 cHF
@@ -138421,8 +138508,8 @@ gsh
 hsT
 bpC
 nfQ
-rJs
-nPu
+rXu
+nKD
 tps
 hFc
 nPu
@@ -138851,7 +138938,7 @@ bqO
 khX
 khX
 uDx
-xIY
+sEU
 cDF
 mfr
 vEf
@@ -139135,7 +139222,7 @@ azA
 nfY
 xVc
 fTC
-aOn
+phB
 muQ
 nfv
 muQ
@@ -139153,7 +139240,7 @@ bqO
 khX
 khX
 uDx
-xIY
+hrC
 cDF
 mfr
 nLG
@@ -139631,7 +139718,7 @@ nPu
 nfQ
 nfQ
 nPu
-nPu
+eBH
 nfQ
 gsh
 gsh
@@ -139928,7 +140015,7 @@ odS
 odS
 gsh
 tSk
-nPu
+rMu
 nPu
 nfQ
 nfQ
@@ -140233,7 +140320,7 @@ eIj
 pWr
 nUC
 nfQ
-rMu
+nfQ
 toh
 pWr
 eIj
@@ -140357,7 +140444,7 @@ cDF
 bPK
 upQ
 uDx
-ubQ
+bqO
 khX
 khX
 khX
@@ -140645,7 +140732,7 @@ azA
 nfY
 xVc
 cpt
-aOn
+vNK
 aOn
 aOn
 aOn
@@ -140659,7 +140746,7 @@ cDF
 mdZ
 nff
 uDx
-jNE
+bqO
 khX
 khX
 khX
@@ -140961,7 +141048,7 @@ cDF
 bPK
 uDx
 uDx
-uDx
+bqO
 khX
 khX
 khX
@@ -141137,7 +141224,7 @@ odS
 gsh
 jki
 nfQ
-nfQ
+lPp
 nPu
 nPu
 nPu
@@ -141264,9 +141351,9 @@ urr
 gur
 gur
 bQm
-gur
-gur
-gur
+jNE
+jNE
+jNE
 uDx
 bIL
 uMg
@@ -141440,7 +141527,7 @@ gsh
 kCC
 lFW
 qUx
-frp
+nPu
 nPu
 mEm
 kvX
@@ -141553,9 +141640,9 @@ xVc
 qaB
 qdH
 aOn
-nnz
+kKf
 hBQ
-nvi
+nkd
 qaB
 azA
 kNP
@@ -141862,7 +141949,7 @@ rNY
 azA
 nfY
 cBf
-cBf
+xVc
 azA
 azA
 azA
@@ -143555,7 +143642,7 @@ nPu
 kos
 bpC
 nfQ
-nfQ
+lPp
 tps
 nPu
 nfQ
@@ -144571,12 +144658,12 @@ azA
 azA
 hip
 cpt
-wfT
+xmj
 xWp
 wfT
 wfT
 wfT
-wfT
+wjx
 cpt
 azA
 azA
@@ -145784,7 +145871,7 @@ pmI
 wwx
 cGN
 wwx
-cGN
+ggr
 pKW
 azA
 mfr
@@ -146383,7 +146470,7 @@ uXD
 azA
 hip
 cpt
-wfT
+xmj
 hIH
 wwx
 cGN
@@ -147294,7 +147381,7 @@ wfT
 wfT
 wfT
 wfT
-xWp
+nBU
 qaB
 azA
 mfr
@@ -147591,7 +147678,7 @@ ccg
 azA
 hip
 cpt
-wwx
+aAc
 wfT
 iLf
 tit
@@ -149096,7 +149183,7 @@ azA
 azA
 azA
 azA
-azA
+ual
 nha
 cBf
 cBf
