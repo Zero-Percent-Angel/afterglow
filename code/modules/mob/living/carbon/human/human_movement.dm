@@ -106,6 +106,7 @@
 
 /mob/living/carbon/human/handle_movement_recoil()
 	on_the_move = TRUE
+	update_recoil()
 
 /*
 	var/base_recoil = max(0.4, (100 - highest_gun_or_energy_cache)/50)

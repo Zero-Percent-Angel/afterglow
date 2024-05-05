@@ -35,6 +35,7 @@
 
 	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, TYPE_PROC_REF(/atom, clean_blood))
 	GLOB.human_list += src
+	SSrecoil_processing.processing += src
 
 
 /mob/living/carbon/human/ComponentInitialize()
