@@ -575,6 +575,11 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/ambientlighting/building/g)
+"dY" = (
+/obj/structure/rack,
+/obj/item/storage/box/medicine/stimpaks/stimpaks5,
+/turf/open/floor/plasteel/airless/white,
+/area/f13/wasteland)
 "dZ" = (
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/planks,
@@ -1135,6 +1140,12 @@
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/ncr_trooper,
 /turf/open/indestructible/ground/outside/snow,
 /area/f13/wasteland)
+"hl" = (
+/obj/structure/rack,
+/obj/item/tank/internals/anesthetic,
+/obj/item/tank/internals/anesthetic,
+/turf/open/floor/plasteel/airless/white,
+/area/f13/wasteland)
 "hp" = (
 /obj/structure/safe,
 /turf/open/floor/wood_common,
@@ -1171,6 +1182,12 @@
 "hJ" = (
 /turf/closed/wall/f13/wood/interior,
 /area/f13/building/abandoned/v)
+"hL" = (
+/obj/structure/rack,
+/obj/item/reagent_containers/glass/beaker/large/charcoal,
+/obj/item/reagent_containers/glass/bottle/charcoal,
+/turf/open/floor/plasteel/airless/white,
+/area/f13/wasteland)
 "hM" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/junk/cabinet,
@@ -1736,7 +1753,7 @@
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
 "lQ" = (
-/turf/closed/wall/f13/wood/house/broken,
+/turf/open/floor/plasteel/airless/white,
 /area/f13/wasteland)
 "lW" = (
 /turf/open/floor/f13{
@@ -3484,8 +3501,10 @@
 	},
 /area/f13/building/abandoned/v)
 "yb" = (
-/turf/closed/wall/f13/wood/house,
-/area/f13/wasteland)
+/obj/structure/window/fulltile/house/broken,
+/obj/structure/barricade/bars,
+/turf/open/floor/f13/wood,
+/area/f13/legioncamp)
 "yc" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/royalblack,
@@ -5584,6 +5603,7 @@
 /area/f13/legioncamp)
 "Mu" = (
 /obj/machinery/workbench,
+/obj/item/gun/ballistic/automatic/service,
 /turf/open/floor/plating/f13/outside/roof/wood/old,
 /area/f13/ncr)
 "Mz" = (
@@ -5644,6 +5664,9 @@
 /obj/item/ammo_box/a556/sport,
 /obj/item/ammo_box/magazine/m556/rifle,
 /obj/item/book/granter/crafting_recipe/gunsmith_one,
+/obj/item/ammo_box/magazine/m556/rifle,
+/obj/item/ammo_box/magazine/m556/rifle,
+/obj/item/ammo_box/magazine/m556/rifle,
 /turf/open/floor/plating/f13/outside/roof/wood/old,
 /area/f13/ncr)
 "MV" = (
@@ -5778,6 +5801,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/mineral/titanium/white,
 /area/f13/followers)
+"NI" = (
+/obj/structure/rack,
+/obj/item/reagent_containers/glass/bottle/salglu_solution,
+/obj/item/reagent_containers/glass/bottle/salglu_solution,
+/obj/item/reagent_containers/glass/bottle/iron,
+/obj/item/reagent_containers/glass/bottle/iodine,
+/obj/item/reagent_containers/glass/bottle/atropine,
+/turf/open/floor/plasteel/airless/white,
+/area/f13/wasteland)
 "NK" = (
 /obj/structure/dresser,
 /turf/open/floor/carpet/royalblue,
@@ -5920,9 +5952,8 @@
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/m)
 "OU" = (
-/obj/structure/window/fulltile/house/broken,
-/obj/structure/barricade/bars,
-/turf/open/floor/f13/wood,
+/obj/structure/simple_door/tent,
+/turf/open/floor/plasteel/airless/white,
 /area/f13/wasteland)
 "OX" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6285,6 +6316,18 @@
 /obj/item/pda,
 /turf/open/floor/plating/f13/outside/roof/wood/old,
 /area/f13/ncr)
+"Rs" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 4
+	},
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	},
+/obj/structure/sign/departments/chemistry{
+	pixel_x = 29
+	},
+/turf/open/indestructible/ground/outside/graveldirt,
+/area/f13/wasteland)
 "Rt" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table/wood,
@@ -13806,8 +13849,8 @@ Zt
 Zt
 Zt
 Zt
-Ju
-dL
+Rs
+eq
 dL
 dL
 mg
@@ -14106,11 +14149,11 @@ xm
 xm
 Zt
 Zt
-Zt
-dD
-LX
-LX
-LX
+Rk
+Rk
+Rk
+OU
+Rk
 LX
 LX
 hk
@@ -14406,13 +14449,13 @@ xm
 xm
 xm
 xm
-xm
 Zt
 Zt
-dD
-dD
-GQ
-jQ
+Rk
+dY
+lQ
+lQ
+Rk
 dD
 zJ
 LX
@@ -14708,13 +14751,13 @@ xm
 xm
 xm
 xm
-xm
-xm
 Zt
-dD
-dD
-dD
-dD
+Zt
+Rk
+hl
+lQ
+lQ
+Rk
 ys
 so
 so
@@ -15010,13 +15053,13 @@ xm
 xm
 xm
 xm
-xm
-xm
 Zt
 Zt
-dD
-dD
-dD
+Rk
+NI
+lQ
+hL
+Rk
 dD
 dD
 dD
@@ -15312,13 +15355,13 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
 Zt
 Zt
-dD
-dD
+Rk
+Rk
+Rk
+Rk
+Rk
 dD
 dD
 dD
@@ -15614,9 +15657,9 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
+Zt
+Zt
+Zt
 Zt
 Zt
 dD
@@ -15918,7 +15961,7 @@ xm
 xm
 xm
 xm
-xm
+Zt
 Zt
 Zt
 Zt
@@ -81035,15 +81078,15 @@ xm
 xm
 xm
 xm
-Vw
-CZ
-gd
-pW
-DF
-Vw
-DF
-lQ
-zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -81338,14 +81381,14 @@ xm
 xm
 xm
 Vw
-es
-pN
-km
-UH
-ry
-Xp
-lQ
-zi
+CZ
+gd
+pW
+DF
+Vw
+DF
+DF
+xm
 xm
 xm
 xm
@@ -81639,15 +81682,15 @@ xm
 xm
 xm
 Ep
-pW
-rO
-ED
-eS
-uk
-ra
-hc
-yb
-zi
+Vw
+es
+pN
+km
+UH
+ry
+Xp
+DF
+xm
 xm
 xm
 xm
@@ -81942,14 +81985,14 @@ xm
 xm
 Ep
 pW
-xH
-ra
-ry
-uk
+rO
 ED
-bB
-yb
-zi
+eS
+uk
+ra
+hc
+Vw
+xm
 xm
 xm
 xm
@@ -82243,15 +82286,15 @@ xm
 xm
 xm
 xm
-DF
-DF
-DF
-Mt
-DF
-DF
-DF
-yb
-zi
+pW
+xH
+ra
+ry
+uk
+ED
+bB
+Vw
+xm
 xm
 xm
 xm
@@ -82545,15 +82588,15 @@ xm
 xm
 xm
 xm
+DF
+DF
+DF
+Mt
+DF
+DF
+DF
 Vw
-Za
-xc
-VO
-rQ
-DI
-XL
-lQ
-zi
+xm
 xm
 xm
 xm
@@ -82847,15 +82890,15 @@ xm
 xm
 xm
 xm
-DF
-wz
-pN
-ra
+Vw
+Za
+xc
+VO
 rQ
-wX
-Tv
-OU
-zi
+DI
+XL
+DF
+xm
 xm
 xm
 xm
@@ -83150,14 +83193,14 @@ xm
 xm
 xm
 DF
-jU
+wz
 pN
-pN
-ux
-Ff
-tz
+ra
+rQ
+wX
+Tv
 yb
-zi
+xm
 xm
 xm
 xm
@@ -83452,14 +83495,14 @@ xm
 xm
 xm
 DF
-CZ
-FB
-pW
-DF
+jU
+pN
+pN
+ux
+Ff
+tz
 Vw
-Vw
-yb
-zi
+xm
 xm
 xm
 xm
@@ -83753,15 +83796,15 @@ xm
 xm
 xm
 xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
+DF
+CZ
+FB
+pW
+DF
+Vw
+Vw
+Vw
+xm
 xm
 xm
 xm
