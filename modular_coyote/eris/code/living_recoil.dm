@@ -1,11 +1,11 @@
 /mob/living/proc/handle_recoil(var/obj/item/gun/G, var/recoil_buildup)
 	var/the_skill_val = (100 - skill_value(G.gun_skill_used)) / HARD_CHECK
-	if ((last_fire_time + max(G.fire_delay, G.autofire_shot_delay, G.burst_shot_delay) + recoil) > world.time)
-		recoil = (recoil_buildup * max(the_skill_val, 0.5) * min(consecutive_fires, 3))
-		consecutive_fires++
-	else
-		recoil = (recoil_buildup * max(the_skill_val, 0.5))
-		consecutive_fires = 0
+	if (recoil < MAX_ACCURACY_OFFSET)
+		if(HAS_TRAIT(src, SPREAD_CONTROL))
+			recoil += (recoil_buildup * max(the_skill_val, 0.5))
+		else
+			recoil += (recoil_buildup * max(the_skill_val, 0.5) * 0.8)
+	update_recoil()
 	return
 	//add_recoil(recoil_buildup)
 
@@ -43,23 +43,15 @@
 
 /mob/living/proc/calc_recoil()
 	on_the_move = FALSE
-	/*
 	if (recoil)
-		if (!highest_gun_or_energy_cache)
-			highest_gun_or_energy_cache = highest_skill_value(SKILL_GUNS, SKILL_ENERGY)
-		var/base = 3 * (highest_gun_or_energy_cache/40)
-		var/scale = 0.8 * (40/highest_gun_or_energy_cache)
-
-		if(HAS_TRAIT(src, SPREAD_CONTROL))
-			scale = 0.6 * (40/highest_gun_or_energy_cache)
-
+		var/base = 1
+		var/scale = (MAX_ACCURACY_OFFSET - recoil)/MAX_ACCURACY_OFFSET
 		if(recoil <= base)
 			recoil = 0
 		else
 			recoil -= base
 			recoil *= scale
-	*/
-	//update_recoil()
+	update_recoil()
 
 /mob/living/proc/calculate_offset(var/offset = 0, skill_used = SKILL_GUNS)
 	var/the_skill_val = (105 - skill_value(skill_used))/EASY_CHECK
@@ -98,12 +90,13 @@
 		remove_cursor()
 		return
 	if(client)
+		sleep(0)
 		if(!CHECK_BITFIELD(client.prefs.cb_toggles, AIM_CURSOR_ON))
 			remove_cursor()
 			return
 		client.mouse_pointer_icon = initial(client.mouse_pointer_icon)
-		//var/offset = round(calculate_offset(G.added_spread) * 0.8)
-		var/icon/base = find_cursor_icon('modular_coyote/eris/icons/standard.dmi', 0)
+		var/offset = round(calculate_offset(G.added_spread) * 0.8)
+		var/icon/base = find_cursor_icon('modular_coyote/eris/icons/standard.dmi', offset)
 		ASSERT(isicon(base))
 		client.mouse_pointer_icon = base
 

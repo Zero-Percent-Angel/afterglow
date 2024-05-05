@@ -414,9 +414,9 @@ GLOBAL_LIST_EMPTY(PDAs)
 						if (P == src)
 							continue
 						if(P.owner in blocked_pdas)
-							dat += "<li><a href='byond://?src=[REF(src)];choice=unblock_pda;target=[P.owner]'>(BLOCKED - CLICK TO UNBLOCK) [P]</a>"
+							dat += "<li><a href='byond://?src=[REF(src)];choice=unblock_pda;target=[P.owner]'>(BLOCKED - CLICK TO UNBLOCK) [P.owner] - ([P.ownjob])</a>"
 						else
-							dat += "<li><a href='byond://?src=[REF(src)];choice=Message;target=[REF(P)]'>[P]</a>"
+							dat += "<li><a href='byond://?src=[REF(src)];choice=Message;target=[REF(P)]'>[P.owner] - ([P.ownjob])</a>"
 						if(cartridge)
 							dat += cartridge.message_special(P)
 						dat += "</li>"
