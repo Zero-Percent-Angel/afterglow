@@ -28,6 +28,17 @@
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 
+/obj/item/clothing/gloves/f13/leather/silverbangles
+	name = "silver bangles"
+	desc = "Silver and glass bangles, some rings of metal and some made of... glass and plastic?"
+	icon_state = "silverbangles
+	item_state = "silverbangles"
+	transfer_prints = TRUE
+	cold_protection = HANDS
+	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+
 /obj/item/clothing/gloves/f13/leather/fingerless
 	name = "fingerless leather gloves"
 	desc = "Gloves made out of wasteland animal hides, tanned and stitched together without any fingers."
