@@ -612,11 +612,6 @@
 	item_state = "ncrcfjacket"
 	desc = "A cheap, standard issue teal canvas jacket issued to poor suckers who find themselves at the butt-end of the NCR's judiciary system."
 
-/obj/item/clothing/suit/toggle/labcoat/f13/ncrbomber
-	name = "NCR bomber"
-	desc = "Often worn by NCR Armed Services members. It has the imagery of the flag on the back, and a tiny NCR flag patch on the shoulder."
-	icon_state = "ncrbomber"
-	item_state = "ncrbomber"
 
 //Brotherhood of Steel (PA in f13armor.dm)
 

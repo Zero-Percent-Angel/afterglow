@@ -771,7 +771,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	name = "khaki bandana"
 	desc = "A thin piece of cloth that keeps sweat out of your face - or maybe just completes your fashion sense."
 	icon_state = "trailbandana"
-    item_state = "trailbandana"
+	item_state = "trailbandana"
 
 //Brotherhood of Steel (PA in f13head.dm)
 
