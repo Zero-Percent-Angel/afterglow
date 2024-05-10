@@ -612,6 +612,7 @@
 	item_state = "ncrcfjacket"
 	desc = "A cheap, standard issue teal canvas jacket issued to poor suckers who find themselves at the butt-end of the NCR's judiciary system."
 
+
 //Brotherhood of Steel (PA in f13armor.dm)
 
 /obj/item/clothing/suit/armor/light/duster/bos/scribe/headscribe

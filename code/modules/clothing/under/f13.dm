@@ -145,7 +145,7 @@
 
 /obj/item/clothing/under/f13/ncr/sniper
 	name = "sniper fatigues"
-	desc = "A standard duty uniform for snipers."
+	desc = "A set of fatigues with padded compression sleeves for long periods of getting on your hands and knees. The top is a little open to beat the heat. Warning: The NCR does not condone the use of Steady chems."
 	can_adjust = FALSE
 	mutantrace_variation = STYLE_DIGITIGRADE
 	icon_state = "ncr_snipermgs"
