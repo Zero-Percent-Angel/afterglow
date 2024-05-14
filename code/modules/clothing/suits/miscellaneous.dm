@@ -554,7 +554,7 @@
 	desc = "A blue and yellow hood attached to a heavy winter jacket."
 	icon_state = "winterhood_captain"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1)
-	
+
 /obj/item/clothing/suit/hooded/wintercoat/hop
 	name = "head of personnel's winter coat"
 	desc = "A cozy winter coat, covered in thick fur. The breast features a proud yellow chevron, reminding everyone that you're the second banana."
@@ -1532,3 +1532,9 @@
 	icon = 'icons/fallout/clothing/hats.dmi'
 	icon_state = "hazmat"
 	item_state = "hazmat_helmet"
+
+/obj/item/clothing/suit/toggle/labcoat/f13/ncrbomber
+	name = "NCR bomber"
+	desc = "Often worn by NCR Armed Services members. It has the imagery of the flag on the back, and a tiny NCR flag patch on the shoulder."
+	icon_state = "ncrbomber"
+	item_state = "ncrbomber"
