@@ -58,7 +58,7 @@
 	var/tool_speed = 1
 	var/penalty = 0
 	var/advance = FALSE
-	if (squirming())
+	if (squirming(target))
 		to_chat(user, span_danger("It's hard to do surgery on a target who is awake, they squirm around!"))
 		penalty = -10
 	if(preop(user, target, target_zone, tool, surgery) == -1)
@@ -93,7 +93,7 @@
 			if(surgery.status > surgery.steps.len)
 				surgery.complete()
 	surgery.step_in_progress = FALSE
-	if (squirming())
+	if (squirming(target))
 		// We used the sleep verb but somone is doing surgery on us... painful!
 		target.SetSleeping(0)
 		if (prob(10 - target.special_e))
