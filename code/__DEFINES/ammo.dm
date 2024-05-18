@@ -116,7 +116,7 @@ GLOBAL_LIST_INIT(hobo_gun_mag_fluff, list(
 #define MAGAZINE_CALIBER_CHANGE_STEP_3 3 // used a welder on it, ready for a new casing
 
 /// Material costs cus fuckin hell this shit's out of hand!
-#define MATS_AMMO_GLOBAL_MULT 5
+#define MATS_AMMO_GLOBAL_MULT 1
 
 /// Bullet~
 #define MATS_AMMO_BULLET_BASE (10 * MATS_AMMO_GLOBAL_MULT)
