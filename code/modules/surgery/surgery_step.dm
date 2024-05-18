@@ -58,7 +58,7 @@
 	var/tool_speed = 1
 	var/penalty = 0
 	var/advance = FALSE
-	if (squirming())
+	if (squirming(target))
 		to_chat(user, span_danger("It's hard to do surgery on a target who is awake, they squirm around!"))
 		penalty = -10
 	if(preop(user, target, target_zone, tool, surgery) == -1)
