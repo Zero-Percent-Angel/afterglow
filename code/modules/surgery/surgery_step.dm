@@ -93,7 +93,7 @@
 			if(surgery.status > surgery.steps.len)
 				surgery.complete()
 	surgery.step_in_progress = FALSE
-	if (squirming())
+	if (squirming(target))
 		// We used the sleep verb but somone is doing surgery on us... painful!
 		target.SetSleeping(0)
 		if (prob(10 - target.special_e))
