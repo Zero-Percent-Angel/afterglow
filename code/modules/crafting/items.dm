@@ -182,7 +182,7 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 
 /obj/item/blueprint/research
 	name = "mysterious blueprint"
-	desc = "Some kind of collection of pre-war 'information'. Might be something in here worthwhile to people interested in that kind of thing. <br><br>(grants 5k research points when destructively analyzed)"
+	desc = "Some kind of collection of pre-war 'information'. Might be something in here worthwhile to people interested in that kind of thing. It can also be used to create a completely random blueprint after a science check. <br><br>(grants 100k research points when destructively analyzed)"
 	icon ='icons/obj/bureaucracy.dmi'
 	icon_state = "docs_generic"
 
@@ -190,6 +190,20 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	. = ..()
 	name = "[pick(GLOB.blueprint_fluff["prefixes"])] [pick(GLOB.blueprint_fluff["suffixes"])]"
 	icon_state = pick(GLOB.blueprint_fluff["iconstates"])
+
+/obj/item/blueprint/research/attack_self(mob/user)
+	. = ..()
+	var/input = input(user, "Do you wish to discover a blueprint?", "Blueprint Discovery") as null|anything in list("discover weapon", "cancel")
+	if (input == "discover weapon")
+		to_chat(user, span_notice("You begin blueprint creation."))
+		if (do_after(user, 10 SECONDS, target = src))
+			if (user.skill_roll(SKILL_SCIENCE, DIFFICULTY_EXPERT))
+				var/type = pick(subtypesof(/obj/item/book/granter/crafting_recipe/blueprint))
+				new type(user.loc)
+				to_chat(user, span_notice("You succeed creating a blueprint."))
+			else
+				to_chat(user, span_warning("You fail to create a blueprint."))
+		qdel(src)
 
 /obj/item/blueprint/misc/stim
 	name = "Stimpack blueprint"

@@ -453,3 +453,29 @@
 		for(var/mob/living/M in rangers)
 			if(prob(5+(allowed(M)*4)) && CHECK_MOBILITY(M, MOBILITY_MOVE))
 				dance(M)
+
+
+/obj/machinery/jukebox/radio
+	name = "radio jukebox"
+	desc = "A classic music player, set to broadcast to the region."
+	var/cooldown = FALSE
+
+/obj/machinery/jukebox/radio/proc/cooloff()
+	cooldown = FALSE
+
+/obj/machinery/jukebox/radio/activate_music()
+	if (cooldown)
+		say("Radio Transmitter still cooling down.")
+		return
+	cooldown = TRUE
+	var/sound/song_to_init = sound(selection.song_path)
+	addtimer(CALLBACK(src, PROC_REF(cooloff)), 3.5 MINUTES)
+	for(var/mob/M in GLOB.player_list)
+		sleep(0)
+		if(M.client.prefs.toggles & SOUND_INSTRUMENTS)
+			var/input = input(M, "Do you wish to tune into the radio broadcast of " + selection.song_name + "?", "Radio Broadcast") as null|anything in list("tune in", "not interested")
+			if (input == "tune in")
+				song_to_init.volume = min(volume, 40) * M.client.admin_music_volume
+				song_to_init.channel = SSsounds.random_available_channel()
+				SEND_SOUND(M, song_to_init)
+				song_to_init.volume = min(volume, 40)
