@@ -40,6 +40,12 @@
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_TOYS
 	cost = 3
 
+/datum/gear/backpack/plushie_bag
+	name = "Plushie Bag"
+	path = /obj/item/storage/bag/plushie
+	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_TOYS
+	cost = 2
+
 //// Pens - not catagorized
 
 /datum/gear/backpack/pen

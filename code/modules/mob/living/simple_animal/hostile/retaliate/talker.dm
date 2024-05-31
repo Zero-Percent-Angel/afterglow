@@ -146,6 +146,8 @@
 
 
 /mob/living/simple_animal/hostile/retaliate/talker/talk_to(mob/talker)
+	if (!istype(talker, /mob/living))
+		return
 	face_atom(talker)
 	if (enemies.Find(WEAKREF(talker)))
 		if(!broken_trust.Find(WEAKREF(talker)) && talker.skill_roll(SKILL_SPEECH))

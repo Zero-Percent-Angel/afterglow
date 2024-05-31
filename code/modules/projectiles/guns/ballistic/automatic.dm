@@ -2132,7 +2132,7 @@
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = LMG_RECOIL(0.7)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm150
+		/datum/firemode/automatic/rpm200
 	)
 
 	is_automatic = TRUE

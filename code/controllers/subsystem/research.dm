@@ -37,8 +37,8 @@ SUBSYSTEM_DEF(research)
 	var/list/techweb_nodes_experimental = list()	//Node ids that are exclusive to the BEPIS.
 
 	var/list/techweb_point_items = list(		//path = list(point type = value)
-	/obj/item/blueprint/research                   = list(TECHWEB_POINT_TYPE_GENERIC = 5000),
-	/obj/item/scrap/research                       = list(TECHWEB_POINT_TYPE_GENERIC = 1000),
+	/obj/item/blueprint/research                   = list(TECHWEB_POINT_TYPE_GENERIC = 100000),
+	/obj/item/scrap/research                       = list(TECHWEB_POINT_TYPE_GENERIC = 15000),
 
 	/obj/item/assembly/signaler/anomaly            = list(TECHWEB_POINT_TYPE_GENERIC = 10000),
 	//   -   Slime Extracts!   - Basics

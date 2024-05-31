@@ -377,7 +377,7 @@
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
-/datum/design/combatc
+/datum/design/servicer
 	name = "Service Rifle"
 	desc = "A 5.56x45 semi-automatic service rifle, made just like the NCR make them... but with more tech."
 	id = "servicerifle"
