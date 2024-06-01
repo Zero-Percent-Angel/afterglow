@@ -468,12 +468,16 @@
 	cooldown = TRUE
 	var/sound/song_to_init = sound(selection.song_path)
 	addtimer(CALLBACK(src, PROC_REF(cooloff)), 3.5 MINUTES)
-	for(var/mob/M in GLOB.player_list)
-		sleep(0)
-		if(M.client.prefs.toggles & SOUND_INSTRUMENTS)
-			var/input = input(M, "Do you wish to tune into the radio broadcast of " + selection.song_name + "?", "Radio Broadcast") as null|anything in list("tune in", "not interested")
-			if (input == "tune in")
-				song_to_init.volume = min(volume, 40) * M.client.admin_music_volume
-				song_to_init.channel = SSsounds.random_available_channel()
-				SEND_SOUND(M, song_to_init)
-				song_to_init.volume = min(volume, 40)
+	var/list/been = list()
+	for(var/obj/item/radio/R in GLOB.all_radios["[FREQ_COMMON]"])
+		if (istype(R.loc, /mob/living))
+			var/mob/living/M = R.loc
+			if(M.client && M.client.prefs.toggles & SOUND_INSTRUMENTS && !been.Find(M))
+				sleep(0)
+				been += M
+				var/input = input(M, "Your [R] crackles with a broadcast, do you wish to tune into the radio broadcast of " + selection.song_name + "?", "Radio Broadcast") as null|anything in list("tune in", "not interested")
+				if (input == "tune in")
+					song_to_init.volume = min(volume*0.2, 20) * M.client.admin_music_volume
+					song_to_init.channel = SSsounds.random_available_channel()
+					SEND_SOUND(M, song_to_init)
+					song_to_init.volume = min(volume*0.2, 20)

@@ -609,3 +609,10 @@
 	. = ..()
 	if(. != BULLET_ACT_FORCE_PIERCE)
 		. =  BULLET_ACT_TURF
+
+
+/turf/proc/has_door()
+	for(var/obj/machinery/door/s in contents)
+		return TRUE
+	for(var/obj/structure/simple_door/s in contents)
+		return TRUE
