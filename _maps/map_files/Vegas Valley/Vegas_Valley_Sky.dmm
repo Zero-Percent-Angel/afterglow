@@ -69,6 +69,11 @@
 	},
 /turf/open/floor/plating/f13/outside/roof,
 /area/f13/wasteland)
+"az" = (
+/obj/structure/window/fulltile/store,
+/obj/structure/barricade/bars,
+/turf/open/floor/plasteel/dark,
+/area/f13/building/abandoned/l)
 "aA" = (
 /obj/effect/turf_decal/weather/snow/corner,
 /turf/open/indestructible/ground/outside/graveldirt,
@@ -217,13 +222,6 @@
 	icon_state = "housewood2-broken"
 	},
 /area/f13/bar)
-"bt" = (
-/obj/structure/window/fulltile/store{
-	icon_state = "storewindowleft"
-	},
-/obj/structure/barricade/bars,
-/turf/open/floor/plasteel/dark,
-/area/f13/building/abandoned/l)
 "bx" = (
 /obj/structure/cable/outdoors{
 	icon_state = "1-2"
@@ -500,12 +498,6 @@
 	icon_state = "bar"
 	},
 /area/f13/ambientlighting/building/g)
-"do" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table,
-/obj/item/key/motorcycle,
-/turf/open/floor/plasteel/f13/vault_floor/misc/bar,
-/area/f13/building/abandoned/l)
 "dp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/sofa/right,
@@ -570,11 +562,14 @@
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/m)
 "dQ" = (
-/obj/structure/window/fulltile/store{
-	icon_state = "storewindowbottom"
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
 	},
-/obj/structure/barricade/bars,
-/turf/open/floor/plasteel/dark,
 /area/f13/building/abandoned/l)
 "dU" = (
 /obj/structure/flora/grass/wasteland{
@@ -939,17 +934,6 @@
 /obj/structure/barricade/wooden/planks,
 /turf/closed/wall/f13/wood/house/broken,
 /area/f13/building/abandoned/y)
-"fT" = (
-/obj/structure/sign/poster/prewar/poster60,
-/turf/closed/indestructible/rock{
-	desc = "A pre-War wall made of solid concrete.";
-	icon = 'icons/turf/walls/f13store.dmi';
-	icon_state = "store";
-	icon_type_smooth = "store";
-	name = "Concrete wall";
-	smooth = 1
-	},
-/area/f13/building/abandoned/l)
 "fU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chalkboard,
@@ -1219,10 +1203,6 @@
 "hE" = (
 /turf/open/floor/plating/f13/outside/roof/wood/old,
 /area/f13/ncr)
-"hG" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/dark,
-/area/f13/building/abandoned/l)
 "hJ" = (
 /turf/closed/wall/f13/wood/interior,
 /area/f13/building/abandoned/v)
@@ -1280,18 +1260,22 @@
 	icon_state = "floordirtysolid"
 	},
 /area/f13/den)
+"ik" = (
+/obj/structure/sign/poster/prewar/poster60,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
+	},
+/area/f13/building/abandoned/l)
 "il" = (
 /obj/structure/junk/small/bed,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/royalblack,
 /area/f13/ambientlighting/building/g)
-"io" = (
-/obj/structure/chair/comfy/beige{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13,
-/area/f13/wasteland)
 "iq" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/showroomfloor,
@@ -1358,6 +1342,12 @@
 /obj/effect/spawner/lootdrop/ammo/fiftypercent,
 /turf/open/floor/carpet/royalblack,
 /area/f13/ambientlighting/building/g)
+"iO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/simple_door/metal/store,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13/vault_floor/misc/bar,
+/area/f13/building/abandoned/l)
 "iQ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table,
@@ -1545,6 +1535,9 @@
 /obj/effect/spawner/lootdrop/f13/crafting,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/o)
+"kh" = (
+/turf/closed/wall/mineral/concrete/blastproof,
+/area/f13/building/abandoned/l)
 "ki" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/sweater/turtleskirt/blackpink,
@@ -1621,16 +1614,6 @@
 	},
 /turf/open/floor/wood_fancy,
 /area/f13/building/abandoned/y)
-"kG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/corp{
-	dir = 4
-	},
-/obj/structure/chair/sofa/corp/corner{
-	dir = 1
-	},
-/turf/open/floor/carpet/royalblack,
-/area/f13/building/abandoned/l)
 "kL" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -1921,12 +1904,6 @@
 /obj/structure/junk/drawer,
 /turf/open/floor/carpet/purple,
 /area/f13/ambientlighting/building/g)
-"mz" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/open/floor/plating/f13/outside/roof/metal/corrugated,
-/area/f13/wasteland)
 "mB" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -2048,11 +2025,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/royalblack,
 /area/f13/building/abandoned/w)
-"nk" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/structure/window/reinforced/tinted,
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
-/area/f13/building/abandoned/l)
 "nl" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table,
@@ -2091,11 +2063,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
-"nv" = (
-/obj/structure/window/fulltile/store,
-/obj/structure/barricade/bars,
-/turf/open/floor/plasteel/dark,
-/area/f13/building/abandoned/l)
 "nw" = (
 /obj/machinery/vending/nukacolavendfull{
 	force_free = 1
@@ -2298,6 +2265,17 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
+"oX" = (
+/obj/effect/landmark/poster_spawner/prewar,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
+	},
+/area/f13/building/abandoned/l)
 "oZ" = (
 /obj/item/kirbyplants,
 /obj/effect/decal/cleanable/dirt{
@@ -2578,17 +2556,6 @@
 "rp" = (
 /turf/closed/wall/f13/wood/house,
 /area/f13/building/abandoned/y)
-"rs" = (
-/obj/effect/landmark/poster_spawner/pinup,
-/turf/closed/indestructible/rock{
-	desc = "A pre-War wall made of solid concrete.";
-	icon = 'icons/turf/walls/f13store.dmi';
-	icon_state = "store";
-	icon_type_smooth = "store";
-	name = "Concrete wall";
-	smooth = 1
-	},
-/area/f13/building/abandoned/l)
 "rt" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/landmark/questing/people{
@@ -2632,6 +2599,11 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
+"rF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/jukebox/radio,
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building/abandoned/l)
 "rG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/vending/hydroseeds,
@@ -2703,11 +2675,6 @@
 	},
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
-"rY" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/jukebox/radio,
-/turf/open/floor/plasteel/f13/vault_floor/dark,
-/area/f13/building/abandoned/l)
 "sa" = (
 /turf/open/floor/plating/f13/outside/roof/metal/corrugated,
 /area/f13/underground/mountain)
@@ -2801,6 +2768,10 @@
 	icon_state = "housewood4-broken"
 	},
 /area/f13/bar)
+"sR" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/carpet/royalblack,
+/area/f13/building/abandoned/l)
 "sU" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -3053,17 +3024,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/building/abandoned/l)
-"uu" = (
-/obj/structure/sign/flag_america,
-/turf/closed/indestructible/rock{
-	desc = "A pre-War wall made of solid concrete.";
-	icon = 'icons/turf/walls/f13store.dmi';
-	icon_state = "store";
-	icon_type_smooth = "store";
-	name = "Concrete wall";
-	smooth = 1
-	},
-/area/f13/building/abandoned/l)
 "uv" = (
 /obj/machinery/light{
 	dir = 4
@@ -3163,6 +3123,17 @@
 /obj/structure/simple_door/room/dirty,
 /turf/open/floor/wood_common,
 /area/f13/followers)
+"uZ" = (
+/obj/structure/sign/poster/prewar/poster62,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
+	},
+/area/f13/building/abandoned/l)
 "va" = (
 /obj/structure/closet/cabinet{
 	anchored = 1
@@ -3419,13 +3390,6 @@
 "wz" = (
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
-"wD" = (
-/obj/structure/railing{
-	layer = 4.1;
-	dir = 4
-	},
-/turf/open/floor/plating/f13/outside/roof/metal/corrugated,
-/area/f13/wasteland)
 "wE" = (
 /obj/structure/table/wood/settler,
 /obj/effect/decal/cleanable/dirt{
@@ -3497,12 +3461,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/building/abandoned/w)
-"wZ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/simple_door/metal/store,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/bar,
-/area/f13/building/abandoned/l)
 "xc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/destructible/tribal_torch/wall/lit{
@@ -3813,6 +3771,14 @@
 	icon_state = "housewood2-broken"
 	},
 /area/f13/bar)
+"ze" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/kirbyplants/random,
+/turf/open/floor/plasteel/f13,
+/area/f13/wasteland)
 "zi" = (
 /turf/open/floor/plating/f13/outside/roof/metal/corrugated,
 /area/f13/wasteland)
@@ -3926,10 +3892,14 @@
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
 "zS" = (
-/obj/effect/turf_decal/delivery,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/office/dark,
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
+/obj/structure/chair/sofa/corp{
+	dir = 4
+	},
+/obj/structure/chair/sofa/corp/corner{
+	dir = 1
+	},
+/turf/open/floor/carpet/royalblack,
 /area/f13/building/abandoned/l)
 "zT" = (
 /obj/effect/decal/cleanable/dirt{
@@ -3946,9 +3916,6 @@
 	},
 /turf/open/floor/carpet/red,
 /area/f13/building/abandoned/w)
-"zX" = (
-/turf/closed/wall/mineral/concrete/blastproof,
-/area/f13/building/abandoned/l)
 "Ab" = (
 /obj/structure/table/wood,
 /obj/machinery/chem_dispenser/drinks/beer,
@@ -4205,10 +4172,6 @@
 /obj/structure/fence,
 /turf/open/indestructible/ground/outside/snow,
 /area/f13/ncr)
-"BA" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/bar,
-/area/f13/building/abandoned/l)
 "BG" = (
 /obj/structure/barricade/wooden/planks/pregame,
 /obj/structure/window/fulltile/house{
@@ -4216,6 +4179,28 @@
 	},
 /turf/open/floor/plating,
 /area/f13/bar)
+"BN" = (
+/obj/structure/sign/flag_america,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
+	},
+/area/f13/building/abandoned/l)
+"BP" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
+	},
+/area/f13/building/abandoned/l)
 "BR" = (
 /turf/closed/wall/f13/wood/house,
 /area/f13/ambientlighting/building/c)
@@ -4338,22 +4323,18 @@
 	icon_state = "housewood1-broken"
 	},
 /area/f13/bar)
+"Ct" = (
+/obj/structure/chair/comfy/beige{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13,
+/area/f13/wasteland)
 "Cu" = (
 /obj/structure/table,
 /obj/structure/bedsheetbin,
 /turf/open/floor/wood_fancy,
 /area/f13/building/abandoned/y)
-"Cv" = (
-/obj/structure/sign/poster/prewar/poster62,
-/turf/closed/indestructible/rock{
-	desc = "A pre-War wall made of solid concrete.";
-	icon = 'icons/turf/walls/f13store.dmi';
-	icon_state = "store";
-	icon_type_smooth = "store";
-	name = "Concrete wall";
-	smooth = 1
-	},
-/area/f13/building/abandoned/l)
 "Cw" = (
 /obj/structure/closet/cabinet,
 /turf/open/floor/carpet/royalblack,
@@ -4431,6 +4412,13 @@
 	},
 /turf/closed/wall/f13/wood/house/broken,
 /area/f13/legioncamp)
+"De" = (
+/obj/structure/railing{
+	layer = 4.1;
+	dir = 4
+	},
+/turf/open/floor/plating/f13/outside/roof/metal/corrugated,
+/area/f13/wasteland)
 "Df" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/mug/coco{
@@ -4586,14 +4574,11 @@
 	},
 /area/f13/brotherhood/surface)
 "En" = (
-/turf/closed/indestructible/rock{
-	desc = "A pre-War wall made of solid concrete.";
-	icon = 'icons/turf/walls/f13store.dmi';
-	icon_state = "store";
-	icon_type_smooth = "store";
-	name = "Concrete wall";
-	smooth = 1
+/obj/structure/window/fulltile/store{
+	icon_state = "storewindowleft"
 	},
+/obj/structure/barricade/bars,
+/turf/open/floor/plasteel/dark,
 /area/f13/building/abandoned/l)
 "Ep" = (
 /obj/structure/curtain{
@@ -4839,6 +4824,17 @@
 /mob/living/simple_animal/hostile/raider/baseball,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/g)
+"FH" = (
+/obj/effect/landmark/poster_spawner/pinup,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
+	},
+/area/f13/building/abandoned/l)
 "FK" = (
 /obj/structure/fence/end/wooden{
 	dir = 8
@@ -4932,16 +4928,6 @@
 	},
 /turf/open/indestructible/ground/outside/snow,
 /area/f13/wasteland)
-"Gi" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/table,
-/obj/effect/spawner/lootdrop/lighter,
-/obj/item/storage/fancy/cigarettes/cigpack_greytort,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13,
-/area/f13/wasteland)
 "Gk" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/bed/wooden,
@@ -4949,6 +4935,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/blue,
 /area/f13/ambientlighting/building/g)
+"Gl" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/floor/plating/f13/outside/roof/metal/corrugated,
+/area/f13/wasteland)
 "Gm" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/autolathe/ammo,
@@ -5039,10 +5031,6 @@
 /obj/structure/simple_door/tent,
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/ncr)
-"GO" = (
-/obj/structure/railing,
-/turf/open/floor/plating/f13/outside/roof/metal/corrugated,
-/area/f13/wasteland)
 "GP" = (
 /obj/structure/railing{
 	dir = 5
@@ -5526,6 +5514,16 @@
 /obj/structure/statue_fal,
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
+"Ke" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/lighter,
+/obj/item/storage/fancy/cigarettes/cigpack_greytort,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13,
+/area/f13/wasteland)
 "Kh" = (
 /obj/structure/window/fulltile/house{
 	icon_state = "housewindowvertical"
@@ -5554,6 +5552,10 @@
 "Kl" = (
 /turf/closed/wall/f13/wood/interior,
 /area/f13/ambientlighting/building/c)
+"Km" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13/vault_floor/dark,
+/area/f13/building/abandoned/l)
 "Ko" = (
 /obj/machinery/light,
 /obj/effect/decal/cleanable/dirt,
@@ -5637,6 +5639,12 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/bar)
+"KR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table,
+/obj/item/key/motorcycle,
+/turf/open/floor/plasteel/f13/vault_floor/misc/bar,
+/area/f13/building/abandoned/l)
 "KT" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -5665,6 +5673,11 @@
 /obj/structure/table/wood,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/m)
+"KX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/simple_door/metal,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
+/area/f13/building/abandoned/l)
 "KY" = (
 /obj/structure/barricade/wooden,
 /turf/closed/wall/f13/wood/house/broken,
@@ -5729,6 +5742,13 @@
 /obj/structure/simple_door/house,
 /turf/open/floor/carpet/red,
 /area/f13/ambientlighting/building/g)
+"Lz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/sofa/corp{
+	dir = 4
+	},
+/turf/open/floor/carpet/royalblack,
+/area/f13/building/abandoned/l)
 "LB" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -5828,6 +5848,13 @@
 /obj/structure/flora/branch_broken,
 /turf/open/indestructible/ground/outside/snow,
 /area/f13/wasteland)
+"Mq" = (
+/obj/structure/window/fulltile/store{
+	icon_state = "storewindowbottom"
+	},
+/obj/structure/barricade/bars,
+/turf/open/floor/plasteel/dark,
+/area/f13/building/abandoned/l)
 "Mr" = (
 /obj/structure/closet/wardrobe/pjs,
 /obj/effect/decal/cleanable/dirt,
@@ -5878,6 +5905,13 @@
 	},
 /turf/open/floor/plasteel/f13,
 /area/f13/brotherhood/surface)
+"MI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/vending/nukacolavendfull{
+	force_free = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/bar,
+/area/f13/building/abandoned/l)
 "MJ" = (
 /obj/structure/rack,
 /obj/machinery/light{
@@ -6230,10 +6264,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/f13/outside/roof/wood/old,
 /area/f13/ncr)
-"Ph" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/royalblack,
-/area/f13/building/abandoned/l)
 "Pm" = (
 /obj/structure/window/fulltile/store{
 	icon_state = "ruinswindowvertical"
@@ -6403,6 +6433,10 @@
 	},
 /turf/open/floor/wood_mosaic,
 /area/f13/ambientlighting/building/c)
+"Qi" = (
+/obj/structure/railing,
+/turf/open/floor/plating/f13/outside/roof/metal/corrugated,
+/area/f13/wasteland)
 "Qj" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/wood_common,
@@ -6526,20 +6560,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_mosaic/wood_mosaic_light,
 /area/engine/workshop)
-"Ra" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/item/kirbyplants/random,
-/turf/open/floor/plasteel/f13,
-/area/f13/wasteland)
-"Rb" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/open/floor/plating/f13/outside/roof/metal/corrugated,
-/area/f13/wasteland)
 "Rd" = (
 /obj/structure/dresser,
 /turf/open/floor/wood_common,
@@ -6554,6 +6574,10 @@
 	},
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
+"Rf" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/f13,
+/area/f13/wasteland)
 "Rg" = (
 /obj/effect/landmark/start/f13/ncrtrooper,
 /obj/effect/turf_decal/weather/snow/corner{
@@ -6566,10 +6590,7 @@
 /area/f13/wasteland)
 "Rh" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/corp{
-	dir = 4
-	},
-/turf/open/floor/carpet/royalblack,
+/turf/open/floor/plasteel/f13/vault_floor/misc/bar,
 /area/f13/building/abandoned/l)
 "Rk" = (
 /turf/closed/wall/f13/tentwall,
@@ -6659,6 +6680,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
+"RH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/poster_spawner/prewar,
+/turf/closed/indestructible/rock{
+	desc = "A pre-War wall made of solid concrete.";
+	icon = 'icons/turf/walls/f13store.dmi';
+	icon_state = "store";
+	icon_type_smooth = "store";
+	name = "Concrete wall";
+	smooth = 1
+	},
+/area/f13/building/abandoned/l)
 "RI" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood_common,
@@ -6707,6 +6740,12 @@
 	icon_state = "tent5"
 	},
 /area/f13/ncr)
+"RV" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/open/floor/plating/f13/outside/roof/metal/corrugated,
+/area/f13/wasteland)
 "RX" = (
 /obj/structure/fence/corner/wooden,
 /obj/effect/turf_decal/weather/snow/corner,
@@ -6795,18 +6834,6 @@
 	},
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
-"Sv" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/poster_spawner/prewar,
-/turf/closed/indestructible/rock{
-	desc = "A pre-War wall made of solid concrete.";
-	icon = 'icons/turf/walls/f13store.dmi';
-	icon_state = "store";
-	icon_type_smooth = "store";
-	name = "Concrete wall";
-	smooth = 1
-	},
-/area/f13/building/abandoned/l)
 "Sx" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 1;
@@ -6990,9 +7017,11 @@
 /turf/open/floor/carpet,
 /area/f13/ambientlighting/building/c)
 "TI" = (
+/obj/effect/turf_decal/delivery,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13,
-/area/f13/wasteland)
+/obj/structure/chair/office/dark,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
+/area/f13/building/abandoned/l)
 "TJ" = (
 /obj/structure/window/fulltile/store{
 	icon_state = "storewindowtop"
@@ -7072,17 +7101,6 @@
 	},
 /turf/open/floor/plating/f13/outside/roof/wood/old,
 /area/f13/ncr)
-"Ud" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/closed/indestructible/rock{
-	desc = "A pre-War wall made of solid concrete.";
-	icon = 'icons/turf/walls/f13store.dmi';
-	icon_state = "store";
-	icon_type_smooth = "store";
-	name = "Concrete wall";
-	smooth = 1
-	},
-/area/f13/building/abandoned/l)
 "Ue" = (
 /obj/structure/simple_door/interior,
 /obj/effect/decal/cleanable/dirt,
@@ -7368,17 +7386,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
-"VT" = (
-/obj/effect/landmark/poster_spawner/prewar,
-/turf/closed/indestructible/rock{
-	desc = "A pre-War wall made of solid concrete.";
-	icon = 'icons/turf/walls/f13store.dmi';
-	icon_state = "store";
-	icon_type_smooth = "store";
-	name = "Concrete wall";
-	smooth = 1
-	},
-/area/f13/building/abandoned/l)
 "VU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light{
@@ -7455,11 +7462,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_mosaic/wood_mosaic_light,
 /area/engine/workshop)
-"WK" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/simple_door/metal,
-/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
-/area/f13/building/abandoned/l)
 "WN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/bin/trashbin,
@@ -7690,6 +7692,11 @@
 /obj/structure/bedsheetbin,
 /turf/open/floor/wood_fancy,
 /area/f13/building/abandoned/w)
+"Ye" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/structure/window/reinforced/tinted,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
+/area/f13/building/abandoned/l)
 "Yh" = (
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/cave)
@@ -7778,13 +7785,6 @@
 "YQ" = (
 /turf/open/floor/wood_common,
 /area/f13/wasteland)
-"YU" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/vending/nukacolavendfull{
-	force_free = 1
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/bar,
-/area/f13/building/abandoned/l)
 "YV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/vending/snack{
@@ -68530,9 +68530,9 @@ xm
 xm
 xm
 zi
-wD
-wD
-wD
+De
+De
+De
 zi
 xm
 xm
@@ -68831,11 +68831,11 @@ xm
 xm
 xm
 xm
-GO
+Qi
 Vu
 jT
 Vu
-Rb
+Gl
 xm
 xm
 xm
@@ -69133,11 +69133,11 @@ xm
 xm
 xm
 xm
-GO
+Qi
 jT
 LI
 jT
-Rb
+Gl
 xm
 xm
 xm
@@ -69435,11 +69435,11 @@ xm
 xm
 xm
 xm
-GO
+Qi
 Vu
 jT
 Vu
-Rb
+Gl
 xm
 xm
 xm
@@ -69738,9 +69738,9 @@ zi
 zi
 zi
 zi
-mz
-mz
-mz
+RV
+RV
+RV
 zi
 xm
 xm
@@ -70031,16 +70031,16 @@ xm
 xm
 xm
 zi
-zX
-VT
-En
-En
-fT
-En
+kh
+oX
 dQ
 dQ
-En
-zX
+ik
+dQ
+Mq
+Mq
+dQ
+kh
 zi
 xm
 xm
@@ -70333,16 +70333,16 @@ xm
 xm
 xm
 zi
-bt
-BA
-UB
-BA
-BA
-Dp
-Rh
-kG
-YU
 En
+Rh
+UB
+Rh
+Rh
+Dp
+Lz
+zS
+MI
+dQ
 zi
 xm
 xm
@@ -70635,16 +70635,16 @@ xm
 xm
 xm
 zi
-nv
-BA
+az
+Rh
 jT
 ch
-BA
-Ph
-Ph
-Ph
+Rh
+sR
+sR
+sR
 Py
-En
+dQ
 zi
 xm
 xm
@@ -70937,16 +70937,16 @@ xm
 xm
 xm
 zi
-zX
-wZ
-En
-En
+kh
+iO
+dQ
+dQ
 jW
 jW
-BA
-BA
-do
-En
+Rh
+Rh
+KR
+dQ
 zi
 xm
 xm
@@ -71239,16 +71239,16 @@ xm
 xm
 xm
 zi
-GO
-TI
-TI
-En
-nk
-Ud
-WK
-Sv
-nk
-zX
+Qi
+Rf
+Rf
+dQ
+Ye
+BP
+KX
+RH
+Ye
+kh
 zi
 xm
 xm
@@ -71541,16 +71541,16 @@ xm
 xm
 xm
 xm
-GO
-TI
-TI
-Cv
-hG
-hG
-hG
-hG
-hG
-En
+Qi
+Rf
+Rf
+uZ
+Km
+Km
+Km
+Km
+Km
+dQ
 zi
 xm
 xm
@@ -71843,16 +71843,16 @@ xm
 xm
 xm
 xm
-GO
-TI
-io
-En
+Qi
+Rf
+Ct
+dQ
 TO
 GT
 Mi
 ox
 ur
-En
+dQ
 zi
 xm
 xm
@@ -72145,16 +72145,16 @@ xm
 xm
 xm
 xm
-GO
-Ra
-Gi
-En
+Qi
+ze
+Ke
+dQ
 Cl
-zS
+TI
 yg
-zS
-hG
-En
+TI
+Km
+dQ
 zi
 xm
 xm
@@ -72450,13 +72450,13 @@ xm
 xm
 zi
 zi
-En
-rY
-hG
-hG
-hG
-hG
-En
+dQ
+rF
+Km
+Km
+Km
+Km
+dQ
 zi
 xm
 xm
@@ -72752,13 +72752,13 @@ xm
 xm
 xm
 zi
-zX
-En
-En
-uu
-rs
-En
-zX
+kh
+dQ
+dQ
+BN
+FH
+dQ
+kh
 zi
 xm
 xm
