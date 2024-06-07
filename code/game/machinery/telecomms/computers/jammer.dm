@@ -41,7 +41,7 @@
 		if (on_cooldown)
 			to_chat(usr, span_warning("Can't jam again so soon."))
 			return
-		if (usr.skill_roll(SKILL_SCIENCE, DIFFICULTY_EXPERT))
+		if (usr.skill_check(SKILL_SCIENCE, EASY_CHECK) && usr.skill_roll(SKILL_SCIENCE, DIFFICULTY_EXPERT))
 			var/obj/machinery/telecomms/server/terminate = locate(href_list["terminate"]) in GLOB.machines
 			terminate(terminate)
 			to_chat(usr, span_good("Communications Jammed"))
