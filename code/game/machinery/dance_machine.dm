@@ -467,11 +467,16 @@
 		return
 	cooldown = TRUE
 	var/sound/song_to_init = sound(selection.song_path)
-	addtimer(CALLBACK(src, PROC_REF(cooloff)), 3.5 MINUTES)
+	addtimer(CALLBACK(src, PROC_REF(cooloff)), selection.song_length)
 	var/list/been = list()
 	for(var/obj/item/radio/R in GLOB.all_radios["[FREQ_COMMON]"])
+		var/mob/living/M = null
+		if (istype(R.loc, /obj/item/pda))
+			if (istype(R.loc.loc, /mob/living))
+				M = R.loc.loc
 		if (istype(R.loc, /mob/living))
-			var/mob/living/M = R.loc
+			M = R.loc
+		if (M != null)
 			if(M.client && M.client.prefs.toggles & SOUND_INSTRUMENTS && !been.Find(M))
 				sleep(0)
 				been += M
