@@ -289,7 +289,7 @@
 /// Prevents sprinting from being active.
 #define TRAIT_SPRINT_LOCKED				"sprint_locked"
 
-
+#define TRAIT_PURE_HUMAN		"Pure Human"
 #define TRAIT_SMUTANT		"Super Mutant"	// This is a trait usually locked for admins due to how OP it is
 #define	TRAIT_CHEMWHIZ			"chemwhiz"
 #define TRAIT_TECHNOPHOBE		"luddite" //Cannot use autolathes/biogens
