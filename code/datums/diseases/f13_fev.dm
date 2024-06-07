@@ -100,6 +100,10 @@
 	cure_chance = 8 // If you can gather all three - you deserve a somewhat of a good chance.
 	severity = DISEASE_SEVERITY_BIOHAZARD
 
+/datum/disease/curling_thirteen/after_add()
+	if (HAS_TRAIT(affected_mob, TRAIT_PURE_HUMAN))
+		carrier = 1
+
 /datum/disease/curling_thirteen/update_stage(new_stage)
 	if(new_stage > stage)
 		var/radiation_prob = max(round(affected_mob.radiation * 0.05), 1) // 1000 rads will result in 50 chance
