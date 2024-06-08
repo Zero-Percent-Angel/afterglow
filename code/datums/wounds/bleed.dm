@@ -157,7 +157,7 @@
 					new_wound = demotes_to
 				else
 					remove_wound(FALSE, FALSE)
-					return //shrug
+					return FALSE //shrug
 	if(new_wound)
 		name = initial(new_wound.name)
 		desc = initial(new_wound.desc)
@@ -185,6 +185,7 @@
 		do_splortch(splortch_reopen)
 	if(second_wind)
 		second_wind()
+	return TRUE
 
 /datum/wound/bleed/proc/do_splortch(renewing = FALSE)
 	var/verbiage = renewing ? "[renew_text]" : "[occur_text]"
