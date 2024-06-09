@@ -71,7 +71,7 @@
 /datum/surgery_step/seal_veins
 	name = "weld veins" // if your doctor says they're going to weld your blood vessels back together, you're either A) on SS13, or B) in grave mortal peril
 	implements = list(TOOL_CAUTERY = 100, /obj/item/gun/energy/laser = 90, TOOL_WELDER = 70, /obj/item = 30)
-	time = 4 SECONDS
+	time = 1 SECONDS
 
 /datum/surgery_step/seal_veins/tool_check(mob/user, obj/item/tool)
 	if(implement_type == TOOL_WELDER || implement_type == /obj/item)
@@ -99,7 +99,7 @@
 		span_notice("[user] successfully melds some of the split blood vessels in [target]'s [parse_zone(target_zone)]!"))
 	log_combat(user, target, "dressed burns in", addition="INTENT: [uppertext(user.a_intent)]")
 	pierce_wound.blood_flow -= 0.5 * user.skill_value(SKILL_DOCTOR)/REGULAR_CHECK
-	surgery.target.heal_bodypart_damage(bleed = 10 * user.skill_value(SKILL_DOCTOR)/REGULAR_CHECK)
+	surgery.target.heal_bodypart_damage(bleed = 15 * user.skill_value(SKILL_DOCTOR)/REGULAR_CHECK)
 	surgery.target.heal_bodypart_damage(1)
 	if(surgery.operated_bodypart.bleed_dam > 0)
 		surgery.status = WELD_VEINS
