@@ -14,6 +14,7 @@ export const Radio = (props, context) => {
     maxFrequency,
     listening,
     broadcasting,
+    tunedIn,
     command,
     useCommand,
     subspace,
@@ -80,6 +81,12 @@ export const Radio = (props, context) => {
                 icon={broadcasting ? 'microphone' : 'microphone-slash'}
                 selected={broadcasting}
                 onClick={() => act('broadcast')} />
+              <Button
+                textAlign="center"
+                width="37px"
+                icon={tunedIn ? 'broadcast-tower' : 'broadcast-tower'}
+                selected={tunedIn}
+                onClick={() => act('tunedIn')} />
               {!!command && (
                 <Button
                   ml={1}

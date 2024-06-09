@@ -1114,6 +1114,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/ncrsalvagedhelmetconversion
 	name = "NCR salvaged T-45d helmet"
@@ -1124,6 +1125,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/legionparmaarmorconversion
 	name = "Salvaged Parma T-45 Armor"
@@ -1134,6 +1136,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/legionparmahelmetconversion
 	name = "Salvaged Parma T-45 helmet"
@@ -1144,6 +1147,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/legionscutumarmorconversion
 	name = "Salvaged Scutum T-51 Armor"
@@ -1164,6 +1168,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 ///////////////////////////////////
 // FACTIONS COMBAT ARMOR SECTION //
 ///////////////////////////////////
@@ -1180,6 +1185,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/ncr_combat_mk2
 	name = "mk2 NCR combat armor"
@@ -1191,6 +1197,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/ncr_combat_helm
 	name = "NCR combat helmet"
@@ -1202,6 +1209,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/ncr_combat_helm_mk2
 	name = "mk2 NCR combat helmet"
@@ -1213,6 +1221,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 // Legion Combat Armor
 
@@ -1226,6 +1235,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/leg_combat_mk2
 	name = "mk2 legion combat armor"
@@ -1237,6 +1247,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/leg_combat_helm
 	name = "legion combat helmets"
@@ -1248,6 +1259,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/leg_combat_helm_mk2
 	name = "mk2 legion combat helmets"
@@ -1259,6 +1271,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 // Brotherhood Combat Armor
 
@@ -1272,6 +1285,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/boscombathelmet
 	name = "knight helmet"
@@ -1283,6 +1297,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/boscombatarmormk2
 	name = "reinforced knight armor"
@@ -1294,6 +1309,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/boscombathelmetmk2
 	name = "reinforced knight helmet"
@@ -1305,6 +1321,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 // Town Combat Armor
 
@@ -1318,6 +1335,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/town_combat_mk2
 	name = "mk2 town combat armor"
@@ -1329,6 +1347,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/town_combat_helm
 	name = "town combat helmet"
@@ -1340,6 +1359,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/town_combat_helm_mk2
 	name = "mk2 town combat helmet"
@@ -1351,6 +1371,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 // Raider combat armor
 
@@ -1364,6 +1385,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/raid_combat_mk2
 	name = "mk2 raider combat armor"
@@ -1375,6 +1397,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/raid_combat_helm
 	name = "raider combat helmet"
@@ -1386,6 +1409,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/raid_combat_helm_mk2
 	name = "mk2 raider combat helmet"
@@ -1397,3 +1421,4 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK

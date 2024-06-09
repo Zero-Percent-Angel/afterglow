@@ -471,17 +471,16 @@
 	var/list/been = list()
 	for(var/obj/item/radio/R in GLOB.all_radios["[FREQ_COMMON]"])
 		var/mob/living/M = null
-		if (istype(R.loc, /obj/item/pda))
-			if (istype(R.loc.loc, /mob/living))
-				M = R.loc.loc
-		if (istype(R.loc, /mob/living))
-			M = R.loc
-		if (M != null)
-			if(M.client && M.client.prefs.toggles & SOUND_INSTRUMENTS && !been.Find(M))
-				sleep(0)
-				been += M
-				var/input = input(M, "Your [R] crackles with a broadcast, do you wish to tune into the radio broadcast of " + selection.song_name + "?", "Radio Broadcast") as null|anything in list("tune in", "not interested")
-				if (input == "tune in")
+		if (R.tuned_in)
+			if (istype(R.loc, /obj/item/pda))
+				if (istype(R.loc.loc, /mob/living))
+					M = R.loc.loc
+			if (istype(R.loc, /mob/living))
+				M = R.loc
+			if (M != null)
+				if(M.client && M.client.prefs.toggles & SOUND_INSTRUMENTS && M.stat != DEAD && !been.Find(M))
+					been += M
+					to_chat(M, span_notice("Your [R] crackles with a broadcast, as it tunes into the radio broadcast of " + selection.song_name))
 					song_to_init.volume = min(volume*0.2, 20) * M.client.admin_music_volume
 					song_to_init.channel = SSsounds.random_available_channel()
 					SEND_SOUND(M, song_to_init)

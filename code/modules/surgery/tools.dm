@@ -134,7 +134,7 @@
 	item_flags = SURGICAL_TOOL
 	flags_1 = CONDUCT_1
 	force = 15
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = WEIGHT_CLASS_SMALL
 	attack_verb = list("drilled")
 	tool_behaviour = TOOL_DRILL
 	toolspeed = 1

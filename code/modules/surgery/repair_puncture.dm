@@ -55,8 +55,9 @@
 		span_notice("[user] successfully realigns some of the blood vessels in [target]'s [parse_zone(target_zone)] with [tool]!"),
 		span_notice("[user] successfully realigns some of the blood vessels in  [target]'s [parse_zone(target_zone)]!"))
 	log_combat(user, target, "excised infected flesh in", addition="INTENT: [uppertext(user.a_intent)]")
-	surgery.operated_bodypart.receive_damage(brute=3, wound_bonus=CANT_WOUND)
-	pierce_wound.blood_flow -= 0.25
+	pierce_wound.blood_flow -= 0.5 * user.skill_value(SKILL_DOCTOR)/REGULAR_CHECK
+	surgery.target.heal_bodypart_damage(bleed = 5 * user.skill_value(SKILL_DOCTOR)/REGULAR_CHECK)
+	surgery.operated_bodypart.heal_damage(3)
 	return ..()
 
 /datum/surgery_step/repair_innards/failure(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery, fail_prob = 0)
@@ -70,7 +71,7 @@
 /datum/surgery_step/seal_veins
 	name = "weld veins" // if your doctor says they're going to weld your blood vessels back together, you're either A) on SS13, or B) in grave mortal peril
 	implements = list(TOOL_CAUTERY = 100, /obj/item/gun/energy/laser = 90, TOOL_WELDER = 70, /obj/item = 30)
-	time = 4 SECONDS
+	time = 1 SECONDS
 
 /datum/surgery_step/seal_veins/tool_check(mob/user, obj/item/tool)
 	if(implement_type == TOOL_WELDER || implement_type == /obj/item)
@@ -97,10 +98,12 @@
 		span_notice("[user] successfully melds some of the split blood vessels in [target]'s [parse_zone(target_zone)] with [tool]!"),
 		span_notice("[user] successfully melds some of the split blood vessels in [target]'s [parse_zone(target_zone)]!"))
 	log_combat(user, target, "dressed burns in", addition="INTENT: [uppertext(user.a_intent)]")
-	pierce_wound.blood_flow -= 0.5
-	if(pierce_wound.blood_flow > 0)
-		surgery.status = REALIGN_INNARDS
-		to_chat(user, "<span class='notice'><i>There still seems to be misaligned blood vessels to finish...<i></span>")
+	pierce_wound.blood_flow -= 0.5 * user.skill_value(SKILL_DOCTOR)/REGULAR_CHECK
+	surgery.target.heal_bodypart_damage(bleed = 15 * user.skill_value(SKILL_DOCTOR)/REGULAR_CHECK)
+	surgery.target.heal_bodypart_damage(1)
+	if(surgery.operated_bodypart.bleed_dam > 0)
+		surgery.status = WELD_VEINS
+		to_chat(user, "<span class='notice'><i>There still seems to be more viens to seal..<i></span>")
 	else
 		to_chat(user, span_green("You've repaired all the internal damage in [target]'s [parse_zone(target_zone)]!"))
 	return ..()

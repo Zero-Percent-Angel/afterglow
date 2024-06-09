@@ -413,7 +413,7 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 /datum/quirk/night_vision
 	name = "Night Vision"
 	desc = "You can see slightly more clearly in full darkness than most people by one more whole tile."
-	value = 1
+	value = 3
 	mob_trait = TRAIT_NIGHT_VISION
 	gain_text = span_notice("The shadows seem a little less dark.")
 	lose_text = span_danger("Everything seems a little darker.")

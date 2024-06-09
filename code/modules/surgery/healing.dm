@@ -29,7 +29,7 @@
 	time = 15
 	var/brutehealing = 0
 	var/burnhealing = 0
-	var/woundhealing = 5
+	var/woundhealing = 3
 	var/missinghpbonus = 0 //heals an extra point of damager per X missing damage of type (burn damage for burn healing, brute for brute). Smaller Number = More Healing!
 
 /datum/surgery_step/heal/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
