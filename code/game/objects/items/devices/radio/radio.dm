@@ -20,6 +20,7 @@
 
 	var/broadcasting = FALSE  // Whether the radio will transmit dialogue it hears nearby.
 	var/listening = TRUE  // Whether the radio is currently receiving.
+	var/tuned_in = TRUE
 	var/prison_radio = FALSE  // If true, the transmit wire starts cut.
 	var/unscrewed = FALSE  // Whether wires are accessible. Toggleable by screwdrivering.
 	var/freerange = FALSE  // If true, the radio has access to the full spectrum.
@@ -157,6 +158,7 @@
 
 	data["broadcasting"] = broadcasting
 	data["listening"] = listening
+	data["tunedIn"] = tuned_in
 	data["frequency"] = frequency
 	data["minFrequency"] = freerange ? MIN_FREE_FREQ : MIN_FREQ
 	data["maxFrequency"] = freerange ? MAX_FREE_FREQ : MAX_FREQ
@@ -207,6 +209,9 @@
 				become_hearing_sensitive(INNATE_TRAIT)
 			else if(!broadcasting)
 				lose_hearing_sensitivity(INNATE_TRAIT)
+			. = TRUE
+		if("tunedIn")
+			tuned_in = !tuned_in
 			. = TRUE
 		if("channel")
 			var/channel = params["channel"]

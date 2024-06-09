@@ -129,6 +129,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	else
 		inserted_item =	new /obj/item/pen(src)
 	radio = new /obj/item/radio(src)
+	radio.name = "pipboy radio"
 	new_overlays = TRUE
 	update_icon()
 
