@@ -19,7 +19,7 @@
 /datum/quirk/sheltered
 	name = "Sheltered"
 	desc = "For one reason or another, you either can't or haven't learned English."
-	value = -2
+	value = -3
 	mob_trait = TRAIT_SHELTERED
 	gain_text = "<span class='danger'>The words of others begin to blur together...</span>"
 	lose_text = "<span class='notice'>You start putting together what people are saying!</span>"
@@ -37,7 +37,7 @@
 /datum/quirk/addict
 	name = "Addicted - Jet"
 	desc = "You've been hooked on jet for a while, you need your fix or it won't be good for you."
-	value = -3
+	value = -4
 	mob_trait = TRAIT_JET_JUNKY
 	gain_text = "<span class='danger'>Jet... jet... need jet.</span>"
 	lose_text = "<span class='notice'>Maybe Jet isn't so good for me.</span>"
@@ -58,7 +58,7 @@
 /datum/quirk/addictmentat
 	name = "Addicted - mentats"
 	desc = "You've been hooked on mentats for a while, you need your fix or it won't be good for you."
-	value = -3
+	value = -4
 	mob_trait = TRAIT_MENTAT_ADDICT
 	gain_text = "<span class='danger'>mentats... mentats... need mentats.</span>"
 	lose_text = "<span class='notice'>Maybe mentats aren't so good for me.</span>"
@@ -79,7 +79,7 @@
 /datum/quirk/addictalchol
 	name = "Addicted - Alcohol"
 	desc = "You're a rampaging alcholic."
-	value = -1
+	value = -2
 	mob_trait = TRAIT_ALCHOLIC
 	gain_text = "<span class='danger'>How about a stiff drink?</span>"
 	lose_text = "<span class='notice'>Alcohol isn't man's best friend.</span>"
@@ -102,7 +102,7 @@
 /datum/quirk/addictcigarette
 	name = "Addicted - Cigarettes"
 	desc = "You need your smokes."
-	value = -1
+	value = -2
 	mob_trait = TRAIT_SMOKER
 	gain_text = "<span class='danger'>Would be a good time to spark up about now.</span>"
 	lose_text = "<span class='notice'>Maybe I don't want lung cancer.</span>"
@@ -264,7 +264,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 /datum/quirk/narcoleptic
 	name = "Narcoleptic" //hard consider redesigning, since this is a flat update. ~TK
 	desc = "You periodically fall asleep without warning."
-	value = -3
+	value = -4
 	mob_trait = TRAIT_NARCOLEPTIC
 	gain_text = span_danger("You feel sleepy.")
 	lose_text = span_notice("You feel awake again.")
@@ -283,7 +283,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 /datum/quirk/brainproblems
 	name = "Brain Tumor"
 	desc = "You have a little friend in your brain that is slowly destroying it. Better bring some mannitol!"
-	value = -3
+	value = -6
 	gain_text = span_danger("You feel smooth.")
 	lose_text = span_notice("You feel wrinkled again.")
 	medical_record_text = "Patient has a tumor in their brain that is slowly driving them to brain death."
@@ -379,7 +379,7 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 /datum/quirk/paraplegic
 	name = "Paraplegic"
 	desc = "Your legs do not function. Nothing will ever fix this. Luckily you found a wheelchair."
-	value = -5
+	value = -6
 	mob_trait = TRAIT_PARA
 	human_only = TRUE
 	gain_text = null // Handled by trauma.
@@ -424,14 +424,14 @@ GLOBAL_LIST_EMPTY(family_heirlooms)
 /datum/quirk/prosopagnosia
 	name = "Prosopagnosia"
 	desc = "You have a mental disorder that prevents you from being able to recognize faces at all."
-	value = -1
+	value = -2
 	mob_trait = TRAIT_PROSOPAGNOSIA
 	medical_record_text = "Patient suffers from prosopagnosia, and cannot recognize faces."
 
 /datum/quirk/insanity
 	name = "Reality Dissociation Syndrome"
 	desc = "You suffer from a severe disorder that causes very vivid hallucinations. Mindbreaker toxin can suppress its effects, and you are immune to mindbreaker's hallucinogenic properties. <b>This is not a license to grief.</b>"
-	value = -1
+	value = -2
 	//no mob trait because it's handled uniquely
 	gain_text = span_userdanger("...")
 	lose_text = span_notice("You feel in tune with the world again.")
@@ -669,7 +669,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/deaf
 	name = "Deaf"
 	desc = "Due to some accident, medical condition or simply by explosion. You are simply completely unable to hear."
-	value = -2 // You are deaf. Not a license to grief.
+	value = -4 // You are deaf. Not a license to grief.
 	gain_text = span_danger("You find yourself unable to ear at all!")
 	lose_text = span_notice("You somehow can hear again, even the slight sound of the wind.")
 	medical_record_text = "Functionally deaf, patient is unable to hear."
@@ -696,7 +696,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/blindness
 	name = "Blind"
 	desc = "You are completely blind, nothing can counteract this."
-	value = -4
+	value = -5
 	gain_text = span_danger("You can't see anything.")
 	lose_text = span_notice("You miraculously gain back your vision.")
 	medical_record_text = "Patient has permanent blindness."
@@ -752,7 +752,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/flimsy
 	name = "Health - Flimsy"
 	desc = "Your body is a little more fragile then most, decreasing total health some."
-	value = -1
+	value = -2
 	mob_trait = TRAIT_FLIMSY
 	medical_record_text = "Patient has low capacity for injury."
 	gain_text = "<span class='notice'>You feel like you could break with a single hit."
@@ -766,7 +766,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/veryflimsy
 	name = "Health - Very Flimsy"
 	desc = "Your body is a lot more fragile then most, decreasing total health."
-	value = -3
+	value = -4
 	mob_trait = TRAIT_VERYFLIMSY
 	medical_record_text = "Patient has abnormally low capacity for injury."
 	gain_text = "<span class='notice'>You feel like you could break with a single hit."
@@ -809,7 +809,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/paper_skin
 	name = "Paper Skin"
 	desc = "Your flesh is weaker, resulting in receiving cuts more easily."
-	value = -2
+	value = -3
 	mob_trait = TRAIT_PAPER_SKIN
 	gain_text = "<span class='notice'>Your flesh feels weak!</span>"
 	lose_text = "<span class='notice'>Your flesh feels more durable!</span>"
@@ -818,7 +818,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/glass_bones
 	name = "Glass Bones"
 	desc = "Your bones are far more brittle, and more vulnerable to breakage."
-	value = -2
+	value = -3
 	mob_trait = TRAIT_GLASS_BONES
 	gain_text = "<span class='notice'>Your bones feels weak!</span>"
 	lose_text = "<span class='notice'>Your bones feels more durable!</span>"
@@ -904,7 +904,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/nosleep
 	name = "Can Not Sleep"
 	desc = "For whatever reason you literally lack the ability to sleep."
-	value = -3
+	value = -4
 	mob_trait = TRAIT_SLEEPIMMUNE
 	gain_text = span_notice("You feel like you'll never need to sleep again, for real!")
 	lose_text = span_danger("You could kind of go for a nap.")
@@ -922,7 +922,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/cantrun
 	name = "Mobility - Can not Run"
 	desc = "For whatever reason you just can't muster up the go to run."
-	value = -4
+	value = -5
 	mob_trait = TRAIT_NORUNNING
 	gain_text = span_notice("Running just isnt' worth the effort!")
 	lose_text = span_danger("You really feel like running all of a sudden!")
@@ -931,7 +931,7 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 /datum/quirk/luddite
 	name = "Luddite"
 	desc = "You forgo some technology, like autolathes and some other machinery."
-	value = -3
+	value = -4
 	mob_trait = TRAIT_TECHNOPHOBE
 	gain_text = span_notice("All my homies hate machines.")
 	lose_text = span_danger("Maybe industrial society isn't so bad...")
