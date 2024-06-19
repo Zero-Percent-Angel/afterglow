@@ -33,7 +33,7 @@
 	/// We have an active do_after, dont superstack healing things
 	var/is_healing = FALSE
 	/// trait needed to use this at full speed and effectiveness. Accepts TRAIT_SURGERY_LOW, TRAIT_SURGERY_MID, TRAIT_SURGERY_HIGH
-	var/needed_trait
+	var/needed_skill
 	/// Time penalty multiplier if they dont have the trait
 	var/unskilled_speed_mult = 2
 	/// Effectiveness penalty multiplier if they dont have the trait
@@ -121,12 +121,12 @@
 	// limb is missing, output a message and move on
 	if(do_these_things == BODYPART_INORGANIC)
 		to_chat(user, span_warning("[C]'s [parse_zone(user.zone_selected)] is robotic! Let's try another part..."))
-	
+
 	// If our operations are a number, and that number corresponds to operations to do, good! output what we're working on and what to do
 	if(isnum(do_these_things) && do_these_things > BODYPART_FINE)
 		output_heal_instructions = list("bodypart" = first_choice, "operations" = do_these_things)
 		return output_heal_instructions
-	
+
 	// Part wasn't there, or needed no healing. Lets find one that does need healing!
 	var/obj/item/bodypart/affecting
 	for(var/limb_slot_to_check in GLOB.main_body_parts)
@@ -181,7 +181,7 @@
 	var/mob/living/simple_animal/critter = M
 	if(M.stat == DEAD)
 		to_chat(user, span_notice(" [M] is dead. You can not help [M.p_them()]!"))
-		return 
+		return
 	if (!(critter.healable))
 		to_chat(user, span_warning("[M] cannot be healed!"))
 		return FALSE
@@ -203,7 +203,10 @@
 		return
 	if(!user.can_inject(C, TRUE))
 		return
-	
+	if(!is_skilled_enough(user, C))
+		user.show_message(span_alert("You don't have the skill needed to use that!"))
+		return
+
 	var/list/output_list = pick_a_bodypart(C, user)
 	if(!islist(output_list))
 		to_chat(user, span_phobia("Uh oh! [src] didnt return a list! This is a bug, probably! Report this pls~ =3"))
@@ -261,7 +264,10 @@
 
 /// Returns if the user is skilled enough to use this thing effectively (unused, currently)
 /obj/item/stack/medical/proc/is_skilled_enough(mob/user, mob/target)
-	return NO_SKILLS_REQUIRED
+	if (!needed_skill)
+		return TRUE
+	else
+		return user.skill_check(SKILL_FIRST_AID, needed_skill)
 /* 	if(!needed_trait)
 		return NO_SKILLS_REQUIRED
 	if(HAS_TRAIT(user, needed_trait))
@@ -305,7 +311,7 @@
 	switch(which_message)
 		if("start")
 			user.visible_message(
-				span_warning("[user] begins applying \a [src] to [target]'s [target_part]..."), 
+				span_warning("[user] begins applying \a [src] to [target]'s [target_part]..."),
 				span_warning("You begin applying \a [src] to [user == target ? "your" : "[target]'s"] [target_part]..."))
 /*			if(is_skilled && is_skilled != NO_SKILLS_REQUIRED)
 				switch(needed_trait)
@@ -328,41 +334,41 @@
 		if("end")
 			if(isnull(bandage_code))
 				user.visible_message(
-					span_green("[user] applies \a [src] to [target]'s [target_part]."), 
+					span_green("[user] applies \a [src] to [target]'s [target_part]."),
 					span_green("You apply \a [src] to [user == target ? "your" : "[target]'s"] [target_part]."))
 			else
 				if(bandage_code & BANDAGE_NEW_APPLIED)
 					user.visible_message(
-						span_green("[user] applies a fresh new [src] to [target]'s [target_part]!"), 
+						span_green("[user] applies a fresh new [src] to [target]'s [target_part]!"),
 						span_green("You apply a fresh new [src] to [user == target ? "your" : "[target]'s"] [target_part]!"))
 				if(bandage_code & BANDAGE_WAS_REPAIRED)
 					user.visible_message(
-						span_green("[user] fixes up the bandages on [target]'s [target_part] with [src]!"), 
+						span_green("[user] fixes up the bandages on [target]'s [target_part] with [src]!"),
 						span_green("You fix up the bandages on [user == target ? "your" : "[target]'s"] [target_part] with [src]!"))
 				if(bandage_code & BANDAGE_WAS_REPAIRED_TO_FULL)
 					user.visible_message(
-						span_green("[user] fixes up the bandages on [target]'s [target_part] with [src], repairing them completely!"), 
+						span_green("[user] fixes up the bandages on [target]'s [target_part] with [src], repairing them completely!"),
 						span_green("You fix up the bandages on [user == target ? "your" : "[target]'s"] [target_part] with [src], repairing them completely!"))
 				if(bandage_code & BANDAGE_TIMER_REFILLED)
 					user.visible_message(
-						span_green("[user] freshens up the bandages on [target]'s [target_part] with [src]!"), 
+						span_green("[user] freshens up the bandages on [target]'s [target_part] with [src]!"),
 						span_green("You freshen up the bandages on [user == target ? "your" : "[target]'s"] [target_part] with [src]!"))
-				
+
 				if(bandage_code & SUTURE_NEW_APPLIED)
 					user.visible_message(
-						span_green("[user] applies a fresh new set of [src] to [target]'s [target_part]!"), 
+						span_green("[user] applies a fresh new set of [src] to [target]'s [target_part]!"),
 						span_green("You apply a fresh new set of [src] to [user == target ? "your" : "[target]'s"] [target_part]!"))
 				if(bandage_code & SUTURE_WAS_REPAIRED)
 					user.visible_message(
-						span_green("[user] reinforces the sutures on [target]'s [target_part] with [src]!"), 
+						span_green("[user] reinforces the sutures on [target]'s [target_part] with [src]!"),
 						span_green("You reinforce the sutures on [user == target ? "your" : "[target]'s"] [target_part] with [src]!"))
 				if(bandage_code & SUTURE_WAS_REPAIRED_TO_FULL)
 					user.visible_message(
-						span_green("[user] reinforces the sutures on [target]'s [target_part] with [src], repairing them completely!"), 
+						span_green("[user] reinforces the sutures on [target]'s [target_part] with [src], repairing them completely!"),
 						span_green("You reinforce the sutures on [user == target ? "your" : "[target]'s"] [target_part] with [src], repairing them completely!"))
 				if(bandage_code & SUTURE_TIMER_REFILLED)
 					user.visible_message(
-						span_green("[user] freshens up the sutures on [target]'s [target_part] with [src]!"), 
+						span_green("[user] freshens up the sutures on [target]'s [target_part] with [src]!"),
 						span_green("You freshen up the sutures on [user == target ? "your" : "[target]'s"] [target_part] with [src]!"))
 
 /obj/item/stack/medical/get_belt_overlay()
@@ -379,7 +385,7 @@
 	icon_state = "brutepack"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	//needed_trait = TRAIT_SURGERY_LOW
+	needed_skill = EASY_CHECK
 	heal_brute = 30
 	heal_burn = 30
 	heal_mobs = 40
@@ -395,7 +401,7 @@
 	icon_state = "brutepack"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	//needed_trait = TRAIT_SURGERY_LOW
+	//needed_skill = TRAIT_SURGERY_LOW
 	infinite_uses = TRUE
 	heal_brute = 1
 	heal_burn = 1
@@ -413,12 +419,12 @@
 	switch(which_message)
 		if("start")
 			user.visible_message(
-				span_notice("[user] starts lapping at [target]'s [target_part]..."), 
+				span_notice("[user] starts lapping at [target]'s [target_part]..."),
 				span_notice("You lick at [user == target ? "your" : "[target]'s"] [target_part]..."))
 
 		if("end")
 			user.visible_message(
-				span_green("[user] lick [target]'s [target_part]!"), 
+				span_green("[user] lick [target]'s [target_part]!"),
 				span_green("You lick [user == target ? "your" : "[target]'s"] [target_part]!"))
 
 /obj/item/stack/medical/bruise_pack/one
@@ -435,7 +441,7 @@
 /* * * * * * * * * * * * * * * * * * *
  * + Quick to apply
  * + Low skill needed
- * + Prevents further blood loss 
+ * + Prevents further blood loss
  * + Heals a little brute and burn
  * - Doesnt stop bleeding on its own
  * - Falls apart easily
@@ -540,7 +546,7 @@
 	bandage_power = BANDAGE_BEST_WOUND_CLOSURE
 	max_bandage_healing = BANDAGE_BEST_WOUND_MAX
 	is_bandage = TRUE
-	//needed_trait = TRAIT_SURGERY_LOW
+	needed_skill = EASY_CHECK
 	//absorption_rate = 0.4
 	//absorption_capacity = 15
 	covering_lifespan = BANDAGE_GOOD_MAX_DURATION
@@ -602,7 +608,7 @@
 	gender = PLURAL
 	singular_name = "suture"
 	icon_state = "suture"
-	//needed_trait = TRAIT_SURGERY_MID
+	//needed_skill = TRAIT_SURGERY_MID
 	covering_hitpoints = 3
 	self_delay = 80
 	other_delay = 60
@@ -630,7 +636,7 @@
 	name = "improvised sutures"
 	icon_state = "suture_imp"
 	desc = "A set of improvised sutures consisting of clothing thread and a sewing needle. Liable to tear up your flesh, but will eventually close up minor bleeds. Medical training won't help you with this."
-	//needed_trait = null
+	//needed_skill = null
 	covering_hitpoints = 1
 	hurt_brute = 8 // Owie
 	self_delay = 100
@@ -660,7 +666,7 @@
 	name = "advanced medicated sutures"
 	icon_state = "suture_purp"
 	desc = "An advanced suture and ultra-sharp needle, both infused with specialized coagulants and painkillers that make for a quick and painless wound treatment. It's very delicate and requires extensive medical training to use effectively."
-	//needed_trait = TRAIT_SURGERY_HIGH
+	needed_skill = REGULAR_CHECK
 	covering_hitpoints = 5
 	self_delay = 80
 	other_delay = 60
@@ -691,7 +697,7 @@
 
 	heal_burn = 5
 	flesh_regeneration = 7
-	sanitization = 2
+	sanitization = 1
 	grind_results = list(/datum/reagent/medicine/kelotane = 10)
 
 /obj/item/stack/medical/ointment/five
@@ -743,6 +749,7 @@
 	flesh_regeneration = 12
 	grind_results = list(/datum/reagent/consumable/aloejuice = 1)
 	merge_type = /obj/item/stack/medical/mesh/advanced
+	needed_skill = REGULAR_CHECK
 
 /obj/item/stack/medical/mesh/advanced/one
 	amount = 1
@@ -796,12 +803,11 @@
 	name = "bone gel"
 	singular_name = "bone gel"
 	desc = "A potent medical gel that, when applied to a damaged bone in a proper surgical setting, triggers an intense melding reaction to repair the wound. Can be directly applied alongside surgical sticky tape to a broken bone in dire circumstances, though this is very harmful to the patient and not recommended."
-
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "bone-gel"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-
+	needed_skill = REGULAR_CHECK
 	amount = 4
 	self_delay = 20
 	grind_results = list(/datum/reagent/medicine/bicaridine = 10)

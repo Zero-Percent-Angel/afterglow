@@ -1158,6 +1158,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/legionscutumhelmetconversion
 	name = "Salvaged Scutum T-51 Helmet"
@@ -1169,6 +1170,7 @@ datum/crafting_recipe/steelbib/heavy
 	subcategory = CAT_ARMOR
 	always_available = FALSE
 	skill_level = VERY_EASY_CHECK
+
 ///////////////////////////////////
 // FACTIONS COMBAT ARMOR SECTION //
 ///////////////////////////////////
@@ -1278,7 +1280,7 @@ datum/crafting_recipe/steelbib/heavy
 /datum/crafting_recipe/boscombatarmor
 	name = "knight armor"
 	result = /obj/item/clothing/suit/armor/medium/combat/brotherhood
-	blacklist = list(/obj/item/clothing/suit/armor/medium/combat/mk2)
+	blacklist = list(/obj/item/clothing/suit/armor/medium/combat/mk2, /obj/item/clothing/suit/armor/medium/combat/brotherhood/mk2)
 	reqs = list(/obj/item/clothing/suit/armor/medium/combat = 1,
 				/obj/item/toy/crayon/spraycan)
 	time = 30
@@ -1290,7 +1292,7 @@ datum/crafting_recipe/steelbib/heavy
 /datum/crafting_recipe/boscombathelmet
 	name = "knight helmet"
 	result = /obj/item/clothing/head/helmet/f13/combat/brotherhood
-	blacklist = list(/obj/item/clothing/head/helmet/f13/combat/mk2)
+	blacklist = list(/obj/item/clothing/head/helmet/f13/combat/mk2, /obj/item/clothing/head/helmet/f13/combat/brotherhood/mk2)
 	reqs = list(/obj/item/clothing/head/helmet/f13/combat = 1,
 				/obj/item/toy/crayon/spraycan)
 	time = 30
