@@ -1794,12 +1794,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/brotherhood/armory)
 "aSA" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
-	icon_state = "1-2"
+	icon_state = "2-8"
 	},
-/obj/machinery/door/poddoor/shutters{
-	id = "bosshop";
-	name = "brotherhood shutters"
+/obj/structure/cable{
+	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/rnd)
@@ -8565,9 +8565,15 @@
 /turf/open/floor/wood_mosaic/wood_mosaic_dark,
 /area/f13/building/abandoned/o)
 "eul" = (
-/obj/structure/ore_box,
+/obj/machinery/door/poddoor/shutters{
+	id = "bosshop";
+	name = "brotherhood shutters"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/brotherhood/operations)
+/area/f13/brotherhood/rnd)
 "euo" = (
 /obj/structure/barricade/wooden,
 /obj/structure/decoration/rag{
@@ -25017,6 +25023,10 @@
 /area/f13/bunker)
 "mMm" = (
 /obj/item/kirbyplants/photosynthetic,
+/obj/machinery/light/small{
+	dir = 4;
+	light_color = "#d8b1b1"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
 "mMn" = (
@@ -37145,15 +37155,9 @@
 /turf/open/floor/plating/rust,
 /area/f13/bunker/bunkersix)
 "sXx" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
+/obj/structure/ore_box,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/brotherhood/rnd)
+/area/f13/brotherhood/operations)
 "sXB" = (
 /obj/effect/gibspawner/human,
 /obj/structure/table,
@@ -38394,7 +38398,7 @@
 "tCU" = (
 /obj/structure/simple_door/metal/ventilation,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
-/area/f13/brotherhood/medical)
+/area/f13/brotherhood/rnd)
 "tCZ" = (
 /obj/structure/flora/rock/jungle,
 /turf/open/water,
@@ -46354,7 +46358,7 @@
 	icon_state = "0-8"
 	},
 /turf/closed/wall/r_wall,
-/area/f13/brotherhood/medical)
+/area/f13/brotherhood/rnd)
 "xCW" = (
 /obj/effect/spawner/lootdrop/f13/armor/tier4,
 /obj/effect/spawner/lootdrop/f13/armor/tier4,
@@ -89169,7 +89173,7 @@ brH
 maM
 qfW
 qfW
-kKQ
+qfW
 phC
 qfW
 vJu
@@ -91594,8 +91598,8 @@ odh
 qdV
 aBA
 fTO
-xoQ
-kPi
+aSA
+eul
 wmG
 dFu
 ueC
@@ -91896,10 +91900,10 @@ qdV
 qdV
 ois
 fTO
-sXx
-aSA
+xoQ
+kPi
 qfW
-eul
+qfW
 ueC
 ohv
 ohv
@@ -92200,8 +92204,8 @@ sJq
 fTO
 xoQ
 kPi
-ueC
-ueC
+qfW
+sXx
 ueC
 yhR
 yhR
@@ -92502,9 +92506,9 @@ aDy
 fTO
 jpT
 woS
-bgK
-yhR
-yhR
+ueC
+ueC
+ueC
 yhR
 yhR
 yhR
@@ -94000,18 +94004,18 @@ vDc
 maM
 vQs
 uHP
-gvF
-gvF
-gvF
+woS
+woS
+woS
 tCU
 xCL
-gvF
-gvF
-gvF
-gvF
-gvF
-gvF
-gvF
+woS
+woS
+woS
+woS
+woS
+woS
+woS
 gvF
 gvF
 gvF
