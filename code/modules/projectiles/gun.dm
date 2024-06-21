@@ -1114,8 +1114,11 @@ ATTACHMENTS
 	//data["pierce_multiplier"] = pierce_multiplier
 	//data["ricochet_multiplier"] = ricochet_multiplier
 	data["penetration_multiplier"] = penetration_multiplier
+	if (automatic)
+		data["fire_delay"] = autofire_shot_delay * 100 //time between shot, in ms
+	else
+		data["fire_delay"] = fire_delay * 100 //time between shot, in ms
 
-	data["fire_delay"] = fire_delay * 100 //time between shot, in ms
 	data["burst"] = burst_size //How many shots are fired per click
 	data["burst_delay"] = burst_shot_delay * 100 //time between shot in burst mode, in ms
 

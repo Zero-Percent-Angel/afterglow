@@ -465,6 +465,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 
 				dat += "Microphone: <a href='byond://?src=[REF(src)];rmictoggle=1'>[radio.broadcasting?"Engaged":"Disengaged"]</a><br>"
 				dat += "Speaker: <a href='byond://?src=[REF(src)];rspktoggle=1'>[radio.listening?"Engaged":"Disengaged"]</a><br>"
+				dat += "Music: <a href='byond://?src=[REF(src)];rmsctoggle=1'>[radio.tuned_in?"Engaged":"Disengaged"]</a><br>"
 				dat += "Frequency:<br>"
 				dat += "<a href='?src=[REF(src)];rfreq=-10'>-</a>"
 				dat += "<a href='?src=[REF(src)];rfreq=-2'>-</a>"
@@ -760,6 +761,10 @@ GLOBAL_LIST_EMPTY(PDAs)
 
 		if(href_list["rspktoggle"])
 			radio.listening = !radio.listening
+			Boop()
+
+		if(href_list["rmsctoggle"])
+			radio.tuned_in = !radio.tuned_in
 			Boop()
 
 		if(href_list["rfreq"])
