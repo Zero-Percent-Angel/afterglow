@@ -13,8 +13,8 @@
 	/// is the gun semi, burst, or fullauto?
 	var/fire_type = GUN_FIREMODE_SEMIAUTO
 	var/firerate_semi = GUN_FIRE_DELAY_NORMAL
-	var/firerate_burst = GUN_AUTOFIRE_DELAY_NORMAL
-	var/firerate_auto = GUN_BURSTFIRE_DELAY_NORMAL
+	var/firerate_burst = GUN_BURSTFIRE_DELAY_NORMAL
+	var/firerate_auto = GUN_AUTOFIRE_DELAY_NORMAL
 	var/burst_count = 1
 	var/accuracy_mod = 0
 	var/obj/item/gun/gun = null
@@ -64,9 +64,9 @@
 		if(IU.weapon_upgrades[GUN_UPGRADE_CHARGECOST])
 			gun.vars["charge_cost"] *= IU.weapon_upgrades[GUN_UPGRADE_CHARGECOST]
 		if(IU.weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT])
-			gun.fire_delay *= IU.weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT]
-			gun.autofire_shot_delay *= IU.weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT]
-			gun.burst_shot_delay *= IU.weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT]
+			gun.fire_delay = max(round(gun.fire_delay * IU.weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT], 1), 1)
+			gun.autofire_shot_delay = max(round(gun.autofire_shot_delay * IU.weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT], 1), 1)
+			gun.burst_shot_delay = max(round(gun.burst_shot_delay * IU.weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT], 1), 1)
 		if(IU.weapon_upgrades[GUN_UPGRADE_OFFSET])
 			gun.added_spread = max(0, gun.added_spread + IU.weapon_upgrades[GUN_UPGRADE_OFFSET])
 

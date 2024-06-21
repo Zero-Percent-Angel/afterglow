@@ -950,7 +950,7 @@ GLOBAL_LIST_INIT(main_body_parts, list(
 #define GUN_BOLT_PENALTY 1.5
 
 /// Refire speed multiplier for manual action guns if you're not a pr0 and click-to-cycle it
-#define GUN_AUTOPUMP_REFIRE_DELAY_MULT 1.8
+#define GUN_AUTOPUMP_REFIRE_DELAY_MULT 1.5
 
 //#define RECOIL_SPREAD_CALC(x)  (0.0075 * (x ** 4)) // Funky way of exponentiating bullet spread from recoil
 #define RECOIL_SPREAD_CALC(x)  (x) // funky recoil kidna turbofucks things in wierd says, maybe
