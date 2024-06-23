@@ -453,7 +453,8 @@ CHAMELEON_CLOTHING_DEFINE(/obj/item/clothing/mask/chameleon)
 	permeability_coefficient = 0.01
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
 
-	var/voice_change = 1 ///This determines if the voice changer is on or off.
+	var/voice_change = 0 ///This determines if the voice changer is on or off.
+	var/voice_name = ""
 
 	var/datum/action/item_action/chameleon/change/chameleon_action
 
@@ -476,6 +477,7 @@ CHAMELEON_CLOTHING_DEFINE(/obj/item/clothing/mask/chameleon)
 	chameleon_action.emp_randomise(INFINITY)
 
 /obj/item/clothing/mask/chameleon/attack_self(mob/user)
+	voice_name = input(user, "What voice do you wish to portray?", "Voice Changer", "Unknown") as text|null
 	voice_change = !voice_change
 	to_chat(user, span_notice("The voice changer is now [voice_change ? "on" : "off"]!"))
 
