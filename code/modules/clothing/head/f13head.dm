@@ -123,7 +123,6 @@
 	desc = "I've never seen so many men wasted so badly."
 	icon_state = "cowboy"
 	item_state = "dethat"
-	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/cowboy/Initialize()
 	. = ..()
@@ -135,7 +134,6 @@
 	desc = "A black cowboy hat with a large brim that's curved to the sides.<br>A silver eagle pin is attached to the front."
 	icon_state = "bandit"
 	item_state = "fedora"
-	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/bandit/Initialize()
 	. = ..()
@@ -146,14 +144,13 @@
 	desc = "A perfect hat for a ramblin' gamblin' man." //But I got to ramble (ramblin' man) //Oh I got to gamble (gamblin' man) //Got to got to ramble (ramblin' man) //I was born a ramblin' gamblin' man
 	icon_state = "gambler"
 	item_state = "dethat"
-	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/helmet/f13/vaquerohat
 	name = "vaquero hat"
 	desc = "An old sombrero worn by Vaqueros to keep off the harsh sun."
 	icon_state = "vaquerohat"
 	item_state = "vaquerohat"
-	flags_inv = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEEARS
 
 /obj/item/clothing/head/helmet/f13/hoodedmask
 	name = "hooded mask"
@@ -169,21 +166,20 @@
 	desc = "A cowboy hat made from brahmin hides."
 	icon_state = "brahmin_leather_cowboy_hat"
 	item_state = "brahmin_leather_cowboy_hat"
-	flags_inv = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEEARS
 
 /obj/item/clothing/head/helmet/f13/rustedcowboyhat
 	name = "Rusted Cowboy Hat"
 	desc = "A hat made from tanned leather hide."
 	icon_state = "rusted_cowboy"
 	item_state = "rusted_cowboy"
-	flags_inv = HIDEEARS|HIDEHAIR
+	flags_inv = HIDEEARS
 
 /obj/item/clothing/head/f13/police
 	name = "police hat"
 	desc = "The wasteland's finest."
 	icon_state = "retropolice"
 	item_state = "fedora"
-	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/simplekitty
 	name = "kitty headband"
@@ -199,8 +195,6 @@
 	item_state = "riderw"
 
 //Soft caps
-/obj/item/clothing/head/soft/f13
-	flags_inv = HIDEEARS|HIDEHAIR
 
 /obj/item/clothing/head/soft/f13/baseball
 	name = "baseball cap"
@@ -328,7 +322,6 @@
 	desc = "Why are there tricorns in the desert again?"
 	icon_state = "tricorn"
 	item_state = "dethat"
-	flags_inv = HIDEHAIR
 
 /obj/item/clothing/head/f13/town/mayor
 	name = "mayoral tricorn"
@@ -364,7 +357,6 @@
 	desc = "There's only one man who can sniff out the dirty stench of crime, and he's likely wearing this black hat."
 	icon_state = "detectivealt"
 	item_state = "fedora"
-	flags_inv = HIDEHAIR
 
 //Old World Law Enforcement
 //Police and State Police
@@ -511,7 +503,6 @@ obj/item/clothing/head/f13/army/beret
 	desc = "A standard issue black beret of the Enclave."
 	icon_state = "remnant"
 	item_state = "remnant"
-	flags_inv = HIDEEARS|HIDEFACE
 	flags_cover = null
 
 /obj/item/clothing/head/beret/enclave/science

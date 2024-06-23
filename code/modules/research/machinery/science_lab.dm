@@ -89,7 +89,12 @@
 			return
 		say("Creation started.")
 		update_overlays()
-		if (do_after(usr, 10 SECONDS, 1, src, required_mobility_flags = MOBILITY_USE))
+		var/total_manip_rating = 0
+		var/manips = 0
+		for(var/obj/item/stock_parts/M in component_parts)
+			total_manip_rating += M.rating
+			manips++
+		if (do_after(usr, STANDARD_PART_LEVEL_LATHE_COEFFICIENT(total_manip_rating/(manips? manips : 1)) * 10 SECONDS, 1, src, required_mobility_flags = MOBILITY_USE))
 			//need to make sure someone hasn't spent all the points while we were working!
 			if (!linked_console.stored_research.can_afford(list(TECHWEB_POINT_TYPE_GENERIC = points_to_contribute)))
 				say("Not enough points.")
@@ -136,7 +141,12 @@
 			return
 		say("Experiment started.")
 		engaged_in_science = TRUE
-		if (do_after(usr, 10 SECONDS, 1, src, required_mobility_flags = MOBILITY_USE))
+		var/total_manip_rating = 0
+		var/manips = 0
+		for(var/obj/item/stock_parts/M in component_parts)
+			total_manip_rating += M.rating
+			manips++
+		if (do_after(usr, STANDARD_PART_LEVEL_LATHE_COEFFICIENT(total_manip_rating/(manips? manips : 1)) * 10 SECONDS, 1, src, required_mobility_flags = MOBILITY_USE))
 			if (scantype == "simple")
 				do_experiment(usr, DIFFICULTY_EASY)
 			if (scantype == "complex")

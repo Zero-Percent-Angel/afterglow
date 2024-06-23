@@ -1,5 +1,6 @@
 /obj/item/clothing/under/dress
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
+	alternate_worn_layer = ABOVE_SHOES_LAYER
 
 /obj/item/clothing/under/dress/skirt
 	name = "black skirt"
