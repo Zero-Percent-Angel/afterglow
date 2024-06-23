@@ -74,7 +74,7 @@
 	delay_shock = world.time + 1 MINUTES
 	if(istype(target, /mob/living))
 		var/mob/living/livingTarget = target
-		livingTarget.electrocute_act(35, src, 1, flags = SHOCK_NOGLOVES|SHOCK_ILLUSION)
+		livingTarget.electrocute_act(35, src, livingTarget.run_armor_check(null, "energy")/100, flags = SHOCK_NOGLOVES|SHOCK_ILLUSION)
 
 /obj/item/fishy/crawdad
 	name = "Crawdad"
