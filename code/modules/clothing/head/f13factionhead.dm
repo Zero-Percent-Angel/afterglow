@@ -1093,7 +1093,7 @@ obj/item/clothing/head/helmet/f13/enclave/usmcriot
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	icon_state = "army_cap"
 	item_state = "army_cap"
-	dynamic_hair_suffix = "+generic"
+	dynamic_hair_suffix = ""
 
 /obj/item/clothing/head/f13/army/officer
 	name = "US Army officer's cap"
