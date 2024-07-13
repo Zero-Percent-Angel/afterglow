@@ -14,7 +14,30 @@
 	var/autoSucceedThreshold = HARD_CHECK
 	var/roll_difficulty = DIFFICULTY_NORMAL
 	var/faction_mob = FALSE
-	var/list/enemy_factions = list()
+	var/list/enemy_factions = list("supermutant", "scorched", "hostile", "ant", "radscorpion", "raider", "wastebot", "tunneler", "trog", "deathclaw", "gecko")
+	var/list/selectable_factions = list(FACTION_NCR = "NCRA Soldiers",
+										FACTION_LEGION = "Caesars Legionaries",
+										FACTION_BROTHERHOOD = "Brotherhood of Steel Soldiers",
+										FACTION_OASIS = "Vegas Valley Townies",
+										FACTION_ENCLAVE = "Mysterious Strangers",
+										FACTION_WASTELAND = "Wastelanders",
+										FACTION_RAIDERS = "Outlaws",
+										FACTION_TRIBE = "Tribals",
+										FACTION_VAULT = "Vault Dwellers",
+										FACTION_FOLLOWERS = "Followers",
+										FACTION_KHAN = "Great Khans")
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/proc/show_faction_dialog_box(mob/talker)
+	var/datum/browser/popup = new(talker, name, "Attack Faction Selector", 400, 500)
+	var/dat = ""
+	for (var/key in selectable_factions)
+		var/entry = selectable_factions[key]
+		if (enemy_factions.Find(key))
+			dat += "<center><a class='green' href='?src=[REF(src)];faction=[key]'>Remove [entry]</a></center>"
+		else
+			dat += "<center><a class='red' href='?src=[REF(src)];faction=[key]'>Add [entry]</a></center>"
+	popup.set_content(dat)
+	popup.open()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/dialog_options(mob/talker, display_options)
 	var/dat = ""
@@ -22,10 +45,19 @@
 		dat += "<center><a href='?src=[REF(src)];together=1'>Try to convince them to follow you (Speech - persuade)</a></center>"
 	if (friends.Find(WEAKREF(talker)) && !trust_no_one)
 		dat += "<center><a href='?src=[REF(src)];only=1'>Convince them to only trust you (Speech - persuade)</a></center>"
+		dat += "<center><a href='?src=[REF(src)];factions=1'>Tell them what factions to attack on sight.</a></center>"
 		say("Just say who you want me to +follow+, who I can +trust+ or who to +attack+ and I'm on it.")
 	return dat
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/Topic(href, href_list)
+	if (href_list["factions"])
+		show_faction_dialog_box(usr)
+	if (href_list["faction"])
+		if (enemy_factions.Find(href_list["faction"]))
+			enemy_factions -= href_list["faction"]
+		else
+			enemy_factions |= href_list["faction"]
+		show_faction_dialog_box(usr)
 	if(href_list["together"])
 		usr.say("The wastes are a dangerous place, we should stick together.")
 		if (!trust_no_one && !failed.Find(WEAKREF(usr)) && (usr.skill_check(SKILL_SPEECH, autoSucceedThreshold) || usr.skill_roll(SKILL_SPEECH, roll_difficulty) || intimidated.Find(WEAKREF(usr))))
@@ -231,6 +263,15 @@
 			allowed_targets = list()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/handle_automated_movement()
+	if (!TICK_CHECK)
+		for (var/mob/living/A in oview(vision_range, targets_from)) //mob/dead/observers arent possible targets
+			if (faction_check(enemy_factions, A.faction) && A.health > 0 && !friends.Find(WEAKREF(A)))
+				if (A.sneaking && (A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
+					to_chat(A, span_notice("[name] has not spotted you."))
+				else
+					enemies |= WEAKREF(A)
+				if (enemies.len)
+					toggle_ai(AI_ON)
 	if (!followingAFriend || target)
 		followingAFriend = FALSE
 		target_mob = null
@@ -350,6 +391,7 @@
 	var/dat = ""
 	if (faction_check_mob(talker))
 		dat += "<center><a href='?src=[REF(src)];post=1'>Order them back to thier post</a></center>"
+		dat += "<center><a href='?src=[REF(src)];factions=1'>Select Factions they should shoot on sight.</a></center>"
 	return dat
 
 
@@ -409,20 +451,7 @@
 			walk_to(src,0)
 		waiting_ticks++
 	else
-		if (!followingAFriend && (get_dist(loc, my_original_loc) > 5) && !stop_automated_movement)
-			walk_to(src, myplace, 0 , move_to_delay)
-			return_to_post = TRUE
-			stop_automated_movement = TRUE
-		else
-			for (var/mob/living/A in oview(vision_range, targets_from)) //mob/dead/observers arent possible targets
-				if (faction_check(enemy_factions, A.faction) && A.health > 0)
-					if (A.sneaking && (A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
-						to_chat(A, span_notice("[name] has not spotted you."))
-					else
-						enemies |= WEAKREF(A)
-				if (enemies.len)
-					toggle_ai(AI_ON)
-			..()
+		..()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/attack_animal(mob/living/simple_animal/M)
 	. = ..()
@@ -458,8 +487,9 @@
 	attack_verb_continuous = "punches"
 	attack_verb_simple = "punch"
 	attack_sound = 'sound/weapons/punch1.ogg'
+	mob_armor = ARMOR_VALUE_MEDIUM
 	faction = list(FACTION_NCR)
-	enemy_factions = list(FACTION_LEGION, "hostile", "ant", "radscorpion", "raider", "wastebot", "tunneler", "trog", "deathclaw", "china", "gecko")
+	enemy_factions = list(FACTION_LEGION, ,"supermutant", "scorched", "hostile", "ant", "radscorpion", "raider", "wastebot", "tunneler", "trog", "deathclaw", "china", "gecko")
 	a_intent = INTENT_HARM
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15
@@ -485,6 +515,16 @@
 	speak = list("Patrolling the Mojave almost makes you wish for a nuclear winter.", "When I got this assignment I was hoping there would be more gambling.", "It's been a long tour, all I can think about now is going back home.", "You know, if you were serving, you'd probably be halfway to general by now.", "You oughtta think about enlisting. We need you here.")
 	speak_emote = list("says")
 	loot = list(/obj/effect/mob_spawn/human/corpse/ncr)
+	selectable_factions = list(FACTION_LEGION = "Caesars Legionaries",
+								FACTION_BROTHERHOOD = "Brotherhood of Steel Soldiers",
+								FACTION_OASIS = "Vegas Valley Townies",
+								FACTION_ENCLAVE = "Mysterious Strangers",
+								FACTION_WASTELAND = "Wastelanders",
+								FACTION_RAIDERS = "Outlaws",
+								FACTION_TRIBE = "Tribals",
+								FACTION_VAULT = "Vault Dwellers",
+								FACTION_FOLLOWERS = "Followers",
+								FACTION_KHAN = "Great Khans")
 
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/legion_guard
@@ -517,6 +557,7 @@
 	attack_verb_continuous = "punches"
 	attack_verb_simple = "punch"
 	attack_sound = 'sound/weapons/punch1.ogg'
+	mob_armor = ARMOR_VALUE_LIGHT
 	faction = list(FACTION_LEGION)
 	enemy_factions = list(FACTION_NCR, "hostile", "supermutant", "scorched", "ant", "radscorpion", "raider", "wastebot", "tunneler", "trog", "deathclaw", "china", "gecko")
 	a_intent = INTENT_HARM
@@ -543,3 +584,13 @@
 		SP_DISTANT_RANGE(RIFLE_MEDIUM_RANGE_DISTANT)
 	)
 	loot = list(/obj/effect/mob_spawn/human/corpse/legion)
+	selectable_factions = list(FACTION_NCR = "NCRA Soldiers",
+								FACTION_BROTHERHOOD = "Brotherhood of Steel Soldiers",
+								FACTION_OASIS = "Vegas Valley Townies",
+								FACTION_ENCLAVE = "Mysterious Strangers",
+								FACTION_WASTELAND = "Wastelanders",
+								FACTION_RAIDERS = "Outlaws",
+								FACTION_TRIBE = "Tribals",
+								FACTION_VAULT = "Vault Dwellers",
+								FACTION_FOLLOWERS = "Followers",
+								FACTION_KHAN = "Great Khans")
