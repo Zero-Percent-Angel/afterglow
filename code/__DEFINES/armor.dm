@@ -224,17 +224,17 @@
  * Low DT
  * * * * * * * * * * * */
 #define ARMOR_VALUE_GHOUL_LEGEND list(\
-		"melee" = 25, \
-		"bullet" = 25, \
-		"laser" = 95, \
-		"energy" = 95, \
+		"melee" = 45, \
+		"bullet" = 45, \
+		"laser" = 70, \
+		"energy" = 70, \
 		"bomb" = 0, \
 		"bio" = 100, \
 		"rad" = 100, \
 		"fire" = 0, \
 		"acid" = 0, \
 		"wound" = 0, \
-		"damage_threshold" = 11)
+		"damage_threshold" = 8)
 
 /* Supermutant jumpsuit
  * Thicc skin resists melee
@@ -302,8 +302,8 @@
 #define ARMOR_VALUE_SUPERMUTANT_LEGEND list(\
 		"melee" = 40, \
 		"bullet" = 40, \
-		"laser" = -5, \
-		"energy" = -5, \
+		"laser" = 10, \
+		"energy" = 10, \
 		"bomb" = 0, \
 		"bio" = 100, \
 		"rad" = 100, \
@@ -319,9 +319,9 @@
  * Higher DT
  * * * * * * * * * * * */
 #define ARMOR_VALUE_ROBOT_CIVILIAN list(\
-		"melee" = 5, \
-		"bullet" = 20, \
-		"laser" = -5, \
+		"melee" = 28, \
+		"bullet" = 25, \
+		"laser" = 5, \
 		"energy" = -5, \
 		"bomb" = 0, \
 		"bio" = 100, \
@@ -338,9 +338,9 @@
  * Higher DT
  * * * * * * * * * * * */
 #define ARMOR_VALUE_ROBOT_SECURITY list(\
-		"melee" = 10, \
-		"bullet" = 25, \
-		"laser" = -5, \
+		"melee" = 35, \
+		"bullet" = 30, \
+		"laser" = 15, \
 		"energy" = -5, \
 		"bomb" = 0, \
 		"bio" = 100, \
@@ -357,17 +357,17 @@
  * Lot of DT
  * * * * * * * * * * * */
 #define ARMOR_VALUE_ROBOT_MILITARY list(\
-		"melee" = 15, \
-		"bullet" = 30, \
-		"laser" = -20, \
-		"energy" = -20, \
+		"melee" = 65, \
+		"bullet" = 65, \
+		"laser" = 50, \
+		"energy" = 10, \
 		"bomb" = 0, \
 		"bio" = 100, \
 		"rad" = 100, \
 		"fire" = 0, \
 		"acid" = 0, \
 		"wound" = 0, \
-		"damage_threshold" = 11)
+		"damage_threshold" = 9)
 
 /* Robot Chew Chew
  * Tanky bossmob fight armour
@@ -375,9 +375,9 @@
  * Lot of DT
  * * * * * * * * * * * */
 #define ARMOR_VALUE_ROBOT_CHEW list(\
-		"melee" = 75, \
+		"melee" = 85, \
 		"bullet" = 85, \
-		"laser" = 90, \
+		"laser" = 80, \
 		"energy" = 15, \
 		"bomb" = 95, \
 		"bio" = 100, \
@@ -473,7 +473,7 @@
 #define ARMOR_VALUE_RAIDER_LEATHER_JACKET list(\
 		"melee" = 20, \
 		"bullet" = 5, \
-		"laser" = -10, \
+		"laser" = 5, \
 		"energy" = -10, \
 		"bomb" = 0, \
 		"bio" = 0, \
@@ -509,9 +509,9 @@
  * decent DT
  * * * * * * * * * * * */
 #define ARMOR_VALUE_RAIDER_COMBAT_ARMOR_BOSS list(\
-		"melee" = 35, \
+		"melee" = 39, \
 		"bullet" = 45, \
-		"laser" = 45, \
+		"laser" = 40, \
 		"energy" = 5, \
 		"bomb" = 0, \
 		"bio" = 0, \
@@ -530,9 +530,9 @@
  * * * * * * * * * * * */
 #define ARMOR_VALUE_RAIDER_METAL_ARMOR list(\
 		"melee" = 55, \
-		"bullet" = 35, \
-		"laser" = 75, \
-		"energy" = -40, \
+		"bullet" = 50, \
+		"laser" = 60, \
+		"energy" = -10, \
 		"bomb" = 0, \
 		"bio" = 0, \
 		"rad" = 0, \
@@ -549,9 +549,9 @@
  * Lowish DT
  * * * * * * * * * * * */
 #define ARMOR_VALUE_RAIDER_ARMOR list(\
-		"melee" = 25, \
-		"bullet" = 5, \
-		"laser" = 35, \
+		"melee" = 35, \
+		"bullet" = 25, \
+		"laser" = 10, \
 		"energy" = 35, \
 		"bomb" = 0, \
 		"bio" = 0, \
@@ -623,15 +623,15 @@
 
 /* Renegade sniper armor
  * Generally low resistances
- * High laser / plasma resist tho
+ *
  *
  * low DT
  * * * * * * * * * * * */
 #define ARMOR_VALUE_RENEGADE_SNIPER_ARMOR list(\
 		"melee" = 15, \
 		"bullet" = 20, \
-		"laser" = 55, \
-		"energy" = 25, \
+		"laser" = 25, \
+		"energy" = 10, \
 		"bomb" = 0, \
 		"bio" = 0, \
 		"rad" = 0, \
@@ -648,10 +648,10 @@
  * heavy DT
  * * * * * * * * * * * */
 #define ARMOR_VALUE_RENEGADE_POWER_ARMOR list(\
-		"melee" = 85, \
-		"bullet" = 85, \
-		"laser" = 90, \
-		"energy" = 35, \
+		"melee" = 80, \
+		"bullet" = 80, \
+		"laser" = 80, \
+		"energy" = 40, \
 		"bomb" = 0, \
 		"bio" = 0, \
 		"rad" = 0, \

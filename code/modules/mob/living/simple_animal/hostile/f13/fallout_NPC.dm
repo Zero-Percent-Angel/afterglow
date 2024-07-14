@@ -524,6 +524,7 @@
 	suit = /obj/item/clothing/suit/armor/light/legion/prime
 	shoes = /obj/item/clothing/shoes/f13/military/legion
 	head = /obj/item/clothing/head/helmet/f13/legion/prime
+	gender = MALE
 
 /mob/living/simple_animal/hostile/legion/prime
 	name = "Legion Prime"
@@ -578,8 +579,6 @@
 		SP_DISTANT_SOUND(RIFLE_MEDIUM_DISTANT_SOUND),
 		SP_DISTANT_RANGE(RIFLE_MEDIUM_RANGE_DISTANT)
 	)
-
-/mob/living/simple_animal/hostile/legion/decan
 
 /obj/effect/mob_spawn/human/corpse/legion/decan
 	name = "Legion Decanus"
