@@ -306,7 +306,7 @@
 	response_harm_simple = "hit"
 	speed = 0
 	stat_attack = CONSCIOUS
-	ranged_cooldown_time = 22
+	ranged_cooldown_time = 16
 	ranged = TRUE
 	robust_searching = TRUE
 	healable = TRUE
@@ -475,7 +475,7 @@
 	response_harm_simple = "hit"
 	speed = 0
 	stat_attack = CONSCIOUS
-	ranged_cooldown_time = 10
+	ranged_cooldown_time = 12
 	ranged = TRUE
 	robust_searching = TRUE
 	healable = TRUE
@@ -514,7 +514,7 @@
 	)
 	speak = list("Patrolling the Mojave almost makes you wish for a nuclear winter.", "When I got this assignment I was hoping there would be more gambling.", "It's been a long tour, all I can think about now is going back home.", "You know, if you were serving, you'd probably be halfway to general by now.", "You oughtta think about enlisting. We need you here.")
 	speak_emote = list("says")
-	loot = list(/obj/effect/mob_spawn/human/corpse/ncr)
+	loot = list(/obj/effect/mob_spawn/human/corpse/ncr, /obj/item/gun/ballistic/automatic/service)
 	selectable_factions = list(FACTION_LEGION = "Caesars Legionaries",
 								FACTION_BROTHERHOOD = "Brotherhood of Steel Soldiers",
 								FACTION_OASIS = "Vegas Valley Townies",
@@ -550,6 +550,7 @@
 	speed = 0
 	stat_attack = CONSCIOUS
 	ranged = TRUE
+	ranged_cooldown_time = 26
 	robust_searching = TRUE
 	healable = TRUE
 	maxHealth = 120
@@ -586,7 +587,7 @@
 		SP_DISTANT_SOUND(RIFLE_MEDIUM_DISTANT_SOUND),
 		SP_DISTANT_RANGE(RIFLE_MEDIUM_RANGE_DISTANT)
 	)
-	loot = list(/obj/effect/mob_spawn/human/corpse/legion)
+	loot = list(/obj/effect/mob_spawn/human/corpse/legion, /obj/item/gun/ballistic/rifle/hunting)
 	selectable_factions = list(FACTION_NCR = "NCRA Soldiers",
 								FACTION_BROTHERHOOD = "Brotherhood of Steel Soldiers",
 								FACTION_OASIS = "Vegas Valley Townies",
@@ -597,3 +598,25 @@
 								FACTION_VAULT = "Vault Dwellers",
 								FACTION_FOLLOWERS = "Followers",
 								FACTION_KHAN = "Great Khans")
+
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/legion_guard/melee
+	icon_state = "legion_melee"
+	icon_living = "legion_melee"
+	projectiletype = null
+	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
+	casingtype = null
+	harm_intent_damage = 15
+	melee_damage_lower = 30
+	melee_damage_upper = 38
+	melee_attack_cooldown = 1 SECONDS
+	attack_verb_continuous = "stabs"
+	attack_verb_simple = "stab"
+	retreat_distance = 0
+	minimum_distance = 1
+	ranged = FALSE
+	loot = list(/obj/effect/mob_spawn/human/corpse/legion, /obj/item/twohanded/legionaxe)
+	wound_bonus = 0 //This might be a TERRIBLE idea
+	bare_wound_bonus = 0
+	sharpness = SHARP_EDGED
+	move_to_delay = 2
