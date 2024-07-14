@@ -258,6 +258,13 @@
 	gloves = /obj/item/clothing/gloves/f13/military
 	mask = /obj/item/clothing/mask/gas/enclave
 
+// Waster corpses
+/obj/effect/mob_spawn/human/corpse/wastelander
+	name = "wastelander"
+	uniform = /obj/item/clothing/under/f13/caravaneer
+	shoes = /obj/item/clothing/shoes/f13/cowboy
+	gloves = /obj/item/clothing/gloves/f13/leather
+
 
 /////////////////////
 // BROTHERHOOD NPC //
