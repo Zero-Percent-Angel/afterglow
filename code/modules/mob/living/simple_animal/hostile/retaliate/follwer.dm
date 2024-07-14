@@ -331,7 +331,7 @@
 	casingtype = /obj/item/ammo_casing/c9mm
 	projectiletype = /obj/item/projectile/bullet/c9mm/improvised
 	projectilesound = 'sound/weapons/gunshot_smg.ogg'
-	loot = list(/obj/item/gun/ballistic/automatic/smg/mini_uzi)
+	loot = list(/obj/effect/mob_spawn/human/corpse/wastelander, /obj/item/gun/ballistic/automatic/smg/mini_uzi)
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction
 	var/myplace = null
@@ -529,6 +529,9 @@
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/legion_guard
 	name = "Legion Guard"
+	use_custom_names = TRUE
+	custom_first_names = list("Aurelius", "Augustus", "Atticus", "Alexus", "Lucius", "Barto", "Silus", "Darius")
+	custom_last_names = list("Magnus", "Crassus", "Mallius", "Inculta", "Serverus", "Rex", "Libo", "Drusus")
 	desc = "A recruit legionary."
 	icon = 'icons/fallout/mobs/humans/fallout_npc.dmi'
 	icon_state = "legion_prime"

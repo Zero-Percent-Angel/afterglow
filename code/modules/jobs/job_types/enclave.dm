@@ -325,6 +325,7 @@
 	supervisors = "Any Enclave member who appears that has more rank than you."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclave_default
 	exp_type = EXP_TYPE_FALLOUT
+	faction = FACTION_WASTELAND
 	exp_requirements = 600
 	loadout_options = list(/datum/outfit/loadout/private, /datum/outfit/loadout/specialist, /datum/outfit/loadout/sergeant, /datum/outfit/loadout/officer, /datum/outfit/loadout/scientist)
 	display_alternate = new /datum/job/wasteland/f13wastelander()

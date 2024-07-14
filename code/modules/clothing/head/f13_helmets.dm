@@ -123,6 +123,7 @@
 	icon_state = "combat_helmet"
 	item_state = "combat_helmet"
 	armor = ARMOR_VALUE_MEDIUM
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1)
 	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	strip_delay = 50
 	flags_inv = HIDEEARS|HIDEHAIR
