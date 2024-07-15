@@ -687,9 +687,14 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/brotherhood/leisure)
 "aqM" = (
-/obj/structure/sign/poster/prewar/poster94,
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/vault)
+/obj/structure/table,
+/obj/structure/sign/plaques/long/vault{
+	pixel_y = -32
+	},
+/turf/open/floor/f13{
+	icon_state = "yellowsiding"
+	},
+/area/ruin/powered)
 "aqT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/trash,
@@ -20742,9 +20747,12 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/bunker/bunkertwo)
 "kMO" = (
-/obj/structure/table,
-/obj/item/paper_bin,
-/turf/open/floor/f13,
+/obj/structure/sign/poster/prewar/vault_tec{
+	pixel_y = -32
+	},
+/turf/open/floor/f13{
+	icon_state = "yellowsiding"
+	},
 /area/ruin/powered)
 "kMW" = (
 /obj/effect/spawner/lootdrop/trash,
@@ -20808,15 +20816,6 @@
 /obj/structure/timeddoor,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker/bunkernine)
-"kOq" = (
-/obj/structure/table,
-/obj/structure/sign/plaques/long/vault{
-	pixel_y = -32
-	},
-/turf/open/floor/f13{
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "kOr" = (
 /obj/structure/table,
 /obj/item/stack/ore/blackpowder/twenty,
@@ -22825,7 +22824,9 @@
 /turf/open/floor/light,
 /area/f13/enclave)
 "lJM" = (
-/obj/structure/sign/poster/prewar/vault_tec,
+/obj/structure/sign/poster/prewar/vault_tec{
+	pixel_y = 30
+	},
 /obj/structure/table/reinforced,
 /obj/machinery/computer/turret_controller{
 	hack_id = "vault_turret"
@@ -39917,6 +39918,11 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker)
+"urh" = (
+/obj/structure/table,
+/obj/item/paper_bin,
+/turf/open/floor/f13,
+/area/ruin/powered)
 "uri" = (
 /turf/open/floor/plasteel/darkred/side{
 	dir = 1
@@ -44084,14 +44090,6 @@
 	icon_state = "rampdowntop"
 	},
 /area/f13/brotherhood/operations)
-"wyp" = (
-/obj/structure/sign/poster/prewar/vault_tec{
-	pixel_y = -32
-	},
-/turf/open/floor/f13{
-	icon_state = "yellowsiding"
-	},
-/area/ruin/powered)
 "wyr" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -69966,7 +69964,7 @@ cNy
 bIk
 dZm
 dZm
-wyp
+kMO
 cNy
 iue
 bIk
@@ -70268,7 +70266,7 @@ cNy
 sPC
 dZm
 uPx
-kOq
+aqM
 cNy
 gVi
 bIk
@@ -70871,7 +70869,7 @@ hED
 slE
 fBF
 dZm
-kMO
+urh
 lwy
 cNy
 pRC
@@ -71174,7 +71172,7 @@ cNy
 sPC
 dZm
 dZm
-wyp
+kMO
 cNy
 eDe
 bIk
@@ -72208,7 +72206,7 @@ tVt
 yhR
 yhR
 yhR
-aqM
+gxT
 wEE
 qmp
 dQW
@@ -87604,7 +87602,7 @@ pNa
 kaU
 xpR
 qIC
-yhR
+hsm
 dTR
 cjN
 weF

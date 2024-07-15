@@ -955,25 +955,13 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 /obj/effect/landmark/start/f13/followersscientist
 	name = "Town Scientist"
 
-
 /obj/effect/landmark/npc_wastelander_spawn_position
 	name = "npc waster spawn location"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/obj/effect/landmark/legion_attack
+	name = "legion possible attack location"
+	var/phrase = "The legion has claimed a location."
+	var/id = 0
 
 /obj/effect/landmark/start/f13/khan
 	name = "Khan"

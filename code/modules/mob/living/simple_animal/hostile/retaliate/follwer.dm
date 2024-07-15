@@ -620,3 +620,142 @@
 	bare_wound_bonus = 0
 	sharpness = SHARP_EDGED
 	move_to_delay = 2
+
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/legion_guard/decanus
+	desc = "A prime decanus."
+	icon_state = "legion_decan"
+	icon_living = "legion_decan"
+	ranged_cooldown_time = 20
+	move_to_delay = 2
+	maxHealth = 200
+	health = 200
+	mob_armor = ARMOR_VALUE_MEDIUM
+	var/obj/item/radio/rad
+	var/list/phrases = list("For the glory of Caesar! ", "To civilise you savages. ", "Be warned profligates. ", "Caesar's legion expands. ", "Pay tribute. ")
+
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/warner
+	var/non_aggresive_factions = list()
+	var/list/warning_phrases = list()
+	var/list/warnings_issued = list()
+	var/warn_count = 3
+
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/warner/handle_automated_movement()
+	if (!TICK_CHECK)
+		for (var/mob/living/A in oview(vision_range, targets_from)) //mob/dead/observers arent possible targets
+			var/weakref_of_a = WEAKREF(A)
+			if (!faction_check(non_aggresive_factions, A.faction) && A.health > 0 && !friends.Find(weakref_of_a) && !enemies.Find(weakref_of_a))
+				if (A.sneaking && (A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
+					to_chat(A, span_notice("[name] has not spotted you."))
+				else
+					if (warnings_issued.Find(weakref_of_a))
+						if (warnings_issued[weakref_of_a] > warn_count)
+							enemies |= weakref_of_a
+							say("You were warned!")
+						else
+							warnings_issued[weakref_of_a] += 1
+							say(pick(warning_phrases))
+					else
+						say(pick(warning_phrases))
+						warnings_issued[weakref_of_a] = 1
+				if (enemies.len)
+					toggle_ai(AI_ON)
+	. = ..()
+
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/warner/legion_guard
+	name = "Legion Guard"
+	use_custom_names = TRUE
+	custom_first_names = list("Aurelius", "Augustus", "Atticus", "Alexus", "Lucius", "Barto", "Silus", "Darius")
+	custom_last_names = list("Magnus", "Crassus", "Mallius", "Inculta", "Serverus", "Rex", "Libo", "Drusus")
+	desc = "A recruit legionary."
+	icon = 'icons/fallout/mobs/humans/fallout_npc.dmi'
+	icon_state = "legion_prime"
+	icon_living = "legion_prime"
+	icon_dead = null
+	del_on_death = TRUE
+	gender = MALE
+	icon_gib = "gib"
+	turns_per_move = 5
+	warning_phrases = list("This is Caesar's land, leave profligate.", "Do not linger any longer.", "Leave now profligate or you will find your place on a cross.")
+	response_help_continuous = "pokes"
+	response_help_simple = "poke"
+	response_disarm_continuous = "shoves"
+	response_disarm_simple = "shove"
+	response_harm_continuous = "hits"
+	response_harm_simple = "hit"
+	speed = 0
+	stat_attack = CONSCIOUS
+	ranged = TRUE
+	ranged_cooldown_time = 26
+	robust_searching = TRUE
+	healable = TRUE
+	maxHealth = 120
+	health = 120
+	harm_intent_damage = 5
+	melee_damage_lower = 10
+	melee_damage_upper = 15
+	attack_verb_continuous = "punches"
+	attack_verb_simple = "punch"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	mob_armor = ARMOR_VALUE_LIGHT
+	faction = list(FACTION_LEGION)
+	non_aggresive_factions = list(FACTION_LEGION, FACTION_KHAN, FACTION_OASIS)
+	enemy_factions = list(FACTION_NCR, "hostile", "supermutant", "scorched", "ant", "radscorpion", "raider", "wastebot", "tunneler", "trog", "deathclaw", "china", "gecko")
+	a_intent = INTENT_HARM
+	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
+	unsuitable_atmos_damage = 15
+	status_flags = CANPUSH
+	search_objects = 1
+	vision_range = 9
+	retreat_distance = 3
+	minimum_distance = 5
+	speak = list("Ave, true to Caesar.", "True to Caesar.", "Ave, Amicus.", "The new slave girls are quite beautiful.", "Give me cause, Profligate.", "Degenerates like you belong on a cross.")
+	speak_emote = list("says")
+	projectiletype = /obj/item/projectile/bullet/a762/sport/simple
+	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
+	casingtype = /obj/item/ammo_casing/a762/sport
+	projectile_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(RIFLE_MEDIUM_VOLUME),
+		SP_VOLUME_SILENCED(RIFLE_MEDIUM_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(RIFLE_MEDIUM_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(RIFLE_MEDIUM_DISTANT_SOUND),
+		SP_DISTANT_RANGE(RIFLE_MEDIUM_RANGE_DISTANT)
+	)
+	loot = list(/obj/effect/mob_spawn/human/corpse/legion, /obj/item/gun/ballistic/rifle/hunting)
+	selectable_factions = list(FACTION_NCR = "NCRA Soldiers",
+								FACTION_BROTHERHOOD = "Brotherhood of Steel Soldiers",
+								FACTION_OASIS = "Vegas Valley Townies",
+								FACTION_ENCLAVE = "Mysterious Strangers",
+								FACTION_WASTELAND = "Wastelanders",
+								FACTION_RAIDERS = "Outlaws",
+								FACTION_TRIBE = "Tribals",
+								FACTION_VAULT = "Vault Dwellers",
+								FACTION_FOLLOWERS = "Followers",
+								FACTION_KHAN = "Great Khans")
+
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/warner/legion_guard/melee
+	icon_state = "legion_melee"
+	icon_living = "legion_melee"
+	projectiletype = null
+	projectilesound = 'sound/f13weapons/hunting_rifle.ogg'
+	casingtype = null
+	harm_intent_damage = 15
+	melee_damage_lower = 30
+	melee_damage_upper = 38
+	melee_attack_cooldown = 1 SECONDS
+	attack_verb_continuous = "stabs"
+	attack_verb_simple = "stab"
+	retreat_distance = 0
+	minimum_distance = 1
+	ranged = FALSE
+	loot = list(/obj/effect/mob_spawn/human/corpse/legion, /obj/item/twohanded/legionaxe)
+	wound_bonus = 0 //This might be a TERRIBLE idea
+	bare_wound_bonus = 0
+	sharpness = SHARP_EDGED
+	move_to_delay = 2
