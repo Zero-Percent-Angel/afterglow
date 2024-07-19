@@ -14,7 +14,7 @@
 	can_ghost_into = FALSE
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	mob_armor = ARMOR_VALUE_GHOUL_NAKED
-	maxHealth = 40 
+	maxHealth = 40
 	health = 40
 	robust_searching = 1
 	move_to_delay = 3.1
@@ -59,7 +59,7 @@
 		"min_n2" = 0,
 		"max_n2" = 0
 		)
-		
+
 	unsuitable_atmos_damage = 20
 	gold_core_spawnable = HOSTILE_SPAWN
 	faction = list("hostile")
@@ -206,9 +206,6 @@
 /mob/living/simple_animal/hostile/ghoul/legendary
 	name = "legendary ghoul"
 	desc = "A ghoul that has lost its mind and become aggressive. This one has exceptionally large, bulging muscles. It looks quite strong."
-	icon_state = "glowinghoul_h"
-	icon_living = "glowinghoul_h"
-	icon_dead = "glowinghoul_h_dead"
 	color = "#FFFF00"
 	mob_armor = ARMOR_VALUE_GHOUL_LEGEND
 	can_ghost_into = FALSE
@@ -240,7 +237,7 @@
 	icon_dead = "glowinghoul_h_dead"
 	rare_icon = "glowinghoul_h"
 	mob_armor = ARMOR_VALUE_GHOUL_GLOWING
-	maxHealth = 40 
+	maxHealth = 40
 	health = 40
 	speed = 2
 	retreat_distance = 4
@@ -292,6 +289,17 @@
 	melee_damage_upper = 30
 	armour_penetration = 0.1
 
+/mob/living/simple_animal/hostile/ghoul/glowing/strong/legendary
+	name = "legendary ghoul"
+	desc = "A ghoul that has lost its mind and become aggressive. This one has exceptionally large, bulging muscles. It looks quite strong."
+	color = "#FFFF00"
+	mob_armor = ARMOR_VALUE_GHOUL_GLOWING_LEGEND
+	can_ghost_into = FALSE
+	sneak_detection_threshold = EXPERT_CHECK
+	sneak_roll_modifier = DIFFICULTY_CHALLENGE
+	retreat_distance = 0
+	minimum_distance = 1
+
 //Alive Ghoul
 /mob/living/simple_animal/hostile/ghoul/soldier
 	name = "ghoul soldier"
@@ -301,7 +309,7 @@
 	icon_dead = "soldier_ghoul_d"
 	icon_gib = "syndicate_gib"
 	mob_armor = ARMOR_VALUE_GHOUL_NAKED
-	maxHealth = 60 
+	maxHealth = 60
 	health = 60
 	loot = list(/obj/item/stack/f13Cash/random/low/medchance)
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
@@ -318,7 +326,7 @@
 	icon_dead = "soldier_ghoul_a_d"
 	icon_gib = "syndicate_gib"
 	mob_armor = ARMOR_VALUE_GHOUL_NAKED
-	maxHealth = 80 
+	maxHealth = 80
 	health = 80
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 	can_ghost_into = FALSE

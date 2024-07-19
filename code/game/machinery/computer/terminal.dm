@@ -12,6 +12,8 @@
 	var/termtag = "Home" // We use this for flavor.
 	var/termnumber = null // Flavor
 	var/mode = 0 // What page we're on. 0 is the main menu.
+	var/vault_secrets = FALSE
+	var/maybe_vault_secrets = FALSE
 
 // Document variables
 	var/doc_title_1 = "readme"
@@ -32,7 +34,7 @@
 	var/note = "ERR://null-data #236XF51"
 
 /obj/machinery/computer/terminal/Initialize()
-	. = ..()
+	..()
 
 	if(!broken)
 		desc = "[initial(desc)] Remarkably, it still works."
@@ -40,6 +42,15 @@
 //		write_documents()
 	else
 		desc = "[initial(desc)] Unfortunately, this one seems to have broken down."
+
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/machinery/computer/terminal/LateInitialize()
+	. = ..()
+	if (vault_secrets || (maybe_vault_secrets && prob(40)))
+		doc_title_4 = "TOP SECRET - VAULT TEC"
+		doc_content_4 = "To whom it may concern.<br> Vault external access code is as follows: [GLOB.vault_password], This code is valid for Vaults: {113, 13, 141, 0}<br> Not to be redistributed."
+
 
 /obj/machinery/computer/terminal/ui_interact(mob/user)
 	. = ..()

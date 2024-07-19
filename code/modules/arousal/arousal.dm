@@ -46,6 +46,9 @@
 			return
 		visible_message(span_warning("[src] is trying to remove [confirm != "All"? "the " : ""]" + confirm  +" of [h]'s underwear!"), span_notice("You start removing [h]'s " + confirm + " underwear."))
 		if(do_after(src, 3 SECONDS, target = h))
+			if (get_dist(src, A) > 1)
+				to_chat(src, span_warning("They're too far away."))
+				return
 			if(confirm == "Top")
 				if(h.upper_body_exposed())
 					if(h.undershirt != "Nude")

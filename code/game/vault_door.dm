@@ -1,4 +1,5 @@
 GLOBAL_LIST_EMPTY(vault_doors)
+GLOBAL_VAR(vault_password)
 
 /obj/structure/vaultdoor
 	name = "vault door 113"
@@ -148,6 +149,7 @@ GLOBAL_LIST_EMPTY(vault_doors)
 /obj/machinery/doorButtons/vaultButton/external/Initialize(mapload)
 	. = ..()
 	password = random_string(8, GLOB.alphabet)
+	GLOB.vault_password = password
 
 /obj/machinery/doorButtons/vaultButton/external/attackby(obj/item/weapon/W, mob/user, params)
 	return

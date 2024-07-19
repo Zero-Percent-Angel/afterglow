@@ -687,9 +687,14 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/brotherhood/leisure)
 "aqM" = (
-/obj/structure/sign/poster/prewar/poster94,
-/turf/closed/indestructible/f13vaultrusted,
-/area/f13/vault)
+/obj/structure/table,
+/obj/structure/sign/plaques/long/vault{
+	pixel_y = -32
+	},
+/turf/open/floor/f13{
+	icon_state = "yellowsiding"
+	},
+/area/ruin/powered)
 "aqT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/trash,
@@ -8355,6 +8360,7 @@
 	light_color = "#c1caff"
 	},
 /obj/effect/turf_decal/stripes/red/line,
+/obj/structure/table/abductor,
 /turf/open/floor/plasteel/dark,
 /area/f13/enclave)
 "enV" = (
@@ -13714,6 +13720,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
+"gZI" = (
+/obj/structure/chair/office{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/f13/enclave)
 "gZK" = (
 /obj/structure/reagent_dispensers/barrel/explosive,
 /turf/open/floor/plasteel/dark,
@@ -15959,6 +15971,7 @@
 /obj/structure/sign/poster/prewar/poster74{
 	pixel_x = 32
 	},
+/obj/structure/table/abductor,
 /turf/open/floor/plasteel/dark,
 /area/f13/enclave)
 "ijH" = (
@@ -20734,9 +20747,13 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/bunker/bunkertwo)
 "kMO" = (
-/obj/machinery/door/locked/expert/trapped,
-/turf/closed/indestructible/rock,
-/area/f13/caves)
+/obj/structure/sign/poster/prewar/vault_tec{
+	pixel_y = -32
+	},
+/turf/open/floor/f13{
+	icon_state = "yellowsiding"
+	},
+/area/ruin/powered)
 "kMW" = (
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/plasteel/floorgrime,
@@ -22807,7 +22824,9 @@
 /turf/open/floor/light,
 /area/f13/enclave)
 "lJM" = (
-/obj/structure/sign/poster/prewar/vault_tec,
+/obj/structure/sign/poster/prewar/vault_tec{
+	pixel_y = 30
+	},
 /obj/structure/table/reinforced,
 /obj/machinery/computer/turret_controller{
 	hack_id = "vault_turret"
@@ -30345,6 +30364,9 @@
 	rapid_melee = 2
 	},
 /obj/effect/decal/cleanable/ash/large,
+/obj/structure/chair/office/dark{
+	dir = 1
+	},
 /turf/open/floor/f13{
 	icon_state = "yellowsiding"
 	},
@@ -30978,6 +31000,11 @@
 	pixel_y = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/computer/terminal{
+	dir = 1;
+	termtag = "Private";
+	vault_secrets = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/vault/overseer)
 "pSE" = (
@@ -31517,6 +31544,15 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/tunnel)
+"qfR" = (
+/obj/structure/table/abductor,
+/obj/machinery/computer/terminal{
+	dir = 8;
+	termtag = "Business";
+	vault_secrets = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/f13/enclave)
 "qfT" = (
 /obj/machinery/workbench,
 /obj/effect/decal/cleanable/dirt,
@@ -34616,7 +34652,9 @@
 /area/f13/brotherhood/leisure)
 "rEY" = (
 /obj/structure/table,
-/obj/machinery/computer/terminal,
+/obj/machinery/computer/terminal{
+	maybe_vault_secrets = 1
+	},
 /turf/open/floor/f13,
 /area/ruin/powered)
 "rFo" = (
@@ -39880,6 +39918,11 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker)
+"urh" = (
+/obj/structure/table,
+/obj/item/paper_bin,
+/turf/open/floor/f13,
+/area/ruin/powered)
 "uri" = (
 /turf/open/floor/plasteel/darkred/side{
 	dir = 1
@@ -68069,7 +68112,7 @@ bgK
 bgK
 bgK
 bgK
-kMO
+bgK
 bgK
 bgK
 bgK
@@ -69921,7 +69964,7 @@ cNy
 bIk
 dZm
 dZm
-lwy
+kMO
 cNy
 iue
 bIk
@@ -70223,7 +70266,7 @@ cNy
 sPC
 dZm
 uPx
-ine
+aqM
 cNy
 gVi
 bIk
@@ -70826,7 +70869,7 @@ hED
 slE
 fBF
 dZm
-uPx
+urh
 lwy
 cNy
 pRC
@@ -71129,7 +71172,7 @@ cNy
 sPC
 dZm
 dZm
-lwy
+kMO
 cNy
 eDe
 bIk
@@ -72163,7 +72206,7 @@ tVt
 yhR
 yhR
 yhR
-aqM
+gxT
 wEE
 qmp
 dQW
@@ -87559,7 +87602,7 @@ pNa
 kaU
 xpR
 qIC
-yhR
+hsm
 dTR
 cjN
 weF
@@ -131574,9 +131617,9 @@ qoq
 mqM
 mqM
 iTN
-enT
+svx
+gZI
 mqM
-ijG
 jzn
 mqM
 mqM
@@ -131876,9 +131919,9 @@ ofV
 mqM
 mqM
 ofV
-ofV
-ofV
-ofV
+enT
+qfR
+ijG
 ofV
 ofV
 ofV
@@ -132178,10 +132221,10 @@ ofV
 xcH
 xcH
 ofV
-qtF
-qtF
-qtF
-qtF
+ofV
+ofV
+ofV
+ofV
 qtF
 qtF
 qtF

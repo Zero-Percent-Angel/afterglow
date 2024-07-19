@@ -220,10 +220,10 @@
 /* Legendary ghoul armor
  * Tough and glowy!
  * Very resistant to laser and plasma
- * Very weak to melee
+ *
  * Low DT
  * * * * * * * * * * * */
-#define ARMOR_VALUE_GHOUL_LEGEND list(\
+#define ARMOR_VALUE_GHOUL_GLOWING_LEGEND list(\
 		"melee" = 45, \
 		"bullet" = 45, \
 		"laser" = 70, \
@@ -231,7 +231,26 @@
 		"bomb" = 0, \
 		"bio" = 100, \
 		"rad" = 100, \
-		"fire" = 0, \
+		"fire" = 20, \
+		"acid" = 0, \
+		"wound" = 0, \
+		"damage_threshold" = 8)
+
+/* Legendary ghoul armor
+ * Tough and glowy!
+ * Very resistant to laser and plasma
+ * Very weak to melee
+ * Low DT
+ * * * * * * * * * * * */
+#define ARMOR_VALUE_GHOUL_LEGEND list(\
+		"melee" = 55, \
+		"bullet" = 55, \
+		"laser" = 60, \
+		"energy" = 60, \
+		"bomb" = 0, \
+		"bio" = 100, \
+		"rad" = 100, \
+		"fire" = 20, \
 		"acid" = 0, \
 		"wound" = 0, \
 		"damage_threshold" = 8)
