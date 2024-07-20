@@ -646,7 +646,7 @@
 	if (!TICK_CHECK)
 		for (var/mob/living/A in oview(vision_range, targets_from)) //mob/dead/observers arent possible targets
 			var/weakref_of_a = WEAKREF(A)
-			if (!faction_check(non_aggresive_factions, A.faction) && A.health > 0 && !friends.Find(weakref_of_a) && !enemies.Find(weakref_of_a))
+			if (!faction_check(non_aggresive_factions, A.faction) && A.health > 0 && !friends.Find(weakref_of_a) && AIStatus != AI_ON)
 				if (A.sneaking && (A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
 					to_chat(A, span_notice("[name] has not spotted you."))
 				else

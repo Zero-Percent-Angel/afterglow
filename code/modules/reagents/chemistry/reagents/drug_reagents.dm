@@ -66,7 +66,7 @@
 	pH = 10
 	value = REAGENT_VALUE_UNCOMMON
 	interferes = CHEMICAL_INTERFERE_OFTEN
-	addiction_chance = 5
+	addiction_chance = 4
 
 /datum/reagent/drug/crank/on_mob_life(mob/living/carbon/M)
 	if(prob(5))
@@ -85,23 +85,23 @@
 	. = 1
 
 /datum/reagent/drug/crank/addiction_act_stage1(mob/living/M)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5*REM)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1*REM)
 	..()
 
 /datum/reagent/drug/crank/addiction_act_stage2(mob/living/M)
-	M.adjustToxLoss(5*REM, 0)
+	M.adjustToxLoss(2*REM, 0)
 	..()
 	. = 1
 
 /datum/reagent/drug/crank/addiction_act_stage3(mob/living/M)
-	M.adjustBruteLoss(5*REM, 0)
+	M.adjustBruteLoss(2*REM, 0)
 	..()
 	. = 1
 
 /datum/reagent/drug/crank/addiction_act_stage4(mob/living/M)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3*REM)
-	M.adjustToxLoss(5*REM, 0)
-	M.adjustBruteLoss(5*REM, 0)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1*REM)
+	M.adjustToxLoss(2*REM, 0)
+	M.adjustBruteLoss(2*REM, 0)
 	..()
 	. = 1
 
@@ -164,7 +164,7 @@
 	color = "#c7AB00"
 	overdose_threshold = 31
 	addiction_threshold = 20
-	addiction_chance = 3
+	addiction_chance = 2
 	interferes = CHEMICAL_INTERFERE_OFTEN
 	pH = 9
 	value = REAGENT_VALUE_UNCOMMON
@@ -189,27 +189,27 @@
 
 /datum/reagent/drug/heroin/overdose_process(mob/living/M)
 	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.25*REM)
-	M.adjustToxLoss(0.25*REM, 0)
+	M.adjustToxLoss(2*REM, 0)
 	..()
 	. = 1
 
 /datum/reagent/drug/heroin/addiction_act_stage1(mob/living/M)
 	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 2*REM)
-	M.adjustToxLoss(2*REM, 0)
+	M.adjustToxLoss(1*REM, 0)
 	..()
 	. = 1
 
 /datum/reagent/drug/heroin/addiction_act_stage2(mob/living/M)
 	if(prob(25))
 		to_chat(M, span_danger("Life feels so hard"))
-	M.adjustToxLoss(3*REM, 0)
+	M.adjustToxLoss(2*REM, 0)
 	..()
 	. = 1
 
 /datum/reagent/drug/heroin/addiction_act_stage3(mob/living/M)
 	if(prob(25))
 		to_chat(M, span_danger("YOU CAN'T TAKE THIS ANYMORE!!"))
-	M.adjustToxLoss(4*REM, 0)
+	M.adjustToxLoss(3*REM, 0)
 	..()
 	. = 1
 
@@ -227,7 +227,7 @@
 	pH = 5
 	value = REAGENT_VALUE_UNCOMMON
 	interferes = CHEMICAL_INTERFERE_OFTEN
-	addiction_chance = 3
+	addiction_chance = 2
 
 /datum/reagent/drug/methamphetamine/on_mob_metabolize(mob/living/L)
 	..()
@@ -299,7 +299,7 @@
 			step(M, pick(GLOB.cardinals))
 	M.Jitter(20)
 	M.Dizzy(20)
-	M.adjustToxLoss(5, 0)
+	M.adjustToxLoss(3, 0)
 	if(prob(50))
 		M.emote(pick("twitch","drool","moan"))
 	..()
@@ -327,7 +327,7 @@
 	value = REAGENT_VALUE_RARE
 	ghoulfriendly = TRUE
 	interferes = CHEMICAL_INTERFERE_SOMETIMES
-	addiction_chance = 3
+	addiction_chance = 2
 
 /datum/reagent/drug/bath_salts/on_mob_metabolize(mob/living/L)
 	..()
@@ -350,7 +350,7 @@
 	if(prob(5))
 		to_chat(M, span_notice("[high_message]"))
 	M.adjustStaminaLoss(-5, 0)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 4)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 2)
 	M.hallucination += 5
 	if(CHECK_MOBILITY(M, MOBILITY_MOVE) && !ismovable(M.loc))
 		step(M, pick(GLOB.cardinals))
@@ -375,7 +375,6 @@
 		for(var/i = 0, i < 8, i++)
 			step(M, pick(GLOB.cardinals))
 	M.Jitter(5)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 10)
 	if(prob(20))
 		M.emote(pick("twitch","drool","moan"))
 	..()
@@ -387,7 +386,7 @@
 			step(M, pick(GLOB.cardinals))
 	M.Jitter(10)
 	M.Dizzy(10)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 10)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1)
 	if(prob(30))
 		M.emote(pick("twitch","drool","moan"))
 	..()
@@ -399,7 +398,7 @@
 			step(M, pick(GLOB.cardinals))
 	M.Jitter(15)
 	M.Dizzy(15)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 10)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 2)
 	if(prob(40))
 		M.emote(pick("twitch","drool","moan"))
 	..()
@@ -411,8 +410,8 @@
 			step(M, pick(GLOB.cardinals))
 	M.Jitter(50)
 	M.Dizzy(50)
-	M.adjustToxLoss(5, 0)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 10)
+	M.adjustToxLoss(3, 0)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3)
 	if(prob(50))
 		M.emote(pick("twitch","drool","moan"))
 	..()
@@ -445,7 +444,7 @@
 	color = "#FFF378"
 	addiction_threshold = 10
 	overdose_threshold = 20
-	addiction_chance = 5
+	addiction_chance = 4
 	pH = 10.5
 	value = REAGENT_VALUE_RARE
 	interferes = CHEMICAL_INTERFERE_SOMETIMES
@@ -587,7 +586,7 @@
 	M.Jitter(50)
 	M.Dizzy(50)
 	M.adjust_blurriness(10)
-	if(prob(50)) //This proc will be called about 200 times and the adjustbrainloss() below only has to be called 40 times to kill. This will make surviving getaway addiction pretty rare without mannitol usage.
+	if(prob(15)) //This proc will be called about 200 times and the adjustbrainloss() below only has to be called 40 times to kill. This will make surviving getaway addiction pretty rare without mannitol usage.
 		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5)
 	if(prob(40))
 		M.emote(pick("twitch","drool","moan"))
@@ -686,16 +685,16 @@
 
 /datum/reagent/drug/aphrodisiacplus/addiction_act_stage2(mob/living/M)
 	if(prob(30))
-		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 2)
+		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1)
 	..()
 /datum/reagent/drug/aphrodisiacplus/addiction_act_stage3(mob/living/M)
 	if(prob(30))
-		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3)
+		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 2)
 
 		..()
 /datum/reagent/drug/aphrodisiacplus/addiction_act_stage4(mob/living/M)
 	if(prob(30))
-		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 4)
+		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3)
 	..()
 
 /datum/reagent/drug/aphrodisiacplus/overdose_process(mob/living/M)

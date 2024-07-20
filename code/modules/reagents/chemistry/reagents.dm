@@ -176,7 +176,7 @@ GLOBAL_LIST_INIT(name2reagent, build_name2reagent())
 /datum/reagent/proc/on_mob_metabolize(mob/living/L)
 	if (0 < interferes)
 		for(var/datum/reagent/rea in L.reagents.reagent_list)
-			var/chance = rea.interferes + interferes
+			var/chance = (rea.interferes + interferes) * (rea.volume/30 * volume/30)
 			if (istype(rea, /datum/reagent/consumable/ethanol) && istype(src, /datum/reagent/consumable/ethanol))
 				continue
 			if (0 < chance && rea != src)
