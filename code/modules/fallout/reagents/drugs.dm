@@ -4,7 +4,7 @@
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 30
 	addiction_threshold = 12.5
-	addiction_chance = 3
+	addiction_chance = 2
 	metabolization_rate = REAGENTS_METABOLISM * 0.25
 	ghoulfriendly = TRUE
 	interferes = CHEMICAL_INTERFERE_IMPOSSIBLE
@@ -41,8 +41,8 @@
 /datum/reagent/drug/jet/overdose_process(mob/living/M)
 	if(M.hallucination < volume && prob(20))
 		M.hallucination += 10
-		M.adjustToxLoss(10, 0)
-		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 15)
+		M.adjustToxLoss(5, 0)
+		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3)
 	..()
 
 /datum/reagent/drug/jet/addiction_act_stage1(mob/living/M)
@@ -62,7 +62,6 @@
 		for(var/i = 0, i < 4, i++)
 			step(M, pick(GLOB.cardinals))
 	M.adjustToxLoss(3, 0)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5)
 	M.set_disgust(60)
 	M.Dizzy(10)
 	if(prob(40))
@@ -74,7 +73,7 @@
 		for(var/i = 0, i < 8, i++)
 			step(M, pick(GLOB.cardinals))
 	M.adjustToxLoss(5, 0)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 10)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1)
 	M.set_disgust(100)
 	M.Dizzy(15)
 	if(prob(50))
@@ -89,7 +88,7 @@
 	color = "#FAFAFA"
 	overdose_threshold = 12
 	addiction_threshold = 8
-	addiction_chance = 4
+	addiction_chance = 3
 	metabolization_rate = 0.7 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
 	interferes = CHEMICAL_INTERFERE_VERY_OFTEN
@@ -174,7 +173,7 @@
 	color = "#FF0000"
 	overdose_threshold = 15
 	addiction_threshold = 12.5
-	addiction_chance = 4
+	addiction_chance = 3
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 	ghoulfriendly = TRUE
@@ -190,6 +189,7 @@
 	M.AdjustUnconscious(-25, 0)
 	M.adjustStaminaLoss(-5, 0)
 	M.Jitter(2)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 0.25)
 	..()
 	. = TRUE
 
@@ -226,20 +226,20 @@
 /datum/reagent/drug/psycho/addiction_act_stage1(mob/living/M)
 	M.hallucination += 10
 	M.Jitter(5)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1)
 	if(prob(20))
 		M.emote(pick("twitch","scream","laugh"))
 	..()
 	return
+
 /datum/reagent/drug/psycho/addiction_act_stage2(mob/living/M)
 	M.hallucination += 20
 	M.Jitter(10)
 	M.Dizzy(10)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1)
 	if(prob(30))
 		M.emote(pick("twitch","scream","laugh"))
 	..()
 	return
+
 /datum/reagent/drug/psycho/addiction_act_stage3(mob/living/M)
 	M.hallucination += 30
 	if(CHECK_MOBILITY(M, MOBILITY_MOVE) && !ismovableatom(M.loc) && !isspaceturf(M.loc))
@@ -247,11 +247,12 @@
 			step(M, pick(GLOB.cardinals))
 	M.Jitter(15)
 	M.Dizzy(15)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 10)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1)
 	if(prob(40))
 		M.emote(pick("twitch","scream","laugh"))
 	..()
 	return
+
 /datum/reagent/drug/psycho/addiction_act_stage4(mob/living/carbon/human/M)
 	M.hallucination += 40
 	if(CHECK_MOBILITY(M, MOBILITY_MOVE) && !ismovableatom(M.loc) && !isspaceturf(M.loc))
@@ -260,7 +261,7 @@
 	M.Jitter(50)
 	M.Dizzy(50)
 	M.adjustToxLoss(5)
-	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 15)
+	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1)
 	if(prob(50))
 		M.emote(pick("twitch","scream","laugh"))
 	..()
@@ -274,7 +275,7 @@
 	overdose_threshold = 20
 	addiction_threshold = 11
 	metabolization_rate = 1.25 * REAGENTS_METABOLISM
-	addiction_chance = 3
+	addiction_chance = 2
 	var/datum/brain_trauma/special/psychotic_brawling/bath_salts/rage
 	ghoulfriendly = TRUE
 	interferes = CHEMICAL_INTERFERE_VERY_OFTEN
@@ -344,9 +345,7 @@
 
 /datum/reagent/drug/buffout/addiction_act_stage3(mob/living/M)
 	to_chat(M, span_notice("Your muscles start to hurt badly, and everything feels like it hurts more."))
-	M.adjustBruteLoss(7.5)
-	M.maxHealth -= 1.5
-	M.health -= 1.5
+	M.adjustBruteLoss(5)
 	if(prob(50))
 		to_chat(M, span_notice("Your muscles spasm, making you drop what you were holding. You're not even sure if you can control your arms!"))
 		M.drop_all_held_items()
@@ -356,16 +355,14 @@
 
 /datum/reagent/drug/buffout/addiction_act_stage4(mob/living/M)
 	to_chat(M, span_danger("Your muscles are in incredible pain! When will it stop!?"))
-	M.adjustBruteLoss(12.5)
-	M.maxHealth -= 5
-	M.health -= 5
+	M.adjustBruteLoss(8)
 	if(prob(90))
 		to_chat(M, span_danger("You can't even keep control of your muscles anymore!"))
 		M.drop_all_held_items()
 		M.emote(pick("twitch"))
 	if(CHECK_MOBILITY(M, MOBILITY_MOVE) && !isspaceturf(M.loc) && prob(25))
 		step(M, pick(GLOB.cardinals))
-	M.adjustOrganLoss(ORGAN_SLOT_HEART, 20)
+	M.adjustOrganLoss(ORGAN_SLOT_HEART, 2)
 	..()
 	return
 
@@ -376,7 +373,7 @@
 	reagent_state = LIQUID
 	overdose_threshold = 20
 	addiction_threshold = 9 //Addicted on the first dose
-	addiction_chance = 5
+	addiction_chance = 4
 	metabolization_rate = 0.8 * REAGENTS_METABOLISM
 	ghoulfriendly = TRUE
 	interferes = CHEMICAL_INTERFERE_OFTEN

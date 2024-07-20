@@ -321,7 +321,7 @@
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	overdose_threshold = 25
 	addiction_threshold = 15
-	addiction_chance = 5
+	addiction_chance = 4
 	var/od_strikes = 0 // So we dont get roflstomped by a sudden massive dose of medx
 	var/od_next_strike = 0 // there's a cool down between strikes, to give the user time to purge this stuff
 	var/od_strike_cooldown = 6 SECONDS
@@ -472,7 +472,7 @@
 	reagent_state = SOLID
 	overdose_threshold = 25
 	addiction_threshold = 15
-	addiction_chance = 3
+	addiction_chance = 2
 	ghoulfriendly = TRUE
 	interference_category = MIND_ALTERING_CHEMICAL
 	interferes = CHEMICAL_INTERFERE_SOMETIMES
@@ -618,7 +618,7 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	taste_description = "refreshing citrus"
 	addiction_threshold = 11 //safe to eat two whole fruits or one farm grown fruit
-	addiction_chance = 2
+	addiction_chance = 1
 	pH = 5 //mild citrus
 	ghoulfriendly = TRUE
 	var/punga_power = 4
