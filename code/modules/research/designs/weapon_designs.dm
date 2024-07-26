@@ -524,7 +524,7 @@
 	id = "plasmapistol"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/titanium = 10000, /datum/material/lead = 10000, /datum/material/plasma = 10000)
-	build_path = /obj/item/gun/energy/laser/pistol
+	build_path = /obj/item/gun/energy/laser/plasma/glock
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
@@ -534,7 +534,7 @@
 	id = "lplasmapistol"
 	build_type = PROTOLATHE
 	materials = list(/datum/material/titanium = 8000, /datum/material/lead = 8000, /datum/material/plasma = 8000)
-	build_path = /obj/item/gun/energy/laser/pistol
+	build_path = /obj/item/gun/energy/laser/plasma/pistol
 	category = list("Weapons")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 

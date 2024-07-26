@@ -52,15 +52,15 @@
 	name = "armory contraband gun spawner"
 	lootdoubles = FALSE
 	loot = list(
-				/obj/item/gun/ballistic/automatic/pistol = 8,
-				/obj/item/gun/ballistic/shotgun/automatic/combat = 5,
+				/obj/item/gun/ballistic/automatic/pistol/mk23 = 8,
+				/obj/item/gun/ballistic/shotgun/automatic/combat/auto5 = 5,
 				/obj/item/gun/ballistic/revolver/m29/snub,
 				/obj/item/gun/ballistic/automatic/pistol/deagle
 				)
 
 /obj/effect/spawner/lootdrop/armory_contraband/metastation
 	loot = list(/obj/item/gun/ballistic/automatic/pistol = 5,
-				/obj/item/gun/ballistic/shotgun/automatic/combat = 5,
+				/obj/item/gun/ballistic/shotgun/automatic/combat/auto5 = 5,
 				/obj/item/gun/ballistic/revolver/m29/snub,
 				/obj/item/gun/ballistic/automatic/pistol/deagle,
 				/obj/item/storage/box/syndie_kit/throwing_weapons = 3)
