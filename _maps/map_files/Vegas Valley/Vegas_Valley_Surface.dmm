@@ -1738,6 +1738,10 @@
 /area/f13/building/abandoned/g)
 "aHK" = (
 /obj/machinery/computer/rdconsole/core/followers,
+/obj/machinery/door/unpowered/securedoor{
+	name = "Clinic";
+	req_access_txt = "124"
+	},
 /turf/open/floor/wood_common,
 /area/f13/followers)
 "aHQ" = (
@@ -5014,7 +5018,7 @@
 /area/f13/ambientlighting/building/d)
 "bVR" = (
 /obj/machinery/door/poddoor/gate/preopen{
-	id = 334ssssssssssssssssssssssssddd;
+	id = 334;
 	name = "power plant"
 	},
 /turf/open/indestructible/ground/outside/graveldirt,
@@ -13184,6 +13188,13 @@
 	icon_state = "horizontaloutermain2"
 	},
 /area/f13/wasteland)
+"eWa" = (
+/obj/machinery/door/unpowered/securedoor{
+	name = "Clinic";
+	req_access_txt = "124"
+	},
+/turf/open/indestructible/ground/outside/grass,
+/area/f13/wasteland)
 "eWg" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -18932,6 +18943,10 @@
 	},
 /turf/open/floor/carpet/orange,
 /area/f13/ambientlighting/building/c)
+"gXw" = (
+/obj/machinery/door/poddoor/gate/preopen,
+/turf/closed/wall/mineral/wood,
+/area/f13/ambientlighting/building/d)
 "gXH" = (
 /turf/closed/indestructible/f13/matrix,
 /area/f13/wasteland)
@@ -34433,12 +34448,12 @@
 /turf/closed/mineral/random/no_caves,
 /area/f13/wasteland/legion)
 "mFu" = (
-/obj/machinery/door/poddoor/gate/preopen{
-	id = 334ssssssssssssssssssssssssddd;
-	name = "power plant"
-	},
 /obj/effect/overlay/desert_side{
 	dir = 1
+	},
+/obj/machinery/door/poddoor/gate/preopen{
+	id = 334;
+	name = "power plant"
 	},
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
@@ -42199,6 +42214,13 @@
 	},
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
+"pBk" = (
+/obj/machinery/door/poddoor/gate/preopen{
+	id = "BoS Inner Surface Gate";
+	name = "Brotherhood Inner Gate"
+	},
+/turf/open/indestructible/ground/outside/water/running,
+/area/f13/wasteland)
 "pBm" = (
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/grass/dirtpath{
@@ -47962,7 +47984,8 @@
 /area/f13/building/tribal)
 "rHb" = (
 /obj/machinery/door/poddoor/gate/preopen{
-	id = 335
+	id = 334;
+	name = "power plant"
 	},
 /obj/structure/cable/outdoors{
 	icon_state = "4-8"
@@ -57390,6 +57413,12 @@
 	dir = 1;
 	pixel_y = 12
 	},
+/obj/machinery/button/door{
+	id = 334;
+	name = "outer gate";
+	pixel_x = -7;
+	pixel_y = 25
+	},
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
 "vau" = (
@@ -61079,6 +61108,13 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
 /area/f13/legioncamp)
+"wtK" = (
+/obj/machinery/door/poddoor/gate/preopen{
+	id = 334;
+	name = "power plant"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "wtL" = (
 /obj/structure/obstacle/barbedwire/end,
 /turf/open/indestructible/ground/outside/road,
@@ -122846,7 +122882,7 @@ kGJ
 kGJ
 kGJ
 kGJ
-kGJ
+pBk
 kGJ
 kGJ
 kGJ
@@ -129964,7 +130000,7 @@ wuZ
 uCz
 xXx
 xXx
-xXx
+eWa
 feo
 xXx
 xXx
@@ -137212,7 +137248,7 @@ iNo
 eXx
 jVM
 qfV
-akw
+gXw
 akw
 xRe
 jyC
@@ -140420,7 +140456,7 @@ nDt
 scz
 wTQ
 ctN
-azA
+wtK
 azA
 azA
 azA
