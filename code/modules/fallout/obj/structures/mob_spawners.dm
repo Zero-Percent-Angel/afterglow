@@ -91,13 +91,8 @@ GLOBAL_LIST_EMPTY(player_made_nests)
 		return try_seal(user, I, I.type, "rods", 0)
 	if(istype(I, /obj/item/stack/sheet/mineral/wood))
 		return try_seal(user, I, I.type, "planks", 1 HOURS)
+	..()
 
-	if(covered) // allow you to interact only when it's sealed
-		..()
-	else
-		if(user.a_intent == INTENT_HARM)
-			to_chat(user, span_warning("You feel it is impossible to destroy this without covering it with something."))
-			return
 
 /obj/structure/nest/proc/try_seal(mob/user, obj/item/stack/S, itempath, cover_state, timer)
 	if(!coverable)
