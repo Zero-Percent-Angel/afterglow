@@ -639,24 +639,27 @@
 	var/non_aggresive_factions = list()
 	var/list/warning_phrases = list()
 	var/list/warnings_issued = list()
-	var/warn_count = 3
+	var/warn_count = 4
 
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/warner/handle_automated_movement()
 	if (!TICK_CHECK)
 		for (var/mob/living/A in oview(vision_range, targets_from)) //mob/dead/observers arent possible targets
 			var/weakref_of_a = WEAKREF(A)
-			if (!faction_check(non_aggresive_factions, A.faction) && A.health > 0 && !friends.Find(weakref_of_a) && AIStatus != AI_ON)
+			var/say_line = AIStatus != AI_ON
+			if (!faction_check(non_aggresive_factions, A.faction) && !friends.Find(weakref_of_a) && A.health > 0)
 				if (A.sneaking && (A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier)))
 					to_chat(A, span_notice("[name] has not spotted you."))
 				else
 					if (warnings_issued.Find(weakref_of_a))
 						if (warnings_issued[weakref_of_a] > warn_count)
 							enemies |= weakref_of_a
-							say("You were warned!")
+							if (say_line)
+								say("You were warned!")
 						else
 							warnings_issued[weakref_of_a] += 1
-							say(pick(warning_phrases))
+							if (say_line)
+								say(pick(warning_phrases))
 					else
 						say(pick(warning_phrases))
 						warnings_issued[weakref_of_a] = 1
