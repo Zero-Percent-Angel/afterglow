@@ -5,7 +5,7 @@
 	access = list(ACCESS_FOLLOWER)
 	minimal_access = list(ACCESS_FOLLOWER)
 	forbids = null
-	enforces = "Generallys peaking it can be assumed that your time spent learning how to be a doctor was for the good of others, but ultimately you are on your own path."
+	enforces = "no one, generally speaking it can be assumed that your time spent learning how to be a doctor was for the good of others, but ultimately you are on your own path."
 	objectivesList = null
 
 /datum/outfit/job/followers
@@ -44,8 +44,8 @@ Administrator
 	faction = "Followers"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Generally speaking your only actual supervisor is your own judgement."
-	description = "You are the lead practitioner in this followers clinic. Your rank is given due to your experience in the field compared to regular doctors. Help deal with issues that arise that normal doctors aren't prepared for, and teach those willing to learn more in the clinic."
+	supervisors = "no one, your only actual supervisor is your own judgement."
+	description = "You are the lead practitioner in this followers clinic. Your 'rank' is given due to your experience in the field compared to regular doctors. Help deal with issues that arise that normal doctors aren't prepared for, and teach those willing to learn more in the clinic."
 	enforces = "Assist and provide medical services to those in need. Provide education for all those who are willing to learn."
 	selection_color = "#FF95FF"
 	exp_requirements = 750
@@ -214,7 +214,7 @@ Practitioner
 	faction = "Followers"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Generally speaking your only actual supervisor is your own judgement, but it might not be amiss to listen to the Lead Practitioner. Assuming they're around."
+	supervisors = "no one, generally speaking your only actual supervisor is your own judgement, but it might not be amiss to listen to the Lead Practitioner. Assuming they're around."
 	description = "You are a Followers Doctor. Whether a doctor in training or a less experienced doctor of some form, you are tasked with providing medical aid where and when it's needed."
 	enforces = "Assist and provide medical services to those in need. Provide education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
@@ -345,7 +345,7 @@ Follower Volunteer
 	faction = "Followers"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Generally speaking your only actual supervisor is your own judgement, but it might not be amiss to listen to the Doctors, or anyone with more experience than you. Assuming they're around."
+	supervisors = "no one, generally speaking your only actual supervisor is your own judgement, but it might not be amiss to listen to the Doctors, or anyone with more experience than you. Assuming they're around."
 	description = "You are a Followers Volunteer. As a Followers Volunteer you provide first aid to those that are injured and assist the clinic doctors as needed."
 	enforces = "Assist and provide medical services to those in need. Provide education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
@@ -435,7 +435,7 @@ Follower Volunteer
 	faction = "Followers"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Generally speaking your only actual supervisor is your own judgement, but it might not be amiss to listen to the Doctors. Assuming they're around."
+	supervisors = "no one, generally speaking your only actual supervisor is your own judgement, but it might not be amiss to listen to the Doctors. Assuming they're around."
 	description = "Your job is to guard the clinic and make sure it's not destroyed."
 	enforces = "Assist and provide medical services to those in need. Provide education for all those who are willing to learn."
 	selection_color = "#FFDDFF"
