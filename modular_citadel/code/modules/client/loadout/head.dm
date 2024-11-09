@@ -393,6 +393,8 @@ datum/gear/head/steelpot_bandolier
 							"NCR Trooper",
 							"NCR Recruit",
 							"NCR Rear Echelon",
+							"NCR Ranger",
+							"NCR Veteran Ranger",
 							"NCR Off-Duty"
 						)
 
@@ -400,9 +402,15 @@ datum/gear/head/steelpot_bandolier
 	name = "NCR campaign hat"
 	path = /obj/item/clothing/head/f13/ncr/ncr_campaign
 	subcategory = LOADOUT_SUBCATEGORY_HEAD_FACTIONS
-	cost = 4
+	cost = 2
 	restricted_desc = "NCR"
 	restricted_roles = list("NCR Sergeant",
+							"NCR Captain",
+							"NCR Lieutenant",
+							"NCR Medical Officer",
+							"NCR Sergeant First Class",
+							"NCR Ranger",
+							"NCR Veteran Ranger",
 							"NCR Heavy Trooper"
 						)
 
