@@ -113,6 +113,21 @@ GLOBAL_LIST_EMPTY(mobs_with_editable_flavor_text) //et tu, hacky code
 	var/datum/element/flavor_text/F = choices[chosen]
 	F.set_flavor(src)
 
+/mob/proc/set_flavor_text(name, text)
+	var/list/L = GLOB.mobs_with_editable_flavor_text[src]
+	if(length(L) == 1)
+		var/datum/element/flavor_text/F = L[1]
+		F.texts_by_atom[src] = text
+		return
+
+	var/list/choices = list()
+	for(var/i in L)
+		var/datum/element/flavor_text/F = i
+		choices[F.flavor_name] = F
+	var/datum/element/flavor_text/F = choices[name]
+	if (F)
+		F.texts_by_atom[src] = text
+
 /datum/element/flavor_text/proc/set_flavor(mob/user)
 	if(!(user in texts_by_atom))
 		return FALSE

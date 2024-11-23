@@ -110,7 +110,7 @@
 	return examine(user)
 
 //Start growing a human clone in the pod!
-/obj/machinery/clonepod/proc/growclone(ckey, clonename, ui, mutation_index, mindref, blood_type, datum/species/mrace, list/features, factions, list/quirks, datum/bank_account/insurance, list/traumas, list/special, list/skills, flavour_text)
+/obj/machinery/clonepod/proc/growclone(ckey, clonename, ui, mutation_index, mindref, blood_type, datum/species/mrace, list/features, factions, list/quirks, datum/bank_account/insurance, list/traumas, list/special, list/skills)
 	if(panel_open)
 		return FALSE
 	if(mess || attempting)
@@ -165,7 +165,6 @@
 	set_skills(H, skills)
 	H.set_special()
 	H.invalidate_skill_caches()
-	H.flavor_text = flavour_text
 	occupant = H
 
 	if(!clonename)	//to prevent null names
