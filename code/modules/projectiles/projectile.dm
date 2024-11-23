@@ -118,6 +118,7 @@
 
 	var/damage = 10
 	var/damage_mod = 1 // Makes the gun's damage mod scale faction damage
+	var/animal_mod = 1
 	var/damage_type = BRUTE //BRUTE, BURN, TOX, OXY, CLONE are the only things that should be in here
 	var/nodamage = 0 //Determines if the projectile will skip any damage inflictions
 	var/flag = "bullet" //Defines what armor to use when it hits things.  Must be set to bullet, laser, energy,or bomb

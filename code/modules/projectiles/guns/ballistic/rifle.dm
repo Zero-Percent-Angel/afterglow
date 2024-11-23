@@ -495,6 +495,7 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T5
+	animal_mod = GUN_EXTRA_DAMAGE_T5
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(2)
 
@@ -537,6 +538,7 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T3
+	animal_mod = GUN_EXTRA_DAMAGE_T5
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(2.5)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
@@ -838,6 +840,7 @@
 	burst_size = 1
 	zoom_factor = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	animal_mod = GUN_EXTRA_DAMAGE_T5
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(3.8)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION

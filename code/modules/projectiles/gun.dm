@@ -51,6 +51,7 @@ ATTACHMENTS
 	slowdown = GUN_SLOWDOWN_NONE
 
 	var/damage_multiplier = 1 //Multiplies damage of projectiles fired from this gun
+	var/animal_mod = 1 // animal damage mulitplier
 	var/penetration_multiplier = 1 //Multiplies armor penetration of projectiles fired from this gun
 
 	/// can we be put into a turret

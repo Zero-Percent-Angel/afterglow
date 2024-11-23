@@ -122,8 +122,8 @@
 			return FALSE
 		if(!QDELETED(clonemind.current))
 			if(clonemind.current.stat != DEAD)	//mind is associated with a non-dead body
-				say("Rejecting clone of living target.")
-				return FALSE
+				say("Warning clone of living target.")
+				clonemind = null
 			if(clonemind.current.suiciding) // Mind is associated with a body that is suiciding.
 				say("Subject has lost the will to live.")
 				return FALSE
@@ -182,7 +182,7 @@
 	if(clonemind)
 		clonemind.transfer_to(H)
 
-	else if(get_clone_mind == CLONEPOD_POLL_MIND)
+	else if(get_clone_mind == CLONEPOD_POLL_MIND || (clonemind == null && get_clone_mind == CLONEPOD_GET_MIND))
 		var/list/candidates = pollCandidatesForMob("Do you want to play as [clonename]'s defective clone? (Don't ERP without permission from the original)", null, null, null, 100, H, POLL_IGNORE_CLONE)
 		if(LAZYLEN(candidates))
 			var/mob/C = pick(candidates)
