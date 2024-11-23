@@ -114,6 +114,7 @@
 	blood_volume = 0
 
 /mob/living/simple_animal/hostile/fireant/Initialize()
+	create_reagents(10)
 	. = ..()
 
 /mob/living/simple_animal/hostile/fireant/Aggro()
@@ -124,7 +125,10 @@
 	. = ..()
 	if(. && ishuman(target))
 		var/mob/living/carbon/human/H = target
-		H.reagents.add_reagent(/datum/reagent/hellwater, 1)
+		reagents.add_reagent(/datum/reagent/fuel, 10)
+		reagents.reaction(H, TOUCH)
+		H.IgniteMob()
+		reagents.clear_reagents()
 
 // ANT QUEEN
 /mob/living/simple_animal/hostile/giantantqueen

@@ -232,6 +232,7 @@
 					to_chat(user, span_notice("You start to remove remaining components..."))
 					if(I.use_tool(src, user, 50, volume=70))
 						to_chat(user, span_notice("You finish salvaging the suit."))
+						new /obj/item/pa_kit(src)
 						var/obj/item/ST = new salvaged_type(src)
 						user.put_in_hands(ST)
 						qdel(src)

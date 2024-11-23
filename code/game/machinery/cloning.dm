@@ -117,13 +117,11 @@
 		return FALSE
 	if(get_clone_mind == CLONEPOD_GET_MIND)
 		clonemind = locate(mindref)
+		var/was_dead = FALSE
 		if(!istype(clonemind))	//not a mind
 			say("Mindlink failed, could not download mind into template.")
 			return FALSE
 		if(!QDELETED(clonemind.current))
-			if(clonemind.current.stat != DEAD)	//mind is associated with a non-dead body
-				say("Rejecting clone of living target.")
-				return FALSE
 			if(clonemind.current.suiciding) // Mind is associated with a body that is suiciding.
 				say("Subject has lost the will to live.")
 				return FALSE
@@ -134,6 +132,9 @@
 				if( ckey(clonemind.key)!=ckey )
 					say("Mindlink error, subject has multiple interfaces.")
 					return FALSE
+			if(clonemind.current.stat != DEAD)	//mind is associated with a non-dead body
+				say("Warning clone of living target.")
+				was_dead = TRUE
 		else
 			// get_ghost() will fail if they're unable to reenter their body
 			var/mob/dead/observer/G = clonemind.get_ghost(TRUE)
@@ -148,6 +149,8 @@
 			mess = TRUE
 			update_icon()
 			return FALSE
+		if(was_dead)
+			clonemind = null
 	current_insurance = insurance
 	attempting = TRUE //One at a time!!
 	countdown.start()
@@ -182,7 +185,7 @@
 	if(clonemind)
 		clonemind.transfer_to(H)
 
-	else if(get_clone_mind == CLONEPOD_POLL_MIND)
+	else if(get_clone_mind == CLONEPOD_POLL_MIND || get_clone_mind == CLONEPOD_GET_MIND)
 		var/list/candidates = pollCandidatesForMob("Do you want to play as [clonename]'s defective clone? (Don't ERP without permission from the original)", null, null, null, 100, H, POLL_IGNORE_CLONE)
 		if(LAZYLEN(candidates))
 			var/mob/C = pick(candidates)

@@ -419,6 +419,7 @@
 		var/old_width = dna.features["width"]
 		dna.features = newfeatures
 		dna.update_body_size(old_size, old_height, old_width)
+		src.set_flavor_text("flavor_text", newfeatures["flavor_text"])
 
 	if(mrace)
 		var/datum/species/newrace = new mrace.type

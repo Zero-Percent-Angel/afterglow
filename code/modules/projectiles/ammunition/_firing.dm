@@ -60,6 +60,7 @@
 	if(isgun(fired_from))
 		var/obj/item/gun/G = fired_from
 		BB.damage *= G.damage_multiplier
+		BB.animal_mod = G.animal_mod
 		BB.damage_mod = G.damage_multiplier
 		BB.armour_penetration *= G.penetration_multiplier
 		BB.pixels_per_second *= G.projectile_speed_multiplier

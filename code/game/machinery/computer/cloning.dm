@@ -507,6 +507,7 @@
 	R.fields["features"] = dna.features
 	R.fields["factions"] = mob_occupant.faction
 	R.fields["quirks"] = list()
+	R.fields["flavour"] = mob_occupant.flavor_text
 	for(var/V in mob_occupant.roundstart_quirks)
 		var/datum/quirk/T = V
 		R.fields["quirks"][T.type] = T.clone_data()
