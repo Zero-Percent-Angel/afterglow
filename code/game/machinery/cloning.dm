@@ -110,20 +110,18 @@
 	return examine(user)
 
 //Start growing a human clone in the pod!
-/obj/machinery/clonepod/proc/growclone(ckey, clonename, ui, mutation_index, mindref, blood_type, datum/species/mrace, list/features, factions, list/quirks, datum/bank_account/insurance, list/traumas, list/special, list/skills)
+/obj/machinery/clonepod/proc/growclone(ckey, clonename, ui, mutation_index, mindref, blood_type, datum/species/mrace, list/features, factions, list/quirks, datum/bank_account/insurance, list/traumas, list/special, list/skills, flavour_text)
 	if(panel_open)
 		return FALSE
 	if(mess || attempting)
 		return FALSE
 	if(get_clone_mind == CLONEPOD_GET_MIND)
 		clonemind = locate(mindref)
+		var/was_dead = FALSE
 		if(!istype(clonemind))	//not a mind
 			say("Mindlink failed, could not download mind into template.")
 			return FALSE
 		if(!QDELETED(clonemind.current))
-			if(clonemind.current.stat != DEAD)	//mind is associated with a non-dead body
-				say("Warning clone of living target.")
-				clonemind = null
 			if(clonemind.current.suiciding) // Mind is associated with a body that is suiciding.
 				say("Subject has lost the will to live.")
 				return FALSE
@@ -134,6 +132,9 @@
 				if( ckey(clonemind.key)!=ckey )
 					say("Mindlink error, subject has multiple interfaces.")
 					return FALSE
+			if(clonemind.current.stat != DEAD)	//mind is associated with a non-dead body
+				say("Warning clone of living target.")
+				was_dead = TRUE
 		else
 			// get_ghost() will fail if they're unable to reenter their body
 			var/mob/dead/observer/G = clonemind.get_ghost(TRUE)
@@ -148,6 +149,8 @@
 			mess = TRUE
 			update_icon()
 			return FALSE
+		if(was_dead)
+			clonemind = null
 	current_insurance = insurance
 	attempting = TRUE //One at a time!!
 	countdown.start()
@@ -162,6 +165,7 @@
 	set_skills(H, skills)
 	H.set_special()
 	H.invalidate_skill_caches()
+	H.flavor_text = flavour_text
 	occupant = H
 
 	if(!clonename)	//to prevent null names
@@ -182,7 +186,7 @@
 	if(clonemind)
 		clonemind.transfer_to(H)
 
-	else if(get_clone_mind == CLONEPOD_POLL_MIND || (clonemind == null && get_clone_mind == CLONEPOD_GET_MIND))
+	else if(get_clone_mind == CLONEPOD_POLL_MIND || get_clone_mind == CLONEPOD_GET_MIND)
 		var/list/candidates = pollCandidatesForMob("Do you want to play as [clonename]'s defective clone? (Don't ERP without permission from the original)", null, null, null, 100, H, POLL_IGNORE_CLONE)
 		if(LAZYLEN(candidates))
 			var/mob/C = pick(candidates)
