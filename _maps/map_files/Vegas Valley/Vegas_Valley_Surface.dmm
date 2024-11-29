@@ -5940,14 +5940,6 @@
 	icon_state = "horizontalinnermain2"
 	},
 /area/f13/ambientlighting/building/o)
-"coW" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/apc/fusebox/west,
-/obj/effect/mapping_helpers/network_builder/power_cable/auto,
-/turf/open/floor/f13{
-	icon_state = "darkrusty"
-	},
-/area/f13/building/abandoned/h)
 "cpa" = (
 /obj/structure/flora/grass/wasteland{
 	icon_state = "tall_grass_4";
@@ -17775,6 +17767,16 @@
 /obj/structure/table,
 /turf/open/floor/plasteel/f13/stone,
 /area/f13/brotherhood/surface)
+"gCU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/port_gen/pacman/diesel{
+	anchored = 1
+	},
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building/abandoned/h)
 "gCW" = (
 /obj/structure/simple_door/bunker/glass,
 /turf/open/floor/plating/rust,
@@ -33445,6 +33447,14 @@
 "mmv" = (
 /turf/closed/wall/f13/store,
 /area/f13/building/abandoned/h)
+"mmw" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/mineral/plasma/twentyfive,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building/abandoned/h)
 "mmx" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -40951,7 +40961,11 @@
 /area/f13/building/abandoned/z)
 "pbC" = (
 /obj/machinery/door/password,
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/floor/f13{
+	color = "#d9c4b9";
+	icon_state = "darkrusty";
+	name = "dirty floor"
+	},
 /area/f13/building/powered)
 "pbD" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -41104,14 +41118,6 @@
 /obj/structure/destructible/tribal_torch/wall/lit,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/d)
-"pfr" = (
-/obj/structure/table,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/stack/sheet/mineral/plasma/twentyfive,
-/turf/open/floor/f13{
-	icon_state = "darkrusty"
-	},
-/area/f13/building/abandoned/h)
 "pfv" = (
 /obj/structure/window/fulltile/house{
 	dir = 2
@@ -43178,16 +43184,6 @@
 	icon_state = "housewood2-broken"
 	},
 /area/f13/building/abandoned/b)
-"pTE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/port_gen/pacman/diesel{
-	anchored = 1
-	},
-/obj/effect/mapping_helpers/network_builder/power_cable/auto,
-/turf/open/floor/f13{
-	icon_state = "darkrusty"
-	},
-/area/f13/building/abandoned/h)
 "pTI" = (
 /obj/structure/simple_door/metal/iron,
 /turf/open/floor/wood_wide,
@@ -63635,6 +63631,14 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/ambientlighting/building/y)
+"xlP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/apc/fusebox/west,
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building/abandoned/h)
 "xlR" = (
 /obj/effect/overlay/desert/sonora/edge{
 	dir = 4
@@ -140074,11 +140078,11 @@ mmv
 cPX
 dWi
 qCl
-coW
+xlP
 ivG
 kvB
 ivG
-pTE
+gCU
 nso
 weO
 snK
@@ -140375,7 +140379,7 @@ azA
 mmv
 tRg
 nJJ
-pfr
+mmw
 nJJ
 teO
 nJJ
