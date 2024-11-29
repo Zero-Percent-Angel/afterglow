@@ -835,6 +835,8 @@
 	armor = ARMOR_VALUE_SALVAGE
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
 	flags_cover = HEADCOVERSEYES
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
 	var/pa_type = null
 	var/combined_needed_fix_skill = 140
 

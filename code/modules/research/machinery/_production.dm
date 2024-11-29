@@ -25,7 +25,15 @@
 	matching_designs = list()
 	cached_designs = list()
 	stored_research = new
-	host_research = SSresearch.science_tech
+	for(var/obj/machinery/computer/rdconsole/console in orange(8, loc))
+		host_research = console.stored_research
+		break
+	if (mapload)
+		if (host_research == null)
+			host_research = SSresearch.science_tech
+	else
+		if (host_research == null)
+			host_research = SSresearch.unknown_tech
 	INVOKE_ASYNC(src, PROC_REF(update_research))
 	materials = AddComponent(/datum/component/remote_materials, "lathe", mapload, _after_insert=CALLBACK(src, PROC_REF(AfterMaterialInsert)))
 	RefreshParts()

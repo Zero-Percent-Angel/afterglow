@@ -196,6 +196,10 @@
 	name = "R&D Console (Computer Board)"
 	build_path = /obj/machinery/computer/rdconsole/core/bos
 
+/obj/item/circuitboard/computer/rdconsole/enclave
+	name = "R&D Console (Computer Board)"
+	build_path = /obj/machinery/computer/rdconsole/core/enclave
+
 /obj/item/circuitboard/computer/rdconsole/vault
 	name = "R&D Console (Computer Board)"
 	build_path = /obj/machinery/computer/rdconsole/core/vault
