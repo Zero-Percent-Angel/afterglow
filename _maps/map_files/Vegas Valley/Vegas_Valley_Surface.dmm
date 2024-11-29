@@ -16383,14 +16383,6 @@
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier2,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/h)
-"gcU" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/apc/fusebox/west,
-/obj/effect/mapping_helpers/network_builder/power_cable/auto,
-/turf/open/floor/f13{
-	icon_state = "darkrusty"
-	},
-/area/f13/building/abandoned/h)
 "gdo" = (
 /obj/structure/debris/v1{
 	color = "#343a33";
@@ -17775,6 +17767,16 @@
 /obj/structure/table,
 /turf/open/floor/plasteel/f13/stone,
 /area/f13/brotherhood/surface)
+"gCU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/port_gen/pacman/diesel{
+	anchored = 1
+	},
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building/abandoned/h)
 "gCW" = (
 /obj/structure/simple_door/bunker/glass,
 /turf/open/floor/plating/rust,
@@ -23225,16 +23227,12 @@
 	},
 /area/f13/wasteland)
 "ivG" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/effect/landmark/legion_attack{
-	id = 3
-	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
 /turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
+	icon_state = "darkrusty"
 	},
-/area/f13/ambientlighting/building/o)
+/area/f13/building/abandoned/h)
 "ivH" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -33449,6 +33447,14 @@
 "mmv" = (
 /turf/closed/wall/f13/store,
 /area/f13/building/abandoned/h)
+"mmw" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/mineral/plasma/twentyfive,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building/abandoned/h)
 "mmx" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -35940,16 +35946,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/a)
-"niO" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/port_gen/pacman/diesel{
-	anchored = 1
-	},
-/obj/effect/mapping_helpers/network_builder/power_cable/auto,
-/turf/open/floor/f13{
-	icon_state = "darkrusty"
-	},
-/area/f13/building/abandoned/h)
 "niP" = (
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/road{
@@ -40965,7 +40961,11 @@
 /area/f13/building/abandoned/z)
 "pbC" = (
 /obj/machinery/door/password,
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/floor/f13{
+	color = "#d9c4b9";
+	icon_state = "darkrusty";
+	name = "dirty floor"
+	},
 /area/f13/building/powered)
 "pbD" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -49716,13 +49716,6 @@
 /mob/living/simple_animal/hostile/raider/sulphite,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building/abandoned/g)
-"spK" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/mapping_helpers/network_builder/power_cable/auto,
-/turf/open/floor/f13{
-	icon_state = "darkrusty"
-	},
-/area/f13/building/abandoned/h)
 "sqd" = (
 /obj/structure/cable/outdoors{
 	icon_state = "4-8"
@@ -55203,14 +55196,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/b)
-"ulC" = (
-/obj/structure/table,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/stack/sheet/mineral/plasma/twentyfive,
-/turf/open/floor/f13{
-	icon_state = "darkrusty"
-	},
-/area/f13/building/abandoned/h)
 "ulJ" = (
 /obj/machinery/door/poddoor/shutters,
 /turf/open/indestructible/ground/outside/road,
@@ -63646,6 +63631,14 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/ambientlighting/building/y)
+"xlP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/apc/fusebox/west,
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building/abandoned/h)
 "xlR" = (
 /obj/effect/overlay/desert/sonora/edge{
 	dir = 4
@@ -89945,7 +89938,7 @@ vcZ
 uhB
 uhB
 uhB
-ivG
+sTB
 uhB
 uhB
 myG
@@ -140085,11 +140078,11 @@ mmv
 cPX
 dWi
 qCl
-gcU
-spK
+xlP
+ivG
 kvB
-spK
-niO
+ivG
+gCU
 nso
 weO
 snK
@@ -140386,7 +140379,7 @@ azA
 mmv
 tRg
 nJJ
-ulC
+mmw
 nJJ
 teO
 nJJ
