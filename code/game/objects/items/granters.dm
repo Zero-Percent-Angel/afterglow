@@ -871,6 +871,16 @@
 	icon_state = "blueprint2"
 	crafting_recipe_types = list(/datum/crafting_recipe/explosive/shrapnelmine, /datum/crafting_recipe/explosive/explomine, /datum/crafting_recipe/explosive/stingmine, /datum/crafting_recipe/explosive/pulsemine, /datum/crafting_recipe/explosive/stunmine)
 
+/obj/item/book/granter/crafting_recipe/blueprint/protolathe
+	name = "protolathe electionics schematics"
+	icon_state = "blueprint2"
+	crafting_recipe_types = list(/datum/crafting_recipe/protolathe)
+
+/obj/item/book/granter/crafting_recipe/blueprint/circuit_imprinter
+	name = "circuit imprinter electionics schematics"
+	icon_state = "blueprint2"
+	crafting_recipe_types = list(/datum/crafting_recipe/circuit_imprinter)
+
 /*
 /obj/item/book/granter/crafting_recipe/blueprint/fnfal
 	name = "fn fal blueprint"

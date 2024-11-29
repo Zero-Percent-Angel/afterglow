@@ -6207,9 +6207,14 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "ctQ" = (
-/obj/structure/fluff/railing{
+/obj/structure/railing{
 	color = "#A47449";
 	dir = 4
+	},
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 8;
+	layer = 4.1
 	},
 /turf/open/floor/plasteel/stairs{
 	barefootstep = "woodbarefoot";
@@ -9940,7 +9945,7 @@
 	},
 /area/f13/wasteland)
 "dLV" = (
-/obj/structure/fluff/railing{
+/obj/structure/railing{
 	color = "#A47449";
 	dir = 4
 	},
@@ -10665,10 +10670,8 @@
 	},
 /area/f13/wasteland)
 "dZX" = (
-/obj/structure/fluff/railing{
-	color = "#A47449";
-	dir = 2;
-	layer = 3.1
+/obj/structure/railing{
+	color = "#A47449"
 	},
 /turf/open/floor/wood_mosaic/wood_mosaic_light,
 /area/f13/legioncamp)
@@ -16380,6 +16383,14 @@
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier2,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/h)
+"gcU" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/apc/fusebox/west,
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building/abandoned/h)
 "gdo" = (
 /obj/structure/debris/v1{
 	color = "#343a33";
@@ -21179,10 +21190,8 @@
 "hIR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/stairs/east,
-/obj/structure/fluff/railing{
-	color = "#A47449";
-	dir = 2;
-	layer = 3.1
+/obj/structure/railing{
+	color = "#A47449"
 	},
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
@@ -28638,6 +28647,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -29715,10 +29725,10 @@
 	},
 /area/f13/wasteland)
 "kPP" = (
-/obj/structure/fluff/railing{
+/obj/structure/railing{
 	color = "#A47449";
 	dir = 8;
-	layer = 3.1
+	layer = 4.1
 	},
 /turf/open/floor/wood_mosaic/wood_mosaic_light,
 /area/f13/legioncamp)
@@ -35930,6 +35940,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/a)
+"niO" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/power/port_gen/pacman/diesel{
+	anchored = 1
+	},
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building/abandoned/h)
 "niP" = (
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/outside/road{
@@ -44258,6 +44278,7 @@
 /obj/structure/sign/poster/contraband/the_griffin{
 	pixel_y = 32
 	},
+/obj/effect/spawner/lootdrop/f13/advboards,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -49695,6 +49716,13 @@
 /mob/living/simple_animal/hostile/raider/sulphite,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building/abandoned/g)
+"spK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building/abandoned/h)
 "sqd" = (
 /obj/structure/cable/outdoors{
 	icon_state = "4-8"
@@ -52784,9 +52812,14 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "twH" = (
-/obj/structure/fluff/railing{
+/obj/structure/railing{
 	color = "#A47449";
-	dir = 8
+	dir = 8;
+	layer = 4.1
+	},
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 4
 	},
 /turf/open/floor/plasteel/stairs{
 	barefootstep = "woodbarefoot";
@@ -53065,6 +53098,7 @@
 /area/f13/wasteland)
 "tBj" = (
 /obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/advboards,
 /turf/open/floor/wood_common,
 /area/f13/followers)
 "tBk" = (
@@ -55169,6 +55203,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/b)
+"ulC" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/mineral/plasma/twentyfive,
+/turf/open/floor/f13{
+	icon_state = "darkrusty"
+	},
+/area/f13/building/abandoned/h)
 "ulJ" = (
 /obj/machinery/door/poddoor/shutters,
 /turf/open/indestructible/ground/outside/road,
@@ -140043,11 +140085,11 @@ mmv
 cPX
 dWi
 qCl
-nJJ
-nJJ
+gcU
+spK
 kvB
-nJJ
-nJJ
+spK
+niO
 nso
 weO
 snK
@@ -140344,7 +140386,7 @@ azA
 mmv
 tRg
 nJJ
-uDG
+ulC
 nJJ
 teO
 nJJ

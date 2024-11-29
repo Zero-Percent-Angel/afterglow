@@ -1918,7 +1918,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/stack/rods/ten = 3,
 				/obj/item/stack/sheet/metal/ten = 5,
 				/obj/item/stack/sheet/cardboard/twenty = 1,
-//				/obj/item/stack/sheet/glass/ten = 2,
+				/obj/item/stack/sheet/glass/ten = 2,
 				/obj/item/stack/sheet/metal/five = 2,
 				/obj/item/stack/sheet/plasteel/five = 1,
 				/obj/item/stack/sheet/plastic/five = 4,
@@ -2194,6 +2194,8 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/advanced_crafting_components/receiver,
 		/obj/item/advanced_crafting_components/assembly,
 		/obj/item/advanced_crafting_components/alloys,
+		/obj/item/book/granter/crafting_recipe/blueprint/protolathe,
+		/obj/item/book/granter/crafting_recipe/blueprint/circuit_imprinter
 	)
 
 /obj/effect/spawner/lootdrop/f13/advcrafting
@@ -2201,14 +2203,27 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootcount = 1
 	lootdoubles = FALSE
 	loot = list(
-		/obj/item/advanced_crafting_components/flux,
-		/obj/item/advanced_crafting_components/lenses,
-		/obj/item/advanced_crafting_components/conductors,
-		/obj/item/advanced_crafting_components/receiver,
-		/obj/item/advanced_crafting_components/assembly,
-		/obj/item/advanced_crafting_components/alloys,
-		/obj/item/ingot/adamantine, // Valuable for smithing
+		/obj/item/advanced_crafting_components/flux = 4,
+		/obj/item/advanced_crafting_components/lenses = 4,
+		/obj/item/advanced_crafting_components/conductors = 4,
+		/obj/item/advanced_crafting_components/receiver = 4,
+		/obj/item/advanced_crafting_components/assembly = 4,
+		/obj/item/advanced_crafting_components/alloys = 4,
+		/obj/item/ingot/adamantine = 4, // Valuable for smithing
 		/obj/item/advanced_crafting_components/p_circuits = 2
+	)
+
+/obj/effect/spawner/lootdrop/f13/advboards
+	name = "advanced_boards"
+	lootcount = 1
+	lootdoubles = FALSE
+	loot = list(
+		/obj/item/wallframe/apc = 2,
+		/obj/item/electronics/apc = 4,
+		/obj/item/circuitboard/machine/autolathe = 4,
+		/obj/item/circuitboard/machine/protolathe = 2,
+		/obj/item/circuitboard/machine/circuit_imprinter = 2,
+		/obj/item/advanced_crafting_components/p_circuits = 10
 	)
 
 /obj/effect/spawner/lootdrop/f13/attachments

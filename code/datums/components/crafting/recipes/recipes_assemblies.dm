@@ -13,6 +13,57 @@
 	subcategory = CAT_ROBOT
 	skill_level = HARD_CHECK
 
+/datum/crafting_recipe/pristine_circuit
+	name = "Pristine Circuit Electronics"
+	result = /obj/item/advanced_crafting_components/p_circuits
+	reqs = list(/obj/item/stack/crafting/electronicparts = 10,
+				/obj/item/stack/cable_coil = 10,
+				/obj/item/stack/crafting/metalparts = 2,
+				/obj/item/stack/crafting/goodparts = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 40
+	category = CAT_CRAFTING
+	subcategory = CAT_ROBOT
+	skill_level = EXPERT_CHECK
+
+/datum/crafting_recipe/apc_electronics
+	name = "APC Electronics"
+	result = /obj/item/electronics/apc
+	reqs = list(/obj/item/advanced_crafting_components/p_circuits = 1,
+				/obj/item/advanced_crafting_components/conductors = 1,
+				/obj/item/stack/crafting/metalparts = 2,
+				/obj/item/stack/crafting/goodparts = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 40
+	category = CAT_CRAFTING
+	subcategory = CAT_ROBOT
+	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/circuit_imprinter
+	name = "Circuit Imprinter Board"
+	result = /obj/item/circuitboard/machine/circuit_imprinter
+	reqs = list(/obj/item/advanced_crafting_components/p_circuits = 3,
+				/obj/item/advanced_crafting_components/conductors = 1,
+				/obj/item/stack/crafting/metalparts = 2,
+				/obj/item/stack/crafting/goodparts = 1)
+	tools = list(TOOL_WORKBENCH)
+	time = 40
+	category = CAT_CRAFTING
+	subcategory = CAT_ROBOT
+	skill_level = HARD_CHECK
+	always_available = FALSE
+
+/datum/crafting_recipe/protolathe
+	name = "Protolathe Board"
+	result = /obj/item/circuitboard/machine/protolathe
+	reqs = list(/obj/item/advanced_crafting_components/p_circuits = 4)
+	tools = list(TOOL_WORKBENCH)
+	time = 40
+	category = CAT_CRAFTING
+	subcategory = CAT_ROBOT
+	skill_level = HARD_CHECK
+	always_available = FALSE
+
 /datum/crafting_recipe/trading_machine
 	name = "Vending machine"
 	result = /obj/machinery/trading_machine

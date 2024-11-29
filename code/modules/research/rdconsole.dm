@@ -1186,6 +1186,13 @@ Nothing else in the console has ID requirements.
 	req_access = null
 	req_access_txt = "120"
 
+/obj/machinery/computer/rdconsole/core/enclave
+	desc = "A console used by the leftovers of the Enclave."
+	name = "Archive Terminal"
+	circuit = /obj/item/circuitboard/computer/rdconsole/enclave
+	req_access = null
+	req_access_txt = "134"
+
 /obj/machinery/computer/rdconsole/core/vault
 	circuit = /obj/item/circuitboard/computer/rdconsole/vault
 
@@ -1196,6 +1203,13 @@ Nothing else in the console has ID requirements.
 /obj/machinery/computer/rdconsole/core/bos/Initialize()
 	. = ..()
 	stored_research = SSresearch.bos_tech //lettern, note about this
+	stored_research.consoles_accessing[src] = TRUE
+	matching_design_ids = list()
+	SyncRDevices()
+
+/obj/machinery/computer/rdconsole/core/enclave/Initialize()
+	. = ..()
+	stored_research = SSresearch.enclave_tech //lettern, note about this
 	stored_research.consoles_accessing[src] = TRUE
 	matching_design_ids = list()
 	SyncRDevices()
