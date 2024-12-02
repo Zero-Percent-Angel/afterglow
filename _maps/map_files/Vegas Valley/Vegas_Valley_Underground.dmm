@@ -3381,7 +3381,6 @@
 /obj/structure/closet{
 	anchored = 1
 	},
-/obj/effect/spawner/lootdrop/costume,
 /turf/open/floor/plasteel/f13/vault_floor/white/whitesolid,
 /area/f13/enclave)
 "bLj" = (
@@ -23584,6 +23583,13 @@
 /obj/item/kirbyplants/photosynthetic,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/medical)
+"lPT" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/landmark/start/f13/usrem,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid"
+	},
+/area/f13/enclave)
 "lQc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/wreck/trash/machinepiletwo,
@@ -39016,7 +39022,8 @@
 	},
 /obj/structure/table/abductor,
 /obj/machinery/computer/terminal{
-	termtag = "Secret"
+	termtag = "Business";
+	vault_secrets = 1
 	},
 /turf/open/floor/circuit/f13_blue,
 /area/f13/enclave)
@@ -42604,11 +42611,13 @@
 	pixel_y = 18;
 	pixel_x = 2
 	},
-/obj/machinery/computer/terminal/telecoms_cracker{
-	dir = 8;
-	pixel_y = 5
-	},
 /obj/structure/table/abductor,
+/obj/machinery/computer/terminal{
+	dir = 8;
+	termtag = "Business";
+	vault_secrets = 1;
+	pixel_y = 9
+	},
 /turf/open/floor/carpet/red,
 /area/f13/enclave)
 "vjz" = (
@@ -43501,6 +43510,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood/reactor)
+"vGo" = (
+/obj/effect/landmark/start/f13/usrem,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/f13/enclave)
 "vGw" = (
 /obj/structure/decoration/rag,
 /turf/closed/wall/r_wall/rust,
@@ -46992,6 +47005,7 @@
 /area/f13/sewer)
 "xoC" = (
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/landmark/start/f13/usrem,
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/enclave)
 "xoQ" = (
@@ -132868,8 +132882,8 @@ jzn
 jzn
 xDO
 xoC
-rJb
-qSA
+lPT
+vGo
 jis
 ofV
 yhR
