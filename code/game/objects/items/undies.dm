@@ -6,6 +6,7 @@
 	var/top = FALSE
 	var/sock = FALSE
 	var/undie = ""
+	w_class = WEIGHT_CLASS_TINY
 
 
 /obj/item/underwear/New(loc, icon_undies, bots = 0, tops = 0, socks = 0)
