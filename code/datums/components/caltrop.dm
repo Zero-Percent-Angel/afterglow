@@ -111,7 +111,7 @@
 	INVOKE_ASYNC(H, TYPE_PROC_REF(/mob/living/carbon/human/, apply_damage), damage, BRUTE, picked_def_zone, H.run_armor_check(picked_def_zone), FALSE, FALSE, CANT_WOUND)
 
 	if(!(flags & CALTROP_NOSTUN)) // Won't set off the paralysis.
-		H.Paralyze(60)
+		H.Paralyze(30)
 
 	if(!soundfile)
 		return
