@@ -496,6 +496,11 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 /datum/hallucination/delusion
 	var/list/image/delusions = list()
 
+/datum/hallucination/delusion/proc/remove_client_image()
+	for(var/image/I in delusions)
+		if(target.client)
+			target.client.images.Remove(I)
+
 /datum/hallucination/delusion/New(mob/living/carbon/C, forced, force_kind = null , duration = 300,skip_nearby = TRUE, custom_icon = null, custom_icon_file = null, custom_name = null)
 	set waitfor = FALSE
 	. = ..()
@@ -540,6 +545,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			delusions |= A
 			target.client.images |= A
 	if(duration)
+		addtimer(CALLBACK(src, PROC_REF(remove_client_image)), min(duration - 1, 1))
 		QDEL_IN(src, duration)
 
 /datum/hallucination/delusion/Destroy()
@@ -582,12 +588,17 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 			target.playsound_local(target,'sound/magic/staff_change.ogg', 50, 1)
 		delusion = A
 		target.client.images |= A
+	addtimer(CALLBACK(src, PROC_REF(remove_client_image)), min(duration - 1, 1))
 	QDEL_IN(src, duration)
 
 /datum/hallucination/self_delusion/Destroy()
 	if(target.client)
 		target.client.images.Remove(delusion)
 	return ..()
+
+/datum/hallucination/self_delusion/proc/remove_client_image()
+	if(target.client)
+		target.client.images.Remove(delusion)
 
 /datum/hallucination/bolts
 	var/list/locks = list()

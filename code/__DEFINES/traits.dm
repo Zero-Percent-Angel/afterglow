@@ -178,6 +178,8 @@
 #define TRAIT_COLDBLOODED		"coldblooded"	// Your body is literal room temperature. Does not make you immune to the temp.
 #define TRAIT_NONATURALHEAL		"nonaturalheal"	// Only Admins can heal you. NOTHING else does it unless it's given the god tag.
 #define TRAIT_NORUNNING			"norunning"		// You walk!
+#define TRAIT_POORHYGINE		"poorhygine"
+#define TRAIT_SMALLSPRINT		"smallsprint"
 #define TRAIT_NOMARROW			"nomarrow"		// You don't make blood, with chemicals or nanites.
 #define TRAIT_NOPULSE			"nopulse"		// Your heart doesn't beat.
 #define TRAIT_NOGUT				"nogutting"		//Your chest cant be gutted of organs
@@ -208,6 +210,8 @@
 #define SPREAD_CONTROL		"spread_control"
 #define TRAIT_PROSOPAGNOSIA		"prosopagnosia"
 #define TRAIT_DRUNK_HEALING		"drunk_healing"
+#define TRAIT_WILD_HUNTER		"wild_hunter"
+#define TRAIT_UNARMORED_FIGHTER	"unarmored_fighter"
 #define TRAIT_TAGGER			"tagger"
 #define TRAIT_PHOTOGRAPHER		"photographer"
 #define TRAIT_MUSICIAN			"musician"

@@ -64,8 +64,10 @@
 		infestation = max(0, infestation - WOUND_BURN_SANITIZATION_RATE)
 		sanitization = max(0, sanitization - (WOUND_BURN_SANITIZATION_RATE * bandage_factor))
 		return
-
-	infestation += infestation_rate
+	var/rate_increase = infestation_rate
+	if (HAS_TRAIT(victim, TRAIT_POORHYGINE))
+		rate_increase *= 2
+	infestation += rate_increase
 
 	switch(infestation)
 		if(0 to WOUND_INFECTION_MODERATE)
@@ -190,7 +192,7 @@
 	user.visible_message(span_green("[user] applies [I] to [victim]."), span_green("You apply [I] to [user == victim ? "your" : "[victim]'s"] [limb.name]."))
 	I.use(1)
 	var/multi = user.skill_value(SKILL_FIRST_AID)/REGULAR_CHECK
-	sanitization += I.sanitization * multi
+	sanitization += I.sanitization * multi * HAS_TRAIT(victim, TRAIT_POORHYGINE) ? 0.5 : 1
 	flesh_healing += I.flesh_regeneration * multi
 	infestation -= I.sanitization * 0.05 * multi
 

@@ -60,7 +60,10 @@
 		maxHealth -= 10
 	if (HAS_TRAIT(src, TRAIT_VERYFLIMSY))
 		maxHealth -= 20
-	default_sprint_buffer_max = initial(default_sprint_buffer_max) + (special_e*3) * CONFIG_GET(number/movedelay/sprint_buffer_max)/13
+	if (!HAS_TRAIT(src, TRAIT_SMALLSPRINT))
+		default_sprint_buffer_max = initial(default_sprint_buffer_max) + (special_e*3) * CONFIG_GET(number/movedelay/sprint_buffer_max)/13
+	else
+		default_sprint_buffer_max = 0
 	stambuffer = initial(stambuffer) + (round(special_e/2) - 2)
 	update_config_movespeed()
 	var/obj/item/organ/brain/brain = getorgan(/obj/item/organ/brain)

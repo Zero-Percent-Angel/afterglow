@@ -233,6 +233,8 @@
 	if(.)
 		if (!prob(special_a*4))
 			var/damage = .
+			if (HAS_TRAIT(src, TRAIT_WILD_HUNTER) && !(M.faction.Find("wastebot") || M.faction.Find("raider") || M.faction.Find("china") || M.faction.Find("raider")))
+				damage = damage * 0.2
 			var/dam_zone = dismembering_strike(M, pick(BODY_ZONE_CHEST, BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG))
 			if(!dam_zone) //Dismemberment successful
 				return TRUE
@@ -240,6 +242,8 @@
 			if(!affecting)
 				affecting = get_bodypart(BODY_ZONE_CHEST)
 			var/armor = run_armor_check(affecting, "melee", armour_penetration = M.armour_penetration)
+			if (!armor && HAS_TRAIT(src, TRAIT_UNARMORED_FIGHTER))
+				armor = 35
 			var/dt = max(run_armor_check(affecting, "damage_threshold") - M.damage_threshold_penetration_mob, 0)
 			apply_damage(damage, M.melee_damage_type, affecting, armor, wound_bonus = M.wound_bonus, bare_wound_bonus = M.bare_wound_bonus, sharpness = M.sharpness, damage_threshold = dt)
 		else
