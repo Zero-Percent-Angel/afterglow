@@ -777,7 +777,6 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	mob_tar.maxHealth -= 20
 	mob_tar.health -= 20
 
-
 /datum/quirk/masked_mook
 	name = "Masked Mook"
 	desc = "For some reason you don't feel... right without wearing some kind of gas mask."
@@ -935,4 +934,22 @@ Edit: TK~  This is the dumbest fucking shit I've ever seen in my life.  This isn
 	mob_trait = TRAIT_TECHNOPHOBE
 	gain_text = span_notice("All my homies hate machines.")
 	lose_text = span_danger("Maybe industrial society isn't so bad...")
+	locked =  FALSE
+
+/datum/quirk/poor_hygine
+	name = "Poor Hygine"
+	desc = "Infections progress much faster for you and treating wounds that are infected is slower."
+	value = -4
+	mob_trait = TRAIT_POORHYGINE
+	gain_text = span_notice("Washing is not needed.")
+	lose_text = span_danger("Maybe it's time to cleanup.")
+	locked =  FALSE
+
+/datum/quirk/small_sprint
+	name = "Out of Shape"
+	desc = "You get no bonus sprint from your endurance."
+	value = -3
+	mob_trait = TRAIT_SMALLSPRINT
+	gain_text = span_notice("You just don't feel like sprinting.")
+	lose_text = span_danger("Your lungs feel better.")
 	locked =  FALSE

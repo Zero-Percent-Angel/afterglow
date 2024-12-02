@@ -189,6 +189,24 @@ GLOBAL_LIST_INIT(former_tribal_recipes, list(
 	lose_text = span_danger("You no longer feel like drinking would ease your pain.")
 	medical_record_text = "Patient has unusually efficient liver metabolism and can slowly regenerate wounds by drinking alcoholic beverages."
 
+/datum/quirk/hunter
+	name = "Wildlife Hunter"
+	desc = "As a skilled wildlife hunter you take reduced damage in melee from mobs that are wild animals down to 20%."
+	value = 4
+	mob_trait = TRAIT_WILD_HUNTER
+	gain_text = span_notice("You feel like you can take on any hostile wildlife.")
+	lose_text = span_danger("Suddenly the wastes seem much more dangerous.")
+	medical_record_text = "Patient seems to have some skill with wildlife."
+
+/datum/quirk/unarmoured_figher
+	name = "Unarmored fighter"
+	desc = "You take reduced damage in melee from mobs while wearing no armor."
+	value = 3
+	mob_trait = TRAIT_UNARMORED_FIGHTER
+	gain_text = span_notice("You feel like you can take on any hostile wildlife.")
+	lose_text = span_danger("Suddenly the wastes seem much more dangerous.")
+	medical_record_text = "Patient seems to have some skill with wildlife."
+
 /datum/quirk/empath
 	name = "Empath"
 	desc = "Whether it's a sixth sense or careful study of body language, it only takes you a quick glance at someone to understand how they feel. This lets you see their mood, damage, and intent. As well as seeing if they're experience oxyloss/toxloss and if they're in a high or low mood."

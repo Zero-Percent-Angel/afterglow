@@ -1834,9 +1834,9 @@ datum/job/wasteland/f13dendoctor
 	flag = F13TRIBAL
 	faction = FACTION_WASTELAND
 	social_faction = FACTION_TRIBE
-	total_positions = 0
-	spawn_positions = 0
-	description = "You are a member of the of a tribe who has wandered to this area, but does not belong to the Sulphur Bottom tribe.  From where you came is up to you, why you are here is your own, and it is up to you to survive on your own and attempt to thrive."
+	total_positions = 3
+	spawn_positions = 3
+	description = "You are a member of the of a tribe who has wandered to this area, but does not belong to the Blue Bird tribe.  From where you came is up to you, why you are here is your own, and it is up to you to survive on your own and attempt to thrive."
 	supervisors = "the Ways of your own tribe."
 
 	selection_color = "#dddddd"
