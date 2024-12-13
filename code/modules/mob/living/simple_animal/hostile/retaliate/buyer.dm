@@ -5,6 +5,7 @@
 	var/default_price = PRICE_BELOW_NORMAL
 	intimidation_difficulty = DIFFICULTY_CHALLENGE
 	var/list/buys_list = list()
+	var/list/things_bought = list()
 
 
 /mob/living/simple_animal/hostile/retaliate/talker/buyer/Initialize(mapload)
@@ -41,6 +42,10 @@
 		buys_list += GLOB.loot_t3_range
 		buys_list += GLOB.loot_t4_range
 		buys_list += GLOB.loot_t5_range
+		buys_list += GLOB.loot_alcohol
+		buys_list += GLOB.loot_attachment
+		buys_list += GLOB.loot_attachment_advanced
+		buys_list += GLOB.loot_seed
 
 /mob/living/simple_animal/hostile/retaliate/talker/buyer/handle_automated_movement()
 	if (my_original_loc != loc)
@@ -78,6 +83,8 @@
 			return
 		for (var/the_loot in buys_list)
 			var/calc_price = item_in_hand.custom_price ? item_in_hand.custom_price : default_price
+			if (things_bought[item_in_hand.type])
+				calc_price *= 1/(NUM_E ** (things_bought[item_in_hand.type]/15))
 			calc_price = round((calc_price * ((35 + user.skill_value(SKILL_BARTER))/100)))
 			if (intimidated.Find(WEAKREF(user)))
 				calc_price += PRICE_CHEAP
@@ -89,6 +96,10 @@
 						if (user.get_active_held_item() != item_in_hand)
 							say("That ain't the thing I agreed to buy.")
 							return
+						if (things_bought[item_in_hand.type])
+							things_bought[item_in_hand.type] += 1
+						else
+							things_bought[item_in_hand.type] = 1
 						qdel(item_in_hand)
 						say("Pleasure doing business with you.")
 						var/obj/item/stack/f13Cash/C = new /obj/item/stack/f13Cash/caps

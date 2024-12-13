@@ -344,7 +344,7 @@
 /area/f13/brotherhood/armory)
 "aiJ" = (
 /obj/machinery/door/airlock/command{
-	name = "Overseer Office";
+	name = "Coordinators Office";
 	req_access_txt = "19"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue,
@@ -2007,11 +2007,6 @@
 /area/f13/bunker)
 "aWL" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/computer/terminal/stored_password{
-	dir = 4;
-	door_id = "tinydoor";
-	proj_pass_rate = 45
-	},
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker/bunkerthree)
@@ -5464,6 +5459,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/rnd)
+"cPQ" = (
+/mob/living/simple_animal/hostile/deathclaw/legendary,
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/caves)
 "cPW" = (
 /turf/open/floor/plasteel/f13/stone,
 /area/f13/building/abandoned/z)
@@ -8334,6 +8333,10 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/brotherhood/armory)
+"ekv" = (
+/obj/effect/spawner/lootdrop/f13/weapon/melee/tier4,
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/caves)
 "ekx" = (
 /obj/structure/sign/poster/contraband/pinup_shower,
 /turf/closed/wall/r_wall/rust,
@@ -8935,6 +8938,11 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/brotherhood/operations)
+"eAf" = (
+/obj/structure/table,
+/obj/effect/spawner/lootdrop/f13/advboards,
+/turf/open/floor/plating/tunnel,
+/area/f13/bunker/bunkersix)
 "eAi" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -11757,6 +11765,10 @@
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/wood_mosaic,
 /area/f13/vault/diner)
+"fSF" = (
+/obj/structure/simple_door/metal/ventilation,
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/sewer/powered)
 "fTa" = (
 /obj/structure/reagent_dispensers/barrel/dangerous,
 /obj/effect/decal/waste{
@@ -13396,6 +13408,10 @@
 /turf/open/floor/f13/wood{
 	icon_state = "housewood1-broken"
 	},
+/area/f13/caves)
+"gJB" = (
+/mob/living/simple_animal/hostile/deathclaw/legendary,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "gJK" = (
 /obj/structure/sign/flag_enclave_pristine{
@@ -18637,6 +18653,13 @@
 /obj/structure/closet/cabinet/anchored,
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/o)
+"jxj" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/lootdrop/f13/advboards,
+/turf/open/floor/plasteel/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/f13/bunker/bunkerfive)
 "jxt" = (
 /obj/structure/chair/f13foldupchair{
 	dir = 4
@@ -19980,7 +20003,9 @@
 /area/f13/bunker)
 "khv" = (
 /obj/machinery/computer/telecomms/server{
-	dir = 4
+	dir = 4;
+	req_access = list();
+	network = "tcommsat"
 	},
 /obj/effect/turf_decal/bot/left,
 /turf/open/floor/circuit/f13_red,
@@ -20792,6 +20817,11 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/storage)
+"kAx" = (
+/obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/f13/advboards,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bunker/bunkernine)
 "kAz" = (
 /obj/structure/chair/f13chair1,
 /turf/open/floor/plasteel/floorgrime,
@@ -24617,6 +24647,10 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/brotherhood/armory)
+"mro" = (
+/obj/effect/spawner/lootdrop/f13/armor/tier5,
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/caves)
 "mrt" = (
 /obj/structure/railing,
 /turf/open/floor/plasteel/dark,
@@ -24665,6 +24699,13 @@
 	icon_state = "floordirtysolid"
 	},
 /area/f13/bunker/bunkerfive)
+"msC" = (
+/obj/structure/simple_door/metal/barred,
+/turf/open/floor/f13{
+	dir = 8;
+	icon_state = "yellowsiding"
+	},
+/area/f13/bunker/bunkerthree)
 "msN" = (
 /obj/structure/disposalpipe/trunk/multiz/down,
 /obj/structure/simple_door/metal/ventilation,
@@ -28533,7 +28574,7 @@
 /area/f13/caves)
 "olE" = (
 /obj/machinery/door/airlock/command{
-	name = "Overseer Office";
+	name = "Coordinators Office";
 	req_access_txt = "19"
 	},
 /obj/structure/cable{
@@ -29680,11 +29721,11 @@
 /turf/open/floor/plating/tunnel,
 /area/ruin/powered)
 "oPu" = (
-/obj/machinery/porta_turret/f13/turret_556/hostile,
 /obj/machinery/light/floor{
 	light_color = "#ff4500";
 	light_range = 12
 	},
+/obj/machinery/porta_turret/f13/turret_556/burstfire,
 /turf/open/floor/f13{
 	dir = 5;
 	icon_state = "yellowsiding"
@@ -33579,6 +33620,9 @@
 /obj/machinery/power/port_gen/pacman/super/vault{
 	anchored = 1
 	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "yellowmark"
@@ -34897,6 +34941,18 @@
 /obj/structure/simple_door/metal/ventilation,
 /turf/open/floor/plating/tunnel,
 /area/f13/sewer)
+"rrw" = (
+/obj/machinery/power/port_gen/pacman/super/vault{
+	anchored = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/f13{
+	dir = 10;
+	icon_state = "yellowmark"
+	},
+/area/f13/enclave)
 "rrH" = (
 /obj/structure/toilet{
 	dir = 4;
@@ -35423,6 +35479,16 @@
 	icon_state = "greenfull"
 	},
 /area/f13/building/abandoned/o)
+"rEM" = (
+/obj/structure/lattice,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/reinforced,
+/obj/machinery/computer/terminal/stored_password{
+	door_id = "tinydoor";
+	proj_pass_rate = 45
+	},
+/turf/open/floor/plating/tunnel,
+/area/f13/bunker/bunkerthree)
 "rEU" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -38403,13 +38469,11 @@
 /turf/open/floor/plating/dirt,
 /area/f13/caves)
 "thJ" = (
-/obj/machinery/porta_turret/f13/turret_shotgun{
-	prefire_delay = 0
-	},
 /obj/machinery/light/floor{
 	light_color = "#ff4500";
 	light_range = 12
 	},
+/obj/machinery/porta_turret/f13/turret_556/burstfire,
 /turf/open/floor/f13{
 	dir = 9;
 	icon_state = "yellowsiding"
@@ -39022,7 +39086,7 @@
 /obj/structure/table/abductor,
 /obj/machinery/computer/terminal{
 	termtag = "Secret";
-	maybe_vault_secrets = 1
+	vault_secrets = 1
 	},
 /turf/open/floor/circuit/f13_blue,
 /area/f13/enclave)
@@ -40189,6 +40253,11 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/f13/tunnel)
+"uaL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/rndboards,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/ruin/powered)
 "ubd" = (
 /obj/machinery/vending/medical/free,
 /obj/effect/turf_decal/delivery,
@@ -61836,7 +61905,7 @@ dCA
 ohv
 fTS
 ohv
-ohv
+gJB
 cGV
 ohv
 bgK
@@ -65481,7 +65550,7 @@ kiQ
 kiQ
 tqE
 kiQ
-nwD
+uaL
 nwD
 nwD
 xUf
@@ -104922,7 +104991,7 @@ oht
 oht
 oht
 oht
-oht
+fSF
 oht
 oht
 oht
@@ -105223,9 +105292,9 @@ yhR
 lWI
 lWI
 lWI
-lWI
-lWI
-lWI
+qBv
+plQ
+qBv
 lWI
 lWI
 lWI
@@ -105522,12 +105591,12 @@ rcd
 oGZ
 myG
 yhR
-lWI
-lWI
-lWI
-lWI
-lWI
-lWI
+qBv
+qBv
+qBv
+qBv
+plQ
+qBv
 lWI
 lWI
 lWI
@@ -105823,13 +105892,13 @@ jYz
 myG
 qew
 cde
-yhR
+jWK
+plQ
+cPQ
 lWI
-lWI
-lWI
-lWI
-lWI
-lWI
+plQ
+plQ
+qBv
 lWI
 lWI
 lWI
@@ -106126,12 +106195,12 @@ myG
 ymi
 myG
 yhR
-lWI
-lWI
-lWI
-lWI
-lWI
-lWI
+plQ
+plQ
+plQ
+plQ
+plQ
+qBv
 lWI
 lWI
 lWI
@@ -106428,10 +106497,10 @@ lzD
 kTj
 myG
 yhR
-lWI
-lWI
-lWI
-lWI
+mro
+plQ
+cPQ
+plQ
 lWI
 lWI
 lWI
@@ -106731,9 +106800,9 @@ oGZ
 qBv
 yhR
 yhR
-yhR
-yhR
-yhR
+plQ
+plQ
+ekv
 yhR
 yhR
 yhR
@@ -109877,7 +109946,7 @@ bgK
 aol
 akM
 ijh
-sNS
+eAf
 rNg
 gST
 snx
@@ -111346,7 +111415,7 @@ hpZ
 sOV
 izF
 qgz
-aav
+jxj
 aQY
 gUG
 fsB
@@ -116222,7 +116291,7 @@ yhR
 yhR
 bgK
 spE
-chz
+kAx
 lqi
 xPb
 anM
@@ -127432,7 +127501,7 @@ ofV
 rsW
 gGV
 ofV
-qIQ
+rrw
 rKI
 vNB
 ofV
@@ -131313,7 +131382,7 @@ aWL
 gKT
 gKT
 xSK
-gKT
+rEM
 ink
 nUN
 hJs
@@ -132818,7 +132887,7 @@ hJs
 hJs
 ilo
 hJs
-hJs
+msC
 hJs
 hJs
 hJs

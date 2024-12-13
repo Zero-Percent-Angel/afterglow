@@ -70,10 +70,9 @@
 	new /obj/item/stack/medical/gauze(src)
 	new /obj/item/stack/medical/suture(src)
 	new /obj/item/stack/medical/ointment(src)
-	new /obj/item/reagent_containers/syringe/charcoal(src)
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak(src)
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak/epipak(src)
-	new /obj/item/reagent_containers/hypospray/medipen/stimpak/glucose(src)
+	new /obj/item/reagent_containers/pill/charcoal(src)
+	new /obj/item/reagent_containers/pill/bitterdrink(src)
+	new /obj/item/reagent_containers/glass/bottle/salglu_solution(src)
 
 /obj/item/storage/firstaid/fire
 	name = "burn treatment kit"
