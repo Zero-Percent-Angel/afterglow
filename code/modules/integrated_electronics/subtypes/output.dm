@@ -51,7 +51,7 @@
 	else
 		if(!isturf(assembly.loc))
 			return
-	
+
 	var/atom/host = assembly || src
 	var/list/mobs = list()
 	for(var/mob/M in range(0, get_turf(src)))
@@ -280,8 +280,8 @@
 	var/obj/machinery/camera/camera
 	var/updating = FALSE
 
-/obj/item/integrated_circuit/output/video_camera/New()
-	..()
+/obj/item/integrated_circuit/output/video_camera/Initialize()
+	. = ..()
 	camera = new(src)
 	camera.network = list("rd")
 	on_data_written()
