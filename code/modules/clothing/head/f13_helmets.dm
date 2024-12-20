@@ -840,6 +840,13 @@
 	var/pa_type = null
 	var/combined_needed_fix_skill = 140
 
+
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/attackby(obj/item/I, mob/living/carbon/human/user, params)
+	if (istype(I, /obj/item/pa_kit))
+		var/obj/item/pa_kit/P = I
+		P.attackby(src, user, params)
+	return ..()
+
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/raider
 	name = "raider T-45d power helmet"
 	desc = "a raider's attempt to duplicate a power armor helmet. The result is a fuzed mass of metal and ceramic that nonetheless provides protection"
@@ -1044,6 +1051,7 @@
 					if(I.use_tool(src, user, 60, volume=70))
 						to_chat(user, span_notice("You finish salvaging the helmet."))
 						var/obj/item/ST = new salvaged_type(src)
+						new /obj/item/pa_kit(src)
 						user.put_in_hands(ST)
 						qdel(src)
 					return

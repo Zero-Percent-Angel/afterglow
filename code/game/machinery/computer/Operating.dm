@@ -33,7 +33,10 @@
 
 /obj/machinery/computer/operating/Initialize()
 	. = ..()
-	linked_techweb = SSresearch.science_tech
+	for(var/obj/machinery/computer/rdconsole/console in orange(8, loc))
+		linked_techweb = console.stored_research
+		break
+	linked_techweb = linked_techweb ? linked_techweb : SSresearch.science_tech
 	find_table()
 
 /obj/machinery/computer/operating/bos
