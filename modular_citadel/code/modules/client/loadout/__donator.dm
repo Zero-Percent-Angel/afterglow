@@ -29,7 +29,7 @@
 					"afroterk","theetneralflame","myrios","omnisalad","zephyrtfa","daemontinadel",
 					"sb208","oblivionandbeyondthestars","sanshoom","medalis","wh0t00kthejam","theman1178",
 					"spockye","xenonia","breensecuter","fluidhelix","charliehere","ryzzz3n","ourlordspungus",
-					"manyfacedfool","ifrickfracki","mikuel","Theshroudedlord", "pisshole")
+					"manyfacedfool","ifrickfracki","mikuel","Theshroudedlord", "pisshole", "Debossans")
 	cost = 1
 
 /datum/gear/donator/mutie/helmet

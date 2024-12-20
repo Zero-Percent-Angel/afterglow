@@ -184,8 +184,8 @@
 	icon_living = "raiderboss"
 	icon_dead = "raiderboss_dead"
 	mob_armor = ARMOR_VALUE_RAIDER_COMBAT_ARMOR_BOSS
-	maxHealth = 150
-	health = 150
+	maxHealth = 200
+	health = 200
 	extra_projectiles = 2
 	rapid_melee = 1
 	waddle_amount = 4
@@ -194,7 +194,7 @@
 	ranged_cooldown_time = 2 SECONDS
 	auto_fire_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	projectiletype = /obj/item/projectile/bullet/c45/simple
-	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/effect/spawner/lootdrop/f13/armor/randomraiderchest, /obj/item/clothing/under/f13/ravenharness, /obj/item/stack/f13Cash/random/high)
+	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/item/clothing/suit/armor/medium/combat/mk2/raider, /obj/item/clothing/under/f13/ravenharness, /obj/item/stack/f13Cash/random/high)
 	footstep_type = FOOTSTEP_MOB_SHOE
 	move_to_delay = 4.0 //faster than average, but not a lot
 	retreat_distance = 4 //mob retreats 1 tile when in min distance

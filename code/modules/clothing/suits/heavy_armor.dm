@@ -200,6 +200,13 @@
 	var/pa_type = /obj/item/clothing/suit/armor/power_armor
 	var/combined_needed_fix_skill = 140
 
+
+/obj/item/clothing/suit/armor/heavy/salvaged_pa/attackby(obj/item/I, mob/living/carbon/human/user, params)
+	if (istype(I, /obj/item/pa_kit))
+		var/obj/item/pa_kit/P = I
+		P.attackby(src, user, params)
+	return ..()
+
 // T-45d
 /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/raider
 	name = "salvaged raider power armor"
