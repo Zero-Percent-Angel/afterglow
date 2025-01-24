@@ -633,6 +633,7 @@
 	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
 	darkness_view = 24
 	unique_reskin = null
+	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T2)
 
 /obj/item/clothing/head/helmet/f13/ncr/veteran/mutie
@@ -641,6 +642,21 @@
 	icon_state = "mutie_vet_ranger"
 	item_state = "mutie_vet_ranger"
 	species_restricted = list("exclude","Human","Ghoul")
+
+/obj/item/clothing/head/helmet/f13/ncr/eliteriot
+	name = "elite riot gear helmet"
+	desc = "An old combat helmet seen in the divide, repurposed for higher ranking Rangers."
+	icon_state = "elite_riot"
+	item_state = "elite_riot"
+	armor = ARMOR_VALUE_MEDIUM
+	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T2)
+	dynamic_hair_suffix = ""
+	dynamic_fhair_suffix = ""
+	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
+	darkness_view = 24
 
 ///////
 /*BOS*/
