@@ -136,7 +136,7 @@
 	icon_state = "5.56m"
 	ammo_type = /obj/item/ammo_casing/c10mm
 	caliber = list(CALIBER_10MM)
-	max_ammo = 50
+	max_ammo = 24
 	multiple_sprites = 2
 	custom_materials = list(/datum/material/iron = MATS_SMG_EXTENDED)
 	w_class = WEIGHT_CLASS_NORMAL

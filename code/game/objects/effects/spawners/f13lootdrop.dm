@@ -390,6 +390,13 @@
 				/obj/item/clothing/head/helmet/f13/combat/rangerbroken
 				)
 
+/obj/effect/spawner/bundle/f13/armor/ranger
+	name = "ranger armor spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/heavy/riot/elite,
+				/obj/item/clothing/head/helmet/f13/ncr/eliteriot
+				)
+
 /obj/effect/spawner/bundle/f13/armor/vault
 	name = "vault armor spawner"
 	items = list(
