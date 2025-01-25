@@ -132,3 +132,11 @@
 	for(var/i in 1 to 25)
 		var/obj/item/stack/spacecash/c1000/lodsamoney = new /obj/item/stack/spacecash/c1000(src)
 		lodsamoney.amount = lodsamoney.max_amount
+
+
+/obj/structure/closet/crate/trashcart/somemoney
+	desc = "A heavy, metal trashcart with wheels. Filled with cash."
+	name = "loaded trash cart"
+
+/obj/structure/closet/crate/trashcart/moneywish/PopulateContents()
+	new /obj/item/stack/spacecash/c10000(src)
