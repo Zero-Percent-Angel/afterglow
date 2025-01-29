@@ -15,7 +15,6 @@
 	turns_per_move = 5
 	see_in_dark = 6
 	ventcrawler = VENTCRAWLER_ALWAYS
-	pass_flags = PASSTABLE
 	mob_size = MOB_SIZE_SMALL
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	minbodytemp = 200
@@ -36,6 +35,8 @@
 	collar_type = "cat"
 	var/held_icon = "cat2"
 	footstep_type = FOOTSTEP_MOB_CLAW
+	density = FALSE
+	pass_flags = PASSTABLE | PASSMOB
 
 /mob/living/simple_animal/pet/cat/Initialize()
 	. = ..()

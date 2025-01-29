@@ -42,6 +42,16 @@
 	icon_state = "debug"
 	var/obj/item/toy/plush/stored_plush = null
 
+/obj/item/toy/plushie_shell/attacked_by(obj/item/I, mob/living/user, attackchain_flags, damage_multiplier, damage_addition)
+	. = ..()
+	if (istype(I, /obj/item/toy/plush) && stored_plush == null)
+		stored_plush = I
+		user.transferItemToLoc(I, src)
+		src.icon = I.icon
+		src.icon_state = I.icon_state
+		src.name = I.name
+
+
 //attacking yourself transfers your mind into the plush!
 /obj/item/toy/plushie_shell/attack_self(mob/user)
 	if(user.mind)
@@ -56,14 +66,14 @@
 		new_plushie.icon_living = src.icon_state
 		new_plushie.icon_dead = src.icon_state
 		new_plushie.icon_state = src.icon_state
-		new_plushie.name = src.name
+		new_plushie.name = user.name
 
 		//make the mob sentient
 		user.mind.transfer_to(new_plushie)
 
 		//add sounds to mob
 		new_plushie.AddComponent(/datum/component/squeak, stored_plush.squeak_override)
-		if(length(stored_plush.squeak_override) > 0)
+		if(stored_plush && length(stored_plush.squeak_override) > 0)
 			new_plushie.attack_sound = stored_plush.squeak_override[1]
 			new_plushie.attacked_sound = stored_plush.squeak_override[1]
 
