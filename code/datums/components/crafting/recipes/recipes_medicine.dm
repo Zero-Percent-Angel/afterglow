@@ -44,7 +44,7 @@
 	reqs = list(/obj/item/stack/medical/gauze/improvised = 1,
 				/datum/reagent/abraxo_cleaner = 5)
 	category = CAT_MEDICAL
-	skill_needed = SKILL_SCIENCE
+	skill_needed = SKILL_DOCTOR
 	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/regular_gauze10
@@ -54,7 +54,7 @@
 	reqs = list(/obj/item/stack/medical/gauze/improvised = 10,
 				/datum/reagent/abraxo_cleaner = 50)
 	category = CAT_MEDICAL
-	skill_needed = SKILL_SCIENCE
+	skill_needed = SKILL_DOCTOR
 	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/upgraded_gauze
@@ -65,7 +65,7 @@
 				/datum/reagent/abraxo_cleaner/sterilizine = 10)
 	category = CAT_MEDICAL
 	blacklist = list(/obj/item/stack/medical/gauze/improvised)
-	skill_needed = SKILL_SCIENCE
+	skill_needed = SKILL_DOCTOR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/upgraded_gauze10
@@ -76,7 +76,7 @@
 				/datum/reagent/abraxo_cleaner/sterilizine = 100)
 	category = CAT_MEDICAL
 	blacklist = list(/obj/item/stack/medical/gauze/improvised)
-	skill_needed = SKILL_SCIENCE
+	skill_needed = SKILL_DOCTOR
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/brute_pack
@@ -86,7 +86,7 @@
 	reqs = list(/obj/item/stack/medical/gauze = 1,
 				/datum/reagent/medicine/styptic_powder = 10)
 	category = CAT_MEDICAL
-	skill_needed = SKILL_SCIENCE
+	skill_needed = SKILL_DOCTOR
 	skill_level = EASY_CHECK
 
 /datum/crafting_recipe/ointment
@@ -96,7 +96,7 @@
 	reqs = list(/obj/item/stack/medical/gauze/improvised = 1,
 				/obj/item/reagent_containers/food/snacks/grown/agave = 1)
 	category = CAT_MEDICAL
-	skill_needed = SKILL_SCIENCE
+	skill_needed = SKILL_DOCTOR
 	skill_level = EASY_CHECK
 	falls_back_on_outdoors = TRUE
 
@@ -226,18 +226,20 @@
 	category = CAT_MEDICAL
 	skill_needed = SKILL_SCIENCE
 	skill_level = REGULAR_CHECK
-	//falls_back_on_outdoors = TRUE		- Disabling for now since Bitters are re-enabled and work roughly the same. Re-enable if it's an issue. Makes Sci useful skillwise.
+
+/datum/crafting_recipe/stimpak/doc
+	skill_needed = SKILL_DOCTOR
 
 /datum/crafting_recipe/stimpak/chemistry // Purely chemistry recipe
 	name = "Stimpak (from chems)"
 	result = /obj/item/reagent_containers/hypospray/medipen/stimpak
-	reqs = list(/datum/reagent/medicine/stimpak = 20,
+	reqs = list(/datum/reagent/medicine/stimpak = 26,
 				/obj/item/reagent_containers/syringe = 1)
 	tools = list(TOOL_CHEMMASTER)
 	time = 10
 	category = CAT_MEDICAL
 	skill_needed = SKILL_SCIENCE
-	skill_level = REGULAR_CHECK
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/stimpak5
 	name = "Stimpak x5"
@@ -251,16 +253,19 @@
 	skill_needed = SKILL_SCIENCE
 	skill_level = REGULAR_CHECK
 
+/datum/crafting_recipe/stimpak5/doc
+	skill_needed = SKILL_DOCTOR
+
 /datum/crafting_recipe/stimpak5/chemistry // Purely chemistry recipe
 	name = "Stimpak x5 (from chems)"
 	result = /obj/item/storage/box/medicine/stimpaks/stimpaks5
-	reqs = list(/datum/reagent/medicine/stimpak = 100,
+	reqs = list(/datum/reagent/medicine/stimpak = 130,
 				/obj/item/reagent_containers/syringe = 5)
 	tools = list(TOOL_CHEMMASTER)
 	time = 20
 	category = CAT_MEDICAL
 	skill_needed = SKILL_SCIENCE
-	skill_level = REGULAR_CHECK
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/superstimpak
 	name = "Super Stimpak"

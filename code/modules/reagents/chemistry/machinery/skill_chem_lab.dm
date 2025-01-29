@@ -76,6 +76,7 @@
 		/datum/reagent/medicine/haloperidol = 3,
 		/datum/reagent/medicine/regen_jelly = 3,
 		/datum/reagent/medicine/epinephrine = 3,
+		/datum/reagent/medicine/clot = 3,
 		/datum/reagent/medicine/spaceacillin = 2
 	)
 

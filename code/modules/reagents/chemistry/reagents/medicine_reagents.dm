@@ -1231,6 +1231,27 @@
 	..()
 	. = 1
 
+/datum/reagent/medicine/clot
+	name = "Quick Clot"
+	description = "Seals up bleeding wounds."
+	reagent_state = LIQUID
+	color = "#a71313"
+	overdose_threshold = 30
+	pH = 7
+
+/datum/reagent/medicine/clot/on_mob_life(mob/living/carbon/M)
+	for(var/obj/item/bodypart/bleeder in M.bodyparts)
+		bleeder.heal_damage(bleed = 1 * metabolization_rate)
+	..()
+	. = 1
+
+/datum/reagent/medicine/clot/overdose_process(mob/living/carbon/M)
+	M.setOrganLoss(ORGAN_SLOT_HEART, M.getOrganLoss(ORGAN_SLOT_HEART) + 1)
+	if(prob(20))
+		to_chat(M, span_warning("Your heart feels like it's clogging up"))
+	..()
+	. = 1
+
 /datum/reagent/medicine/dexalin
 	name = "Dexalin"
 	description = "Restores oxygen loss. Overdose causes it instead."

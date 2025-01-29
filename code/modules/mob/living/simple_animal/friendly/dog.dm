@@ -40,6 +40,8 @@
 	animal_species = /mob/living/simple_animal/pet/dog
 	gold_core_spawnable = FRIENDLY_SPAWN
 	collar_type = "corgi"
+	density = FALSE
+	pass_flags = PASSTABLE | PASSMOB
 	var/obj/item/inventory_head
 	var/obj/item/inventory_back
 	var/shaved = FALSE
@@ -73,6 +75,8 @@
 	gold_core_spawnable = FRIENDLY_SPAWN
 	collar_type = "pug"
 	held_icon = "pug"
+	density = FALSE
+	pass_flags = PASSTABLE | PASSMOB
 
 /mob/living/simple_animal/pet/dog/corgi/exoticcorgi
 	name = "Exotic Corgi"

@@ -281,6 +281,13 @@ datum/chemical_reaction/rezadone
 	results = list(/datum/reagent/medicine/bicaridine = 3)
 	required_reagents = list(/datum/reagent/carbon = 1, /datum/reagent/oxygen = 1, /datum/reagent/consumable/sugar = 1)
 
+
+/datum/chemical_reaction/clot
+	name = "Quick Clot"
+	id = /datum/reagent/medicine/clot
+	results = list(/datum/reagent/medicine/clot = 3)
+	required_reagents = list(/datum/reagent/carbon = 1, /datum/reagent/water = 1, /datum/reagent/phenol = 1)
+
 /datum/chemical_reaction/kelotane
 	name = "Kelotane"
 	id = /datum/reagent/medicine/kelotane
@@ -389,9 +396,9 @@ datum/chemical_reaction/rezadone
 	id = /datum/reagent/medicine/stimpak
 	results = list(/datum/reagent/medicine/stimpak = 20)
 	required_reagents = list(
-		/datum/reagent/medicine/bicaridine = 5, 
-		/datum/reagent/medicine/kelotane = 5, 
-		/datum/reagent/medicine/styptic_powder = 5, 
-		/datum/reagent/medicine/silver_sulfadiazine = 5, 
+		/datum/reagent/medicine/bicaridine = 5,
+		/datum/reagent/medicine/kelotane = 5,
+		/datum/reagent/medicine/styptic_powder = 5,
+		/datum/reagent/medicine/silver_sulfadiazine = 5,
 		)
 	required_temp = 451
