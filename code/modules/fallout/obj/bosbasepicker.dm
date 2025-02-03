@@ -20,13 +20,15 @@
 				log_admin("[usr] attempted to href dock exploit on [src] with target location \"[attempted]\"")
 				message_admins("[usr] just attempted to href dock exploit on [src] with target location \"[sanitized]\"")
 				return
-			else
-				activate_ladder(params["shuttle_id"], base_ladder_id)
-				has_moved = TRUE
 		else
 			to_chat(usr, span_warning("The controls have malfunctioned, and you cannot seem to lock the base down!"))
 			return 0
-	. = ..()
+		. = ..()
+		has_moved = .
+		if (has_moved)
+			activate_ladder(params["shuttle_id"], base_ladder_id)
+	else
+		. = ..()
 
 proc/activate_ladder(activation_id, new_id)
 	for(var/obj/structure/ladder/unbreakable/lad in GLOB.ladders)
