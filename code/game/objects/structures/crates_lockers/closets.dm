@@ -45,7 +45,7 @@
 	drag_delay = 0.2 SECONDS
 
 /obj/structure/closet/Initialize(mapload)
-	. = ..()
+	..()
 	update_icon()
 	if(should_populate_contents)
 		PopulateContents()
@@ -54,6 +54,7 @@
 	if(secure)
 		lockerelectronics = new(src)
 		lockerelectronics.accesses = req_access
+	return INITIALIZE_HINT_LATELOAD
 
 /obj/structure/closet/LateInitialize()
 	. = ..()
