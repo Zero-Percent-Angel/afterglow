@@ -275,6 +275,8 @@
 	item_state = "recycled_power"
 	pa_type = /obj/item/clothing/suit/armor/power_armor/t45d
 	combined_needed_fix_skill = 160
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T3, ARMOR_MODIFIER_DOWN_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_DT_T2)
+	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //Mutie
 /obj/item/clothing/suit/armor/heavy/vest/breastplate/scrap/mutie
