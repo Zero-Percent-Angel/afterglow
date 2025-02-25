@@ -9,8 +9,7 @@
 				/obj/item/stack/crafting/goodparts = 2)
 	tools = list(TOOL_WORKBENCH)
 	time = 40
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 	skill_level = HARD_CHECK
 
 /datum/crafting_recipe/pristine_circuit
@@ -22,8 +21,7 @@
 				/obj/item/stack/crafting/goodparts = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 40
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 	skill_level = EXPERT_CHECK
 
 /datum/crafting_recipe/apc_electronics
@@ -35,8 +33,7 @@
 				/obj/item/stack/crafting/goodparts = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 40
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 	skill_level = HARD_CHECK
 
 /datum/crafting_recipe/circuit_imprinter
@@ -48,8 +45,7 @@
 				/obj/item/stack/crafting/goodparts = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 40
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 	skill_level = HARD_CHECK
 	always_available = FALSE
 
@@ -59,8 +55,7 @@
 	reqs = list(/obj/item/advanced_crafting_components/p_circuits = 4)
 	tools = list(TOOL_WORKBENCH)
 	time = 40
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 	skill_level = HARD_CHECK
 	always_available = FALSE
 
@@ -74,8 +69,7 @@
 				/obj/item/stack/cable_coil = 10)
 	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER)
 	time = 80
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/fusebox
@@ -86,8 +80,7 @@
 				/obj/item/stack/cable_coil = 10)
 	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER)
 	time = 30
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/pressureplate
@@ -98,8 +91,7 @@
 				  /obj/item/stack/tile/plasteel = 1,
 				  /obj/item/stack/cable_coil = 2,
 				  /obj/item/assembly/igniter = 1)
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 
 /datum/crafting_recipe/mousetrap
 	name = "Mousetrap"
@@ -107,8 +99,7 @@
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/rods = 1)
 	time = 10
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 
 /datum/crafting_recipe/igniter
 	name = "Igniter"
@@ -118,8 +109,7 @@
 				/obj/item/stack/rods = 1,
 				/obj/item/stack/cable_coil = 1)
 	time = 10
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 
 /datum/crafting_recipe/health_sensor
 	name = "Health sensor"
@@ -128,8 +118,7 @@
 				/obj/item/stack/sheet/metal = 1,
 				/obj/item/stack/rods = 1)
 	time = 10
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/timer
@@ -139,8 +128,7 @@
 				/obj/item/stack/sheet/metal = 1,
 				/obj/item/stack/rods = 1)
 	time = 10
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/signaler
@@ -151,8 +139,7 @@
 				/obj/item/stack/rods = 1,
 				/obj/item/stack/cable_coil = 2)
 	time = 10
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/infrared
@@ -162,8 +149,7 @@
 				/obj/item/stack/sheet/metal = 1,
 				/obj/item/stack/rods = 1)
 	time = 10
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/proximity
@@ -173,8 +159,7 @@
 				/obj/item/stack/sheet/metal = 1,
 				/obj/item/stack/rods = 1)
 	time = 10
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 	skill_level = REGULAR_CHECK
 
 /datum/crafting_recipe/pressureplate
@@ -185,8 +170,7 @@
 				  /obj/item/stack/tile/plasteel = 1,
 				  /obj/item/stack/cable_coil = 2,
 				  /obj/item/assembly/igniter = 1)
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 
 /datum/crafting_recipe/mousetrap
 	name = "Mouse Trap"
@@ -194,8 +178,7 @@
 	time = 10
 	reqs = list(/obj/item/stack/sheet/cardboard = 1,
 				/obj/item/stack/rods = 1)
-	category = CAT_CRAFTING
-	subcategory = CAT_ROBOT
+	category = CAT_ROBOT
 
 /////////////////////
 //Farming & Cooking//
