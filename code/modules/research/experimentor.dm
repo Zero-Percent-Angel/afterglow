@@ -304,7 +304,7 @@
 			R.add_reagent(chosenchem , 50)
 			investigate_log("Experimentor has released [chosenchem] smoke.", INVESTIGATE_EXPERIMENTOR)
 			var/datum/effect_system/smoke_spread/chem/smoke = new
-			smoke.set_up(R, 0, src, silent = TRUE)
+			smoke.set_up(R, 3, src, silent = TRUE)
 			playsound(src, 'sound/effects/smoke.ogg', 50, 1, -3)
 			smoke.start()
 			qdel(R)
@@ -316,7 +316,7 @@
 			R.my_atom = src
 			R.add_reagent(chosenchem , 50)
 			var/datum/effect_system/smoke_spread/chem/smoke = new
-			smoke.set_up(R, 0, src, silent = TRUE)
+			smoke.set_up(R, 3, src, silent = TRUE)
 			playsound(src, 'sound/effects/smoke.ogg', 50, 1, -3)
 			smoke.start()
 			qdel(R)
@@ -361,10 +361,15 @@
 			ejectItem(TRUE)
 		else if(prob(EFFECT_PROB_MEDIUM-badThingCoeff))
 			visible_message(span_warning("[src] malfunctions, melting [exp_on] and leaking hot air!"))
-			var/datum/gas_mixture/env = loc.return_air()
-			env.adjust_heat(100000)
-			air_update_turf()
-			investigate_log("Experimentor has released hot air.", INVESTIGATE_EXPERIMENTOR)
+			var/datum/reagents/R = new/datum/reagents(70)
+			R.my_atom = src
+			R.add_reagent(/datum/reagent/consumable/capsaicin, 70)
+			investigate_log("Experimentor has released capsaicin gas.", INVESTIGATE_EXPERIMENTOR)
+			var/datum/effect_system/smoke_spread/chem/smoke = new
+			smoke.set_up(R, 3, src, silent = TRUE)
+			playsound(src, 'sound/effects/smoke.ogg', 50, 1, -3)
+			smoke.start()
+			qdel(R)
 			ejectItem(TRUE)
 		else if(prob(EFFECT_PROB_MEDIUM-badThingCoeff))
 			visible_message(span_warning("[src] malfunctions, activating its emergency coolant systems!"))
@@ -382,22 +387,23 @@
 			playsound(src, 'sound/machines/ding.ogg', 50, 1) //Ding! Your death coffee is ready!
 			chosenchem = pick(/datum/reagent/uranium,/datum/reagent/consumable/frostoil,/datum/reagent/medicine/ephedrine)
 			C.reagents.remove_any(25)
-			C.reagents.add_reagent(chosenchem , 50)
+			C.reagents.add_reagent(chosenchem , 25)
 			C.name = "Cup of Suspicious Liquid"
 			C.desc = "It has a large hazard symbol printed on the side in fading ink."
 			investigate_log("Experimentor has made a cup of [chosenchem] coffee.", INVESTIGATE_EXPERIMENTOR)
-		else if(prob(EFFECT_PROB_VERYLOW-badThingCoeff))
+		else if(prob(EFFECT_PROB_LOW-badThingCoeff))
 			visible_message(span_danger("[src] malfunctions, shattering [exp_on] and releasing a dangerous cloud of coolant!"))
 			var/datum/reagents/R = new/datum/reagents(50)
 			R.my_atom = src
 			R.add_reagent(/datum/reagent/consumable/frostoil, 50)
 			investigate_log("Experimentor has released frostoil gas.", INVESTIGATE_EXPERIMENTOR)
 			var/datum/effect_system/smoke_spread/chem/smoke = new
-			smoke.set_up(R, 0, src, silent = TRUE)
+			smoke.set_up(R, 3, src, silent = TRUE)
 			playsound(src, 'sound/effects/smoke.ogg', 50, 1, -3)
 			smoke.start()
 			qdel(R)
 			ejectItem(TRUE)
+		/*
 		else if(prob(EFFECT_PROB_LOW-badThingCoeff))
 			visible_message(span_warning("[src] malfunctions, shattering [exp_on] and leaking cold air!"))
 			var/datum/gas_mixture/env = loc.return_air()
@@ -405,10 +411,11 @@
 			air_update_turf()
 			investigate_log("Experimentor has released cold air.", INVESTIGATE_EXPERIMENTOR)
 			ejectItem(TRUE)
+		*/
 		else if(prob(EFFECT_PROB_MEDIUM-badThingCoeff))
 			visible_message(span_warning("[src] malfunctions, releasing a flurry of chilly air as [exp_on] pops out!"))
 			var/datum/effect_system/smoke_spread/smoke = new
-			smoke.set_up(0, loc)
+			smoke.set_up(2, loc)
 			smoke.start()
 			ejectItem()
 	////////////////////////////////////////////////////////////////////////////////////////////////

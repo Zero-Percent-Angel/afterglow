@@ -2341,10 +2341,10 @@
 	if((ismonkey(M) || ishuman(M)) && current_cycle >= 10)
 		M.gorillize()
 
-/*
+
 /datum/reagent/growthserum
 	name = "Growth Serum"
-	description = "A commercial chemical designed to help older men in the bedroom."//not really it just makes you a giant
+	description = "Giant Juice."//not really it just makes you a giant
 	color = "#ff0000"//strong red. rgb 255, 0, 0
 	var/current_size = RESIZE_DEFAULT_SIZE
 	value = REAGENT_VALUE_COMMON
@@ -2374,7 +2374,7 @@
 	current_size = RESIZE_DEFAULT_SIZE
 	M.update_transform()
 	..()
-*/
+
 
 /datum/reagent/plastic_polymers
 	name = "plastic polymers"

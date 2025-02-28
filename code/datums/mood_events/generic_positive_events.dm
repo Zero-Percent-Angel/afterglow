@@ -11,7 +11,7 @@
 
 /datum/mood_event/hug
 	description = span_nicegreen("Closeness with another, even if unwanted, reminds you that maybe people can be okay.")
-	mood_change = list(0,1,2)
+	mood_change = 2
 	timeout = 10 MINUTES
 
 /datum/mood_event/arcade
@@ -152,7 +152,7 @@
 
 /datum/mood_event/hugbox
 	description = span_nicegreen("I hugged a box of hugs recently...")
-	mood_change = list(-2, -1, 0, 1, 2)
+	mood_change = 0.5
 	timeout = 5 MINUTES
 
 /datum/mood_event/plushpet
