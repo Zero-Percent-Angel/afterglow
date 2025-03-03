@@ -18,6 +18,7 @@
 	synth_metabolism_use_human = TRUE
 	interferes = CHEMICAL_INTERFERE_SOMETIMES
 	interference_category = MIND_ALTERING_CHEMICAL
+	metabolization_rate = REAGENTS_METABOLISM * 0.25
 
 /*
 Boozepwr Chart
