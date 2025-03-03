@@ -27,7 +27,7 @@
 	dat += "<b>COPYRIGHT 2075-2077 ROBCO INDUSTRIES</b><br><br><br><br>"
 	for(var/obj/machinery/telecomms/server/T in machinelist)
 		if (!T.interference)
-			dat += "<a href='?src=[REF(src)];terminate=[REF(T)]'> [T.name]<br>"
+			dat += "<a href='?src=[REF(src)];terminate=[REF(T)]'>[T.name]</a><br>"
 	var/datum/browser/popup = new(user, "radio_jammer", "Radio Jammer Terminal")
 	popup.set_content(dat)
 	popup.open()

@@ -311,7 +311,7 @@
 
 	var/apparent_blood_volume = blood_volume
 	if(dna.species.use_skintones && skin_tone == "albino")
-		apparent_blood_volume -= 300 // enough to knock you down one tier
+		apparent_blood_volume -= 350 // enough to knock you down one tier
 	switch(apparent_blood_volume)
 		if(BLOOD_VOLUME_SYMPTOMS_ANNOYING to BLOOD_VOLUME_SYMPTOMS_WARN)
 			msg += "[t_He] [t_has] pale skin.\n"
