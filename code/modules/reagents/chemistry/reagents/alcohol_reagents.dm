@@ -18,7 +18,7 @@
 	synth_metabolism_use_human = TRUE
 	interferes = CHEMICAL_INTERFERE_SOMETIMES
 	interference_category = MIND_ALTERING_CHEMICAL
-	metabolization_rate = REAGENTS_METABOLISM * 0.25
+	metabolization_rate = REAGENTS_METABOLISM * 0.35
 
 /*
 Boozepwr Chart
@@ -44,7 +44,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	else if(C.drunkenness < volume * boozepwr * ALCOHOL_THRESHOLD_MODIFIER)
 		var/booze_power = boozepwr
 		if(HAS_TRAIT(C, TRAIT_ALCOHOL_TOLERANCE)) //we're an accomplished drinker
-			booze_power *= 0.7
+			booze_power *= 0.4
 		C.drunkenness = max((C.drunkenness + (sqrt(volume) * booze_power * ALCOHOL_RATE)), 0) //Volume, power, and server alcohol rate effect how quickly one gets drunk
 		var/obj/item/organ/liver/L = C.getorganslot(ORGAN_SLOT_LIVER)
 		if(L)
@@ -1308,12 +1308,12 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		M.adjustStaminaLoss(10)
 		M.drop_all_held_items()
 		to_chat(M, span_notice("You cant feel your hands!"))
-	if(current_cycle > 5)
+	if(current_cycle > 15)
 		if(prob(20) && !holder.has_reagent(/datum/reagent/consumable/ethanol/neuroweak))
 			var/t = pickt()
 			ADD_TRAIT(M, t, type)
 			M.adjustStaminaLoss(10)
-		if(current_cycle > 30)
+		if(current_cycle > 90)
 			M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 2*REM)
 			if(current_cycle > 50 && prob(15))
 				if(!M.undergoing_cardiac_arrest() && M.can_heartattack())
@@ -1366,22 +1366,22 @@ All effects don't start immediately, but rather get worse over time; the rate is
 /datum/reagent/consumable/ethanol/hippies_delight/on_mob_life(mob/living/carbon/M)
 	M.slurring = max(M.slurring,50)
 	switch(current_cycle)
-		if(1 to 5)
+		if(1 to 15)
 			M.Dizzy(10)
 			M.set_drugginess(30)
 			if(prob(10))
 				M.emote(pick("twitch","giggle"))
-		if(5 to 10)
+		if(15 to 30)
 			M.Dizzy(20)
 			M.set_drugginess(45)
 			if(prob(20))
 				M.emote(pick("twitch","giggle"))
-		if (10 to 200)
+		if (30 to 600)
 			M.Dizzy(40)
 			M.set_drugginess(60)
 			if(prob(30))
 				M.emote(pick("twitch","giggle"))
-		if(200 to INFINITY)
+		if(600 to INFINITY)
 			M.Dizzy(60)
 			M.set_drugginess(75)
 			if(prob(40))
