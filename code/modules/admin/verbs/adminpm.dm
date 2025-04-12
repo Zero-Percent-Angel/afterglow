@@ -329,7 +329,7 @@
 	msg = emoji_parse(msg)
 
 	to_chat(C, "<font color='red' size='4'><b>-- Administrator private message --</b></font>", confidential = TRUE)
-	to_chat(C, "<span class='adminsay'>Admin PM from-<b><a href='?priv_msg=[stealthkey]'>[adminname]</A></b>: [msg]</span>", confidential = TRUE)
+	to_chat(C, "<span class='adminsay'>Admin PM from-<b><a href='byond://?priv_msg=[stealthkey]'>[adminname]</A></b>: [msg]</span>", confidential = TRUE)
 	to_chat(C, "<span class='adminsay'><i>Click on the administrator's name to reply.</i></span>", confidential = TRUE)
 
 	admin_ticket_log(C, "<font color='purple'>PM From [tgs_tagged]: [msg]</font>")

@@ -730,7 +730,7 @@
 		dat += cat_dat[category]
 		dat += "</div>"
 
-	user << browse(wrap(dat), "window=spellbook;size=700x500")
+	user << browse(HTML_SKELETON(wrap(dat)), "window=spellbook;size=700x500")
 	onclose(user, "spellbook")
 	return
 

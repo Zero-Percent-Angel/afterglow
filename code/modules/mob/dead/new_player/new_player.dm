@@ -657,7 +657,7 @@
 	dat += "<h4>Crew Manifest</h4>"
 	dat += GLOB.data_core.get_manifest_dr(OOC = 1)
 
-	src << browse(dat, "window=manifest;size=387x420;can_close=1")
+	src << browse(HTML_SKELETON(dat), "window=manifest;size=387x420;can_close=1")
 
 /mob/dead/new_player/Move()
 	return 0

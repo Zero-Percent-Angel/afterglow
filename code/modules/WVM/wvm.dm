@@ -426,7 +426,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 			dat += "<h3>Machine setup menu</h3>"
 			dat += "<div class='statusDisplay'>"
 			dat += "<font color='green'>Caps stored - [stored_caps]</font>"
-			dat += "<a href='?src=\ref[src];removecaps=1'>Unload</a>"
+			dat += "<a href='byond://?src=\ref[src];removecaps=1'>Unload</a>"
 			dat += "<h4> Items </h4> "
 
 			if(content.len == 0)
@@ -436,15 +436,15 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 					var/item_name = url_encode(Itm.name)
 					var/price = content[Itm]
 					dat += "<b>[Itm.name]</b> - [content[Itm]] caps"
-					dat += "<a href='?src=\ref[src];setprice=[item_name];current_price=[price]'>Set price</a> "
-					dat += "<a href='?src=\ref[src];remove=[item_name];current_price=[price]'>Remove</a> <br>"
+					dat += "<a href='byond://?src=\ref[src];setprice=[item_name];current_price=[price]'>Set price</a> "
+					dat += "<a href='byond://?src=\ref[src];remove=[item_name];current_price=[price]'>Remove</a> <br>"
 
 		// --- Vend
 		if(STATE_VEND)
 			dat += "<h3>Select an item</h3>"
 			dat += "<div class='statusDisplay'>"
 			dat += "<font color = 'red'>Waiting for [expected_price] caps!</font>"
-			dat += "<a href='?src=\ref[src];back=1'> Back</a> "
+			dat += "<a href='byond://?src=\ref[src];back=1'> Back</a> "
 
 		// --- Lock Open
 		if(STATE_LOCKOPEN)
@@ -925,7 +925,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	. = ..()
 	var/dat
 	dat +="<div class='statusDisplay'>"
-	dat += "<b>Bottle caps stored:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
+	dat += "<b>Bottle caps stored:</b> [stored_caps]. <A href='byond://?src=[REF(src)];choice=eject'>Eject caps</A><br>"
 	dat += "</div>"
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"
@@ -940,10 +940,10 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	dat += "<b>Vendor goods:</b><BR><table border='0' width='300'>"
 	if (GLOB.player_list.len>50)
 		for(var/datum/data/wasteland_equipment/prize in highpop_list)
-			dat += "<tr><td>[prize.equipment_name]</td><td>[prize.cost]</td><td><A href='?src=[REF(src)];purchase=[REF(prize)]'>Purchase</A></td></tr>"
+			dat += "<tr><td>[prize.equipment_name]</td><td>[prize.cost]</td><td><A href='byond://?src=[REF(src)];purchase=[REF(prize)]'>Purchase</A></td></tr>"
 	else
 		for(var/datum/data/wasteland_equipment/prize in prize_list)
-			dat += "<tr><td>[prize.equipment_name]</td><td>[prize.cost]</td><td><A href='?src=[REF(src)];purchase=[REF(prize)]'>Purchase</A></td></tr>"
+			dat += "<tr><td>[prize.equipment_name]</td><td>[prize.cost]</td><td><A href='byond://?src=[REF(src)];purchase=[REF(prize)]'>Purchase</A></td></tr>"
 	dat += "</table>"
 	dat += "</div>"
 

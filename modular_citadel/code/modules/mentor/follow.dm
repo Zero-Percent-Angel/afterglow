@@ -6,7 +6,7 @@
 		mentor_datum.following = M
 		usr.reset_perspective(M)
 		add_verb(usr, /client/proc/mentor_unfollow)
-		to_chat(usr, "<span class='info'>Click the <a href='?_src_=mentor;mentor_unfollow=[REF(M)];[MentorHrefToken(TRUE)]'>\"Stop Following\"</a> button here or in the Mentor tab to stop following [key_name(M)].</span>")
+		to_chat(usr, "<span class='info'>Click the <a href='byond://?_src_=mentor;mentor_unfollow=[REF(M)];[MentorHrefToken(TRUE)]'>\"Stop Following\"</a> button here or in the Mentor tab to stop following [key_name(M)].</span>")
 		orbiting = FALSE
 	else
 		var/mob/dead/observer/O = usr

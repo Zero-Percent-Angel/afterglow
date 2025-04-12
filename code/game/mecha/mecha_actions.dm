@@ -140,7 +140,7 @@
 /datum/action/innate/mecha/mech_view_stats/Activate()
 	if(!owner || !chassis || chassis.occupant != owner)
 		return
-	chassis.occupant << browse(chassis.get_stats_html(), "window=exosuit")
+	chassis.occupant << browse(HTML_SKELETON(chassis.get_stats_html()), "window=exosuit")
 
 
 /datum/action/innate/mecha/strafe

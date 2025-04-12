@@ -17,7 +17,7 @@
 /mob/living/simple_animal/hostile/retaliate/talker/trader/dialog_options(mob/talker, display_options)
 	var/dat = ""
 	if (!broken_trust.Find(WEAKREF(talker)) && !enemies.Find(WEAKREF(talker)))
-		dat += "<center><a href='?src=[REF(src)];trade=1'>Trade with [name].</a></center>"
+		dat += "<center><a href='byond://?src=[REF(src)];trade=1'>Trade with [name].</a></center>"
 	return dat
 
 /mob/living/simple_animal/hostile/retaliate/talker/trader/Initialize(mapload)
@@ -352,7 +352,7 @@
 	var/dat = ""
 	if (!broken_trust.Find(WEAKREF(talker)) && !enemies.Find(WEAKREF(talker)) &&
 		!failed.Find(WEAKREF(talker)) && (trusted.Find(WEAKREF(talker)) || intimidated.Find(WEAKREF(talker))))
-		dat += "<center><a href='?src=[REF(src)];trade=1'>Trade with [name].</a></center>"
+		dat += "<center><a href='byond://?src=[REF(src)];trade=1'>Trade with [name].</a></center>"
 	return dat
 
 /mob/living/simple_animal/hostile/retaliate/talker/trader/reluctant/easy

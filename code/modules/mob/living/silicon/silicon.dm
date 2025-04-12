@@ -327,7 +327,7 @@
 			number++
 	list += {"<br><br><A href='byond://?src=[REF(src)];laws=1'>State Laws</A>"}
 
-	usr << browse(list, "window=laws")
+	usr << browse(HTML_SKELETON(list), "window=laws")
 
 /mob/living/silicon/proc/set_autosay() //For allowing the AI and borgs to set the radio behavior of auto announcements (state laws, arrivals).
 	if(!radio)
@@ -407,7 +407,7 @@
 	dat += GLOB.data_core.get_manifest_dr()
 	dat += "</body></html>"
 
-	src << browse(dat, "window=airoster")
+	src << browse(HTML_SKELETON(dat), "window=airoster")
 	onclose(src, "airoster")
 
 /mob/living/silicon/update_transform()

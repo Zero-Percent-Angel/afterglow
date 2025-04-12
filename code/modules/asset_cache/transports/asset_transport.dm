@@ -136,7 +136,7 @@
 	return FALSE
 
 
-/// Precache files without clogging up the browse() queue, used for passively sending files on connection start.
+/// Precache files without clogging up the browse(HTML_SKELETON() queue), used for passively sending files on connection start.
 /datum/asset_transport/proc/send_assets_slow(client/client, list/files, filerate = 3)
 	var/startingfilerate = filerate
 	for (var/file in files)

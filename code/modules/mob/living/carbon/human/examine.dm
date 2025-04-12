@@ -16,7 +16,7 @@
 	. = list("<span class='info'>*---------*\nThis is <EM>[!obscure_name ? name : "Unknown"]</EM>!")
 
 	if (profilePicture)
-		. += "<a href='?src=[REF(src)];enlargeImage=1'><img src='[DiscordLink(profilePicture)]' width='125' height='auto' max-height='300'></a>"
+		. += "<a href='byond://?src=[REF(src)];enlargeImage=1'><img src='[DiscordLink(profilePicture)]' width='125' height='auto' max-height='300'></a>"
 
 
 	var/vampDesc = ReturnVampExamine(user) // Vamps recognize the names of other vamps.
@@ -464,7 +464,7 @@
 			if(perpname)
 				var/datum/data/record/R = find_record("name", perpname, GLOB.data_core.general)
 				if(R)
-					. += "<span class='deptradio'>Rank:</span> [R.fields["rank"]]\n<a href='?src=[REF(src)];hud=1;photo_front=1'>\[Front photo\]</a><a href='?src=[REF(src)];hud=1;photo_side=1'>\[Side photo\]</a>"
+					. += "<span class='deptradio'>Rank:</span> [R.fields["rank"]]\n<a href='byond://?src=[REF(src)];hud=1;photo_front=1'>\[Front photo\]</a><a href='byond://?src=[REF(src)];hud=1;photo_side=1'>\[Side photo\]</a>"
 				if(istype(H.glasses, /obj/item/clothing/glasses/hud/health) || istype(CIH, /obj/item/organ/cyberimp/eyes/hud/medical))
 					var/cyberimp_detect
 					for(var/obj/item/organ/cyberimp/CI in internal_organs)
@@ -475,12 +475,12 @@
 						. += cyberimp_detect
 					if(R)
 						var/health_r = R.fields["p_stat"]
-						. += "<a href='?src=[REF(src)];hud=m;p_stat=1'>\[[health_r]\]</a>"
+						. += "<a href='byond://?src=[REF(src)];hud=m;p_stat=1'>\[[health_r]\]</a>"
 						health_r = R.fields["m_stat"]
-						. += "<a href='?src=[REF(src)];hud=m;m_stat=1'>\[[health_r]\]</a>"
+						. += "<a href='byond://?src=[REF(src)];hud=m;m_stat=1'>\[[health_r]\]</a>"
 					R = find_record("name", perpname, GLOB.data_core.medical)
 					if(R)
-						. += "<a href='?src=[REF(src)];hud=m;evaluation=1'>\[Medical evaluation\]</a>"
+						. += "<a href='byond://?src=[REF(src)];hud=m;evaluation=1'>\[Medical evaluation\]</a>"
 					if(traitstring)
 						msg += "<span class='info'>Detected physiological traits:<br></span>"
 						msg += "<span class='info'>[traitstring]</span><br>"
@@ -496,11 +496,11 @@
 						if(R)
 							criminal = R.fields["criminal"]
 
-						. += jointext(list("<span class='deptradio'>Criminal status:</span> <a href='?src=[REF(src)];hud=s;status=1'>\[[criminal]\]</a>",
-							"<span class='deptradio'>Security record:</span> <a href='?src=[REF(src)];hud=s;view=1'>\[View\]</a>",
-							"<a href='?src=[REF(src)];hud=s;add_crime=1'>\[Add crime\]</a>",
-							"<a href='?src=[REF(src)];hud=s;view_comment=1'>\[View comment log\]</a>",
-							"<a href='?src=[REF(src)];hud=s;add_comment=1'>\[Add comment\]</a>"), "")
+						. += jointext(list("<span class='deptradio'>Criminal status:</span> <a href='byond://?src=[REF(src)];hud=s;status=1'>\[[criminal]\]</a>",
+							"<span class='deptradio'>Security record:</span> <a href='byond://?src=[REF(src)];hud=s;view=1'>\[View\]</a>",
+							"<a href='byond://?src=[REF(src)];hud=s;add_crime=1'>\[Add crime\]</a>",
+							"<a href='byond://?src=[REF(src)];hud=s;view_comment=1'>\[View comment log\]</a>",
+							"<a href='byond://?src=[REF(src)];hud=s;add_comment=1'>\[Add comment\]</a>"), "")
 	else if(isobserver(user) && traitstring)
 		. += "<span class='info'><b>Traits:</b> [traitstring]</span>"
 

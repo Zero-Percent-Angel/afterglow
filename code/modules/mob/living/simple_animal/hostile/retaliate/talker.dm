@@ -179,9 +179,9 @@
 	if (say_hello)
 		say(dat)
 	if(!we_introduced)
-		dat += "<center><a href='?src=[REF(src)];introduce=1'>Introduce yourself</a></center>"
+		dat += "<center><a href='byond://?src=[REF(src)];introduce=1'>Introduce yourself</a></center>"
 	if(!friends.Find(WEAKREF(talker)) && !intimidated.Find(WEAKREF(talker)) && !failed.Find(WEAKREF(talker)))
-		dat += "<center><a href='?src=[REF(src)];stare=1'>Remain silent and stare. (Speech - Intimidate)</a></center>"
+		dat += "<center><a href='byond://?src=[REF(src)];stare=1'>Remain silent and stare. (Speech - Intimidate)</a></center>"
 	dat += dialog_options(talker, we_introduced || intimidated.Find(WEAKREF(talker)))
 	return dat
 

@@ -1309,10 +1309,10 @@
 		return
 	var/dat = 	"<div align='center'><b>Inventory of [name]</b></div><p>"
 	if(inventory_back)
-		dat +=	"<br><b>Back:</b> [inventory_back] (<a href='?src=[REF(src)];remove_inv=back'>Remove</a>)"
+		dat +=	"<br><b>Back:</b> [inventory_back] (<a href='byond://?src=[REF(src)];remove_inv=back'>Remove</a>)"
 	else
-		dat +=	"<br><b>Back:</b> <a href='?src=[REF(src)];add_inv=back'>Nothing</a>"
-	user << browse(dat, text("window=mob[];size=325x500", real_name))
+		dat +=	"<br><b>Back:</b> <a href='byond://?src=[REF(src)];add_inv=back'>Nothing</a>"
+	user << browse(HTML_SKELETON(dat), text("window=mob[];size=325x500", real_name))
 	onclose(user, "mob[real_name]")
 	return
 mob/living/simple_animal/cow/brahmin/Topic(href, href_list)

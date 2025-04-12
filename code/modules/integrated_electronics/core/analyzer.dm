@@ -15,6 +15,6 @@
 		var/saved = "[A.name] analyzed! On circuit printers with cloning enabled, you may use the code below to clone the circuit:<br><br><code>[SScircuit.save_electronic_assembly(A)]</code>"
 		if(saved)
 			to_chat(user, span_notice("You scan [A]."))
-			user << browse(saved, "window=circuit_scan;size=500x600;border=1;can_resize=1;can_close=1;can_minimize=1")
+			user << browse(HTML_SKELETON(saved), "window=circuit_scan;size=500x600;border=1;can_resize=1;can_close=1;can_minimize=1")
 		else
 			to_chat(user, span_warning("[A] is not complete enough to be encoded!"))

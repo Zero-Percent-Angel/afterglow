@@ -234,7 +234,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	body += "<html><head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><title>Playtime for [key]</title></head><BODY><BR>Playtime:"
 	body += get_exp_report()
 	body += "</BODY></HTML>"
-	usr << browse(body.Join(), "window=playerplaytime[ckey];size=550x615")
+	usr << browse(HTML_SKELETON(body.Join()), "window=playerplaytime[ckey];size=550x615")
 
 /client/proc/ignore_key(client)
 	var/client/C = client

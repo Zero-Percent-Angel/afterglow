@@ -33,19 +33,19 @@
 	for (var/key in selectable_factions)
 		var/entry = selectable_factions[key]
 		if (enemy_factions.Find(key))
-			dat += "<center><a class='green' href='?src=[REF(src)];faction=[key]'>Remove [entry]</a></center>"
+			dat += "<center><a class='green' href='byond://?src=[REF(src)];faction=[key]'>Remove [entry]</a></center>"
 		else
-			dat += "<center><a class='red' href='?src=[REF(src)];faction=[key]'>Add [entry]</a></center>"
+			dat += "<center><a class='red' href='byond://?src=[REF(src)];faction=[key]'>Add [entry]</a></center>"
 	popup.set_content(dat)
 	popup.open()
 
 /mob/living/simple_animal/hostile/retaliate/talker/follower/dialog_options(mob/talker, display_options)
 	var/dat = ""
 	if (!friends.Find(WEAKREF(talker)) && (intimidated.Find(WEAKREF(talker)) || introduced.Find(WEAKREF(talker))))
-		dat += "<center><a href='?src=[REF(src)];together=1'>Try to convince them to follow you (Speech - persuade)</a></center>"
+		dat += "<center><a href='byond://?src=[REF(src)];together=1'>Try to convince them to follow you (Speech - persuade)</a></center>"
 	if (friends.Find(WEAKREF(talker)) && !trust_no_one)
-		dat += "<center><a href='?src=[REF(src)];only=1'>Convince them to only trust you (Speech - persuade)</a></center>"
-		dat += "<center><a href='?src=[REF(src)];factions=1'>Tell them what factions to attack on sight.</a></center>"
+		dat += "<center><a href='byond://?src=[REF(src)];only=1'>Convince them to only trust you (Speech - persuade)</a></center>"
+		dat += "<center><a href='byond://?src=[REF(src)];factions=1'>Tell them what factions to attack on sight.</a></center>"
 		say("Just say who you want me to +follow+, who I can +trust+ or who to +attack+ and I'm on it.")
 	return dat
 
@@ -390,8 +390,8 @@
 /mob/living/simple_animal/hostile/retaliate/talker/follower/faction/dialog_options(mob/talker, display_options)
 	var/dat = ""
 	if (faction_check_mob(talker))
-		dat += "<center><a href='?src=[REF(src)];post=1'>Order them back to thier post</a></center>"
-		dat += "<center><a href='?src=[REF(src)];factions=1'>Select Factions they should shoot on sight.</a></center>"
+		dat += "<center><a href='byond://?src=[REF(src)];post=1'>Order them back to thier post</a></center>"
+		dat += "<center><a href='byond://?src=[REF(src)];factions=1'>Select Factions they should shoot on sight.</a></center>"
 	return dat
 
 
