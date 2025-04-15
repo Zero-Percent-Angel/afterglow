@@ -176,6 +176,24 @@
 
 
 /obj/machinery/seed_extractor/ui_data()
+
+	var/list/seeds = list()
+
+	for(var/key in piles)
+		var/obj/item/seeds/seed = GET_WEAKREF(piles[key][1])
+		seeds[key] = list()
+		seeds[key]["name"] = seed.name
+		seeds[key]["key"] = key
+		seeds[key]["lifespan"] = seed.lifespan
+		seeds[key]["endurance"] = seed.endurance
+		seeds[key]["maturation"] = seed.maturation
+		seeds[key]["production"] = seed.production
+		seeds[key]["yield"] = seed.yield
+		seeds[key]["potency"] = seed.potency
+		seeds[key]["instability"] = seed.instability
+		seeds[key]["amount"] = piles[key]:len
+
+	/*
 	var/list/V = list()
 	for(var/key in piles)
 		if(piles[key])
@@ -183,8 +201,10 @@
 			if(len)
 				V[key] = len
 
+
+	*/
 	. = list()
-	.["seeds"] = V
+	.["seeds"] = seeds
 
 /obj/machinery/seed_extractor/ui_act(action, params)
 	if(..())

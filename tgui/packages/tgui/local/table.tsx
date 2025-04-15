@@ -4,8 +4,8 @@
  * @license MIT
  */
 
-import { classes } from 'common/react';
 import { Box } from 'tgui-core/components';
+import { classes } from 'tgui-core/react';
 import { computeBoxClassName, computeBoxProps } from 'tgui-core/ui';
 
 type BoxProps = React.ComponentProps<typeof Box>;

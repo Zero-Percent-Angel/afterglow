@@ -1,5 +1,5 @@
 import { map } from 'common/collections';
-import { classes } from 'common/react';
+import { classes } from 'tgui-core/react';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, Input, LabeledList, NumberInput, Section } from 'tgui-core/components';
 import { Window } from '../layouts';
@@ -55,7 +55,7 @@ export const ChemReactionChamber = (props, context) => {
                   step={1}
                   stepPixelSize={3}
                   width="39px"
-                  onDrag={(e, value) => setReagentQuantity(value)} />
+                  onDrag={(value) => setReagentQuantity(value)} />
                 <Box inline mr={1} />
                 <Button
                   icon="plus"

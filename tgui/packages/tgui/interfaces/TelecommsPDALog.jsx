@@ -3,7 +3,6 @@
  * @copyright 2020 LetterN (https://github.com/LetterN)
  * @license MIT
  */
-import { Fragment } from 'inferno';
 import { Window } from '../layouts';
 import { useBackend, useSharedState } from '../backend';
 import { Button, LabeledList, NoticeBox, Section, Tabs, Input } from 'tgui-core/components';
@@ -43,7 +42,7 @@ export const TelecommsPDALog = (props, context) => {
             </b>
             <i>
               {(silicon && !hack_status.emagging) ? (
-                <Fragment>
+                <>
                   Brute-forcing for server key. <br />
                   It will take 20 seconds for every character that
                   the password has.
@@ -51,9 +50,9 @@ export const TelecommsPDALog = (props, context) => {
                   In the meantime, this console can reveal your
                   true intentions if you let someone access it.
                   Make sure no humans enter the room during that time.
-                </Fragment>
+                </>
               ) : (
-                <Fragment>
+                <>
                   QnJ1dGUtZm9yY2luZyBmb3Igc2VydmVyIGtleS48YnI+IEl0IHdpbG<br />
                   wgdGFrZSAyMCBzZWNvbmRzIGZvciBldmVyeSBjaGFyYWN0ZXIgdGhh<br />
                   dCB0aGUgcGFzc3dvcmQgaGFzLiBJbiB0aGUgbWVhbnRpbWUsIHRoaX<br />
@@ -61,7 +60,7 @@ export const TelecommsPDALog = (props, context) => {
                   IGlmIHlvdSBsZXQgc29tZW9uZSBhY2Nlc3MgaXQuIE1ha2Ugc3VyZS<br />
                   BubyBodW1hbnMgZW50ZXIgdGhlIHJvb20gZHVyaW5nIHRoYXQgdGltZS4=
                   <br /><br />
-                </Fragment>
+                </>
               )}
             </i>
           </NoticeBox>
@@ -73,7 +72,7 @@ export const TelecommsPDALog = (props, context) => {
   return (
     <Window theme="ntos" resizable>
       <Window.Content scrollable>
-        <Fragment>
+        <>
           {!!notice && (
             <NoticeBox>
               {notice}
@@ -86,14 +85,14 @@ export const TelecommsPDALog = (props, context) => {
                   value={network}
                   width="150px"
                   maxLength={15}
-                  onChange={(e, value) => act('network', {
+                  onChange={(value) => act('network', {
                     'value': value,
                   })} />
               </LabeledList.Item>
               <LabeledList.Item
                 label="Memory"
                 buttons={(
-                  <Fragment>
+                  <>
                     <Button
                       icon="minus-circle"
                       disabled={!servers.length}
@@ -106,7 +105,7 @@ export const TelecommsPDALog = (props, context) => {
                       onClick={() => act('probe')}>
                       Probe Network
                     </Button>
-                  </Fragment>
+                  </>
                 )}>
                 {servers ? (
                   `${servers.length} currently probed and buffered`
@@ -118,7 +117,7 @@ export const TelecommsPDALog = (props, context) => {
                 label="Authentication"
                 color={authenticated ? 'good' : 'bad'}
                 buttons={(
-                  <Fragment>
+                  <>
                     <Button
                       disabled={!authenticated || !selected}
                       onClick={() => act('change_auth')}>
@@ -132,14 +131,14 @@ export const TelecommsPDALog = (props, context) => {
                         Brute Force
                       </Button>
                     )}
-                  </Fragment>
+                  </>
                 )}>
                 {authenticated ? "KEY OK" : "KEY FAIL"}
               </LabeledList.Item>
               <LabeledList.Item
                 label="PDA Server"
                 buttons={(
-                  <Fragment>
+                  <>
                     <Button
                       icon={authenticated ? 'unlock' : 'lock'}
                       color={authenticated ? 'good' : 'bad'}
@@ -153,7 +152,7 @@ export const TelecommsPDALog = (props, context) => {
                       onClick={() => act('mainmenu')}>
                       Disconnect
                     </Button>
-                  </Fragment>
+                  </>
                 )}>
                 {selected ? (
                   `${selected.name} (${selected.id})`
@@ -233,7 +232,7 @@ export const TelecommsPDALog = (props, context) => {
               )}
             </Section>
           ) : (
-            <Fragment>
+            <>
               {(tab === "pdalog-message" && authenticated) && (
                 <TeleLogs />
               )}
@@ -243,9 +242,9 @@ export const TelecommsPDALog = (props, context) => {
               {(tab === "pdalog-custommsg" && authenticated) && (
                 <CustomMsg />
               )}
-            </Fragment>
+            </>
           )}
-        </Fragment>
+        </>
       </Window.Content>
     </Window>
   );
@@ -321,7 +320,7 @@ export const TeleLogs = (props, context) => {
                 {message.message}
               </LabeledList.Item>
               {!!msgs_log && (
-                <Fragment>
+                <>
                   <LabeledList.Item
                     label="Stamp"
                     color={message.stamp !== "Unstamped" ? (
@@ -355,7 +354,7 @@ export const TeleLogs = (props, context) => {
                       message.priority
                     )}
                   </LabeledList.Item>
-                </Fragment>
+                </>
               )}
             </LabeledList>
           </Section>
@@ -396,7 +395,7 @@ export const CustomMsg = context => {
             value={fake_message.sender}
             width="250px"
             maxLength={42}
-            onChange={(e, value) => act('fake', {
+            onChange={(value) => act('fake', {
               'sender': value,
             })}
           />
@@ -406,7 +405,7 @@ export const CustomMsg = context => {
             value={fake_message.job}
             width="250px"
             maxLength={100}
-            onChange={(e, value) => act('fake', {
+            onChange={(value) => act('fake', {
               'job': value,
             })}
           />
@@ -430,7 +429,7 @@ export const CustomMsg = context => {
             width="500px"
             height="150px"
             maxLength={2048}
-            onChange={(e, value) => act('fake', {
+            onChange={(value) => act('fake', {
               'message': value,
             })}
           />

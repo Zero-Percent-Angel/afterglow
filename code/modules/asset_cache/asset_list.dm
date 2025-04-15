@@ -364,7 +364,7 @@ GLOBAL_LIST_EMPTY(asset_datums)
 	..()
 
 /// Get a html string that will load a html asset.
-/// Needed because byond doesn't allow you to browse(HTML_SKELETON() to a url.)
+/// Needed because byond doesn't allow you to browse() to a url.)
 /datum/asset/simple/namespaced/proc/get_htmlloader(filename)
 	return url2htmlloader(SSassets.transport.get_asset_url(filename, assets[filename]))
 

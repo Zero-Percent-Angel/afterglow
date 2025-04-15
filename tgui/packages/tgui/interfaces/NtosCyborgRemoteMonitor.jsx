@@ -1,14 +1,10 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, NoticeBox, Section } from 'tgui-core/components';
 import { NtosWindow } from '../layouts';
 
-export const NtosCyborgRemoteMonitor = (props, context) => {
+export const NtosCyborgRemoteMonitor = (props) => {
   return (
-    <NtosWindow
-      width={600}
-      height={800}
-      resizable>
+    <NtosWindow width={600} height={800} resizable>
       <NtosWindow.Content scrollable>
         <NtosCyborgRemoteMonitorContent />
       </NtosWindow.Content>
@@ -16,73 +12,74 @@ export const NtosCyborgRemoteMonitor = (props, context) => {
   );
 };
 
-export const NtosCyborgRemoteMonitorContent = (props, context) => {
-  const { act, data } = useBackend(context);
-  const {
-    card,
-    cyborgs = [],
-  } = data;
+export const NtosCyborgRemoteMonitorContent = (props) => {
+  const { act, data } = useBackend();
+  const { card, cyborgs = [] } = data;
 
   if (!cyborgs.length) {
-    return (
-      <NoticeBox>
-        No cyborg units detected.
-      </NoticeBox>
-    );
+    return <NoticeBox>No cyborg units detected.</NoticeBox>;
   }
 
   return (
-    <Fragment>
+    <>
       {!card && (
-        <NoticeBox>
-          Certain features require an ID card login.
-        </NoticeBox>
+        <NoticeBox>Certain features require an ID card login.</NoticeBox>
       )}
-      {cyborgs.map(cyborg => {
+      {cyborgs.map((cyborg) => {
         return (
           <Section
             key={cyborg.ref}
             title={cyborg.name}
-            buttons={(
+            buttons={
               <Button
                 icon="terminal"
                 content="Send Message"
                 color="blue"
                 disabled={!card}
-                onClick={() => act('messagebot', {
-                  ref: cyborg.ref,
-                })} />
-            )}>
+                onClick={() =>
+                  act('messagebot', {
+                    ref: cyborg.ref,
+                  })
+                }
+              />
+            }
+          >
             <LabeledList>
               <LabeledList.Item label="Status">
-                <Box color={cyborg.status
-                  ? 'bad'
-                  : cyborg.locked_down
-                    ? 'average'
-                    : 'good'}>
+                <Box
+                  color={
+                    cyborg.status
+                      ? 'bad'
+                      : cyborg.locked_down
+                        ? 'average'
+                        : 'good'
+                  }
+                >
                   {cyborg.status
-                    ? "Not Responding"
+                    ? 'Not Responding'
                     : cyborg.locked_down
-                      ? "Locked Down"
+                      ? 'Locked Down'
                       : cyborg.shell_discon
-                        ? "Nominal/Disconnected"
-                        : "Nominal"}
+                        ? 'Nominal/Disconnected'
+                        : 'Nominal'}
                 </Box>
               </LabeledList.Item>
               <LabeledList.Item label="Charge">
-                <Box color={cyborg.charge <= 30
-                  ? 'bad'
-                  : cyborg.charge <= 70
-                    ? 'average'
-                    : 'good'}>
+                <Box
+                  color={
+                    cyborg.charge <= 30
+                      ? 'bad'
+                      : cyborg.charge <= 70
+                        ? 'average'
+                        : 'good'
+                  }
+                >
                   {typeof cyborg.charge === 'number'
-                    ? cyborg.charge + "%"
-                    : "Not Found"}
+                    ? cyborg.charge + '%'
+                    : 'Not Found'}
                 </Box>
               </LabeledList.Item>
-              <LabeledList.Item label="Module">
-                {cyborg.module}
-              </LabeledList.Item>
+              <LabeledList.Item label="Model">{cyborg.module}</LabeledList.Item>
               <LabeledList.Item label="Upgrades">
                 {cyborg.upgrades}
               </LabeledList.Item>
@@ -90,6 +87,6 @@ export const NtosCyborgRemoteMonitorContent = (props, context) => {
           </Section>
         );
       })}
-    </Fragment>
+    </>
   );
 };

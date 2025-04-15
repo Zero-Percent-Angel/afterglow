@@ -28,7 +28,7 @@ export const AtmosFilter = (props, context) => {
                 unit="L/s"
                 minValue={0}
                 maxValue={200}
-                onDrag={(e, value) => act('rate', {
+                onDrag={(value) => act('rate', {
                   rate: value,
                 })} />
               <Button

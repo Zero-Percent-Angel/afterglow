@@ -3,7 +3,6 @@
  * @copyright 2020 LetterN (https://github.com/LetterN)
  * @license MIT
  */
-import { Fragment } from 'inferno';
 import { Window } from '../layouts';
 import { useBackend, useSharedState } from '../backend';
 import { Button, LabeledList, NoticeBox, Section, Tabs, Input } from 'tgui-core/components';
@@ -28,7 +27,7 @@ export const TelecommsLogBrowser = (props, context) => {
       width={575}
       height={400}>
       <Window.Content scrollable>
-        <Fragment>
+        <>
           {!!notice && (
             <NoticeBox>
               {notice}
@@ -41,7 +40,7 @@ export const TelecommsLogBrowser = (props, context) => {
                   value={network}
                   width="150px"
                   maxLength={15}
-                  onChange={(e, value) => act('network', {
+                  onChange={(value) => act('network', {
                     'value': value,
                   })} />
               </LabeledList.Item>
@@ -192,7 +191,7 @@ export const TelecommsLogBrowser = (props, context) => {
               )}
             </Section>
           )}
-        </Fragment>
+        </>
       </Window.Content>
     </Window>
   );

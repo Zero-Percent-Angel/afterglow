@@ -3,7 +3,6 @@
  * @copyright 2020 LetterN (https://github.com/LetterN)
  * @license MIT
  */
-import { Fragment } from 'inferno';
 import { Window } from '../layouts';
 import { useBackend, useSharedState } from '../backend';
 import { RADIO_CHANNELS } from '../constants';
@@ -32,7 +31,7 @@ export const TelecommsMonitor = (props, context) => {
       width={575}
       height={400}>
       <Window.Content scrollable>
-        <Fragment>
+        <>
           {!!notice && (
             <NoticeBox>
               {notice}
@@ -45,14 +44,14 @@ export const TelecommsMonitor = (props, context) => {
                   value={network}
                   width="150px"
                   maxLength={15}
-                  onChange={(e, value) => act('network', {
+                  onChange={(value) => act('network', {
                     'value': value,
                   })} />
               </LabeledList.Item>
               <LabeledList.Item
                 label="Memory"
                 buttons={(
-                  <Fragment>
+                  <>
                     <Button
                       icon="minus-circle"
                       disabled={!servers.length || !!selected}
@@ -65,7 +64,7 @@ export const TelecommsMonitor = (props, context) => {
                       onClick={() => act('probe')}>
                       Probe Network
                     </Button>
-                  </Fragment>
+                  </>
                 )}>
                 {!selected ? (
                   servers ? (
@@ -252,7 +251,7 @@ export const TelecommsMonitor = (props, context) => {
             </Section>
 
           )}
-        </Fragment>
+        </>
       </Window.Content>
     </Window>
   );

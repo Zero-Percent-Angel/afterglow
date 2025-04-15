@@ -1,6 +1,6 @@
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, NumberInput, ProgressBar, Section } from 'tgui-core/components';
-import { Grid } from '../common/grid';
+import { Grid } from '../local/grid';
 import { Window } from '../layouts';
 
 export const SolarControl = (props, context) => {
@@ -92,7 +92,7 @@ export const SolarControl = (props, context) => {
                   minValue={-360}
                   maxValue={+720}
                   value={azimuth_current}
-                  onDrag={(e, value) => act('azimuth', { value })} />
+                  onDrag={(value) => act('azimuth', { value })} />
               )}
               {tracking_state === 1 && (
                 <NumberInput
@@ -107,7 +107,7 @@ export const SolarControl = (props, context) => {
                     const sign = Math.sign(rate) > 0 ? '+' : '-';
                     return sign + Math.abs(rate);
                   }}
-                  onDrag={(e, value) => act('azimuth_rate', { value })} />
+                  onDrag={(value) => act('azimuth_rate', { value })} />
               )}
               {tracking_state === 2 && (
                 <Box inline color="label" mt="3px">

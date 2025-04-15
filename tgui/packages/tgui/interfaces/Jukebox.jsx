@@ -1,5 +1,5 @@
 import { sortBy } from 'common/collections';
-import { flow } from 'common/fp';
+import { flow } from 'tgui-core/fp';
 import { useBackend } from '../backend';
 import { Box, Button, Dropdown, Section, Knob, LabeledControls, LabeledList } from 'tgui-core/components';
 import { Window } from '../layouts';
@@ -66,7 +66,7 @@ export const Jukebox = (props, context) => {
                   step={1}
                   stepPixelSize={1}
                   disabled={active}
-                  onDrag={(e, value) => act('set_volume', {
+                  onDrag={(value) => act('set_volume', {
                     volume: value,
                   })} />
                 <Button

@@ -1,4 +1,4 @@
-import { toFixed } from 'common/math';
+import { toFixed } from 'tgui-core/math';
 import { useBackend } from '../backend';
 import { Button, LabeledList, NumberInput, Section } from 'tgui-core/components';
 import { Window } from '../layouts';
@@ -46,7 +46,7 @@ export const Electropack = (props, context) => {
                 value={frequency / 10}
                 format={value => toFixed(value, 1)}
                 width="80px"
-                onDrag={(e, value) => act('freq', {
+                onDrag={(value) => act('freq', {
                   freq: value,
                 })} />
             </LabeledList.Item>
@@ -68,7 +68,7 @@ export const Electropack = (props, context) => {
                 maxValue={100}
                 value={code}
                 width="80px"
-                onDrag={(e, value) => act('code', {
+                onDrag={(value) => act('code', {
                   code: value,
                 })} />
             </LabeledList.Item>

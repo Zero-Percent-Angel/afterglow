@@ -1091,7 +1091,7 @@ const RadiationEmitterSettings = (props) => {
             value={radStrength}
             minValue={1}
             maxValue={RADIATION_STRENGTH_MAX}
-            onDrag={(e, value) =>
+            onDrag={(value) =>
               act('set_pulse_strength', {
                 val: value,
               })
@@ -1106,7 +1106,7 @@ const RadiationEmitterSettings = (props) => {
             value={radDuration}
             minValue={1}
             maxValue={RADIATION_DURATION_MAX}
-            onDrag={(e, value) =>
+            onDrag={(value) =>
               act('set_pulse_duration', {
                 val: value,
               })

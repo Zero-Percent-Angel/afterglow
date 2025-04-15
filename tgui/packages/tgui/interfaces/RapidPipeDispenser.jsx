@@ -1,4 +1,4 @@
-import { classes } from 'common/react';
+import { classes } from 'tgui-core/react';
 import { useBackend, useLocalState } from '../backend';
 import { Box, Button, ColorBox, Flex, LabeledList, Section, Tabs } from 'tgui-core/components';
 import { Window } from '../layouts';

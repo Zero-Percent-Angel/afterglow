@@ -1,6 +1,6 @@
-import { sortBy } from 'common/collections';
-import { flow } from 'common/fp';
-import { toTitleCase } from 'common/string';
+import { sortBy, map } from 'common/collections';
+import { flow } from 'tgui-core/fp';
+import { toTitleCase } from 'tgui-core/string';
 import { useBackend } from '../backend';
 import { Button, Section, Table } from 'tgui-core/components';
 import { Window } from '../layouts';
@@ -9,7 +9,7 @@ import { Window } from '../layouts';
  * This method takes a seed string and splits the values
  * into an object
  */
-const splitSeedString = text => {
+const splitSeedString = (text) => {
   const re = /([^;=]+)=([^;]+)/g;
   const ret = {};
   let m;
@@ -22,34 +22,10 @@ const splitSeedString = text => {
   return ret;
 };
 
-/**
- * This method splits up the string "name" we get for the seeds
- * and creates an object from it include the value that is the
- * ammount
- *
- * @returns {any[]}
- */
-const createSeeds = seedStrings => {
-  const objs = Object.keys(seedStrings).map(key => {
-    const obj = splitSeedString(key);
-    obj.amount = seedStrings[key];
-    obj.key = key;
-    obj.name = toTitleCase(obj.name.replace('pack of ', ''));
-    return obj;
-  });
-  return flow([
-    sortBy(item => item.name),
-  ])(objs);
-};
-
-export const SeedExtractor = (props, context) => {
-  const { act, data } = useBackend(context);
-  const seeds = createSeeds(data.seeds);
+export const SeedExtractor = (props) => {
+  const { act, data } = useBackend();
   return (
-    <Window
-      width={1000}
-      height={400}
-      resizable>
+    <Window width={1000} height={400} resizable>
       <Window.Content scrollable>
         <Section title="Stored seeds:">
           <Table cellpadding="3" textAlign="center">
@@ -64,23 +40,26 @@ export const SeedExtractor = (props, context) => {
               <Table.Cell>Instability</Table.Cell>
               <Table.Cell>Stock</Table.Cell>
             </Table.Row>
-            {seeds.map(item => (
-              <Table.Row key={item.key}>
-                <Table.Cell bold>{item.name}</Table.Cell>
-                <Table.Cell>{item.lifespan}</Table.Cell>
-                <Table.Cell>{item.endurance}</Table.Cell>
-                <Table.Cell>{item.maturation}</Table.Cell>
-                <Table.Cell>{item.production}</Table.Cell>
-                <Table.Cell>{item.yield}</Table.Cell>
-                <Table.Cell>{item.potency}</Table.Cell>
-                <Table.Cell>{item.instability}</Table.Cell>
+            {map(data.seeds, (seed) => (
+			    <Table.Row key={seed.key}>
+                <Table.Cell bold>{seed.name}</Table.Cell>
+                <Table.Cell>{seed.lifespan}</Table.Cell>
+                <Table.Cell>{seed.endurance}</Table.Cell>
+                <Table.Cell>{seed.maturation}</Table.Cell>
+                <Table.Cell>{seed.production}</Table.Cell>
+                <Table.Cell>{seed.yield}</Table.Cell>
+                <Table.Cell>{seed.potency}</Table.Cell>
+                <Table.Cell>{seed.instability}</Table.Cell>
                 <Table.Cell>
                   <Button
                     content="Vend"
-                    onClick={() => act('select', {
-                      item: item.key,
-                    })} />
-                  ({item.amount} left)
+                    onClick={() =>
+                      act('select', {
+                        item: seed.key,
+                      })
+                    }
+                  />
+                  ({seed.amount} left)
                 </Table.Cell>
               </Table.Row>
             ))}

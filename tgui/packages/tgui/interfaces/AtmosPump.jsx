@@ -27,7 +27,7 @@ export const AtmosPump = (props, context) => {
                   unit="L/s"
                   minValue={0}
                   maxValue={200}
-                  onChange={(e, value) => act('rate', {
+                  onChange={(value) => act('rate', {
                     rate: value,
                   })} />
                 <Button
@@ -49,7 +49,7 @@ export const AtmosPump = (props, context) => {
                   minValue={0}
                   maxValue={4500}
                   step={10}
-                  onChange={(e, value) => act('pressure', {
+                  onChange={(value) => act('pressure', {
                     pressure: value,
                   })} />
                 <Button

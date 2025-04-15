@@ -1,109 +1,120 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { Button, LabeledList, NoticeBox, Section } from 'tgui-core/components';
 import { Window } from '../layouts';
 
-export const PortableTurret = (props, context) => {
-  const { act, data } = useBackend(context);
+export const PortableTurret = (props) => {
+  const { act, data } = useBackend();
   const {
     silicon_user,
     locked,
     on,
-    turret_shoot_weapons,
-    turret_shoot_wildlife,
-    turret_shoot_all,
-    turret_shoot_players,
-    turret_shoot_raiders,
-    turret_shoot_robots,
-    turret_shoot_ignore_faction,
-    turret_make_noise,
-    turret_use_laser_pointer,
+    check_weapons,
+    neutralize_criminals,
+    neutralize_all,
+    neutralize_unidentified,
+    neutralize_nonmindshielded,
+    neutralize_cyborgs,
+    neutralize_heads,
     manual_control,
     allow_manual_control,
     lasertag_turret,
   } = data;
   return (
-    <Window
-      width={310}
-      height={lasertag_turret ? 110 : 292}>
+    <Window width={310} height={lasertag_turret ? 110 : 292}>
       <Window.Content>
         <NoticeBox>
           Swipe an ID card to {locked ? 'unlock' : 'lock'} this interface.
         </NoticeBox>
-        <Fragment>
+        <>
           <Section>
             <LabeledList>
               <LabeledList.Item
                 label="Status"
-                buttons={!lasertag_turret && (!!allow_manual_control
-                  || (!!manual_control && !!silicon_user)) && (
-                  <Button
-                    icon={manual_control ? "wifi" : "terminal"}
-                    content={manual_control
-                      ? "Remotely Controlled"
-                      : "Manual Control"}
-                    disabled={manual_control}
-                    color="bad"
-                    onClick={() => act('manual')} />
-                )}>
+                buttons={
+                  !lasertag_turret &&
+                  (!!allow_manual_control ||
+                    (!!manual_control && !!silicon_user)) && (
+                    <Button
+                      icon={manual_control ? 'wifi' : 'terminal'}
+                      content={
+                        manual_control
+                          ? 'Remotely Controlled'
+                          : 'Manual Control'
+                      }
+                      disabled={manual_control}
+                      color="bad"
+                      onClick={() => act('manual')}
+                    />
+                  )
+                }
+              >
                 <Button
                   icon={on ? 'power-off' : 'times'}
                   content={on ? 'On' : 'Off'}
                   selected={on}
                   disabled={locked}
-                  onClick={() => act('power')} />
+                  onClick={() => act('power')}
+                />
               </LabeledList.Item>
             </LabeledList>
           </Section>
           {!lasertag_turret && (
             <Section
               title="Target Settings"
-              buttons={(
+              buttons={
                 <Button.Checkbox
-                  checked={!turret_shoot_ignore_faction}
-                  content="Disable IFF"
+                  checked={!neutralize_heads}
+                  content="Ignore Command"
                   disabled={locked}
-                  onClick={() => act('turret_return_ignore_faction')} />
-              )}>
+                  onClick={() => act('shootheads')}
+                />
+              }
+            >
               <Button.Checkbox
                 fluid
-                checked={turret_shoot_players}
-                content="Target Civilians"
+                checked={neutralize_all}
+                content="Non-Security and Non-Command"
                 disabled={locked}
-                onClick={() => act('turret_return_shoot_players')} />
+                onClick={() => act('shootall')}
+              />
               <Button.Checkbox
                 fluid
-                checked={turret_shoot_raiders}
-                content="Target Possible Criminals"
+                checked={check_weapons}
+                content="Unauthorized Weapons"
                 disabled={locked}
-                onClick={() => act('turret_return_shoot_raiders')} />
+                onClick={() => act('authweapon')}
+              />
               <Button.Checkbox
                 fluid
-                checked={turret_shoot_wildlife}
-                content="Target Pests"
+                checked={neutralize_unidentified}
+                content="Unidentified Life Signs"
                 disabled={locked}
-                onClick={() => act('turret_return_shoot_wildlife')} />
+                onClick={() => act('checkxenos')}
+              />
               <Button.Checkbox
                 fluid
-                checked={turret_shoot_robots}
-                content="Target Robots"
+                checked={neutralize_nonmindshielded}
+                content="Non-Mindshielded"
                 disabled={locked}
-                onClick={() => act('turret_return_shoot_robots')} />
+                onClick={() => act('checkloyal')}
+              />
               <Button.Checkbox
                 fluid
-                checked={turret_use_laser_pointer}
-                content="Use Targetting Laser"
+                checked={neutralize_criminals}
+                content="Wanted Criminals"
                 disabled={locked}
-                onClick={() => act('turret_return_use_laser_pointer')} />
+                onClick={() => act('shootcriminals')}
+              />
               <Button.Checkbox
                 fluid
-                checked={turret_make_noise}
-                content="Use Internal Speakers"
+                checked={neutralize_cyborgs}
+                content="Cyborgs"
                 disabled={locked}
-                onClick={() => act('turret_return_make_noise')} />
+                onClick={() => act('shootborgs')}
+              />
             </Section>
           )}
-        </Fragment>
+        </>
       </Window.Content>
     </Window>
   );

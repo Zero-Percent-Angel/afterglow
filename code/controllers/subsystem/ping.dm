@@ -5,7 +5,7 @@
 
 SUBSYSTEM_DEF(ping)
 	name = "Ping"
-	priority = FIRE_PRIORITY_PING
+	priority = 10
 	// init_stage = INITSTAGE_EARLY
 	wait = 4 SECONDS
 	flags = SS_NO_INIT

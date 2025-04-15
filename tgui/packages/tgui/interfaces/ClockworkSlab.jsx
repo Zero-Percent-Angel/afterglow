@@ -1,7 +1,6 @@
 import { useBackend, useSharedState } from '../backend';
 import { map } from 'common/collections';
 import { Section, Tabs, Table, Button, Box, NoticeBox, Divider } from 'tgui-core/components';
-import { Fragment } from 'inferno';
 import { Window } from '../layouts';
 
 let REC_RATVAR = "";
@@ -62,7 +61,7 @@ export const ClockworkSlab = (props, context) => {
                   {REC_RATVAR}
                 </Box>
               ) : (
-                <Fragment>
+                <>
                   <Box
                     as="span"
                     textColor="#BE8700"
@@ -90,11 +89,11 @@ export const ClockworkSlab = (props, context) => {
                     not let it confuse you! You are free to use the names
                     in pronoun form when speaking in normal languages.
                   </Box>
-                </Fragment>
+                </>
               )}
             </Box>
             {recollection_categories?.map(cat => (
-              <Fragment key={cat.name}>
+              <>
                 <br />
                 <Button
                   tooltip={cat.desc}
@@ -104,7 +103,7 @@ export const ClockworkSlab = (props, context) => {
                   })} >
                   {cat.name}
                 </Button>
-              </Fragment>
+              </>
             ))}
             <Divider />
             <Box>
@@ -141,7 +140,7 @@ export const ClockworkSlab = (props, context) => {
               </Box>
               <br /><br />
               {rec_binds?.map(bind => (
-                <Fragment key={bind.name ? bind.name : "none"}>
+                <>
                   A <b>Quickbind</b> slot ({rec_binds.indexOf(bind)+1}),
                   currently set to&nbsp;
                   <span style={`color:${bind ? bind.color : "#BE8700"}`}>
@@ -149,7 +148,7 @@ export const ClockworkSlab = (props, context) => {
                   </span>
                   .
                   <br />
-                </Fragment>
+                </>
               ))}
             </Box>
           </Section>

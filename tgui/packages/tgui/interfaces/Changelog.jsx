@@ -1,6 +1,5 @@
-import { classes } from 'common/react';
+import { classes } from 'tgui-core/react';
 import { useBackend } from '../backend';
-import { Component, Fragment } from 'inferno';
 import {
   Box,
   Button,
@@ -287,7 +286,7 @@ export class Changelog extends Component {
         <Section key={date} title={dateformat(date, 'd mmmm yyyy', true)}>
           <Box ml={3}>
             {Object.entries(authors).map(([name, changes]) => (
-              <Fragment key={name}>
+              <>
                 <h4>{name} changed:</h4>
                 <Box ml={3}>
                   <Table>
@@ -322,7 +321,7 @@ export class Changelog extends Component {
                     })}
                   </Table>
                 </Box>
-              </Fragment>
+              </>
             ))}
           </Box>
         </Section>

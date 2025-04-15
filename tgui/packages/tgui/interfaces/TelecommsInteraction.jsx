@@ -3,10 +3,9 @@
  * @copyright 2020 LetterN (https://github.com/LetterN)
  * @license MIT
  */
-import { Fragment } from 'inferno';
 import { Window } from '../layouts';
 import { useBackend } from '../backend';
-import { toFixed } from 'common/math';
+import { toFixed } from 'tgui-core/math';
 import { RADIO_CHANNELS } from '../constants';
 import { Button, LabeledList, NumberInput, NoticeBox, Section, Input } from 'tgui-core/components';
 
@@ -35,7 +34,7 @@ export const TelecommsInteraction = (props, context) => {
       width={520}
       height={500}>
       <Window.Content scrollable>
-        <Fragment>
+        <>
           {!!notice && (
             <NoticeBox>
               {notice}
@@ -52,13 +51,13 @@ export const TelecommsInteraction = (props, context) => {
                 </Button>
               </LabeledList.Item>
               {power ? (
-                <Fragment>
+                <>
                   <LabeledList.Item label="Identification String">
                     <Input
                       value={id}
                       width="150px"
                       maxLength={255}
-                      onChange={(e, value) => act('machine', {
+                      onChange={(value) => act('machine', {
                         'id': value,
                       })} />
                   </LabeledList.Item>
@@ -67,7 +66,7 @@ export const TelecommsInteraction = (props, context) => {
                       value={network}
                       width="150px"
                       maxLength={15}
-                      onChange={(e, value) => act('machine', {
+                      onChange={(value) => act('machine', {
                         'network': value,
                       })} />
                   </LabeledList.Item>
@@ -77,7 +76,7 @@ export const TelecommsInteraction = (props, context) => {
                     {prefab ? 'TRUE' : 'FALSE'}
                   </LabeledList.Item>
                   {!!isrelay && (
-                    <Fragment>
+                    <>
                       <LabeledList.Item label="Broadcasting">
                         <Button
                           icon={machine.broadcast ? 'check' : 'times'}
@@ -98,7 +97,7 @@ export const TelecommsInteraction = (props, context) => {
                           {machine.receiving ? 'YES' : 'NO'}
                         </Button>
                       </LabeledList.Item>
-                    </Fragment>
+                    </>
                   )}
                   {!!isbus && (
                     <LabeledList.Item label="Change Signal Frequency">
@@ -124,7 +123,7 @@ export const TelecommsInteraction = (props, context) => {
                           maxValue={1599 / 10}
                           value={machine.chang_freq_value / 10}
                           format={value => toFixed(value, 1)}
-                          onChange={(e, value) => act('frequency', {
+                          onChange={(value) => act('frequency', {
                             'adjust': value,
                           })} />
                       )}
@@ -139,7 +138,7 @@ export const TelecommsInteraction = (props, context) => {
                     <LabeledList.Item
                       label="Multitool buffer"
                       buttons={multitool_buf ? (
-                        <Fragment>
+                        <>
                           <Button
                             onClick={() => act('multitool', {
                               'Link': true,
@@ -152,7 +151,7 @@ export const TelecommsInteraction = (props, context) => {
                             })}>
                             Flush
                           </Button>
-                        </Fragment>
+                        </>
                       ) : (
                         <Button
                           onClick={() => act('multitool', {
@@ -166,13 +165,13 @@ export const TelecommsInteraction = (props, context) => {
                       )}
                     </LabeledList.Item>
                   )}
-                </Fragment>
+                </>
               ) : (
                 ''
               )}
             </LabeledList>
             {power ? (
-              <Fragment>
+              <>
                 <Section
                   title="Linked Network Entities"
                   level={2}>
@@ -230,12 +229,12 @@ export const TelecommsInteraction = (props, context) => {
                     ''
                   )}
                 </Section>
-              </Fragment>
+              </>
             ) : (
               ''
             )}
           </Section>
-        </Fragment>
+        </>
       </Window.Content>
     </Window>
   );

@@ -1,5 +1,5 @@
 import { map } from 'common/collections';
-import { toFixed } from 'common/math';
+import { toFixed } from 'tgui-core/math';
 import { useBackend } from '../backend';
 import { Button, LabeledList, NumberInput, Section } from 'tgui-core/components';
 import { Window } from '../layouts';
@@ -68,7 +68,7 @@ export const AtmosControlConsole = (props, context) => {
                   // This takes an exceptionally long time to update
                   // due to being an async signal
                   suppressFlicker={2000}
-                  onChange={(e, value) => act('rate', {
+                  onChange={(value) => act('rate', {
                     rate: value,
                   })} />
               </LabeledList.Item>
@@ -90,7 +90,7 @@ export const AtmosControlConsole = (props, context) => {
                   // This takes an exceptionally long time to update
                   // due to being an async signal
                   suppressFlicker={2000}
-                  onChange={(e, value) => act('pressure', {
+                  onChange={(value) => act('pressure', {
                     pressure: value,
                   })} />
               </LabeledList.Item>

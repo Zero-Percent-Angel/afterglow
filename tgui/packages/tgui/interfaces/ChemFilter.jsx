@@ -1,77 +1,81 @@
-import { Fragment } from 'inferno';
+import { Fragment } from 'react';
 import { useBackend, useLocalState } from '../backend';
-import { Button, Flex, Input, Section } from 'tgui-core/components';
+import { Button, Input, Section, Stack } from 'tgui-core/components';
 import { Window } from '../layouts';
 
-export const ChemFilterPane = (props, context) => {
-  const { act } = useBackend(context);
+export const ChemFilterPane = (props) => {
+  const { act } = useBackend();
   const { title, list, reagentName, onReagentInput } = props;
   const titleKey = title.toLowerCase();
   return (
     <Section
       title={title}
       minHeight="240px"
-      buttons={(
-        <Fragment>
+      buttons={
+        <>
           <Input
             placeholder="Reagent"
             width="140px"
-            onInput={(e, value) => onReagentInput(value)} />
+            onInput={(e, value) => onReagentInput(value)}
+          />
           <Button
             ml={1}
             icon="plus"
-            onClick={() => act('add', {
-              which: titleKey,
-              name: reagentName,
-            })} />
-        </Fragment>
-      )}>
-      {list.map(filter => (
+            onClick={() =>
+              act('add', {
+                which: titleKey,
+                name: reagentName,
+              })
+            }
+          />
+        </>
+      }
+    >
+      {list.map((filter) => (
         <Fragment key={filter}>
           <Button
             fluid
             icon="minus"
             content={filter}
-            onClick={() => act('remove', {
-              which: titleKey,
-              reagent: filter,
-            })} />
+            onClick={() =>
+              act('remove', {
+                which: titleKey,
+                reagent: filter,
+              })
+            }
+          />
         </Fragment>
       ))}
     </Section>
   );
 };
 
-export const ChemFilter = (props, context) => {
-  const { act, data } = useBackend(context);
-  const {
-    left = [],
-    right = [],
-  } = data;
-  const [leftName, setLeftName] = useLocalState(context, 'leftName', '');
-  const [rightName, setRightName] = useLocalState(context, 'rightName', '');
+export const ChemFilter = (props) => {
+  const { act, data } = useBackend();
+  const { left = [], right = [] } = data;
+  const [leftName, setLeftName] = useLocalState('leftName', '');
+  const [rightName, setRightName] = useLocalState('rightName', '');
   return (
-    <Window
-      width={500}
-      height={300}
-      resizable>
+    <Window width={500} height={300} resizable>
       <Window.Content scrollable>
-        <Flex spacing={1}>
-          <Flex.Item grow={1}>
+        <Stack>
+          <Stack.Item grow>
             <ChemFilterPane
               title="Left"
               list={left}
               reagentName={leftName}
-              onReagentInput={value => setLeftName(value)} />
-          </Flex.Item>
-          <Flex.Item grow={1}>
+              onReagentInput={(value) => setLeftName(value)}
+            />
+          </Stack.Item>
+          <Stack.Item grow>
             <ChemFilterPane
               title="Right"
               list={right}
               reagentName={rightName}
-              onReagentInput={value => setRightName(value)} />
-          </Flex.Item>
-        </Flex>
+              onReagentInput={(value) => setRightName(value)}
+            />
+          </Stack.Item>
+        </Stack>
       </Window.Content>
     </Window>
   );

@@ -1,7 +1,7 @@
-import { toFixed } from 'common/math';
+import { toFixed } from 'tgui-core/math';
 import { useBackend } from '../backend';
 import { Button, NumberInput, Section } from 'tgui-core/components';
-import { Grid } from '../common/grid';
+import { Grid } from '../local/grid';
 import { Window } from '../layouts';
 
 export const Signaler = (props, context) => {
@@ -33,7 +33,7 @@ export const Signaler = (props, context) => {
                 value={frequency / 10}
                 format={value => toFixed(value, 1)}
                 width="80px"
-                onDrag={(e, value) => act('freq', {
+                onDrag={(value) => act('freq', {
                   freq: value,
                 })} />
             </Grid.Column>
@@ -60,7 +60,7 @@ export const Signaler = (props, context) => {
                 maxValue={100}
                 value={code}
                 width="80px"
-                onDrag={(e, value) => act('code', {
+                onDrag={(value) => act('code', {
                   code: value,
                 })} />
             </Grid.Column>

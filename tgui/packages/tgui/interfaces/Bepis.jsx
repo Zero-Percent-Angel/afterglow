@@ -1,6 +1,6 @@
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, NumberInput, Section } from 'tgui-core/components';
-import { Grid } from '../common/grid';
+import { Grid } from '../local/grid';
 import { Window } from '../layouts';
 
 export const Bepis = (props, context) => {
@@ -66,7 +66,7 @@ export const Bepis = (props, context) => {
                       maxValue={30000}
                       step={100}
                       stepPixelSize={2}
-                      onChange={(e, value) => act('amount', {
+                      onChange={(value) => act('amount', {
                         amount: value,
                       })} />
                   </LabeledList.Item>

@@ -1,4 +1,4 @@
-import { toFixed } from 'common/math';
+import { toFixed } from 'tgui-core/math';
 import { useBackend } from '../backend';
 import { AnimatedNumber, Button, LabeledList, NumberInput, Section } from 'tgui-core/components';
 import { Window } from '../layouts';
@@ -46,7 +46,7 @@ export const ThermoMachine = (props, context) => {
                 maxValue={Math.round(data.max)}
                 step={5}
                 stepPixelSize={3}
-                onDrag={(e, value) => act('target', {
+                onDrag={(value) => act('target', {
                   target: value,
                 })} />
             </LabeledList.Item>

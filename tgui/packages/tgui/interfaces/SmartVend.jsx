@@ -35,7 +35,7 @@ export const SmartVend = (props, context) => {
                   {data.verb ? data.verb : 'Dispense'}
                 </Table.Cell>
               </Table.Row>
-              {map((value, key) => (
+              {map(data.contents, (value, key) => (
                 <Table.Row key={key}>
                   <Table.Cell>
                     {value.name}
@@ -59,7 +59,7 @@ export const SmartVend = (props, context) => {
                       })} />
                   </Table.Cell>
                 </Table.Row>
-              ))(data.contents)}
+              ))}
             </Table>
           )}
         </Section>

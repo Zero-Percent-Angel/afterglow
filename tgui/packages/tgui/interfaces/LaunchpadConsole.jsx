@@ -1,6 +1,6 @@
 import { useBackend } from '../backend';
 import { Box, Button, Divider, Flex, Input, NoticeBox, NumberInput, Section } from 'tgui-core/components';
-import { Grid } from '../common/grid';
+import { Grid } from '../local/grid';
 import { Window } from '../layouts';
 
 const LaunchpadButtonPad = (props, context) => {
@@ -104,7 +104,7 @@ export const LaunchpadControl = (props, context) => {
         <Input
           value={pad_name}
           width="170px"
-          onChange={(e, value) => act('rename', {
+          onChange={(value) => act('rename', {
             name: value,
           })} />
       )}
@@ -141,7 +141,7 @@ export const LaunchpadControl = (props, context) => {
                   width="90px"
                   height="30px"
                   stepPixelSize={10}
-                  onChange={(e, value) => act('set_pos', {
+                  onChange={(value) => act('set_pos', {
                     x: value,
                   })} />
               </Box>
@@ -161,7 +161,7 @@ export const LaunchpadControl = (props, context) => {
                   fontSize="26px"
                   width="90px"
                   height="30px"
-                  onChange={(e, value) => act('set_pos', {
+                  onChange={(value) => act('set_pos', {
                     y: value,
                   })} />
               </Box>

@@ -86,6 +86,7 @@
 	if(active_camera)
 		data["activeCamera"] = list(
 			name = active_camera.c_tag,
+			ref = active_camera.c_tag,
 			status = active_camera.status,
 		)
 	return data
@@ -95,10 +96,12 @@
 	data["mapRef"] = map_name
 	var/list/cameras = get_available_cameras()
 	data["cameras"] = list()
+	data["can_spy"] = FALSE
 	for(var/i in cameras)
 		var/obj/machinery/camera/C = cameras[i]
 		data["cameras"] += list(list(
 			name = C.c_tag,
+			ref = C.c_tag,
 		))
 	return data
 
@@ -108,7 +111,7 @@
 		return
 
 	if(action == "switch_camera")
-		var/c_tag = params["name"]
+		var/c_tag = params["camera"]
 		var/list/cameras = get_available_cameras()
 		var/obj/machinery/camera/C = cameras[c_tag]
 		active_camera = C
@@ -170,7 +173,7 @@
 			continue
 		var/list/tempnetwork = C.network & network
 		if(tempnetwork.len)
-			D["[C.c_tag]"] = C
+			D[C.c_tag] = C
 	return D
 
 // SECURITY MONITORS

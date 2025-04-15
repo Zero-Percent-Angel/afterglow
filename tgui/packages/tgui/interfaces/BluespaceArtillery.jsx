@@ -1,39 +1,27 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { Box, Button, LabeledList, NoticeBox, Section } from 'tgui-core/components';
 import { Window } from '../layouts';
 
-export const BluespaceArtillery = (props, context) => {
-  const { act, data } = useBackend(context);
-  const {
-    notice,
-    connected,
-    unlocked,
-    target,
-  } = data;
+export const BluespaceArtillery = (props) => {
+  const { act, data } = useBackend();
+  const { notice, connected, unlocked, target } = data;
   return (
-    <Window
-      width={400}
-      height={220}>
+    <Window width={400} height={220}>
       <Window.Content>
-        {!!notice && (
-          <NoticeBox>
-            {notice}
-          </NoticeBox>
-        )}
+        {!!notice && <NoticeBox>{notice}</NoticeBox>}
         {connected ? (
-          <Fragment>
+          <>
             <Section
               title="Target"
-              buttons={(
+              buttons={
                 <Button
                   icon="crosshairs"
                   disabled={!unlocked}
-                  onClick={() => act('recalibrate')} />
-              )}>
-              <Box
-                color={target ? 'average' : 'bad'}
-                fontSize="25px">
+                  onClick={() => act('recalibrate')}
+                />
+              }
+            >
+              <Box color={target ? 'average' : 'bad'} fontSize="25px">
                 {target || 'No Target Set'}
               </Box>
             </Section>
@@ -48,23 +36,22 @@ export const BluespaceArtillery = (props, context) => {
                     fontSize="30px"
                     textAlign="center"
                     lineHeight="46px"
-                    onClick={() => act('fire')} />
+                    onClick={() => act('fire')}
+                  />
                 </Box>
               ) : (
-                <Fragment>
-                  <Box
-                    color="bad"
-                    fontSize="18px">
+                <>
+                  <Box color="bad" fontSize="18px">
                     Bluespace artillery is currently locked.
                   </Box>
                   <Box mt={1}>
                     Awaiting authorization via keycard reader from at minimum
                     two station heads.
                   </Box>
-                </Fragment>
+                </>
               )}
             </Section>
-          </Fragment>
+          </>
         ) : (
           <Section>
             <LabeledList>
@@ -72,7 +59,8 @@ export const BluespaceArtillery = (props, context) => {
                 <Button
                   icon="wrench"
                   content="Complete Deployment"
-                  onClick={() => act('build')} />
+                  onClick={() => act('build')}
+                />
               </LabeledList.Item>
             </LabeledList>
           </Section>
