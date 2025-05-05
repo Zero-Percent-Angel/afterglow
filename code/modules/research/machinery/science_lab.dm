@@ -3,7 +3,6 @@
 	desc = "Used to increase research points."
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "HPLCempty"
-	icon_state_open = "HPLCempty"
 	circuit = /obj/item/circuitboard/machine/science_lab
 	var/engaged_in_science = FALSE
 	var/list/blueprint_types = list("small guns", "big guns")
@@ -70,7 +69,7 @@
 		usr << browse(null, "window=science_lab")
 		return
 	if(scantype == "search")
-		var/obj/machinery/computer/rdconsole/D = locate(/obj/machinery/computer/rdconsole) in oview(3,src)
+		var/obj/machinery/computer/rdconsole/D = locate(/obj/machinery/computer/rdconsole) in oview(4,src)
 		if(D)
 			linked_console = D
 			updateUsrDialog()
