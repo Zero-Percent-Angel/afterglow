@@ -325,6 +325,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 /client/verb/fix_stat_panel()
 	set name = "Fix Stat Panel"
 	init_verbs()
+	statbrowser_ready = TRUE
 
 /client/proc/GetOOCName()
 	if(iscarbon(mob)) // If mob is null I'll be very surprised, worse case, add a sanity check if this becomes an issue in the future.
