@@ -13,10 +13,7 @@ export const Jukebox = (props, context) => {
     track_beat,
     volume,
   } = data;
-  const songs = flow([
-    sortBy(
-      song => song.name),
-  ])(data.songs || []);
+  data.songs.sort((a, b) => a.name.localeCompare(b.name));
   return (
     <Window
       width={370}
@@ -36,7 +33,7 @@ export const Jukebox = (props, context) => {
               <Dropdown
                 overflow-y="scroll"
                 width="240px"
-                options={songs.map(song => song.name)}
+                options={data.songs.map((song) => song.name)}
                 disabled={active}
                 selected={track_selected || "Select a Track"}
                 onSelected={value => act('select_track', {
