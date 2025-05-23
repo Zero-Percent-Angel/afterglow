@@ -161,7 +161,7 @@
 	color = "#A9FBFB"
 	taste_description = "bitterness"
 	metabolization_rate = 2 * REAGENTS_METABOLISM	// same as bicaridine
-	overdose_threshold = 30
+	overdose_threshold = 50
 	ghoulfriendly = TRUE
 
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
@@ -189,7 +189,7 @@
 	name = "Healing poultice"
 	description = "Potent, stinging herbs that swiftly aid in the recovery of grevious wounds."
 	color = "#C8A5DC"
-	overdose_threshold = 15
+	overdose_threshold = 20
 	var/clot_rate = 0.20
 	var/clot_coeff_per_wound = 0.9
 

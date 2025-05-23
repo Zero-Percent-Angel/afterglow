@@ -77,7 +77,7 @@
 	desc = "A powder used to heal physical wounds derived from ground broc flowers and xander roots, commonly used by tribals."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_healingpowder"
-	list_reagents = list(/datum/reagent/medicine/healing_powder = 10)
+	list_reagents = list(/datum/reagent/medicine/healing_powder = 15)
 
 // ---------------------------------
 // CUSTOM POWDER
@@ -98,7 +98,7 @@
 	name = "Healing poultice"
 	desc = "A concoction of broc flower, cave fungus, agrave fruit and xander root."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
-	list_reagents = list(/datum/reagent/medicine/healing_powder/poultice = 11, /datum/reagent/medicine/healing_powder = 5, /datum/reagent/medicine/tricordrazine = 5)
+	list_reagents = list(/datum/reagent/medicine/healing_powder/poultice = 11, /datum/reagent/medicine/healing_powder = 10, /datum/reagent/medicine/tricordrazine = 5)
 	self_delay = 1
 	icon_state = "patch_healingpoultice"
 
@@ -110,7 +110,7 @@
 	desc = "A strong herbal healing concoction invented and created by the Twin Mothers tribe."
 	icon = 'icons/fallout/objects/medicine/drugs.dmi'
 	icon_state = "patch_bitterdrink"
-	list_reagents = list(/datum/reagent/medicine/healing_powder = 5, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5)
+	list_reagents = list(/datum/reagent/medicine/healing_powder = 10, /datum/reagent/medicine/bicaridine = 5, /datum/reagent/medicine/kelotane = 5)
 
 // ---------------------------------
 // HYDRA
