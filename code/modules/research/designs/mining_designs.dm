@@ -41,7 +41,7 @@
 	build_path = /obj/item/pickaxe/drill/diamonddrill
 	category = list("Mining Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_CARGO
-/*
+
 /datum/design/plasmacutter
 	name = "Plasma Cutter"
 	desc = "You could use it to cut limbs off of xenos! Or, you know, mine stuff."
@@ -61,7 +61,27 @@
 	build_path = /obj/item/gun/energy/plasmacutter/adv
 	category = list("Mining Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_CARGO
-*/
+
+/datum/design/mining_scanner
+	name = "Mining Scanner"
+	desc = "A simple scanner for detecting ores."
+	id = "mining_scanner"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 400, /datum/material/glass = 800, /datum/material/uranium = 100)
+	build_path = /obj/item/mining_scanner
+	category = list("Tool Designs")
+	departmental_flags =  DEPARTMENTAL_FLAG_CARGO
+
+/datum/design/adv_mining_scanner
+	name = "Mining Scanner"
+	desc = "A simple scanner for detecting ores."
+	id = "adv_mining_scanner"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 400, /datum/material/glass = 800, /datum/material/uranium = 100, /datum/material/gold = 200)
+	build_path = /obj/item/t_scanner/adv_mining_scanner
+	category = list("Tool Designs")
+	departmental_flags =  DEPARTMENTAL_FLAG_CARGO
+
 /datum/design/plasteel_pick
 	name = "plasteel-tipped pickaxe"
 	desc = "A pickaxe with a plasteel pick head. Less robust at cracking rock walls and digging up dirt than the titanium pickaxe, but better at cracking open skulls."

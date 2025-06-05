@@ -3,6 +3,7 @@
 	use_power = NO_POWER_USE
 	idle_power_usage = 0
 	active_power_usage = 0
+	circuit = /obj/item/circuitboard/machine/autolathe/manual
 	stored_research = /datum/techweb/specialized/autounlocking/autolathe/public
 	categories = list(
 							"Tools",
