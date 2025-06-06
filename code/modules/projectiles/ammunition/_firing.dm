@@ -23,19 +23,18 @@
 				max_spread *= 0.85
 			max_spread *= (1.3 - (user.special_p/20))
 			angle_out = clamp(rand(-max_spread, max_spread), -MAX_ACCURACY_OFFSET, MAX_ACCURACY_OFFSET)
-
 	var/targloc = get_turf(target)
 	ready_proj(target, user, quiet, zone_override, damage_multiplier, penetration_multiplier, projectile_speed_multiplier, fired_from, damage_threshold_penetration)
 	if(pellets == 1)
 		if(!randomspread) //Smart spread
-			angle_out = round(1 - 0.5) * distro
+			angle_out = distro
 		if(!throw_proj(target, targloc, user, params, angle_out))
 			return FALSE
 	else
 		if(isnull(BB))
 			return FALSE
 		AddComponent(/datum/component/pellet_cloud, projectile_type, pellets)
-		SEND_SIGNAL(src, COMSIG_PELLET_CLOUD_INIT, target, user, fired_from, randomspread, (variance * HAS_TRAIT(user,TRAIT_INSANE_AIM) ? 0.5 : 1), zone_override, params, angle_out)
+		SEND_SIGNAL(src, COMSIG_PELLET_CLOUD_INIT, target, user, fired_from, randomspread, (variance * (HAS_TRAIT(user,TRAIT_INSANE_AIM) ? 0.5 : 1)), zone_override, params, angle_out)
 	deduct_powder_and_bullet_mats()
 	if(istype(user))
 		user.DelayNextAction(considered_action = TRUE, immediate = FALSE)

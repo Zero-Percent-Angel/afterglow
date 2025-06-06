@@ -111,7 +111,6 @@
 			angle_out += rand(-spread, spread) * 0.5
 		else //Smart spread
 			angle_out = round((i / num_pellets - 0.5) * max(distro, 1))
-
 		RegisterSignal(shell.BB, COMSIG_PROJECTILE_SELF_ON_HIT, PROC_REF(pellet_hit))
 		RegisterSignal(shell.BB, list(COMSIG_PROJECTILE_RANGE_OUT, COMSIG_PARENT_QDELETING), PROC_REF(pellet_range))
 		LAZYADD(pellets, shell.BB)
