@@ -290,15 +290,15 @@
  *
  * return bool - TRUE if any assets had to be sent to the client
  */
-/datum/tgui_window/proc/send_asset(datum/asset/asset)
+/datum/tgui_window/proc/send_asset(datum/asset/asset, force = 0)
 	if(!client || !asset)
 		return
 	sent_assets |= list(asset)
 	. = asset.send(client)
 	if(istype(asset, /datum/asset/spritesheet))
 		var/datum/asset/spritesheet/spritesheet = asset
-		send_message("asset/stylesheet", spritesheet.css_filename())
-	send_raw_message(asset.get_serialized_url_mappings())
+		send_message("asset/stylesheet", spritesheet.css_filename(), force)
+	send_raw_message(asset.get_serialized_url_mappings(), force)
 
 /**
  * private
