@@ -45,9 +45,9 @@
 	window.initialize(assets = list(
 		get_asset_datum(/datum/asset/simple/tgui_panel),
 	))
-	window.send_asset(get_asset_datum(/datum/asset/simple/namespaced/fontawesome), 1)
-	window.send_asset(get_asset_datum(/datum/asset/simple/namespaced/tgfont), 1)
-	window.send_asset(get_asset_datum(/datum/asset/spritesheet/chat), 1)
+	window.send_asset(get_asset_datum(/datum/asset/simple/namespaced/fontawesome), force)
+	window.send_asset(get_asset_datum(/datum/asset/simple/namespaced/tgfont), force)
+	window.send_asset(get_asset_datum(/datum/asset/spritesheet/chat), force)
 	// Other setup
 	request_telemetry()
 	addtimer(CALLBACK(src, PROC_REF(on_initialize_timed_out)), 15 SECONDS)
