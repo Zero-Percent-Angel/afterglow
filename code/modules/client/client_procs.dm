@@ -477,6 +477,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	view_size.setZoomMode()
 	fit_viewport()
 	Master.UpdateTickRate()
+	fix_stat_panel()
 
 
 /proc/alert_async(mob/target, message)

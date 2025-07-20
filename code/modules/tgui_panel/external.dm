@@ -33,10 +33,9 @@
 	// Force show the panel to see if there are any errors
 	winset(src, "output", "is-disabled=1&is-visible=0")
 	winset(src, "browseroutput", "is-disabled=0;is-visible=1")
-	/*
 	if(byond_version >= 516)
-		winset(src, null, list("browser-options" = "find,refresh,byondstorage"))
-	*/
+		winset(src, null, list("browser-options" = "find,refresh"))
+
 
 /client/verb/panel_devtools()
 	set name = "Enable TGUI Devtools"
