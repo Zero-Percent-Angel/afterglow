@@ -1829,7 +1829,7 @@
 /turf/open/floor/wood_common{
 	icon_state = "common-broken2"
 	},
-/area/f13/wasteland)
+/area/f13/ncr)
 "mc" = (
 /obj/structure/chair/f13chair2{
 	dir = 8
@@ -2215,6 +2215,14 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood_common,
 /area/f13/followers)
+"oL" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small{
+	dir = 8;
+	light_color = "#ff4747"
+	},
+/turf/open/floor/wood_common,
+/area/f13/ncr)
 "oN" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 4
@@ -5310,6 +5318,13 @@
 "Jl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/start/f13/ncrveteranranger,
+/obj/structure/chair/office/dark,
+/obj/structure/fluff/paper/stack{
+	desc = "A stack of various papers, illegible scribbles scattered across each page.";
+	pixel_x = 6;
+	pixel_y = -4;
+	dir = 4
+	},
 /turf/open/floor/wood_common,
 /area/f13/ncr)
 "Jm" = (
@@ -6063,6 +6078,15 @@
 /obj/item/clothing/under/f13/ranger/patrol,
 /obj/item/clothing/neck/mantle/ranger,
 /obj/item/clothing/neck/mantle/ranger,
+/obj/item/clothing/suit/armor/light/ncr/trailranger,
+/obj/item/clothing/head/f13/trailranger/kemble,
+/obj/item/clothing/under/f13/ranger/blue,
+/obj/item/clothing/under/f13/ranger/vet/foxflannel,
+/obj/item/clothing/suit/armor/medium/combat/patrol{
+	icon = 'icons/mob/clothing/suit.dmi';
+	icon_state = "ncr_patrol_old";
+	mob_overlay_icon = 'icons/mob/clothing/suit.dmi'
+	},
 /turf/open/floor/wood_common,
 /area/f13/ncr)
 "OC" = (
@@ -6109,6 +6133,13 @@
 /area/f13/ncr)
 "ON" = (
 /obj/effect/landmark/start/f13/ncrveteranranger,
+/obj/structure/fluff/paper/stack,
+/obj/structure/fluff/paper/stack{
+	desc = "A stack of various papers, illegible scribbles scattered across each page.";
+	pixel_x = 6;
+	pixel_y = -4;
+	dir = 1
+	},
 /turf/open/floor/wood_common,
 /area/f13/ncr)
 "OS" = (
@@ -6999,12 +7030,16 @@
 	pixel_x = 5;
 	pixel_y = 6
 	},
+/obj/structure/decoration/clock{
+	pixel_x = 30
+	},
+/obj/effect/spawner/lootdrop/f13/ncr_k_ration{
+	pixel_x = 5;
+	pixel_y = 12
+	},
 /obj/item/reagent_containers/food/drinks/bottle/nukashine{
 	pixel_y = 5;
 	pixel_x = -5
-	},
-/obj/structure/decoration/clock{
-	pixel_x = 30
 	},
 /turf/open/floor/wood_common,
 /area/f13/ncr)
@@ -10073,7 +10108,7 @@ xm
 xm
 zy
 CD
-eO
+oL
 eO
 eO
 ON
