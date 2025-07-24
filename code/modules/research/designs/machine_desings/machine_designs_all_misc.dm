@@ -26,6 +26,14 @@
 	category = list ("Misc. Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_ALL
 
+/datum/design/board/reloading_bench
+	name = "Machine Design (Reloading Bench Board)"
+	desc = "The circuit board for an autolathe."
+	id = "reloading_bench"
+	build_path = /obj/item/circuitboard/machine/autolathe/ammo
+	category = list ("Misc. Machinery")
+	departmental_flags = DEPARTMENTAL_FLAG_ALL
+
 /datum/design/board/autolathe_secure
 	name = "Machine Design (Secure Autolathe Board)"
 	desc = "The circuit board for an autolathe. This one is programmed to not allow hacking."
