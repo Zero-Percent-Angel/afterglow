@@ -249,7 +249,7 @@ GLOBAL_LIST_EMPTY(network_holopads)
 				for(var/mob/living/silicon/ai/AI in GLOB.silicon_mobs)
 					if(!AI.client)
 						continue
-					to_chat(AI, "<span class='info'>Your presence is requested at <a href='?src=[REF(AI)];jumptoholopad=[REF(src)]'>\the [area]</a>.</span>")
+					to_chat(AI, "<span class='info'>Your presence is requested at <a href='byond://?src=[REF(AI)];jumptoholopad=[REF(src)]'>\the [area]</a>.</span>")
 				return TRUE
 			else
 				to_chat(usr, span_info("A request for AI presence was already sent recently."))

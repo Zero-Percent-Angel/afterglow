@@ -15,8 +15,9 @@
 	light_color = LIGHT_COLOR_BLUE
 
 /obj/machinery/computer/operating/process()
-	table.check_patient()
-	patient = table.patient
+	if (table)
+		table.check_patient()
+		patient = table.patient
 	if (!patient)
 		icon_screen = "fallout_screen_operating_empty"
 	else
@@ -46,12 +47,10 @@
 /obj/machinery/computer/operating/followers/Initialize()
 	. = ..()
 	linked_techweb = SSresearch.followers_tech
-	find_table()
 
 /obj/machinery/computer/operating/bos/Initialize()
 	. = ..()
 	linked_techweb = SSresearch.bos_tech
-	find_table()
 
 /obj/machinery/computer/operating/attackby(obj/item/O, mob/user, params)
 	if(istype(O, /obj/item/disk/surgery))

@@ -146,13 +146,13 @@ a creative player the means to solve many problems.  Circuits are held inside an
 	HTML += "<table border='1' style='undefined;table-layout: fixed; width: 80%'>"
 
 	if(assembly)
-		HTML += "<a href='?src=[REF(src)];return=1'>\[Return to Assembly\]</a><br>"
+		HTML += "<a href='byond://?src=[REF(src)];return=1'>\[Return to Assembly\]</a><br>"
 
-	HTML += "<a href='?src=[REF(src)]'>\[Refresh\]</a>  |  "
-	HTML += "<a href='?src=[REF(src)];rename=1'>\[Rename\]</a>  |  "
-	HTML += "<a href='?src=[REF(src)];scan=1'>\[Copy Ref\]</a>"
+	HTML += "<a href='byond://?src=[REF(src)]'>\[Refresh\]</a>  |  "
+	HTML += "<a href='byond://?src=[REF(src)];rename=1'>\[Rename\]</a>  |  "
+	HTML += "<a href='byond://?src=[REF(src)];scan=1'>\[Copy Ref\]</a>"
 	if(assembly && removable)
-		HTML += "  |  <a href='?src=[REF(assembly)];component=[REF(src)];remove=1'>\[Remove\]</a>"
+		HTML += "  |  <a href='byond://?src=[REF(assembly)];component=[REF(src)];remove=1'>\[Remove\]</a>"
 	HTML += "<br>"
 
 	HTML += "<colgroup>"
@@ -174,13 +174,13 @@ a creative player the means to solve many problems.  Circuits are held inside an
 				if(1)
 					io = get_pin_ref(IC_INPUT, i)
 					if(io)
-						words += "<b><a href='?src=[REF(src)];act=wire;pin=[REF(io)]'>[io.display_pin_type()] [io.name]</a> \
-						<a href='?src=[REF(src)];act=data;pin=[REF(io)]'>[io.display_data(io.data)]</a></b><br>"
+						words += "<b><a href='byond://?src=[REF(src)];act=wire;pin=[REF(io)]'>[io.display_pin_type()] [io.name]</a> \
+						<a href='byond://?src=[REF(src)];act=data;pin=[REF(io)]'>[io.display_data(io.data)]</a></b><br>"
 						if(io.linked.len)
 							for(var/k in 1 to io.linked.len)
 								var/datum/integrated_io/linked = io.linked[k]
-								words += "<a href='?src=[REF(src)];act=unwire;pin=[REF(io)];link=[REF(linked)]'>[linked]</a> \
-								@ <a href='?src=[REF(linked.holder)]'>[linked.holder.displayed_name]</a><br>"
+								words += "<a href='byond://?src=[REF(src)];act=unwire;pin=[REF(io)];link=[REF(linked)]'>[linked]</a> \
+								@ <a href='byond://?src=[REF(linked.holder)]'>[linked.holder.displayed_name]</a><br>"
 
 						if(outputs.len > inputs.len)
 							height = 1
@@ -193,13 +193,13 @@ a creative player the means to solve many problems.  Circuits are held inside an
 				if(3)
 					io = get_pin_ref(IC_OUTPUT, i)
 					if(io)
-						words += "<b><a href='?src=[REF(src)];act=wire;pin=[REF(io)]'>[io.display_pin_type()] [io.name]</a> \
-						<a href='?src=[REF(src)];act=data;pin=[REF(io)]'>[io.display_data(io.data)]</a></b><br>"
+						words += "<b><a href='byond://?src=[REF(src)];act=wire;pin=[REF(io)]'>[io.display_pin_type()] [io.name]</a> \
+						<a href='byond://?src=[REF(src)];act=data;pin=[REF(io)]'>[io.display_data(io.data)]</a></b><br>"
 						if(io.linked.len)
 							for(var/k in 1 to io.linked.len)
 								var/datum/integrated_io/linked = io.linked[k]
-								words += "<a href='?src=[REF(src)];act=unwire;pin=[REF(io)];link=[REF(linked)]'>[linked]</a> \
-								@ <a href='?src=[REF(linked.holder)]'>[linked.holder.displayed_name]</a><br>"
+								words += "<a href='byond://?src=[REF(src)];act=unwire;pin=[REF(io)];link=[REF(linked)]'>[linked]</a> \
+								@ <a href='byond://?src=[REF(linked.holder)]'>[linked.holder.displayed_name]</a><br>"
 
 						if(inputs.len > outputs.len)
 							height = 1
@@ -210,13 +210,13 @@ a creative player the means to solve many problems.  Circuits are held inside an
 		var/datum/integrated_io/io = activator
 		var/words = list()
 
-		words += "<b><a href='?src=[REF(src)];act=wire;pin=[REF(io)]'><font color='FF0000'>[io]</font></a> "
-		words += "<a href='?src=[REF(src)];act=data;pin=[REF(io)]'><font color='FF0000'>[io.data?"\<PULSE OUT\>":"\<PULSE IN\>"]</font></a></b><br>"
+		words += "<b><a href='byond://?src=[REF(src)];act=wire;pin=[REF(io)]'><font color='FF0000'>[io]</font></a> "
+		words += "<a href='byond://?src=[REF(src)];act=data;pin=[REF(io)]'><font color='FF0000'>[io.data?"\<PULSE OUT\>":"\<PULSE IN\>"]</font></a></b><br>"
 		if(io.linked.len)
 			for(var/k in 1 to io.linked.len)
 				var/datum/integrated_io/linked = io.linked[k]
-				words += "<a href='?src=[REF(src)];act=unwire;pin=[REF(io)];link=[REF(linked)]'><font color='FF0000'>[linked]</font></a> \
-				@ <a href='?src=[REF(linked.holder)]'><font color='FF0000'>[linked.holder.displayed_name]</font></a><br>"
+				words += "<a href='byond://?src=[REF(src)];act=unwire;pin=[REF(io)];link=[REF(linked)]'><font color='FF0000'>[linked]</font></a> \
+				@ <a href='byond://?src=[REF(linked.holder)]'><font color='FF0000'>[linked.holder.displayed_name]</font></a><br>"
 
 		HTML += "<tr>"
 		HTML += "<td colspan='3' align='center'>[jointext(words, null)]</td>"
@@ -237,9 +237,9 @@ a creative player the means to solve many problems.  Circuits are held inside an
 
 	HTML += "</body></html>"
 	if(assembly)
-		user << browse(HTML, "window=assembly-[REF(assembly)];size=[window_width]x[window_height];border=1;can_resize=1;can_close=1;can_minimize=1")
+		user << browse(HTML_SKELETON(HTML), "window=assembly-[REF(assembly)];size=[window_width]x[window_height];border=1;can_resize=1;can_close=1;can_minimize=1")
 	else
-		user << browse(HTML, "window=circuit-[REF(src)];size=[window_width]x[window_height];border=1;can_resize=1;can_close=1;can_minimize=1")
+		user << browse(HTML_SKELETON(HTML), "window=circuit-[REF(src)];size=[window_width]x[window_height];border=1;can_resize=1;can_close=1;can_minimize=1")
 
 	onclose(user, "assembly-[REF(src.assembly)]")
 

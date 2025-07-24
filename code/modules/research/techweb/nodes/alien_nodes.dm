@@ -32,5 +32,5 @@
 	display_name = "Experimental Engineering" //Fortuna edit: Alien tech -> Experimental tech
 	description = "Highly advanced engineering tools."
 	prereq_ids = list("alientech", "exp_tools")
-	design_ids = list("alien_wrench", "alien_wirecutters", "alien_screwdriver", "alien_crowbar", "alien_welder", "alien_multitool")
+	design_ids = list("alien_wrench", "alien_wirecutters", "alien_screwdriver", "alien_crowbar", "alien_welder", "alien_multitool", "plasmacutter_adv")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)

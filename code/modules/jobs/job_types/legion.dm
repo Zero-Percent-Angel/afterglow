@@ -48,7 +48,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/job/CaesarsLegion/Legionnaire
 	belt = /obj/item/storage/belt/army/assault/legion
-	//ears = /obj/item/radio/headset/headset_legion
+	ears = /obj/item/radio/headset/headset_legion
 	backpack = /obj/item/storage/backpack/explorer
 	satchel = /obj/item/storage/backpack/satchel/explorer
 	uniform = /obj/item/clothing/under/f13/legskirt
@@ -1110,7 +1110,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	head = /obj/item/clothing/head/f13/auxilia
 	uniform = /obj/item/clothing/under/f13/legauxiliaf
 	shoes = /obj/item/clothing/shoes/roman
-	//ears = /obj/item/radio/headset/headset_legion
+	ears = /obj/item/radio/headset/headset_legion
 	gloves = null
 	belt = null
 	r_pocket = /obj/item/flashlight/lantern

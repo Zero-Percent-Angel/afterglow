@@ -659,14 +659,14 @@
 
 				for(var/obj/item/I in LB.embedded_objects)
 					if(I.isEmbedHarmless())
-						to_chat(src, "\t <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] stuck to your [LB.name]!</a>")
+						to_chat(src, "\t <a href='byond://?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] stuck to your [LB.name]!</a>")
 					else
-						to_chat(src, "\t <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] embedded in your [LB.name]!</a>")
+						to_chat(src, "\t <a href='byond://?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] embedded in your [LB.name]!</a>")
 
 				if(LB.current_gauze)
-					to_chat(src, "\t [span_notice("It is covered with [LB.current_gauze.name]\s.")] <a href='?src=[REF(src)];remove_covering=[TRUE];bandage=[TRUE];limb=[REF(LB)]' class='notice'>(Remove?)</a>")
+					to_chat(src, "\t [span_notice("It is covered with [LB.current_gauze.name]\s.")] <a href='byond://?src=[REF(src)];remove_covering=[TRUE];bandage=[TRUE];limb=[REF(LB)]' class='notice'>(Remove?)</a>")
 				if(LB.current_suture)
-					to_chat(src, "\t [span_notice("It is stitched with [LB.current_suture.name]\s.")] <a href='?src=[REF(src)];remove_covering=[TRUE];suture=[TRUE];limb=[REF(LB)]' class='notice'>(Remove?)</a>")
+					to_chat(src, "\t [span_notice("It is stitched with [LB.current_suture.name]\s.")] <a href='byond://?src=[REF(src)];remove_covering=[TRUE];suture=[TRUE];limb=[REF(LB)]' class='notice'>(Remove?)</a>")
 
 			for(var/t in missing)
 				to_send += span_boldannounce("Your [parse_zone(t)] is missing!")
@@ -881,7 +881,7 @@
 				message_bandage += span_warning(" covering a bleeding wound! ")
 			else
 				message_bandage += "! "
-			message_bandage += "<a href='?src=[REF(src)];remove_covering=[TRUE];bandage=[TRUE];limb=[REF(LB)]' class='notice'>(Remove?)</a>"
+			message_bandage += "<a href='byond://?src=[REF(src)];remove_covering=[TRUE];bandage=[TRUE];limb=[REF(LB)]' class='notice'>(Remove?)</a>"
 			to_chat(src, "\t[span_notice(message_bandage)]")
 
 		if(LB.current_suture)
@@ -903,14 +903,14 @@
 				message_suture += span_warning(" closing a bleeding wound! ")
 			else
 				message_suture += "! "
-			message_suture += "<a href='?src=[REF(src)];remove_covering=[TRUE];suture=[TRUE];limb=[REF(LB)]g' class='notice'>(Remove?)</a>"
+			message_suture += "<a href='byond://?src=[REF(src)];remove_covering=[TRUE];suture=[TRUE];limb=[REF(LB)]g' class='notice'>(Remove?)</a>"
 			to_chat(src, "\t[span_notice(message_suture)]")
 
 		for(var/obj/item/I in LB.embedded_objects)
 			if(I.isEmbedHarmless())
-				to_chat(src, "\t <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] stuck to your [LB.name]!</a>")
+				to_chat(src, "\t <a href='byond://?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] stuck to your [LB.name]!</a>")
 			else
-				to_chat(src, "\t <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] embedded in your [LB.name]!</a>")
+				to_chat(src, "\t <a href='byond://?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] embedded in your [LB.name]!</a>")
 
 /mob/living/carbon/human/examine_more(mob/user)
 	. = ..()
@@ -1006,7 +1006,7 @@
 				message_bandage += span_warning(" covering a bleeding wound! ")
 			else
 				message_bandage += "! "
-			message_bandage += "<a href='?src=[REF(src)];remove_covering=[TRUE];bandage=[TRUE];limb=[REF(LB)];other_doer=[REF(user)]' class='notice'>(Remove?)</a>"
+			message_bandage += "<a href='byond://?src=[REF(src)];remove_covering=[TRUE];bandage=[TRUE];limb=[REF(LB)];other_doer=[REF(user)]' class='notice'>(Remove?)</a>"
 			. += "\t[span_notice(message_bandage)]"
 
 		if(LB.current_suture)
@@ -1028,7 +1028,7 @@
 				message_suture += span_warning(" closing a bleeding wound! ")
 			else
 				message_suture += "! "
-			message_suture += "<a href='?src=[REF(src)];remove_covering=[TRUE];suture=[TRUE];limb=[REF(LB)];other_doer=[REF(user)]' class='notice'>(Remove?)</a>"
+			message_suture += "<a href='byond://?src=[REF(src)];remove_covering=[TRUE];suture=[TRUE];limb=[REF(LB)];other_doer=[REF(user)]' class='notice'>(Remove?)</a>"
 			. += "\t[span_notice(message_suture)]"
 
 /mob/living/carbon/human/damage_clothes(damage_amount, damage_type = BRUTE, damage_flag = 0, def_zone)

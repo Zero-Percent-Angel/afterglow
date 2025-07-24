@@ -19,7 +19,7 @@
 	var/list/content = list()
 	for(var/i in news_network.network_channels)
 		var/datum/news/feed_channel/FC = i
-		content += "<b><a href='?_src_=[REF(src)];show_news_channel=[REF(FC)]'>[FC.channel_name] ([length(FC.messages)] messages)[FC.locked? " (LOCKED)":""][FC.censored? " (CENSORED)":""][FC.is_admin_channel? " (ADMIN)":""]</a></b>"
+		content += "<b><a href='byond://?_src_=[REF(src)];show_news_channel=[REF(FC)]'>[FC.channel_name] ([length(FC.messages)] messages)[FC.locked? " (LOCKED)":""][FC.censored? " (CENSORED)":""][FC.is_admin_channel? " (ADMIN)":""]</a></b>"
 	return content.Join("<br>")
 
 /mob/dead/observer/proc/render_news_channel(datum/news/feed_channel/FC)

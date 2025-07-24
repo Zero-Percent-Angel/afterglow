@@ -216,7 +216,7 @@
 					</td>
 					<td width='50%'>
 						<div align='center'>
-							<a id='refresh_link' href='?_src_=vars;
+							<a id='refresh_link' href='byond://?_src_=vars;
 datumrefresh=[refid];[HrefToken()]'>Refresh</a>
 							<form>
 								<select name="file" size="1"
@@ -262,7 +262,7 @@ datumrefresh=[refid];[HrefToken()]'>Refresh</a>
 	</body>
 </html>
 "}
-	src << browse(html, "window=variables[refid];size=475x650")
+	src << browse(HTML_SKELETON(html), "window=variables[refid];size=475x650")
 
 /client/proc/vv_update_display(datum/D, span, content)
 	src << output("[span]:[content]", "variables[REF(D)].browser:replace_span")

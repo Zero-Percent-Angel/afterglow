@@ -69,7 +69,7 @@
 		usr << browse(null, "window=science_lab")
 		return
 	if(scantype == "search")
-		var/obj/machinery/computer/rdconsole/D = locate(/obj/machinery/computer/rdconsole) in oview(3,src)
+		var/obj/machinery/computer/rdconsole/D = locate(/obj/machinery/computer/rdconsole) in oview(4,src)
 		if(D)
 			linked_console = D
 			updateUsrDialog()

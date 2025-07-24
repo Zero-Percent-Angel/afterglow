@@ -152,11 +152,11 @@
 
 /datum/admins/proc/stickyban_gethtml(ckey, ban)
 	. = {"
-		<a href='?_src_=holder;[HrefToken()];stickyban=remove&ckey=[ckey]'>\[-\]</a>
-		<a href='?_src_=holder;[HrefToken()];stickyban=revert&ckey=[ckey]'>\[revert\]</a>
+		<a href='byond://?_src_=holder;[HrefToken()];stickyban=remove&ckey=[ckey]'>\[-\]</a>
+		<a href='byond://?_src_=holder;[HrefToken()];stickyban=revert&ckey=[ckey]'>\[revert\]</a>
 		<b>[ckey]</b>
 		<br />"
-		[ban["message"]] <b><a href='?_src_=holder;[HrefToken()];stickyban=edit&ckey=[ckey]'>\[Edit\]</a></b><br />
+		[ban["message"]] <b><a href='byond://?_src_=holder;[HrefToken()];stickyban=edit&ckey=[ckey]'>\[Edit\]</a></b><br />
 	"}
 	if (ban["admin"])
 		. += "[ban["admin"]]<br />"
@@ -166,7 +166,7 @@
 	for (var/key in ban["keys"])
 		if (ckey(key) == ckey)
 			continue
-		. += "<li><a href='?_src_=holder;[HrefToken()];stickyban=remove_alt&ckey=[ckey]&alt=[ckey(key)]'>\[-\]</a>[key]</li>"
+		. += "<li><a href='byond://?_src_=holder;[HrefToken()];stickyban=remove_alt&ckey=[ckey]&alt=[ckey(key)]'>\[-\]</a>[key]</li>"
 	. += "</ol>\n"
 
 /datum/admins/proc/stickyban_show()
@@ -185,11 +185,11 @@
 		<title>Sticky Bans</title>
 	</head>
 	<body>
-		<h2>All Sticky Bans:</h2> <a href='?_src_=holder;[HrefToken()];stickyban=add'>\[+\]</a><br>
+		<h2>All Sticky Bans:</h2> <a href='byond://?_src_=holder;[HrefToken()];stickyban=add'>\[+\]</a><br>
 		[banhtml]
 	</body>
 	"}
-	usr << browse(html,"window=stickybans;size=700x400")
+	usr << browse(HTML_SKELETON(html),"window=stickybans;size=700x400")
 
 /proc/get_stickyban_from_ckey(ckey)
 	if (!ckey)

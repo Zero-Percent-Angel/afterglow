@@ -92,7 +92,7 @@
 				entry += " - <b><font color='red'>Antagonist</font></b>"
 
 	if(_adminStatus)
-		entry += " (<A HREF='?_src_=holder;[HrefToken()];adminmoreinfo=\ref[C.mob]'>?</A>)"
+		entry += " (<A href='byond://?_src_=holder;[HrefToken()];adminmoreinfo=\ref[C.mob]'>?</A>)"
 	return entry
 
 

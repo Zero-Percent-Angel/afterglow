@@ -214,8 +214,13 @@
 	for (var/obj/machinery/door/password/pass_door in orange(10, src))
 		if (pass_door.door_id == door_id)
 			our_door = pass_door
-	doc_title_2 = "Password updated"
-	doc_content_2 = "Hi " + pick(GLOB.first_names_male + GLOB.first_names_female) + ", \n" + "Just wanted to give you a heads up about the password change on the door controller. \n New password is: " + our_door.password + " \n remember to delete this when you have it memorized. \n " + pick(GLOB.first_names_male + GLOB.first_names_female)
+	if (our_door != null)
+		doc_title_2 = "Password updated"
+		doc_content_2 = "Hi " + pick(GLOB.first_names_male + GLOB.first_names_female) + ", \n" + "Just wanted to give you a heads up about the password change on the door controller. \n New password is: " + our_door.password + " \n remember to delete this when you have it memorized. \n " + pick(GLOB.first_names_male + GLOB.first_names_female)
+	else
+		doc_title_2 = "Corrupt File"
+		doc_content_2 = "Data Corrupt Contact System Admin."
+
 
 /obj/machinery/computer/terminal/stored_password/enclave/Initialize()
 	var/the_password = random_string(8, GLOB.alphabet)

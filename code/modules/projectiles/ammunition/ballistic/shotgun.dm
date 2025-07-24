@@ -152,7 +152,7 @@ obj/item/ammo_casing/shotgun/executioner
 	wound_bonus = -100
 	bare_wound_bonus = -100
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-	
+
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET * 0.25
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
 
@@ -240,7 +240,7 @@ obj/item/ammo_casing/shotgun/executioner
 	icon_state = "magshell"
 	projectile_type = /obj/item/projectile/bullet/pellet/magnum_buckshot
 	pellets = 7
-	variance = 15
+	variance = SHOTGUN_SPREAD_BASE
 	fire_power = CASING_POWER_SHOTGUN * CASING_POWER_MOD_MATCH
 
 /obj/item/ammo_casing/shotgun/trainshot
@@ -249,7 +249,7 @@ obj/item/ammo_casing/shotgun/executioner
 	icon_state = "magshell"
 	projectile_type = /obj/item/projectile/bullet/pellet/trainshot
 	pellets = 3
-	variance = 15
+	variance = SHOTGUN_SPREAD_BASE
 	fire_power = CASING_POWER_SHOTGUN * CASING_POWER_MOD_MATCH
 
 // BETA STUFF // Obsolete

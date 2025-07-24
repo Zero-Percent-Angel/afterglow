@@ -146,14 +146,14 @@ GLOBAL_LIST_EMPTY(allConsoles)
 				dat += "<tr>"
 				dat += "<td width='55%'>[dpt]</td>"
 				dat += "<td width='45%'>"
-				dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=1'>Normal</a>"
-				dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=2'>High</a>"
+				dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=1'>Normal</a>"
+				dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=2'>High</a>"
 				if(hackState)
-					dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=3'>EXTREME</a>"
+					dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=3'>EXTREME</a>"
 				dat += "</td>"
 				dat += "</tr>"
 			dat += "</table>"
-			dat += "<br><A href='?src=[REF(src)];setScreen=0'><< Back</A><br>"
+			dat += "<br><A href='byond://?src=[REF(src)];setScreen=0'><< Back</A><br>"
 
 		if(2)	//req. supplies
 			dat += "Which department do you need supplies from?<br><br>"
@@ -165,14 +165,14 @@ GLOBAL_LIST_EMPTY(allConsoles)
 				dat += "<tr>"
 				dat += "<td width='55%'>[dpt]</td>"
 				dat += "<td width='45%'>"
-				dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=1'>Normal</a>"
-				dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=2'>High</a>"
+				dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=1'>Normal</a>"
+				dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=2'>High</a>"
 				if(hackState)
-					dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=3'>EXTREME</a>"
+					dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=3'>EXTREME</a>"
 				dat += "</td>"
 				dat += "</tr>"
 			dat += "</table>"
-			dat += "<br><A href='?src=[REF(src)];setScreen=0'><< Back</A><br>"
+			dat += "<br><A href='byond://?src=[REF(src)];setScreen=0'><< Back</A><br>"
 
 		if(3)	//relay information
 			dat += "Which department would you like to send information to?<br><br>"
@@ -183,22 +183,22 @@ GLOBAL_LIST_EMPTY(allConsoles)
 				dat += "<tr>"
 				dat += "<td width='55%'>[dpt]</td>"
 				dat += "<td width='45%'>"
-				dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=1'>Normal</a>"
-				dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=2'>High</a>"
+				dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=1'>Normal</a>"
+				dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=2'>High</a>"
 				if(hackState)
-					dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=3'>EXTREME</a>"
+					dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=3'>EXTREME</a>"
 				dat += "</td>"
 				dat += "</tr>"
 			dat += "</table>"
-			dat += "<br><a href='?src=[REF(src)];setScreen=0'><< Back</a><br>"
+			dat += "<br><a href='byond://?src=[REF(src)];setScreen=0'><< Back</a><br>"
 
 		if(6)	//sent successfully
 			dat += "<span class='good'>Message sent.</span><br><br>"
-			dat += "<a href='?src=[REF(src)];setScreen=0'>Continue</a><br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=0'>Continue</a><br>"
 
 		if(7)	//unsuccessful; not sent
 			dat += "<span class='bad'>An error occurred.</span><br><br>"
-			dat += "<a href='?src=[REF(src)];setScreen=0'>Continue</a><br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=0'>Continue</a><br>"
 
 		if(8)	//view messages
 			for(var/obj/machinery/requests_console/Console in GLOB.allConsoles)
@@ -212,7 +212,7 @@ GLOBAL_LIST_EMPTY(allConsoles)
 			for(var/msg in messages) // This puts more recent messages at the *top*, where they belong.
 				messageComposite = "<div class='block'>[msg]</div>" + messageComposite
 			dat += messageComposite
-			dat += "<br><a href='?src=[REF(src)];setScreen=0'><< Back to Main Menu</a><br>"
+			dat += "<br><a href='byond://?src=[REF(src)];setScreen=0'><< Back to Main Menu</a><br>"
 
 		if(9)	//authentication before sending
 			dat += "<b>Message Authentication</b> <br><br>"
@@ -222,8 +222,8 @@ GLOBAL_LIST_EMPTY(allConsoles)
 			dat += "<b>Validated by:</b> [msgVerified ? "<span class='good'><b>[msgVerified]</b></span>" : "<i>Not Validated</i>"] <br>"
 			dat += "<b>Stamped by:</b> [msgStamped ? span_boldnotice("[msgStamped]") : "<i>Not Stamped</i>"] <br><br>"
 
-			dat += "<a href='?src=[REF(src)];department=[dpt]'>Send Message</a> <br><br>"
-			dat += "<a href='?src=[REF(src)];setScreen=0'><< Discard Message</a> <br>"
+			dat += "<a href='byond://?src=[REF(src)];department=[dpt]'>Send Message</a> <br><br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=0'><< Discard Message</a> <br>"
 
 		if(10)	//send announcement
 			dat += "<h3>Station-wide Announcement</h3>"
@@ -232,12 +232,12 @@ GLOBAL_LIST_EMPTY(allConsoles)
 			else
 				dat += "<div class='notice'>Swipe your card to authenticate yourself</div> <br>"
 			dat += "<b>Message: </b>[message ? message : "<i>No Message</i>"] <br>"
-			dat += "<a href='?src=[REF(src)];writeAnnouncement=1'>[message ? "Edit" : "Write"] Message</a> <br><br>"
+			dat += "<a href='byond://?src=[REF(src)];writeAnnouncement=1'>[message ? "Edit" : "Write"] Message</a> <br><br>"
 			if((announceAuth || IsAdminGhost(user)) && message)
-				dat += "<a href='?src=[REF(src)];sendAnnouncement=1'>Announce Message</a> <br>"
+				dat += "<a href='byond://?src=[REF(src)];sendAnnouncement=1'>Announce Message</a> <br>"
 			else
 				dat += "<span class='linkOff'>Announce Message</span> <br>"
-			dat += "<br><a href='?src=[REF(src)];setScreen=0'><< Back</a> <br>"
+			dat += "<br><a href='byond://?src=[REF(src)];setScreen=0'><< Back</a> <br>"
 
 		else	//main menu
 			screen = 0
@@ -249,25 +249,25 @@ GLOBAL_LIST_EMPTY(allConsoles)
 			if(newmessagepriority == EXTREME_MESSAGE_PRIORITY)
 				dat += "<div class='notice'>There are new <b>EXTREME PRIORITY</b> messages</div><br>"
 
-			dat += "<a href='?src=[REF(src)];setScreen=8'>View Messages</a> <br><br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=8'>View Messages</a> <br><br>"
 
-			dat += "<a href='?src=[REF(src)];setScreen=1'>Request Assistance</a> <br>"
-			dat += "<a href='?src=[REF(src)];setScreen=2'>Request Supplies</a> <br>"
-			dat += "<a href='?src=[REF(src)];setScreen=3'>Relay Anonymous Information</a> <br><br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=1'>Request Assistance</a> <br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=2'>Request Supplies</a> <br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=3'>Relay Anonymous Information</a> <br><br>"
 
 			if(!emergency)
-				dat += "<a href='?src=[REF(src)];emergency=1'>Emergency: Security</a> <br>"
-				dat += "<a href='?src=[REF(src)];emergency=2'>Emergency: Engineering</a> <br>"
-				dat += "<a href='?src=[REF(src)];emergency=3'>Emergency: Medical</a> <br><br>"
+				dat += "<a href='byond://?src=[REF(src)];emergency=1'>Emergency: Security</a> <br>"
+				dat += "<a href='byond://?src=[REF(src)];emergency=2'>Emergency: Engineering</a> <br>"
+				dat += "<a href='byond://?src=[REF(src)];emergency=3'>Emergency: Medical</a> <br><br>"
 			else
 				dat += "<b><div class='bad'>[emergency] has been dispatched to this location.</div></b> <br><br>"
 
 			if(announcementConsole)
-				dat += "<a href='?src=[REF(src)];setScreen=10'>Send Station-wide Announcement</a> <br><br>"
+				dat += "<a href='byond://?src=[REF(src)];setScreen=10'>Send Station-wide Announcement</a> <br><br>"
 			if(silent)
-				dat += "Speaker <a href='?src=[REF(src)];setSilent=0'>OFF</a>"
+				dat += "Speaker <a href='byond://?src=[REF(src)];setSilent=0'>OFF</a>"
 			else
-				dat += "Speaker <a href='?src=[REF(src)];setSilent=1'>ON</a>"
+				dat += "Speaker <a href='byond://?src=[REF(src)];setSilent=1'>ON</a>"
 
 	var/datum/browser/popup = new(user, "req_console", "[department] Requests Console", 450, 440)
 	popup.set_content(dat)
@@ -468,7 +468,7 @@ GLOBAL_LIST_EMPTY(allConsoles)
 	var/linkedsender
 	if(istype(source, /obj/machinery/requests_console))
 		var/obj/machinery/requests_console/sender = source
-		linkedsender = "<a href='?src=[REF(src)];write=[ckey(sender.department)]'>[sender.department]</a>"
+		linkedsender = "<a href='byond://?src=[REF(src)];write=[ckey(sender.department)]'>[sender.department]</a>"
 	else
 		capitalize(source)
 		linkedsender = source
