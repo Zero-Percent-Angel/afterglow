@@ -39,4 +39,4 @@
 	if(!fexists(F))
 		to_chat(src, span_danger("No [selected] logfile was found."), confidential = TRUE)
 		return
-	src << browse(F,"window=investigate[selected];size=800x300")
+	src << browse(HTML_SKELETON(F),"window=investigate[selected];size=800x300")

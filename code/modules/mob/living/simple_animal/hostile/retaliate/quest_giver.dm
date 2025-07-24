@@ -221,15 +221,15 @@
 		if (possible_quests.len > 0)
 			for (var/datum/quest/qu in possible_quests)
 				if (qu.requires_speech)
-					dat += "<center><a href='?src=[REF(src)];quest=[qu.quest_id]'>[qu.quest_name] - (SPEECH CHECK)</a></center>"
+					dat += "<center><a href='byond://?src=[REF(src)];quest=[qu.quest_id]'>[qu.quest_name] - (SPEECH CHECK)</a></center>"
 				else
-					dat += "<center><a href='?src=[REF(src)];quest=[qu.quest_id]'>[qu.quest_name]</a></center>"
+					dat += "<center><a href='byond://?src=[REF(src)];quest=[qu.quest_id]'>[qu.quest_name]</a></center>"
 	else if (active_quests.Find(WEAKREF(talker)))
 		var/datum/quest/qu = active_quests[WEAKREF(talker)]
 		if (istype(qu, /datum/quest/kill))
-			dat += "<center><a href='?src=[REF(src)];hand=[qu.quest_id]'>I have proof that I killed em with this here in my hand.</a></center>"
+			dat += "<center><a href='byond://?src=[REF(src)];hand=[qu.quest_id]'>I have proof that I killed em with this here in my hand.</a></center>"
 		else
-			dat += "<center><a href='?src=[REF(src)];hand=[qu.quest_id]'>I have that item here in my hand.</a></center>"
+			dat += "<center><a href='byond://?src=[REF(src)];hand=[qu.quest_id]'>I have that item here in my hand.</a></center>"
 	return dat
 
 /mob/living/simple_animal/hostile/retaliate/talker/quest_giver/Topic(href, href_list)

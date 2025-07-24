@@ -30,7 +30,7 @@
 	display_name = "Advanced Plasma Research"
 	description = "Research on how to fully exploit the power of plasma."
 	prereq_ids = list("basic_plasma")
-	design_ids = list("mech_plasma_cutter")
+	design_ids = list("mech_plasma_cutter", "plasmacutter")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000)
 	skill_level_needed = REGULAR_CHECK
 

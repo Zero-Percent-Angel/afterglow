@@ -497,7 +497,7 @@
 		if(bancount > bansperpage)
 			output += "<br><b>Page: </b>"
 			while(bancount > 0)
-				output+= "|<a href='?_src_=holder;[HrefToken()];dbsearchckey=[playerckey];dbsearchadmin=[adminckey];dbsearchpage=[pagecount]'>[pagecount == page ? "<b>\[[pagecount]\]</b>" : "\[[pagecount]\]"]</a>"
+				output+= "|<a href='byond://?_src_=holder;[HrefToken()];dbsearchckey=[playerckey];dbsearchadmin=[adminckey];dbsearchpage=[pagecount]'>[pagecount == page ? "<b>\[[pagecount]\]</b>" : "\[[pagecount]\]"]</a>"
 				bancount -= bansperpage
 				pagecount++
 			output += "|"
@@ -619,4 +619,4 @@
 		qdel(query_search_bans)
 		output += "</table></div>"
 
-	usr << browse(output,"window=lookupbans;size=900x500")
+	usr << browse(HTML_SKELETON(output),"window=lookupbans;size=900x500")

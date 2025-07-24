@@ -39,19 +39,19 @@
 	<HR>"}
 	for(var/i in 1 to held_items.len)
 		var/obj/item/I = get_item_for_held_index(i)
-		dat += "<BR><B>[get_held_index_name(i)]:</B><A href='?src=[REF(src)];item=[SLOT_HANDS];hand_index=[i]'>[(I && !(I.item_flags & ABSTRACT)) ? I : "<font color=grey>Empty</font>"]</a>"
-	dat += "<BR><A href='?src=[REF(src)];pouches=1'>Empty Pouches</A>"
+		dat += "<BR><B>[get_held_index_name(i)]:</B><A href='byond://?src=[REF(src)];item=[SLOT_HANDS];hand_index=[i]'>[(I && !(I.item_flags & ABSTRACT)) ? I : "<font color=grey>Empty</font>"]</a>"
+	dat += "<BR><A href='byond://?src=[REF(src)];pouches=1'>Empty Pouches</A>"
 
 	if(handcuffed)
-		dat += "<BR><A href='?src=[REF(src)];item=[SLOT_HANDCUFFED]'>Handcuffed</A>"
+		dat += "<BR><A href='byond://?src=[REF(src)];item=[SLOT_HANDCUFFED]'>Handcuffed</A>"
 	if(legcuffed)
-		dat += "<BR><A href='?src=[REF(src)];item=[SLOT_LEGCUFFED]'>Legcuffed</A>"
+		dat += "<BR><A href='byond://?src=[REF(src)];item=[SLOT_LEGCUFFED]'>Legcuffed</A>"
 
 	dat += {"
 	<BR>
-	<BR><A href='?src=[REF(user)];mach_close=mob[REF(src)]'>Close</A>
+	<BR><A href='byond://?src=[REF(user)];mach_close=mob[REF(src)]'>Close</A>
 	"}
-	user << browse(dat.Join(), "window=mob[REF(src)];size=325x500")
+	user << browse(HTML_SKELETON(dat.Join()), "window=mob[REF(src)];size=325x500")
 	onclose(user, "mob[REF(src)]")
 
 

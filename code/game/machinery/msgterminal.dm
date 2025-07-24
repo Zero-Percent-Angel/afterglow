@@ -101,10 +101,10 @@ GLOBAL_LIST_EMPTY(allTerminals)
 				dat += "<tr>"
 				dat += "<td width='55%'>[dpt]</td>"
 				dat += "<td width='45%'>"
-				dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=1'>Normal</a>"
-				dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=2'>High</a>"
+				dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=1'>Normal</a>"
+				dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=2'>High</a>"
 				if(hackState)
-					dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=3'>EXTREME</a>"
+					dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=3'>EXTREME</a>"
 				dat += "</td>"
 				dat += "</tr>"
 			dat += "<tr>"
@@ -117,12 +117,12 @@ GLOBAL_LIST_EMPTY(allTerminals)
 				dat += "<br>Arizona Command Camp Alexander"
 			dat += "</td>"
 			dat += "<td width='45%'>"
-			dat += "<br><A href='?src=[REF(src)];setScreen=11'>Send Message to Command</A><br>"
+			dat += "<br><A href='byond://?src=[REF(src)];setScreen=11'>Send Message to Command</A><br>"
 			dat += "</td>"
 			dat += "</tr>"
 
 			dat += "</table>"
-			dat += "<br><A href='?src=[REF(src)];setScreen=0'><< Back</A><br>"
+			dat += "<br><A href='byond://?src=[REF(src)];setScreen=0'><< Back</A><br>"
 			dat += "<br><div class='panel redborder'><span class='redtext'>(( NOTE: Do not misuse this terminal to send harassing, joke or meme messages to other factions or groups in the terminal list. ))</span></div><br>"
 			
 
@@ -135,23 +135,23 @@ GLOBAL_LIST_EMPTY(allTerminals)
 				dat += "<tr>"
 				dat += "<td width='55%'>[dpt]</td>"
 				dat += "<td width='45%'>"
-				dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=1'>Normal</a>"
-				dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=2'>High</a>"
+				dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=1'>Normal</a>"
+				dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=2'>High</a>"
 				if(hackState)
-					dat += "<a href='?src=[REF(src)];write=[ckey(dpt)];priority=3'>EXTREME</a>"
+					dat += "<a href='byond://?src=[REF(src)];write=[ckey(dpt)];priority=3'>EXTREME</a>"
 				dat += "</td>"
 				dat += "</tr>"
 			dat += "</table>"
-			dat += "<br><a href='?src=[REF(src)];setScreen=0'><< Back</a><br>"
+			dat += "<br><a href='byond://?src=[REF(src)];setScreen=0'><< Back</a><br>"
 
 		if(6)	//sent successfully
 			playsound(src, 'sound/f13machines/terminalmenuenter.ogg', 20, 1)
 			dat += "<span class='good'>Message delivered.</span><br><br>"
-			dat += "<a href='?src=[REF(src)];setScreen=0'>Continue</a><br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=0'>Continue</a><br>"
 
 		if(7)	//unsuccessful; not sent
 			dat += "<span class='bad'>An error occurred.</span><br><br>"
-			dat += "<a href='?src=[REF(src)];setScreen=0'>Continue</a><br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=0'>Continue</a><br>"
 
 		if(8)	//view messages
 			for(var/obj/machinery/msgterminal/Console in GLOB.allTerminals)
@@ -165,14 +165,14 @@ GLOBAL_LIST_EMPTY(allTerminals)
 			for(var/msg in messages) // This puts more recent messages at the *top*, where they belong.
 				messageComposite = "<div class='block'>[msg]</div>" + messageComposite
 			dat += messageComposite
-			dat += "<br><a href='?src=[REF(src)];setScreen=0'><< Back to Main Menu</a><br>"
+			dat += "<br><a href='byond://?src=[REF(src)];setScreen=0'><< Back to Main Menu</a><br>"
 
 		if(9)	//authentication before sending
 			dat += "<b>Message Confirmation</b> <br><br>"
 			dat += "<b>Message for [uppertext(dpt)]:</b><br><div class='panel redborder'> <font size=1>[message]</font> </div><br><br>"
 			dat += "<div class='panel redborder'>Are you sure you want to send this message?</div> <br>"
-			dat += "<a href='?src=[REF(src)];terminal=[dpt]'>Send Message</a> <br><br>"
-			dat += "<a href='?src=[REF(src)];setScreen=0'><< Discard Message</a> <br>"
+			dat += "<a href='byond://?src=[REF(src)];terminal=[dpt]'>Send Message</a> <br><br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=0'><< Discard Message</a> <br>"
 
 		if(10) //unused for now but may be useful later
 			dat += "<b>Message to Command</b> <br><br>"
@@ -182,7 +182,7 @@ GLOBAL_LIST_EMPTY(allTerminals)
 				dat += "<b>Cohort War Council of Southwestern Arizona</b> <br><br>"
 			if(src.terminalid == "brotherhood")
 				dat += "<b>Circle of Steel</b> <br><br>"
-			dat += "<a href='?src=[REF(src)];setScreen=11'>Send Message to Command</a> <br><br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=11'>Send Message to Command</a> <br><br>"
 		if(11)
 			var/message = input(usr,"Send a message to command staff. Ensure it makes sense IC.","") as message|null
 			if(message)
@@ -197,7 +197,7 @@ GLOBAL_LIST_EMPTY(allTerminals)
 				dat += "<span class='bad'>Message to Command aborted.</span><br><br>"
 				updateUsrDialog()
 				playsound(src, 'sound/f13machines/terminalmenucancel.ogg', 20, 1)
-			dat += "<a href='?src=[REF(src)];setScreen=0'>Continue</a><br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=0'>Continue</a><br>"
 		else	//main menu
 			screen = 0
 			if(newmessagepriority == NORMAL_MESSAGE_PRIORITY)
@@ -207,13 +207,13 @@ GLOBAL_LIST_EMPTY(allTerminals)
 			if(newmessagepriority == EXTREME_MESSAGE_PRIORITY)
 				dat += "<div class='notice'>There are new <b>EXTREME PRIORITY</b> messages</div><br>"
 
-			dat += "<a href='?src=[REF(src)];setScreen=8'>View Messages</a> <br><br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=8'>View Messages</a> <br><br>"
 
-			dat += "<a href='?src=[REF(src)];setScreen=1'>Send Message</a> <br>"
+			dat += "<a href='byond://?src=[REF(src)];setScreen=1'>Send Message</a> <br>"
 			if(silent)
-				dat += "(( Sound effects <a href='?src=[REF(src)];setSilent=0'>OFF</a> ))"
+				dat += "(( Sound effects <a href='byond://?src=[REF(src)];setSilent=0'>OFF</a> ))"
 			else
-				dat += "(( Sound effects <a href='?src=[REF(src)];setSilent=1'>ON</a> ))"
+				dat += "(( Sound effects <a href='byond://?src=[REF(src)];setSilent=1'>ON</a> ))"
 
 	var/datum/browser/popup = new(user, "req_console", "[terminal]")
 	popup.set_content(dat)
@@ -333,7 +333,7 @@ GLOBAL_LIST_EMPTY(allTerminals)
 	var/linkedsender
 	if(istype(source, /obj/machinery/msgterminal))
 		var/obj/machinery/msgterminal/sender = source
-		linkedsender = "<a href='?src=[REF(src)];write=[ckey(sender.terminal)]'>[sender.terminal]</a>"
+		linkedsender = "<a href='byond://?src=[REF(src)];write=[ckey(sender.terminal)]'>[sender.terminal]</a>"
 	else
 		capitalize(source)
 		linkedsender = source

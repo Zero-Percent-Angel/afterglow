@@ -237,9 +237,15 @@
 <div id="under_menu"></div>
 <div id="statcontent"></div>
 <script>
+
 // Polyfills and compatibility ------------------------------------------------
 var decoder = decodeURIComponent || unescape;
 var addEventListenerKey = (document.addEventListener ? 'addEventListener' : 'attachEvent'); // IE8 handling for Wine users
+
+window.addEventListener("readystatechange", (event) => {
+	NotifyByondOnload();
+});
+
 var textContentKey = (typeof document.body.textContent != 'undefined') ? 'textContent' : 'innerText';
 if(!Array.prototype.includes) {
 	Array.prototype.includes = function(thing) {
@@ -1239,12 +1245,8 @@ if(!current_tab) {
 	tab_change("Status");
 }
 
-window.onload = function() {
-	NotifyByondOnload();
-};
-
 function NotifyByondOnload() {
-	window.location.href = "byond://winset?command=Panel-Ready";
+	send_byond_command("Panel-Ready")
 }
 
 function create_debug(){

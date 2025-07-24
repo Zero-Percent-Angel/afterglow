@@ -234,7 +234,7 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 	body += "<html><head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><title>Playtime for [key]</title></head><BODY><BR>Playtime:"
 	body += get_exp_report()
 	body += "</BODY></HTML>"
-	usr << browse(body.Join(), "window=playerplaytime[ckey];size=550x615")
+	usr << browse(HTML_SKELETON(body.Join()), "window=playerplaytime[ckey];size=550x615")
 
 /client/proc/ignore_key(client)
 	var/client/C = client
@@ -324,9 +324,8 @@ GLOBAL_VAR_INIT(normal_ooc_colour, "#002eb8")
 
 /client/verb/fix_stat_panel()
 	set name = "Fix Stat Panel"
-	set hidden = TRUE
-
 	init_verbs()
+	statbrowser_ready = TRUE
 
 /client/proc/GetOOCName()
 	if(iscarbon(mob)) // If mob is null I'll be very surprised, worse case, add a sanity check if this becomes an issue in the future.

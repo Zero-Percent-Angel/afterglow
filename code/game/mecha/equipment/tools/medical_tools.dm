@@ -103,7 +103,7 @@
 	if(output)
 		var/temp = ""
 		if(patient)
-			temp = "<br />\[Occupant: [patient] ([patient.stat > 1 ? "*DECEASED*" : "Health: [patient.health]%"])\]<br /><a href='?src=[REF(src)];view_stats=1'>View stats</a>|<a href='?src=[REF(src)];eject=1'>Eject</a>"
+			temp = "<br />\[Occupant: [patient] ([patient.stat > 1 ? "*DECEASED*" : "Health: [patient.health]%"])\]<br /><a href='byond://?src=[REF(src)];view_stats=1'>View stats</a>|<a href='byond://?src=[REF(src)];eject=1'>Eject</a>"
 		return "[output] [temp]"
 	return
 
@@ -112,7 +112,7 @@
 	if(href_list["eject"])
 		go_out()
 	if(href_list["view_stats"])
-		chassis.occupant << browse(get_patient_stats(),"window=msleeper")
+		chassis.occupant << browse(HTML_SKELETON(get_patient_stats()),"window=msleeper")
 		onclose(chassis.occupant, "msleeper")
 		return
 	if(href_list["inject"])
@@ -288,7 +288,7 @@
 /obj/item/mecha_parts/mecha_equipment/medical/syringe_gun/get_equip_info()
 	var/output = ..()
 	if(output)
-		return "[output] \[<a href=\"?src=[REF(src)];toggle_mode=1\">[mode? "Analyze" : "Launch"]</a>\]<br />\[Syringes: [syringes.len]/[max_syringes] | Reagents: [reagents.total_volume]/[reagents.maximum_volume]\]<br /><a href='?src=[REF(src)];show_reagents=1'>Reagents list</a>"
+		return "[output] \[<a href=\"?src=[REF(src)];toggle_mode=1\">[mode? "Analyze" : "Launch"]</a>\]<br />\[Syringes: [syringes.len]/[max_syringes] | Reagents: [reagents.total_volume]/[reagents.maximum_volume]\]<br /><a href='byond://?src=[REF(src)];show_reagents=1'>Reagents list</a>"
 	return
 
 /obj/item/mecha_parts/mecha_equipment/medical/syringe_gun/action(atom/movable/target)
@@ -382,7 +382,7 @@
 			mecha_log_message("Reagent processing started.")
 		return
 	if (href_list["show_reagents"])
-		chassis.occupant << browse(get_reagents_page(),"window=msyringegun")
+		chassis.occupant << browse(HTML_SKELETON(get_reagents_page()),"window=msyringegun")
 	if (href_list["purge_reagent"])
 		var/reagent = href_list["purge_reagent"]
 		if(reagent)

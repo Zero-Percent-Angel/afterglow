@@ -670,7 +670,7 @@
 
 	dellog += "</ol>"
 
-	usr << browse(dellog.Join(), "window=dellog")
+	usr << browse(HTML_SKELETON(dellog.Join()), "window=dellog")
 
 /client/proc/cmd_display_overlay_log()
 	set category = "Debug"
@@ -684,7 +684,7 @@
 	set name = "Display Initialize() Log"
 	set desc = "Displays a list of things that didn't handle Initialize() properly"
 
-	usr << browse(replacetext(SSatoms.InitLog(), "\n", "<br>"), "window=initlog")
+	usr << browse(HTML_SKELETON(replacetext(SSatoms.InitLog(), "\n", "<br>")), "window=initlog")
 
 /client/proc/debug_huds(i as num)
 	set category = "Debug"

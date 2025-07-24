@@ -10,7 +10,7 @@
 	ckey = user.ckey
 	banked_caps = getMoney(ckey)
 	dat +="<div class='statusDisplay'>"
-	dat += "<b>Bottle caps stored:</b> [stored_caps]. <A href='?src=[REF(src)];choice=eject'>Eject caps</A><br>"
+	dat += "<b>Bottle caps stored:</b> [stored_caps]. <A href='byond://?src=[REF(src)];choice=eject'>Eject caps</A><br>"
 	dat += "</div>"
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"
@@ -18,7 +18,7 @@
 	dat += "</div>"
 	dat += "<br>"
 	dat +="<div class='statusDisplay'>"
-	dat += "<b>Redeem caps:</b> <A href='?src=[REF(src)];choice=redeem'>Redeem caps</A><br>"
+	dat += "<b>Redeem caps:</b> <A href='byond://?src=[REF(src)];choice=redeem'>Redeem caps</A><br>"
 	dat += "</div>"
 	dat += "<br>"
 

@@ -114,7 +114,7 @@
 		SSassets.transport.send_assets(user, stylesheets)
 	if(scripts.len)
 		SSassets.transport.send_assets(user, scripts)
-	user << browse(get_content(), "window=[window_id];[window_size][window_options]")
+	user << browse(HTML_SKELETON(get_content()), "window=[window_id];[window_size][window_options]")
 	if(use_onclose)
 		setup_onclose()
 
@@ -350,11 +350,11 @@
 		var/setting = settings["mainsettings"][name]
 		if (setting["type"] == "datum")
 			if (setting["subtypesonly"])
-				dat += "<b>[setting["desc"]]:</b> <a href='?src=[REF(src)];setting=[name];task=input;subtypesonly=1;type=datum;path=[setting["path"]]'>[setting["value"]]</a><BR>"
+				dat += "<b>[setting["desc"]]:</b> <a href='byond://?src=[REF(src)];setting=[name];task=input;subtypesonly=1;type=datum;path=[setting["path"]]'>[setting["value"]]</a><BR>"
 			else
-				dat += "<b>[setting["desc"]]:</b> <a href='?src=[REF(src)];setting=[name];task=input;type=datum;path=[setting["path"]]'>[setting["value"]]</a><BR>"
+				dat += "<b>[setting["desc"]]:</b> <a href='byond://?src=[REF(src)];setting=[name];task=input;type=datum;path=[setting["path"]]'>[setting["value"]]</a><BR>"
 		else
-			dat += "<b>[setting["desc"]]:</b> <a href='?src=[REF(src)];setting=[name];task=input;type=[setting["type"]]'>[setting["value"]]</a><BR>"
+			dat += "<b>[setting["desc"]]:</b> <a href='byond://?src=[REF(src)];setting=[name];task=input;type=[setting["type"]]'>[setting["value"]]</a><BR>"
 
 	if (preview_icon)
 		dat += "<td valign='center'>"
@@ -365,7 +365,7 @@
 
 	dat += "</tr></table>"
 
-	dat += "<hr><center><a href='?src=[REF(src)];button=1'>Ok</a> "
+	dat += "<hr><center><a href='byond://?src=[REF(src)];button=1'>Ok</a> "
 
 	dat += "</center>"
 
@@ -440,7 +440,7 @@
 // e.g. canisters, timers, etc.
 //
 // windowid should be the specified window name
-// e.g. code is	: user << browse(text, "window=fred")
+// e.g. code is	: user << browse(HTML_SKELETON(text), "window=fred")
 // then use 	: onclose(user, "fred")
 //
 // Optionally, specify the "ref" parameter as the controlled atom (usually src)

@@ -52,6 +52,7 @@
 		return
 	strength -= strength / hl3_release_date
 	if(strength <= RAD_BACKGROUND_RADIATION)
+		qdel(src)
 		return PROCESS_KILL
 
 

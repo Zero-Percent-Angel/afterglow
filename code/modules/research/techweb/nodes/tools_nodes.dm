@@ -14,7 +14,7 @@
 	display_name = "Mining Technology"
 	description = "Better than Efficiency V."
 	prereq_ids = list("engineering", "basic_plasma")
-	design_ids = list("drill", "superresonator", "triggermod", "damagemod", "cooldownmod", "rangemod", "ore_redemption", "mining_equipment_vendor", "cargoexpress")//CB Edit Yeet Plasma cutter
+	design_ids = list("drill", "superresonator", "triggermod", "damagemod", "cooldownmod", "rangemod", "ore_redemption", "mining_equipment_vendor", "cargoexpress", "mining_scanner")//CB Edit Yeet Plasma cutter
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 1000)
 	alt_skill = SKILL_REPAIR
 
@@ -23,7 +23,7 @@
 	display_name = "Advanced Mining Technology"
 	description = "Efficiency Level 127"	//dumb mc references
 	prereq_ids = list("basic_mining", "adv_engi", "adv_power", "adv_plasma")
-	design_ids = list("drill_diamond", "mole_miner", "hypermod", "ore_silo", "plasteel_pick", "titanium_pick") //CB Edit Yeet Plasma Cutter
+	design_ids = list("drill_diamond", "mole_miner", "hypermod", "ore_silo", "plasteel_pick", "titanium_pick", "adv_mining_scanner") //CB Edit Yeet Plasma Cutter
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 	alt_skill = SKILL_REPAIR
 	skill_level_needed = REGULAR_CHECK

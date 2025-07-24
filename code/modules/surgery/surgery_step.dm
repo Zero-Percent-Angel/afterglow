@@ -102,7 +102,10 @@
 	return advance
 
 /datum/surgery_step/proc/squirming(mob/living/target)
-	return !(target.IsUnconscious() || target.reagents.get_reagent_amount(/datum/reagent/medicine/morphine)) && target.stat != DEAD
+	return !(target.IsUnconscious() || has_painkillers(target)) && target.stat != DEAD
+
+/datum/surgery_step/proc/has_painkillers(mob/living/target)
+	return target.reagents.get_reagent_amount(/datum/reagent/medicine/morphine) || target.reagents.get_reagent_amount(/datum/reagent/medicine/medx)
 
 /datum/surgery_step/proc/preop(mob/user, mob/living/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	display_results(user, target, span_notice("You begin to perform surgery on [target]..."),

@@ -110,7 +110,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/scatter/tribeam/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/tribeam/hitscan
 	pellets = 3
-	variance = (SHOTGUN_SPREAD_IMPROVISED*4)
+	variance = SHOTGUN_SPREAD_BASE
 	select_name = "tribeam"
 	e_cost = 200 //10 shots
 
@@ -125,14 +125,14 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/scatter/tribeam/laserbuss/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/tribeam/laserbuss/hitscan
 	pellets = 8
-	variance = 50
+	variance = SHOTGUN_SPREAD_IMPROVISED
 	select_name = "tribeam"
 	e_cost = 750 //2 shots
 
 /obj/item/ammo_casing/energy/laser/scatter/tribeam/hitscan/nonlethal
 	projectile_type = /obj/item/projectile/beam/laser/pistol/hitscan/stun
 	pellets = 3
-	variance = 38
+	variance = SHOTGUN_SPREAD_BASE
 	select_name = "tribeam"
 	e_cost = 100 //20 shots
 	harmful = FALSE
@@ -250,7 +250,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/pistol/badlands
 	projectile_type = /obj/item/projectile/beam/laser/pistol/badlands
 	pellets = 2
-	variance = 20
+	variance = SHOTGUN_SPREAD_BASE
 	e_cost = 100 //15 shots
 	fire_sound = 'sound/f13weapons/laser_pistol.ogg'
 
@@ -261,7 +261,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/pistol/badlands/worn
 	projectile_type = /obj/item/projectile/beam/laser/pistol/badlands/worn
 	pellets = 2
-	variance = 20
+	variance = SHOTGUN_SPREAD_BASE
 	e_cost = 150 //10 shots
 	fire_sound = 'sound/f13weapons/laser_pistol.ogg'
 
@@ -272,7 +272,7 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/pistol/freeblade
 	projectile_type = /obj/item/projectile/beam/laser/pistol/freeblade
 	pellets = 3
-	variance = 35
+	variance = SHOTGUN_SPREAD_BASE
 	e_cost = 100 //15 shots
 	fire_sound = 'sound/f13weapons/laser_pistol.ogg'
 

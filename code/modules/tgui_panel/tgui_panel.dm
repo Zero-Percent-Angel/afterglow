@@ -10,7 +10,7 @@
 /datum/tgui_panel
 	var/client/client
 	var/datum/tgui_window/window
-	var/broken = FALSE
+	var/broken = TRUE
 	var/initialized_at
 
 /datum/tgui_panel/New(client/client)
@@ -42,16 +42,15 @@
 	sleep(1)
 	initialized_at = world.time
 	// Perform a clean initialization
-	window.initialize(inline_assets = list(
-		get_asset_datum(/datum/asset/simple/tgui_common),
+	window.initialize(assets = list(
 		get_asset_datum(/datum/asset/simple/tgui_panel),
 	))
-	window.send_asset(get_asset_datum(/datum/asset/simple/namespaced/fontawesome))
-	window.send_asset(get_asset_datum(/datum/asset/simple/namespaced/tgfont))
-	window.send_asset(get_asset_datum(/datum/asset/spritesheet/chat))
+	window.send_asset(get_asset_datum(/datum/asset/simple/namespaced/fontawesome), force)
+	window.send_asset(get_asset_datum(/datum/asset/simple/namespaced/tgfont), force)
+	window.send_asset(get_asset_datum(/datum/asset/spritesheet/chat), force)
 	// Other setup
 	request_telemetry()
-	addtimer(CALLBACK(src, PROC_REF(on_initialize_timed_out)), 15 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(auto_fix_if_not_working)), 5 SECONDS)
 
 /**
  * private
@@ -61,6 +60,16 @@
 /datum/tgui_panel/proc/on_initialize_timed_out()
 	// Currently does nothing but sending a message to old chat.
 	SEND_TEXT(client, "<span class=\"userdanger\">Failed to load fancy chat, click <a href='?src=[REF(src)];reload_tguipanel=1'>HERE</a> to attempt to reload it. OR press the (Fix chat window) button in the lobby window.</span>")
+
+
+/datum/tgui_panel/proc/auto_fix_if_not_working()
+	log_tgui(client, "checking if panel working")
+	if (!is_ready())
+		SEND_TEXT(client, "<span class=\"userdanger\">Failed to load fancy chat, click <a href='?src=[REF(src)];reload_tguipanel=1'>HERE</a> to attempt to reload it. OR press the (Fix chat window) button in the lobby window.</span>")
+		log_tgui(client, "panel was busted.")
+		addtimer(CALLBACK(client, TYPE_PROC_REF(/client, nuke_chat), 0 SECONDS))
+	else
+		log_tgui(client, "panel functional.")
 
 /**
  * private

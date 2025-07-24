@@ -311,8 +311,8 @@ GLOBAL_LIST_EMPTY(PDAs)
 			if (0)
 				dat += "<h2><center>=======PERSONAL INFORMATION PROCESSOR v.1.2=======</center></h2>"
 				dat += "Owner: [owner], [ownjob]<br>"
-				dat += "ID: <a href='?src=[REF(src)];choice=Authenticate'>[id ? "[id.registered_name], [id.assignment]" : "----------"]</a><br>"
-				dat += "<a href='?src=[REF(src)];choice=UpdateInfo'>[id ? "Update Pip-Boy Info" : ""]</a><br><br>"
+				dat += "ID: <a href='byond://?src=[REF(src)];choice=Authenticate'>[id ? "[id.registered_name], [id.assignment]" : "----------"]</a><br>"
+				dat += "<a href='byond://?src=[REF(src)];choice=UpdateInfo'>[id ? "Update Pip-Boy Info" : ""]</a><br><br>"
 
 				dat += "[STATION_TIME_TIMESTAMP("hh:mm:ss", world.time)]<br>" //:[world.time / 100 % 6][world.time / 100 % 10]"
 				dat += "[time2text(world.realtime, "MMM DD")] [GLOB.year_integer]"
@@ -467,19 +467,19 @@ GLOBAL_LIST_EMPTY(PDAs)
 				dat += "Speaker: <a href='byond://?src=[REF(src)];rspktoggle=1'>[radio.listening?"Engaged":"Disengaged"]</a><br>"
 				dat += "Music: <a href='byond://?src=[REF(src)];rmsctoggle=1'>[radio.tuned_in?"Engaged":"Disengaged"]</a><br>"
 				dat += "Frequency:<br>"
-				dat += "<a href='?src=[REF(src)];rfreq=-10'>-</a>"
-				dat += "<a href='?src=[REF(src)];rfreq=-2'>-</a>"
+				dat += "<a href='byond://?src=[REF(src)];rfreq=-10'>-</a>"
+				dat += "<a href='byond://?src=[REF(src)];rfreq=-2'>-</a>"
 				dat += "[format_frequency(radio.frequency)]"
-				dat += "<a href='?src=[REF(src)];rfreq=2'>+</a>"
-				dat += "<a href='?src=[REF(src)];rfreq=10'>+</a>"
-				dat += " | <a href='?src=[REF(src)];rsavefreq=[radio.frequency]'>Save Frequency</a><br><br>"
+				dat += "<a href='byond://?src=[REF(src)];rfreq=2'>+</a>"
+				dat += "<a href='byond://?src=[REF(src)];rfreq=10'>+</a>"
+				dat += " | <a href='byond://?src=[REF(src)];rsavefreq=[radio.frequency]'>Save Frequency</a><br><br>"
 
 				if(saved_frequencies)
 					dat += "<b>Saved Frequencies</b>"
 					dat += "<ul>"
 					for(var/freq in saved_frequencies)
-						dat += "<li><a href='?src=[REF(src)];rloadfreq=[saved_frequencies[freq]]'>[freq] ([format_frequency(saved_frequencies[freq])])</a>"
-						dat += " (<a href='?src=[REF(src)];rdelfreq=[saved_frequencies[freq]]'>Delete</a> | <a href='?src=[REF(src)];rrenfreq=[saved_frequencies[freq]]'>Rename</a>)</li>"
+						dat += "<li><a href='byond://?src=[REF(src)];rloadfreq=[saved_frequencies[freq]]'>[freq] ([format_frequency(saved_frequencies[freq])])</a>"
+						dat += " (<a href='byond://?src=[REF(src)];rdelfreq=[saved_frequencies[freq]]'>Delete</a> | <a href='byond://?src=[REF(src)];rrenfreq=[saved_frequencies[freq]]'>Rename</a>)</li>"
 					dat += "</ul>"
 
 			else//Else it links to the cart menu proc. Although, it really uses menu hub 4--menu 4 doesn't really exist as it simply redirects to hub.
@@ -492,7 +492,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 	if (!underline_flag)
 		dat = replacetext(dat, "text-decoration:underline", "text-decoration:none")
 
-	//user << browse(dat, "window=pda;size=600x500;border=1;can_resize=1;can_minimize=0")
+	//user << browse(HTML_SKELETON(dat), "window=pda;size=600x500;border=1;can_resize=1;can_minimize=0")
 	var/datum/browser/popup = new(user, "pda", "", 600, 500)
 	popup.set_content(dat)
 	popup.open(FALSE)
@@ -961,7 +961,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 		var/hrefstart
 		var/hrefend
 		if (isAI(L))
-			hrefstart = "<a href='?src=[REF(L)];track=[html_encode(signal.data["name"])]'>"
+			hrefstart = "<a href='byond://?src=[REF(L)];track=[html_encode(signal.data["name"])]'>"
 			hrefend = "</a>"
 
 		var/inbound_message = signal.format_message()
@@ -1306,7 +1306,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 		return
 	if(!isnull(aiPDA))
 		var/HTML = "<html><head><meta http-equiv='Content-Type' content='text/html; charset=UTF-8'><title>AI PDA Message Log</title></head><body>[aiPDA.tnote]</body></html>"
-		user << browse(HTML, "window=log;size=400x444;border=1;can_resize=1;can_close=1;can_minimize=0")
+		user << browse(HTML_SKELETON(HTML), "window=log;size=400x444;border=1;can_resize=1;can_close=1;can_minimize=0")
 	else
 		to_chat(user, "You do not have a PDA. You should make an issue report about this.")
 

@@ -31,4 +31,4 @@ but I am not sure you even want non-humans to have it (not even Bay does that), 
 //		if(length(msg) <= 40)
 //			return span_notice("[html_encode(msg)]")
 //		else
-//			return "<span class='notice'>[html_encode(copytext(msg, 1, 37))]... <a href='?src=[REF(src)];flavor_more=1'>More...</span></a>"
+//			return "<span class='notice'>[html_encode(copytext(msg, 1, 37))]... <a href='byond://?src=[REF(src)];flavor_more=1'>More...</span></a>"

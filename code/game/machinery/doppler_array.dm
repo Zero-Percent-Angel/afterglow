@@ -34,9 +34,9 @@ GLOBAL_LIST_EMPTY(doppler_arrays)
 	var/list/dat = list()
 	for(var/i in 1 to LAZYLEN(message_log))
 		dat += "Log recording #[i]: [message_log[i]]<br/><br>"
-	dat += "<A href='?src=[REF(src)];delete_log=1'>Delete logs</A><br>"
+	dat += "<A href='byond://?src=[REF(src)];delete_log=1'>Delete logs</A><br>"
 	dat += "<hr>"
-	dat += "<A href='?src=[REF(src)];refresh=1'>(Refresh)</A><br>"
+	dat += "<A href='byond://?src=[REF(src)];refresh=1'>(Refresh)</A><br>"
 	dat += "</body></html>"
 	var/datum/browser/popup = new(user, "computer", name, 400, 500)
 	popup.set_content(dat.Join(" "))

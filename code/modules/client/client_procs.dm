@@ -382,7 +382,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 			msg += "Your version: [byond_version]<br>"
 			msg += "Required version to remove this message: [cwv] or later<br>"
 			msg += "Visit <a href=\"https://secure.byond.com/download\">BYOND's website</a> to get the latest version of BYOND.<br>"
-			src << browse(msg, "window=warning_popup")
+			src << browse(HTML_SKELETON(msg), "window=warning_popup")
 		else
 			to_chat(src, "<span class='danger'><b>Your version of byond may be getting out of date:</b></span>")
 			var/warn_message = CONFIG_GET(string/client_warn_message)
@@ -477,6 +477,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	view_size.setZoomMode()
 	fit_viewport()
 	Master.UpdateTickRate()
+	fix_stat_panel()
 
 
 /proc/alert_async(mob/target, message)
@@ -1059,7 +1060,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 /client/proc/check_panel_loaded()
 	if(statbrowser_ready)
 		return
-	to_chat(src, span_userdanger("<span class='message linkify'>Statpanel failed to load, click <a href='?src=[REF(src)];reload_statbrowser=1'>here</a> to reload the panel </span>"))
+	to_chat(src, span_userdanger("<span class='message linkify'>Statpanel failed to load, click <a href='byond://?src=[REF(src)];reload_statbrowser=1'>here</a> to reload the panel </span>"))
 // 'message linkify' span class should allow you to click on URLs in the chat window, I think this is what causes it so you cannot click it (can't playtest it privately cause I don't have the issue.)
 /**
  * Initializes dropdown menus on client

@@ -110,11 +110,11 @@
 		<B>Caps Remaining:</B> [balance]<BR>
 		[plays] players have tried their luck today, and [jackpots] have won a jackpot!<BR>
 		<HR><BR>
-		<A href='?src=[REF(src)];spin=1'>Play!</A><BR>
+		<A href='byond://?src=[REF(src)];spin=1'>Play!</A><BR>
 		<BR>
 		[reeltext]
 		<BR>
-		<font size='1'><A href='?src=[REF(src)];refund=1'>Refund balance</A><BR>"}
+		<font size='1'><A href='byond://?src=[REF(src)];refund=1'>Refund balance</A><BR>"}
 	var/datum/browser/popup = new(user, "slotmachine", "Slot Machine")
 	popup.set_content(dat)
 	popup.open()
