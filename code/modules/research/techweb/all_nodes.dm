@@ -538,7 +538,7 @@
 	display_name = "Weapon Development Technology"
 	description = "Our researchers have found new to weaponize just about everything now."
 	prereq_ids = list("engineering")
-	design_ids = list("pin_testing", "tele_shield", "mfc", "ec")
+	design_ids = list("pin_testing", "tele_shield", "mfc", "ec", "reloading_bench")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 	skill_level_needed = REGULAR_CHECK
