@@ -136,7 +136,7 @@
 		throwpower = I.throwforce
 	var/impacting_zone = ran_zone(BODY_ZONE_CHEST, 65)//Hits a random part of the body, geared towards the chest
 	var/list/block_return = list()
-	var/total_damage = AM.throwforce * (throwingdatum.thrower.skill_value(SKILL_THROWING)/REGULAR_CHECK + special_s/10)
+	var/total_damage = AM.throwforce
 	if(mob_run_block(AM, throwpower, "\the [AM.name]", ATTACK_TYPE_THROWN, 0, throwingdatum?.thrower, impacting_zone, block_return) & BLOCK_SUCCESS)
 		hitpush = FALSE
 		skipcatch = TRUE
@@ -169,7 +169,7 @@
 					return
 				var/armor = run_armor_check(impacting_zone, "melee", "Your armor has protected your [parse_zone(impacting_zone)].", "Your armor has softened hit to your [parse_zone(impacting_zone)].",I.armour_penetration)
 				var/dt = max(run_armor_check("damage_threshold", "melee", null, null, 0, null) - I.damage_threshold_penetration, 0)
-				apply_damage(I.throwforce, dtype, impacting_zone, armor, sharpness=I.get_sharpness(), wound_bonus=(nosell_hit * CANT_WOUND), damage_threshold = dt)
+				apply_damage((throwpower * (throwingdatum.thrower.skill_value(SKILL_THROWING)/REGULAR_CHECK + special_s/10)), dtype, impacting_zone, armor, sharpness=I.get_sharpness(), wound_bonus=(nosell_hit * CANT_WOUND), damage_threshold = dt)
 		else
 			return 1
 	else
