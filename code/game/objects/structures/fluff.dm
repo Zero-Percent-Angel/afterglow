@@ -267,3 +267,11 @@
  */
 /obj/structure/fluff/hedge/opaque
 	opacity = TRUE
+
+
+/obj/structure/fluff/rug/rug_rubber
+	name = "rubber rug"
+	desc = "Roll around on it!"
+	icon = 'icons/fallout/objects/64x64_rugs.dmi'
+	icon_state = "rug_rubber"
+	layer = 2.7
