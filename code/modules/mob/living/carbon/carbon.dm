@@ -215,13 +215,14 @@
 		adjustStaminaLossBuffered(I.getweight(src, STAM_COST_THROW_MULT, SKILL_THROW_STAM_COST))
 
 	if(thrown_thing)
-		var/power_throw = 0
+		var/power_throw = -0.8
 		if(HAS_TRAIT(src, TRAIT_HULK))
 			power_throw++
 		if(pulling && grab_state >= GRAB_NECK)
 			power_throw++
-		visible_message(span_danger("[src] throws [thrown_thing][power_throw ? " really hard!" : "."]"), \
-						span_danger("You throw [thrown_thing][power_throw ? " really hard!" : "."]"))
+		power_throw += (skill_value(SKILL_THROWING)/EXPERT_CHECK + special_s/10)
+		visible_message(span_danger("[src] throws [thrown_thing][power_throw > 0.5 ? " really hard!" : "."]"), \
+						span_danger("You throw [thrown_thing][power_throw > 0.5 ? " really hard!" : "."]"))
 		log_message("has thrown [thrown_thing] [power_throw ? "really hard" : ""]", LOG_ATTACK)
 		do_attack_animation(target, no_effect = 1)
 		playsound(loc, 'sound/weapons/punchmiss.ogg', 50, 1, -1)

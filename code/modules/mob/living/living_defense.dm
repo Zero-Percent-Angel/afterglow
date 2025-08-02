@@ -136,14 +136,14 @@
 		throwpower = I.throwforce
 	var/impacting_zone = ran_zone(BODY_ZONE_CHEST, 65)//Hits a random part of the body, geared towards the chest
 	var/list/block_return = list()
-	var/total_damage = AM.throwforce
+	var/total_damage = AM.throwforce * (throwingdatum.thrower.skill_value(SKILL_THROWING)/REGULAR_CHECK + special_s/10)
 	if(mob_run_block(AM, throwpower, "\the [AM.name]", ATTACK_TYPE_THROWN, 0, throwingdatum?.thrower, impacting_zone, block_return) & BLOCK_SUCCESS)
 		hitpush = FALSE
 		skipcatch = TRUE
 		blocked = TRUE
 		total_damage = block_calculate_resultant_damage(total_damage, block_return)
 	if(I)
-		if (isliving(throwingdatum.thrower) && !throwingdatum.thrower.skill_roll(SKILL_THROWING, do_message = 0))
+		if (isliving(throwingdatum.thrower) && !throwingdatum.thrower.skill_roll_kind(SKILL_THROWING, do_message = 0))
 			visible_message(span_danger("[src] is narrowly missed by [I]!"), \
 				span_userdanger("You're missed by [I]!"))
 			playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
