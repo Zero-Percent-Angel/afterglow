@@ -2280,6 +2280,13 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/ambientlighting/building/j)
+"aPM" = (
+/obj/structure/rack,
+/obj/item/reagent_containers/food/snacks/kebab/human,
+/obj/item/reagent_containers/food/snacks/kebab/human,
+/obj/item/reagent_containers/food/snacks/kebab/human,
+/turf/open/floor/plating/rust,
+/area/f13/building/powered)
 "aPO" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -11397,8 +11404,11 @@
 	},
 /area/f13/building/abandoned/t)
 "dSB" = (
-/obj/structure/kitchenspike,
 /obj/effect/decal/cleanable/blood/gibs/human,
+/obj/machinery/light/fo13colored/Red{
+	dir = 1;
+	pixel_x = -16
+	},
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "dSO" = (
@@ -16114,6 +16124,14 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland)
+"fwG" = (
+/obj/structure/stairs/west,
+/turf/open/floor/f13{
+	color = "#d9c4b9";
+	icon_state = "darkrusty";
+	name = "dirty floor"
+	},
+/area/f13/building/powered)
 "fwH" = (
 /obj/structure/sign/departments/security,
 /turf/closed/indestructible/f13vaultrusted,
@@ -22584,8 +22602,10 @@
 	},
 /area/f13/ambientlighting/building/g)
 "hzf" = (
-/obj/structure/kitchenspike,
-/obj/effect/decal/cleanable/blood/gibs,
+/obj/machinery/light/fo13colored/Red{
+	dir = 1;
+	pixel_x = -16
+	},
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -23832,6 +23852,11 @@
 	icon_state = "darkrusty";
 	name = "dirty floor"
 	},
+/area/f13/building/powered)
+"hSb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/stairs/east,
+/turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "hSd" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -27539,6 +27564,10 @@
 "jgP" = (
 /turf/closed/wall/r_wall/rust,
 /area/f13/wasteland)
+"jgV" = (
+/obj/structure/kitchenspike,
+/turf/open/floor/plating/rust,
+/area/f13/building/powered)
 "jgY" = (
 /obj/structure/decoration/rag,
 /obj/structure/barricade/tentleatheredge{
@@ -37740,6 +37769,10 @@
 "mEv" = (
 /obj/structure/rack,
 /obj/item/reagent_containers/food/snacks/kebab/human,
+/obj/item/reagent_containers/food/snacks/kebab/monkey,
+/obj/machinery/light/fo13colored/Red{
+	dir = 8
+	},
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -40435,10 +40468,7 @@
 	},
 /area/f13/ambientlighting/building/o)
 "nAe" = (
-/obj/machinery/light/fo13colored/Red{
-	dir = 1;
-	pixel_x = -16
-	},
+/obj/structure/stairs/east,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "nAh" = (
@@ -51320,10 +51350,6 @@
 	},
 /area/f13/wasteland/legion)
 "rhK" = (
-/obj/machinery/light/fo13colored/Red{
-	dir = 1;
-	pixel_x = -16
-	},
 /obj/structure/kitchenspike,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plating/rust,
@@ -55256,6 +55282,7 @@
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/centaur,
 /obj/effect/decal/cleanable/greenglow,
+/obj/structure/railing,
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -125299,12 +125326,12 @@ tuI
 odS
 gsh
 cLF
-jyd
-mef
+jjs
+ipF
 puq
-ipF
+aPM
 mEv
-ipF
+gsh
 gsh
 cBf
 cBf
@@ -125605,8 +125632,8 @@ jyd
 rEB
 ipF
 ipF
-foC
-lYw
+rvE
+fwG
 gsh
 cBf
 wfq
@@ -136761,7 +136788,7 @@ jyd
 mav
 nxX
 ijV
-ipF
+jgV
 jyd
 jyd
 gsh
@@ -137663,7 +137690,7 @@ azA
 azA
 azA
 gsh
-hzf
+gsh
 jyd
 jyd
 jyd
@@ -137965,7 +137992,7 @@ azA
 azA
 azA
 gsh
-jyd
+gsh
 jyd
 rEB
 jyd
@@ -138569,11 +138596,11 @@ vQn
 vQn
 vQn
 gsh
+hzf
 jyd
-nxX
 sTJ
 mnA
-jyd
+nxX
 jyd
 ipF
 gsh
@@ -160382,8 +160409,8 @@ xNG
 lhJ
 hCi
 gsh
-xNG
-xNG
+lhJ
+hSb
 bCW
 hkt
 kjQ
@@ -160684,8 +160711,8 @@ xNG
 jRU
 uJZ
 gsh
-xNG
-xNG
+bKG
+bKG
 jKD
 xNG
 kjQ
