@@ -992,6 +992,15 @@
 	icon_state = "chinese_officer"
 	item_state = "chinese_officer"
 
+/obj/item/clothing/under/f13/chinese/infiltrator
+	name = "PLA infiltrator's uniform"
+	desc = "The uniform worn by chinese infiltrators. It is said hundreds of them are active even today all over the USA."
+	icon = 'icons/fallout/clothing/uniforms.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
+	mutantrace_variation = STYLE_DIGITIGRADE
+	icon_state = "chinese_infiltrator"
+	item_state = "chinese_infiltrator"
+
 //Old World Law Enforcement
 //Police and State Police
 

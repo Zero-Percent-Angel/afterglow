@@ -17,7 +17,7 @@
 	item_state = "gun"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
-	mag_type = /obj/item/ammo_box/magazine/internal
+	mag_type = /obj/item/ammo_box/magazine/m10mm/adv/simple
 
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -341,7 +341,6 @@
 	desc = "Chinese military sidearm at the time of the Great War. The ones around are old and worn, but somewhat popular due to the long barrel and rechambered in 10mm after the original ammo ran dry decades ago."
 	icon_state = "chinapistol"
 	mag_type = /obj/item/ammo_box/magazine/internal/chinapistol
-	/obj/item/ammo_box/magazine/internal/chinapistol
 	w_class = WEIGHT_CLASS_SMALL
 
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -366,7 +365,7 @@
 		SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
 	)
 	init_firemodes = list(
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/semi_auto/faster
 	)
 
 // Tox's Type 17
