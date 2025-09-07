@@ -992,9 +992,9 @@
 	icon_state = "chinese_officer"
 	item_state = "chinese_officer"
 
-/obj/item/clothing/under/f13/chinese/infiltrator
-	name = "PLA infiltrator's uniform"
-	desc = "The uniform worn by chinese infiltrators. It is said hundreds of them are active even today all over the USA."
+/obj/item/clothing/under/f13/chinese/militant
+	name = "PLA militant's uniform"
+	desc = "A discrete black outfit worn by chinese agents within the US. It is said hundreds of them are active even today."
 	icon = 'icons/fallout/clothing/uniforms.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
 	mutantrace_variation = STYLE_DIGITIGRADE

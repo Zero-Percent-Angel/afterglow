@@ -482,13 +482,14 @@ obj/item/clothing/head/f13/army/beret
 	icon_state = "chinese_officer"
 	item_state = "chinese_officer"
 
-/obj/item/clothing/head/f13/chinese/infiltrator
+/obj/item/clothing/head/f13/chinese/militant
 	name = "PLA infiltrator's cap"
 	desc = "A black hat worn by chinese agents. Comes with a bandana to hide your identity"
+	flags_inv = HIDEFACIALHAIR|HIDEFACE
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = "chinese_officer"
-	item_state = "chinese_officer"
+	icon_state = "chinese_infiltrator"
+	item_state = "chinese_infiltrator"
 
 //Enclave
 /obj/item/clothing/head/f13/enclave
