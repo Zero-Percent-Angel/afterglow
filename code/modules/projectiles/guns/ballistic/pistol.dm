@@ -17,7 +17,7 @@
 	item_state = "gun"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
-	mag_type = /obj/item/ammo_box/magazine/m10mm/adv/simple
+	mag_type = /obj/item/ammo_box/magazine/internal
 
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -334,11 +334,14 @@
  * Less accurate
  * Less damage
  * Common
+ * loads from stripper clips: only 10 rounds, but you can do partial top-up reloads
  * * * * * * * * * * */
 /obj/item/gun/ballistic/automatic/pistol/type17
 	name = "Type 17"
 	desc = "Chinese military sidearm at the time of the Great War. The ones around are old and worn, but somewhat popular due to the long barrel and rechambered in 10mm after the original ammo ran dry decades ago."
 	icon_state = "chinapistol"
+	mag_type = /obj/item/ammo_box/magazine/internal/chinapistol
+	/obj/item/ammo_box/magazine/internal/chinapistol
 	w_class = WEIGHT_CLASS_SMALL
 
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
