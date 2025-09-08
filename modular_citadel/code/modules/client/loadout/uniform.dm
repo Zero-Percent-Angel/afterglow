@@ -549,6 +549,11 @@
 	path = /obj/item/clothing/under/f13/chinese
 	cost = 2
 
+/datum/gear/uniform/chinese/militant
+	name = "PLA militant's uniform"
+	path = /obj/item/clothing/under/f13/chinese/militant
+	cost = 3
+
 /datum/gear/uniform/chinese/officer
 	name = "PLA officer's uniform"
 	path = /obj/item/clothing/under/f13/chinese/officer

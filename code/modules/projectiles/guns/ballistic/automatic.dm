@@ -1660,7 +1660,7 @@
 
 /obj/item/gun/ballistic/automatic/type93
 	name = "type 93 assault rifle"
-	desc = "The Type 93 Chinese assault rifle was designed and manufactured by a Chinese industrial conglomerate for the People's Liberation Army during the Resource Wars. Has a unique burst-fire mechanism, where it fires two bullets very quickly, staying accurate, but leading to an increased pause between follow-up shots. Chambered in 5.56x45."
+	desc = "The standard issue rifle for the PLA at the time ofthe great war.. Thousands were stockpiled in the US for infiltrators before the bombs fell ."
 	icon_state = "type93"
 	item_state = "handmade_rifle"
 	icon_prefix = "handmade_rifle"
