@@ -1660,7 +1660,7 @@
 
 /obj/item/gun/ballistic/automatic/type93
 	name = "type 93 assault rifle"
-	desc = "The standard issue rifle for the PLA at the time ofthe great war.. Thousands were stockpiled in the US for infiltrators before the bombs fell ."
+	desc = "The standard issue rifle for the PLA at the time of the great war.. Thousands were stockpiled in the US for infiltrators before the bombs fell ."
 	icon_state = "type93"
 	item_state = "handmade_rifle"
 	icon_prefix = "handmade_rifle"
