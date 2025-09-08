@@ -488,8 +488,8 @@ obj/item/clothing/head/f13/army/beret
 	flags_inv = HIDEFACIALHAIR|HIDEFACE
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
-	icon_state = "chinese_infiltrator"
-	item_state = "chinese_infiltrator"
+	icon_state = "chinese_infiltrator_hat"
+	item_state = "chinese_infiltrator_hat"
 
 //Enclave
 /obj/item/clothing/head/f13/enclave
