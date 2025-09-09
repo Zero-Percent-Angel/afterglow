@@ -207,9 +207,6 @@
 /area/f13/caves)
 "aE" = (
 /obj/structure/dresser,
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/open/floor/carpet,
 /area/f13/followers)
 "aG" = (
@@ -5048,10 +5045,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_mosaic,
 /area/engine/workshop)
-"rh" = (
-/obj/item/latexballon,
-/turf/open/floor/plating/f13/outside/roof/metal/corrugated,
-/area/f13/wasteland)
 "rk" = (
 /obj/machinery/shower{
 	dir = 4
@@ -8155,10 +8148,6 @@
 /area/f13/building/powered)
 "BM" = (
 /obj/machinery/vending/wardrobe/medi_wardrobe/free,
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#706891"
-	},
 /turf/open/floor/wood_common,
 /area/f13/followers)
 "BN" = (
@@ -8195,7 +8184,6 @@
 /obj/item/reagent_containers/food/drinks/dry_ramen{
 	pixel_y = 3
 	},
-/obj/item/binoculars,
 /turf/open/floor/carpet,
 /area/f13/followers)
 "BR" = (
@@ -8762,13 +8750,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/ncr)
-"Dy" = (
-/obj/structure/table/wood,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/carpet,
-/area/f13/followers)
 "Dz" = (
 /turf/closed/wall/f13/wood/interior,
 /area/engine/workshop)
@@ -11684,7 +11665,6 @@
 /obj/effect/spawner/lootdrop/implants,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/implants,
-/obj/item/storage/box/bodybags,
 /turf/open/floor/f13{
 	icon_state = "floordirty"
 	},
@@ -11698,6 +11678,10 @@
 /area/f13/building/powered)
 "Nj" = (
 /obj/machinery/gear_painter,
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#706891"
+	},
 /turf/open/floor/wood_common,
 /area/f13/followers)
 "Nk" = (
@@ -13457,6 +13441,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
+"SP" = (
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
+/area/f13/followers)
 "SQ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table,
@@ -14795,6 +14784,11 @@
 	color = "#363636";
 	pixel_x = 32
 	},
+/obj/item/card/id/dogtag/town{
+	access = "124";
+	name = "Clinic Pass";
+	desc = "An ID allowing entry into the Follower's of the Apocalypse Clinic"
+	},
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -14936,6 +14930,10 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
+"XU" = (
+/obj/item/latexballon,
+/turf/open/floor/plating/f13/outside/roof/metal/corrugated,
+/area/f13/wasteland)
 "XV" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 5
@@ -15162,11 +15160,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"YM" = (
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/followers)
 "YN" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/small{
@@ -66229,7 +66222,7 @@ ZG
 Wd
 zi
 zi
-rh
+XU
 zi
 zi
 zi
@@ -71663,7 +71656,7 @@ eb
 qe
 tW
 MA
-YM
+SP
 Aw
 Ez
 xm
@@ -76185,7 +76178,7 @@ tW
 Kw
 EA
 tW
-Dy
+PL
 uy
 tW
 zi
