@@ -239,8 +239,8 @@
 "aL" = (
 /obj/effect/decal/cleanable/ash/snappop_phoenix,
 /obj/item/cigbutt/cigarbutt,
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/securitron/sentrybot/chew,
 /turf/open/floor/carpet/purple,
 /area/f13/building/powered)
 "aM" = (
@@ -1186,6 +1186,15 @@
 /obj/effect/spawner/lootdrop/f13/armor/random,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/g)
+"ee" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/random_mid,
+/turf/open/floor/f13{
+	color = "#d9c4b9";
+	icon_state = "darkrusty";
+	name = "dirty floor"
+	},
+/area/f13/building/powered)
 "ef" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8
@@ -1212,7 +1221,6 @@
 /area/f13/den)
 "ei" = (
 /obj/structure/table,
-/obj/item/gun/energy/laser/plasma,
 /obj/effect/spawner/lootdrop/f13/blueprintMid,
 /obj/item/stock_parts/micro_laser/quadultra,
 /turf/open/floor/f13{
@@ -1360,7 +1368,7 @@
 /obj/effect/decal/cleanable/ash/large,
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/handy/robobrain,
+/mob/living/simple_animal/hostile/handy/robobrain/nsb,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 1
 	},
@@ -2169,6 +2177,14 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
+	},
+/area/f13/building/powered)
+"hu" = (
+/obj/structure/lattice,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/supermutant/nightkin/elitemutant,
+/turf/open/floor/plating/tunnel{
+	icon_state = "tunnelrusty"
 	},
 /area/f13/building/powered)
 "hv" = (
@@ -3404,6 +3420,16 @@
 	},
 /turf/open/floor/plating/f13/outside/roof,
 /area/f13/followers)
+"lI" = (
+/obj/machinery/door/poddoor/shutters,
+/obj/structure/simple_door/bunker,
+/obj/machinery/door/poddoor/shutters,
+/turf/open/floor/f13{
+	color = "#d9c4b9";
+	icon_state = "darkrusty";
+	name = "dirty floor"
+	},
+/area/f13/building/powered)
 "lJ" = (
 /turf/closed/wall/f13/wood/house/broken,
 /area/f13/ambientlighting/building/g)
@@ -3804,6 +3830,7 @@
 	},
 /obj/item/wrench/crude,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/supermutant/nightkin/elitemutant,
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -4933,6 +4960,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_mosaic,
 /area/engine/workshop)
+"ri" = (
+/obj/structure/rack/shelf_metal,
+/obj/item/clothing/head/helmet/f13/combat/mk2/remnant,
+/obj/item/storage/belt/army/assault/enclave,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
+/area/f13/building/powered)
 "rk" = (
 /obj/machinery/shower{
 	dir = 4
@@ -5225,6 +5261,15 @@
 /obj/structure/bed,
 /turf/open/floor/wood_fancy,
 /area/f13/building/abandoned/y)
+"so" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/supermutant/nightkin/elitemutant,
+/turf/open/floor/f13{
+	color = "#d9c4b9";
+	icon_state = "darkrusty";
+	name = "dirty floor"
+	},
+/area/f13/building/powered)
 "sp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6793,6 +6838,7 @@
 "xD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/sheet/prewar,
+/mob/living/simple_animal/hostile/handy/robobrain/nsb,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -6866,6 +6912,7 @@
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/z)
 "xO" = (
+/mob/living/simple_animal/hostile/securitron/nsb,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side,
 /area/f13/building/powered)
 "xP" = (
@@ -6960,7 +7007,7 @@
 /area/f13/ambientlighting/building/g)
 "yd" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/handy/robobrain,
+/mob/living/simple_animal/hostile/handy/robobrain/nsb,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side,
 /area/f13/building/powered)
 "yg" = (
@@ -8259,10 +8306,8 @@
 	},
 /area/f13/building/powered)
 "CB" = (
-/obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/circuitboard/machine/protolathe/department/science,
-/obj/item/storage/bag/money/vault,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/secure_closet/RD,
 /turf/open/floor/carpet/purple,
 /area/f13/building/powered)
 "CC" = (
@@ -8393,12 +8438,10 @@
 /turf/closed/wall/f13/wood/house/broken,
 /area/f13/legioncamp)
 "Da" = (
-/obj/structure/lattice,
-/obj/structure/sign/flag_enclave_pristine{
-	pixel_y = 29
-	},
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelrusty"
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/securitron/sentrybot/suicide,
+/turf/open/floor/plasteel/f13/vault_floor/blue/side{
+	dir = 1
 	},
 /area/f13/building/powered)
 "Db" = (
@@ -8665,7 +8708,6 @@
 /area/f13/legioncamp)
 "DT" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/clothing/head/helmet/f13/combat/mk2/remnant,
 /obj/item/storage/belt/army/assault/enclave,
 /obj/item/clothing/suit/armor/medium/combat/enclave,
 /obj/effect/decal/cleanable/dirt,
@@ -9560,6 +9602,11 @@
 /obj/machinery/light/small,
 /turf/open/floor/wood_common,
 /area/f13/ncr)
+"GH" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/handy/gutsy/flamer,
+/turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
+/area/f13/building/powered)
 "GJ" = (
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier3,
 /obj/effect/decal/cleanable/dirt,
@@ -9793,9 +9840,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
 "Hz" = (
-/obj/structure/closet/secure_closet/RD,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/purple,
+/obj/structure/nest/assaultron,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/building/powered)
 "HA" = (
 /obj/structure/toilet{
@@ -10196,8 +10244,10 @@
 /turf/open/transparent/openspace,
 /area/f13/building/abandoned/z)
 "IP" = (
-/obj/structure/closet/secure_closet/personal/cabinet,
-/turf/closed/indestructible/f13vaultrusted,
+/mob/living/simple_animal/hostile/securitron/nsb,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/building/powered)
 "IS" = (
 /obj/item/clothing/under/rank/civilian/janitor,
@@ -10255,7 +10305,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/handy/robobrain,
+/mob/living/simple_animal/hostile/handy/robobrain/nsb,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -10865,7 +10915,7 @@
 /area/f13/building/abandoned/w)
 "Le" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/handy/robobrain,
+/mob/living/simple_animal/hostile/handy/robobrain/nsb,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 8
 	},
@@ -11084,9 +11134,6 @@
 "LQ" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/splatter,
-/obj/structure/sign/flag_enclave_pristine{
-	pixel_y = 29
-	},
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "LR" = (
@@ -11342,7 +11389,6 @@
 /obj/structure/closet/locker/oldstyle,
 /obj/item/gun/energy/laser/aer12,
 /obj/item/gun/energy/laser/aer14,
-/obj/item/gun/energy/ionrifle,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -11793,6 +11839,7 @@
 /obj/machinery/light/fo13colored/Red,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
+/mob/living/simple_animal/hostile/handy/robobrain/nsb,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -12454,6 +12501,11 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/purple,
+/area/f13/building/powered)
+"Qx" = (
+/obj/structure/simple_door/bunker,
+/obj/machinery/door/poddoor/shutters/preopen,
+/turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "Qy" = (
 /obj/machinery/light{
@@ -13671,6 +13723,16 @@
 /obj/effect/decal/cleanable/robot_debris,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
+"Un" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/abomination/weak,
+/turf/open/floor/f13{
+	color = "#d9c4b9";
+	icon_state = "darkrusty";
+	name = "dirty floor"
+	},
+/area/f13/building/powered)
 "Uo" = (
 /obj/structure/destructible/tribal_torch/lit,
 /turf/open/floor/f13{
@@ -14004,7 +14066,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/handy/robobrain,
+/mob/living/simple_animal/hostile/handy/robobrain/nsb,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -14507,10 +14569,17 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/building/powered)
+"Xy" = (
+/obj/structure/nest/securitron,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
+/area/f13/building/powered)
 "XA" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/blueprintLowMid,
 /obj/item/stock_parts/cell/ammo/ultracite,
+/obj/effect/spawner/lootdrop/f13/blueprintVHighBallistics,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -84580,7 +84649,7 @@ lb
 fa
 zo
 iY
-Zi
+Qx
 xt
 sP
 wp
@@ -85189,7 +85258,7 @@ hE
 hE
 jH
 tm
-Iy
+lI
 Iy
 tm
 tm
@@ -85784,7 +85853,7 @@ zO
 oQ
 Yo
 ij
-XH
+hu
 OB
 tm
 Dk
@@ -86699,7 +86768,7 @@ Ji
 wg
 zq
 tm
-Zi
+Qx
 Zi
 tm
 Pf
@@ -86974,7 +87043,7 @@ sP
 ui
 lb
 MO
-lb
+rr
 Nb
 Lg
 vh
@@ -87003,7 +87072,7 @@ UT
 tm
 Nb
 qB
-lb
+RF
 Nb
 RF
 Nb
@@ -87303,7 +87372,7 @@ yC
 UT
 oo
 tm
-lb
+RF
 cI
 Qw
 cI
@@ -87611,7 +87680,7 @@ sX
 fe
 DL
 cI
-Da
+Nb
 tm
 tm
 HT
@@ -88813,7 +88882,7 @@ tm
 Pw
 tm
 tm
-IP
+tm
 bm
 tm
 mr
@@ -90322,7 +90391,7 @@ xm
 xm
 xm
 tm
-RP
+Hz
 YR
 ut
 aI
@@ -90940,11 +91009,11 @@ FV
 UO
 tm
 DT
-DT
+ri
 UO
 IG
 VA
-UO
+mC
 Fa
 UO
 tm
@@ -93952,7 +94021,7 @@ xm
 xm
 tm
 tm
-Cp
+Da
 ma
 tm
 tm
@@ -94258,7 +94327,7 @@ Cp
 dI
 tm
 tm
-Hz
+cI
 vP
 fu
 UO
@@ -95767,7 +95836,7 @@ bm
 UO
 af
 bM
-RP
+IP
 tA
 gq
 cI
@@ -96669,7 +96738,7 @@ lw
 xm
 xm
 tm
-tm
+Xy
 RP
 NX
 gy
@@ -97576,7 +97645,7 @@ xm
 xm
 tm
 qx
-NN
+GH
 tm
 xr
 UO
@@ -100914,7 +100983,7 @@ ij
 Dm
 tm
 Xb
-sE
+ee
 sE
 OL
 tm
@@ -101226,7 +101295,7 @@ wG
 mV
 kX
 pt
-sQ
+Un
 sQ
 tm
 Zt
@@ -102729,7 +102798,7 @@ mA
 sE
 Fo
 te
-sZ
+df
 wG
 xw
 NQ
@@ -102737,7 +102806,7 @@ Mc
 ij
 ij
 xd
-sE
+so
 tm
 Zt
 Zt
