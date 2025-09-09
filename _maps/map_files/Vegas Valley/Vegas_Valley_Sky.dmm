@@ -168,10 +168,7 @@
 /obj/structure/table/glass,
 /obj/item/pen,
 /obj/item/reagent_containers/food/snacks/syndicake,
-/obj/structure/curtain{
-	color = "#363636";
-	pixel_x = 32
-	},
+/obj/item/pda,
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -341,13 +338,14 @@
 /area/f13/building/powered)
 "bf" = (
 /obj/structure/rack/shelf_metal,
-/obj/effect/spawner/lootdrop/implants,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/implants,
 /obj/structure/curtain{
 	color = "#363636";
 	pixel_y = 32
 	},
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/ancient,
+/obj/item/storage/firstaid/ancient,
 /turf/open/floor/f13{
 	icon_state = "floordirty"
 	},
@@ -1094,7 +1092,7 @@
 	flickering = 1
 	},
 /turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
+	icon_state = "bluerustysolid"
 	},
 /area/f13/followers)
 "dL" = (
@@ -3456,7 +3454,14 @@
 /turf/open/transparent/openspace,
 /area/f13/building/powered)
 "lG" = (
-/obj/structure/window/fulltile/wood_window,
+/obj/item/radio/intercom/retro/foa{
+	pixel_y = -30
+	},
+/obj/machinery/button/door{
+	id = "fadmin";
+	name = "Door lockdown button";
+	pixel_x = -30
+	},
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -4117,7 +4122,6 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/f13/followersadministrator,
-/obj/machinery/light,
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -4741,6 +4745,7 @@
 /obj/item/stack/sheet/metal/fifty,
 /obj/item/stack/sheet/glass/fifty,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/lights/mixed,
 /turf/open/floor/f13{
 	icon_state = "floordirty"
 	},
@@ -5837,7 +5842,7 @@
 	pixel_y = -32
 	},
 /turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
+	icon_state = "bluerustysolid"
 	},
 /area/f13/followers)
 "uf" = (
@@ -5964,7 +5969,7 @@
 /area/f13/legioncamp)
 "uy" = (
 /obj/structure/bed,
-/obj/item/bedsheet/blue,
+/obj/item/bedsheet/random,
 /turf/open/floor/carpet,
 /area/f13/followers)
 "uz" = (
@@ -7081,7 +7086,7 @@
 /obj/item/twohanded/spear,
 /obj/item/twohanded/sledgehammer/simple,
 /turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
+	icon_state = "bluerustysolid"
 	},
 /area/f13/followers)
 "xZ" = (
@@ -7433,7 +7438,7 @@
 /turf/open/floor/wood_wide,
 /area/f13/followers)
 "zl" = (
-/obj/structure/simple_door/house/clean,
+/obj/structure/simple_door/house,
 /turf/open/floor/mineral/titanium/white,
 /area/f13/followers)
 "zm" = (
@@ -7815,7 +7820,7 @@
 	pixel_y = -32
 	},
 /turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
+	icon_state = "bluerustysolid"
 	},
 /area/f13/followers)
 "Ax" = (
@@ -8406,7 +8411,7 @@
 /turf/open/floor/wood_fancy,
 /area/f13/building/abandoned/y)
 "Cv" = (
-/obj/structure/simple_door/house/clean,
+/obj/structure/simple_door/house,
 /turf/open/floor/carpet,
 /area/f13/followers)
 "Cw" = (
@@ -8607,6 +8612,9 @@
 /turf/open/floor/plating/f13/outside/roof/metal/corrugated,
 /area/f13/wasteland)
 "Df" = (
+/obj/structure/railing{
+	dir = 8
+	},
 /obj/machinery/light,
 /turf/open/transparent/openspace,
 /area/f13/followers)
@@ -8859,11 +8867,13 @@
 	},
 /area/f13/building/powered)
 "DU" = (
-/obj/machinery/door/airlock/medical,
+/obj/machinery/door/airlock/medical{
+	name = "Clinic";
+	req_one_access_txt = "124"
+	},
 /obj/machinery/door/poddoor/shutters{
-	armor = list("melee"=40,"bullet"=30,"laser"=25,"energy"=75,"bomb"=25,"bio"=100,"rad"=100,"fire"=100,"acid"=70);
-	id = "adminshutters";
-	name = "followers shutters"
+	id = "fadmin";
+	name = "Office shutters"
 	},
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
@@ -9171,7 +9181,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/f13/building/abandoned/w)
 "EW" = (
-/obj/structure/simple_door/house/clean,
+/obj/structure/simple_door/house,
 /turf/open/floor/wood_common,
 /area/f13/followers)
 "EX" = (
@@ -10103,10 +10113,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"HS" = (
-/obj/machinery/vending/cigarette,
-/turf/open/floor/wood_wide,
-/area/f13/followers)
 "HT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/wreck/trash/machinepile,
@@ -10455,7 +10461,7 @@
 "Jc" = (
 /obj/effect/landmark/start/f13/followersguard,
 /turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
+	icon_state = "bluerustysolid"
 	},
 /area/f13/followers)
 "Jd" = (
@@ -10959,10 +10965,10 @@
 /area/f13/ambientlighting/building/g)
 "KO" = (
 /obj/structure/window/fulltile/wood_window,
+/obj/structure/barricade/bars,
 /obj/machinery/door/poddoor/shutters{
-	armor = list("melee"=40,"bullet"=30,"laser"=25,"energy"=75,"bomb"=25,"bio"=100,"rad"=100,"fire"=100,"acid"=70);
-	id = "adminshutters";
-	name = "followers shutters"
+	id = "fadmin";
+	name = "Office shutters"
 	},
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
@@ -11481,10 +11487,11 @@
 /area/f13/building/abandoned/w)
 "MA" = (
 /obj/structure/table,
-/obj/item/storage/fancy/donut_box,
 /obj/item/restraints/handcuffs,
+/obj/item/storage/fancy/donut_box,
+/obj/item/gun/energy/laser/complianceregulator,
 /turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
+	icon_state = "bluerustysolid"
 	},
 /area/f13/followers)
 "MB" = (
@@ -11671,6 +11678,10 @@
 /area/f13/building/powered)
 "Nj" = (
 /obj/machinery/gear_painter,
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#706891"
+	},
 /turf/open/floor/wood_common,
 /area/f13/followers)
 "Nk" = (
@@ -11703,6 +11714,8 @@
 /obj/structure/rack/shelf_metal,
 /obj/effect/spawner/lootdrop/implants,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/implants,
+/obj/effect/spawner/lootdrop/implants,
 /obj/effect/spawner/lootdrop/implants,
 /obj/effect/spawner/lootdrop/implants,
 /turf/open/floor/f13{
@@ -13102,10 +13115,6 @@
 	smooth = 1
 	},
 /area/f13/building/abandoned/l)
-"RI" = (
-/obj/machinery/light,
-/turf/open/floor/wood_common,
-/area/f13/followers)
 "RJ" = (
 /obj/structure/railing{
 	color = "#A47449";
@@ -13356,10 +13365,12 @@
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "SB" = (
-/obj/structure/railing{
-	dir = 4
+/obj/item/radio/intercom/retro/foa{
+	pixel_y = 32
 	},
-/turf/open/floor/wood_common,
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
 /area/f13/followers)
 "SC" = (
 /turf/open/floor/carpet,
@@ -13430,6 +13441,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
+"SP" = (
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
+/area/f13/followers)
 "SQ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table,
@@ -14298,6 +14314,9 @@
 /area/f13/ambientlighting/building/m)
 "VM" = (
 /obj/structure/chair/comfy/purple,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -14344,7 +14363,7 @@
 "VY" = (
 /obj/structure/chair/stool,
 /turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
+	icon_state = "bluerustysolid"
 	},
 /area/f13/followers)
 "Wd" = (
@@ -14756,16 +14775,20 @@
 /turf/open/transparent/openspace,
 /area/f13/building/powered)
 "Xy" = (
-/obj/machinery/button/door{
-	id = "adminshutters";
-	name = "door shutters";
-	pixel_x = 23
-	},
 /obj/structure/closet/locker,
 /obj/item/defibrillator/primitive,
 /obj/item/reagent_containers/food/snacks/store/cake/birthday,
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super,
 /obj/item/reagent_containers/hypospray/medipen/stimpak/super,
+/obj/structure/curtain{
+	color = "#363636";
+	pixel_x = 32
+	},
+/obj/item/card/id/dogtag/town{
+	access = "124";
+	name = "Clinic Pass";
+	desc = "An ID allowing entry into the Follower's of the Apocalypse Clinic"
+	},
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -14907,6 +14930,10 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
+"XU" = (
+/obj/item/latexballon,
+/turf/open/floor/plating/f13/outside/roof/metal/corrugated,
+/area/f13/wasteland)
 "XV" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 5
@@ -66195,7 +66222,7 @@ ZG
 Wd
 zi
 zi
-zi
+XU
 zi
 zi
 zi
@@ -71326,7 +71353,7 @@ eb
 Nr
 EX
 tW
-xK
+SB
 Jc
 dK
 tW
@@ -71629,7 +71656,7 @@ eb
 qe
 tW
 MA
-xK
+SP
 Aw
 Ez
 xm
@@ -73739,7 +73766,7 @@ Fg
 tf
 bq
 bq
-bq
+lG
 tf
 NH
 KG
@@ -74348,7 +74375,7 @@ tf
 ov
 YV
 tW
-HS
+AS
 AS
 iH
 Lq
@@ -74644,8 +74671,8 @@ xm
 xm
 tf
 KO
-lG
 tf
+KO
 tf
 tW
 tW
@@ -76753,7 +76780,7 @@ xm
 xm
 tW
 Nj
-RI
+TY
 tW
 Ws
 yQ
@@ -77659,7 +77686,7 @@ xm
 xm
 tW
 oZ
-SB
+TY
 Cv
 Lj
 Lj
