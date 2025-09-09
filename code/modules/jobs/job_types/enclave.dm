@@ -319,8 +319,8 @@
 
 /datum/job/enclave/enclaveremnant
 	title = "Enclave Remnant"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 4
+	spawn_positions = 4
 	description = "You are an operative for the remnants of the Enclave. Cut off from what once was now you must forge your own path."
 	supervisors = "Any Enclave member who appears that has more rank than you."
 	outfit = /datum/outfit/job/enclave/peacekeeper/enclave_default
