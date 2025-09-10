@@ -10465,7 +10465,8 @@
 /area/f13/wasteland)
 "dBH" = (
 /obj/machinery/light{
-	light_color = "#e8eaff"
+	dir = 4;
+	light_color = "#c1caff"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
@@ -12548,12 +12549,14 @@
 	},
 /area/f13/building/powered)
 "enR" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light{
+/obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+/obj/structure/sign/warning/nosmoking{
+	pixel_y = 31
+	},
 /turf/open/floor/f13{
-	icon_state = "bluerustysolid"
+	icon_state = "bluedirtychess2"
 	},
 /area/f13/followers)
 "enS" = (
@@ -14685,15 +14688,6 @@
 	},
 /turf/open/floor/plasteel/f13/stone,
 /area/f13/brotherhood/surface)
-"eZj" = (
-/obj/structure/table/optable,
-/obj/machinery/defibrillator_mount/loaded{
-	pixel_x = 32
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "whitedirtysolid"
-	},
-/area/f13/followers)
 "eZm" = (
 /obj/machinery/smartfridge/bottlerack/lootshelf/books,
 /turf/open/floor/plating/rust,
@@ -18305,13 +18299,6 @@
 	icon_state = "snow_dug"
 	},
 /area/f13/ncr)
-"ggq" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/defibrillator_mount/loaded{
-	pixel_y = 23
-	},
-/turf/closed/wall/f13/supermart,
-/area/f13/followers)
 "ggr" = (
 /obj/structure/bed/wooden{
 	pixel_y = 15
@@ -19348,7 +19335,7 @@
 /turf/open/indestructible/ground/outside/grass,
 /area/f13/ambientlighting/building/t)
 "gAT" = (
-/obj/structure/simple_door/house/clean,
+/obj/machinery/door/airlock/medical/glass,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
@@ -25374,8 +25361,8 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
-/turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "whitedirtysolid"
 	},
 /area/f13/followers)
 "itB" = (
@@ -26069,15 +26056,6 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
 /turf/open/floor/wood_wide,
 /area/f13/wasteland)
-"iFk" = (
-/obj/machinery/vending/medical/follower,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
-	},
-/area/f13/followers)
 "iFo" = (
 /obj/structure/simple_door/house{
 	icon_state = "glassclosing"
@@ -30006,13 +29984,6 @@
 /obj/structure/campfire/barrel,
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
-"jXy" = (
-/obj/structure/table/reinforced,
-/obj/structure/barricade/bars,
-/turf/open/floor/f13{
-	icon_state = "bluerustysolid"
-	},
-/area/f13/followers)
 "jXD" = (
 /obj/structure/window/fulltile/store,
 /turf/open/floor/f13/wood{
@@ -34013,12 +33984,11 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "lqm" = (
-/obj/structure/table/optable,
-/obj/machinery/defibrillator_mount/loaded{
-	pixel_x = -32
+/obj/structure/chair/f13chair2{
+	dir = 4
 	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "whitedirtysolid"
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
 	},
 /area/f13/followers)
 "lqq" = (
@@ -35829,6 +35799,9 @@
 /area/f13/building/powered)
 "lXg" = (
 /obj/item/storage/money_stack,
+/obj/structure/sign/warning/nosmoking{
+	pixel_x = -32
+	},
 /turf/open/floor/carpet/blue,
 /area/f13/followers)
 "lXh" = (
@@ -44925,7 +44898,11 @@
 	},
 /area/f13/ambientlighting/building/b)
 "paa" = (
-/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/freezer/blood,
+/obj/machinery/light{
+	dir = 1;
+	flickering = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
 	},
@@ -51568,7 +51545,7 @@
 /area/f13/wasteland)
 "rlq" = (
 /obj/machinery/light{
-	dir = 8;
+	dir = 1;
 	flickering = 1
 	},
 /turf/open/floor/f13{
@@ -53304,11 +53281,10 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
-/obj/machinery/light{
-	dir = 1;
-	flickering = 1
+/obj/structure/table/optable,
+/obj/machinery/defibrillator_mount/loaded{
+	pixel_y = 27
 	},
-/obj/machinery/iv_drip,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
 	},
@@ -54208,12 +54184,6 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
-"shW" = (
-/obj/structure/closet/crate/freezer/blood,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
-	icon_state = "whitedirtysolid"
-	},
-/area/f13/followers)
 "shY" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 5
@@ -63884,9 +63854,12 @@
 	},
 /area/f13/ambientlighting/building/o)
 "vqU" = (
-/obj/structure/chair/f13chair2,
-/turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
+/obj/structure/table/optable,
+/obj/machinery/defibrillator_mount/loaded{
+	pixel_y = 27
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "whitedirtysolid"
 	},
 /area/f13/followers)
 "vqV" = (
@@ -71546,10 +71519,11 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building/abandoned/g)
 "xOP" = (
-/obj/machinery/door/airlock/medical/glass{
-	req_access_txt = "124"
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/freezer/blood,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "whitedirtysolid"
 	},
-/turf/open/indestructible/ground/outside/desert,
 /area/f13/followers)
 "xOQ" = (
 /obj/structure/tires/two,
@@ -130593,12 +130567,12 @@ xXx
 xXx
 vNS
 bdw
-shW
-paa
-nvV
-pFx
-lqm
 eJh
+nvV
+ahC
+bdw
+vqe
+lqm
 bdw
 vmH
 twU
@@ -130897,10 +130871,10 @@ vNS
 bdw
 rQV
 sKu
-paa
-sKu
-sKu
-sKu
+ahC
+bdw
+pxd
+pxd
 bdw
 vmH
 xUE
@@ -130910,7 +130884,7 @@ lzF
 lzF
 bxc
 bdw
-xDZ
+enR
 fgd
 pxd
 pIr
@@ -131197,12 +131171,12 @@ xXx
 xXx
 vNS
 bdw
-ahC
+pFx
 sKu
 sKu
-sKu
-sKu
-dBH
+bdw
+pxd
+sZE
 bdw
 wtA
 gsc
@@ -131499,12 +131473,12 @@ xXx
 xXx
 vNS
 bdw
-kRd
-sKu
+paa
 qVh
-pFx
-eZj
-eJh
+sKu
+iZz
+pxd
+pxd
 bdw
 vmH
 vmH
@@ -131801,12 +131775,12 @@ xXx
 xXx
 vNS
 bdw
-ggq
-eYb
+pFx
+sKu
+sKu
 iZz
-bdw
-bdw
-bdw
+pxd
+pxd
 bdw
 vmH
 vmH
@@ -132105,8 +132079,8 @@ vNS
 bdw
 vqU
 itw
-tME
-pxd
+kRd
+bdw
 rlq
 pxd
 icY
@@ -132405,10 +132379,10 @@ xXx
 xXx
 vNS
 bdw
-iFk
-pxd
-tME
-pxd
+eJh
+dBH
+xOP
+bdw
 pxd
 pxd
 icY
@@ -132708,11 +132682,11 @@ eSP
 vNS
 bdw
 bdw
-jXy
+bdw
 xNh
 bdw
-xOP
-bdw
+icY
+ivh
 bdw
 vmH
 nOM
@@ -133011,7 +132985,7 @@ vNS
 bdw
 qJZ
 mri
-enR
+mri
 dUR
 tME
 pxd
