@@ -107,6 +107,12 @@
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 2
 
+/datum/gear/suit/bulletvest
+	name = "Punk Armor Kit"
+	path = /obj/item/clothing/suit/armor/light/kit/punk
+	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
+	cost = 2
+
 /datum/gear/suit/autumn
 	name = "tan trenchcoat"
 	path = /obj/item/clothing/suit/armor/light/duster/autumn

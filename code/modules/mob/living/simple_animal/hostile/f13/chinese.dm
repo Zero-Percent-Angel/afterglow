@@ -51,6 +51,45 @@
 		SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
 	)
 
+/mob/living/simple_animal/hostile/chinese/militant
+	name = "chinese militant"
+	icon_state = "chinesemilitant"
+	icon_living = "chinesmilitant"
+	ranged = 1
+	retreat_distance = 4
+	minimum_distance = 6
+	loot = list(/obj/effect/mob_spawn/human/corpse/chineseremnant/militant, /obj/item/gun/ballistic/automatic/pistol/type17)
+	projectiletype = /obj/item/projectile/bullet/c9mm/simple
+	projectilesound =  'sound/f13weapons/ninemil.ogg'
+	projectile_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(PISTOL_LIGHT_VOLUME),
+		SP_VOLUME_SILENCED(PISTOL_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(PISTOL_LIGHT_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(PISTOL_LIGHT_DISTANT_SOUND),
+		SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
+	)
+
+/mob/living/simple_animal/hostile/chinese/militant/rifle
+	icon_state = "chinesemilitant_rifle"
+	icon_living = "chinesmilitant_rifle"
+	extra_projectiles = 1
+	loot = list(/obj/effect/mob_spawn/human/corpse/chineseremnant/militant, /obj/item/gun/ballistic/automatic/type93)
+	projectiletype = /obj/item/projectile/bullet/a556/simple
+	projectilesound = 'sound/f13weapons/assaultrifle_fire.ogg'
+	projectile_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(RIFLE_LIGHT_VOLUME),
+		SP_VOLUME_SILENCED(RIFLE_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(RIFLE_LIGHT_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(RIFLE_LIGHT_DISTANT_SOUND),
+		SP_DISTANT_RANGE(RIFLE_LIGHT_RANGE_DISTANT)
+	)
+
 /mob/living/simple_animal/hostile/chinese/ranged/assault
 	name = "chinese remnant assault soldier"
 	icon_state = "chineseassault"

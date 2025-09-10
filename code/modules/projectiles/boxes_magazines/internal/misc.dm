@@ -34,6 +34,14 @@
 	caliber = list(CALIBER_FUEL)
 	max_ammo = 10 //You're not getting many shots here
 
+/obj/item/ammo_box/magazine/internal/chinapistol
+	name = "chinese pistol magazine"
+	desc = "you shouldnt be seeing this, but its the internal magazine of the type-17 pistol"
+	ammo_type = /obj/item/ammo_casing/c10mm
+	caliber = list(CALIBER_10MM)
+	max_ammo = 10
+
+
 // BETA STUFF // Obsolete
 /obj/item/ammo_box/magazine/internal/shot/lethal/test
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/test

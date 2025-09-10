@@ -272,6 +272,14 @@ obj/effect/mob_spawn/human/corpse/raiderbossalt
 	facial_hair_style = "Shaved"
 	mob_species = /datum/species/ghoul
 
+/obj/effect/mob_spawn/human/corpse/chineseremnant/militant
+	uniform = /obj/item/clothing/under/f13/chinese/militant
+	shoes = /obj/item/clothing/shoes/jackboots
+	head = /obj/item/clothing/head/f13/chinese/militant
+	hair_style = "Bald"
+	facial_hair_style = "Shaved"
+	mob_species = /datum/species/ghoul
+
 /obj/effect/mob_spawn/human/corpse/chineseremnant/pistol
 	name = "Chinese Remnant Pistoleer Corpse"
 	neck = /obj/item/storage/belt/shoulderholster

@@ -108,6 +108,13 @@
 	build_path = /obj/item/ammo_box/c22/empty
 	category = list("initial", "Simple Magazines", "Handmade Magazines")
 
+/datum/design/ammolathe/c10mmstrip
+	name = "stripper clip (10mm)"
+	id = "c10mmstrip"
+	materials = list(/datum/material/iron = 2000)
+	build_path = /obj/item/ammo_box/c10mm/clip
+	category = list("initial", "Simple Magazines", "Handmade Magazines")
+
 /datum/design/ammolathe/speedloader44
 	name = "empty speed loader (.44)"
 	id = "speedloader44"

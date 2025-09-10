@@ -318,7 +318,7 @@
 	body_parts_hidden = CHEST | GROIN
 
 /////////////////////
-// DUSTERS & COATS //
+// DUSTERS, COATS & VESTS//
 /////////////////////
 
 /obj/item/clothing/suit/armor/light/duster
@@ -408,6 +408,21 @@
 	icon_state = "rusted_cowboy"
 	item_state = "rusted_cowboy"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_MELEE_T1)
+
+
+/obj/item/clothing/suit/armor/light/vest
+	name = "generic light armor vest"
+	desc = "a supremely generic armor vest."
+	icon_state = "armor"
+	item_state = "armor"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T1)
+
+/obj/item/clothing/suit/armor/light/vest/flak
+	name = "flak vest"
+	desc = "A nylon vest designed to stop low-caliber bullets and fragentation. Obsolete even before the great war, don't expect it to do much."
+	icon_state = "vest_flak"
+	item_state = "vest_flak"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1,ARMOR_MODIFIER_UP_BOMB_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 ///////////////////
 // LEATHER ARMOR //
