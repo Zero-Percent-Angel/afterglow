@@ -428,7 +428,7 @@
 /obj/item/gun/energy/laser/pistol/fo4laser
 	name = "\improper AER7 laser carbine"
 	desc = ". An AER7 laser rifle that has been cut down to pistol size. Damage and power consumption have both been reduced."
-	icon_state = "f4laserpistol"
+	icon_state = "laserfo4"
 	item_state = "laser-pistol"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
