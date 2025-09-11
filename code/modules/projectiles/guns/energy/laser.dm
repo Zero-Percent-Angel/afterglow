@@ -361,7 +361,7 @@
 //Recharger Pistol
 /obj/item/gun/energy/laser/wattz/recharger
 	name = "Recharger Pistol"
-	desc = "A recharger pistol manufactured by the Followers of the Apocalpyse. As the name implied, it charges its capacitor banks over time using radioactive decay."
+	desc = "A recharger pistol manufactured by the Followers of the Apocalpyse. As the name implies, it charges its capacitor banks over time using radioactive decay."
 	can_remove = 0
 	can_charge = 0
 	selfcharge = 1
@@ -385,7 +385,7 @@
 //Recharger Rifle
 /obj/item/gun/energy/laser/wattz/recharger/rifle
 	name = "Recharger Rifle"
-	desc = "A recharger rifle manufactred by the Followers of the Apocalpyse. AS the name implies, it charges its capacitor banks over time using radioactive decay."
+	desc = "A recharger rifle manufactred by the Followers of the Apocalpyse. As the name implies, it charges its capacitor banks over time using radioactive decay."
 	icon = 'icons/fallout/objects/guns/longguns.dmi'
 	icon_state = "rechargerrifle"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan/rifle)
@@ -421,20 +421,32 @@
 		/datum/firemode/semi_auto
 	)
 
-//AEP9
-/obj/item/gun/energy/laser/pistol/revolver
-	name = "\improper AEP9 laser revolver"
-	desc = "A basic energy-based laser gun that fires concentrated beams of light. 'Revolver' version of the AEP7. Armor-penetrating beams dealing more damage, but acting with far less efficiency."
-	icon_state = "aep9"
+//FO4 laser gun
+//AEP7 that loads from MF cells instead
+//stronger than the AEP7 but bulkier
+//more shots than the AER9 and smaller, but les damage and no dual wield
+/obj/item/gun/energy/laser/pistol/fo4laser
+	name = "\improper AER7 laser carbine"
+	desc = ". An AER7 laser rifle that has been cut down to pistol size. Damage and power consumption have both been reduced."
+	icon_state = "f4laserpistol"
 	item_state = "laser-pistol"
-	w_class = WEIGHT_CLASS_SMALL
+	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan/revolver)
-	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan/fo4laser)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	can_scope = FALSE
-	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_SLOW
+
+	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
+	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
+	draw_time = GUN_DRAW_MODERATE
+	fire_delay = GUN_FIRE_DELAY_NORMAL
+	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	burst_size = 1
+	init_firemodes = list(
+		/datum/firemode/semi_auto
+	)
 
 
 // Debug laser pistol that does 10 damage and 0 DT piercing
