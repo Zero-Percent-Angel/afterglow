@@ -410,8 +410,8 @@
 
 /obj/item/projectile/beam/laser/pistol/hitscan/fo4laser //FO4 laser"
 	damage = 24 //one more hit to kill than rifle, one less than pistol
-	armour_penetration = 0.05
-	damage_threshold_penetration = 10
+	armour_penetration = 0.1
+	damage_threshold_penetration = 4
 
 /obj/item/projectile/beam/laser/recharger/hitscan //hitscan recharger pistol
 	name = "recharger beam"
