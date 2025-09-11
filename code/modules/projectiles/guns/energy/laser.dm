@@ -426,8 +426,8 @@
 //stronger than the AEP7 but bulkier
 //more shots than the AER9 and smaller, but les damage and no dual wield
 /obj/item/gun/energy/laser/pistol/fo4laser
-	name = "\improper AER7 laser carbine"
-	desc = ". An AER7 laser rifle that has been cut down to pistol size. Damage and power consumption have both been reduced."
+	name = "\improper AER9 laser carbine"
+	desc = ". An AER9 laser rifle that has been cut down to pistol size. Damage and power consumption have both been reduced."
 	icon_state = "laserfo4"
 	item_state = "laser-pistol"
 	w_class = WEIGHT_CLASS_NORMAL
