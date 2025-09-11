@@ -408,10 +408,10 @@
 	muzzle_type = /obj/effect/projectile/muzzle/disabler
 	impact_type = /obj/effect/projectile/impact/disabler
 
-/obj/item/projectile/beam/laser/pistol/hitscan/revolver //AEP9
-	name = "laser beam"
-	damage = 44
-	armour_penetration = 0.2
+/obj/item/projectile/beam/laser/pistol/hitscan/fo4laser //FO4 laser"
+	damage = 24 //one more hit to kill than rifle, one less than pistol
+	armour_penetration = 0.02
+	damage_threshold_penetration = 10
 
 /obj/item/projectile/beam/laser/recharger/hitscan //hitscan recharger pistol
 	name = "recharger beam"
