@@ -861,6 +861,14 @@
 	icon_state = "50ap"
 */
 
+/obj/item/ammo_box/c10mm/clip
+	name = "stripper clip (10mm)"
+	desc = "10 round clip of 10mm rounds."
+	ammo_type = /obj/item/ammo_casing/c10mm
+	icon_state = "clip10mm"
+	max_ammo = 10
+	multiple_sprites = 1
+
 ////////////////////////////////
 // FLAMER FUEL AND OTHER MISC //
 ////////////////////////////////

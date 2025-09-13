@@ -247,6 +247,13 @@
 	path = /obj/item/clothing/head/f13/chinese/officer
 	cost = 2
 
+/datum/gear/head/chinese/officer
+	name = "PLA militant's cap"
+	path = /obj/item/clothing/head/f13/chinese/militant
+	cost = 2
+
+//khaaaaan
+
 /datum/gear/head/khan_horned
 	name = "horned helmet"
 	path = /obj/item/clothing/head/helmet/f13/khan

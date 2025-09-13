@@ -986,11 +986,14 @@
 /obj/item/clothing/under/f13/chinese/officer
 	name = "PLA officer's uniform"
 	desc = "An pre-war People's Liberation Army uniform, worn by officers."
-	icon = 'icons/fallout/clothing/uniforms.dmi'
-	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform.dmi'
-	mutantrace_variation = STYLE_DIGITIGRADE
 	icon_state = "chinese_officer"
 	item_state = "chinese_officer"
+
+/obj/item/clothing/under/f13/chinese/militant
+	name = "PLA militant's uniform"
+	desc = "A discrete black outfit worn by chinese agents within the US. It is said hundreds of them are active even today."
+	icon_state = "chinese_infiltrator"
+	item_state = "chinese_infiltrator"
 
 //Old World Law Enforcement
 //Police and State Police

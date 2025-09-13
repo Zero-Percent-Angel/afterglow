@@ -889,8 +889,8 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 
 /obj/item/storage/box/gun/pistol/type17/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/pistol/type17(src)
-	new /obj/item/ammo_box/magazine/m10mm/adv/simple(src)
-	new /obj/item/ammo_box/magazine/m10mm/adv/simple(src)
+	new /obj/item/ammo_box/c10mm/clip(src)
+	new /obj/item/ammo_box/c10mm/clip(src)
 
 /obj/item/storage/box/gun/pistol/m1911 //muh three worldly whores
 	name = "M1911 case"

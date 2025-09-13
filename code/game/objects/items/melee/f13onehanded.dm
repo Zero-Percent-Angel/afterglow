@@ -128,6 +128,15 @@
 	force = 31
 	block_chance = 15
 
+/obj/item/melee/onehanded/chinasword
+	name = "chinese officer's sword"
+	desc = "A chinese sword brought home as a trophy from Alaska. What it lacks in force, it makes up for in finesse, at least that is what the fortune cookie says."
+	icon_state = "chinese"
+	item_state = "scrapsabre"
+	force = 27
+	block_chance = 33
+	armour_penetration = 0.10
+
 /obj/item/throwing_star/spear
 	name = "throwing spear"
 	desc = "An heavy hefty ancient weapon used to this day, due to its ease of lodging itself into its victim's body parts."

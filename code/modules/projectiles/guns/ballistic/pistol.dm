@@ -334,11 +334,13 @@
  * Less accurate
  * Less damage
  * Common
+ * loads from stripper clips: only 10 rounds, but you can do partial top-up reloads
  * * * * * * * * * * */
 /obj/item/gun/ballistic/automatic/pistol/type17
 	name = "Type 17"
 	desc = "Chinese military sidearm at the time of the Great War. The ones around are old and worn, but somewhat popular due to the long barrel and rechambered in 10mm after the original ammo ran dry decades ago."
 	icon_state = "chinapistol"
+	mag_type = /obj/item/ammo_box/magazine/internal/chinapistol
 	w_class = WEIGHT_CLASS_SMALL
 
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
@@ -347,7 +349,7 @@
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	damage_multiplier = GUN_LESS_DAMAGE_T1
+	damage_multiplier = GUN_LESS_DAMAGE_T2
 	init_recoil = HANDGUN_RECOIL(0.6)
 
 	can_suppress = FALSE
@@ -363,7 +365,7 @@
 		SP_DISTANT_RANGE(PISTOL_MEDIUM_RANGE_DISTANT)
 	)
 	init_firemodes = list(
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/semi_auto/faster
 	)
 
 // Tox's Type 17
