@@ -34621,6 +34621,8 @@
 /area/f13/wasteland/city)
 "lAW" = (
 /obj/structure/table,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/storage/box/beakers,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -46025,11 +46027,22 @@
 	},
 /area/f13/wasteland/town)
 "pua" = (
-/obj/item/storage/box/beakers,
-/obj/structure/table,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/obj/machinery/shower{
+	dir = 8;
+	pixel_y = -6;
+	pixel_x = 2
+	},
+/obj/structure/decoration/vent/rusty{
+	desc = "It's very old and rusty.";
+	name = "rusty grate";
+	pixel_x = 2;
+	pixel_y = -3
+	},
 /turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
+	icon_state = "floorrusty"
 	},
 /area/f13/followers)
 "pun" = (
@@ -51593,6 +51606,17 @@
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
+"rkY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/stripes/line,
+/obj/structure/sink/greyscale{
+	dir = 8;
+	pixel_x = -12
+	},
+/turf/open/floor/f13{
+	icon_state = "bluerustysolid"
+	},
+/area/f13/followers)
 "rlq" = (
 /obj/machinery/light{
 	dir = 1;
@@ -71575,7 +71599,10 @@
 /area/f13/building/abandoned/g)
 "xOP" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/freezer/blood,
+/obj/structure/sink/kitchen{
+	dir = 8;
+	pixel_x = 12
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "whitedirtysolid"
 	},
@@ -131228,7 +131255,7 @@ vNS
 bdw
 pFx
 sKu
-sKu
+kRd
 bdw
 pxd
 sZE
@@ -132134,7 +132161,7 @@ vNS
 bdw
 vqU
 itw
-kRd
+sKu
 bdw
 rlq
 pxd
@@ -133041,7 +133068,7 @@ bdw
 qJZ
 mri
 mri
-dUR
+rkY
 tME
 pxd
 bdw
