@@ -448,6 +448,18 @@
 		/datum/firemode/semi_auto
 	)
 
+/obj/item/gun/energy/laser/pistol/hotwired
+	name = "\improper overcharged laser gun"
+	desc = "A laser gun that has been modified to fire more powerful blasts at the cost of higher energy consumption."
+	icon_state = "aep9"
+	item_state = "laser-pistol"
+	w_class = WEIGHT_CLASS_SMALL
+	slot_flags = ITEM_SLOT_BELT
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/hitscan/focused)
+	cell_type = /obj/item/stock_parts/cell/ammo/ec
+	can_scope = FALSE
+	draw_time = GUN_DRAW_QUICK
+	fire_delay = GUN_FIRE_DELAY_SLOW
 
 // Debug laser pistol that does 10 damage and 0 DT piercing
 /obj/item/gun/energy/laser/pistol/debug_10_damage_0_dt_pierce
