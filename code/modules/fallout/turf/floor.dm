@@ -19,9 +19,6 @@
 //	step_sounds = list("human" = "woodfootsteps")
 	broken_states = list("housewood1-broken", "housewood2-broken", "housewood3-broken", "housewood4-broken")
 
-/turf/open/floor/f13/wood/make_plating()
-	return ChangeTurf(/turf/open/floor/plating/wooden)
-
 /turf/open/floor/f13/wood/attackby(obj/item/C, mob/user, params)
 	if(..())
 		return
