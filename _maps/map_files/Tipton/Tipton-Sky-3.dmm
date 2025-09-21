@@ -820,12 +820,13 @@
 /turf/open/floor/plating/dirt,
 /area/f13/legioncamp)
 "aEr" = (
+/obj/item/stack/sheet/metal,
 /obj/structure/lattice/catwalk{
 	icon = 'icons/fallout/turfs/floors.dmi';
 	icon_state = "railtiejunc";
-	dir = 8
+	dir = 8;
+	smooth = 0
 	},
-/obj/item/stack/sheet/metal,
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -2764,18 +2765,13 @@
 	},
 /area/f13/wasteland)
 "ccT" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	pixel_y = -23;
-	start_charge = 500;
-	name = "second floor area power controller"
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/machinery/power/apc/auto_name/south,
 /turf/open/floor/circuit/f13_green,
 /area/f13/brotherhood/secondfloor)
 "ccZ" = (
@@ -4348,18 +4344,19 @@
 /turf/open/floor/plating/f13/outside/roof/wood,
 /area/f13/building/powered)
 "diZ" = (
-/obj/vertibird{
-	dir = 4;
-	pixel_y = -70;
-	name = "Broken VB-02"
+/obj/item/stack/cable_coil/cut{
+	pixel_y = 11
 	},
 /obj/structure/lattice/catwalk{
 	icon = 'icons/fallout/turfs/floors.dmi';
 	icon_state = "railtiejunc";
-	dir = 8
+	dir = 8;
+	smooth = 0
 	},
-/obj/item/stack/cable_coil/cut{
-	pixel_y = 11
+/obj/vertibird{
+	dir = 4;
+	pixel_y = -70;
+	name = "Broken VB-02"
 	},
 /turf/open/floor/f13{
 	color = "#d9c4b9";
@@ -6660,7 +6657,8 @@
 /obj/structure/fence/handrail_end{
 	dir = 4;
 	pixel_y = 16;
-	pixel_x = -16
+	pixel_x = -16;
+	density = 0
 	},
 /turf/open/transparent/openspace,
 /area/f13/brotherhood/secondfloor)
@@ -7322,7 +7320,8 @@
 /obj/structure/fence/handrail_end{
 	dir = 8;
 	pixel_y = 16;
-	pixel_x = 16
+	pixel_x = 16;
+	density = 0
 	},
 /turf/open/transparent/openspace,
 /area/f13/brotherhood/secondfloor)
@@ -8230,11 +8229,6 @@
 /turf/open/indestructible/ground/outside/snow,
 /area/f13/underground/mountain)
 "fWG" = (
-/obj/structure/lattice/catwalk{
-	icon = 'icons/fallout/turfs/floors.dmi';
-	icon_state = "railtiejunc";
-	dir = 8
-	},
 /obj/structure/fence/handrail{
 	pixel_y = 14;
 	layer = 3.4
@@ -8242,6 +8236,12 @@
 /obj/item/stack/crafting/metalparts{
 	pixel_x = 5;
 	pixel_y = -13
+	},
+/obj/structure/lattice/catwalk{
+	icon = 'icons/fallout/turfs/floors.dmi';
+	icon_state = "railtiejunc";
+	dir = 8;
+	smooth = 0
 	},
 /turf/open/floor/f13{
 	color = "#d9c4b9";
@@ -10940,15 +10940,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/building/powered)
 "hHP" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	start_charge = 500;
-	pixel_x = 24;
-	name = "first floor area power controller"
-	},
 /obj/structure/cable{
 	icon_state = "0-1"
 	},
+/obj/machinery/power/apc/auto_name/east,
 /turf/open/floor/circuit/f13_green,
 /area/f13/brotherhood)
 "hHZ" = (
@@ -11319,15 +11314,10 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/powered)
 "hYG" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	pixel_y = -23;
-	start_charge = 500;
-	name = "dormitories area power controller"
-	},
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/apc/auto_name/south,
 /turf/open/floor/circuit/f13_green,
 /area/f13/brotherhood/dorms)
 "hYJ" = (
@@ -11496,15 +11486,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/secondfloor)
 "ifn" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	start_charge = 500;
-	pixel_x = 24;
-	name = "canteen area power controller"
-	},
 /obj/structure/cable{
 	icon_state = "0-1"
 	},
+/obj/machinery/power/apc/auto_name/east,
 /turf/open/floor/circuit/f13_green,
 /area/f13/brotherhood/leisure)
 "ifZ" = (
@@ -14889,11 +14874,6 @@
 	},
 /area/f13/building)
 "kFv" = (
-/obj/structure/lattice/catwalk{
-	icon = 'icons/fallout/turfs/floors.dmi';
-	icon_state = "railtiejunc";
-	dir = 8
-	},
 /obj/structure/fence/handrail{
 	pixel_y = 14;
 	layer = 3.4
@@ -14901,6 +14881,12 @@
 /obj/structure/wreck/trash/two_barrels{
 	pixel_y = -13;
 	pixel_x = -5
+	},
+/obj/structure/lattice/catwalk{
+	icon = 'icons/fallout/turfs/floors.dmi';
+	icon_state = "railtiejunc";
+	dir = 8;
+	smooth = 0
 	},
 /turf/open/floor/f13{
 	color = "#d9c4b9";
@@ -15435,18 +15421,13 @@
 /turf/open/floor/plating/f13/outside/roof,
 /area/f13/wasteland/cold)
 "laZ" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	pixel_y = -23;
-	start_charge = 500;
-	name = "offices area power controller"
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/apc/auto_name/south,
 /turf/open/floor/circuit/f13_green,
 /area/f13/brotherhood/offices2nd)
 "lbm" = (
@@ -16486,18 +16467,13 @@
 /turf/open/transparent/openspace,
 /area/f13/village)
 "lQE" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	pixel_y = -23;
-	start_charge = 500;
-	name = "hangar area power controller"
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/machinery/power/apc/auto_name/south,
 /turf/open/floor/circuit/f13_green,
 /area/f13/brotherhood/hangar)
 "lQN" = (
@@ -16884,15 +16860,10 @@
 	},
 /area/f13/building/powered)
 "meO" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	start_charge = 500;
-	pixel_x = -23;
-	name = "medbay area power controller"
-	},
 /obj/structure/cable{
 	icon_state = "0-1"
 	},
+/obj/machinery/power/apc/auto_name/west,
 /turf/open/floor/circuit/f13_green,
 /area/f13/brotherhood/medical)
 "mfo" = (
@@ -16959,7 +16930,8 @@
 /obj/structure/lattice/catwalk{
 	icon = 'icons/fallout/turfs/floors.dmi';
 	icon_state = "railtiejunc";
-	dir = 8
+	dir = 8;
+	smooth = 0
 	},
 /turf/open/floor/f13{
 	color = "#d9c4b9";
@@ -17669,14 +17641,15 @@
 /turf/open/floor/wood_common,
 /area/f13/legioncamp)
 "mIS" = (
-/obj/structure/lattice/catwalk{
-	icon = 'icons/fallout/turfs/floors.dmi';
-	icon_state = "railtiejunc";
-	dir = 8
-	},
 /obj/structure/fence/handrail{
 	pixel_y = 14;
 	layer = 3.4
+	},
+/obj/structure/lattice/catwalk{
+	icon = 'icons/fallout/turfs/floors.dmi';
+	icon_state = "railtiejunc";
+	dir = 8;
+	smooth = 0
 	},
 /turf/open/floor/f13{
 	color = "#d9c4b9";
@@ -18551,7 +18524,8 @@
 /obj/structure/lattice/catwalk{
 	icon = 'icons/fallout/turfs/floors.dmi';
 	icon_state = "railtiejunc";
-	dir = 8
+	dir = 8;
+	smooth = 0
 	},
 /turf/open/transparent/openspace,
 /area/f13/brotherhood/secondfloor)
@@ -18864,15 +18838,10 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/underground/mountain)
 "nDp" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	pixel_y = -23;
-	start_charge = 500;
-	name = "security area power controller"
-	},
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/machinery/power/apc/auto_name/south,
 /turf/open/floor/circuit/f13_green,
 /area/f13/brotherhood/operations)
 "nDH" = (
@@ -21362,6 +21331,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/vexillarius,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/mountain)
 "poR" = (
@@ -21483,7 +21453,9 @@
 	},
 /area/f13/building/powered)
 "prV" = (
-/obj/structure/fluff/rug/rug_rubber,
+/obj/structure/fluff/rug/rug_rubber{
+	pixel_x = 1
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -22182,18 +22154,13 @@
 /turf/open/floor/plating/f13/outside/roof,
 /area/f13/wasteland/cold)
 "pUm" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	pixel_y = -23;
-	start_charge = 500;
-	name = "research area power controller"
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/apc/auto_name/south,
 /turf/open/floor/circuit/f13_green,
 /area/f13/brotherhood/rnd)
 "pUD" = (
@@ -23307,14 +23274,15 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/underground/mountain)
 "qOp" = (
-/obj/structure/lattice/catwalk{
-	icon = 'icons/fallout/turfs/floors.dmi';
-	icon_state = "railtiejunc";
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/lattice/catwalk{
+	icon = 'icons/fallout/turfs/floors.dmi';
+	icon_state = "railtiejunc";
+	dir = 8;
+	smooth = 0
 	},
 /turf/open/floor/f13{
 	color = "#d9c4b9";
@@ -23568,6 +23536,12 @@
 	pixel_x = 9;
 	pixel_y = 12
 	},
+/obj/structure/lattice/catwalk{
+	icon = 'icons/fallout/turfs/floors.dmi';
+	icon_state = "railtiejunc";
+	dir = 8;
+	smooth = 0
+	},
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -23660,6 +23634,10 @@
 	name = "concrete wall"
 	},
 /area/f13/building)
+"rbA" = (
+/obj/effect/landmark/start/f13/vexillarius,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/underground/mountain)
 "rbC" = (
 /obj/structure/table/wood,
 /obj/item/pda,
@@ -24459,13 +24437,14 @@
 /turf/open/floor/f13/wood,
 /area/f13/building)
 "rEk" = (
+/obj/structure/wreck/trash/engine{
+	pixel_y = 11
+	},
 /obj/structure/lattice/catwalk{
 	icon = 'icons/fallout/turfs/floors.dmi';
 	icon_state = "railtiejunc";
-	dir = 8
-	},
-/obj/structure/wreck/trash/engine{
-	pixel_y = 11
+	dir = 8;
+	smooth = 0
 	},
 /turf/open/floor/f13{
 	color = "#d9c4b9";
@@ -25933,11 +25912,6 @@
 	},
 /area/f13/brotherhood/hangar)
 "sFK" = (
-/obj/structure/lattice/catwalk{
-	icon = 'icons/fallout/turfs/floors.dmi';
-	icon_state = "railtiejunc";
-	dir = 8
-	},
 /obj/structure/fence/handrail{
 	pixel_y = 14;
 	layer = 3.4
@@ -25945,6 +25919,12 @@
 /obj/item/tool_upgrade/productivity/booster{
 	pixel_y = -12;
 	pixel_x = 9
+	},
+/obj/structure/lattice/catwalk{
+	icon = 'icons/fallout/turfs/floors.dmi';
+	icon_state = "railtiejunc";
+	dir = 8;
+	smooth = 0
 	},
 /turf/open/floor/f13{
 	color = "#d9c4b9";
@@ -26231,7 +26211,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/powered)
 "sPE" = (
-/obj/structure/fluff/rug/rug_rubber,
+/obj/structure/fluff/rug/rug_rubber{
+	pixel_x = 2
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -27653,15 +27635,10 @@
 	},
 /area/f13/wasteland)
 "tVI" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	start_charge = 500;
-	pixel_x = -23;
-	name = "armoury area power controller"
-	},
 /obj/structure/cable{
 	icon_state = "0-1"
 	},
+/obj/machinery/power/apc/auto_name/west,
 /turf/open/floor/circuit/f13_green,
 /area/f13/brotherhood/armory)
 "tVK" = (
@@ -29928,7 +29905,9 @@
 /obj/structure/chair/office/light{
 	dir = 1
 	},
-/obj/structure/fluff/rug/rug_rubber,
+/obj/structure/fluff/rug/rug_rubber{
+	pixel_x = -2
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -31760,12 +31739,13 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legion)
 "wYb" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/lattice/catwalk{
 	icon = 'icons/fallout/turfs/floors.dmi';
 	icon_state = "railtiejunc";
-	dir = 8
+	dir = 8;
+	smooth = 0
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -32475,17 +32455,18 @@
 /turf/open/floor/plating/dirt,
 /area/f13/wasteland/cold)
 "xsS" = (
-/obj/structure/lattice/catwalk{
-	icon = 'icons/fallout/turfs/floors.dmi';
-	icon_state = "railtiejunc";
-	dir = 8
-	},
 /obj/item/wrench{
 	pixel_x = 10
 	},
 /obj/structure/wreck/trash/autoshaft,
 /obj/effect/decal/cleanable/dirt/dust{
 	color = "#111111"
+	},
+/obj/structure/lattice/catwalk{
+	icon = 'icons/fallout/turfs/floors.dmi';
+	icon_state = "railtiejunc";
+	dir = 8;
+	smooth = 0
 	},
 /turf/open/floor/f13{
 	color = "#d9c4b9";
@@ -78006,7 +77987,7 @@ jHP
 qmF
 cVs
 jBK
-cVs
+rbA
 qmF
 vzU
 iXd

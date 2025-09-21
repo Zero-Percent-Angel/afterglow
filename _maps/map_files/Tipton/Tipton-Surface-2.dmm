@@ -1848,6 +1848,10 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/mountain)
+"ayc" = (
+/obj/effect/landmark/start/f13/venator,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legion)
 "ayg" = (
 /obj/item/clothing/mask/gas/sechailer,
 /obj/item/clothing/mask/gas/sechailer,
@@ -3141,7 +3145,8 @@
 /obj/structure/lattice/catwalk{
 	icon = 'icons/fallout/turfs/floors.dmi';
 	icon_state = "railtiejunc";
-	dir = 8
+	dir = 8;
+	smooth = 0
 	},
 /turf/open/floor/f13{
 	icon_state = "plating"
@@ -11612,6 +11617,13 @@
 	icon_state = "worn_dark-broken2"
 	},
 /area/f13/wasteland)
+"dub" = (
+/obj/structure/simple_door/metal/store{
+	name = "General Atomics"
+	},
+/obj/structure/barricade/wooden/planks/pregame,
+/turf/closed/wall/mineral/wood,
+/area/f13/building/powered)
 "duk" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -14724,6 +14736,17 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/ambientlighting/building/d)
+"enc" = (
+/obj/docking_port/stationary{
+	area_type = /area/f13;
+	height = 3;
+	id = "bos_entryway";
+	name = "Level 0: Entryway";
+	roundstart_template = /datum/map_template/shuttle/entrance_elevator;
+	width = 3
+	},
+/turf/open/floor/plasteel/elevatorshaft,
+/area/f13/brotherhood)
 "ene" = (
 /turf/closed/wall/f13/ruins{
 	color = "#d9cdb9"
@@ -15074,13 +15097,14 @@
 	pixel_x = -1;
 	pixel_y = 4
 	},
-/obj/machinery/computer/terminal{
-	termtag = "Security";
-	pixel_x = 12
-	},
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 1;
 	pixel_y = 17
+	},
+/obj/machinery/computer/terminal{
+	termtag = "Business";
+	pixel_x = 12;
+	pixel_y = 3
 	},
 /turf/open/floor/wood_common/wood_common_dark,
 /area/f13/wasteland)
@@ -19680,7 +19704,8 @@
 "fKt" = (
 /obj/structure/lattice/catwalk{
 	icon = 'icons/fallout/turfs/floors.dmi';
-	icon_state = "railtiejunc"
+	icon_state = "railtiejunc";
+	smooth = 0
 	},
 /turf/open/floor/f13{
 	icon_state = "plating"
@@ -20684,8 +20709,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/neutral/neutralchess,
 /area/f13/village)
 "gad" = (
-/obj/structure/table/reinforced,
-/obj/structure/table/wood/poker,
+/obj/machinery/computer/telecomms/jammer,
 /turf/open/floor/wood_common/wood_common_dark,
 /area/f13/wasteland)
 "gaj" = (
@@ -25933,6 +25957,16 @@
 	icon_state = "common1"
 	},
 /area/f13/building)
+"hDf" = (
+/obj/docking_port/stationary{
+	area_type = /area/f13;
+	height = 3;
+	id = "bos_surface";
+	name = "Surface";
+	width = 3
+	},
+/turf/open/floor/plasteel/elevatorshaft,
+/area/f13/brotherhood/powered)
 "hDw" = (
 /obj/structure/table,
 /obj/machinery/processor/chopping_block,
@@ -30657,7 +30691,8 @@
 /obj/structure/lattice/catwalk{
 	icon = 'icons/fallout/turfs/floors.dmi';
 	icon_state = "railtiejunc";
-	dir = 8
+	dir = 8;
+	smooth = 0
 	},
 /turf/open/floor/f13{
 	icon_state = "plating"
@@ -37380,11 +37415,8 @@
 /area/f13/ambientlighting/building/d)
 "kRZ" = (
 /obj/structure/rack,
-/obj/item/trash/f13/electronic{
-	pixel_x = 2;
-	pixel_y = 14
-	},
 /obj/effect/decal/cleanable/cobweb,
+/obj/item/trash/f13/fancylads,
 /turf/open/floor/f13{
 	icon_state = "floordirtysolid"
 	},
@@ -51086,7 +51118,7 @@
 /area/f13/legioncamp)
 "oQR" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh,
+/obj/effect/spawner/lootdrop/weapons/experimental,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/underground/mountain)
 "oQV" = (
@@ -51460,9 +51492,7 @@
 	},
 /area/f13/brotherhood/powered)
 "oUQ" = (
-/obj/structure/musician/piano{
-	dir = 0
-	},
+/obj/machinery/jukebox/radio,
 /turf/open/floor/wood_common/wood_common_dark,
 /area/f13/wasteland)
 "oVe" = (
@@ -54159,11 +54189,12 @@
 	},
 /area/f13/wasteland)
 "pLm" = (
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/lattice/catwalk{
 	icon = 'icons/fallout/turfs/floors.dmi';
-	icon_state = "railtiejunc"
+	icon_state = "railtiejunc";
+	smooth = 0
 	},
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
 	icon_state = "plating"
 	},
@@ -67028,6 +67059,12 @@
 /area/f13/underground/mountain)
 "tDt" = (
 /obj/structure/lattice/catwalk,
+/obj/structure/table{
+	layer = 2.9
+	},
+/obj/item/book/manual/advice_farming{
+	pixel_y = 5
+	},
 /turf/open/water,
 /area/f13/brotherhood)
 "tDE" = (
@@ -72783,11 +72820,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/wasteland)
 "vnG" = (
-/obj/structure/stairs/east{
-	color = "#A47449"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/legion)
+/obj/effect/spawner/lootdrop/weapons/experimental,
+/turf/open/indestructible/ground/outside/snow,
+/area/f13/underground/mountain)
 "vnH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -76381,6 +76416,7 @@
 /obj/machinery/newscaster{
 	pixel_x = 32
 	},
+/obj/item/kirbyplants/photosynthetic,
 /turf/open/water,
 /area/f13/brotherhood)
 "wns" = (
@@ -91251,7 +91287,7 @@ tSi
 tSi
 tSi
 tSi
-tSi
+vnG
 eqe
 jwS
 fkW
@@ -113937,7 +113973,7 @@ jRd
 poz
 qyM
 uQb
-dHY
+dub
 sDe
 lqt
 qqd
@@ -126755,10 +126791,10 @@ jch
 kUE
 riu
 xbd
-tUP
-tUP
-tUP
-tUP
+kUF
+kUF
+kUF
+kUF
 slF
 jBf
 tqr
@@ -126959,8 +126995,8 @@ loq
 pXH
 ceE
 ceE
-ceE
-tUP
+hDf
+kUF
 mxz
 qvh
 aGe
@@ -126972,7 +127008,7 @@ okc
 mqN
 fRq
 fRq
-fRq
+enc
 ruH
 pCg
 kNv
@@ -127162,7 +127198,7 @@ wzx
 ceE
 ceE
 ceE
-tUP
+kUF
 mxz
 jBf
 nem
@@ -127364,7 +127400,7 @@ pXH
 ceE
 ceE
 ceE
-tUP
+kUF
 mxz
 qvh
 aGe
@@ -127563,10 +127599,10 @@ hXx
 iEQ
 ulJ
 tUP
-tUP
-tUP
-tUP
-tUP
+kUF
+kUF
+kUF
+kUF
 slF
 jBf
 gIK
@@ -129843,7 +129879,7 @@ rjV
 hfU
 rjV
 dbs
-dbs
+ayc
 dbs
 lxi
 dbs
@@ -131842,13 +131878,13 @@ gvq
 qgH
 lxi
 uPw
-vnG
+uPw
 oXy
 uPw
 dbs
 xXj
 nfn
-vnG
+uPw
 dbs
 lxi
 lxi
