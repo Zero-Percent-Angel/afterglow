@@ -615,7 +615,7 @@
 /obj/item/clothing/suit/armor/medium/combat/patrol
 	name = "NCR patrol ranger combat armor"
 	desc = "A modified set of combat armor specifically for use of heavy patrol rangers."
-	icon_state = "ncr_ranger_patrol"
+	icon_state = "ncr_ranger_patrol_old"
 	item_state = "ncr_ranger_patrol"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
