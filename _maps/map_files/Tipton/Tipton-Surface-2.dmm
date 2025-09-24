@@ -4281,10 +4281,6 @@
 	pixel_y = 3;
 	pixel_x = -2
 	},
-/obj/item/roller{
-	pixel_y = 10;
-	pixel_x = -2
-	},
 /obj/structure/sign/poster/prewar/poster65{
 	pixel_y = 32
 	},
@@ -12468,8 +12464,8 @@
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland/cold)
 "eoe" = (
-/obj/structure/window/fulltile/store{
-	icon_state = "storewindowvertical"
+/obj/structure/window/fulltile/ruins{
+	icon_state = "ruinswindowvertical"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/building/powered)
@@ -16126,6 +16122,14 @@
 "fDz" = (
 /obj/structure/simple_door/dirtyglass,
 /turf/open/floor/wood_common/wood_common_dark,
+/area/f13/building/powered)
+"fDA" = (
+/obj/structure/window/fulltile/ruins{
+	icon_state = "ruinswindowbrokenvertical"
+	},
+/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden/planks/pregame,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/building/powered)
 "fDD" = (
 /obj/structure/fence{
@@ -22584,8 +22588,8 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/underground/mountain)
 "hXO" = (
-/obj/structure/table/optable,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/table/optable/primitive,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/building/powered)
 "hXT" = (
@@ -27706,7 +27710,6 @@
 /area/f13/wasteland/cold)
 "jRH" = (
 /obj/structure/closet/crate/medical,
-/obj/item/reagent_containers/hypospray/medipen/stimpak,
 /obj/item/reagent_containers/hypospray/medipen/stimpak{
 	pixel_y = -6
 	},
@@ -29558,13 +29561,12 @@
 /area/f13/brotherhood)
 "kwL" = (
 /obj/structure/table,
-/obj/item/storage/backpack/duffelbag/med/surgery{
-	pixel_y = 11;
-	pixel_x = 3
-	},
 /obj/machinery/vending/wallmed{
 	force_free = 1;
 	pixel_y = 30
+	},
+/obj/item/storage/backpack/duffelbag/med/surgery/primitive/anchored{
+	pixel_x = 2
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
 /area/f13/building/powered)
@@ -44171,9 +44173,7 @@
 /area/f13/underground/mountain)
 "pXD" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/f13chair1{
-	dir = 1
-	},
+/obj/item/chair/folding,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building/powered)
 "pXR" = (
@@ -46835,13 +46835,14 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/powered)
 "qWC" = (
-/obj/machinery/computer/operating{
-	dir = 8;
-	pixel_x = 5
+/obj/effect/decal/marking{
+	icon_state = "doublehorizontal"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vault1,
-/area/f13/building/powered)
+/obj/effect/landmark/npc_wastelander_spawn_position,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain1"
+	},
+/area/f13/tunnel)
 "qWT" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt{
@@ -48691,8 +48692,7 @@
 "rFv" = (
 /obj/structure/table/wood/bar,
 /obj/item/candle/infinite{
-	pixel_x = -10;
-	pixel_y = -3
+	pixel_x = -8
 	},
 /turf/open/floor/wood_worn/wood_worn_dark,
 /area/f13/building/powered)
@@ -55389,10 +55389,7 @@
 /turf/open/indestructible/ground/outside/snow,
 /area/f13/wasteland/cold)
 "ufi" = (
-/obj/machinery/door/airlock/medical/glass{
-	name = "Clinic";
-	req_one_access_txt = "124"
-	},
+/obj/machinery/door/airlock/medical/glass,
 /turf/open/floor/wood_wide,
 /area/f13/followers)
 "ufz" = (
@@ -57964,6 +57961,13 @@
 	icon_state = "redrustysolid"
 	},
 /area/f13/brotherhood/armory)
+"vgL" = (
+/obj/structure/table/wood/bar,
+/obj/item/candle/infinite{
+	pixel_x = 7
+	},
+/turf/open/floor/wood_worn/wood_worn_dark,
+/area/f13/building/powered)
 "vgS" = (
 /obj/structure/car/rubbish1,
 /obj/effect/decal/cleanable/dirt,
@@ -58066,6 +58070,10 @@
 /obj/item/reagent_containers/food/drinks/bottle/gin{
 	pixel_y = 18
 	},
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/alcoholspawner,
+/obj/effect/spawner/lootdrop/f13/alcoholspawner,
+/obj/effect/spawner/lootdrop/f13/alcoholspawner,
 /turf/open/floor/wood_worn/wood_worn_dark,
 /area/f13/building/powered)
 "viC" = (
@@ -66259,6 +66267,12 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"yjP" = (
+/obj/effect/landmark/npc_wastelander_spawn_position,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaltopbordertop0"
+	},
+/area/f13/tunnel)
 "yjU" = (
 /obj/structure/chair/folding{
 	dir = 8
@@ -67722,7 +67736,7 @@ owk
 owk
 owk
 yft
-gaR
+yjP
 ktV
 iso
 pfC
@@ -68333,7 +68347,7 @@ ktV
 iso
 iso
 lGH
-lGH
+qWC
 mUA
 mUA
 nsA
@@ -74799,7 +74813,7 @@ ssp
 vic
 vic
 gyU
-jVE
+siO
 lsB
 lfV
 ssn
@@ -100326,7 +100340,7 @@ owk
 gXb
 pXa
 bgS
-hMT
+vgL
 wwD
 cAZ
 pxA
@@ -101946,7 +101960,7 @@ fPa
 fPa
 kwL
 hXO
-qWC
+oPe
 tuz
 cRP
 qMh
@@ -102147,7 +102161,7 @@ xVf
 xYG
 fPa
 eoe
-eoe
+fDA
 eoe
 fPa
 iAv

@@ -2236,16 +2236,8 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/building/powered)
 "bPg" = (
-/obj/structure/stairs/north,
-/obj/structure/fluff/railing{
-	dir = 4;
-	layer = 3.1;
-	color = "#A47449"
-	},
-/obj/structure/fluff/railing{
-	dir = 8;
-	layer = 3.1;
-	color = "#A47449"
+/obj/structure/stairs/north{
+	dir = 2
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/followers)
@@ -3333,6 +3325,14 @@
 /obj/effect/spawner/lootdrop/low_tools,
 /turf/open/floor/plasteel/f13,
 /area/f13/tunnel)
+"cRZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/railing/corner{
+	color = "#A47449";
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/gravel,
+/area/f13/followers)
 "cSG" = (
 /obj/structure/fence,
 /turf/open/floor/f13{
@@ -4361,6 +4361,11 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/bunker)
+"dLq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/closed/wall/f13/sunset/brick_small_dark,
+/area/f13/followers)
 "dLN" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -5286,6 +5291,13 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/low,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
+"exX" = (
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/gravel,
+/area/f13/followers)
 "eyb" = (
 /obj/structure/table,
 /obj/machinery/microwave{
@@ -5468,6 +5480,10 @@
 "eHb" = (
 /obj/structure/wreck/trash/two_tire,
 /turf/open/indestructible/ground/inside/subway,
+/area/f13/sewer/powered)
+"eHw" = (
+/obj/structure/debris/v3,
+/turf/closed/wall/f13/ruins,
 /area/f13/sewer/powered)
 "eHH" = (
 /obj/structure/lattice/catwalk,
@@ -8964,6 +8980,13 @@
 	icon_state = "dark"
 	},
 /area/f13/den)
+"hAb" = (
+/obj/structure/railing/corner{
+	color = "#A47449";
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/gravel,
+/area/f13/followers)
 "hAg" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/wreck/trash/machinepile,
@@ -10475,6 +10498,13 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/brotherhood/powered)
+"iUV" = (
+/obj/structure/railing{
+	color = "#A47449";
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/gravel,
+/area/f13/followers)
 "iVi" = (
 /obj/item/flag/bos,
 /turf/open/indestructible/ground/inside/subway,
@@ -15760,6 +15790,14 @@
 /obj/structure/disposalpipe/junction/yjunction,
 /turf/closed/mineral/random/low_chance,
 /area/f13/caves)
+"nUi" = (
+/obj/structure/debris/v1,
+/obj/structure/debris/v2{
+	pixel_x = -8;
+	pixel_y = -20
+	},
+/turf/closed/wall/f13/ruins,
+/area/f13/sewer/powered)
 "nUl" = (
 /obj/structure/simple_door/metal/barred,
 /obj/structure/barricade/wooden/planks/pregame,
@@ -16463,6 +16501,9 @@
 /obj/structure/flora/branch,
 /mob/living/simple_animal/chicken,
 /turf/open/floor/plating/dirt,
+/area/f13/sewer/powered)
+"ozD" = (
+/turf/closed/wall/f13/sunset/brick_small_dark,
 /area/f13/sewer/powered)
 "ozE" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -18159,6 +18200,15 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/legioncamp)
+"pXu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/railing/corner{
+	dir = 1;
+	color = "#A47449"
+	},
+/turf/open/indestructible/ground/outside/gravel,
+/area/f13/followers)
 "pXy" = (
 /obj/structure/chair/bench,
 /turf/open/indestructible/ground/inside/mountain,
@@ -22226,6 +22276,12 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/radiation)
+"tqK" = (
+/obj/structure/railing/corner{
+	color = "#A47449"
+	},
+/turf/open/indestructible/ground/outside/gravel,
+/area/f13/followers)
 "tqL" = (
 /obj/structure/decoration/rag{
 	icon_state = "skin"
@@ -23854,7 +23910,6 @@
 /area/f13/den)
 "uEO" = (
 /obj/machinery/light{
-	pixel_y = -4;
 	dir = 1
 	},
 /turf/open/floor/f13{
@@ -65873,7 +65928,7 @@ gDj
 ivI
 hKX
 tIS
-tIS
+nUi
 hKX
 hOs
 vVT
@@ -66075,8 +66130,8 @@ gDj
 ivI
 hKX
 tIS
-tIS
 hKX
+ozD
 hOs
 keF
 keF
@@ -66277,11 +66332,11 @@ gDj
 gDj
 hKX
 tIS
-tIS
 hKX
-hOs
-keF
-rpI
+ozD
+tqK
+exX
+cRZ
 keF
 wQm
 hOs
@@ -66479,11 +66534,11 @@ aJo
 auI
 tIS
 tIS
-tIS
-hKX
-hOs
+eHw
+ozD
+keF
 bPg
-hDJ
+dLq
 hFg
 wQm
 hOs
@@ -66681,11 +66736,11 @@ aJo
 bZT
 tIS
 tIS
-tIS
-hKX
-hOs
-keF
-hDJ
+neo
+ozD
+hAb
+iUV
+pXu
 rpI
 wQm
 hOs
@@ -66883,8 +66938,8 @@ gDj
 gDj
 hKX
 tIS
-tIS
 hKX
+ozD
 hOs
 dGe
 keF
@@ -67085,7 +67140,7 @@ ivI
 ivI
 hKX
 tIS
-tIS
+hKX
 hKX
 hOs
 hOs
@@ -67287,7 +67342,7 @@ ivI
 ivI
 hKX
 tIS
-tIS
+hKX
 hKX
 ewT
 hOs
