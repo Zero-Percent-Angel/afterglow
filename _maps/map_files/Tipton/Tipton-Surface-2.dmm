@@ -3766,6 +3766,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/weather/snow/corner,
+/obj/structure/billboard/powerlines2,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalbottombordertop0"
 	},
@@ -6251,6 +6252,10 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building/powered)
+"cju" = (
+/obj/structure/barricade/wooden,
+/turf/closed/wall/f13/wood,
+/area/f13/building)
 "cjw" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 6
@@ -9897,13 +9902,6 @@
 	icon_state = "horizontaltopbordertop0"
 	},
 /area/f13/building/powered)
-"dug" = (
-/obj/machinery/button/door{
-	id = "legionnorthgatehouse";
-	pixel_x = 23
-	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
 "duj" = (
 /obj/structure/shelf_wood,
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier2,
@@ -10265,21 +10263,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/village)
-"dyo" = (
-/obj/structure/table/wood,
-/obj/structure/barricade/bars{
-	max_integrity = 1200;
-	name = "reinforced metal bars";
-	obj_integrity = 1200
-	},
-/obj/machinery/door/poddoor/shutters{
-	id = "legionsouthgatehouse";
-	max_integrity = 600;
-	name = "reinforced shutters";
-	obj_integrity = 600
-	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
 "dyq" = (
 /obj/item/storage/trash_stack,
 /turf/open/floor/plating/dirt,
@@ -12510,11 +12493,14 @@
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/f13/village)
 "eoo" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 1
+/obj/structure/barricade/sandbags,
+/obj/effect/overlay/barbed{
+	dir = 8
 	},
-/mob/living/simple_animal/hostile/radroach,
-/turf/open/indestructible/ground/outside/sidewalk,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain2";
+	dir = 8
+	},
 /area/f13/wasteland/cold)
 "eop" = (
 /obj/machinery/camera/autoname{
@@ -14320,10 +14306,6 @@
 /area/f13/wasteland/cold)
 "eYi" = (
 /obj/effect/decal/marking,
-/obj/structure/obstacle/barbedwire/end{
-	dir = 1;
-	pixel_x = 5
-	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontaltopborderbottom0"
@@ -16679,6 +16661,21 @@
 	icon_state = "horizontalinnermain1"
 	},
 /area/f13/wasteland/cold)
+"fPD" = (
+/obj/structure/table/wood,
+/obj/structure/barricade/bars{
+	max_integrity = 1200;
+	name = "reinforced metal bars";
+	obj_integrity = 1200
+	},
+/obj/machinery/door/poddoor/shutters{
+	id = "legionnorthgatehouse";
+	max_integrity = 600;
+	name = "reinforced shutters";
+	obj_integrity = 600
+	},
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legioncamp)
 "fPV" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 4
@@ -19676,7 +19673,7 @@
 	obj_integrity = 1200
 	},
 /obj/machinery/door/poddoor/shutters{
-	id = "legionnorthgatehouse";
+	id = "legionsouthgatehouse";
 	max_integrity = 600;
 	name = "reinforced shutters";
 	obj_integrity = 600
@@ -22039,10 +22036,6 @@
 	icon_state = "horizontalinnermain0"
 	},
 /area/f13/building/powered)
-"hMQ" = (
-/obj/structure/barricade/wooden,
-/turf/closed/wall/f13/wood,
-/area/f13/building)
 "hMT" = (
 /obj/structure/table/wood/bar,
 /turf/open/floor/wood_worn/wood_worn_dark,
@@ -23012,6 +23005,7 @@
 "ieX" = (
 /obj/structure/car,
 /obj/structure/tires,
+/obj/structure/billboard/powerlines1,
 /turf/open/indestructible/ground/outside/snow{
 	icon_state = "snow3"
 	},
@@ -23078,6 +23072,10 @@
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain0"
 	},
+/area/f13/wasteland/cold)
+"ifZ" = (
+/obj/structure/barricade/wooden,
+/turf/closed/wall/f13/wood,
 /area/f13/wasteland/cold)
 "igf" = (
 /obj/structure/campfire,
@@ -31960,8 +31958,10 @@
 /turf/open/floor/plating/f13/inside,
 /area/f13/wasteland/cold)
 "lnu" = (
-/mob/living/simple_animal/hostile/radroach,
-/turf/open/indestructible/ground/outside/sidewalk,
+/obj/structure/billboard/powerlines2,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain1"
+	},
 /area/f13/wasteland/cold)
 "lnM" = (
 /obj/structure/barricade/bars{
@@ -32060,6 +32060,12 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"lpr" = (
+/obj/structure/billboard/powerlines2,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalbottombordertop1"
+	},
+/area/f13/wasteland/cold)
 "lpv" = (
 /obj/structure/shelf_wood,
 /obj/item/roller,
@@ -34369,6 +34375,15 @@
 /obj/effect/decal/cleanable/blood/xeno,
 /turf/open/floor/plasteel/f13/vault_floor/dark,
 /area/f13/brotherhood/rnd)
+"mkA" = (
+/obj/effect/decal/marking{
+	icon_state = "doublehorizontal"
+	},
+/obj/effect/landmark/npc_wastelander_spawn_position,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain2"
+	},
+/area/f13/wasteland/cold)
 "mkD" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin{
@@ -34693,6 +34708,13 @@
 	icon_state = "horizontalbottomborderbottom0"
 	},
 /area/f13/wasteland/cold)
+"mpY" = (
+/obj/machinery/button/door{
+	id = "legionsouthgatehouse";
+	pixel_x = 23
+	},
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legioncamp)
 "mqg" = (
 /obj/effect/decal/marking,
 /obj/effect/turf_decal/weather/snow/corner{
@@ -36882,6 +36904,12 @@
 /obj/structure/closet/cabinet,
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "verticaloutermain2"
+	},
+/area/f13/wasteland/cold)
+"niS" = (
+/obj/structure/billboard/powerlines2,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain2"
 	},
 /area/f13/wasteland/cold)
 "njg" = (
@@ -39219,13 +39247,6 @@
 /obj/structure/table/booth,
 /turf/open/floor/wood_common/wood_common_dark,
 /area/f13/building/powered)
-"odo" = (
-/obj/machinery/button/door{
-	id = "legionsouthgatehouse";
-	pixel_x = 23
-	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
 "odE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood{
@@ -42106,6 +42127,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland/cold)
+"phL" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 1
+	},
+/obj/effect/landmark/npc_wastelander_spawn_position,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontaltopborderbottom2"
+	},
+/area/f13/wasteland/cold)
 "phR" = (
 /turf/open/floor/wood_worn/wood_worn_dark{
 	icon_state = "worn_dark-broken5"
@@ -43183,6 +43213,16 @@
 	name = "metal plating"
 	},
 /area/f13/village)
+"pDe" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/sandbags,
+/obj/effect/overlay/barbed,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain2";
+	dir = 8
+	},
+/area/f13/wasteland/cold)
 "pDj" = (
 /mob/living/simple_animal/hostile/poison/giant_spider/tarantula,
 /turf/open/indestructible/ground/inside/mountain,
@@ -46644,6 +46684,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_common/wood_common_dark,
 /area/f13/building/powered)
+"qQY" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/sandbags,
+/obj/effect/overlay/barbed{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain2";
+	dir = 8
+	},
+/area/f13/wasteland/cold)
 "qRe" = (
 /obj/machinery/chem_master/condimaster,
 /obj/effect/decal/cleanable/dirt,
@@ -55141,10 +55192,6 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/indestructible/ground/outside/snow,
 /area/f13/building/powered)
-"tYz" = (
-/obj/structure/barricade/wooden,
-/turf/closed/wall/f13/wood,
-/area/f13/wasteland/cold)
 "tYG" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -62629,6 +62676,17 @@
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/indestructible/ground/outside/snow,
 /area/f13/wasteland/cold)
+"wMc" = (
+/obj/structure/barricade/sandbags,
+/obj/effect/overlay/barbed,
+/obj/effect/overlay/barbed{
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain2";
+	dir = 8
+	},
+/area/f13/wasteland/cold)
 "wMd" = (
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /turf/open/indestructible/ground/inside/mountain,
@@ -63555,6 +63613,13 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /turf/open/floor/wood_common/wood_common_dark,
 /area/f13/building)
+"xgv" = (
+/obj/machinery/button/door{
+	id = "legionnorthgatehouse";
+	pixel_x = 23
+	},
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legioncamp)
 "xgz" = (
 /obj/structure/bookcase/random{
 	icon_state = "bookempty"
@@ -69449,7 +69514,7 @@ iso
 ssp
 bul
 gvI
-hYA
+pTh
 gzE
 gzE
 vLo
@@ -77325,9 +77390,9 @@ vic
 vic
 ssp
 jVE
-jVE
+lnu
 vRd
-hYA
+pTh
 hYA
 hYA
 aGt
@@ -85809,9 +85874,9 @@ vic
 gdg
 ssp
 deK
+mMV
 hYA
-hYA
-hYA
+pTh
 hYA
 hYA
 hYA
@@ -92475,9 +92540,9 @@ dsD
 gdg
 ssp
 kgj
-dsM
+lpr
 qos
-hYA
+pTh
 xjV
 wPA
 hYA
@@ -96267,7 +96332,7 @@ kaQ
 qoK
 tIm
 wPA
-hYA
+mMV
 hYA
 ieX
 aHy
@@ -103709,7 +103774,7 @@ tSL
 nSP
 xLb
 ybS
-aye
+pDe
 bHb
 lfV
 jOy
@@ -103909,9 +103974,9 @@ jLl
 ndT
 tSL
 gTg
-xLb
-ybS
-ybS
+qQY
+eoo
+wMc
 xLb
 iaj
 jLl
@@ -104715,7 +104780,7 @@ wuV
 lZm
 aKB
 wuV
-lnu
+jOy
 jLl
 jLl
 apG
@@ -105322,7 +105387,7 @@ lGC
 jkx
 wuV
 hYA
-eoo
+ccR
 jLl
 qkr
 heX
@@ -106817,9 +106882,9 @@ vic
 oxT
 jVE
 ssp
-ssp
+niS
 qos
-hYA
+pTh
 hYA
 hYA
 hYA
@@ -108830,7 +108895,7 @@ sxL
 pir
 ors
 hYA
-hHA
+phL
 jVE
 jVE
 gdg
@@ -109642,7 +109707,7 @@ hHA
 jVE
 ssp
 vic
-gdg
+mkA
 xIt
 jVE
 vhp
@@ -116379,7 +116444,7 @@ wOt
 giV
 gtb
 tNt
-dug
+xgv
 sFd
 gbt
 xXe
@@ -116393,7 +116458,7 @@ tNt
 goC
 jgs
 qMa
-odo
+mpY
 oDm
 gtb
 gtb
@@ -116582,8 +116647,8 @@ giV
 gtb
 tNt
 tNt
-gWT
-gWT
+fPD
+fPD
 oDm
 jzF
 vjv
@@ -116593,8 +116658,8 @@ rkS
 vjv
 tNt
 pOO
-dyo
-dyo
+gWT
+gWT
 tNt
 tNt
 gtb
@@ -116835,7 +116900,7 @@ hYA
 dRZ
 dRZ
 myE
-hMQ
+cju
 dRZ
 dRZ
 dRZ
@@ -117247,7 +117312,7 @@ xPS
 roH
 uHg
 xPS
-hMQ
+cju
 hYA
 dRZ
 pMx
@@ -119061,7 +119126,7 @@ rZh
 rZh
 vvf
 gJh
-hMQ
+cju
 oUg
 oUg
 rPo
@@ -119947,9 +120012,9 @@ vic
 vic
 xIt
 ssp
-jVE
+lnu
 qos
-hYA
+pTh
 hiD
 hYA
 hYA
@@ -120069,7 +120134,7 @@ pyV
 dRZ
 dRZ
 dRZ
-hMQ
+cju
 dRZ
 dRZ
 pyV
@@ -124068,7 +124133,7 @@ oap
 hYA
 hYA
 hYA
-tYz
+ifZ
 hYA
 hYA
 aGt
