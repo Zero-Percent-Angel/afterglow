@@ -811,7 +811,7 @@
 				/obj/item/gun/energy/laser/wattz2ks,
 				/obj/effect/spawner/bundle/f13/aer14,
 				/obj/item/gun/energy/laser/plasma/pistol/adam,
-				/obj/item/minigunpack
+				/obj/item/minigunpack,
 				/obj/item/gun/energy/laser/aer9/auto
 				)
 
@@ -954,7 +954,7 @@
 				/obj/item/gun/ballistic/rocketlauncher = 10,
 				/obj/item/gun/ballistic/automatic/bozar = 7,
 				/obj/effect/spawner/bundle/f13/m1919 = 5,
-				/obj/effect/spawner/bundle/f13/guns/p90 = 7,
+				/obj/effect/spawner/bundle/f13/guns/p90 = 7
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/unique
@@ -969,8 +969,8 @@
 				/obj/item/gun/ballistic/revolver/colt357/lucky,
 				/obj/item/gun/ballistic/automatic/m1garand/oldglory,
 				/obj/item/gun/ballistic/automatic/marksman/sniper/gold,
-				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil
-				/obj/item/gun/ballistic/automatic/pistol/n99/executive
+				/obj/item/gun/ballistic/automatic/pistol/pistol14/lildevil,
+				/obj/item/gun/ballistic/automatic/pistol/n99/executive,
 				/obj/item/gun/ballistic/revolver/m29/peacekeeper
 				)
 
