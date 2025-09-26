@@ -928,7 +928,6 @@
 				/obj/effect/spawner/bundle/f13/riotshotgun = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 10,
 				/obj/effect/spawner/bundle/f13/guns/p90 = 2,
-				/obj/item/gun/ballistic/revolver/m24057 = 10,
 				/obj/effect/spawner/bundle/f13/rangemaster = 10,
 				/obj/effect/spawner/bundle/f13/brushgun = 15
 				)
