@@ -214,8 +214,18 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 /datum/outfit/loadout/captainfrontline
 	name = "The Appointee"
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/deagle = 2,
-		/obj/item/ammo_box/magazine/m44 = 6,
+		/obj/item/gun/ballistic/revolver/m29/peacekeeper = 1,
+		/obj/item/ammo_box/m44box = 3,
+		/obj/item/ammo_box/m44box/incendiary = 2,
+		/obj/item/storage/box/ration/menu_eight = 1,
+		/obj/item/melee/onehanded/knife/trench = 1,
+		)
+
+/datum/outfit/loadout/captainfrontline
+	name = "The Frontliner"
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/shotgun/pancor = 1,
+		/obj/item/ammo_box/magazine/d12g/buck = 3,
 		/obj/item/storage/box/ration/menu_eight = 1,
 		/obj/item/melee/onehanded/knife/trench = 1,
 		)
