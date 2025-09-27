@@ -6,6 +6,7 @@
 	intimidation_difficulty = DIFFICULTY_CHALLENGE
 	var/list/buys_list = list()
 	var/list/things_bought = list()
+	var/next_restock = 500
 
 
 /mob/living/simple_animal/hostile/retaliate/talker/buyer/Initialize(mapload)
@@ -48,6 +49,10 @@
 		buys_list += GLOB.loot_seed
 
 /mob/living/simple_animal/hostile/retaliate/talker/buyer/handle_automated_movement()
+	next_restock--
+	if (next_restock == 0)
+		next_restock = 500
+		things_bought.Cut()
 	if (my_original_loc != loc)
 		if (pulledby)
 			pulledby.stop_pulling()
