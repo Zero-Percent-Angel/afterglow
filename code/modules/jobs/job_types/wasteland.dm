@@ -270,9 +270,9 @@ Raider
 	name = "Quack Doctor"
 	suit = /obj/item/clothing/suit/toggle/labcoat
 	l_hand = /obj/item/storage/backpack/duffelbag/med/surgery
-	suit_store = /obj/item/gun/energy/laser/wattz
+	suit_store = /obj/item/gun/ballistic/revolver/needler = 1,
 	backpack_contents = list(
-		/obj/item/stock_parts/cell/ammo/ec = 1,
+				/obj/item/ammo_box/needle = 2,
 		/obj/item/reagent_containers/pill/patch/jet = 3,
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/storage/pill_bottle/aranesp = 1,
