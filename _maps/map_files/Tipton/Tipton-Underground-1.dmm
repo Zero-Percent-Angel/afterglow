@@ -12702,10 +12702,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/reagent_containers/food/snacks/meat/slab,
 /obj/item/reagent_containers/food/snacks/meat/slab,
-/obj/item/reagent_containers/food/snacks/meat/slab,
-/obj/item/reagent_containers/food/snacks/meat/slab,
-/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk,
-/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2"
 	},
@@ -18180,8 +18176,7 @@
 /area/f13/sewer/powered)
 "pRq" = (
 /obj/structure/table/wood/bar,
-/obj/item/storage/backpack/duffelbag/med/surgery/primitive,
-/obj/item/reagent_containers/hypospray/medipen/medx,
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2"
 	},
@@ -18749,6 +18744,11 @@
 /obj/structure/decoration/rads,
 /turf/closed/wall/rust,
 /area/f13/sewer/powered)
+"qsj" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/raider/ranged,
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/sewer/powered)
 "qsE" = (
 /turf/open/floor/f13/wood{
 	icon_state = "housewood1-broken"
@@ -19145,18 +19145,7 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker/bighornbunker)
 "qMN" = (
-/obj/item/storage/survivalkit/medical/tribal{
-	pixel_x = 5;
-	pixel_y = 7
-	},
 /obj/structure/table,
-/obj/item/storage/survivalkit/medical{
-	pixel_x = -7;
-	pixel_y = 3
-	},
-/obj/item/stack/medical/bruise_pack{
-	pixel_y = 5
-	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/blood/old{
 	pixel_x = 12
@@ -23465,14 +23454,7 @@
 /area/f13/radiation)
 "ulm" = (
 /obj/structure/table,
-/obj/item/smelling_salts{
-	pixel_y = 13;
-	pixel_x = -6
-	},
-/obj/item/smelling_salts{
-	pixel_y = 8;
-	pixel_x = 4
-	},
+/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2"
 	},
@@ -23738,6 +23720,18 @@
 /obj/structure/rack,
 /turf/open/floor/plasteel/f13{
 	icon_state = "yellowdirtyfull"
+	},
+/area/f13/sewer/powered)
+"uus" = (
+/obj/structure/closet/fridge,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/reagent_containers/food/snacks/meat/slab,
+/obj/item/reagent_containers/food/snacks/meat/slab,
+/obj/item/reagent_containers/food/snacks/meat/slab,
+/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk,
+/obj/item/reagent_containers/food/snacks/meat/slab/mirelurk,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
 	},
 /area/f13/sewer/powered)
 "uuS" = (
@@ -26989,6 +26983,7 @@
 	dir = 1;
 	pixel_y = 17
 	},
+/mob/living/simple_animal/hostile/raider/baseball,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer/powered)
 "xmk" = (
@@ -53812,7 +53807,7 @@ ivI
 obY
 qMN
 jjg
-hnf
+qsj
 lac
 fZM
 ewT
@@ -54015,7 +54010,7 @@ daV
 fsQ
 agm
 fGn
-lac
+uus
 fZM
 ewT
 fEl
