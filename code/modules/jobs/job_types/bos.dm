@@ -685,8 +685,7 @@ Senior Scribe
 	backpack_contents = list(
 		/obj/item/book/granter/crafting_recipe/blueprint/aer9 = 1,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7 = 1,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/melee/powered/ripper = 1,
 		)
 
 /datum/outfit/loadout/sshield

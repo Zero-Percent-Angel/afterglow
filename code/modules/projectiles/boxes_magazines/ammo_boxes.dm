@@ -808,15 +808,19 @@
 
 //Needler
 /obj/item/ammo_box/needle
-	name = "needler stripper clip (needle darts)"
+	name = "HN AP needler stripper clip (needle darts)"
 	icon_state = "needler"
 	caliber = "needle"
-	ammo_type = /obj/item/ammo_casing/caseless/needle
+	ammo_type = /obj/item/ammo_casing/caseless/needle/pierce
 	caliber = list(CALIBER_NEEDLE)
 	max_ammo = 5
 	multiple_sprites = 1
 	w_class = WEIGHT_CLASS_TINY
 	custom_materials = list(/datum/material/iron = MATS_STRIPPER)
+
+/obj/item/ammo_box/needle/handload
+	name = "HN needler stripper clip (needle darts)"
+	ammo_type = /obj/item/ammo_casing/caseless/needle
 
 //.50 BMG
 /obj/item/ammo_box/a50MG

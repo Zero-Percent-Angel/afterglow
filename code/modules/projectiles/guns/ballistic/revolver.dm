@@ -747,7 +747,7 @@
 
 /* * * * * * * * * * *
  * Needler 'revolver'
- * Wounding revolver
+ * Armor Piercing, low damage
  * Needles
  * Uncommon
  * * * * * * * * * * */
@@ -767,10 +767,10 @@
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
-	init_recoil = HANDGUN_RECOIL(0.8)
+	init_recoil = HANDGUN_RECOIL(0.6)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 	init_firemodes = list(
-		/datum/firemode/semi_auto/faster
+		/datum/firemode/semi_auto/fast
 	)
 	silenced = TRUE
 	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
@@ -778,7 +778,7 @@
 
 /obj/item/gun/ballistic/revolver/needler/ultra
 	name = "Ultracite needler"
-	desc = "An ultracite enhanced needler pistol." //Sounds like lame bethesda stuff to me
+	desc = "An ultracite enhanced needler pistol."
 	icon_state = "ultraneedler"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revneedler
 

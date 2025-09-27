@@ -391,8 +391,8 @@
 							/obj/item/clothing/suit/bio_suit/enclave = 1,
 							/obj/item/storage/belt/medical = 1,
 							/obj/item/clothing/gloves/color/latex/nitrile = 1,
-							/obj/item/stock_parts/cell/ammo/mfc = 2,
-							/obj/item/gun/energy/gammagun = 1,
+							/obj/item/gun/ballistic/revolver/needler = 1,
+							/obj/item/ammo_box/needle = 2,
 							)
 
 //NON-COMBATANTS

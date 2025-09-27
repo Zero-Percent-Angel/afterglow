@@ -107,6 +107,8 @@ Administrator
 		/obj/item/book/granter/trait/techno = 1,
 		/obj/item/healthanalyzer/advanced = 1,
 		/obj/item/storage/bag/money/small/settler = 1,
+		/obj/item/gun/ballistic/revolver/needler = 1,
+		/obj/item/ammo_box/needle = 2,
 		/obj/item/hypospray/mkii/CMO = 1
 	)
 
@@ -300,6 +302,7 @@ Practitioner
 	backpack_contents = list(
 		/obj/item/clothing/suit/hooded/surgical = 1,
 		/obj/item/reagent_containers/medspray/synthflesh = 1,
+		/obj/item/melee/powered/ripper = 1,
 		/obj/item/healthanalyzer/advanced = 1,
 	)
 
@@ -311,6 +314,8 @@ Practitioner
 	backpack_contents = list(
 		/obj/item/flashlight/pen = 1,
 		/obj/item/pda/chemist = 1,
+		/obj/item/gun/ballistic/revolver/needler = 1,
+		/obj/item/ammo_box/needle = 2,
 	)
 
 /datum/outfit/loadout/paramedic
