@@ -158,8 +158,9 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	exp_requirements = 1900
 
 	loadout_options = list(
-		/datum/outfit/loadout/captainbackline,	// Infiltrator, El Capitan
-		/datum/outfit/loadout/captainfrontline, // Pancor Jackhammer, The Court Martial, Desert Eagle
+		/datum/outfit/loadout/captainbackline,	// g11
+		/datum/outfit/loadout/captainfrontline, // peacekeeper
+		/datum/outfit/loadout/captainpointman   // pancor shotgun
 		)
 
 /datum/outfit/job/ncr/f13captain/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -221,7 +222,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/melee/onehanded/knife/trench = 1,
 		)
 
-/datum/outfit/loadout/captainfrontline
+/datum/outfit/loadout/captainpointman
 	name = "The Frontliner"
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/shotgun/pancor = 1,
