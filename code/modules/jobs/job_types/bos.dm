@@ -306,6 +306,7 @@ Head Scribe
 		/obj/item/book/granter/crafting_recipe/blueprint/wattz2k = 1,
 		/obj/item/book/granter/crafting_recipe/blueprint/aer9 = 1,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7 = 1,
+		/obj/item/melee/powered/ripper = 1,
 		)
 
 /datum/outfit/loadout/hshield
