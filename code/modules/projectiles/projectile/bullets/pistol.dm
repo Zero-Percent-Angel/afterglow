@@ -294,7 +294,7 @@
 	damage_falloff = BULLET_FALLOFF_START_PISTOL_HEAVY //slightly more range
 
 
-/obj/item/projectile/bullet/needle/piercing
+/obj/item/projectile/bullet/needle/pierce
 	damage_threshold_penetration = 20
 
 ///////////
