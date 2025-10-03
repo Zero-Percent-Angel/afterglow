@@ -1044,6 +1044,14 @@
 	name = "Brotherhood of Steel RnD Department"//Brother Hood
 	icon_state = "brotherhoodrnddepartment"
 
+/area/f13/brotherhood/secondfloor
+	name = "Brotherhood of Steel 2nd Floor"//Brother Hood
+	icon_state = "brotherhood"
+
+/area/f13/brotherhood/hangar
+	name = "Brotherhood of Steel Hangar"//Brother Hood
+	icon_state = "brotherhood"
+
 /area/f13/brotherhood/offices1st
 	name = "Brotherhood of Steel 1st Floor Offices"//Brother Hood
 	icon_state = "brotherhoodoffices1st"
