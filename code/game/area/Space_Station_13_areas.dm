@@ -1295,10 +1295,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/ai_monitored/turret_protected
 	ambientsounds = list(
-		AREA_SOUND('sound/ambience/ambimalf.ogg', 10 SECONDS), 
-		AREA_SOUND('sound/ambience/ambitech.ogg', 10 SECONDS), 
-		AREA_SOUND('sound/ambience/ambitech2.ogg', 10 SECONDS), 
-		AREA_SOUND('sound/ambience/ambiatmos.ogg', 10 SECONDS), 
+		AREA_SOUND('sound/ambience/ambimalf.ogg', 10 SECONDS),
+		AREA_SOUND('sound/ambience/ambitech.ogg', 10 SECONDS),
+		AREA_SOUND('sound/ambience/ambitech2.ogg', 10 SECONDS),
+		AREA_SOUND('sound/ambience/ambiatmos.ogg', 10 SECONDS),
 		AREA_SOUND('sound/ambience/ambiatmos2.ogg', 10 SECONDS))
 
 /area/ai_monitored/turret_protected/ai_upload
@@ -1765,6 +1765,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/shuttle/bos_elevator
 	name = "BOS Elevator"
 
+/area/shuttle/bos_elevator_tipton
+	name = "BOS Elevator"
 
 /area/shuttle/bunker_elevator
 	name = "Bunker Elevator"
