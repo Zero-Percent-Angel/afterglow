@@ -24,8 +24,8 @@
 	if(wielded_mult)
 		force = (force / wielded_mult)
 	else
-		force = (force / 1.15)
-	
+		force = (force / FALLBACK_FORCE)
+
 	var/sf = findtext(name," (Wielded)")
 	if(sf)
 		name = copytext(name,1,sf)
