@@ -915,6 +915,7 @@
 				/obj/effect/spawner/bundle/f13/marksman,
 				/obj/effect/spawner/bundle/f13/guns/tommygun,
 				/obj/effect/spawner/bundle/f13/shotgunlever,
+				/obj/effect/spawner/bundle/f13/pistol14,
 				/obj/effect/spawner/bundle/f13/brushgun
 				)
 
@@ -922,27 +923,25 @@
 	name = "high tier ballistic gun"
 	loot = list(/obj/item/gun/ballistic/automatic/type93 = 15,
 				/obj/effect/spawner/bundle/f13/dkssniper = 15,
-				/obj/effect/spawner/bundle/f13/pistol14 = 15,
 				/obj/effect/spawner/bundle/f13/assault_rifle = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
 				/obj/item/gun/ballistic/rocketlauncher = 5,
 				/obj/effect/spawner/bundle/f13/riotshotgun = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 10,
-				/obj/effect/spawner/bundle/f13/guns/p90 = 2,
-				/obj/effect/spawner/bundle/f13/rangemaster = 10,
-				/obj/effect/spawner/bundle/f13/brushgun = 15
+				/obj/effect/spawner/bundle/f13/guns/p90 = 5,
+				/obj/effect/spawner/bundle/f13/rangemaster = 10
 				)
 
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhigh
 	name = "superhigh tier ballistic gun"
 	loot = list(/obj/effect/spawner/bundle/f13/amr = 10,
-				/obj/effect/spawner/bundle/f13/r84 = 14,
+				/obj/effect/spawner/bundle/f13/r84 = 10,
 				/obj/effect/spawner/bundle/f13/fnfal = 10,
 				/obj/item/gun/ballistic/rocketlauncher = 10,
 				/obj/item/gun/ballistic/automatic/bozar = 10,
 				/obj/item/minigunpackbal5mm = 10,
-				/obj/effect/spawner/bundle/f13/guns/p90 = 14,
+				/obj/effect/spawner/bundle/f13/guns/p90 = 10,
 				/obj/effect/spawner/bundle/f13/m1919 = 10
 				)
 
