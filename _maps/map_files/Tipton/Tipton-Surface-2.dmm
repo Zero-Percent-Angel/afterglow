@@ -3865,7 +3865,9 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/weather/snow/corner,
-/obj/structure/billboard/powerlines2,
+/obj/structure/billboard/powerlines2{
+	density = 0
+	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalbottombordertop0"
 	},
@@ -7632,7 +7634,9 @@
 	pixel_y = 14;
 	layer = 3.2
 	},
-/obj/structure/table/plasmaglass,
+/obj/structure/table/reinforced{
+	color = "#c1b6a5"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/rnd)
 "cEU" = (
@@ -10518,14 +10522,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/bar,
 /area/f13/village)
 "dzk" = (
-/obj/machinery/power/apc/fusebox/north,
 /obj/structure/rack/shelf_metal,
 /obj/item/storage/firstaid/ancient,
 /obj/item/storage/firstaid/ancient,
 /obj/item/storage/firstaid/fire,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
 /turf/open/floor/f13{
 	icon_state = "floordirtysolid"
 	},
@@ -10553,7 +10553,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "dAe" = (
-/obj/structure/billboard/powerlines2,
+/obj/structure/billboard/powerlines2{
+	density = 0
+	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain3"
 	},
@@ -15093,6 +15095,15 @@
 /obj/structure/flora/wasteplant/wild_agave,
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/wasteland/cold)
+"few" = (
+/obj/item/storage/trash_stack{
+	icon_state = "Junk_2";
+	pixel_y = 23
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "feD" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "Clinic";
@@ -25981,6 +25992,15 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/building/powered)
+"iYy" = (
+/obj/item/storage/trash_stack{
+	pixel_y = 19;
+	pixel_x = -7
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2-broken"
+	},
+/area/f13/building)
 "iYz" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/door/unpowered/secure_NCR,
@@ -27069,6 +27089,14 @@
 /obj/structure/junk/locker,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/underground/mountain)
+"jpV" = (
+/obj/item/storage/trash_stack{
+	icon_state = "trash_2"
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/wasteland/cold)
 "jqb" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_common/wood_common_light,
@@ -32715,7 +32743,9 @@
 /turf/open/floor/plating/f13/inside,
 /area/f13/wasteland/cold)
 "lnu" = (
-/obj/structure/billboard/powerlines2,
+/obj/structure/billboard/powerlines2{
+	density = 0
+	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain1"
 	},
@@ -35083,6 +35113,15 @@
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "hole"
 	},
+/area/f13/wasteland/cold)
+"miN" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 9
+	},
+/obj/item/storage/trash_stack{
+	icon_state = "trash_2"
+	},
+/turf/open/indestructible/ground/outside/gravel,
 /area/f13/wasteland/cold)
 "miX" = (
 /obj/effect/decal/marking{
@@ -40472,7 +40511,9 @@
 	name = "Inactive Radar Console";
 	pixel_y = 17
 	},
-/obj/structure/table/plasmaglass,
+/obj/structure/table/reinforced{
+	color = "#c1b6a5"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/rnd)
 "ojR" = (
@@ -45051,6 +45092,12 @@
 	icon_state = "verticaloutermain1"
 	},
 /area/f13/wasteland/cold)
+"pRB" = (
+/obj/structure/billboard/powerlines2{
+	density = 0
+	},
+/turf/open/indestructible/ground/outside/snow,
+/area/f13/wasteland/cold)
 "pRE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/vehicle/ridden/fuel/motorcycle/green,
@@ -47516,7 +47563,9 @@
 	},
 /area/f13/wasteland/cold)
 "qKu" = (
-/obj/structure/billboard/powerlines2,
+/obj/structure/billboard/powerlines2{
+	density = 0
+	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain2"
 	},
@@ -54128,7 +54177,9 @@
 	},
 /area/f13/underground/mountain)
 "tgf" = (
-/obj/structure/billboard/powerlines2,
+/obj/structure/billboard/powerlines2{
+	density = 0
+	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 1;
 	icon_state = "outerborder"
@@ -64581,13 +64632,6 @@
 /area/f13/building)
 "wRQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/port_gen/infinite/diesel{
-	active = 1;
-	anchored = 1
-	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
 /turf/open/floor/f13{
 	icon_state = "floordirty"
 	},
@@ -87582,7 +87626,7 @@ vic
 gdg
 ssp
 deK
-mMV
+pRB
 hYA
 pTh
 hYA
@@ -98242,7 +98286,7 @@ qFU
 qkB
 dtH
 hYA
-mMV
+pRB
 hYA
 pTh
 ses
@@ -98648,7 +98692,7 @@ hYA
 hYA
 hYA
 hYA
-aGt
+hYA
 iqe
 uYs
 orS
@@ -116694,7 +116738,7 @@ hYA
 wJa
 dmJ
 hYA
-hYA
+dEF
 hYA
 hYA
 jGT
@@ -117291,7 +117335,7 @@ hYA
 hYA
 hYA
 hYA
-hYA
+tRV
 hYA
 aPn
 hYA
@@ -117706,7 +117750,7 @@ crh
 mfV
 swa
 hYA
-hYA
+tRV
 hYA
 jGT
 xIt
@@ -118109,7 +118153,7 @@ nix
 doP
 hYA
 hYA
-hYA
+tRV
 hYA
 hYA
 jGT
@@ -118708,7 +118752,7 @@ nxO
 wPA
 hYA
 hYA
-hYA
+tRV
 aDu
 ndT
 tSL
@@ -119883,9 +119927,9 @@ hYA
 aGt
 uZy
 hYA
+pRB
 hYA
-hYA
-hYA
+pTh
 cMA
 hYA
 hiD
@@ -120513,7 +120557,7 @@ qos
 hYA
 wPA
 aGt
-hYA
+tRV
 hYA
 hYA
 aGt
@@ -121815,7 +121859,7 @@ hYA
 hYA
 aGt
 hYA
-jFA
+miN
 rDE
 cVV
 hYA
@@ -122396,7 +122440,7 @@ gtb
 hYA
 hYA
 dRZ
-xBL
+iYy
 oCx
 oCx
 sgJ
@@ -123657,7 +123701,7 @@ xjV
 aGt
 lQG
 elT
-hYA
+nJS
 hYA
 elV
 tRV
@@ -124421,7 +124465,7 @@ hYA
 aGt
 dRZ
 qJp
-oCx
+few
 oCx
 fnT
 hYA
@@ -126242,7 +126286,7 @@ hYA
 hYA
 poJ
 xqh
-clm
+jpV
 mTw
 hYA
 xMM
