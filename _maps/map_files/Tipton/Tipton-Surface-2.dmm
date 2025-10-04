@@ -18905,7 +18905,17 @@
 /area/f13/building/powered)
 "gxC" = (
 /obj/structure/table,
-/obj/item/papercutter,
+/obj/item/papercutter{
+	pixel_x = 9
+	},
+/obj/item/paper_bin{
+	pixel_x = -10;
+	pixel_y = 5
+	},
+/obj/item/pen{
+	pixel_x = -9;
+	pixel_y = 6
+	},
 /turf/open/floor/f13/wood,
 /area/f13/brotherhood/rnd)
 "gxO" = (
@@ -41815,10 +41825,10 @@
 	},
 /area/f13/underground/mountain)
 "oGb" = (
-/obj/structure/bookcase/manuals/research_and_development,
 /obj/item/paper/pamphlet/ruin/originalcontent/yelling{
 	pixel_y = 29
 	},
+/obj/machinery/bookbinder,
 /turf/open/floor/f13/wood,
 /area/f13/brotherhood/rnd)
 "oGn" = (
@@ -46346,13 +46356,8 @@
 /obj/structure/sign/poster/prewar/poster60{
 	pixel_y = 32
 	},
-/obj/item/paper_bin{
-	pixel_x = 8;
-	pixel_y = 5
-	},
-/obj/item/pen{
-	pixel_x = 6;
-	pixel_y = 6
+/obj/machinery/libraryscanner{
+	pixel_y = 10
 	},
 /turf/open/floor/f13/wood,
 /area/f13/brotherhood/rnd)
@@ -56322,7 +56327,7 @@
 /turf/open/floor/plating/dirt,
 /area/f13/ncr/powered)
 "tTh" = (
-/obj/structure/bookcase/manuals/engineering,
+/obj/structure/bookcase/random/reference,
 /turf/open/floor/f13/wood,
 /area/f13/brotherhood/rnd)
 "tTk" = (
@@ -59280,13 +59285,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite/rarecyan,
 /area/f13/building/powered)
 "vaY" = (
-/obj/structure/bookcase/manuals/engineering{
-	desc = "A collection of scrolls, archives and relics.";
-	name = "Brotherhood Archives"
-	},
 /obj/structure/decoration/smokeold{
 	pixel_y = 26
 	},
+/obj/structure/bookcase/random/adult,
 /turf/open/floor/f13/wood,
 /area/f13/brotherhood/rnd)
 "vbb" = (
@@ -60153,6 +60155,10 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building/powered)
+"vtd" = (
+/obj/structure/bookcase/manuals/research_and_development,
+/turf/open/floor/f13/wood,
+/area/f13/brotherhood/rnd)
 "vtm" = (
 /obj/structure/flora/tree_stump,
 /turf/open/indestructible/ground/outside/snow,
@@ -65228,6 +65234,10 @@
 /obj/machinery/light/small,
 /turf/open/floor/f13/wood,
 /area/f13/building)
+"xft" = (
+/obj/structure/bookcase/random/fiction,
+/turf/open/floor/f13/wood,
+/area/f13/brotherhood/rnd)
 "xfu" = (
 /obj/structure/bookshelf{
 	icon_state = "book-3"
@@ -115945,7 +115955,7 @@ eAj
 iRm
 uZK
 eNy
-tTh
+xft
 tTh
 eAj
 eDP
@@ -116349,7 +116359,7 @@ jaP
 qpL
 cQM
 csm
-uHF
+vtd
 eAj
 fbG
 rNd
