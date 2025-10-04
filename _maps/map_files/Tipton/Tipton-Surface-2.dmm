@@ -1294,9 +1294,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/underground/mountain)
 "ayt" = (
-/obj/machinery/door/unpowered/secure_steeldoor{
-	req_access_txt = "281";
-	name = "police station door"
+/obj/machinery/door/unpowered/securedoor{
+	req_access_txt = "136"
 	},
 /turf/open/floor/wood_common,
 /area/f13/building/powered)
@@ -3865,7 +3864,9 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/weather/snow/corner,
-/obj/structure/billboard/powerlines2,
+/obj/structure/billboard/powerlines2{
+	density = 0
+	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalbottombordertop0"
 	},
@@ -7632,7 +7633,9 @@
 	pixel_y = 14;
 	layer = 3.2
 	},
-/obj/structure/table/plasmaglass,
+/obj/structure/table/reinforced{
+	color = "#c1b6a5"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/rnd)
 "cEU" = (
@@ -10518,14 +10521,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/bar,
 /area/f13/village)
 "dzk" = (
-/obj/machinery/power/apc/fusebox/north,
 /obj/structure/rack/shelf_metal,
 /obj/item/storage/firstaid/ancient,
 /obj/item/storage/firstaid/ancient,
 /obj/item/storage/firstaid/fire,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
 /turf/open/floor/f13{
 	icon_state = "floordirtysolid"
 	},
@@ -10553,7 +10552,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/tunnel)
 "dAe" = (
-/obj/structure/billboard/powerlines2,
+/obj/structure/billboard/powerlines2{
+	density = 0
+	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "verticalinnermain3"
 	},
@@ -15093,6 +15094,15 @@
 /obj/structure/flora/wasteplant/wild_agave,
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/wasteland/cold)
+"few" = (
+/obj/item/storage/trash_stack{
+	icon_state = "Junk_2";
+	pixel_y = 23
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/building)
 "feD" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "Clinic";
@@ -18894,7 +18904,17 @@
 /area/f13/building/powered)
 "gxC" = (
 /obj/structure/table,
-/obj/item/papercutter,
+/obj/item/papercutter{
+	pixel_x = 9
+	},
+/obj/item/paper_bin{
+	pixel_x = -10;
+	pixel_y = 5
+	},
+/obj/item/pen{
+	pixel_x = -9;
+	pixel_y = 6
+	},
 /turf/open/floor/f13/wood,
 /area/f13/brotherhood/rnd)
 "gxO" = (
@@ -25981,6 +26001,15 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/building/powered)
+"iYy" = (
+/obj/item/storage/trash_stack{
+	pixel_y = 19;
+	pixel_x = -7
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2-broken"
+	},
+/area/f13/building)
 "iYz" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/door/unpowered/secure_NCR,
@@ -26795,6 +26824,10 @@
 	icon_state = "whiteyellowrustychess"
 	},
 /area/f13/followers)
+"jkz" = (
+/obj/structure/bookcase/random/reference,
+/turf/open/floor/f13/wood,
+/area/f13/brotherhood/rnd)
 "jkC" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -27069,6 +27102,14 @@
 /obj/structure/junk/locker,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/underground/mountain)
+"jpV" = (
+/obj/item/storage/trash_stack{
+	icon_state = "trash_2"
+	},
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/wasteland/cold)
 "jqb" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_common/wood_common_light,
@@ -31033,8 +31074,9 @@
 	max_integrity = 1000;
 	name = "The Codex";
 	note = "Scribe Note of the Week:";
-	pixel_y = 4;
-	termtag = "Codex"
+	pixel_y = 7;
+	termtag = "Codex";
+	icon_state = null
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "bcircuit1";
@@ -32715,7 +32757,9 @@
 /turf/open/floor/plating/f13/inside,
 /area/f13/wasteland/cold)
 "lnu" = (
-/obj/structure/billboard/powerlines2,
+/obj/structure/billboard/powerlines2{
+	density = 0
+	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain1"
 	},
@@ -35083,6 +35127,15 @@
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "hole"
 	},
+/area/f13/wasteland/cold)
+"miN" = (
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 9
+	},
+/obj/item/storage/trash_stack{
+	icon_state = "trash_2"
+	},
+/turf/open/indestructible/ground/outside/gravel,
 /area/f13/wasteland/cold)
 "miX" = (
 /obj/effect/decal/marking{
@@ -38516,10 +38569,6 @@
 /obj/item/salvage/tool,
 /turf/open/indestructible/ground/outside/gravel,
 /area/f13/building/powered)
-"nzb" = (
-/obj/effect/spawner/lootdrop/weapons/experimental,
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/underground/mountain)
 "nzf" = (
 /obj/structure/barricade/tentclothedge{
 	dir = 4
@@ -40472,7 +40521,9 @@
 	name = "Inactive Radar Console";
 	pixel_y = 17
 	},
-/obj/structure/table/plasmaglass,
+/obj/structure/table/reinforced{
+	color = "#c1b6a5"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/rnd)
 "ojR" = (
@@ -41774,10 +41825,10 @@
 	},
 /area/f13/underground/mountain)
 "oGb" = (
-/obj/structure/bookcase/manuals/research_and_development,
 /obj/item/paper/pamphlet/ruin/originalcontent/yelling{
 	pixel_y = 29
 	},
+/obj/machinery/bookbinder,
 /turf/open/floor/f13/wood,
 /area/f13/brotherhood/rnd)
 "oGn" = (
@@ -45051,6 +45102,12 @@
 	icon_state = "verticaloutermain1"
 	},
 /area/f13/wasteland/cold)
+"pRB" = (
+/obj/structure/billboard/powerlines2{
+	density = 0
+	},
+/turf/open/indestructible/ground/outside/snow,
+/area/f13/wasteland/cold)
 "pRE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/vehicle/ridden/fuel/motorcycle/green,
@@ -46299,13 +46356,8 @@
 /obj/structure/sign/poster/prewar/poster60{
 	pixel_y = 32
 	},
-/obj/item/paper_bin{
-	pixel_x = 8;
-	pixel_y = 5
-	},
-/obj/item/pen{
-	pixel_x = 6;
-	pixel_y = 6
+/obj/machinery/libraryscanner{
+	pixel_y = 10
 	},
 /turf/open/floor/f13/wood,
 /area/f13/brotherhood/rnd)
@@ -47516,7 +47568,9 @@
 	},
 /area/f13/wasteland/cold)
 "qKu" = (
-/obj/structure/billboard/powerlines2,
+/obj/structure/billboard/powerlines2{
+	density = 0
+	},
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain2"
 	},
@@ -48561,6 +48615,10 @@
 	icon_state = "horizontalinnermain1"
 	},
 /area/f13/wasteland/cold)
+"rdN" = (
+/obj/structure/bookcase/manuals/research_and_development,
+/turf/open/floor/f13/wood,
+/area/f13/brotherhood/rnd)
 "rdS" = (
 /obj/structure/simple_door/house{
 	icon_state = "room"
@@ -54128,7 +54186,9 @@
 	},
 /area/f13/underground/mountain)
 "tgf" = (
-/obj/structure/billboard/powerlines2,
+/obj/structure/billboard/powerlines2{
+	density = 0
+	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 1;
 	icon_state = "outerborder"
@@ -56271,7 +56331,7 @@
 /turf/open/floor/plating/dirt,
 /area/f13/ncr/powered)
 "tTh" = (
-/obj/structure/bookcase/manuals/engineering,
+/obj/structure/bookcase/random/fiction,
 /turf/open/floor/f13/wood,
 /area/f13/brotherhood/rnd)
 "tTk" = (
@@ -59229,13 +59289,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite/rarecyan,
 /area/f13/building/powered)
 "vaY" = (
-/obj/structure/bookcase/manuals/engineering{
-	desc = "A collection of scrolls, archives and relics.";
-	name = "Brotherhood Archives"
-	},
 /obj/structure/decoration/smokeold{
 	pixel_y = 26
 	},
+/obj/structure/bookcase/random/adult,
 /turf/open/floor/f13/wood,
 /area/f13/brotherhood/rnd)
 "vbb" = (
@@ -60486,9 +60543,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/village)
 "vyO" = (
-/obj/structure/chalkboard{
-	icon_state = "board_mess1"
-	},
+/obj/structure/chalkboard,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/brotherhood/powered)
 "vyW" = (
@@ -64581,13 +64636,6 @@
 /area/f13/building)
 "wRQ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/port_gen/infinite/diesel{
-	active = 1;
-	anchored = 1
-	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
 /turf/open/floor/f13{
 	icon_state = "floordirty"
 	},
@@ -76555,7 +76603,7 @@ dhF
 dhF
 dhF
 dhF
-nzb
+dhF
 akB
 djg
 mMt
@@ -87582,7 +87630,7 @@ vic
 gdg
 ssp
 deK
-mMV
+pRB
 hYA
 pTh
 hYA
@@ -98242,7 +98290,7 @@ qFU
 qkB
 dtH
 hYA
-mMV
+pRB
 hYA
 pTh
 ses
@@ -98648,7 +98696,7 @@ hYA
 hYA
 hYA
 hYA
-aGt
+hYA
 iqe
 uYs
 orS
@@ -115902,7 +115950,7 @@ iRm
 uZK
 eNy
 tTh
-tTh
+jkz
 eAj
 eDP
 lbD
@@ -116305,7 +116353,7 @@ jaP
 qpL
 cQM
 csm
-uHF
+rdN
 eAj
 fbG
 rNd
@@ -116694,7 +116742,7 @@ hYA
 wJa
 dmJ
 hYA
-hYA
+dEF
 hYA
 hYA
 jGT
@@ -117291,7 +117339,7 @@ hYA
 hYA
 hYA
 hYA
-hYA
+tRV
 hYA
 aPn
 hYA
@@ -117706,7 +117754,7 @@ crh
 mfV
 swa
 hYA
-hYA
+tRV
 hYA
 jGT
 xIt
@@ -118109,7 +118157,7 @@ nix
 doP
 hYA
 hYA
-hYA
+tRV
 hYA
 hYA
 jGT
@@ -118708,7 +118756,7 @@ nxO
 wPA
 hYA
 hYA
-hYA
+tRV
 aDu
 ndT
 tSL
@@ -119883,9 +119931,9 @@ hYA
 aGt
 uZy
 hYA
+pRB
 hYA
-hYA
-hYA
+pTh
 cMA
 hYA
 hiD
@@ -120513,7 +120561,7 @@ qos
 hYA
 wPA
 aGt
-hYA
+tRV
 hYA
 hYA
 aGt
@@ -121815,7 +121863,7 @@ hYA
 hYA
 aGt
 hYA
-jFA
+miN
 rDE
 cVV
 hYA
@@ -122396,7 +122444,7 @@ gtb
 hYA
 hYA
 dRZ
-xBL
+iYy
 oCx
 oCx
 sgJ
@@ -123657,7 +123705,7 @@ xjV
 aGt
 lQG
 elT
-hYA
+nJS
 hYA
 elV
 tRV
@@ -124421,7 +124469,7 @@ hYA
 aGt
 dRZ
 qJp
-oCx
+few
 oCx
 fnT
 hYA
@@ -126242,7 +126290,7 @@ hYA
 hYA
 poJ
 xqh
-clm
+jpV
 mTw
 hYA
 xMM

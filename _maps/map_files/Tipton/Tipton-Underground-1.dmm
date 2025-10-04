@@ -3818,6 +3818,12 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer/powered)
+"dmx" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/building/powered)
 "dmz" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -6230,6 +6236,15 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/yellow{
 	icon_state = "yellowrustyfull"
+	},
+/area/f13/sewer/powered)
+"fnQ" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/barricade/wooden,
+/obj/structure/decoration/rag,
+/obj/structure/barricade/wooden/planks/pregame,
+/turf/open/floor/plasteel/f13/vault_floor/yellow{
+	icon_state = "yellowdirtyfull"
 	},
 /area/f13/sewer/powered)
 "foe" = (
@@ -9940,6 +9955,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
+/obj/effect/spawner/lootdrop/f13/armor/tier2,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -12617,15 +12633,6 @@
 "kUl" = (
 /turf/closed/mineral/random/no_caves,
 /area/f13/den)
-"kUm" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/barricade/wooden,
-/obj/structure/decoration/rag,
-/obj/structure/barricade/wooden/planks/pregame,
-/turf/open/floor/plasteel/f13/vault_floor/yellow{
-	icon_state = "yellowdirtyfull"
-	},
-/area/f13/sewer/powered)
 "kUM" = (
 /obj/structure/table/wood,
 /obj/item/trash/f13/c_ration_3,
@@ -13764,6 +13771,16 @@
 /turf/open/floor/plasteel/f13/vault_floor/white/whitesolid,
 /area/f13/enclave)
 "lQT" = (
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid"
+	},
+/area/f13/followers)
+"lRa" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/power/apc/fusebox/west,
+/obj/structure/cable,
 /turf/open/floor/f13{
 	icon_state = "floordirtysolid"
 	},
@@ -17523,6 +17540,13 @@
 /obj/item/bedsheet/blanket,
 /turf/open/floor/wood_common,
 /area/f13/enclave)
+"ppc" = (
+/obj/machinery/power/port_gen/pacman/diesel,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/building/powered)
 "ppn" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -21808,8 +21832,10 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker/bighornbunker)
 "sSk" = (
-/obj/machinery/power/port_gen/pacman/diesel,
-/turf/open/indestructible/ground/inside/subway,
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/building/powered)
 "sSF" = (
 /turf/open/floor/plasteel/f13/vault_floor/neutral/side{
@@ -22966,6 +22992,9 @@
 	name = "Clinic";
 	req_one_access_txt = "124"
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -23643,6 +23672,7 @@
 /obj/item/clothing/shoes/workboots/mining,
 /obj/item/clothing/shoes/f13/enclave/serviceboots,
 /obj/item/clothing/shoes/f13/enclave/serviceboots,
+/obj/effect/spawner/lootdrop/f13/armor/tier1,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -25918,6 +25948,14 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/enclave)
+"wlA" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
+/area/f13/followers)
 "wlE" = (
 /obj/structure/dresser,
 /obj/effect/decal/cleanable/dirt,
@@ -63697,10 +63735,10 @@ bZd
 bZd
 dFw
 nct
-utU
+sSk
 tKd
-vyU
-mhd
+wlA
+lRa
 kNy
 spg
 jLx
@@ -63899,7 +63937,7 @@ bZd
 bZd
 dFw
 vKt
-nct
+dmx
 rrL
 grm
 mhd
@@ -64101,7 +64139,7 @@ bZd
 bZd
 dFw
 nct
-nct
+dmx
 rrL
 rrL
 rrL
@@ -64303,9 +64341,9 @@ dFw
 bZd
 dFw
 jrK
-nct
-nct
-sSk
+ppc
+oNn
+oNn
 rrL
 bGL
 bGL
@@ -74419,7 +74457,7 @@ eUy
 eUy
 coG
 coG
-kUm
+fnQ
 xVc
 snx
 snx
@@ -74823,7 +74861,7 @@ coG
 coG
 coG
 coG
-kUm
+fnQ
 xVc
 snx
 snx
