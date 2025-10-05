@@ -17,7 +17,7 @@
 /area/f13/enclave)
 "aaq" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/mob/living/simple_animal/hostile/raider/junker/boss,
+/mob/living/simple_animal/hostile/raider/junker/creator,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -4606,7 +4606,7 @@
 "dSY" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/highmid,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/high,
 /turf/open/floor/plasteel/f13{
 	icon_state = "yellowdirtysolid"
 	},
@@ -6274,7 +6274,8 @@
 /area/f13/bunker/bunkersix)
 "fpe" = (
 /obj/machinery/vending/wardrobe/medi_wardrobe{
-	density = 0
+	density = 0;
+	force_free = 1
 	},
 /turf/closed/wall/f13/supermart,
 /area/f13/followers)
@@ -16456,7 +16457,6 @@
 "ooX" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/chair/sofa/right,
-/mob/living/simple_animal/hostile/raider/junker/boss,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid{
 	icon_state = "darkrustysolid"
 	},
@@ -17541,10 +17541,10 @@
 /turf/open/floor/wood_common,
 /area/f13/enclave)
 "ppc" = (
-/obj/machinery/power/port_gen/pacman/diesel,
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/port_gen/infinite/diesel,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/building/powered)
 "ppn" = (
@@ -22799,6 +22799,7 @@
 "tDr" = (
 /obj/machinery/workbench,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/lootdrop/weapons/experimental,
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/bunker)
 "tDw" = (
@@ -27417,13 +27418,6 @@
 	icon_state = "darkrusty"
 	},
 /area/f13/sewer/powered)
-"xyw" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/mob/living/simple_animal/hostile/raider/junker/creator,
-/turf/open/floor/plasteel/f13{
-	icon_state = "yellowdirtyfull"
-	},
-/area/f13/bunker)
 "xyA" = (
 /turf/closed/wall/rust,
 /area/f13/building/powered)
@@ -66663,7 +66657,7 @@ uPA
 uPA
 vEB
 rgz
-irO
+unL
 unL
 unL
 unL
@@ -66861,7 +66855,7 @@ tIS
 daV
 rgz
 eae
-xyw
+eJX
 eJX
 jln
 rgz
@@ -70300,7 +70294,7 @@ giP
 dKY
 fue
 dKY
-aaq
+dKY
 uBS
 dKY
 giP
