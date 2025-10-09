@@ -443,7 +443,6 @@
 		/datum/firemode/semi_auto,
 		/datum/firemode/burst/three/faster,
 	)
-	actions_types = list(/datum/action/item_action/toggle_firemode)
 	can_scope = FALSE
 
 /* * * * * * * * * * *
