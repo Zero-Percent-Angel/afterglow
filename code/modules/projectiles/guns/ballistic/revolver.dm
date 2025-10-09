@@ -426,24 +426,25 @@
 /obj/item/gun/ballistic/revolver/m29/peacekeeper
 	name = "Peacekeeper"
 	desc = "When you don't just need excessive force, but crave it. This .44 has a special hammer mechanism, allowing for measured powerful shots, or fanning for a flurry of inaccurate shots."
-	item_state = "m29peace"
-	icon_state = "m29peace"
+	item_state = "peacemaker"
+	icon_state = "peacemaker"
 
 	slowdown = GUN_SLOWDOWN_REVOLVER_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_AKIMBO
 	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_NORMAL
+	fire_delay = GUN_FIRE_DELAY_FAST
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	init_recoil = HANDGUN_RECOIL(1.2)
 	init_firemodes = list(
-		/datum/firemode/semi_auto
+		/datum/firemode/semi_auto,
+		/datum/firemode/burst/three/faster,
 	)
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	can_scope = FALSE
-	can_fan = TRUE
 
 /* * * * * * * * * * *
  * Snubnose .44 revolver
