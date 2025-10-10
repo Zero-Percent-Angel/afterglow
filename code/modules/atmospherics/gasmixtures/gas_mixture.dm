@@ -141,7 +141,7 @@ we use a hook instead
 	return 0
 
 /datum/gas_mixture/proc/set_temperature(new_temp)
-	temp = new_temp
+	//temp = new_temp
 
 /datum/gas_mixture/proc/set_volume(new_volume)
 	initial_volume = new_volume
