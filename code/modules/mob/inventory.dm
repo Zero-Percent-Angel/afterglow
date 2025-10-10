@@ -369,8 +369,8 @@
 	if (equip_to_slot_if_possible(W, slot, FALSE, TRUE, FALSE, TRUE))
 		return TRUE
 	else
-		dropItemToGround(W)
-		return FALSE
+		addtimer(CALLBACK(src, PROC_REF(dropItemToGround), W), 10)
+	return FALSE
 
 //puts the item "W" into an appropriate slot in a human's inventory
 //returns 0 if it cannot, 1 if successful

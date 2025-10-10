@@ -142,6 +142,12 @@
 			say("Safeties restored. Restarting...")
 
 /obj/machinery/computer/holodeck/process()
+
+	if (!spawned)
+		spawned = list()
+	if (!effects)
+		effects = list()
+
 	if(damaged && prob(10))
 		for(var/turf/T in linked)
 			if(prob(5))
@@ -170,7 +176,6 @@
 	for(var/e in effects)
 		var/obj/effect/holodeck_effect/HE = e
 		HE.tick()
-
 	active_power_usage = 50 + spawned.len * 3 + effects.len * 5
 
 /obj/machinery/computer/holodeck/emag_act(mob/user)
