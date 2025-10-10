@@ -354,7 +354,7 @@
 /obj/item/dualsaber/hypereutactic/chaplain
 	name = "divine lightblade"
 	desc = "A giant blade of bright and holy light, said to cut down the wicked with ease."
-	force = 5
+	force = 26
 	armour_penetration = 0
 	block_parry_data = /datum/block_parry_data/chaplain
 	var/chaplain_spawnable = TRUE

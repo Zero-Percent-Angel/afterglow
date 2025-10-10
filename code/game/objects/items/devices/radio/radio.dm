@@ -522,6 +522,13 @@
 	. = ..()
 	wires.cut(WIRE_RX)
 
+
+/obj/item/radio/old/attackby(obj/item/W, mob/user, params)
+	if(W.tool_behaviour == TOOL_SCREWDRIVER)
+		add_fingerprint(user)
+		return
+	..()
+
 GLOBAL_VAR_INIT(redwater_frequency, null)
 GLOBAL_LIST_INIT(banned_redwater_freqs, list(FREQ_COMMON, 1488))
 
