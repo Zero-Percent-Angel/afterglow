@@ -769,7 +769,8 @@
 				/obj/effect/spawner/bundle/f13/plasmapistol = 10,
 				/obj/effect/spawner/bundle/f13/wattzm = 25,
 				/obj/item/gun/energy/laser/wattzs = 10,
-				/obj/effect/spawner/bundle/f13/laserpistol = 15,
+				/obj/effect/spawner/bundle/f13/laserpistol = 20,
+				/obj/item/gun/ballistic/rifle/hobo/lasmusket = 10
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/mid
@@ -905,7 +906,9 @@
 				/obj/effect/spawner/bundle/f13/marksman,
 				/obj/effect/spawner/bundle/f13/m1garand,
 				/obj/effect/spawner/bundle/f13/deagle,
-				/obj/item/gun/ballistic/automatic/smg/american180
+				/obj/item/gun/ballistic/automatic/smg/american180,
+				/obj/item/gun/ballistic/automatic/service/carbine,
+				/obj/item/gun/ballistic/shotgun/automatic/combat/shotgunlever
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/highmid
@@ -930,21 +933,23 @@
 				/obj/item/gun/ballistic/rocketlauncher = 5,
 				/obj/effect/spawner/bundle/f13/riotshotgun = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 10,
-				/obj/effect/spawner/bundle/f13/guns/p90 = 5,
-				/obj/effect/spawner/bundle/f13/rangemaster = 10
+				/obj/effect/spawner/bundle/f13/guns/p90 = 2,
+				/obj/effect/spawner/bundle/f13/rangemaster = 10,
+				/obj/item/gun/ballistic/automatic/lsw = 10
 				)
 
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhigh
 	name = "superhigh tier ballistic gun"
-	loot = list(/obj/effect/spawner/bundle/f13/amr = 10,
+	loot = list(/obj/effect/spawner/bundle/f13/amr = 13,
 				/obj/effect/spawner/bundle/f13/r84 = 10,
 				/obj/effect/spawner/bundle/f13/fnfal = 10,
 				/obj/item/gun/ballistic/rocketlauncher = 10,
 				/obj/item/gun/ballistic/automatic/bozar = 10,
 				/obj/item/minigunpackbal5mm = 10,
 				/obj/effect/spawner/bundle/f13/guns/p90 = 10,
-				/obj/effect/spawner/bundle/f13/m1919 = 10
+				/obj/effect/spawner/bundle/f13/m1919 = 13,
+				/obj/item/gun/ballistic/automatic/smg/smg14 = 10
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superhighcargo //this loot table is for the prewar cargo crate
