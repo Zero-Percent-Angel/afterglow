@@ -363,6 +363,15 @@
 /mob/proc/equip_to_slot_or_del(obj/item/W, slot)
 	return equip_to_slot_if_possible(W, slot, TRUE, TRUE, FALSE, TRUE)
 
+//This is just a commonly used configuration for the equip_to_slot_if_possible() proc, used to equip people when the round starts and when events happen and such.
+//Also bypasses equip delay checks, since the mob isn't actually putting it on.
+/mob/proc/equip_to_slot_or_drop(obj/item/W, slot)
+	if (equip_to_slot_if_possible(W, slot, FALSE, TRUE, FALSE, TRUE))
+		return TRUE
+	else
+		dropItemToGround(W)
+		return FALSE
+
 //puts the item "W" into an appropriate slot in a human's inventory
 //returns 0 if it cannot, 1 if successful
 /mob/proc/equip_to_appropriate_slot(obj/item/W, clothing_check = FALSE)

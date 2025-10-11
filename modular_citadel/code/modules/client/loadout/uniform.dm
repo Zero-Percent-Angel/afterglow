@@ -1098,3 +1098,50 @@
 /datum/gear/uniform/scav/female
 	name = "female scav outfit"
 	path = /obj/item/clothing/under/f13/female/scav
+
+
+// SUPER MUTIE
+
+/datum/gear/uniform/mutie
+	name = "Super Mutant Shorts"
+	path = /obj/item/clothing/under/f13/mutie
+
+/datum/gear/uniform/mutie/cloth
+	name = "Super Mutant Loin Cloth"
+	path = /obj/item/clothing/under/f13/mutie/cloth
+
+/datum/gear/uniform/mutie/vault
+	name = "Super Mutant Vault Suit"
+	path = /obj/item/clothing/under/f13/mutie/vault
+
+/datum/gear/uniform/mutie/slacks
+	name = "Super Mutant Slacks"
+	path = /obj/item/clothing/under/f13/mutie/townie
+
+/datum/gear/uniform/mutie/overalls
+	name = "Super Mutant Overalls"
+	path = /obj/item/clothing/under/f13/mutie/townie/overalls
+
+/datum/gear/uniform/mutie/suit
+	name = "Super Mutant Suit"
+	path = /obj/item/clothing/under/f13/mutie/suit
+
+/datum/gear/uniform/mutie/police
+	name = "Super Mutant Suit"
+	path = /obj/item/clothing/under/f13/mutie/townie/police
+
+/datum/gear/uniform/mutie/b_suit
+	name = "Super Mutant Burgandy Suit"
+	path = /obj/item/clothing/under/f13/mutie/suit/burgundy
+
+/datum/gear/uniform/mutie/b_suit
+	name = "Super Mutant Purple Suit"
+	path = /obj/item/clothing/under/f13/mutie/suit/purple
+
+/datum/gear/uniform/mutie/b_suit
+	name = "Super Mutant Sleaveless Suit"
+	path = /obj/item/clothing/under/f13/mutie/suit/purple/pinstripe/torn
+
+/datum/gear/uniform/mutie/b_suit
+	name = "Super Mutant Pinstripe Suit"
+	path = /obj/item/clothing/under/f13/mutie/suit/purple/pinstripe
