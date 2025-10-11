@@ -5465,7 +5465,9 @@
 	},
 /area/f13/wasteland/cold)
 "bPA" = (
-/mob/living/simple_animal/pet/dog/protectron,
+/mob/living/simple_animal/pet/dog/protectron{
+	faction = list("trader")
+	},
 /turf/open/floor/plating/f13/inside,
 /area/f13/wasteland/cold)
 "bPC" = (
@@ -29771,7 +29773,9 @@
 /obj/effect/decal/marking{
 	icon_state = "doublehorizontalright"
 	},
-/turf/open/indestructible/ground/outside/road,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain2"
+	},
 /area/f13/wasteland/cold)
 "jDs" = (
 /obj/structure/sink{
@@ -39638,6 +39642,12 @@
 /obj/machinery/light/floor,
 /turf/open/floor/f13,
 /area/f13/building/powered)
+"mPD" = (
+/obj/structure/flora/grass/both,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood1-broken"
+	},
+/area/f13/wasteland/cold)
 "mPE" = (
 /obj/structure/sign/departments/medbay,
 /turf/closed/wall/r_wall,
@@ -48334,7 +48344,7 @@
 /area/f13/wasteland/cold)
 "pRE" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/vehicle/ridden/fuel/motorcycle/rusty,
+/obj/vehicle/ridden/fuel/motorcycle,
 /turf/open/indestructible/ground/outside/road{
 	icon_state = "horizontalinnermain0"
 	},
@@ -49097,7 +49107,9 @@
 /area/f13/wasteland/cold)
 "qgl" = (
 /obj/structure/wreck/bus/rusted/segmented17,
-/turf/open/indestructible/ground/outside/road,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain2"
+	},
 /area/f13/wasteland/cold)
 "qgr" = (
 /obj/structure/lattice,
@@ -55701,6 +55713,9 @@
 	icon_state = "snow_corner"
 	},
 /obj/structure/flora/ausbushes/ppflowers,
+/obj/effect/turf_decal/weather/snow/corner{
+	dir = 6
+	},
 /turf/open/floor/plating/dirt,
 /area/f13/wasteland/cold)
 "slH" = (
@@ -88211,7 +88226,7 @@ hYA
 hYA
 hYA
 hYA
-hiD
+mPD
 hYA
 hYA
 hYA
@@ -91822,7 +91837,7 @@ vAc
 ndT
 nBT
 fYd
-miG
+jVF
 sep
 uxg
 lZa
@@ -92025,7 +92040,7 @@ aFS
 sep
 sep
 sep
-sep
+ssp
 sep
 sep
 lEy
@@ -92226,8 +92241,8 @@ sgC
 ndT
 sep
 sep
-sep
-sep
+ssp
+ssp
 sep
 vQk
 sep
@@ -94044,7 +94059,7 @@ jHp
 fsM
 nir
 nmu
-cuo
+gdg
 meh
 nir
 nmu
@@ -96098,7 +96113,7 @@ ruK
 ruK
 hYA
 hYA
-bBT
+dBE
 ndT
 xZr
 jVE
@@ -108744,7 +108759,7 @@ mrg
 jKX
 pOy
 pOy
-sPI
+jOy
 ndT
 aGt
 pgX
@@ -108946,7 +108961,7 @@ ymc
 eJr
 xVx
 pOy
-fEC
+jOy
 dgp
 wIz
 wIz
@@ -118152,10 +118167,10 @@ jXd
 jXd
 kUe
 kUe
-jXd
-owk
-owk
-owk
+iaT
+giV
+giV
+giV
 eAj
 eAj
 xwe
@@ -118354,10 +118369,10 @@ tDK
 jXd
 dkq
 vbw
-jXd
-jXd
+iaT
+iaT
 doT
-owk
+giV
 eAj
 pUK
 vKx
@@ -118557,9 +118572,9 @@ jXd
 oMg
 sPL
 sbE
-jXd
-jXd
-owk
+iaT
+iaT
+giV
 eAj
 dvT
 ieO
@@ -118760,8 +118775,8 @@ lju
 mNC
 sNn
 dYK
-jXd
-owk
+iaT
+giV
 eAj
 osT
 ojP
