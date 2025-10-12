@@ -483,12 +483,18 @@
 	},
 /area/f13/sewer/powered)
 "akt" = (
-/obj/machinery/power/smes/engineering,
+/obj/structure/rack/shelf_metal,
+/obj/item/pda/engineering{
+	name = "Knight-Engineer Pip-Boy 3000"
+	},
+/obj/item/lightreplacer,
+/obj/item/stack/sheet/mineral/concrete/ten,
 /obj/machinery/light/small{
-	dir = 1
+	dir = 1;
+	light_color = "#d8b1b1"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/yellow/side{
-	dir = 1
+	dir = 5
 	},
 /area/f13/brotherhood/reactor)
 "akv" = (
@@ -1599,6 +1605,8 @@
 	dir = 4;
 	light_color = "#c1caff"
 	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
 "aLV" = (
@@ -2150,8 +2158,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/obj/machinery/autolathe,
+/obj/machinery/workbench/advanced,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/side,
 /area/f13/brotherhood/reactor)
 "aYm" = (
@@ -2195,6 +2202,16 @@
 /obj/structure/toilet,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker/bunkernine)
+"aZT" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/brotherhood/armory)
 "aZU" = (
 /obj/structure/sign/poster/random,
 /turf/closed/wall/r_wall,
@@ -3110,10 +3127,18 @@
 /turf/closed/wall/f13/ruins,
 /area/f13/sewer)
 "bAQ" = (
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/red,
-/area/f13/brotherhood/operations)
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/machinery/light/small{
+	dir = 4;
+	light_color = "#ff4747"
+	},
+/turf/open/floor/f13{
+	dir = 10;
+	icon_state = "redmark"
+	},
+/area/f13/brotherhood/reactor)
 "bAV" = (
 /obj/machinery/light{
 	dir = 8
@@ -3333,7 +3358,6 @@
 /area/f13/vault/atrium)
 "bGu" = (
 /obj/machinery/vending/security,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 10
 	},
@@ -4239,6 +4263,7 @@
 	name = "Science";
 	req_access_txt = "120"
 	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/brotherhood/operations)
 "cee" = (
@@ -5103,7 +5128,6 @@
 /area/f13/sewer)
 "cyF" = (
 /obj/machinery/chem_master/advanced,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/chemistry)
@@ -6739,6 +6763,7 @@
 	color = "000000"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 4
 	},
@@ -6811,7 +6836,6 @@
 /area/ruin/powered)
 "dqS" = (
 /obj/structure/closet/secure_closet/brig,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 6
 	},
@@ -7319,10 +7343,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/bunker/bunkerfive)
 "dDT" = (
-/obj/machinery/power/apc/auto_name/east,
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
 /obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/red,
+/turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/operations)
 "dDY" = (
 /obj/effect/decal/cleanable/dirt,
@@ -10696,6 +10721,7 @@
 	color = "000000"
 	},
 /obj/structure/spider/stickyweb,
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/operations)
 "flU" = (
@@ -12111,7 +12137,6 @@
 	pixel_y = 4
 	},
 /obj/item/reagent_containers/glass/beaker/large,
-/obj/machinery/power/apc/auto_name/south,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria{
 	icon_state = "tealwhrusty_chess2"
@@ -12140,7 +12165,6 @@
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 4
 	},
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/chemistry)
@@ -12419,6 +12443,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/red/corner{
 	dir = 1
 	},
@@ -12464,11 +12489,10 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/obj/machinery/power/apc/auto_name/east,
 /obj/structure/cable{
-	icon_state = "0-8"
+	icon_state = "1-8"
 	},
-/turf/open/floor/plasteel/f13/vault_floor/red/white,
+/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/brotherhood/reactor)
 "gfV" = (
 /mob/living/simple_animal/hostile/handy/assaultron{
@@ -12503,6 +12527,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/operations)
 "ggw" = (
@@ -12922,9 +12947,8 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/obj/machinery/power/terminal{
-	dir = 1
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/brotherhood/reactor)
@@ -13098,6 +13122,7 @@
 	pixel_y = 5
 	},
 /obj/item/storage/firstaid/regular,
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/chemistry)
 "gvQ" = (
@@ -13727,6 +13752,16 @@
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /turf/open/floor/plasteel/f13,
 /area/f13/tunnel)
+"gKq" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/machinery/light/small{
+	light_color = "#ff4747"
+	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/turf/open/floor/plasteel/f13/vault_floor/yellow/side,
+/area/f13/brotherhood/reactor)
 "gKH" = (
 /obj/machinery/light{
 	dir = 8
@@ -14663,7 +14698,6 @@
 /obj/item/gun/ballistic/shotgun/police,
 /obj/item/ammo_box/shotgun/rubber,
 /obj/item/ammo_box/shotgun/bean,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/red/side,
 /area/f13/brotherhood/armory)
 "heG" = (
@@ -14757,7 +14791,6 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /obj/machinery/button/door{
 	id = "bosengine";
 	name = "Radiation Shutters";
@@ -15935,9 +15968,15 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/radiation)
 "hLk" = (
-/obj/machinery/power/smes/engineering,
+/obj/structure/rack/shelf_metal,
+/obj/item/circuitboard/machine/pacman/super,
+/obj/item/circuitboard/machine/pacman/super,
+/obj/item/circuitboard/machine/recharger,
+/obj/item/circuitboard/cryopodcontrol,
+/obj/item/circuitboard/machine/cryo_tube,
+/obj/item/circuitboard/machine/pipedispenser,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/side{
-	dir = 1
+	dir = 9
 	},
 /area/f13/brotherhood/reactor)
 "hLv" = (
@@ -16175,8 +16214,6 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/obj/machinery/power/apc/auto_name/west,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 8
 	},
@@ -16967,14 +17004,13 @@
 /turf/open/floor/plasteel/freezer,
 /area/f13/bunker)
 "ipI" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/circuitboard/machine/pacman/super,
-/obj/item/circuitboard/machine/pacman/super,
-/obj/item/circuitboard/machine/recharger,
-/obj/item/circuitboard/cryopodcontrol,
-/obj/item/circuitboard/machine/cryo_tube,
-/obj/item/circuitboard/machine/pipedispenser,
-/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
+/obj/machinery/power/smes/engineering,
+/obj/structure/cable{
+	icon_state = "0-1"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/yellow/side{
+	dir = 4
+	},
 /area/f13/brotherhood/reactor)
 "ipW" = (
 /turf/open/indestructible/ground/inside/subway,
@@ -18250,7 +18286,6 @@
 /area/ruin/powered)
 "jat" = (
 /obj/machinery/chem_heater,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/chemistry)
@@ -21082,16 +21117,17 @@
 /turf/open/floor/plating,
 /area/f13/bunker/bunkereight)
 "kxh" = (
-/obj/docking_port/stationary{
-	area_type = /area/f13;
-	dwidth = 1;
-	height = 4;
-	id = "bos_entryway";
-	name = "Level 0: Entryway";
-	roundstart_template = /datum/map_template/shuttle/entrance_elevator;
-	width = 5
+/obj/machinery/power/smes/engineering,
+/obj/structure/cable{
+	icon_state = "0-8"
 	},
-/turf/open/floor/plasteel/elevatorshaft,
+/obj/structure/window/reinforced/tinted{
+	dir = 8
+	},
+/obj/structure/window/reinforced/tinted{
+	dir = 1
+	},
+/turf/open/floor/plasteel/f13/vault_floor/yellow/white,
 /area/f13/brotherhood/operations)
 "kxM" = (
 /turf/open/floor/plating/tunnel,
@@ -21198,6 +21234,19 @@
 /obj/structure/chair/f13chair1,
 /turf/open/floor/plasteel/floorgrime,
 /area/f13/sewer)
+"kAB" = (
+/obj/docking_port/stationary{
+	area_type = /area/f13;
+	dwidth = 1;
+	height = 4;
+	id = "bos_entryway";
+	name = "Level 0: Entryway";
+	roundstart_template = /datum/map_template/shuttle/entrance_elevator;
+	width = 5;
+	dir = 2
+	},
+/turf/open/floor/plasteel/elevatorshaft,
+/area/f13/brotherhood/operations)
 "kAW" = (
 /obj/structure/curtain{
 	color = "#845f58"
@@ -23313,6 +23362,17 @@
 /obj/machinery/light,
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
 /area/f13/vault/dormitory)
+"lAp" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/machinery/light/small{
+	dir = 1;
+	pixel_x = 8
+	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/turf/open/floor/plating/f13/inside,
+/area/f13/brotherhood/operations)
 "lAr" = (
 /obj/effect/spawner/lootdrop/trash,
 /obj/effect/decal/cleanable/dirt,
@@ -24162,18 +24222,21 @@
 	color = "000000"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 9
 	},
 /area/f13/brotherhood/rnd)
 "lTM" = (
 /obj/machinery/power/apc/auto_name/east,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
+	},
+/obj/structure/cable{
+	icon_state = "0-1"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/mining)
@@ -24783,10 +24846,6 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/terminal{
-	dir = 1
-	},
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/side{
 	dir = 8
 	},
@@ -24974,9 +25033,14 @@
 	},
 /area/f13/sewer/powered)
 "mpS" = (
+/obj/structure/lattice{
+	layer = 3
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
 /obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_common,
+/turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/brotherhood/operations)
 "mpV" = (
 /obj/structure/cable{
@@ -25082,6 +25146,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/operations)
 "mti" = (
@@ -26306,9 +26371,11 @@
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "mVt" = (
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
+	},
+/obj/machinery/light/small{
+	light_color = "#ff4747"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/yellow/side{
 	dir = 6
@@ -29144,7 +29211,6 @@
 	name = "Combat Caste Office";
 	req_access_txt = "120"
 	},
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/wood_common,
 /area/f13/brotherhood/operations)
 "opb" = (
@@ -29866,6 +29932,9 @@
 "oFJ" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/f13/vault_floor/yellow/side{
 	dir = 1
@@ -33045,7 +33114,6 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/obj/machinery/power/apc/auto_name/east,
 /obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 4
@@ -33288,7 +33356,6 @@
 	name = "Backup Power";
 	req_access_txt = "120"
 	},
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/brotherhood/armory)
 "qmH" = (
@@ -34045,6 +34112,16 @@
 /obj/machinery/porta_turret/f13/turret_556/hostile,
 /turf/open/floor/plasteel/bar,
 /area/f13/bunker/bunkerthree)
+"qCi" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/turf/open/floor/plating/f13/inside,
+/area/f13/brotherhood/operations)
 "qCo" = (
 /obj/machinery/workbench/advanced,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -34614,7 +34691,6 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 10
 	},
@@ -35264,6 +35340,9 @@
 	},
 /obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "neutralrustyfull"
 	},
@@ -35276,6 +35355,12 @@
 /area/ruin/powered)
 "rfP" = (
 /obj/effect/decal/cleanable/oil/streak,
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/brotherhood/reactor)
 "rfS" = (
@@ -35492,7 +35577,6 @@
 /turf/closed/mineral/ash_rock,
 /area/f13/caves)
 "rmC" = (
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /obj/machinery/light/small{
 	brightness = 7;
 	dir = 4
@@ -35824,8 +35908,10 @@
 /turf/open/floor/wood_mosaic,
 /area/f13/vault/security)
 "rtw" = (
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /obj/machinery/power/apc/auto_name/north,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/dorms)
 "rtG" = (
@@ -36378,7 +36464,9 @@
 /area/f13/sewer)
 "rIf" = (
 /obj/machinery/power/apc/auto_name/north,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
 /turf/open/floor/carpet/royalblack,
 /area/f13/brotherhood/operations)
 "rIj" = (
@@ -38188,8 +38276,10 @@
 /area/f13/building/abandoned/o)
 "sAG" = (
 /obj/machinery/power/apc/auto_name/south,
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "0-1"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/chemistry)
 "sAQ" = (
@@ -39707,15 +39797,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker/bunkernine)
 "tmz" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	pixel_x = 28;
-	start_charge = 500
-	},
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/obj/structure/spider/stickyweb,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/operations)
 "tmA" = (
@@ -42069,10 +42155,6 @@
 	},
 /area/f13/brotherhood/operating)
 "urF" = (
-/obj/machinery/power/terminal{
-	dir = 8
-	},
-/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/side,
 /area/f13/brotherhood/reactor)
 "urS" = (
@@ -42359,6 +42441,20 @@
 /obj/structure/flora/rock/jungle,
 /turf/open/floor/plating/dirt,
 /area/f13/sewer)
+"uyk" = (
+/obj/structure/lattice{
+	layer = 3
+	},
+/obj/machinery/light/small{
+	brightness = 7;
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/turf/open/floor/plasteel/f13/vault_floor/plating,
+/area/f13/brotherhood/operations)
 "uyw" = (
 /obj/structure/table/abductor,
 /obj/item/stack/sheet/plastitaniumglass/fifty,
@@ -42958,6 +43054,7 @@
 /area/f13/sewer/powered)
 "uME" = (
 /obj/structure/simple_door/metal/ventilation,
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/brotherhood/operations)
 "uMZ" = (
@@ -43310,6 +43407,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/brotherhood/operations)
 "uTV" = (
@@ -44514,8 +44612,12 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/o)
 "vyf" = (
+/obj/structure/simple_door/metal/ventilation,
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
 /obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
-/turf/open/floor/wood_common,
+/turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/operations)
 "vyk" = (
 /obj/structure/disposalpipe/segment{
@@ -45097,6 +45199,10 @@
 /obj/structure/frame/machine,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/circuitboard/machine/ore_silo,
+/obj/machinery/light/small{
+	dir = 4;
+	light_color = "#ff4747"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 4
 	},
@@ -46149,6 +46255,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 9
 	},
@@ -46282,6 +46389,14 @@
 /obj/structure/barricade/bars,
 /turf/open/water,
 /area/f13/sewer)
+"wrm" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/structure/spider/stickyweb,
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/turf/open/floor/plating/f13/inside,
+/area/f13/brotherhood/operations)
 "wrD" = (
 /obj/structure/sign/poster/prewar/poster80{
 	pixel_x = 32
@@ -46468,11 +46583,11 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
 "wvA" = (
-/obj/machinery/power/smes/engineering,
 /obj/machinery/light/small{
 	dir = 8;
 	light_color = "red"
 	},
+/obj/machinery/autolathe,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/side{
 	dir = 10
 	},
@@ -49151,6 +49266,7 @@
 /area/f13/sewer)
 "xHM" = (
 /obj/structure/simple_door/metal/ventilation,
+/obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/armory)
 "xIq" = (
@@ -49798,12 +49914,12 @@
 /turf/open/floor/f13,
 /area/f13/vault)
 "xZa" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/pda/engineering{
-	name = "Knight-Engineer Pip-Boy 3000"
+/obj/machinery/power/terminal{
+	dir = 1
 	},
-/obj/item/lightreplacer,
-/obj/item/stack/sheet/mineral/concrete/ten,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/yellow/side{
 	dir = 5
 	},
@@ -88796,11 +88912,11 @@ yhR
 vOm
 ueC
 flQ
-kKl
-kKl
-kKl
-loq
-loq
+mpS
+mpS
+mpS
+dDT
+dDT
 eCH
 ueC
 ueC
@@ -89097,21 +89213,21 @@ yhR
 bgK
 vOm
 ueC
-loq
+dDT
 ueC
 ueC
 ueC
 ueC
-loq
-kKl
-cjE
+dDT
+mpS
+vyf
 msR
-loq
-loq
-loq
+dDT
+dDT
+dDT
 msR
-loq
-taH
+dDT
+qCi
 ueC
 vOm
 vOm
@@ -89399,7 +89515,7 @@ oEb
 bgK
 fJY
 ueC
-loq
+dDT
 ueC
 pmg
 iPM
@@ -89413,7 +89529,7 @@ uDl
 uDl
 uDl
 ueC
-cjE
+vyf
 ueC
 ueC
 ueC
@@ -89701,7 +89817,7 @@ oEb
 bgK
 fJY
 ueC
-loq
+dDT
 gRz
 kYz
 kYz
@@ -89716,10 +89832,10 @@ nIW
 nIW
 ueC
 uTK
-yeo
-kKl
-loq
-vyu
+uyk
+mpS
+dDT
+xmd
 msR
 ueC
 ueC
@@ -90022,7 +90138,7 @@ woS
 woS
 woS
 sHi
-kKl
+mpS
 ueC
 ueC
 ueC
@@ -90305,7 +90421,7 @@ bgK
 fJY
 fJY
 ueC
-eCH
+tmz
 seR
 ueC
 hLk
@@ -90324,10 +90440,10 @@ nnI
 jzw
 irU
 sHi
-kKl
-kKl
-kKl
-loq
+mpS
+mpS
+mpS
+dDT
 kZC
 xRy
 ueC
@@ -90607,7 +90723,7 @@ bgK
 fJY
 ueC
 ueC
-eCH
+tmz
 wAC
 ueC
 akt
@@ -90908,13 +91024,13 @@ yhR
 bgK
 fJY
 ueC
-loq
-loq
-taH
+dDT
+dDT
+qCi
 uME
 oFJ
-pcy
-gBR
+gfU
+kIr
 aYb
 uDl
 cbX
@@ -91210,14 +91326,14 @@ yhR
 bgK
 fJY
 ueC
-kaE
+lAp
 ueC
 ueC
-ueC
+kxh
 xZa
 ipI
 rfP
-upz
+gKq
 gYT
 gzW
 eCE
@@ -91512,7 +91628,7 @@ yhR
 bgK
 fJY
 ueC
-eUt
+wrm
 tee
 tee
 tee
@@ -91814,7 +91930,7 @@ yhR
 bgK
 fJY
 ueC
-loq
+dDT
 tee
 ezR
 eEr
@@ -91825,9 +91941,9 @@ mVt
 uDl
 mda
 eCE
-eCE
+bAQ
 mMn
-gfU
+dsc
 woS
 brH
 xQt
@@ -92116,7 +92232,7 @@ yhR
 bgK
 fJY
 ueC
-loq
+dDT
 tee
 iSH
 kqf
@@ -92418,7 +92534,7 @@ yhR
 bgK
 fJY
 ueC
-loq
+dDT
 tee
 csR
 kqf
@@ -92720,7 +92836,7 @@ yhR
 bgK
 fJY
 ueC
-loq
+dDT
 tee
 eub
 kqf
@@ -92730,12 +92846,12 @@ dHT
 fRI
 wnm
 gfi
-kIr
-pWN
+gBR
+pcy
 wHI
 cLN
 cCi
-cCi
+hFH
 iKj
 trK
 vZC
@@ -93022,7 +93138,7 @@ bgK
 fJY
 fJY
 ueC
-kaE
+lAp
 tee
 evg
 qCz
@@ -93037,7 +93153,7 @@ pWN
 wHI
 dNx
 cCi
-cCi
+hFH
 iri
 trK
 mTV
@@ -93324,7 +93440,7 @@ fJY
 fJY
 ueC
 ueC
-loq
+dDT
 tee
 tee
 eLm
@@ -93339,7 +93455,7 @@ rOa
 uBM
 ueC
 lCH
-cCi
+hFH
 qfW
 mRs
 mTV
@@ -93626,7 +93742,7 @@ ueC
 ueC
 ueC
 vBk
-eUt
+wrm
 tee
 vXE
 iKT
@@ -93641,7 +93757,7 @@ pWN
 fMp
 ueC
 onR
-cCi
+hFH
 qfW
 foH
 mTV
@@ -93928,11 +94044,11 @@ loq
 loq
 loq
 eUt
-loq
+dDT
 xHM
-bxZ
-iKT
-iKT
+iZL
+aZT
+aZT
 czv
 gqZ
 lFO
@@ -93943,7 +94059,7 @@ cxP
 xFd
 ueC
 cea
-cCi
+hFH
 qfW
 trK
 mTV
@@ -94245,7 +94361,7 @@ ueC
 ueC
 ueC
 iVq
-cCi
+hFH
 iri
 trK
 mTV
@@ -94547,7 +94663,7 @@ qfW
 qfW
 eNP
 bRN
-cCi
+hFH
 lPN
 trK
 rwV
@@ -94849,7 +94965,7 @@ mXb
 cCi
 qfW
 qfW
-pbr
+hcr
 ldy
 cCi
 vkW
@@ -95148,13 +95264,13 @@ ueC
 ueC
 ueC
 mNI
-qfW
-cCi
-cCi
+ljc
+hFH
+hFH
 aLs
-uJJ
-cCi
-cCi
+sfU
+hFH
+hFH
 qfW
 fPf
 qNy
@@ -95456,7 +95572,7 @@ ueC
 ueC
 rFP
 xjC
-cCi
+hFH
 pbr
 qfW
 jwK
@@ -95758,7 +95874,7 @@ qfW
 cCi
 ueC
 ueC
-cCi
+hFH
 cCi
 wcC
 ueC
@@ -96060,7 +96176,7 @@ qfW
 uJJ
 jXQ
 ueC
-qfW
+ljc
 cCi
 sFT
 uOn
@@ -96362,11 +96478,11 @@ rZJ
 beH
 wZw
 xwz
-pbr
-cCi
-cCi
-qfW
-qfW
+hcr
+hFH
+hFH
+ljc
+ljc
 ljc
 cCi
 cCi
@@ -96962,7 +97078,7 @@ beH
 vSU
 vSU
 vSU
-kxh
+vSU
 beH
 vQs
 ueC
@@ -97563,7 +97679,7 @@ cCi
 ueC
 ueC
 ueC
-vSU
+kAB
 vSU
 vSU
 vSU
@@ -98159,7 +98275,7 @@ ueC
 jNz
 oJi
 ppW
-mpS
+udd
 udd
 ueC
 jcM
@@ -98460,7 +98576,7 @@ loq
 ueC
 jnJ
 uwi
-vyf
+vsQ
 rmC
 eRa
 ueC
@@ -99064,7 +99180,7 @@ kaE
 ueC
 ueC
 eRa
-mpS
+udd
 nlw
 nlw
 mgY
@@ -99366,15 +99482,15 @@ loq
 loq
 ueC
 tGj
-bAQ
-bAQ
+nlw
+nlw
 fPf
 ueC
 rID
 aBA
 ueC
 vlM
-tmz
+loq
 vBk
 uVv
 hfp
@@ -99669,7 +99785,7 @@ aGI
 ueC
 aYu
 fTu
-dDT
+nlw
 hmF
 ueC
 qaR
