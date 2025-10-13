@@ -110,7 +110,7 @@
 
 //10mm extended
 /obj/item/ammo_box/magazine/m10mm/adv/ext
-	name = "10mm pistol magazine (10mm)"
+	name = "10mm pistol extended magazine (10mm)"
 	icon_state = "smg10mm"
 	ammo_type = /obj/item/ammo_casing/c10mm
 	max_ammo = 16
