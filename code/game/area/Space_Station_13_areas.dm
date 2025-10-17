@@ -1735,6 +1735,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/f13/den
 	name = "Den"
 	icon_state = "den"
+	requires_power = FALSE
 
 /area/f13/underground/overseer_office
 	name = "Overseer's Office"
