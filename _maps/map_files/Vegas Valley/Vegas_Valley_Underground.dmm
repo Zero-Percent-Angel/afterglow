@@ -3357,7 +3357,9 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/atrium)
 "bGu" = (
-/obj/machinery/vending/security,
+/obj/machinery/vending/security{
+	force_free = 1
+	},
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 10
 	},
@@ -4245,6 +4247,10 @@
 	color = "000000"
 	},
 /obj/structure/table/reinforced,
+/obj/item/multitool{
+	pixel_x = 6;
+	pixel_y = 3
+	},
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -7421,7 +7427,9 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/sewer)
 "dGq" = (
-/obj/machinery/button/crematorium,
+/obj/machinery/button/crematorium{
+	pixel_y = -8
+	},
 /turf/closed/wall/r_wall,
 /area/f13/brotherhood/operating)
 "dGW" = (
@@ -8072,6 +8080,10 @@
 /obj/item/reagent_containers/food/drinks/mug/coco{
 	pixel_x = -8;
 	pixel_y = 8
+	},
+/obj/machinery/recharger{
+	pixel_y = 6;
+	pixel_x = 6
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/brotherhood/armory)
@@ -11572,6 +11584,12 @@
 	icon_state = "floordirty"
 	},
 /area/f13/bunker/bunkerthree)
+"fHN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/f13chair1,
+/obj/effect/landmark/start/f13/scribe,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/brotherhood/operating)
 "fHU" = (
 /obj/machinery/light/small{
 	brightness = 7;
@@ -17081,10 +17099,12 @@
 	},
 /area/f13/bunker/bunkerfive)
 "iri" = (
-/obj/structure/chair/stool/retro/black,
-/obj/effect/landmark/start/f13/scribe,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/brotherhood/operations)
+/obj/structure/simple_door/bunker/glass{
+	req_access_txt = "120";
+	req_one_access_txt = "120"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralsolid,
+/area/f13/brotherhood/operating)
 "irp" = (
 /obj/machinery/light{
 	dir = 4
@@ -19209,13 +19229,15 @@
 /turf/open/floor/plasteel/f13/vault_floor/white/whitesolid,
 /area/f13/enclave)
 "jzw" = (
-/obj/item/kirbyplants/random,
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
+	},
+/obj/item/kirbyplants/random{
+	pixel_y = 8
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 8
@@ -26017,7 +26039,9 @@
 /area/f13/bunker)
 "mMm" = (
 /obj/structure/table/glass,
-/obj/item/kirbyplants/random,
+/obj/item/kirbyplants/random{
+	pixel_y = 6
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 4
@@ -28028,6 +28052,9 @@
 "nHG" = (
 /obj/structure/table/reinforced,
 /obj/machinery/button/flasher,
+/obj/machinery/cell_charger{
+	pixel_y = 13
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/brotherhood/armory)
 "nHO" = (
@@ -30225,7 +30252,7 @@
 	dir = 8;
 	pixel_y = -15
 	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralsolid,
 /area/f13/brotherhood/operating)
 "oNB" = (
 /obj/structure/cable,
@@ -30670,14 +30697,20 @@
 	color = "000000"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/wrench/advanced{
+	pixel_x = 2
+	},
+/obj/item/crowbar/advanced,
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/brotherhood/rnd)
 "pag" = (
-/obj/item/kirbyplants/random,
 /obj/structure/table/glass,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/item/kirbyplants/random{
+	pixel_y = 6
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 1
@@ -40169,7 +40202,9 @@
 /turf/open/floor/circuit/f13_blue,
 /area/f13/enclave)
 "ttS" = (
-/obj/structure/reagent_dispensers/peppertank,
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_x = 5
+	},
 /turf/closed/wall/r_wall,
 /area/f13/brotherhood/armory)
 "ttV" = (
@@ -42742,12 +42777,14 @@
 /area/ruin/powered)
 "uED" = (
 /obj/structure/table,
-/obj/item/crowbar/advanced,
-/obj/item/wrench/advanced{
-	pixel_x = 2
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/obj/machinery/recharger{
+	pixel_x = 6
+	},
+/obj/machinery/recharger{
+	pixel_x = -6
+	},
 /turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
 /area/f13/brotherhood/rnd)
 "uFc" = (
@@ -43837,7 +43874,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralsolid,
 /area/f13/brotherhood/operating)
 "vfc" = (
 /obj/structure/table,
@@ -44157,7 +44194,9 @@
 /area/f13/bunker/bunkerthree)
 "vma" = (
 /obj/structure/table/reinforced,
-/obj/item/kirbyplants/random,
+/obj/item/kirbyplants/random{
+	pixel_y = 8
+	},
 /turf/open/floor/plasteel/f13/vault_floor/red/side,
 /area/f13/brotherhood/armory)
 "vmj" = (
@@ -46731,7 +46770,7 @@
 	},
 /obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/turf/open/floor/plasteel/f13/vault_floor/neutral/neutralsolid,
 /area/f13/brotherhood/operating)
 "wzh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -47520,7 +47559,9 @@
 	color = "000000"
 	},
 /obj/structure/table/reinforced,
-/obj/item/multitool,
+/obj/machinery/cell_charger{
+	pixel_y = 3
+	},
 /turf/open/floor/plasteel/f13/vault_floor/red/white,
 /area/f13/brotherhood/reactor)
 "wQP" = (
@@ -50136,8 +50177,8 @@
 /turf/open/floor/plating/f13/inside,
 /area/f13/brotherhood/operations)
 "yfa" = (
-/obj/machinery/chem_dispenser,
 /obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
+/obj/machinery/chem_lab,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/chemistry)
 "yfc" = (
@@ -93154,7 +93195,7 @@ wHI
 dNx
 cCi
 hFH
-iri
+lPN
 trK
 mTV
 fWs
@@ -94362,7 +94403,7 @@ ueC
 ueC
 iVq
 hFH
-iri
+lPN
 trK
 mTV
 nsx
@@ -98596,7 +98637,7 @@ jcR
 uVv
 uVv
 kRr
-jcR
+iri
 uVv
 uVv
 uVv
@@ -98893,7 +98934,7 @@ rOH
 aRW
 pwo
 uVv
-nNC
+fHN
 aGf
 oNz
 bxs
