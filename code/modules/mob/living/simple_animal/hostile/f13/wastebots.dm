@@ -193,14 +193,19 @@
 	faction = list("raider")
 	obj_damage = 300
 
-/mob/living/simple_animal/hostile/handy/liberator
+/mob/living/simple_animal/hostile/liberator
 	name = "liberator"
-	desc = "A small pre-War droned used by the People's Liberation Army."
+	desc = "A small pre-war robot used by the People's Liberation Army."
+	icon = 'icons/fallout/mobs/robots/wasterobots.dmi'
 	icon_state = "liberator"
-	icon_living = "leberator"
+	icon_living = "liberator"
 	icon_dead = "liberator_d"
 	icon_gib = "liberator_g"
+	faction = list("china")
 	mob_armor = ARMOR_VALUE_ROBOT_SECURITY
+	can_ghost_into = FALSE
+	gender = NEUTER
+	mob_biotypes = MOB_ROBOTIC|MOB_INORGANIC
 	maxHealth = 50
 	health = 50
 	melee_damage_lower = 5
@@ -208,22 +213,20 @@
 	can_ghost_into = FALSE
 	attack_verb_simple = "slaps"
 	projectilesound = 'sound/weapons/laser.ogg'
-	projectiletype = /obj/item/projectile/beam/laser/pistol
+	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak
 	extra_projectiles = 1
 	ranged = TRUE
 	retreat_distance = 2
 	minimum_distance = 2
 	check_friendly_fire = TRUE
+	deathmessage = "blows apart!"
+	taunt_chance = 30
 	loot = list(
 		/obj/effect/decal/cleanable/robot_debris,
 		/obj/item/stack/crafting/electronicparts/three,
 		/obj/item/stock_parts/cell/ammo/mfc
 		)
-	emote_taunt_sound = null
 	emote_taunt = list("levels its laser")
-	aggrosound = null
-	idlesound = null
-	death_sound = null
 	attack_sound = null
 	projectile_sound_properties = list(
 		SP_VARY(FALSE),
@@ -239,13 +242,28 @@
 	call_backup = null
 	desc_short = "A robot that shoots lasers."
 
-/mob/living/simple_animal/hostile/handy/liberator/yellow
-	name = "liberator"
-	desc = "A small pre-War droned used by the People's Liberation Army."
-	icon_state = "liberator_y"
-	can_ghost_into = FALSE
-	icon_living = "leberator_y"
-	icon_dead = "liberator_y_d"
+	death_sound = list(
+		'sound/f13npc/liberator/libdeath1.ogg',
+		'sound/f13npc/liberator/libdeath2.ogg',
+	)
+	emote_taunt_sound = list(
+		'sound/f13npc/liberator/libtaunt1.ogg',
+		'sound/f13npc/liberator/libtaunt2.ogg',
+		'sound/f13npc/liberator/libtaunt3.ogg',
+		'sound/f13npc/liberator/libtaunt4.ogg',
+		)
+	aggrosound = list(
+		'sound/f13npc/liberator/libcombattaunt1.ogg',
+		'sound/f13npc/liberator/libcombattaunt2.ogg',
+		'sound/f13npc/liberator/libattack1.ogg',
+		)
+
+/obj/item/projectile/beam/laser/pistol/liberator
+
+/mob/living/simple_animal/hostile/liberator/neutral
+	faction = list("neutral")
+	desc = "A small pre-war robot used by the People's Liberation Army. This one looks reprogrammed."
+
 
 /mob/living/simple_animal/hostile/handy/robobrain
 	name = "robobrain"
@@ -292,6 +310,7 @@
 	send_mobs = null
 	call_backup = null
 	desc_short = "A brainy robot with lasers."
+
 
 /mob/living/simple_animal/hostile/handy/robobrain/AttackingTarget()
 	. = ..()
@@ -572,4 +591,3 @@
 		SP_DISTANT_RANGE(LASER_RANGE_DISTANT)
 	)
 	can_ghost_into = FALSE
-
