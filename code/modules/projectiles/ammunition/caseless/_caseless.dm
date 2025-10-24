@@ -23,7 +23,12 @@
 	icon_state = "needler-casing"
 	caliber = CALIBER_NEEDLE
 	projectile_type = /obj/item/projectile/bullet/needle
-	var/reagent_amount = 15
+
+/obj/item/ammo_casing/caseless/needle/pierce
+	name = "An AP needler round."
+	desc = "A dart for use in needler pistols."
+	projectile_type = /obj/item/projectile/bullet/needle/pierce
+
 
 /obj/item/ammo_casing/caseless/musketball
 	name = "Musketball"
