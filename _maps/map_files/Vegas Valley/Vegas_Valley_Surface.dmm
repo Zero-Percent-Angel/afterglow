@@ -12245,6 +12245,10 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
+"dSQ" = (
+/obj/structure/chair/stool,
+/turf/open/indestructible/ground/outside/sidewalkdirt,
+/area/f13/followers)
 "dTf" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/f13{
@@ -20285,11 +20289,12 @@
 	},
 /area/f13/wasteland)
 "grB" = (
-/obj/structure/fence,
-/turf/open/indestructible/ground/outside/grass/dirtpath{
-	dir = 10
+/obj/machinery/door/unpowered/securedoor{
+	name = "Clinic";
+	req_access_txt = "124"
 	},
-/area/f13/wasteland/followers)
+/turf/open/indestructible/ground/outside/sidewalkdirt,
+/area/f13/followers)
 "grD" = (
 /obj/structure/barricade/tentclothcorner{
 	dir = 1
@@ -28890,6 +28895,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
+"iWI" = (
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "verticaloutermain1"
+	},
+/area/f13/followers)
 "iWV" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
@@ -30037,6 +30047,13 @@
 	},
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
+"joL" = (
+/obj/structure/window/fulltile/house{
+	icon_state = "housewindowbroken"
+	},
+/obj/structure/barricade/bars,
+/turf/open/indestructible/ground/outside/sidewalkdirt,
+/area/f13/followers)
 "joM" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/road{
@@ -45703,6 +45720,12 @@
 	icon_state = "outerpavement"
 	},
 /area/f13/wasteland)
+"olr" = (
+/obj/item/flag/followers,
+/turf/open/indestructible/ground/outside/grass/dirtpath{
+	dir = 8
+	},
+/area/f13/wasteland)
 "olu" = (
 /obj/structure/flora/grass/wasteland{
 	icon_state = "tall_grass_4"
@@ -57971,11 +57994,14 @@
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "sdN" = (
-/obj/structure/simple_door/metal/fence{
-	dir = 8
+/obj/structure/curtain{
+	color = "#845f58";
+	pixel_x = 30
 	},
-/turf/open/indestructible/ground/inside/dirt,
-/area/f13/wasteland/followers)
+/obj/structure/closet/crate/bin/trashbin,
+/obj/item/stack/medical/bruise_pack,
+/turf/open/indestructible/ground/outside/sidewalkdirt,
+/area/f13/followers)
 "sdP" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 9
@@ -66001,6 +66027,7 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/building/powered)
 "uCz" = (
+/obj/structure/flora/ausbushes/sparsegrass,
 /obj/item/flag/followers,
 /turf/open/indestructible/ground/outside/grass,
 /area/f13/wasteland)
@@ -68266,11 +68293,11 @@
 /turf/open/floor/carpet/blue,
 /area/f13/followers)
 "vli" = (
-/obj/structure/flora/tree/oak_three,
-/turf/open/indestructible/ground/outside/grass/corner{
-	dir = 1
+/obj/machinery/light{
+	flickering = 1
 	},
-/area/f13/wasteland)
+/turf/open/indestructible/ground/outside/sidewalkdirt,
+/area/f13/followers)
 "vln" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table/wood/settler,
@@ -141395,11 +141422,11 @@ pQZ
 ags
 fOk
 fOk
-fOk
+xCm
+xCm
+xCm
 grB
-sdN
-ags
-fOk
+xCm
 fOk
 fOk
 fOk
@@ -141697,11 +141724,11 @@ rlV
 wuZ
 xXx
 ouW
-uCz
-qfV
-rlV
-wuZ
-uCz
+xCm
+dSQ
+iWI
+gsc
+xCm
 xXx
 xXx
 xXx
@@ -141998,12 +142025,12 @@ rlV
 rlV
 cAC
 wPL
-blp
+lMd
+xCm
+sdN
+gsc
 vli
-qfV
-rlV
-wuZ
-xXx
+xCm
 xXx
 xXx
 xXx
@@ -142300,12 +142327,12 @@ djm
 rlV
 rlV
 rlV
-rlV
 wuZ
-qfV
-rlV
-wuZ
-pfB
+xCm
+joL
+grB
+xCm
+xCm
 xXx
 nNZ
 blp
@@ -142602,12 +142629,12 @@ xQD
 djm
 rlV
 rlV
-rlV
 cAC
+olr
 fcK
 rlV
 wuZ
-hgh
+uCz
 xXx
 qfV
 rlV
