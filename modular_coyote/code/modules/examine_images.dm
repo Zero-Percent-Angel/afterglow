@@ -1,44 +1,44 @@
 // Config Entries! Check discordURL
 /datum/config_entry/string/discordImage_p // Prefix, text going before the URL
 	config_entry_value = "https://cdn.discordapp.com/attachments/"
-/datum/config_entry/string/discordImage_s // Suffix, text going after the URL.
-	config_entry_value = ".png"
+/datum/config_entry/string/discordImage_p_alt // Alternate Prefix, text going before the URL
+	config_entry_value = "https://cdn.discordapp.com/attachments/"
 
-// Helper procs to help make sure the discord link is correct and to conver it with/without the url section.
+
+// Helper procs to help make sure the discord link is correct and to convert it with/without the url section.
 /proc/SanitizeDiscordLink(url)
-	var/startURL = CONFIG_GET(string/discordImage_p)
-	var/endURL = CONFIG_GET(string/discordImage_s)
 
-	var/result = 1
+	if(length(url) > 355)
+		return 0
 
-	if(!findtext(url, startURL, 1, length(startURL) + 1))
-		result = 0
+	if(!CheckPrefix(url))
+		return 0
+	var/noParamsUrl = splittext(url, "?")[1]
+	if(!findtext(noParamsUrl, ".png", (length(noParamsUrl) - (5))))
+		return 0
 
-	var/offset = (length(url) + 1) - (length(endURL) + 2)
-	if(!findtext(url, endURL, offset))
-		result = 0
-	
-	return result
+	return 1
+
+/proc/CheckPrefix(url)
+	var/startURL1 = CONFIG_GET(string/discordImage_p)
+	var/startURL2 = CONFIG_GET(string/discordImage_p_alt)
+
+	var/found = 0
+	if(findtext(url, startURL1, 1, length(startURL1) + 1))
+		found = 1
+	if(findtext(url, startURL2, 1, length(startURL2) + 1))
+		found = 1
+
+	return found
+
 
 // Applies the prefix and suffix to the link, makes things a liiiiitttle safer in terms of security as we're forcing a specific website to be used.
 /proc/DiscordLink(imageText)
-	var/prefix = CONFIG_GET(string/discordImage_p)
-	var/suffix = CONFIG_GET(string/discordImage_s)
-
-	var/result = prefix + imageText + suffix
-	return result
+	return imageText
 
 // Removes the prefix and suffix from the url, pretty much to make sure things are safe if things go bad, idk.
-/proc/StoreDiscordLink(url)
-	var/prefix = CONFIG_GET(string/discordImage_p)
-	var/suffix = CONFIG_GET(string/discordImage_s)
-
-	var/output = copytext(url, (length(prefix) + 1)) // Removes the beggining of the url.
-
-	var/offset = length(output) - length(suffix)
-	output = copytext(output, 1, offset + 1) // Removes the .png on the end.
-
-	return output
+/proc/StoreDiscordLink(url) // Removes the beggining of the url.
+	return url
 
 // Mob definitions!!!
 /mob/living/carbon/human
@@ -50,11 +50,11 @@
 
 	if(!client)
 		return
-	
-	var/input = stripped_input(usr,"Right click an image from discord (do not expand the image by clicking it) and click 'Copy Link' and paste it here. Must be a png")
-	if(length(input))	
+
+	var/input = stripped_input(usr,"Right click an image from discord click 'Copy Link' and paste it here. Must be a png.")
+	if(length(input))
 		if(!SanitizeDiscordLink(input))
-			to_chat(usr, span_warning("Link is incorrect, make sure you just right click the image in discord and copy link, do NOT click it to expand the image. It must end in '.png'"))
+			to_chat(usr, span_warning("Link is incorrect, make sure you just right click the image in discord and copy link. It must be in png format."))
 			return
 
 		profilePicture = StoreDiscordLink(input)
@@ -122,12 +122,12 @@
 		if("input")
 			switch(href_list["preference"])
 				if("ProfilePicture")
-					var/input = stripped_input(usr,"Right click an image from discord (do not expand the image by clicking it) and click 'Copy Link' and paste it here. Must be a png")
-					if(input)	
+					var/input = stripped_input(usr,"Right click an image from discord and click 'Copy Link' and paste it here. Must be a png.")
+					if(input)
 						if(SanitizeDiscordLink(input))
 							profilePicture = StoreDiscordLink(input)
 						else
-							to_chat(usr, span_warning("Link is incorrect, make sure you just right click the image in discord and copy link, do NOT click it to expand the image. It must end in '.png'"))
+							to_chat(usr, span_warning("Link is incorrect, make sure you just right click the image in discord and copy link. It must be in png format."))
 					else
 						var/deletePicture = alert(usr, "Do you wish to remove your profile picture?", "Remove PFP", "Yes", "No")
 						if(deletePicture == "Yes")

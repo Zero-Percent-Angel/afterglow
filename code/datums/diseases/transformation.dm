@@ -69,9 +69,34 @@
 			else
 				affected_mob.transfer_ckey(new_mob)
 
+		set_skills_on_new_mob(new_mob, affected_mob)
 		new_mob.name = affected_mob.real_name
 		new_mob.real_name = new_mob.name
 		qdel(affected_mob)
+
+/datum/disease/transformation/proc/set_skills_on_new_mob(mob/living/new_mob, mob/living/old_mob)
+	new_mob.special_s = old_mob.special_s
+	new_mob.special_p = old_mob.special_p
+	new_mob.special_e = old_mob.special_e
+	new_mob.special_c = old_mob.special_c
+	new_mob.special_i = old_mob.special_i
+	new_mob.special_a = old_mob.special_a
+	new_mob.special_l = old_mob.special_l
+	new_mob.skill_barter = old_mob.skill_barter
+	new_mob.skill_doctor = old_mob.skill_doctor
+	new_mob.skill_energy = old_mob.skill_energy
+	new_mob.skill_first_aid = old_mob.skill_first_aid
+	new_mob.skill_guns = old_mob.skill_guns
+	new_mob.skill_lockpick = old_mob.skill_lockpick
+	new_mob.skill_melee = old_mob.skill_melee
+	new_mob.skill_outdoorsman = old_mob.skill_outdoorsman
+	new_mob.skill_repair = old_mob.skill_repair
+	new_mob.skill_sneak = old_mob.skill_sneak
+	new_mob.skill_science = old_mob.skill_science
+	new_mob.skill_speech = old_mob.skill_speech
+	new_mob.skill_throwing = old_mob.skill_throwing
+	new_mob.skill_unarmed = old_mob.skill_unarmed
+	new_mob.set_special()
 
 /datum/disease/transformation/proc/replace_banned_player(mob/living/new_mob) // This can run well after the mob has been transferred, so need a handle on the new mob to kill it if needed.
 	set waitfor = FALSE

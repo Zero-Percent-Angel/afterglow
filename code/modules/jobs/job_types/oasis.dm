@@ -588,7 +588,7 @@ Mayor
 	name = "Barkeep"
 	jobtype = /datum/job/oasis/f13barkeep
 	uniform = /obj/item/clothing/under/f13/bartenderalt
-	id = /obj/item/card/id/khantattoo
+	id = /obj/item/card/id/dogtag/town
 	ears = /obj/item/radio/headset/headset_khans
 	shoes = /obj/item/clothing/shoes/workboots/mining
 	backpack = /obj/item/storage/backpack/satchel/leather
