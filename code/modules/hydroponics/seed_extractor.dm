@@ -219,5 +219,7 @@
 				if(O)
 					piles[item] -= WO
 					O.forceMove(drop_location())
+					if (!length(piles[item]))
+						piles.Remove(item)
 					. = TRUE
 					//to_chat(usr, span_notice("[src] clanks to life briefly before vending [prize.equipment_name]!"))

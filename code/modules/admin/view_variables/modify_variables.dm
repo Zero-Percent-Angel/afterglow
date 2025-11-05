@@ -294,9 +294,8 @@ GLOBAL_PROTECT(VVpixelmovement)
 	var/class
 	var/variable
 	var/var_value
-
 	if(param_var_name)
-		if(!(O.vars[param_var_name]))
+		if(!(trim(param_var_name) in O.vars || O.vars[param_var_name]))
 			to_chat(src, "A variable with this name ([param_var_name]) doesn't exist in this datum ([O])", confidential = TRUE)
 			return
 		variable = param_var_name
