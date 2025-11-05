@@ -28,6 +28,13 @@
 	GLOB.trash_piles -= src
 	. = ..()
 
+/obj/item/storage/trash_stack/attackby(obj/item/W, mob/user, params)
+	if (istype(W, /obj/item/broom) && do_after(user, 2 SECONDS))
+		visible_message(span_notice("[user] sweeps away the pile of garbage."), span_notice("You sweep away the garbage pile"))
+		qdel(src)
+		return TRUE
+	. = ..()
+
 /obj/item/storage/trash_stack/attack_hand(mob/user)
 	var/turf/ST = get_turf(src)
 	if(user in loot_players)
