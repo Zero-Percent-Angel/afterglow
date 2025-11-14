@@ -280,6 +280,20 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 	skill_level = REGULAR_CHECK
+
+/datum/crafting_recipe/needle
+	name = "strip of HN needles"
+	result = /obj/item/ammo_box/needle/handload
+	reqs = list(/obj/item/reagent_containers/syringe = 5,
+	/obj/item/stack/sheet/metal = 1,
+	/obj/item/stack/sheet/plastic = 1,
+	)
+	tools = list(TOOL_AWORKBENCH)
+	time = 5
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+	skill_level = REGULAR_CHECK
+
 /*
 /datum/crafting_recipe/c4570boxheavy
 	name = ".45-70 Gv'mt ultradense ammo box"
