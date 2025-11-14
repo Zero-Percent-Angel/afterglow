@@ -78,7 +78,7 @@ SUBSYSTEM_DEF(mapping)
 		if(!config || config.defaulted)
 			to_chat(world, span_boldannounce("Unable to load next or default map config, defaulting to Pahrump..."))
 			config = old_config
-	GLOB.year_integer += config.year_offset
+	GLOB.year_integer = config.year_offset
 	GLOB.announcertype = (config.announcertype == "standard" ? (prob(1) ? "medibot" : "classic") : config.announcertype)
 	loadWorld()
 	repopulate_sorted_areas()
