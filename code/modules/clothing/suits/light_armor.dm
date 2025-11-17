@@ -473,13 +473,12 @@
 //weaker than leather armor
 //no slowodwn, but light armor already has trivial slowdown so this is a token benefit
 
-//no slowdown in exchange for next to no DT, melee, or bullet resist
 /obj/item/clothing/suit/armor/light/leather_jacket
 	name = "leather jacket"
 	desc = "A leather jacket adorned with a metal spiked arm piece and some reinforced leather lining its inside."
 	icon_state = "leather_jacket"
 	item_state = "leather_jacket"
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_DOWN_BULLET_T1,ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_DT_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_DOWN_DT_T1)
 	slowdown = ARMOR_SLOWDOWN_NONE
 	body_parts_hidden = ARMS | GROIN
 
@@ -487,7 +486,7 @@
 /obj/item/clothing/suit/armor/light/leather_jacket/reinforced
 	name = "reinforced leather jacket"
 	desc = "This heavily padded leather jacket is unusual in that it has two sleeves. You'll definitely make a fashion statement whenever, and wherever, you rumble."
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_DOWN_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2,ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1)
 	icon_state = "leather_jacket_reinforced"
 	item_state = "leather_jacket_reinforced"
 
@@ -498,7 +497,7 @@
 	icon_state = "leather_jacket_reinforced_coat"
 	item_state = "leather_jacket_reinforced_coat"
 	cold_protection = CHEST | GROIN | LEGS| ARMS | HEAD
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T2,ARMOR_MODIFIER_UP_LASER_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2,ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2)
 
 //////////////////////////
 //MISC. LEATHER OUTFITS //
