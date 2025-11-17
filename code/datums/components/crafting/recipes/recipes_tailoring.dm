@@ -14,11 +14,11 @@
 	subcategory = CAT_ARMOR
 	skill_level = EASY_CHECK
 
-/datum/crafting_recipe/combat_jacket
-	name = "Combat Jacket"
-	result = /obj/item/clothing/suit/armor/light/leather/leather_jacket
-	reqs = list(/obj/item/clothing/suit/armor/light/leather/leathercoat = 1,
-				/obj/item/stack/sheet/animalhide/deathclaw  = 1)
+/datum/crafting_recipe/leather_jacket
+	name = "Leather Jacket"
+	result = /obj/item/clothing/suit/armor/light/leather_jacket
+	reqs = list(/obj/item/stack/sheet/leather = 1,
+				/obj/item/weaponcrafting/string = 1)
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
@@ -26,18 +26,23 @@
 	skill_level = VERY_EASY_CHECK
 	subcategory = CAT_ARMOR
 
-/datum/crafting_recipe/combat_coat
-	name = "Combat Coat"
-	result = /obj/item/clothing/suit/armor/light/leather/leathercoat
-	reqs = list(/obj/item/clothing/suit/armor/light/leather/leathersuit = 1,
+/datum/crafting_recipe/leather_jacket/reinforced
+	name = "Reinforced Leather Jacket"
+	result = /obj/item/clothing/suit/armor/light/leather_jacket/reinforced
+	reqs = list(/obj/item/clothing/suit/armor/light/leather_jacket/reinforced = 1,
 				/obj/item/stack/sheet/animalhide/brahmin = 1,
 				/obj/item/stack/sheet/animalhide/gecko = 1,
 				/obj/item/stack/sheet/leather = 1)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
+	skill_level = EASY_CHECK
+
+/datum/crafting_recipe/leather_jacket/reinforcedovercoat
+	name = "Reinforced Leather Overcoat"
+	result = /obj/item/clothing/suit/armor/light/leather_jacket/reinforced_coat
+	reqs = list(/obj/item/clothing/suit/armor/light/leather_jacket/reinforced = 1,
+				/obj/item/stack/sheet/animalhide/deathclaw = 1,)
 	skill_needed = SKILL_OUTDOORSMAN
-	subcategory = CAT_ARMOR
+	skill_level = REGULAR_CHECK
+
 
 /*
 /datum/crafting_recipe/armor_plate_deathclaw
@@ -85,18 +90,6 @@
 	time = 60
 	category = CAT_CLOTHING
 	skill_needed = SKILL_OUTDOORSMAN
-	subcategory = CAT_ARMOR
-
-/datum/crafting_recipe/leather_jacket
-	name = "Leather Jacket"
-	result = /obj/item/clothing/suit/armor/light/leather/leather_jacket
-	reqs = list(/obj/item/stack/sheet/animalhide/brahmin = 2,
-				/obj/item/weaponcrafting/string = 1)
-	tools = list(TOOL_WORKBENCH)
-	time = 60
-	category = CAT_CLOTHING
-	skill_needed = SKILL_OUTDOORSMAN
-	skill_level = VERY_EASY_CHECK
 	subcategory = CAT_ARMOR
 
 /datum/crafting_recipe/metalarmor

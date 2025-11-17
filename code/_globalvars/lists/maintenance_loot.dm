@@ -360,7 +360,7 @@ GLOBAL_LIST_INIT(loot_prewar_costume, list(
 ))
 
 GLOBAL_LIST_INIT(loot_t1_armor, list(
-	/obj/item/clothing/suit/armor/light/leather/leather_jacket,
+	/obj/item/clothing/suit/armor/light/leather_jacket,
 	/obj/item/clothing/suit/armor/light/kit,
 	/obj/item/clothing/suit/armor/light/duster
 ))
@@ -380,13 +380,12 @@ GLOBAL_LIST_INIT(loot_t3_armor, list(
 	/obj/item/clothing/head/helmet/knight/f13/metal,
 	/obj/item/clothing/suit/armor/heavy/metal,
 	/obj/item/clothing/suit/armor/light/leather,
-	/obj/item/clothing/suit/armor/light/leather/leather_jacket,
-	/obj/item/clothing/suit/armor/light/leather/leathercoat
+	/obj/item/clothing/suit/armor/light/leather_jacket/reinforced_coat
 ))
 
 GLOBAL_LIST_INIT(loot_t4_armor, list(
 	/obj/item/clothing/suit/armor/heavy/metal/reinforced,
-	/obj/item/clothing/suit/armor/light/leather/leathercoat,
+	/obj/item/clothing/suit/armor/light/leather_jacket/reinforced_coat,
 	/obj/item/clothing/head/helmet/f13/combat/swat,
 	/obj/item/clothing/suit/armor/medium/combat,
 	/obj/item/clothing/head/helmet/f13/combat,

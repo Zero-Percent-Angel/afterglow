@@ -330,4 +330,4 @@
 	new /obj/item/ammo_box/a357box/ricochet(src)
 	new /obj/item/gun/ballistic/revolver/colt357(src)
 	new /obj/item/clothing/head/f13/ncr/ranger(src)
-	new /obj/item/clothing/suit/armor/light/leather/leathercoat(src)
+	new /obj/item/clothing/suit/armor/light/leather_jacket/reinforced_coat(src)

@@ -301,13 +301,6 @@
 	item_state = "badlands"
 	body_parts_hidden = ARMS
 
-/obj/item/clothing/suit/armor/light/raider/leather
-	name = "punk raider jacket"
-	desc = "A leather jacket adorned with a metal spiked arm piece and some reinforced leather lining its inside."
-	icon_state = "leather_jacket_fighter"
-	item_state = "leather_jacket_fighter"
-	body_parts_hidden = ARMS | GROIN
-
 /obj/item/clothing/suit/armor/light/raider/wastewar
 	name = "wasteland warrior armor"
 	desc = "a mad attempt to recreate armor based of images of japanese samurai, using a sawn up old car tire as shoulder pads, bits of chain to cover the hips and pieces of furniture for a breastplate. Might stop a blade but nothing else, burns easily too. Comes with an enormous scabbard welded to the back!"
@@ -458,30 +451,50 @@
 /obj/item/clothing/suit/armor/light/leather/leathersuit
 	name = "leather suit"
 	desc = "Comfortable suit of tanned leather leaving one arm mostly bare. Keeps you warm and cozy."
-	icon_state = "combat_jacket"
-	item_state = "combat_jacket"
+	icon_state = "leather_suit"
+	item_state = "leather_suit"
 	flags_inv = HIDEJUMPSUIT
 	cold_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 0.9
 	body_parts_hidden = ARMS | CHEST | GROIN | LEGS
 
-/obj/item/clothing/suit/armor/light/leather/leathercoat
-	name = "thick leather coat"
-	desc = "Reinforced leather jacket with a overcoat. Well insulated, creaks a lot while moving."
-	icon_state = "leather_suit"
-	item_state = "leather_suit"
-	siemens_coefficient = 0.8
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
-	body_parts_hidden = ARMS | CHEST
+//////////////////////
+// LEATHER JACKETS //
+////////////////////
 
-/obj/item/clothing/suit/armor/light/leather/leather_jacket
-	name = "thick leather combat jacket"
+//weaker than leather armor
+//no slowodwn, but light armor already has trivial slowdown so this is a token benefit
+
+//no slowdown in exchange for next to no DT, melee, or bullet resist
+/obj/item/clothing/suit/armor/light/leather_jacket
+	name = "leather jacket"
+	desc = "A leather jacket adorned with a metal spiked arm piece and some reinforced leather lining its inside."
+	icon_state = "leather_jacket"
+	item_state = "leather_jacket"
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_DOWN_BULLET_T1,ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_DT_T3)
+	slowdown = ARMOR_SLOWDOWN_NONE
+	body_parts_hidden = ARMS | GROIN
+
+//no slowdown leather armor with less DT
+/obj/item/clothing/suit/armor/light/leather_jacket/reinforced
+	name = "reinforced leather jacket"
 	desc = "This heavily padded leather jacket is unusual in that it has two sleeves. You'll definitely make a fashion statement whenever, and wherever, you rumble."
-	icon_state = "leather_jacket_thick"
-	item_state = "leather_jacket_thick"
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_FIRE_T2, ARMOR_MODIFIER_UP_DT_T3)
-	body_parts_hidden = ARMS | CHEST | LEGS
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_DOWN_DT_T2)
+	icon_state = "leather_jacket_reinforced"
+	item_state = "leather_jacket_reinforced"
 
+//better than leather armor, worse than leather armor mk2, still no slowdown
+/obj/item/clothing/suit/armor/light/leather_jacket/reinforced_coat
+	name = "reinforced leather overcoat"
+	desc = "Reinforced leather jacket with a overcoat. Well insulated, creaks a lot while moving."
+	icon_state = "leather_jacket_reinforced_coat"
+	item_state = "leather_jacket_reinforced_coat"
+	cold_protection = CHEST | GROIN | LEGS| ARMS | HEAD
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1)
+
+//////////////////////////
+//MISC. LEATHER OUTFITS //
+/////////////////////////
 /obj/item/clothing/suit/armor/light/leather/tanvest
 	name = "tanned vest"
 	icon_state = "tanleather"

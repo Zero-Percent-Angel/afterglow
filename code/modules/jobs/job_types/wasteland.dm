@@ -2245,7 +2245,7 @@ datum/job/wasteland/f13dendoctor
 	suit = pick(
 		/obj/item/clothing/suit/armor/light/raider/badlands,\
 		/obj/item/clothing/suit/armor/medium/raider/yankee, \
-		/obj/item/clothing/suit/armor/light/raider/leather, \
+		/obj/item/clothing/suit/armor/light/leather_jacket/reinforced, \
 		/obj/item/clothing/suit/armor/medium/raider/blastmaster, \
 		/obj/item/clothing/suit/armor/light/raider/wastewar, \
 		/obj/item/clothing/suit/armor/medium/raider/rebel)

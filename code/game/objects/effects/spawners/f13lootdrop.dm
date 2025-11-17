@@ -224,7 +224,7 @@
 /obj/effect/spawner/lootdrop/f13/armor/tier1 //TIER 1 ARMOR
 	name = "tier 1 armor"
 	loot = list(
-				/obj/item/clothing/suit/armor/light/leather/leather_jacket,
+				/obj/item/clothing/suit/armor/light/leather/leathersuit,
 				/obj/item/clothing/suit/armor/light/leather,
 				/obj/effect/spawner/bundle/f13/armor/sadist,
 				/obj/effect/spawner/bundle/f13/armor/blastmaster,
@@ -238,7 +238,7 @@
 /obj/effect/spawner/bundle/f13/armor/sadist
 	name = "blastmaster raider armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/light/raider/leather,
+			/obj/item/clothing/suit/armor/light/leather/leathersuit,
 				/obj/item/clothing/head/helmet/f13/raider/arclight
 				)
 
@@ -275,8 +275,7 @@
 	loot = list(
 				/obj/effect/spawner/bundle/f13/armor/knight,
 				/obj/effect/spawner/bundle/f13/armor/metal,
-				/obj/item/clothing/suit/armor/light/leather/leather_jacket,
-				/obj/item/clothing/suit/armor/light/leather/leathercoat,
+				/obj/item/clothing/suit/armor/light/leather_jacket/reinforced_coat,
 				/obj/item/clothing/suit/armor/medium/vest,
 				/obj/item/clothing/suit/armor/medium/raider/slam,
 				/obj/item/clothing/suit/armor/medium/raider/scrapcombat
