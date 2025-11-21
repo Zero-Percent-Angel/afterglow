@@ -170,4 +170,6 @@
 	var/on_the_move = FALSE
 	var/suit_recoil
 
+	var/list/active_special_mods = list()
+
 	var/disconnect_time //how long have we been dc'd for

@@ -179,8 +179,8 @@ GLOBAL_LIST_INIT(trash_clothing, list(
 	/obj/item/clothing/gloves/f13/military = 5,
 	/obj/item/clothing/gloves/f13/leather/fingerless = 5,
 	/obj/item/clothing/shoes/f13/tan = 5,
-	/obj/item/clothing/suit/armor/light/kit/punk = 5,
-	/obj/item/clothing/suit/armor/light/kit = 5,
+	/obj/item/clothing/suit/armor/tiered/light/kit/punk = 5,
+	/obj/item/clothing/suit/armor/tiered/light/kit = 5,
 	/obj/item/clothing/head/welding = 5
 ))
 
@@ -360,54 +360,104 @@ GLOBAL_LIST_INIT(loot_prewar_costume, list(
 ))
 
 GLOBAL_LIST_INIT(loot_t1_armor, list(
-	/obj/item/clothing/suit/armor/light/leather/leather_jacket,
-	/obj/item/clothing/suit/armor/light/kit,
-	/obj/item/clothing/suit/armor/light/duster
+	/obj/item/clothing/suit/armor/tiered/light/kit,
+	/obj/item/clothing/suit/armor/tiered/medium/tribal/bone,
+	/obj/item/clothing/suit/armor/tiered/medium/tribal/chitinarmor,
+	/obj/item/clothing/head/helmet/alt,
+	/obj/item/clothing/head/helmet/f13/raider/arclight,
+	/obj/item/clothing/suit/armor/tiered/medium/raider/blastmaster,
+	/obj/item/clothing/head/helmet/f13/raider/blastmaster,
+	/obj/item/clothing/suit/armor/tiered/medium/raider/yankee,
+	/obj/item/clothing/head/helmet/f13/raider/yankee,
+	/obj/item/clothing/head/helmet/f13/fiend,
+	/obj/item/clothing/suit/armor/tiered/medium/raider/raidermetal,
+	/obj/item/clothing/suit/armor/tiered/medium/raider/slam,
+	/obj/item/clothing/suit/armor/tiered/light/raider/wastewar,
+	/obj/item/clothing/suit/armor/tiered/light/raider/leather,
+	/obj/item/clothing/suit/armor/tiered/light/raider/badlands,
+	/obj/item/clothing/suit/armor/tiered/light/kit,
+	/obj/item/clothing/suit/armor/tiered/light/kit/punk
 ))
 
 GLOBAL_LIST_INIT(loot_t2_armor, list(
-	/obj/item/clothing/head/helmet/f13/raider/arclight,
-	/obj/item/clothing/suit/armor/medium/raider/blastmaster,
-	/obj/item/clothing/head/helmet/f13/raider/blastmaster,
-	/obj/item/clothing/suit/armor/medium/raider/yankee,
-	/obj/item/clothing/head/helmet/f13/raider/yankee,
-	/obj/item/clothing/head/helmet/f13/fiend,
-	/obj/item/clothing/suit/armor/medium/raider/iconoclast
+	/obj/item/clothing/suit/armor/tiered/light/leather/leather_jacket,
+	/obj/item/clothing/suit/armor/tiered/light/leather,
+	/obj/item/clothing/suit/armor/tiered/light/kit/plates,
+	/obj/item/clothing/suit/armor/tiered/light/leather/leathercoat,
+	/obj/item/clothing/suit/armor/tiered/light/leather/cowboyvest,
+	/obj/item/clothing/suit/armor/tiered/light/vest/flak,
+	/obj/item/clothing/suit/armor/tiered/light/vest,
+	/obj/item/clothing/suit/armor/tiered/light/duster/rustedcowboy,
+	/obj/item/clothing/suit/armor/tiered/light/duster/brahmin,
+	/obj/item/clothing/suit/armor/tiered/light/duster/vet,
+	/obj/item/clothing/suit/armor/tiered/light/duster,
+	/obj/item/clothing/head/helmet/f13/fiend_reinforced,
+	/obj/item/clothing/suit/armor/tiered/heavy/tier2/metal,
+	/obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal,
+	/obj/item/clothing/suit/armor/tiered/medium/tribal/armor,
+	/obj/item/clothing/suit/armor/tiered/medium/raider/iconoclast,
+	/obj/item/clothing/suit/armor/tiered/medium/vest/bulletproof,
+	/obj/item/clothing/suit/armor/tiered/medium/vest/kevlar,
+	/obj/item/clothing/suit/armor/tiered/medium/vest,
+	/obj/item/clothing/head/helmet/f13/knight/metal,
+	/obj/item/clothing/head/helmet/f13/tier2/pre_war_raider,
+	/obj/item/clothing/head/helmet/f13/tier2/metal_mask,
+	/obj/item/clothing/suit/armor/tiered/medium/vest/chinese,
+	/obj/item/clothing/suit/armor/tiered/medium/vest/russian,
+	/obj/item/clothing/suit/armor/tiered/medium/vest/breastplate/scrap/mutie,
+	/obj/item/clothing/suit/armor/tiered/medium/vest/breastplate/scrap/brokencombat,
+	/obj/item/clothing/suit/armor/tiered/medium/raider/scrapcombat,
+	/obj/item/clothing/suit/armor/tiered/medium/duster/motorball,
+	/obj/item/clothing/suit/armor/tiered/medium/duster/cloak_armored,
+	/obj/item/clothing/suit/armor/tiered/medium/duster/duster_renegade,
+	/obj/item/clothing/suit/armor/tiered/medium/duster,
+	/obj/item/clothing/suit/armor/tiered/light/duster/bos/outcast
 ))
 
 GLOBAL_LIST_INIT(loot_t3_armor, list(
-	/obj/item/clothing/suit/armor/heavy/metal,
-	/obj/item/clothing/head/helmet/knight/f13/metal,
-	/obj/item/clothing/suit/armor/heavy/metal,
-	/obj/item/clothing/suit/armor/light/leather,
-	/obj/item/clothing/suit/armor/light/leather/leather_jacket,
-	/obj/item/clothing/suit/armor/light/leather/leathercoat
+	/obj/item/clothing/suit/armor/tiered/light/duster/herbertranger,
+	/obj/item/clothing/suit/armor/tiered/light/leather/leathermk2,
+	/obj/item/clothing/head/helmet/f13/knight/metal/reinforced,
+	/obj/item/clothing/suit/armor/tiered/heavy/tier3/metal/reinforced,
+	/obj/item/clothing/suit/armor/tiered/heavy/tier3/metal/sulphite,
+	/obj/item/clothing/suit/armor/tiered/light/leather,
+	/obj/item/clothing/suit/armor/tiered/light/leather/leather_jacket,
+	/obj/item/clothing/suit/armor/tiered/light/leather/leathercoat,
+	/obj/item/clothing/head/helmet/f13/combat/swat,
+	/obj/item/clothing/suit/armor/tiered/medium/combat,
+	/obj/item/clothing/head/helmet/f13/combat,
+	/obj/item/clothing/suit/armor/tiered/medium/vest/bulletproof/big,
+	/obj/item/clothing/suit/armor/tiered/medium/combat/dark,
+	/obj/item/clothing/head/helmet/f13/combat/dark,
+	/obj/item/clothing/suit/armor/tiered/medium/vest/breastplate/scrap/reinforced,
+	/obj/item/clothing/suit/armor/tiered/medium/vest/breastplate/reinforced,
+	/obj/item/clothing/suit/armor/tiered/medium/vest/breastplate/scrap/mutie/reinforced,
+	/obj/item/clothing/head/helmet/f13/combat/rangerbroken,
+
 ))
 
 GLOBAL_LIST_INIT(loot_t4_armor, list(
-	/obj/item/clothing/suit/armor/heavy/metal/reinforced,
-	/obj/item/clothing/suit/armor/light/leather/leathercoat,
-	/obj/item/clothing/head/helmet/f13/combat/swat,
-	/obj/item/clothing/suit/armor/medium/combat,
-	/obj/item/clothing/head/helmet/f13/combat,
-	/obj/item/clothing/suit/armor/medium/vest/bulletproof,
-	/obj/item/clothing/head/helmet/alt,
-	/obj/item/clothing/suit/armor/medium/combat/dark,
-	/obj/item/clothing/head/helmet/f13/combat/dark,
-	/obj/item/clothing/suit/armor/medium/combat/mk2/dark,
+	/obj/item/clothing/suit/armor/tiered/light/leather/leathercoat,
+	/obj/item/clothing/suit/armor/tiered/medium/combat/mk2/dark,
 	/obj/item/clothing/head/helmet/f13/combat/mk2/dark,
-	/obj/item/clothing/suit/armor/heavy/metal/sulphite,
-	/obj/item/clothing/head/helmet/f13/sulphitehelm
+	/obj/item/clothing/suit/armor/tiered/heavy/tier4/riot/police,
+	/obj/item/clothing/head/helmet/f13/town/riot,
+	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d,
+	/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d,
+	/obj/item/clothing/head/helmet/f13/sulphitehelm,
+	/obj/item/clothing/suit/armor/tiered/medium/combat/mk2,
+	/obj/item/clothing/head/helmet/f13/combat/mk2
 ))
 
 GLOBAL_LIST_INIT(loot_t5_armor, list(
-	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d,
-	/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d,
-	/obj/item/clothing/suit/armor/heavy/riot,
-	/obj/item/clothing/suit/armor/heavy/riot/police,
-	/obj/item/clothing/head/helmet/f13/combat/rangerbroken,
-	/obj/item/clothing/suit/armor/medium/combat/mk2,
-	/obj/item/clothing/head/helmet/f13/combat/mk2
+	/obj/item/clothing/suit/armor/tiered/heavy/tier5/riot/elite,
+	/obj/item/clothing/head/helmet/f13/town/riot,
+	/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/x02,
+	/obj/item/clothing/head/helmet/f13/power_armor/advanced,
+	/obj/item/clothing/head/helmet/f13/power_armor/t51b,
+	/obj/item/clothing/suit/armor/tiered/power_armor/t51b/hardened,
+	/obj/item/clothing/suit/armor/tiered/power_armor/advanced/x02,
+	/obj/item/clothing/suit/armor/tiered/power_armor/advanced
 ))
 
 GLOBAL_LIST_INIT(loot_medical_tool, list(

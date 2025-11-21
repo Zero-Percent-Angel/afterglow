@@ -284,7 +284,7 @@
 	flags_inv = HIDEJUMPSUIT
 	dog_fashion = /datum/dog_fashion/back
 
-/obj/item/clothing/suit/armor/power_armor/t51b/costume
+/obj/item/clothing/suit/armor/tiered/power_armor/t51b/costume
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. Now with clanking action!"
 	requires_training = FALSE
 	deflect_damage = 1

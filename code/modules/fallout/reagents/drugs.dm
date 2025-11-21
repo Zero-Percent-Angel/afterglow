@@ -13,6 +13,7 @@
 	..()
 	if(isliving(M))
 		to_chat(M, span_notice("You feel an incredible high! You just absolutely love life in this moment!"))
+		M.modify_special(list("a"=2), type)
 
 /datum/reagent/drug/jet/on_mob_delete(mob/living/carbon/human/M)
 	..()
@@ -21,6 +22,7 @@
 		to_chat(M, span_notice("You come down from your high. The wild ride is unfortunately over..."))
 		M.confused += 2
 		SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "jet_come_down", /datum/mood_event/jet_come_down, name)
+		M.remove_special_modification(type)
 
 /datum/reagent/drug/jet/on_mob_life(mob/living/carbon/M)
 	M.adjustStaminaLoss(-20, 0)
@@ -98,14 +100,14 @@
 	ADD_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
 	if (istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
-		H.modify_special(10, "a")
+		H.modify_special(list("a" = 10), type)
 
 
 /datum/reagent/drug/turbo/on_mob_delete(mob/M)
 	REMOVE_TRAIT(M, TRAIT_IGNOREDAMAGESLOWDOWN, "[type]")
 	if (istype(M, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
-		H.modify_special(-10, "a")
+		H.remove_special_modification(type)
 	..()
 
 /datum/reagent/drug/turbo/on_mob_life(mob/living/carbon/M)
@@ -200,11 +202,11 @@
 		var/mob/living/carbon/C = L
 		rage = new()
 		C.gain_trauma(rage, TRAUMA_RESILIENCE_ABSOLUTE)
-		C.modify_special(5, "s")
+		C.modify_special(list("s" = 5), type)
 
 /datum/reagent/drug/psycho/on_mob_delete(mob/living/L)
 	REMOVE_TRAIT(L, TRAIT_SLEEPIMMUNE, "[type]")
-	L.modify_special(-5, "s")
+	L.remove_special_modification(type)
 	if(rage)
 		QDEL_NULL(rage)
 	..()
@@ -285,16 +287,14 @@
 	if(isliving(M))
 		to_chat(M, span_notice("You feel stronger, and like you're able to endure more."))
 		ADD_TRAIT(M, TRAIT_BUFFOUT_BUFF, "buffout")
-		M.modify_special(3, "e")
-		M.modify_special(3, "s")
+		M.modify_special(list("e"=3, "s"=3), type)
 
 /datum/reagent/drug/buffout/on_mob_delete(mob/living/carbon/human/M)
 	..()
 	if(isliving(M))
 		to_chat(M, span_notice("You feel weaker."))
 		REMOVE_TRAIT(M, TRAIT_BUFFOUT_BUFF, "buffout")
-		M.modify_special(-3, "e")
-		M.modify_special(-3, "s")
+		M.remove_special_modification(type)
 
 /datum/reagent/drug/buffout/on_mob_life(mob/living/carbon/M)
 	M.AdjustStun(-10*REAGENTS_EFFECT_MULTIPLIER, 0)

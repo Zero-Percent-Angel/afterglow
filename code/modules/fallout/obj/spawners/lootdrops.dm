@@ -165,8 +165,8 @@
 /obj/effect/spawner/lootdrop/clothing_low
 /*	color = "#FF0000"
 	loot = list(
-	/obj/item/clothing/suit/armor/light/leather = 1,
-	/obj/item/clothing/suit/armor/medium/raider/slam = 1,
+	/obj/item/clothing/suit/armor/tiered/light/leather = 1,
+	/obj/item/clothing/suit/armor/tiered/medium/raider/slam = 1,
 	/obj/item/clothing/glasses/f13/biker = 1,
 	/obj/item/clothing/gloves/f13/leather = 1,
 	/obj/item/clothing/head/f13/police = 1,
@@ -192,8 +192,8 @@
 	/obj/item/clothing/head/helmet/f13/combat_mk1 = 1,
 	/obj/item/clothing/shoes/f13/military = 1,
 	/obj/item/clothing/shoes/f13/military/diesel = 1,
-	/obj/item/clothing/suit/armor/medium/combat_mk1 = 1,
-	/obj/item/clothing/suit/armor/light/kit = 1,
+	/obj/item/clothing/suit/armor/tiered/medium/combat_mk1 = 1,
+	/obj/item/clothing/suit/armor/tiered/light/kit = 1,
 	/obj/item/clothing/suit/armor/yankee = 1,
 	/obj/item/clothing/suit/armor/outfit/jacket/merc = 1,
 	/obj/item/clothing/under/f13/cyberpunk = 1,
@@ -205,13 +205,13 @@
 	loot = list(
 	/obj/item/clothing/head/helmet/f13/combat_mk2 = 1,
 	/obj/item/clothing/suit/armor/bmetalarmor = 1,
-	/obj/item/clothing/suit/armor/medium/combat_mk2 = 1)
+	/obj/item/clothing/suit/armor/tiered/medium/combat_mk2 = 1)
 */
 /obj/effect/spawner/lootdrop/clothing_legend
 /*	color = "#FF0000"
 	loot = list(
 	/obj/item/clothing/head/helmet/power_armor/t45d = 1,
 	/obj/item/clothing/head/helmet/power_armor/ncr = 1,
-	/obj/item/clothing/suit/armor/power_armor/t45d = 1,
-	/obj/item/clothing/suit/armor/power_armor/ncr = 1,
+	/obj/item/clothing/suit/armor/tiered/power_armor/t45d = 1,
+	/obj/item/clothing/suit/armor/tiered/power_armor/ncr = 1,
 	/obj/item/clothing/under/f13/recon = 1)*/

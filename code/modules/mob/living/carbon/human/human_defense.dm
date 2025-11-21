@@ -29,7 +29,15 @@
 		if(istype(bp, /obj/item/clothing))
 			var/obj/item/clothing/C = bp
 			if(C.body_parts_covered & def_zone.body_part)
-				protection += C.armor.getRating(d_type)
+				if ((C.obj_integrity > 1) || d_type != "damage_threshold")
+					protection += C.armor.getRating(d_type)
+					if (protection)
+						if(istype(C, /obj/item/clothing/suit/armor/tiered))
+							var/obj/item/clothing/suit/armor/tiered/tiered_armor = C
+							tiered_armor.take_damage(1)
+						if (istype(C, /obj/item/clothing/head/helmet/f13))
+							var/obj/item/clothing/head/helmet/f13/tiered_armor = C
+							tiered_armor.take_damage(1)
 	protection += physiology.armor.getRating(d_type)
 	return protection
 

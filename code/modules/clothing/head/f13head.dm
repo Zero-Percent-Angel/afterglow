@@ -315,7 +315,7 @@
 
 //Oasis/Town
 
-/obj/item/clothing/head/f13/town
+/obj/item/clothing/head/helmet/f13/town
 	icon = 'icons/obj/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/head.dmi'
 	name = "town tricorn"
@@ -323,20 +323,20 @@
 	icon_state = "tricorn"
 	item_state = "dethat"
 
-/obj/item/clothing/head/f13/town/mayor
+/obj/item/clothing/head/helmet/f13/town/mayor
 	name = "mayoral tricorn"
 	desc = "A tricorn in the desert.  Stranger things have happened."
 
-/obj/item/clothing/head/f13/town/big
+/obj/item/clothing/head/helmet/f13/town/big
 	name = "big hat"
 	desc = "It's a big hat."
 	icon_state = "bigcowboyhat"
 
-/obj/item/clothing/head/f13/town/deputy/Initialize()
+/obj/item/clothing/head/helmet/f13/town/deputy/Initialize()
 	. = ..()
 	AddComponent(/datum/component/armor_plate)
 
-/obj/item/clothing/head/f13/town/officer
+/obj/item/clothing/head/helmet/f13/town/officer
 	name = "Ripley officer's cap"
 	desc = "A simple dark navy peaked cap, worn by police."
 	icon = 'icons/fallout/clothing/hats.dmi'
@@ -344,7 +344,7 @@
 	icon_state = "police_officer"
 	item_state = "police_officer"
 
-/obj/item/clothing/head/f13/town/chief
+/obj/item/clothing/head/helmet/f13/town/chief
 	name = "NPD Chief's hat"
 	desc = "A blue hat with a silver badge."
 	icon = 'icons/fallout/clothing/hats.dmi'

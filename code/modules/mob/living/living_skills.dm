@@ -269,9 +269,11 @@
 			if (inspiree.inspired || inspiree == src)
 				return
 			SEND_SIGNAL(inspiree, COMSIG_ADD_MOOD_EVENT, "speech", /datum/mood_event/inspiring_speech)
-			inspiree.modify_special(bonus, special_in_question)
+			var/list/list = list()
+			list[special_in_question] = bonus
+			inspiree.modify_special(list, "inspiration")
 			inspiree.inspired = TRUE
-			addtimer(CALLBACK(inspiree, /mob/living/proc/modify_special, (-bonus), special_in_question), 20 MINUTES)
+			addtimer(CALLBACK(inspiree, /mob/living/proc/remove_special_modification, "inspiration"), 20 MINUTES)
 			addtimer(CALLBACK(inspiree, /mob/living/proc/clear_inspired), 20 MINUTES)
 	return good_speech
 
@@ -281,20 +283,48 @@
 /mob/living/proc/clear_inspired()
 	inspired = FALSE
 
-/mob/living/proc/modify_special(val, spec)
-	if ("s" == spec)
-		special_s += val
-	if ("p" == spec)
-		special_p += val
-	if ("e" == spec)
-		special_e += val
-	if ("c" == spec)
-		special_c += val
-	if ("i" == spec)
-		special_i += val
-	if ("a" == spec)
-		special_a += val
-	if ("l" == spec)
-		special_l += val
+/mob/living/proc/modify_special(list/special_mods, source)
+	if (active_special_mods.Find(source))
+		return
+	active_special_mods[source] = special_mods
+	for (var/spec in special_mods)
+		var/val = special_mods[spec]
+		if ("s" == spec)
+			special_s += val
+		if ("p" == spec)
+			special_p += val
+		if ("e" == spec)
+			special_e += val
+		if ("c" == spec)
+			special_c += val
+		if ("i" == spec)
+			special_i += val
+		if ("a" == spec)
+			special_a += val
+		if ("l" == spec)
+			special_l += val
+	set_special()
+	update_equipment_speed_mods()
+
+/mob/living/proc/remove_special_modification(source)
+	if (!active_special_mods.Find(source))
+		return
+	for (var/special in active_special_mods[source])
+		var/val = active_special_mods[source][special]
+		if ("s" == special)
+			special_s -= val
+		if ("p" == special)
+			special_p -= val
+		if ("e" == special)
+			special_e -= val
+		if ("c" == special)
+			special_c -= val
+		if ("i" == special)
+			special_i -= val
+		if ("a" == special)
+			special_a -= val
+		if ("l" == special)
+			special_l -= val
+	active_special_mods.Remove(source)
 	set_special()
 	update_equipment_speed_mods()

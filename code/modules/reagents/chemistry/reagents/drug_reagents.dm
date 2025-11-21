@@ -536,9 +536,7 @@
 	L.action_cooldown_mod *= 1.5
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
-		H.modify_special(8, "s")
-		H.modify_special(-3, "i")
-		H.modify_special(-3, "a")
+		H.modify_special(list("s" = 8, "i" = -3, "a" = -3), type)
 		if(H.physiology)
 			H.physiology.stamina_mod *= 0.5
 
@@ -550,9 +548,7 @@
 		var/mob/living/carbon/human/H = L
 		if(H.physiology)
 			H.physiology.stamina_mod *= 2
-		H.modify_special(-8, "s")
-		H.modify_special(3, "i")
-		H.modify_special(3, "a")
+		H.remove_special_modification(type)
 
 /datum/reagent/drug/getaway/on_mob_life(mob/living/carbon/M)
 	M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 1*REM)

@@ -61,7 +61,7 @@
 
 /datum/gear/suit/jacketleather
 	name = "Leather jacket"
-	path = /obj/item/clothing/suit/armor/light/leather/leather_jacket
+	path = /obj/item/clothing/suit/armor/tiered/light/leather/leather_jacket
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 2
 
@@ -97,25 +97,25 @@
 
 /datum/gear/suit/armorkit
 	name = "Armor Kit"
-	path = /obj/item/clothing/suit/armor/light/kit
+	path = /obj/item/clothing/suit/armor/tiered/light/kit
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 2
 
 /datum/gear/suit/punkkit
 	name = "Punk Armor Kit"
-	path = /obj/item/clothing/suit/armor/light/kit/punk
+	path = /obj/item/clothing/suit/armor/tiered/light/kit/punk
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 2
 
 /datum/gear/suit/bulletvest
 	name = "Punk Armor Kit"
-	path = /obj/item/clothing/suit/armor/light/kit/punk
+	path = /obj/item/clothing/suit/armor/tiered/light/kit/punk
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 2
 
 /datum/gear/suit/autumn
 	name = "tan trenchcoat"
-	path = /obj/item/clothing/suit/armor/light/duster/autumn
+	path = /obj/item/clothing/suit/armor/tiered/light/duster/autumn
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 2
 
@@ -127,7 +127,7 @@
 
 /datum/gear/suit/rustedcowboy
 	name = "Rusted Cowboy Outfit"
-	path = /obj/item/clothing/suit/armor/light/duster/rustedcowboy
+	path = /obj/item/clothing/suit/armor/tiered/light/duster/rustedcowboy
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 2
 
@@ -135,7 +135,7 @@
 
 /datum/gear/suit/chestgearharness
 	name = "Chest gear harness"
-	path = /obj/item/clothing/suit/armor/light/leather/rig
+	path = /obj/item/clothing/suit/armor/tiered/light/leather/rig
 	cost = 2
 
 /datum/gear/suit/fieldscribe
@@ -151,11 +151,11 @@
 
 /datum/gear/suit/fieldscribe/coat
 	name = "Fieldscribe coat"
-	path = /obj/item/clothing/suit/armor/light/duster/bos/scribe/field_coat
+	path = /obj/item/clothing/suit/armor/tiered/light/duster/bos/scribe/field_coat
 
 /datum/gear/suit/town
 	name = "Town Trenchcoat"
-	path = /obj/item/clothing/suit/armor/light/duster/town
+	path = /obj/item/clothing/suit/armor/tiered/light/duster/town
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_FACTIONS
 	cost = 2
 

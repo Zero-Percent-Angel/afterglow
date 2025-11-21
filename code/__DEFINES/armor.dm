@@ -70,7 +70,59 @@
 		"fire" = 10, \
 		"acid" = 10, \
 		"wound" = 10, \
-		"damage_threshold" = 4)
+		"damage_threshold" = 0)
+
+#define ARMOR_VALUE_LIGHT_T2 list(\
+		"linemelee" = 25, \
+		"linebullet" = 25, \
+		"linelaser" = 25, \
+		"energy" = 0, \
+		"bomb" = 15, \
+		"bio" = 10, \
+		"rad" = 10, \
+		"fire" = 10, \
+		"acid" = 10, \
+		"wound" = 10, \
+		"damage_threshold" = 5)
+
+#define ARMOR_VALUE_LIGHT_T3 list(\
+		"linemelee" = 25, \
+		"linebullet" = 25, \
+		"linelaser" = 25, \
+		"energy" = 5, \
+		"bomb" = 15, \
+		"bio" = 10, \
+		"rad" = 10, \
+		"fire" = 10, \
+		"acid" = 10, \
+		"wound" = 10, \
+		"damage_threshold" = 10)
+
+#define ARMOR_VALUE_LIGHT_T4 list(\
+		"linemelee" = 25, \
+		"linebullet" = 25, \
+		"linelaser" = 25, \
+		"energy" = 5, \
+		"bomb" = 15, \
+		"bio" = 10, \
+		"rad" = 10, \
+		"fire" = 10, \
+		"acid" = 10, \
+		"wound" = 10, \
+		"damage_threshold" = 15)
+
+#define ARMOR_VALUE_LIGHT_T5 list(\
+		"linemelee" = 25, \
+		"linebullet" = 25, \
+		"linelaser" = 25, \
+		"energy" = 5, \
+		"bomb" = 15, \
+		"bio" = 10, \
+		"rad" = 10, \
+		"fire" = 10, \
+		"acid" = 10, \
+		"wound" = 10, \
+		"damage_threshold" = 20)
 
 /* Medium armor values
  * Decent mobility
@@ -91,7 +143,59 @@
 		"fire" = 25, \
 		"acid" = 25, \
 		"wound" = 20, \
-		"damage_threshold" = 6)
+		"damage_threshold" = 0)
+
+#define ARMOR_VALUE_MEDIUM_T2 list(\
+		"linemelee" = 54, \
+		"linebullet" = 54, \
+		"linelaser" = 54, \
+		"energy" = 5, \
+		"bomb" = 30, \
+		"bio" = 25, \
+		"rad" = 25, \
+		"fire" = 25, \
+		"acid" = 25, \
+		"wound" = 20, \
+		"damage_threshold" = 5)
+
+#define ARMOR_VALUE_MEDIUM_T3 list(\
+		"linemelee" = 54, \
+		"linebullet" = 54, \
+		"linelaser" = 54, \
+		"energy" = 10, \
+		"bomb" = 30, \
+		"bio" = 25, \
+		"rad" = 25, \
+		"fire" = 25, \
+		"acid" = 25, \
+		"wound" = 20, \
+		"damage_threshold" = 10)
+
+#define ARMOR_VALUE_MEDIUM_T4 list(\
+		"linemelee" = 54, \
+		"linebullet" = 54, \
+		"linelaser" = 54, \
+		"energy" = 10, \
+		"bomb" = 30, \
+		"bio" = 25, \
+		"rad" = 25, \
+		"fire" = 25, \
+		"acid" = 25, \
+		"wound" = 20, \
+		"damage_threshold" = 15)
+
+#define ARMOR_VALUE_MEDIUM_T5 list(\
+		"linemelee" = 54, \
+		"linebullet" = 54, \
+		"linelaser" = 54, \
+		"energy" = 10, \
+		"bomb" = 30, \
+		"bio" = 25, \
+		"rad" = 25, \
+		"fire" = 25, \
+		"acid" = 25, \
+		"wound" = 20, \
+		"damage_threshold" = 20)
 
 /* Heavy armor values
  * Low mobility
@@ -112,7 +216,59 @@
 		"fire" = 35, \
 		"acid" = 35, \
 		"wound" = 35, \
-		"damage_threshold" = 8)
+		"damage_threshold" = 0)
+
+#define ARMOR_VALUE_HEAVY_T2 list(\
+		"linemelee" = 100, \
+		"linebullet" = 100, \
+		"linelaser" = 100, \
+		"energy" = 10, \
+		"bomb" = 50, \
+		"bio" = 35, \
+		"rad" = 25, \
+		"fire" = 35, \
+		"acid" = 35, \
+		"wound" = 35, \
+		"damage_threshold" = 5)
+
+#define ARMOR_VALUE_HEAVY_T3 list(\
+		"linemelee" = 100, \
+		"linebullet" = 100, \
+		"linelaser" = 100, \
+		"energy" = 15, \
+		"bomb" = 50, \
+		"bio" = 35, \
+		"rad" = 25, \
+		"fire" = 35, \
+		"acid" = 35, \
+		"wound" = 35, \
+		"damage_threshold" = 10)
+
+#define ARMOR_VALUE_HEAVY_T4 list(\
+		"linemelee" = 100, \
+		"linebullet" = 100, \
+		"linelaser" = 100, \
+		"energy" = 15, \
+		"bomb" = 50, \
+		"bio" = 35, \
+		"rad" = 25, \
+		"fire" = 35, \
+		"acid" = 35, \
+		"wound" = 35, \
+		"damage_threshold" = 15)
+
+#define ARMOR_VALUE_HEAVY_T5 list(\
+		"linemelee" = 100, \
+		"linebullet" = 100, \
+		"linelaser" = 100, \
+		"energy" = 15, \
+		"bomb" = 50, \
+		"bio" = 35, \
+		"rad" = 25, \
+		"fire" = 35, \
+		"acid" = 35, \
+		"wound" = 35, \
+		"damage_threshold" = 20)
 
 /* Salvaged PA values
  * Next to no mobility
@@ -133,7 +289,59 @@
 		"fire" = 70, \
 		"acid" = 70, \
 		"wound" = 50, \
-		"damage_threshold" = 9)
+		"damage_threshold" = 0)
+
+#define ARMOR_VALUE_SALVAGE_T2 list(\
+		"linemelee" = 185, \
+		"linebullet" = 185, \
+		"linelaser" = 185, \
+		"energy" = 30, \
+		"bomb" = 70, \
+		"bio" = 100, \
+		"rad" = 50, \
+		"fire" = 70, \
+		"acid" = 70, \
+		"wound" = 50, \
+		"damage_threshold" = 5)
+
+#define ARMOR_VALUE_SALVAGE_T3 list(\
+		"linemelee" = 185, \
+		"linebullet" = 185, \
+		"linelaser" = 185, \
+		"energy" = 30, \
+		"bomb" = 70, \
+		"bio" = 100, \
+		"rad" = 50, \
+		"fire" = 70, \
+		"acid" = 70, \
+		"wound" = 50, \
+		"damage_threshold" = 10)
+
+#define ARMOR_VALUE_SALVAGE_T4 list(\
+		"linemelee" = 185, \
+		"linebullet" = 185, \
+		"linelaser" = 185, \
+		"energy" = 40, \
+		"bomb" = 70, \
+		"bio" = 100, \
+		"rad" = 50, \
+		"fire" = 70, \
+		"acid" = 70, \
+		"wound" = 50, \
+		"damage_threshold" = 15)
+
+#define ARMOR_VALUE_SALVAGE_T5 list(\
+		"linemelee" = 185, \
+		"linebullet" = 185, \
+		"linelaser" = 185, \
+		"energy" = 40, \
+		"bomb" = 70, \
+		"bio" = 100, \
+		"rad" = 50, \
+		"fire" = 70, \
+		"acid" = 70, \
+		"wound" = 50, \
+		"damage_threshold" = 20)
 
 /* Power armor values
  * Low mobility
@@ -154,7 +362,7 @@
 		"fire" = 95, \
 		"acid" = 95, \
 		"wound" = 70, \
-		"damage_threshold" = 10)
+		"damage_threshold" = 0)
 
 /* * * * * * * * * * * * * * *
  * MOB SPECIFIC ARMOR VALUES *
@@ -923,6 +1131,18 @@
 #define ARMOR_MODIFIER_DOWN_DT_T4 list(\
 		"damage_threshold" = -5)
 
+#define ARMOR_DT_T2 list(\
+		"damage_threshold" = 5)
+
+#define ARMOR_DT_T3 list(\
+		"damage_threshold" = 10)
+
+#define ARMOR_DT_T4 list(\
+		"damage_threshold" = 15)
+
+#define ARMOR_DT_T5 list(\
+		"damage_threshold" = 20)
+
 /// Should the modifier MULTiply or ADD the value?
 GLOBAL_LIST_INIT(armor_token_operation_legend, list(
 		"melee" = "MULT",
@@ -961,34 +1181,34 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
  * Light Armor
  * Basically clothes, but more
 */
-#define ARMOR_SLOWDOWN_LIGHT 0.04
+#define ARMOR_SLOWDOWN_LIGHT 0
 
 /*
  * Medium Armor
  * Substantial armor
 */
-#define ARMOR_SLOWDOWN_MEDIUM 0.2
+#define ARMOR_SLOWDOWN_MEDIUM 0
 //Originally this was 0.5 on Coyete
 
 /*
  * Heavy Armor
  * Bulky suits of heavy armor
 */
-#define ARMOR_SLOWDOWN_HEAVY 0.5
+#define ARMOR_SLOWDOWN_HEAVY 0.1
 //Originally this was 1.0 on Coyete
 
 /*
  * Salvaged Power Armor
  * Basically wearing a car
 */
-#define ARMOR_SLOWDOWN_SALVAGE 1.15
+#define ARMOR_SLOWDOWN_SALVAGE 0.2
 //Originally this was 2 on Coyete
 
 /*
  * Power Armor
  * Basically driving a car
 */
-#define ARMOR_SLOWDOWN_PA 0.55
+#define ARMOR_SLOWDOWN_PA 0.1
 //Originally this was 1 on Coyete
 
 #define HELMET_SLOWDOWN_LIGHT 0.01
@@ -1026,16 +1246,16 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
 #define ARMOR_CLOTHING_LIGHT "This is a set of light armor, almost weightless on your frame, and about as protective as you'd expect."
 
 /// Extra tag saying what armor tier this armor is, for description purposes
-#define ARMOR_CLOTHING_MEDIUM "This is a set of medium armor, trading a degree of mobility for increased protection."
+#define ARMOR_CLOTHING_MEDIUM "This is a set of medium armor, trading a degree of mobility (-1 Agility) for increased protection."
 
 /// Extra tag saying what armor tier this armor is, for description purposes
-#define ARMOR_CLOTHING_HEAVY "This is a set of heavy armor, heavy, bulky, and built to take a beating."
+#define ARMOR_CLOTHING_HEAVY "This is a set of heavy armor, heavy (-2 Agility, 10% Slowdown), bulky, and built to take a beating."
 
 /// Extra tag saying what armor tier this armor is, for description purposes
-#define ARMOR_CLOTHING_SALVAGE "This is a set of salvaged power armor, nigh impenetrable, but weighs about as much as a small car."
+#define ARMOR_CLOTHING_SALVAGE "This is a set of salvaged power armor, nigh impenetrable, but weighs about as much as a small car (-2 Agility, 20% Slowdown)."
 
 /// Extra tag saying what armor tier this armor is, for description purposes
-#define ARMOR_CLOTHING_PA "This is a suit of power armor, able to withstand a tank shell and still finish a marathon."
+#define ARMOR_CLOTHING_PA "This is a suit of power armor, able to withstand a tank shell and still finish a marathon. (-1 Agility, 10% Slowdown, +1 Strength - while powered)"
 
 /// Armor caps!
 #define ARMOR_CAP_BOMB 100

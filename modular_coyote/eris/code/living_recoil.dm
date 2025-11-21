@@ -2,9 +2,10 @@
 	var/the_skill_val = (100 - skill_value(G.gun_skill_used)) / HARD_CHECK
 	if (recoil < MAX_ACCURACY_OFFSET)
 		if(HAS_TRAIT(src, SPREAD_CONTROL))
-			recoil += (recoil_buildup * max(the_skill_val, 0.5))
-		else
 			recoil += (recoil_buildup * max(the_skill_val, 0.5) * 0.8)
+		else
+			recoil += (recoil_buildup * max(the_skill_val, 0.5))
+		recoil = min(MAX_ACCURACY_OFFSET, recoil)
 	update_recoil()
 	return
 	//add_recoil(recoil_buildup)
@@ -45,7 +46,7 @@
 	on_the_move = FALSE
 	if (recoil)
 		var/base = 1
-		var/scale = (MAX_ACCURACY_OFFSET - recoil)/MAX_ACCURACY_OFFSET
+		var/scale = (MAX_ACCURACY_OFFSET + 5 - recoil)/MAX_ACCURACY_OFFSET
 		if(recoil <= base)
 			recoil = 0
 		else

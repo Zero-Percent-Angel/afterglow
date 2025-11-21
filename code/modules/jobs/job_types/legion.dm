@@ -129,7 +129,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Legate"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legate
 	shoes =	/obj/item/clothing/shoes/f13/military/legate
-	suit = /obj/item/clothing/suit/armor/heavy/legion/legate
+	suit = /obj/item/clothing/suit/armor/tiered/heavy/legion/tier4/legate
 	head = /obj/item/clothing/head/helmet/f13/legion/legate
 	gloves = /obj/item/clothing/gloves/legion/legate
 	glasses = /obj/item/clothing/glasses/sunglasses/big
@@ -165,7 +165,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13orator
 	neck = /obj/item/storage/belt/shoulderholster
 	shoes = /obj/item/clothing/shoes/f13/military/plated
-	suit = /obj/item/clothing/suit/armor/medium/legion/orator
+	suit = /obj/item/clothing/suit/armor/tiered/medium/legion/orator
 	head = /obj/item/clothing/head/helmet/f13/legion/orator
 	id = /obj/item/card/id/dogtag/legorator
 	gloves = null
@@ -251,7 +251,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/palacent
 	name = "Paladin-Slayer Centurion"
-	suit = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/palacent
+	suit = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/palacent
 	head = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/palacent
 	suit_store = /obj/item/gun/ballistic/automatic/bar
 	backpack_contents = list(
@@ -263,7 +263,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/rangerhunter
 	name = "Ranger-Hunter Centurion"
-	suit = /obj/item/clothing/suit/armor/medium/legion/rangercent
+	suit = /obj/item/clothing/suit/armor/tiered/medium/legion/rangercent
 	head = /obj/item/clothing/head/helmet/f13/legion/rangercent
 	suit_store = /obj/item/gun/ballistic/rifle/mag/antimateriel
 	backpack_contents = list(
@@ -275,7 +275,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 
 /datum/outfit/loadout/centurion
 	name = "Warlord Centurion"
-	suit = /obj/item/clothing/suit/armor/heavy/legion/centurion
+	suit = /obj/item/clothing/suit/armor/tiered/heavy/legion/tier3/centurion
 	head = /obj/item/clothing/head/helmet/f13/legion/centurion
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/pistol14
 	backpack_contents = list(
@@ -319,7 +319,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Legion Veteran Decanus"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decanvet
 	id = /obj/item/card/id/dogtag/legveteran
-	suit = /obj/item/clothing/suit/armor/heavy/legion/vetdecan
+	suit = /obj/item/clothing/suit/armor/tiered/heavy/legion/tier2/vetdecan
 	mask = /obj/item/clothing/mask/bandana/legion/legdecan
 	neck = /obj/item/storage/belt/shoulderholster
 	gloves = /obj/item/clothing/gloves/legion/plated
@@ -414,7 +414,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Prime Decanus"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decan
 	id = /obj/item/card/id/dogtag/legveteran
-	suit = /obj/item/clothing/suit/armor/light/legion/prime
+	suit = /obj/item/clothing/suit/armor/tiered/light/legion/prime
 	head = /obj/item/clothing/head/helmet/f13/legion/prime/decan
 	mask = /obj/item/clothing/mask/bandana/legion/legdecan
 	neck = /obj/item/storage/belt/shoulderholster
@@ -507,7 +507,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Legion Recruit Decanus"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13decanrec
 	id = /obj/item/card/id/dogtag/legveteran
-	suit = /obj/item/clothing/suit/armor/light/legion/prime
+	suit = /obj/item/clothing/suit/armor/tiered/light/legion/prime
 	head = /obj/item/clothing/head/helmet/f13/legion/recruit/decan
 	mask = /obj/item/clothing/mask/bandana/legion/legdecan
 	neck = /obj/item/storage/belt/shoulderholster
@@ -601,7 +601,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Vexillarius"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13vexillarius
 	id = /obj/item/card/id/dogtag/legveteran
-	suit = /obj/item/clothing/suit/armor/medium/legion/vexil
+	suit = /obj/item/clothing/suit/armor/tiered/medium/legion/vexil
 	mask = /obj/item/clothing/mask/bandana/legion/legvet
 	neck = /obj/item/storage/belt/shoulderholster
 	glasses = /obj/item/clothing/glasses/sunglasses
@@ -686,7 +686,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Legion Explorer"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	id = /obj/item/card/id/dogtag/legprime
-	suit = /obj/item/clothing/suit/armor/light/legion/explorer
+	suit = /obj/item/clothing/suit/armor/tiered/light/legion/explorer
 	head = /obj/item/clothing/head/helmet/f13/legion/explorer
 	neck = /obj/item/storage/belt/shoulderholster
 	r_pocket = /obj/item/flashlight
@@ -782,7 +782,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	mask = /obj/item/clothing/mask/bandana/legion/legvet
 	head = /obj/item/clothing/head/helmet/f13/legion/vet
 	neck = /obj/item/storage/belt/shoulderholster
-	suit = /obj/item/clothing/suit/armor/medium/legion/vet
+	suit = /obj/item/clothing/suit/armor/tiered/medium/legion/vet
 	glasses = /obj/item/clothing/glasses/sunglasses
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	r_pocket = /obj/item/flashlight/lantern
@@ -869,7 +869,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	mask = /obj/item/clothing/mask/bandana/legion/legprime
 	head = /obj/item/clothing/head/helmet/f13/legion/prime
 	neck = /obj/item/storage/belt/shoulderholster
-	suit = /obj/item/clothing/suit/armor/light/legion/prime
+	suit = /obj/item/clothing/suit/armor/tiered/light/legion/prime
 	glasses = /obj/item/clothing/glasses/legiongoggles
 	r_pocket = /obj/item/flashlight/lantern
 	l_pocket = /obj/item/restraints/handcuffs
@@ -947,7 +947,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13recleg
 	id = /obj/item/card/id/dogtag/legrecruit
 	shoes = /obj/item/clothing/shoes/f13/military/leather
-	suit = /obj/item/clothing/suit/armor/light/legion/recruit
+	suit = /obj/item/clothing/suit/armor/tiered/light/legion/recruit
 	head = /obj/item/clothing/head/helmet/f13/legion/recruit
 	mask = /obj/item/clothing/mask/bandana/legion/legrecruit
 	glasses = /obj/item/clothing/glasses/legiongoggles
@@ -1311,7 +1311,7 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	name = "Legion Assassin"
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13explorer
 	id = /obj/item/card/id/dogtag/legvenator
-	suit = /obj/item/clothing/suit/armor/light/legion/explorer/assassin
+	suit = /obj/item/clothing/suit/armor/tiered/light/legion/explorer/assassin
 	head = /obj/item/clothing/head/helmet/f13/legion/venator
 	mask = /obj/item/clothing/mask/bandana/legion/legdecan
 	neck = /obj/item/storage/belt/shoulderholster
@@ -1369,7 +1369,7 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	jobtype = /datum/job/CaesarsLegion/Legionnaire/f13legionary
 	id =			/obj/item/card/id/dogtag/legslavemaster
 	uniform =		/obj/item/clothing/under/gladiator
-	suit = 			/obj/item/clothing/suit/armor/light/legion/recruit
+	suit = 			/obj/item/clothing/suit/armor/tiered/light/legion/recruit
 	belt = 			/obj/item/melee/onehanded/slavewhip
 	shoes =			/obj/item/clothing/shoes/roman
 	suit_store = 	/obj/item/melee/onehanded/machete/forgedmachete

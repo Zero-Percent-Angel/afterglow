@@ -30,7 +30,7 @@
 					"sb208","oblivionandbeyondthestars","sanshoom","medalis","wh0t00kthejam","theman1178",
 					"spockye","xenonia","breensecuter","fluidhelix","charliehere","ryzzz3n","ourlordspungus",
 					"manyfacedfool","ifrickfracki","mikuel","Theshroudedlord", "pisshole", "debossans",
-					"aetherfueled", "zugor", "krulcharles", "dankwulf")
+					"aetherfueled", "zugor", "krulcharles", "dankwulf", "woodentucker")
 	cost = 1
 
 /datum/gear/donator/mutie/helmet
@@ -40,15 +40,15 @@
 
 /datum/gear/donator/mutie/helmet/metal
 	name = "Mutant Bladed Helmet"
-	path = /obj/item/clothing/head/helmet/knight/f13/metal/mutie
+	path = /obj/item/clothing/head/helmet/f13/knight/metal/mutie
 
 /datum/gear/donator/mutie/helmet/metal/knight
 	name = "Mutant Knight Helmet"
-	path = /obj/item/clothing/head/helmet/knight/f13/metal/mutie/knight
+	path = /obj/item/clothing/head/helmet/f13/knight/metal/mutie/knight
 
 /datum/gear/donator/mutie/helmet/metal/crown
 	name = "Mutant Crowned Helmet"
-	path = /obj/item/clothing/head/helmet/knight/f13/metal/mutie/knight/crown
+	path = /obj/item/clothing/head/helmet/f13/knight/metal/mutie/knight/crown
 
 /datum/gear/donator/mutie/under
 	name = "Mutant Shorts"
@@ -93,12 +93,12 @@
 
 /datum/gear/donator/mutie/armour/light
 	name = "Mutant Forged Armour"
-	path = /obj/item/clothing/suit/armor/light/mutie
+	path = /obj/item/clothing/suit/armor/tiered/light/mutie
 	slot = SLOT_WEAR_SUIT
 
 /datum/gear/donator/mutie/armour
 	name = "Mutant Metal Armour"
-	path = /obj/item/clothing/suit/armor/medium/vest/breastplate/scrap/mutie
+	path = /obj/item/clothing/suit/armor/tiered/medium/vest/breastplate/scrap/mutie
 
 /datum/gear/donator/mutie/armour/cloak
 	name = "Mutant Cloak"

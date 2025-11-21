@@ -481,7 +481,7 @@
 	name = "Syndicate Battlecruiser Assault Operative"
 	uniform = /obj/item/clothing/under/syndicate/combat
 	belt = /obj/item/storage/belt/military
-	suit = /obj/item/clothing/suit/armor/medium/vest
+	suit = /obj/item/clothing/suit/armor/tiered/medium/vest
 	suit_store = /obj/item/gun/ballistic/automatic/pistol
 	back = /obj/item/storage/backpack/security
 	mask = /obj/item/clothing/mask/gas/syndicate
@@ -741,13 +741,13 @@
 	flavour_text = "Rangers lead the way!"
 	assignedrole = "NCR Ranger"
 	outfit = /datum/outfit/job/ncr/f13ranger
-	suit = /obj/item/clothing/suit/armor/light/ncr/trailranger
+	suit = /obj/item/clothing/suit/armor/tiered/light/ncr/trailranger
 	belt = /obj/item/storage/belt/army/assault/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
-	head = /obj/item/clothing/head/f13/ncr/ranger
+	head = /obj/item/clothing/head/helmet/f13/ncr/ranger
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m556/rifle/assault = 1,
-		/obj/item/clothing/head/f13/ncr/ranger = 1,
+		/obj/item/clothing/head/helmet/f13/ncr/ranger = 1,
 		/obj/item/storage/survivalkit = 1,
 		/obj/item/storage/survivalkit/medical = 1,
 		/obj/item/gun_upgrade/scope/watchman = 1,
@@ -835,7 +835,7 @@
 	assignedrole = "Raider"
 	suit_store = /obj/item/gun/ballistic/automatic/smg/greasegun
 	uniform = /obj/item/clothing/under/f13/ravenharness
-	suit = /obj/item/clothing/suit/armor/medium/combat/mk2/raider
+	suit = /obj/item/clothing/suit/armor/tiered/medium/combat/mk2/raider
 	head = /obj/item/clothing/head/helmet/f13/combat/mk2/raider
 	ears = /obj/item/radio/headset
 	belt = /obj/item/storage/belt/army/assault
