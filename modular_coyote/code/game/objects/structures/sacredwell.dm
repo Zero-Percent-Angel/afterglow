@@ -35,7 +35,7 @@ GLOBAL_LIST_INIT(sacredwellitems_mid, typecacheof(list(/obj/item/gun/energy/lase
 	/obj/item/gun/ballistic/automatic/service)))
 
 GLOBAL_LIST_INIT(sacredwellitems_high, typecacheof(list(/obj/item/gun/energy/laser/plasma,
-/obj/item/clothing/suit/armor/power_armor,
+/obj/item/clothing/suit/armor/tiered/power_armor,
 /obj/item/clothing/head/helmet/f13/power_armor)))
 
 
@@ -44,7 +44,7 @@ GLOBAL_LIST_INIT(sacredwellitems_high, typecacheof(list(/obj/item/gun/energy/las
 /obj/effect/spawner/lootdrop/f13/sacredwell
 	lootcount = 1
 	lootdoubles = FALSE
-	loot = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/tribal,
+	loot = list(/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/tribal,
 				/obj/item/gun/energy/laser/wattz/sacredpistol,
 				/obj/item/gun/energy/laser/wattz/sacred,
 				/obj/item/gun/energy/laser/wattz2k/extended/blessed,
@@ -52,8 +52,8 @@ GLOBAL_LIST_INIT(sacredwellitems_high, typecacheof(list(/obj/item/gun/energy/las
 				/obj/item/gun/ballistic/automatic/smg/tommygun/whitelegs,
 				/obj/item/gun/ballistic/bow/claw,
 				/obj/item/gun/ballistic/bow/sturdy,
-				/obj/item/clothing/suit/armor/heavy/tribal,
-				/obj/item/clothing/suit/armor/light/tribal/simple,
+				/obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal,
+				/obj/item/clothing/suit/armor/tiered/light/tribal/simple,
 				/obj/item/clothing/suit/hooded/cloak)
 
 // sacred items

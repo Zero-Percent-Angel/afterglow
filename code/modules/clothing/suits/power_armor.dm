@@ -2,13 +2,14 @@
 // Power armor //
 /////////////////
 
-/obj/item/clothing/suit/armor/power_armor
+/obj/item/clothing/suit/armor/tiered/power_armor
 	w_class = WEIGHT_CLASS_HUGE
 	// body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEJUMPSUIT
 	item_flags = SLOWS_WHILE_IN_HAND
+	max_integrity = 500
 	clothing_flags = THICKMATERIAL
 	equip_delay_self = 50
 	equip_delay_other = 60
@@ -28,9 +29,9 @@
 	/// If TRUE - suit has ran out of charge and is currently affected by slowdown from it
 	var/no_power = FALSE
 	/// How much slowdown is added when suit is unpowered
-	var/unpowered_slowdown = 3
+	var/unpowered_slowdown = 2
 	/// Projectiles below this damage will get deflected
-	var/deflect_damage = 11
+	var/deflect_damage = 12
 	/// If TRUE - it requires PA training trait to be worn
 	var/requires_training = TRUE
 	/// If TRUE - the suit will give its user specific traits when worn
@@ -43,17 +44,19 @@
 	var/salvage_step = 0
 	/// This is handled elsewhere
 	slowdown = 0
-	armor = ARMOR_VALUE_PA
+	armor = ARMOR_VALUE_SALVAGE_T4
 	armor_tier_desc = ARMOR_CLOTHING_PA
 	stiffness = MEDIUM_STIFFNESS
 	custom_price = PRICE_ALMOST_ONE_GRAND
+	tier = 4
+	special_modifications = list("a" = -1)
 
-/obj/item/clothing/suit/armor/power_armor/Initialize()
+/obj/item/clothing/suit/armor/tiered/power_armor/Initialize()
 	. = ..()
 	if(ispath(cell))
 		cell = new cell(src)
 
-/obj/item/clothing/suit/armor/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
+/obj/item/clothing/suit/armor/tiered/power_armor/mob_can_equip(mob/user, mob/equipper, slot, disable_warning = 1)
 	var/mob/living/carbon/human/H = user
 	if(src == H.wear_suit) //Suit is already equipped
 		return ..()
@@ -67,39 +70,43 @@
 		return ..()
 	return
 
-/obj/item/clothing/suit/armor/power_armor/equipped(mob/user, slot)
+/obj/item/clothing/suit/armor/tiered/power_armor/equipped(mob/user, slot)
 	..()
 	if(slot == SLOT_WEAR_SUIT && powered)
 		START_PROCESSING(SSobj, src)
 		assign_traits(user)
 
-/obj/item/clothing/suit/armor/power_armor/proc/assign_traits(mob/user)
+/obj/item/clothing/suit/armor/tiered/power_armor/proc/assign_traits(mob/user)
 	if(no_power) // Has no charge left
 		return
 	ADD_TRAIT(user, TRAIT_STUNIMMUNE, "PA_stun_immunity")
 	ADD_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
 	ADD_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
 	ADD_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait") // General effects from being in PA
+	var/mob/living/liver = user
+	liver.modify_special(list("s" = 1), src)
 	user.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/pa_speedmod, multiplicative_slowdown = ARMOR_SLOWDOWN_PA * ARMOR_SLOWDOWN_GLOBAL_MULT)
 
-/obj/item/clothing/suit/armor/power_armor/dropped(mob/user)
+/obj/item/clothing/suit/armor/tiered/power_armor/dropped(mob/user)
 	..()
 	if(powered)
 		STOP_PROCESSING(SSobj, src)
 		remove_traits(user)
 
-/obj/item/clothing/suit/armor/power_armor/proc/remove_traits(mob/user)
+/obj/item/clothing/suit/armor/tiered/power_armor/proc/remove_traits(mob/user)
 	REMOVE_TRAIT(user, TRAIT_STUNIMMUNE, "PA_stun_immunity")
 	REMOVE_TRAIT(user, TRAIT_PUSHIMMUNE, "PA_push_immunity")
 	REMOVE_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
 	REMOVE_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait")
+	var/mob/living/liver = user
+	liver.remove_special_modification(src)
 	user.remove_movespeed_modifier(/datum/movespeed_modifier/pa_speedmod, update=TRUE)
 
-/obj/item/clothing/suit/armor/power_armor/Destroy()
+/obj/item/clothing/suit/armor/tiered/power_armor/Destroy()
 	. = ..()
 	STOP_PROCESSING(SSobj, src)
 
-/obj/item/clothing/suit/armor/power_armor/process()
+/obj/item/clothing/suit/armor/tiered/power_armor/process()
 	var/mob/living/carbon/human/user = src.loc
 	if(!user || !ishuman(user) || (user.wear_suit != src))
 		return
@@ -115,7 +122,7 @@
 		restore_power(user)
 		return
 
-/obj/item/clothing/suit/armor/power_armor/proc/remove_power(mob/user)
+/obj/item/clothing/suit/armor/tiered/power_armor/proc/remove_power(mob/user)
 	if(salvage_step > 1) // Being salvaged
 		to_chat(user, span_warning("Components in [src] require repairs!"))
 	else if (emped)
@@ -127,14 +134,14 @@
 	remove_traits(user)
 	user.update_equipment_speed_mods()
 
-/obj/item/clothing/suit/armor/power_armor/proc/restore_power(mob/user)
+/obj/item/clothing/suit/armor/tiered/power_armor/proc/restore_power(mob/user)
 	to_chat(user, span_notice("\The [src]'s power restored."))
 	slowdown -= unpowered_slowdown
 	no_power = FALSE
 	assign_traits(user)
 	user.update_equipment_speed_mods()
 
-/obj/item/clothing/suit/armor/power_armor/attackby(obj/item/I, mob/living/carbon/human/user, params)
+/obj/item/clothing/suit/armor/tiered/power_armor/attackby(obj/item/I, mob/living/carbon/human/user, params)
 	if(powered && istype(I, /obj/item/stock_parts/cell))
 		if(cell)
 			to_chat(user, span_warning("\The [src] already has a cell installed."))
@@ -249,19 +256,19 @@
 					return
 	return ..()
 
-/obj/item/clothing/suit/armor/power_armor/attack_self(mob/living/user)
+/obj/item/clothing/suit/armor/tiered/power_armor/attack_self(mob/living/user)
 	if(powered)
 		toggle_cell(user)
 	return ..()
 
-/obj/item/clothing/suit/armor/power_armor/AltClick(mob/living/user)
+/obj/item/clothing/suit/armor/tiered/power_armor/AltClick(mob/living/user)
 	if(!user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		return ..()
 	if(powered)
 		toggle_cell(user)
 	return
 
-/obj/item/clothing/suit/armor/power_armor/proc/toggle_cell(mob/living/user)
+/obj/item/clothing/suit/armor/tiered/power_armor/proc/toggle_cell(mob/living/user)
 	if(cell)
 		user.visible_message(span_notice("[user] removes \the [cell] from [src]!"), \
 			span_notice("You remove [cell]."))
@@ -271,7 +278,7 @@
 	else
 		to_chat(user, span_warning("[src] has no cell installed."))
 
-/obj/item/clothing/suit/armor/power_armor/examine(mob/user)
+/obj/item/clothing/suit/armor/tiered/power_armor/examine(mob/user)
 	. = ..()
 	if(powered && (in_range(src, user) || isobserver(user)))
 		if(cell)
@@ -281,7 +288,7 @@
 	if(ispath(salvaged_type))
 		. += salvage_hint()
 
-/obj/item/clothing/suit/armor/power_armor/proc/salvage_hint()
+/obj/item/clothing/suit/armor/tiered/power_armor/proc/salvage_hint()
 	switch(salvage_step)
 		if(0)
 			return "<span class='notice'>The wiring cover is <i>screwed</i> in place.</span>"
@@ -294,7 +301,7 @@
 		if(4)
 			return "<span class='warning'>The servomotors have been <i>sliced apart</i> from the frame and remaining components can be <i>pried away</i>.</span>"
 
-/obj/item/clothing/suit/armor/power_armor/emp_act(mob/living/carbon/human/owner, severity)
+/obj/item/clothing/suit/armor/tiered/power_armor/emp_act(mob/living/carbon/human/owner, severity)
 	. = ..()
 	if(. & EMP_PROTECT_SELF)
 		return
@@ -315,7 +322,7 @@
 			addtimer(CALLBACK(src, PROC_REF(end_emp_effect)), severity/1 SECONDS)
 	return
 
-/obj/item/clothing/suit/armor/power_armor/proc/end_emp_effect()
+/obj/item/clothing/suit/armor/tiered/power_armor/proc/end_emp_effect()
 	emped = FALSE
 	if(isliving(loc))
 		process()
@@ -323,61 +330,69 @@
 		to_chat(L, span_warning("Armor power reroute successful. All systems operational."))
 		L.update_equipment_speed_mods()
 
-/obj/item/clothing/suit/armor/power_armor/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+/obj/item/clothing/suit/armor/tiered/power_armor/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if((attack_type == ATTACK_TYPE_PROJECTILE) && (def_zone in protected_zones))
 		if(prob(70) && (damage < deflect_damage) && (armour_penetration <= 0)) // Weak projectiles like shrapnel get deflected
 			block_return[BLOCK_RETURN_REDIRECT_METHOD] = REDIRECT_METHOD_DEFLECT
 			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return ..()
 
-/obj/item/clothing/suit/armor/power_armor/t45d
+/obj/item/clothing/suit/armor/tiered/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
-	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
+	salvaged_type = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d
 
-/obj/item/clothing/suit/armor/power_armor/t51b
+/obj/item/clothing/suit/armor/tiered/power_armor/t51b
 	name = "T-51b power armor"
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
-	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b
+	salvaged_type = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier4/t51b
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
 
-/obj/item/clothing/suit/armor/power_armor/t51b/hardened
+/obj/item/clothing/suit/armor/tiered/power_armor/t51b/hardened
 	name = "Hardened T-51b power armor"
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. It's plates have been chemially treated to be stronger."
 	icon_state = "t51green"
 	item_state = "t51green"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
+	tier = 5
+	armor = ARMOR_VALUE_SALVAGE_T5
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T1)
 
-/obj/item/clothing/suit/armor/power_armor/excavator
+/obj/item/clothing/suit/armor/tiered/power_armor/excavator
 	name = "excavator power armor"
 	desc = "Developed by Garrahan Mining Co. in collaboration with West Tek, the Excavator-class power armor was designed to protect miners from rockfalls and airborne contaminants while increasing the speed at which they could work. "
 	icon_state = "excavator"
 	item_state = "excavator"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2)
+	tier = 3
+	armor = ARMOR_VALUE_SALVAGE_T3
 
-/obj/item/clothing/suit/armor/power_armor/vaulttec
+/obj/item/clothing/suit/armor/tiered/power_armor/vaulttec
 	name = "Vault Tec power armor"
 	desc = "Developed by Vault-Tec personnel following the Great war by reverse engineering Excavator Power Armour, Vault-Tec Power Armour is designed to provide better protection than it's mining-suit origins in close-quarters combat."
 	icon_state = "vaultpa"
 	item_state = "vaultpa"
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_UP_ENV_T3)
+	tier = 3
+	armor = ARMOR_VALUE_SALVAGE_T3
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2)
 
-/obj/item/clothing/suit/armor/power_armor/advanced
+/obj/item/clothing/suit/armor/tiered/power_armor/advanced
 	name = "advanced power armor"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for its user's comfort."
 	icon_state = "advpowerarmor1"
 	item_state = "advpowerarmor1"
-	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/advanced
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
+	salvaged_type = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier4/advanced
+	tier = 5
+	armor = ARMOR_VALUE_SALVAGE_T5
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2)
 
-/obj/item/clothing/suit/armor/power_armor/advanced/x02
+/obj/item/clothing/suit/armor/tiered/power_armor/advanced/x02
 	name = "Enclave power armor"
 	desc = "Upgraded pre-war power armor design used by the Enclave. It is mildly worn due to it's age and lack of maintenance after the fall of the Enclave."
 	icon_state = "PA_x02"
 	item_state = "PA_x02"
-	salvaged_type = /obj/item/clothing/suit/armor/heavy/salvaged_pa/x02 // Oh the misery
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T3, ARMOR_MODIFIER_UP_DT_T3)
+	salvaged_type = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier4/x02
+	tier = 5
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T3)

@@ -232,7 +232,7 @@
 
 /datum/crafting_recipe/tribalwar/whitelegs/lightarmour
 	name = "White Legs Light Armour"
-	result = /obj/item/clothing/suit/armor/light/tribal/whitelegs
+	result = /obj/item/clothing/suit/armor/tiered/light/tribal/whitelegs
 	time = 60
 	reqs = list(/obj/item/stack/sheet/animalhide/gecko = 10,
 				/obj/item/stack/sheet/leather = 10,
@@ -240,18 +240,18 @@
 
 /datum/crafting_recipe/tribalwar/whitelegs/armour
 	name = "White Legs Armour"
-	result = /obj/item/clothing/suit/armor/medium/tribal/whitelegs
+	result = /obj/item/clothing/suit/armor/tiered/medium/tribal/whitelegs
 	time = 120
-	reqs = list(/obj/item/clothing/suit/armor/light/tribal/whitelegs = 1,
+	reqs = list(/obj/item/clothing/suit/armor/tiered/light/tribal/whitelegs = 1,
 				/obj/item/stack/sheet/animalhide/gecko = 15,
 				/obj/item/stack/sheet/leather = 10,
 				/obj/item/stack/crafting/goodparts = 10)
 
 /datum/crafting_recipe/tribalwar/whitelegs/heavyarmour
 	name = "White Legs Heavy Armour"
-	result = /obj/item/clothing/suit/armor/heavy/tribal/whitelegs
+	result = /obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal/whitelegs
 	time = 180
-	reqs = list(/obj/item/clothing/suit/armor/medium/tribal/whitelegs = 1,
+	reqs = list(/obj/item/clothing/suit/armor/tiered/medium/tribal/whitelegs = 1,
 				/obj/item/stack/sheet/animalhide/gecko = 20,
 				/obj/item/stack/sheet/leather = 30,
 				/obj/item/stack/crafting/goodparts = 15)
@@ -276,7 +276,7 @@
 
 /datum/crafting_recipe/tribalwar/rustwalkers/lightarmour
 	name = "Rustwalkers Light Armour"
-	result = /obj/item/clothing/suit/armor/light/tribal/rustwalkers
+	result = /obj/item/clothing/suit/armor/tiered/light/tribal/rustwalkers
 	time = 60
 	reqs = list(/obj/item/stack/crafting/metalparts = 5,
 				/obj/item/stack/sheet/leather = 5,
@@ -284,18 +284,18 @@
 
 /datum/crafting_recipe/tribalwar/rustwalkers/armour
 	name = "Rustwalkers Armour"
-	result = /obj/item/clothing/suit/armor/medium/tribal/rustwalkers
+	result = /obj/item/clothing/suit/armor/tiered/medium/tribal/rustwalkers
 	time = 60
-	reqs = list(/obj/item/clothing/suit/armor/light/tribal/rustwalkers = 1,
+	reqs = list(/obj/item/clothing/suit/armor/tiered/light/tribal/rustwalkers = 1,
 				/obj/item/stack/crafting/metalparts = 5,
 				/obj/item/stack/sheet/leather = 10,
 				/obj/item/stack/crafting/goodparts = 5)
 
 /datum/crafting_recipe/tribalwar/rustwalkers/heavyarmour
 	name = "Rustwalkers Heavy Armour"
-	result = /obj/item/clothing/suit/armor/heavy/tribal/rustwalkers
+	result = /obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal/rustwalkers
 	time = 60
-	reqs = list(/obj/item/clothing/suit/armor/medium/tribal/rustwalkers = 1,
+	reqs = list(/obj/item/clothing/suit/armor/tiered/medium/tribal/rustwalkers = 1,
 				/obj/item/shockpaddles/primitive = 1,
 				/obj/item/stack/sheet/leather = 10,
 				/obj/item/stack/crafting/goodparts = 5)
@@ -318,7 +318,7 @@
 
 /datum/crafting_recipe/tribalwar/eighties/lightarmour
 	name = "Eighties Light Armour"
-	result = /obj/item/clothing/suit/armor/light/tribal/eighties
+	result = /obj/item/clothing/suit/armor/tiered/light/tribal/eighties
 	time = 60
 	reqs = list(/obj/item/stack/crafting/goodparts = 1,
 				/obj/item/stack/sheet/leather = 10,
@@ -326,18 +326,18 @@
 
 /datum/crafting_recipe/tribalwar/eighties/armour
 	name = "Eighties Armour"
-	result = /obj/item/clothing/suit/armor/medium/tribal/eighties
+	result = /obj/item/clothing/suit/armor/tiered/medium/tribal/eighties
 	time = 60
-	reqs = list(/obj/item/clothing/suit/armor/light/tribal/eighties = 1,
+	reqs = list(/obj/item/clothing/suit/armor/tiered/light/tribal/eighties = 1,
 				/obj/item/stack/crafting/goodparts = 5,
 				/obj/item/stack/sheet/leather = 10,
 				/obj/item/stack/sheet/cloth = 10)
 
 /datum/crafting_recipe/tribalwar/eighties/heavyarmour
 	name = "Eighties Heavy Armour"
-	result = /obj/item/clothing/suit/armor/heavy/tribal/eighties
+	result = /obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal/eighties
 	time = 60
-	reqs = list(/obj/item/clothing/suit/armor/medium/tribal/eighties = 1,
+	reqs = list(/obj/item/clothing/suit/armor/tiered/medium/tribal/eighties = 1,
 				/obj/item/stack/crafting/goodparts = 10,
 				/obj/item/stack/sheet/leather = 10,
 				/obj/item/stack/sheet/cloth = 10
@@ -361,7 +361,7 @@
 
 /datum/crafting_recipe/tribalwar/deadhorses/lightarmour
 	name = "Dead Horses Light Armour"
-	result = /obj/item/clothing/suit/armor/light/tribal/deadhorses
+	result = /obj/item/clothing/suit/armor/tiered/light/tribal/deadhorses
 	time = 60
 	reqs = list(/obj/item/stack/crafting/metalparts = 2,
 				/obj/item/stack/sheet/animalhide/gecko = 3,
@@ -369,18 +369,18 @@
 
 /datum/crafting_recipe/tribalwar/deadhorses/armour
 	name = "Dead Horses Armour"
-	result = /obj/item/clothing/suit/armor/medium/tribal/deadhorses
+	result = /obj/item/clothing/suit/armor/tiered/medium/tribal/deadhorses
 	time = 60
-	reqs = list(/obj/item/clothing/suit/armor/light/tribal/deadhorses = 1,
+	reqs = list(/obj/item/clothing/suit/armor/tiered/light/tribal/deadhorses = 1,
 				/obj/item/stack/crafting/metalparts = 2,
 				/obj/item/stack/sheet/animalhide/gecko = 5,
 				/obj/item/stack/sheet/cloth = 10)
 
 /datum/crafting_recipe/tribalwar/deadhorses/heavyarmour
 	name = "Dead Horses Heavy Armour"
-	result = /obj/item/clothing/suit/armor/heavy/tribal/deadhorses
+	result = /obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal/deadhorses
 	time = 60
-	reqs = list(/obj/item/clothing/suit/armor/medium/tribal/deadhorses = 1,
+	reqs = list(/obj/item/clothing/suit/armor/tiered/medium/tribal/deadhorses = 1,
 				/obj/item/stack/crafting/goodparts = 2,
 				/obj/item/stack/sheet/animalhide/gecko = 20,
 				/obj/item/stack/sheet/leather = 10)
@@ -403,7 +403,7 @@
 
 /datum/crafting_recipe/tribalwar/sorrows/armour
 	name = "Sorrows Armour"
-	result = /obj/item/clothing/suit/armor/medium/tribal/sorrows
+	result = /obj/item/clothing/suit/armor/tiered/medium/tribal/sorrows
 	time = 30
 	reqs = list(/obj/item/stack/crafting/goodparts = 5,
 				/obj/item/stack/crafting/metalparts = 5,
@@ -436,7 +436,7 @@ datum/crafting_recipe/tribalwar/bone
 
 /datum/crafting_recipe/tribalwar/bone/lightarmour
 	name = "Bone Dancer Light Armor"
-	result = /obj/item/clothing/suit/armor/light/tribal/bonedancers
+	result = /obj/item/clothing/suit/armor/tiered/light/tribal/bonedancers
 	time = 60
 	reqs = list(/obj/item/stack/crafting/metalparts = 2,
 				/obj/item/stack/sheet/leather = 3,
@@ -444,18 +444,18 @@ datum/crafting_recipe/tribalwar/bone
 
 /datum/crafting_recipe/tribalwar/bone/armour
 	name = "Bone Dancer Reinforced Armor"
-	result = /obj/item/clothing/suit/armor/medium/tribal/bonedancers
+	result = /obj/item/clothing/suit/armor/tiered/medium/tribal/bonedancers
 	time = 60
-	reqs = list(/obj/item/clothing/suit/armor/light/tribal/bonedancers = 1,
+	reqs = list(/obj/item/clothing/suit/armor/tiered/light/tribal/bonedancers = 1,
 				/obj/item/stack/crafting/metalparts = 5,
 				/obj/item/stack/sheet/leather = 15,
 				/obj/item/stack/sheet/bone = 20)
 
 /datum/crafting_recipe/tribalwar/bone/heavyarmour
 	name = "Bone Dancer Heavy Armor"
-	result = /obj/item/clothing/suit/armor/heavy/tribal/bonedancers
+	result = /obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal/bonedancers
 	time = 60
-	reqs = list(/obj/item/clothing/suit/armor/medium/tribal/bonedancers = 1,
+	reqs = list(/obj/item/clothing/suit/armor/tiered/medium/tribal/bonedancers = 1,
 				/obj/item/stack/crafting/metalparts = 5,
 				/obj/item/stack/sheet/leather = 20,
 				/obj/item/stack/sheet/bone = 20)
@@ -474,7 +474,7 @@ datum/crafting_recipe/tribalwar/bone
 
 /datum/crafting_recipe/tribalwar/wayfarers/lightarmour
 	name = "Wayfarers Light Armour"
-	result = /obj/item/clothing/suit/armor/light/tribal/westernwayfarer
+	result = /obj/item/clothing/suit/armor/tiered/light/tribal/westernwayfarer
 	time = 60
 	reqs = list(/obj/item/stack/crafting/metalparts = 5,
 				/obj/item/stack/sheet/leather = 5,
@@ -482,9 +482,9 @@ datum/crafting_recipe/tribalwar/bone
 
 /datum/crafting_recipe/tribalwar/wayfarers/heavyarmor
 	name = "Wayfarers Heavy Armour"
-	result = /obj/item/clothing/suit/armor/heavy/tribal/westernwayfarer
+	result = /obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal/westernwayfarer
 	time = 60
-	reqs = list(/obj/item/clothing/suit/armor/light/tribal/westernwayfarer = 1,
+	reqs = list(/obj/item/clothing/suit/armor/tiered/light/tribal/westernwayfarer = 1,
 				/obj/item/stack/crafting/metalparts = 10,
 				/obj/item/stack/sheet/leather = 5,
 				/obj/item/stack/crafting/goodparts = 10)

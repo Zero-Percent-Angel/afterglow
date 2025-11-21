@@ -332,13 +332,13 @@
 	..()
 	if(isliving(M))
 		to_chat(M, span_alert("You feel a dull warmth spread throughout your body, masking all sense of pain with a not-unpleasant tingle. Injuries don't seem to hurt as much."))
-		M.modify_special(10, "e")
+		M.modify_special(list("e" = 10), type)
 		M.add_movespeed_mod_immunities(type, list(/datum/movespeed_modifier/damage_slowdown, /datum/movespeed_modifier/damage_slowdown_flying, /datum/movespeed_modifier/monkey_health_speedmod))
 
 /datum/reagent/medicine/medx/on_mob_end_metabolize(mob/living/carbon/human/M)
 	if(isliving(M))
 		to_chat(M, span_danger("The warmth fades, and every injury you you had slams into you like a truck."))
-		M.modify_special(-10, "e")
+		M.remove_special_modification(type)
 		M.remove_movespeed_mod_immunities(type, list(/datum/movespeed_modifier/damage_slowdown, /datum/movespeed_modifier/damage_slowdown_flying, /datum/movespeed_modifier/monkey_health_speedmod))
 	..()
 
@@ -479,13 +479,11 @@
 
 /datum/reagent/medicine/mentat/on_mob_add(mob/living/L, amount)
 	. = ..()
-	L.modify_special(3, "p")
-	L.modify_special(5, "i")
+	L.modify_special(list("p" = 3, "i" = 5), type)
 
 /datum/reagent/medicine/mentat/on_mob_delete(mob/living/L)
 	. = ..()
-	L.modify_special(-3, "p")
-	L.modify_special(-5, "i")
+	L.remove_special_modification(type)
 
 /datum/reagent/medicine/mentat/on_mob_life(mob/living/carbon/M)
 	M.adjustOxyLoss(-3*REAGENTS_EFFECT_MULTIPLIER)

@@ -295,7 +295,7 @@ GLOBAL_PROTECT(VVpixelmovement)
 	var/variable
 	var/var_value
 	if(param_var_name)
-		if(!((param_var_name in O.vars) || (O.vars[param_var_name])))
+		if(!((O.vars[param_var_name]) || contains_var(O, param_var_name)))
 			to_chat(src, "A variable with this name ([param_var_name]) doesn't exist in this datum ([O])", confidential = TRUE)
 			return
 		variable = param_var_name
@@ -386,3 +386,10 @@ GLOBAL_PROTECT(VVpixelmovement)
 	message_admins(msg)
 	admin_ticket_log(O, msg)
 	return TRUE
+
+
+proc/contains_var(datum/O, param_var_name)
+	for (var/name in O.vars)
+		if (name == param_var_name)
+			return TRUE
+	return FALSE

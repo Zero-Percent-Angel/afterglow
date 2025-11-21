@@ -143,7 +143,7 @@
 	name = "Bounty Hunter - Synth"
 	uniform = /obj/item/clothing/under/rank/prisoner
 	back = /obj/item/storage/backpack
-	suit = /obj/item/clothing/suit/armor/heavy/riot
+	suit = /obj/item/clothing/suit/armor/tiered/heavy/tier3/riot
 	shoes = /obj/item/clothing/shoes/jackboots
 	glasses = /obj/item/clothing/glasses/eyepatch
 	r_pocket = /obj/item/restraints/handcuffs/cable

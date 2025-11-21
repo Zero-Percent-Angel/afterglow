@@ -1367,7 +1367,7 @@ obj/item/storage/box/stingbangs
 
 /obj/item/storage/box/syndie/fakepa/PopulateContents()
 	new /obj/item/clothing/head/helmet/f13/power_armor/t51b/costume(src)
-	new /obj/item/clothing/suit/armor/power_armor/t51b/costume(src)
+	new /obj/item/clothing/suit/armor/tiered/power_armor/t51b/costume(src)
 
 /obj/item/storage/box/deputy_badges
 	name = "box of spare badges"

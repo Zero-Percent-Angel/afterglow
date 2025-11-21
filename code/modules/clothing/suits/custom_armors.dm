@@ -17,7 +17,7 @@ Below you will find all the templates for modkit items.*/
 	item_state = "mariarmor"
 
 //Custom item - T60 PA; literally just an alt of T45 since it's just a mass-produced T45 piece in-lore anyway.
-/obj/item/clothing/suit/armor/power_armor/t45d/t60
+/obj/item/clothing/suit/armor/tiered/power_armor/t45d/t60
 	name = "T-60a power armor"
 	desc = "Developed in early 2077 after the Anchorage Reclamation, the T-60 series of power armor was designed to eventually replace the T-51b as the pinnacle of powered armor technology in the U.S. military arsenal."
 	icon = 'icons/fallout/clothing/custom/suits_custom.dmi'
@@ -25,7 +25,7 @@ Below you will find all the templates for modkit items.*/
 	item_state = "t60powerarmor"
 
 //Custom item - Hellfire PA; literally just an alt of x02 snowflake stuff.
-/obj/item/clothing/suit/armor/power_armor/advanced/x02/hellfire
+/obj/item/clothing/suit/armor/tiered/power_armor/advanced/x02/hellfire
 	name = "hellfire power armor"
 	desc = "A deep black helmet of Enclave-manufactured heavy power armor, based on pre-war designs such as the T-51 and improving off of data gathered by post-war designs such as the X-01. Most commonly fielded on the East Coast, no other helmet rivals it's strength."
 	icon = 'icons/fallout/clothing/custom/suits_custom.dmi'

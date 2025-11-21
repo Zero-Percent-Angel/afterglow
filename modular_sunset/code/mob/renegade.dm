@@ -281,7 +281,7 @@
 		/obj/effect/spawner/bundle/f13/trenchshotgun,
 		/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 		/obj/item/stack/f13Cash/random/low,
-		/obj/item/clothing/suit/armor/medium/vest/breastplate/scrap
+		/obj/item/clothing/suit/armor/tiered/medium/vest/breastplate/scrap
 		)
 	robust_searching = TRUE
 	speak = list(
@@ -388,8 +388,8 @@
 	speak_emote = list("says")
 	speak_chance = 1
 	loot = list(
-		/obj/effect/spawner/lootdrop/f13/medical/vault/meds, 
-		/obj/effect/spawner/lootdrop/f13/weapon/revolver44variants, 
+		/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
+		/obj/effect/spawner/lootdrop/f13/weapon/revolver44variants,
 		/obj/effect/spawner/lootdrop/f13/medical/surgical/blood)
 
 	projectile_sound_properties = list(

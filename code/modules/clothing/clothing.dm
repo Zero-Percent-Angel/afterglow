@@ -72,6 +72,7 @@
 	var/salvage_tool_behavior = TOOL_SAW
 	/// Items that are dropped on salvage; If it's empty - item can't salvaged
 	var/list/salvage_loot = list()
+	var/list/special_modifications = list()
 
 /obj/item/clothing/Initialize()
 	. = ..()
@@ -138,6 +139,10 @@
 		return TRUE
 
 	return ..()
+
+/obj/item/clothing/proc/update_damage_state()
+	var/percentLeft = round(100 * obj_integrity/max_integrity)
+	name = "[initial(name)] ([percentLeft]%)"
 
 // Set the clothing's integrity back to 100%, remove all damage to bodyparts, and generally fix it up
 /obj/item/clothing/proc/repair(mob/user, params)
@@ -228,6 +233,9 @@
 	..()
 	if(!istype(user))
 		return
+	if (isliving(user))
+		var/mob/living/liver = user
+		liver.remove_special_modification(src)
 	UnregisterSignal(user, COMSIG_MOVABLE_MOVED)
 	if(LAZYLEN(user_vars_remembered))
 		for(var/variable in user_vars_remembered)
@@ -240,6 +248,9 @@
 	..()
 	if (!istype(user))
 		return
+	if (isliving(user) && slot == SLOT_WEAR_SUIT)
+		var/mob/living/liver = user
+		liver.modify_special(special_modifications, src)
 	if(slot_flags & slotdefine2slotbit(slot)) //Was equipped to a valid slot for this item?
 		if(iscarbon(user) && LAZYLEN(zones_disabled))
 			RegisterSignal(user, COMSIG_MOVABLE_MOVED, PROC_REF(bristle))

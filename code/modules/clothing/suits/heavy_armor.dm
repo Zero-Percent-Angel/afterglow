@@ -17,26 +17,50 @@
  * Salvaged PA (partway to PA, but super sloooow and bulky)
  */
 
-/obj/item/clothing/suit/armor/heavy
+/obj/item/clothing/suit/armor/tiered/heavy
 	name = "heavy armor template"
 	icon = 'icons/fallout/clothing/armored_heavy.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 	slowdown = 1
 	strip_delay = 50
 	equip_delay_other = 50
-	max_integrity = 300
+	max_integrity = 500
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/armor
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_HEAVY
 	armor_tier_desc = ARMOR_CLOTHING_HEAVY
 	stiffness = HEAVY_STIFFNESS
 	custom_price = PRICE_ABOVE_EXPENSIVE
+	special_modifications = list("a" = -2)
+
+// Tier 2 - 5 DT
+/obj/item/clothing/suit/armor/tiered/heavy/tier2
+	custom_price = PRICE_ABOVE_EXPENSIVE
+	armor = ARMOR_VALUE_HEAVY_T2
+	tier = 2
+
+// Tier 3 - 10 DT
+/obj/item/clothing/suit/armor/tiered/heavy/tier3
+	custom_price = PRICE_REALLY_EXPENSIVE
+	armor = ARMOR_VALUE_HEAVY_T3
+	tier = 3
+
+// Tier 4 - 15 DT
+/obj/item/clothing/suit/armor/tiered/heavy/tier4
+	custom_price = PRICE_ULTRA_EXPENSIVE
+	armor = ARMOR_VALUE_HEAVY_T4
+	tier = 4
+
+/obj/item/clothing/suit/armor/tiered/heavy/tier5
+	custom_price = PRICE_ALMOST_ONE_GRAND
+	armor = ARMOR_VALUE_HEAVY_T5
+	tier = 5
 
 //////////////////////
 //// TRIBAL ARMOR ////
 //////////////////////
 
-/obj/item/clothing/suit/armor/heavy/tribal
+/obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal
 	name = "tribal heavy carapace"
 	desc = "Thick layers of leather and bone, with metal reinforcements, surely this will make the wearer tough and uncaring for claws and blades."
 	icon = 'icons/fallout/clothing/armored_heavy.dmi'
@@ -47,7 +71,7 @@
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
 
-/obj/item/clothing/suit/armor/heavy/tribal/bone
+/obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal/bone
 	name = "Heavy Bone armor"
 	desc = "A tribal full armor plate, crafted from animal bone, metal and leather. Usually worn by the Bone Dancers"
 	mob_overlay_icon = null
@@ -56,7 +80,7 @@
 	blood_overlay_type = "armor"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T1)
 
-/obj/item/clothing/suit/armor/heavy/tribal/rustwalkers
+/obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal/rustwalkers
 	name = "Rustwalkers heavy armour"
 	desc = "A car seat leather duster, a timing belt bandolier, and armour plating made from various parts of a car, it surely would weigh the wearer down. Commonly worn by members of the Rustwalkers tribe."
 	icon_state = "rustwalkers_armour_heavy"
@@ -64,14 +88,14 @@
 	body_parts_hidden = CHEST|GROIN|LEGS|ARMS
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 
-/obj/item/clothing/suit/armor/heavy/tribal/whitelegs
+/obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal/whitelegs
 	name = "White Legs heavy armour"
 	desc = "A series of tan and khaki armour plates, held in place with a considerable amount of strapping and possibly duct tape. Commonly worn by members of the White Legs tribe."
 	icon_state = "white_legs_armour_heavy"
 	item_state = "white_legs_armour_heavy"
 	body_parts_hidden = ARMS | LEGS
 
-/obj/item/clothing/suit/armor/heavy/tribal/eighties
+/obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal/eighties
 	name = "80s heavy armour"
 	desc = "A ballistic duster with the number 80 stitched onto the back worn over a breastplate made from a motorcycle's engine housing, with kneepads made from stirrups. Worn by the members of the 80s tribe."
 	icon_state = "80s_armour_heavy"
@@ -79,14 +103,14 @@
 	body_parts_hidden = CHEST|GROIN|LEGS|ARMS
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 
-/obj/item/clothing/suit/armor/heavy/tribal/deadhorses
+/obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal/deadhorses
 	name = "Dead Horses heavy armour"
 	desc = "A simple leather bandolier and gecko hide chest covering, with an engraved metal pauldron and a set of black leather straps, one holding a shinpad in place. Commonly worn by the members of the Dead Horses tribe."
 	icon_state = "dead_horses_armour_heavy"
 	item_state = "dead_horses_armour_heavy"
 	body_parts_hidden = CHEST
 
-/obj/item/clothing/suit/armor/heavy/tribal/bonedancers
+/obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal/bonedancers
 	name = "Bone Dancers heavy armour"
 	desc = "A chestplate, pauldrons, bracers, thigh guards and greaves made from bone, metal and sinew. Commonly worn by members of the Bone Dancers tribe."
 	icon_state = "bone_dancer_armor_heavy"
@@ -94,7 +118,7 @@
 	body_parts_hidden = CHEST|GROIN|LEGS|ARMS
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 
-/obj/item/clothing/suit/armor/heavy/tribal/westernwayfarer
+/obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal/westernwayfarer
 	name = "Western Wayfarer heavy armor"
 	desc = "A Suit of armor crafted by Tribals using pieces of scrap metals and the armor of fallen foes, a bighorner's skull sits on the right pauldron along with bighorner fur lining the collar of the leather bound chest. Along the leather straps adoring it are multiple bone charms with odd markings on them."
 	icon_state = "western_wayfarer_armor_heavy"
@@ -105,7 +129,7 @@
 //// METAL ARMOR ////
 /////////////////////
 
-/obj/item/clothing/suit/armor/heavy/metal
+/obj/item/clothing/suit/armor/tiered/heavy/tier2/metal
 	name = "metal armor"
 	desc = "A set of plates formed together to form a crude chestplate."
 	icon_state = "metalarmor"
@@ -113,13 +137,15 @@
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 
-/obj/item/clothing/suit/armor/heavy/metal/reinforced
+/obj/item/clothing/suit/armor/tiered/heavy/tier3/metal/reinforced
 	name = "reinforced metal armor"
 	desc = "A set of well-fitted plates formed together to provide effective protection."
+	icon_state = "metalarmor"
+	item_state = "metalarmor"
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T2)
 
-/obj/item/clothing/suit/armor/heavy/metal/sulphite
+/obj/item/clothing/suit/armor/tiered/heavy/tier3/metal/sulphite
 	name = "sulphite armor"
 	desc = "A combination of what seems to be raider metal armor with a jerry-rigged flame-exhaust system and ceramic plating."
 	icon = 'icons/fallout/clothing/armored_heavy.dmi'
@@ -135,7 +161,7 @@
 //// RIOT ARMOR ////
 ////////////////////
 
-/obj/item/clothing/suit/armor/heavy/riot
+/obj/item/clothing/suit/armor/tiered/heavy/tier3/riot
 	name = "riot suit"
 	desc = "A suit of semi-flexible polycarbonate body armor with heavy padding to protect against melee attacks. Helps the wearer resist shoving in close quarters."
 	icon_state = "riot"
@@ -143,29 +169,35 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
 	blocks_shove_knockdown = TRUE
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_FIRE_T3, ARMOR_MODIFIER_UP_DT_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_FIRE_T3)
 
-/obj/item/clothing/suit/armor/heavy/riot/police
+/obj/item/clothing/suit/armor/tiered/heavy/tier4/riot/police
 	name = "riot police armor"
 	icon_state = "bulletproof_heavy"
 	item_state = "bulletproof_heavy"
 	desc = "Heavy armor with ballistic inserts, sewn into a padded riot police coat."
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
+	blocks_shove_knockdown = TRUE
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T2, ARMOR_MODIFIER_UP_DT_T3)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T2)
 
-/obj/item/clothing/suit/armor/heavy/riot/elite
+/obj/item/clothing/suit/armor/tiered/heavy/tier5/riot/elite
 	name = "elite riot gear"
 	desc = "A heavily reinforced set of military grade armor."
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
+	blocks_shove_knockdown = TRUE
 
-/obj/item/clothing/suit/armor/heavy/riot/combat
+/obj/item/clothing/suit/armor/tiered/heavy/tier4/riot/combat
 	name = "combat body armor"
 	icon_state = "combat_coat"
 	item_state = "combat_coat"
 	desc = "A heavy armor with ballistic inserts, sewn into a padded riot police coat."
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
+	blocks_shove_knockdown = TRUE
 
-/obj/item/clothing/suit/armor/heavy/vest/bulletproof
+/obj/item/clothing/suit/armor/tiered/heavy/tier3/vest/bulletproof
 	name = "heavy bulletproof armor"
 	desc = "A heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry."
 	icon_state = "bulletproof_heavy"
@@ -174,14 +206,13 @@
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/magpouch // 4 slots for ammo!
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T2, ARMOR_MODIFIER_UP_DT_T3)
-	custom_price = PRICE_REALLY_EXPENSIVE
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T2)
 
 //////////////////////////
 // Salvaged Power Armor //
 //////////////////////////
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa
 	name = "salvaged power armor"
 	desc = "It's a set of early-model SS-13 power armor, except it isn't real. Stop looking at it, go ping coders or something. \
 	It's literally not meant to be here, you are just wasting your time reading some text that someone wrote for you \
@@ -197,31 +228,40 @@
 	armor_tier_desc = ARMOR_CLOTHING_SALVAGE
 	custom_price = PRICE_ULTRA_EXPENSIVE
 	strip_delay = 50
-	var/pa_type = /obj/item/clothing/suit/armor/power_armor
+	var/pa_type = /obj/item/clothing/suit/armor/tiered/power_armor
 	var/combined_needed_fix_skill = 140
+	special_modifications = list("a" = -2)
 
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3
+	armor = ARMOR_VALUE_SALVAGE_T3
+	tier = 3
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/attackby(obj/item/I, mob/living/carbon/human/user, params)
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier4
+	armor = ARMOR_VALUE_SALVAGE_T4
+	custom_price = PRICE_ALMOST_ONE_GRAND
+	tier = 4
+
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/attackby(obj/item/I, mob/living/carbon/human/user, params)
 	if (istype(I, /obj/item/pa_kit))
 		var/obj/item/pa_kit/P = I
 		P.attackby(src, user, params)
 	return ..()
 
 // T-45d
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/raider
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/raider
 	name = "salvaged raider power armor"
 	desc = "A destroyed T-45d power armor has been brought back to life with the help of a welder and lots of scrap metal."
 	icon_state = "raider_salvaged"
 	item_state = "raider_salvaged"
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/hotrod
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/hotrod
 	name = "salvaged hotrod T-45d power armor"
 	desc = " It's a set of T-45d power armor with a with some of its plating removed. This set has exhaust pipes piped to the pauldrons, flames erupting from them."
 	icon_state = "t45hotrod"
 	item_state = "t45hotrod"
 	armor_tokens = list(ARMOR_MODIFIER_UP_FIRE_T2, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_MELEE_T1)
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/tribal
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/tribal
 	name = "salvaged tribal T45-d power armor"
 	desc = "A set of salvaged power armor, with certain bits of plating stripped out to retain more freedom of movement. No cooling module, though."
 	icon_state = "tribal_power_armor"
@@ -229,53 +269,53 @@
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT // zooom
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T3, ARMOR_MODIFIER_DOWN_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T3)
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d
 	name = "salvaged T-45d power armor"
 	desc = "T-45d power armor with servomotors and all valuable components stripped out of it."
 	icon_state = "t45d_salvaged"
 	item_state = "t45d_salvaged"
-	pa_type = /obj/item/clothing/suit/armor/power_armor/t45d
+	pa_type = /obj/item/clothing/suit/armor/tiered/power_armor/t45d
 
 // T-51B
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier4/t51b
 	name = "salvaged T-51b power armor"
 	desc = "T-51b power armor with servomotors and all valuable components stripped out of it."
 	icon_state = "t51b_salvaged"
 	item_state = "t51b_salvaged"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T1)
-	pa_type = /obj/item/clothing/suit/armor/power_armor/t51b
+	pa_type = /obj/item/clothing/suit/armor/tiered/power_armor/t51b
 	combined_needed_fix_skill = 160
 
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/advanced
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier4/advanced
 	name = "salvaged Enclave power armor"
 	desc = "X-02 power armor with servomotors and all valuable components stripped out of it."
 	icon_state = "advanced_salvaged"
 	item_state = "advanced_salvaged"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T1)
-	pa_type = /obj/item/clothing/suit/armor/power_armor/advanced
+	pa_type = /obj/item/clothing/suit/armor/tiered/power_armor/advanced
 	combined_needed_fix_skill = 160
 
 // X-02
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/x02
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier4/x02
 	name = "salvaged Enclave power armor"
 	desc = "X-02 power armor with servomotors and all valuable components stripped out of it."
 	icon_state = "advanced_salvaged"
 	item_state = "advanced_salvaged"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
-	pa_type = /obj/item/clothing/suit/armor/power_armor/advanced/x02
+	pa_type = /obj/item/clothing/suit/armor/tiered/power_armor/advanced/x02
 	combined_needed_fix_skill = 160
 
 
 // Just generic PA I guess??
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/recycled
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/recycled
 	name = "recycled power armor"
 	desc = "Taking pieces off from a wrecked power armor will at least give you thick plating, but don't expect too much of this shot up, piecemeal armor.."
 	icon_state = "recycled_power"
 	item_state = "recycled_power"
-	pa_type = /obj/item/clothing/suit/armor/power_armor/t45d
+	pa_type = /obj/item/clothing/suit/armor/tiered/power_armor/t45d
 	combined_needed_fix_skill = 160
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T3, ARMOR_MODIFIER_DOWN_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_DT_T2)
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T3, ARMOR_MODIFIER_DOWN_BULLET_T3, ARMOR_MODIFIER_DOWN_LASER_T2)
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //Mutie
@@ -292,7 +332,7 @@
 	icon_state = "mutie_knight"
 	item_state = "mutie_knight"
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/mutie
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45b/mutie
 	name = "large damaged power armor"
 	desc = "It's unclear just want kind of power armour this once was. Was it T-51? Was it APA? Maybe it was just a suit of excavator armor? There's no way of knowing. What is clear though, is that the suit cannot be repaired or restored, and it's far too large for a normal human to wear."
 	icon_state = "mutie_power_armor"
@@ -301,7 +341,7 @@
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2)
 	pa_type = null
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/mutie/ncr
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45b/mutie/ncr
 	name = "large NCR Salvaged Power Armour"
 	desc = "It's unclear just want kind of power armour this once was. Was it T-51? Was it APA? Maybe it was just a suit of excavator armor? There's no way of knowing. What is clear though, is that the suit cannot be repaired or restored to what it once was, and it's far too large for a normal human to wear. Decorated with the NCR flag."
 	icon_state = "mutie_ncr_salvaged"
@@ -316,7 +356,7 @@
 // NCR //
 /////////
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/ncr
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/ncr
 	name = "salvaged NCR power armor"
 	desc = "It's a set of T-45d power armor with a air conditioning module installed, sadly it lacks servomotors to enhance the users strength. The paintjob and the two headed bear painted onto the chestplate shows it belongs to the NCR."
 	icon = 'icons/fallout/clothing/armored_heavy.dmi'
@@ -328,26 +368,45 @@
 // Legion //
 ////////////
 
-/obj/item/clothing/suit/armor/heavy/legion
+/obj/item/clothing/suit/armor/tiered/heavy/legion
 	icon = 'icons/fallout/clothing/armored_heavy.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_heavy.dmi'
 
-/obj/item/clothing/suit/armor/heavy/legion/vetdecan
+
+// Tier 2 - 5 DT
+/obj/item/clothing/suit/armor/tiered/heavy/legion/tier2
+	custom_price = PRICE_ABOVE_EXPENSIVE
+	armor = ARMOR_VALUE_HEAVY_T2
+	tier = 2
+
+// Tier 3 - 10 DT
+/obj/item/clothing/suit/armor/tiered/heavy/legion/tier3
+	custom_price = PRICE_REALLY_EXPENSIVE
+	armor = ARMOR_VALUE_HEAVY_T3
+	tier = 3
+
+// Tier 4 - 15 DT
+/obj/item/clothing/suit/armor/tiered/heavy/legion/tier4
+	custom_price = PRICE_ULTRA_EXPENSIVE
+	armor = ARMOR_VALUE_HEAVY_T4
+	tier = 4
+
+/obj/item/clothing/suit/armor/tiered/heavy/legion/tier2/vetdecan
 	name = "legion veteran decanus armor"
 	desc = "An armor worn by veteran legionary decanus who have proven their combat prowess in many battles, strapped to it is various forms of kevlar and other bullet-proof armors."
 	icon_state = "legion_heavy"
 	item_state = "legion_heavy"
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
 
-/obj/item/clothing/suit/armor/heavy/legion/centurion //good all around
+/obj/item/clothing/suit/armor/tiered/heavy/legion/tier3/centurion
 	name = "legion centurion armor"
 	desc = "Every Centurion is issued some of the best armor available in the Legion, and adds better pieces from slain opponents over time."
 	icon_state = "legion_centurion"
 	item_state = "legion_centurion"
-	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/palacent //laser resist spec
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/palacent //laser resist spec
 	name = "legion centurion paladin-slayer armor"
 	desc = "A Centurion able to defeat a Brotherhood Paladin gets the honorific title 'Paladin-Slayer', and adds bits of the looted armor to his own."
 	icon_state = "legion_palacent"
@@ -355,7 +414,7 @@
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2)
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/legion //Legion T45d SPA from recipe
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/legion //Legion T45d SPA from recipe
 	name = "salvaged parma T-45d power armor"
 	desc = "Reforged armor made from the husk of T45d power armor. It seems faster, at the cost of some protection. It is fitting that it has the icons of the Legion, as it takes the strength of a brahmin to wear."
 	icon_state = "legion_parma"
@@ -363,7 +422,7 @@
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T1)
 
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t51b/legion //Legion T51b SPA from recipe
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier4/t51b/legion //Legion T51b SPA from recipe
 	name = "salvaged scutum T-51b power armor"
 	desc = "Reforged armor made from the husk of T51b power armor. It seems faster, at the cost of some protection. It is fitting that it has the icons of the Legion, as it takes the strength of a brahmin to wear."
 	icon_state = "legion_scutum"
@@ -371,8 +430,9 @@
 	slowdown = ARMOR_SLOWDOWN_SALVAGE * ARMOR_SLOWDOWN_LESS_T1 *ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_DOWN_BULLET_T1)
 
-/obj/item/clothing/suit/armor/heavy/legion/legate
+/obj/item/clothing/suit/armor/tiered/heavy/legion/tier4/legate
 	name = "legion legate armor"
 	desc = "Made by the most skilled blacksmiths in Arizona, the bronzed steel of this rare armor offers good protection, and the scars on its metal proves it has seen use on the field."
 	icon_state = "leg_legate"
 	item_state = "leg_legate"
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT

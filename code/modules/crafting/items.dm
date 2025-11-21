@@ -41,6 +41,14 @@
 	pixel_x = -224
 	pixel_y = -224
 
+/obj/item/armor_repair_kit
+	name = "armor repair kit"
+	w_class = WEIGHT_CLASS_NORMAL
+	icon = 'icons/fallout/objects/tools.dmi'
+	icon_state = "repairkitarmor"
+	var/repair_amount = 252
+	custom_price = PRICE_ALMOST_EXPENSIVE
+
 /obj/item/components
 	name = "crafting items"
 	icon = 'icons/fallout/objects/items.dmi'
@@ -342,7 +350,7 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	if(istype(W, /obj/item/gun/energy))
 		to_chat(usr, "You can't improve [W.name]...")
 		return
-	if(istype(W, /obj/item/clothing/suit/armor/heavy/salvaged_pa/))
+	if(istype(W, /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/))
 		parmor(W, user)
 		return
 	if(istype(W, /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa))
@@ -357,10 +365,10 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 	var/untinkerable = FALSE
 
 /obj/item/pa_kit/proc/parmor(obj/item/W, mob/user)
-	var/obj/item/clothing/suit/armor/heavy/salvaged_pa/A = W
-	if(istype(A,/obj/item/clothing/suit/armor/heavy/salvaged_pa) && A.pa_type != null)
+	var/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/A = W
+	if(istype(A,/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa) && A.pa_type != null)
 		if (((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= A.combined_needed_fix_skill) || ((user.skill_value(SKILL_REPAIR) + user.skill_value(SKILL_SCIENCE)) >= (A.combined_needed_fix_skill - 20) && (HAS_TRAIT(user, TRAIT_TECHNOPHREAK))))
-			var/obj/item/clothing/suit/armor/power_armor/pa = new A.pa_type(user.loc)
+			var/obj/item/clothing/suit/armor/tiered/power_armor/pa = new A.pa_type(user.loc)
 			pa.cell = null
 			pa.salvage_step = 4
 			qdel(A)

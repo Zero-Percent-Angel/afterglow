@@ -164,7 +164,7 @@ Head of Security
 	ears = 			/obj/item/radio/headset/headset_vault_hos/alt
 	uniform = 		/obj/item/clothing/under/f13/vault13/alternate/f1
 	shoes = 		/obj/item/clothing/shoes/jackboots
-	suit = 			/obj/item/clothing/suit/armor/medium/vest
+	suit = 			/obj/item/clothing/suit/armor/tiered/medium/vest
 	head = 			/obj/item/clothing/head/collectable/police/cos
 	belt = 			/obj/item/storage/belt/army/security
 	glasses = 		/obj/item/clothing/glasses/sunglasses
@@ -184,7 +184,7 @@ Head of Security
 
 /datum/outfit/loadout/sec_riot_suppression
 	name = "Riot Suppression"
-	suit = /obj/item/clothing/suit/armor/power_armor/vaulttec
+	suit = /obj/item/clothing/suit/armor/tiered/power_armor/vaulttec
 	head = /obj/item/clothing/head/helmet/f13/power_armor/vaulttec
 	backpack_contents = list(
 		/obj/item/book/granter/trait/pa_wear = 1
@@ -372,7 +372,7 @@ Security Officer
 	ears = 			/obj/item/radio/headset/headset_vaultsec
 	uniform = 		/obj/item/clothing/under/f13/vault13/alternate/f1
 	head = 			/obj/item/clothing/head/helmet/riot/vaultsec
-	suit =			/obj/item/clothing/suit/armor/medium/vest
+	suit =			/obj/item/clothing/suit/armor/tiered/medium/vest
 	glasses = 		/obj/item/clothing/glasses/sunglasses
 	shoes = 		/obj/item/clothing/shoes/jackboots
 	belt = 			/obj/item/storage/belt/army/security

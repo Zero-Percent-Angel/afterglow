@@ -5,6 +5,40 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	armor = ARMOR_VALUE_LIGHT
 	slowdown = HELMET_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	var/tier = 1
+	max_integrity = 400
+	custom_price = PRICE_ABOVE_EXPENSIVE
+
+/obj/item/clothing/head/helmet/f13/take_damage(damage_amount, damage_type, damage_flag, sound_effect, attack_dir, armour_penetration, atom/attacked_by)
+	if (obj_integrity > 1)
+		obj_integrity -= damage_amount
+	update_damage_state()
+
+/obj/item/clothing/head/helmet/f13/get_examine_string(mob/user, thats = FALSE)
+	return "[icon2html(src, user)] [thats? "That's ":""][colour_text(get_examine_name(user))]"
+
+/obj/item/clothing/head/helmet/f13/proc/colour_text(txt)
+	switch(tier)
+		if (2)
+			return span_green(txt)
+		if (3)
+			return span_blue(txt)
+		if (4)
+			return span_purple(txt)
+		if (5)
+			return span_red(txt)
+	return txt
+
+/obj/item/clothing/head/helmet/f13/attackby(obj/item/I, mob/user, params)
+	if (istype(I, /obj/item/armor_repair_kit))
+		var/obj/item/armor_repair_kit/kit
+		obj_integrity = min(obj_integrity + round(kit.repair_amount/tier), max_integrity)
+		if (obj_integrity == max_integrity)
+			repair(user, params)
+		else
+			to_chat(user, "You fix a little of the damage to the [src].")
+			update_damage_state()
+	. = ..()
 
 /obj/item/clothing/head/helmet/f13/raider
 	name = "yankee raider helmet"
@@ -74,7 +108,8 @@
 	item_state = "fiend"
 	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
 	flags_inv = HIDEEARS|HIDEHAIR
-	slowdown = 0.025
+	tier = 2
+	armor = ARMOR_VALUE_LIGHT_T2
 
 /obj/item/clothing/head/helmet/f13/firefighter
 	name = "firefighter helmet"
@@ -117,12 +152,59 @@
 	item_state = "wastewar"
 	flags_inv = HIDEEARS|HIDEHAIR
 
+
+// Tier 2
+
+/obj/item/clothing/head/helmet/f13/tier2
+	icon = 'icons/fallout/clothing/helmets.dmi'
+	mob_overlay_icon = null
+	icon = 'icons/obj/clothing/hats.dmi'
+	tier = 2
+	custom_price = PRICE_ABOVE_EXPENSIVE
+
+
+/obj/item/clothing/head/helmet/f13/tier2/pre_war_raider
+	name = "perwar style helmet"
+	desc = "A crude raider created immitation of a prewar combat helmet."
+	armor = ARMOR_VALUE_MEDIUM_T2
+	icon_state = "marine"
+	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
+
+/obj/item/clothing/head/helmet/f13/tier2/metal_mask
+	name = "metal mask"
+	desc = "A light weight metal mask."
+	slowdown = HELMET_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_LIGHT_T2
+	icon_state = "metal_mask"
+	toggle_message = "You pull the visor down on"
+	alt_toggle_message = "You push the visor up on"
+	can_toggle = 1
+	visor_flags_inv = HIDEFACE
+	toggle_cooldown = 0
+	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	actions_types = list(/datum/action/item_action/toggle)
+
+/obj/item/clothing/head/helmet/f13/light_combat/brotherhood/outcast
+	name = "old brotherhood helmet"
+	desc = " An old stripped down combat helmet, bearing a series of red markings."
+	icon_state = "brotherhood_helmet_outcast"
+	item_state = "brotherhood_helmet_outcast"
+	armor = ARMOR_VALUE_LIGHT_T2
+	tier = 2
+	custom_price = PRICE_EXPENSIVE
+	slowdown = HELMET_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	strip_delay = 50
+	icon = 'icons/obj/clothing/hats.dmi'
+	mob_overlay_icon = null
+
 /obj/item/clothing/head/helmet/f13/combat
 	name = "combat helmet"
 	desc = "An old military grade pre-war combat helmet."
 	icon_state = "combat_helmet"
 	item_state = "combat_helmet"
-	armor = ARMOR_VALUE_MEDIUM
+	armor = ARMOR_VALUE_MEDIUM_T3
+	tier = 3
+	custom_price = PRICE_REALLY_EXPENSIVE
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1)
 	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	strip_delay = 50
@@ -151,6 +233,9 @@
 	icon_state = "combat_helmet_mk2"
 	item_state = "combat_helmet_mk2"
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2)
+	armor = ARMOR_VALUE_MEDIUM_T4
+	tier = 4
+	custom_price = PRICE_ULTRA_EXPENSIVE
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
@@ -251,10 +336,15 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 	flash_protect = 1
+	tier = 3
+	armor = ARMOR_VALUE_MEDIUM_T3
+	custom_price = PRICE_ULTRA_EXPENSIVE
 
 /obj/item/clothing/head/helmet/f13/combat/swat
 	name = "SWAT combat helmet"
 	desc = "A prewar combat helmet issued to S.W.A.T. personnel."
+	icon = 'icons/obj/clothing/hats.dmi'
+	mob_overlay_icon = null
 	icon_state = "swatsyndie"
 	item_state = "swatsyndie"
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2)
@@ -283,22 +373,37 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_FIRE_T3)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	tier = 3
+	armor = ARMOR_VALUE_HEAVY_T3
+	custom_price = PRICE_REALLY_EXPENSIVE
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //Metal
 
-/obj/item/clothing/head/helmet/knight/f13/metal
+/obj/item/clothing/head/helmet/f13/knight
+	icon = 'icons/obj/clothing/hats.dmi'
+	mob_overlay_icon = null
+
+/obj/item/clothing/head/helmet/f13/knight/metal
 	name = "metal helmet"
 	desc = "An iron helmet forged by tribal warriors, with a unique design to protect the face from arrows and axes."
 	icon_state = "metalhelmet"
 	item_state = "metalhelmet"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_MELEE_T2)
-	custom_price = PRICE_EXPENSIVE
+	custom_price = PRICE_ABOVE_EXPENSIVE
+	tier = 2
+	armor = ARMOR_VALUE_HEAVY_T2
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 
-/obj/item/clothing/head/helmet/knight/f13/metal/reinforced
+/obj/item/clothing/head/helmet/f13/knight/metal/reinforced
 	name = "reinforced metal helmet"
 	icon_state = "metalhelmet_r"
 	item_state = "metalhelmet_r"
+	tier = 3
+	armor = ARMOR_VALUE_HEAVY_T3
+	custom_price = PRICE_REALLY_EXPENSIVE
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_MELEE_T3)
 
 //Mutie
@@ -311,7 +416,7 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_MELEE_T2)
 	species_restricted = list("exclude","Human","Ghoul")
 
-/obj/item/clothing/head/helmet/knight/f13/metal/mutie
+/obj/item/clothing/head/helmet/f13/knight/metal/mutie
 	name = "bladed mutant helmet"
 	desc = "A metal helmet forged by Super Mutants, with a large blade on the forehead."
 	icon_state = "mutie_bladed_helmet"
@@ -320,14 +425,14 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_MELEE_T1)
 	species_restricted = list("exclude","Human","Ghoul")
 
-/obj/item/clothing/head/helmet/knight/f13/metal/mutie/knight
+/obj/item/clothing/head/helmet/f13/knight/metal/mutie/knight
 	name = "mutant knight helmet"
 	desc = "A metal helmet forged by Super Mutants, reminisient of the helmets worn by the Knights of old."
 	icon_state = "mutie_knight"
 	item_state = "mutie_knight"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 
-/obj/item/clothing/head/helmet/knight/f13/metal/mutie/knight/crown
+/obj/item/clothing/head/helmet/f13/knight/metal/mutie/knight/crown
 	name = "mutant crown helmet"
 	desc = "A metal helmet forged by Super Mutants, reminisient of the helmets worn by the Knights of old."
 	icon_state = "mutie_crown"
@@ -368,6 +473,9 @@
 	icon_state = "legprime"
 	item_state = "legprime"
 	flags_inv = HIDEEARS|HIDEHAIR
+	tier = 2
+	armor = ARMOR_VALUE_LIGHT_T2
+	custom_price = PRICE_EXPENSIVE
 
 /obj/item/clothing/head/helmet/f13/legion/vet
 	name = "legion veteran helmet"
@@ -376,7 +484,9 @@
 	item_state = "legvet"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 	flags_inv = HIDEEARS|HIDEHAIR
-	armor = ARMOR_VALUE_MEDIUM
+	armor = ARMOR_VALUE_MEDIUM_T2
+	tier = 2
+	custom_price = PRICE_EXPENSIVE
 
 ////////////////
 /*RECON/SCOUT */
@@ -388,12 +498,18 @@
 	icon_state = "legion-hood"
 	item_state = "legion-hood"
 	flags_inv = HIDEEARS|HIDEHAIR
+	tier = 3
+	armor = ARMOR_VALUE_LIGHT_T3
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 /obj/item/clothing/head/helmet/f13/legion/venator
 	name = "legion venator hood"
 	desc = "A leather hood with a sturdy metal skullcap and a gold bull insignia in the front."
 	icon_state = "legion-venator"
 	item_state = "legion-venator"
+	tier = 3
+	armor = ARMOR_VALUE_LIGHT_T3
+	custom_price = PRICE_ABOVE_EXPENSIVE
 
 //////////
 /*DECANI*/
@@ -446,6 +562,9 @@
 	icon_state = "legheavy"
 	item_state = "legheavy"
 	can_toggle = 1
+	armor = ARMOR_VALUE_HEAVY_T3
+	tier = 3
+	custom_price = PRICE_REALLY_EXPENSIVE
 
 /////////////
 /*CENTURION*/
@@ -459,7 +578,9 @@
 	icon_state = "legion-centurion"
 	item_state = "legion-centurion"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	armor = ARMOR_VALUE_HEAVY
+	armor = ARMOR_VALUE_HEAVY_T4
+	tier = 4
+	custom_price = PRICE_ULTRA_EXPENSIVE
 	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/palacent
@@ -470,7 +591,7 @@
 	icon_state = "legcentpal"
 	item_state = "legcentpal"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	armor = ARMOR_VALUE_SALVAGE
+	armor = ARMOR_VALUE_SALVAGE_T4
 
 /obj/item/clothing/head/helmet/f13/legion/rangercent
 	name = "legion centurion ranger-hunter helmet"
@@ -480,7 +601,9 @@
 	icon_state = "legcentrang"
 	item_state = "legcentrang"
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
-	armor = ARMOR_VALUE_MEDIUM
+	tier = 4
+	armor = ARMOR_VALUE_MEDIUM_T4
+	custom_price = PRICE_ULTRA_EXPENSIVE
 	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //Don't give this to anything outside of event crap
@@ -494,6 +617,9 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
+	armor = ARMOR_VALUE_HEAVY_T5
+	tier = 5
+	custom_price = PRICE_ALMOST_ONE_GRAND
 
 /obj/item/clothing/head/helmet/f13/legion/orator
 	name = "legion death mask"
@@ -501,7 +627,9 @@
 	icon_state = "legion-slavemaster"
 	item_state = "legion-slavemaster"
 	flags_inv = null
-	armor = ARMOR_VALUE_LIGHT
+	armor = ARMOR_VALUE_MEDIUM_T3
+	tier = 3
+	custom_price = PRICE_REALLY_EXPENSIVE
 
 ///////
 /*NCR*/
@@ -515,7 +643,9 @@
 	item_state = "ncr_helmet"
 	unique_reskin = list("M1" = "ncr_old")
 	strip_delay = 50
-	armor = ARMOR_VALUE_MEDIUM
+	armor = ARMOR_VALUE_MEDIUM_T2
+	tier = 2
+	custom_price = PRICE_REALLY_EXPENSIVE
 	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/ncr/gambler
@@ -590,27 +720,31 @@
 //Ranger
 //Yes, nearly all of these are not helmets - but this is because they ACT as helmets for balance-purposes.
 
-/obj/item/clothing/head/f13/ncr/ranger
+/obj/item/clothing/head/helmet/f13/ncr/ranger
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	name = "NCR ranger hat"
 	desc = "a rustic, homely style cowboy hat worn by NCR rangers. Yeehaw!"
 	icon_state = "ncr_ranger"
 	item_state = "ncr_ranger"
-	armor = ARMOR_VALUE_LIGHT
+	armor = ARMOR_VALUE_LIGHT_T3
+	tier = 3
+	custom_price = PRICE_REALLY_EXPENSIVE
 	slowdown = HELMET_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
-/obj/item/clothing/head/f13/ncr/patrol
+/obj/item/clothing/head/helmet/f13/ncr/patrol
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 	name = "NCR ranger campaign hat"
 	desc = "An NCR ranger hat, standard issue amongst all but the most elite rangers."
 	icon_state = "ncr_ranger_patrol"
 	item_state = "ncr_ranger_patrol"
-	armor = ARMOR_VALUE_MEDIUM
-	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_LIGHT_T3
+	tier = 3
+	custom_price = PRICE_REALLY_EXPENSIVE
+	slowdown = HELMET_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
-/obj/item/clothing/head/f13/ncr/patrol/mutie
+/obj/item/clothing/head/helmet/f13/ncr/patrol/mutie
 	name = "NCR Mutant Ranger Hat"
 	desc = "An NCR Mutant Ranger hat, standard issue amongst all but the most elite Mutie rangers."
 	icon_state = "mutie_ncr_ranger"
@@ -622,7 +756,9 @@
 	desc = "An old combat helmet, out of use around the time of the war."
 	icon_state = "ncr_ranger_veteran"
 	item_state = "ncr_ranger_veteran"
-	armor = ARMOR_VALUE_HEAVY
+	armor = ARMOR_VALUE_HEAVY_T3
+	tier = 4
+	custom_price = PRICE_ULTRA_EXPENSIVE
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -630,11 +766,11 @@
 	dynamic_fhair_suffix = ""
 	flash_protect = 1
 	glass_colour_type = /datum/client_colour/glass_colour/red
-	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
+	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	darkness_view = 24
 	unique_reskin = null
 	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T3)
 
 /obj/item/clothing/head/helmet/f13/ncr/veteran/mutie
 	name = "NCR Mutant Veteran Ranger Combat Helmet"
@@ -648,14 +784,16 @@
 	desc = "An old combat helmet seen in the divide, repurposed for higher ranking Rangers."
 	icon_state = "elite_riot"
 	item_state = "elite_riot"
-	armor = ARMOR_VALUE_MEDIUM
+	armor = ARMOR_VALUE_MEDIUM_T4
+	tier = 4
+	custom_price = PRICE_ULTRA_EXPENSIVE
 	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1)
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
-	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
+	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	darkness_view = 24
 
 ///////
@@ -667,7 +805,7 @@
 	desc = "An improved combat helmet, bearing the symbol of the Knights."
 	icon_state = "brotherhood_helmet_knight"
 	item_state = "brotherhood_helmet_knight"
-	armor = ARMOR_VALUE_MEDIUM
+	armor = ARMOR_VALUE_MEDIUM_T3
 	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/senior
@@ -675,12 +813,16 @@
 	desc = "An improved combat helmet, bearing the symbol of a Senior Knight."
 	icon_state = "brotherhood_helmet_senior"
 	item_state = "brotherhood_helmet_senior"
-	armor = ARMOR_VALUE_HEAVY
+	armor = ARMOR_VALUE_HEAVY_T3
 	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	name = "initiate helmet"
 	desc = "An old degraded pre-war combat helmet, repainted to the colour scheme of the Brotherhood of Steel."
+	tier = 2
+	armor = ARMOR_VALUE_MEDIUM_T2
+	custom_price = PRICE_ABOVE_EXPENSIVE
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T3)
 	icon_state = "brotherhood_helmet"
 	item_state = "brotherhood_helmet"
 
@@ -690,17 +832,22 @@
 	icon_state = "brotherhood_helmet"
 	item_state = "brotherhood_helmet"
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2)
+	armor = ARMOR_VALUE_MEDIUM_T4
+	tier = 4
+	custom_price = PRICE_ULTRA_EXPENSIVE
 
 ///////////
 /*T O W N*/
 ///////////
 // Just like Rangers, a lot are not helmets.. but they are going to act akin to helmets for our purposes.
-/obj/item/clothing/head/f13/town
-	armor = ARMOR_VALUE_LIGHT
+/obj/item/clothing/head/helmet/f13/town
+	armor = ARMOR_VALUE_LIGHT_T2
+	tier = 2
+	custom_price = PRICE_ABOVE_EXPENSIVE
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 
-/obj/item/clothing/head/f13/town/deputy
+/obj/item/clothing/head/helmet/f13/town/deputy
 	name = "town lawman's hat"
 	desc = "A stylish classic hat used by lawmen."
 	icon_state = "town_deputy"
@@ -708,7 +855,7 @@
 	icon = 'icons/fallout/clothing/hats.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 
-/obj/item/clothing/head/f13/town/sheriff
+/obj/item/clothing/head/helmet/f13/town/sheriff
 	name = "town sheriff's hat"
 	desc = "A stylish classic hat used by lawmen. This one belongs to the man of big iron"
 	icon_state = "town_marshal"
@@ -719,8 +866,6 @@
 /obj/item/clothing/head/helmet/f13/combat/town
 	name = "town security helmet"
 	desc = "An old riot helmet reinforced with proper alloys and stripped of it's faceshield to be more usable outside of confines of a vault."
-	armor = ARMOR_VALUE_MEDIUM
-	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	icon_state = "town_helmet"
 	item_state = "town_helmet"
 	flags_inv = HIDEEARS
@@ -737,7 +882,9 @@
 	desc = "An old riot helmet bastardized into a what is essentially a maska without functioning internals. Belongs to the big gun of the town."
 	icon_state = "town_marshal_riot"
 	item_state = "town_marshal_riot"
-	armor = ARMOR_VALUE_HEAVY
+	armor = ARMOR_VALUE_HEAVY_T4
+	tier = 4
+	custom_price = PRICE_ULTRA_EXPENSIVE
 	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR|HIDEFACE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -748,6 +895,8 @@
 	glass_colour_type = /datum/client_colour/glass_colour/red
 	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
 	darkness_view = 24
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
 
 ////////////////////////
 // GREAT KHAN HELMETS //
@@ -759,6 +908,9 @@
 	icon_state = "khan_helmet"
 	item_state = "khan_helmet"
 	icon = 'icons/fallout/clothing/helmets.dmi'
+	armor = ARMOR_VALUE_LIGHT_T2
+	tier = 2
+	custom_price = PRICE_ABOVE_EXPENSIVE
 	flags_inv = null
 	flags_cover = null
 	strip_delay = 20
@@ -769,13 +921,17 @@
 	desc = "A helmet with traditional horns, but wasteland-chique fur trimming instead of the classic leather cover. For the Khan who wants to show off their hair."
 	icon_state = "khan_helmetpelt"
 	item_state = "khan_helmetpelt"
+	dynamic_hair_suffix = null
+	dynamic_fhair_suffix = null
 
 /obj/item/clothing/head/helmet/f13/khan/fullhelm
 	name = "Great Khan full helmet"
 	desc = " A Khan helmet modified with steel horns and a full guard comprised of red sunglass lenses and a thick metal plate to conceal the lower face."
 	icon_state = "khanhelmet"
 	item_state = "khanhelmet"
-	armor = ARMOR_VALUE_MEDIUM
+	armor = ARMOR_VALUE_MEDIUM_T3
+	tier = 3
+	custom_price = PRICE_REALLY_EXPENSIVE
 	slowdown = HELMET_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
@@ -832,6 +988,7 @@
 /obj/item/clothing/head/helmet/riot/vaultsec
 	name = "security helmet"
 	desc = "A standard issue vault security helmet, pretty robust."
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_DT_T3)
 
 
 /obj/item/clothing/head/helmet/riot/vaultsec/vc
@@ -848,11 +1005,13 @@
 	name = "salvaged power helmet"
 	desc = "It's a salvaged power armor helmet of what..? YOU CAN'T SEE ME! STOP! REPORT TO CODERS!!"
 	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT * ARMOR_SLOWDOWN_MORE_T2
-	armor = ARMOR_VALUE_SALVAGE
+	armor = ARMOR_VALUE_SALVAGE_T4
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEMASK
 	flags_cover = HEADCOVERSEYES
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
+	tier = 4
+	custom_price = PRICE_ULTRA_EXPENSIVE
 	var/pa_type = null
 	var/combined_needed_fix_skill = 140
 
@@ -868,6 +1027,8 @@
 	desc = "a raider's attempt to duplicate a power armor helmet. The result is a fuzed mass of metal and ceramic that nonetheless provides protection"
 	icon_state = "raiderpa_helm"
 	item_state = "raiderpa_helm"
+	tier = 3
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_DT_T3)
 
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/ncr
 	name = "ncr salvaged T-45d helmet"
@@ -887,7 +1048,8 @@
 	desc = "A salvaged T-45d powered armor, with the servos removed and a feathered headdress. Certain bits of plating have been stripped out to retain more freedom of movement."
 	icon_state = "tribal"
 	item_state = "tribal"
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2)
+	tier = 3
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_DT_T3)
 	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
 
@@ -928,6 +1090,9 @@
 	desc = "It's a salvaged X-02 power armor helmet."
 	icon_state = "advanced"
 	item_state = "advanced"
+	tier = 5
+	armor = ARMOR_VALUE_SALVAGE_T5
+	custom_price = PRICE_ALMOST_ONE_GRAND
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T3)
 	pa_type = /obj/item/clothing/head/helmet/f13/power_armor/x02helmet
 
@@ -986,7 +1151,8 @@
 	var/obj/item/salvaged_type = null
 	/// Used to track next tool required to salvage the suit
 	var/salvage_step = 0
-	armor = ARMOR_VALUE_PA
+	armor = ARMOR_VALUE_SALVAGE_T4
+	tier = 4
 	custom_price = PRICE_ULTRA_EXPENSIVE
 
 /obj/item/clothing/head/helmet/f13/power_armor/ComponentInitialize()
@@ -1114,6 +1280,9 @@
 	desc = "It's a T-51b power helmet, typically used by the Brotherhood. It looks somewhat charming."
 	icon_state = "t51bhelmet0"
 	item_state = "t51bhelmet0"
+	tier = 5
+	armor = ARMOR_VALUE_SALVAGE_T5
+	custom_price = PRICE_ALMOST_ONE_GRAND
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b
@@ -1141,6 +1310,9 @@
 	desc = "It's an advanced power armor MK1 helmet, typically used by the Enclave. It looks somewhat threatening."
 	icon_state = "advanced"
 	item_state = "advanced"
+	tier = 5
+	armor = ARMOR_VALUE_SALVAGE_T5
+	custom_price = PRICE_ALMOST_ONE_GRAND
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_UP_BOMB_T1, ARMOR_MODIFIER_UP_DT_T1)
 
 
@@ -1150,6 +1322,9 @@
 	desc = "The Enclave Mark II Powered Combat Armor helmet."
 	icon_state = "superadvanced"
 	item_state = "superadvanced"
+	tier = 5
+	armor = ARMOR_VALUE_SALVAGE_T5
+	custom_price = PRICE_ALMOST_ONE_GRAND
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T3, ARMOR_MODIFIER_UP_ENV_T3, ARMOR_MODIFIER_UP_BOMB_T1, ARMOR_MODIFIER_UP_DT_T1)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/x02
@@ -1164,6 +1339,10 @@
 	item_state = "tribal"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_MELEE_T2, ARMOR_MODIFIER_DOWN_BULLET_T2, ARMOR_MODIFIER_DOWN_LASER_T2)
+	armor = ARMOR_VALUE_SALVAGE_T3
+	tier = 3
+	custom_price = PRICE_REALLY_EXPENSIVE
+	slowdown = HELMET_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR
 	strip_delay = 30
 	dynamic_hair_suffix = ""

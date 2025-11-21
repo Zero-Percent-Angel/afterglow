@@ -237,7 +237,7 @@
 					/obj/item/clothing/under/costume/maid = 5,
 					/obj/item/clothing/under/janimaid = 5,
 					/obj/item/clothing/under/rank/civilian/janitor/maid = 5,
-					/obj/item/clothing/suit/armor/light/duster/brahmin = 3,
+					/obj/item/clothing/suit/armor/tiered/light/duster/brahmin = 3,
 					/obj/item/clothing/head/helmet/f13/brahmincowboyhat = 3,
 					/obj/item/restraints/handcuffs/fake/kinky = 5,
 					/obj/item/clothing/mask/muzzle = 5,

@@ -294,7 +294,7 @@ Practitioner
 
 /datum/outfit/loadout/physician
 	name =	"Emergency Physician"
-	suit =	/obj/item/clothing/suit/toggle/labcoat
+	suit =	/obj/item/clothing/suit/armor/tiered/medium/vest/trench
 	mask =	/obj/item/clothing/mask/surgical
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
 	backpack_contents = list(
@@ -316,7 +316,7 @@ Practitioner
 /datum/outfit/loadout/paramedic
 	name =	"Paramedic"
 	head =	/obj/item/clothing/head/soft/emt
-	suit =	/obj/item/clothing/suit/toggle/labcoat/emt
+	suit =	/obj/item/clothing/suit/armor/tiered/medium/vest/trench
 	belt =	/obj/item/storage/belt/medical
 	backpack_contents = list(
 		/obj/item/reagent_containers/medspray/synthflesh = 2,
@@ -386,7 +386,7 @@ Follower Volunteer
 
 /datum/outfit/loadout/volunteer_emt
 	name = "EMT"
-	suit = /obj/item/clothing/suit/toggle/labcoat/emt
+	suit = /obj/item/clothing/suit/armor/tiered/medium/vest/trench
 	head = /obj/item/clothing/head/soft/emt
 	backpack_contents = list(
 		/obj/item/healthanalyzer = 1,
@@ -458,8 +458,8 @@ Follower Volunteer
 	belt = /obj/item/kit_spawner/follower/guard
 	id =	/obj/item/card/id/silver
 	uniform =	/obj/item/clothing/under/f13/bodyguard
-	suit =	/obj/item/clothing/suit/armor/medium/vest/bulletproof/big
-	head =	/obj/item/clothing/head/helmet/riot/vaultsec
+	suit =	/obj/item/clothing/suit/armor/tiered/medium/vest/trench
+	head =	/obj/item/clothing/head/helmet/riot
 	glasses =	/obj/item/clothing/glasses/sunglasses
 	shoes =	/obj/item/clothing/shoes/combat
 	l_pocket =	/obj/item/storage/belt/shoulderholster
