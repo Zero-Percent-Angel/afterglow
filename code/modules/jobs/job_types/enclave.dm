@@ -73,7 +73,7 @@
 
 	head = /obj/item/clothing/head/f13/enclave
 	uniform = /obj/item/clothing/under/f13/enclave/officer
-	suit = /obj/item/clothing/suit/armor/medium/duster/enclave
+	suit = /obj/item/clothing/suit/armor/tiered/medium/duster/enclave
 	accessory = /obj/item/clothing/accessory/ncr/LT1
 	id = /obj/item/card/id/dogtag/enclave/officer
 	ears = /obj/item/radio/headset/headset_enclave/command
@@ -138,7 +138,7 @@
 	name = "Enclave Gunnery Sergeant"
 	jobtype = /datum/job/enclave/f13gysergeant
 	head = /obj/item/clothing/head/helmet/f13/power_armor/x02helmet
-	suit = /obj/item/clothing/suit/armor/power_armor/advanced/x02
+	suit = /obj/item/clothing/suit/armor/tiered/power_armor/advanced/x02
 	accessory = /obj/item/clothing/accessory/enclave/master_sergeant
 
 	backpack_contents = list(
@@ -200,7 +200,7 @@
 /datum/outfit/job/enclave/peacekeeper/enclavesgt
 	name = "Enclave Sergeant"
 	jobtype = /datum/job/enclave/enclavesgt
-	suit = /obj/item/clothing/suit/armor/medium/combat/mk2/remnant
+	suit = /obj/item/clothing/suit/armor/tiered/medium/combat/mk2/remnant
 	head = /obj/item/clothing/head/helmet/f13/combat/mk2/remnant
 	accessory = /obj/item/clothing/accessory/enclave/sergeant
 
@@ -253,7 +253,7 @@
 /datum/outfit/job/enclave/peacekeeper/f13specialist
 	name = "Enclave Specialist"
 	jobtype = /datum/job/enclave/f13specialist
-	suit = /obj/item/clothing/suit/armor/heavy/vest/bulletproof
+	suit = /obj/item/clothing/suit/armor/tiered/heavy/tier3/vest/bulletproof
 	suit_store = /obj/item/gun/ballistic/automatic/smg/mp5
 	accessory = /obj/item/clothing/accessory/enclave/specialist
 
@@ -304,7 +304,7 @@
 	name = "Enclave Private"
 	jobtype = /datum/job/enclave/enclavespy
 	head = /obj/item/clothing/head/helmet/f13/combat/swat
-	suit = /obj/item/clothing/suit/armor/medium/combat/swat
+	suit = /obj/item/clothing/suit/armor/tiered/medium/combat/swat
 	suit_store =  /obj/item/gun/ballistic/automatic/assault_carbine/ak112
 	accessory = /obj/item/clothing/accessory/enclave
 
@@ -347,7 +347,7 @@
 /datum/outfit/loadout/private
 	name = "Private"
 	backpack_contents = list(/obj/item/clothing/accessory/enclave = 1,
-							/obj/item/clothing/suit/armor/medium/combat/swat = 1,
+							/obj/item/clothing/suit/armor/tiered/medium/combat/swat = 1,
 							/obj/item/clothing/head/helmet/f13/combat/swat = 1,
 							/obj/item/gun/ballistic/automatic/assault_carbine = 1,
 							/obj/item/ammo_box/magazine/m5mm = 2,
@@ -357,7 +357,7 @@
 	name = "Medical Specialist"
 	backpack_contents = list(/obj/item/clothing/accessory/enclave/specialist = 1,
 							/obj/item/gun/medbeam = 1,
-							/obj/item/clothing/suit/armor/heavy/vest/bulletproof = 1,
+							/obj/item/clothing/suit/armor/tiered/heavy/tier3/vest/bulletproof = 1,
 							/obj/item/gun/ballistic/automatic/smg/mp5 = 1,
 							/obj/item/ammo_box/magazine/uzim9mm = 2,
 							)
@@ -365,7 +365,7 @@
 /datum/outfit/loadout/sergeant
 	name = "Sergeant"
 	backpack_contents = list(/obj/item/clothing/accessory/enclave/sergeant = 1,
-							/obj/item/clothing/suit/armor/power_armor/advanced/x02 = 1,
+							/obj/item/clothing/suit/armor/tiered/power_armor/advanced/x02 = 1,
 							/obj/item/clothing/head/helmet/f13/power_armor/x02helmet = 1,
 							/obj/item/gun/ballistic/automatic/assault_rifle = 1,
 							/obj/item/ammo_box/magazine/m556/rifle = 3,
@@ -376,7 +376,7 @@
 	backpack_contents = list(/obj/item/clothing/accessory/enclave/lieutenant = 1,
 							/obj/item/clothing/under/f13/enclave/officer = 1,
 							/obj/item/clothing/head/f13/enclave = 1,
-							/obj/item/clothing/suit/armor/medium/duster/enclave = 1,
+							/obj/item/clothing/suit/armor/tiered/medium/duster/enclave = 1,
 							/obj/item/gun/ballistic/automatic/fnfal = 1,
 							/obj/item/ammo_box/magazine/m762 = 2,
 							/obj/item/stock_parts/cell/ammo/mfc = 2,

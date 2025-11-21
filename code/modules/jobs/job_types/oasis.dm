@@ -86,8 +86,8 @@ Mayor
 	r_pocket = /obj/item/flashlight/seclite
 	shoes = /obj/item/clothing/shoes/f13/tan
 	uniform = /obj/item/clothing/under/f13/gentlesuit
-	suit = /obj/item/clothing/suit/armor/light/duster/town/coat
-	head = /obj/item/clothing/head/f13/town/mayor
+	suit = /obj/item/clothing/suit/armor/tiered/light/duster/town/coat
+	head = /obj/item/clothing/head/helmet/f13/town/mayor
 	backpack_contents = list(
 		/obj/item/storage/pill_bottle/chem_tin/radx,
 		/obj/item/storage/box/citizenship_permits = 1,
@@ -229,7 +229,7 @@ Mayor
 	)
 
 /datum/outfit/smutant/town/police
-	suit = /obj/item/clothing/suit/armor/medium/duster/mutie
+	suit = /obj/item/clothing/suit/armor/tiered/medium/duster/mutie
 	uniform = /obj/item/clothing/under/f13/mutie/townie/deputy
 	shoes = /obj/item/clothing/shoes/f13/mutie/boots
 	gloves = /obj/item/clothing/gloves/f13/mutie/sign
@@ -257,8 +257,8 @@ Mayor
 
 /datum/outfit/loadout/thelaw
 	name = "The Law Man"
-	suit = /obj/item/clothing/suit/armor/medium/town/riot
-	head = /obj/item/clothing/head/f13/town/sheriff
+	suit = /obj/item/clothing/suit/armor/tiered/medium/town/riot
+	head = /obj/item/clothing/head/helmet/f13/town/sheriff
 	uniform = /obj/item/clothing/under/f13/police/formal
 	neck = /obj/item/storage/belt/shoulderholster/ranger45
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/brush
@@ -272,7 +272,7 @@ Mayor
 /datum/outfit/loadout/thechief
 	name = "The Chief"
 	uniform = /obj/item/clothing/under/f13/police/chief
-	suit = /obj/item/clothing/suit/armor/medium/town/riot
+	suit = /obj/item/clothing/suit/armor/tiered/medium/town/riot
 	head = /obj/item/clothing/head/helmet/f13/combat/town
 	neck = /obj/item/storage/belt/shoulderholster/ranger45
 	shoes = /obj/item/clothing/shoes/combat
@@ -284,7 +284,7 @@ Mayor
 /datum/outfit/loadout/thegangster
 	name = "The Gangster"
 	uniform = /obj/item/clothing/under/f13/police/chief
-	suit = /obj/item/clothing/suit/armor/medium/town/riot
+	suit = /obj/item/clothing/suit/armor/tiered/medium/town/riot
 	head = /obj/item/clothing/head/helmet/f13/combat/town
 	neck = /obj/item/storage/belt/shoulderholster/ranger45
 	suit_store = /obj/item/gun/ballistic/automatic/smg/tommygun
@@ -348,8 +348,8 @@ Mayor
 
 /datum/outfit/loadout/frontierjustice
 	name = "Frontier Justice"
-	suit = /obj/item/clothing/suit/armor/medium/duster/deputy
-	head = /obj/item/clothing/head/f13/town/deputy
+	suit = /obj/item/clothing/suit/armor/tiered/medium/duster/deputy
+	head = /obj/item/clothing/head/helmet/f13/town/deputy
 	neck = /obj/item/storage/belt/shoulderholster
 	backpack_contents = list(
 		/obj/item/ammo_box/m44 = 2,
@@ -360,8 +360,8 @@ Mayor
 /datum/outfit/loadout/police
 	name = "Ripley PD"
 	uniform = /obj/item/clothing/under/f13/police/officer
-	suit = /obj/item/clothing/suit/armor/medium/vest/bulletproof
-	head = /obj/item/clothing/head/f13/town/deputy
+	suit = /obj/item/clothing/suit/armor/tiered/medium/vest/bulletproof
+	head = /obj/item/clothing/head/helmet/f13/town/deputy
 	belt = /obj/item/storage/belt/legholster
 	suit_store = /obj/item/gun/ballistic/shotgun/police
 	shoes = /obj/item/clothing/shoes/jackboots
@@ -376,7 +376,7 @@ Mayor
 /datum/outfit/loadout/mercenary
 	name = "Hired Gun"
 	uniform = /obj/item/clothing/under/f13/police/swat
-	suit = /obj/item/clothing/suit/armor/medium/vest/bulletproof
+	suit = /obj/item/clothing/suit/armor/tiered/medium/vest/bulletproof
 	head = /obj/item/clothing/head/helmet/alt
 	mask = /obj/item/clothing/mask/balaclava
 	gloves = /obj/item/clothing/gloves/f13/military
@@ -474,7 +474,7 @@ Mayor
 
 /datum/outfit/loadout/miner
 	name = "Miner"
-	suit = /obj/item/clothing/suit/armor/light/leather/rig
+	suit = /obj/item/clothing/suit/armor/tiered/light/leather/rig
 	uniform = /obj/item/clothing/under/f13/lumberjack
 	head = /obj/item/clothing/head/hardhat
 	belt = /obj/item/storage/belt/utility/mining/alt
@@ -606,7 +606,7 @@ Mayor
 	name = "Rugged"
 	head = /obj/item/clothing/head/helmet/f13/brahmincowboyhat
 	uniform = /obj/item/clothing/under/f13/cowboyb
-	suit = /obj/item/clothing/suit/armor/light/duster/brahmin
+	suit = /obj/item/clothing/suit/armor/tiered/light/duster/brahmin
 	gloves = /obj/item/clothing/gloves/color/brown
 	shoes = /obj/item/clothing/shoes/f13/brownie
 
@@ -615,7 +615,7 @@ Mayor
 	head = /obj/item/clothing/head/bowler
 	mask = /obj/item/clothing/mask/fakemoustache
 	uniform = /obj/item/clothing/under/f13/westender
-	suit = /obj/item/clothing/suit/armor/light/duster/town/bartender
+	suit = /obj/item/clothing/suit/armor/tiered/light/duster/town/bartender
 	gloves = /obj/item/clothing/gloves/fingerless
 	shoes = /obj/item/clothing/shoes/f13/fancy
 
@@ -744,7 +744,7 @@ Mayor
 /datum/outfit/loadout/outdoorsman
 	name = "Outdoorsman"
 	head = /obj/item/clothing/head/soft/grey
-	suit = /obj/item/clothing/suit/armor/light/leather/tanvest
+	suit = /obj/item/clothing/suit/armor/tiered/light/leather/tanvest
 	suit_store = /obj/item/gun/ballistic/rifle/mag/sportcarbine
 	belt = /obj/item/melee/onehanded/knife/bowie
 	uniform = /obj/item/clothing/under/f13/cowboyt

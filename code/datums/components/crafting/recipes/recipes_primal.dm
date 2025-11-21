@@ -251,11 +251,11 @@
 	name = "Tribal Salvaged Power Armor"
 	time = 120
 	reqs = list(
-			/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d = 1,
+			/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d = 1,
 			/obj/item/stack/sheet/sinew = 2,
 			/obj/item/stack/sheet/bone = 4
 			)
-	result = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/tribal
+	result = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/tribal
 	category = CAT_TRIBAL
 	always_available = FALSE
 
@@ -275,11 +275,11 @@
 	name = "Tribal Combat Armor"
 	time = 40
 	reqs = list(
-			/obj/item/clothing/suit/armor/medium/combat = 1,
+			/obj/item/clothing/suit/armor/tiered/medium/combat = 1,
 			/obj/item/stack/sheet/sinew = 1,
 			/obj/item/stack/sheet/bone = 2
 			)
-	result = /obj/item/clothing/suit/armor/medium/combat/tribal
+	result = /obj/item/clothing/suit/armor/tiered/medium/combat/tribal
 	category = CAT_TRIBAL
 	always_available = FALSE
 
@@ -521,7 +521,7 @@
 
 /datum/crafting_recipe/tribalwar/heavytribe
 	name = "Heavy Tribal Plates"
-	result = /obj/item/clothing/suit/armor/heavy/tribal
+	result = /obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal
 	time = 600
 	reqs = list(/obj/item/stack/sheet/metal = 20,
 				/obj/item/stack/sheet/cloth = 5)
@@ -542,7 +542,7 @@
 
 /datum/crafting_recipe/tribalwar/chitinarmor
 	name = "Insect Chitin Armor"
-	result = /obj/item/clothing/suit/armor/medium/tribal/chitinarmor
+	result = /obj/item/clothing/suit/armor/tiered/medium/tribal/chitinarmor
 	time = 30
 	reqs = list(/obj/item/stack/sheet/animalhide/chitin = 12,
 				/obj/item/stack/sheet/sinew = 4,

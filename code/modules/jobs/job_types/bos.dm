@@ -106,7 +106,7 @@ Elder
 	jobtype = /datum/job/bos/f13elder
 	pa_wear = TRUE
 	belt = /obj/item/kit_spawner/bos/boss
-	suit =	/obj/item/clothing/suit/armor/light/duster/bos/scribe/elder
+	suit =	/obj/item/clothing/suit/armor/tiered/light/duster/bos/scribe/elder
 	glasses =	/obj/item/clothing/glasses/night
 	accessory =	/obj/item/clothing/accessory/bos/elder
 //	suit_store =	/obj/item/gun/energy/laser/laer
@@ -184,7 +184,7 @@ Head Paladin
 /datum/outfit/job/bos/f13sentinel
 	name = "Head Paladin"
 	jobtype = /datum/job/bos/f13sentinel
-	suit =			/obj/item/clothing/suit/armor/power_armor/t51b
+	suit =			/obj/item/clothing/suit/armor/tiered/power_armor/t51b
 	head =			/obj/item/clothing/head/helmet/f13/power_armor/t51b
 	uniform = 		/obj/item/clothing/under/f13/recon
 	accessory = 	/obj/item/clothing/accessory/bos/sentinel
@@ -286,11 +286,11 @@ Head Scribe
 	name = "Head Scribe"
 	jobtype = /datum/job/bos/f13headscribe
 	uniform = 		/obj/item/clothing/under/syndicate/brotherhood
-	suit =			/obj/item/clothing/suit/armor/power_armor/t51b
+	suit =			/obj/item/clothing/suit/armor/tiered/power_armor/t51b
 	head =			/obj/item/clothing/head/helmet/f13/power_armor/t51b
 	accessory = 	/obj/item/clothing/accessory/bos/headscribe
 	glasses =       /obj/item/clothing/glasses/sunglasses
-	suit = 			/obj/item/clothing/suit/armor/light/duster/bos/scribe/headscribe
+	suit = 			/obj/item/clothing/suit/armor/tiered/light/duster/bos/scribe/headscribe
 	belt = 			/obj/item/storage/belt/utility/full/engi
 	id = 			/obj/item/card/id/dogtag
 	backpack_contents = list(
@@ -464,7 +464,7 @@ Senior Paladin
 /datum/outfit/job/bos/f13seniorpaladin
 	name =	"Senior Paladin"
 	jobtype =	/datum/job/bos/f13seniorpaladin
-	suit =	/obj/item/clothing/suit/armor/power_armor/t45d
+	suit =	/obj/item/clothing/suit/armor/tiered/power_armor/t45d
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	accessory =	/obj/item/clothing/accessory/bos/seniorpaladin
 	uniform =	/obj/item/clothing/under/f13/recon
@@ -557,7 +557,7 @@ Paladin
 /datum/outfit/job/bos/f13paladin
 	name =	"Paladin"
 	jobtype =	/datum/job/bos/f13paladin
-	suit =	/obj/item/clothing/suit/armor/power_armor/t45d
+	suit =	/obj/item/clothing/suit/armor/tiered/power_armor/t45d
 	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =	/obj/item/clothing/mask/gas/sechailer
@@ -670,7 +670,7 @@ Senior Scribe
 	//belt = /obj/item/kit_spawner/bos/scientist
 	belt =	/obj/item/storage/belt/utility/full/engi
 	accessory =	/obj/item/clothing/accessory/bos/seniorscribe
-	suit =	/obj/item/clothing/suit/armor/light/duster/bos/scribe/seniorscribe
+	suit =	/obj/item/clothing/suit/armor/tiered/light/duster/bos/scribe/seniorscribe
 	id =	/obj/item/card/id/dogtag
 	glasses =	/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
@@ -763,7 +763,7 @@ Scribe
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	shoes = 		/obj/item/clothing/shoes/combat
 	//belt = /obj/item/kit_spawner/bos/scientist
-	suit = 			/obj/item/clothing/suit/armor/light/duster/bos/scribe
+	suit = 			/obj/item/clothing/suit/armor/tiered/light/duster/bos/scribe
 	id = 			/obj/item/card/id/dogtag
 	glasses =		/obj/item/clothing/glasses/sunglasses/big
 	backpack_contents = list(
@@ -885,7 +885,7 @@ Senior Knight
 /datum/outfit/job/bos/f13seniorknight
 	name = "Senior Knight"
 	jobtype = /datum/job/bos/f13seniorknight
-	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood/senior
+	suit = 			/obj/item/clothing/suit/armor/tiered/medium/combat/brotherhood/senior
 	accessory = 	/obj/item/clothing/accessory/bos/seniorknight
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	glasses =       /obj/item/clothing/glasses/night
@@ -992,7 +992,7 @@ Knight
 /datum/outfit/job/bos/f13knight
 	name = "Knight"
 	jobtype = /datum/job/bos/f13knight
-	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood
+	suit = 			/obj/item/clothing/suit/armor/tiered/medium/combat/brotherhood
 	uniform =		/obj/item/clothing/under/syndicate/brotherhood
 	mask =			/obj/item/clothing/mask/gas/sechailer
 	belt = /obj/item/storage/belt/legholster
@@ -1249,7 +1249,7 @@ Initiate
 /datum/outfit/loadout/initiatek
 	name = "Knight-Aspirant"
 	belt = 			/obj/item/storage/belt/army/assault
-	suit = 			/obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate
+	suit = 			/obj/item/clothing/suit/armor/tiered/medium/combat/brotherhood/initiate
 	head = 			/obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/pistol=1,

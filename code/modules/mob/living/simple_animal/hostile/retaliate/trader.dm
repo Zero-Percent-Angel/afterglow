@@ -53,6 +53,7 @@
 
 /mob/living/simple_animal/hostile/retaliate/talker/trader/proc/restock()
 	var/list/random_list = list()
+	random_list.Add(/obj/item/reagent_containers/hypospray/medipen/stimpak, /obj/item/reagent_containers/pill/healingpowder)
 	for(var/iii in 1 to stock_amount) //go back up to understand why we populate prizes
 		if (iii < 2)
 			random_list += pick(GLOB.loot_prewar_clothing)
@@ -63,23 +64,24 @@
 		else if (iii < 7)
 			random_list += pick(GLOB.loot_medical_medicine)
 		else if (iii < 12)
-			random_list += pick(pick(list(GLOB.loot_t1_armor, GLOB.loot_t2_armor, GLOB.loot_t3_armor, GLOB.loot_t4_armor)))
+			random_list += pick(pick(list(GLOB.loot_t1_armor, GLOB.loot_t2_armor, GLOB.loot_t3_armor)))
 		else if (iii < 15)
 			random_list += pick(pick(list(GLOB.loot_t1_melee, GLOB.loot_t2_melee, GLOB.loot_t3_melee, GLOB.loot_t4_melee)))
 		else
 			random_list += pick(pick(list(GLOB.loot_t1_range, GLOB.loot_t2_range, GLOB.loot_t3_range, GLOB.loot_t4_range)))
 	random_list.Add(GLOB.loot_t2_ammo)
 	random_list.Add(/obj/item/ammo_box/shotgun/buck)
+	random_list.Add(/obj/item/armor_repair_kit)
 
 	//our special something for high speech individuals or for expert barter skill
 	var/list/hidden_list = list()
-	hidden_list += pick(GLOB.loot_t5_armor)
+	hidden_list += pick(pick(list(GLOB.loot_t4_armor, GLOB.loot_t5_armor)))
 	hidden_list += pick(GLOB.loot_t5_melee)
 	hidden_list += pick(GLOB.loot_t5_range)
 
 	// populate our stock
 	for(var/typepath in random_list)
-		var/amount = 2
+		var/amount = 4
 
 		var/atom/temp = typepath
 		var/datum/data/vending_product/R = new /datum/data/vending_product()

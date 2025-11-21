@@ -168,7 +168,7 @@
 	name = "Lavaland Syndicate Comms Agent"
 	r_hand = /obj/item/melee/transforming/plasmacutter/sword/saber
 	mask = /obj/item/clothing/mask/chameleon/gps
-	suit = /obj/item/clothing/suit/armor/medium/vest
+	suit = /obj/item/clothing/suit/armor/tiered/medium/vest
 
 /obj/item/clothing/mask/chameleon/gps/Initialize()
 	. = ..()

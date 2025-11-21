@@ -58,7 +58,7 @@
 		if(istype(H.wear_suit, /obj/item/clothing/suit/armor/f13/power_armor))//Standard PA.
 			to_chat(user, "The [name] will not move, because you are too heavy.")
 			return
-		if(istype(H.wear_suit, /obj/item/clothing/suit/armor/heavy/salvaged_pa) || istype(H.wear_suit, /obj/item/clothing/suit/armor/power_armor))//Salvaged PA and misc.
+		if(istype(H.wear_suit, /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa) || istype(H.wear_suit, /obj/item/clothing/suit/armor/tiered/power_armor))//Salvaged PA and misc.
 			to_chat(user, "The [name] will not move, because you are too heavy.")
 			return
 		if(H.pulling)

@@ -101,7 +101,7 @@
 	contains = list(/obj/item/melee/onehanded/knife/hunting,
 					/obj/item/melee/onehanded/knife/hunting,
 					/obj/item/melee/onehanded/knife/hunting)
-					
+
 /* /datum/supply_pack/security/dueling_stam
 	name = "Dueling Pistols"
 	desc = "Resolve all your quarrels with some nonlethal fun."
@@ -109,7 +109,7 @@
 	contains = list(/obj/item/storage/lockbox/dueling/hugbox/stamina)
 	crate_name = "dueling pistols"
 
-/datum/supply_pack/security/dueling_stam/generate() 
+/datum/supply_pack/security/dueling_stam/generate()
 	. = ..()
 	for(var/i in 1 to 3)
 		new /obj/item/storage/lockbox/dueling/hugbox/stamina(.)
@@ -148,8 +148,8 @@
 					/obj/item/clothing/shoes/combat,
 					/obj/item/clothing/head/ushanka,
 					/obj/item/clothing/head/ushanka,
-					/obj/item/clothing/suit/armor/heavy/vest/bulletproof,
-					/obj/item/clothing/suit/armor/heavy/vest/bulletproof,
+					/obj/item/clothing/suit/armor/tiered/heavy/tier3/vest/bulletproof,
+					/obj/item/clothing/suit/armor/tiered/heavy/tier3/vest/bulletproof,
 					/obj/item/clothing/head/helmet/alt,
 					/obj/item/clothing/head/helmet/alt,
 					/obj/item/clothing/gloves/tackler/combat/insulated,
@@ -190,10 +190,10 @@
 					/obj/item/clothing/head/beret/sec/navyofficer,
 					/obj/item/clothing/head/beret/sec/navyofficer,
 					/obj/item/clothing/under/rank/security/warden/formal,
-					/obj/item/clothing/suit/armor/medium/vest/warden/navyblue,
+					/obj/item/clothing/suit/armor/tiered/medium/vest/warden/navyblue,
 					/obj/item/clothing/head/beret/sec/navywarden,
 					/obj/item/clothing/under/rank/security/head_of_security/formal,
-					/obj/item/clothing/suit/armor/medium/duster/navyblue,
+					/obj/item/clothing/suit/armor/tiered/medium/duster/navyblue,
 					/obj/item/clothing/head/beret/sec/navyhos)
 	crate_name = "security clothing crate"
 	can_private_buy = TRUE

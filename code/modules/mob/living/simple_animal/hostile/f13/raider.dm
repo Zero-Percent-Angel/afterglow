@@ -46,7 +46,7 @@
 /obj/effect/mob_spawn/human/corpse/raider
 	name = "Raider"
 	uniform = /obj/item/clothing/under/f13/rag
-	suit = /obj/item/clothing/suit/armor/medium/raider/iconoclast
+	suit = /obj/item/clothing/suit/armor/tiered/medium/raider/iconoclast
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/f13/leather
 	head = /obj/item/clothing/head/helmet/f13/firefighter
@@ -194,7 +194,7 @@
 	ranged_cooldown_time = 2 SECONDS
 	auto_fire_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	projectiletype = /obj/item/projectile/bullet/c45/simple
-	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/item/clothing/suit/armor/medium/combat/mk2/raider, /obj/item/clothing/under/f13/ravenharness, /obj/item/stack/f13Cash/random/high)
+	loot = list(/obj/item/gun/ballistic/automatic/smg/greasegun, /obj/item/clothing/head/helmet/f13/combat/mk2/raider, /obj/item/clothing/suit/armor/tiered/medium/combat/mk2/raider, /obj/item/clothing/under/f13/ravenharness, /obj/item/stack/f13Cash/random/high)
 	footstep_type = FOOTSTEP_MOB_SHOE
 	move_to_delay = 4.0 //faster than average, but not a lot
 	retreat_distance = 4 //mob retreats 1 tile when in min distance
@@ -352,7 +352,7 @@
 	auto_fire_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	projectiletype = /obj/item/projectile/bullet/c45/simple
 	projectilesound = 'sound/weapons/gunshot.ogg'
-	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911/custom, /obj/item/clothing/suit/armor/heavy/metal/reinforced, /obj/item/clothing/head/helmet/knight/f13/metal, /obj/item/stack/f13Cash/random/med)
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911/custom, /obj/item/clothing/suit/armor/tiered/heavy/tier3/metal/reinforced, /obj/item/clothing/head/helmet/f13/knight/metal, /obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_SHOE
 	projectile_sound_properties = list(
 		SP_VARY(FALSE),
@@ -392,7 +392,7 @@
 	auto_fire_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	projectiletype = /obj/item/projectile/bullet/a762/sport/simple
 	projectilesound = 'sound/f13weapons/magnum_fire.ogg'
-	loot = list(/obj/item/gun/ballistic/revolver/thatgun, /obj/item/clothing/suit/armor/medium/combat/rusted, /obj/item/clothing/head/helmet/f13/combat/raider, /obj/item/stack/f13Cash/random/med)
+	loot = list(/obj/item/gun/ballistic/revolver/thatgun, /obj/item/clothing/suit/armor/tiered/medium/combat/rusted, /obj/item/clothing/head/helmet/f13/combat/raider, /obj/item/stack/f13Cash/random/med)
 	footstep_type = FOOTSTEP_MOB_SHOE
 	projectile_sound_properties = list(
 		SP_VARY(FALSE),
@@ -407,7 +407,7 @@
 
 /obj/effect/mob_spawn/human/corpse/raider/ranged/biker
 	uniform = /obj/item/clothing/under/f13/ncrcf
-	suit = /obj/item/clothing/suit/armor/medium/combat/rusted
+	suit = /obj/item/clothing/suit/armor/tiered/medium/combat/rusted
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
 	head = /obj/item/clothing/head/helmet/f13/combat/raider
@@ -433,7 +433,7 @@
 
 /obj/effect/mob_spawn/human/corpse/raider/baseball
 	uniform = /obj/item/clothing/under/f13/mechanic
-	suit = /obj/item/clothing/suit/armor/medium/raider/yankee
+	suit = /obj/item/clothing/suit/armor/tiered/medium/raider/yankee
 	shoes = /obj/item/clothing/shoes/f13/explorer
 	gloves = /obj/item/clothing/gloves/f13/leather/fingerless
 	head = /obj/item/clothing/head/helmet/f13/raider/yankee
@@ -455,7 +455,7 @@
 
 /obj/effect/mob_spawn/human/corpse/raider/tribal
 	uniform = /obj/item/clothing/under/f13/raiderrags
-	suit = /obj/item/clothing/suit/armor/light/tribal
+	suit = /obj/item/clothing/suit/armor/tiered/light/tribal
 	shoes = /obj/item/clothing/shoes/f13/rag
 	mask = /obj/item/clothing/mask/facewrap
 
@@ -488,7 +488,7 @@
 	maxHealth = 80
 	health = 80
 	extra_projectiles = 2
-	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911/custom, /obj/item/clothing/suit/armor/heavy/metal/sulphite, /obj/item/clothing/head/helmet/f13/sulphitehelm, /obj/item/stack/f13Cash/random/med)
+	loot = list(/obj/item/gun/ballistic/automatic/pistol/m1911/custom, /obj/item/clothing/suit/armor/tiered/heavy/tier3/metal/sulphite, /obj/item/clothing/head/helmet/f13/sulphitehelm, /obj/item/stack/f13Cash/random/med)
 
 /mob/living/simple_animal/hostile/raider/ranged/sulphite/heavy
 	name = "Sulphite Seasoner"
@@ -517,7 +517,7 @@
 	maxHealth = 300
 	health = 300
 	rapid_melee = 1
-	loot = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/hotrod, /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/hotrod, /obj/item/stack/f13Cash/random/banker)
+	loot = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/hotrod, /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/hotrod, /obj/item/stack/f13Cash/random/banker)
 	melee_damage_lower = 30
 	melee_damage_upper = 49 //would be higher, but I think it'll deal 50 of each type
 	melee_damage_type = list(BRUTE, BURN)//his punches are literally steampowered
