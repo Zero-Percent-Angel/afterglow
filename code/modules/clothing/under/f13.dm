@@ -1254,7 +1254,7 @@
 	item_state = "mercc_f"
 	item_color = "mercc_m"
 
-/obj/item/clothing/under/f13/merccharmf//Female version
+/obj/item/clothing/under/f13/merccharmf //Female version
 	name = "female merc charmer outfit"
 	desc = "A blue and gray outfit resembling a dress.<br>Fitted for female wastelanders."
 	icon_state = "mercc_f"
