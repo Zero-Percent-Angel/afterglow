@@ -1254,6 +1254,13 @@
 	item_state = "mercc_f"
 	item_color = "mercc_m"
 
+/obj/item/clothing/under/f13/merccharmf//Female version
+	name = "female merc charmer outfit"
+	desc = "A blue and gray outfit resembling a dress.<br>Fitted for female wastelanders."
+	icon_state = "mercc_f"
+	item_state = "mercc_f"
+	item_color = "mercc_f"
+
 /obj/item/clothing/under/f13/mechanic
 	name = "worn blue jumpsuit"
 	desc = "A worn jumpsuit, made of soft-blue colored cloth, with old machine oil stains on it.<br>Long time ago it could have belonged to a repair mechanic."

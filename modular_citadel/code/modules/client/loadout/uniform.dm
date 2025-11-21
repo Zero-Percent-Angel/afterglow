@@ -865,6 +865,10 @@
 	name = "Merc charmer outfit"
 	path = /obj/item/clothing/under/f13/merccharm
 
+/datum/gear/uniform/wasteland/mercharmf\
+	name = "Female merc charmer outfit"
+	path = /obj/item/clothing/under/f13/merccharmf
+
 /datum/gear/uniform/wasteland/doctor
 	name = "Doctor fatigues"
 	path = /obj/item/clothing/under/f13/doctor
