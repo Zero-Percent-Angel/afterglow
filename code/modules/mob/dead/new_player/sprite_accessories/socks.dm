@@ -58,6 +58,7 @@
 	icon_state = "thin_knee"
 	has_color = TRUE
 
+
 /*
 /datum/sprite_accessory/underwear/socks/uk_knee
 	name = "Knee-High - UK"
@@ -136,6 +137,11 @@
 /datum/sprite_accessory/underwear/socks/socks_thigh
 	name = "Thigh-high"
 	icon_state = "socks_thigh"
+	has_color = TRUE
+
+/datum/sprite_accessory/underwear/socks/thin_thigh_rip
+	name = "Thigh-high - Ripped"
+	icon_state = "thin_thigh_ripped"
 	has_color = TRUE
 
 /*
