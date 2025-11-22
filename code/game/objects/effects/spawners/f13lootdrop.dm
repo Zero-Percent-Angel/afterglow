@@ -282,7 +282,7 @@
 				/obj/effect/spawner/bundle/f13/armor/slam,
 				/obj/effect/spawner/bundle/f13/armor/scrapcombat,
 				/obj/effect/spawner/bundle/f13/armor/tribal_t2,
-				/obj/effect/spawner/bundle/f13/armor/light_combatm
+				/obj/effect/spawner/bundle/f13/armor/light_combat,
 				/obj/item/clothing/suit/armor/tiered/medium/tribal/armor,
 				)
 
