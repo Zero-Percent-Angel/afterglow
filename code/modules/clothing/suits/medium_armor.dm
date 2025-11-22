@@ -178,6 +178,8 @@
 	custom_price = PRICE_ABOVE_EXPENSIVE
 	armor = ARMOR_VALUE_MEDIUM_T2
 	tier = 2
+	icon = 'icons/obj/clothing/suits.dmi'
+	mob_overlay_icon = null
 
 ////////////////////////////////
 //// MEDIUM BALLISTIC VESTS ////
