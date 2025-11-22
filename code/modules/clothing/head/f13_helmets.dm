@@ -30,14 +30,16 @@
 	return txt
 
 /obj/item/clothing/head/helmet/f13/attackby(obj/item/I, mob/user, params)
-	if (istype(I, /obj/item/armor_repair_kit))
-		var/obj/item/armor_repair_kit/kit
+	if (istype(I, /obj/item/armor_repair_kit) && (obj_integrity < max_integrity))
+		var/obj/item/armor_repair_kit/kit = I
 		obj_integrity = min(obj_integrity + round(kit.repair_amount/tier), max_integrity)
 		if (obj_integrity == max_integrity)
 			repair(user, params)
 		else
 			to_chat(user, "You fix a little of the damage to the [src].")
 			update_damage_state()
+		qdel(kit)
+		return
 	. = ..()
 
 /obj/item/clothing/head/helmet/f13/raider

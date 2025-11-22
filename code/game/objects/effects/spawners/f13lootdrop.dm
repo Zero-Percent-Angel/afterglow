@@ -233,7 +233,7 @@
 				/obj/item/clothing/suit/armor/tiered/light/duster,
 				/obj/effect/spawner/bundle/f13/armor/combatduster,
 				/obj/item/clothing/suit/armor/tiered/medium/raider/iconoclast,
-				/obj/item/clothing/suit/armor/tiered/medium/tribal,
+				/obj/item/clothing/suit/armor/tiered/medium/tribal/chitinarmor
 	)
 
 /obj/effect/spawner/bundle/f13/armor/sadist
@@ -282,7 +282,8 @@
 				/obj/effect/spawner/bundle/f13/armor/slam,
 				/obj/effect/spawner/bundle/f13/armor/scrapcombat,
 				/obj/effect/spawner/bundle/f13/armor/tribal_t2,
-				/obj/effect/spawner/bundle/f13/armor/light_combat
+				/obj/effect/spawner/bundle/f13/armor/light_combatm
+				/obj/item/clothing/suit/armor/tiered/medium/tribal/armor,
 				)
 
 /obj/effect/spawner/bundle/f13/armor/tribal_t2
