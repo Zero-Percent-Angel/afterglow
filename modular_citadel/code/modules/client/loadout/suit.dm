@@ -61,7 +61,7 @@
 
 /datum/gear/suit/jacketleather
 	name = "Leather jacket"
-	path = /obj/item/clothing/suit/armor/tiered/light/leather/leather_jacket
+	path = /obj/item/clothing/suit/armor/tiered/light/leather/jacket
 	subcategory = LOADOUT_SUBCATEGORY_SUIT_JACKETS
 	cost = 2
 

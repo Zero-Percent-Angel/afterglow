@@ -999,6 +999,15 @@
 	icon_state = "vtcc_riot_helmet"
 	item_state = "vtcc_riot_helmet"
 
+/////////////////////////////////
+// Followers of the Apocaylpse //
+///////////////////////////////
+
+/obj/item/clothing/head/helmet/f13/combat/followers
+	desc = "A pre-war combat helmet that has been customized by the Followers of the Apocaylpse."
+	icon_state = "combat_helmet_foa"
+	item_state = "combat_helmet_foa"
+
 //////////////////////////
 // Salvaged Power Armor //
 //////////////////////////
