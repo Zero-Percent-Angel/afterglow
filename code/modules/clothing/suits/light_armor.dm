@@ -513,16 +513,19 @@
 	desc = "This heavily padded leather jacket is unusual in that it has two sleeves. You'll definitely make a fashion statement whenever, and wherever, you rumble."
 	icon_state = "leather_jacket_reinforced"
 	item_state = "leather_jacket_reinforced"
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_FIRE_T2, ARMOR_MODIFIER_UP_DT_T3)
+	custom_price = PRICE_REALLY_EXPENSIVE
+	armor = ARMOR_VALUE_LIGHT_T3
+	tier = 3
 	body_parts_hidden = ARMS | CHEST | LEGS
 
 /obj/item/clothing/suit/armor/tiered/light/leather/leathercoat
-	name = "thick leather coat"
+	name = "reinforced leather coat"
 	desc = "Reinforced leather jacket with a overcoat. Well insulated, creaks a lot while moving."
 	icon_state = "leather_coat"
 	item_state = "leather_coat"
 	siemens_coefficient = 0.8
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
+	armor = ARMOR_VALUE_LIGHT_T4
+	tier = 3
 	body_parts_hidden = ARMS | CHEST
 
 
