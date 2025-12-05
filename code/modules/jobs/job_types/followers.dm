@@ -76,8 +76,8 @@ Administrator
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
-	/*
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rechargerpistol)
+	/*
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/pico_manip)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_matter_bin)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/phasic_scanning)
@@ -378,6 +378,7 @@ Follower Volunteer
 	id = 		/obj/item/card/id/silver
 	belt = /obj/item/kit_spawner/follower
 	uniform = 	/obj/item/clothing/under/f13/followers
+	suit =	/obj/item/clothing/suit/armor/tiered/light/leather/jacket/followers
 	shoes = 	/obj/item/clothing/shoes/f13/explorer
 	backpack = 	/obj/item/storage/backpack/explorer
 	satchel = 	/obj/item/storage/backpack/satchel/explorer
