@@ -369,6 +369,8 @@
 	desc = "Metal armor worn under a stylish duster. For the bad boy who wants to look good while commiting murder."
 	icon_state = "duster-renegade"
 	item_state = "duster-renegade"
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 
 /obj/item/clothing/suit/armor/tiered/medium/duster/motorball
 	name = "motorball suit"
@@ -445,6 +447,8 @@
 	desc = "(An uncommon suit of pre-war Chinese combat armor. It's a very basic and straightforward piece of armor that covers the front of the user."
 	icon_state = "chicom_armor"
 	item_state = "chicom_armor"
+	icon = 'icons/obj/clothing/suits.dmi'
+	mob_overlay_icon = null
 
 /obj/item/clothing/suit/armor/tiered/medium/combat/rusted
 	name = "rusted combat armor"
