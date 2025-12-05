@@ -190,7 +190,7 @@
 		var/list/data = list(
 			asset = get_spritesheet_icon_key_from_type(R.product_path),
 			name = R.name,
-			price = R.custom_premium_price || extra_price, //may cause breakage. please note
+			price = calc_price, //may cause breakage. please note
 			max_amount = R.max_amount,
 			ref = REF(R),
 			premium = TRUE
