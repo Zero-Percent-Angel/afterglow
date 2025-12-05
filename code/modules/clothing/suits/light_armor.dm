@@ -524,7 +524,8 @@
 	icon_state = "leather_coat"
 	item_state = "leather_coat"
 	siemens_coefficient = 0.8
-	armor = ARMOR_VALUE_LIGHT_T4
+	armor = ARMOR_VALUE_LIGHT_T3
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
 	tier = 3
 	body_parts_hidden = ARMS | CHEST
 
