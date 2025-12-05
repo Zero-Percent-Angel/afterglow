@@ -373,14 +373,14 @@ GLOBAL_LIST_INIT(loot_t1_armor, list(
 	/obj/item/clothing/suit/armor/tiered/medium/raider/raidermetal,
 	/obj/item/clothing/suit/armor/tiered/medium/raider/slam,
 	/obj/item/clothing/suit/armor/tiered/light/raider/wastewar,
-	/obj/item/clothing/suit/armor/tiered/light/raider/leather,
+	/obj/item/clothing/suit/armor/tiered/light/leather/jacket,
 	/obj/item/clothing/suit/armor/tiered/light/raider/badlands,
 	/obj/item/clothing/suit/armor/tiered/light/kit,
 	/obj/item/clothing/suit/armor/tiered/light/kit/punk
 ))
 
 GLOBAL_LIST_INIT(loot_t2_armor, list(
-	/obj/item/clothing/suit/armor/tiered/light/leather/leather_jacket,
+	/obj/item/clothing/suit/armor/tiered/light/leather/jacket,
 	/obj/item/clothing/suit/armor/tiered/light/leather,
 	/obj/item/clothing/suit/armor/tiered/light/kit/plates,
 	/obj/item/clothing/suit/armor/tiered/light/leather/leathercoat,
@@ -421,7 +421,7 @@ GLOBAL_LIST_INIT(loot_t3_armor, list(
 	/obj/item/clothing/suit/armor/tiered/heavy/tier3/metal/reinforced,
 	/obj/item/clothing/suit/armor/tiered/heavy/tier3/metal/sulphite,
 	/obj/item/clothing/suit/armor/tiered/light/leather,
-	/obj/item/clothing/suit/armor/tiered/light/leather/leather_jacket,
+	/obj/item/clothing/suit/armor/tiered/light/leather/jacket,
 	/obj/item/clothing/suit/armor/tiered/light/leather/leathercoat,
 	/obj/item/clothing/head/helmet/f13/combat/swat,
 	/obj/item/clothing/suit/armor/tiered/medium/combat,

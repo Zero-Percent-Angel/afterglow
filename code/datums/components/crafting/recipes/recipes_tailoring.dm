@@ -24,11 +24,12 @@
 	subcategory = CAT_ARMOR
 	skill_level = VERY_EASY_CHECK
 
-/datum/crafting_recipe/combat_jacket
-	name = "Combat Jacket"
-	result = /obj/item/clothing/suit/armor/tiered/light/leather/leather_jacket
-	reqs = list(/obj/item/clothing/suit/armor/tiered/light/leather/leathercoat = 1,
-				/obj/item/stack/sheet/animalhide/deathclaw  = 1)
+/datum/crafting_recipe/leather_jacket
+	name = "Leather Jacket"
+	result = /obj/item/clothing/suit/armor/tiered/light/leather/jacket
+	reqs = list(/obj/item/stack/sheet/leather = 3,
+				/obj/item/weaponcrafting/string = 2)
+
 	tools = list(TOOL_WORKBENCH)
 	time = 60
 	category = CAT_CLOTHING
@@ -100,7 +101,7 @@
 
 /datum/crafting_recipe/leather_jacket
 	name = "Leather Jacket"
-	result = /obj/item/clothing/suit/armor/tiered/light/leather/leather_jacket
+	result = /obj/item/clothing/suit/armor/tiered/light/leather/jacket
 	reqs = list(/obj/item/stack/sheet/animalhide/brahmin = 2,
 				/obj/item/weaponcrafting/string = 1)
 	tools = list(TOOL_WORKBENCH)

@@ -220,7 +220,7 @@ obj/effect/mob_spawn/human/corpse/raider
 obj/effect/mob_spawn/human/corpse/raidermelee
 	name = "Raider Melee Corpse"
 	uniform = /obj/item/clothing/under/jabroni
-	suit = /obj/item/clothing/suit/armor/tiered/light/leather/leather_jacket
+	suit = /obj/item/clothing/suit/armor/tiered/light/leather/jacket
 	shoes = /obj/item/clothing/shoes/jackboots
 	head = /obj/item/clothing/head/helmet/skull
 	hair_style = "Bald"
@@ -229,7 +229,7 @@ obj/effect/mob_spawn/human/corpse/raidermelee
 /obj/effect/mob_spawn/human/corpse/raiderranged
 	name = "Raider Ranged Corpse"
 	uniform = /obj/item/clothing/under/jabroni
-	suit = /obj/item/clothing/suit/armor/tiered/light/leather/leather_jacket
+	suit = /obj/item/clothing/suit/armor/tiered/light/leather/jacket
 	shoes = /obj/item/clothing/shoes/jackboots
 	head = /obj/item/clothing/head/helmet/skull
 	hair_style = "Bald"
