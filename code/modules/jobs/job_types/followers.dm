@@ -20,6 +20,7 @@
 /datum/outfit/job/followers/f13followers
 	name =		"Followers"
 	uniform =	/obj/item/clothing/under/f13/follower
+	suit =	/obj/item/clothing/suit/armor/tiered/light/leather/jacket/followers
 
 /datum/outfit/job/followers/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -75,8 +76,8 @@ Administrator
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
-	/*
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rechargerpistol)
+	/*
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/pico_manip)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_matter_bin)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/phasic_scanning)
@@ -277,6 +278,7 @@ Practitioner
 	name =	"Town Doctor"
 	jobtype =	/datum/job/followers/f13practitioner
 	uniform =	/obj/item/clothing/under/f13/followers
+	suit =	/obj/item/clothing/suit/armor/tiered/light/leather/jacket/followers
 	id =	/obj/item/card/id/silver
 	//chemwhiz =	TRUE
 	backpack =	/obj/item/storage/backpack/medic
@@ -376,6 +378,7 @@ Follower Volunteer
 	id = 		/obj/item/card/id/silver
 	belt = /obj/item/kit_spawner/follower
 	uniform = 	/obj/item/clothing/under/f13/followers
+	suit =	/obj/item/clothing/suit/armor/tiered/light/leather/jacket/followers
 	shoes = 	/obj/item/clothing/shoes/f13/explorer
 	backpack = 	/obj/item/storage/backpack/explorer
 	satchel = 	/obj/item/storage/backpack/satchel/explorer
@@ -458,9 +461,8 @@ Follower Volunteer
 	belt = /obj/item/kit_spawner/follower/guard
 	id =	/obj/item/card/id/silver
 	uniform =	/obj/item/clothing/under/f13/bodyguard
-	suit =	/obj/item/clothing/suit/armor/tiered/medium/vest/trench
-	head =	/obj/item/clothing/head/helmet/riot
-	glasses =	/obj/item/clothing/glasses/sunglasses
+	suit =	/obj/item/clothing/suit/armor/tiered/light/leather/leathermk2/followers
+	head =	/obj/item/clothing/head/helmet/f13/combat/followers
 	shoes =	/obj/item/clothing/shoes/combat
 	l_pocket =	/obj/item/storage/belt/shoulderholster
 	backpack =	/obj/item/storage/backpack/explorer

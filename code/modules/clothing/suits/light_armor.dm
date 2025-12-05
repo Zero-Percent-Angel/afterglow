@@ -318,13 +318,6 @@
 	item_state = "badlands"
 	body_parts_hidden = ARMS
 
-/obj/item/clothing/suit/armor/tiered/light/raider/leather
-	name = "punk raider jacket"
-	desc = "A leather jacket adorned with a metal spiked arm piece and some reinforced leather lining its inside."
-	icon_state = "leather_jacket_fighter"
-	item_state = "leather_jacket_fighter"
-	body_parts_hidden = ARMS | GROIN
-
 /obj/item/clothing/suit/armor/tiered/light/raider/wastewar
 	name = "wasteland warrior armor"
 	desc = "a mad attempt to recreate armor based of images of japanese samurai, using a sawn up old car tire as shoulder pads, bits of chain to cover the hips and pieces of furniture for a breastplate. Might stop a blade but nothing else, burns easily too. Comes with an enormous scabbard welded to the back!"
@@ -500,29 +493,42 @@
 /obj/item/clothing/suit/armor/tiered/light/leather/leathersuit
 	name = "leather suit"
 	desc = "Comfortable suit of tanned leather leaving one arm mostly bare. Keeps you warm and cozy."
-	icon_state = "combat_jacket"
-	item_state = "combat_jacket"
+	icon_state = "leather_suit"
+	item_state = "leather_suit"
 	flags_inv = HIDEJUMPSUIT
 	cold_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	siemens_coefficient = 0.9
 	body_parts_hidden = ARMS | CHEST | GROIN | LEGS
 
+
+/obj/item/clothing/suit/armor/tiered/light/leather/jacket
+	name = "leather jacket"
+	desc = "A leather jacket adorned with a metal spiked arm piece and some reinforced leather lining its inside."
+	icon_state = "leather_jacket"
+	item_state = "leather_jacket"
+	body_parts_hidden = ARMS | GROIN
+
+/obj/item/clothing/suit/armor/tiered/light/leather/jacket_reinf
+	name = "reinforced leather jacket"
+	desc = "This heavily padded leather jacket is unusual in that it has two sleeves. You'll definitely make a fashion statement whenever, and wherever, you rumble."
+	icon_state = "leather_jacket_reinforced"
+	item_state = "leather_jacket_reinforced"
+	custom_price = PRICE_REALLY_EXPENSIVE
+	armor = ARMOR_VALUE_LIGHT_T3
+	tier = 3
+	body_parts_hidden = ARMS | CHEST | LEGS
+
 /obj/item/clothing/suit/armor/tiered/light/leather/leathercoat
-	name = "thick leather coat"
+	name = "reinforced leather coat"
 	desc = "Reinforced leather jacket with a overcoat. Well insulated, creaks a lot while moving."
-	icon_state = "leather_suit"
-	item_state = "leather_suit"
+	icon_state = "leather_coat"
+	item_state = "leather_coat"
 	siemens_coefficient = 0.8
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
+	armor = ARMOR_VALUE_LIGHT_T3
+	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
+	tier = 3
 	body_parts_hidden = ARMS | CHEST
 
-/obj/item/clothing/suit/armor/tiered/light/leather/leather_jacket
-	name = "thick leather combat jacket"
-	desc = "This heavily padded leather jacket is unusual in that it has two sleeves. You'll definitely make a fashion statement whenever, and wherever, you rumble."
-	icon_state = "leather_jacket_thick"
-	item_state = "leather_jacket_thick"
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_DOWN_FIRE_T2, ARMOR_MODIFIER_UP_DT_T3)
-	body_parts_hidden = ARMS | CHEST | LEGS
 
 /obj/item/clothing/suit/armor/tiered/light/leather/tanvest
 	name = "tanned vest"
@@ -859,3 +865,21 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_DT_T1)
 	custom_price = PRICE_REALLY_EXPENSIVE
 	armor = ARMOR_VALUE_LIGHT_T3
+
+/////////////////////////////////
+// Followers of the Apocalypse //
+////////////////////////////////
+
+
+/obj/item/clothing/suit/armor/tiered/light/leather/jacket/followers
+	name = "Follower's jacket"
+	desc = "A leather jacket used by the Followers of the Apocalypse."
+	icon_state = "leather_jacket_foa"
+	item_state = "leather_jacket_foa"
+
+/obj/item/clothing/suit/armor/tiered/light/leather/leathermk2/followers
+	name = "armored Follower's jacket"
+	desc = "A leather jacket used by the Followers of the Apocalypse.This one has been reinforced to provide additional protection"
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2)
+	icon_state = "leather_jacket_foa2"
+	item_state = "leather_jacket_foa2"
