@@ -415,3 +415,51 @@
 /obj/item/storage/box/medicine/hydra5/PopulateContents()
 	for(var/i in 1 to 5)
 		new /obj/item/reagent_containers/pill/patch/hydra(src)
+
+// -----------------------------------
+// DOCTOR'S BAG
+
+/obj/item/storage/backpack/doctorbag
+	name = "doctor's bag"
+	desc = "This bag contains tools used by doctors in the application of their trade."
+	icon = 'icons/fallout/objects/medicine/medic_bags.dmi'
+	icon_state = "doctorbag"
+	item_state = "doctorbag"
+	lefthand_file = 'icons/fallout/onmob/items/bags_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/items/bags_righthand.dmi'
+	component_type = /datum/component/storage/concrete/backpack/duffelbag
+
+/obj/item/storage/backpack/doctorbag/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 10
+	STR.rustle_sound = FALSE
+	STR.max_w_class = WEIGHT_CLASS_NORMAL
+	STR.can_hold = typecacheof(list(
+		/obj/item/scalpel,
+		/obj/item/hemostat,
+	 	/obj/item/retractor,
+	 	/obj/item/circular_saw,
+	 	/obj/item/surgicaldrill,
+	 	/obj/item/cautery,
+	 	/obj/item/bonesetter,
+	 	/obj/item/surgical_drapes,
+	 	/obj/item/clothing/mask/surgical,
+	 	/obj/item/reagent_containers/medspray/sterilizine,
+	 	/obj/item/razor,
+	 	/obj/item/stack/sticky_tape,
+		/obj/item/stack/medical/bone_gel,
+		))
+
+/obj/item/storage/backpack/doctorbag/PopulateContents()
+	new /obj/item/scalpel(src)
+	new /obj/item/hemostat(src)
+	new /obj/item/retractor(src)
+	new /obj/item/circular_saw(src)
+	new /obj/item/surgicaldrill(src)
+	new /obj/item/cautery(src)
+	new /obj/item/bonesetter(src)
+	new /obj/item/surgical_drapes(src)
+	new /obj/item/reagent_containers/medspray/sterilizine(src)
+
+

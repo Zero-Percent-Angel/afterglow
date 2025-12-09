@@ -361,7 +361,7 @@
 //Recharger Pistol
 /obj/item/gun/energy/laser/wattz/recharger
 	name = "Recharger Pistol"
-	desc = "A recharger pistol manufactured by the Followers of the Apocalpyse. As the name implies, it charges its capacitor banks over time using radioactive decay."
+	desc = "A self-charging laser weapon, powered by radioactive decay."
 	can_remove = 0
 	can_charge = 0
 	selfcharge = 1
@@ -383,9 +383,10 @@
 	)
 
 //Recharger Rifle
+//worse damage than pistol, bigger than pistol, still light for a rifle at least
 /obj/item/gun/energy/laser/wattz/recharger/rifle
 	name = "Recharger Rifle"
-	desc = "A recharger rifle manufactred by the Followers of the Apocalpyse. As the name implies, it charges its capacitor banks over time using radioactive decay."
+	desc = "A first-generation self-charging laser weapon."
 	icon = 'icons/fallout/objects/guns/longguns.dmi'
 	icon_state = "rechargerrifle"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan/rifle)

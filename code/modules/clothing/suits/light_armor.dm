@@ -883,3 +883,12 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2)
 	icon_state = "leather_jacket_foa2"
 	item_state = "leather_jacket_foa2"
+
+/obj/item/clothing/suit/armor/tiered/light/sciencesuit //super enviro resistance, excellent plasma, good laser, average everything else
+	name = "all purpose follower's suit
+	desc = "A hazardous environmental suit modified for use by the Followers of the Apocalypse. It is designed to stop radiation, fire, acid, and high radiant loads. It is not designed to stop bullets." "
+	icon_state = "sciencesuit"
+	item_state = "sciencesuit"
+	armor = ARMOR_VALUE_LIGHT_T3
+	armor_tokens = list( ARMOR_MODIFIER_UP_ENV_T4 ,ARMOR_MODIFIER_UP_LASER_T2,ARMOR_MODIFIER_UP_ENERGY_T2, ARMOR_MODIFIER_UP_DT_T2)
+
