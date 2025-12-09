@@ -1026,6 +1026,31 @@
 		"bomb" = -2)
 
 
+/* Plasma Armor
+ * Multiplies energy resistance
+ * Rare form of protection, limited only to dedicated anti-plasma armor, not necessary on high-tier armor
+ * Really big numbers, because light and medium armor has very little energy resist, so you need to multiply it by a big number
+ * T1 - Massive chunk of heat-resistant material
+ * T2 - Ablative Armor that dissipates large quantities of heat
+ * T3 - Energized or Magnitized shield that deflects charged particles
+ * T4 - Liberty Prime
+* * * * * * * * * * * */
+
+#define ARMOR_MODIFIER_UP_ENERGY_T1 list(\
+		"energy" = 2)
+
+#define ARMOR_MODIFIER_UP_ENERGY_T2 list(\
+		"energy" = 4)
+
+#define ARMOR_MODIFIER_UP_ENERGY_T3 list(\
+		"energy" = 5)
+
+#define ARMOR_MODIFIER_UP_ENERGY_T4 list(\
+		"energy" = 10)
+
+#define ARMOR_MODIFIER_DOWN_ENERGY_T1 list(\
+		"energy" = 0.5)
+
 /* Bullet armor
  * Adds on bullet protection
  * T1 - A layer of basic protection
