@@ -906,3 +906,24 @@
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
 	stiffness = MEDIUM_STIFFNESS
+
+/////////////////////////////////
+// Followers of the Apocalypse //
+////////////////////////////////
+
+//FOA SPA equivelant, heavy armor protection but medium armor penalty, compared to being in between heavy and power, very efficient but with a low ceiling
+/obj/item/clothing/suit/armor/tiered/medium/followerarmor
+	name = "all purpose  suit"
+	desc = "A hazardous environmental suit modified for use by the Followers of the Apocalypse. It is designed to stop radiation, fire, acid, and high radiant loads. It is not designed to stop bullets."
+	icon_state = "sciencesuit"
+	item_state = "sciencesuit"
+	armor = ARMOR_VALUE_HEAVY_T3 //its made out of SPA
+	tier = 4
+	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2 ,ARMOR_MODIFIER_DOWN_MELEE_T2,ARMOR_MODIFIER_DOWN_BULLET_T2,ARMOR_MODIFIER_UP_ENERGY_T2, ARMOR_MODIFIER_UP_DT_T2)
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
+	body_parts_hidden = CHEST|ARMS|LEGS
+
+
