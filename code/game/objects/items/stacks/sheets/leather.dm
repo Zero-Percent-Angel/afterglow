@@ -14,7 +14,7 @@
 	merge_type = /obj/item/stack/sheet/animalhide/human
 
 GLOBAL_LIST_INIT(human_recipes, list(
-	new/datum/stack_recipe("bloated human costume", /obj/item/clothing/suit/hooded/bloated_human, 5),
+	new/datum/stack_recipe("bloated human costume", /obj/item/clothing/suit/armor/tiered/hooded/bloated_human, 5),
 	))
 
 /obj/item/stack/sheet/animalhide/human/get_main_recipes()
@@ -56,7 +56,7 @@ GLOBAL_LIST_INIT(gondola_recipes, list (
 	. += GLOB.gondola_recipes
 
 GLOBAL_LIST_INIT(corgi_recipes, list (
-	new/datum/stack_recipe("corgi costume", /obj/item/clothing/suit/hooded/ian_costume, 3),
+	new/datum/stack_recipe("corgi costume", /obj/item/clothing/suit/armor/tiered/hooded/ian_costume, 3),
 	))
 
 /obj/item/stack/sheet/animalhide/corgi/get_main_recipes()
@@ -178,7 +178,7 @@ GLOBAL_LIST_INIT(leather_recipes, list (
 	new/datum/stack_recipe("leather jacket", /obj/item/clothing/suit/jacket/leather, 7),
 	new/datum/stack_recipe("leather shoes", /obj/item/clothing/shoes/laceup, 2),
 	new/datum/stack_recipe("leather overcoat", /obj/item/clothing/suit/jacket/leather/overcoat, 10),
-	new/datum/stack_recipe("leather cloak", /obj/item/clothing/suit/hooded/cloak/desert, 3),
+	new/datum/stack_recipe("leather cloak", /obj/item/clothing/suit/armor/tiered/hooded/light/cloak/desert, 3),
 	null,
 	new/datum/stack_recipe("survival pouch", /obj/item/storage/survivalkit/empty, 5),
 	new/datum/stack_recipe("rugged pouch", /obj/item/storage/survivalkit/outlaw/empty, 5),
@@ -332,7 +332,7 @@ GLOBAL_LIST_INIT(sinew_recipes, list (
 GLOBAL_LIST_INIT(leatherstrips_recipes, list (
 	new/datum/stack_recipe("gear harness", /obj/item/clothing/under/misc/gear_harness, 2, time = 40),
 	new/datum/stack_recipe("jabroni outfit", /obj/item/clothing/under/jabroni, 4, time = 80),
-	new/datum/stack_recipe("muzzle", /obj/item/clothing/mask/muzzle, 2, time = 40), 
+	new/datum/stack_recipe("muzzle", /obj/item/clothing/mask/muzzle, 2, time = 40),
 	new/datum/stack_recipe("pet collar", /obj/item/clothing/neck/petcollar, 2, time = 40)
 ))
 

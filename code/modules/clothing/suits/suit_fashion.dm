@@ -211,7 +211,7 @@
 	icon = 'icons/obj/clothing/clockwork_garb.dmi'
 	icon_state = "clockwork_cuirass_old"
 
-/obj/item/clothing/suit/hooded/wintercoat/christmascoatr
+/obj/item/clothing/suit/armor/tiered/hooded/hooded/wintercoat/christmascoatr
 	name = "red christmas coat"
 	desc = "A festive red Christmas coat! Smells like Candy Cane!"
 	icon_state = "christmascoatr"

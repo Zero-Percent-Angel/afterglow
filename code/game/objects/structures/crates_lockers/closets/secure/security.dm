@@ -42,7 +42,7 @@
 	new /obj/item/door_remote/civillian(src)
 	new /obj/item/circuitboard/machine/techfab/department/service(src)
 	new /obj/item/storage/photo_album/HoP(src)
-	new /obj/item/clothing/suit/hooded/wintercoat/hop(src)
+	new /obj/item/clothing/suit/armor/tiered/hooded/wintercoat/hop(src)
 	new /obj/item/clothing/head/hopcap/beret/white(src)
 
 /obj/structure/closet/secure_closet/hos

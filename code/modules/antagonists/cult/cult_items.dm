@@ -404,7 +404,7 @@
 	if(old_state != icon_state)
 		playsound(get_turf(src), 'sound/items/unsheath.ogg', 25, 1)
 
-/obj/item/clothing/suit/hooded/cultrobes/cult_shield
+/obj/item/clothing/suit/armor/tiered/hooded/cultrobes/cult_shield
 	name = "empowered cultist armor"
 	desc = "Empowered garb which creates a powerful shield around the user."
 	icon_state = "cult_armor"
@@ -423,7 +423,7 @@
 	body_parts_covered = HEAD
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
 
-/obj/item/clothing/suit/hooded/cultrobes/cult_shield/equipped(mob/living/user, slot)
+/obj/item/clothing/suit/armor/tiered/hooded/cultrobes/cult_shield/equipped(mob/living/user, slot)
 	..()
 	if(!iscultist(user))
 		if(!is_servant_of_ratvar(user))
@@ -439,13 +439,13 @@
 			user.adjustBruteLoss(25)
 			user.dropItemToGround(src, TRUE)
 
-/obj/item/clothing/suit/hooded/cultrobes/cult_shield/check_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+/obj/item/clothing/suit/armor/tiered/hooded/cultrobes/cult_shield/check_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if(current_charges)
 		block_return[BLOCK_RETURN_NORMAL_BLOCK_CHANCE] = 100
 		block_return[BLOCK_RETURN_BLOCK_CAPACITY] = (block_return[BLOCK_RETURN_BLOCK_CAPACITY] || 0) + current_charges
 	return ..()
 
-/obj/item/clothing/suit/hooded/cultrobes/cult_shield/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
+/obj/item/clothing/suit/armor/tiered/hooded/cultrobes/cult_shield/run_block(mob/living/owner, atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, final_block_chance, list/block_return)
 	if(current_charges)
 		owner.visible_message(span_danger("\The [attack_text] is deflected in a burst of blood-red sparks!"))
 		current_charges--
@@ -456,12 +456,12 @@
 		return BLOCK_SUCCESS | BLOCK_PHYSICAL_EXTERNAL
 	return BLOCK_NONE
 
-/obj/item/clothing/suit/hooded/cultrobes/cult_shield/worn_overlays(isinhands, icon_file, used_state, style_flags = NONE)
+/obj/item/clothing/suit/armor/tiered/hooded/cultrobes/cult_shield/worn_overlays(isinhands, icon_file, used_state, style_flags = NONE)
 	. = ..()
 	if(!isinhands && current_charges)
 		. += mutable_appearance('icons/effects/cult_effects.dmi', "shield-cult", MOB_LAYER + 0.01)
 
-/obj/item/clothing/suit/hooded/cultrobes/berserker
+/obj/item/clothing/suit/armor/tiered/hooded/cultrobes/berserker
 	name = "flagellant's robes"
 	desc = "Blood-soaked robes infused with dark magic; allows the user to move at inhuman speeds, but at the cost of increased damage."
 	icon_state = "cultrobes"

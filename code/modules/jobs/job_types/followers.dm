@@ -300,7 +300,7 @@ Practitioner
 	mask =	/obj/item/clothing/mask/surgical
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
 	backpack_contents = list(
-		/obj/item/clothing/suit/hooded/surgical = 1,
+		/obj/item/clothing/suit/armor/tiered/hooded/surgical = 1,
 		/obj/item/reagent_containers/medspray/synthflesh = 1,
 		/obj/item/healthanalyzer/advanced = 1,
 	)

@@ -54,7 +54,7 @@ GLOBAL_LIST_INIT(sacredwellitems_high, typecacheof(list(/obj/item/gun/energy/las
 				/obj/item/gun/ballistic/bow/sturdy,
 				/obj/item/clothing/suit/armor/tiered/heavy/tier2/tribal,
 				/obj/item/clothing/suit/armor/tiered/light/tribal/simple,
-				/obj/item/clothing/suit/hooded/cloak)
+				/obj/item/clothing/suit/armor/tiered/hooded/cloak)
 
 // sacred items
 

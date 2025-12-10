@@ -1027,9 +1027,9 @@
 
 
 /* Plasma Armor
- * Multiplies energy resistance
+ * Adds energy resistance
  * Rare form of protection, limited only to dedicated anti-plasma armor, not necessary on high-tier armor
- * Really big numbers, because light and medium armor has very little energy resist, so you need to multiply it by a big number
+ * Really big numbers, because light and medium armor has very little energy resist, so assume that this is the base energy protect rather than an add-on
  * T1 - Massive chunk of heat-resistant material
  * T2 - Ablative Armor that dissipates large quantities of heat
  * T3 - Energized or Magnitized shield that deflects charged particles
@@ -1037,19 +1037,19 @@
 * * * * * * * * * * * */
 
 #define ARMOR_MODIFIER_UP_ENERGY_T1 list(\
-		"energy" = 2)
+		"energy" = 25)
 
 #define ARMOR_MODIFIER_UP_ENERGY_T2 list(\
-		"energy" = 4)
+		"energy" = 35)
 
 #define ARMOR_MODIFIER_UP_ENERGY_T3 list(\
-		"energy" = 5)
+		"energy" = 40)
 
 #define ARMOR_MODIFIER_UP_ENERGY_T4 list(\
-		"energy" = 10)
+		"energy" = 45)
 
 #define ARMOR_MODIFIER_DOWN_ENERGY_T1 list(\
-		"energy" = 0.5)
+		"energy" = -10)
 
 /* Bullet armor
  * Adds on bullet protection
@@ -1176,7 +1176,7 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
 		"linemelee" = "ADD",
 		"linebullet" = "ADD",
 		"linelaser" = "ADD",
-		"energy" = "MULT",
+		"energy" = "ADD",
 		"bomb" = "MULT",
 		"bio" = "MULT",
 		"rad" = "MULT",

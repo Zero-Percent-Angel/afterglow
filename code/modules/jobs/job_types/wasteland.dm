@@ -579,7 +579,7 @@ Raider
 
 /datum/outfit/loadout/unethical_practitioner
 	name = "Unethical Practitioner"
-	suit = /obj/item/clothing/suit/hooded/surgical
+	suit = /obj/item/clothing/suit/armor/tiered/hooded/surgical
 	uniform = /obj/item/clothing/under/misc/pj/blue
 	l_hand = /obj/item/storage/backpack/duffelbag/med/surgery
 	//suit_store = /obj/item/gun/energy/laser/wattzs
@@ -891,7 +891,7 @@ Raider
 		/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 2,
 	//	/obj/item/storage/belt/shoulderholster/ranger357 = 1,
 		/obj/item/clothing/under/pants/f13/warboy = 1,
-		/obj/item/clothing/suit/hooded/cloak/desert = 1,
+		/obj/item/clothing/suit/armor/tiered/hooded/light/cloak/desert = 1,
 		/obj/item/clothing/shoes/f13/peltboots = 1,
 		/obj/item/melee/unarmed/sappers = 1,
 		)
@@ -1944,7 +1944,7 @@ datum/job/wasteland/f13dendoctor
 
 /datum/outfit/loadout/shaman
 	name = "Far-Land Shaman"
-	suit = /obj/item/clothing/suit/hooded/cloak/desert
+	suit = /obj/item/clothing/suit/armor/tiered/hooded/light/cloak/desert
 	box = /obj/item/storage/survivalkit/tribal
 	box_two = /obj/item/storage/survivalkit/medical/tribal
 	backpack_contents = list(
@@ -1961,7 +1961,7 @@ datum/job/wasteland/f13dendoctor
 
 /datum/outfit/loadout/lostvillager
 	name = "Lost Villager"
-	suit = /obj/item/clothing/suit/hooded/cloak
+	suit = /obj/item/clothing/suit/armor/tiered/hooded/cloak
 	backpack_contents = list(
 		/obj/item/clothing/under/f13/rag = 1,
 		/obj/item/clothing/head/rice_hat = 1,

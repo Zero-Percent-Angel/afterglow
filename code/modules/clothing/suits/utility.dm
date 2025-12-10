@@ -7,7 +7,7 @@
  */
 
 
-/obj/item/clothing/suit/hooded/surgical
+/obj/item/clothing/suit/armor/tiered/hooded/surgical
 	name = "surgical scrubs"
 	desc = "A bundle with all the sterile clothing needed to perform safe surgery accoring to the standards set in the Followers' pamphlet on safe surgery. The shoe covers have grip surfaces to prevent slipping in the blood."
 	icon = 'icons/fallout/clothing/suits_utility.dmi'

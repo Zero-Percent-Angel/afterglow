@@ -38,6 +38,23 @@
 	stiffness = LIGHT_STIFFNESS
 	custom_price = PRICE_EXPENSIVE
 
+/obj/item/clothing/suit/armor/tiered/hooded/light
+	name = "light armor template"
+	icon = 'icons/fallout/clothing/armored_light.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_light.dmi'
+	cold_protection = CHEST|GROIN
+	heat_protection = CHEST|GROIN
+	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
+	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
+	strip_delay = 10
+	equip_delay_other = 10
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/armor
+	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_LIGHT
+	armor_tier_desc = ARMOR_CLOTHING_LIGHT
+	stiffness = LIGHT_STIFFNESS
+	custom_price = PRICE_EXPENSIVE
+
 // Tier 2 - 5 DT
 /obj/item/clothing/suit/armor/tiered/light/tier2
 	custom_price = PRICE_ABOVE_EXPENSIVE
@@ -142,7 +159,7 @@
 	body_parts_hidden = CHEST
 
 /// to be refactored to work with the New Tier System (tm)
-/obj/item/clothing/suit/hooded/cloak
+/obj/item/clothing/suit/armor/tiered/hooded/light/cloak
 	name = "cloak"
 	desc = "A cloak, made out of cloak."
 	icon_state = "clawsuitcloak"
@@ -162,13 +179,25 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 	custom_price = PRICE_REALLY_EXPENSIVE
 
-/obj/item/clothing/suit/hooded/cloak/Initialize()
+/obj/item/clothing/suit/armor/tiered/hooded/light/cloak/Initialize()
 	/// make sure the parents work first for this, child lists take priority
 	. = ..()
 	/// i hate my extended family
 	allowed = GLOB.default_all_armor_slot_allowed
 
-/obj/item/clothing/suit/hooded/cloak/goliath
+/obj/item/clothing/suit/armor/tiered/hooded/light/cloak/desert
+	name = "desert cloak"
+	icon_state = "desertcloak"
+	desc = "A practical cloak made out of animal hide."
+	hoodtype = /obj/item/clothing/head/hooded/cloakhood/desert
+
+/obj/item/clothing/head/hooded/cloakhood/desert
+	name = "desert cloak hood"
+	icon_state = "desertcloak"
+	desc = "A protective and concealing hood."
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+
+/obj/item/clothing/suit/armor/tiered/hooded/light/cloak/goliath
 	name = "deathclaw cloak"
 	desc = "A staunch, practical cloak made out of sinew and skin from the fearsome deathclaw."
 	icon_state = "clawsuitcloak"
@@ -189,7 +218,7 @@
 	armor = ARMOR_VALUE_LIGHT_T2
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
 
-/obj/item/clothing/suit/hooded/cloak/goliath/tatteredred
+/obj/item/clothing/suit/armor/tiered/hooded/light/cloak/goliath/tatteredred
 	name = "tattered red cloak"
 	desc = "An old ragged, tattered red cloak that is covered in burns and bullet holes."
 	icon_state = "goliath_cloak"
@@ -209,7 +238,7 @@
 	armor = ARMOR_VALUE_MEDIUM
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2)
 
-/obj/item/clothing/suit/hooded/cloak/hhunter
+/obj/item/clothing/suit/armor/tiered/hooded/light/cloak/hhunter
 	name = "Razorclaw armour"
 	desc = "A suit of armour fashioned out of the remains of a legendary deathclaw."
 	icon_state = "rcarmour"
@@ -234,7 +263,7 @@
 	armor = ARMOR_VALUE_LIGHT_T3
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
 
-/obj/item/clothing/suit/hooded/cloak/shunter
+/obj/item/clothing/suit/armor/tiered/hooded/light/cloak/shunter
 	name = "quickclaw armour"
 	desc = "A suit of armour fashioned out of the remains of a legendary deathclaw, this one has been crafted to remove a good portion of its protection to improve on speed and trekking."
 	icon_state = "birdarmor"
@@ -259,7 +288,7 @@
 	armor = ARMOR_VALUE_LIGHT_T3
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_DOWN_LASER_T2, ARMOR_MODIFIER_UP_DT_T2)
 
-/obj/item/clothing/suit/hooded/cloak/deathclaw
+/obj/item/clothing/suit/armor/tiered/hooded/light/cloak/deathclaw
 	name = "deathclaw cloak"
 	icon_state = "desertcloak"
 	item_state = "desertcloak"
@@ -281,7 +310,7 @@
 	armor = ARMOR_VALUE_LIGHT_T3
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T2)
 
-/obj/item/clothing/suit/hooded/cloak/desert/raven_cloak
+/obj/item/clothing/suit/armor/tiered/hooded/light/desert/raven_cloak
 	name = "Raven cloak"
 	desc = "A huge cloak made out of hundreds of knife-like black bird feathers. It glitters in the light, ranging from blue to dark green and purple."
 	icon_state = "raven_cloak"
@@ -609,7 +638,7 @@
 	armor = ARMOR_VALUE_LIGHT_T2
 	tier = 2
 
-/obj/item/clothing/suit/hooded/cloak/mutie
+/obj/item/clothing/suit/armor/tiered/hooded/light/cloak/mutie
 	name = "mutant cloak"
 	desc = "An oversized cloak, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
 	icon_state = "mutie_cloak"
@@ -619,17 +648,17 @@
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/mutie/poncho
 	species_restricted = list("exclude","Human","Ghoul")
 
-/obj/item/clothing/suit/hooded/cloak/mutie/poncho
+/obj/item/clothing/suit/armor/tiered/hooded/cloak/mutie/poncho
 	name = "mutant poncho"
 	desc = "An oversized poncho, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
 	icon_state = "mutie_poncho"
 	item_state = "mutie_poncho"
 
-/obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered
+/obj/item/clothing/suit/armor/tiered/hooded/light/cloak/mutie/poncho/weathered
 	icon_state = "mutie_poncho_weathered"
 	item_state = "mutie_poncho_weathered"
 
-/obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered/townie
+/obj/item/clothing/suit/armor/tiered/hooded/cloak/mutie/poncho/weathered/townie
 	name = "mutant townie poncho"
 	desc = "An oversized poncho, made to fit the frame of a super mutant. Maybe he's the big ranger with an iron on his hip?"
 	icon_state = "mutie_townie"
@@ -884,11 +913,37 @@
 	icon_state = "leather_jacket_foa2"
 	item_state = "leather_jacket_foa2"
 
-/obj/item/clothing/suit/armor/tiered/light/sciencesuit //super enviro resistance, excellent plasma, good laser, average everything else
-	name = "all purpose follower's suit
-	desc = "A hazardous environmental suit modified for use by the Followers of the Apocalypse. It is designed to stop radiation, fire, acid, and high radiant loads. It is not designed to stop bullets." "
+/obj/item/clothing/suit/armor/tiered/hooded/light/sciencesuit //super enviro resistance, excellent plasma, good laser, average everything else
+	name = "all purpose follower's suit"
+	desc = "A hazardous environmental suit modified for use by the Followers of the Apocalypse. It is designed to stop radiation, fire, acid, and high radiant loads. It is not designed to stop bullets."
 	icon_state = "sciencesuit"
 	item_state = "sciencesuit"
-	armor = ARMOR_VALUE_LIGHT_T3
-	armor_tokens = list( ARMOR_MODIFIER_UP_ENV_T4 ,ARMOR_MODIFIER_UP_LASER_T2,ARMOR_MODIFIER_UP_ENERGY_T2, ARMOR_MODIFIER_UP_DT_T2)
+	armor = ARMOR_VALUE_LIGHT_T2
+	tier = 2
+	hoodtype = /obj/item/clothing/head/hooded/sciencesuit
+	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T4 ,ARMOR_MODIFIER_UP_LASER_T2,ARMOR_MODIFIER_UP_ENERGY_T2, ARMOR_MODIFIER_UP_DT_T2)
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
+	body_parts_hidden = CHEST|ARMS|LEGS
 
+/obj/item/clothing/head/hooded/sciencesuit
+	name = "all purpose follower's suit hood"
+	desc = "A white hazmat helmet with a coupling system and a polarized visor."
+	icon = 'icons/fallout/onmob/clothes/head.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+	icon_state = "sciencesuit"
+	item_state = "sciencesuit"
+	tier = 2
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
+	slowdown = ARMOR_SLOWDOWN_LIGHT
+	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
+	heat_protection = HEAD
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	cold_protection = HEAD
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	armor = ARMOR_VALUE_LIGHT_T2
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T4 ,ARMOR_MODIFIER_UP_LASER_T2,ARMOR_MODIFIER_UP_ENERGY_T2, ARMOR_MODIFIER_UP_DT_T2)

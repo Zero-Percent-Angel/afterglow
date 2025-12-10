@@ -112,7 +112,7 @@
 		if("darklord") //20 tc + tk + summon item close enough for now
 			new /obj/item/dualsaber(src)
 			new /obj/item/dnainjector/telemut/darkbundle(src)
-			new /obj/item/clothing/suit/hooded/chaplain_hoodie(src)
+			new /obj/item/clothing/suit/armor/tiered/hooded/chaplain_hoodie(src)
 			new /obj/item/card/id/syndicate(src)
 			new /obj/item/clothing/shoes/chameleon/noslip(src) //because slipping while being a dark lord sucks
 			new /obj/item/book/granter/spell/summonitem(src)
