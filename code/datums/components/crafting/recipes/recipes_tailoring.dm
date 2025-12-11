@@ -1202,7 +1202,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	skill_level = VERY_HARD_CHECK
+	skill_level = HARD_CHECK
 
 /datum/crafting_recipe/legionparmahelmetconversion
 	name = "Salvaged Parma T-45 helmet"
