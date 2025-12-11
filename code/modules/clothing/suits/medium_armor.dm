@@ -912,11 +912,11 @@
 ////////////////////////////////
 
 //FOA SPA equivelant, heavy armor protection but medium armor penalty, compared to being in between heavy and power, very efficient but with a low ceiling
-/obj/item/clothing/suit/armor/tiered/medium/followerarmor
-	name = "all purpose  suit"
-	desc = "A hazardous environmental suit modified for use by the Followers of the Apocalypse. It is designed to stop radiation, fire, acid, and high radiant loads. It is not designed to stop bullets."
-	icon_state = "sciencesuit"
-	item_state = "sciencesuit"
+/obj/item/clothing/suit/armor/tiered/medium/foasalvage
+	name = "all purpose heavy armor"
+	desc = "A hazardous environmental suit modified for combat use. It has been enhanced with components salvaged from T-51b. "
+	icon_state = "foasalvage"
+	item_state = "foasalvage"
 	armor = ARMOR_VALUE_HEAVY_T3 //its made out of SPA
 	tier = 4
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL

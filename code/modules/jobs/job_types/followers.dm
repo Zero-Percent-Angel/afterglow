@@ -27,6 +27,7 @@
 	if(visualsOnly)
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/followers)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foa_combat_helm)
 
 //datum/outfit/job/followers/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 //	..()
@@ -77,6 +78,7 @@ Administrator
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rechargerpistol)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foasalvagedarmorconversion)
 	/*
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/pico_manip)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_matter_bin)
@@ -258,6 +260,7 @@ Practitioner
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foasalvagedarmorconversion)
 	/* Don't be silly.
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/pico_manip)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_matter_bin)
