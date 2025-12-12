@@ -9,7 +9,7 @@
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEJUMPSUIT
 	item_flags = SLOWS_WHILE_IN_HAND
-	max_integrity = 500
+	max_integrity = ARMOR_INTEGRITY
 	clothing_flags = THICKMATERIAL
 	equip_delay_self = 50
 	equip_delay_other = 60
