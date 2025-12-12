@@ -1195,9 +1195,9 @@ datum/crafting_recipe/steelbib/heavy
 //any T-45 variant will do
 /datum/crafting_recipe/foasalvagedarmorconversion
 	name = "All Purpose Heavy Armor"
-	result = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/ncr
+	result = /obj/item/clothing/suit/armor/tiered/medium/foasalvage
 	reqs = list(/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3 = 1,
-				/obj/item/toy/crayon/spraycan)
+				/obj/item/clothing/suit/armor/tiered/hooded/light/sciencesuit)
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
