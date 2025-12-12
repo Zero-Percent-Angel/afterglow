@@ -1037,19 +1037,19 @@
 * * * * * * * * * * * */
 
 #define ARMOR_MODIFIER_UP_ENERGY_T1 list(\
-		"energy" = 25)
+		"energy" = 5)
 
 #define ARMOR_MODIFIER_UP_ENERGY_T2 list(\
-		"energy" = 35)
+		"energy" = 15)
 
 #define ARMOR_MODIFIER_UP_ENERGY_T3 list(\
-		"energy" = 40)
+		"energy" = 20)
 
 #define ARMOR_MODIFIER_UP_ENERGY_T4 list(\
-		"energy" = 45)
+		"energy" = 25)
 
 #define ARMOR_MODIFIER_DOWN_ENERGY_T1 list(\
-		"energy" = -10)
+		"energy" = -5)
 
 /* Bullet armor
  * Adds on bullet protection
