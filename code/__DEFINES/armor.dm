@@ -2,6 +2,9 @@
  * ARMOR DEFINES
  */
 
+
+#define ARMOR_INTEGRITY 1000
+
 /* Zero armor values
  * * * * * * * * * * * */
 #define ARMOR_VALUE_ZERO list(\
@@ -60,68 +63,68 @@
  * 20% Damage Protection
  * * * * * * * * * * * */
 #define ARMOR_VALUE_LIGHT list(\
-		"linemelee" = 25, \
-		"linebullet" = 25, \
-		"linelaser" = 25, \
-		"energy" = 0, \
-		"bomb" = 15, \
-		"bio" = 10, \
-		"rad" = 10, \
-		"fire" = 10, \
-		"acid" = 10, \
-		"wound" = 10, \
+		"linemelee" = 50, \
+		"linebullet" = 50, \
+		"linelaser" = 50, \
+		"energy" = 15, \
+		"bomb" = 30, \
+		"bio" = 30, \
+		"rad" = 30, \
+		"fire" = 30, \
+		"acid" = 30, \
+		"wound" = 30, \
 		"damage_threshold" = 0)
 
 #define ARMOR_VALUE_LIGHT_T2 list(\
-		"linemelee" = 25, \
-		"linebullet" = 25, \
-		"linelaser" = 25, \
-		"energy" = 0, \
-		"bomb" = 15, \
-		"bio" = 10, \
-		"rad" = 10, \
-		"fire" = 10, \
-		"acid" = 10, \
-		"wound" = 10, \
+		"linemelee" = 50, \
+		"linebullet" = 50, \
+		"linelaser" = 50, \
+		"energy" = 15, \
+		"bomb" = 30, \
+		"bio" = 30, \
+		"rad" = 30, \
+		"fire" = 30, \
+		"acid" = 30, \
+		"wound" = 30, \
 		"damage_threshold" = 5)
 
 #define ARMOR_VALUE_LIGHT_T3 list(\
-		"linemelee" = 25, \
-		"linebullet" = 25, \
-		"linelaser" = 25, \
-		"energy" = 5, \
-		"bomb" = 15, \
-		"bio" = 10, \
-		"rad" = 10, \
-		"fire" = 10, \
-		"acid" = 10, \
-		"wound" = 10, \
+		"linemelee" = 50, \
+		"linebullet" = 50, \
+		"linelaser" = 50, \
+		"energy" = 15, \
+		"bomb" = 30, \
+		"bio" = 30, \
+		"rad" = 30, \
+		"fire" = 30, \
+		"acid" = 30, \
+		"wound" = 30, \
 		"damage_threshold" = 10)
 
 #define ARMOR_VALUE_LIGHT_T4 list(\
-		"linemelee" = 25, \
-		"linebullet" = 25, \
-		"linelaser" = 25, \
-		"energy" = 5, \
-		"bomb" = 15, \
-		"bio" = 10, \
-		"rad" = 10, \
-		"fire" = 10, \
-		"acid" = 10, \
-		"wound" = 10, \
+		"linemelee" = 50, \
+		"linebullet" = 50, \
+		"linelaser" = 50, \
+		"energy" = 15, \
+		"bomb" = 30, \
+		"bio" = 30, \
+		"rad" = 30, \
+		"fire" = 30, \
+		"acid" = 30, \
+		"wound" = 30, \
 		"damage_threshold" = 15)
 
 #define ARMOR_VALUE_LIGHT_T5 list(\
-		"linemelee" = 25, \
-		"linebullet" = 25, \
-		"linelaser" = 25, \
-		"energy" = 5, \
-		"bomb" = 15, \
-		"bio" = 10, \
-		"rad" = 10, \
-		"fire" = 10, \
-		"acid" = 10, \
-		"wound" = 10, \
+		"linemelee" = 50, \
+		"linebullet" = 50, \
+		"linelaser" = 50, \
+		"energy" = 15, \
+		"bomb" = 30, \
+		"bio" = 30, \
+		"rad" = 30, \
+		"fire" = 30, \
+		"acid" = 30, \
+		"wound" = 30, \
 		"damage_threshold" = 20)
 
 /* Medium armor values
@@ -133,68 +136,68 @@
  * 35% Damage Protection
  * * * * * * * * * * * */
 #define ARMOR_VALUE_MEDIUM list(\
-		"linemelee" = 54, \
-		"linebullet" = 54, \
-		"linelaser" = 54, \
-		"energy" = 5, \
-		"bomb" = 30, \
-		"bio" = 25, \
-		"rad" = 25, \
-		"fire" = 25, \
-		"acid" = 25, \
-		"wound" = 20, \
+		"linemelee" = 75, \
+		"linebullet" = 75, \
+		"linelaser" = 75, \
+		"energy" = 25, \
+		"bomb" = 37, \
+		"bio" = 37, \
+		"rad" = 37, \
+		"fire" = 37, \
+		"acid" = 37, \
+		"wound" = 37, \
 		"damage_threshold" = 0)
 
 #define ARMOR_VALUE_MEDIUM_T2 list(\
-		"linemelee" = 54, \
-		"linebullet" = 54, \
-		"linelaser" = 54, \
-		"energy" = 5, \
-		"bomb" = 30, \
-		"bio" = 25, \
-		"rad" = 25, \
-		"fire" = 25, \
-		"acid" = 25, \
-		"wound" = 20, \
+		"linemelee" = 75, \
+		"linebullet" = 75, \
+		"linelaser" = 75, \
+		"energy" = 25, \
+		"bomb" = 37, \
+		"bio" = 37, \
+		"rad" = 37, \
+		"fire" = 37, \
+		"acid" = 37, \
+		"wound" = 37, \
 		"damage_threshold" = 5)
 
 #define ARMOR_VALUE_MEDIUM_T3 list(\
-		"linemelee" = 54, \
-		"linebullet" = 54, \
-		"linelaser" = 54, \
-		"energy" = 10, \
-		"bomb" = 30, \
-		"bio" = 25, \
-		"rad" = 25, \
-		"fire" = 25, \
-		"acid" = 25, \
-		"wound" = 20, \
+		"linemelee" = 75, \
+		"linebullet" = 75, \
+		"linelaser" = 75, \
+		"energy" = 25, \
+		"bomb" = 37, \
+		"bio" = 37, \
+		"rad" = 37, \
+		"fire" = 37, \
+		"acid" = 37, \
+		"wound" = 37, \
 		"damage_threshold" = 10)
 
 #define ARMOR_VALUE_MEDIUM_T4 list(\
-		"linemelee" = 54, \
-		"linebullet" = 54, \
-		"linelaser" = 54, \
-		"energy" = 10, \
-		"bomb" = 30, \
-		"bio" = 25, \
-		"rad" = 25, \
-		"fire" = 25, \
-		"acid" = 25, \
-		"wound" = 20, \
+		"linemelee" = 75, \
+		"linebullet" = 75, \
+		"linelaser" = 75, \
+		"energy" = 25, \
+		"bomb" = 37, \
+		"bio" = 37, \
+		"rad" = 37, \
+		"fire" = 37, \
+		"acid" = 37, \
+		"wound" = 37, \
 		"damage_threshold" = 15)
 
 #define ARMOR_VALUE_MEDIUM_T5 list(\
-		"linemelee" = 54, \
-		"linebullet" = 54, \
-		"linelaser" = 54, \
-		"energy" = 10, \
-		"bomb" = 30, \
-		"bio" = 25, \
-		"rad" = 25, \
-		"fire" = 25, \
-		"acid" = 25, \
-		"wound" = 20, \
+		"linemelee" = 75, \
+		"linebullet" = 75, \
+		"linelaser" = 75, \
+		"energy" = 25, \
+		"bomb" = 37, \
+		"bio" = 37, \
+		"rad" = 37, \
+		"fire" = 37, \
+		"acid" = 37, \
+		"wound" = 37, \
 		"damage_threshold" = 20)
 
 /* Heavy armor values
@@ -206,68 +209,68 @@
  * 50% Damage Protection
  * * * * * * * * * * * */
 #define ARMOR_VALUE_HEAVY list(\
-		"linemelee" = 100, \
-		"linebullet" = 100, \
-		"linelaser" = 100, \
-		"energy" = 10, \
+		"linemelee" = 120, \
+		"linebullet" = 120, \
+		"linelaser" = 120, \
+		"energy" = 35, \
 		"bomb" = 50, \
-		"bio" = 35, \
-		"rad" = 25, \
-		"fire" = 35, \
-		"acid" = 35, \
-		"wound" = 35, \
+		"bio" = 45, \
+		"rad" = 45, \
+		"fire" = 45, \
+		"acid" = 45, \
+		"wound" = 40, \
 		"damage_threshold" = 0)
 
 #define ARMOR_VALUE_HEAVY_T2 list(\
-		"linemelee" = 100, \
-		"linebullet" = 100, \
-		"linelaser" = 100, \
-		"energy" = 10, \
+		"linemelee" = 120, \
+		"linebullet" = 120, \
+		"linelaser" = 120, \
+		"energy" = 35, \
 		"bomb" = 50, \
-		"bio" = 35, \
-		"rad" = 25, \
-		"fire" = 35, \
-		"acid" = 35, \
-		"wound" = 35, \
+		"bio" = 45, \
+		"rad" = 45, \
+		"fire" = 45, \
+		"acid" = 45, \
+		"wound" = 40, \
 		"damage_threshold" = 5)
 
 #define ARMOR_VALUE_HEAVY_T3 list(\
-		"linemelee" = 100, \
-		"linebullet" = 100, \
-		"linelaser" = 100, \
-		"energy" = 15, \
+		"linemelee" = 120, \
+		"linebullet" = 120, \
+		"linelaser" = 120, \
+		"energy" = 35, \
 		"bomb" = 50, \
-		"bio" = 35, \
-		"rad" = 25, \
-		"fire" = 35, \
-		"acid" = 35, \
-		"wound" = 35, \
+		"bio" = 45, \
+		"rad" = 45, \
+		"fire" = 45, \
+		"acid" = 45, \
+		"wound" = 40, \
 		"damage_threshold" = 10)
 
 #define ARMOR_VALUE_HEAVY_T4 list(\
-		"linemelee" = 100, \
-		"linebullet" = 100, \
-		"linelaser" = 100, \
-		"energy" = 15, \
+		"linemelee" = 120, \
+		"linebullet" = 120, \
+		"linelaser" = 120, \
+		"energy" = 35, \
 		"bomb" = 50, \
-		"bio" = 35, \
-		"rad" = 25, \
-		"fire" = 35, \
-		"acid" = 35, \
-		"wound" = 35, \
+		"bio" = 45, \
+		"rad" = 45, \
+		"fire" = 45, \
+		"acid" = 45, \
+		"wound" = 40, \
 		"damage_threshold" = 15)
 
 #define ARMOR_VALUE_HEAVY_T5 list(\
-		"linemelee" = 100, \
-		"linebullet" = 100, \
-		"linelaser" = 100, \
-		"energy" = 15, \
+		"linemelee" = 120, \
+		"linebullet" = 120, \
+		"linelaser" = 120, \
+		"energy" = 35, \
 		"bomb" = 50, \
-		"bio" = 35, \
-		"rad" = 25, \
-		"fire" = 35, \
-		"acid" = 35, \
-		"wound" = 35, \
+		"bio" = 45, \
+		"rad" = 45, \
+		"fire" = 45, \
+		"acid" = 45, \
+		"wound" = 40, \
 		"damage_threshold" = 20)
 
 /* Salvaged PA values

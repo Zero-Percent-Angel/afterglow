@@ -32,7 +32,7 @@
 
 /obj/item/clothing/suit/armor/tiered
 	var/tier = 1
-	max_integrity = 500
+	max_integrity = ARMOR_INTEGRITY
 
 /obj/item/clothing/suit/armor/tiered/take_damage(damage_amount, damage_type, damage_flag, sound_effect, attack_dir, armour_penetration, atom/attacked_by)
 	if (obj_integrity > 1)
