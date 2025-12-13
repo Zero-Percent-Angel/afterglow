@@ -349,4 +349,4 @@
 
 // Winter coat
 /obj/item/clothing/suit/hooded/wintercoat/fabrication_vals(mob/living/user, obj/item/clockwork/replica_fabricator/fabricator, silent) //four sheets of metal
-	return list("operation_time" = 30, "new_obj_type" = /obj/item/clothing/suit/hooded/wintercoat/ratvar, "power_cost" = POWER_METAL * 4, "spawn_dir" = SOUTH)
+	return list("operation_time" = 30, "new_obj_type" = /obj/item/clothing/suit/armor/tiered/hooded/wintercoat/ratvar, "power_cost" = POWER_METAL * 4, "spawn_dir" = SOUTH)

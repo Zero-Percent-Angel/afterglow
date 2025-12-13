@@ -31,7 +31,7 @@
 /*
  * Costume
  */
-/obj/item/clothing/suit/hooded/flashsuit
+/obj/item/clothing/suit/armor/tiered/hooded/flashsuit
 	name = "flashy costume"
 	desc = "What did you expect?"
 	icon_state = "flashsuit"
@@ -210,7 +210,7 @@
 	flags_inv = HIDEJUMPSUIT|HIDESHOES
 	mutantrace_variation = NONE
 
-/obj/item/clothing/suit/hooded/robes
+/obj/item/clothing/suit/armor/tiered/hooded/robes
 	name = "thick brown robes"
 	desc = "When was the last time these things were washed?"
 	icon_state = "brownrobes"
@@ -227,7 +227,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flash_protect = 2
 
-/obj/item/clothing/suit/hooded/robes/grey
+/obj/item/clothing/suit/armor/tiered/hooded/robes/grey
 	name = "grey robes"
 	desc = "Requisite attire for the monthly meetings of your local cult."
 	icon_state = "greyrobes"
@@ -240,7 +240,7 @@
 	item_state = "greyrobes"
 	icon_state = "greyrobes"
 
-/obj/item/clothing/suit/hooded/carp_costume
+/obj/item/clothing/suit/armor/tiered/hooded/hooded/carp_costume
 	name = "carp costume"
 	desc = "A costume made from 'synthetic' carp scales, it smells."
 	icon_state = "carp_casual"
@@ -259,7 +259,7 @@
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	flags_inv = HIDEHAIR|HIDEEARS
 
-/obj/item/clothing/suit/hooded/ian_costume	//It's Ian, rub his bell- oh god what happened to his inside parts?
+/obj/item/clothing/suit/armor/tiered/hooded/ian_costume	//It's Ian, rub his bell- oh god what happened to his inside parts?
 	name = "corgi costume"
 	desc = "A costume that looks like someone made a human-like corgi, it won't guarantee belly rubs."
 	icon_state = "ian"
@@ -275,7 +275,7 @@
 	body_parts_covered = HEAD
 	flags_inv = HIDEHAIR|HIDEEARS
 
-/obj/item/clothing/suit/hooded/bee_costume // It's Hip!
+/obj/item/clothing/suit/armor/tiered/hooded/bee_costume // It's Hip!
 	name = "bee costume"
 	desc = "Bee the true Queen!"
 	icon_state = "bee"
@@ -293,7 +293,7 @@
 	flags_inv = HIDEHAIR|HIDEEARS
 	dynamic_hair_suffix = ""
 
-/obj/item/clothing/suit/hooded/bloated_human	//OH MY GOD WHAT HAVE YOU DONE!?!?!?
+/obj/item/clothing/suit/armor/tiered/hooded/bloated_human	//OH MY GOD WHAT HAVE YOU DONE!?!?!?
 	name = "bloated human suit"
 	desc = "A horribly bloated suit made from human skins."
 	icon_state = "lingspacesuit"
@@ -498,7 +498,7 @@
 
 // WINTER COATS
 
-/obj/item/clothing/suit/hooded/wintercoat
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat
 	name = "winter coat"
 	desc = "A heavy jacket made from 'synthetic' animal furs."
 	icon_state = "coatwinter"
@@ -507,6 +507,7 @@
 	cold_protection = CHEST|GROIN|ARMS
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
+	hoodtype = /obj/item/clothing/head/hooded/winterhood
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1)
 
@@ -522,7 +523,7 @@
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1)
 
-/obj/item/clothing/suit/hooded/wintercoat/centcom
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/centcom
 	name = "centcom winter coat"
 	desc = "A coat layered with both insulation and armor."
 	icon_state = "coatcentcom"
@@ -538,7 +539,7 @@
 	icon_state = "winterhood_centcom"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
-/obj/item/clothing/suit/hooded/wintercoat/captain
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/captain
 	name = "captain's winter coat"
 	desc = "A luxurious winter coat, stuffed with the down of the endangered Uka bird and trimmed with genuine sable. The fabric is an indulgently soft micro-fiber, and the deep ultramarine color is only one that could be achieved with minute amounts of crystalline bluespace dust woven into the thread between the plectrums. Extremely lavish, and extremely durable. The tiny flakes of protective material make it nothing short of extremely light lamellar armor."
 	icon_state = "coatcaptain"
@@ -546,7 +547,7 @@
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/captain
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
-/obj/item/clothing/suit/hooded/wintercoat/captain/Initialize()
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/captain/Initialize()
 	. = ..()
 	allowed = GLOB.security_wintercoat_allowed
 
@@ -555,7 +556,7 @@
 	icon_state = "winterhood_captain"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
-/obj/item/clothing/suit/hooded/wintercoat/hop
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/hop
 	name = "head of personnel's winter coat"
 	desc = "A cozy winter coat, covered in thick fur. The breast features a proud yellow chevron, reminding everyone that you're the second banana."
 	icon_state = "coathop"
@@ -568,7 +569,7 @@
 	icon_state = "winterhood_hop"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
-/obj/item/clothing/suit/hooded/wintercoat/security
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/security
 	name = "security winter coat"
 	desc = "A red, armor-padded winter coat. It glitters with a mild ablative coating and a robust air of authority.  The zipper tab is a pair of jingly little handcuffs that get annoying after the first ten seconds."
 	icon_state = "coatsecurity"
@@ -586,7 +587,7 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
 
-/obj/item/clothing/suit/hooded/wintercoat/hos
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/hos
 	name = "head of security's winter coat"
 	desc = "A red, armor-padded winter coat, lovingly woven with a Kevlar interleave and reinforced with semi-ablative polymers and a silver azide fill material. The zipper tab looks like a tiny replica of Beepsky."
 	icon_state = "coathos"
@@ -603,7 +604,7 @@
 	icon_state = "winterhood_hos"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T1)
 
-/obj/item/clothing/suit/hooded/wintercoat/medical
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/medical
 	name = "medical winter coat"
 	desc = "An arctic white winter coat with a small blue caduceus instead of a plastic zipper tab. Snazzy."
 	icon_state = "coatmedical"
@@ -614,7 +615,7 @@
 	desc = "A white winter coat hood."
 	icon_state = "winterhood_medical"
 
-/obj/item/clothing/suit/hooded/wintercoat/cmo
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cmo
 	name = "chief medical officer's winter coat"
 	desc = "An arctic white winter coat with a small blue caduceus instead of a plastic zipper tab. The normal liner is replaced with an exceptionally thick, soft layer of fur."
 	icon_state = "coatcmo"
@@ -627,7 +628,7 @@
 	icon_state = "winterhood_cmo"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2)
 
-/obj/item/clothing/suit/hooded/wintercoat/chemistry
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/chemistry
 	name = "chemistry winter coat"
 	desc = "A lab-grade winter coat made with acid resistant polymers. For the enterprising chemist who was exiled to a frozen wasteland on the go."
 	icon_state = "coatchemistry"
@@ -640,7 +641,7 @@
 	icon_state = "winterhood_chemistry"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2)
 
-/obj/item/clothing/suit/hooded/wintercoat/viro
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/viro
 	name = "virology winter coat"
 	desc = "A white winter coat with green markings. Warm, but wont fight off the common cold or any other disease. Might make people stand far away from you in the hallway. The zipper tab looks like an oversized bacteriophage."
 	icon_state = "coatviro"
@@ -653,7 +654,7 @@
 	icon_state = "winterhood_viro"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2)
 
-/obj/item/clothing/suit/hooded/wintercoat/paramedic
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/paramedic
 	name = "paramedic winter coat"
 	desc = "A winter coat with blue markings. Warm, but probably won't protect from biological agents. For the cozy doctor on the go."
 	icon_state = "coatparamed"
@@ -664,7 +665,7 @@
 	desc = "A white winter coat hood with blue markings."
 	icon_state = "winterhood_paramed"
 
-/obj/item/clothing/suit/hooded/wintercoat/science
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/science
 	name = "science winter coat"
 	desc = "A white winter coat with an outdated atomic model instead of a plastic zipper tab."
 	icon_state = "coatscience"
@@ -677,7 +678,7 @@
 	icon_state = "winterhood_science"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2)
 
-/obj/item/clothing/suit/hooded/wintercoat/robotics
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/robotics
 	name = "robotics winter coat"
 	desc = "A black winter coat with a badass flaming robotic skull for the zipper tab. This one has bright red designs and a few useless buttons."
 	icon_state = "coatrobotics"
@@ -688,7 +689,7 @@
 	desc = "A black winter coat hood. You can pull it down over your eyes and pretend that you're an outdated, late 1980s interpretation of a futuristic mechanized police force. They'll fix you. They fix everything."
 	icon_state = "winterhood_robotics"
 
-/obj/item/clothing/suit/hooded/wintercoat/genetics
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/genetics
 	name = "genetics winter coat"
 	desc = "A white winter coat with a DNA helix for the zipper tab. "
 	icon_state = "coatgenetics"
@@ -699,7 +700,7 @@
 	desc = "A white winter coat hood. It's warm."
 	icon_state = "winterhood_genetics"
 
-/obj/item/clothing/suit/hooded/wintercoat/rd
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/rd
 	name = "research director's winter coat"
 	desc = "A thick arctic winter coat with an outdated atomic model instead of a plastic zipper tab. Most in the know are heavily aware that Bohr's model of the atom was outdated by the time of the 1930s when the Heisenbergian and Schrodinger models were generally accepted for true. Nevertheless, we still see its use in anachronism, roleplaying, and, in this case, as a zipper tab. At least it should keep you warm on your ivory pillar."
 	icon_state = "coatrd"
@@ -712,7 +713,7 @@
 	icon_state = "winterhood_rd"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2)
 
-/obj/item/clothing/suit/hooded/wintercoat/ce
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/ce
 	name = "chief engineer's winter coat"
 	desc = "A white winter coat with reflective green and yellow stripes. Stuffed with asbestos, treated with fire retardant PBDE, lined with a micro thin sheet of lead foil and snugly fitted to your body's measurements. This baby's ready to save you from anything except the thyroid cancer and systemic fibrosis you'll get from wearing it. The zipper tab is a tiny golden wrench."
 	icon_state = "coatce"
@@ -725,32 +726,32 @@
 	icon_state = "winterhood_ce"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T3)
 
-/obj/item/clothing/suit/hooded/wintercoat/engineering
+/obj/item/clothing/suit/armor/tiered/hooded/hooded/wintercoat/engineering
 	name = "engineering winter coat"
 	desc = "A surprisingly heavy yellow winter coat with reflective orange stripes. It has a small wrench for its zipper tab, and the inside layer is covered with a radiation-resistant silver-nylon blend. Because you're worth it."
 	icon_state = "coatengineer"
 	item_state = "coatengineer"
-	hoodtype = /obj/item/clothing/head/hooded/winterhood/engineering
+	hoodtype = /obj/item/clothing/suit/armor/tiered/hooded/winterhood/engineering
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2)
 
-/obj/item/clothing/head/hooded/winterhood/engineering
+/obj/item/clothing/suit/armor/tiered/hooded/winterhood/engineering
 	desc = "A yellow winter coat hood. Definitely not a replacement for a hard hat."
 	icon_state = "winterhood_engineer"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2)
 
-/obj/item/clothing/suit/hooded/wintercoat/engineering/atmos
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/engineering/atmos
 	name = "atmospherics winter coat"
 	desc = "A yellow and blue winter coat. The zipper pull-tab is made to look like a miniature breath mask."
 	icon_state = "coatatmos"
 	item_state = "coatatmos"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2)
 
-/obj/item/clothing/head/hooded/winterhood/engineering/atmos
+/obj/item/clothing/suit/armor/tiered/hooded/hooded/winterhood/engineering/atmos
 	desc = "A yellow and blue winter coat hood."
 	icon_state = "winterhood_atmos"
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2)
 
-/obj/item/clothing/suit/hooded/wintercoat/hydro
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/hydro
 	name = "hydroponics winter coat"
 	desc = " A green and blue winter coat. The zipper tab looks like the flower from a member of Rosa Hesperrhodos, a pretty pink-and-white rose. The colors absolutely clash."
 	icon_state = "coathydro"
@@ -761,7 +762,7 @@
 	desc = "A green winter coat hood."
 	icon_state = "winterhood_hydro"
 
-/obj/item/clothing/suit/hooded/wintercoat/bar
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/bar
 	name = "bartender winter coat"
 	desc = "A fancy winter coat with a waistcoat and flamboyant bowtie stuck onto it. The zipper tab is actually the bowtie."
 	icon_state = "coatbar"
@@ -772,7 +773,7 @@
 	desc = "A fancy winter coat hood."
 	icon_state = "winterhood_bar"
 
-/obj/item/clothing/suit/hooded/wintercoat/janitor
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/janitor
 	name = "janitors winter coat"
 	desc = "A purple-and-beige winter coat that smells of Abraxo-brand cleaner."
 	icon_state = "coatjanitor"
@@ -783,7 +784,7 @@
 	desc = "A purple hood that smells of Abraxo-brand cleaner."
 	icon_state = "winterhood_janitor"
 
-/obj/item/clothing/suit/hooded/wintercoat/cargo
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cargo
 	name = "cargo winter coat"
 	desc = "A tan-and-grey winter coat that has a crate for its zipper pull tab. It fills you with the warmth of a fierce independence."
 	icon_state = "coatcargo"
@@ -794,7 +795,7 @@
 	desc = "A grey hood for a winter coat."
 	icon_state = "winterhood_cargo"
 
-/obj/item/clothing/suit/hooded/wintercoat/qm
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/qm
 	name = "quartermaster's winter coat"
 	desc = "A dark brown winter coat that has a golden crate pin for its zipper pully."
 	icon_state = "coatqm"
@@ -805,7 +806,7 @@
 	desc = "A dark brown winter hood"
 	icon_state = "winterhood_qm"
 
-/obj/item/clothing/suit/hooded/wintercoat/aformal
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/aformal
 	name = "assistant's formal winter coat"
 	desc = "A black button up winter coat."
 	icon_state = "coataformal"
@@ -816,7 +817,7 @@
 	desc = "A black winter coat hood."
 	icon_state = "winterhood_aformal"
 
-/obj/item/clothing/suit/hooded/wintercoat/miner
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/miner
 	name = "mining winter coat"
 	desc = "A dusty button up winter coat. The zipper tab looks like a tiny pickaxe."
 	icon_state = "coatminer"
@@ -827,7 +828,7 @@
 	desc = "A dusty winter coat hood."
 	icon_state = "winterhood_miner"
 
-/obj/item/clothing/suit/hooded/wintercoat/ratvar
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/ratvar
 	name = "ratvarian winter coat"
 	desc = "A brass-plated button up winter coat. Instead of a zipper tab, it has a brass cog with a tiny red gemstone inset."
 	icon_state = "coatratvar"
@@ -842,7 +843,7 @@
 	light_power = 1
 	light_color = "#B18B25" //clockwork slab background top color
 
-/obj/item/clothing/suit/hooded/wintercoat/ratvar/equipped(mob/living/user,slot)
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/ratvar/equipped(mob/living/user,slot)
 	..()
 	if (slot != SLOT_WEAR_SUIT || !real)
 		return
@@ -854,7 +855,7 @@
 		to_chat(user,span_userdanger("Your skin burns where the coat touched your skin!"))
 		user.adjustFireLoss(rand(10,16))
 
-/obj/item/clothing/suit/hooded/wintercoat/narsie
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/narsie
 	name = "narsian winter coat"
 	desc = "A somber button-up in tones of grey entropy and a wicked crimson zipper. When pulled all the way up, the zipper looks like a bloody gash. The zipper pull looks like a single drop of blood."
 	icon_state = "coatnarsie"
@@ -862,7 +863,7 @@
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/narsie
 	var/real = TRUE
 
-/obj/item/clothing/suit/hooded/wintercoat/narsie/equipped(mob/living/user,slot)
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/narsie/equipped(mob/living/user,slot)
 	..()
 	if (slot != SLOT_WEAR_SUIT || !real)
 		return
@@ -878,21 +879,21 @@
 	desc = "A black winter hood full of whispering secrets that only She shall ever know."
 	icon_state = "winterhood_narsie"
 
-/obj/item/clothing/suit/hooded/wintercoat/ratvar/fake
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/ratvar/fake
 	name = "brass winter coat"
 	desc = "A brass-plated button up winter coat. Instead of a zipper tab, it has a brass cog with a tiny red piece of plastic as an inset."
 	icon_state = "coatratvar"
 	item_state = "coatratvar"
 	real = FALSE
 
-/obj/item/clothing/suit/hooded/wintercoat/narsie/fake
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/narsie/fake
 	name = "runed winter coat"
 	desc = "A dusty button up winter coat in the tones of oblivion and ash. The zipper pull looks like a single drop of blood."
 	icon_state = "coatnarsie"
 	item_state = "coatnarsie"
 	real = FALSE
 
-/obj/item/clothing/suit/hooded/wintercoat/durathread
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/durathread
 	name = "durathread winter coat"
 	desc = "The one coat to rule them all. Extremely durable while providing the utmost comfort."
 	icon_state = "coatdurathread"
@@ -901,7 +902,7 @@
 
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/durathread
 
-/obj/item/clothing/suit/hooded/wintercoat/durathread/Initialize()
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/durathread/Initialize()
 	. = ..()
 	allowed = GLOB.security_wintercoat_allowed
 
@@ -950,7 +951,7 @@
 	resistance_flags = NONE
 	armor = ARMOR_VALUE_LIGHT
 
-/obj/item/clothing/suit/hooded/wintercoat/christmascoatr
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/christmascoatr
 	name = "red christmas coat"
 	desc = "A festive red Christmas coat! Smells like Candy Cane!"
 	icon_state = "christmascoatr"
@@ -960,7 +961,7 @@
 /obj/item/clothing/head/hooded/winterhood/christmashoodr
 	icon_state = "christmashoodr"
 
-/obj/item/clothing/suit/hooded/wintercoat/christmascoatg
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/christmascoatg
 	name = "green christmas coat"
 	desc = "A festive green Christmas coat! Smells like Candy Cane!"
 	icon_state = "christmascoatg"
@@ -970,7 +971,7 @@
 /obj/item/clothing/head/hooded/winterhood/christmashoodg
 	icon_state = "christmashoodg"
 
-/obj/item/clothing/suit/hooded/wintercoat/christmascoatrg
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/christmascoatrg
 	name = "red and green christmas coat"
 	desc = "A festive red and green Christmas coat! Smells like Candy Cane!"
 	icon_state = "christmascoatrg"
@@ -980,13 +981,13 @@
 /obj/item/clothing/head/hooded/winterhood/christmashoodrg
 	icon_state = "christmashoodrg"
 
-/obj/item/clothing/suit/hooded/wintercoat/polychromic
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/polychromic
 	name = "polychromic winter coat"
 	icon_state = "coatpoly"
 	item_state = "coatpoly"
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/polychromic
 
-/obj/item/clothing/suit/hooded/wintercoat/polychromic/ComponentInitialize()
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/polychromic/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/polychromic, list("#6A6964", "#C4B8A6", "#0000FF"), 3)
 
@@ -1361,7 +1362,7 @@
 	item_state = "labcoat"
 
 //these are jackets too
-/obj/item/clothing/suit/hooded/parka/medical
+/obj/item/clothing/suit/armor/tiered/hooded/parka/medical
 	name = "armored medical parka"
 	icon_state = "armormedical"
 	desc = "A staunch, practical parka made out of a wind-breaking jacket, reinforced with metal plates."
@@ -1375,7 +1376,7 @@
 	desc = " A protective & concealing parka hood."
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
 
-/obj/item/clothing/suit/hooded/parka/grey
+/obj/item/clothing/suit/armor/tiered/hooded/parka/grey
 	name = "grey armored parka"
 	desc = "A staunch, practical parka made out of a wind-breaking jacket, reinforced with metal plates."
 	icon_state = "armorgrey"

@@ -14,7 +14,7 @@
 	mutantrace_variation = NONE
 	body_parts_covered = CHEST|ARMS|LEGS
 
-/obj/item/clothing/suit/hooded/cloak/david
+/obj/item/clothing/suit/armor/tiered/hooded/cloak/david
 	name = "red cloak"
 	icon_state = "goliath_cloak"
 	desc = "A grubby red cloak, it has gained its color from years of blood, dust, rust, and various stains."

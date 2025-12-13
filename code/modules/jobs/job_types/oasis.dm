@@ -419,7 +419,7 @@ Mayor
 	/datum/outfit/loadout/miner,)
 
 /datum/outfit/smutant/town/labourer
-	suit = /obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered/townie
+	suit = /obj/item/clothing/suit/armor/tiered/hooded/cloak/mutie/poncho/weathered/townie
 	uniform = /obj/item/clothing/under/f13/mutie/townie/overalls
 	shoes = /obj/item/clothing/shoes/f13/mutie
 	gloves = /obj/item/clothing/gloves/f13/mutie
@@ -668,7 +668,7 @@ Mayor
 	)
 
 /datum/outfit/smutant/town
-	suit = /obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered/townie
+	suit = /obj/item/clothing/suit/armor/tiered/hooded/cloak/mutie/poncho/weathered/townie
 	uniform = /obj/item/clothing/under/f13/mutie/townie
 	shoes = /obj/item/clothing/shoes/f13/mutie/boots
 	gloves = /obj/item/clothing/gloves/f13/mutie/sign

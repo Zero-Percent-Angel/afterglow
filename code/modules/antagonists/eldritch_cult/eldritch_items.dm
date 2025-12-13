@@ -16,7 +16,7 @@
 		return
 	var/dist = get_dist(user.loc,target.loc)
 	var/dir = get_dir(user.loc,target.loc)
-	
+
 	if(user.z != target.z)
 		to_chat(user,span_warning("[target.real_name] is beyond our reach."))
 	else
@@ -125,7 +125,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	flash_protect = 2
 
-/obj/item/clothing/suit/hooded/cultrobes/eldritch
+/obj/item/clothing/suit/armor/tiered/hooded/cultrobes/eldritch
 	name = "ominous armor"
 	desc = "A ragged, dusty set of robes. Strange eyes line the inside."
 	icon_state = "eldritch_armor"

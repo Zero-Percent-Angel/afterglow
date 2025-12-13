@@ -20,7 +20,7 @@
 					/obj/item/clothing/suit/jacket/flannel/brown = 4,
 					/obj/item/clothing/suit/jacket/puffer/vest = 4,
 					/obj/item/clothing/suit/jacket/puffer = 4,
-					/obj/item/clothing/suit/hooded/cloak/david = 4,
+					/obj/item/clothing/suit/armor/tiered/hooded/cloak/david = 4,
 					/obj/item/clothing/suit/bomber = 5,
 					/obj/item/clothing/under/suit/turtle/teal = 3,
 					/obj/item/clothing/under/suit/turtle/grey = 3,
@@ -140,9 +140,9 @@
 					/obj/item/clothing/under/costume/christmas/croptop = 3,
 					/obj/item/clothing/under/costume/christmas/croptop/green = 3,
 					*/
-					/obj/item/clothing/suit/hooded/wintercoat/christmascoatr = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/christmascoatg = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/christmascoatrg = 3,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/christmascoatr = 3,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/christmascoatg = 3,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/christmascoatrg = 3,
 					/*Commenting out until next Christmas or made automatic
 					/obj/item/clothing/head/christmashat = 3,
 					/obj/item/clothing/head/christmashatg = 3,
@@ -182,7 +182,7 @@
 					/obj/item/clothing/under/pants/mustangjeans = 3,
 					/obj/item/clothing/neck/necklace/dope = 5,
 					/obj/item/clothing/suit/jacket/letterman_nanotrasen = 5,
-					/obj/item/clothing/suit/hooded/wintercoat/polychromic = 5)
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/polychromic = 5)
 	refill_canister = /obj/item/vending_refill/clothing
 	default_price = PRICE_CHEAP
 	extra_price = PRICE_BELOW_NORMAL

@@ -531,7 +531,7 @@
 
 /datum/crafting_recipe/tribalwar/goliathcloak
 	name = "Deathclaw cloak"
-	result = /obj/item/clothing/suit/hooded/cloak/goliath
+	result = /obj/item/clothing/suit/armor/tiered/hooded/light/cloak/goliath
 	time = 50
 	reqs = list(/obj/item/stack/sheet/leather = 2,
 				/obj/item/stack/sheet/sinew = 2,
@@ -565,7 +565,7 @@
 
 /datum/crafting_recipe/tribalwar/legendaryclawcloak
 	name = "Legendary Deathclaw Cloak"
-	result = /obj/item/clothing/suit/hooded/cloak/hhunter
+	result = /obj/item/clothing/suit/armor/tiered/hooded/light/cloak/hhunter
 	time = 300
 	reqs = list(/obj/item/melee/unarmed/deathclawgauntlet = 1,
 				/obj/item/stack/sheet/animalhide/chitin = 10,

@@ -230,13 +230,13 @@
 	name = "Followers of the Chaplain Kit"
 
 /obj/item/storage/box/holy/follower/PopulateContents()
-	new /obj/item/clothing/suit/hooded/chaplain_hoodie/leader(src)
-	new /obj/item/clothing/suit/hooded/chaplain_hoodie(src)
-	new /obj/item/clothing/suit/hooded/chaplain_hoodie(src)
-	new /obj/item/clothing/suit/hooded/chaplain_hoodie(src)
-	new /obj/item/clothing/suit/hooded/chaplain_hoodie(src)
+	new /obj/item/clothing/suit/armor/tiered/hooded/chaplain_hoodie/leader(src)
+	new /obj/item/clothing/suit/armor/tiered/hooded/chaplain_hoodie(src)
+	new /obj/item/clothing/suit/armor/tiered/hooded/chaplain_hoodie(src)
+	new /obj/item/clothing/suit/armor/tiered/hooded/chaplain_hoodie(src)
+	new /obj/item/clothing/suit/armor/tiered/hooded/chaplain_hoodie(src)
 
-/obj/item/clothing/suit/hooded/chaplain_hoodie
+/obj/item/clothing/suit/armor/tiered/hooded/chaplain_hoodie
 	name = "follower hoodie"
 	desc = "Hoodie made for acolytes of the chaplain."
 	icon_state = "chaplain_hoodie"
@@ -253,7 +253,7 @@
 	body_parts_covered = HEAD
 	flags_inv = HIDEHAIR|HIDEFACE|HIDEEARS
 
-/obj/item/clothing/suit/hooded/chaplain_hoodie/leader
+/obj/item/clothing/suit/armor/tiered/hooded/chaplain_hoodie/leader
 	name = "leader hoodie"
 	desc = "Now you're ready for some 50 dollar bling water."
 	icon_state = "chaplain_hoodie_leader"

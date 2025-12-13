@@ -113,7 +113,7 @@ Tribal Chief
 	belt =	/obj/item/storage/backpack/spearquiver
 	neck =	/obj/item/clothing/neck/mantle/chief
 	id =	/obj/item/card/id/tribetattoo
-	suit =	/obj/item/clothing/suit/hooded/cloak/hhunter
+	suit =	/obj/item/clothing/suit/armor/tiered/hooded/light/cloak/hhunter
 	suit_store =	/obj/item/twohanded/spear/bonespear/deathclaw
 	backpack_contents = list(
 		/obj/item/restraints/legcuffs/bola = 1,
@@ -231,7 +231,7 @@ Tribal Head Hunter
 	name = "Hunter"
 	jobtype = /datum/job/tribal/f13Hhunter
 	uniform = /obj/item/clothing/under/f13/wayfarer/hunter
-	suit = /obj/item/clothing/suit/hooded/cloak/shunter
+	suit = /obj/item/clothing/suit/armor/tiered/hooded/light/cloak/shunter
 	belt = /obj/item/twohanded/spearaxe
 	id = /obj/item/card/id/tribetattoo
 	backpack_contents = list(

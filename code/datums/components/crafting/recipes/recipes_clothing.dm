@@ -129,7 +129,7 @@
 
 /datum/crafting_recipe/durathread_wintercoat
 	name = "Durathread Winter Coat"
-	result = /obj/item/clothing/suit/hooded/wintercoat/durathread
+	result = /obj/item/clothing/suit/armor/tiered/hooded/wintercoat/durathread
 	reqs = list(/obj/item/stack/sheet/durathread = 12,
 				/obj/item/stack/sheet/leather = 10)
 	time = 70

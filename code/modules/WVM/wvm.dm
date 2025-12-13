@@ -633,6 +633,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Chest reviver Implant",			/obj/item/organ/cyberimp/chest/reviver,								250),
 		new /datum/data/wasteland_equipment("Follower's Leather Jacket",	/obj/item/clothing/suit/armor/tiered/light/leather/jacket/followers,	300),
 		new /datum/data/wasteland_equipment("Armored Leather Jacket",	/obj/item/clothing/suit/armor/tiered/light/leather/leathermk2/followers,	600),
+		new /datum/data/wasteland_equipment("All Purpose Followers'suit",	/obj/item/clothing/suit/armor/tiered/hooded/light/sciencesuit,	1500),
 		new /datum/data/wasteland_equipment("Upgraded Prosthetic Limbs",	/obj/item/storage/box/sparelimbs,									300),
 		new /datum/data/wasteland_equipment("Cat",							/mob/living/simple_animal/pet/cat/Runtime,							2000),
 		)

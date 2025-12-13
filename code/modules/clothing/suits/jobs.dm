@@ -176,7 +176,7 @@
 
 //Robotocist
 
-/obj/item/clothing/suit/hooded/techpriest
+/obj/item/clothing/suit/armor/tiered/hooded/techpriest
 	name = "techpriest robes"
 	desc = "For those who REALLY love their toasters."
 	icon_state = "techpriest"

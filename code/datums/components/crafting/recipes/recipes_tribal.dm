@@ -5,7 +5,7 @@
 
 /datum/crafting_recipe/tribalwar/tatteredredcloak
 	name = "Tattered red cloak"
-	result = /obj/item/clothing/suit/hooded/cloak/goliath/tatteredred
+	result = /obj/item/clothing/suit/armor/tiered/hooded/light/cloak/goliath/tatteredred
 	time = 50
 	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/sinew = 1,

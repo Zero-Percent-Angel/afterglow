@@ -6,7 +6,7 @@
 
 /datum/gear/suit/redhood
 	name = "Red cloak"
-	path = /obj/item/clothing/suit/hooded/cloak/david
+	path = /obj/item/clothing/suit/armor/tiered/hooded/cloak/david
 	cost = 2
 
 /datum/gear/suit/labcoat
