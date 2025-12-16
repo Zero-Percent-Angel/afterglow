@@ -133,7 +133,7 @@
 /obj/item/ammo_box/magazine/m10mm_p90
 	name = "toploader magazine (10mm)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
-	icon_state = "5.56m"
+	icon_state = "p90"
 	ammo_type = /obj/item/ammo_casing/c10mm
 	caliber = list(CALIBER_10MM)
 	max_ammo = 24

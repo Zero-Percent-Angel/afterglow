@@ -24,7 +24,7 @@
 	slowdown = 1
 	strip_delay = 50
 	equip_delay_other = 50
-	max_integrity = 500
+	max_integrity = ARMOR_INTEGRITY
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/armor
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_HEAVY
