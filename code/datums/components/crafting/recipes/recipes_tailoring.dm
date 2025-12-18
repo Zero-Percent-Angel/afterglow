@@ -281,6 +281,19 @@ datum/crafting_recipe/steelbib/heavy
 	always_available = FALSE
 	skill_level = REGULAR_CHECK
 
+/datum/crafting_recipe/hardhat_battle
+	name = "reinforced hardhat"
+	result = /obj/item/clothing/head/helmet/f13/hardhat/battle
+	reqs = list(/obj/item/clothing/head/hardhat = 1,
+				/obj/item/advanced_crafting_components/alloys = 1,
+				/obj/item/stock_parts/cell/ammo/ec = 1,
+				)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = TRUE
+	skill_level = REGULAR_CHECK
+
 //Greaves
 
 /datum/crafting_recipe/plateboot
