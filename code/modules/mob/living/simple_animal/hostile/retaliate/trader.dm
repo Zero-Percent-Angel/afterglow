@@ -185,7 +185,7 @@
 		.["product_records"] += list(data)
 	.["hidden_records"] = list()
 	for (var/datum/data/vending_product/R in hidden_records)
-		var/calc_price = R.custom_premium_price || extra_price
+		var/calc_price = R.custom_price + extra_price
 		calc_price = round((calc_price * ((150 - user.skill_value(SKILL_BARTER))/100)))
 		var/list/data = list(
 			asset = get_spritesheet_icon_key_from_type(R.product_path),
@@ -230,7 +230,7 @@
 			if(R.custom_price)
 				price_to_use = R.custom_price
 			if(hidden_records.Find(R))
-				price_to_use = R.custom_premium_price ? R.custom_premium_price : extra_price
+				price_to_use = R.custom_price + extra_price
 
 			price_to_use = round((price_to_use * ((150 - usr.skill_value(SKILL_BARTER))/100)))
 

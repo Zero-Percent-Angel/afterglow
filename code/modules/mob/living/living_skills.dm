@@ -77,6 +77,12 @@
 		return TRUE
 	return FALSE
 
+/mob/proc/skill_checks(list/checks, threshold = REGULAR_CHECK, do_message = 0)
+	for (var/check in checks)
+		if (skill_check(check, threshold, do_message))
+			return TRUE
+	return FALSE
+
 /mob/proc/highest_skill_value(check1, check2)
 	var/skill_1_val = skill_value(check1)
 	var/skill_2_val = skill_value(check2)

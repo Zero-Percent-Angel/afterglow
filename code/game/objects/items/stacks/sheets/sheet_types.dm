@@ -28,7 +28,7 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	null, \
 	new/datum/stack_recipe("metal rod", /obj/item/stack/rods, 1, 2, 60), \
 	new/datum/stack_recipe("iron ingot", /obj/item/ingot/iron, 6, time = 100), \
-	new/datum/stack_recipe("metal parts", /obj/item/stack/crafting/metalparts, 5, skill_threshold = REGULAR_CHECK), \
+	new/datum/stack_recipe("metal parts", /obj/item/stack/crafting/metalparts, 5, skill_threshold = REGULAR_CHECK, skills = list(SKILL_REPAIR, SKILL_OUTDOORSMAN)), \
 	new/datum/stack_recipe("length of chain", /obj/item/blacksmith/chain, 1, time = 50), \
 	null, \
 	new/datum/stack_recipe("lock", /obj/item/lock_construct, 1, skill_threshold = VERY_EASY_CHECK), \
@@ -104,8 +104,8 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	new/datum/stack_recipe("meatspike frame", /obj/structure/kitchenspike_frame, 5, time = 25, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("floodlight frame", /obj/structure/floodlight_frame, 5, one_per_turf = TRUE, on_floor = TRUE, skill_threshold = HARD_CHECK), \
 	null, \
-	new/datum/stack_recipe("large light fixture frame", /obj/item/wallframe/light_fixture, 2, skill_threshold = EASY_CHECK), \
-	new/datum/stack_recipe("small light fixture frame", /obj/item/wallframe/light_fixture/small, 1, skill_threshold = EASY_CHECK), \
+	new/datum/stack_recipe("large light fixture frame", /obj/item/wallframe/light_fixture, 2, skill_threshold = EASY_CHECK, skills = list(SKILL_REPAIR, SKILL_OUTDOORSMAN)), \
+	new/datum/stack_recipe("small light fixture frame", /obj/item/wallframe/light_fixture/small, 1, skill_threshold = EASY_CHECK, skills = list(SKILL_REPAIR, SKILL_OUTDOORSMAN)), \
 	null, \
 	new/datum/stack_recipe("extinguisher cabinet frame", /obj/item/wallframe/extinguisher_cabinet, 2), \
 	new/datum/stack_recipe("button frame", /obj/item/wallframe/button, 1, skill_threshold = EASY_CHECK), \

@@ -154,6 +154,19 @@
 	item_state = "wastewar"
 	flags_inv = HIDEEARS|HIDEHAIR
 
+/obj/item/clothing/head/helmet/f13/hardhat/battle
+	name = "reinforced hard hat"
+	desc = "a hard hat that has a plexiglass visor attached to improve protection and an energy cell bolted on. This provides more protection to your face."
+	hat_type = "battle"
+	icon_state = "hardhat0_battle"
+	item_state = "hardhat0_battle"
+	visor_flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1)
+	light_range = 6
+	light_power = 1
+	flash_protect = 1
+	tier = 2
+	armor = ARMOR_VALUE_LIGHT_T2
 
 // Tier 2
 
