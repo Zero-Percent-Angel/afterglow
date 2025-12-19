@@ -8,11 +8,11 @@
 	name = "worn vault jumpsuit"
 	path = /obj/item/clothing/under/f13/vault
 
-/datum/gear/uniform/vault
+/datum/gear/uniform/vault_trad
 	name = "traditional vault jumpsuit"
 	path = /obj/item/clothing/under/f13/vault/alternate
 
-/datum/gear/uniform/vault
+/datum/gear/uniform/vault_city
 	name = "Vault City jumpsuit"
 	path = /obj/item/clothing/under/f13/vault/vcity
 
