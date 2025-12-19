@@ -1213,7 +1213,7 @@ datum/crafting_recipe/steelbib/heavy
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 	always_available = FALSE
-	skill_level = HARD_VERY_EASY
+	skill_level = VERY_EASY_CHECK
 
 /datum/crafting_recipe/legionscutumarmorconversion
 	name = "Salvaged Scutum T-51 Armor"
