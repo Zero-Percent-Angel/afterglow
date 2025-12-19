@@ -185,7 +185,7 @@
 			var/max_multiplier = round(get_amount() / R.req_amount)
 			var/title
 			var/can_build = 1
-			can_build = (can_build && (max_multiplier>0) && user.skill_check(SKILL_REPAIR, R.skill_threshold))
+			can_build = (can_build && (max_multiplier>0) && user.skill_checks(R.skills, R.skill_threshold))
 
 			if (R.res_amount>1)
 				title+= "[R.res_amount]x [R.title]\s"
@@ -194,7 +194,7 @@
 			title+= " ([R.req_amount] [singular_name]\s)"
 			if (can_build)
 				t1 += text("<A href='byond://?src=[REF(src)];sublist=[recipes_sublist];make=[i];multiplier=1'>[title]</A>  ")
-			else if (user.skill_check(SKILL_REPAIR, R.skill_threshold))
+			else if (user.skill_checks(R.skills, R.skill_threshold))
 				t1 += text("[]", title)
 				continue
 			else
@@ -234,7 +234,7 @@
 		if(!multiplier || multiplier < 1 || !IS_FINITE(multiplier)) //href exploit protection
 			stack_trace("Invalid multiplier value in stack creation [multiplier], [usr] is likely attempting an exploit")
 			return
-		if(!building_checks(R, multiplier) || !usr.skill_check(SKILL_REPAIR, R.skill_threshold))
+		if(!building_checks(R, multiplier) || !usr.skill_checks(R.skills, R.skill_threshold))
 			return
 		if (R.time)
 			var/adjusted_time = 0
@@ -552,9 +552,9 @@
 	var/trait_booster = null
 	var/trait_modifier = 1
 	var/skill_threshold = VERY_EASY_CHECK
+	var/list/skills = list(SKILL_REPAIR)
 
-/datum/stack_recipe/New(title, result_type, req_amount = 1, res_amount = 1, max_res_amount = 1,time = 0, one_per_turf = FALSE, on_floor = FALSE, window_checks = FALSE, placement_checks = FALSE, applies_mats = FALSE, trait_booster = null, trait_modifier = 1, skill_threshold = VERY_EASY_CHECK)
-
+/datum/stack_recipe/New(title, result_type, req_amount = 1, res_amount = 1, max_res_amount = 1,time = 0, one_per_turf = FALSE, on_floor = FALSE, window_checks = FALSE, placement_checks = FALSE, applies_mats = FALSE, trait_booster = null, trait_modifier = 1, skill_threshold = VERY_EASY_CHECK, skills = list(SKILL_REPAIR))
 
 	src.title = title
 	src.result_type = result_type
@@ -570,6 +570,8 @@
 	src.trait_booster = trait_booster
 	src.trait_modifier = trait_modifier
 	src.skill_threshold = skill_threshold
+	src.skills = skills
+
 /*
  * Recipe list datum
  */

@@ -51,7 +51,7 @@ SUBSYSTEM_DEF(waster_spawn)
 			legion_done += choosen
 
 /datum/controller/subsystem/waster_spawn/proc/do_legion_take_over(obj/effect/landmark/legion_attack/choosen)
-	for (var/mob/living/carbon/human/human in oview(9, choosen))
+	for (var/mob/living/carbon/human/human in view(9, choosen))
 		if (human.stat != DEAD)
 			return
 	// do legion spawn here
