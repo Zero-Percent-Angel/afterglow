@@ -189,23 +189,23 @@
 	beepsky_fashion = /datum/beepsky_fashion/engineer
 
 
-obj/item/clothing/head/helmet/f13/hardhat/ComponentInitialize()
+/obj/item/clothing/head/helmet/f13/hardhat/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/update_icon_updates_onmob)
 
-obj/item/clothing/head/helmet/f13/hardhat/attack_self(mob/living/user)
+/obj/item/clothing/head/helmet/f13/hardhat/attack_self(mob/living/user)
 	toggle_helmet_light(user)
 
-obj/item/clothing/head/helmet/f13/hardhat/proc/toggle_helmet_light(mob/living/user)
+/obj/item/clothing/head/helmet/f13/hardhat/proc/toggle_helmet_light(mob/living/user)
 	set_light_on(!light_on)
 	update_icon()
 
-obj/item/clothing/head/helmet/f13/hardhat/proc/turn_on(mob/user)
+/obj/item/clothing/head/helmet/f13/hardhat/proc/turn_on(mob/user)
 	set_light_on(TRUE)
 
-obj/item/clothing/head/helmet/f13/hardhat/proc/turn_off(mob/user)
+/obj/item/clothing/head/helmet/f13/hardhat/proc/turn_off(mob/user)
 	set_light_on(FALSE)
 
-obj/item/clothing/head/helmet/f13/hardhat/update_icon_state()
+/obj/item/clothing/head/helmet/f13/hardhat/update_icon_state()
 	icon_state = "hardhat[light_on]_[hat_type]"
 	item_state = "hardhat[light_on]_[hat_type]"
