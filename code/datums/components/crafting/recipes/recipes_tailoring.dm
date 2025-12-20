@@ -1208,7 +1208,7 @@ datum/crafting_recipe/steelbib/heavy
 //any T-45 variant will do
 /datum/crafting_recipe/foasalvagedarmorconversion
 	name = "All Purpose Heavy Armor"
-	result = /obj/item/clothing/suit/armor/tiered/medium/foasalvage
+	result = /obj/item/clothing/suit/armor/tiered/heavy/foasalvage
 	reqs = list(/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3 = 1,
 				/obj/item/clothing/suit/armor/tiered/hooded/light/sciencesuit)
 	time = 30
