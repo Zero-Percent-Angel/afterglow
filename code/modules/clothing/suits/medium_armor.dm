@@ -907,23 +907,5 @@
 	armor_tier_desc = ARMOR_CLOTHING_MEDIUM
 	stiffness = MEDIUM_STIFFNESS
 
-/////////////////////////////////
-// Followers of the Apocalypse //
-////////////////////////////////
-
-//FOA SPA equivelant, heavy armor protection but medium armor penalty, compared to being in between heavy and power, very efficient but with a low ceiling
-/obj/item/clothing/suit/armor/tiered/medium/foasalvage
-	name = "all purpose heavy armor"
-	desc = "A hazardous environmental suit modified for combat use. It has been enhanced with components salvaged from T-51b. "
-	icon_state = "foasalvage"
-	item_state = "foasalvage"
-	armor = ARMOR_VALUE_HEAVY_T3 //its made out of SPA
-	tier = 4
-	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
-	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
-	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2 ,ARMOR_MODIFIER_DOWN_BULLET_T3,ARMOR_MODIFIER_DOWN_MELEE_T3, ARMOR_MODIFIER_UP_LASER_T2,ARMOR_MODIFIER_UP_ENERGY_T2, ARMOR_MODIFIER_UP_DT_T2)
-	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
-	body_parts_hidden = CHEST|ARMS|LEGS
 
 

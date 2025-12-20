@@ -436,3 +436,25 @@
 	icon_state = "leg_legate"
 	item_state = "leg_legate"
 	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T3 * ARMOR_SLOWDOWN_GLOBAL_MULT
+
+/////////////////////////////////
+// Followers of the Apocalypse //
+////////////////////////////////
+
+//FOA SPA equivelant, less slowdown and less protection
+/obj/item/clothing/suit/armor/tiered/heavy/foasalvage
+	name = "all purpose heavy armor"
+	desc = "A hazardous environmental suit modified for combat use. It has been enhanced with components salvaged from T-51b. "
+	icon_state = "foasalvage"
+	item_state = "foasalvage"
+	slowdown = ARMOR_SLOWDOWN_HEAVY * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
+	armor = ARMOR_VALUE_HEAVY_T3
+	tier = 4
+	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2 ,ARMOR_MODIFIER_DOWN_BULLET_T2,ARMOR_MODIFIER_DOWN_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2,ARMOR_MODIFIER_UP_ENERGY_T2)
+	rad_flags = RAD_PROTECT_CONTENTS | RAD_NO_CONTAMINATE
+	body_parts_hidden = CHEST|ARMS|LEGS
+
+
