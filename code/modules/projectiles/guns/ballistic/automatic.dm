@@ -240,7 +240,7 @@
 	init_firemodes = list(
 		/datum/firemode/automatic/rpm150,
 		/datum/firemode/burst/three/slow,
-		/datum/firemode/semi_auto/faster
+		/datum/firemode/semi_auto/fast
 	)
 
 	is_automatic = TRUE
@@ -291,7 +291,7 @@
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
 		/datum/firemode/automatic/rpm150,
-		/datum/firemode/semi_auto/faster
+		/datum/firemode/semi_auto/fast
 	)
 
 	is_automatic = TRUE

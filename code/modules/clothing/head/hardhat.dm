@@ -165,3 +165,47 @@
 	icon_state = "hardhat0_dblue"
 	item_state = "hardhat0_dblue"
 	hat_type = "dblue"
+
+/obj/item/clothing/head/helmet/f13/hardhat //tiered hardhat
+	name = "hard hat"
+	desc = "Hacky workaround for hardhats. if you see this, report it to a coder."
+	icon_state = "hardhat0_yellow"
+	item_state = "hardhat0_yellow"
+	light_system = MOVABLE_LIGHT_DIRECTIONAL
+	light_range = 4
+	light_power = 0.8
+	light_color = "#FFCC66"
+	light_on = FALSE
+	var/hat_type = "yellow" //Determines used sprites: hardhat[light_on]_[hat_type] and hardhat[light_on]_[hat_type]2 (lying down sprite)
+	armor = ARMOR_VALUE_LIGHT
+	flags_inv = 0
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	resistance_flags = FIRE_PROOF
+	dynamic_hair_suffix = "+generic"
+	icon = 'icons/fallout/clothing/hats.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/head.dmi'
+
+	dog_fashion = /datum/dog_fashion/head
+	beepsky_fashion = /datum/beepsky_fashion/engineer
+
+
+/obj/item/clothing/head/helmet/f13/hardhat/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/update_icon_updates_onmob)
+
+/obj/item/clothing/head/helmet/f13/hardhat/attack_self(mob/living/user)
+	toggle_helmet_light(user)
+
+/obj/item/clothing/head/helmet/f13/hardhat/proc/toggle_helmet_light(mob/living/user)
+	set_light_on(!light_on)
+	update_icon()
+
+/obj/item/clothing/head/helmet/f13/hardhat/proc/turn_on(mob/user)
+	set_light_on(TRUE)
+
+/obj/item/clothing/head/helmet/f13/hardhat/proc/turn_off(mob/user)
+	set_light_on(FALSE)
+
+/obj/item/clothing/head/helmet/f13/hardhat/update_icon_state()
+	icon_state = "hardhat[light_on]_[hat_type]"
+	item_state = "hardhat[light_on]_[hat_type]"

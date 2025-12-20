@@ -30,6 +30,19 @@
 	var/melee_block_threshold = null
 	var/dmg_block_threshold = null
 
+/obj/item/clothing/suit/armor/Initialize()
+	. = ..()
+	if(!islist(allowed))
+		allowed = list()
+	// Here we set up what's allowed in their suit storage.
+	// this lets us merge multiple lists, and also disallow certain things from it too
+	allowed |= GLOB.default_all_armor_slot_allowed
+
+/obj/item/clothing/suit/armor/examine()
+	. = ..()
+	. += "<br>" + span_notice(armor_tier_desc)
+
+
 /obj/item/clothing/suit/armor/tiered
 	var/tier = 1
 	max_integrity = ARMOR_INTEGRITY
