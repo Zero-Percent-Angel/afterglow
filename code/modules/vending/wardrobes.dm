@@ -90,8 +90,8 @@
 					/obj/item/storage/backpack/duffelbag/med = 5,
 					/obj/item/storage/backpack/medic = 5,
 					/obj/item/storage/backpack/satchel/med = 5,
-					/obj/item/clothing/suit/hooded/wintercoat/medical = 5,
-					/obj/item/clothing/suit/hooded/wintercoat/paramedic = 2,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/medical = 5,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/paramedic = 2,
 					/obj/item/clothing/under/rank/medical/doctor/nurse = 5,
 					/obj/item/clothing/head/nursehat = 5,
 					/obj/item/clothing/under/rank/medical/doctor/skirt= 5,
@@ -112,7 +112,7 @@
 					/obj/item/clothing/suit/toggle/labcoat/emt = 5,
 					/obj/item/clothing/shoes/sneakers/white = 5,
 					/obj/item/clothing/head/soft/emt = 5,
-					/obj/item/clothing/suit/hooded/surgical = 5,
+					/obj/item/clothing/suit/armor/tiered/hooded/surgical = 5,
 					/obj/item/clothing/mask/surgical = 5,
 					/obj/item/clothing/under/rank/medical/doctor/util = 5,
 					/obj/item/clothing/under/rank/medical/paramedic/red = 5,
@@ -136,7 +136,7 @@
 					/obj/item/storage/backpack/duffelbag/engineering = 3,
 					/obj/item/storage/backpack/industrial = 3,
 					/obj/item/storage/backpack/satchel/eng = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/engineering = 3,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/engineering = 3,
 					/obj/item/clothing/under/rank/engineering/engineer = 5,
 					/obj/item/clothing/under/rank/engineering/engineer/skirt = 5,
 					/obj/item/clothing/under/rank/engineering/engineer/hazard = 5,
@@ -167,7 +167,7 @@
 					/obj/item/storage/backpack/satchel/eng = 3,
 					/obj/item/storage/backpack/industrial = 3,
 					/obj/item/clothing/head/hardhat/weldhat/dblue = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/engineering/atmos = 3,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/engineering/atmos = 3,
 					/obj/item/clothing/under/rank/engineering/atmospheric_technician = 5,
 					/obj/item/clothing/under/rank/engineering/atmospheric_technician/skirt = 5,
 					/obj/item/clothing/shoes/sneakers/black = 5)
@@ -184,7 +184,7 @@
 	icon_state = "cargodrobe"
 	product_ads = "Upgraded Assistant Style! Pick yours today!;These shorts are comfy and easy to wear, get yours now!"
 	vend_reply = "Thank you for using the CargoDrobe!"
-	products = list(/obj/item/clothing/suit/hooded/wintercoat/cargo = 3,
+	products = list(/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cargo = 3,
 					/obj/item/clothing/under/rank/cargo/tech = 5,
 					/obj/item/clothing/under/rank/cargo/tech/skirt = 5,
 					/obj/item/clothing/under/rank/cargo/util = 5,
@@ -211,7 +211,7 @@
 					/obj/item/clothing/under/rank/rnd/roboticist = 3,
 					/obj/item/clothing/under/rank/rnd/roboticist/sleek = 3,
 					/obj/item/clothing/under/rank/rnd/roboticist/skirt = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/robotics = 3,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/robotics = 3,
 					/obj/item/clothing/suit/toggle/labcoat = 3,
 					/obj/item/clothing/shoes/sneakers/black = 3,
 					/obj/item/clothing/gloves/fingerless = 3,
@@ -220,7 +220,7 @@
 					/obj/item/clothing/under/misc/mechsuitred = 1,
 					/obj/item/clothing/under/misc/mechsuitwhite = 1,
 					/obj/item/clothing/under/misc/mechsuitblue = 1)
-	contraband = list(/obj/item/clothing/suit/hooded/techpriest = 2)
+	contraband = list(/obj/item/clothing/suit/armor/tiered/hooded/techpriest = 2)
 	refill_canister = /obj/item/vending_refill/wardrobe/robo_wardrobe
 	payment_department = ACCOUNT_SCI
 	cost_multiplier_per_dept = list(ACCOUNT_SCI = 0)
@@ -238,7 +238,7 @@
 					/obj/item/clothing/head/beret/sci = 3,
 					/obj/item/storage/backpack/science = 3,
 					/obj/item/storage/backpack/satchel/tox = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/science = 3,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/science = 3,
 					/obj/item/clothing/under/rank/rnd/scientist = 4,
 					/obj/item/clothing/under/rank/rnd/scientist/util = 4,
 					/obj/item/clothing/under/rank/rnd/scientist/skirt = 4,
@@ -249,14 +249,14 @@
 					/obj/item/clothing/under/rank/rnd/roboticist = 3,
 					/obj/item/clothing/under/rank/rnd/roboticist/sleek = 3,
 					/obj/item/clothing/under/rank/rnd/roboticist/skirt = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/robotics = 3,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/robotics = 3,
 					/obj/item/clothing/suit/toggle/labcoat = 3,
 					/obj/item/clothing/shoes/sneakers/black = 3,
 					/obj/item/clothing/gloves/fingerless = 3,
 					/obj/item/clothing/head/soft/black = 3,
 					/obj/item/clothing/mask/bandana/skull = 2,
 					/obj/item/clothing/mask/gas = 5)
-	contraband = list(/obj/item/clothing/suit/hooded/techpriest = 2,
+	contraband = list(/obj/item/clothing/suit/armor/tiered/hooded/techpriest = 2,
 					/obj/item/clothing/under/misc/mechsuitred = 1,
 					/obj/item/clothing/under/misc/mechsuitwhite = 1,
 					/obj/item/clothing/under/misc/mechsuitblue = 1)
@@ -275,7 +275,7 @@
 	vend_reply = "Thank you for using the Hydrobe!"
 	products = list(/obj/item/storage/backpack/botany = 3,
 					/obj/item/storage/backpack/satchel/hyd = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/hydro = 2,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/hydro = 2,
 					/obj/item/clothing/neck/apron/labor = 3,
 					/obj/item/clothing/under/rank/civilian/hydroponics = 5,
 					/obj/item/clothing/under/rank/civilian/hydroponics/skirt = 5,
@@ -321,7 +321,7 @@
 	vend_reply = "Thank you for using the BarDrobe!"
 	products = list(/obj/item/clothing/head/that = 3,
 					/obj/item/radio/headset/headset_srv = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/bar = 3,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/bar = 3,
 					/obj/item/clothing/under/suit/sl = 3,
 					/obj/item/clothing/under/rank/civilian/bartender = 3,
 					/obj/item/clothing/under/rank/civilian/bartender/skirt = 2,
@@ -380,7 +380,7 @@
 	vend_reply = "Thank you for using the JaniDrobe!"
 	products = list(/obj/item/clothing/under/rank/civilian/janitor = 2,
 					/obj/item/clothing/under/rank/civilian/janitor/skirt = 2,
-					/obj/item/clothing/suit/hooded/wintercoat/janitor = 3,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/janitor = 3,
 					/obj/item/cartridge/janitor = 3,
 					/obj/item/clothing/gloves/color/black = 2,
 					/obj/item/clothing/head/soft/purple = 2,
@@ -478,7 +478,7 @@
 	products = list(/obj/item/clothing/under/rank/medical/chemist = 3,
 					/obj/item/clothing/head/beret/chem = 3,
 					/obj/item/clothing/under/rank/medical/chemist/skirt = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/chemistry = 3,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/chemistry = 3,
 					/obj/item/clothing/shoes/sneakers/white = 3,
 					/obj/item/storage/backpack/chemistry = 3,
 					/obj/item/storage/backpack/satchel/chem = 3,
@@ -499,7 +499,7 @@
 	vend_reply = "Thank you for using the GeneDrobe!"
 	products = list(/obj/item/clothing/under/rank/medical/geneticist = 3,
 					/obj/item/clothing/under/rank/medical/geneticist/skirt = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/genetics = 3,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/genetics = 3,
 					/obj/item/clothing/shoes/sneakers/white = 3,
 					/obj/item/storage/backpack/genetics = 3,
 					/obj/item/storage/backpack/satchel/gen = 3)
@@ -519,7 +519,7 @@
 	products = list(/obj/item/clothing/head/beret/viro = 3,
 					/obj/item/clothing/under/rank/medical/virologist = 3,
 					/obj/item/clothing/under/rank/medical/virologist/skirt = 3,
-					/obj/item/clothing/suit/hooded/wintercoat/viro = 3,
+					/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/viro = 3,
 					/obj/item/clothing/shoes/sneakers/white = 3,
 					/obj/item/clothing/mask/surgical = 3,
 					/obj/item/storage/backpack/virology = 3,
@@ -538,7 +538,7 @@
 	icon_deny = "capsdrobe-deny"
 	product_ads = "Only the greatest for a commander such as ours."
 	vend_reply = "A wonderful day to you, great leader."
-	products = list(/obj/item/clothing/suit/hooded/wintercoat/captain = 1,
+	products = list(/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/captain = 1,
 					/obj/item/storage/backpack/captain = 1,
 					/obj/item/storage/backpack/satchel/cap = 1,
 					/obj/item/storage/backpack/duffelbag/captain = 1,

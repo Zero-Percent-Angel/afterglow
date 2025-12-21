@@ -1,5 +1,5 @@
 /****************Explorer's Suit and Mask****************/
-/obj/item/clothing/suit/hooded/explorer
+/obj/item/clothing/suit/armor/tiered/hooded/explorer
 	name = "explorer suit"
 	desc = "An armoured suit for exploring harsh environments."
 	icon_state = "explorer"
@@ -116,7 +116,7 @@
 
 /****************SEVA Suit and Mask****************/
 
-/obj/item/clothing/suit/hooded/explorer/seva
+/obj/item/clothing/suit/armor/tiered/hooded/explorer/seva
 	name = "SEVA Suit"
 	desc = "A fire-proof suit for exploring hot environments. Its design and material make it easier for a Goliath to keep their grip on the wearer."
 	icon_state = "seva"
@@ -148,7 +148,7 @@
 
 /****************Exo-Suit and Mask****************/
 
-/obj/item/clothing/suit/hooded/explorer/exo
+/obj/item/clothing/suit/armor/tiered/hooded/explorer/exo
 	name = "Exo-suit"
 	desc = "A robust suit for fighting dangerous animals. Its design and material make it harder for a Goliath to keep their grip on the wearer."
 	icon_state = "exo"

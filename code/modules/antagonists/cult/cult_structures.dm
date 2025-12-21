@@ -163,7 +163,7 @@
 	var/reward
 	switch(choice)
 		if("Shielded Robe")
-			reward = /obj/item/clothing/suit/hooded/cultrobes/cult_shield
+			reward = /obj/item/clothing/suit/armor/tiered/hooded/cultrobes/cult_shield
 		if("Flagellant's Robe")
 			reward = /obj/item/clothing/suit/hooded/cultrobes/berserker
 		if("Mirror Shield")

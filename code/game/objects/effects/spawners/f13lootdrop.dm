@@ -104,7 +104,7 @@
 	name = "hoodie"
 	items = list(
 				/obj/item/clothing/head/beanie/black,
-				/obj/item/clothing/suit/hooded/chaplain_hoodie
+				/obj/item/clothing/suit/armor/tiered/hooded/chaplain_hoodie
 				)
 
 /obj/effect/spawner/bundle/f13/bartender_purple
@@ -559,7 +559,7 @@
 				/obj/item/retractor,
 				/obj/item/cautery,
 				/obj/item/scalpel,
-				/obj/item/clothing/suit/hooded/surgical,
+				/obj/item/clothing/suit/armor/tiered/hooded/surgical,
 				/obj/item/clothing/gloves/color/latex,
 				/obj/item/clothing/mask/surgical,
 				/obj/item/surgical_drapes,
