@@ -35,6 +35,14 @@
 	for(var/obj/item/stock_parts/matter_bin/B in component_parts)
 		reagents.maximum_volume += REAGENTS_BASE_VOLUME * B.rating
 	AddComponent(/datum/component/plumbing/simple_demand)
+	wires = new /datum/wires/smoke_machine(src)
+
+/obj/machinery/smoke_machine/attackby(obj/item/I, mob/user, params)
+	if(panel_open && is_wire_tool(I))
+		wires.interact(user)
+		return TRUE
+	. = ..()
+
 
 /obj/machinery/smoke_machine/ComponentInitialize()
 	. = ..()
