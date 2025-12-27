@@ -76,7 +76,7 @@
 	new /obj/item/circuitboard/machine/techfab/department/medical(src)
 	new /obj/item/storage/photo_album/CMO(src)
 	new	/obj/item/storage/lockbox/medal/medical(src)
-	new /obj/item/clothing/suit/hooded/wintercoat/cmo(src)
+	new /obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cmo(src)
 	new /obj/item/clothing/head/beret/cmo/blue(src)
 
 /obj/structure/closet/secure_closet/animal

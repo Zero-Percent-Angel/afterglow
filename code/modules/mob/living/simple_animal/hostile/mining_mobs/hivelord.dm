@@ -306,8 +306,6 @@
 				shoes = /obj/item/clothing/shoes/workboots/mining
 			gloves = /obj/item/clothing/gloves/color/black
 			mask = /obj/item/clothing/mask/gas/explorer
-			if(prob(20))
-				suit = pickweight(list(/obj/item/clothing/suit/hooded/explorer = 6, /obj/item/clothing/suit/hooded/cloak/goliath = 2, /obj/item/clothing/suit/hooded/explorer/exo = 6, /obj/item/clothing/suit/hooded/explorer/seva = 6))
 			if(prob(30))
 				r_pocket = pickweight(list(/obj/item/stack/marker_beacon = 20, /obj/item/stack/spacecash/c1000 = 7, /obj/item/reagent_containers/hypospray/medipen/survival = 2, /obj/item/borg/upgrade/modkit/damage = 1 ))
 			if(prob(10))
@@ -407,7 +405,7 @@
 
 		if("Beelegion")
 			uniform = /obj/item/clothing/under/color/yellow
-			suit = /obj/item/clothing/suit/hooded/bee_costume
+			suit = /obj/item/clothing/suit/armor/tiered/hooded/bee_costume
 			shoes = /obj/item/clothing/shoes/sneakers/yellow
 			gloves = /obj/item/clothing/gloves/color/yellow
 			ears = /obj/item/radio/headset

@@ -102,15 +102,15 @@
 
 /datum/gear/donator/mutie/armour/cloak
 	name = "Mutant Cloak"
-	path = /obj/item/clothing/suit/hooded/cloak/mutie
+	path = /obj/item/clothing/suit/armor/tiered/hooded/cloak/mutie
 
 /datum/gear/donator/mutie/armour/poncho
 	name = "Mutant Poncho"
-	path = /obj/item/clothing/suit/hooded/cloak/mutie/poncho
+	path = /obj/item/clothing/suit/armor/tiered/hooded/cloak/mutie/poncho
 
 /datum/gear/donator/mutie/armour/poncho
 	name = "Mutant Weathered Poncho"
-	path = /obj/item/clothing/suit/hooded/cloak/mutie/poncho/weathered
+	path = /obj/item/clothing/suit/armor/tiered/hooded/cloak/mutie/poncho/weathered
 
 /datum/gear/donator/mutie/gloves
 	name = "Mutant Bracers"

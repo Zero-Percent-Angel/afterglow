@@ -1,15 +1,16 @@
 //Hoods for winter coats and chaplain hoodie etc
 
-/obj/item/clothing/suit/hooded
+/obj/item/clothing/suit/armor/tiered/hooded
 	actions_types = list(/datum/action/item_action/toggle_hood)
+	icon = 'icons/obj/clothing/suits.dmi'
 	var/obj/item/clothing/head/hooded/hood
 	var/hoodtype = /obj/item/clothing/head/hooded/winterhood //so the chaplain hoodie or other hoodies can override this
 
-/obj/item/clothing/suit/hooded/Initialize()
+/obj/item/clothing/suit/armor/tiered/hooded/Initialize()
 	. = ..()
 	hood = MakeHelmet()
 
-/obj/item/clothing/suit/hooded/Destroy()
+/obj/item/clothing/suit/armor/tiered/hooded/Destroy()
 	. = ..()
 	qdel(hood)
 	hood = null
@@ -18,25 +19,25 @@
 	SEND_SIGNAL(src, COMSIG_SUIT_MADE_HELMET, H)
 	return H
 
-/obj/item/clothing/suit/hooded/MakeHelmet(obj/item/clothing/head/hooded/H)
+/obj/item/clothing/suit/armor/tiered/hooded/MakeHelmet(obj/item/clothing/head/hooded/H)
 	if(!hood)
 		H = new hoodtype(src)
 		H.suit = src
 		return ..()
 
-/obj/item/clothing/suit/hooded/ui_action_click()
+/obj/item/clothing/suit/armor/tiered/hooded/ui_action_click()
 	ToggleHood()
 
-/obj/item/clothing/suit/hooded/item_action_slot_check(slot, mob/user, datum/action/A)
+/obj/item/clothing/suit/armor/tiered/hooded/item_action_slot_check(slot, mob/user, datum/action/A)
 	if(slot == SLOT_WEAR_SUIT || slot == SLOT_NECK)
 		return 1
 
-/obj/item/clothing/suit/hooded/equipped(mob/user, slot)
+/obj/item/clothing/suit/armor/tiered/hooded/equipped(mob/user, slot)
 	if(slot != SLOT_WEAR_SUIT && slot != SLOT_NECK)
 		RemoveHood()
 	..()
 
-/obj/item/clothing/suit/hooded/proc/RemoveHood()
+/obj/item/clothing/suit/armor/tiered/hooded/proc/RemoveHood()
 	suittoggled = FALSE
 	if(ishuman(hood.loc))
 		var/mob/living/carbon/H = hood.loc
@@ -46,18 +47,18 @@
 		hood.forceMove(src)
 	update_icon()
 
-/obj/item/clothing/suit/hooded/update_icon_state()
+/obj/item/clothing/suit/armor/tiered/hooded/update_icon_state()
 	icon_state = "[initial(icon_state)]"
 	if(ishuman(hood?.loc))
 		var/mob/living/carbon/human/H = hood.loc
 		if(H.head == hood)
 			icon_state += "_t"
 
-/obj/item/clothing/suit/hooded/dropped(mob/user)
+/obj/item/clothing/suit/armor/tiered/hooded/dropped(mob/user)
 	..()
 	RemoveHood()
 
-/obj/item/clothing/suit/hooded/proc/ToggleHood()
+/obj/item/clothing/suit/armor/tiered/hooded/proc/ToggleHood()
 	if(!hood)
 		to_chat(loc, span_warning("[src] seems to be missing its hood.."))
 		return
@@ -81,7 +82,8 @@
 		RemoveHood()
 
 /obj/item/clothing/head/hooded
-	var/obj/item/clothing/suit/hooded/suit
+	var/obj/item/clothing/suit/armor/tiered/hooded/suit
+	var/tier = 1
 	dynamic_hair_suffix = ""
 
 /obj/item/clothing/head/hooded/Destroy()

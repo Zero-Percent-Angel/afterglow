@@ -516,11 +516,6 @@
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(0.75)
-	init_firemodes = list(
-		/datum/firemode/automatic/rpm300,
-		/datum/firemode/semi_auto
-	)
-
 	automatic = TRUE
 	automatic_burst_overlay = FALSE
 
@@ -1500,7 +1495,7 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T4
+	damage_multiplier = GUN_EXTRA_DAMAGE_T5
 	cock_delay = GUN_COCK_RIFLE_BASE
 
 /* * * * * * * * * * *

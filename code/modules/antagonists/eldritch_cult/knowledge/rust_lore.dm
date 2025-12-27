@@ -120,7 +120,7 @@
 	cost = 1
 	next_knowledge = list(/datum/eldritch_knowledge/rust_regen,/datum/eldritch_knowledge/flesh_ghoul)
 	required_atoms = list(/obj/structure/table,/obj/item/clothing/mask/gas)
-	result_atoms = list(/obj/item/clothing/suit/hooded/cultrobes/eldritch)
+	result_atoms = list(/obj/item/clothing/suit/armor/tiered/hooded/cultrobes/eldritch)
 
 /datum/eldritch_knowledge/essence
 	name = "Priest's Ritual"

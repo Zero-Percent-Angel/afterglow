@@ -1205,6 +1205,18 @@ datum/crafting_recipe/steelbib/heavy
 	always_available = FALSE
 	skill_level = VERY_EASY_CHECK
 
+//any T-45 variant will do
+/datum/crafting_recipe/foasalvagedarmorconversion
+	name = "All Purpose Heavy Armor"
+	result = /obj/item/clothing/suit/armor/tiered/heavy/foasalvage
+	reqs = list(/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3 = 1,
+				/obj/item/clothing/suit/armor/tiered/hooded/light/sciencesuit)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+	skill_level = HARD_CHECK
+
 /datum/crafting_recipe/legionparmahelmetconversion
 	name = "Salvaged Parma T-45 helmet"
 	result = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/legion
@@ -1484,6 +1496,20 @@ datum/crafting_recipe/steelbib/heavy
 	name = "mk2 raider combat helmet"
 	result = /obj/item/clothing/head/helmet/f13/combat/mk2/raider
 	reqs = list(/obj/item/clothing/head/helmet/f13/combat/mk2 = 1,
+				/obj/item/toy/crayon/spraycan)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+	skill_level = VERY_EASY_CHECK
+
+//FOA combat armor
+
+/datum/crafting_recipe/foa_combat_helm
+	name = "Followers combat helmet"
+	result = /obj/item/clothing/head/helmet/f13/combat/ncr
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat/followers = 1,
 				/obj/item/toy/crayon/spraycan)
 	tools = list(TOOL_WORKBENCH)
 	time = 60

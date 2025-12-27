@@ -125,7 +125,7 @@
 				var/obj/item/clothing/suit/space/hardsuit/hardsuit = O.suit
 				helmet_type = initial(hardsuit.helmettype)
 			else
-				var/obj/item/clothing/suit/hooded/hooded = O.suit
+				var/obj/item/clothing/suit/armor/tiered/hooded/hooded = O.suit
 				helmet_type = initial(hooded.hoodtype)
 
 			if(helmet_type)

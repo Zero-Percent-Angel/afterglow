@@ -202,7 +202,7 @@
 /datum/outfit/bee_terrorist
 	name = "BLF Operative"
 	uniform = /obj/item/clothing/under/color/yellow
-	suit = /obj/item/clothing/suit/hooded/bee_costume
+	suit = /obj/item/clothing/suit/armor/tiered/hooded/bee_costume
 	shoes = /obj/item/clothing/shoes/sneakers/yellow
 	gloves = /obj/item/clothing/gloves/color/yellow
 	ears = /obj/item/radio/headset
