@@ -439,8 +439,8 @@ Follower Volunteer
 	flag = F13FOLLOWERGUARD
 	department_flag = FOLLOWERS
 	faction = "Followers"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "no one, generally speaking your only actual supervisor is your own judgement, but it might not be amiss to listen to the Doctors. Assuming they're around."
 	description = "Your job is to guard the clinic and make sure it's not destroyed."
 	enforces = "Assist and provide medical services to those in need. Provide education for all those who are willing to learn."
