@@ -366,6 +366,7 @@
 	can_charge = 0
 	selfcharge = 1
 	icon_state = "rechargerpistol"
+	item_state = "rechargerpistol"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan)
 	cell_type = /obj/item/stock_parts/cell/ammo/breeder
 	equipsound = 'sound/f13weapons/equipsounds/aep7equip.ogg'
@@ -389,6 +390,7 @@
 	desc = "A first-generation self-charging laser weapon."
 	icon = 'icons/fallout/objects/guns/longguns.dmi'
 	icon_state = "rechargerrifle"
+	item_state = "rechargerrifle"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan/rifle)
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
