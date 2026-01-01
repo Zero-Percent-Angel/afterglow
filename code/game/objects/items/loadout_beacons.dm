@@ -985,6 +985,12 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	new /obj/item/gun/energy/laser/wattz(src)
 	new /obj/item/stock_parts/cell/ammo/ec(src)
 
+/obj/item/storage/box/gun/energy/rechargerrifle
+	name = "recharger rifle case"
+
+/obj/item/storage/box/gun/energy/rechargerrifle/PopulateContents()
+	new /obj/item/gun/energy/laser/wattz/recharger/rifle(src)
+
 /obj/item/choice_beacon/box/gun //template for sprites
 	name = "weapon case"
 	desc = "a sturdy case keeping your weapon of choice safe until you pop it open."
@@ -1027,6 +1033,13 @@ GLOBAL_LIST_EMPTY(loadout_boxes)
 	entry_flags = LOADOUT_FLAG_WASTER
 	entry_class = LOADOUT_CAT_ENERGY
 	spawn_thing = /obj/item/storage/box/gun/energy/wattz1000
+
+/datum/loadout_box/rechargerrifle
+	entry_tag = "Recharger Rifle"
+	entry_flags = LOADOUT_FLAG_WASTER
+	entry_class = LOADOUT_CAT_ENERGY
+	spawn_thing = /obj/item/storage/box/gun/energy/rechargerrifle
+
 
 /// Fancyguns
 
