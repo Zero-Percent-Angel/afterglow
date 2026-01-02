@@ -66,13 +66,13 @@
 			return FALSE
 
 	if(requires_trait== "UNETHICAL_PRACTITIONER") //brainwashing, romerol revivication, viral bonding, combat implants
-		if(HAS_TRAIT(user,TRAIT_UNETHICAL_PRACTITIONER)||HAS_TRAIT(user,TRAIT_ABDUCTOR_SCIENTIST_TRAINING))
+		if(HAS_TRAIT(user,TRAIT_UNETHICAL_PRACTITIONER)|| HAS_TRAIT(user,TRAIT_ABDUCTOR_SCIENTIST_TRAINING) || user.skill_check(SKILL_DOCTOR, EXPERT_CHECK))
 			return TRUE
 		else
 			return FALSE
 
 	if(requires_trait== "UNETHICAL_PRACTITIONER_BRAINWASHING") //brainwashing, romerol revivication, viral bonding, combat implants
-		if(HAS_TRAIT(user,TRAIT_UNETHICAL_PRACTITIONER_BRAINWASHING))
+		if(HAS_TRAIT(user,TRAIT_UNETHICAL_PRACTITIONER_BRAINWASHING) || user.skill_check(SKILL_DOCTOR, EXPERT_CHECK))
 			return TRUE
 		else
 			return FALSE
