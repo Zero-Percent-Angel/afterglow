@@ -1210,7 +1210,7 @@ datum/crafting_recipe/steelbib/heavy
 	name = "All Purpose Heavy Armor"
 	result = /obj/item/clothing/suit/armor/tiered/heavy/foasalvage
 	reqs = list(/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3 = 1,
-				/obj/item/clothing/suit/armor/tiered/hooded/light/sciencesuit)
+				/obj/item/clothing/suit/armor/tiered/hooded/light/sciencesuit = 1)
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
@@ -1508,8 +1508,8 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/foa_combat_helm
 	name = "Followers combat helmet"
-	result = /obj/item/clothing/head/helmet/f13/combat/ncr
-	reqs = list(/obj/item/clothing/head/helmet/f13/combat/followers = 1,
+	result = /obj/item/clothing/head/helmet/f13/combat/followers
+	reqs = list(/obj/item/clothing/head/helmet/f13/combat = 1,
 				/obj/item/toy/crayon/spraycan)
 	tools = list(TOOL_WORKBENCH)
 	time = 60

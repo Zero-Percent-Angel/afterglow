@@ -28,6 +28,7 @@
 		return
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/followers)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foa_combat_helm)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foasalvagedarmorconversion)
 
 //datum/outfit/job/followers/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 //	..()
@@ -78,7 +79,6 @@ Administrator
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rechargerpistol)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foasalvagedarmorconversion)
 	/*
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/pico_manip)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_matter_bin)
@@ -260,7 +260,7 @@ Practitioner
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/superstimpak5)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foasalvagedarmorconversion)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rechargerpistol)
 	/* Don't be silly.
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/pico_manip)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_matter_bin)
@@ -285,7 +285,7 @@ Practitioner
 	id =	/obj/item/card/id/silver
 	//chemwhiz =	TRUE
 	backpack =	/obj/item/storage/backpack/medic
-	belt = /obj/item/kit_spawner/follower/doctor
+	belt = /obj/item/gun/energy/laser/wattz/recharger
 	satchel =	/obj/item/storage/backpack/satchel/med
 	duffelbag =	/obj/item/storage/backpack/duffelbag/med
 	backpack_contents = list(
@@ -379,7 +379,7 @@ Follower Volunteer
 	name = "Nurse"
 	jobtype = /datum/job/followers/f13followervolunteer
 	id = 		/obj/item/card/id/silver
-	belt = /obj/item/kit_spawner/follower
+	belt = /obj/item/gun/energy/laser/wattz/recharger
 	uniform = 	/obj/item/clothing/under/f13/followers
 	suit =	/obj/item/clothing/suit/armor/tiered/light/leather/jacket/followers
 	shoes = 	/obj/item/clothing/shoes/f13/explorer
@@ -439,8 +439,8 @@ Follower Volunteer
 	flag = F13FOLLOWERGUARD
 	department_flag = FOLLOWERS
 	faction = "Followers"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "no one, generally speaking your only actual supervisor is your own judgement, but it might not be amiss to listen to the Doctors. Assuming they're around."
 	description = "Your job is to guard the clinic and make sure it's not destroyed."
 	enforces = "Assist and provide medical services to those in need. Provide education for all those who are willing to learn."

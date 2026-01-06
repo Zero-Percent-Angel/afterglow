@@ -747,7 +747,7 @@
 
 /* * * * * * * * * * *
  * Needler 'revolver'
- * Wounding revolver
+ * Armor Piercing gun
  * Needles
  * Uncommon
  * * * * * * * * * * */
@@ -770,7 +770,7 @@
 	init_recoil = HANDGUN_RECOIL(0.8)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 	init_firemodes = list(
-		/datum/firemode/semi_auto/faster
+		/datum/firemode/semi_auto/fast
 	)
 	silenced = TRUE
 	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
