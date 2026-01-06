@@ -49,7 +49,7 @@
 	stiffness = MEDIUM_STIFFNESS
 	custom_price = PRICE_ALMOST_ONE_GRAND
 	tier = 4
-	special_modifications = list("a" = -1)
+	special_modifications = list("a" = -1, "s" = 2)
 
 /obj/item/clothing/suit/armor/tiered/power_armor/Initialize()
 	. = ..()
@@ -387,12 +387,14 @@
 	tier = 5
 	armor = ARMOR_VALUE_SALVAGE_T5
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T2)
+	special_modifications = list("a" = -1, "s" = 4)
+	armor_tier_desc = "This is a suit of power armor, able to withstand a tank shell and still finish a marathon. (-1 Agility, 10% Slowdown, +4 Strength - while powered)"
 
 /obj/item/clothing/suit/armor/tiered/power_armor/advanced/x02
 	name = "Enclave power armor"
 	desc = "Upgraded pre-war power armor design used by the Enclave. It is mildly worn due to it's age and lack of maintenance after the fall of the Enclave."
-	icon_state = "PA_x02"
-	item_state = "PA_x02"
+	icon_state = "badmin"
+	item_state = "badmin"
 	salvaged_type = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier4/x02
 	tier = 5
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T3, ARMOR_MODIFIER_UP_BULLET_T3, ARMOR_MODIFIER_UP_LASER_T3)

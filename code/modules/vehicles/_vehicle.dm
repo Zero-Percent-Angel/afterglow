@@ -21,7 +21,7 @@
 	var/enclosed = FALSE	// is the rider protected from bullets? assume no
 	var/list/autogrant_actions_passenger	//plain list of typepaths
 	var/list/autogrant_actions_controller	//assoc list "[bitflag]" = list(typepaths)
-	var/list/mob/occupant_actions			//assoc list mob = list(type = action datum assigned to mob)
+	var/list/occupant_actions			//assoc list mob = list(type = action datum assigned to mob)
 	var/obj/vehicle/trailer
 	var/engine_on = 0
 	var/engine_on_sound = null

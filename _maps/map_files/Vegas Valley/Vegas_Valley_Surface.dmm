@@ -5374,6 +5374,11 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/ambientlighting/building/g)
+"bLU" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/suit/armor/tiered/light/combat/brotherhood/scout,
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood)
 "bMj" = (
 /obj/structure/simple_door/metal/dirtystore,
 /obj/effect/decal/cleanable/dirt,
@@ -20468,6 +20473,13 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/a)
+"gtP" = (
+/obj/machinery/porta_turret/f13/turret_556/burstfire{
+	faction = list("BOS");
+	req_access = list(120)
+	},
+/turf/open/floor/plating/rust,
+/area/f13/brotherhood)
 "guh" = (
 /obj/structure/barricade/wooden/planks/pregame,
 /obj/structure/window/fulltile/house{
@@ -29314,11 +29326,9 @@
 	},
 /area/f13/wasteland)
 "jbb" = (
-/obj/machinery/porta_turret/f13/turret_556/burstfire{
-	faction = list("BOS")
-	},
-/turf/open/floor/plating/rust,
-/area/f13/brotherhood)
+/obj/item/reagent_containers/food/drinks/bottle/cognac/empty,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "jbl" = (
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 10;
@@ -61152,16 +61162,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/bluechess,
 /area/f13/legioncamp)
-"sZi" = (
-/obj/machinery/porta_turret/f13/turret_556/burstfire{
-	faction = list("BOS")
-	},
-/turf/open/floor/f13{
-	color = "#ffe9de";
-	icon_state = "darkrusty";
-	name = "dirty floor"
-	},
-/area/f13/brotherhood)
 "sZj" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -66115,6 +66115,10 @@
 	pixel_x = 17
 	},
 /obj/structure/tires/two,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"uAp" = (
+/obj/structure/closet/crate/grave,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "uAq" = (
@@ -71258,7 +71262,7 @@
 	},
 /area/f13/ambientlighting/building/o)
 "wfI" = (
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/armor/tier3,
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -74985,12 +74989,16 @@
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/k)
 "xjV" = (
-/obj/structure/rack/shelf_metal,
-/obj/effect/spawner/lootdrop/f13/armor/random,
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/rust,
-/area/f13/building/powered)
+/obj/machinery/porta_turret/f13/turret_556/burstfire{
+	faction = list("BOS");
+	req_access = list(120)
+	},
+/turf/open/floor/f13{
+	color = "#ffe9de";
+	icon_state = "darkrusty";
+	name = "dirty floor"
+	},
+/area/f13/brotherhood)
 "xjW" = (
 /obj/structure/barricade/tentclothcorner{
 	dir = 8
@@ -123705,7 +123713,7 @@ qZA
 qZA
 sqC
 glB
-jbb
+gtP
 naK
 naK
 ryn
@@ -124622,7 +124630,7 @@ sqC
 sqC
 sqC
 hRM
-eal
+bLU
 eal
 sqC
 xAu
@@ -125517,7 +125525,7 @@ vhF
 fpI
 sqC
 glB
-sZi
+xjV
 naK
 xAu
 xAu
@@ -153497,8 +153505,8 @@ yfv
 yfv
 yfv
 azA
-azA
-azA
+uAp
+jbb
 yfv
 yfv
 yfv
@@ -155547,7 +155555,7 @@ ipF
 jyd
 jyd
 uXO
-xjV
+fds
 bMQ
 bMQ
 gsh
