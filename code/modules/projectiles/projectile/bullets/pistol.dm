@@ -285,7 +285,7 @@
 	stamina = BULLET_STAMINA_PISTOL_NEEDLE
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_PISTOL_NEEDLE
-	damage_threshold_penetration = 20
+	damage_threshold_penetration = 10
 
 	wound_bonus = BULLET_WOUND_PISTOL_NEEDLE
 	bare_wound_bonus = BULLET_WOUND_PISTOL_NEEDLE_NAKED_MULT
@@ -297,7 +297,7 @@
 	var/piercing = FALSE // not sure what this does
 
 /obj/item/projectile/bullet/needle/improvised
-	damage_threshold_penetration = 10
+	damage_threshold_penetration = 5
 
 
 ///////////
