@@ -303,6 +303,7 @@ Head Scribe
 	backpack_contents = list(
 		/obj/item/gun/energy/laser/plasma/glock = 1,
 		/obj/item/stock_parts/cell/ammo/ec = 2,
+		/obj/item/melee/powered/ripper/folding = 1,
 		/obj/item/book/granter/crafting_recipe/blueprint/wattz2k = 1,
 		/obj/item/book/granter/crafting_recipe/blueprint/aer9 = 1,
 		/obj/item/book/granter/crafting_recipe/blueprint/aep7 = 1,
