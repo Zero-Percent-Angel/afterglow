@@ -476,5 +476,5 @@
 	new /obj/item/cautery(src)
 	new /obj/item/bonesetter(src)
 	new /obj/item/surgical_drapes(src)
-	new /obj/item/stack/medical/bone_gel,
+	new /obj/item/stack/medical/bone_gel(src)
 	new /obj/item/reagent_containers/medspray/sterilizine(src)
