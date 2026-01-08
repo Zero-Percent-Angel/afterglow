@@ -508,6 +508,7 @@
 	loot = list(
 				/obj/effect/spawner/bundle/f13/armor/t45d,
 				/obj/effect/spawner/bundle/f13/armor/t51b,
+				/obj/effect/spawner/bundle/f13/armor/t51b_hardened,
 				/obj/effect/spawner/bundle/f13/armor/ranger,
 				/obj/effect/spawner/bundle/f13/armor/t51b_salvaged
 				)
@@ -526,6 +527,12 @@
 				/obj/item/clothing/head/helmet/f13/power_armor/t51b,
 				)
 
+/obj/effect/spawner/bundle/f13/armor/t51b_hardened
+	name = "t51b power armor spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/tiered/power_armor/t51b/hardened,
+				/obj/item/clothing/head/helmet/f13/power_armor/t51b,
+				)
 
 /obj/effect/spawner/lootdrop/f13/armor/random
 	name = "random armor loot"
