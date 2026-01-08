@@ -909,7 +909,8 @@
 /obj/item/clothing/suit/armor/tiered/light/leather/leathermk2/followers
 	name = "armored Follower's jacket"
 	desc = "A leather jacket used by the Followers of the Apocalypse.This one has been reinforced with ballistic panels to stop bullets."
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3,ARMOR_MODIFIER_UP_DT_T3 )
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T3,ARMOR_MODIFIER_UP_DT_T3)
+	tier = 4
 	armor = ARMOR_VALUE_LIGHT_T3
 	icon_state = "leather_jacket_foa2"
 	item_state = "leather_jacket_foa2"

@@ -29,6 +29,10 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/followers)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foa_combat_helm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foasalvagedarmorconversion)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foa_leather)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foa_leather2)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foa_trench)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foa_sciencesuit)
 
 //datum/outfit/job/followers/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 //	..()
@@ -79,7 +83,6 @@ Administrator
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rechargerpistol)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foa_sciencesuit)
 	/*
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/pico_manip)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_matter_bin)
@@ -262,7 +265,6 @@ Practitioner
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/buffout)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/steady)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rechargerpistol)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/foa_sciencesuit)
 	/* Don't be silly.
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/pico_manip)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/super_matter_bin)
@@ -301,7 +303,6 @@ Practitioner
 
 /datum/outfit/loadout/physician
 	name =	"Emergency Physician"
-	suit =	/obj/item/clothing/suit/armor/tiered/medium/vest/trench
 	mask =	/obj/item/clothing/mask/surgical
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
 	backpack_contents = list(
@@ -323,7 +324,6 @@ Practitioner
 /datum/outfit/loadout/paramedic
 	name =	"Paramedic"
 	head =	/obj/item/clothing/head/soft/emt
-	suit =	/obj/item/clothing/suit/armor/tiered/medium/vest/trench
 	belt =	/obj/item/storage/belt/medical
 	backpack_contents = list(
 		/obj/item/reagent_containers/medspray/synthflesh = 2,
@@ -394,7 +394,6 @@ Follower Volunteer
 
 /datum/outfit/loadout/volunteer_emt
 	name = "EMT"
-	suit = /obj/item/clothing/suit/armor/tiered/medium/vest/trench
 	head = /obj/item/clothing/head/soft/emt
 	backpack_contents = list(
 		/obj/item/healthanalyzer = 1,

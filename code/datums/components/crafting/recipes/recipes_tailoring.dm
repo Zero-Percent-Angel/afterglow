@@ -1534,3 +1534,43 @@ datum/crafting_recipe/steelbib/heavy
 	subcategory = CAT_ARMOR
 	always_available = FALSE
 	skill_level = REGULAR_CHECK
+
+/datum/crafting_recipe/foa_leather
+	name = "Follower's Leather Jacket"
+	result = /obj/item/clothing/suit/armor/tiered/light/leather/jacket/followers
+	reqs = list(/obj/item/clothing/suit/armor/tiered/light/leather,
+				/obj/item/stack/sheet/leather = 3,
+				/obj/item/weaponcrafting/string = 1
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+	skill_level = EASY_CHECK
+
+/datum/crafting_recipe/foa_leather2
+	name = "Follower's Armored Jacket"
+	result = /obj/item/clothing/suit/armor/tiered/light/leather/leathermk2/followers
+	reqs = list(/obj/item/stack/sheet/durathread = 5,
+				/obj/item/clothing/suit/armor/tiered/light/leather/jacket/followers = 1,
+			,	/obj/item/stack/crafting/armor_plate = 1.
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+	skill_level = REGULAR_CHECK
+
+/datum/crafting_recipe/foa_trench
+	name = "Follower's Armored Trenchcoat"
+	result = /obj/item/clothing/suit/armor/tiered/medium/vest/trench
+	reqs = list(/obj/item/clothing/suit/armor/tiered/medium/vest = 1,
+				/obj/item/clothing/suit/toggle/labcoat= 1,
+				)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+	skill_level = EASY_CHECK
