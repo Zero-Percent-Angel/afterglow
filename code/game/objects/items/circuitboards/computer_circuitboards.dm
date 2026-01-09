@@ -462,3 +462,8 @@
 /obj/item/circuitboard/computer/bos
 	name = "Brotherhood Monitor (Computer Board)"
 	build_path = /obj/machinery/computer/security/bos
+
+
+/obj/item/circuitboard/computer/brotherhood_tipton_control
+	name = "Brotherhood Tipton Elevator Control (Computer board)"
+	build_path = /obj/machinery/computer/shuttle/bos_tipton_elevator

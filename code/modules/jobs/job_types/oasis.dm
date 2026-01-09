@@ -37,8 +37,8 @@ Mayor
 	title = "Mayor"
 	flag = F13MAYOR
 	department_flag = DEP_OASIS
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "Ripley"
 	description = "You are the civil leader of the Town of Ripley. You were chosen by the people to represent and lead them from your manor. Your town is in a terse situation with the slaver town to the south, Redwater. While not at war, you will have to work to keep your people safe from their predations. The Tribals to the south east are also a nuisance but it's best not to provoke them needlessly. Do what's best for the town, and it's people. All while lining your pockets occasionally, of course."
 	enforces = "The Secretary is your stand-in replacement, and under this the Sheriff."
@@ -103,8 +103,8 @@ Mayor
 	title = "Secretary"
 	flag = F13SECRETARY
 	department_flag = DEP_OASIS
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "The Mayor"
 	description = "The settlement of Ripley is a busy place, and the Mayor often can't handle everything by themselves. You are here to help them with anything and everything they require, and make sure the more trivial problems do not concern them. You handle clerical work, hear complaints, and set meetings within the manor. An efficient and smooth running town means a happy Mayor - just remember that if things go wrong, you're a convenient scapegoat."
 	enforces = "You are the stand-in leader of Ripley if a Mayor does not exist."
@@ -200,8 +200,8 @@ Mayor
 	flag = F13SHERIFF
 	department_flag = DEP_OASIS
 	head_announce = list("Security")
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "The Mayor"
 	description = "You are the civil enforcer of Ripley, keeping the settlement within firm control under the authority of the Mayor. With your loyal patrolmen, you maintain your claim to authority by keeping the peace, managing disputes, and protecting the citizens from threats within and without. Never leave Ripley undefended, and don't let its people die out. If this town falls, new conquerors don't tend to look kindly upon the old law."
 	enforces = "You are the stand-in leader of Ripley if a Mayor or Secretary does not exist."
@@ -393,8 +393,8 @@ Mayor
 	title = "Prospector"
 	flag = F13PROSPECTOR
 	department_flag = DEP_OASIS
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "The Mayor"
 	description = "Prospecting is a complicated business. Some call it scrounging or looting, but there is more to it than sifting through rubble - few can boast the valuable skills of mining and scavenging the ruins of fallen empires. The settlement of Ripley understands the value of this, and you've found purpose within their mines. Sell the materials you find to the highest bidder - the local store may be particularly interested in metals."
 	enforces = "Mining is a public service, and you are under control of local governance - but by default you are expected to work with private businesses and individual clients."
@@ -642,8 +642,8 @@ Mayor
 	title = "Citizen"
 	flag = F13SETTLER
 	department_flag = DEP_OASIS
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "Ripley's laws"
 	description = "You are a citizen living in Ripley. Treat your town with respect and make sure to follow the laws in place, as your premium status may be revoked if you are considered a danger to the populace. One of the local businesses may have work if you require funds."
 	selection_color = "#dcba97"
@@ -766,8 +766,8 @@ Mayor
 /datum/job/oasis/f13detective
 	title = "Detective"
 	flag = F13DETECTIVE
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "paying clients and Ripley's laws"
 	selection_color = "#dcba97"
 	outfit = /datum/outfit/job/oasis/f13detective
@@ -1001,8 +1001,8 @@ Mayor
 	title = "Ripley Trade Worker"
 	flag = F13SHOPKEEPER
 	department_flag = DEP_OASIS
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "the free market and Ripley's laws"
 	description = "You are one of the many workers who live in the city of Ripley. Working with the town council you have rented out a space in the shop for you to make your living."
 	enforces = "The Ripley store is part of your workplace, but it is not your workplace alone. You should try work with the other trade workers to try and turn a profit."
@@ -1161,8 +1161,8 @@ Mayor
 	title = "Farm Hand"
 	flag = F13SETTLER
 	department_flag = F13SETTLER
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 10
+	spawn_positions = 10
 	supervisors = "The Family"
 	description = "You've found yourself working for the family in exchange for food and a roof, how you got here and what your ambitions are is up to you but for now you should do as they say."
 	enforces = "You work for the family in exchange for food and a roof over your head."

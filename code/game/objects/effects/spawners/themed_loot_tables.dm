@@ -305,17 +305,18 @@
 /obj/effect/spawner/lootdrop/weapons/experimental
 	name = "weaponspawner experimental"
 	loot = list(
-		/obj/item/gun/ballistic/automatic/g11 = 15,
-		/obj/effect/spawner/bundle/f13/needler = 10,
+		/obj/item/gun/ballistic/automatic/g11 = 10,
+		/obj/effect/spawner/bundle/f13/needler = 15,
 		/obj/item/gun/energy/laser/rcw = 10,
-		/obj/item/gun/ballistic/automatic/m72 =10,
+		/obj/item/gun/ballistic/automatic/m72 =8,
 		/obj/item/gun/energy/laser/plasma/carbine = 5,
 		/obj/item/gun/energy/laser/plasma/glock = 2,
 		/obj/item/gun/energy/laser/plasma = 2,
-		/obj/item/gun/energy/laser/plasma/scatter =1,
+		/obj/item/gun/energy/laser/plasma/scatter =2,
 		/obj/item/melee/powerfist/f13/moleminer = 10,
 		/obj/item/melee/transforming/energy/axe/protonaxe = 10,
-		/obj/item/gun/ballistic/revolver/ballisticfist = 5,
+		/obj/item/gun/ballistic/revolver/ballisticfist = 10,
+		/obj/item/gun/ballistic/automatic/xl70e3 = 10,
 		)
 
 
