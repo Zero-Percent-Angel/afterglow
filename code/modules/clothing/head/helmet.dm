@@ -100,7 +100,7 @@
 	desc = "A bulletproof combat helmet that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent."
 	icon_state = "helmetalt"
 	item_state = "helmetalt"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_DT_T3)
 	can_flashlight = 1
 	dog_fashion = null
 

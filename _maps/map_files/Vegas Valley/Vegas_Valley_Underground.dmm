@@ -2538,7 +2538,7 @@
 	pixel_y = -15
 	},
 /obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/armor/tier2,
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -3380,7 +3380,6 @@
 	dir = 1;
 	light_color = "red"
 	},
-/obj/effect/spawner/bundle/f13/armor/combat/dark,
 /turf/open/floor/f13{
 	icon_state = "yellowdirtyfull"
 	},
@@ -4067,7 +4066,8 @@
 	dir = 1
 	},
 /obj/machinery/porta_turret/f13/turret_556/burstfire{
-	faction = list("BOS")
+	faction = list("BOS");
+	req_access = list(120)
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
@@ -5672,7 +5672,7 @@
 /area/f13/building/abandoned/o)
 "cMP" = (
 /obj/structure/table,
-/obj/effect/spawner/bundle/f13/armor/combat/mk2/dark,
+/obj/effect/spawner/lootdrop/f13/armor/tier4,
 /turf/open/floor/f13{
 	icon_state = "yellowdirtyfull"
 	},
@@ -7550,15 +7550,6 @@
 /obj/item/stack/sheet/mineral/plasma,
 /turf/open/floor/f13,
 /area/f13/vault)
-"dIj" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
-/obj/machinery/porta_turret/f13/turret_556/burstfire{
-	faction = list("BOS")
-	},
-/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
-/area/f13/brotherhood/mining)
 "dIw" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
@@ -13590,7 +13581,7 @@
 /area/f13/brotherhood/chemistry)
 "gCf" = (
 /obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/armor/tier3,
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -13754,6 +13745,9 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/purple/white,
 /area/f13/vault/science)
+"gHp" = (
+/turf/closed/indestructible/vaultdoor,
+/area/f13/vault/atrium)
 "gHs" = (
 /obj/effect/decal/cleanable/ash/large,
 /obj/effect/decal/cleanable/ash/large,
@@ -18194,6 +18188,7 @@
 	},
 /obj/item/storage/belt/army/assault,
 /obj/item/storage/belt/army/assault,
+/obj/item/clothing/suit/armor/tiered/light/combat/brotherhood/scout/senior,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 1
 	},
@@ -23446,6 +23441,12 @@
 	icon_state = "yellowsiding"
 	},
 /area/ruin/powered)
+"lwH" = (
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh,
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/ruin/powered)
 "lwJ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table/wood,
@@ -25161,7 +25162,7 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/enclave)
 "mnA" = (
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/armor/random,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/radiation)
 "mnK" = (
@@ -25309,7 +25310,7 @@
 	},
 /area/f13/radiation)
 "mro" = (
-/obj/effect/spawner/lootdrop/f13/armor/tier5,
+/obj/effect/spawner/bundle/f13/armor/t45d_salvaged/raider,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
 "mrt" = (
@@ -34159,7 +34160,7 @@
 /obj/structure/table,
 /obj/item/bodypart/head/robot,
 /obj/item/bodypart/chest/robot,
-/obj/effect/spawner/bundle/f13/armor/combat/dark,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh,
 /turf/open/floor/f13{
 	icon_state = "yellowdirtyfull"
 	},
@@ -36752,7 +36753,8 @@
 "rGJ" = (
 /obj/machinery/light/small,
 /obj/machinery/porta_turret/f13/turret_556/burstfire{
-	faction = list("BOS")
+	faction = list("BOS");
+	req_access = list(120)
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
@@ -38266,6 +38268,16 @@
 	icon_state = "yellowrustyfull"
 	},
 /area/f13/sewer)
+"sqC" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/machinery/porta_turret/f13/turret_556/burstfire{
+	faction = list("BOS");
+	req_access = list(120)
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/brotherhood/mining)
 "sqG" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
@@ -38605,7 +38617,7 @@
 /area/f13/bunker/bunkereight)
 "szD" = (
 /obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/armor/tier2,
 /turf/open/floor/f13/wood,
 /area/f13/bunker)
 "szK" = (
@@ -45751,8 +45763,10 @@
 /area/f13/radiation)
 "vPD" = (
 /obj/structure/table,
-/obj/effect/spawner/bundle/f13/armor/combat/dark,
-/turf/open/floor/f13,
+/obj/effect/spawner/lootdrop/f13/armor/tier5,
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
 /area/ruin/powered)
 "vPM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -45976,9 +45990,6 @@
 	},
 /turf/open/floor/f13,
 /area/f13/bunker)
-"vVU" = (
-/turf/closed/indestructible/vaultdoor,
-/area/f13/vault/atrium)
 "vWk" = (
 /obj/effect/spawner/lootdrop/f13/armor/tier4,
 /obj/effect/decal/cleanable/dirt,
@@ -49580,9 +49591,9 @@
 	},
 /area/f13/sewer/powered)
 "xCW" = (
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
 /obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/armor/tier2,
+/obj/effect/spawner/lootdrop/f13/armor/tier3,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker/bunkernine)
 "xDh" = (
@@ -74396,7 +74407,7 @@ dZm
 lwy
 nuY
 cNy
-fbb
+lwH
 bIk
 lwy
 opH
@@ -74693,7 +74704,7 @@ lwy
 cNy
 gVi
 bIk
-vPD
+uPx
 uPx
 lwy
 wCz
@@ -75597,12 +75608,12 @@ uNy
 hED
 aWW
 cNy
-pRC
+cMP
 nuY
-pRC
+vPD
 xyH
-cMP
-cMP
+pRC
+pRC
 cNy
 hGD
 aFR
@@ -89606,7 +89617,7 @@ gcg
 fgd
 loM
 wQr
-vVU
+gHp
 xYS
 gJk
 rwm
@@ -90210,7 +90221,7 @@ gcg
 qDz
 fgd
 mAf
-vVU
+gHp
 wfT
 eCR
 cOS
@@ -99087,7 +99098,7 @@ xLy
 eHY
 cZu
 cZu
-dIj
+sqC
 pFU
 nbK
 ohv

@@ -1209,13 +1209,13 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
  * Light Armor
  * Basically clothes, but more
 */
-#define ARMOR_SLOWDOWN_LIGHT 0
+#define ARMOR_SLOWDOWN_LIGHT 0.01
 
 /*
  * Medium Armor
  * Substantial armor
 */
-#define ARMOR_SLOWDOWN_MEDIUM 0
+#define ARMOR_SLOWDOWN_MEDIUM 0.05
 //Originally this was 0.5 on Coyete
 
 /*
@@ -1283,7 +1283,7 @@ GLOBAL_LIST_INIT(armor_token_operation_legend, list(
 #define ARMOR_CLOTHING_SALVAGE "This is a set of salvaged power armor, nigh impenetrable, but weighs about as much as a small car (-2 Agility, 20% Slowdown)."
 
 /// Extra tag saying what armor tier this armor is, for description purposes
-#define ARMOR_CLOTHING_PA "This is a suit of power armor, able to withstand a tank shell and still finish a marathon. (-1 Agility, 10% Slowdown, +1 Strength - while powered)"
+#define ARMOR_CLOTHING_PA "This is a suit of power armor, able to withstand a tank shell and still finish a marathon. (-1 Agility, 10% Slowdown, +2 Strength - while powered)"
 
 /// Armor caps!
 #define ARMOR_CAP_BOMB 100

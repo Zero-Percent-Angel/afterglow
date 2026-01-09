@@ -387,13 +387,13 @@
 		return
 	if(length(armor_tokens) < 1)
 		return // all done!
-	
+
 	for(var/list/token in armor_tokens)
 		for(var/modifier in token)
 			switch(GLOB.armor_token_operation_legend[modifier])
 				if("MULT")
-					armor[modifier] = round(armor[modifier] * token[modifier], 1)
+					armor.vars[modifier] = round(armor.vars[modifier] * token[modifier], 1)
 				if("ADD")
-					armor[modifier] = max(armor[modifier] + token[modifier], 0)
+					armor.vars[modifier] = max(armor.vars[modifier] + token[modifier], 0)
 				else
 					continue

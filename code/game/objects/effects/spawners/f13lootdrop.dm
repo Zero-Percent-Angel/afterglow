@@ -382,7 +382,7 @@
 /obj/effect/spawner/bundle/f13/armor/bulletproof
 	name = "bulletproof armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/tiered/medium/vest/bulletproof,
+				/obj/item/clothing/suit/armor/tiered/medium/vest/bulletproof/big,
 				/obj/item/clothing/head/helmet/alt
 				)
 
@@ -407,6 +407,7 @@
 				/obj/effect/spawner/bundle/f13/armor/riot,
 				/obj/effect/spawner/bundle/f13/armor/combat/mk2,
 				/obj/effect/spawner/bundle/f13/armor/combat/mk2/dark,
+				/obj/effect/spawner/bundle/f13/armor/t45d_salvaged/raider
 				)
 
 /obj/effect/spawner/bundle/f13/armor/t45d_salvaged
@@ -417,6 +418,12 @@
 				)
 
 
+/obj/effect/spawner/bundle/f13/armor/t45d_salvaged/raider
+	name = "raider pa spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/raider,
+				/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/raider
+				)
 
 /obj/effect/spawner/bundle/f13/armor/light_combat
 	name = "bos outcast armor spawner"
@@ -439,7 +446,6 @@
 				/obj/item/clothing/suit/armor/tiered/heavy/tier4/riot/combat,
 				/obj/item/clothing/head/helmet/f13/town/riot
 				)
-
 
 /obj/effect/spawner/bundle/f13/armor/tier_3_riot
 	name = "riot armor spawner"
@@ -502,6 +508,7 @@
 	loot = list(
 				/obj/effect/spawner/bundle/f13/armor/t45d,
 				/obj/effect/spawner/bundle/f13/armor/t51b,
+				/obj/effect/spawner/bundle/f13/armor/t51b_hardened,
 				/obj/effect/spawner/bundle/f13/armor/ranger,
 				/obj/effect/spawner/bundle/f13/armor/t51b_salvaged
 				)
@@ -520,15 +527,23 @@
 				/obj/item/clothing/head/helmet/f13/power_armor/t51b,
 				)
 
+/obj/effect/spawner/bundle/f13/armor/t51b_hardened
+	name = "t51b power armor spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/tiered/power_armor/t51b/hardened,
+				/obj/item/clothing/head/helmet/f13/power_armor/t51b,
+				)
 
 /obj/effect/spawner/lootdrop/f13/armor/random
 	name = "random armor loot"
 	lootcount = 1
 
 	loot = list(
-			/obj/effect/spawner/lootdrop/f13/armor/tier1 = 90,
-			/obj/effect/spawner/lootdrop/f13/armor/tier2 = 9,
-			/obj/effect/spawner/lootdrop/f13/armor/tier3 = 1,
+			/obj/effect/spawner/lootdrop/f13/armor/tier1 = 54,
+			/obj/effect/spawner/lootdrop/f13/armor/tier2 = 30,
+			/obj/effect/spawner/lootdrop/f13/armor/tier3 = 10,
+			/obj/effect/spawner/lootdrop/f13/armor/tier4 = 5,
+			/obj/effect/spawner/lootdrop/f13/armor/tier5 = 1,
 			)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid

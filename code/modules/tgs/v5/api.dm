@@ -170,12 +170,12 @@
 	if (!length(channels))
 		return
 
-	message = message._interop_serialize()
-	message[DMAPI5_CHAT_MESSAGE_CHANNEL_IDS] = ids
+	var/list/serialized_message = message._interop_serialize()
+	serialized_message[DMAPI5_CHAT_MESSAGE_CHANNEL_IDS] = ids
 	if(intercepted_message_queue)
-		intercepted_message_queue += list(message)
+		intercepted_message_queue += list(serialized_message)
 	else
-		Bridge(DMAPI5_BRIDGE_COMMAND_CHAT_SEND, list(DMAPI5_BRIDGE_PARAMETER_CHAT_MESSAGE = message))
+		Bridge(DMAPI5_BRIDGE_COMMAND_CHAT_SEND, list(DMAPI5_BRIDGE_PARAMETER_CHAT_MESSAGE = serialized_message))
 
 /datum/tgs_api/v5/ChatTargetedBroadcast(datum/tgs_message_content/message, admin_only)
 	var/list/channels = list()
@@ -189,21 +189,21 @@
 	if (!length(channels))
 		return
 
-	message = message._interop_serialize()
-	message[DMAPI5_CHAT_MESSAGE_CHANNEL_IDS] = channels
+	var/list/serialized_message = message._interop_serialize()
+	serialized_message[DMAPI5_CHAT_MESSAGE_CHANNEL_IDS] = channels
 	if(intercepted_message_queue)
-		intercepted_message_queue += list(message)
+		intercepted_message_queue += list(serialized_message)
 	else
-		Bridge(DMAPI5_BRIDGE_COMMAND_CHAT_SEND, list(DMAPI5_BRIDGE_PARAMETER_CHAT_MESSAGE = message))
+		Bridge(DMAPI5_BRIDGE_COMMAND_CHAT_SEND, list(DMAPI5_BRIDGE_PARAMETER_CHAT_MESSAGE = serialized_message))
 
 /datum/tgs_api/v5/ChatPrivateMessage(datum/tgs_message_content/message, datum/tgs_chat_user/user)
 	message = UpgradeDeprecatedChatMessage(message)
-	message = message._interop_serialize()
-	message[DMAPI5_CHAT_MESSAGE_CHANNEL_IDS] = list(user.channel.id)
+	var/list/serialized_message = message._interop_serialize()
+	serialized_message[DMAPI5_CHAT_MESSAGE_CHANNEL_IDS] = list(user.channel.id)
 	if(intercepted_message_queue)
-		intercepted_message_queue += list(message)
+		intercepted_message_queue += list(serialized_message)
 	else
-		Bridge(DMAPI5_BRIDGE_COMMAND_CHAT_SEND, list(DMAPI5_BRIDGE_PARAMETER_CHAT_MESSAGE = message))
+		Bridge(DMAPI5_BRIDGE_COMMAND_CHAT_SEND, list(DMAPI5_BRIDGE_PARAMETER_CHAT_MESSAGE = serialized_message))
 
 /datum/tgs_api/v5/ChatChannelInfo()
 	RequireInitialBridgeResponse()
