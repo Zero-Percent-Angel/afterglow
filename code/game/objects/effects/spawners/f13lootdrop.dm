@@ -785,6 +785,7 @@
 				/obj/item/melee/unarmed/maceglove,
 				/obj/item/melee/unarmed/punchdagger,
 				/obj/item/twohanded/baseball/louisville,
+				/obj/item/melee/powered/ripper/folding,
 				/obj/item/shield/riot,
 				/obj/item/melee/onehanded/machete/gladius,
 				/obj/item/melee/onehanded/machete/spatha,
@@ -1646,6 +1647,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/ammo_box/magazine/mm762
 				)
 
+
 /*	------------------------------------------------
 	------------WEAPON AMMO SPAWNERS----------------
 	------------------------------------------------ */
@@ -2324,6 +2326,15 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/circuitboard/machine/protolathe = 2,
 		/obj/item/circuitboard/machine/circuit_imprinter = 2,
 		/obj/item/advanced_crafting_components/p_circuits = 10
+	)
+
+/obj/effect/spawner/lootdrop/f13/doctorbag
+	name = "doctor bag spawn"
+	lootcount = 1
+	lootdoubles = FALSE
+	loot = list(
+		/obj/item/storage/backpack/doctorbag = 3,
+		/obj/item/storage/backpack/doctorbag/advanced = 1,
 	)
 
 /obj/effect/spawner/lootdrop/f13/attachments

@@ -1,8 +1,11 @@
-/obj/item/gun/syringe
+/obj/item/gun/syringe //temporary holder of tranquilizer gun sprite, until a more thematic injection launcher can be coded
 	name = "syringe gun"
 	desc = "A spring loaded rifle designed to fit syringes, used to incapacitate unruly patients from a distance."
-	icon_state = "syringegun"
-	item_state = "syringegun"
+	icon = 'icons/fallout/objects/medicine/equipment.dmi'
+	lefthand_file = 'icons/fallout/onmob/weapons/special_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/special_righthand.dmi'
+	icon_state = "tranqgun"
+	item_state = "tranqgun"
 	w_class = WEIGHT_CLASS_NORMAL
 	throw_speed = 3
 	throw_range = 7

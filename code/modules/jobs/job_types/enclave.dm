@@ -393,6 +393,7 @@
 							/obj/item/clothing/gloves/color/latex/nitrile = 1,
 							/obj/item/stock_parts/cell/ammo/mfc = 2,
 							/obj/item/gun/energy/gammagun = 1,
+							/obj/item/melee/powered/ripper/folding = 1,
 							)
 
 //NON-COMBATANTS
@@ -428,6 +429,7 @@
 		/obj/item/storage/bag/money/small/wastelander = 1,
 		/obj/item/melee/onehanded/knife/survival = 1,
 		/obj/item/clothing/head/beret/enclave/science = 1,
+		/obj/item/melee/powered/ripper/folding = 1,
 		)
 
 /datum/outfit/job/enclave/noncombat/enclavesci/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
