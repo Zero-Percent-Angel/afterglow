@@ -3193,7 +3193,7 @@
 			if(response.body == "[]")
 				dat += "<center><b>0 bans detected for [ckey]</b></center>"
 			else
-				bans = json_decode(response["body"])
+				bans = json_decode(response.body)
 				dat += "<center><b>[bans.len] ban\s detected for [ckey]</b></center>"
 				for(var/list/ban in bans)
 					dat += "<b>Server: </b> [sanitize(ban["sourceName"])]<br>"
@@ -3369,7 +3369,7 @@
 			list("ckey" = ckey)
 		)
 		if(!query_remove_mentor.warn_execute())
-			return		
+			return
 		// var/datum/db_query/query_add_admin_log = SSdbcore.NewQuery({" // stops the adminip error for now ~ w~
 		// 	INSERT INTO `[format_table_name("admin_log")]` (`datetime`, `round_id`, `adminckey`, `adminip`, `operation`, `target`, `log`)
 		// 	VALUES (:time, :round_id, :adminckey, :addr, 'remove mentor', :mentorkey, CONCAT('Removed mentor ', :mentorkey));"},

@@ -280,6 +280,7 @@ Raider
 		/obj/item/book/granter/trait/chemistry = 1,
 		/obj/item/stack/sheet/mineral/silver=2,
 		/obj/item/clothing/accessory/pocketprotector/full = 1,
+		/obj/item/melee/powered/ripper/folding = 1,
 		)
 
 /datum/outfit/loadout/raider_ncr

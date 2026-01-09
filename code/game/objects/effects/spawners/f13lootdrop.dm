@@ -382,7 +382,7 @@
 /obj/effect/spawner/bundle/f13/armor/bulletproof
 	name = "bulletproof armor spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/tiered/medium/vest/bulletproof,
+				/obj/item/clothing/suit/armor/tiered/medium/vest/bulletproof/big,
 				/obj/item/clothing/head/helmet/alt
 				)
 
@@ -407,6 +407,7 @@
 				/obj/effect/spawner/bundle/f13/armor/riot,
 				/obj/effect/spawner/bundle/f13/armor/combat/mk2,
 				/obj/effect/spawner/bundle/f13/armor/combat/mk2/dark,
+				/obj/effect/spawner/bundle/f13/armor/t45d_salvaged/raider
 				)
 
 /obj/effect/spawner/bundle/f13/armor/t45d_salvaged
@@ -417,6 +418,12 @@
 				)
 
 
+/obj/effect/spawner/bundle/f13/armor/t45d_salvaged/raider
+	name = "raider pa spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/raider,
+				/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/raider
+				)
 
 /obj/effect/spawner/bundle/f13/armor/light_combat
 	name = "bos outcast armor spawner"
@@ -439,7 +446,6 @@
 				/obj/item/clothing/suit/armor/tiered/heavy/tier4/riot/combat,
 				/obj/item/clothing/head/helmet/f13/town/riot
 				)
-
 
 /obj/effect/spawner/bundle/f13/armor/tier_3_riot
 	name = "riot armor spawner"
@@ -502,6 +508,7 @@
 	loot = list(
 				/obj/effect/spawner/bundle/f13/armor/t45d,
 				/obj/effect/spawner/bundle/f13/armor/t51b,
+				/obj/effect/spawner/bundle/f13/armor/t51b_hardened,
 				/obj/effect/spawner/bundle/f13/armor/ranger,
 				/obj/effect/spawner/bundle/f13/armor/t51b_salvaged
 				)
@@ -520,15 +527,23 @@
 				/obj/item/clothing/head/helmet/f13/power_armor/t51b,
 				)
 
+/obj/effect/spawner/bundle/f13/armor/t51b_hardened
+	name = "t51b power armor spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/tiered/power_armor/t51b/hardened,
+				/obj/item/clothing/head/helmet/f13/power_armor/t51b,
+				)
 
 /obj/effect/spawner/lootdrop/f13/armor/random
 	name = "random armor loot"
 	lootcount = 1
 
 	loot = list(
-			/obj/effect/spawner/lootdrop/f13/armor/tier1 = 90,
-			/obj/effect/spawner/lootdrop/f13/armor/tier2 = 9,
-			/obj/effect/spawner/lootdrop/f13/armor/tier3 = 1,
+			/obj/effect/spawner/lootdrop/f13/armor/tier1 = 54,
+			/obj/effect/spawner/lootdrop/f13/armor/tier2 = 30,
+			/obj/effect/spawner/lootdrop/f13/armor/tier3 = 10,
+			/obj/effect/spawner/lootdrop/f13/armor/tier4 = 5,
+			/obj/effect/spawner/lootdrop/f13/armor/tier5 = 1,
 			)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid
@@ -770,6 +785,7 @@
 				/obj/item/melee/unarmed/maceglove,
 				/obj/item/melee/unarmed/punchdagger,
 				/obj/item/twohanded/baseball/louisville,
+				/obj/item/melee/powered/ripper/folding,
 				/obj/item/shield/riot,
 				/obj/item/melee/onehanded/machete/gladius,
 				/obj/item/melee/onehanded/machete/spatha,
@@ -828,13 +844,23 @@
 	icon_state = "gun_loot"
 
 //Energy Weapon Spawners
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superlow
+	name = "very low energy gun"
+	loot = list(/obj/effect/spawner/bundle/f13/wattz = 45,
+				/obj/effect/spawner/bundle/f13/wattzm = 5,
+				/obj/effect/spawner/bundle/f13/laserpistol = 5,
+				/obj/item/gun/energy/laser/wattz/recharger/rifle = 45,
+				)
+
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/low
 	name = "low tier energy gun"
-	loot = list(/obj/effect/spawner/bundle/f13/wattz = 15,
-				/obj/effect/spawner/bundle/f13/plasmapistol = 10,
-				/obj/effect/spawner/bundle/f13/wattzm = 25,
+	loot = list(/obj/effect/spawner/bundle/f13/wattz = 5,
+				/obj/effect/spawner/bundle/f13/plasmapistol = 5,
+				/obj/effect/spawner/bundle/f13/wattzm = 10,
 				/obj/item/gun/energy/laser/wattzs = 10,
-				/obj/effect/spawner/bundle/f13/laserpistol = 20,
+				/obj/effect/spawner/bundle/f13/laserpistol = 15,
+				/obj/effect/spawner/bundle/f13/laserpistol = 10,
+				/obj/item/gun/energy/laser/pistol/fo4laser = 10,
 				/obj/item/gun/ballistic/rifle/hobo/lasmusket = 10
 				)
 
@@ -1629,6 +1655,7 @@ obj/effect/spawner/bundle/f13/combat_rifle
 				/obj/item/ammo_box/magazine/mm762
 				)
 
+
 /*	------------------------------------------------
 	------------WEAPON AMMO SPAWNERS----------------
 	------------------------------------------------ */
@@ -2307,6 +2334,15 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/circuitboard/machine/protolathe = 2,
 		/obj/item/circuitboard/machine/circuit_imprinter = 2,
 		/obj/item/advanced_crafting_components/p_circuits = 10
+	)
+
+/obj/effect/spawner/lootdrop/f13/doctorbag
+	name = "doctor bag spawn"
+	lootcount = 1
+	lootdoubles = FALSE
+	loot = list(
+		/obj/item/storage/backpack/doctorbag = 3,
+		/obj/item/storage/backpack/doctorbag/advanced = 1,
 	)
 
 /obj/effect/spawner/lootdrop/f13/attachments

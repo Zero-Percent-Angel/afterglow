@@ -1344,8 +1344,8 @@
 /obj/item/clothing/head/helmet/f13/power_armor/x02helmet
 	name = "Enclave power armor helmet"
 	desc = "The Enclave Mark II Powered Combat Armor helmet."
-	icon_state = "superadvanced"
-	item_state = "superadvanced"
+	icon_state = "badmin"
+	item_state = "badmin"
 	tier = 5
 	armor = ARMOR_VALUE_SALVAGE_T5
 	custom_price = PRICE_ALMOST_ONE_GRAND

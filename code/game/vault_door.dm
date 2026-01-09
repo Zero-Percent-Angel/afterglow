@@ -16,7 +16,7 @@ GLOBAL_VAR(vault_password)
 	var/is_open = FALSE
 	max_integrity = 1000
 	resistance_flags = FIRE_PROOF | ACID_PROOF | UNACIDABLE | FREEZE_PROOF  //it's a fucking steel blast door
-	armor = list("melee" = 90, "bullet" = 90, "laser" = 90, "energy" = 90, "bomb" = 90, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100, "damage_threshold" = 30) //it's a fucking steel door 2.0
+	armor = list("melee" = 89, "bullet" = 89, "laser" = 85, "energy" = 80, "bomb" = 60, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100, "damage_threshold" = 10) //it's a fucking steel door 2.0
 
 /obj/structure/vaultdoor/Initialize()
 	. = ..()
@@ -98,7 +98,7 @@ GLOBAL_VAR(vault_password)
 	if(icon_state == "empty") //Its brok, fix it
 		if(istype(I, /obj/item/weldingtool) && user.a_intent == INTENT_HELP)
 			if(user.skill_check(SKILL_REPAIR, EXPERT_CHECK, FALSE))
-				if(I.use_tool(src, user, 40, volume=50))
+				if(I.use_tool(src, user, 100, volume=50))
 					repair()
 			else
 				to_chat(user, span_warning("You have no idea where to even start with this."))

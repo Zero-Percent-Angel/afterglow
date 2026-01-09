@@ -4082,14 +4082,10 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/legion)
 "boG" = (
-/obj/effect/decal/remains/human,
-/obj/effect/decal/cleanable/blood{
-	icon_state = "gib2";
-	pixel_y = 4
-	},
-/obj/item/clothing/suit/armor/light/tribal/outcast,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland)
+/obj/structure/table/reinforced,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superlow,
+/turf/open/floor/plating/rust,
+/area/f13/building/powered)
 "boH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/old,
@@ -4283,10 +4279,6 @@
 /obj/item/clothing/head/helmet/f13/ncr/gambler{
 	pixel_y = -3;
 	pixel_x = -4
-	},
-/obj/item/clothing/suit/armor/medium/vest/ncr{
-	pixel_x = 7;
-	pixel_y = 6
 	},
 /turf/open/floor/wood_wide,
 /area/f13/ncr)
@@ -5382,6 +5374,11 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/ambientlighting/building/g)
+"bLU" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/suit/armor/tiered/light/combat/brotherhood/scout,
+/turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
+/area/f13/brotherhood)
 "bMj" = (
 /obj/structure/simple_door/metal/dirtystore,
 /obj/effect/decal/cleanable/dirt,
@@ -7021,6 +7018,17 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building/abandoned/h)
+"cnn" = (
+/obj/structure/table/wood,
+/obj/item/paper,
+/obj/item/pen,
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superlow,
+/turf/open/floor/f13/wood,
+/area/f13/ambientlighting/building/k)
 "cno" = (
 /obj/structure/fence/wooden{
 	dir = 4;
@@ -9535,7 +9543,7 @@
 	color = "000000"
 	},
 /obj/structure/table/wood,
-/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/effect/spawner/lootdrop/f13/doctorbag,
 /turf/open/floor/plasteel/f13/vault_floor/yellow,
 /area/f13/ambientlighting/building/j)
 "cZD" = (
@@ -12443,7 +12451,7 @@
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
 "dUG" = (
-/obj/item/clothing/suit/armor/medium/combat/brotherhood/exile,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superlow,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "dUJ" = (
@@ -14992,6 +15000,7 @@
 "eKA" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superlow,
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/w)
 "eKH" = (
@@ -15985,9 +15994,7 @@
 /area/f13/followers)
 "fbY" = (
 /obj/machinery/light/floor,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "outerturn"
-	},
+/turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/ambientlighting/building/b)
 "fcb" = (
 /obj/item/storage/trash_stack{
@@ -18741,7 +18748,6 @@
 /obj/structure/table/wood/poker,
 /obj/effect/holodeck_effect/cards,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45b/mutie,
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -20467,6 +20473,13 @@
 /obj/structure/barricade/wooden/planks/pregame,
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/a)
+"gtP" = (
+/obj/machinery/porta_turret/f13/turret_556/burstfire{
+	faction = list("BOS");
+	req_access = list(120)
+	},
+/turf/open/floor/plating/rust,
+/area/f13/brotherhood)
 "guh" = (
 /obj/structure/barricade/wooden/planks/pregame,
 /obj/structure/window/fulltile/house{
@@ -21940,9 +21953,7 @@
 "gQv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/floor,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "outerturn"
-	},
+/turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/ambientlighting/building/b)
 "gQw" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
@@ -22826,7 +22837,6 @@
 /obj/structure/shelf_wood,
 /obj/item/clothing/under/f13/tribe,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/suit/armor/light/tribal/cloak,
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/building/tribal)
 "hdU" = (
@@ -25543,9 +25553,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/toy/plush/dr_scanny{
-	desc = "A old outdated scanner that has been modified to have googly eyes, a drawn on mouth and, heart."
-	},
+/obj/item/toy/plush/dr_scanny,
 /obj/machinery/light{
 	light_color = "#e8eaff"
 	},
@@ -25576,6 +25584,7 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/low,
 /obj/effect/spawner/lootdrop/f13/armor/tier1,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superlow,
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/z)
 "hQF" = (
@@ -29317,10 +29326,8 @@
 	},
 /area/f13/wasteland)
 "jbb" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "outerturn"
-	},
+/obj/item/reagent_containers/food/drinks/bottle/cognac/empty,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "jbl" = (
 /turf/open/indestructible/ground/outside/dirt{
@@ -32804,6 +32811,7 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier2,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superlow,
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/b)
 "kgR" = (
@@ -35653,6 +35661,7 @@
 /obj/item/binoculars{
 	pixel_y = 8
 	},
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superlow,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building/abandoned/g)
 "kZT" = (
@@ -39968,6 +39977,7 @@
 /obj/structure/table/wood/settler,
 /obj/item/lockpick_set,
 /obj/item/paper/crumpled/ruins/bigderelict1/coward,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superlow,
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/x)
 "mvc" = (
@@ -44693,6 +44703,7 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superlow,
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/b)
 "nSW" = (
@@ -47773,6 +47784,7 @@
 "oPQ" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/superlow,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building/powered)
 "oPT" = (
@@ -48308,8 +48320,6 @@
 /area/f13/brotherhood)
 "oYW" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/clothing/suit/armor/medium/combat/brotherhood,
-/obj/item/clothing/suit/armor/medium/combat/brotherhood/initiate,
 /obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate,
 /obj/item/clothing/head/helmet/f13/combat/brotherhood,
 /obj/effect/decal/cleanable/dirt{
@@ -48494,7 +48504,7 @@
 	dir = 1
 	},
 /obj/item/book/granter/trait/trekking{
-	desc = "This indispensable guidebook contains everything that a survivor in the wasteland would need to know. A rare artifact from the East Coast, having made the long and arduous trip across the entire country. This is a First Edition printing, one of the few verified copies to have originated directly from the East. Unlike most copies printed west, this one is crpytically authored by the Lone Wandererssss."
+	desc = "This indispensable guidebook contains everything that a survivor in the wasteland would need to know. A rare artifact from the East Coast, having made the long and arduous trip across the entire country. This is a First Edition printing, one of the few verified copies to have originated directly from the East. Unlike most copies printed west, this one is crpytically authored by the Lone Wanderer."
 	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -50227,7 +50237,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/k)
 "pFx" = (
-/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/effect/spawner/lootdrop/f13/doctorbag,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
@@ -53798,7 +53808,6 @@
 /obj/item/clothing/gloves/color/latex/nitrile{
 	pixel_x = -1
 	},
-/obj/item/clothing/suit/hooded/surgical,
 /obj/machinery/computer/terminal{
 	dir = 4;
 	pixel_y = 13;
@@ -56151,7 +56160,6 @@
 /turf/open/floor/plating/rust,
 /area/f13/ambientlighting/building/j)
 "rtI" = (
-/obj/item/clothing/suit/armor/medium/duster/enclave,
 /obj/structure/rack/shelf_metal,
 /obj/item/clothing/mask/gas/enclave,
 /obj/effect/turf_decal/weather/dirt{
@@ -56621,6 +56629,7 @@
 "rCq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superlow,
 /turf/open/floor/wood_mosaic,
 /area/engine/workshop)
 "rCs" = (
@@ -60755,11 +60764,9 @@
 	},
 /area/f13/ambientlighting/building/p)
 "sTl" = (
-/obj/item/clothing/suit/armor/heavy/metal/reinforced,
-/obj/structure/table,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating/rust,
-/area/f13/building/powered)
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superlow,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "sTt" = (
 /obj/structure/lattice,
 /obj/effect/decal/cleanable/dirt,
@@ -63689,9 +63696,7 @@
 	icon_state = "floor5";
 	pixel_x = -19
 	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "outerturn"
-	},
+/turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/wasteland)
 "tOF" = (
 /turf/open/indestructible/ground/outside/dirt{
@@ -64712,7 +64717,7 @@
 	req_access_txt = "124"
 	},
 /obj/machinery/nuclearbomb/beer{
-	desc = "A haunting reminder of why the Followers of the Apocalypse should remember the past, lest we repeat it. It is also fun at parties" ;
+	desc = "A haunting reminder of why the Followers of the Apocalypse should remember the past, lest we repeat it. It is also fun at parties";
 	name = "pre-war nuclear device"
 	},
 /turf/open/floor/f13{
@@ -65292,6 +65297,7 @@
 /obj/item/gun/ballistic/automatic/smg/greasegun/worn,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superlow,
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/b)
 "ulJ" = (
@@ -66109,6 +66115,10 @@
 	pixel_x = 17
 	},
 /obj/structure/tires/two,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"uAp" = (
+/obj/structure/closet/crate/grave,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "uAq" = (
@@ -67904,6 +67914,7 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier1,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/low,
 /obj/effect/spawner/lootdrop/f13/armor/tier1,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superlow,
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/z)
 "vbf" = (
@@ -71251,7 +71262,7 @@
 	},
 /area/f13/ambientlighting/building/o)
 "wfI" = (
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/armor/tier3,
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -73639,7 +73650,6 @@
 /area/f13/brotherhood)
 "wPB" = (
 /obj/structure/closet/crate/large,
-/obj/item/clothing/suit/armor/light/legion/recruit,
 /obj/item/clothing/head/helmet/f13/legion/recruit,
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -74979,12 +74989,16 @@
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/k)
 "xjV" = (
-/obj/structure/rack/shelf_metal,
-/obj/effect/spawner/lootdrop/f13/armor/random,
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/rust,
-/area/f13/building/powered)
+/obj/machinery/porta_turret/f13/turret_556/burstfire{
+	faction = list("BOS");
+	req_access = list(120)
+	},
+/turf/open/floor/f13{
+	color = "#ffe9de";
+	icon_state = "darkrusty";
+	name = "dirty floor"
+	},
+/area/f13/brotherhood)
 "xjW" = (
 /obj/structure/barricade/tentclothcorner{
 	dir = 8
@@ -76379,6 +76393,7 @@
 "xDG" = (
 /obj/structure/table/wood,
 /obj/item/lockpick_set/bobby_pin,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superlow,
 /turf/open/floor/f13/wood{
 	icon_state = "housewood2"
 	},
@@ -79852,7 +79867,7 @@ hKS
 onw
 taO
 vwf
-taO
+dUG
 neZ
 izb
 pjw
@@ -89524,7 +89539,7 @@ tRj
 hdv
 ygf
 wYW
-wRG
+cnn
 dCA
 ygf
 wYW
@@ -95997,7 +96012,7 @@ kYf
 smK
 ktq
 bZO
-jbb
+uup
 smK
 smK
 smK
@@ -97356,7 +97371,7 @@ eAw
 eAw
 nQB
 eAw
-qwL
+nAH
 smK
 cKE
 smK
@@ -100445,7 +100460,7 @@ eAw
 eAw
 eAw
 eAw
-nAH
+uVn
 tPS
 tPS
 tPS
@@ -108814,7 +108829,7 @@ tEn
 tEn
 tEn
 rzw
-nAH
+uVn
 eUj
 eUj
 eUj
@@ -120469,7 +120484,7 @@ yfv
 yfv
 lKe
 cBf
-boG
+pgg
 yfv
 cBf
 huW
@@ -123698,7 +123713,7 @@ qZA
 qZA
 sqC
 glB
-naK
+gtP
 naK
 naK
 ryn
@@ -124574,7 +124589,7 @@ tjM
 eyn
 kBe
 kBe
-dUG
+taO
 qqM
 taO
 eyn
@@ -124615,7 +124630,7 @@ sqC
 sqC
 sqC
 hRM
-eal
+bLU
 eal
 sqC
 xAu
@@ -125510,7 +125525,7 @@ vhF
 fpI
 sqC
 glB
-ryn
+xjV
 naK
 xAu
 xAu
@@ -125585,7 +125600,7 @@ rRz
 rRz
 rRz
 rQw
-azA
+sTl
 azA
 ndZ
 rDi
@@ -144294,7 +144309,7 @@ vQn
 gsh
 hzf
 jyd
-sTJ
+boG
 mnA
 nxX
 jyd
@@ -145712,7 +145727,7 @@ eAw
 eAw
 eAw
 eAw
-nAH
+uVn
 eUj
 smK
 kYf
@@ -153490,8 +153505,8 @@ yfv
 yfv
 yfv
 azA
-azA
-azA
+uAp
+jbb
 yfv
 yfv
 yfv
@@ -155540,7 +155555,7 @@ ipF
 jyd
 jyd
 uXO
-xjV
+fds
 bMQ
 bMQ
 gsh
@@ -163638,7 +163653,7 @@ puq
 goq
 oya
 bdK
-sTl
+bdK
 gsh
 azA
 azA

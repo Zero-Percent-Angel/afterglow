@@ -560,7 +560,7 @@
 "alH" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/clothing/suit/armor/power_armor/t45d,
+/obj/item/clothing/suit/armor/tiered/power_armor/t45d,
 /obj/item/clothing/head/helmet/f13/power_armor/t45d,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker/bunkerthree)
@@ -2538,7 +2538,7 @@
 	pixel_y = -15
 	},
 /obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/armor/tier2,
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -3380,7 +3380,6 @@
 	dir = 1;
 	light_color = "red"
 	},
-/obj/effect/spawner/bundle/f13/armor/combat/dark,
 /turf/open/floor/f13{
 	icon_state = "yellowdirtyfull"
 	},
@@ -4065,6 +4064,10 @@
 "bYs" = (
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/machinery/porta_turret/f13/turret_556/burstfire{
+	faction = list("BOS");
+	req_access = list(120)
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
@@ -5127,7 +5130,7 @@
 /area/f13/building/abandoned/o)
 "cxM" = (
 /obj/structure/table/wood,
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/outlaw,
+/obj/item/clothing/suit/armor/tiered/medium/combat/desert_ranger/outlaw,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -5409,7 +5412,7 @@
 /obj/structure/rack/shelf_metal,
 /obj/item/clothing/mask/balaclava,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/clothing/suit/armor/medium/combat/enclave,
+/obj/item/clothing/suit/armor/tiered/medium/combat/enclave,
 /obj/item/clothing/head/helmet/f13/combat/mk2/remnant,
 /turf/open/floor/f13{
 	dir = 10;
@@ -5669,7 +5672,7 @@
 /area/f13/building/abandoned/o)
 "cMP" = (
 /obj/structure/table,
-/obj/effect/spawner/bundle/f13/armor/combat/mk2/dark,
+/obj/effect/spawner/lootdrop/f13/armor/tier4,
 /turf/open/floor/f13{
 	icon_state = "yellowdirtyfull"
 	},
@@ -6359,7 +6362,7 @@
 /obj/structure/rack/shelf_metal,
 /obj/item/storage/belt/durathread,
 /obj/item/storage/belt/durathread,
-/obj/item/clothing/suit/armor/medium/vest/bulletproof/big,
+/obj/item/clothing/suit/armor/tiered/medium/vest/bulletproof/big,
 /obj/item/clothing/head/helmet/alt,
 /obj/item/gun/ballistic/automatic/pistol/n99,
 /obj/item/storage/belt/shoulderholster,
@@ -8880,7 +8883,7 @@
 /obj/structure/rack/shelf_metal,
 /obj/item/storage/belt/durathread,
 /obj/item/storage/belt/durathread,
-/obj/item/clothing/suit/armor/medium/vest/bulletproof/big,
+/obj/item/clothing/suit/armor/tiered/medium/vest/bulletproof/big,
 /obj/item/clothing/head/helmet/alt,
 /obj/item/gun/ballistic/automatic/pistol/n99,
 /obj/item/storage/belt/shoulderholster,
@@ -10642,7 +10645,7 @@
 /area/f13/bunker)
 "fhD" = (
 /obj/structure/table/glass,
-/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/effect/spawner/lootdrop/f13/doctorbag,
 /obj/machinery/camera/autoname{
 	dir = 4;
 	network = list("vault")
@@ -13090,15 +13093,9 @@
 /obj/structure/table{
 	layer = 2.9
 	},
-/obj/item/hemostat,
-/obj/item/retractor,
-/obj/item/scalpel,
-/obj/item/circular_saw,
-/obj/item/surgicaldrill,
-/obj/item/cautery,
-/obj/item/bonesetter,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light,
+/obj/effect/spawner/lootdrop/f13/doctorbag,
 /turf/open/floor/plasteel/f13/vault_floor/neutral/white/side,
 /area/f13/brotherhood/operating)
 "gsv" = (
@@ -13578,7 +13575,7 @@
 /area/f13/brotherhood/chemistry)
 "gCf" = (
 /obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/armor/tier3,
 /turf/open/floor/f13{
 	color = "#d9c4b9";
 	icon_state = "darkrusty";
@@ -13742,6 +13739,9 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/purple/white,
 /area/f13/vault/science)
+"gHp" = (
+/turf/closed/indestructible/vaultdoor,
+/area/f13/vault/atrium)
 "gHs" = (
 /obj/effect/decal/cleanable/ash/large,
 /obj/effect/decal/cleanable/ash/large,
@@ -16741,7 +16741,7 @@
 /area/f13/sewer)
 "ieh" = (
 /obj/item/clothing/head/helmet/riot/vaultsec,
-/obj/item/clothing/suit/armor/medium/vest/bulletproof/big,
+/obj/item/clothing/suit/armor/tiered/medium/vest/bulletproof/big,
 /turf/open/floor/plasteel/dark,
 /area/f13/bunker/bunkertwo)
 "iek" = (
@@ -16889,7 +16889,7 @@
 /area/f13/building/abandoned/o)
 "ijF" = (
 /obj/structure/table,
-/obj/item/clothing/suit/armor/power_armor/t45d,
+/obj/item/clothing/suit/armor/tiered/power_armor/t45d,
 /obj/item/clothing/head/helmet/f13/power_armor/t45d,
 /turf/open/floor/f13{
 	icon_state = "yellowdirtyfull"
@@ -17752,9 +17752,7 @@
 /obj/structure/table/optable,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/bot_white,
-/obj/item/storage/backpack/duffelbag/med/surgery{
-	pixel_y = 8
-	},
+/obj/effect/spawner/lootdrop/f13/doctorbag,
 /obj/machinery/defibrillator_mount{
 	pixel_x = 27
 	},
@@ -18182,6 +18180,7 @@
 	},
 /obj/item/storage/belt/army/assault,
 /obj/item/storage/belt/army/assault,
+/obj/item/clothing/suit/armor/tiered/light/combat/brotherhood/scout/senior,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 1
 	},
@@ -23434,6 +23433,12 @@
 	icon_state = "yellowsiding"
 	},
 /area/ruin/powered)
+"lwH" = (
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh,
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
+/area/ruin/powered)
 "lwJ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table/wood,
@@ -25149,7 +25154,7 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/enclave)
 "mnA" = (
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/armor/random,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/radiation)
 "mnK" = (
@@ -25297,7 +25302,7 @@
 	},
 /area/f13/radiation)
 "mro" = (
-/obj/effect/spawner/lootdrop/f13/armor/tier5,
+/obj/effect/spawner/bundle/f13/armor/t45d_salvaged/raider,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
 "mrt" = (
@@ -27695,7 +27700,7 @@
 /area/f13/bunker/bighornbunker)
 "nvY" = (
 /obj/item/clothing/head/helmet/f13/power_armor/excavator,
-/obj/item/clothing/suit/armor/power_armor/excavator,
+/obj/item/clothing/suit/armor/tiered/power_armor/excavator,
 /obj/structure/table/reinforced,
 /turf/open/floor/plating,
 /area/f13/bunker/bunkereight)
@@ -31864,7 +31869,7 @@
 /area/f13/sewer/powered)
 "pzg" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d,
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d,
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/raider,
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/sewer/powered)
@@ -34147,7 +34152,7 @@
 /obj/structure/table,
 /obj/item/bodypart/head/robot,
 /obj/item/bodypart/chest/robot,
-/obj/effect/spawner/bundle/f13/armor/combat/dark,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh,
 /turf/open/floor/f13{
 	icon_state = "yellowdirtyfull"
 	},
@@ -35860,7 +35865,7 @@
 /area/f13/bunker/bunkereight)
 "rlq" = (
 /obj/item/clothing/gloves/botanic_leather,
-/obj/item/clothing/suit/hooded/wintercoat/hydro,
+/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/hydro,
 /obj/structure/closet/anchored,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/effect/decal/cleanable/dirt,
@@ -36739,6 +36744,10 @@
 /area/f13/bunker/bunkerfive)
 "rGJ" = (
 /obj/machinery/light/small,
+/obj/machinery/porta_turret/f13/turret_556/burstfire{
+	faction = list("BOS");
+	req_access = list(120)
+	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/operations)
 "rHe" = (
@@ -38251,6 +38260,16 @@
 	icon_state = "yellowrustyfull"
 	},
 /area/f13/sewer)
+"sqC" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/machinery/porta_turret/f13/turret_556/burstfire{
+	faction = list("BOS");
+	req_access = list(120)
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/brotherhood/mining)
 "sqG" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
@@ -38590,7 +38609,7 @@
 /area/f13/bunker/bunkereight)
 "szD" = (
 /obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/obj/effect/spawner/lootdrop/f13/armor/tier2,
 /turf/open/floor/f13/wood,
 /area/f13/bunker)
 "szK" = (
@@ -45736,8 +45755,10 @@
 /area/f13/radiation)
 "vPD" = (
 /obj/structure/table,
-/obj/effect/spawner/bundle/f13/armor/combat/dark,
-/turf/open/floor/f13,
+/obj/effect/spawner/lootdrop/f13/armor/tier5,
+/turf/open/floor/f13{
+	icon_state = "yellowdirtyfull"
+	},
 /area/ruin/powered)
 "vPM" = (
 /obj/effect/decal/cleanable/dirt,
@@ -45762,7 +45783,7 @@
 /area/f13/brotherhood/operations)
 "vQu" = (
 /obj/structure/table/wood,
-/obj/item/clothing/suit/armor/medium/combat/desert_ranger/whiskey,
+/obj/item/clothing/suit/armor/tiered/medium/combat/desert_ranger/whiskey,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
 	icon_state = "floorrustysolid"
 	},
@@ -49562,9 +49583,9 @@
 	},
 /area/f13/sewer/powered)
 "xCW" = (
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
-/obj/effect/spawner/lootdrop/f13/armor/tier4,
 /obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/armor/tier2,
+/obj/effect/spawner/lootdrop/f13/armor/tier3,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker/bunkernine)
 "xDh" = (
@@ -50842,10 +50863,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/item/clothing/suit/armor/medium/vest,
-/obj/item/clothing/suit/armor/medium/vest,
-/obj/item/clothing/suit/armor/medium/vest,
-/obj/item/clothing/suit/armor/medium/vest,
+/obj/item/clothing/suit/armor/tiered/medium/vest,
+/obj/item/clothing/suit/armor/tiered/medium/vest,
+/obj/item/clothing/suit/armor/tiered/medium/vest,
+/obj/item/clothing/suit/armor/tiered/medium/vest,
 /turf/open/floor/plasteel/vault,
 /area/f13/vault/security/armory)
 "ymc" = (
@@ -74378,7 +74399,7 @@ dZm
 lwy
 nuY
 cNy
-fbb
+lwH
 bIk
 lwy
 opH
@@ -74675,7 +74696,7 @@ lwy
 cNy
 gVi
 bIk
-vPD
+uPx
 uPx
 lwy
 wCz
@@ -75579,12 +75600,12 @@ uNy
 hED
 aWW
 cNy
-pRC
+cMP
 nuY
-pRC
+vPD
 xyH
-cMP
-cMP
+pRC
+pRC
 cNy
 hGD
 aFR
@@ -89588,7 +89609,7 @@ gcg
 fgd
 loM
 wQr
-oWM
+gHp
 xYS
 gJk
 rwm
@@ -90192,7 +90213,7 @@ gcg
 qDz
 fgd
 mAf
-oWM
+gHp
 wfT
 eCR
 cOS
@@ -99069,7 +99090,7 @@ xLy
 eHY
 cZu
 cZu
-eHY
+sqC
 pFU
 nbK
 ohv

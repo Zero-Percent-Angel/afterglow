@@ -203,6 +203,51 @@
 	force_on = 50
 	armour_penetration = 0.15
 
+//folding ripper				Keywords: 8/40, less damage, smaller size, reduced Wound Bonus, Block, faster surgery speed
+/obj/item/melee/powered/ripper/folding
+	name = "surgical ripper"
+	desc = "A ripper designed with surgery in mind. More likely to leave the organs intact."
+	w_class = WEIGHT_CLASS_SMALL
+	on_item_state = "ripper_on"
+	off_item_state = "ripper"
+	weight_class_on = WEIGHT_CLASS_BULKY
+	tool_behaviour = null
+	toolspeed = 0.9 //better than regular ripeer, better than surgical saw
+	icon_state = "surgicalrip_off"
+	on_icon_state = "surgicalrip_on"
+	off_icon_state = "surgicalrip_off"
+	on_item_state = "surgicalrip_on"
+	off_item_state = "surgicalrip_off"
+	force_on = 40
+	force_off = 8
+	block_chance = 10
+	wound_bonus = 20
+	description_on = "<span class ='warning'>With a single motion, you unfold and activate the Ripper like a badass.</span>"
+	description_off = "<span class ='notice'>You flick the Ripper back shut and turn it off.</span>"
+
+/obj/item/melee/powered/ripper/folding/attack_self(mob/user)
+	on = !on
+	to_chat(user, description_on)
+	if(on)
+		to_chat(user, description_on)
+		icon_state = on_icon_state
+		item_state = on_item_state
+		w_class = weight_class_on
+		tool_behaviour = TOOL_SAW
+		force = force_on
+		slot_flags = null
+		attack_verb = list("sawed", "torn", "ripped", "chopped", "diced")
+		playsound(loc, on_sound, 50, TRUE)
+	else
+		to_chat(user, description_off)
+		icon_state = off_icon_state
+		item_state = off_item_state
+		w_class = WEIGHT_CLASS_SMALL
+		force = force_off
+		slot_flags = ITEM_SLOT_SUITSTORE | ITEM_SLOT_BELT
+		attack_verb = list("smacks", "thumps")
+	add_fingerprint(user)
+
 
 // Shishkebab backpack				The shishkebab weapon base unit
 /obj/item/shishkebabpack

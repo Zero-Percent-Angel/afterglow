@@ -46,7 +46,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	icon = 'icons/fallout/objects/tools.dmi'
 	icon_state = "repairkitarmor"
-	var/repair_amount = 252
+	var/repair_amount = 354
 	custom_price = PRICE_ALMOST_EXPENSIVE
 
 /obj/item/components

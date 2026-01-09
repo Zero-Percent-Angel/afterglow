@@ -367,8 +367,8 @@
 /obj/item/clothing/suit/armor/tiered/medium/duster/duster_renegade
 	name = "renegade duster"
 	desc = "Metal armor worn under a stylish duster. For the bad boy who wants to look good while commiting murder."
-	icon_state = "duster-renegade"
-	item_state = "duster-renegade"
+	icon_state = "duster_renegade"
+	item_state = "duster_renegade"
 	icon = 'icons/fallout/clothing/armored_medium.dmi'
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 
