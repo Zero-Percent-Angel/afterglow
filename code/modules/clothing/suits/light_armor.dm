@@ -557,8 +557,6 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
 	tier = 3
 	body_parts_hidden = ARMS | CHEST
-	icon = 'icons/obj/clothing/suits.dmi'
-	mob_overlay_icon = null
 
 
 /obj/item/clothing/suit/armor/tiered/light/leather/tanvest
