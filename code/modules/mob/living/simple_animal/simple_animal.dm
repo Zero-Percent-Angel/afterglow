@@ -1011,13 +1011,14 @@ GLOBAL_LIST_EMPTY(playmob_cooldowns)
 	if(length(mob_armor_tokens) < 1)
 		return // all done!
 
+	var/list/badTypeFix = mob_armor
 	for(var/list/token in mob_armor_tokens)
 		for(var/modifier in token)
 			switch(GLOB.armor_token_operation_legend[modifier])
 				if("MULT")
-					mob_armor.vars[modifier] = round(mob_armor.vars[modifier] * token[modifier], 1)
+					badTypeFix[modifier] = round(badTypeFix[modifier] * token[modifier], 1)
 				if("ADD")
-					mob_armor.vars[modifier] = max(mob_armor.vars[modifier] + token[modifier], 0)
+					badTypeFix[modifier] = max(badTypeFix[modifier] + token[modifier], 0)
 				else
 					continue
 
