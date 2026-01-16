@@ -208,16 +208,12 @@
 	name = "surgical ripper"
 	desc = "A ripper designed with surgery in mind. More likely to leave the organs intact."
 	w_class = WEIGHT_CLASS_SMALL
-	on_item_state = "ripper_on"
-	off_item_state = "ripper"
 	weight_class_on = WEIGHT_CLASS_BULKY
 	tool_behaviour = null
 	toolspeed = 0.9 //better than regular ripeer, better than surgical saw
 	icon_state = "surgicalrip_off"
 	on_icon_state = "surgicalrip_on"
 	off_icon_state = "surgicalrip_off"
-	on_item_state = "surgicalrip_on"
-	off_item_state = "surgicalrip_off"
 	force_on = 40
 	force_off = 8
 	block_chance = 10
