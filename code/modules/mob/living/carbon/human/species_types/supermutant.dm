@@ -11,7 +11,7 @@
 					"sb208","oblivionandbeyondthestars","sanshoom","medalis","wh0t00kthejam","theman1178",
 					"spockye","xenonia","breensecuter","fluidhelix","charliehere","ryzzz3n","ourlordspungus",
 					"manyfacedfool","ifrickfracki","mikuel","Theshroudedlord", "pisshole", "debossans",
-					"aetherfueled", "zugor", "krulcharles", "dankwulf", "woodentucker")
+					"aetherfueled", "zugor", "krulcharles", "dankwulf", "woodentucker", "lordvonsepheron")
 	species_traits = list(NOTRANSSTING,NOAROUSAL,NOGENITALS,EYECOLOR,NO_UNDERWEAR)
 	inherent_traits = list(TRAIT_RADIMMUNE,TRAIT_VIRUSIMMUNE,TRAIT_SMUTANT)
 	inherent_biotypes = list(MOB_HUMANOID)
