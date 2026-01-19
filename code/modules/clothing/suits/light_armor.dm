@@ -881,12 +881,12 @@
 	equip_delay_other = 10
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/armor
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor = ARMOR_VALUE_LIGHT
 	armor_tier_desc = ARMOR_CLOTHING_LIGHT
 	stiffness = LIGHT_STIFFNESS
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets
 	custom_price = PRICE_ABOVE_EXPENSIVE
 	armor = ARMOR_VALUE_LIGHT_T2
+	special_modifications = list("a" = 1)
 
 /obj/item/cloathing/suit/toggle/labcoat/khan_jacket/reinforced
 	name = "Reinforced Great Khan jacket"
