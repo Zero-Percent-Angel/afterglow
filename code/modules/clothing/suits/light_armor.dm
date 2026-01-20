@@ -886,7 +886,7 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets
 	custom_price = PRICE_ABOVE_EXPENSIVE
 	armor = ARMOR_VALUE_LIGHT_T2
-	special_modifications = list("a" = 1)
+	special_modifications = list("a" = 1, "e" = 1)
 
 /obj/item/cloathing/suit/toggle/labcoat/khan_jacket/reinforced
 	name = "Reinforced Great Khan jacket"
