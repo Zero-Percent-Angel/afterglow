@@ -923,7 +923,7 @@
 	armor = ARMOR_VALUE_LIGHT_T2
 	tier = 2
 	hoodtype = /obj/item/clothing/head/hooded/sciencesuit
-	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
+	clothing_flags = STOPSPRESSUREDAMAGE | MASKINTERNALS
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
