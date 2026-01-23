@@ -964,6 +964,7 @@
 	dynamic_fhair_suffix = null
 	var/helmettoggled = FALSE
 	armor = ARMOR_VALUE_LIGHT
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_DT_T2)
 	slowdown = HELMET_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 /obj/item/clothing/head/helmet/f13/khan/bandana/AltClick(mob/user)
