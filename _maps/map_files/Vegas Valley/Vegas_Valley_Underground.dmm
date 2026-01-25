@@ -847,6 +847,10 @@
 	name = "dirty floor"
 	},
 /area/f13/building/abandoned/o)
+"asx" = (
+/mob/living/simple_animal/hostile/raider/ranged/legendary,
+/turf/open/floor/plasteel/dark,
+/area/f13/caves)
 "asA" = (
 /obj/structure/bookcase/manuals/research_and_development,
 /turf/open/floor/plasteel/f13/vault_floor/blue,
@@ -3124,6 +3128,11 @@
 /obj/structure/decoration/rag,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
+"byY" = (
+/obj/structure/closet/cabinet,
+/obj/effect/spawner/lootdrop/f13/armor/tier4,
+/turf/open/floor/f13/wood,
+/area/f13/bunker)
 "bzv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/robot_debris/limb,
@@ -4211,12 +4220,11 @@
 /obj/item/clothing/shoes/cowboyboots/black,
 /obj/item/clothing/shoes/workboots,
 /obj/item/clothing/shoes/winterboots,
-/obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/workboots/mining,
-/obj/item/clothing/shoes/workboots/mining,
-/obj/item/clothing/shoes/f13/enclave/serviceboots,
-/obj/item/clothing/shoes/f13/enclave/serviceboots,
+/obj/effect/spawner/lootdrop/f13/armor/randomraiderhead,
+/obj/effect/spawner/lootdrop/f13/armor/randomraiderhead,
+/obj/effect/spawner/lootdrop/f13/armor/randomraiderchest,
+/obj/effect/spawner/lootdrop/f13/armor/randomraiderchest,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -6157,7 +6165,11 @@
 	},
 /area/f13/bunker/bunkerthree)
 "cYy" = (
-/obj/structure/frame/machine,
+/obj/structure/closet/locker/oldstyle,
+/obj/item/clothing/suit/bio_suit/enclave,
+/obj/item/clothing/mask/gas/enclave,
+/obj/item/clothing/head/beret/enclave/science,
+/obj/item/clothing/head/bio_hood/scientist,
 /turf/open/floor/plasteel/f13/vault_floor/purple/white,
 /area/f13/enclave)
 "cYJ" = (
@@ -7394,6 +7406,11 @@
 /obj/structure/simple_door/bunker,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker/bunkerseven)
+"dDk" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/reagent_dispensers/barrel/four,
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
+/area/f13/bunker/bunkerthree)
 "dDp" = (
 /obj/structure/lattice,
 /obj/structure/table/wood,
@@ -10643,6 +10660,10 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/bunker)
+"fhA" = (
+/obj/item/clothing/head/helmet/f13/knight/metal/reinforced,
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/caves)
 "fhD" = (
 /obj/structure/table/glass,
 /obj/effect/spawner/lootdrop/f13/doctorbag,
@@ -15483,7 +15504,7 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
 	},
-/obj/item/locked_box/armor/tier3_5,
+/obj/item/locked_box/armor/tier2,
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrustysolid"
 	},
@@ -17827,7 +17848,7 @@
 "iIP" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/locked_box/weapon/range/tier3_5,
+/obj/item/locked_box/weapon/range/tier4,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker/bunkerthree)
 "iIW" = (
@@ -22249,7 +22270,6 @@
 /obj/effect/decal/waste{
 	icon_state = "goo5"
 	},
-/obj/item/gun/energy/gammagun,
 /turf/open/floor/plasteel/dark,
 /area/f13/bunker/bunkereight)
 "kUz" = (
@@ -23612,6 +23632,7 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
+/obj/effect/spawner/lootdrop/f13/armor/costumes,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -25302,7 +25323,7 @@
 	},
 /area/f13/radiation)
 "mro" = (
-/obj/effect/spawner/bundle/f13/armor/t45d_salvaged/raider,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/lowmid,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
 "mrt" = (
@@ -27594,8 +27615,11 @@
 "nus" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/clothing/under/f13/enclave/officer,
-/obj/item/clothing/head/f13/enclave,
+/obj/item/clothing/head/f13/enclave{
+	pixel_y = 14
+	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/item/clothing/suit/armor/tiered/medium/duster/enclave,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -27699,9 +27723,9 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker/bighornbunker)
 "nvY" = (
-/obj/item/clothing/head/helmet/f13/power_armor/excavator,
-/obj/item/clothing/suit/armor/tiered/power_armor/excavator,
 /obj/structure/table/reinforced,
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/recycled,
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d,
 /turf/open/floor/plating,
 /area/f13/bunker/bunkereight)
 "nwg" = (
@@ -30170,7 +30194,7 @@
 /area/f13/caves)
 "oEg" = (
 /obj/structure/rack,
-/obj/item/clothing/head/helmet/f13/power_armor/t45d,
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker/bunkernine)
 "oED" = (
@@ -30288,7 +30312,7 @@
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/sheet/mineral/gold/fifty,
-/obj/item/locked_box/weapon/range/any_random,
+/obj/item/locked_box/weapon/range/tier4,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/bunker/bunkerthree)
 "oHE" = (
@@ -31687,6 +31711,13 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating/tunnel,
 /area/f13/sewer)
+"puN" = (
+/obj/structure/rack,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/mineral/gold/fifty,
+/obj/item/locked_box/armor/tier3,
+/turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
+/area/f13/bunker/bunkerthree)
 "puW" = (
 /obj/machinery/light{
 	dir = 8
@@ -31869,8 +31900,8 @@
 /area/f13/sewer/powered)
 "pzg" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d,
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/raider,
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/raider,
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/sewer/powered)
 "pzo" = (
@@ -32765,6 +32796,9 @@
 /obj/item/clothing/head/beret/enclave,
 /obj/item/clothing/under/f13/exile/enclave,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/item/clothing/shoes/f13/enclave/serviceboots{
+	pixel_y = -8
+	},
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -34262,7 +34296,7 @@
 "qyQ" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/locked_box/weapon/melee/tier3_5,
+/obj/item/locked_box/weapon/melee/tier5,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker/bunkerthree)
 "qyT" = (
@@ -34570,6 +34604,11 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/brotherhood/mining)
+"qFt" = (
+/obj/effect/mob_spawn/human/corpse/charredskeleton,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/mid,
+/turf/open/floor/plasteel/dark,
+/area/f13/bunker/bunkereight)
 "qFv" = (
 /obj/effect/spawner/lootdrop/crate_spawner,
 /turf/open/floor/plasteel/f13,
@@ -36539,7 +36578,7 @@
 	dir = 1
 	},
 /obj/effect/spawner/lootdrop/f13/attachments,
-/obj/item/locked_box/weapon/range/tier3_5,
+/obj/item/locked_box/weapon/range/tier3,
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrustysolid"
 	},
@@ -42382,6 +42421,10 @@
 	},
 /turf/open/floor/wood_mosaic,
 /area/f13/vault/diner)
+"uok" = (
+/obj/item/clothing/suit/armor/tiered/heavy/tier3/metal/reinforced,
+/turf/open/indestructible/ground/inside/subway,
+/area/f13/caves)
 "uom" = (
 /obj/structure/table/reinforced,
 /obj/item/stack/spacecash/c1000{
@@ -43664,7 +43707,7 @@
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/sheet/mineral/gold/fifty,
-/obj/item/locked_box/weapon/melee/any_random,
+/obj/item/locked_box/weapon/melee/tier3,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/bunker/bunkerthree)
 "uPM" = (
@@ -44774,7 +44817,7 @@
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/sheet/mineral/gold/fifty,
-/obj/item/locked_box/armor/any_random,
+/obj/item/locked_box/armor/tier4,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/bunker/bunkerthree)
 "vrI" = (
@@ -45223,6 +45266,7 @@
 	req_access_txt = "256";
 	pixel_y = 3
 	},
+/obj/item/radio/headset/headset_enclave/command,
 /turf/open/floor/wood_mosaic/wood_mosaic_light,
 /area/f13/enclave)
 "vBT" = (
@@ -46058,6 +46102,10 @@
 /obj/item/clothing/head/helmet/f13/envirosuit,
 /obj/item/radio/headset,
 /obj/item/radio/headset,
+/obj/item/pda/chameleon,
+/obj/item/pda/chameleon,
+/obj/item/clothing/mask/chameleon,
+/obj/item/clothing/mask/chameleon,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -46125,6 +46173,7 @@
 "waM" = (
 /obj/structure/table,
 /obj/machinery/light,
+/obj/structure/frame/machine,
 /turf/open/floor/plasteel/f13/vault_floor/purple/white/whitepurplechess/whitepurplechess2,
 /area/f13/enclave)
 "waQ" = (
@@ -46442,7 +46491,7 @@
 	},
 /area/f13/bunker/bunkerfive)
 "wiI" = (
-/obj/item/clothing/head/helmet/f13/power_armor/t45d,
+/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d,
 /turf/open/floor/plating/dirt/dark,
 /area/f13/radiation)
 "wiJ" = (
@@ -48415,6 +48464,9 @@
 /obj/item/storage/belt/army/assault/enclave,
 /obj/item/storage/belt/army,
 /obj/item/storage/belt/army/assault/enclave,
+/obj/item/storage/belt/bandolier,
+/obj/effect/spawner/lootdrop/f13/armor/costumes,
+/obj/effect/spawner/lootdrop/f13/armor/tier2,
 /turf/open/floor/f13{
 	dir = 10;
 	icon_state = "redmark"
@@ -50031,7 +50083,7 @@
 "xPY" = (
 /obj/structure/rack,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/locked_box/armor/tier4,
+/obj/item/locked_box/armor/tier3,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker/bunkerthree)
 "xQt" = (
@@ -64327,7 +64379,7 @@ yhR
 yhR
 cdu
 pGO
-ePK
+byY
 nXZ
 rcV
 ycf
@@ -69621,7 +69673,7 @@ aKq
 aKq
 tVt
 xmO
-xmO
+asx
 xmO
 xmO
 xmO
@@ -71249,7 +71301,7 @@ oED
 npY
 npY
 oED
-vdK
+qFt
 kUr
 flf
 rPN
@@ -108095,7 +108147,7 @@ myG
 yhR
 plQ
 plQ
-plQ
+fhA
 plQ
 plQ
 qBv
@@ -108698,7 +108750,7 @@ oGZ
 qBv
 yhR
 yhR
-plQ
+uok
 plQ
 ekv
 yhR
@@ -132368,7 +132420,7 @@ gKT
 ink
 iIP
 xSK
-vrA
+puN
 dgP
 dgP
 dgP
@@ -132667,7 +132719,7 @@ xSK
 nRX
 gKT
 gKT
-ink
+dDk
 oqZ
 xSK
 eBa
