@@ -6519,17 +6519,6 @@
 	icon_state = "oakfloor1-broken"
 	},
 /area/f13/ncr/powered)
-"ewh" = (
-/obj/structure/barricade/bars,
-/obj/structure/window/fulltile/ruins,
-/obj/structure/curtain{
-	color = "#845f58"
-	},
-/obj/structure/decoration/rag,
-/turf/open/floor/f13{
-	icon_state = "floordirty"
-	},
-/area/f13/followers)
 "ewn" = (
 /obj/structure/simple_door/wood,
 /turf/open/floor/f13/wood,
@@ -7562,6 +7551,9 @@
 /obj/structure/table/optable,
 /obj/machinery/defibrillator_mount/loaded{
 	pixel_y = 25
+	},
+/obj/item/clothing/neck/stethoscope{
+	pixel_y = 2
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/followers)
@@ -12031,6 +12023,10 @@
 	pixel_x = 2;
 	pixel_y = 12
 	},
+/obj/effect/decal/cleanable/ash{
+	pixel_x = -3;
+	pixel_y = -6
+	},
 /turf/open/floor/f13{
 	icon_state = "floordirtysolid"
 	},
@@ -13996,6 +13992,7 @@
 	pixel_x = 8;
 	pixel_y = -6
 	},
+/obj/effect/spawner/lootdrop/f13/resourcespawner,
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -14841,6 +14838,8 @@
 /obj/effect/spawner/lootdrop/trash,
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /obj/effect/spawner/lootdrop/f13/junkspawners,
+/obj/effect/spawner/lootdrop/f13/resourcespawner,
+/obj/effect/spawner/lootdrop/f13/resourcespawner,
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -15832,13 +15831,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/brotherhood/leisure)
-"ldZ" = (
-/obj/structure/window/fulltile/wood_window,
-/obj/structure/decoration/rag{
-	icon_state = "skin"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
-/area/f13/followers)
 "lew" = (
 /obj/structure/fence/wooden{
 	dir = 4;
@@ -30039,6 +30031,13 @@
 /obj/effect/spawner/lootdrop/f13/junkspawners,
 /turf/open/floor/plating/f13/outside/roof,
 /area/f13/building)
+"vAK" = (
+/obj/structure/window/fulltile/wood_window,
+/obj/structure/decoration/rag{
+	icon_state = "skin"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
+/area/f13/followers)
 "vAU" = (
 /obj/item/reagent_containers/food/snacks/meatsalted{
 	pixel_x = 7;
@@ -31002,6 +31001,17 @@
 /obj/machinery/computer/slot_machine,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/building/powered)
+"wiU" = (
+/obj/structure/barricade/bars,
+/obj/structure/window/fulltile/ruins,
+/obj/structure/curtain{
+	color = "#845f58"
+	},
+/obj/structure/decoration/rag,
+/turf/open/floor/f13{
+	icon_state = "floordirty"
+	},
+/area/f13/followers)
 "wjH" = (
 /obj/structure/railing{
 	color = "#A47449";
@@ -32841,6 +32851,12 @@
 /obj/item/storage/belt/army/followers{
 	pixel_y = -8;
 	pixel_x = 3
+	},
+/obj/structure/sink/kitchen{
+	desc = "Strictly For filling Up mop buckets.";
+	dir = 8;
+	name = "Mop Sink";
+	pixel_x = 11
 	},
 /turf/open/floor/f13{
 	icon_state = "greendirtyfull"
@@ -72066,7 +72082,7 @@ tov
 qNO
 scr
 scr
-ldZ
+vAK
 qNO
 ets
 wpJ
@@ -73073,7 +73089,7 @@ idd
 lAe
 pzu
 bOz
-ewh
+wiU
 ets
 wpJ
 wpJ
