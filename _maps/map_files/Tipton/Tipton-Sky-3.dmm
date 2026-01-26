@@ -2012,6 +2012,7 @@
 /obj/structure/decoration/smokeold{
 	pixel_y = -31
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/white,
 /area/f13/followers)
 "bvd" = (
@@ -6519,6 +6520,17 @@
 	icon_state = "oakfloor1-broken"
 	},
 /area/f13/ncr/powered)
+"ewh" = (
+/obj/structure/barricade/bars,
+/obj/structure/window/fulltile/ruins,
+/obj/structure/curtain{
+	color = "#845f58"
+	},
+/obj/structure/decoration/rag,
+/turf/open/floor/f13{
+	icon_state = "floordirty"
+	},
+/area/f13/followers)
 "ewn" = (
 /obj/structure/simple_door/wood,
 /turf/open/floor/f13/wood,
@@ -7249,6 +7261,10 @@
 /obj/effect/turf_decal/stripes/corner,
 /obj/item/radio/intercom/retro/foa{
 	pixel_x = -25
+	},
+/obj/structure/sink/greyscale{
+	dir = 8;
+	pixel_x = -12
 	},
 /turf/open/floor/f13{
 	icon_state = "darkdirtysolid"
@@ -10827,6 +10843,11 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds/drug,
 /turf/open/floor/f13/wood,
 /area/f13/building/powered)
+"hBI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/caution,
+/turf/open/floor/plasteel/f13/vault_floor/yellow/yellowchess,
+/area/f13/followers)
 "hCi" = (
 /obj/structure/chair/bench{
 	dir = 8;
@@ -15886,6 +15907,7 @@
 /area/f13/building/powered)
 "lgA" = (
 /obj/machinery/chem_master/advanced,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/white,
 /area/f13/followers)
 "lhe" = (
@@ -16332,6 +16354,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/white,
 /area/f13/followers)
 "lBR" = (
@@ -18857,12 +18880,9 @@
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/underground/mountain)
 "ntX" = (
-/obj/structure/sink/greyscale{
-	dir = 4;
-	pixel_x = 12;
-	pixel_y = 7
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/chem_dispenser,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/white,
 /area/f13/followers)
 "nug" = (
@@ -19493,6 +19513,13 @@
 /mob/living/simple_animal/hostile/raider,
 /turf/open/floor/plating/f13/outside/roof/wood/old,
 /area/f13/building/powered)
+"nSE" = (
+/obj/structure/window/fulltile/wood_window,
+/obj/structure/decoration/rag{
+	icon_state = "skin"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
+/area/f13/followers)
 "nTj" = (
 /obj/structure/table/wood,
 /obj/item/clothing/head/beret/ncr/ncr_sof{
@@ -30032,9 +30059,9 @@
 /turf/open/floor/plating/f13/outside/roof,
 /area/f13/building)
 "vAK" = (
-/obj/structure/window/fulltile/wood_window,
-/obj/structure/decoration/rag{
-	icon_state = "skin"
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/chair/stool/retro/black{
+	pixel_x = 4
 	},
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/followers)
@@ -31001,17 +31028,6 @@
 /obj/machinery/computer/slot_machine,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/building/powered)
-"wiU" = (
-/obj/structure/barricade/bars,
-/obj/structure/window/fulltile/ruins,
-/obj/structure/curtain{
-	color = "#845f58"
-	},
-/obj/structure/decoration/rag,
-/turf/open/floor/f13{
-	icon_state = "floordirty"
-	},
-/area/f13/followers)
 "wjH" = (
 /obj/structure/railing{
 	color = "#A47449";
@@ -31643,12 +31659,6 @@
 	icon_state = "housewood2-broken"
 	},
 /area/f13/building/powered)
-"wGD" = (
-/obj/structure/chair/stool/retro/black{
-	pixel_x = 4
-	},
-/turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
-/area/f13/followers)
 "wGR" = (
 /obj/structure/barricade/bars,
 /obj/structure/curtain{
@@ -71473,7 +71483,7 @@ gld
 nCC
 hUM
 gjZ
-rHt
+hBI
 lym
 tHM
 tHM
@@ -71677,8 +71687,8 @@ nFP
 xLH
 rHt
 jrW
-tHM
-wGD
+vAK
+lym
 bvb
 qNO
 wpJ
@@ -72082,7 +72092,7 @@ tov
 qNO
 scr
 scr
-vAK
+nSE
 qNO
 ets
 wpJ
@@ -73089,7 +73099,7 @@ idd
 lAe
 pzu
 bOz
-wiU
+ewh
 ets
 wpJ
 wpJ
