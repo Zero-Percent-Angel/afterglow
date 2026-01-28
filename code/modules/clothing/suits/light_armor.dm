@@ -881,12 +881,12 @@
 	equip_delay_other = 10
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/armor
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor = ARMOR_VALUE_LIGHT
 	armor_tier_desc = ARMOR_CLOTHING_LIGHT
 	stiffness = LIGHT_STIFFNESS
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets
 	custom_price = PRICE_ABOVE_EXPENSIVE
 	armor = ARMOR_VALUE_LIGHT_T2
+	special_modifications = list("a" = 1, "e" = 1)
 
 /obj/item/cloathing/suit/toggle/labcoat/khan_jacket/reinforced
 	name = "Reinforced Great Khan jacket"
@@ -923,7 +923,7 @@
 	armor = ARMOR_VALUE_LIGHT_T2
 	tier = 2
 	hoodtype = /obj/item/clothing/head/hooded/sciencesuit
-	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
+	clothing_flags = STOPSPRESSUREDAMAGE
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
@@ -942,7 +942,7 @@
 	tier = 2
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR|HIDEFACIALHAIR
 	slowdown = ARMOR_SLOWDOWN_LIGHT
-	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
+	clothing_flags = STOPSPRESSUREDAMAGE
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	cold_protection = HEAD

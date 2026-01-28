@@ -393,6 +393,9 @@
 	item_state = "rechargerrifle"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/recharger/hitscan/rifle)
 	weapon_weight = GUN_TWO_HAND_ONLY
+	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
+	force = GUN_MELEE_FORCE_RIFLE_HEAVY
+	w_class = WEIGHT_CLASS_BULKY
 	draw_time = GUN_DRAW_NORMAL
 
 //AEP 7 Laser pistol
