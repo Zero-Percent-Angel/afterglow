@@ -241,10 +241,8 @@ Practitioner
 	)
 
 	loadout_options = list(
-	/datum/outfit/loadout/physician,
-	/datum/outfit/loadout/pharmacist,
-	/datum/outfit/loadout/paramedic,
-	/datum/outfit/loadout/medical_researcher,
+	/datum/outfit/loadout/doctorstandard,
+	/datum/outfit/loadout/doctorrebel,
 	)
 
 /datum/outfit/job/followers/f13practitioner/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -285,11 +283,9 @@ Practitioner
 	name =	"Town Doctor"
 	jobtype =	/datum/job/followers/f13practitioner
 	uniform =	/obj/item/clothing/under/f13/followers
-	suit =	/obj/item/clothing/suit/armor/tiered/light/leather/jacket/followers
 	id =	/obj/item/card/id/silver
 	//chemwhiz =	TRUE
 	backpack =	/obj/item/storage/backpack/medic
-	belt = /obj/item/gun/energy/laser/wattz/recharger
 	satchel =	/obj/item/storage/backpack/satchel/med
 	duffelbag =	/obj/item/storage/backpack/duffelbag/med
 	backpack_contents = list(
@@ -301,45 +297,28 @@ Practitioner
 		/obj/item/storage/bag/money/small/settler = 1,
 	)
 
-/datum/outfit/loadout/physician
-	name =	"Emergency Physician"
+/datum/outfit/loadout/doctorstandard
+	name =	"Doctor"
 	mask =	/obj/item/clothing/mask/surgical
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
 	backpack_contents = list(
 		/obj/item/clothing/suit/armor/tiered/hooded/surgical = 1,
 		/obj/item/reagent_containers/medspray/synthflesh = 1,
 		/obj/item/healthanalyzer/advanced = 1,
+		belt = /obj/item/gun/energy/laser/wattz/recharger
 	)
 
-/datum/outfit/loadout/pharmacist
-	name =	"Pharmacist"
-	suit =	/obj/item/clothing/suit/toggle/labcoat
-	gloves =	/obj/item/clothing/gloves/color/latex
-	glasses =	/obj/item/clothing/glasses/science
-	backpack_contents = list(
-		/obj/item/flashlight/pen = 1,
-		/obj/item/pda/chemist = 1,
-	)
-
-/datum/outfit/loadout/paramedic
-	name =	"Paramedic"
+/datum/outfit/loadout/doctorrebel
+	name =	"Rebel"
 	head =	/obj/item/clothing/head/soft/emt
 	belt =	/obj/item/storage/belt/medical
 	backpack_contents = list(
 		/obj/item/reagent_containers/medspray/synthflesh = 2,
 		/obj/item/pda/medical = 1,
 		/obj/item/healthanalyzer=1,
+		/obj/item/clothing/suit/armor/tiered/light/leather/jacket/followers = 1,
+		/obj/item/kit_spawner/follower = 1,
 	)
-
-/datum/outfit/loadout/medical_researcher
-	name =	"Medical Researcher"
-	suit =	/obj/item/clothing/suit/toggle/labcoat/followers
-	backpack_contents = list(
-		/obj/item/clothing/accessory/pocketprotector/full = 1,
-		/obj/item/folder/white = 1,
-		/obj/item/pda/medical = 1,
-		/obj/item/healthanalyzer/advanced = 1,
-		/obj/item/book/granter/trait/techno = 1,)
 
 /*
 Follower Volunteer
