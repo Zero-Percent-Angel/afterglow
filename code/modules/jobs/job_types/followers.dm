@@ -301,17 +301,16 @@ Practitioner
 	name =	"Doctor"
 	mask =	/obj/item/clothing/mask/surgical
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
+	belt =	/obj/item/storage/belt/medical
 	backpack_contents = list(
-		/obj/item/clothing/suit/armor/tiered/hooded/surgical = 1,
 		/obj/item/reagent_containers/medspray/synthflesh = 1,
 		/obj/item/healthanalyzer/advanced = 1,
-		belt = /obj/item/gun/energy/laser/wattz/recharger
+		/obj/item/gun/energy/laser/wattz/recharger = 1,
 	)
 
 /datum/outfit/loadout/doctorrebel
 	name =	"Rebel"
-	head =	/obj/item/clothing/head/soft/emt
-	belt =	/obj/item/storage/belt/medical
+	belt =	/obj/item/storage/belt/shoulderholster
 	backpack_contents = list(
 		/obj/item/reagent_containers/medspray/synthflesh = 2,
 		/obj/item/pda/medical = 1,
