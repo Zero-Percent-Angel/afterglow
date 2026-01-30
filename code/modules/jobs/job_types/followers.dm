@@ -305,6 +305,9 @@ Practitioner
 	backpack_contents = list(
 		/obj/item/healthanalyzer/advanced = 1,
 		/obj/item/gun/energy/laser/wattz/recharger = 1,
+		/obj/item/book/granter/trait/techno = 1,
+		/obj/item/book/granter/trait/midsurgery = 1.
+
 	)
 
 /datum/outfit/loadout/doctorrebel
@@ -315,6 +318,7 @@ Practitioner
 		/obj/item/healthanalyzer=1,
 		/obj/item/clothing/suit/armor/tiered/light/leather/jacket/followers = 1,
 		/obj/item/kit_spawner/follower = 1,
+		/obj/item/book/granter/trait/techno = 1,
 	)
 
 /*
