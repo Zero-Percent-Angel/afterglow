@@ -505,7 +505,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 				switch(crit_case) // only carbons can have the fun crits
 					if(1) // shatter their legs and bleed 'em
-						crit_rebate = 60
+						crit_rebate = 30
 						C.bleed(150)
 						var/obj/item/bodypart/l_leg/l = C.get_bodypart(BODY_ZONE_L_LEG)
 						if(l)
@@ -522,7 +522,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 						C.visible_message(span_danger("[C] is pinned underneath [src]!"), \
 							span_userdanger("You are pinned down by [src]!"))
 					if(3) // glass candy
-						crit_rebate = 50
+						crit_rebate = 25
 						for(var/i = 0, i < num_shards, i++)
 							var/obj/item/shard/shard = new /obj/item/shard(get_turf(C))
 							shard.embedding = list(embed_chance = 100, ignore_throwspeed_threshold = TRUE, impact_pain_mult=1, pain_chance=5)
@@ -557,8 +557,8 @@ GLOBAL_LIST_EMPTY(vending_products)
 				if(prob(30))
 					C.apply_damage(max(0, squish_damage - crit_rebate), forced=TRUE, spread_damage=TRUE) // the 30% chance to spread the damage means you escape breaking any bones
 				else
-					C.take_bodypart_damage((squish_damage - crit_rebate)*0.5, wound_bonus = 5) // otherwise, deal it to 2 random limbs (or the same one) which will likely shatter something
-					C.take_bodypart_damage((squish_damage - crit_rebate)*0.5, wound_bonus = 5)
+					C.take_bodypart_damage(max(0, squish_damage - crit_rebate)*0.5, wound_bonus = 5) // otherwise, deal it to 2 random limbs (or the same one) which will likely shatter something
+					C.take_bodypart_damage(max(0, squish_damage - crit_rebate)*0.5, wound_bonus = 5)
 				C.AddElement(/datum/element/squish, 18 SECONDS)
 			else
 				L.visible_message(span_danger("[L] is crushed by [src]!"), \
@@ -772,20 +772,20 @@ GLOBAL_LIST_EMPTY(vending_products)
 			if(!R || !istype(R) || !R.product_path)
 				vend_ready = TRUE
 				return
-			
+
 			//debug
 			if(product_records.Find(R) && hidden_records.Find(R))
 				log_runtime("WARN - vendor [src] @ [loc] has Duplicate [R] accross normal and hidden product tables!")
 			if(product_records.Find(R) && coin_records.Find(R))
 				log_runtime("WARN - vendor [src] @ [loc] has Duplicate [R] accross normal and premium product tables!")
-			
+
 			//Set price for the item we're using.
 			var/price_to_use = default_price
 			if(R.custom_price)
 				price_to_use = R.custom_price
 			if(coin_records.Find(R) || hidden_records.Find(R))
 				price_to_use = R.custom_premium_price ? R.custom_premium_price : extra_price
-			
+
 			//Make sure we actually have the item.
 			if(R in hidden_records)
 				if(!extended_inventory)
@@ -800,7 +800,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 				flick(icon_deny,src)
 				vend_ready = TRUE
 				return
-			
+
 			//Thank them like any megaglobal corp should.
 			if(last_shopper != usr || purchase_message_cooldown < world.time)
 				say("Thank you for shopping with [src]!")
@@ -812,11 +812,11 @@ GLOBAL_LIST_EMPTY(vending_products)
 				to_chat(usr, span_alert("Not enough caps to pay for [R.name]!"))
 				vend_ready = TRUE
 				return
-			
+
 			//Deduct that price if we're not overridden to be free.
 			if(!force_free)
 				stored_caps = stored_caps - price_to_use
-			
+
 			//use power, play animations and sounds.
 			use_power(5)
 			if(icon_vend) //Show the vending animation if needed

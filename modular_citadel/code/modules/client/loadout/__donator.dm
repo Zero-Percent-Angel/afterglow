@@ -31,7 +31,7 @@
 					"spockye","xenonia","breensecuter","fluidhelix","charliehere","ryzzz3n","ourlordspungus",
 					"manyfacedfool","ifrickfracki","mikuel","Theshroudedlord", "pisshole", "debossans",
 					"aetherfueled", "zugor", "krulcharles", "dankwulf", "woodentucker", "lordvonsepheron",
-					"whiterred", "invyicta")
+					"whiterred", "invyicta", "ghostie345", "xuvari")
 	cost = 1
 
 /datum/gear/donator/mutie/helmet
