@@ -291,7 +291,7 @@ Practitioner
 	backpack_contents = list(
 		/obj/item/storage/survivalkit/medical/follower = 1,
 		/obj/item/reagent_containers/hypospray/medipen/stimpak = 2,
-		/obj/item/reagent_containers/medspray/synthflesh = 1,
+		/obj/item/reagent_containers/medspray/synthflesh = 2,
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/gun/energy/laser/complianceregulator = 1,
 		/obj/item/storage/bag/money/small/settler = 1,
@@ -303,7 +303,6 @@ Practitioner
 	gloves =	/obj/item/clothing/gloves/color/latex/nitrile
 	belt =	/obj/item/storage/belt/medical
 	backpack_contents = list(
-		/obj/item/reagent_containers/medspray/synthflesh = 1,
 		/obj/item/healthanalyzer/advanced = 1,
 		/obj/item/gun/energy/laser/wattz/recharger = 1,
 	)
@@ -312,7 +311,6 @@ Practitioner
 	name =	"Rebel"
 	belt =	/obj/item/storage/belt/shoulderholster
 	backpack_contents = list(
-		/obj/item/reagent_containers/medspray/synthflesh = 2,
 		/obj/item/pda/medical = 1,
 		/obj/item/healthanalyzer=1,
 		/obj/item/clothing/suit/armor/tiered/light/leather/jacket/followers = 1,
