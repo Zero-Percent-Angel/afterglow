@@ -404,6 +404,8 @@
 	desc = "A basic energy-based laser gun that fires concentrated beams of light. Military version of the Wattz-1000. Quicker-firing, armor-penetrating, with slightly less damage, and far more efficiency."
 	icon_state = "AEP7"
 	item_state = "laser-pistol"
+	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan)
@@ -435,7 +437,7 @@
 	name = "\improper AER9 laser carbine"
 	desc = ". An AER9 laser rifle that has been cut down to pistol size. Damage and power consumption have both been reduced."
 	icon_state = "laserfo4"
-	item_state = "laser-pistol"
+	item_state = "laserfo4"
 	w_class = WEIGHT_CLASS_NORMAL
 	slot_flags = ITEM_SLOT_BELT
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol/hitscan/fo4laser)
