@@ -671,7 +671,7 @@
 	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	icon_state = "ncr_infantry_vest"
 	item_state = "ncr_infantry_vest"
-	armor = ARMOR_VALUE_MEDIUM
+	armor = ARMOR_VALUE_MEDIUM_T2
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T1)
 
@@ -709,7 +709,7 @@
 /obj/item/clothing/suit/armor/tiered/medium/combat/patrol
 	name = "NCR patrol ranger combat armor"
 	desc = "A modified set of combat armor specifically for use of heavy patrol rangers."
-	icon_state = "ncr_ranger_patrol_old"
+	icon_state = "ncr_ranger_patrol"
 	item_state = "ncr_ranger_patrol"
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 
