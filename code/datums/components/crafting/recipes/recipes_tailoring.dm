@@ -1574,3 +1574,37 @@ datum/crafting_recipe/steelbib/heavy
 	subcategory = CAT_ARMOR
 	always_available = FALSE
 	skill_level = EASY_CHECK
+
+
+/datum/crafting_recipe/vault_pa_body
+	name = "FH-46 Body"
+	result = /obj/item/clothing/suit/armor/tiered/power_armor/fh46
+	reqs = list(/obj/item/clothing/suit/armor/tiered/medium/vest = 1,
+				/obj/item/stack/crafting/goodparts = 4,
+				/obj/item/stack/sheet/cloth = 20,
+				/obj/item/pa_kit = 1,
+				/obj/item/stack/cable_coil = 5,
+				/obj/item/stack/sheet/metal = 5,
+				/obj/item/stock_parts/cell/high = 1
+				)
+	time = 120
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+	skill_level = EXPERT_CHECK
+
+/datum/crafting_recipe/vault_pa_helmet
+	name = "FH-46 Helmet"
+	result = /obj/item/clothing/head/helmet/f13/power_armor/fh46
+	reqs = list(/obj/item/stack/crafting/metalparts = 2,
+				/obj/item/stack/crafting/goodparts = 4,
+				/obj/item/stack/sheet/cloth = 10,
+				/obj/item/pa_kit = 1,
+				/obj/item/stack/cable_coil = 5,
+				/obj/item/stack/sheet/metal = 5
+				)
+	time = 80
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = FALSE
+	skill_level = EXPERT_CHECK

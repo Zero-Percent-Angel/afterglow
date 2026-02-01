@@ -207,7 +207,7 @@
 
 /obj/item/locked_box/armor
 	easy_naming = "armor "
-	prize_amount = 4
+	prize_amount = 2
 
 /obj/item/locked_box/armor/prewar_clothes
 	easy_naming = "prewar clothing "

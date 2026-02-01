@@ -479,6 +479,8 @@
 	flags_inv = HIDEJUMPSUIT
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T3)
+	icon = 'icons/obj/clothing/suits.dmi'
+	mob_overlay_icon = null
 
 /obj/item/clothing/suit/armor/tiered/medium/combat/environmental/ComponentInitialize()
 	. = ..()

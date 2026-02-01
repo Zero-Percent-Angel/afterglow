@@ -332,6 +332,7 @@
 				/obj/effect/spawner/bundle/f13/armor/bulletproof,
 				/obj/effect/spawner/bundle/f13/armor/sulphite,
 				/obj/effect/spawner/bundle/f13/armor/vault,
+				/obj/effect/spawner/bundle/f13/armor/enviro,
 				/obj/effect/spawner/bundle/f13/armor/good_duster,
 				/obj/effect/spawner/bundle/f13/armor/tier_3_armored_coat,
 				/obj/effect/spawner/bundle/f13/armor/tier_3_riot
@@ -377,6 +378,13 @@
 	items = list(
 				/obj/item/clothing/suit/armor/tiered/medium/combat,
 				/obj/item/clothing/head/helmet/f13/combat
+				)
+
+/obj/effect/spawner/bundle/f13/armor/enviro
+	name = "enviro armor spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/tiered/medium/combat/environmental,
+				/obj/item/clothing/head/helmet/f13/combat/environmental
 				)
 
 /obj/effect/spawner/bundle/f13/armor/bulletproof

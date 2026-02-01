@@ -678,6 +678,13 @@
 	requires_skill = list(SKILL_REPAIR = HARD_CHECK)
 	var/datum/design/design_print
 
+/obj/item/book/granter/crafting_recipe/blueprint/fh_46
+	name = "FH-46 Blueprints"
+	icon_state = "blueprint2"
+	oneuse = FALSE
+	requires_skill = list(SKILL_REPAIR = EXPERT_CHECK)
+	crafting_recipe_types = list(/datum/crafting_recipe/vault_pa_body, /datum/crafting_recipe/vault_pa_helmet)
+
 /obj/item/book/granter/crafting_recipe/blueprint/n99
 	name = "10mm pistol blueprint"
 	icon_state = "blueprint2"

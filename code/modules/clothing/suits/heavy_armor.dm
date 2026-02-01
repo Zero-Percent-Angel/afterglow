@@ -253,6 +253,7 @@
 	desc = "A destroyed T-45d power armor has been brought back to life with the help of a welder and lots of scrap metal."
 	icon_state = "raider_salvaged"
 	item_state = "raider_salvaged"
+	pa_type = /obj/item/clothing/suit/armor/tiered/power_armor/raider
 
 /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/hotrod
 	name = "salvaged hotrod T-45d power armor"
@@ -275,6 +276,15 @@
 	icon_state = "t45d_salvaged"
 	item_state = "t45d_salvaged"
 	pa_type = /obj/item/clothing/suit/armor/tiered/power_armor/t45d
+
+/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/fh46
+	name = "salvaged FH-46 power armor"
+	desc = "FH-46 power armor with servomotors and all valuable components stripped out of it."
+	icon_state = "hardsuit-vault"
+	item_state = "hardsuit-vault"
+	pa_type = /obj/item/clothing/suit/armor/tiered/power_armor/fh46
+	icon = 'icons/obj/clothing/suits.dmi'
+	mob_overlay_icon = null
 
 // T-51B
 /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier4/t51b
