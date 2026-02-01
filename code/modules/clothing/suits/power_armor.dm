@@ -25,7 +25,7 @@
 	/// Cell that is currently installed in the suit
 	var/obj/item/stock_parts/cell/cell = /obj/item/stock_parts/cell/high
 	/// How much power the cell consumes each process tick
-	var/usage_cost = 5 // With high-capacity cell it'd run out of charge in ~33 minutes
+	var/usage_cost = 2 // With high-capacity cell it'd run out of charge in ~33 minutes
 	/// If TRUE - suit has ran out of charge and is currently affected by slowdown from it
 	var/no_power = FALSE
 	/// How much slowdown is added when suit is unpowered
@@ -337,12 +337,32 @@
 			return BLOCK_SHOULD_REDIRECT | BLOCK_REDIRECTED | BLOCK_SUCCESS | BLOCK_PHYSICAL_INTERNAL
 	return ..()
 
+/obj/item/clothing/suit/armor/tiered/power_armor/fh46
+	name = "FH-46 power armor"
+	desc = "Developed and manufactured by Vault 113 after project Fenalis-Harker. A leaner stripped down modern version of PA."
+	icon_state = "hardsuit-vault"
+	item_state = "hardsuit-vault"
+	salvaged_type = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/fh46
+	tier = 3
+	armor = ARMOR_VALUE_SALVAGE_T3
+	special_modifications =  list("s" = 3)
+	armor_tier_desc = "This is a suit of power armor, able to withstand a tank shell and still finish a marathon. (10% Slowdown, +3 Strength - while powered)"
+
 /obj/item/clothing/suit/armor/tiered/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
 	salvaged_type = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d
+
+/obj/item/clothing/suit/armor/tiered/power_armor/raider
+	name = "Raider Power Armor"
+	desc = "A shedwork of plates constructed on an old restored PA frame."
+	icon_state = "raiderpa"
+	item_state = "raiderpa"
+	salvaged_type = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/raider
+	tier = 3
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_DT_T3)
 
 /obj/item/clothing/suit/armor/tiered/power_armor/t51b
 	name = "T-51b power armor"

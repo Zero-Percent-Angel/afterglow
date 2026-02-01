@@ -373,6 +373,9 @@
 	strip_delay = 60
 	equip_delay_other = 60
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	icon = 'icons/obj/clothing/hats.dmi'
+	mob_overlay_icon = null
+
 
 /obj/item/clothing/head/helmet/f13/combat/environmental/ComponentInitialize()
 	. = ..()
@@ -929,7 +932,7 @@
 	flags_inv = null
 	flags_cover = null
 	strip_delay = 20
-	dynamic_hair_suffix = "+generic"
+	dynamic_hair_suffix = null
 	dynamic_fhair_suffix = null
 
 /obj/item/clothing/head/helmet/f13/khan/pelt
@@ -1053,7 +1056,8 @@
 	icon_state = "raiderpa_helm"
 	item_state = "raiderpa_helm"
 	tier = 3
-	armor_tokens = list(ARMOR_MODIFIER_DOWN_DT_T3)
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_DT_T4)
+	pa_type = /obj/item/clothing/head/helmet/f13/power_armor/raider
 
 /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/ncr
 	name = "ncr salvaged T-45d helmet"
@@ -1290,11 +1294,32 @@
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45d
 	name = "T-45d power helmet"
-	desc = "t's an old pre-War power armor helmet. It's pretty hot inside of it."
+	desc = "it's an old pre-War power armor helmet. It's pretty hot inside of it."
 	icon_state = "t45dhelmet0"
 	item_state = "t45dhelmet0"
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d
+
+/obj/item/clothing/head/helmet/f13/power_armor/fh46
+	name = "FH-46 power helmet"
+	desc = "A new Vault 113 design. It's airconditioned."
+	icon_state = "hardsuit0-vau"
+	item_state = "hardsuit0-vau"
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	salvaged_type = null
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_DT_T3)
+	tier = 3
+	icon = 'icons/obj/clothing/hats.dmi'
+	mob_overlay_icon = null
+
+/obj/item/clothing/head/helmet/f13/power_armor/raider
+	name = "Raider power helmet"
+	desc = "it's a power armor helmet. It's pretty hot inside of it."
+	icon_state = "raiderpa_helm"
+	item_state = "raiderpa_helm"
+	actions_types = list(/datum/action/item_action/toggle_helmet_light)
+	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/raider
+	armor_tokens = list(ARMOR_MODIFIER_DOWN_DT_T3)
 
 /obj/item/clothing/head/helmet/f13/power_armor/t45d/update_icon_state()
 	icon_state = "t45dhelmet[light_on]"
