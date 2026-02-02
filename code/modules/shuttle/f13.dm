@@ -118,14 +118,4 @@
 	flags_1 = NODECONSTRUCT_1
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 
-/obj/machinery/computer/shuttle/bos_tipton_elevator
-	name = "Brotherhood tipton elevator controls"
-	desc = "Controls the elevator between bunker and the poseidon energy storage site."
-	icon_screen = "shuttle"
-	icon_keyboard = "tech_key"
-	light_color = LIGHT_COLOR_CYAN
-	circuit = /obj/item/circuitboard/computer/brotherhood_tipton_control
-	shuttleId = "bos_elevator_tipton"
-	possible_destinations = "bos_tipton;bos_surface"
-	flags_1 = NODECONSTRUCT_1
-	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+

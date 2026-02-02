@@ -644,11 +644,6 @@
 	name = "BOS Entrance Elevator"
 	port_id = "entrance"
 
-/datum/map_template/shuttle/bos_elevator_tipton
-	suffix = "elevator"
-	name = "BOS Tipton Elevator"
-	port_id = "bos_tipton"
-
 /datum/map_template/shuttle/raider_train
 	suffix = "train"
 	name = "Raider Train"

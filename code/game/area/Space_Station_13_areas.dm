@@ -1766,9 +1766,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/shuttle/bos_elevator
 	name = "BOS Elevator"
 
-/area/shuttle/bos_elevator_tipton
-	name = "BOS Elevator"
-
 /area/shuttle/bunker_elevator
 	name = "Bunker Elevator"
 
