@@ -773,11 +773,7 @@
 
 	is_automatic = TRUE
 	automatic = 1
-	can_scope = TRUE
-	scope_state = "AEP7_scope"
-	scope_x_offset = 9
-	scope_y_offset = 21
-	gun_tags = list(GUN_SCOPE)
+	can_scope = FALSE
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(PISTOL_LIGHT_VOLUME),
@@ -841,6 +837,8 @@
 	knife_x_offset = 22
 	knife_y_offset = 21
 	can_scope = TRUE
+	SCOPED_IN_ADD_SLOWDOWN_MID
+	zoom_factor = 1.5
 	scope_state = "scope_medium"
 	scope_x_offset = 5
 	scope_y_offset = 14
@@ -1090,6 +1088,7 @@
 	automatic_burst_overlay = FALSE
 	can_scope = FALSE
 	zoom_factor = 1
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_LOW
 	can_bayonet = FALSE
 	bayonet_state = "rifles"
 	knife_x_offset = 22
@@ -1299,6 +1298,8 @@
 	scope_state = "scope_long"
 	scope_x_offset = 5
 	scope_y_offset = 14
+	zoom_factor = 1
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_LOW
 	auto_eject_sound = 'sound/f13weapons/garand_ping.ogg'
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 	gun_sound_properties = list(
@@ -1376,7 +1377,8 @@
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
 
-	zoom_factor = 1.2
+	zoom_factor = 1.5
+
 	fire_delay = 0.5
 	can_scope = FALSE
 
@@ -1459,7 +1461,8 @@
 	can_bayonet = FALSE
 	can_scope = FALSE
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-	zoom_factor = 1.5
+	zoom_factor = 2
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_HIGH
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(RIFLE_MEDIUM_VOLUME),

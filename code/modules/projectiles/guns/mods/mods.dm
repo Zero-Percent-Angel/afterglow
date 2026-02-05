@@ -219,7 +219,7 @@
 	var/datum/component/item_upgrade/I = AddComponent(/datum/component/item_upgrade)
 	I.weapon_upgrades = list(
 		GUN_UPGRADE_RECOIL = 1.1,
-		GUN_UPGRADE_ZOOM = 1.2
+		//GUN_UPGRADE_ZOOM = 1.2
 		)
 	I.gun_loc_tag = GUN_SCOPE
 	I.req_gun_tags = list(GUN_SCOPE)
@@ -233,8 +233,8 @@
 	..()
 	var/datum/component/item_upgrade/I = AddComponent(/datum/component/item_upgrade)
 	I.weapon_upgrades = list(
-		GUN_UPGRADE_RECOIL = 1.3,
-		GUN_UPGRADE_ZOOM = 2
+		GUN_UPGRADE_RECOIL = 1.05,
+		//GUN_UPGRADE_ZOOM = 2
 		)
 	I.gun_loc_tag = GUN_SCOPE
 	I.req_gun_tags = list(GUN_SCOPE)
@@ -332,7 +332,7 @@
 	var/datum/component/item_upgrade/I = AddComponent(/datum/component/item_upgrade)
 	I.weapon_upgrades = list(
 		GUN_UPGRADE_OFFSET = rand(1,3),
-		GUN_UPGRADE_ZOOM = rand(4,8)/10
+		//GUN_UPGRADE_ZOOM = rand(4,8)/10
 	)
 	I.destroy_on_removal = TRUE
 	I.gun_loc_tag = GUN_SCOPE

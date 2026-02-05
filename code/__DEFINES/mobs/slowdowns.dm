@@ -9,4 +9,6 @@
 /// slowdown when crawling
 #define CRAWLING_ADD_SLOWDOWN 7
 /// slowdown while scoped in
-#define SCOPED_IN_ADD_SLOWDOWN 4
+#define SCOPED_IN_ADD_SLOWDOWN_LOW 1
+#define SCOPED_IN_ADD_SLOWDOWN_MID 2
+#define SCOPED_IN_ADD_SLOWDOWN_HIGH 4

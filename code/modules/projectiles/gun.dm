@@ -49,6 +49,7 @@ ATTACHMENTS
 	var/sawn_off = FALSE
 
 	slowdown = GUN_SLOWDOWN_NONE
+	var/scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_MID
 
 	var/damage_multiplier = 1 //Multiplies damage of projectiles fired from this gun
 	var/animal_mod = 1 // animal damage mulitplier
@@ -803,7 +804,12 @@ ATTACHMENTS
 		zoomed = !zoomed
 
 	if(zoomed)//if we need to be zoomed in
-		user.add_movespeed_modifier(/datum/movespeed_modifier/scoped_in)
+		if(scope_slowdown==SCOPED_IN_ADD_SLOWDOWN_HIGH)
+			user.add_movespeed_modifier(/datum/movespeed_modifier/scoped_in_high)
+		else if(scope_slowdown==SCOPED_IN_ADD_SLOWDOWN_MID)
+			user.add_movespeed_modifier(/datum/movespeed_modifier/scoped_in_mid)
+		else
+			user.add_movespeed_modifier(/datum/movespeed_modifier/scoped_in_low)
 		var/_x = 0
 		var/_y = 0
 		switch(user.dir)
@@ -823,7 +829,13 @@ ATTACHMENTS
 		UnregisterSignal(user, COMSIG_MOVABLE_MOVED) //pls don't conflict with anything else using this signal
 		user.visible_message(span_notice("[user] looks down the scope of [src]."), span_notice("You look down the scope of [src]."))
 	else
-		user.remove_movespeed_modifier(/datum/movespeed_modifier/scoped_in)
+		if(scope_slowdown==SCOPED_IN_ADD_SLOWDOWN_HIGH)
+			user.remove_movespeed_modifier(/datum/movespeed_modifier/scoped_in_high)
+		else if(scope_slowdown==SCOPED_IN_ADD_SLOWDOWN_MID)
+			user.remove_movespeed_modifier(/datum/movespeed_modifier/scoped_in_mid)
+		else
+			user.remove_movespeed_modifier(/datum/movespeed_modifier/scoped_in_low)
+
 		user.client.change_view(CONFIG_GET(string/default_view))
 		user.client.pixel_x = 0
 		user.client.pixel_y = 0
