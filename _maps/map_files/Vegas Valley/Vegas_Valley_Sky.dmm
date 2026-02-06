@@ -3601,9 +3601,8 @@
 /area/f13/building/powered)
 "lp" = (
 /obj/structure/table,
-/obj/item/circuitboard/aicore,
-/obj/item/aicard,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/locked_box/armor/tier4,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -9069,7 +9068,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong,
+/mob/living/simple_animal/hostile/securitron/sentrybot/chew{
+	faction = list("raider")
+	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
 "Ce" = (
@@ -9265,6 +9266,7 @@
 /obj/item/circuitboard/machine/circuit_imprinter,
 /obj/item/circuitboard/machine/protolathe,
 /obj/item/storage/box/stockparts/basic,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/high,
 /turf/open/floor/carpet/purple,
 /area/f13/building/powered)
 "CC" = (
