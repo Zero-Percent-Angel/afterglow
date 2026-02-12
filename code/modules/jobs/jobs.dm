@@ -369,7 +369,7 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#6d613f"),
 	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#0026ff"),
 	EXP_TYPE_KHAN = list("jobs" = khan_positions, "color" = "#b77dee"),
-	"New Town" = list("jobs" = town_positions, "color" = "#297941"),
+	"N.T" = list("jobs" = town_positions, "color" = "#297941"),
 	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#05ffff"),
 	EXP_TYPE_FAMILY = list("jobs" = family_positions, "color" = "#d7b088")
 	//"Redwater" = list("jobs" = redwater_positions, "color" = "#f81717"),
