@@ -172,7 +172,19 @@ GLOBAL_LIST_INIT(town_command_positions, list(
 	"Sheriff",
 ))
 
-GLOBAL_LIST_INIT(family_positions, list(
+GLOBAL_LIST_INIT(town_positions, list(
+	"Mayor",
+	"Secretary",
+	"Sheriff",
+	"Deputy",
+//	"Farmer",
+	"Prospector",
+	"Doctor",
+	"Detective",
+//	"Banker",
+	"Ripley Quartermaster",
+	"Ripley Trade Worker",
+	"Citizen",
 	"Family Member",
 	"Family Head",
 	"Farm Hand"
@@ -285,18 +297,12 @@ GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Wastelander",
 ))
 
-GLOBAL_LIST_INIT(town_positions, list(
-	"Mayor",
-	"Secretary",
-	"Sheriff",
-	"Deputy",
-	"Farmer",
-	"Prospector",
-	"Doctor",
-	"Detective",
-	"Ripley Quartermaster",
-	"Ripley Trade Worker",
-	"Citizen",
+GLOBAL_LIST_INIT(redwater_positions, list(
+	"Redwater Slave",
+	"Outlaw",
+	"Redwater Resident",
+	"Redwater Watcher",
+	"Redwater Overboss",
 ))
 
 GLOBAL_LIST_INIT(khan_positions, list(
@@ -358,9 +364,9 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#6d613f"),
 	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#0026ff"),
 	EXP_TYPE_KHAN = list("jobs" = khan_positions, "color" = "#b77dee"),
-	"The Family" = list("jobs" = family_positions, "color" = "#d7b088"),
+	"The Family" = list("jobs" = town_positions, "color" = "#d7b088"),
 	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#05ffff"),
-	"New Town" = list("jobs" = town_positions, "color" = "#f81717"),
+	//"Redwater" = list("jobs" = redwater_positions, "color" = "#f81717"),
 ))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
@@ -379,7 +385,6 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_OUTLAW = list("titles" = list("Outlaw","Den Mob Boss","Den Mob Enforcer","Den Doctor",)),
 	EXP_TYPE_BROTHERHOOD = list("titles" = brotherhood_positions),
 	EXP_TYPE_OASIS = list("titles" = town_positions ),
-	EXP_TYPE_FAMILY = list ("titles" = family_positions),
 	EXP_TYPE_LEGION = list("titles" = legion_positions),
 	EXP_TYPE_NCR = list("titles" = ncr_positions),
 	EXP_TYPE_VAULT = list("titles" = vault_positions),
