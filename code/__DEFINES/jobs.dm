@@ -12,7 +12,6 @@
 #define FACTION_VAULT "Vault"
 #define FACTION_FOLLOWERS "Followers"
 #define FACTION_KHAN "Great Khans"
-#define FACTION_FAMILY "Family"
 
 #define ENGSEC			(1<<0)
 
@@ -201,11 +200,6 @@
 #define F13KHORCHIN (1<<3)
 #define F13KIPCHAK (1<<4)
 #define F13MANGUDAI (1<<5)
-
-#define DEP_FAMILY (1<<13)
-
-#define F13FAMILYHEAD        (1<<0)
-#define F13FAMILYMEMBER       (1<<1)
 
 
 #define JOB_AVAILABLE 0
