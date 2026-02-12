@@ -6584,7 +6584,6 @@
 	name = "Secuirty Camera";
 	network = list("BoS")
 	},
-/obj/effect/turf_decal/weather/dirt,
 /obj/structure/cable/outdoors{
 	icon_state = "4-8"
 	},
@@ -11015,7 +11014,9 @@
 /obj/structure/cable/outdoors{
 	icon_state = "1-8"
 	},
-/turf/open/floor/plating/dirt,
+/turf/open/indestructible/ground/outside/sidewalk{
+	icon_state = "horizontaloutermain1"
+	},
 /area/f13/wasteland)
 "dxA" = (
 /obj/effect/turf_decal/bot,
@@ -20044,11 +20045,6 @@
 /obj/structure/fence/wooden,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
-"gmu" = (
-/obj/structure/junk/small/table,
-/obj/structure/junk/small/tv,
-/turf/open/floor/plating/rust,
-/area/f13/building/powered)
 "gmz" = (
 /obj/structure/fence{
 	dir = 1;
@@ -33241,9 +33237,6 @@
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/ambientlighting/building/t)
 "kna" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 8
-	},
 /obj/structure/cable/outdoors{
 	icon_state = "1-2"
 	},
@@ -34483,9 +34476,6 @@
 	},
 /area/f13/wasteland)
 "kIN" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 4
-	},
 /obj/structure/cable/outdoors{
 	icon_state = "2-8"
 	},
@@ -35212,17 +35202,6 @@
 	smooth = 1
 	},
 /area/f13/building/abandoned/l)
-"kRU" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 4
-	},
-/obj/effect/turf_decal/weather/dirt{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontaloutermain2"
-	},
-/area/f13/wasteland)
 "kRW" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/cash_random_low,
@@ -36476,11 +36455,6 @@
 	icon_state = "dark"
 	},
 /area/f13/casino)
-"lpo" = (
-/obj/structure/wreck/trash/engine,
-/obj/effect/decal/cleanable/oil/streak,
-/turf/open/floor/plating/rust,
-/area/f13/building/powered)
 "lpq" = (
 /obj/structure/obstacle/barbedwire{
 	dir = 4
@@ -36568,14 +36542,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"lqC" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 4
-	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontaloutermain2"
-	},
-/area/f13/wasteland)
 "lqD" = (
 /obj/structure/closet,
 /turf/open/floor/f13{
@@ -36647,14 +36613,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/followers)
-"lrB" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontaloutermain2"
-	},
-/area/f13/wasteland)
 "lrC" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 4
@@ -48463,10 +48421,6 @@
 /obj/structure/table,
 /turf/open/floor/plasteel/f13/stone,
 /area/f13/building/abandoned/z)
-"pbv" = (
-/obj/structure/junk/machinery,
-/turf/open/floor/plating/rust,
-/area/f13/building/powered)
 "pbC" = (
 /obj/machinery/door/password,
 /turf/open/floor/f13{
@@ -73483,15 +73437,6 @@
 	icon_state = "horizontaltopborderbottom1"
 	},
 /area/f13/wasteland)
-"wMH" = (
-/obj/structure/cable/outdoors{
-	icon_state = "4-8"
-	},
-/turf/open/indestructible/ground/outside/road{
-	dir = 8;
-	icon_state = "horizontalinnermain2left"
-	},
-/area/f13/wasteland)
 "wMK" = (
 /obj/effect/turf_decal/delivery/white{
 	pixel_x = 5;
@@ -76159,8 +76104,12 @@
 /obj/structure/cable/outdoors{
 	icon_state = "4-8"
 	},
+/obj/effect/turf_decal/weather/dirt{
+	dir = 2
+	},
 /turf/open/indestructible/ground/outside/road{
-	icon_state = "hole"
+	dir = 8;
+	icon_state = "horizontalinnermain2left"
 	},
 /area/f13/wasteland)
 "xBd" = (
@@ -76484,14 +76433,6 @@
 	},
 /turf/open/floor/carpet/airless,
 /area/f13/ambientlighting/building/c)
-"xFk" = (
-/obj/effect/overlay/desert/sonora/edge{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/road{
-	icon_state = "hole"
-	},
-/area/f13/wasteland)
 "xFm" = (
 /mob/living/simple_animal/hostile/ghoul/scorched,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -116780,7 +116721,7 @@ hXl
 ipF
 uyc
 bjT
-ipF
+eNN
 gQq
 eNN
 yeC
@@ -117079,11 +117020,11 @@ dEx
 nrq
 mbx
 hbp
-lpo
+jai
 eNN
 eNN
-gmu
-pbv
+eNN
+eNN
 pfo
 bhV
 ccm
@@ -117686,7 +117627,7 @@ mjp
 mjp
 kvH
 mjp
-lxu
+mjp
 mjp
 mjp
 mjp
@@ -117982,7 +117923,7 @@ eNA
 mjp
 mJj
 mJj
-xFk
+mJj
 mJj
 mJj
 mjp
@@ -117990,7 +117931,7 @@ mjp
 mjp
 smK
 mjp
-lxu
+mjp
 mjp
 mjp
 mjp
@@ -118591,7 +118532,7 @@ cBf
 nrq
 jUV
 dpM
-lqC
+ioi
 sqC
 rIs
 rIs
@@ -118893,7 +118834,7 @@ fcP
 fcP
 fcP
 cfw
-fpI
+qZA
 dsF
 pot
 pot
@@ -119497,7 +119438,7 @@ sUF
 sUF
 fYz
 dxr
-lrB
+ioi
 dsF
 atH
 atH
@@ -119798,7 +119739,7 @@ rEi
 gVF
 tcA
 fcP
-kRU
+ioi
 scn
 dsF
 uQS
@@ -120100,8 +120041,8 @@ fcP
 fcP
 fcP
 fcP
-fpI
-cjQ
+qZA
+qZA
 dsF
 kXE
 kXE
@@ -120402,7 +120343,7 @@ jbl
 ioi
 ioi
 ioi
-xRZ
+ioi
 dsF
 dsF
 dsF
@@ -121603,7 +121544,7 @@ dPr
 cBf
 nrq
 eNA
-cYh
+xAN
 nrq
 pAd
 kiP
@@ -122205,9 +122146,9 @@ qXs
 mjp
 mjp
 mjp
-lxu
 mjp
-wMH
+mjp
+xAN
 nrq
 mDN
 wTQ
