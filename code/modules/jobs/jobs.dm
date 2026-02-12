@@ -188,7 +188,7 @@ GLOBAL_LIST_INIT(town_positions, list(
 
 //Family
 
-GLOBAL_LIST_INIT(family_postions, list(
+GLOBAL_LIST_INIT(family_positions, list(
 	"Family Member",
 	"Family Head",
 	"Farm Hand"
@@ -402,6 +402,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_RANGER = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
 	EXP_TYPE_SCRIBE = list("titles" = list("Scribe")),
 	EXP_TYPE_DECANUS = list("titles" = list("Legion Decanus")),
+	EXP_TYPE_FAMILY = list("titles" = family_positions),
 
 	EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman","Head Hunter")),
 	EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Senior Doctor, Lead Practitioner")),
