@@ -1101,8 +1101,8 @@ Mayor
 
 /datum/job/oasis/family_head
 	title = "Family Head"
-	flag = F13FAMILYHEAD
-	department_flag = F13FAMILYHEAD
+	flag = F13SETTLER
+	department_flag = F13SETTLER
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Yourself"
@@ -1130,8 +1130,8 @@ Mayor
 
 /datum/job/oasis/family_member
 	title = "Family Member"
-	flag = F13FAMILYMEMBER
-	department_flag = F13FAMILYMEMBER
+	flag = F13SETTLER
+	department_flag = F13SETTLER
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "The head of the family"
@@ -1160,7 +1160,7 @@ Mayor
 /datum/job/oasis/family_farmer
 	title = "Farm Hand"
 	flag = F13SETTLER
-	department_flag = F13FAMILYMEMBER
+	department_flag = F13SETTLER
 	total_positions = 10
 	spawn_positions = 10
 	supervisors = "The Family"
