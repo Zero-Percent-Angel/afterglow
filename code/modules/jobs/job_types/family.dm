@@ -19,7 +19,7 @@ Family.
 /datum/job/family
 	department_flag = DEP_FAMILY
 	faction = FACTION_FAMILY
-	exp_type = "The Family"
+	exp_type = EXP_TYPE_FAMILY
 
 /datum/job/family/family_head
 	title = "Family Head"
