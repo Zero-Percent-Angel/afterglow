@@ -334,7 +334,7 @@
 				/obj/effect/spawner/bundle/f13/armor/vault,
 				/obj/effect/spawner/bundle/f13/armor/enviro,
 				/obj/effect/spawner/bundle/f13/armor/good_duster,
-				/obj/effect/spawner/bundle/f13/armor/tier_3_armored_coat,
+				/obj/effect/spawner/bundle/f13/armor/tier_3_armored_coat_spawner
 				/obj/effect/spawner/bundle/f13/armor/tier_3_riot
 				)
 
@@ -461,10 +461,25 @@
 				/obj/item/clothing/suit/armor/tiered/heavy/tier3/riot,
 				/obj/item/clothing/head/helmet/f13/combat/rangerbroken
 				)
-/obj/effect/spawner/bundle/f13/armor/tier_3_armored_coat
+
+/obj/effect/spawner/bundle/f13/armor/tier_3_armored_coat_spawner
 	name = "armored coat spawner"
 	items = list(
-				/obj/item/clothing/suit/armor/tiered/medium/duster/armoredcoat,
+				/obj/effect/spawner/bundle/f13/armor/tier_3_armored_coat_tan
+				/obj/effect/spawner/bundle/f13/armor/tier_3_armored_coat_red
+				)
+
+/obj/effect/spawner/bundle/f13/armor/tier_3_armored_coat_tan
+	name = "tan armored coat spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/tiered/medium/duster/armoredcoattan,
+				/obj/item/clothing/head/helmet/f13/combat/rangerbroken
+				)
+
+/obj/effect/spawner/bundle/f13/armor/tier_3_armored_coat_red
+	name = "red armored coat spawner"
+	items = list(
+				/obj/item/clothing/suit/armor/tiered/medium/duster/armoredcoatred,
 				/obj/item/clothing/head/helmet/f13/combat/rangerbroken
 				)
 
