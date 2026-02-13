@@ -1,4 +1,4 @@
-// In this document: Goat, Chicken, Brahmin, Radstag, Bighorner (also cow but extinct so basically brahmin)
+	// In this document: Goat, Chicken, Brahmin, Radstag, Bighorner (also cow but extinct so basically brahmin)
 
 //////////
 // GOAT //
@@ -1269,6 +1269,66 @@
 		else
 			udder.generateMilk(milk_reagent)
 
+
+
+
+	// Tribal Nightstalker
+/mob/living/simple_animal/cow/brahmin/nightstalkertribal
+	name = "tribal nightstalker"
+	desc = "A crazed genetic hybrid of rattlesnake and coyote DNA. This one seems a bit less crazed, at least."
+	icon = 'icons/fallout/mobs/animals/nightstalker2.dmi'
+	icon_state = "tribalnightstalker"
+	icon_living = "tribalnightstalker"
+	icon_dead = "tribalnightstalker-dead"
+	speak = list("*shiss","*gnarl","*bark")
+	speak_emote = list("barks","hisses")
+	emote_hear = list("perks its head up.")
+	emote_see = list("stares.")
+	speak_chance = 1
+	turns_per_move = -1 //no random movement
+	see_in_dark = 6
+	health = 150
+	maxHealth = 150
+	ride_move_delay = 1.8
+	can_ghost_into = TRUE
+	pop_required_to_jump_into = BIG_MOB_MIN_PLAYERS
+	response_help_continuous  = "pets"
+	response_help_simple = "pet"
+	response_disarm_continuous = "gently pushes aside"
+	response_disarm_simple = "gently push aside"
+	response_harm_continuous = "bites"
+	response_harm_simple = "bites"
+	attack_verb_continuous = "bites"
+	attack_verb_simple = "bite"
+	waddle_amount = 3
+	waddle_up_time = 1
+	waddle_side_time = 2
+	attack_sound = 'sound/weapons/punch1.ogg'
+	young_type = /mob/living/simple_animal/cow/brahmin/nightstalkertribal
+	food_types = list(
+		/obj/item/reagent_containers/food/snacks/meat/slab/gecko,
+		/obj/item/reagent_containers/food/snacks/f13/canned/dog
+		)
+	milk_reagent = /datum/reagent/toxin
+	ride_offsets = list(
+		"1" = list(15, 8),
+		"2" = list(15, 8),
+		"4" = list(15, 8),
+		"8" = list(15, 8)
+		)
+	guaranteed_butcher_results = list(
+		/obj/item/reagent_containers/food/snacks/meat/slab/nightstalker_meat = 2,
+		/obj/item/stack/sheet/sinew = 2,
+		/obj/item/stack/sheet/bone = 2
+		)
+	butcher_results = list(
+		/obj/item/clothing/head/f13/stalkerpelt = 1,
+		/obj/item/reagent_containers/food/snacks/meat/slab/nightstalker_meat = 1
+		)
+	butcher_difficulty = 1
+
+
+
 // BIGHORNER CALF
 /mob/living/simple_animal/hostile/retaliate/goat/bighorn/calf
 	name = "bighoner calf"
@@ -1278,6 +1338,7 @@
 	. = ..()
 	resize = 0.7
 	update_transform()
+
 
 
 /* Seems obsolete with Daves Brahmin packs, marked for death?
