@@ -1220,7 +1220,7 @@ datum/crafting_recipe/steelbib/heavy
 /datum/crafting_recipe/raiderpowerarmorconversion
 	name = "Salvaged Raider Power Armor"
 	result = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/raider
-	reqs = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/recycled = 1,
+	reqs = list(/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/recycled = 1,
 				/obj/item/stack/sheet/plasteel = 40)
 	time = 40
 	category = CAT_CLOTHING
