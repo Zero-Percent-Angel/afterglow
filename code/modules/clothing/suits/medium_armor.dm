@@ -355,11 +355,24 @@
 	custom_price = PRICE_ABOVE_EXPENSIVE
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_ENV_T1)
 
-/obj/item/clothing/suit/armor/tiered/medium/duster/armoredcoat
-	name = "armored battlecoat"
-	desc = "A heavy padded leather coat with faded colors, worn over a armor vest."
+/obj/item/clothing/suit/armor/tiered/medium/duster/armoredcoattan
+	name = "tan armored battlecoat"
+	desc = "A heavy padded leather coat with faded tan colors, worn over a armor vest."
 	icon_state = "battlecoat_tan"
 	item_state = "battlecoat_tan"
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
+	armor = ARMOR_VALUE_MEDIUM_T3
+	tier = 3
+	custom_price = PRICE_REALLY_EXPENSIVE
+
+/obj/item/clothing/suit/armor/tiered/medium/duster/armoredcoatred
+	name = "red armored battlecoat"
+	desc = "A heavy padded leather coat with faded red colors, worn over a armor vest."
+	icon_state = "battlecoat_red"
+	item_state = "battlecoat_red"
+	icon = 'icons/fallout/clothing/armored_medium.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/armor_medium.dmi'
 	armor = ARMOR_VALUE_MEDIUM_T3
 	tier = 3
 	custom_price = PRICE_REALLY_EXPENSIVE
