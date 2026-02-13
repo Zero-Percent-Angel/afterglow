@@ -1222,6 +1222,7 @@ datum/crafting_recipe/steelbib/heavy
 	result = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/raider
 	reqs = list(/obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/recycled = 1,
 				/obj/item/stack/sheet/plasteel = 40)
+	tools = list(TOOL_WELDER, TOOL_AWORKBENCH)
 	time = 40
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
@@ -1233,6 +1234,7 @@ datum/crafting_recipe/steelbib/heavy
 	result = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/raider
 	reqs = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d = 1,
 				/obj/item/stack/sheet/plasteel = 10)
+	tools = list(TOOL_WELDER, TOOL_AWORKBENCH)
 	time = 40
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
