@@ -334,7 +334,7 @@
 				/obj/effect/spawner/bundle/f13/armor/vault,
 				/obj/effect/spawner/bundle/f13/armor/enviro,
 				/obj/effect/spawner/bundle/f13/armor/good_duster,
-				/obj/effect/spawner/bundle/f13/armor/tier_3_armored_coat_spawner,
+				/obj/effect/spawner/lootdrop/f13/armor/tier_3_armored_coat_spawner,
 				/obj/effect/spawner/bundle/f13/armor/tier_3_riot
 				)
 
@@ -462,9 +462,9 @@
 				/obj/item/clothing/head/helmet/f13/combat/rangerbroken
 				)
 
-/obj/effect/spawner/bundle/f13/armor/tier_3_armored_coat_spawner
+/obj/effect/spawner/lootdrop/f13/armor/tier_3_armored_coat_spawner
 	name = "armored coat spawner"
-	items = list(
+	loot = list(
 				/obj/effect/spawner/bundle/f13/armor/tier_3_armored_coat_tan,
 				/obj/effect/spawner/bundle/f13/armor/tier_3_armored_coat_red
 				)
