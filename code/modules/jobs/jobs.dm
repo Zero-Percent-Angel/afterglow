@@ -1,4 +1,3 @@
-
 GLOBAL_LIST_INIT(engineering_positions, list(
 	"Chief Engineer",
 	"Station Engineer",
@@ -185,10 +184,16 @@ GLOBAL_LIST_INIT(town_positions, list(
 	"Ripley Quartermaster",
 	"Ripley Trade Worker",
 	"Citizen",
+))
+
+//Family
+
+GLOBAL_LIST_INIT(family_positions, list(
 	"Family Member",
 	"Family Head",
 	"Farm Hand"
 ))
+
 //Legion
 GLOBAL_LIST_INIT(legion_command_positions, list(
 	"Legate",
@@ -364,8 +369,9 @@ GLOBAL_LIST_INIT(position_categories, list(
 	EXP_TYPE_WASTELAND = list("jobs" = wasteland_positions, "color" = "#6d613f"),
 	EXP_TYPE_ENCLAVE = list("jobs" = enclave_positions, "color" = "#0026ff"),
 	EXP_TYPE_KHAN = list("jobs" = khan_positions, "color" = "#b77dee"),
-	"The Family" = list("jobs" = town_positions, "color" = "#d7b088"),
+	"N.T" = list("jobs" = town_positions, "color" = "#297941"),
 	EXP_TYPE_TRIBAL = list("jobs" = tribal_positions, "color" = "#05ffff"),
+	EXP_TYPE_FAMILY = list("jobs" = family_positions, "color" = "#d7b088")
 	//"Redwater" = list("jobs" = redwater_positions, "color" = "#f81717"),
 ))
 
@@ -396,6 +402,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_RANGER = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
 	EXP_TYPE_SCRIBE = list("titles" = list("Scribe")),
 	EXP_TYPE_DECANUS = list("titles" = list("Legion Decanus")),
+	EXP_TYPE_FAMILY = list("titles" = family_positions),
 
 	EXP_TYPE_TRIBALCOMMAND = list("titles" = list("Chief","Shaman","Head Hunter")),
 	EXP_TYPE_FOLLOWERSCOMMAND = list("titles" = list("Senior Doctor, Lead Practitioner")),
