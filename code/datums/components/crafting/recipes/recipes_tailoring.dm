@@ -1217,6 +1217,28 @@ datum/crafting_recipe/steelbib/heavy
 	always_available = FALSE
 	skill_level = HARD_CHECK
 
+/datum/crafting_recipe/raiderpowerarmorconversion
+	name = "Salvaged Raider Power Armor"
+	result = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/raider
+	reqs = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d = 1,
+				/obj/item/stack/sheet/plasteel = 40)
+	time = 40
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = TRUE
+	skill_level = EASY_CHECK
+
+/datum/crafting_recipe/raiderpowerarmorhelmetconversion
+	name = "Salvaged Raider Power Armor Helmet"
+	result = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/raider
+	reqs = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d = 1,
+				/obj/item/stack/sheet/plasteel = 20)
+	time = 40
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_available = TRUE
+	skill_level = EASY_CHECK
+
 /datum/crafting_recipe/legionparmahelmetconversion
 	name = "Salvaged Parma T-45 helmet"
 	result = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/legion
