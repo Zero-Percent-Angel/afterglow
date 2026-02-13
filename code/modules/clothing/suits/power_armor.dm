@@ -84,7 +84,7 @@
 	ADD_TRAIT(user, SPREAD_CONTROL, "PA_spreadcontrol")
 	ADD_TRAIT(user, TRAIT_POWER_ARMOR, "PA_worn_trait") // General effects from being in PA
 	var/mob/living/liver = user
-	liver.modify_special(list("s" = 1), src)
+	liver.modify_special(special_modifications, src)
 	user.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/pa_speedmod, multiplicative_slowdown = ARMOR_SLOWDOWN_PA * ARMOR_SLOWDOWN_GLOBAL_MULT)
 
 /obj/item/clothing/suit/armor/tiered/power_armor/dropped(mob/user)
@@ -303,8 +303,6 @@
 
 /obj/item/clothing/suit/armor/tiered/power_armor/emp_act(mob/living/carbon/human/owner, severity)
 	. = ..()
-	if(. & EMP_PROTECT_SELF)
-		return
 	if(!powered)
 		return
 	if(cell)
