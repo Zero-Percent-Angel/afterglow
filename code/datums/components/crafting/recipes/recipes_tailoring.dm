@@ -1219,8 +1219,8 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/raiderpowerarmorconversion
 	name = "Salvaged Raider Power Armor"
-	result = /obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d/raider
-	reqs = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/t45d = 1,
+	result = /obj/item/clothing/suit/armor/tiered/heavy/salvaged_pa/tier3/t45d/raider
+	reqs = list(/obj/item/clothing/suit/armor/heavy/salvaged_pa/recycled = 1,
 				/obj/item/stack/sheet/plasteel = 40)
 	time = 40
 	category = CAT_CLOTHING
@@ -1232,7 +1232,7 @@ datum/crafting_recipe/steelbib/heavy
 	name = "Salvaged Raider Power Armor Helmet"
 	result = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d/raider
 	reqs = list(/obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t45d = 1,
-				/obj/item/stack/sheet/plasteel = 20)
+				/obj/item/stack/sheet/plasteel = 10)
 	time = 40
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
