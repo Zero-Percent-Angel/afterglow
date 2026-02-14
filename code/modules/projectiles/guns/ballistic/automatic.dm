@@ -313,36 +313,6 @@
 	)
 
 /* * * * * * * * * * *
- * Worn greasegun SMG
- * Cruddy .45 SMG
- * .45
- * One-handed
- * No akimbo
- * Less accuracy
- * Less damage
- * Common
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/smg/greasegun/worn
-	name = "beat up .45ACP submachine gun"
-	desc = "What was once an inexpensive, but reliable submachine gun is now an inexpensive piece of shit. It's impressive this thing still fires at all."
-
-	slowdown = GUN_SLOWDOWN_SMG_LIGHT
-	force = GUN_MELEE_FORCE_PISTOL_HEAVY
-	weapon_weight = GUN_ONE_HAND_ONLY
-	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FASTER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_SLOW
-	burst_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T2
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = SMG_RECOIL(1.2)
-	init_firemodes = list(
-		/datum/firemode/automatic/rpm150
-	)
-
-/* * * * * * * * * * *
  * 10mm SMG
  * Baseline 10mm SMG
  * 10mm
