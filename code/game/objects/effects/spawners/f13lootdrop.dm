@@ -882,7 +882,6 @@
 				/obj/effect/spawner/bundle/f13/wattzm = 5,
 				/obj/item/gun/energy/laser/wattzs = 10,
 				/obj/item/gun/ballistic/rifle/hobo/lasmusket = 10,
-				/obj/effect/spawner/bundle/f13/aer9 = 20,
 				/obj/effect/spawner/bundle/f13/laserpistol = 25,
 				/obj/item/gun/energy/laser/pistol/fo4laser = 25,
 				)
@@ -1040,7 +1039,7 @@
 	name = "high tier ballistic gun"
 	loot = list(/obj/effect/spawner/bundle/f13/dkssniper = 15,
 				/obj/effect/spawner/lootdrop/f13/weapon/assaultrifle = 15,
-				/obj/effect/spawner/lootdrop/f13/weapon/assaultcarbine = 15.
+				/obj/effect/spawner/lootdrop/f13/weapon/assaultcarbine = 15,
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
 				/obj/item/gun/ballistic/rocketlauncher = 5,
 				/obj/effect/spawner/bundle/f13/riotshotgun = 10,
