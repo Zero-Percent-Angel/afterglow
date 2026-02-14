@@ -869,22 +869,22 @@
 //Energy Weapon Spawners
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superlow
 	name = "very low energy gun"
-	loot = list(/obj/effect/spawner/bundle/f13/wattz = 45,
+	loot = list(/obj/effect/spawner/bundle/f13/wattz = 30,
 				/obj/effect/spawner/bundle/f13/wattzm = 5,
 				/obj/effect/spawner/bundle/f13/laserpistol = 5,
-				/obj/item/gun/energy/laser/wattz/recharger/rifle = 45,
+				/obj/item/gun/energy/laser/wattz/recharger/rifle = 30,
+				/obj/item/gun/ballistic/rifle/hobo/lasmusket = 30
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/low
 	name = "low tier energy gun"
-	loot = list(/obj/effect/spawner/bundle/f13/wattz = 5,
-				/obj/effect/spawner/bundle/f13/plasmapistol = 5,
-				/obj/effect/spawner/bundle/f13/wattzm = 10,
+	loot = list(/obj/effect/spawner/bundle/f13/plasmapistol = 5,
+				/obj/effect/spawner/bundle/f13/wattzm = 5,
 				/obj/item/gun/energy/laser/wattzs = 10,
-				/obj/effect/spawner/bundle/f13/laserpistol = 15,
-				/obj/effect/spawner/bundle/f13/laserpistol = 10,
-				/obj/item/gun/energy/laser/pistol/fo4laser = 10,
-				/obj/item/gun/ballistic/rifle/hobo/lasmusket = 10
+				/obj/item/gun/ballistic/rifle/hobo/lasmusket = 10,
+				/obj/effect/spawner/bundle/f13/aer9 = 20,
+				/obj/effect/spawner/bundle/f13/laserpistol = 25,
+				/obj/item/gun/energy/laser/pistol/fo4laser = 25,
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/mid
@@ -900,13 +900,13 @@
 	loot = list(/obj/item/gun/energy/laser/aer12 = 20,
 				/obj/effect/spawner/bundle/f13/plasmapistol = 25,
 				/obj/effect/spawner/bundle/f13/wattz2k = 15,
-				/obj/effect/spawner/bundle/f13/ionrifle = 25
+				/obj/effect/spawner/bundle/f13/rcw = 20,
+				/obj/effect/spawner/bundle/f13/ionrifle = 20
 				)
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/high
 	name = "high tier energy gun"
 	loot = list(/obj/effect/spawner/bundle/f13/plasmarifle = 20,
 				/obj/effect/spawner/bundle/f13/tribeam = 20,
-				/obj/effect/spawner/bundle/f13/rcw = 20,
 				/obj/effect/spawner/bundle/f13/wattz2kext = 10, //Now a high tier gun.
 				/obj/effect/spawner/bundle/f13/plasmaglock = 20
 				)
@@ -967,7 +967,6 @@
 				/obj/effect/spawner/bundle/f13/huntingshotgun = 4,
 				/obj/effect/spawner/bundle/f13/police_pistol = 5,
 				/obj/effect/spawner/bundle/f13/m1carbine = 5,
-				/obj/effect/spawner/bundle/f13/mini22uzi = 2
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/garbagetomid
@@ -1003,7 +1002,6 @@
 				/obj/effect/spawner/bundle/f13/cowboy,
 				/obj/effect/spawner/bundle/f13/mk23,
 				/obj/effect/spawner/bundle/f13/hunting,
-				/obj/effect/spawner/bundle/f13/mini22uzi,
 				/obj/effect/spawner/lootdrop/f13/weapon/revolver44variants,
 				/obj/effect/spawner/bundle/f13/trenchshotgun,
 				/obj/effect/spawner/bundle/f13/m1carbine,
@@ -1040,9 +1038,9 @@
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/high
 	name = "high tier ballistic gun"
-	loot = list(/obj/item/gun/ballistic/automatic/type93 = 15,
-				/obj/effect/spawner/bundle/f13/dkssniper = 15,
-				/obj/effect/spawner/bundle/f13/assault_rifle = 15,
+	loot = list(/obj/effect/spawner/bundle/f13/dkssniper = 15,
+				/obj/effect/spawner/lootdrop/f13/weapon/assaultrifle = 15,
+				/obj/effect/spawner/lootdrop/f13/weapon/assaultcarbine = 15.
 				/obj/item/gun/ballistic/revolver/grenadelauncher = 5,
 				/obj/item/gun/ballistic/rocketlauncher = 5,
 				/obj/effect/spawner/bundle/f13/riotshotgun = 10,
@@ -1082,8 +1080,7 @@
 	loot = list(
 				/obj/item/gun/ballistic/automatic/pistol/ninemil/maria,
 				/obj/item/gun/ballistic/rifle/hunting/paciencia,
-				/obj/item/gun/ballistic/rifle/mag/varmint/ratslayer,
-				/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator,
+				/obj/item/gun/ballistic/rifle/mag/varmint/ratslayer,,
 				/obj/item/gun/ballistic/revolver/colt357/lucky,
 				/obj/item/gun/ballistic/automatic/m1garand/oldglory,
 				/obj/item/gun/ballistic/automatic/marksman/sniper/gold,
@@ -1102,7 +1099,18 @@
 				/obj/effect/spawner/bundle/f13/revolverm29snub
 	)
 
+/obj/effect/spawner/lootdrop/f13/weapon/assaultrifle
+	name = "random spawner for 5.56 assault rifles"
+	loot = list(/obj/effect/spawner/bundle/f13/assault_rifle = 60,
+				/obj/item/gun/ballistic/automatic/type93 = 30,
+				/obj/item/gun/ballistic/automatic/assault_rifle/infiltrator = 10,
+	)
 
+/obj/effect/spawner/lootdrop/f13/weapon/assaultcarbine
+	name = "random spawner for 5mm assault rifles"
+	loot = list(/obj/effect/spawner/bundle/f13/assault_carbine = 65,
+				/obj/effect/spawner/bundle/f13/ak112 = 30,
+	)
 
 //Gun Bundles
 /obj/effect/spawner/bundle/f13/zipgun
@@ -1441,6 +1449,14 @@
 				/obj/item/gun/ballistic/automatic/assault_carbine,
 				/obj/item/ammo_box/magazine/m5mm
 				)
+
+/obj/effect/spawner/bundle/f13/ak112
+	name = "ak-112 and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/assault_carbine/ak112,
+				/obj/item/ammo_box/magazine/m5mm
+				)
+
 
 /obj/effect/spawner/bundle/f13/marksman
 	name = "marksman rifle and ammo spawner"

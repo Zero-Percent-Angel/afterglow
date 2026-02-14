@@ -189,10 +189,10 @@
 	item_path = /obj/item/gun/ballistic/automatic/pistol/type17
 
 /datum/gang_item/weapon/type93
-	name = "Worn Type 93"
+	name = "Type 93"
 	id = "worntype93"
 	cost = 500
-	item_path = /obj/item/gun/ballistic/automatic/type93/worn
+	item_path = /obj/item/gun/ballistic/automatic/type93/
 
 
 ///////////////////

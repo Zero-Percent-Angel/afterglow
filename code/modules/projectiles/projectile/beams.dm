@@ -293,8 +293,8 @@
 	name = "laser beam"
 	damage = 34
 	hitscan = TRUE
-	armour_penetration = 0.01 //rare laser to have AP, to offset single-fire
 	pixels_per_second = TILES_TO_PIXELS(50)
+	damage_threshold_penetration = 2
 
 //plasma caster
 /obj/item/projectile/f13plasma/plasmacaster
@@ -344,7 +344,7 @@
 /obj/item/projectile/beam/laser/lasgun/hitscan //hitscan aer9 test
 	name = "laser beam"
 	damage = 30
-	armour_penetration = 0.33 // 33% so you can get through tougher stuff
+	armour_penetration = 0.25 // 25% so you can get through tougher stuff
 	damage_threshold_penetration = 5
 	hitscan = TRUE
 	tracer_type = /obj/effect/projectile/tracer/laser
@@ -375,6 +375,7 @@
 	damage = 18
 	hitscan = TRUE
 	armour_penetration = 0.02
+	damage_threshold_penetration = 2
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser
@@ -464,6 +465,7 @@
 	damage = 20 // Hits less than the W1K but has innate AP/DT reduction.
 	hitscan = TRUE
 	armour_penetration = 0.2 //rare laser to keep its AP, since base model is so bad
+	damage_threshold_penetration = 2
 	tracer_type = /obj/effect/projectile/tracer/laser
 	muzzle_type = /obj/effect/projectile/muzzle/laser
 	impact_type = /obj/effect/projectile/impact/laser

@@ -1603,6 +1603,7 @@
  * Quiet 5.56mm autorifle
  * .223 / 5.56mm
  * Uncommon
+ * Less Damage, More Recoil, Scoped, Suppressed, Wields faster
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/assault_rifle/infiltrator
@@ -1611,9 +1612,9 @@
 	icon_state = "infiltrator"
 	item_state = "fnfal"
 
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
+	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	draw_time = GUN_DRAW_NORMAL
+	draw_time = GUN_DRAW_FAST
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
@@ -1651,6 +1652,7 @@
  * Chinese 5.56mm AN-94-like rifle
  * .223 / 5.56mm
  * Uncommon
+ * More damage, More Recoil
  * * * * * * * * * * */
 
 /obj/item/gun/ballistic/automatic/type93
@@ -1669,9 +1671,9 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1)
+	init_recoil = RIFLE_RECOIL(1.2)
 	init_firemodes = list(
 		/datum/firemode/automatic/rpm200
 	)
@@ -1695,34 +1697,6 @@
 		SP_DISTANT_RANGE(RIFLE_LIGHT_RANGE_DISTANT)
 	)
 
-/* * * * * * * * * * *
- * Worn Type 93 assault rifle
- * Chinese 5.56mm autorifle
- * .223 / 5.56mm
- * Less damage
- * Less accuracy
- * Slower to shoot
- * Uncommon
- * * * * * * * * * * */
-
-/obj/item/gun/ballistic/automatic/type93/worn //24dmg
-	name = "\improper Worn Type 93"
-	desc = "This Type 93 Chinese assault rifle looks like it has been restored in a garage. The bore is shot to hell, the threading is destroyed, and so is the burst fire mechanism- it seems to fire unevenly, spraying more bullets than before."
-	icon = 'icons/fallout/objects/guns/ballistic.dmi'
-	icon_state = "type93"
-	item_state = "handmade_rifle"
-
-	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
-	force = GUN_MELEE_FORCE_RIFLE_HEAVY
-	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
-	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T2
-	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = RIFLE_RECOIL(1.6)
-	can_suppress = FALSE
 
 /* * * * * * * * * * *
  * BOZAR
