@@ -894,7 +894,7 @@
 				/obj/item/gun/energy/laser/pistol/fo4laser = 20
 				)
 
-/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh //overlaps with midtier
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/midhigh
 	name = "mid-high tier energy gun"
 	loot = list(/obj/item/gun/energy/laser/aer12 = 20,
 				/obj/effect/spawner/bundle/f13/plasmapistol = 25,
@@ -1107,8 +1107,8 @@
 
 /obj/effect/spawner/lootdrop/f13/weapon/assaultcarbine
 	name = "random spawner for 5mm assault rifles"
-	loot = list(/obj/effect/spawner/bundle/f13/assault_carbine = 65,
-				/obj/effect/spawner/bundle/f13/ak112 = 30,
+	loot = list(/obj/effect/spawner/bundle/f13/assault_carbine = 35,
+				/obj/effect/spawner/bundle/f13/ak112 = 65,
 	)
 
 //Gun Bundles
