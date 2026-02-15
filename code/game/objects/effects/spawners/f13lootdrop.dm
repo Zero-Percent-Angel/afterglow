@@ -1046,7 +1046,6 @@
 				/obj/item/gun/ballistic/rocketlauncher = 5,
 				/obj/effect/spawner/bundle/f13/riotshotgun = 10,
 				/obj/item/gun/ballistic/shotgun/automatic/combat/citykiller = 10,
-				/obj/effect/spawner/bundle/f13/guns/p90 = 2,
 				/obj/effect/spawner/bundle/f13/rangemaster = 10,
 				/obj/item/gun/ballistic/automatic/lsw = 10
 				)
@@ -1070,7 +1069,6 @@
 				/obj/item/gun/ballistic/rocketlauncher = 10,
 				/obj/item/gun/ballistic/automatic/bozar = 7,
 				/obj/effect/spawner/bundle/f13/m1919 = 5,
-				/obj/effect/spawner/bundle/f13/guns/p90 = 7
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/unique
