@@ -87,8 +87,6 @@
 			to_chat(source, self_message)
 		if(playsound)
 			source.playsound_local(source, 'sound/misc/ui_toggle_vats.ogg', 50, FALSE, pressure_affected = FALSE) //Sound from interbay!
-	RegisterSignal(source, COMSIG_MOB_CLIENT_MOUSEMOVE, PROC_REF(onMouseMove))
-	RegisterSignal(source, COMSIG_MOVABLE_MOVED, PROC_REF(on_move))
 	if(hud_icon)
 		hud_icon.combat_on = TRUE
 		hud_icon.update_icon()
@@ -123,19 +121,6 @@
 	source.end_parry_sequence()
 	var/mob/living/L = source
 	L.toggle_combat_mode()
-
-///Changes the user direction to (try) keep match the pointer.
-/datum/component/combat_mode/proc/on_move(atom/movable/source, dir, atom/oldloc, forced)
-	var/mob/living/L = source
-	if((mode_flags & COMBAT_MODE_ACTIVE) && L.client)
-		L.setDir(lastmousedir, ismousemovement = TRUE)
-
-///Changes the user direction to (try) match the pointer.
-/datum/component/combat_mode/proc/onMouseMove(mob/source, object, location, control, params)
-	if(source.client.show_popup_menus)
-		return
-	source.face_atom(object, TRUE)
-	lastmousedir = source.dir
 
 /// Toggles whether the user is intentionally in combat mode. THIS should be the proc you generally use! Has built in visual/to other player feedback, as well as an audible cue to ourselves.
 /datum/component/combat_mode/proc/user_toggle_intentional_combat_mode(mob/living/source)
