@@ -3009,6 +3009,7 @@
 	dir = 4;
 	light_color = "#228B22"
 	},
+/obj/machinery/autolathe/ammo,
 /turf/open/floor/plasteel/dark,
 /area/engine/workshop)
 "aXn" = (
@@ -3858,6 +3859,10 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building/abandoned/h)
+"bkN" = (
+/obj/structure/debris/v1,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/town)
 "bkW" = (
 /obj/effect/decal/fakelattice,
 /turf/open/floor/plating/tunnel{
@@ -4224,6 +4229,10 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/f13/inside/gravel,
+/area/f13/wasteland/town)
+"bqZ" = (
+/obj/structure/debris/v4,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland/town)
 "brc" = (
 /obj/structure/simple_door/tentflap_cloth{
@@ -12661,6 +12670,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2,
 /area/f13/ambientlighting/building/j)
+"dYb" = (
+/obj/structure/barricade/wooden/strong,
+/turf/closed/wall/r_wall/rust,
+/area/f13/wasteland/town)
 "dYF" = (
 /obj/effect/landmark/poster_spawner/pinup,
 /turf/closed/indestructible/f13vaultrusted,
@@ -12789,6 +12802,10 @@
 	},
 /turf/open/floor/wood_mosaic/wood_mosaic_light,
 /area/f13/legioncamp)
+"eai" = (
+/obj/structure/wreck/bus/blue/alt,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "eal" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
@@ -15261,6 +15278,12 @@
 	icon_state = "snow_dug"
 	},
 /area/f13/ncr)
+"eOz" = (
+/obj/structure/barricade/bars,
+/obj/structure/table/reinforced,
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/turf/open/floor/f13/wood,
+/area/f13/building/abandoned/n)
 "eOE" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 8
@@ -15562,7 +15585,8 @@
 	},
 /area/f13/wasteland)
 "eUC" = (
-/turf/closed/indestructible/f13vaultrusted,
+/obj/structure/barricade/wooden/strong,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland/town)
 "eUD" = (
 /obj/structure/reagent_dispensers/barrel/three,
@@ -17317,6 +17341,10 @@
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/wasteland)
+"fwo" = (
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/turf/open/indestructible/ground/outside/road,
+/area/f13/building/abandoned/n)
 "fwp" = (
 /turf/open/floor/plating/f13/outside/road,
 /area/f13/ambientlighting/building/w)
@@ -23030,8 +23058,14 @@
 	},
 /area/f13/wasteland)
 "hgu" = (
+/obj/structure/rack/shelf_metal,
+/obj/effect/spawner/lootdrop/ammo,
+/obj/effect/spawner/lootdrop/ammo,
+/obj/effect/spawner/lootdrop/ammo,
+/obj/item/book/granter/crafting_recipe/gunsmith_one,
+/obj/item/book/granter/crafting_recipe/gunsmith_two,
+/obj/item/book/granter/crafting_recipe/ODF,
 /obj/effect/mapping_helpers/network_builder/power_cable/auto,
-/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/engine/workshop)
 "hgv" = (
@@ -23661,13 +23695,12 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/ambientlighting/building/p)
 "hou" = (
-/obj/structure/ladder/unbreakable{
-	level = 1;
-	id = "townunderbottomright";
-	height = 2
+/obj/structure/wreck/car{
+	pixel_y = 12
 	},
-/turf/open/floor/f13/wood,
-/area/f13/building/abandoned/m)
+/obj/structure/barricade/wooden/strong,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/town)
 "how" = (
 /mob/living/simple_animal/hostile/supermutant/rangedmutant/varmint,
 /obj/effect/decal/cleanable/blood/old{
@@ -26071,13 +26104,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/green/white,
 /area/f13/ambientlighting/building/j)
 "hXV" = (
-/obj/structure/rack/shelf_metal,
-/obj/effect/spawner/lootdrop/ammo,
-/obj/effect/spawner/lootdrop/ammo,
-/obj/effect/spawner/lootdrop/ammo,
-/obj/item/book/granter/crafting_recipe/gunsmith_one,
-/obj/item/book/granter/crafting_recipe/gunsmith_two,
-/obj/item/book/granter/crafting_recipe/ODF,
+/obj/machinery/conveyor/auto{
+	dir = 4;
+	id = "town"
+	},
 /turf/open/floor/plasteel/dark,
 /area/engine/workshop)
 "hYb" = (
@@ -27411,6 +27441,7 @@
 /obj/structure/chair/folding{
 	dir = 4
 	},
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/n)
 "iuH" = (
@@ -30890,6 +30921,11 @@
 	icon_state = "housewood1-broken"
 	},
 /area/f13/ambientlighting/building/m)
+"jzN" = (
+/obj/structure/debris/v1,
+/obj/structure/barricade/wooden/strong,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/town)
 "jAa" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -36407,6 +36443,7 @@
 	dir = 1;
 	light_color = "#706891"
 	},
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/n)
 "lpg" = (
@@ -37611,6 +37648,11 @@
 	icon_state = "housewood2-broken"
 	},
 /area/f13/ambientlighting/building/e)
+"lJW" = (
+/obj/structure/debris/v4,
+/obj/structure/barricade/wooden/strong,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/town)
 "lJY" = (
 /obj/structure/junk/locker,
 /obj/structure/grille/broken,
@@ -42142,6 +42184,13 @@
 	icon_state = "bar"
 	},
 /area/f13/ambientlighting/building/g)
+"nfd" = (
+/obj/structure/fence{
+	dir = 8
+	},
+/obj/structure/debris/v2,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/town)
 "nff" = (
 /obj/structure/flora/grass/wasteland{
 	icon_state = "tall_grass_4";
@@ -51482,6 +51531,15 @@
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/floor/wood_common/wood_common_dark,
 /area/f13/ncr)
+"pYL" = (
+/obj/structure/wreck/car{
+	dir = 4;
+	icon_state = "buggy_olive";
+	layer = 2;
+	pixel_y = -11
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/town)
 "pYT" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/glass{
@@ -52880,7 +52938,7 @@
 "qtH" = (
 /obj/structure/ladder/unbreakable{
 	level = 1;
-	id = "townunderbottomleft";
+	id = "townunderupperleft";
 	height = 2
 	},
 /turf/open/floor/f13/wood,
@@ -52901,6 +52959,7 @@
 /obj/structure/chair/folding{
 	dir = 8
 	},
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/n)
 "qtW" = (
@@ -56412,6 +56471,13 @@
 /obj/machinery/vending/nukacolavend,
 /turf/open/floor/wood_common,
 /area/maintenance/bar)
+"rzr" = (
+/obj/structure/fence{
+	dir = 8
+	},
+/obj/structure/debris/v3,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/town)
 "rzw" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 4;
@@ -59962,10 +60028,10 @@
 /turf/open/floor/plating,
 /area/f13/bar)
 "sGg" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/autolathe/ammo,
-/turf/open/floor/plasteel/dark,
-/area/engine/workshop)
+/obj/structure/debris/v2,
+/obj/structure/barricade/wooden/strong,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/town)
 "sGq" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/junk/small/bed,
@@ -60481,6 +60547,12 @@
 	icon_state = "outerpavement"
 	},
 /area/f13/wasteland)
+"sPg" = (
+/obj/structure/table/reinforced,
+/obj/structure/barricade/bars,
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/turf/open/floor/f13/wood,
+/area/f13/building/abandoned/n)
 "sPl" = (
 /obj/machinery/vending/engivend,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -63503,6 +63575,10 @@
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
+"tLV" = (
+/obj/structure/wreck/bus/rusted,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/town)
 "tLX" = (
 /obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -68396,6 +68472,11 @@
 /obj/structure/car/rubbish4,
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/wasteland)
+"vhU" = (
+/obj/structure/debris/v3,
+/obj/structure/barricade/wooden/strong,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/town)
 "vie" = (
 /obj/structure/table/wood,
 /obj/machinery/processor/chopping_block,
@@ -76637,6 +76718,10 @@
 /obj/structure/barricade/wooden,
 /turf/closed/wall/f13/tentwall,
 /area/f13/ambientlighting/building/b)
+"xGY" = (
+/obj/structure/debris/v2,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/town)
 "xHn" = (
 /obj/structure/table/reinforced,
 /obj/structure/barricade/bars,
@@ -78515,6 +78600,11 @@
 	icon_state = "outerpavement"
 	},
 /area/f13/caves)
+"ylS" = (
+/obj/structure/barricade/wooden/strong,
+/obj/structure/barricade/wooden/strong,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/town)
 "ylX" = (
 /obj/structure/simple_door,
 /obj/structure/barricade/wooden/planks,
@@ -104173,7 +104263,7 @@ azA
 azA
 azA
 azA
-iMq
+azA
 azA
 azA
 azA
@@ -104480,7 +104570,7 @@ jNF
 tXi
 azA
 azA
-azA
+eai
 azA
 azA
 azA
@@ -104791,11 +104881,11 @@ pSE
 pSE
 pSE
 pSE
-aOv
-aOv
-aOv
-eUC
-eUC
+ncr
+lJW
+jzN
+sGg
+vhU
 azA
 azA
 qmk
@@ -105095,10 +105185,10 @@ xbV
 gsH
 tPI
 hEr
-apD
-apD
+bqZ
+pYL
 eUC
-azA
+tUZ
 azA
 qmk
 odg
@@ -105398,9 +105488,9 @@ pSE
 voV
 oks
 apD
-apD
-veG
-azA
+lsp
+ncr
+xoU
 azA
 azA
 azA
@@ -105700,9 +105790,9 @@ pSE
 voV
 oks
 apD
-apD
-veG
-azA
+bkN
+hou
+xoU
 azA
 azA
 azA
@@ -106002,9 +106092,9 @@ pSE
 eeh
 oks
 apD
-apD
-veG
-azA
+xGY
+eUC
+xoU
 azA
 azA
 azA
@@ -106305,8 +106395,8 @@ xDy
 oks
 apD
 apD
-veG
-azA
+tLV
+xoU
 azA
 azA
 azA
@@ -106607,8 +106697,8 @@ xDy
 oks
 apD
 apD
-veG
-azA
+apD
+xoU
 azA
 azA
 azA
@@ -106909,8 +106999,8 @@ xDy
 oks
 apD
 apD
-veG
-azA
+apD
+xoU
 azA
 azA
 azA
@@ -107157,7 +107247,7 @@ azA
 azA
 fhV
 dkX
-dkX
+ftp
 kNE
 gIs
 sag
@@ -107211,8 +107301,8 @@ xDy
 oks
 apD
 apD
-veG
-azA
+apD
+xoU
 azA
 azA
 azA
@@ -107459,7 +107549,7 @@ azA
 azA
 dIZ
 lTA
-dkX
+ftp
 dkX
 gIs
 sag
@@ -107483,7 +107573,7 @@ oPT
 aGd
 dUn
 hXV
-sGg
+iFX
 iFX
 aZj
 aXl
@@ -107513,8 +107603,8 @@ gzL
 oks
 apD
 apD
-veG
-azA
+apD
+xoU
 azA
 azA
 azA
@@ -107761,7 +107851,7 @@ azA
 azA
 dIZ
 lpd
-dkX
+ftp
 dkX
 gIs
 sag
@@ -107815,8 +107905,8 @@ voV
 oks
 apD
 apD
-veG
-azA
+apD
+xoU
 azA
 azA
 azA
@@ -108116,9 +108206,9 @@ pSE
 voV
 oks
 apD
-apD
-veG
-azA
+eUC
+nfd
+xoU
 azA
 azA
 azA
@@ -108365,7 +108455,7 @@ azA
 azA
 dIZ
 dIZ
-fhV
+eOz
 fhV
 gIs
 udK
@@ -108418,9 +108508,9 @@ gsH
 voV
 oks
 apD
-apD
-veG
-azA
+ylS
+rzr
+xoU
 azA
 azA
 azA
@@ -108667,7 +108757,7 @@ iZo
 iZo
 wnZ
 qVs
-gAU
+fwo
 gAU
 rUD
 qZf
@@ -108720,9 +108810,9 @@ pSE
 voV
 oks
 apD
-apD
-veG
-azA
+eUC
+baZ
+xoU
 azA
 azA
 azA
@@ -108969,7 +109059,7 @@ smK
 smK
 smK
 gAU
-gAU
+fwo
 gAU
 qZf
 qZf
@@ -109022,9 +109112,9 @@ pSE
 voV
 oks
 apD
-apD
-veG
-azA
+eUC
+dYb
+kBZ
 azA
 azA
 azA
@@ -109271,7 +109361,7 @@ hwF
 hwF
 hwF
 gyt
-gAU
+fwo
 gAU
 qZf
 qZf
@@ -109324,8 +109414,8 @@ pSE
 bZw
 aYI
 apD
-apD
-veG
+eUC
+ncr
 azA
 azA
 azA
@@ -109573,7 +109663,7 @@ azA
 azA
 dIZ
 dIZ
-xiZ
+sPg
 lSd
 gIs
 fXx
@@ -110177,7 +110267,7 @@ azA
 azA
 dIZ
 lpd
-dkX
+ftp
 dkX
 dIZ
 apD
@@ -112947,7 +113037,7 @@ xSY
 apD
 apD
 qRl
-hou
+qtH
 qRl
 qRl
 azA
