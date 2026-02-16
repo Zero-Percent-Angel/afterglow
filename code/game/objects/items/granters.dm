@@ -685,6 +685,12 @@
 	requires_skill = list(SKILL_REPAIR = EXPERT_CHECK)
 	crafting_recipe_types = list(/datum/crafting_recipe/vault_pa_body, /datum/crafting_recipe/vault_pa_helmet)
 
+/obj/item/book/granter/crafting_recipe/blueprint/fh_46/bos
+	crafting_recipe_types = list(/datum/crafting_recipe/vault_pa_body/bos, /datum/crafting_recipe/vault_pa_helmet)
+
+/obj/item/book/granter/crafting_recipe/blueprint/fh_46/unmarked
+	crafting_recipe_types = list(/datum/crafting_recipe/vault_pa_body/unmarked, /datum/crafting_recipe/vault_pa_helmet)
+
 /obj/item/book/granter/crafting_recipe/blueprint/n99
 	name = "10mm pistol blueprint"
 	icon_state = "blueprint2"

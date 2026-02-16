@@ -346,6 +346,14 @@
 	special_modifications =  list("s" = 3)
 	armor_tier_desc = "This is a suit of power armor, able to withstand a tank shell and still finish a marathon. (10% Slowdown, +3 Strength - while powered)"
 
+/obj/item/clothing/suit/armor/tiered/power_armor/fh46/unmarked
+	icon_state = "hardsuit-vault-unmarked"
+	item_state = "hardsuit-vault-unmarked"
+
+/obj/item/clothing/suit/armor/tiered/power_armor/fh46/bos
+	icon_state = "hardsuit-vault-bos"
+	item_state = "hardsuit-vault-bos"
+
 /obj/item/clothing/suit/armor/tiered/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
