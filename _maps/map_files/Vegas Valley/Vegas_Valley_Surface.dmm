@@ -4087,7 +4087,9 @@
 /turf/open/floor/wood_common/wood_common_dark,
 /area/f13/ncr)
 "bph" = (
-/obj/machinery/door/airlock/virology/glass,
+/obj/machinery/door/airlock/virology/glass{
+	req_one_access_txt = "5"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/clinic)
 "bpj" = (
@@ -25792,7 +25794,9 @@
 /area/f13/wasteland)
 "hSB" = (
 /obj/effect/mapping_helpers/network_builder/power_cable/auto,
-/obj/machinery/door/airlock/virology,
+/obj/machinery/door/airlock/virology/glass{
+	req_one_access_txt = "5"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/clinic)
 "hSF" = (
@@ -27354,18 +27358,6 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland)
-"itw" = (
-/obj/structure/chair/f13chair2{
-	dir = 4;
-	icon_state = "f13chair2"
-	},
-/obj/item/radio/intercom/retro/foa{
-	pixel_y = -30
-	},
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
-	},
-/area/f13/followers)
 "itB" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
@@ -42169,7 +42161,9 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/caves)
 "nfD" = (
-/obj/machinery/door/unpowered/securedoor,
+/obj/machinery/door/unpowered/securedoor{
+	req_one_access_txt = "1"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/m)
 "nfF" = (
@@ -43734,7 +43728,9 @@
 	},
 /area/f13/wasteland)
 "nDE" = (
-/obj/machinery/door/unpowered/securedoor,
+/obj/machinery/door/unpowered/securedoor{
+	req_one_access_txt = "1"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/n)
 "nDM" = (
@@ -46377,7 +46373,9 @@
 	},
 /area/f13/ambientlighting/building/i)
 "ovq" = (
-/obj/machinery/door/airlock/virology,
+/obj/machinery/door/airlock/virology/glass{
+	req_one_access_txt = "5"
+	},
 /turf/open/floor/plasteel/neutral,
 /area/f13/clinic)
 "ovy" = (
@@ -50630,9 +50628,6 @@
 "pLz" = (
 /obj/structure/table,
 /obj/item/pen,
-/obj/item/radio/intercom/retro/foa{
-	pixel_y = -30
-	},
 /obj/item/paper_bin,
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
@@ -71619,7 +71614,9 @@
 /area/f13/ambientlighting/building/j)
 "wlg" = (
 /obj/effect/mapping_helpers/network_builder/power_cable/auto,
-/obj/machinery/door/airlock/virology,
+/obj/machinery/door/airlock/virology/glass{
+	req_one_access_txt = "5"
+	},
 /turf/open/floor/plasteel/blue,
 /area/f13/clinic)
 "wli" = (
@@ -77622,7 +77619,9 @@
 /area/f13/wasteland)
 "xXP" = (
 /obj/effect/mapping_helpers/network_builder/power_cable/auto,
-/obj/machinery/door/unpowered/securedoor,
+/obj/machinery/door/unpowered/securedoor{
+	req_one_access_txt = "1"
+	},
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/n)
 "xXU" = (
@@ -135365,7 +135364,7 @@ pLz
 bdw
 uxo
 kKT
-itw
+kKT
 bdw
 bdw
 vOD
