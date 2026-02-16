@@ -516,7 +516,7 @@ Mayor
 /datum/outfit/job/den/f13dendoc
 	name = "Doctor"
 	jobtype = /datum/job/oasis/f13dendoc
-	ears = /obj/item/radio/headset/headset_town/medical
+	ears = /obj/item/radio/headset/headset_town
 	uniform = /obj/item/clothing/under/f13/medic
 	neck = /obj/item/clothing/neck/stethoscope
 	suit = /obj/item/clothing/suit/toggle/labcoat
@@ -676,6 +676,7 @@ Mayor
 /datum/outfit/job/den/f13settler
 	name = "Citizen"
 	jobtype = /datum/job/oasis/f13settler
+	ears = /obj/item/radio/headset/headset_town
 	id = /obj/item/card/id/dogtag/town
 	uniform = /obj/item/clothing/under/f13/settler
 	shoes = /obj/item/clothing/shoes/jackboots
