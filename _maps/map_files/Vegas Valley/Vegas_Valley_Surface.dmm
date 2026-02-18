@@ -2285,6 +2285,7 @@
 	color = "000000"
 	},
 /obj/structure/guncase,
+/obj/item/gun/energy/laser/aer9,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -4302,6 +4303,7 @@
 	dir = 8;
 	pixel_y = -15
 	},
+/obj/item/storage/belt/utility/full,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 9
 	},
@@ -5414,7 +5416,7 @@
 /area/f13/ambientlighting/building/g)
 "bLU" = (
 /obj/structure/table/reinforced,
-/obj/item/clothing/suit/armor/tiered/light/combat/brotherhood/scout,
+/obj/machinery/recharger,
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood)
 "bMj" = (
@@ -5807,8 +5809,17 @@
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland/city)
 "bRp" = (
-/obj/structure/guncase,
-/obj/item/gun/energy/laser/aer9,
+/obj/structure/closet/crate/secure/weapon{
+	anchored = 1
+	},
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
+/obj/item/stock_parts/cell/ammo/mfc,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 1
 	},
@@ -9776,8 +9787,9 @@
 /area/f13/ambientlighting/building/o)
 "dcW" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/ammo_box/a556/sport,
-/obj/item/ammo_box/a556/sport,
+/obj/item/clothing/suit/armor/tiered/light/combat/brotherhood/scout,
+/obj/item/clothing/head/helmet/f13/combat/brotherhood,
+/obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -12811,6 +12823,9 @@
 /area/f13/legioncamp)
 "eal" = (
 /obj/structure/table/reinforced,
+/obj/machinery/cell_charger{
+	pixel_y = 6
+	},
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood)
 "eat" = (
@@ -28998,10 +29013,10 @@
 /turf/open/floor/plasteel/neutral,
 /area/f13/clinic)
 "iUZ" = (
-/obj/structure/table{
-	layer = 2.9
-	},
-/obj/machinery/recharger,
+/obj/machinery/autolathe/ammo,
+/obj/item/book/granter/crafting_recipe/gunsmith_two,
+/obj/item/book/granter/crafting_recipe/gunsmith_one,
+/obj/item/book/granter/crafting_recipe/gunsmith_three,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 8
 	},
@@ -32066,7 +32081,6 @@
 	dir = 4;
 	pixel_y = 10
 	},
-/obj/item/storage/belt/utility/full,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -38465,9 +38479,11 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "lWM" = (
-/obj/machinery/autolathe,
+/obj/machinery/vending/engineering,
 /turf/open/floor/f13{
-	icon_state = "reddirtyfull"
+	color = "#ffe9de";
+	icon_state = "darkrusty";
+	name = "dirty floor"
 	},
 /area/f13/brotherhood)
 "lWW" = (
@@ -41630,21 +41646,7 @@
 	},
 /area/f13/followers)
 "mVK" = (
-/obj/structure/closet/crate/secure/weapon{
-	anchored = 1
-	},
-/obj/item/stock_parts/cell/ammo/mfc,
-/obj/item/stock_parts/cell/ammo/mfc,
-/obj/item/stock_parts/cell/ammo/mfc,
-/obj/item/stock_parts/cell/ammo/mfc,
-/obj/item/stock_parts/cell/ammo/mfc,
-/obj/item/stock_parts/cell/ammo/mfc,
-/obj/item/stock_parts/cell/ammo/mfc,
-/obj/item/stock_parts/cell/ammo/mfc,
-/obj/effect/turf_decal/bot_white,
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
+/obj/effect/turf_decal/delivery/white,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -46230,10 +46232,18 @@
 /area/f13/wasteland/town)
 "orz" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/vending/engineering,
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/closet/crate/secure/weapon{
+	anchored = 1
+	},
+/obj/item/stock_parts/cell/ammo/ec,
+/obj/item/stock_parts/cell/ammo/ec,
+/obj/item/stock_parts/cell/ammo/ec,
+/obj/item/stock_parts/cell/ammo/ec,
+/obj/item/stock_parts/cell/ammo/ec,
+/obj/item/stock_parts/cell/ammo/ec,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 5
 	},
@@ -47254,10 +47264,7 @@
 	},
 /area/f13/building/abandoned/a)
 "oJL" = (
-/obj/machinery/autolathe/ammo,
-/obj/item/book/granter/crafting_recipe/gunsmith_three,
-/obj/item/book/granter/crafting_recipe/gunsmith_one,
-/obj/item/book/granter/crafting_recipe/gunsmith_two,
+/obj/machinery/autolathe,
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 1
 	},
@@ -48304,11 +48311,11 @@
 /area/f13/brotherhood)
 "oYW" = (
 /obj/structure/rack/shelf_metal,
-/obj/item/clothing/head/helmet/f13/combat/brotherhood/initiate,
-/obj/item/clothing/head/helmet/f13/combat/brotherhood,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
+/obj/item/ammo_box/a556/sport,
+/obj/item/ammo_box/a556/sport,
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
@@ -55119,9 +55126,6 @@
 "rdo" = (
 /obj/structure/table{
 	layer = 2.9
-	},
-/obj/machinery/cell_charger{
-	pixel_y = 6
 	},
 /turf/open/floor/plasteel/f13/vault_floor/red/side{
 	dir = 10
@@ -63430,16 +63434,6 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "tIu" = (
-/obj/structure/closet/crate/secure/weapon{
-	anchored = 1
-	},
-/obj/item/stock_parts/cell/ammo/ec,
-/obj/item/stock_parts/cell/ammo/ec,
-/obj/item/stock_parts/cell/ammo/ec,
-/obj/item/stock_parts/cell/ammo/ec,
-/obj/item/stock_parts/cell/ammo/ec,
-/obj/item/stock_parts/cell/ammo/ec,
-/obj/effect/turf_decal/bot_white,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
@@ -66832,12 +66826,6 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/ncr)
-"uIC" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "000000"
-	},
-/turf/open/floor/plasteel/f13/vault_floor/floor/floorsolid,
-/area/f13/brotherhood)
 "uIF" = (
 /obj/structure/reagent_dispensers/rainwater_tank,
 /turf/open/indestructible/ground/inside/dirt,
@@ -123249,7 +123237,7 @@ mve
 dzh
 vwa
 iQC
-uIC
+iQC
 odO
 sqC
 xAu
@@ -124154,7 +124142,7 @@ glB
 sqC
 oJL
 vwa
-lWM
+aYP
 dcW
 aJp
 iKg
@@ -127475,7 +127463,7 @@ cBf
 myl
 cBf
 sqC
-ryn
+lWM
 oUH
 pIs
 ckc
