@@ -1014,7 +1014,7 @@
 	loot = list(/obj/effect/spawner/bundle/f13/trail,
 				/obj/effect/spawner/bundle/f13/service,
 				/obj/effect/spawner/bundle/f13/miniuzi,
-				/obj/effect/spawner/bundle/f13/smg10mm
+				/obj/effect/spawner/bundle/f13/smg10mm,
 				/obj/effect/spawner/bundle/f13/auto5,
 				/obj/effect/spawner/bundle/f13/marksman,
 				/obj/effect/spawner/bundle/f13/m1garand,
@@ -1331,6 +1331,13 @@
 	name = "10mm SMG and ammo spawner"
 	items = list(
 				/obj/item/gun/ballistic/automatic/smg/smg10mm,
+				/obj/item/ammo_box/magazine/m10mm/smg
+				)
+
+/obj/effect/spawner/bundle/f13/smg10mm/worn
+	name = "worn 10mm SMG and ammo spawner"
+	items = list(
+				/obj/item/gun/ballistic/automatic/smg/smg10mm/worn,
 				/obj/item/ammo_box/magazine/m10mm/smg
 				)
 
