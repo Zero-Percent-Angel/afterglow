@@ -25409,7 +25409,12 @@
 	color = "#363636"
 	},
 /obj/structure/target_stake,
-/obj/item/target/communist,
+/obj/item/target/communist{
+	max_integrity = 2000;
+	obj_integrity = 2000;
+	desc = "A shooting target designed to look like a commie!";
+	name = "communist target"
+	},
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelchess"
 	},
@@ -36421,7 +36426,12 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
-/obj/item/target/vaultie,
+/obj/item/target/vaultie{
+	max_integrity = 2000;
+	obj_integrity = 2000;
+	name = "vault boy target";
+	desc = "A target of the famous vault boy, riddled with holes already!"
+	},
 /obj/structure/target_stake,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
@@ -36663,7 +36673,12 @@
 	color = "#363636"
 	},
 /obj/structure/target_stake,
-/obj/item/target/vaultie2,
+/obj/item/target/vaultie2{
+	max_integrity = 2000;
+	obj_integrity = 2000;
+	name = "waster target";
+	desc = "A shooting target designed to look like a waster!"
+	},
 /turf/open/floor/f13{
 	icon_state = "reddirtyfull"
 	},
