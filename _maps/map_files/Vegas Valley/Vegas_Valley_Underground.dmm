@@ -3773,6 +3773,9 @@
 	dir = 1;
 	icon_state = "tube-burned"
 	},
+/obj/item/storage/trash_stack{
+	icon_state = "Junk_10"
+	},
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelchess"
 	},
@@ -3866,12 +3869,10 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker/bighornbunker)
 "bJm" = (
-/obj/structure/simple_door/bunker{
-	name = "Dormitory"
-	},
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
+/obj/structure/simple_door/interior,
 /turf/open/floor/plasteel/f13/vault_floor/blue,
 /area/f13/enclave)
 "bJo" = (
@@ -4663,7 +4664,6 @@
 /area/ruin/powered)
 "cbR" = (
 /obj/structure/debris/v4,
-/obj/structure/debris/v2,
 /obj/structure/lattice,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -4677,6 +4677,7 @@
 	icon_state = "tube-burned";
 	light_color = "#e8eaff"
 	},
+/obj/structure/debris/v2,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
 	},
@@ -4789,14 +4790,10 @@
 /obj/item/trash/semki{
 	pixel_x = 16
 	},
-/obj/item/clothing/suit/armor/tiered/medium/duster/armoredcoattan,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/cobweb{
 	dir = 1;
 	icon_state = "cobweb2"
-	},
-/obj/item/clothing/head/HoS/beret/syndicate{
-	name = "armored beret"
 	},
 /turf/open/floor/wood_mosaic/wood_mosaic_light,
 /area/f13/enclave)
@@ -11259,6 +11256,11 @@
 /obj/effect/decal/cleanable/generic{
 	pixel_x = -8;
 	pixel_y = 12
+	},
+/obj/item/storage/trash_stack{
+	icon_state = "Junk_9";
+	pixel_x = 5;
+	pixel_y = 20
 	},
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelchess2"
@@ -23157,6 +23159,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
+/obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelchess"
 	},
@@ -33415,6 +33418,7 @@
 	name = "Engineering"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/sandbags,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/enclave)
 "pcy" = (
@@ -34837,6 +34841,9 @@
 	dir = 1;
 	icon_state = "tube-burned"
 	},
+/obj/item/storage/trash_stack{
+	icon_state = "trash_3"
+	},
 /turf/open/floor/plating/tunnel,
 /area/f13/enclave)
 "pMe" = (
@@ -35128,6 +35135,15 @@
 /obj/item/clothing/head/flatcap,
 /obj/item/clothing/head/fedora,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/belt/military/alt,
+/obj/item/storage/belt/shoulderholster,
+/obj/item/storage/belt/legholster,
+/obj/item/clothing/shoes/combat/swat,
+/obj/item/clothing/shoes/f13/diesel,
+/obj/item/clothing/shoes/f13/military/plated,
+/obj/item/clothing/shoes/f13/raidertreads,
+/obj/item/clothing/shoes/f13/thighboot,
+/obj/item/clothing/shoes/f13/military/leather,
 /turf/open/floor/f13{
 	icon_state = "redmark"
 	},
@@ -35234,15 +35250,21 @@
 /turf/open/water,
 /area/f13/sewer)
 "pSY" = (
-/obj/structure/table/reinforced,
-/obj/item/pda/captain,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/lattice,
+/obj/structure/closet/locker{
+	anchored = 1
+	},
 /obj/item/stack/spacecash/c1000{
 	desc = "One thousand United States Dollars, probably not so useful after the Great War but kept as a reminder of what was lost.";
 	name = "one thousand dollars";
 	singular_name = "ten hundred dollar bill"
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/lattice,
+/obj/item/pda/captain,
+/obj/item/clothing/head/HoS/beret/syndicate{
+	name = "armored beret"
+	},
+/obj/item/clothing/suit/armor/tiered/medium/duster/armoredcoattan,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelchess2"
 	},
@@ -38431,6 +38453,10 @@
 /obj/machinery/light{
 	dir = 1;
 	icon_state = "tube-burned"
+	},
+/obj/item/storage/trash_stack{
+	pixel_x = 3;
+	pixel_y = 12
 	},
 /turf/open/floor/plating/tunnel,
 /area/f13/enclave)
@@ -43740,6 +43766,7 @@
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
+/obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/plating/tunnel,
 /area/f13/enclave)
 "tyq" = (
