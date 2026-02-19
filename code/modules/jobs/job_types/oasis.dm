@@ -538,7 +538,6 @@ Mayor
 		/obj/item/circuitboard/machine/bloodbankgen,
 		/obj/item/gun/ballistic/revolver/needler,
 		/obj/item/ammo_box/needle = 4,
-		
 		)
 
 /datum/outfit/job/den/f13dendoc/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
