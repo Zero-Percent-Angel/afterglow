@@ -17,14 +17,7 @@
 	},
 /area/shuttle/bos_foyer)
 "g" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/vomit/old{
-	pixel_x = 6;
-	pixel_y = -10
-	},
-/turf/open/floor/f13{
-	icon_state = "floordirtysolid"
-	},
+/turf/closed/wall/r_wall,
 /area/shuttle/bos_foyer)
 "h" = (
 /turf/template_noop,
@@ -47,34 +40,22 @@
 	icon_state = "floorrusty"
 	},
 /area/shuttle/bos_foyer)
-"n" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood{
-	icon_state = "gib2_flesh"
+"l" = (
+/obj/effect/decal/cleanable/generic{
+	pixel_x = -8
 	},
-/turf/open/floor/f13{
-	icon_state = "floorrusty"
+/obj/structure/lattice,
+/obj/effect/decal/cleanable/blood{
+	icon_state = "drip1"
+	},
+/turf/open/floor/plating/tunnel{
+	icon_state = "tunnelchess"
 	},
 /area/shuttle/bos_foyer)
 "o" = (
 /obj/structure/lattice,
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/tunnel,
-/area/shuttle/bos_foyer)
-"q" = (
-/obj/structure/lattice,
-/obj/effect/decal/cleanable/oil{
-	icon_state = "floor6";
-	pixel_x = -15;
-	pixel_y = 13
-	},
-/obj/machinery/light{
-	dir = 4;
-	light_color = "#c1caff"
-	},
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelchess"
-	},
 /area/shuttle/bos_foyer)
 "r" = (
 /obj/structure/chair/office{
@@ -85,15 +66,25 @@
 	},
 /area/shuttle/bos_foyer)
 "t" = (
-/turf/closed/wall/r_wall,
+/obj/effect/decal/cleanable/generic,
+/turf/open/floor/f13{
+	icon_state = "floordirtysolid"
+	},
 /area/shuttle/bos_foyer)
-"y" = (
+"v" = (
+/obj/machinery/light/fo13colored/Red{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
 	},
+/area/shuttle/bos_foyer)
+"y" = (
+/obj/structure/sign/flag_enclave,
+/turf/closed/wall/r_wall,
 /area/shuttle/bos_foyer)
 "z" = (
 /obj/structure/table,
@@ -119,21 +110,17 @@
 	icon_state = "floorrusty"
 	},
 /area/shuttle/bos_foyer)
-"B" = (
+"D" = (
 /obj/structure/lattice,
-/obj/effect/decal/cleanable/blood,
-/obj/item/broken_bottle{
-	pixel_x = -7;
-	pixel_y = -5
+/obj/effect/decal/cleanable/generic{
+	pixel_x = -8
+	},
+/obj/machinery/porta_turret/f13/turret_556/burstfire{
+	faction = list("Wastelander", "Enclave");
+	req_access = list(134)
 	},
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelchess2"
-	},
-/area/shuttle/bos_foyer)
-"D" = (
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/f13{
-	icon_state = "floordirtysolid"
 	},
 /area/shuttle/bos_foyer)
 "E" = (
@@ -149,26 +136,16 @@
 	icon_state = "floorrusty"
 	},
 /area/shuttle/bos_foyer)
-"G" = (
+"H" = (
 /obj/structure/lattice,
-/obj/effect/decal/cleanable/generic{
-	pixel_x = -8
+/obj/effect/decal/cleanable/oil{
+	icon_state = "floor6";
+	pixel_x = -15;
+	pixel_y = 13
 	},
-/obj/machinery/porta_turret/f13/turret_556/burstfire{
-	faction = list("Wastelander");
-	req_access = list(134)
-	},
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelchess2"
-	},
-/area/shuttle/bos_foyer)
-"I" = (
-/obj/effect/decal/cleanable/generic{
-	pixel_x = -8
-	},
-/obj/structure/lattice,
-/obj/effect/decal/cleanable/blood{
-	icon_state = "drip1"
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#c1caff"
 	},
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelchess"
@@ -181,17 +158,11 @@
 	},
 /area/shuttle/bos_foyer)
 "K" = (
-/obj/machinery/light/fo13colored/Red{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
 /turf/open/floor/f13{
-	icon_state = "floorrusty"
+	icon_state = "floordirtysolid"
 	},
 /area/shuttle/bos_foyer)
-"L" = (
+"N" = (
 /obj/structure/lattice,
 /obj/effect/decal/cleanable/robot_debris/down,
 /obj/structure/barricade/sandbags,
@@ -199,85 +170,114 @@
 	icon_state = "tunnelrusty"
 	},
 /area/shuttle/bos_foyer)
-"O" = (
-/obj/structure/sign/flag_enclave,
-/turf/closed/wall/r_wall,
-/area/shuttle/bos_foyer)
-"U" = (
+"R" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/vomit/old{
+	pixel_x = 6;
+	pixel_y = -10
+	},
 /turf/open/floor/f13{
 	icon_state = "floordirtysolid"
 	},
 /area/shuttle/bos_foyer)
+"T" = (
+/obj/structure/lattice,
+/obj/effect/decal/cleanable/blood,
+/obj/item/broken_bottle{
+	pixel_x = -7;
+	pixel_y = -5
+	},
+/turf/open/floor/plating/tunnel{
+	icon_state = "tunnelchess2"
+	},
+/area/shuttle/bos_foyer)
+"X" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/shuttle/bos_foyer)
+"Y" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood{
+	icon_state = "gib2_flesh"
+	},
+/turf/open/floor/f13{
+	icon_state = "floorrusty"
+	},
+/area/shuttle/bos_foyer)
 
 (1,1,1) = {"
-t
+g
 j
-t
-t
+g
+g
 a
 a
 "}
 (2,1,1) = {"
-t
-y
-t
+g
+X
+g
 h
 h
-t
+g
 "}
 (3,1,1) = {"
 a
-K
+v
 a
-t
+g
 i
-t
+g
 "}
 (4,1,1) = {"
 a
-I
+l
 A
 c
 c
-t
+g
 "}
 (5,1,1) = {"
 a
 a
+g
 t
-D
-n
+Y
 a
 "}
 (6,1,1) = {"
 a
 E
 r
-g
-B
+R
+T
 a
 "}
 (7,1,1) = {"
-O
+y
 z
-U
+K
 o
-L
+N
 a
 "}
 (8,1,1) = {"
-t
+g
 e
 J
-q
-G
-t
+H
+D
+g
 "}
 (9,1,1) = {"
-t
-t
+g
+g
 a
 a
-t
-t
+g
+g
 "}
