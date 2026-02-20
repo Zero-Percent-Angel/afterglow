@@ -20,13 +20,13 @@
 	user.regenerate_icons()
 	if(!user?.client)
 		return
-	
+
 	var/client/C = user.client
 	var/_x = 0
 	var/_y = 0
 	var/turf/T = get_turf(user)
 	if(is_above_level(T.z)) //higher elevation equals higher view range
-		src.zoom_out_amt = 19
+		src.zoom_out_amt = 12
 		src.zoom_amt = 10
 		to_chat(user,"You see the horizon more clearly from this elevation.")
 	else if(!is_above_level(T.z))
@@ -45,6 +45,8 @@
 	C.change_view(world.view + zoom_out_amt)
 	C.pixel_x = world.icon_size*_x
 	C.pixel_y = world.icon_size*_y
+
+	user.add_movespeed_modifier(/datum/movespeed_modifier/scoped_in_low)
 
 /obj/item/binoculars/proc/on_unwield(obj/item/source, mob/user)
 	unwield(user)
@@ -74,6 +76,7 @@
 	user.visible_message(span_notice("[user] lowers [src]."), span_notice("You lower [src]."))
 	item_state = "binoculars"
 	user.regenerate_icons()
+	user.remove_movespeed_modifier(/datum/movespeed_modifier/scoped_in_low)
 	if(user && user.client)
 		user.regenerate_icons()
 		var/client/C = user.client

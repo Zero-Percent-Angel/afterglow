@@ -266,7 +266,7 @@ Mayor
 
 	backpack_contents = list(
 		/obj/item/ammo_box/tube/c4570 = 3,
-		/obj/item/gun_upgrade/scope/watchman = 1
+		/obj/item/gun_upgrade/scope/mid = 1
 	)
 
 /datum/outfit/loadout/thechief

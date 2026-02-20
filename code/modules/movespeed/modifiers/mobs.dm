@@ -108,8 +108,14 @@
 	variable = TRUE
 	flags = IGNORE_NOSLOW
 
-/datum/movespeed_modifier/scoped_in
-	multiplicative_slowdown = SCOPED_IN_ADD_SLOWDOWN
+/datum/movespeed_modifier/scoped_in_high
+	multiplicative_slowdown = SCOPED_IN_ADD_SLOWDOWN_HIGH
+
+/datum/movespeed_modifier/scoped_in_mid
+	multiplicative_slowdown = SCOPED_IN_ADD_SLOWDOWN_MID
+
+/datum/movespeed_modifier/scoped_in_low
+	multiplicative_slowdown = SCOPED_IN_ADD_SLOWDOWN_LOW
 
 /datum/movespeed_modifier/carbon_softcrit
 	multiplicative_slowdown = SOFTCRIT_ADD_SLOWDOWN

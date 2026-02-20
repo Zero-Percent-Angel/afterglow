@@ -457,7 +457,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	name = "Designated Marmskan"
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
 	backpack_contents = list(
-		/obj/item/gun_upgrade/scope/watchman = 1,
+		/obj/item/gun_upgrade/scope/mid = 1,
 		/obj/item/ammo_box/tube/m44 = 2,
 		/obj/item/gun/ballistic/revolver/m29 = 1,
 		/obj/item/ammo_box/m44 = 3,
@@ -639,7 +639,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	head = /obj/item/clothing/head/helmet/f13/legion/vet/vexil
 	suit_store = /obj/item/gun/ballistic/rifle/repeater/brush
 	backpack_contents = list(
-		/obj/item/gun_upgrade/scope/watchman = 1,
+		/obj/item/gun_upgrade/scope/mid = 1,
 		/obj/item/ammo_box/tube/c4570 = 2,
 		/obj/item/melee/onehanded/machete/gladius = 1,
 		)
@@ -719,7 +719,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 		/obj/item/ammo_box/a762 = 3,
 		/obj/item/grenade/smokebomb = 1,
 		/obj/item/bottlecap_mine = 1,
-		/obj/item/gun_upgrade/scope/watchman = 1,
+		/obj/item/gun_upgrade/scope/high,
 		)
 
 /datum/outfit/loadout/expsapper
