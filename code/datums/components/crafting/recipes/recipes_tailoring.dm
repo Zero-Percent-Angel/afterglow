@@ -1617,6 +1617,14 @@ datum/crafting_recipe/steelbib/heavy
 	always_available = FALSE
 	skill_level = EXPERT_CHECK
 
+/datum/crafting_recipe/vault_pa_body/bos
+	name = "FH-46 Body"
+	result = /obj/item/clothing/suit/armor/tiered/power_armor/fh46/bos
+
+/datum/crafting_recipe/vault_pa_body/unmarked
+	name = "FH-46 Body"
+	result = /obj/item/clothing/suit/armor/tiered/power_armor/fh46/unmarked
+
 /datum/crafting_recipe/vault_pa_helmet
 	name = "FH-46 Helmet"
 	result = /obj/item/clothing/head/helmet/f13/power_armor/fh46

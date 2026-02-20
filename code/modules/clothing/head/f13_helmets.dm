@@ -1303,14 +1303,19 @@
 /obj/item/clothing/head/helmet/f13/power_armor/fh46
 	name = "FH-46 power helmet"
 	desc = "A new Vault 113 design. It's airconditioned."
-	icon_state = "hardsuit0-vau"
-	item_state = "hardsuit0-vau"
+	icon_state = "hardsuit-vau0"
+	item_state = "hardsuit-vau0"
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	salvaged_type = null
 	armor_tokens = list(ARMOR_MODIFIER_DOWN_DT_T3)
 	tier = 3
 	icon = 'icons/obj/clothing/hats.dmi'
 	mob_overlay_icon = null
+
+/obj/item/clothing/head/helmet/f13/power_armor/fh46/update_icon_state()
+	icon_state = "hardsuit-vau[light_on]"
+	item_state = "hardsuit-vau[light_on]"
+
 
 /obj/item/clothing/head/helmet/f13/power_armor/raider
 	name = "Raider power helmet"

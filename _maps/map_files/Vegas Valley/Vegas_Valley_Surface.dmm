@@ -9622,6 +9622,10 @@
 "cZL" = (
 /obj/structure/bed/old,
 /obj/item/reagent_containers/pill/patch/jet,
+/obj/structure/sink/greyscale{
+	dir = 4;
+	pixel_x = 13
+	},
 /turf/open/indestructible/ground/outside/sidewalk{
 	icon_state = "horizontaloutermainleft"
 	},
@@ -11680,13 +11684,8 @@
 /turf/closed/wall/r_wall/rust,
 /area/f13/building/abandoned/n)
 "dJe" = (
-/obj/structure/wreck/car{
-	pixel_y = 12
-	},
-/obj/effect/overlay/desert/sonora/edge{
-	dir = 4
-	},
-/turf/open/floor/plating/f13/inside/gravel,
+/obj/structure/fence/door,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland/town)
 "dJl" = (
 /obj/effect/spawner/lootdrop/trash,
@@ -14102,9 +14101,8 @@
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
 "evp" = (
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontaloutermainleft"
-	},
+/obj/structure/reagent_dispensers/rainwater_tank,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland/town)
 "evv" = (
 /obj/machinery/light/small{
@@ -14923,6 +14921,7 @@
 	},
 /area/f13/ambientlighting/building/o)
 "eIE" = (
+/obj/structure/reagent_dispensers/rainwater_tank,
 /turf/open/floor/plating/f13/inside/gravel,
 /area/f13/building/abandoned/x)
 "eIF" = (
@@ -28626,8 +28625,14 @@
 /area/f13/ambientlighting/building/i)
 "iMG" = (
 /obj/structure/wreck/trash/bus_door,
+/obj/structure/curtain{
+	color = "#363636"
+	},
+/obj/dugpit,
+/obj/item/reagent_containers/glass/bucket/wood,
+/obj/item/reagent_containers/rag,
 /turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland/town)
+/area/f13/building/abandoned/x)
 "iMH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/overlay/desert/sonora/edge/corner{
@@ -38316,6 +38321,7 @@
 	id = "townunderupperleft";
 	height = 2
 	},
+/obj/effect/landmark/start/f13/deputy,
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/n)
 "lTG" = (
@@ -50171,10 +50177,8 @@
 	},
 /area/f13/building/abandoned/a)
 "pEu" = (
-/turf/open/indestructible/ground/outside/sidewalk{
-	icon_state = "horizontalbottomborderbottomleft"
-	},
-/area/f13/wasteland/town)
+/turf/closed/wall/f13/wood,
+/area/f13/building/abandoned/x)
 "pEv" = (
 /obj/structure/obstacle/barbedwire/end{
 	dir = 1
@@ -53300,8 +53304,8 @@
 /area/f13/wasteland)
 "qzM" = (
 /obj/structure/campfire/barrel,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland/town)
+/turf/closed/wall/f13/wood,
+/area/f13/building/abandoned/x)
 "qzU" = (
 /obj/structure/railing/corner,
 /obj/effect/decal/cleanable/dirt,
@@ -78089,9 +78093,8 @@
 /area/f13/ambientlighting/building/o)
 "ycR" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/start/f13/prospector,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland/town)
+/turf/closed/wall/f13/wood,
+/area/f13/building/abandoned/x)
 "ydn" = (
 /obj/effect/overlay/desert/sonora/edge{
 	dir = 1
@@ -105196,7 +105199,7 @@ qzM
 ycR
 eUD
 baZ
-dJe
+tPI
 tPI
 gsH
 iaJ
@@ -105494,10 +105497,10 @@ pwE
 suq
 lsx
 pVt
-apD
+pEu
 iMG
 pLI
-baZ
+dJe
 voV
 voV
 pSE
@@ -105795,9 +105798,9 @@ kOX
 kOX
 xRT
 cfk
-apD
-pEu
 evp
+pEu
+pEu
 cZL
 ezn
 voV
