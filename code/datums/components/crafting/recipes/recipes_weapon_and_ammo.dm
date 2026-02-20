@@ -180,6 +180,20 @@
 	category = CAT_WEAPONRY
 	subcategory = CAT_AMMO
 
+/datum/crafting_recipe/needleimprovised
+	name = "Strip of HN needle darts"
+	result = /obj/item/ammo_box/needle/improvised
+	reqs = list(/obj/item/reagent_containers/syringe = 5,
+				/obj/item/stack/sheet/plastic = 1,
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 5
+	category = CAT_WEAPONRY
+	subcategory = CAT_AMMO
+	skill_needed = SKILL_SCIENCE
+	skill_level = EASY_CHECK
+
+
 /datum/crafting_recipe/shotgunammo3p
 	name = "12g 3p trainshot box"
 	result = /obj/item/ammo_box/shotgun/trainshot
