@@ -438,7 +438,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 /obj/item/radio/headset/headset_town/medical
 	name = "N.T medical radio headset"
 	desc = "This is used by N.T's medical folk.\
-		\nTo access the N.T channel, use :f.\
+		\nTo access the N.T channel, use :f."
 	icon_state = "med_headset"
 	keyslot = new /obj/item/encryptionkey/headset_town/medical
 
