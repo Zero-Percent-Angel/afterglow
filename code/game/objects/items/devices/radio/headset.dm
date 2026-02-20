@@ -401,46 +401,44 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	keyslot = new /obj/item/encryptionkey/headset_khans
 
 /obj/item/radio/headset/headset_town
-	name = "Ripley radio headset"
-	desc = "This is used by the town of Ripley.\
-		\nTo access the Ripley channel, use :f."
+	name = "N.T radio headset"
+	desc = "This is used by denizens of N.T.\
+		\nTo access the N.T channel, use :f."
 	icon_state = "mine_headset"
 	keyslot = new /obj/item/encryptionkey/headset_town
 
 /obj/item/radio/headset/headset_town/lawman
-	name = "Ripley sheriff radio headset"
-	desc = "This is used by Ripley's local sheriff force. Protects ears from flashbangs.\
-		\nTo access the Ripley channel, use :f.\
-		\nTo access the Ripley sheriff channel, use :l."
+	name = "N.T sheriff radio headset"
+	desc = "This is used by N.T's local sheriff force. Protects ears from flashbangs.\
+		\nTo access the N.T channel, use :f.\
+		\nTo access the N.T sheriff channel, use :l."
 	icon_state = "sec_headset_alt"
 	item_state = "sec_headset_alt"
 	bowman = TRUE
 	keyslot = new /obj/item/encryptionkey/headset_town/lawman
 
 /obj/item/radio/headset/headset_town/commerce
-	name = "Ripley commerce radio headset"
-	desc = "This is used by Ripley's small business owners.\
-		\nTo access the Ripley channel, use :f.\
-		\nTo access the Ripley commerce channel, use :j."
+	name = "N.T commerce radio headset"
+	desc = "This is used by N.T's small business owners.\
+		\nTo access the N.T channel, use :f.\
+		\nTo access the N.T commerce channel, use :j."
 	keyslot = new /obj/item/encryptionkey/headset_town/commerce
 
 /obj/item/radio/headset/headset_town/mayor
-	name = "Ripley mayoral radio headset"
-	desc = "This is used by Ripley's mayor (and secretary). Protects ears from flashbangs.\
-		\nTo access the Ripley channel, use :f.\
-		\nTo access the Ripley mayor channel, use :y.\
-		\nTo access the Ripley sheriff channel, use :l.\
-		\nTo access the Ripley medical channel, use :m.\
-		\nTo access the Ripley commerce channel, use :j."
+	name = "N.T mayoral radio headset"
+	desc = "This is used by N.T's mayor (and secretary). Protects ears from flashbangs.\
+		\nTo access the N.T channel, use :f.\
+		\nTo access the N.T mayor channel, use :y.\
+		\nTo access the N.T sheriff channel, use :l.\
+		\nTo access the N.T commerce channel, use :j."
 	bowman = TRUE
 	command = TRUE
 	keyslot = new /obj/item/encryptionkey/headset_town/mayor
 
 /obj/item/radio/headset/headset_town/medical
-	name = "Ripley medical radio headset"
-	desc = "This is used by Ripley's medical folk.\
-		\nTo access the Ripley channel, use :f.\
-		\nTo access the medical channel, use :m"
+	name = "N.T medical radio headset"
+	desc = "This is used by N.T's medical folk.\
+		\nTo access the N.T channel, use :f.\
 	icon_state = "med_headset"
 	keyslot = new /obj/item/encryptionkey/headset_town/medical
 

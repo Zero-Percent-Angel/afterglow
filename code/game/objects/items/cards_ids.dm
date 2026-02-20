@@ -947,6 +947,7 @@
 	assignment = "badge"
 	icon_state = "sheriff"
 	item_state = "badge-sheriff"
+	access = list(ACCESS_SECURITY)
 
 /obj/item/card/id/dogtag/town
 	name = "citizenship permit"
@@ -1286,6 +1287,8 @@
 	item_state = "card-doctor"
 	assignment = "name badge"
 	uses_overlays = FALSE
+
+	access = list(ACCESS_MEDICAL)
 
 /obj/item/card/id/chief
 	name = "crimson identification card"

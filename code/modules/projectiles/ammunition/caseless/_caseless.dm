@@ -25,6 +25,9 @@
 	projectile_type = /obj/item/projectile/bullet/needle
 	var/reagent_amount = 15
 
+/obj/item/ammo_casing/caseless/needle/improvised
+	projectile_type = /obj/item/projectile/bullet/needle/improvised
+
 /obj/item/ammo_casing/caseless/musketball
 	name = "Musketball"
 	desc = "This is a lead ball for a musket."
