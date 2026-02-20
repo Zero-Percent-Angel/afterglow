@@ -557,8 +557,8 @@
 		/datum/firemode/semi_auto/slow
 	)
 	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_MID
+	zoom_factor = 1.5
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(PISTOL_HEAVY_VOLUME),
@@ -596,6 +596,8 @@
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
 	gun_tags = list(GUN_SCOPE)
 	can_scope = TRUE
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_MID
+	zoom_factor = 1.5
 	scope_state = "revolver_scope"
 	scope_x_offset = 9
 	scope_y_offset = 20

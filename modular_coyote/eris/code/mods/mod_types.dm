@@ -1,3 +1,6 @@
+/* Mods moved to projectiles/guns/mods
+these should not be used */
+
 /******************************
 	UPGRADE TYPES
 ******************************/
@@ -375,7 +378,7 @@
 	)*/
 	I.weapon_upgrades = list(
 		GUN_UPGRADE_RECOIL = 0.9
-		
+
 	)
 	I.gun_loc_tag = GUN_UNDERBARREL
 	I.prefix = "laser-guided"

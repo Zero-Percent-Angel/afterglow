@@ -750,7 +750,7 @@
 		/obj/item/clothing/head/helmet/f13/ncr/ranger = 1,
 		/obj/item/storage/survivalkit = 1,
 		/obj/item/storage/survivalkit/medical = 1,
-		/obj/item/gun_upgrade/scope/watchman = 1,
+		/obj/item/gun_upgrade/scope/mid,
 		/obj/item/gun/ballistic/revolver/m29 = 1,
 		/obj/item/ammo_box/m44 = 2,
 		/obj/item/clothing/mask/gas/ranger = 1,

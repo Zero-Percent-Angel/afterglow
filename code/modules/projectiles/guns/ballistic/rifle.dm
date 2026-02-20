@@ -499,9 +499,10 @@
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(2)
 
-	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 13
+
+	zoom_factor = 2
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_HIGH
+
 	can_scope = FALSE
 
 /obj/item/gun/ballistic/rifle/hunting/paciencia/attackby(obj/item/A, mob/user, params) //no sawing off this one
@@ -716,6 +717,7 @@
 	silenced = TRUE
 	can_scope = FALSE
 	zoom_factor = 1.5
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_MID
 	fire_sound_silenced = 'sound/weapons/Gunshot_large_silenced.ogg'
 
 /* * * * * * * * * * *
@@ -743,6 +745,9 @@
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
+
+	zoom_factor = 2
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_HIGH
 
 	gun_tags = list()
 
@@ -838,7 +843,8 @@
 	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
 	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
-	zoom_factor = 1
+	zoom_factor = 2
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_HIGH
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	animal_mod = GUN_EXTRA_DAMAGE_T5
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -848,8 +854,6 @@
 		/datum/firemode/semi_auto/slowest
 	)
 	zoomable = TRUE
-	zoom_amt = 10
-	zoom_out_amt = 18
 	fire_sound = 'sound/f13weapons/antimaterielfire.ogg'
 	pump_sound = 'sound/f13weapons/antimaterielreload.ogg'
 	gun_sound_properties = list(

@@ -519,7 +519,7 @@ Raider
 		///obj/item/gun/ballistic/rifle/hunting = 1,
 		///obj/item/ammo_box/a308 = 1,
 		///obj/item/ammo_box/a308box = 1,
-		/obj/item/gun_upgrade/scope/watchman = 1,
+		/obj/item/gun_upgrade/scope/mid = 1,
 	//	/obj/item/gun/ballistic/revolver/m29=2,
 		/obj/item/storage/belt/shoulderholster=1,
 	//	/obj/item/ammo_box/m44=4,

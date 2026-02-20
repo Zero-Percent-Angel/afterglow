@@ -880,7 +880,7 @@
 				/obj/item/advanced_crafting_components/assembly = 1,
 				/obj/item/advanced_crafting_components/alloys = 1,
 				/obj/item/stack/crafting/goodparts = 5,
-				/obj/item/gun_upgrade/scope/watchman = 1
+				/obj/item/gun_upgrade/scope/mid = 1,
 				)
 	tools = list(TOOL_WORKBENCH)
 	time = 120
@@ -1417,14 +1417,31 @@
 //////////////////////////////////
 ///GUN ATTACHMENT/PARTS CRAFTING//
 //////////////////////////////////
-/datum/crafting_recipe/scope
-	name = "ACOG Scope"
-	result = /obj/item/gun_upgrade/scope/watchman
+/datum/crafting_recipe/scope/low
+	name = "reflex sights"
+	result = /obj/item/gun_upgrade/scope/low
 	reqs = list(
 				/obj/item/stack/sheet/metal = 3,
 				/obj/item/stack/sheet/glass = 3,
-				/obj/item/stack/crafting/metalparts = 1,
-				/obj/item/stack/crafting/goodparts = 1
+				/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/crafting/goodparts = 3
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 30
+	category = CAT_WEAPONRY
+	subcategory = CAT_PARTS
+	always_available = FALSE
+	skill_level = REGULAR_CHECK
+
+/datum/crafting_recipe/scope/mid
+	name = "ACOG Scope"
+	result = /obj/item/gun_upgrade/scope/mid
+	reqs = list(
+				/obj/item/stack/sheet/metal = 3,
+				/obj/item/stack/sheet/glass = 3,
+				/obj/item/stack/crafting/metalparts = 2,
+				/obj/item/stack/crafting/goodparts = 2,
+				/obj/item/advanced_crafting_components/lenses = 1
 				)
 	tools = list(TOOL_WORKBENCH)
 	time = 30
@@ -1432,6 +1449,23 @@
 	subcategory = CAT_PARTS
 	always_available = FALSE
 	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/scope/high
+	name = "Telescopic Sights"
+	result = /obj/item/gun_upgrade/scope/high
+	reqs = list(
+				/obj/item/stack/sheet/metal = 3,
+				/obj/item/stack/sheet/glass = 3,
+				/obj/item/stack/crafting/metalparts = 3,
+				/obj/item/stack/crafting/goodparts = 3,
+				/obj/item/advanced_crafting_components/lenses = 2
+				)
+	tools = list(TOOL_WORKBENCH)
+	time = 30
+	category = CAT_WEAPONRY
+	subcategory = CAT_PARTS
+	always_available = FALSE
+	skill_level = EXPERT_CHECK
 
 /datum/crafting_recipe/suppressor
 	name = "Silencer"

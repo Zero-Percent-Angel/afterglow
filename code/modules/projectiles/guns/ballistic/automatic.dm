@@ -837,8 +837,6 @@
 	knife_x_offset = 22
 	knife_y_offset = 21
 	can_scope = TRUE
-	SCOPED_IN_ADD_SLOWDOWN_MID
-	zoom_factor = 1.5
 	scope_state = "scope_medium"
 	scope_x_offset = 5
 	scope_y_offset = 14
@@ -1298,8 +1296,6 @@
 	scope_state = "scope_long"
 	scope_x_offset = 5
 	scope_y_offset = 14
-	zoom_factor = 1
-	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_LOW
 	auto_eject_sound = 'sound/f13weapons/garand_ping.ogg'
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
 	gun_sound_properties = list(
@@ -1377,7 +1373,8 @@
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
 
-	zoom_factor = 1.5
+	zoom_factor = 1.6
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_MID
 
 	fire_delay = 0.5
 	can_scope = FALSE
@@ -1461,7 +1458,7 @@
 	can_bayonet = FALSE
 	can_scope = FALSE
 	fire_sound = 'sound/f13weapons/hunting_rifle.ogg'
-	zoom_factor = 2
+	zoom_factor = 2.2
 	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_HIGH
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -1522,7 +1519,6 @@
 	icon_state = "venator_sniper"
 	item_state = "venator_sniper"
 
-	zoom_factor = 2.5
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
@@ -1637,7 +1633,8 @@
 	can_scope = FALSE
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	fire_sound_silenced = 'sound/weapons/Gunshot_large_silenced.ogg'
-	zoom_factor = 0.8
+	zoom_factor = 1
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_LOW
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(RIFLE_LIGHT_VOLUME),
@@ -1767,7 +1764,8 @@
 	automatic = 1
 	zoomable = TRUE
 	fire_sound = 'sound/f13weapons/bozar_fire.ogg'
-	zoom_factor = 1.2
+	zoom_factor = 1.5
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_MID
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
 		SP_VOLUME(RIFLE_LIGHT_VOLUME),
@@ -2032,6 +2030,7 @@
 	semi_auto = TRUE
 	can_scope = FALSE
 	zoom_factor = 1
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_LOW
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	select = 0
 	gun_sound_properties = list(
@@ -2185,6 +2184,7 @@
 	automatic = 1
 	spawnwithmagazine = TRUE
 	zoom_factor = 1
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_LOW
 	can_scope = FALSE
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	gun_sound_properties = list(
@@ -2334,7 +2334,8 @@
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION // obviously
 
 	can_scope = FALSE
-	zoom_factor = 1.2
+	zoom_factor = 1.5
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_MID
 	semi_auto = TRUE
 	fire_sound = 'sound/f13weapons/gauss_rifle.ogg'
 	gun_sound_properties = list(
@@ -2382,7 +2383,8 @@
 
 	is_automatic = TRUE
 	spawnwithmagazine = TRUE
-	zoom_factor = 1.2
+	zoom_factor = 1.5
+	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_LOW
 	can_scope = FALSE
 	gun_sound_properties = list(
 		SP_VARY(FALSE),

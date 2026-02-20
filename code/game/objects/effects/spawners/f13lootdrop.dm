@@ -2199,7 +2199,9 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/advanced_crafting_components/receiver,
 		/obj/item/advanced_crafting_components/assembly,
 		/obj/item/advanced_crafting_components/alloys,
-		/obj/item/gun_upgrade/scope/watchman,
+		/obj/item/gun_upgrade/scope/low,
+		/obj/item/gun_upgrade/scope/mid,
+		/obj/item/gun_upgrade/scope/high,
 		/obj/item/gun_upgrade/trigger/raidertrigger,
 		/obj/item/tool_upgrade/productivity/ergonomic_grip,
 		/obj/item/tool_upgrade/refinement/ported_barrel,
@@ -2218,7 +2220,9 @@ obj/effect/spawner/bundle/f13/combat_rifle
 		/obj/item/advanced_crafting_components/receiver = 2,
 		/obj/item/advanced_crafting_components/assembly = 2,
 		/obj/item/advanced_crafting_components/alloys = 2,
-		/obj/item/gun_upgrade/scope/watchman,
+		/obj/item/gun_upgrade/scope/low,
+		/obj/item/gun_upgrade/scope/mid,
+		/obj/item/gun_upgrade/scope/high,
 		/obj/item/gun_upgrade/trigger/raidertrigger,
 		/obj/item/tool_upgrade/productivity/ergonomic_grip,
 		/obj/item/tool_upgrade/refinement/ported_barrel,
@@ -2350,7 +2354,9 @@ obj/effect/spawner/bundle/f13/combat_rifle
 	lootcount = 1
 	lootdoubles = FALSE
 	loot = list(
-		/obj/item/gun_upgrade/scope/watchman,
+		/obj/item/gun_upgrade/scope/low,
+		/obj/item/gun_upgrade/scope/mid,
+		/obj/item/gun_upgrade/scope/high,
 		/obj/item/gun_upgrade/trigger/raidertrigger,
 		/obj/item/tool_upgrade/productivity/ergonomic_grip,
 		/obj/item/tool_upgrade/refinement/ported_barrel,

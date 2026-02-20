@@ -852,12 +852,16 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	name = "Wasteland Vending Machine - Attachments"
 	icon_state = "generic_idle"
 	prize_list = list(
-		new /datum/data/wasteland_equipment("Old Scope",					/obj/item/gun_upgrade/scope/watchman,							25),
+		new /datum/data/wasteland_equipment("Reflex Sights",				/obj/item/gun_upgrade/scope/low,								50),
+		new /datum/data/wasteland_equipment("ACOG Scope",					/obj/item/gun_upgrade/scope/mid,								100),
+		new /datum/data/wasteland_equipment("Telescopic Sights",			/obj/item/gun_upgrade/scope/mid,								150),
 		new /datum/data/wasteland_equipment("Ergonomic Grip",				/obj/item/tool_upgrade/productivity/ergonomic_grip,				25),
 		new /datum/data/wasteland_equipment("Forged Barrel",				/obj/item/gun_upgrade/barrel/forged,							25)
 		)
 	highpop_list = list(
-		new /datum/data/wasteland_equipment("Old Scope",					/obj/item/gun_upgrade/scope/watchman,							25),
+		new /datum/data/wasteland_equipment("Reflex Sights",				/obj/item/gun_upgrade/scope/low,								50),
+		new /datum/data/wasteland_equipment("ACOG Scope",					/obj/item/gun_upgrade/scope/mid,								100),
+		new /datum/data/wasteland_equipment("Telescopic Sights",			/obj/item/gun_upgrade/scope/mid,								150),
 		new /datum/data/wasteland_equipment("Ergonomic Grip",				/obj/item/tool_upgrade/productivity/ergonomic_grip,				25),
 		new /datum/data/wasteland_equipment("Forged Barrel",				/obj/item/gun_upgrade/barrel/forged,							25)
 		)

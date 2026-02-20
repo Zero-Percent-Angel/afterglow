@@ -66,6 +66,7 @@
 
 #define GUN_UPGRADE_OFFSET "offset" //Constant offset, in degrees
 #define GUN_UPGRADE_ZOOM "zoom"
+#define GUN_UPGRADE_ZOOM_SLOWDOWN "zoom_slowdown"
 
 //boolean
 #define GUN_UPGRADE_SILENCER "silencable"

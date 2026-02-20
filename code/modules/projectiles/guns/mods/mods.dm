@@ -7,7 +7,6 @@
 /obj/item/gun_upgrade/muzzle
 
 /obj/item/gun_upgrade/underbarrel
-
 /obj/item/gun_upgrade/underbarrel/bipod
 	name = "bipod"
 	desc = "A simple set of telescopic poles to keep a weapon stabilized during firing. It greatly reduces recoil when deployed, but also increases the gun\'s weight, making it unwieldy unless braced."

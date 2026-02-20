@@ -392,7 +392,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/garand308 = 3,
 		/obj/item/storage/box/ration/menu_eight = 1,
-		/obj/item/gun_upgrade/scope/watchman = 1,
+		/obj/item/gun_upgrade/scope/mid = 1,
 		/obj/item/binoculars = 1,
 		)
 
@@ -1286,7 +1286,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack_contents = list(
 		/obj/item/ammo_box/a762 = 3,
 		/obj/item/grenade/smokebomb = 1,
-		/obj/item/gun_upgrade/scope/watchman = 1,
+		/obj/item/gun_upgrade/scope/high = 1,
 		/obj/item/storage/box/ration/menu_two = 1,
 		)
 
@@ -1386,7 +1386,7 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	backpack_contents = list(
 		/obj/item/ammo_box/a762 = 3,
 		/obj/item/grenade/smokebomb = 1,
-		/obj/item/gun_upgrade/scope/watchman = 1,
+		/obj/item/gun_upgrade/scope/mid = 1,
 		/obj/item/storage/box/ration/menu_two = 1,
 		)
 
