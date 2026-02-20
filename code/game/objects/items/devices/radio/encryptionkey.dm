@@ -203,7 +203,7 @@
 /obj/item/encryptionkey/headset_town/medical
 	name = "N.T medical radio encryption key"
 	desc = "An encryption key for a radio headset.\
-		\nTo access the N.T channel, use :f.\
+		\nTo access the N.T channel, use :f."
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_TOWN = 1)
 
