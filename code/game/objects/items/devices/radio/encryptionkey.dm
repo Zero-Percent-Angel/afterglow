@@ -204,9 +204,8 @@
 	name = "N.T medical radio encryption key"
 	desc = "An encryption key for a radio headset.\
 		\nTo access the N.T channel, use :f.\
-		\nTo access the N.T medical channel, use :m"
 	icon_state = "cypherkey"
-	channels = list(RADIO_CHANNEL_TOWN = 1, RADIO_CHANNEL_MEDICAL = 1)
+	channels = list(RADIO_CHANNEL_TOWN = 1)
 
 /obj/item/encryptionkey/headset_town/mayor
 	name = "N.T mayor radio encryption key"
@@ -214,7 +213,6 @@
 		\nTo access the N.T channel, use :f.\
 		\nTo access the N.T mayor, use :y.\
 		\nTo access the N.T sheriff, use :l.\
-		\nTo access the N.T medical, use :m.\
 		\nTo access the N.T commerce channel, use :j"
 	icon_state = "cypherkey"
 	channels = list(RADIO_CHANNEL_TOWN = 1, RADIO_CHANNEL_REDWATER = 1, RADIO_CHANNEL_TOWN_COMMERCE = 1, RADIO_CHANNEL_TOWN_MAYOR = 1)
