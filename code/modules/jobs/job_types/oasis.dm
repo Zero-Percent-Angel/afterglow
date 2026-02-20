@@ -47,8 +47,8 @@ Mayor
 	exp_requirements = 750
 
 	outfit = /datum/outfit/job/den/f13mayor
-	access = list(ACCESS_BAR, ACCESS_MAYOR, ACCESS_MEDICAL, ACCESS_SECURITY)
-	minimal_access = list(ACCESS_BAR, ACCESS_MAYOR, ACCESS_MEDICAL, ACCESS_SECURITY)
+	access = list(ACCESS_BAR, ACCESS_MAYOR, ACCESS_CLINIC, ACCESS_OFFICER)
+	minimal_access = list(ACCESS_BAR, ACCESS_MAYOR, ACCESS_CLINIC, ACCESS_OFFICER)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis
@@ -217,8 +217,8 @@ Mayor
 	/datum/outfit/loadout/thegangster
 	)
 
-	access = list(ACCESS_BAR, ACCESS_MEDICAL, ACCESS_SECURITY)
-	minimal_access = list(ACCESS_BAR, ACCESS_MEDICAL, ACCESS_SECURITY)
+	access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_OFFICER)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC, ACCESS_OFFICER)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis
@@ -502,8 +502,8 @@ Mayor
 	selection_color = "#dcba97"
 
 	outfit = /datum/outfit/job/den/f13dendoc
-	access = list(ACCESS_BAR, ACCESS_MEDICAL)
-	minimal_access = list(ACCESS_BAR, ACCESS_MEDICAL)
+	access = list(ACCESS_BAR, ACCESS_CLINIC)
+	minimal_access = list(ACCESS_BAR, ACCESS_CLINIC)
 	matchmaking_allowed = list(
 		/datum/matchmaking_pref/friend = list(
 			/datum/job/oasis
