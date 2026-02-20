@@ -819,7 +819,7 @@
 	custom_materials = list(/datum/material/iron = MATS_STRIPPER)
 
 /obj/item/ammo_box/needle/improvised
-	name = "Strip of AP needle darts"
+	name = "Strip of HN needle darts"
 	ammo_type = /obj/item/ammo_casing/caseless/needle/improvised
 
 
