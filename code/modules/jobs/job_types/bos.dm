@@ -454,8 +454,8 @@ Senior Paladin
 /datum/outfit/job/bos/f13seniorpaladin
 	name =	"Senior Paladin"
 	jobtype =	/datum/job/bos/f13seniorpaladin
-	suit =		/obj/item/clothing/suit/armor/tiered/power_armor/t51b
-	head =		/obj/item/clothing/head/helmet/f13/power_armor/t51b
+	suit =	/obj/item/clothing/suit/armor/tiered/power_armor/t45d
+	head =	/obj/item/clothing/head/helmet/f13/power_armor/t45d
 	accessory =	/obj/item/clothing/accessory/bos/seniorpaladin
 	uniform =	/obj/item/clothing/under/f13/recon
 	mask =		/obj/item/clothing/mask/gas/sechailer
@@ -886,11 +886,11 @@ Senior Knight
 
 /datum/outfit/loadout/sknightc
 	name = "Recon"
+	suit_store = /obj/item/gun/ballistic/automatic/marksman/sniper
 	backpack_contents = list(
-		/obj/item/gun/energy/laser/wattz2k = 1,
-		/obj/item/stock_parts/cell/ammo/mfc = 2,
-		/obj/item/gun/energy/laser/pistol=1,
-		/obj/item/stock_parts/cell/ammo/ec=2,
+		/obj/item/ammo_box/magazine/w308 = 2,
+		/obj/item/gun/ballistic/automatic/pistol/mk23 = 1,
+		/obj/item/ammo_box/magazine/m45/socom = 2,
 		)
 
 /*
