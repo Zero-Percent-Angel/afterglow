@@ -130,7 +130,7 @@
 	melee_damage_lower = 24
 	melee_damage_upper = 55
 	extra_projectiles = 5 //5 projectiles
-	ranged_cooldown_time = 30 //brrrrrrrrrrrrt
+	ranged_cooldown_time = 30 //you need it lil bro...
 	retreat_distance = 5
 	minimum_distance = 5 // SENTRY bot, not run up to your face and magdump you bot
 	attack_verb_simple = "pulverizes"
@@ -198,6 +198,7 @@
 	obj_damage = 300
 	armour_penetration = 0.5 //applies to melee. i forgor.
 	move_to_delay = 4.0 //bit faster
+	ranged_cooldown_time = 40 //you dont...
 	retreat_distance = 1
 	minimum_distance = 2 //run up to your face and magdump you bot
 	environment_smash = ENVIRONMENT_SMASH_RWALLS //wall-obliterator. perish.
