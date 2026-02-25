@@ -698,8 +698,19 @@
 /obj/item/clothing/suit/armor/tiered/light/ncr/trailranger
 	name = "NCR ranger vest"
 	desc = "A quaint little jacket and scarf worn by NCR trail rangers."
-	icon_state = "ncr_ranger"
-	item_state = "ncr_ranger"
+	icon_state = "ncr_trail_ranger"
+	item_state = "ncr_trail_ranger"
+	armor_tokens = list()
+	slowdown = ARMOR_SLOWDOWN_NONE * ARMOR_SLOWDOWN_GLOBAL_MULT
+	custom_price = PRICE_REALLY_EXPENSIVE
+	armor = ARMOR_VALUE_LIGHT_T3
+	tier = 3
+
+/obj/item/clothing/suit/armor/tiered/light/ncr/recon_ranger
+	name = "NCR ranger vest"
+	desc = "A thicker than average duster worn by NCR recon rangers out in the field. It's not heavily armored by any means, but is easy to move around in and provides excellent protection from the harsh desert environment."
+	icon_state = "ncr_recon_ranger"
+	item_state = "ncr_recon_ranger"
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_GLOBAL_MULT
 	custom_price = PRICE_REALLY_EXPENSIVE
