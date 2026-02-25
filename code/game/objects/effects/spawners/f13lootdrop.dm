@@ -347,12 +347,24 @@
 				/obj/item/clothing/suit/armor/tiered/medium/raider/scrapcombat,
 				/obj/item/clothing/suit/armor/tiered/medium/raider/slam,
 				/obj/item/clothing/suit/armor/tiered/light/raider/wastewar,
+				/obj/item/clothing/suit/armor/tiered/light/raider/badlands,
+				/obj/item/clothing/suit/armor/tiered/medium/raider/yankee,
+				/obj/item/clothing/suit/armor/tiered/medium/raider/blastmaster,
 				/obj/item/clothing/suit/armor/tiered/medium/combat/mk2/raider) // da grail
 
 /obj/effect/spawner/lootdrop/f13/armor/randomraiderhead //random raider armor
 	name = "raider boss armor drop"
 	loot = list(
-				/obj/item/clothing/head/helmet/f13/combat/mk2/raider
+				/obj/item/clothing/head/helmet/f13/combat/mk2/raider,
+				/obj/item/clothing/head/helmet/f13/tier2/pre_war_raider,
+				/obj/item/clothing/head/helmet/f13/tier2/metal_mask,
+				/obj/item/clothing/head/helmet/f13/fiend_reinforced,
+				/obj/item/clothing/head/helmet/f13/raider/arclight,
+				/obj/item/clothing/head/helmet/f13/raider/yankee,
+				/obj/item/clothing/head/helmet/f13/motorcycle,
+				/obj/item/clothing/head/helmet/f13/knight/metal,
+				/obj/item/clothing/glasses/sunglasses,
+				/obj/item/clothing/head/helmet/f13/raider/blastmaster
 				)
 
 /obj/effect/spawner/bundle/f13/armor/metal/reinforced
