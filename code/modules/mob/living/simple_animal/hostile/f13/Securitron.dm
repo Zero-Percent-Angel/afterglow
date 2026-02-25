@@ -221,7 +221,7 @@
 	desc = "A pre-war military robot armed with a deadly minigun and covered in thick armor plating. This one's in amazing condition, with power to match."
 	icon_state = "ballisentry"
 	icon_living = "ballisentry"
-	icon_dead = "ballisentry_dead
+	icon_dead = "ballisentry_dead"
 	projectiletype = /obj/item/projectile/bullet/m5mm/simple
 	projectilesound = 'sound/f13weapons/automaticrifle_BAR.ogg'
 	projectile_sound_properties = list(
