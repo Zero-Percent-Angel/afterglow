@@ -204,7 +204,7 @@
 	environment_smash = ENVIRONMENT_SMASH_RWALLS //wall-obliterator. perish.
 	aggro_vision_range = 15
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 //cannot self-harm with it's explosion spam
-	sneak_detection_threshold = EXPERT_CHECK
+	sneak_detection_threshold = HARD_CHECK //perceptive bastard
 	sneak_roll_modifier = DIFFICULTY_CHALLENGE
 	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/chew
 	auto_fire_delay = GUN_AUTOFIRE_DELAY_NORMAL
@@ -247,6 +247,7 @@
 	emp_flags = list() //no emp instakill for you
 	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/chew/strong
 	stat_attack = UNCONSCIOUS //you are dead. notbigsuprise.
+	sneak_detection_threshold = EXPERT_CHECK
 	loot = list(/obj/item/keycard/library)
 
 /mob/living/simple_animal/hostile/securitron/sentrybot/pristine/boss/bullet_act(obj/item/projectile/Proj)
