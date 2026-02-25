@@ -2743,7 +2743,19 @@
 /area/ruin/powered)
 "bhL" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/indestructible/rock,
+/obj/effect/decal/cleanable/cobweb,
+/obj/structure/closet/locker/oldstyle{
+	anchored = 1
+	},
+/obj/item/clothing/glasses/night,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/unique,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/unique,
+/obj/effect/spawner/lootdrop/f13/armor/tier5,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier5,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier5,
+/obj/effect/spawner/lootdrop/f13/medical/vault/equipment,
+/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/ruin/powered)
 "bhT" = (
 /obj/structure/sign/departments/science,
@@ -5938,6 +5950,11 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"cFX" = (
+/obj/structure/lattice,
+/obj/structure/barricade/wooden/planks,
+/turf/closed/indestructible/syndicate,
+/area/ruin/powered)
 "cGh" = (
 /obj/structure/table/wood/poker,
 /obj/item/stack/f13Cash/random/med,
@@ -9620,7 +9637,7 @@
 	},
 /area/f13/enclave)
 "eqT" = (
-/obj/machinery/door/locked/hard/maybe_trapped,
+/obj/machinery/door/locked/easy/maybe_trapped,
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "eqW" = (
@@ -11937,10 +11954,10 @@
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/radiation)
 "fvb" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/mob/living/simple_animal/hostile/securitron/sentrybot/pristine,
-/turf/open/floor/plasteel/dark,
-/area/f13/bunker/bunkereight)
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/mecha_part_fabricator,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/ruin/powered)
 "fvm" = (
 /obj/machinery/porta_turret/f13/turret_9mm/burstfire/raider,
 /turf/open/indestructible/ground/inside/subway,
@@ -16233,10 +16250,12 @@
 	},
 /area/f13/sewer)
 "hlm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/lattice,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/unique,
-/turf/open/floor/plating/tunnel,
+/mob/living/simple_animal/hostile/handy/gutsy{
+	faction = list("hostile")
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "engine"
+	},
 /area/ruin/powered)
 "hlx" = (
 /obj/structure/lattice,
@@ -29606,6 +29625,7 @@
 /area/f13/sewer/powered)
 "nuh" = (
 /obj/machinery/door/airlock/hatch,
+/obj/structure/barricade/wooden/planks,
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "nuj" = (
@@ -30693,6 +30713,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/ash,
 /obj/machinery/door/airlock/hatch,
+/obj/structure/barricade/wooden/planks,
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "nSo" = (
@@ -38284,6 +38305,11 @@
 /obj/machinery/door/airlock/maintenance_hatch,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/vault/medical)
+"rdx" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine,
+/turf/open/floor/plasteel/dark,
+/area/f13/bunker/bunkereight)
 "rdG" = (
 /obj/structure/rack,
 /obj/item/stack/spacecash/c1000,
@@ -45243,6 +45269,14 @@
 "ugN" = (
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/tcoms)
+"ugQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/keycard/library{
+	icon = 'icons/obj/doors/puzzledoor/default.dmi';
+	max_integrity = 60000
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/ruin/powered)
 "uhK" = (
 /obj/structure/table/reinforced,
 /obj/item/paper/fluff/ruins/exp_cloning/log,
@@ -49186,10 +49220,15 @@
 /turf/open/floor/plating/dirt/dark,
 /area/f13/radiation)
 "vPD" = (
-/obj/structure/table,
-/obj/effect/spawner/lootdrop/f13/armor/tier5,
-/turf/open/floor/f13{
-	icon_state = "yellowdirtyfull"
+/mob/living/simple_animal/hostile/handy/assaultron{
+	desc = "A deadly close combat robot developed by RobCo in a vaguely feminine, yet ominous chassis. This one seems sleeker and more dangerous, with a slick red paintjob.";
+	faction = list("hostile");
+	health = 800;
+	name = "redline assaultron";
+	rapid_melee = 2
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "engine"
 	},
 /area/ruin/powered)
 "vPM" = (
@@ -67021,7 +67060,7 @@ bgK
 bgK
 bgK
 bgK
-vBd
+bgK
 vBd
 bgK
 bgK
@@ -67316,14 +67355,14 @@ yhR
 yhR
 yhR
 yhR
-bgK
-yhR
-yhR
-yhR
-yhR
-yhR
-bgK
-bgK
+cNy
+cNy
+cNy
+cNy
+cNy
+cNy
+cNy
+cNy
 bgK
 bgK
 bgK
@@ -67619,12 +67658,12 @@ cNy
 cNy
 cNy
 cNy
-cNy
-cNy
-cNy
-cNy
-cNy
-cNy
+mbw
+mbw
+mbw
+mbw
+mbw
+mbw
 cNy
 cNy
 cNy
@@ -68224,10 +68263,10 @@ mbw
 mbw
 mbw
 mbw
-mbw
-mbw
-mbw
-mbw
+cNy
+cNy
+cNy
+cNy
 mVs
 mbw
 mbw
@@ -68523,13 +68562,13 @@ mbw
 cNy
 cNy
 cNy
-mIB
-bgK
-bgK
-bgK
-mIB
-mIB
 cNy
+cNy
+cNy
+aNw
+fvb
+bhL
+aNw
 cNy
 cNy
 cNy
@@ -68828,10 +68867,10 @@ nwD
 gyW
 gyW
 vPM
-vPM
-bhL
-ksE
+cNy
 nwD
+nwD
+ugQ
 fww
 nwD
 nzg
@@ -69130,10 +69169,10 @@ nwD
 nwD
 nwD
 nwD
-nzg
-nwD
-nwD
-nwD
+aNw
+aNw
+aNw
+aNw
 nwD
 nwD
 nwD
@@ -69430,16 +69469,16 @@ cNy
 qdN
 vnW
 vnW
-kiQ
+ciE
 nwD
 nwD
 qmq
 qdN
-ptB
 nwD
-kiQ
+nwD
+ciE
 uon
-kiQ
+ciE
 cZS
 cNy
 mbw
@@ -69737,7 +69776,7 @@ nwD
 nwD
 nwD
 nwD
-nwD
+ptB
 kiQ
 kiQ
 kiQ
@@ -70522,7 +70561,7 @@ boA
 gRt
 cAT
 kLB
-fvb
+rdx
 boA
 suj
 boA
@@ -71852,7 +71891,7 @@ nwD
 nwD
 nwD
 ciE
-hlm
+kiQ
 wqm
 sJQ
 kiQ
@@ -71860,7 +71899,7 @@ nwD
 qMI
 tDl
 vMA
-qDB
+cFX
 qDB
 qDB
 vIO
@@ -72154,7 +72193,7 @@ nzg
 kiQ
 kiQ
 kiQ
-ciE
+kiQ
 nwD
 qdN
 kiQ
@@ -74840,7 +74879,7 @@ cNy
 cNy
 jGX
 kpM
-dZm
+gds
 mMe
 wxE
 wxE
@@ -76355,7 +76394,7 @@ hGc
 hGc
 hGc
 hGc
-hGc
+hlm
 hGc
 qXd
 dZm
@@ -78469,7 +78508,7 @@ hGc
 bed
 hGc
 hGc
-hGc
+vPD
 qCo
 siv
 dZm
@@ -79068,7 +79107,7 @@ vug
 dZm
 esT
 ris
-hGc
+hlm
 hGc
 hGc
 hGc
@@ -79403,7 +79442,7 @@ aWW
 cNy
 cMP
 nuY
-vPD
+pRC
 xyH
 pRC
 pRC

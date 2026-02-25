@@ -209,14 +209,6 @@
 	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/chew
 	auto_fire_delay = GUN_AUTOFIRE_DELAY_NORMAL
 
-/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/bullet_act(obj/item/projectile/Proj)
-	if(!Proj)
-		CRASH("[src] sentrybot invoked bullet_act() without a projectile")
-	if(prob(10) && health > 1)
-		visible_message(span_danger("\The [src] releases a defensive grenade!"))
-		explosion(get_turf(src),-1,-1,2, flame_range = 4) //perish, mortal - explosion size identical to craftable IED
-	..()
-
 /mob/living/simple_animal/hostile/securitron/sentrybot/pristine/ballistic //gun version.
 	name = "pristine sentry bot"
 	desc = "A pre-war military robot armed with a deadly minigun and covered in thick armor plating. This one's in amazing condition, with power to match."
@@ -248,11 +240,23 @@
 	mob_armor = ARMOR_VALUE_ROBOT_CHEW //tanky. no more ez cheese
 	extra_projectiles = 4
 	melee_attack_cooldown = 1 //rapid melee no longer works. this should.
-	armour_penetration = 0.9 //Punches harder
+	armour_penetration = 0.8 //Punches harder
+	melee_damage_lower = 20
+	melee_damage_upper = 45
 	retreat_distance = 0 //Is going to punch you
 	emp_flags = list() //no emp instakill for you
 	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/chew/strong
 	stat_attack = UNCONSCIOUS //you are dead. notbigsuprise.
+	loot = list(/obj/item/keycard/library)
+
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/boss/bullet_act(obj/item/projectile/Proj)
+	if(!Proj)
+		CRASH("[src] sentrybot invoked bullet_act() without a projectile")
+	if(prob(10) && health > 1)
+		visible_message(span_danger("\The [src] releases a defensive grenade!"))
+		explosion(get_turf(src),-1,-1,2, flame_range = 4) //perish, mortal - explosion size identical to craftable IED
+	..()
+
 
 //Playable Sentrybot
 /mob/living/simple_animal/hostile/securitron/sentrybot/playable

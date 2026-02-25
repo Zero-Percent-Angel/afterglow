@@ -2117,7 +2117,11 @@
 /turf/open/floor/wood_fancy,
 /area/f13/clinic)
 "gv" = (
-/turf/closed/wall/rust,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine,
+/turf/open/floor/f13{
+	icon_state = "bluedirtychess2"
+	},
 /area/f13/building/powered)
 "gw" = (
 /turf/closed/indestructible/rock,
@@ -2660,8 +2664,10 @@
 /turf/open/floor/wood_fancy,
 /area/maintenance/bar)
 "if" = (
-/obj/effect/landmark/poster_spawner/prewar,
-/turf/closed/wall/rust,
+/mob/living/simple_animal/hostile/handy/gutsy/flamer,
+/turf/open/floor/plasteel/f13/vault_floor/blue/side{
+	dir = 4
+	},
 /area/f13/building/powered)
 "ig" = (
 /obj/structure/simple_door/bunker/glass,
@@ -3908,11 +3914,8 @@
 	},
 /area/f13/building/powered)
 "ma" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/securitron,
-/turf/open/floor/plasteel/f13/vault_floor/blue/side{
-	dir = 8
-	},
+/obj/effect/landmark/poster_spawner/prewar,
+/turf/closed/wall/rust,
 /area/f13/building/powered)
 "mc" = (
 /obj/structure/frame/machine,
@@ -4462,8 +4465,10 @@
 /turf/open/floor/wood_fancy,
 /area/f13/clinic)
 "nR" = (
-/obj/effect/spawner/structure/window/reinforced/tinted/electrochromatic,
 /obj/structure/grille,
+/obj/structure/window/fulltile/store{
+	icon_state = "storewindowtop"
+	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
 "nS" = (
@@ -5431,9 +5436,6 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/securitron/sentrybot/pristine{
-	faction = list("raider")
-	},
 /turf/open/floor/carpet/purple,
 /area/f13/building/powered)
 "qR" = (
@@ -11336,12 +11338,7 @@
 	},
 /area/f13/building/powered)
 "Ik" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/ballistic{
-	faction = list("raider")
-	},
-/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
+/turf/closed/wall/rust,
 /area/f13/building/powered)
 "Il" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11527,7 +11524,7 @@
 	},
 /area/f13/building/powered)
 "IP" = (
-/mob/living/simple_animal/hostile/securitron/sentrybot,
+/mob/living/simple_animal/hostile/securitron,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -12644,10 +12641,12 @@
 	},
 /area/f13/building/powered)
 "Mp" = (
-/mob/living/simple_animal/hostile/handy/gutsy/flamer,
-/turf/open/floor/plasteel/f13/vault_floor/blue/side{
-	dir = 4
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine{
+	faction = list("raider")
 	},
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
 "Mq" = (
 /obj/structure/window/fulltile/store{
@@ -13430,6 +13429,14 @@
 	icon_state = "darkrusty";
 	name = "dirty floor"
 	},
+/area/f13/building/powered)
+"OQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/ballistic{
+	faction = list("raider")
+	},
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
 "OR" = (
 /obj/structure/lattice/catwalk,
@@ -16696,6 +16703,13 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/m)
+"YL" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/securitron,
+/turf/open/floor/plasteel/f13/vault_floor/blue/side{
+	dir = 8
+	},
+/area/f13/building/powered)
 "YN" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/small{
@@ -16966,14 +16980,6 @@
 /obj/item/clothing/head/f13/enclave/peacekeeper,
 /obj/effect/decal/remains/human,
 /turf/open/floor/carpet/royalblue,
-/area/f13/building/powered)
-"ZI" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/securitron/sentrybot/pristine{
-	faction = list("raider")
-	},
-/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
 "ZK" = (
 /obj/effect/spawner/lootdrop/f13/advcrafting,
@@ -90422,8 +90428,8 @@ oJ
 xD
 tm
 fE
-ZI
-Ik
+Mp
+OQ
 yy
 eB
 tm
@@ -94339,8 +94345,8 @@ ht
 tm
 UO
 UO
-gv
-if
+Ik
+ma
 gj
 UO
 fu
@@ -94642,7 +94648,7 @@ tm
 wI
 wI
 tm
-gv
+Ik
 gj
 UO
 vp
@@ -94944,7 +94950,7 @@ tm
 Cp
 VN
 tm
-gv
+Ik
 gj
 UO
 wr
@@ -95246,7 +95252,7 @@ tm
 sS
 uX
 tm
-gv
+Ik
 Vq
 Vq
 tm
@@ -95548,9 +95554,9 @@ tm
 kv
 uX
 tm
-if
+ma
 UO
-UO
+gv
 UO
 UO
 UO
@@ -95850,7 +95856,7 @@ tm
 Da
 uX
 tm
-gv
+Ik
 qM
 Hg
 Es
@@ -96152,7 +96158,7 @@ tm
 Cp
 dI
 tm
-gv
+Ik
 cI
 vP
 fu
@@ -96454,12 +96460,12 @@ tm
 NV
 uX
 tm
-gv
+Ik
 Ra
 cI
 cI
 Nn
-gv
+Ik
 tm
 tm
 tm
@@ -96756,10 +96762,10 @@ tm
 Cp
 YW
 tm
-gv
-gv
-gv
-gv
+Ik
+Ik
+Ik
+Ik
 FD
 tm
 PJ
@@ -97059,7 +97065,7 @@ Cp
 uX
 tm
 tm
-gv
+Ik
 CB
 NZ
 cI
@@ -98269,7 +98275,7 @@ mv
 sS
 ml
 rX
-Mp
+if
 nH
 yv
 DM
@@ -98567,7 +98573,7 @@ tm
 Xy
 RP
 NX
-ma
+YL
 UO
 NX
 NX
