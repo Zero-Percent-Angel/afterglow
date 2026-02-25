@@ -264,7 +264,9 @@
 /obj/effect/decal/cleanable/ash/snappop_phoenix,
 /obj/item/cigbutt/cigarbutt,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew,
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/ballistic{
+	faction = list("raider")
+	},
 /turf/open/floor/carpet/purple,
 /area/f13/building/powered)
 "aM" = (
@@ -2115,11 +2117,7 @@
 /turf/open/floor/wood_fancy,
 /area/f13/clinic)
 "gv" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb,
-/turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
-	},
+/turf/closed/wall/rust,
 /area/f13/building/powered)
 "gw" = (
 /turf/closed/indestructible/rock,
@@ -2662,10 +2660,8 @@
 /turf/open/floor/wood_fancy,
 /area/maintenance/bar)
 "if" = (
-/mob/living/simple_animal/hostile/securitron/nsb,
-/turf/open/floor/plasteel/f13/vault_floor/blue/side{
-	dir = 8
-	},
+/obj/effect/landmark/poster_spawner/prewar,
+/turf/closed/wall/rust,
 /area/f13/building/powered)
 "ig" = (
 /obj/structure/simple_door/bunker/glass,
@@ -3913,8 +3909,10 @@
 /area/f13/building/powered)
 "ma" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb,
-/turf/open/floor/carpet/purple,
+/mob/living/simple_animal/hostile/securitron,
+/turf/open/floor/plasteel/f13/vault_floor/blue/side{
+	dir = 8
+	},
 /area/f13/building/powered)
 "mc" = (
 /obj/structure/frame/machine,
@@ -4420,7 +4418,6 @@
 /obj/machinery/light/broken{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/securitron/nsb,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 4
 	},
@@ -5434,6 +5431,9 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine{
+	faction = list("raider")
+	},
 /turf/open/floor/carpet/purple,
 /area/f13/building/powered)
 "qR" = (
@@ -7848,7 +7848,7 @@
 /turf/closed/wall/f13/wood/interior,
 /area/f13/clinic)
 "xO" = (
-/mob/living/simple_animal/hostile/securitron/nsb,
+/mob/living/simple_animal/hostile/handy/gutsy/flamer,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side,
 /area/f13/building/powered)
 "xP" = (
@@ -9243,7 +9243,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong,
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
 "Ce" = (
@@ -9588,7 +9587,7 @@
 /area/f13/legioncamp)
 "Da" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/securitron/sentrybot/suicide,
+/mob/living/simple_animal/hostile/securitron/sentrybot,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 1
 	},
@@ -11337,11 +11336,12 @@
 	},
 /area/f13/building/powered)
 "Ik" = (
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/f13{
-	icon_state = "bluedirtychess2"
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/ballistic{
+	faction = list("raider")
 	},
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
 "Il" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11527,7 +11527,7 @@
 	},
 /area/f13/building/powered)
 "IP" = (
-/mob/living/simple_animal/hostile/securitron/nsb,
+/mob/living/simple_animal/hostile/securitron/sentrybot,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
@@ -11995,6 +11995,7 @@
 /area/f13/building/abandoned/l)
 "Kn" = (
 /obj/item/stack/cable_coil/cut,
+/mob/living/simple_animal/hostile/securitron,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
 	dir = 8
 	},
@@ -12643,10 +12644,9 @@
 	},
 /area/f13/building/powered)
 "Mp" = (
-/mob/living/simple_animal/hostile/securitron/nsb,
-/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/handy/gutsy/flamer,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
-	dir = 8
+	dir = 4
 	},
 /area/f13/building/powered)
 "Mq" = (
@@ -16966,6 +16966,14 @@
 /obj/item/clothing/head/f13/enclave/peacekeeper,
 /obj/effect/decal/remains/human,
 /turf/open/floor/carpet/royalblue,
+/area/f13/building/powered)
+"ZI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine{
+	faction = list("raider")
+	},
+/turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
 "ZK" = (
 /obj/effect/spawner/lootdrop/f13/advcrafting,
@@ -90414,8 +90422,8 @@ oJ
 xD
 tm
 fE
-sp
-sp
+ZI
+Ik
 yy
 eB
 tm
@@ -94331,10 +94339,10 @@ ht
 tm
 UO
 UO
-tm
-mr
-gj
 gv
+if
+gj
+UO
 fu
 cI
 UO
@@ -94634,7 +94642,7 @@ tm
 wI
 wI
 tm
-tm
+gv
 gj
 UO
 vp
@@ -94936,7 +94944,7 @@ tm
 Cp
 VN
 tm
-tm
+gv
 gj
 UO
 wr
@@ -95238,7 +95246,7 @@ tm
 sS
 uX
 tm
-tm
+gv
 Vq
 Vq
 tm
@@ -95540,11 +95548,11 @@ tm
 kv
 uX
 tm
-mr
+if
 UO
 UO
 UO
-Ik
+UO
 UO
 tm
 qr
@@ -95842,7 +95850,7 @@ tm
 Da
 uX
 tm
-tm
+gv
 qM
 Hg
 Es
@@ -96144,8 +96152,8 @@ tm
 Cp
 dI
 tm
-tm
-ma
+gv
+cI
 vP
 fu
 UO
@@ -96446,12 +96454,12 @@ tm
 NV
 uX
 tm
-tm
+gv
 Ra
 cI
 cI
 Nn
-tm
+gv
 tm
 tm
 tm
@@ -96748,10 +96756,10 @@ tm
 Cp
 YW
 tm
-tm
-tm
-tm
-tm
+gv
+gv
+gv
+gv
 FD
 tm
 PJ
@@ -97051,7 +97059,7 @@ Cp
 uX
 tm
 tm
-tm
+gv
 CB
 NZ
 cI
@@ -98261,7 +98269,7 @@ mv
 sS
 ml
 rX
-rX
+Mp
 nH
 yv
 DM
@@ -98559,15 +98567,15 @@ tm
 Xy
 RP
 NX
-gy
+ma
 UO
-if
+NX
 NX
 NX
 rC
 Kn
 gy
-Mp
+gy
 UO
 UN
 Rz

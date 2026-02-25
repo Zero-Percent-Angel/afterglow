@@ -11937,19 +11937,10 @@
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/radiation)
 "fvb" = (
-/obj/item/shard,
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot{
-	auto_fire_delay = 1;
-	color = "#FFCCCB";
-	desc = "A sentry bot armed with a modified breacher shotgun and covered in thick armor plating, this one has ESC-2403 stamped onto it's chestplate and looks alot tougher than your average sentry bot.";
-	extra_projectiles = 2;
-	faction = list("hostile");
-	health = 1000;
-	name = "ESC-2400";
-	projectiletype = /obj/item/projectile/bullet/incendiary/shotgun
-	},
-/turf/open/floor/f13,
-/area/ruin/powered)
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine,
+/turf/open/floor/plasteel/dark,
+/area/f13/bunker/bunkereight)
 "fvm" = (
 /obj/machinery/porta_turret/f13/turret_9mm/burstfire/raider,
 /turf/open/indestructible/ground/inside/subway,
@@ -31493,15 +31484,8 @@
 /area/f13/sewer)
 "ojV" = (
 /obj/item/shard,
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot{
-	auto_fire_delay = 1;
-	color = "#FFCCCB";
-	desc = "A sentry bot armed with a modified breacher shotgun and covered in thick armor plating, this one has ESC-2403 stamped onto it's chestplate and looks alot tougher than your average sentry bot.";
-	extra_projectiles = 2;
-	faction = list("hostile");
-	health = 1000;
-	name = "ESC-2401";
-	projectiletype = /obj/item/projectile/bullet/incendiary/shotgun
+/mob/living/simple_animal/hostile/securitron/sentrybot{
+	faction = list("hostile")
 	},
 /turf/open/floor/f13,
 /area/ruin/powered)
@@ -38236,7 +38220,6 @@
 	pixel_x = -33
 	},
 /obj/structure/table,
-/obj/item/gun/ballistic/automatic/type93/worn,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
 "rcp" = (
@@ -40772,12 +40755,7 @@
 "sip" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/robot_debris/limb,
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong{
-	aggro_vision_range = 16;
-	faction = list("hostile");
-	field_of_vision_type = 360;
-	vision_range = 16
-	},
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/boss,
 /turf/open/water,
 /area/ruin/powered)
 "siv" = (
@@ -41483,17 +41461,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault/reactor)
 "syy" = (
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot{
-	auto_fire_delay = 1;
-	color = "#FFCCCB";
-	desc = "A sentry bot armed with a modified breacher shotgun and covered in thick armor plating, this one has ESC-2403 stamped onto it's chestplate and looks alot tougher than your average sentry bot.";
-	extra_projectiles = 2;
-	faction = list("hostile");
-	health = 1000;
-	name = "ESC-2403";
-	projectiletype = /obj/item/projectile/bullet/incendiary/shotgun
-	},
 /obj/item/shard,
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine{
+	faction = list("hostile")
+	},
 /turf/open/floor/f13,
 /area/ruin/powered)
 "syE" = (
@@ -42865,15 +42836,8 @@
 /area/f13/enclave)
 "tfd" = (
 /obj/item/shard,
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot{
-	auto_fire_delay = 1;
-	color = "#FFCCCB";
-	desc = "A sentry bot armed with a modified breacher shotgun and covered in thick armor plating, this one has ESC-2403 stamped onto it's chestplate and looks alot tougher than your average sentry bot.";
-	extra_projectiles = 2;
-	faction = list("hostile");
-	health = 1000;
-	name = "ESC-2402";
-	projectiletype = /obj/item/projectile/bullet/incendiary/shotgun
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/ballistic{
+	faction = list("hostile")
 	},
 /turf/open/floor/f13,
 /area/ruin/powered)
@@ -43723,9 +43687,7 @@
 /obj/effect/decal/waste{
 	icon_state = "goo8"
 	},
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew{
-	emp_flags = list()
-	},
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/ballistic,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
 	},
@@ -70035,7 +69997,7 @@ dZm
 lwy
 cNy
 cNy
-fvb
+ojV
 cNy
 cNy
 cNy
@@ -70560,7 +70522,7 @@ boA
 gRt
 cAT
 kLB
-pQc
+fvb
 boA
 suj
 boA
