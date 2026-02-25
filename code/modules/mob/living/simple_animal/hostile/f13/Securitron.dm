@@ -241,7 +241,7 @@
 	desc = "An oddly scorched pre-war military robot armed with a deadly gatling laser firing high-penetration experimental lasers and covered in thick armor plating, the name Big Chew-Chew scratched onto it's front armour crudely, highlighted by small bits of white paint. There seems to be an odd pack on the monstrosity of a sentrie's back, a chute at the bottom of it - there's the most scorch-marks on the robot here, so it's safe to assume this robot is capable of explosions. Better watch out!"
 	icon_state = "sentrybotchew"
 	icon_living = "sentrybotchew"
-	icon_dead = "sentrybotchew_dead
+	icon_dead = "sentrybotchew_dead"
 	health = 1500 //more HP than its smaller brother
 	maxHealth = 1500
 	mob_armor = ARMOR_VALUE_ROBOT_CHEW //tanky. no more ez cheese
