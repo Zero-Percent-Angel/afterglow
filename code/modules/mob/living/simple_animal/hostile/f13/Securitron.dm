@@ -127,8 +127,9 @@
 /mob/living/simple_animal/hostile/securitron/sentrybot
 	name = "sentry bot"
 	desc = "A pre-war military robot armed with a deadly gatling laser and covered in thick armor plating."
-	icon_state = "sentrybot"
-	icon_living = "sentrybot"
+	icon = 'icons/fallout/mobs/robots/sentry.dmi'
+	icon_state = "sentrybotold"
+	icon_living = "sentrybotold"
 	icon_dead = "sentrybot_dead"
 	mob_armor = ARMOR_VALUE_ROBOT_SECURITY
 	maxHealth = 150
@@ -196,6 +197,9 @@
 /mob/living/simple_animal/hostile/securitron/sentrybot/chew //Made it more like an old sentrybot. None of this new sentrybot shit.
 	name = "lil' chew-chew"
 	desc = "An oddly scorched pre-war military robot armed with a deadly gatling laser and covered in thick, oddly blue armor plating, the name Lil' Chew-Chew scratched onto it's front armour crudely, highlighted by small bits of white paint. There seems to be an odd pack on the monstrosity of a sentrie's back, a chute at the bottom of it - there's the most scorch-marks on the robot here, so it's safe to assume this robot is capable of explosions. Better watch out!"
+	icon_state = "sentrybot"
+	icon_living = "sentrybot"
+	icon_dead = "sentrybot_dead"
 	extra_projectiles = 6
 	health = 800
 	maxHealth = 800 //chomk
@@ -205,7 +209,6 @@
 	retreat_distance = 1
 	minimum_distance = 2 //run up to your face and magdump you bot
 	environment_smash = ENVIRONMENT_SMASH_RWALLS //wall-obliterator. perish.
-	color = "#75FFE2"
 	aggro_vision_range = 15
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 //cannot self-harm with it's explosion spam
 	sneak_detection_threshold = EXPERT_CHECK
