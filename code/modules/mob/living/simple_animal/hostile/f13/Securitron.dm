@@ -246,9 +246,9 @@
 	maxHealth = 1500
 	mob_armor = ARMOR_VALUE_ROBOT_CHEW //tanky. no more ez cheese
 	extra_projectiles = 4
-	armour_penetration = 0.8 //Punches harder
+	melee_attack_cooldown = 1 //rapid melee no longer works. this should.
+	armour_penetration = 0.9 //Punches harder
 	retreat_distance = 0 //Is going to punch you
-	rapid_melee = 2 //Punches faster
 	emp_flags = list() //no emp instakill for you
 	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/chew/strong
 	stat_attack = UNCONSCIOUS //you are dead. notbigsuprise.
