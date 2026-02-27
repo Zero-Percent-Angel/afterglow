@@ -760,7 +760,7 @@ Mayor
 
 datum/outfit/loadout/lifeguard
 	name = "Lifeguard"
-	glases = /obj/item/clothing/glasses/sunglasses
+	glasses = /obj/item/clothing/glasses/sunglasses
 	shoes = /obj/item/clothing/shoes/f13/swimfins
 	backpack_contents = list(
 		/obj/item/toy/poolnoodle = 1,

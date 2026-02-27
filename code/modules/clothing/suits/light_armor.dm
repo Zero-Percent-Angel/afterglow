@@ -178,6 +178,8 @@
 	armor = ARMOR_VALUE_LIGHT
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T2, ARMOR_MODIFIER_UP_DT_T1)
 	custom_price = PRICE_REALLY_EXPENSIVE
+	mob_overlay_icon = null
+	icon = 'icons/obj/clothing/suits.dmi'
 
 /obj/item/clothing/suit/armor/tiered/hooded/light/cloak/Initialize()
 	/// make sure the parents work first for this, child lists take priority
