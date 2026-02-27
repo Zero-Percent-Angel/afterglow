@@ -756,6 +756,19 @@ Mayor
 		/obj/item/reagent_containers/food/drinks/flask/survival = 1,
 	)
 
+datum/outfit/loadout/lifeguard
+	name = "Lifeguard"
+	glases = /obj/item/clothing/glasses/sunglasses
+	shoes = /obj/item/clothing/shoes/f13/swimfins
+	backpack_contents = list(
+		/obj/item/toy/poolnoodle = 1,
+		/obj/item/storage/firstaid/ancient = 1,
+		/obj/item/smelling_salts = 1,
+		/obj/item/storage/pill_bottle/chem_tin/buffout = 1,
+		/obj/item/storage/fancy/rollingpapers/makeshift = 1,
+		/obj/item/reagent_containers/food/drinks/flask/survival = 1,
+
+
 /*----------------------------------------------------------------
 --							Detective							--
 ----------------------------------------------------------------*/
