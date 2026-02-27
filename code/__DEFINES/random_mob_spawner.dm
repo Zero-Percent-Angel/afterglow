@@ -861,14 +861,14 @@ GLOBAL_LIST_EMPTY(random_mob_nest_spawner_datums)
 	mob_list_medium = list(
 		/mob/living/simple_animal/hostile/handy/protectron = 10,
 		/mob/living/simple_animal/hostile/securitron = 3,
-		/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot = 1
+		/mob/living/simple_animal/hostile/securitron/sentrybot/pristine = 1
 		)
 	num_mobs_to_spawn_hard = 2
 	mob_respawn_time_hard = MOB_SPAWNER_TIME_DEFAULT
 	mob_list_hard = list(
 		/mob/living/simple_animal/hostile/handy/robobrain = 10,
 		/mob/living/simple_animal/hostile/securitron = 5,
-		/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot = 5,
+		/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/ballistic = 5,
 		/mob/living/simple_animal/hostile/securitron/sentrybot = 4
 		)
 

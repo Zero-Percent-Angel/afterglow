@@ -914,6 +914,11 @@
 /obj/item/storage/trash_stack,
 /turf/open/floor/plasteel/f13/vault_floor/red,
 /area/ruin/powered)
+"asO" = (
+/obj/effect/decal/cleanable/ash,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "atf" = (
 /obj/structure/reagent_dispensers/barrel/two,
 /turf/open/indestructible/ground/inside/mountain,
@@ -1776,6 +1781,10 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
+"aLW" = (
+/obj/item/mine/stun,
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "aMb" = (
 /obj/item/ammo_casing/spent{
 	dir = 1;
@@ -2358,6 +2367,7 @@
 /area/f13/vault/medical/breakroom)
 "aXT" = (
 /obj/effect/decal/cleanable/cobweb,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "aYb" = (
@@ -2743,7 +2753,19 @@
 /area/ruin/powered)
 "bhL" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/closed/indestructible/rock,
+/obj/structure/closet/locker/oldstyle{
+	anchored = 1
+	},
+/obj/item/clothing/glasses/night,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/unique,
+/obj/effect/spawner/lootdrop/f13/armor/tier5,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier5,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier5,
+/obj/effect/spawner/lootdrop/f13/medical/vault/equipment,
+/obj/effect/spawner/lootdrop/f13/medical/vault/meds,
+/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh,
+/obj/item/storage/box/rndboards,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/ruin/powered)
 "bhT" = (
 /obj/structure/sign/departments/science,
@@ -4428,6 +4450,13 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/bunker/bunkerfive)
+"bWl" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/handy/gutsy/flamer{
+	faction = list("hostile")
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "bWo" = (
 /obj/structure/barricade/train{
 	dir = 1
@@ -5938,6 +5967,15 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
+"cFX" = (
+/obj/structure/lattice,
+/obj/structure/barricade/wooden/planks,
+/obj/structure/sign/warning{
+	layer = 5;
+	desc = "The sign reads 'WARNING! Restricted area! Entry may result in death!'. There's probably something deadlier than normal beyond the door..."
+	},
+/turf/closed/indestructible/syndicate,
+/area/ruin/powered)
 "cGh" = (
 /obj/structure/table/wood/poker,
 /obj/item/stack/f13Cash/random/med,
@@ -8499,7 +8537,7 @@
 /area/f13/vault/diner)
 "dNY" = (
 /obj/machinery/door/password{
-	difficulty = 45
+	difficulty = 35
 	},
 /turf/open/floor/f13{
 	icon_state = "purplefull"
@@ -9598,6 +9636,14 @@
 	icon_state = "yellowsiding"
 	},
 /area/ruin/powered)
+"eqp" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "eqv" = (
 /obj/structure/lattice,
 /obj/effect/decal/cleanable/generic{
@@ -9620,7 +9666,7 @@
 	},
 /area/f13/enclave)
 "eqT" = (
-/obj/machinery/door/locked/hard/maybe_trapped,
+/obj/machinery/door/locked/easy/maybe_trapped,
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "eqW" = (
@@ -11937,18 +11983,10 @@
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/radiation)
 "fvb" = (
-/obj/item/shard,
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot{
-	auto_fire_delay = 1;
-	color = "#FFCCCB";
-	desc = "A sentry bot armed with a modified breacher shotgun and covered in thick armor plating, this one has ESC-2403 stamped onto it's chestplate and looks alot tougher than your average sentry bot.";
-	extra_projectiles = 2;
-	faction = list("hostile");
-	health = 1000;
-	name = "ESC-2400";
-	projectiletype = /obj/item/projectile/bullet/incendiary/shotgun
-	},
-/turf/open/floor/f13,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/mecha_part_fabricator,
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/ruin/powered)
 "fvm" = (
 /obj/machinery/porta_turret/f13/turret_9mm/burstfire/raider,
@@ -12050,6 +12088,11 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/sewer)
+"fxo" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/mine/stun,
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "fxr" = (
 /obj/structure/table/wood,
 /obj/item/restraints/handcuffs,
@@ -12084,6 +12127,13 @@
 /obj/structure/wreck/trash/four_barrels,
 /turf/open/floor/plasteel/f13/vault_floor/yellow,
 /area/f13/sewer)
+"fxU" = (
+/obj/effect/decal/cleanable/blood/gibs/body,
+/obj/effect/decal/remains/human{
+	layer = 5
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "fxZ" = (
 /obj/structure/destructible/tribal_torch/lit{
 	pixel_y = 18
@@ -12293,6 +12343,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "fBO" = (
@@ -12516,6 +12567,14 @@
 	},
 /turf/open/floor/plating/tunnel,
 /area/f13/enclave)
+"fHc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/trash_stack{
+	icon_state = "Junk_9"
+	},
+/obj/structure/lattice,
+/turf/open/floor/plating/tunnel,
+/area/ruin/powered)
 "fHz" = (
 /obj/structure/lattice,
 /obj/effect/decal/cleanable/dirt,
@@ -12587,6 +12646,13 @@
 /obj/effect/landmark/start/f13/usscientist,
 /turf/open/floor/plating/tunnel,
 /area/f13/enclave)
+"fJa" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "fJb" = (
 /obj/structure/destructible/tribal_torch/lit,
 /obj/effect/decal/cleanable/dirt,
@@ -14739,6 +14805,13 @@
 "gGV" = (
 /turf/closed/indestructible/f13vaultrusted,
 /area/f13/enclave)
+"gGZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/oil{
+	icon_state = "floor5"
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "gHc" = (
 /obj/structure/reagent_dispensers/barrel/explosive,
 /turf/open/floor/plasteel/f13/vault_floor/yellow{
@@ -16242,10 +16315,12 @@
 	},
 /area/f13/sewer)
 "hlm" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/lattice,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/unique,
-/turf/open/floor/plating/tunnel,
+/mob/living/simple_animal/hostile/handy/gutsy{
+	faction = list("hostile")
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "engine"
+	},
 /area/ruin/powered)
 "hlx" = (
 /obj/structure/lattice,
@@ -16282,6 +16357,14 @@
 /obj/machinery/telecomms/server/presets/security,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/tcoms)
+"hmn" = (
+/obj/effect/decal/cleanable/oil{
+	icon_state = "floor6";
+	pixel_y = 9;
+	pixel_x = -10
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "hmo" = (
 /obj/structure/closet/wardrobe/botanist,
 /obj/item/reagent_containers/glass/bucket/plastic,
@@ -16374,6 +16457,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/f13/bunker/bunkereight)
+"hnz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/lattice,
+/obj/structure/wreck/trash/three_barrels,
+/turf/open/floor/plating/tunnel,
+/area/ruin/powered)
 "hnE" = (
 /obj/structure/bed/mattress{
 	icon_state = "mattress4"
@@ -20102,6 +20191,12 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/dark,
 /area/f13/bunker/bunkertwo)
+"jgO" = (
+/obj/structure/wreck/trash/machinepiletwo,
+/obj/structure/lattice,
+/obj/effect/decal/cleanable/cobweb,
+/turf/open/floor/plating/tunnel,
+/area/ruin/powered)
 "jgS" = (
 /obj/structure/fence,
 /obj/effect/overlay/junk/curtain,
@@ -22129,6 +22224,12 @@
 /mob/living/simple_animal/hostile/raider/junker,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
+"kha" = (
+/obj/effect/decal/cleanable/oil{
+	pixel_x = -8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "khv" = (
 /obj/effect/turf_decal/box,
 /obj/effect/decal/cleanable/dirt{
@@ -26249,6 +26350,15 @@
 	},
 /turf/open/floor/wood_mosaic,
 /area/f13/vault/diner)
+"lTl" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/lattice,
+/obj/item/mine/shrapnel,
+/turf/open/floor/plating/tunnel,
+/area/ruin/powered)
 "lTn" = (
 /obj/machinery/processor,
 /obj/effect/decal/cleanable/dirt,
@@ -29615,6 +29725,7 @@
 /area/f13/sewer/powered)
 "nuh" = (
 /obj/machinery/door/airlock/hatch,
+/obj/structure/barricade/wooden/planks,
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "nuj" = (
@@ -30702,6 +30813,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/ash,
 /obj/machinery/door/airlock/hatch,
+/obj/structure/barricade/wooden/planks,
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "nSo" = (
@@ -31493,15 +31605,8 @@
 /area/f13/sewer)
 "ojV" = (
 /obj/item/shard,
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot{
-	auto_fire_delay = 1;
-	color = "#FFCCCB";
-	desc = "A sentry bot armed with a modified breacher shotgun and covered in thick armor plating, this one has ESC-2403 stamped onto it's chestplate and looks alot tougher than your average sentry bot.";
-	extra_projectiles = 2;
-	faction = list("hostile");
-	health = 1000;
-	name = "ESC-2401";
-	projectiletype = /obj/item/projectile/bullet/incendiary/shotgun
+/mob/living/simple_animal/hostile/securitron/sentrybot{
+	faction = list("hostile")
 	},
 /turf/open/floor/f13,
 /area/ruin/powered)
@@ -31918,6 +32023,10 @@
 	icon_state = "reddirtyfull"
 	},
 /area/f13/sewer/powered)
+"osD" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "osF" = (
 /obj/structure/car/rubbish3,
 /turf/open/indestructible/ground/inside/subway,
@@ -32435,6 +32544,11 @@
 "oFn" = (
 /obj/effect/spawner/structure/window,
 /turf/open/floor/f13,
+/area/ruin/powered)
+"oFu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/plasteel/dark,
 /area/ruin/powered)
 "oFz" = (
 /obj/structure/simple_door/room/dirty,
@@ -35668,6 +35782,14 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker/bighornbunker)
+"qbK" = (
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#228B22"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "qbL" = (
 /obj/machinery/processor/chopping_block,
 /turf/open/indestructible/ground/inside/subway,
@@ -36556,6 +36678,13 @@
 	name = "dirty floor"
 	},
 /area/f13/sewer/powered)
+"qtj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/remains/human{
+	layer = 5
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "qtn" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -36770,7 +36899,6 @@
 /obj/structure/table,
 /obj/item/bodypart/head/robot,
 /obj/item/bodypart/chest/robot,
-/obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh,
 /turf/open/floor/f13{
 	icon_state = "yellowdirtyfull"
 	},
@@ -38236,7 +38364,6 @@
 	pixel_x = -33
 	},
 /obj/structure/table,
-/obj/item/gun/ballistic/automatic/type93/worn,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/caves)
 "rcp" = (
@@ -38301,6 +38428,11 @@
 /obj/machinery/door/airlock/maintenance_hatch,
 /turf/open/floor/plasteel/f13/vault_floor/dark/darksolid,
 /area/f13/vault/medical)
+"rdx" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine,
+/turf/open/floor/plasteel/dark,
+/area/f13/bunker/bunkereight)
 "rdG" = (
 /obj/structure/rack,
 /obj/item/stack/spacecash/c1000,
@@ -38629,6 +38761,17 @@
 	icon_state = "tunnelchess2"
 	},
 /area/f13/bunker/bunkerthree)
+"rmu" = (
+/obj/machinery/light{
+	dir = 4;
+	light_color = "#228B22"
+	},
+/obj/structure/lattice,
+/obj/effect/decal/cleanable/cobweb{
+	icon_state = "cobweb2"
+	},
+/turf/open/floor/plating/tunnel,
+/area/ruin/powered)
 "rmB" = (
 /turf/closed/mineral/ash_rock,
 /area/f13/caves)
@@ -39920,6 +40063,11 @@
 /obj/machinery/telecomms/receiver/preset_right,
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/tcoms)
+"rOQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/ash/large,
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "rPa" = (
 /obj/effect/decal/waste{
 	pixel_x = -4;
@@ -40772,11 +40920,11 @@
 "sip" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/robot_debris/limb,
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong{
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/boss{
 	aggro_vision_range = 16;
-	faction = list("hostile");
 	field_of_vision_type = 360;
-	vision_range = 16
+	vision_range = 16;
+	faction = list("hostile")
 	},
 /turf/open/water,
 /area/ruin/powered)
@@ -41483,17 +41631,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/plating,
 /area/f13/vault/reactor)
 "syy" = (
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot{
-	auto_fire_delay = 1;
-	color = "#FFCCCB";
-	desc = "A sentry bot armed with a modified breacher shotgun and covered in thick armor plating, this one has ESC-2403 stamped onto it's chestplate and looks alot tougher than your average sentry bot.";
-	extra_projectiles = 2;
-	faction = list("hostile");
-	health = 1000;
-	name = "ESC-2403";
-	projectiletype = /obj/item/projectile/bullet/incendiary/shotgun
-	},
 /obj/item/shard,
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine{
+	faction = list("hostile")
+	},
 /turf/open/floor/f13,
 /area/ruin/powered)
 "syE" = (
@@ -41654,6 +41795,13 @@
 /obj/effect/spawner/lootdrop/f13/foodspawner,
 /turf/open/floor/plasteel/dark,
 /area/f13/caves)
+"sCv" = (
+/obj/effect/decal/cleanable/oil{
+	icon_state = "floor6";
+	pixel_x = -28
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "sCw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/rack/shelf_metal{
@@ -41865,13 +42013,6 @@
 /mob/living/simple_animal/hostile/deathclaw,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
-"sGQ" = (
-/obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/hostile/radroach{
-	faction = list("raider")
-	},
-/turf/open/floor/mineral/plastitanium,
-/area/ruin/powered)
 "sGS" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/ghoul/soldier,
@@ -41886,6 +42027,11 @@
 "sGX" = (
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/sewer/powered)
+"sHe" = (
+/obj/structure/lattice,
+/obj/structure/wreck/trash/two_barrels,
+/turf/open/floor/plating/tunnel,
+/area/ruin/powered)
 "sHi" = (
 /obj/structure/lattice{
 	layer = 3
@@ -42865,15 +43011,8 @@
 /area/f13/enclave)
 "tfd" = (
 /obj/item/shard,
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot{
-	auto_fire_delay = 1;
-	color = "#FFCCCB";
-	desc = "A sentry bot armed with a modified breacher shotgun and covered in thick armor plating, this one has ESC-2403 stamped onto it's chestplate and looks alot tougher than your average sentry bot.";
-	extra_projectiles = 2;
-	faction = list("hostile");
-	health = 1000;
-	name = "ESC-2402";
-	projectiletype = /obj/item/projectile/bullet/incendiary/shotgun
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/ballistic{
+	faction = list("hostile")
 	},
 /turf/open/floor/f13,
 /area/ruin/powered)
@@ -43446,6 +43585,11 @@
 	icon_state = "floorrustysolid"
 	},
 /area/f13/bunker)
+"tqI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/mine/shrapnel,
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "tqN" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/plating/f13/inside,
@@ -43627,6 +43771,11 @@
 "tuT" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bar/heaven)
+"tvp" = (
+/obj/structure/lattice,
+/obj/item/mine/stun,
+/turf/open/floor/plating/tunnel,
+/area/ruin/powered)
 "tvV" = (
 /obj/structure/simple_door/metal/barred,
 /obj/effect/decal/cleanable/dirt,
@@ -43723,9 +43872,7 @@
 /obj/effect/decal/waste{
 	icon_state = "goo8"
 	},
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew{
-	emp_flags = list()
-	},
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/ballistic,
 /turf/open/floor/plating/tunnel{
 	icon_state = "tunnelrusty"
 	},
@@ -44990,11 +45137,6 @@
 	icon_state = "yellowdirtyfull"
 	},
 /area/f13/tunnel)
-"uaL" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/storage/box/rndboards,
-/turf/open/floor/plasteel/f13/vault_floor/floor,
-/area/ruin/powered)
 "ubd" = (
 /obj/machinery/vending/medical/free,
 /obj/effect/turf_decal/delivery,
@@ -45281,6 +45423,16 @@
 "ugN" = (
 /turf/open/floor/plasteel/dark/telecomms/mainframe,
 /area/f13/tcoms)
+"ugQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/keycard/library{
+	icon = 'icons/obj/doors/puzzledoor/default.dmi';
+	max_integrity = 60000;
+	desc = "This door only opens when a keycard is swiped. It looks virtually indestructable.";
+	name = "locked door"
+	},
+/turf/open/floor/plasteel/f13/vault_floor/floor,
+/area/ruin/powered)
 "uhK" = (
 /obj/structure/table/reinforced,
 /obj/item/paper/fluff/ruins/exp_cloning/log,
@@ -46775,6 +46927,14 @@
 /obj/effect/mapping_helpers/network_builder/power_cable/red/auto,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/whiteyellowfull,
 /area/f13/brotherhood/operations)
+"uMJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/oil{
+	icon_state = "floor5";
+	pixel_x = -17
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "uMZ" = (
 /obj/structure/wreck/trash/autoshaft,
 /turf/open/indestructible/ground/inside/subway,
@@ -49224,10 +49384,15 @@
 /turf/open/floor/plating/dirt/dark,
 /area/f13/radiation)
 "vPD" = (
-/obj/structure/table,
-/obj/effect/spawner/lootdrop/f13/armor/tier5,
-/turf/open/floor/f13{
-	icon_state = "yellowdirtyfull"
+/mob/living/simple_animal/hostile/handy/assaultron{
+	desc = "A deadly close combat robot developed by RobCo in a vaguely feminine, yet ominous chassis. This one seems sleeker and more dangerous, with a slick red paintjob.";
+	faction = list("hostile");
+	health = 800;
+	name = "redline assaultron";
+	rapid_melee = 2
+	},
+/turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust{
+	icon_state = "engine"
 	},
 /area/ruin/powered)
 "vPM" = (
@@ -49600,6 +49765,15 @@
 /obj/structure/wreck/trash/two_tire,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker/bunkersix)
+"vZx" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/trash_stack{
+	icon_state = "trash_2"
+	},
+/obj/structure/lattice,
+/obj/effect/mob_spawn/human/corpse/charredskeleton,
+/turf/open/floor/plating/tunnel,
+/area/ruin/powered)
 "vZC" = (
 /obj/structure/decoration/hatch{
 	dir = 8
@@ -51038,6 +51212,13 @@
 /mob/living/simple_animal/hostile/renegade/soldier,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker/bighornbunker)
+"wFV" = (
+/obj/item/storage/trash_stack{
+	icon_state = "Junk_10";
+	pixel_y = 5
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "wFW" = (
 /obj/structure/rack/shelf_metal{
 	pixel_y = -12
@@ -51058,6 +51239,13 @@
 /obj/item/storage/trash_stack,
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker/bighornbunker)
+"wGI" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/remains/human{
+	layer = 5
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "wHb" = (
 /obj/structure/railing{
 	dir = 10
@@ -52601,6 +52789,10 @@
 	name = "dirty floor"
 	},
 /area/f13/sewer/powered)
+"xnO" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "xnT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light{
@@ -53453,6 +53645,13 @@
 	},
 /turf/open/water,
 /area/f13/radiation)
+"xFW" = (
+/obj/structure/sign/warning{
+	layer = 5;
+	desc = "The sign reads 'WARNING! Restricted area! Entry may result in death!'. There's probably something deadlier than normal beyond the door..."
+	},
+/turf/closed/indestructible/syndicate,
+/area/ruin/powered)
 "xFX" = (
 /obj/machinery/chem_heater,
 /turf/open/floor/plasteel/f13/vault_floor/yellow/white,
@@ -53878,6 +54077,11 @@
 /obj/structure/sign/departments/security,
 /turf/closed/indestructible/f13vaultrusted,
 /area/f13/bunker/bunkertwo)
+"xSc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered)
 "xSd" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -67059,7 +67263,7 @@ bgK
 bgK
 bgK
 bgK
-vBd
+bgK
 vBd
 bgK
 bgK
@@ -67354,14 +67558,14 @@ yhR
 yhR
 yhR
 yhR
-bgK
-yhR
-yhR
-yhR
-yhR
-yhR
-bgK
-bgK
+cNy
+cNy
+cNy
+cNy
+cNy
+cNy
+cNy
+cNy
 bgK
 bgK
 bgK
@@ -67657,12 +67861,12 @@ cNy
 cNy
 cNy
 cNy
-cNy
-cNy
-cNy
-cNy
-cNy
-cNy
+jgO
+vZx
+wGI
+osD
+osD
+gGZ
 cNy
 cNy
 cNy
@@ -67951,28 +68155,28 @@ bgK
 bgK
 yhR
 yhR
-cNy
+oIX
+tqI
+fJa
+osD
+osD
+osD
+osD
+xnO
+osD
+sCv
+osD
+bWl
 mbw
-tfz
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-tfz
-mbw
-cNy
+osD
+xSc
+osD
+osD
+kHX
+kHX
+lTl
+hnz
+oIX
 bgK
 yhR
 yhR
@@ -68253,28 +68457,28 @@ bgK
 bgK
 bgK
 bgK
-cNy
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
+oIX
+osD
+osD
+osD
+gMi
+osD
+fxo
+xSc
 mVs
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
-mbw
 cNy
+cNy
+cNy
+cNy
+mVs
+xSc
+aLW
+osD
+uMJ
+osD
+kHX
+kiQ
+oIX
 bgK
 yhR
 yhR
@@ -68556,26 +68760,26 @@ bgK
 bgK
 bgK
 cNy
-mbw
-mbw
-cNy
-cNy
-cNy
-mIB
-bgK
-bgK
-bgK
-mIB
-mIB
+osD
+osD
 cNy
 cNy
 cNy
 cNy
 cNy
 cNy
+aNw
+fvb
+bhL
+aNw
 cNy
-mbw
-mbw
+cNy
+cNy
+cNy
+cNy
+cNy
+osD
+fxU
 cNy
 bgK
 yhR
@@ -68858,18 +69062,18 @@ bgK
 bgK
 bgK
 cNy
-mbw
-mbw
+osD
+osD
 cNy
 llm
 nwD
 gyW
 gyW
 vPM
-vPM
-bhL
-ksE
+cNy
 nwD
+nwD
+ugQ
 fww
 nwD
 nzg
@@ -68877,7 +69081,7 @@ jSe
 xFF
 cNy
 mbw
-mbw
+osD
 cNy
 bgK
 yhR
@@ -69160,26 +69364,26 @@ bgK
 bgK
 bgK
 cNy
-mbw
-mbw
+osD
+osD
 cNy
 qZa
 nwD
 nwD
 nwD
 nwD
-nzg
-nwD
-nwD
-nwD
+aNw
+aNw
+aNw
+aNw
 nwD
 nwD
 nwD
 nwD
 lSf
 cNy
-mbw
-mbw
+osD
+osD
 cNy
 bgK
 yhR
@@ -69462,26 +69666,26 @@ bgK
 bgK
 bgK
 cNy
-mbw
-mbw
+osD
+fHc
 cNy
 qdN
 vnW
 vnW
-kiQ
+ciE
 nwD
 nwD
 qmq
 qdN
-ptB
 nwD
-kiQ
+nwD
+ciE
 uon
-kiQ
+ciE
 cZS
 cNy
-mbw
-mbw
+wFV
+osD
 cNy
 bgK
 yhR
@@ -69764,8 +69968,8 @@ bgK
 bgK
 bgK
 cNy
-mbw
-mbw
+kHX
+sHe
 cNy
 nwD
 kiQ
@@ -69775,15 +69979,15 @@ nwD
 nwD
 nwD
 nwD
-nwD
+ptB
 kiQ
 kiQ
 kiQ
 kiQ
 nwD
 cNy
-fBL
-mbw
+eqp
+osD
 cNy
 bgK
 yhR
@@ -70035,7 +70239,7 @@ dZm
 lwy
 cNy
 cNy
-fvb
+ojV
 cNy
 cNy
 cNy
@@ -70067,7 +70271,7 @@ bgK
 bgK
 cNy
 fBL
-mbw
+tvp
 cNy
 nwD
 nwD
@@ -70084,8 +70288,8 @@ sJQ
 xDY
 nwD
 cNy
-mbw
-mbw
+osD
+oFu
 cNy
 bgK
 bgK
@@ -70368,8 +70572,8 @@ bgK
 bgK
 bgK
 cNy
-mbw
-mbw
+osD
+osD
 cNy
 gyW
 oIO
@@ -70386,8 +70590,8 @@ ptB
 kiQ
 nwD
 cNy
-mbw
-mbw
+tqI
+osD
 cNy
 cNy
 cNy
@@ -70560,7 +70764,7 @@ boA
 gRt
 cAT
 kLB
-pQc
+rdx
 boA
 suj
 boA
@@ -70670,8 +70874,8 @@ bgK
 bgK
 bgK
 cNy
-mbw
-mbw
+kha
+osD
 cNy
 gyW
 gyW
@@ -70688,10 +70892,10 @@ nwD
 kiQ
 gxz
 cNy
-mbw
-mbw
-mbw
-mbw
+osD
+xnO
+fxo
+cbO
 cNy
 bgK
 yhR
@@ -70972,8 +71176,8 @@ bgK
 bgK
 bgK
 cNy
-mbw
-mbw
+osD
+osD
 cNy
 vPM
 gyW
@@ -70990,10 +71194,10 @@ wOI
 nzg
 nwD
 cNy
-mbw
-mVs
-mbw
-mbw
+xlQ
+qbK
+osD
+osD
 cNy
 bgK
 bgK
@@ -71274,8 +71478,8 @@ bgK
 bgK
 bgK
 cNy
-mbw
-mbw
+osD
+osD
 cNy
 vPM
 agO
@@ -71287,7 +71491,7 @@ kiQ
 kiQ
 tqE
 kiQ
-uaL
+nwD
 nwD
 nwD
 xUf
@@ -71576,8 +71780,8 @@ cNy
 cNy
 bgK
 cNy
-mbw
-mbw
+osD
+osD
 cNy
 vPM
 gyW
@@ -71878,8 +72082,8 @@ dZm
 cNy
 cNy
 cNy
-mbw
-mbw
+qtj
+osD
 cNy
 vPM
 vPM
@@ -71890,7 +72094,7 @@ nwD
 nwD
 nwD
 ciE
-hlm
+kiQ
 wqm
 sJQ
 kiQ
@@ -71898,7 +72102,7 @@ nwD
 qMI
 tDl
 vMA
-qDB
+cFX
 qDB
 qDB
 vIO
@@ -72180,8 +72384,8 @@ dZm
 dZm
 cNy
 cNy
-mbw
-mbw
+osD
+osD
 cNy
 vPM
 vPM
@@ -72192,7 +72396,7 @@ nzg
 kiQ
 kiQ
 kiQ
-ciE
+kiQ
 nwD
 qdN
 kiQ
@@ -72784,8 +72988,8 @@ euT
 cNy
 cNy
 cNy
-mbw
-mbw
+osD
+osD
 cNy
 vPM
 nwD
@@ -73086,8 +73290,8 @@ wOT
 iFO
 eqh
 cNy
-mbw
-mbw
+xSc
+tqI
 cNy
 vPM
 nwD
@@ -73388,8 +73592,8 @@ dZm
 dZm
 bwZ
 cNy
-mbw
-mbw
+hmn
+osD
 cNy
 jht
 nwD
@@ -73690,8 +73894,8 @@ dZm
 dZm
 hNp
 cNy
-mbw
-mbw
+aLW
+rOQ
 cNy
 kiQ
 kiQ
@@ -73992,12 +74196,12 @@ hED
 hED
 dcP
 cNy
-mbw
-mbw
+osD
+xSc
 cNy
 cNy
 nuh
-cNy
+xFW
 cNy
 cNy
 kiQ
@@ -74295,10 +74499,10 @@ cNy
 cNy
 cNy
 mbw
-mbw
+osD
 cNy
 aXT
-gMi
+asO
 tfz
 cNy
 vfS
@@ -74313,7 +74517,7 @@ nwD
 uSF
 vnW
 taz
-sGQ
+taz
 taz
 taz
 wKp
@@ -74596,10 +74800,10 @@ wdw
 cNy
 bgK
 cNy
-mVs
-mbw
+rmu
+fxo
 eqT
-mbw
+osD
 vjE
 xlQ
 nSf
@@ -74878,7 +75082,7 @@ cNy
 cNy
 jGX
 kpM
-dZm
+gds
 mMe
 wxE
 wxE
@@ -76393,7 +76597,7 @@ hGc
 hGc
 hGc
 hGc
-hGc
+hlm
 hGc
 qXd
 dZm
@@ -76684,7 +76888,7 @@ oFn
 cNy
 cNy
 cNy
-cNy
+xFW
 cNy
 lBo
 dZm
@@ -78507,7 +78711,7 @@ hGc
 bed
 hGc
 hGc
-hGc
+vPD
 qCo
 siv
 dZm
@@ -78798,7 +79002,7 @@ oFn
 cNy
 cNy
 cNy
-cNy
+xFW
 cNy
 lBo
 dZm
@@ -79106,7 +79310,7 @@ vug
 dZm
 esT
 ris
-hGc
+hlm
 hGc
 hGc
 hGc
@@ -79441,7 +79645,7 @@ aWW
 cNy
 cMP
 nuY
-vPD
+pRC
 xyH
 pRC
 pRC

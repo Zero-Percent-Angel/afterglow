@@ -78,14 +78,6 @@
 	sneak_detection_threshold = HARD_CHECK
 	sneak_roll_modifier = DIFFICULTY_NORMAL
 
-/mob/living/simple_animal/hostile/securitron/nsb //NSB + Raider Bunker specific
-	name = "Securitron"
-	faction = list("raider")
-	obj_damage = 300
-	retreat_distance = 0 //perish, mortal
-	sneak_detection_threshold = HARD_CHECK
-	sneak_roll_modifier = DIFFICULTY_NORMAL
-
 /mob/living/simple_animal/hostile/securitron/bullet_act(obj/item/projectile/Proj)
 	if(!Proj)
 		CRASH("[src] securitron invoked bullet_act() without a projectile")
@@ -125,19 +117,20 @@
 
 //Sentry Bot
 /mob/living/simple_animal/hostile/securitron/sentrybot
-	name = "sentry bot"
-	desc = "A pre-war military robot armed with a deadly gatling laser and covered in thick armor plating."
-	icon_state = "sentrybot"
-	icon_living = "sentrybot"
+	name = "old sentry bot"
+	desc = "A pre-war military robot armed with a deadly gatling laser and covered in thick armor plating. This one's clearly seen better days, being in a state of disrepair."
+	icon = 'icons/fallout/mobs/robots/sentry.dmi'
+	icon_state = "sentrybotold"
+	icon_living = "sentrybotold"
 	icon_dead = "sentrybot_dead"
 	mob_armor = ARMOR_VALUE_ROBOT_SECURITY
-	maxHealth = 150
-	health = 150
+	maxHealth = 400
+	health = 400
 	del_on_death = FALSE
 	melee_damage_lower = 24
 	melee_damage_upper = 55
-	extra_projectiles = 2 //5 projectiles
-	ranged_cooldown_time = 40 //brrrrrrrrrrrrt
+	extra_projectiles = 5 //5 projectiles
+	ranged_cooldown_time = 30 //you need it lil bro...
 	retreat_distance = 5
 	minimum_distance = 5 // SENTRY bot, not run up to your face and magdump you bot
 	attack_verb_simple = "pulverizes"
@@ -192,74 +185,79 @@
 			warned = TRUE
 			playsound(src, 'sound/f13npc/sentry/systemfailure.ogg', 75, FALSE)
 
-// Lil chew-chew
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew //Made it more like an old sentrybot. None of this new sentrybot shit.
-	name = "lil' chew-chew"
-	desc = "An oddly scorched pre-war military robot armed with a deadly gatling laser and covered in thick, oddly blue armor plating, the name Lil' Chew-Chew scratched onto it's front armour crudely, highlighted by small bits of white paint. There seems to be an odd pack on the monstrosity of a sentrie's back, a chute at the bottom of it - there's the most scorch-marks on the robot here, so it's safe to assume this robot is capable of explosions. Better watch out!"
+// non-fucked sentry bot
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine
+	name = "pristine sentry bot"
+	desc = "A pre-war military robot armed with a deadly gatling laser and covered in thick armor plating. This one's in amazing condition, with power to match."
+	icon_state = "sentrybot"
+	icon_living = "sentrybot"
+	icon_dead = "sentrybot_dead"
 	extra_projectiles = 6
 	health = 800
 	maxHealth = 800 //chomk
 	obj_damage = 300
 	armour_penetration = 0.5 //applies to melee. i forgor.
 	move_to_delay = 4.0 //bit faster
+	ranged_cooldown_time = 40 //you dont...
 	retreat_distance = 1
 	minimum_distance = 2 //run up to your face and magdump you bot
 	environment_smash = ENVIRONMENT_SMASH_RWALLS //wall-obliterator. perish.
-	color = "#75FFE2"
 	aggro_vision_range = 15
 	flags_1 = PREVENT_CONTENTS_EXPLOSION_1 //cannot self-harm with it's explosion spam
-	sneak_detection_threshold = EXPERT_CHECK
+	sneak_detection_threshold = HARD_CHECK //perceptive bastard
 	sneak_roll_modifier = DIFFICULTY_CHALLENGE
 	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/chew
 	auto_fire_delay = GUN_AUTOFIRE_DELAY_NORMAL
 
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew/bullet_act(obj/item/projectile/Proj)
-	if(!Proj)
-		CRASH("[src] sentrybot invoked bullet_act() without a projectile")
-	if(prob(10) && health > 1)
-		visible_message(span_danger("\The [src] releases a defensive explosive!"))
-		explosion(get_turf(src),-1,-1,2, flame_range = 4) //perish, mortal - explosion size identical to craftable IED
-	..()
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/ballistic //gun version.
+	name = "pristine sentry bot"
+	desc = "A pre-war military robot armed with a deadly minigun and covered in thick armor plating. This one's in amazing condition, with power to match."
+	icon_state = "ballisentry"
+	icon_living = "ballisentry"
+	icon_dead = "ballisentry_dead"
+	projectiletype = /obj/item/projectile/bullet/m5mm/simple
+	projectilesound = 'sound/f13weapons/automaticrifle_BAR.ogg'
+	projectile_sound_properties = list(
+		SP_VARY(FALSE),
+		SP_VOLUME(PISTOL_LIGHT_VOLUME),
+		SP_VOLUME_SILENCED(PISTOL_LIGHT_VOLUME * SILENCED_VOLUME_MULTIPLIER),
+		SP_NORMAL_RANGE(PISTOL_LIGHT_RANGE),
+		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
+		SP_IGNORE_WALLS(TRUE),
+		SP_DISTANT_SOUND(RIFLE_HEAVY_DISTANT_SOUND),
+		SP_DISTANT_RANGE(PISTOL_LIGHT_RANGE_DISTANT)
+	)
 
 // Big chew-chew
-/mob/living/simple_animal/hostile/securitron/sentrybot/chew/strong //For use as a main bunker boss. Essentially a mildly edited OverSEER port
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/boss //For use as a main bunker boss. Do not put in the open, i beg you.
 	name = "big chew-chew"
-	desc = "An oddly scorched pre-war military robot armed with a deadly gatling laser firing high-penetration experimental lasers and covered in thick, dark blue armor plating, the name Big Chew-Chew scratched onto it's front armour crudely, highlighted by small bits of white paint. There seems to be an odd pack on the monstrosity of a sentrie's back, a chute at the bottom of it - there's the most scorch-marks on the robot here, so it's safe to assume this robot is capable of explosions. Better watch out!"
+	desc = "An oddly scorched pre-war military robot armed with a deadly gatling laser firing high-penetration experimental lasers and covered in thick armor plating, the name Big Chew-Chew scratched onto it's front armour crudely, highlighted by small bits of white paint. There seems to be an odd pack on the monstrosity of a sentry's back, a chute at the bottom of it - there's the most scorch-marks on the robot here, so it's safe to assume this robot is capable of explosions. Better watch out!"
+	icon_state = "sentrybotchew"
+	icon_living = "sentrybotchew"
+	icon_dead = "sentrybotchew_dead"
 	health = 1500 //more HP than its smaller brother
 	maxHealth = 1500
 	mob_armor = ARMOR_VALUE_ROBOT_CHEW //tanky. no more ez cheese
 	extra_projectiles = 4
+	melee_attack_cooldown = 1 //rapid melee no longer works. this should.
 	armour_penetration = 0.8 //Punches harder
+	melee_damage_lower = 20
+	melee_damage_upper = 45
 	retreat_distance = 0 //Is going to punch you
-	rapid_melee = 2 //Punches faster
-	color = "#3444C8" //dark blue
 	emp_flags = list() //no emp instakill for you
 	projectiletype = /obj/item/projectile/beam/laser/pistol/ultraweak/chew/strong
 	stat_attack = UNCONSCIOUS //you are dead. notbigsuprise.
+	sneak_detection_threshold = EXPERT_CHECK
+	loot = list(/obj/item/keycard/library)
 
-//Raider friendly Sentry bot
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb
-	name = "sentry bot"
-	obj_damage = 300
+/mob/living/simple_animal/hostile/securitron/sentrybot/pristine/boss/bullet_act(obj/item/projectile/Proj)
+	if(!Proj)
+		CRASH("[src] sentrybot invoked bullet_act() without a projectile")
+	if(prob(10) && health > 1)
+		visible_message(span_danger("\The [src] releases a defensive grenade!"))
+		explosion(get_turf(src),-1,-1,2, flame_range = 4) //perish, mortal - explosion size identical to craftable IED
+	..()
 
-//Raider friendly Sentry bot with non-lethals
-/mob/living/simple_animal/hostile/securitron/sentrybot/nsb/riot //NSB + Raider Bunker specific.
-	name = "riot-control sentry bot"
-	desc = "A pre-war military robot armed with a modified breacher shotgun and covered in thick armor plating."
-	projectilesound = 'sound/f13weapons/riot_shotgun.ogg'
-	projectiletype = /obj/item/projectile/bullet/shotgun_beanbag
-	retreat_distance = 0
-	extra_projectiles = 0
-	projectile_sound_properties = list(
-		SP_VARY(FALSE),
-		SP_VOLUME(SHOTGUN_VOLUME),
-		SP_VOLUME_SILENCED(SHOTGUN_VOLUME * SILENCED_VOLUME_MULTIPLIER),
-		SP_NORMAL_RANGE(SHOTGUN_RANGE),
-		SP_NORMAL_RANGE_SILENCED(SILENCED_GUN_RANGE),
-		SP_IGNORE_WALLS(TRUE),
-		SP_DISTANT_SOUND(SHOTGUN_DISTANT_SOUND),
-		SP_DISTANT_RANGE(SHOTGUN_RANGE_DISTANT)
-	)
 
 //Playable Sentrybot
 /mob/living/simple_animal/hostile/securitron/sentrybot/playable
@@ -279,18 +277,3 @@
 
 /mob/living/simple_animal/hostile/securitron/sentrybot/playable/death()
 	return ..()
-
-//Junkers
-/mob/living/simple_animal/hostile/securitron/sentrybot/suicide
-	name = "explosive sentry bot"
-	desc = "A pre-war military robot armed with a deadly gatling laser and covered in thick armor plating. Don't get too close to this one, it looks like it's rigged to blow!"
-	maxHealth = 160
-	health = 160
-	color = "#B85C00"
-	retreat_distance = null
-	minimum_distance = 1
-
-/mob/living/simple_animal/hostile/securitron/sentrybot/suicide/AttackingTarget()
-	if(ishuman(target))
-		addtimer(CALLBACK(src, PROC_REF(do_death_beep)), 1 SECONDS)
-		addtimer(CALLBACK(src, PROC_REF(self_destruct)), 2 SECONDS)
