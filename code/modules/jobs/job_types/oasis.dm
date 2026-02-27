@@ -654,9 +654,10 @@ Mayor
 	smutant_outfit = /datum/outfit/smutant/town
 
 	loadout_options = list(
-		/datum/outfit/loadout/gambler,
-		/datum/outfit/loadout/resident,
-		/datum/outfit/loadout/outdoorsman
+		/datum/outfit/loadout/mechanic,
+		/datum/outfit/loadout/prospector,
+		/datum/outfit/loadout/settler,
+		/datum/outfit/loadout/lifeguard,
 	)
 	access = list(ACCESS_BAR)
 	minimal_access = list(ACCESS_BAR)
@@ -688,6 +689,7 @@ Mayor
 		/obj/item/storage/pill_bottle/chem_tin/radx,
 		/obj/item/storage/bag/money/small/settler = 1,
 		/obj/item/melee/onehanded/knife/hunting = 1,
+		/obj/item/stack/f13Cash/caps/onezerozero = 1,
 		/obj/item/kit_spawner/waster = 1,
 		)
 
@@ -716,49 +718,40 @@ Mayor
 		/obj/item/clothing/under/f13/cowboyg,
 		/obj/item/clothing/under/f13/cowboyt)
 
-/datum/outfit/loadout/gambler
-	name = "Gambler"
-	suit = /obj/item/clothing/suit/vickyblack
-	gloves = /obj/item/pda
-	shoes = /obj/item/clothing/shoes/laceup
+/datum/outfit/loadout/settler
+	name = "Settler"
+	suit = /obj/item/clothing/suit/armor/tiered/light/leather/leathersuit
+	gloves = /obj/item/clothing/gloves/botanic_leather
 	uniform = /obj/item/clothing/under/f13/worn
-	gloves = /obj/item/clothing/gloves/f13/leather
-	backpack_contents = list(/obj/item/reagent_containers/food/drinks/flask = 1,
-		/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
-		/obj/item/ammo_box/magazine/m22 = 1,
-		/obj/item/stack/f13Cash/caps/twofivezero = 1,
+	backpack_contents = list(/obj/item/seeds/xander = 1,
+		/obj/item/seeds/poppy/broc = 1,
+		/obj/item/seeds/ambrosia/deus = 1,
+		/obj/item/stack/sheet/mineral/wood/fifty = 1,
 	)
 
-/datum/outfit/loadout/resident
-	name = "Resident"
-	head = /obj/item/clothing/head/soft/grey
-	belt = /obj/item/storage/belt/utility/waster
-	suit = /obj/item/clothing/under/f13/mechanic
-	gloves = /obj/item/clothing/gloves/color/black
-	shoes = /obj/item/clothing/shoes/sneakers/noslip
-	neck = /obj/item/storage/belt/shoulderholster
-	suit_store = /obj/item/gun/ballistic/revolver/single_shotgun
-	backpack_contents = list(/obj/item/ammo_box/shotgun/buck = 1,
-		/obj/item/stack/f13Cash/caps/onezerozero = 1,
-		/obj/item/storage/box/ration/menu_two = 1,
-		/obj/item/storage/box/ration/menu_eight = 1,
+/datum/outfit/loadout/prospector
+	name = "Prospector"
+	head = /obj/item/clothing/head/helmet/armyhelmet
+	shoes = /obj/item/clothing/shoes/jackboots
+	suit_store = /obj/item/storage/bag/ore
+	backpack_contents = list(/obj/item/mining_scanner= 1,
+		/obj/item/pickaxe/drill = 1,
+		/obj/item/flashlight/lantern = 1,
+		/obj/item/reagent_containers/blood/radaway = 1,
 		/obj/item/reagent_containers/food/drinks/flask/survival = 1,
 	)
 
-/datum/outfit/loadout/outdoorsman
-	name = "Outdoorsman"
-	head = /obj/item/clothing/head/soft/grey
-	suit = /obj/item/clothing/suit/armor/tiered/light/leather/tanvest
-	suit_store = /obj/item/gun/ballistic/rifle/mag/sportcarbine
-	belt = /obj/item/melee/onehanded/knife/bowie
-	uniform = /obj/item/clothing/under/f13/cowboyt
-	gloves = /obj/item/clothing/gloves/botanic_leather
-	shoes = /obj/item/clothing/shoes/f13/peltboots
+/datum/outfit/loadout/mechanic
+	name = "Mechanic"
+	suit = /obj/item/clothing/suit/armor/tiered/light/kit
+	uniform = /obj/item/clothing/under/f13/mechanic
+	gloves = /obj/item/clothing/gloves/color/yellow
+	neck = /obj/item/clothing/neck/apron/labor
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m22 = 2,
-		/obj/item/fishingrod = 1,
-		/obj/item/binoculars = 1,
-		/obj/item/crafting/campfirekit = 1,
+		/obj/item/stack/crafting/metalparts/five = 1,
+		/obj/item/stack/crafting/goodparts = 2,
+		/obj/item/clothing/glasses/welding = 1,
+		/obj/item/stack/crafting/electronicparts/five = 1,
 		/obj/item/storage/fancy/rollingpapers/makeshift = 1,
 		/obj/item/reagent_containers/food/drinks/flask/survival = 1,
 	)
