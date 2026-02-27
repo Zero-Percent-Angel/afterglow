@@ -691,6 +691,7 @@ Mayor
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/stack/f13Cash/caps/onezerozero = 1,
 		/obj/item/kit_spawner/waster = 1,
+		/obj/item/reagent_containers/pill/healingpowder = 1,
 		)
 
 /datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
@@ -733,7 +734,6 @@ Mayor
 	name = "Prospector"
 	head = /obj/item/clothing/head/helmet/armyhelmet
 	suit = /obj/item/clothing/suit/armor/tiered/light/leather/jacket_reinf
-	shoes = /obj/item/clothing/shoes/jackboots
 	suit_store = /obj/item/storage/bag/ore
 	backpack_contents = list(/obj/item/mining_scanner= 1,
 		/obj/item/pickaxe/drill = 1,
@@ -763,7 +763,7 @@ datum/outfit/loadout/townlifeguard
 	glasses = /obj/item/clothing/glasses/sunglasses
 	shoes = /obj/item/clothing/shoes/f13/swimfins
 	backpack_contents = list(
-		/obj/item/toy/poolnoodle = 1,
+		/obj/item/toy/poolnoodle/blue = 1,
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/smelling_salts = 1,
 		/obj/item/storage/pill_bottle/chem_tin/buffout = 1,
