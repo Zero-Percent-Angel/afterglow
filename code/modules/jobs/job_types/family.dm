@@ -49,6 +49,54 @@ Family.
 		)
 	)
 
+/datum/outfit/loadout/gambler
+	name = "Gambler"
+	suit = /obj/item/clothing/suit/vickyblack
+	gloves = /obj/item/pda
+	shoes = /obj/item/clothing/shoes/laceup
+	uniform = /obj/item/clothing/under/f13/worn
+	gloves = /obj/item/clothing/gloves/f13/leather
+	backpack_contents = list(/obj/item/reagent_containers/food/drinks/flask = 1,
+		/obj/item/gun/ballistic/automatic/pistol/pistol22 = 1,
+		/obj/item/ammo_box/magazine/m22 = 1,
+		/obj/item/stack/f13Cash/caps/twofivezero = 1,
+	)
+
+/datum/outfit/loadout/resident
+	name = "Resident"
+	head = /obj/item/clothing/head/soft/grey
+	belt = /obj/item/storage/belt/utility/waster
+	suit = /obj/item/clothing/under/f13/mechanic
+	gloves = /obj/item/clothing/gloves/color/black
+	shoes = /obj/item/clothing/shoes/sneakers/noslip
+	neck = /obj/item/storage/belt/shoulderholster
+	suit_store = /obj/item/gun/ballistic/revolver/single_shotgun
+	backpack_contents = list(/obj/item/ammo_box/shotgun/buck = 1,
+		/obj/item/stack/f13Cash/caps/onezerozero = 1,
+		/obj/item/storage/box/ration/menu_two = 1,
+		/obj/item/storage/box/ration/menu_eight = 1,
+		/obj/item/reagent_containers/food/drinks/flask/survival = 1,
+	)
+
+/datum/outfit/loadout/outdoorsman
+	name = "Outdoorsman"
+	head = /obj/item/clothing/head/soft/grey
+	suit = /obj/item/clothing/suit/armor/tiered/light/leather/tanvest
+	suit_store = /obj/item/gun/ballistic/rifle/mag/sportcarbine
+	belt = /obj/item/melee/onehanded/knife/bowie
+	uniform = /obj/item/clothing/under/f13/cowboyt
+	gloves = /obj/item/clothing/gloves/botanic_leather
+	shoes = /obj/item/clothing/shoes/f13/peltboots
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m22 = 2,
+		/obj/item/fishingrod = 1,
+		/obj/item/binoculars = 1,
+		/obj/item/crafting/campfirekit = 1,
+		/obj/item/storage/fancy/rollingpapers/makeshift = 1,
+		/obj/item/reagent_containers/food/drinks/flask/survival = 1,
+	)
+
+
 /datum/job/family/family_member
 	title = "Family Member"
 	flag = F13FAMILYMEMBER
