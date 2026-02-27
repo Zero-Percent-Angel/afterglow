@@ -632,9 +632,10 @@
 	lootcount = 1
 
 	loot = list(
-				/obj/item/defibrillator/compact/combat/loaded,
-				/obj/item/reagent_containers/hypospray/combat,
-				/obj/item/disk/medical/defib_heal
+				/obj/item/defibrillator/compact/combat/loaded = 5,
+				/obj/item/reagent_containers/hypospray/combat = 6,
+				/obj/item/disk/medical/defib_heal = 8,
+				/obj/item/gun/medbeam = 1
 				)
 
 /obj/effect/spawner/lootdrop/f13/medical/vault/meds  //no drugs, didn't add
