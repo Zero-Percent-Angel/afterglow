@@ -732,6 +732,7 @@ Mayor
 /datum/outfit/loadout/prospector
 	name = "Prospector"
 	head = /obj/item/clothing/head/helmet/armyhelmet
+	suit = /obj/item/clothing/suit/armor/tiered/light/leather/jacket_reinf
 	shoes = /obj/item/clothing/shoes/jackboots
 	suit_store = /obj/item/storage/bag/ore
 	backpack_contents = list(/obj/item/mining_scanner= 1,
@@ -752,8 +753,9 @@ Mayor
 		/obj/item/stack/crafting/goodparts = 2,
 		/obj/item/clothing/glasses/welding = 1,
 		/obj/item/stack/crafting/electronicparts/five = 1,
-		/obj/item/storage/fancy/rollingpapers/makeshift = 1,
-		/obj/item/reagent_containers/food/drinks/flask/survival = 1,
+		/obj/item/melee/onehanded/club/tireiron = 1,
+		/obj/item/book/granter/crafting_recipe/gunsmith_four = 1,
+
 	)
 
 datum/outfit/loadout/lifeguard
@@ -767,8 +769,7 @@ datum/outfit/loadout/lifeguard
 		/obj/item/storage/pill_bottle/chem_tin/buffout = 1,
 		/obj/item/storage/fancy/rollingpapers/makeshift = 1,
 		/obj/item/reagent_containers/food/drinks/flask/survival = 1,
-
-
+		)
 /*----------------------------------------------------------------
 --							Detective							--
 ----------------------------------------------------------------*/
