@@ -236,7 +236,7 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	ears = /obj/item/radio/headset/headset_legion/cent
 	neck = /obj/item/clothing/neck/mantle/legion
 	gloves = /obj/item/clothing/gloves/legion/plated
-	glasses = /obj/item/clothing/glasses/night/polarizing
+	glasses = /obj/item/clothing/glasses/legionpolarizing
 	shoes = /obj/item/clothing/shoes/f13/military/plated
 	r_pocket = /obj/item/restraints/handcuffs
 	l_pocket = /obj/item/flashlight/lantern
@@ -1315,7 +1315,7 @@ Venator  - Zero slots, role built on cloning vet ranger, linear just vastly bett
 	head = /obj/item/clothing/head/helmet/f13/legion/venator
 	mask = /obj/item/clothing/mask/bandana/legion/legdecan
 	neck = /obj/item/storage/belt/shoulderholster
-	glasses = /obj/item/clothing/glasses/night/polarizing
+	glasses = /obj/item/clothing/glasses/legionpolarizing
 	ears = /obj/item/radio/headset/headset_legion
 	r_pocket = /obj/item/binoculars
 	backpack_contents = list(
