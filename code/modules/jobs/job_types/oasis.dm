@@ -654,10 +654,10 @@ Mayor
 	smutant_outfit = /datum/outfit/smutant/town
 
 	loadout_options = list(
-		/datum/outfit/loadout/mechanic,
-		/datum/outfit/loadout/prospector,
-		/datum/outfit/loadout/settler,
-		/datum/outfit/loadout/lifeguard,
+		/datum/outfit/loadout/townmechanic,
+		/datum/outfit/loadout/townprospector,
+		/datum/outfit/loadout/townsettler,
+		/datum/outfit/loadout/townlifeguard,
 	)
 	access = list(ACCESS_BAR)
 	minimal_access = list(ACCESS_BAR)
@@ -691,6 +691,7 @@ Mayor
 		/obj/item/melee/onehanded/knife/hunting = 1,
 		/obj/item/stack/f13Cash/caps/onezerozero = 1,
 		/obj/item/kit_spawner/waster = 1,
+		/obj/item/reagent_containers/pill/healingpowder = 1,
 		)
 
 /datum/outfit/job/den/f13settler/pre_equip(mob/living/carbon/human/H)
@@ -718,7 +719,7 @@ Mayor
 		/obj/item/clothing/under/f13/cowboyg,
 		/obj/item/clothing/under/f13/cowboyt)
 
-/datum/outfit/loadout/settler
+/datum/outfit/loadout/townsettler
 	name = "Settler"
 	suit = /obj/item/clothing/suit/armor/tiered/light/leather/leathersuit
 	gloves = /obj/item/clothing/gloves/botanic_leather
@@ -729,11 +730,10 @@ Mayor
 		/obj/item/stack/sheet/mineral/wood/fifty = 1,
 	)
 
-/datum/outfit/loadout/prospector
+/datum/outfit/loadout/townprospector
 	name = "Prospector"
 	head = /obj/item/clothing/head/helmet/armyhelmet
 	suit = /obj/item/clothing/suit/armor/tiered/light/leather/jacket_reinf
-	shoes = /obj/item/clothing/shoes/jackboots
 	suit_store = /obj/item/storage/bag/ore
 	backpack_contents = list(/obj/item/mining_scanner= 1,
 		/obj/item/pickaxe/drill = 1,
@@ -742,7 +742,7 @@ Mayor
 		/obj/item/reagent_containers/food/drinks/flask/survival = 1,
 	)
 
-/datum/outfit/loadout/mechanic
+/datum/outfit/loadout/townmechanic
 	name = "Mechanic"
 	suit = /obj/item/clothing/suit/armor/tiered/light/kit
 	uniform = /obj/item/clothing/under/f13/mechanic
@@ -758,16 +758,15 @@ Mayor
 
 	)
 
-datum/outfit/loadout/lifeguard
+datum/outfit/loadout/townlifeguard
 	name = "Lifeguard"
 	glasses = /obj/item/clothing/glasses/sunglasses
 	shoes = /obj/item/clothing/shoes/f13/swimfins
 	backpack_contents = list(
-		/obj/item/toy/poolnoodle = 1,
+		/obj/item/toy/poolnoodle/blue = 1,
 		/obj/item/storage/firstaid/ancient = 1,
 		/obj/item/smelling_salts = 1,
 		/obj/item/storage/pill_bottle/chem_tin/buffout = 1,
-		/obj/item/storage/fancy/rollingpapers/makeshift = 1,
 		/obj/item/reagent_containers/food/drinks/flask/survival = 1,
 		)
 /*----------------------------------------------------------------
