@@ -347,12 +347,24 @@
 				/obj/item/clothing/suit/armor/tiered/medium/raider/scrapcombat,
 				/obj/item/clothing/suit/armor/tiered/medium/raider/slam,
 				/obj/item/clothing/suit/armor/tiered/light/raider/wastewar,
+				/obj/item/clothing/suit/armor/tiered/light/raider/badlands,
+				/obj/item/clothing/suit/armor/tiered/medium/raider/yankee,
+				/obj/item/clothing/suit/armor/tiered/medium/raider/blastmaster,
 				/obj/item/clothing/suit/armor/tiered/medium/combat/mk2/raider) // da grail
 
 /obj/effect/spawner/lootdrop/f13/armor/randomraiderhead //random raider armor
 	name = "raider boss armor drop"
 	loot = list(
-				/obj/item/clothing/head/helmet/f13/combat/mk2/raider
+				/obj/item/clothing/head/helmet/f13/combat/mk2/raider,
+				/obj/item/clothing/head/helmet/f13/tier2/pre_war_raider,
+				/obj/item/clothing/head/helmet/f13/tier2/metal_mask,
+				/obj/item/clothing/head/helmet/f13/fiend_reinforced,
+				/obj/item/clothing/head/helmet/f13/raider/arclight,
+				/obj/item/clothing/head/helmet/f13/raider/yankee,
+				/obj/item/clothing/head/helmet/f13/motorcycle,
+				/obj/item/clothing/head/helmet/f13/knight/metal,
+				/obj/item/clothing/glasses/sunglasses,
+				/obj/item/clothing/head/helmet/f13/raider/blastmaster
 				)
 
 /obj/effect/spawner/bundle/f13/armor/metal/reinforced
@@ -620,9 +632,10 @@
 	lootcount = 1
 
 	loot = list(
-				/obj/item/defibrillator/compact/combat/loaded,
-				/obj/item/reagent_containers/hypospray/combat,
-				/obj/item/disk/medical/defib_heal
+				/obj/item/defibrillator/compact/combat/loaded = 5,
+				/obj/item/reagent_containers/hypospray/combat = 6,
+				/obj/item/disk/medical/defib_heal = 8,
+				/obj/item/gun/medbeam = 1
 				)
 
 /obj/effect/spawner/lootdrop/f13/medical/vault/meds  //no drugs, didn't add
