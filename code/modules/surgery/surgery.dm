@@ -60,7 +60,7 @@
 // Alien & Unethical surgeries
 
 	if(requires_trait== "ABDUCTOR") //Actual alien abductions
-		if(HAS_TRAIT(user,TRAIT_ABDUCTOR_SCIENTIST_TRAINING))
+		if(HAS_TRAIT(user,TRAIT_ABDUCTOR_SCIENTIST_TRAINING) || user.skill_check(SKILL_DOCTOR, EXPERT_CHECK))
 			return TRUE
 		else
 			return FALSE
