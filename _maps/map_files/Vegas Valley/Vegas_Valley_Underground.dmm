@@ -18980,6 +18980,13 @@
 	icon_state = "tunnelrusty"
 	},
 /area/f13/enclave)
+"iyq" = (
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 28
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "iza" = (
 /obj/structure/table,
 /obj/item/radio/intercom/retro/foa{
@@ -19277,11 +19284,10 @@
 /turf/open/floor/plating/tunnel,
 /area/f13/bunker/bunkerthree)
 "iHC" = (
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 1;
-	pixel_y = 28
+/obj/machinery/door/unpowered/secure_legion{
+	req_access_txt = "123"
 	},
-/turf/open/indestructible/ground/inside/mountain,
+/turf/open/floor/plating/asteroid,
 /area/f13/caves)
 "iHF" = (
 /obj/effect/decal/cleanable/blood{
@@ -26037,11 +26043,8 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker)
 "lLm" = (
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 1;
-	pixel_y = 28
-	},
-/turf/open/floor/plating/asteroid,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "lLo" = (
 /obj/machinery/door/airlock/medical{
@@ -32644,8 +32647,11 @@
 	},
 /area/f13/sewer/powered)
 "oEU" = (
-/obj/structure/nest/radroach,
-/turf/open/indestructible/ground/inside/mountain,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 28
+	},
+/turf/open/floor/plating/asteroid,
 /area/f13/caves)
 "oEY" = (
 /obj/structure/cable{
@@ -44432,7 +44438,7 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/bunker/bunkereight)
 "tGN" = (
-/mob/living/simple_animal/hostile/radroach,
+/obj/structure/nest/radroach,
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "tGY" = (
@@ -45209,12 +45215,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/brotherhood/armory)
-"tWW" = (
-/obj/machinery/door/unpowered/secure_legion{
-	req_access_txt = "123"
-	},
-/turf/open/floor/plating/asteroid,
-/area/f13/caves)
 "tXl" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -124292,7 +124292,7 @@ vzC
 aKq
 yhR
 ohv
-oEU
+tGN
 yhR
 yhR
 yhR
@@ -125204,7 +125204,7 @@ yhR
 yhR
 yhR
 yhR
-tGN
+lLm
 oEb
 yhR
 yhR
@@ -129427,7 +129427,7 @@ aKq
 aKq
 oEb
 yhR
-iHC
+iyq
 yhR
 aKq
 sVC
@@ -130031,7 +130031,7 @@ aKq
 aKq
 aKq
 aKq
-tWW
+iHC
 aKq
 aKq
 sVC
@@ -130333,7 +130333,7 @@ sVC
 sVC
 sVC
 aKq
-lLm
+oEU
 aKq
 aKq
 sVC
