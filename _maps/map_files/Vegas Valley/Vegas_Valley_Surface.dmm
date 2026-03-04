@@ -891,13 +891,13 @@
 	},
 /area/f13/wasteland)
 "arx" = (
-/obj/effect/overlay/desert_side{
+/obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+	color = "000000"
 	},
-/obj/structure/ore_furnace,
+/obj/machinery/workbench/forge,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "arA" = (
@@ -1614,13 +1614,11 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland/legion)
 "aBs" = (
-/obj/structure/closet/crate/large,
-/obj/item/clothing/head/helmet/f13/legion/recruit,
+/obj/machinery/workbench/forge,
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
-/obj/item/clothing/suit/armor/tiered/light/legion/recruit,
-/obj/item/clothing/suit/armor/tiered/light/legion/recruit,
+/obj/item/clothing/glasses/welding,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "aBw" = (
@@ -2820,13 +2818,12 @@
 /turf/open/floor/wood_common/wood_common_dark,
 /area/f13/ncr)
 "aUD" = (
-/obj/structure/fence/wooden{
-	dir = 1
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
 	},
-/obj/structure/fence/corner/wooden{
-	dir = 4
-	},
-/turf/open/indestructible/ground/outside/desert,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/legionary,
+/turf/open/floor/f13/wood,
 /area/f13/legioncamp)
 "aUS" = (
 /obj/structure/barricade/wooden,
@@ -2938,18 +2935,12 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/a)
 "aWj" = (
-/obj/structure/chair/bench{
-	dir = 4;
-	pixel_x = -16
+/obj/effect/overlay/desert_side{
+	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
+/obj/effect/turf_decal/weather/dirt,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/legion)
 "aWl" = (
 /obj/structure/window/fulltile/house,
 /turf/open/floor/f13/wood{
@@ -2994,24 +2985,30 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/caves)
 "aXh" = (
-/obj/structure/fence,
-/obj/effect/overlay/desert_side{
-	dir = 4
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/rack/shelf_metal{
+	name = "Melee"
 	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 8;
-	icon_state = "dirt"
-	},
-/area/f13/wasteland/legion)
+/obj/item/melee/onehanded/machete,
+/obj/item/melee/onehanded/machete,
+/obj/item/melee/onehanded/machete,
+/obj/item/storage/backpack/spearquiver,
+/obj/item/storage/backpack/spearquiver,
+/obj/item/restraints/legcuffs/bola,
+/obj/item/restraints/legcuffs/bola,
+/obj/item/restraints/legcuffs/bola,
+/obj/item/restraints/legcuffs/bola,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legioncamp)
 "aXj" = (
-/obj/structure/fence{
+/obj/structure/fence/wooden{
 	dir = 1
 	},
 /turf/open/indestructible/ground/outside/dirt{
-	dir = 8;
+	dir = 4;
 	icon_state = "dirt"
 	},
-/area/f13/wasteland/legion)
+/area/f13/legioncamp)
 "aXl" = (
 /obj/machinery/light{
 	dir = 4;
@@ -3548,7 +3545,10 @@
 	},
 /area/f13/ambientlighting/building/o)
 "bfc" = (
-/obj/structure/table/wood,
+/obj/structure/window/fulltile/house{
+	icon_state = "housewindowbroken"
+	},
+/obj/structure/barricade/bars,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "bfe" = (
@@ -3749,16 +3749,6 @@
 	},
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/wasteland)
-"bir" = (
-/obj/structure/chair/bench{
-	dir = 4;
-	pixel_x = -16
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
 "biy" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/ghoul/glowing,
@@ -4368,14 +4358,6 @@
 	dir = 4
 	},
 /area/f13/wasteland)
-"btj" = (
-/obj/machinery/workbench/forge,
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 1;
-	pixel_y = 24
-	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
 "bto" = (
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/z)
@@ -4555,16 +4537,6 @@
 	icon_state = "rubble"
 	},
 /area/f13/wasteland)
-"bwg" = (
-/obj/structure/barricade/tentclothedge{
-	color = "#7c0A02";
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 5;
-	icon_state = "dirt"
-	},
-/area/f13/legioncamp)
 "bwp" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13{
@@ -4710,14 +4682,6 @@
 /obj/structure/barricade/wooden/strong,
 /turf/closed/wall/f13/tentwall,
 /area/f13/wasteland)
-"bzu" = (
-/obj/machinery/smartfridge/bottlerack/grownbin,
-/obj/effect/overlay/desert_side{
-	dir = 8
-	},
-/obj/effect/overlay/desert_side,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
 "bzD" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/glass/beaker/waterbottle{
@@ -5293,12 +5257,11 @@
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/ambientlighting/building/c)
 "bIL" = (
-/obj/effect/overlay/desert_side{
-	dir = 4
+/obj/item/flag/legion,
+/turf/open/indestructible/ground/outside/desert{
+	icon_state = "wasteland33"
 	},
-/obj/machinery/smartfridge/bottlerack/seedbin/primitive,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
+/area/f13/wasteland)
 "bJc" = (
 /obj/structure/railing/corner{
 	color = "#A47449"
@@ -5623,13 +5586,6 @@
 	},
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/ncr)
-"bOd" = (
-/obj/structure/fence,
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 8;
-	icon_state = "dirt"
-	},
-/area/f13/wasteland/legion)
 "bOu" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
@@ -5714,12 +5670,6 @@
 "bPD" = (
 /turf/open/floor/carpet/red,
 /area/f13/legioncamp)
-"bPK" = (
-/obj/effect/overlay/desert_side{
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
 "bPL" = (
 /obj/effect/overlay/desert/sonora/edge{
 	dir = 1
@@ -5795,22 +5745,25 @@
 	},
 /area/f13/ambientlighting/building/o)
 "bQm" = (
-/obj/effect/overlay/desert_side{
-	dir = 4
+/obj/item/storage/trash_stack{
+	icon_state = "trash_2"
 	},
-/obj/structure/fence/wooden{
-	dir = 4;
-	icon_state = "post_wood"
-	},
+/obj/effect/decal/cleanable/generic,
 /turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
+/area/f13/wasteland/legion)
 "bQt" = (
 /obj/structure/flora/tree/oak_two,
 /turf/open/indestructible/ground/outside/grass,
 /area/f13/wasteland)
 "bQx" = (
-/obj/effect/landmark/start/f13/legionary,
-/turf/open/floor/f13/wood,
+/obj/structure/barricade/tentclothedge{
+	color = "#7c0A02";
+	dir = 8
+	},
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 5;
+	icon_state = "dirt"
+	},
 /area/f13/legioncamp)
 "bQy" = (
 /obj/structure/rack/shelf_metal,
@@ -6015,9 +5968,11 @@
 /turf/open/floor/carpet/red,
 /area/f13/legioncamp)
 "bTS" = (
-/obj/structure/chair/bench,
-/obj/effect/landmark/start/f13/recleg,
-/turf/open/floor/f13/wood,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 8;
+	light_color = "#f4e3b0"
+	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "bTU" = (
 /obj/effect/decal/cleanable/glass,
@@ -6530,12 +6485,15 @@
 	},
 /area/f13/wasteland)
 "ccg" = (
-/obj/effect/overlay/desert_side,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/item/storage/trash_stack{
+	pixel_y = 17
 	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
+/obj/effect/decal/cleanable/generic,
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 2;
+	icon_state = "dirt"
+	},
+/area/f13/wasteland/legion)
 "cck" = (
 /obj/structure/fence/wooden{
 	dir = 8
@@ -6810,15 +6768,6 @@
 	icon_state = "horizontalinnermain2left"
 	},
 /area/f13/wasteland)
-"chO" = (
-/obj/structure/fence/corner/wooden{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 4;
-	icon_state = "dirtcorner"
-	},
-/area/f13/legioncamp)
 "chQ" = (
 /obj/item/flag/ncr/snow,
 /turf/open/indestructible/ground/outside/snow,
@@ -6957,7 +6906,7 @@
 /obj/structure/barricade/bars,
 /obj/structure/barricade/sandbags,
 /obj/structure/table/wood,
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/floor/f13/wood,
 /area/f13/legioncamp)
 "ckx" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7006,15 +6955,9 @@
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/building/abandoned/q)
 "ckT" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 4;
-	light_color = "#f4e3b0"
-	},
-/obj/machinery/gear_painter,
-/turf/open/floor/plasteel/f13/stone/rugged,
+/obj/structure/barricade/wooden/strong,
+/obj/structure/barricade/wooden/planks,
+/turf/closed/wall/f13/wood/house,
 /area/f13/legioncamp)
 "ckU" = (
 /obj/effect/landmark/questing/animals{
@@ -7561,6 +7504,7 @@
 "ctW" = (
 /obj/item/bedsheet/blanket,
 /obj/structure/bed/mattress/pregame,
+/obj/effect/landmark/start/f13/recleg,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "cuj" = (
@@ -7769,16 +7713,15 @@
 /turf/open/floor/plating/dirt,
 /area/f13/wasteland)
 "cxF" = (
-/obj/effect/landmark/start/f13/campfollower,
-/obj/structure/chair/bench{
-	dir = 4;
-	pixel_x = -16
+/obj/structure/curtain{
+	color = "#845f58";
+	pixel_x = 32
 	},
 /obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+	color = "000000"
 	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/structure/rack/shelf_metal{
+	name = "Explosives"
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
@@ -8101,12 +8044,16 @@
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland/town)
 "cBS" = (
-/obj/structure/destructible/tribal_torch/lit,
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 1;
-	icon_state = "dirt"
+/obj/structure/curtain{
+	color = "#845f58";
+	pixel_x = -32
 	},
-/area/f13/wasteland/legion)
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/structure/table/wood,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legioncamp)
 "cCa" = (
 /obj/docking_port/stationary{
 	area_type = /area/f13;
@@ -8236,11 +8183,10 @@
 /turf/closed/indestructible/f13/matrix,
 /area/f13/tunnel/southwest)
 "cDF" = (
-/obj/structure/fence/wooden{
-	dir = 4;
-	icon_state = "post_wood"
+/obj/structure/destructible/tribal_torch/lit{
+	pixel_y = -18
 	},
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "cDN" = (
 /obj/item/storage/trash_stack{
@@ -8802,15 +8748,13 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "cKW" = (
-/obj/structure/simple_door/metal/fence/wooden,
-/obj/effect/overlay/desert_side{
-	dir = 8
+/obj/structure/obstacle/barbedwire,
+/obj/structure/barricade/sandbags,
+/obj/structure/flora/tree/tall{
+	icon_state = "tree_3"
 	},
-/obj/effect/overlay/desert_side{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "cLe" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8842,9 +8786,9 @@
 /turf/open/indestructible/ground/outside/sidewalkdirt,
 /area/f13/wasteland/followers)
 "cLz" = (
-/obj/structure/fence/wooden{
-	dir = 1
-	},
+/obj/structure/bed/mattress/pregame,
+/obj/item/bedsheet/blanket,
+/obj/effect/landmark/start/f13/recleg,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "cLA" = (
@@ -9276,20 +9220,12 @@
 	},
 /area/f13/wasteland/town)
 "cTk" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/flashlight/flare/torch,
-/obj/item/flashlight/flare/torch,
-/obj/item/flashlight/flare/torch,
-/obj/item/flashlight/flare/torch,
-/obj/item/flashlight/flare/torch,
-/obj/item/flashlight/flare/torch,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/structure/obstacle/barbedwire/end{
+	dir = 8
 	},
-/obj/item/flashlight/lantern,
-/obj/item/flashlight/lantern,
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
+/obj/structure/barricade/sandbags,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "cTp" = (
 /obj/machinery/smartfridge/bottlerack/grownbin,
 /turf/open/indestructible/ground/inside/dirt,
@@ -9743,11 +9679,14 @@
 	},
 /area/f13/wasteland/town)
 "cZW" = (
-/obj/effect/overlay/desert_side{
-	dir = 8
+/obj/structure/fence/wooden{
+	dir = 4;
+	icon_state = "post_wood"
 	},
-/obj/structure/simple_door/metal/fence/wooden,
-/turf/open/indestructible/ground/outside/dirt,
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirt";
+	dir = 1
+	},
 /area/f13/legioncamp)
 "cZX" = (
 /obj/item/trash/f13/crisps,
@@ -9934,12 +9873,9 @@
 /turf/open/floor/wood_common/wood_common_dark,
 /area/f13/ncr)
 "ddq" = (
-/obj/effect/landmark/start/f13/venator,
-/obj/effect/overlay/desert_side{
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland/legion)
+/obj/structure/barricade/wooden/planks,
+/turf/closed/wall/f13/wood/house,
+/area/f13/legioncamp)
 "dds" = (
 /obj/structure/barricade/sandbags,
 /obj/machinery/light/small{
@@ -10336,14 +10272,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/a)
-"djz" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/obj/structure/barricade/wooden,
-/obj/item/flag/legion,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland/legion)
 "djD" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -10578,14 +10506,6 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland)
-"dow" = (
-/obj/effect/overlay/desert_side,
-/obj/item/stack/sheet/leather/ten,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/metal/fifty,
-/obj/structure/rack/shelf_metal,
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
 "doz" = (
 /obj/machinery/sleeper,
 /obj/effect/decal/cleanable/dirt{
@@ -11379,17 +11299,12 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
 "dBg" = (
-/obj/structure/fence{
-	dir = 1
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
 	},
-/obj/effect/overlay/desert_side{
-	dir = 4
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 8;
-	icon_state = "dirt"
-	},
-/area/f13/wasteland/legion)
+/obj/effect/landmark/start/f13/campfollower,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legioncamp)
 "dBq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -11552,9 +11467,9 @@
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "dEg" = (
-/obj/effect/landmark/start/f13/vexillarius,
-/obj/effect/overlay/desert_side{
-	dir = 4
+/obj/structure/destructible/tribal_torch/lit,
+/obj/effect/decal/cleanable/blood{
+	icon_state = "drip1"
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/legion)
@@ -12100,14 +12015,12 @@
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/w)
 "dMY" = (
-/obj/effect/overlay/desert_side,
-/obj/structure/closet/crate/large,
-/obj/item/ingot/iron,
-/obj/item/ingot/iron,
-/obj/item/ingot/iron,
-/obj/item/ingot/iron,
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
+/obj/effect/overlay/desert_side{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/legion)
 "dMZ" = (
 /obj/structure/flora/brushwoodalt,
 /turf/open/indestructible/ground/outside/snow,
@@ -12194,17 +12107,6 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/c)
-"dNJ" = (
-/obj/structure/fence/corner/wooden,
-/obj/structure/fence/end/wooden{
-	dir = 4;
-	pixel_x = 5
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirt";
-	dir = 1
-	},
-/area/f13/legioncamp)
 "dNK" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13{
@@ -12520,11 +12422,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/followers)
-"dST" = (
-/obj/structure/barricade/wooden,
-/obj/item/flag/legion,
-/turf/closed/wall/mineral/wood,
-/area/f13/wasteland/legion)
 "dTf" = (
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/f13{
@@ -12986,11 +12883,18 @@
 /turf/open/floor/plasteel/f13/vault_floor/red/whiteredfull,
 /area/f13/brotherhood)
 "eat" = (
-/obj/machinery/workbench/forge,
-/obj/item/clothing/glasses/welding,
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
+/obj/item/clothing/mask/bandana/legion/legrecruit,
+/obj/item/clothing/mask/bandana/legion/legrecruit,
+/obj/item/clothing/mask/bandana/legion/legrecruit,
+/obj/item/clothing/mask/bandana/legion/legrecruit,
+/obj/item/clothing/glasses/legiongoggles,
+/obj/item/clothing/glasses/legiongoggles,
+/obj/item/clothing/glasses/legiongoggles,
+/obj/item/clothing/glasses/legiongoggles,
+/obj/structure/closet/crate/large,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "eax" = (
@@ -13029,8 +12933,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/ambientlighting/building/p)
 "ebU" = (
-/obj/machinery/autolathe/ammo,
-/turf/open/floor/plasteel/f13/stone/rugged,
+/obj/machinery/smartfridge/bottlerack/seedbin/primitive,
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "eca" = (
 /obj/structure/rack/shelf_metal,
@@ -13955,12 +13859,11 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "eql" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
-	},
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 4;
-	light_color = "#f4e3b0"
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
@@ -14060,15 +13963,6 @@
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
-"esi" = (
-/obj/effect/overlay/desert_side,
-/obj/structure/fence/corner/wooden,
-/obj/structure/destructible/tribal_torch/lit{
-	pixel_x = 13;
-	pixel_y = 9
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/legioncamp)
 "esq" = (
 /obj/structure/wreck/trash/machinepile,
 /obj/effect/decal/cleanable/dirt/dust{
@@ -15473,11 +15367,10 @@
 	},
 /area/f13/wasteland)
 "eOX" = (
-/obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+	color = "000000"
 	},
-/obj/item/reagent_containers/food/drinks/bottle/sunset,
+/obj/machinery/workbench,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "ePG" = (
@@ -16476,13 +16369,14 @@
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/z)
 "ffO" = (
-/obj/structure/chair/bench{
-	dir = 8;
-	pixel_x = 14
+/obj/structure/curtain{
+	color = "#845f58";
+	pixel_x = -32
 	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/wood,
+/obj/item/reagent_containers/food/drinks/bottle/sunset,
+/obj/effect/decal/cleanable/generic,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "ffQ" = (
@@ -17621,16 +17515,15 @@
 /turf/open/floor/carpet/purple,
 /area/f13/ambientlighting/building/g)
 "fxa" = (
-/obj/effect/landmark/start/f13/vetlegionary,
-/turf/open/floor/f13/wood,
-/area/f13/legioncamp)
-"fxd" = (
-/obj/effect/overlay/desert_side{
+/obj/structure/destructible/tribal_torch/lit{
+	pixel_x = 13;
+	pixel_y = 9
+	},
+/obj/structure/fence/corner/wooden{
 	dir = 4
 	},
-/obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland/legion)
+/area/f13/legioncamp)
 "fxn" = (
 /obj/structure/simple_door/room,
 /turf/open/floor/f13/wood,
@@ -19550,10 +19443,10 @@
 /turf/open/indestructible/ground/outside/grass,
 /area/f13/ambientlighting/building/c)
 "gbM" = (
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 10;
-	icon_state = "dirt"
+/obj/effect/turf_decal/weather/dirt{
+	dir = 8
 	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/legion)
 "gbO" = (
 /obj/machinery/light{
@@ -20049,14 +19942,14 @@
 /area/f13/ambientlighting/building/c)
 "gig" = (
 /obj/structure/rack/shelf_metal,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/leather/ten,
+/obj/item/stack/rods/fifty,
+/obj/item/stack/sheet/mineral/wood/fifty,
 /obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+	color = "000000"
 	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/item/stack/ore/blackpowder/five,
-/obj/item/stack/ore/blackpowder/five,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "gim" = (
@@ -20152,8 +20045,8 @@
 /area/f13/wasteland)
 "gjU" = (
 /obj/structure/barricade/wooden,
-/obj/structure/barricade/wooden/planks,
-/turf/open/indestructible/ground/outside/desert,
+/obj/item/flag/legion,
+/turf/closed/wall/mineral/wood,
 /area/f13/wasteland/legion)
 "gka" = (
 /obj/machinery/pool/drain,
@@ -20162,8 +20055,7 @@
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "gkg" = (
-/obj/structure/barricade/wooden,
-/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden/strong,
 /turf/closed/wall/f13/wood/house,
 /area/f13/legioncamp)
 "gkn" = (
@@ -20301,9 +20193,13 @@
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/wasteland)
 "gmM" = (
-/obj/structure/barricade/wooden,
-/obj/structure/barricade/wooden,
-/turf/closed/wall/f13/wood/house/broken,
+/obj/structure/table/wood,
+/obj/item/seeds/wheat,
+/obj/item/seeds/ambrosia/deus,
+/obj/item/seeds/agave,
+/obj/item/seeds/tato,
+/obj/item/seeds/yucca,
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "gmU" = (
 /obj/effect/decal/cleanable/greenglow,
@@ -20584,14 +20480,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/ambientlighting/building/g)
-"gqR" = (
-/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/legion_guard{
-	faction = list("Legion", "neutral");
-	name = "Cattle Guard Barto";
-	desc = "A legionary assigned to guard the Legion's cattle and livestock. His name's Barto."
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/legioncamp)
 "gqS" = (
 /obj/machinery/door/unpowered/secure_NCR{
 	name = "Medical"
@@ -20762,10 +20650,21 @@
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/wasteland)
 "gur" = (
-/obj/effect/overlay/desert_side{
-	dir = 4
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
 	},
-/turf/open/indestructible/ground/outside/dirt,
+/obj/structure/rack/shelf_metal{
+	name = "Miscellaneous"
+	},
+/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern,
+/obj/item/flashlight/flare/torch,
+/obj/item/flashlight/flare/torch,
+/obj/item/flashlight/flare/torch,
+/obj/item/flashlight/flare/torch,
+/obj/item/flashlight/flare/torch,
+/obj/item/flashlight/flare/torch,
+/turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "guv" = (
 /obj/effect/decal/waste,
@@ -22756,10 +22655,14 @@
 	},
 /area/f13/wasteland)
 "gYn" = (
-/obj/structure/rack,
-/obj/item/melee/onehanded/machete/training,
-/obj/item/melee/onehanded/machete/training,
-/turf/open/indestructible/ground/outside/desert,
+/obj/effect/overlay/desert_side{
+	dir = 1
+	},
+/obj/effect/turf_decal/weather/dirt{
+	dir = 2;
+	pixel_x = -28
+	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/legion)
 "gYp" = (
 /obj/structure/fence/corner/wooden{
@@ -22842,12 +22745,6 @@
 /obj/effect/decal/cleanable/greenglow,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
-"gZm" = (
-/obj/structure/fence/wooden{
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/legioncamp)
 "gZv" = (
 /obj/structure/window/fulltile/house{
 	dir = 2;
@@ -23390,12 +23287,13 @@
 	},
 /area/f13/wasteland)
 "hgM" = (
-/obj/structure/obstacle/barbedwire{
+/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden/planks,
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirt";
 	dir = 4
 	},
-/obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland)
+/area/f13/wasteland/legion)
 "hgR" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light/small{
@@ -23614,16 +23512,6 @@
 	},
 /turf/open/floor/carpet/orange,
 /area/f13/ambientlighting/building/c)
-"hjv" = (
-/obj/effect/overlay/desert_side{
-	dir = 8
-	},
-/obj/effect/overlay/desert_side{
-	dir = 1
-	},
-/mob/living/simple_animal/chicken,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
 "hjC" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
@@ -24272,11 +24160,21 @@
 /turf/open/indestructible/ground/outside/grass,
 /area/f13/wasteland)
 "hrC" = (
-/obj/effect/overlay/desert_side,
-/obj/structure/sink/well{
-	pixel_x = -20
+/obj/structure/reagent_dispensers/barrel/explosive{
+	pixel_x = 5;
+	pixel_y = 3
 	},
-/turf/open/indestructible/ground/outside/dirt,
+/obj/structure/reagent_dispensers/barrel/explosive{
+	pixel_x = -9;
+	pixel_y = 10
+	},
+/obj/structure/reagent_dispensers/barrel/explosive{
+	pixel_x = -9
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "hrE" = (
 /obj/structure/table/wood,
@@ -24721,11 +24619,14 @@
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "hys" = (
-/obj/effect/overlay/desert_side{
-	dir = 8
+/obj/structure/barricade/sandbags,
+/obj/structure/obstacle/barbedwire{
+	dir = 4
 	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
+/turf/open/indestructible/ground/outside/desert{
+	icon_state = "wasteland32"
+	},
+/area/f13/wasteland)
 "hyP" = (
 /obj/structure/flora/grass/wasteland{
 	icon_state = "tall_grass_2";
@@ -25208,19 +25109,13 @@
 /turf/open/indestructible/ground/outside/road,
 /area/f13/wasteland)
 "hEZ" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/book/granter/crafting_recipe/gunsmith_one,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/structure/fence{
+	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
+/obj/structure/barricade/wooden/planks,
+/obj/structure/barricade/wooden/strong,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/legion)
 "hFc" = (
 /obj/structure/reagent_dispensers/barrel/dangerous,
 /obj/effect/decal/cleanable/greenglow,
@@ -25975,10 +25870,13 @@
 /turf/open/floor/f13,
 /area/f13/ambientlighting/building/o)
 "hQt" = (
-/obj/structure/chair/bench,
-/obj/effect/landmark/start/f13/explorer,
-/turf/open/floor/f13/wood,
-/area/f13/legioncamp)
+/obj/structure/rack,
+/obj/item/melee/onehanded/machete/training,
+/obj/item/melee/onehanded/machete/training,
+/obj/item/melee/onehanded/machete/training,
+/obj/item/melee/onehanded/machete/training,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/legion)
 "hQv" = (
 /obj/structure/table,
 /obj/structure/window/reinforced{
@@ -26077,7 +25975,15 @@
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/ambientlighting/building/u)
 "hRu" = (
+/obj/structure/curtain{
+	color = "#845f58";
+	pixel_x = -32
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
 /obj/machinery/workbench/fbench,
+/obj/effect/decal/cleanable/generic,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "hRB" = (
@@ -27138,14 +27044,10 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building/tribal)
 "iip" = (
-/obj/structure/fence/wooden{
-	dir = 4;
-	icon_state = "post_wood"
+/obj/structure/fence/door{
+	dir = 4
 	},
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirt";
-	dir = 1
-	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "iiA" = (
 /obj/effect/decal/cleanable/dirt,
@@ -28030,9 +27932,16 @@
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/ambientlighting/building/p)
 "ixz" = (
-/obj/structure/sign/legion/smithy,
-/turf/closed/wall/f13/wood/house/broken,
-/area/f13/legioncamp)
+/obj/structure/curtain{
+	color = "#845f58";
+	pixel_y = -32
+	},
+/obj/effect/decal/cleanable/generic{
+	pixel_x = -8;
+	pixel_y = 12
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/legion)
 "ixK" = (
 /obj/effect/overlay/desert/sonora/edge{
 	dir = 9
@@ -28545,12 +28454,14 @@
 	},
 /area/f13/ambientlighting/building/f)
 "iFW" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 4;
+	light_color = "#f4e3b0"
 	},
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
+/obj/machinery/gear_painter,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "iFX" = (
@@ -29906,12 +29817,12 @@
 	},
 /area/f13/building/abandoned/h)
 "jcT" = (
-/obj/structure/fence/corner/wooden{
-	dir = 4
+/obj/structure/barricade/sandbags,
+/obj/structure/obstacle/barbedwire/end{
+	dir = 8
 	},
-/obj/structure/destructible/tribal_torch/lit,
 /turf/open/indestructible/ground/outside/desert,
-/area/f13/legioncamp)
+/area/f13/wasteland)
 "jde" = (
 /obj/structure/wreck/trash/halftire,
 /turf/open/indestructible/ground/inside/dirt,
@@ -30069,7 +29980,11 @@
 /turf/closed/wall/f13/wood/interior,
 /area/f13/building/abandoned/j)
 "jfN" = (
-/obj/machinery/workbench,
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/structure/chair/bench,
+/obj/effect/landmark/start/f13/explorer,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "jfW" = (
@@ -31698,9 +31613,11 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/building/abandoned/j)
 "jFz" = (
-/obj/machinery/autolathe/manual,
+/obj/effect/turf_decal/weather/dirt{
+	dir = 4
+	},
 /obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+	color = "000000"
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
@@ -31731,13 +31648,17 @@
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/wasteland)
 "jFY" = (
-/obj/structure/fence/wooden{
-	dir = 1
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
 	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 4;
-	icon_state = "dirt"
+/obj/structure/rack/shelf_metal{
+	name = "Materials"
 	},
+/obj/item/stack/ore/blackpowder/five,
+/obj/item/stack/ore/blackpowder/five,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "jGd" = (
 /obj/effect/spawner/lootdrop/f13/crafting,
@@ -32106,15 +32027,17 @@
 	},
 /area/f13/ambientlighting/building/f)
 "jNE" = (
-/obj/effect/overlay/desert_side{
-	dir = 4
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
 	},
-/obj/machinery/hydroponics/soil{
-	mutmod = 0;
-	name = "ancient fertile soil";
-	yieldmod = 1.3
+/obj/structure/rack/shelf_metal{
+	name = "Ballistic Ammo"
 	},
-/turf/open/indestructible/ground/outside/dirt,
+/obj/item/ammo_box/shotgun/buck,
+/obj/item/ammo_box/shotgun/buck,
+/obj/item/ammo_box/a308box/improvised,
+/obj/item/ammo_box/a308box/improvised,
+/turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "jNF" = (
 /obj/structure/obstacle/barbedwire,
@@ -32202,12 +32125,15 @@
 	},
 /area/f13/wasteland)
 "jPt" = (
-/obj/effect/overlay/desert_side,
-/obj/structure/destructible/tribal_torch/wall{
-	dir = 2
+/obj/structure/fence/wooden{
+	dir = 1
+	},
+/obj/structure/destructible/tribal_torch/lit{
+	pixel_x = 13;
+	pixel_y = 9
 	},
 /turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland/legion)
+/area/f13/legioncamp)
 "jPD" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/small{
@@ -33493,12 +33419,10 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building/powered)
 "kky" = (
-/obj/structure/destructible/tribal_torch/lit{
-	pixel_x = 13;
-	pixel_y = 9
-	},
-/obj/structure/fence/corner/wooden{
-	dir = 4
+/obj/structure/flora/grass/wasteland{
+	icon_state = "tall_grass_8";
+	pixel_x = -1;
+	pixel_y = 2
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
@@ -34066,9 +33990,15 @@
 	},
 /area/f13/wasteland)
 "kuy" = (
-/obj/effect/overlay/desert_side{
-	dir = 8
+/obj/structure/curtain{
+	color = "#845f58";
+	pixel_x = -32
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/autolathe/ammo,
+/obj/item/book/granter/crafting_recipe/gunsmith_two,
+/obj/item/book/granter/crafting_recipe/gunsmith_three,
+/obj/item/book/granter/crafting_recipe/gunsmith_one,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "kuz" = (
@@ -34175,9 +34105,14 @@
 	},
 /area/f13/ambientlighting/building/m)
 "kvV" = (
-/obj/effect/overlay/desert_side,
-/obj/machinery/workbench,
-/turf/open/floor/plasteel/f13/stone/rugged,
+/obj/structure/fence/wooden{
+	dir = 4;
+	icon_state = "post_wood"
+	},
+/obj/structure/destructible/tribal_torch/lit{
+	pixel_y = -18
+	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "kvX" = (
 /obj/structure/table/reinforced,
@@ -35622,12 +35557,18 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "kRA" = (
-/obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/desert,
+/obj/structure/table/wood,
+/obj/item/storage/bag/plants,
+/obj/item/cultivator,
+/obj/item/shovel/spade,
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "kRH" = (
-/obj/structure/sign/legion/prime,
-/turf/open/indestructible/ground/outside/desert,
+/obj/effect/decal/cleanable/generic{
+	pixel_x = -8;
+	pixel_y = 12
+	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/legion)
 "kRN" = (
 /obj/structure/sign/flag_america,
@@ -36004,13 +35945,10 @@
 /turf/open/floor/plating/rust,
 /area/f13/caves)
 "kYq" = (
-/obj/effect/overlay/desert_side{
-	dir = 8
+/obj/structure/decoration/rag{
+	icon_state = "skulls"
 	},
-/obj/effect/overlay/desert_side{
-	dir = 8
-	},
-/turf/open/indestructible/ground/outside/dirt,
+/turf/closed/wall/mineral/wood,
 /area/f13/wasteland/legion)
 "kYH" = (
 /obj/effect/decal/cleanable/dirt{
@@ -36046,10 +35984,12 @@
 	},
 /area/f13/wasteland)
 "kZj" = (
-/obj/effect/overlay/desert_side,
-/obj/structure/table/wood,
-/obj/item/clothing/neck/apron/labor/forge,
-/turf/open/floor/plasteel/f13/stone/rugged,
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/vetlegionary,
+/turf/open/floor/f13/wood,
 /area/f13/legioncamp)
 "kZx" = (
 /obj/structure/rack,
@@ -37121,13 +37061,6 @@
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building/abandoned/g)
-"lrS" = (
-/obj/structure/obstacle/barbedwire/end{
-	dir = 8
-	},
-/obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland)
 "lrX" = (
 /obj/effect/decal/remains{
 	icon_state = "remains"
@@ -37372,12 +37305,6 @@
 	icon_state = "horizontalinnermain1"
 	},
 /area/f13/wasteland)
-"lwD" = (
-/obj/item/storage/trash_stack{
-	pixel_y = 17
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland/legion)
 "lwL" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 4;
@@ -37495,8 +37422,12 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/ambientlighting/building/q)
 "lyv" = (
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
+/obj/effect/turf_decal/weather/dirt{
+	dir = 1
+	},
+/obj/effect/overlay/desert_side,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/legion)
 "lyC" = (
 /obj/structure/railing{
 	layer = 3.1
@@ -37506,16 +37437,6 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland)
-"lyF" = (
-/obj/structure/fence/wooden{
-	dir = 4;
-	icon_state = "post_wood"
-	},
-/obj/structure/destructible/tribal_torch/lit{
-	pixel_y = -18
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
 "lyJ" = (
 /obj/structure/table/reinforced,
 /obj/item/stack/ore/blackpowder/five,
@@ -37622,12 +37543,16 @@
 /turf/open/floor/plasteel/f13/vault_floor/green/greenchess/greenchess2,
 /area/f13/ambientlighting/building/j)
 "lzL" = (
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 8;
-	light_color = "#f4e3b0"
+/obj/structure/curtain{
+	color = "#845f58";
+	pixel_x = 32
 	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland/legion)
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/rack/shelf_metal{
+	name = "Weapon Attachments"
+	},
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legioncamp)
 "lAb" = (
 /obj/effect/turf_decal/weather/snow/corner{
 	dir = 10
@@ -39029,14 +38954,6 @@
 	},
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/wasteland)
-"lXG" = (
-/obj/structure/car/rubbish3,
-/obj/structure/obstacle/barbedwire{
-	dir = 4
-	},
-/obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland)
 "lXK" = (
 /obj/structure/bed,
 /obj/item/bedsheet/random,
@@ -39062,19 +38979,19 @@
 	},
 /area/f13/brotherhood)
 "lXV" = (
-/obj/structure/sink/well{
-	pixel_x = -20
+/obj/structure/fence/wooden{
+	dir = 1
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "lXY" = (
-/obj/structure/fence/wooden{
+/obj/structure/fence,
+/obj/effect/decal/cleanable/generic,
+/turf/open/indestructible/ground/outside/dirt{
 	dir = 4;
-	icon_state = "post_wood"
+	icon_state = "dirt"
 	},
-/obj/structure/destructible/tribal_torch/lit,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
+/area/f13/wasteland/legion)
 "lYf" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/rack,
@@ -39397,12 +39314,7 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "mdZ" = (
-/obj/effect/overlay/desert_side{
-	dir = 1
-	},
-/mob/living/simple_animal/chicken{
-	icon_state = "chicken_white"
-	},
+/obj/machinery/smartfridge/bottlerack/grownbin,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "mef" = (
@@ -40802,14 +40714,6 @@
 	smooth = 1
 	},
 /area/f13/brotherhood/surface)
-"mAy" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/obj/structure/barricade/wooden/planks,
-/obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland/legion)
 "mAD" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -41714,11 +41618,7 @@
 /turf/open/indestructible/ground/outside/grass,
 /area/f13/wasteland)
 "mPp" = (
-/obj/structure/table/wood,
-/obj/item/storage/toolbox/mechanical,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "mPs" = (
@@ -41779,13 +41679,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/building/powered)
-"mQB" = (
-/obj/effect/overlay/desert_side{
-	dir = 1
-	},
-/obj/machinery/door/unpowered/securedoor/legion,
-/turf/open/floor/plating/f13/inside/gravel,
-/area/f13/legioncamp)
 "mQK" = (
 /obj/structure/fluff/railing{
 	dir = 8
@@ -42206,17 +42099,14 @@
 	},
 /area/f13/wasteland)
 "mWS" = (
-/obj/effect/overlay/desert_side,
 /obj/effect/overlay/desert_side{
-	dir = 4
+	dir = 8
 	},
-/obj/structure/rack/shelf_metal,
-/obj/item/stack/sheet/mineral/wood/fifty,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 6;
+	icon_state = "dirt"
 	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
+/area/f13/wasteland/legion)
 "mXD" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/indestructible/ground/outside/dirt,
@@ -42304,9 +42194,15 @@
 	},
 /area/f13/wasteland)
 "mZs" = (
-/obj/effect/landmark/start/f13/recleg,
-/obj/structure/chair/bench,
-/turf/open/floor/f13/wood,
+/obj/structure/fence/corner/wooden,
+/obj/structure/fence/end/wooden{
+	dir = 4;
+	pixel_x = 5
+	},
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirt";
+	dir = 1
+	},
 /area/f13/legioncamp)
 "mZw" = (
 /obj/machinery/light/small{
@@ -42470,12 +42366,12 @@
 	},
 /area/f13/ambientlighting/building/o)
 "nbq" = (
-/obj/structure/barricade/tentclothcorner{
-	color = "#7c0A02";
-	dir = 8
+/obj/structure/barricade/sandbags,
+/obj/structure/obstacle/barbedwire{
+	dir = 4
 	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "nbt" = (
 /obj/machinery/light/small{
 	dir = 8;
@@ -42896,13 +42792,9 @@
 	},
 /area/f13/wasteland)
 "nha" = (
-/obj/item/storage/trash_stack{
-	icon_state = "trash_2"
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 2;
-	icon_state = "dirt"
-	},
+/obj/effect/spawner/lootdrop/trash,
+/obj/effect/decal/cleanable/generic,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland/legion)
 "nhh" = (
 /obj/structure/obstacle/barbedwire/end{
@@ -43248,13 +43140,13 @@
 /turf/open/floor/wood_wide,
 /area/f13/building/abandoned/g)
 "nmq" = (
-/obj/structure/anvil/obtainable/legion,
-/obj/item/melee/smith/hammer/premade,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/effect/decal/cleanable/blood{
+	icon_state = "floor6";
+	pixel_x = -18;
+	pixel_y = 15
 	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/legion)
 "nmu" = (
 /obj/structure/nest/deathclaw/mother,
 /turf/open/indestructible/ground/inside/mountain,
@@ -43561,12 +43453,6 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland)
-"nrz" = (
-/mob/living/simple_animal/chicken{
-	icon_state = "chicken_white"
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
 "nrA" = (
 /obj/structure/rack,
 /obj/item/stack/f13Cash/caps/onefivezero,
@@ -45167,9 +45053,12 @@
 	},
 /area/f13/wasteland)
 "nQP" = (
-/obj/structure/destructible/tribal_torch/wall,
-/turf/closed/wall/f13/wood/house/broken,
-/area/f13/legioncamp)
+/obj/structure/obstacle/barbedwire/end{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "nQW" = (
 /turf/open/indestructible/ground/outside/grass/dirtpath{
 	dir = 8
@@ -45215,14 +45104,6 @@
 /obj/structure/bed/old,
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/ambientlighting/building/t)
-"nSi" = (
-/obj/structure/flora/grass/wasteland{
-	icon_state = "tall_grass_8";
-	pixel_x = -1;
-	pixel_y = 2
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
 "nSn" = (
 /obj/structure/rack,
 /obj/item/trash/f13/cram,
@@ -46341,14 +46222,17 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/a)
 "oko" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/rack/shelf_metal{
+	name = "Clothing"
 	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/item/clothing/under/f13/legskirt,
+/obj/item/clothing/under/f13/legskirt,
+/obj/item/clothing/under/f13/legskirt,
+/obj/item/clothing/under/f13/legskirt,
+/obj/effect/decal/cleanable/generic{
+	pixel_x = -8;
+	pixel_y = 12
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
@@ -46492,8 +46376,11 @@
 /turf/open/indestructible/ground/outside/road,
 /area/f13/ambientlighting/building/g)
 "olV" = (
-/obj/structure/bed/mattress/pregame,
-/obj/item/bedsheet/blanket,
+/obj/structure/barricade/tentclothedge{
+	color = "#7c0A02";
+	dir = 1;
+	pixel_y = -3
+	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "omf" = (
@@ -47563,9 +47450,8 @@
 /area/f13/brotherhood)
 "oFg" = (
 /obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+	color = "000000"
 	},
-/obj/effect/landmark/start/f13/explorer,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "oFl" = (
@@ -47846,17 +47732,8 @@
 	},
 /area/f13/brotherhood)
 "oJO" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/clothing/mask/bandana/legion/legrecruit,
-/obj/item/clothing/mask/bandana/legion/legrecruit,
-/obj/item/clothing/mask/bandana/legion/legrecruit,
-/obj/item/clothing/mask/bandana/legion/legrecruit,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/venator,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "oJW" = (
@@ -50334,12 +50211,11 @@
 /turf/open/indestructible/ground/outside/sidewalk,
 /area/f13/ambientlighting/building/x)
 "pvM" = (
-/obj/structure/fence/corner/wooden{
-	dir = 8
+/obj/effect/spawner/lootdrop/trash,
+/obj/effect/decal/cleanable/generic{
+	pixel_x = -8
 	},
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirtcorner"
-	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "pvT" = (
 /obj/structure/table/wood/poker,
@@ -50564,16 +50440,8 @@
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "pzH" = (
-/obj/structure/fence/wooden{
-	dir = 4;
-	icon_state = "post_wood"
-	},
-/obj/structure/destructible/tribal_torch/lit{
-	pixel_y = -18
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirt"
-	},
+/obj/structure/sign/warning/explosives,
+/turf/closed/wall/f13/wood/house,
 /area/f13/legioncamp)
 "pAd" = (
 /obj/structure/car/rubbish3{
@@ -50823,10 +50691,6 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/ambientlighting/building/j)
-"pFi" = (
-/obj/machinery/smartfridge/bottlerack/grownbin,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
 "pFl" = (
 /obj/structure/rack/shelf_metal,
 /obj/effect/decal/cleanable/dirt,
@@ -50857,16 +50721,10 @@
 	},
 /area/f13/followers)
 "pFB" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/clothing/glasses/legiongoggles,
-/obj/item/clothing/glasses/legiongoggles,
-/obj/item/clothing/glasses/legiongoggles,
-/obj/item/clothing/glasses/legiongoggles,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/structure/sink/well{
+	pixel_x = -20
 	},
-/obj/structure/destructible/tribal_torch/wall/lit,
-/turf/open/floor/plasteel/f13/stone/rugged,
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "pFH" = (
 /obj/structure/curtain{
@@ -51573,12 +51431,6 @@
 /obj/structure/simple_door/room,
 /turf/open/floor/wood_common,
 /area/maintenance/bar)
-"pPr" = (
-/obj/item/flag/legion,
-/turf/open/indestructible/ground/outside/desert{
-	icon_state = "wasteland33"
-	},
-/area/f13/wasteland)
 "pPx" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/autolathe/ammo,
@@ -52994,14 +52846,19 @@
 	},
 /area/f13/wasteland)
 "qla" = (
-/obj/structure/fence/door{
-	dir = 4
+/obj/structure/curtain{
+	color = "#845f58";
+	pixel_x = 32
 	},
-/obj/effect/overlay/desert_side{
-	dir = 1
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
 	},
-/obj/effect/overlay/desert_side,
-/turf/open/indestructible/ground/outside/dirt,
+/obj/machinery/autolathe/manual,
+/obj/effect/decal/cleanable/generic{
+	pixel_x = -8;
+	pixel_y = 12
+	},
+/turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "qlb" = (
 /obj/structure/table/wood,
@@ -53874,10 +53731,13 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building/abandoned/g)
 "qyJ" = (
-/obj/item/storage/trash_stack{
-	icon_state = "trash_2"
+/obj/structure/destructible/tribal_torch/lit,
+/obj/effect/decal/cleanable/blood{
+	plane = -14;
+	layer = 3.7;
+	icon_state = "drip4"
 	},
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/legion)
 "qyM" = (
 /obj/structure/flora/grass/wasteland{
@@ -54055,15 +53915,13 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/building/abandoned/g)
 "qBt" = (
-/obj/structure/window/fulltile/house{
-	icon_state = "housewindowbroken"
+/obj/structure/fence/corner/wooden{
+	dir = 8
 	},
-/obj/structure/curtain{
-	color = "#845f58";
-	pixel_y = -32
+/obj/structure/fence/wooden{
+	dir = 1
 	},
-/obj/structure/barricade/bars,
-/turf/open/indestructible/ground/outside/desert,
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "qBN" = (
 /obj/structure/obstacle/barbedwire/end{
@@ -54263,12 +54121,12 @@
 /turf/closed/wall/rust,
 /area/f13/wasteland)
 "qEm" = (
-/obj/effect/overlay/desert_side{
-	dir = 1
+/obj/effect/spawner/lootdrop/trash,
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 2;
+	icon_state = "dirt"
 	},
-/mob/living/simple_animal/cow/brahmin,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
+/area/f13/wasteland/legion)
 "qEp" = (
 /obj/structure/barricade/sandbags,
 /obj/effect/decal/cleanable/glass,
@@ -54354,17 +54212,11 @@
 /turf/open/floor/plasteel/f13/vault_floor/white/whitesolid,
 /area/f13/ambientlighting/building/j)
 "qFA" = (
-/obj/structure/fence/wooden{
-	dir = 1
+/obj/structure/barricade/tentclothcorner{
+	color = "#7c0A02";
+	dir = 8
 	},
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 8;
-	light_color = "#f4e3b0"
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 4;
-	icon_state = "dirt"
-	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "qFH" = (
 /obj/structure/barricade/wooden,
@@ -55852,10 +55704,6 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/caves)
 "rdZ" = (
-/obj/structure/fence/corner/wooden{
-	dir = 8
-	},
-/obj/structure/destructible/tribal_torch/lit,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/legioncamp)
 "ref" = (
@@ -57382,22 +57230,22 @@
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/p)
 "rCE" = (
-/obj/effect/overlay/desert_side{
-	dir = 8
+/obj/effect/turf_decal/weather/dirt{
+	dir = 1
 	},
-/obj/effect/overlay/desert_side,
-/obj/structure/reagent_dispensers/barrel/explosive{
-	pixel_x = -9;
-	pixel_y = 10
+/obj/structure/anvil/obtainable/legion,
+/obj/item/melee/smith/hammer/premade,
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
 	},
-/obj/structure/reagent_dispensers/barrel/explosive{
-	pixel_x = 5;
-	pixel_y = 3
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 4;
+	light_color = "#f4e3b0"
 	},
-/obj/structure/reagent_dispensers/barrel/explosive{
-	pixel_x = -9
+/obj/effect/decal/cleanable/generic{
+	pixel_x = -8;
+	pixel_y = 12
 	},
-/obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "rCK" = (
@@ -57843,14 +57691,12 @@
 /turf/open/floor/plating/f13/inside/gravel,
 /area/f13/building/abandoned/x)
 "rKa" = (
-/obj/structure/fence/corner/wooden{
-	dir = 8
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 17
 	},
-/obj/structure/fence/wooden{
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/legioncamp)
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/legion)
 "rKd" = (
 /obj/structure/fence/end/wooden{
 	dir = 8
@@ -58133,12 +57979,9 @@
 /turf/open/floor/plating/rust,
 /area/f13/caves)
 "rOF" = (
-/obj/structure/fence/end/wooden{
-	dir = 8;
-	pixel_x = -4
-	},
+/obj/structure/destructible/tribal_torch/wall/lit,
 /turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
+/area/f13/wasteland/legion)
 "rOJ" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/snacks/meatsalted,
@@ -58637,15 +58480,16 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/b)
 "rWF" = (
-/obj/effect/overlay/desert_side,
-/obj/effect/overlay/desert_side{
-	dir = 4
+/obj/effect/turf_decal/weather/dirt{
+	dir = 5
 	},
-/obj/structure/destructible/tribal_torch/wall{
-	dir = 2
+/obj/structure/barricade/wooden/strong,
+/obj/structure/barricade/wooden/planks,
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
 	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/wasteland/legion)
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legioncamp)
 "rWK" = (
 /obj/structure/car/rubbish2,
 /turf/closed/mineral/random/low_chance,
@@ -58654,14 +58498,6 @@
 /turf/open/indestructible/ground/outside/snow{
 	icon_state = "snow5"
 	},
-/area/f13/wasteland)
-"rWX" = (
-/obj/structure/obstacle/barbedwire,
-/obj/structure/barricade/sandbags,
-/obj/structure/flora/tree/tall{
-	icon_state = "tree_3"
-	},
-/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "rXd" = (
 /obj/structure/lamp_post/quadra,
@@ -58874,10 +58710,9 @@
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "sbo" = (
-/obj/structure/barricade/tentclothedge{
-	color = "#7c0A02";
-	dir = 1;
-	pixel_y = -3
+/obj/structure/fence/end/wooden{
+	dir = 8;
+	pixel_x = -4
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
@@ -60694,10 +60529,6 @@
 	},
 /turf/open/floor/wood_common/wood_common_dark,
 /area/f13/ncr)
-"sEU" = (
-/obj/effect/overlay/desert_side,
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
 "sEY" = (
 /obj/structure/bed/double,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -61115,15 +60946,6 @@
 /obj/item/stack/f13Cash/caps/onefivezero,
 /turf/open/floor/carpet/purple,
 /area/f13/bar)
-"sLD" = (
-/obj/structure/fence/corner/wooden{
-	dir = 4
-	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 2;
-	icon_state = "dirt"
-	},
-/area/f13/legioncamp)
 "sLI" = (
 /turf/open/indestructible/ground/outside/sidewalk{
 	dir = 1;
@@ -61265,10 +61087,14 @@
 /turf/open/indestructible/ground/outside/road,
 /area/f13/building/abandoned/k)
 "sOo" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/melee/onehanded/machete,
-/obj/item/melee/onehanded/machete,
-/obj/item/melee/onehanded/machete,
+/obj/effect/turf_decal/weather/dirt{
+	dir = 6
+	},
+/obj/structure/barricade/wooden/strong,
+/obj/structure/barricade/wooden/planks,
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "sOp" = (
@@ -61943,8 +61769,10 @@
 	},
 /area/f13/ambientlighting/building/o)
 "sYI" = (
-/obj/effect/overlay/desert_side,
-/turf/open/floor/plasteel/f13/stone/rugged,
+/mob/living/simple_animal/chicken{
+	icon_state = "chicken_white"
+	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "sYL" = (
 /obj/machinery/mineral/wasteland_vendor/clothing,
@@ -63490,13 +63318,15 @@
 	},
 /area/f13/wasteland)
 "tyd" = (
-/obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+	color = "000000"
 	},
-/obj/item/ammo_box/c45/improvised,
-/obj/item/ammo_box/c45/improvised,
-/obj/item/ammo_box/c45/improvised,
+/obj/structure/rack/shelf_metal{
+	name = "Energy"
+	},
+/obj/effect/decal/cleanable/generic{
+	pixel_x = -8
+	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "tyj" = (
@@ -63702,13 +63532,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/a)
-"tAI" = (
-/obj/structure/barricade/wooden,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/closed/wall/f13/wood/house/broken,
-/area/f13/legioncamp)
 "tAO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/spawner/lootdrop/f13/advcrafting,
@@ -64134,11 +63957,9 @@
 /turf/open/indestructible/ground/outside/grass,
 /area/f13/wasteland)
 "tHc" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 8
+/obj/structure/barricade/bars,
+/obj/structure/window/fulltile/house{
+	icon_state = "housewindowbroken"
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
@@ -64929,15 +64750,11 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building/abandoned/g)
 "tTJ" = (
-/obj/effect/overlay/desert_side{
-	dir = 8
+/obj/effect/turf_decal/weather/dirt{
+	dir = 1
 	},
-/obj/effect/overlay/desert_side,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/legion)
 "tTL" = (
 /obj/structure/lattice,
 /obj/structure/reagent_dispensers/barrel/three,
@@ -65504,12 +65321,16 @@
 	},
 /area/f13/brotherhood)
 "udy" = (
-/obj/effect/landmark/start/f13/campfollower,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/effect/overlay/desert_side{
+	dir = 1
 	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
+/obj/effect/turf_decal/weather/dirt,
+/obj/effect/turf_decal/weather/dirt{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/legion)
 "udz" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood_common/wood_common_dark{
@@ -66132,8 +65953,9 @@
 /turf/open/indestructible/ground/outside/dirthole,
 /area/f13/wasteland)
 "ulx" = (
-/obj/structure/fence/door{
-	dir = 4
+/obj/structure/barricade/tentclothcorner{
+	color = "#7c0A02";
+	dir = 1
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
@@ -66429,14 +66251,12 @@
 	},
 /area/f13/ambientlighting/building/t)
 "urr" = (
-/obj/effect/overlay/desert_side{
-	dir = 1
-	},
-/obj/effect/overlay/desert_side{
+/obj/structure/obstacle/barbedwire{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
+/obj/structure/barricade/sandbags,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "urA" = (
 /obj/structure/stairs/south,
 /turf/open/floor/carpet/green,
@@ -66538,11 +66358,13 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland/town)
 "utA" = (
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 8
+/obj/structure/car/rubbish3,
+/obj/structure/obstacle/barbedwire{
+	dir = 4
 	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
+/obj/structure/barricade/sandbags,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "utM" = (
 /obj/machinery/vending/cigarette{
 	force_free = 1
@@ -67339,12 +67161,12 @@
 	},
 /area/f13/wasteland)
 "uFS" = (
-/obj/structure/campfire/barrel,
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 1;
-	icon_state = "dirt"
+/obj/effect/overlay/desert_side{
+	dir = 4
 	},
-/area/f13/wasteland/legion)
+/obj/structure/barricade/wooden/strong,
+/turf/closed/mineral/random/low_chance,
+/area/f13/wasteland)
 "uFT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -67794,14 +67616,12 @@
 /area/f13/wasteland)
 "uMg" = (
 /obj/structure/fence/wooden{
-	dir = 4;
-	icon_state = "post_wood"
+	dir = 1
 	},
-/obj/effect/overlay/desert_side{
-	dir = 4
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 8;
+	icon_state = "dirt"
 	},
-/obj/effect/overlay/desert_side,
-/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "uMl" = (
 /obj/effect/mapping_helpers/network_builder/power_cable/auto,
@@ -67871,13 +67691,8 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland/town)
 "uNh" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/ammo_box/shotgun/buck,
-/obj/item/ammo_box/shotgun/buck,
-/obj/item/gun/ballistic/shotgun/hunting,
-/obj/item/gun/ballistic/shotgun/hunting,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/effect/turf_decal/weather/dirt{
+	dir = 2
 	},
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -68429,15 +68244,6 @@
 "uVo" = (
 /turf/closed/wall/f13/wood,
 /area/f13/ambientlighting/building/e)
-"uVs" = (
-/obj/structure/table/wood,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/obj/item/ammo_box/a308box/improvised,
-/obj/item/ammo_box/a308box/improvised,
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
 "uVw" = (
 /turf/open/indestructible/ground/outside/roaddirt{
 	icon_state = "innerpavement"
@@ -68455,9 +68261,6 @@
 /obj/structure/curtain{
 	color = "#845f58";
 	pixel_y = -32
-	},
-/obj/effect/overlay/desert_side{
-	dir = 1
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/legion)
@@ -68541,11 +68344,16 @@
 /turf/open/floor/wood_common,
 /area/f13/wasteland)
 "uXi" = (
-/obj/structure/table/wood,
-/obj/item/book/granter/crafting_recipe/gunsmith_two,
 /obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+	color = "000000"
 	},
+/obj/structure/rack/shelf_metal{
+	name = "Ballistic Guns"
+	},
+/obj/item/gun/ballistic/shotgun/hunting,
+/obj/item/gun/ballistic/shotgun/hunting,
+/obj/item/gun/ballistic/rifle/hunting,
+/obj/item/gun/ballistic/rifle/hunting,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "uXl" = (
@@ -68597,11 +68405,9 @@
 	},
 /area/f13/ambientlighting/building/o)
 "uXD" = (
-/obj/effect/overlay/desert_side,
-/obj/structure/table/wood,
-/obj/item/clothing/gloves/legion/forgemaster,
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
+/obj/item/flag/legion,
+/turf/closed/wall/mineral/wood,
+/area/f13/wasteland/legion)
 "uXE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/car/rubbish1,
@@ -68744,9 +68550,17 @@
 /turf/open/indestructible/ground/outside/graveldirt,
 /area/f13/wasteland)
 "vau" = (
-/obj/structure/sink/well,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland/legion)
+/obj/structure/fence/wooden{
+	dir = 1
+	},
+/obj/structure/fence/corner/wooden{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 5;
+	icon_state = "dirt"
+	},
+/area/f13/legioncamp)
 "vaF" = (
 /obj/structure/billboard/redrocket2,
 /turf/open/indestructible/ground/outside/sidewalkdirt{
@@ -69041,11 +68855,13 @@
 /turf/open/floor/carpet/red,
 /area/f13/building/abandoned/t)
 "veC" = (
-/obj/structure/flora/grass/wasteland{
-	pixel_x = 4;
-	pixel_y = 13
+/obj/structure/fence/wooden{
+	dir = 1
 	},
-/turf/open/indestructible/ground/outside/dirt,
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 10;
+	icon_state = "dirt"
+	},
 /area/f13/legioncamp)
 "veD" = (
 /obj/effect/decal/marking{
@@ -69263,13 +69079,21 @@
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "vhc" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/gun/ballistic/rifle/hunting,
-/obj/item/gun/ballistic/rifle/hunting,
-/obj/item/ammo_box/a308box/improvised,
-/obj/item/ammo_box/a308box/improvised,
+/obj/effect/turf_decal/weather/dirt{
+	dir = 2
+	},
+/obj/machinery/workbench,
 /obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+	color = "000000"
+	},
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 4;
+	light_color = "#f4e3b0"
+	},
+/obj/item/clothing/neck/apron/labor/forge,
+/obj/item/clothing/gloves/legion/forgemaster,
+/obj/effect/decal/cleanable/generic{
+	pixel_x = -8
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
@@ -70406,16 +70230,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/ambientlighting/building/o)
-"vAi" = (
-/obj/structure/fence/wooden{
-	dir = 1
-	},
-/obj/structure/destructible/tribal_torch/lit{
-	pixel_x = 13;
-	pixel_y = 9
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
 "vAJ" = (
 /obj/structure/sign/poster/contraband/pinup_vixen{
 	pixel_y = 32
@@ -70610,13 +70424,12 @@
 	},
 /area/f13/ambientlighting/building/b)
 "vDq" = (
-/obj/structure/fence/wooden{
-	dir = 4;
-	icon_state = "post_wood"
+/mob/living/simple_animal/hostile/retaliate/talker/follower/faction/legion_guard{
+	faction = list("Legion", "neutral");
+	name = "Cattle Guard Barto";
+	desc = "A legionary assigned to guard the Legion's cattle and livestock. His name's Barto."
 	},
-/turf/open/indestructible/ground/outside/dirt{
-	icon_state = "dirt"
-	},
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
 "vDy" = (
 /obj/effect/decal/cleanable/glass,
@@ -70842,9 +70655,12 @@
 	},
 /area/f13/building/abandoned/h)
 "vGU" = (
-/obj/machinery/door/unpowered/secure_legion,
+/obj/structure/curtain{
+	color = "#845f58";
+	pixel_x = 32
+	},
 /obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+	color = "000000"
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
@@ -71387,13 +71203,8 @@
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "vRd" = (
-/obj/structure/fence/wooden{
-	dir = 1
-	},
-/obj/structure/fence/corner/wooden{
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/desert,
+/obj/structure/sign/legion/armory,
+/turf/closed/wall/f13/wood/house,
 /area/f13/legioncamp)
 "vRl" = (
 /obj/structure/sign/flag_america_pristine{
@@ -71645,9 +71456,12 @@
 /turf/open/floor/plating/f13/inside/gravel,
 /area/f13/wasteland/town)
 "vVT" = (
-/obj/effect/overlay/desert_side,
-/obj/machinery/door/unpowered/securedoor/legion,
-/turf/open/floor/plating/f13/inside/gravel,
+/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden/planks,
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 6;
+	icon_state = "dirt"
+	},
 /area/f13/legioncamp)
 "vWc" = (
 /obj/structure/flora/grass/wasteland{
@@ -71707,13 +71521,12 @@
 /turf/open/indestructible/ground/outside/ruins,
 /area/f13/wasteland)
 "vXp" = (
-/obj/structure/fence/wooden{
-	dir = 4;
-	icon_state = "post_wood"
+/obj/structure/fence{
+	dir = 4
 	},
-/obj/effect/overlay/desert_side,
+/obj/structure/barricade/wooden/planks,
 /turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
+/area/f13/wasteland/legion)
 "vXx" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 4
@@ -72893,22 +72706,22 @@
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
 "wqg" = (
-/obj/effect/overlay/desert_side{
+/obj/effect/decal/cleanable/generic{
+	pixel_x = -8
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/legion)
+"wqk" = (
+/obj/effect/turf_decal/weather/dirt{
 	dir = 4
 	},
-/obj/structure/rack/shelf_metal,
-/obj/item/stack/rods/fifty,
+/obj/structure/closet/crate/large,
+/obj/item/ingot/iron,
+/obj/item/ingot/iron,
+/obj/item/ingot/iron,
+/obj/item/ingot/iron,
 /obj/effect/decal/cleanable/dirt{
-	color = "#363636"
-	},
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
-"wqk" = (
-/obj/structure/rack/shelf_metal,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/glass/fifty,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+	color = "000000"
 	},
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
@@ -73588,11 +73401,9 @@
 	},
 /area/f13/building/powered)
 "wzu" = (
-/obj/structure/fence/corner/wooden{
-	dir = 8
-	},
-/obj/structure/fence/wooden{
-	dir = 1
+/obj/structure/barricade/tentclothedge{
+	color = "#7c0A02";
+	dir = 4
 	},
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/legioncamp)
@@ -74367,17 +74178,14 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/p)
 "wKM" = (
-/obj/effect/overlay/desert_side{
-	dir = 8
+/obj/item/storage/trash_stack{
+	icon_state = "Junk_9"
 	},
-/obj/effect/overlay/desert_side,
-/obj/machinery/hydroponics/soil{
-	mutmod = 0;
-	name = "ancient fertile soil";
-	yieldmod = 1.3
+/obj/effect/decal/cleanable/generic{
+	pixel_x = -8
 	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland/legion)
 "wKZ" = (
 /obj/structure/wreck/trash/machinepile{
 	pixel_x = -7;
@@ -74456,16 +74264,16 @@
 /turf/closed/wall/f13/tentwall,
 /area/f13/building/tribal)
 "wMA" = (
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/rack/shelf_metal{
+	name = "Armor"
 	},
-/obj/structure/rack/shelf_metal,
-/obj/item/restraints/legcuffs/bola,
-/obj/item/restraints/legcuffs/bola,
-/obj/item/restraints/legcuffs/bola,
-/obj/item/restraints/legcuffs/bola,
-/obj/item/storage/backpack/spearquiver,
-/obj/item/storage/backpack/spearquiver,
+/obj/item/clothing/suit/armor/tiered/light/legion/prime,
+/obj/item/clothing/suit/armor/tiered/light/legion/prime,
+/obj/item/clothing/head/helmet/f13/legion/recruit,
+/obj/item/clothing/head/helmet/f13/legion/recruit,
+/obj/item/clothing/suit/armor/tiered/light/legion/recruit,
+/obj/item/clothing/suit/armor/tiered/light/legion/recruit,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "wMG" = (
@@ -74663,13 +74471,12 @@
 /turf/open/floor/plating/rust,
 /area/f13/brotherhood)
 "wPB" = (
-/obj/structure/closet/crate/large,
-/obj/item/clothing/head/helmet/f13/legion/recruit,
+/obj/effect/turf_decal/weather/dirt{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
 	},
-/obj/item/clothing/suit/armor/tiered/light/legion/prime,
-/obj/item/clothing/suit/armor/tiered/light/legion/prime,
 /turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "wPD" = (
@@ -75291,9 +75098,12 @@
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland/legion)
 "wYj" = (
-/obj/structure/fence/corner{
-	dir = 4
+/obj/effect/turf_decal/weather/dirt{
+	dir = 1;
+	pixel_x = -28
 	},
+/obj/effect/overlay/desert_side,
+/obj/effect/decal/cleanable/generic,
 /turf/open/indestructible/ground/outside/dirt{
 	dir = 9;
 	icon_state = "dirt"
@@ -75418,11 +75228,12 @@
 	},
 /area/f13/ambientlighting/building/j)
 "xax" = (
-/obj/item/storage/trash_stack{
-	icon_state = "Junk_9"
+/obj/structure/barricade/sandbags,
+/obj/structure/obstacle/barbedwire/end{
+	dir = 4
 	},
 /turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland/legion)
+/area/f13/wasteland)
 "xaB" = (
 /obj/structure/chair/sofa/left{
 	dir = 4
@@ -75716,11 +75527,11 @@
 /turf/closed/indestructible/f13/obsidian,
 /area/f13/tunnel)
 "xfE" = (
-/obj/structure/barricade/tentclothedge{
-	color = "#7c0A02";
-	dir = 4
+/obj/machinery/door/unpowered/securedoor/legion,
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
 	},
-/turf/open/indestructible/ground/outside/dirt,
+/turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "xfJ" = (
 /obj/item/storage/trash_stack{
@@ -75946,13 +75757,16 @@
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/n)
 "xjh" = (
-/obj/structure/fence/wooden{
-	dir = 1
-	},
 /obj/structure/fence/corner/wooden{
 	dir = 8
 	},
-/turf/open/indestructible/ground/outside/desert,
+/obj/structure/fence/wooden{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 4;
+	icon_state = "dirtcorner"
+	},
 /area/f13/legioncamp)
 "xjq" = (
 /obj/structure/flora/ausbushes/grassybush,
@@ -76180,14 +75994,12 @@
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
 "xml" = (
-/obj/structure/fence/corner,
-/obj/effect/overlay/desert_side{
+/obj/structure/fence{
 	dir = 4
 	},
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 8;
-	icon_state = "dirt"
-	},
+/obj/structure/barricade/wooden/strong,
+/obj/structure/barricade/wooden/planks/pregame,
+/turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland/legion)
 "xmm" = (
 /obj/structure/barricade/sandbags,
@@ -76305,9 +76117,12 @@
 	},
 /area/f13/building/powered)
 "xnV" = (
-/obj/structure/barricade/wooden,
-/turf/closed/mineral/random/low_chance,
-/area/f13/wasteland/legion)
+/obj/machinery/door/unpowered/securedoor/legion,
+/obj/effect/decal/cleanable/dirt{
+	color = "#363636"
+	},
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legioncamp)
 "xoa" = (
 /obj/structure/fence/end/wooden{
 	dir = 8
@@ -76407,9 +76222,9 @@
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/c)
 "xpB" = (
-/obj/structure/sign/legion/storeroom,
-/turf/closed/wall/f13/wood/house,
-/area/f13/legioncamp)
+/obj/structure/campfire/barrel,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland/legion)
 "xpD" = (
 /obj/structure/nest/ghoul,
 /obj/effect/decal/cleanable/dirt,
@@ -76574,8 +76389,18 @@
 	},
 /area/f13/building/powered)
 "xrX" = (
-/obj/machinery/smartfridge/bottlerack/seedbin/primitive,
-/turf/open/indestructible/ground/outside/dirt,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 4;
+	light_color = "#f4e3b0"
+	},
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/structure/rack/shelf_metal{
+	name = "Tools"
+	},
+/obj/item/storage/toolbox/mechanical,
+/turf/open/floor/plasteel/f13/stone/rugged,
 /area/f13/legioncamp)
 "xsa" = (
 /obj/effect/turf_decal/huge{
@@ -77318,12 +77143,18 @@
 	},
 /area/f13/building/powered)
 "xDh" = (
-/obj/structure/barricade/wooden,
-/turf/open/indestructible/ground/outside/dirt{
-	dir = 1;
-	icon_state = "dirt"
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 8
 	},
-/area/f13/wasteland/legion)
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/structure/chair/bench{
+	dir = 1
+	},
+/obj/effect/landmark/start/f13/explorer,
+/turf/open/floor/plasteel/f13/stone/rugged,
+/area/f13/legioncamp)
 "xDj" = (
 /obj/structure/chair/office,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -77500,13 +77331,11 @@
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/building/abandoned/g)
 "xFD" = (
-/obj/structure/table/wood,
-/obj/effect/decal/cleanable/dirt{
-	color = "#363636"
+/obj/effect/overlay/desert_side{
+	dir = 4
 	},
-/obj/item/reagent_containers/pill/healingpowder,
-/turf/open/floor/plasteel/f13/stone/rugged,
-/area/f13/legioncamp)
+/turf/closed/mineral/random/low_chance,
+/area/f13/wasteland)
 "xFH" = (
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/underground/cave)
@@ -77706,13 +77535,9 @@
 	},
 /area/f13/building/abandoned/n)
 "xIY" = (
-/obj/effect/overlay/desert_side,
-/obj/machinery/hydroponics/soil{
-	mutmod = 0;
-	name = "ancient fertile soil";
-	yieldmod = 1.3
-	},
-/turf/open/indestructible/ground/outside/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/vexillarius,
+/turf/open/floor/f13/wood,
 /area/f13/legioncamp)
 "xJg" = (
 /obj/structure/chair/wood{
@@ -78055,14 +77880,6 @@
 	dir = 2
 	},
 /area/f13/wasteland/town)
-"xPA" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/obj/structure/barricade/wooden,
-/obj/structure/barricade/sandbags,
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland/legion)
 "xPY" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -78298,16 +78115,6 @@
 	icon_state = "verticalinnermain0"
 	},
 /area/f13/wasteland)
-"xSQ" = (
-/obj/effect/overlay/desert_side,
-/obj/effect/overlay/desert_side{
-	dir = 1
-	},
-/obj/structure/fence/door{
-	dir = 4
-	},
-/turf/open/indestructible/ground/outside/dirt,
-/area/f13/legioncamp)
 "xSY" = (
 /turf/closed/wall/f13/wood/house,
 /area/f13/building/abandoned/m)
@@ -78883,11 +78690,8 @@
 	},
 /area/f13/wasteland)
 "ybU" = (
-/obj/structure/barricade/tentclothcorner{
-	color = "#7c0A02";
-	dir = 1
-	},
-/turf/open/indestructible/ground/outside/dirt,
+/obj/structure/sign/legion/smithy,
+/turf/closed/wall/f13/wood/house,
 /area/f13/legioncamp)
 "ycb" = (
 /obj/structure/closet/crate{
@@ -79443,13 +79247,6 @@
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
 	},
-/turf/open/indestructible/ground/outside/desert,
-/area/f13/wasteland)
-"ykB" = (
-/obj/structure/obstacle/barbedwire/end{
-	dir = 4
-	},
-/obj/structure/barricade/sandbags,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "ykC" = (
@@ -151522,14 +151319,14 @@ mFs
 mFs
 mFs
 mFs
-dMN
-sRy
-sRy
-sRy
-sRy
-sRy
-rqH
-tOF
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 sct
 sct
 sct
@@ -151824,14 +151621,14 @@ mFs
 mFs
 mFs
 mFs
-kzt
-iaF
-gxZ
-gxZ
-gxZ
-iaF
-kzt
-ruG
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 sct
 sct
 hEJ
@@ -152126,14 +151923,14 @@ mFs
 mFs
 mFs
 gxZ
-kzt
-gxZ
-gxZ
-gxZ
-gxZ
-gxZ
-kzt
-ruG
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 sct
 wJy
 sct
@@ -152428,14 +152225,14 @@ plS
 gxZ
 gxZ
 gxZ
-kzt
-gxZ
-gxZ
-gxZ
-gxZ
-gxZ
-kzt
-ruG
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 sct
 sct
 sct
@@ -152730,14 +152527,14 @@ tvd
 gxZ
 gxZ
 gxZ
-kzt
-gxZ
-gxZ
-gxZ
-gxZ
-gxZ
-kzt
-ruG
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 sct
 sct
 sct
@@ -153032,14 +152829,14 @@ vzn
 tWW
 tWW
 gxZ
-sCd
-gxZ
-gxZ
-gxZ
-gxZ
-gxZ
-kzt
-ruG
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 sct
 sct
 sct
@@ -153334,14 +153131,14 @@ rNY
 qaB
 qaB
 puJ
-kzt
-iaF
-gxZ
-gxZ
-gxZ
-iaF
-kzt
-ruG
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 sct
 hEJ
 sct
@@ -153636,14 +153433,14 @@ muQ
 phB
 rNY
 puJ
-wYj
-aXj
-bOd
-bOd
-aXh
-dBg
-xml
-uUU
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 sct
 sct
 sct
@@ -153938,8 +153735,8 @@ agS
 uwg
 vGc
 puJ
-gYn
-gYn
+sct
+sct
 sct
 hEJ
 hEJ
@@ -156323,7 +156120,7 @@ odR
 odR
 odR
 odR
-rWX
+cKW
 sct
 sct
 sct
@@ -156619,7 +156416,7 @@ smK
 smK
 smK
 dxn
-ykB
+nQP
 tXE
 qgG
 qgG
@@ -156664,15 +156461,15 @@ sct
 sct
 sct
 rdZ
-gZm
-gZm
-gZm
-vRd
-xSQ
-gZm
-gZm
-gZm
-rKa
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 mfr
 hmD
 uES
@@ -156921,12 +156718,12 @@ smK
 smK
 smK
 azA
-lXG
+utA
 gwJ
 gwJ
-gjU
-gwJ
-gjU
+hgM
+kYq
+hgM
 gwJ
 sct
 sct
@@ -156965,16 +156762,16 @@ vsE
 vsE
 vsE
 tOF
-cDF
-hjv
-hys
-hys
-cZW
-uDx
-hys
-hys
-wKM
-cDF
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 mfr
 oaB
 uDx
@@ -157223,16 +157020,16 @@ smK
 smK
 mJM
 azA
-hgM
+urr
 tXE
-gwJ
+avH
 pvM
-jFY
-jFY
-qFA
-jFY
-jFY
-chO
+bTS
+uDx
+vau
+aXj
+aXj
+xjh
 sct
 sct
 sct
@@ -157267,16 +157064,16 @@ gzU
 gxZ
 gzU
 ruG
-cDF
-bPK
-uDx
-upQ
-bqO
-khX
-khX
-uDx
-xIY
-cDF
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 mfr
 doX
 uDx
@@ -157525,16 +157322,16 @@ smK
 mJM
 xys
 azA
-hgM
+urr
 tXE
-gjU
-vDq
+vVT
 uDx
+vDq
 nff
 uDx
 uDx
 upQ
-iip
+cZW
 sct
 sct
 sct
@@ -157569,16 +157366,16 @@ gxZ
 gxZ
 gxZ
 ruG
-cDF
-bPK
-isq
-uDx
-bqO
-khX
-khX
-uDx
-xIY
-cDF
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 mfr
 mPY
 uDx
@@ -157827,16 +157624,16 @@ mJM
 xys
 dzm
 azA
-lrS
-gwJ
-sct
-vDq
+cTk
+tXE
+uDx
+uDx
 dPF
 uDx
 uDx
 nff
 uDx
-dNJ
+mZs
 sct
 sct
 owY
@@ -157871,16 +157668,16 @@ gxZ
 gxZ
 gxZ
 ruG
-cDF
-bPK
-uDx
-nff
-lXY
-khX
-khX
-uDx
-xIY
-cDF
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 mfr
 kJh
 uDx
@@ -158129,16 +157926,16 @@ vjT
 dzm
 azA
 azA
-azA
-gwJ
-sct
-vDq
+xax
+sjv
+uDx
+uDx
 uDx
 uDx
 upQ
 uDx
-ybU
-bwg
+ulx
+bQx
 hjR
 hjR
 hjR
@@ -158173,16 +157970,16 @@ pBS
 gxZ
 pBS
 ruG
-cDF
-bPK
-uDx
-uDx
-bqO
-khX
-khX
-uDx
-sEU
-cDF
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 mfr
 vEf
 uDx
@@ -158431,15 +158228,15 @@ vjT
 azA
 azA
 dzm
-azA
+nbq
 rIw
-sct
-vDq
+nff
+uDx
 isq
 uDx
 uDx
 uDx
-sbo
+olV
 lyg
 lyg
 lyg
@@ -158475,16 +158272,16 @@ fAg
 gMZ
 gMZ
 uUU
-cDF
-qEm
-uDx
-upQ
-bqO
-khX
-khX
-uDx
-hrC
-cDF
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 mfr
 nLG
 rmB
@@ -158733,19 +158530,19 @@ gTs
 dcx
 azA
 dzm
-dzm
-djz
-sct
-vDq
+hys
+uXD
+uDx
+uDx
 uDx
 nff
 upQ
 uDx
-sbo
+olV
 ctW
-olV
-olV
-olV
+cLz
+cLz
+cLz
 foG
 gxZ
 qbb
@@ -158777,17 +158574,17 @@ sct
 sct
 sct
 sct
-cDF
-bPK
-veC
-uDx
-bqO
-khX
-khX
-uDx
-uDx
-bzu
-xjh
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 hVV
 sct
 cTt
@@ -159035,15 +158832,15 @@ smK
 gTs
 dcx
 azA
-azA
-mAy
-kRA
-pzH
+nbq
+tXE
+uDx
+cDF
 uDx
 uDx
 uDx
 uDx
-sbo
+olV
 uDx
 kJh
 uDx
@@ -159079,17 +158876,17 @@ sct
 sct
 hEJ
 sct
-cDF
-bPK
-dPF
-uDx
-bqO
-khX
-khX
-uDx
-uDx
-uDx
-cKW
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 qWJ
 qWJ
 gxZ
@@ -159337,15 +159134,15 @@ smK
 eiO
 vjT
 azA
-azA
-mAy
-gqR
-vDq
+nbq
+tXE
+uDx
+uDx
 upQ
 uDx
-nrz
+sYI
 dPF
-sbo
+olV
 lyg
 lyg
 lyg
@@ -159359,7 +159156,7 @@ mfr
 vMO
 kSG
 eCk
-hQt
+vMO
 rcP
 rcP
 vMO
@@ -159381,17 +159178,17 @@ sct
 sct
 hEJ
 sct
-cDF
-bPK
-uDx
-uDx
-eti
-uDx
-uDx
-uDx
-uDx
-uDx
-eti
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 tWW
 tWW
 gxZ
@@ -159639,19 +159436,19 @@ smK
 cKE
 oDH
 azA
-azA
-xPA
-kRA
-vDq
+nbq
+gwJ
+uDx
+uDx
 nff
 uDx
 uDx
-nSi
-sbo
+kky
 olV
-olV
-olV
-olV
+cLz
+cLz
+cLz
+cLz
 foG
 gxZ
 qbb
@@ -159683,17 +159480,17 @@ sct
 sct
 sct
 sct
-cDF
-bPK
-upQ
-uDx
-bqO
-khX
-khX
-khX
-uDx
-mIz
-vXp
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 sct
 sct
 puJ
@@ -159941,35 +159738,35 @@ smK
 cKE
 oDH
 azA
-azA
-fND
-sct
-sLD
-vAi
+jcT
+tXE
+uMg
+veC
+jPt
+qBt
+lXV
+iip
+qFA
 wzu
-cLz
-ulx
-nbq
-xfE
-xfE
-xfE
-xfE
+wzu
+wzu
+wzu
 lyl
 gxZ
 qbb
 sct
 sct
 mfr
-mZs
+vMO
 pKw
 qVp
 vMO
-bQx
-fxa
+rcP
+rcP
 vMO
 qND
 eCk
-bTS
+vMO
 mfr
 sct
 puJ
@@ -159985,17 +159782,17 @@ hEJ
 sct
 sct
 sct
-cDF
-mdZ
-nff
-uDx
-lXY
-khX
-khX
-khX
-uDx
-woT
-vXp
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 sct
 sct
 puJ
@@ -160245,24 +160042,24 @@ vjT
 azA
 azA
 sjv
-sct
-iRq
-gxZ
+tXE
+qEm
+kRH
 bqO
-khX
 uDx
 uDx
-rOF
+kRA
+sbo
 khX
 khX
-rOF
-lyF
+sbo
+kvV
 gxZ
 qbb
 sct
 sct
 mfr
-mZs
+vMO
 eCk
 mUj
 vMO
@@ -160271,7 +160068,7 @@ rcP
 vMO
 hng
 vHQ
-bTS
+vMO
 mfr
 sct
 puJ
@@ -160287,17 +160084,17 @@ sct
 sct
 sct
 lcs
-cDF
-bPK
-uDx
-uDx
-bqO
-khX
-khX
-khX
-uDx
-jtB
-vXp
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 sct
 sct
 puJ
@@ -160547,13 +160344,13 @@ oDH
 azA
 azA
 gwJ
-lwD
-iRq
+gwJ
+ccg
 gxZ
 bqO
-khX
 uDx
 uDx
+gmM
 khX
 khX
 khX
@@ -160564,7 +160361,7 @@ qbb
 sct
 sct
 mfr
-mZs
+vMO
 hng
 vHQ
 vMO
@@ -160573,7 +160370,7 @@ rcP
 vMO
 rOJ
 mUj
-bTS
+vMO
 mfr
 sct
 puJ
@@ -160589,17 +160386,17 @@ sct
 sct
 tYT
 wjt
-cDF
-urr
-gur
-gur
-bQm
-jNE
-jNE
-jNE
-uDx
-bIL
-uMg
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 awQ
 awQ
 puJ
@@ -160853,7 +160650,7 @@ xqq
 avH
 gxZ
 bqO
-khX
+uDx
 uDx
 uDx
 khX
@@ -160866,16 +160663,16 @@ qbb
 sct
 sct
 mfr
-mZs
+vMO
 fRF
 qND
 vMO
-bQx
-fxa
+rcP
+rcP
 vMO
 eCk
 qVp
-bTS
+vMO
 mfr
 sct
 puJ
@@ -160891,17 +160688,17 @@ sct
 kNP
 qWJ
 pdf
-jcT
-gZm
-gZm
-gZm
-aUD
-gZm
-gZm
-gZm
-qla
-gZm
-esi
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
+rdZ
 sct
 sct
 puJ
@@ -161155,7 +160952,7 @@ eEc
 avH
 gxZ
 bqO
-khX
+uDx
 uDx
 uDx
 uDx
@@ -161763,7 +161560,7 @@ khX
 khX
 khX
 uDx
-lXV
+pFB
 uDx
 mIz
 bqO
@@ -161784,7 +161581,7 @@ mfr
 mfr
 mfr
 hVV
-ddq
+puJ
 qbb
 sct
 sct
@@ -162669,9 +162466,9 @@ khX
 khX
 khX
 uDx
-pFi
+mdZ
 uDx
-xrX
+ebU
 bqO
 gxZ
 gxZ
@@ -162966,15 +162763,15 @@ yhp
 mqq
 gxZ
 gxZ
-kky
-cLz
-cLz
-cLz
-ulx
-cLz
-cLz
-cLz
-kky
+fxa
+lXV
+lXV
+lXV
+iip
+lXV
+lXV
+lXV
+fxa
 gxZ
 gxZ
 gxZ
@@ -163279,22 +163076,22 @@ gxZ
 gxZ
 gxZ
 gxZ
-tWW
-tWW
-tWW
-tWW
-tWW
-tWW
-tWW
 gxZ
 gxZ
-tWW
-tWW
-tWW
-tWW
-tWW
-tWW
-dEg
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
 gxZ
 lNh
 tWW
@@ -163580,24 +163377,24 @@ gxZ
 gxZ
 gxZ
 gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
 qbb
-hVV
-sct
-sct
-sct
-sct
-sct
-hVV
-puJ
-qbb
-hVV
-sct
-sct
-sct
-vau
-sct
-sct
-uMN
 rNY
 qaB
 aGK
@@ -163873,7 +163670,7 @@ mqq
 gxZ
 gxZ
 tWW
-fxd
+dMY
 tWW
 tWW
 tWW
@@ -163882,24 +163679,24 @@ tWW
 tWW
 tWW
 gxZ
+tWW
+tWW
+tWW
+tWW
+tWW
+gxZ
+tWW
+tWW
+tWW
+tWW
+tWW
+gxZ
+tWW
+tWW
+tWW
+tWW
+tWW
 qbb
-gmM
-tEU
-qBt
-qBt
-uiP
-xpB
-rNY
-mQB
-vVT
-cpt
-rNY
-sct
-sct
-sct
-sct
-sct
-uMN
 cpt
 xmj
 xWp
@@ -164183,19 +163980,19 @@ sct
 sct
 sct
 hVV
-puJ
-qbb
-rNY
-hRu
-vQW
-vQW
-vQW
-vQW
+uMN
+fTC
+fTC
 tHc
-vQW
-lyv
-utA
+tHc
+vRd
+xnV
 cpt
+tHc
+tHc
+qaB
+qaB
+puJ
 sct
 sct
 sct
@@ -164468,7 +164265,7 @@ smK
 cKE
 gTs
 dcx
-pPr
+bIL
 qmd
 ckv
 ckv
@@ -164485,24 +164282,24 @@ avH
 avH
 xqq
 sct
-puJ
-jPt
-cpt
-hRu
-vQW
-vQW
-ffO
-ffO
-ffO
-vQW
-vQW
-wMA
+uMN
 cpt
 arx
-tTJ
-hVV
+hRu
+kuy
+gur
+vQW
+jfN
+ffO
+cBS
+xDh
+qaB
+puJ
 sct
-kRH
+sct
+sct
+sct
+sct
 uMN
 rNY
 wwx
@@ -164787,30 +164584,30 @@ aOn
 bJv
 avH
 sct
-puJ
-qbb
-fTC
-btj
-vQW
-vQW
-eOX
-uVs
-mPp
-vQW
+uMN
+qaB
 oFg
-cTk
-rNY
-exv
+mPp
+oFg
+oFg
 vQW
-kuy
-rCE
+mPp
+mPp
+mPp
+oFg
+fTC
+puJ
+sct
+sct
+sct
+sct
 sct
 puJ
 jyV
 wwx
+aUD
 wfT
-wfT
-wfT
+kZj
 wfT
 nmH
 muL
@@ -165089,23 +164886,23 @@ aOn
 kjT
 ouK
 sct
-puJ
-qbb
-fTC
-lyv
+uMN
+qaB
+jFY
 vQW
-vQW
+mPp
+jNE
 uXi
-xFD
 tyd
-vQW
-vQW
-pFB
+oJO
+mPp
+wMA
 rNY
-eat
-vQW
-lyv
-kvV
+puJ
+sct
+sct
+sct
+sct
 sct
 bpY
 mGI
@@ -165391,23 +165188,23 @@ aOn
 hyZ
 czd
 sct
-puJ
-fay
-uiP
-bfc
+uMN
+qaB
+eOX
 vQW
 vQW
-bir
-aWj
-cxF
-iFW
+mPp
+mPp
+oFg
+oFg
+vQW
 oko
-oJO
-rNY
-vQW
-vQW
-lyv
-kZj
+cpt
+puJ
+sct
+sct
+sct
+sct
 sct
 uMN
 lbQ
@@ -165693,23 +165490,23 @@ rgm
 gnf
 qMW
 aBk
+uMN
+rNY
+xrX
+vGU
+qla
+aXh
+cxF
+lzL
+eat
+vQW
+iFW
+qaB
 puJ
-fay
-uiP
-bfc
-vQW
-vQW
-vQW
-iFW
-iFW
-iFW
-iFW
-aBs
-nQP
-nmq
-vQW
-vQW
-uXD
+sct
+sct
+sct
+sct
 sct
 uMN
 cpt
@@ -165985,33 +165782,33 @@ aOn
 uIt
 uVN
 avH
-sZj
+ixz
 nBd
 nnz
 muQ
 fMp
 avH
-aOn
+xIY
 aOn
 liB
 rEb
-gxZ
-fay
-uiP
+qbb
+fTC
+qaB
 bfc
-iFW
-iFW
-iFW
-oko
-iFW
-iFW
-iFW
-wPB
-cpt
-tAI
-vQW
-vQW
-dMY
+bfc
+gkg
+tHc
+tHc
+ybU
+xnV
+qaB
+qaB
+puJ
+sct
+sct
+sct
+sct
 sct
 uMN
 rNY
@@ -166297,23 +166094,23 @@ rHt
 gnf
 avH
 sct
-puJ
-qbb
-gmM
-jfN
-iFW
-iFW
-iFW
-hEZ
+udy
+wPB
+vQW
+vQW
+exv
+exv
+oFg
+vQW
 uNh
-iFW
-oko
-iFW
-vQW
-vGU
-vQW
-iFW
-ccg
+tTJ
+rEb
+qWJ
+tWW
+sct
+sct
+sct
+sct
 sct
 uMN
 cpt
@@ -166337,14 +166134,14 @@ kkK
 trd
 qpN
 mfr
-iRq
-eLC
-vsE
-vsE
-vsE
-vsE
-vsE
-jPH
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 uiN
 azA
 azA
@@ -166587,7 +166384,7 @@ eJc
 yky
 azA
 tXE
-sct
+nha
 sct
 sZj
 nBd
@@ -166599,30 +166396,30 @@ aOn
 thi
 avH
 sct
-puJ
-qbb
-rNY
-hRu
+aWj
+rCE
+aBs
 vQW
-vQW
-vQW
+dBg
+dBg
+oFg
 gig
 vhc
-vQW
-oko
-iFW
-vQW
-vGU
-udy
-iFW
-ccg
+lyv
+gkg
+xfE
+pzH
+sct
+sct
+sct
+sct
 sct
 bpY
 bSb
 wfT
+aUD
 wfT
-wfT
-wfT
+kZj
 wfT
 nBU
 qaB
@@ -166639,14 +166436,14 @@ kkK
 trd
 vTo
 mfr
-iRq
-gxZ
-gxZ
-gxZ
-gxZ
-gxZ
-gxZ
-rhJ
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 uiN
 azA
 azA
@@ -166901,23 +166698,23 @@ rHt
 jue
 xqq
 sct
-puJ
+aWj
 rWF
-qaB
-ebU
-vQW
+eql
+eql
+jFz
 jFz
 eql
 wqk
 sOo
 lyv
 ckT
-vQW
-lyv
-ixz
-vQW
-vQW
-sYI
+hrC
+ddq
+sct
+sct
+sct
+sct
 sct
 uMN
 cpt
@@ -166941,14 +166738,14 @@ vkz
 aOn
 fNz
 mfr
-iRq
-mqq
-mqq
-mqq
-mqq
-mqq
-mqq
-uFS
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 hAd
 azA
 azA
@@ -167203,23 +167000,23 @@ trd
 iAh
 nBd
 sct
-cHF
-sct
-qaB
-qaB
-fTC
-fTC
-qaB
-qaB
-qaB
-rNY
-rNY
+gYn
+gbM
+gbM
+gbM
+gbM
+gbM
+gbM
+gbM
+gbM
+wYj
+ddq
 gkg
 qaB
-qaB
-dow
-wqg
-mWS
+sct
+sct
+sct
+sct
 sct
 puJ
 jyV
@@ -167243,14 +167040,14 @@ aOn
 aOn
 aOn
 mfr
-iRq
-gxZ
-gxZ
-gxZ
-gxZ
-gxZ
-gxZ
-cBS
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 vRo
 azA
 azA
@@ -167505,24 +167302,24 @@ aOn
 dGJ
 nBd
 sct
-cHF
-sct
-lzL
-sct
-sct
-sct
-sct
-lzL
-sct
-sct
-sct
-sct
-sct
-sct
-sct
-hVV
-hEJ
-sct
+puJ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+eLC
+dMN
+sRy
+lXY
+sRy
+sRy
+sRy
+rqH
+mWS
 uVK
 muL
 nAs
@@ -167545,14 +167342,14 @@ aOn
 aOn
 qpN
 mfr
-iRq
-gxZ
-gxZ
-gxZ
-nZk
-gxZ
-gxZ
-ruG
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 vBD
 ual
 afB
@@ -167808,23 +167605,23 @@ uIt
 avH
 sct
 puJ
-rEb
-rEb
-rEb
-rEb
-rEb
-rEb
-rEb
-rEb
-rEb
-rEb
-rEb
-rEb
-qWJ
-qWJ
-qWJ
-qWJ
-kYq
+xpB
+gxZ
+mqq
+mqq
+mqq
+mqq
+mqq
+mqq
+gxZ
+sCd
+dEg
+gxZ
+kRH
+gxZ
+iaF
+sCd
+gxZ
 moI
 cpt
 qaB
@@ -167847,14 +167644,14 @@ mfr
 mfr
 mfr
 mfr
-iRq
-gxZ
-gxZ
-gxZ
-gxZ
-gxZ
-gxZ
-ruG
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 sjv
 azA
 azA
@@ -168109,23 +167906,23 @@ avH
 avH
 xqq
 sct
-cHF
-sct
-sct
-sct
-sct
-sct
-sct
-sct
-sct
-wXZ
-sct
-sct
-sct
-lKD
-gMZ
-gMZ
-gbM
+puJ
+rRz
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+kzt
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+kzt
 gxZ
 gxZ
 rNY
@@ -168149,14 +167946,14 @@ sct
 sct
 jcP
 hVV
-iRq
-gxZ
-gxZ
-gxZ
-gxZ
-gxZ
-gxZ
-ruG
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 vBD
 azA
 azA
@@ -168398,8 +168195,8 @@ smK
 smK
 yky
 azA
-dST
-xax
+gjU
+wKM
 rRz
 sct
 sct
@@ -168411,23 +168208,23 @@ sct
 sct
 sct
 sct
-cHF
-qyJ
-sct
-sct
-sct
-sct
-sct
-sct
-sct
-sct
-sct
-sct
-sct
-sct
-sct
-hVV
-nha
+puJ
+rRz
+wqg
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+xml
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+kzt
 gxZ
 gxZ
 rNY
@@ -168451,14 +168248,14 @@ sct
 sct
 sct
 sct
-nha
-gxZ
-pUe
-nZk
-gxZ
-pUe
-iaF
-ruG
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 vBD
 azA
 rRz
@@ -168716,21 +168513,21 @@ hVV
 puJ
 rRz
 rRz
+rKa
+gxZ
+gxZ
+gxZ
+nZk
+rOF
 rRz
 rRz
-sct
-sct
-sct
-sct
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
+gxZ
+gxZ
+nmq
+gxZ
+gxZ
+hEZ
+hQt
 rRz
 rNY
 rNY
@@ -168753,14 +168550,14 @@ rRz
 sct
 sct
 rRz
-xnV
-xnV
-xnV
-xnV
-xnV
-xnV
-xnV
-xDh
+sct
+sct
+sct
+sct
+sct
+sct
+sct
+sct
 vBD
 azA
 azA
@@ -169018,20 +168815,20 @@ xYn
 gxZ
 rRz
 rRz
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
+gxZ
 rRz
 rRz
-rRz
-rRz
-sct
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
+gxZ
+gxZ
+gxZ
+gxZ
+wqg
+vXp
 rRz
 rRz
 rRz
@@ -169320,19 +169117,19 @@ uJc
 rRz
 rRz
 rRz
+gxZ
+pUe
+nZk
+gxZ
+pUe
+bQm
 rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
+tjM
+iaF
+gxZ
+gxZ
+gxZ
+qyJ
 rRz
 rRz
 rRz
@@ -169622,20 +169419,20 @@ rRz
 rRz
 rRz
 rRz
+tjM
+tjM
+tjM
+tjM
+tjM
+tjM
 rRz
 rRz
 rRz
 rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
-rRz
+tjM
+uFS
+xFD
+xFD
 rRz
 rRz
 rRz
