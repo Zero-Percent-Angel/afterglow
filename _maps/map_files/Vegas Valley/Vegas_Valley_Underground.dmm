@@ -26037,8 +26037,11 @@
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/bunker)
 "lLm" = (
-/mob/living/simple_animal/hostile/radroach,
-/turf/open/indestructible/ground/inside/mountain,
+/obj/structure/destructible/tribal_torch/wall/lit{
+	dir = 1;
+	pixel_y = 28
+	},
+/turf/open/floor/plating/asteroid,
 /area/f13/caves)
 "lLo" = (
 /obj/machinery/door/airlock/medical{
@@ -44429,11 +44432,8 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/bunker/bunkereight)
 "tGN" = (
-/obj/structure/destructible/tribal_torch/wall/lit{
-	dir = 1;
-	pixel_y = 28
-	},
-/turf/open/floor/plating/asteroid,
+/mob/living/simple_animal/hostile/radroach,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/caves)
 "tGY" = (
 /obj/structure/table/wood,
@@ -45209,6 +45209,12 @@
 	icon_state = "floorrusty"
 	},
 /area/f13/brotherhood/armory)
+"tWW" = (
+/obj/machinery/door/unpowered/secure_legion{
+	req_access_txt = "123"
+	},
+/turf/open/floor/plating/asteroid,
+/area/f13/caves)
 "tXl" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
@@ -47155,12 +47161,6 @@
 	},
 /turf/open/indestructible/ground/inside/subway,
 /area/f13/sewer)
-"uOh" = (
-/obj/machinery/door/unpowered/secure_legion{
-	req_access_txt = "123"
-	},
-/turf/open/floor/plating/asteroid,
-/area/f13/caves)
 "uOn" = (
 /obj/structure/chair/middle{
 	dir = 4
@@ -125204,7 +125204,7 @@ yhR
 yhR
 yhR
 yhR
-lLm
+tGN
 oEb
 yhR
 yhR
@@ -130031,7 +130031,7 @@ aKq
 aKq
 aKq
 aKq
-uOh
+tWW
 aKq
 aKq
 sVC
@@ -130333,7 +130333,7 @@ sVC
 sVC
 sVC
 aKq
-tGN
+lLm
 aKq
 aKq
 sVC
