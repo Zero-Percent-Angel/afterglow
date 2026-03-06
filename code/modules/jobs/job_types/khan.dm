@@ -18,6 +18,23 @@
 	forbids = "THE KHANATE DISCOURAGES: Dishonorable actions, Weakness, Abuse of power or status, sabotaging other Khans."
 	enforces = "THE KHANATE ENCOURAGES: Bravery, Honor, Displays of strenght, Brotherhood."
 
+
+/datum/outfit/job/khan/mangudai
+	jobtype = /datum/job/khan/lacky
+/*
+/datum/outfit/job/khan/kipchak
+	jobtype = /datum/job/khan/kipchak
+
+/datum/outfit/job/khan/khorchin
+	jobtype = /datum/job/khan/khorchin
+
+/datum/outfit/job/khan/kheshig
+	jobtype = /datum/job/khan/kheshig
+
+/datum/outfit/job/khanleader/steward
+	jobtype = /datum/job/khan/steward
+*/
+
 /datum/outfit/job/khan
 	name = "Khan"
 	jobtype = /datum/job/khan
@@ -49,21 +66,109 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
 
-/datum/outfit/job/khan/mangudai
-	jobtype = /datum/job/khan/lacky
+
+/datum/job/khan/lacky
+	title = "Khan"
+	flag = F13MANGUDAI
+	faction = FACTION_KHAN
+	total_positions = 8
+	spawn_positions = 8
+	description = "You are a Khan, who has passed the Trial of Position within the arena and earned their place. While your combat skills are to be respected, remember your position as a soldier - protect the Khan Fortress and Bighorn, show loyalty, and you may find chances yet to prove your greater worth."
+	supervisors = "the great khan."
+	selection_color = "#ff915e"
+	exp_type = EXP_TYPE_KHAN
+	outfit = /datum/outfit/job/khan/mangudai
+
+	loadout_options = list(
+		/datum/outfit/loadout/enforcer,
+		/datum/outfit/loadout/khanskirmisher,
+		/datum/outfit/loadout/khandrug,
+		)
+
+
+/datum/outfit/loadout/enforcer
+	name = "Enforcer"
+	r_hand = /obj/item/twohanded/baseball/spiked
+	belt = /obj/item/storage/belt/bandolier
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/deagle = 1,
+		/obj/item/ammo_box/magazine/m44 = 3,
+		/obj/item/restraints/legcuffs/bola/tactical = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
+
+/datum/outfit/loadout/khanskirmisher
+	name = "Skirmisher"
+	suit_store = /obj/item/gun/ballistic/rifle/repeater/trail
+	backpack_contents = list(
+		/obj/item/ammo_box/tube/m44 = 3,
+		/obj/item/gun_upgrade/scope/mid = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
+		/obj/item/storage/belt/shoulderholster = 1)
+
+/datum/outfit/loadout/khandrug
+	name = "Drug Pusher"
+	belt = /obj/item/storage/belt/bandolier
+	r_hand = /obj/item/gun/ballistic/automatic/smg/mini_uzi
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/uzim9mm = 3,
+		/obj/item/reagent_containers/hypospray/medipen/medx = 2,
+		/obj/item/reagent_containers/hypospray/medipen/psycho = 3,
+		/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 2,
+		/obj/item/reagent_containers/pill/patch/turbo = 2)
+
+
+
+// Somehow, I doubt a bunch of gangers from california 200 years after a nuclear end of the world know ANYTHING about the Mongolian Ranks 2000ish years prior.
 /*
-/datum/outfit/job/khan/kipchak
-	jobtype = /datum/job/khan/kipchak
+/datum/job/khan/mangudai
+	title = "Mangudai"
+	flag = F13MANGUDAI
+	faction = FACTION_KHAN
+	total_positions = 4
+	spawn_positions = 4
+	description = "You are a Mangudai, a warrior of the Great Khans who has passed the Trial of Position within the arena and earned their place. While your combat skills are to be respected, remember your position as a soldier - protect the Khan Fortress and Bighorn, show loyalty, and you may find chances yet to prove your greater worth."
+	supervisors = "the Noyan and Khanate"
+	selection_color = "#ff915e"
+	exp_type = EXP_TYPE_KHAN
+	outfit = /datum/outfit/job/khan/mangudai
 
-/datum/outfit/job/khan/khorchin
-	jobtype = /datum/job/khan/khorchin
-
-/datum/outfit/job/khan/kheshig
-	jobtype = /datum/job/khan/kheshig
-
-/datum/outfit/job/khanleader/steward
-	jobtype = /datum/job/khan/steward
+	loadout_options = list(
+		/datum/outfit/loadout/enforcer,
+		/datum/outfit/loadout/khanskirmisher,
+		/datum/outfit/loadout/khandrug,
+		)
 */
+//=========================================================== LOADOUT DATUMS ===========================================================
+
+//KIPCHAK =================================================================
+
+
+//NOYAN ====================================================================
+
+/datum/job/khanleader/great
+	title = "Great Khan"
+	flag = F13NOYAN
+	head_announce = list("Security")
+	faction = FACTION_KHAN
+	total_positions = 1
+	spawn_positions = 1
+	description = "You are a the Great Khan. You serve with the authority of the Khan themselves, and answer only to them - every Khan within the region is under your command."
+	enforces = "While you command great respect, you are nevertheless expected to keep the interests of the Khanate central. Put down dissent, but expect rapid and justified rebellion amongst your Khans if you begin unnecessarily endangering the interests of the Khanate."
+	supervisors = "the Khan and Khanate"
+	selection_color = "#ff915e"
+	req_admin_notify = 1
+	exp_requirements = 1000
+	exp_type = EXP_TYPE_KHAN
+	outfit = /datum/outfit/job/khanleader/noyan
+
+	loadout_options = list(
+
+		/datum/outfit/loadout/bigboss,
+		/datum/outfit/loadout/ironfist,
+		/datum/outfit/loadout/peopleleader,
+		/datum/outfit/loadout/pacifier,
+		)
+
 /datum/outfit/job/khanleader/noyan
 	jobtype = /datum/job/khanleader/great
 
@@ -98,231 +203,6 @@
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/smg10mm)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_khanate)
 
-/datum/job/khan/lacky
-	title = "Khan"
-	flag = F13MANGUDAI
-	faction = FACTION_KHAN
-	total_positions = 8
-	spawn_positions = 8
-	description = "You are a Khan, who has passed the Trial of Position within the arena and earned their place. While your combat skills are to be respected, remember your position as a soldier - protect the Khan Fortress and Bighorn, show loyalty, and you may find chances yet to prove your greater worth."
-	supervisors = "the great khan."
-	selection_color = "#ff915e"
-	exp_type = EXP_TYPE_KHAN
-	outfit = /datum/outfit/job/khan/mangudai
-
-	loadout_options = list(
-		/datum/outfit/loadout/enforcer,
-		/datum/outfit/loadout/khanskirmisher,
-		/datum/outfit/loadout/khandrug,
-		)
-
-/datum/job/khanleader/great
-	title = "Great Khan"
-	flag = F13NOYAN
-	head_announce = list("Security")
-	faction = FACTION_KHAN
-	total_positions = 1
-	spawn_positions = 1
-	description = "You are a the Great Khan. You serve with the authority of the Khan themselves, and answer only to them - every Khan within the region is under your command."
-	enforces = "While you command great respect, you are nevertheless expected to keep the interests of the Khanate central. Put down dissent, but expect rapid and justified rebellion amongst your Khans if you begin unnecessarily endangering the interests of the Khanate."
-	supervisors = "the Khan and Khanate"
-	selection_color = "#ff915e"
-	req_admin_notify = 1
-	exp_requirements = 1000
-	exp_type = EXP_TYPE_KHAN
-	outfit = /datum/outfit/job/khanleader/noyan
-
-	loadout_options = list(
-		/datum/outfit/loadout/ironfist,
-		/datum/outfit/loadout/peopleleader,
-		/datum/outfit/loadout/pacifier,
-		/datum/outfit/loadout/bigboss,
-		)
-
-
-// Somehow, I doubt a bunch of gangers from california 200 years after a nuclear end of the world know ANYTHING about the Mongolian Ranks 2000ish years prior.
-/*
-/datum/job/khan/mangudai
-	title = "Mangudai"
-	flag = F13MANGUDAI
-	faction = FACTION_KHAN
-	total_positions = 4
-	spawn_positions = 4
-	description = "You are a Mangudai, a warrior of the Great Khans who has passed the Trial of Position within the arena and earned their place. While your combat skills are to be respected, remember your position as a soldier - protect the Khan Fortress and Bighorn, show loyalty, and you may find chances yet to prove your greater worth."
-	supervisors = "the Noyan and Khanate"
-	selection_color = "#ff915e"
-	exp_type = EXP_TYPE_KHAN
-	outfit = /datum/outfit/job/khan/mangudai
-
-	loadout_options = list(
-		/datum/outfit/loadout/enforcer,
-		/datum/outfit/loadout/khanskirmisher,
-		/datum/outfit/loadout/khandrug,
-		)
-*/
-//=========================================================== LOADOUT DATUMS ===========================================================
-
-//KIPCHAK =================================================================
-
-/datum/outfit/loadout/miner
-	name = "Miner"
-	r_hand = /obj/item/pickaxe
-	l_hand = /obj/item/flashlight/lantern
-	belt = /obj/item/storage/bag/ore
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
-		/obj/item/shovel = 1)
-
-/datum/outfit/loadout/prospector
-	name = "Prospector"
-	r_hand = /obj/item/gun/ballistic/automatic/pistol/m1911/custom
-	l_hand = /obj/item/weldingtool/largetank
-	belt = /obj/item/storage/belt/fannypack
-	mask = /obj/item/clothing/mask/gas/welding
-	backpack_contents = list(
-		/obj/item/wrench = 1,
-		/obj/item/ammo_box/magazine/m45 = 3,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
-		/obj/item/book/granter/trait/techno = 1)
-
-/datum/outfit/loadout/hunter
-	name = "Hunter"
-	r_hand = /obj/item/gun/ballistic/rifle/hunting
-	belt = /obj/item/storage/belt/bandolier
-	backpack_contents = list(
-		/obj/item/ammo_box/a308  = 3,
-		/obj/item/melee/onehanded/knife/hunting = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
-
-//MANGUDAI =================================================================
-
-/datum/outfit/loadout/enforcer
-	name = "Enforcer"
-	r_hand = /obj/item/twohanded/baseball/spiked
-	belt = /obj/item/storage/belt/bandolier
-	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/ninemil = 1,
-		/obj/item/ammo_box/magazine/m9mm = 1,
-		/obj/item/restraints/legcuffs/bola/tactical = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
-
-/datum/outfit/loadout/khanskirmisher
-	name = "Skirmisher"
-	r_hand = /obj/item/gun/ballistic/automatic/smg/mini_uzi
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/uzim9mm = 3,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
-		/obj/item/storage/belt/shoulderholster = 1)
-
-/datum/outfit/loadout/khandrug
-	name = "Drug Pusher"
-	belt = /obj/item/storage/belt/bandolier
-	r_hand = /obj/item/gun/ballistic/automatic/pistol/ninemil
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m9mm = 1,
-		/obj/item/reagent_containers/hypospray/medipen/medx = 1,
-		/obj/item/reagent_containers/hypospray/medipen/psycho = 1,
-		/obj/item/storage/fancy/cigarettes/cigpack_cannabis = 2,
-		/obj/item/reagent_containers/pill/patch/turbo = 2)
-
-//KHORCHIN =================================================================
-
-/datum/outfit/loadout/fighter
-	name = "Fighter"
-	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
-	belt = /obj/item/storage/belt/bandolier
-	head = /obj/item/clothing/head/helmet/f13/khan
-	backpack_contents = list(
-		/obj/item/ammo_box/tube/m44 = 3,
-		/obj/item/book/granter/trait/bigleagues = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
-
-/datum/outfit/loadout/guard
-	name = "Guard"
-	r_hand = /obj/item/gun/ballistic/shotgun/trench
-	belt = /obj/item/storage/belt/bandolier
-	head = /obj/item/clothing/head/helmet/f13/khan
-	backpack_contents = list(
-		/obj/item/ammo_box/shotgun/buck = 2,
-		/obj/item/book/granter/trait/bigleagues = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
-
-/datum/outfit/loadout/protector
-	name = "protector"
-	r_hand = /obj/item/gun/ballistic/automatic/pistol/n99
-	l_hand = /obj/item/shield/riot/scrapshield
-	belt = /obj/item/storage/belt/bandolier
-	head = /obj/item/clothing/head/helmet/f13/khan
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm/adv/simple = 3,
-		/obj/item/melee/onehanded/machete/scrapsabre = 1,
-		/obj/item/book/granter/trait/bigleagues = 1,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
-
-//KESHIG ===================================================================
-
-/datum/outfit/loadout/veteran
-	name = "Veteran Fighter"
-	belt = /obj/item/storage/belt/bandolier
-	r_hand = /obj/item/gun/ballistic/automatic/m1garand
-	suit = /obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
-	head = /obj/item/clothing/head/helmet/f13/khan
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/garand308 = 3,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
-		/obj/item/book/granter/trait/bigleagues = 1)
-
-/datum/outfit/loadout/sprayer
-	name = "Sprayer"
-	belt = /obj/item/storage/belt/bandolier
-	r_hand = /obj/item/gun/ballistic/automatic/smg/smg10mm
-	suit = /obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
-	head = /obj/item/clothing/head/helmet/f13/khan
-	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m10mm/adv/ext = 3,
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
-		/obj/item/book/granter/trait/bigleagues = 1)
-
-/datum/outfit/loadout/pusher
-	name = "Pusher"
-	belt = /obj/item/storage/backpack/spearquiver
-	l_hand = /obj/item/shield/riot/tower
-	r_hand = /obj/item/melee/onehanded/machete/scrapsabre
-	suit = /obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
-	head = /obj/item/clothing/head/helmet/f13/khan
-	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
-		/obj/item/book/granter/trait/bigleagues = 1)
-
-//STEWARD ==================================================================
-
-/datum/outfit/loadout/privileged
-	name = "Privileged"
-	suit = /obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
-	glasses = /obj/item/clothing/glasses/wraith_spectacles
-	head = /obj/item/clothing/head/collectable/petehat/gang
-	r_hand = /obj/item/gun/ballistic/revolver/colt357/lucky
-	l_hand = /obj/item/twohanded/baseball/louisville
-	neck = /obj/item/storage/belt/shoulderholster
-	backpack_contents = list(
-		/obj/item/ammo_box/a357 = 3,
-		/obj/item/clipboard = 1,
-		/obj/item/pen = 1,
-		/obj/item/folder = 1)
-
-/datum/outfit/loadout/taxcollector
-	name = "Tax Collector"
-	glasses = /obj/item/clothing/glasses/sunglasses
-	r_hand = /obj/item/gun/ballistic/revolver/hunting
-	neck = /obj/item/storage/belt/shoulderholster
-	backpack_contents = list(
-		/obj/item/ammo_box/c4570 = 3,
-		/obj/item/twohanded/baseball = 1,
-		/obj/item/clipboard = 1,
-		/obj/item/pen = 1,
-		/obj/item/folder = 1)
-
-//NOYAN ====================================================================
 
 /datum/outfit/loadout/bigboss
 	name = "Big Boss"
@@ -480,4 +360,135 @@
 		/datum/outfit/loadout/pacifier,
 		/datum/outfit/loadout/bigboss,
 		)
+
+
+/datum/outfit/loadout/miner
+	name = "Miner"
+	r_hand = /obj/item/pickaxe
+	l_hand = /obj/item/flashlight/lantern
+	belt = /obj/item/storage/bag/ore
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
+		/obj/item/shovel = 1)
+
+/datum/outfit/loadout/prospector
+	name = "Prospector"
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/m1911/custom
+	l_hand = /obj/item/weldingtool/largetank
+	belt = /obj/item/storage/belt/fannypack
+	mask = /obj/item/clothing/mask/gas/welding
+	backpack_contents = list(
+		/obj/item/wrench = 1,
+		/obj/item/ammo_box/magazine/m45 = 3,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
+		/obj/item/book/granter/trait/techno = 1)
+
+/datum/outfit/loadout/hunter
+	name = "Hunter"
+	r_hand = /obj/item/gun/ballistic/rifle/hunting
+	belt = /obj/item/storage/belt/bandolier
+	backpack_contents = list(
+		/obj/item/ammo_box/a308  = 3,
+		/obj/item/melee/onehanded/knife/hunting = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
+
+//MANGUDAI =================================================================
+
+//KHORCHIN =================================================================
+
+/datum/outfit/loadout/fighter
+	name = "Fighter"
+	r_hand = /obj/item/gun/ballistic/rifle/repeater/trail
+	belt = /obj/item/storage/belt/bandolier
+	head = /obj/item/clothing/head/helmet/f13/khan
+	backpack_contents = list(
+		/obj/item/ammo_box/tube/m44 = 3,
+		/obj/item/book/granter/trait/bigleagues = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
+
+/datum/outfit/loadout/guard
+	name = "Guard"
+	r_hand = /obj/item/gun/ballistic/shotgun/trench
+	belt = /obj/item/storage/belt/bandolier
+	head = /obj/item/clothing/head/helmet/f13/khan
+	backpack_contents = list(
+		/obj/item/ammo_box/shotgun/buck = 2,
+		/obj/item/book/granter/trait/bigleagues = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
+
+/datum/outfit/loadout/protector
+	name = "protector"
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/n99
+	l_hand = /obj/item/shield/riot/scrapshield
+	belt = /obj/item/storage/belt/bandolier
+	head = /obj/item/clothing/head/helmet/f13/khan
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m10mm/adv/simple = 3,
+		/obj/item/melee/onehanded/machete/scrapsabre = 1,
+		/obj/item/book/granter/trait/bigleagues = 1,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3)
+
+//KESHIG ===================================================================
+
+/datum/outfit/loadout/veteran
+	name = "Veteran Fighter"
+	belt = /obj/item/storage/belt/bandolier
+	r_hand = /obj/item/gun/ballistic/automatic/m1garand
+	suit = /obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
+	head = /obj/item/clothing/head/helmet/f13/khan
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/garand308 = 3,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
+		/obj/item/book/granter/trait/bigleagues = 1)
+
+/datum/outfit/loadout/sprayer
+	name = "Sprayer"
+	belt = /obj/item/storage/belt/bandolier
+	r_hand = /obj/item/gun/ballistic/automatic/smg/smg10mm
+	suit = /obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
+	head = /obj/item/clothing/head/helmet/f13/khan
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m10mm/adv/ext = 3,
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
+		/obj/item/book/granter/trait/bigleagues = 1)
+
+/datum/outfit/loadout/pusher
+	name = "Pusher"
+	belt = /obj/item/storage/backpack/spearquiver
+	l_hand = /obj/item/shield/riot/tower
+	r_hand = /obj/item/melee/onehanded/machete/scrapsabre
+	suit = /obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
+	head = /obj/item/clothing/head/helmet/f13/khan
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/stimpak = 3,
+		/obj/item/book/granter/trait/bigleagues = 1)
+
+//STEWARD ==================================================================
+
+/datum/outfit/loadout/privileged
+	name = "Privileged"
+	suit = /obj/item/clothing/suit/toggle/labcoat/khan_jacket/armored
+	glasses = /obj/item/clothing/glasses/wraith_spectacles
+	head = /obj/item/clothing/head/collectable/petehat/gang
+	r_hand = /obj/item/gun/ballistic/revolver/colt357/lucky
+	l_hand = /obj/item/twohanded/baseball/louisville
+	neck = /obj/item/storage/belt/shoulderholster
+	backpack_contents = list(
+		/obj/item/ammo_box/a357 = 3,
+		/obj/item/clipboard = 1,
+		/obj/item/pen = 1,
+		/obj/item/folder = 1)
+
+/datum/outfit/loadout/taxcollector
+	name = "Tax Collector"
+	glasses = /obj/item/clothing/glasses/sunglasses
+	r_hand = /obj/item/gun/ballistic/revolver/hunting
+	neck = /obj/item/storage/belt/shoulderholster
+	backpack_contents = list(
+		/obj/item/ammo_box/c4570 = 3,
+		/obj/item/twohanded/baseball = 1,
+		/obj/item/clipboard = 1,
+		/obj/item/pen = 1,
+		/obj/item/folder = 1)
+
 */
