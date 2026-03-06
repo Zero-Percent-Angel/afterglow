@@ -414,6 +414,18 @@
 				/obj/item/storage/fancy/cigarettes/cigars/havana = 25,
 				)
 
+/obj/effect/spawner/lootdrop/emptyglassbottles
+	lootcount = 1
+	loot = list(
+				/obj/item/reagent_containers/food/drinks/bottle/brown/darkbrown,
+				/obj/item/reagent_containers/food/drinks/bottle/brown/lightbrown,
+				/obj/item/reagent_containers/food/drinks/bottle/brown/white,
+				/obj/item/reagent_containers/food/drinks/bottle/brown/green,
+				/obj/item/reagent_containers/food/drinks/bottle/brown/wine,
+				/obj/item/reagent_containers/food/drinks/bottle/brown/greenwine,
+				/obj/item/reagent_containers/food/drinks/bottle/brown/beer
+				)
+
 /obj/effect/spawner/lootdrop/lighter
 	lootcount = 1
 	loot = list(
