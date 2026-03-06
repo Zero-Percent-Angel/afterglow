@@ -164,6 +164,19 @@
 	overdose_threshold = 50
 	ghoulfriendly = TRUE
 
+// insta-heal on ingest, same as normal stims. 15hp instantly due to crafted powder only containing 15u of Powder
+/datum/reagent/medicine/healing_powder/reaction_mob(mob/living/M, method=INGEST, reac_volume)
+	if(iscarbon(M))
+		if(M.stat == DEAD) // Doesnt work on the dead
+			return
+		if(method != INGEST) // Gotta be ingested
+			return
+		if(M.getBruteLoss())
+			M.adjustBruteLoss(-reac_volume * 0.75)
+		if(M.getFireLoss())
+			M.adjustFireLoss(-reac_volume * 0.75)
+	..()
+
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
 	if(M.getBruteLoss() > M.getFireLoss())	//Less effective at healing mixed damage types.
 		M.adjustBruteLoss(-3 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
