@@ -169,7 +169,7 @@
 	if(iscarbon(M))
 		if(M.stat == DEAD) // Doesnt work on the dead
 			return
-		if(method != INGEST) // Gotta be ingested
+		if(method != INGEST) //only works if ingested
 			return
 		if(M.getBruteLoss())
 			M.adjustBruteLoss(-reac_volume * 0.75)
@@ -205,6 +205,19 @@
 	overdose_threshold = 20
 	var/clot_rate = 0.20
 	var/clot_coeff_per_wound = 0.9
+
+//superstim heal equivalent, exclusively if applied by patch because poultice is a patch apparently. so it wont stack with the powder one, even though poultice contains powder.
+/datum/reagent/medicine/super_stimpak/reaction_mob(mob/living/M, method=PATCH, reac_volume)
+	if(iscarbon(M))
+		if(M.stat == DEAD)
+			return
+		if(method != PATCH) //patch only
+			return
+		if(M.getBruteLoss())
+			M.adjustBruteLoss(-reac_volume * 1.5)
+		if(M.getFireLoss())
+			M.adjustFireLoss(-reac_volume * 1.5)
+	..()
 
 /* /datum/reagent/medicine/healing_powder/poultice/on_mob_metabolize(mob/living/carbon/M) // a painful remedy!
 	. = ..()
