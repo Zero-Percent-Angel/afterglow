@@ -177,19 +177,6 @@
 			M.adjustFireLoss(-reac_volume * 0.75)
 	..()
 
-//patch variant of the above.
-/datum/reagent/medicine/healing_powder/reaction_mob(mob/living/M, method=PATCH, reac_volume)
-	if(iscarbon(M))
-		if(M.stat == DEAD)
-			return
-		if(method != PATCH) //patch only
-			return
-		if(M.getBruteLoss())
-			M.adjustBruteLoss(-reac_volume * 0,75)
-		if(M.getFireLoss())
-			M.adjustFireLoss(-reac_volume * 0.75)
-	..()
-
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
 	if(M.getBruteLoss() > M.getFireLoss())	//Less effective at healing mixed damage types.
 		M.adjustBruteLoss(-3 * metabolization_rate * REAGENTS_EFFECT_MULTIPLIER)
@@ -218,6 +205,19 @@
 	overdose_threshold = 20
 	var/clot_rate = 0.20
 	var/clot_coeff_per_wound = 0.9
+
+//superstim heal equivalent, exclusively if applied by patch because poultice is a patch apparently. so it wont stack with the powder one, even though poultice contains powder.
+/datum/reagent/medicine/healing_powder/poultice/reaction_mob(mob/living/M, method=APPLY, reac_volume)
+	if(iscarbon(M))
+		if(M.stat == DEAD)
+			return
+		if(method != APPLY) //patch-only
+			return
+		if(M.getBruteLoss())
+			M.adjustBruteLoss(-reac_volume * 2) //higher than superstim due to poultice od limit being 20 and instaheal not stacking with powders
+		if(M.getFireLoss())
+			M.adjustFireLoss(-reac_volume * 2) //about 22hp insta-healing for burn, another 22 for brute due to 11u poultice per patch
+	..()
 
 /* /datum/reagent/medicine/healing_powder/poultice/on_mob_metabolize(mob/living/carbon/M) // a painful remedy!
 	. = ..()
