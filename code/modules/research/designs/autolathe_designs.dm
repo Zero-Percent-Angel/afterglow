@@ -426,7 +426,7 @@
 	id = "glassbottle"
 	build_type = AUTOLATHE
 	materials = list(MAT_GLASS = 1000)
-	build_path = /obj/item/reagent_containers/food/drinks/bottle/brown/darkbrown
+	build_path = /obj/effect/spawner/lootdrop/emptyglassbottles
 	category = list("initial", "Medical")
 
 /datum/design/large_beaker

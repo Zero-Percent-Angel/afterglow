@@ -184,7 +184,7 @@
 	id = "glassbottle"
 	build_type = AUTOLATHE | PROTOLATHE
 	materials = list(/datum/material/glass = 1000)
-	build_path = /obj/item/reagent_containers/food/drinks/bottle/brown/darkbrown
+	build_path = /obj/effect/spawner/lootdrop/emptyglassbottles
 	category = list("initial", "Medical","Medical Designs")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL | DEPARTMENTAL_FLAG_SERVICE | DEPARTMENTAL_FLAG_SCIENCE
 
