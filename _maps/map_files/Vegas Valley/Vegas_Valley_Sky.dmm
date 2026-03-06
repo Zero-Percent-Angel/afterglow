@@ -12,15 +12,6 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/clinic)
-"ac" = (
-/obj/machinery/iv_drip,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/wood_common{
-	icon_state = "common-broken3"
-	},
-/area/f13/ncr)
 "ad" = (
 /obj/structure/railing{
 	layer = 4.1;
@@ -100,12 +91,6 @@
 	smooth = 1
 	},
 /area/f13/brotherhood/offices1st)
-"al" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_common/wood_common_dark{
-	icon_state = "common_dark-broken3"
-	},
-/area/f13/ncr)
 "am" = (
 /obj/structure/barricade/wooden,
 /obj/structure/barricade/wooden/planks/pregame,
@@ -139,16 +124,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"aq" = (
-/obj/structure/chair/sofa/right{
-	color = "#475340"
-	},
-/obj/machinery/light/small{
-	dir = 1;
-	light_color = "#ff4747"
-	},
-/turf/open/floor/carpet/red,
-/area/f13/ncr)
 "as" = (
 /obj/structure/railing{
 	dir = 10
@@ -206,12 +181,6 @@
 /obj/structure/barricade/bars,
 /turf/open/floor/plasteel/dark,
 /area/f13/building/abandoned/l)
-"aA" = (
-/obj/structure/flora/grass/jungle/b{
-	pixel_x = -22
-	},
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
 "aB" = (
 /obj/structure/table,
 /obj/item/storage/crayons,
@@ -224,15 +193,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
-"aD" = (
-/obj/structure/fluff{
-	icon = 'icons/fallout/objects/cave_decor.dmi';
-	icon_state = "support_wall";
-	name = "support wall";
-	density = 1
-	},
-/turf/closed/mineral/random/low_chance,
-/area/f13/caves)
 "aG" = (
 /obj/item/weldingtool,
 /obj/effect/decal/cleanable/dirt,
@@ -256,6 +216,12 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
+"aK" = (
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 9;
+	icon_state = "dirt"
+	},
+/area/f13/wasteland)
 "aL" = (
 /obj/effect/decal/cleanable/ash/snappop_phoenix,
 /obj/item/cigbutt/cigarbutt,
@@ -265,16 +231,6 @@
 	},
 /turf/open/floor/carpet/purple,
 /area/f13/building/powered)
-"aM" = (
-/obj/structure/bookcase/random{
-	icon_state = "bookempty"
-	},
-/obj/item/toy/cards/deck{
-	pixel_y = 17;
-	pixel_x = 6
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "aO" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/mug/coco{
@@ -287,14 +243,11 @@
 	},
 /turf/open/floor/wood_wide,
 /area/f13/followers)
-"aR" = (
-/obj/structure/fermenting_barrel{
-	pixel_y = 10;
-	pixel_x = 8;
-	density = 0;
-	layer = 3.1
+"aQ" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 6
 	},
-/turf/open/indestructible/ground/outside/snow,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "aT" = (
 /obj/structure/bed/double,
@@ -320,10 +273,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
-"aW" = (
-/obj/structure/flora/branch,
-/turf/open/floor/plating/dirt/dark,
-/area/f13/caves)
 "aX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -331,12 +280,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"aY" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 1
-	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "ba" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 4
@@ -446,6 +389,10 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
+"bs" = (
+/obj/effect/decal/remains/human,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "bt" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/carpet/royalblack,
@@ -685,8 +632,11 @@
 /turf/open/floor/holofloor/carpet,
 /area/f13/ambientlighting/building/e)
 "cc" = (
-/turf/open/floor/carpet/red,
-/area/f13/ncr)
+/obj/structure/simple_door/tentflap_cloth{
+	pixel_y = -3
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/ambientlighting/building/u)
 "ce" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -695,18 +645,9 @@
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/bar)
 "cf" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 9
-	},
-/obj/structure/wreck/trash/one_barrel{
-	pixel_x = -13;
-	pixel_y = -3
-	},
-/obj/structure/wreck/trash/one_barrel{
-	pixel_y = 9
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
+/obj/structure/flora/big_bush,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "cg" = (
 /obj/structure/closet/firecloset/full,
 /obj/machinery/light/fo13colored/Red{
@@ -790,10 +731,7 @@
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
 "cr" = (
-/obj/structure/fluff/railing{
-	dir = 8
-	},
-/turf/open/floor/plating/f13/outside/roof/metal/corrugated,
+/turf/open/indestructible/ground/outside/ruins,
 /area/f13/wasteland)
 "cs" = (
 /obj/structure/sign/legion/veteran,
@@ -841,18 +779,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"cB" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 6
-	},
-/obj/effect/turf_decal/weather/dirt{
-	dir = 5
-	},
-/obj/structure/flora/ausbushes/stalkybush{
-	pixel_y = 17
-	},
-/turf/open/indestructible/ground/outside/water,
-/area/f13/caves)
 "cC" = (
 /obj/structure/railing{
 	layer = 4.1
@@ -863,13 +789,6 @@
 /obj/effect/spawner/lootdrop/trash,
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/bar)
-"cE" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 6
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "cF" = (
 /obj/structure/reagent_dispensers/barrel/three,
 /obj/effect/decal/cleanable/dirt,
@@ -981,26 +900,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"da" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 1
-	},
-/obj/effect/turf_decal/weather/dirt,
-/obj/structure/fluff{
-	icon = 'icons/fallout/objects/cave_decor.dmi';
-	icon_state = "boards_mammoth_we-5";
-	name = "planks";
-	desc = "planks to keep your shoes clean of mud"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "db" = (
 /turf/open/floor/holofloor/carpet,
 /area/f13/ambientlighting/building/e)
-"dc" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/closed/mineral/random/low_chance,
-/area/f13/caves)
 "dd" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -1013,58 +915,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"de" = (
-/obj/structure/rack,
-/obj/item/clothing/shoes/winterboots/ice_boots,
-/obj/item/clothing/shoes/winterboots/ice_boots,
-/obj/item/clothing/shoes/winterboots/ice_boots,
-/obj/item/clothing/shoes/winterboots/ice_boots,
-/obj/item/clothing/shoes/winterboots/ice_boots,
-/obj/item/clothing/shoes/winterboots/ice_boots,
-/obj/item/clothing/shoes/winterboots/ice_boots,
-/obj/item/clothing/shoes/winterboots/ice_boots,
-/obj/item/clothing/shoes/winterboots/ice_boots,
-/obj/item/clothing/shoes/winterboots/ice_boots,
-/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cargo{
-	name = "NCR winter coat"
-	},
-/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cargo{
-	name = "NCR winter coat"
-	},
-/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cargo{
-	name = "NCR winter coat"
-	},
-/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cargo{
-	name = "NCR winter coat"
-	},
-/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cargo{
-	name = "NCR winter coat"
-	},
-/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cargo{
-	name = "NCR winter coat"
-	},
-/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cargo{
-	name = "NCR winter coat"
-	},
-/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cargo{
-	name = "NCR winter coat"
-	},
-/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cargo{
-	name = "NCR winter coat"
-	},
-/obj/item/clothing/suit/armor/tiered/hooded/wintercoat/cargo{
-	name = "NCR winter coat"
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/item/clothing/shoes/f13/mutie/boots/ncr/ranger,
-/obj/item/radio/headset/headset_ncr,
-/obj/item/radio/headset/headset_ncr,
-/obj/item/radio/headset/headset_ncr,
-/obj/item/radio/headset/headset_ncr,
-/obj/item/radio/headset/headset_ncr,
-/obj/item/radio/headset/headset_ncr,
-/turf/open/floor/wood_wide,
-/area/f13/ncr)
 "df" = (
 /obj/structure/simple_door/bunker,
 /obj/structure/barricade/wooden/planks,
@@ -1094,10 +944,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"di" = (
-/obj/structure/flora/rock/jungle,
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
 "dj" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/campfire/barrel,
@@ -1195,16 +1041,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/side,
 /area/f13/building/powered)
-"dA" = (
-/obj/effect/turf_decal/weather/dirt,
-/obj/structure/fluff{
-	icon = 'icons/fallout/objects/cave_decor.dmi';
-	icon_state = "boards_mammoth_we-3";
-	name = "planks";
-	desc = "planks to keep your shoes clean of mud"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "dB" = (
 /obj/structure/simple_door/glass,
 /turf/open/floor/wood_common,
@@ -1216,9 +1052,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/purple,
 /area/f13/building/powered)
-"dD" = (
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
 "dE" = (
 /obj/structure/table/wood/junk,
 /obj/item/radio/old,
@@ -1254,9 +1087,6 @@
 	},
 /turf/open/floor/wood_wide,
 /area/f13/followers)
-"dL" = (
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
 "dM" = (
 /obj/structure/simple_door/bunker,
 /turf/open/floor/f13{
@@ -1307,20 +1137,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"dU" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood{
-	icon_state = "floor6";
-	pixel_x = -18;
-	pixel_y = 15
-	},
-/obj/effect/decal/cleanable/ash{
-	pixel_x = -9;
-	pixel_y = 13
-	},
-/obj/structure/fluff/rug/rug_rubber,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "dV" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 4
@@ -1364,10 +1180,7 @@
 /turf/open/floor/carpet/blue,
 /area/f13/followers)
 "ec" = (
-/obj/structure/fluff/railing{
-	dir = 4
-	},
-/turf/open/floor/plating/f13/outside/roof/metal/corrugated,
+/turf/open/floor/plating/f13/outside/roof/red,
 /area/f13/wasteland)
 "ee" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1442,11 +1255,13 @@
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/p)
 "eq" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 6
+/obj/structure/closet/crate/large,
+/obj/structure/closet/crate/large{
+	layer = 5;
+	pixel_y = 18
 	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "er" = (
 /turf/open/floor/wood_common/wood_common_light,
 /area/f13/wasteland)
@@ -1598,9 +1413,11 @@
 	},
 /area/f13/building/powered)
 "eO" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 5;
+	icon_state = "dirt"
+	},
+/area/f13/wasteland)
 "eP" = (
 /turf/closed/wall/mineral/wood,
 /area/f13/ambientlighting/building/d)
@@ -1678,13 +1495,9 @@
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "fb" = (
-/obj/structure/sign/poster/ncr/loaded{
-	pixel_y = 32
-	},
-/turf/open/floor/wood_wide{
-	icon_state = "wide-broken1"
-	},
-/area/f13/ncr)
+/obj/structure/fluff/railing/corner,
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "fc" = (
 /obj/structure/simple_door/bunker/glass,
 /turf/open/floor/f13{
@@ -1694,12 +1507,15 @@
 	},
 /area/f13/building/powered)
 "fd" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/railing{
-	color = "#A47449"
+/obj/structure/railing/wood/post{
+	desc = "A wooden stanchion.";
+	name = "wooden stanchion";
+	pixel_y = 24;
+	pixel_x = 16
 	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
+/obj/structure/closet/crate/large,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "fe" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -1784,13 +1600,6 @@
 /obj/item/reagent_containers/spray/cleaner,
 /turf/open/floor/carpet,
 /area/f13/ambientlighting/building/c)
-"fq" = (
-/obj/effect/decal/cleanable/blood{
-	dir = 5;
-	icon_state = "tracks"
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "fr" = (
 /obj/item/clothing/head/welding/weldingjapan,
 /obj/effect/decal/cleanable/dirt{
@@ -1865,6 +1674,10 @@
 /obj/structure/wreck/trash/one_tire,
 /turf/open/floor/plating/f13/outside/roof/metal,
 /area/f13/wasteland)
+"fB" = (
+/obj/item/cultivator/rake,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "fD" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_fancy,
@@ -1912,22 +1725,6 @@
 /obj/item/reagent_containers/food/snacks/f13/fancylads,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/p)
-"fL" = (
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
-"fM" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 1
-	},
-/obj/effect/turf_decal/weather/dirt,
-/obj/structure/fluff{
-	icon = 'icons/fallout/objects/cave_decor.dmi';
-	icon_state = "boards_drought_we-3";
-	name = "planks";
-	desc = "planks to keep your shoes clean of mud"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "fN" = (
 /turf/closed/wall/rust,
 /area/f13/brotherhood/offices1st)
@@ -1949,8 +1746,11 @@
 /turf/open/floor/wood_wide,
 /area/f13/legioncamp)
 "fR" = (
-/turf/open/floor/wood_common,
-/area/f13/ncr)
+/obj/structure/fluff/railing{
+	dir = 10
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "fS" = (
 /obj/structure/window/fulltile/house,
 /turf/open/indestructible/ground/outside/desert,
@@ -1964,13 +1764,6 @@
 "fU" = (
 /turf/open/transparent/openspace,
 /area/f13/building/abandoned/m)
-"fV" = (
-/obj/structure/flora/grass/brown{
-	pixel_x = -6;
-	pixel_y = 12
-	},
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
 "fW" = (
 /obj/effect/turf_decal/bot_red,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1980,12 +1773,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"fX" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 10
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "fY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table_frame,
@@ -2124,20 +1911,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/purple,
 /area/f13/building/powered)
-"gs" = (
-/obj/structure/table/wood,
-/obj/item/lighter{
-	pixel_x = 6;
-	pixel_y = 3
-	},
-/obj/item/storage/fancy/cigarettes/cigpack_bigboss{
-	pixel_x = 10
-	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "gt" = (
 /turf/closed/wall/f13/wood/house,
 /area/f13/building/abandoned/z)
+"gu" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "gv" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/securitron/sentrybot/pristine,
@@ -2166,6 +1948,10 @@
 	dir = 8
 	},
 /area/f13/building/powered)
+"gB" = (
+/obj/structure/flora/wasteplant/wild_yucca,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "gC" = (
 /obj/machinery/vending/autodrobe{
 	force_free = 1
@@ -2218,13 +2004,6 @@
 /obj/item/clothing/head/cowboyhat/black,
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/d)
-"gH" = (
-/obj/structure/fence/wooden{
-	pixel_x = 13;
-	density = 0
-	},
-/turf/open/transparent/openspace,
-/area/f13/ncr)
 "gI" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -2346,10 +2125,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"ha" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_wide,
-/area/f13/ncr)
 "hc" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
@@ -2371,39 +2146,30 @@
 "hf" = (
 /turf/closed/wall/mineral/wood,
 /area/f13/legioncamp)
-"hh" = (
-/turf/open/floor/wood_common/wood_common_dark{
-	icon_state = "common_dark-broken5"
+"hg" = (
+/obj/structure/barricade/tentclothedge{
+	dir = 4
 	},
-/area/f13/ncr)
+/obj/effect/overlay/desert/sonora/edge{
+	dir = 8
+	},
+/obj/structure/barricade/tentclothedge{
+	dir = 4;
+	pixel_x = 15;
+	pixel_y = 12;
+	layer = 5
+	},
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/ambientlighting/building/u)
 "hj" = (
 /obj/structure/table,
 /obj/item/book/granter/crafting_recipe/gunsmith_three,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"hk" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 6
-	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "hl" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/structure/sink/kitchen{
-	dir = 8;
-	pixel_x = 11
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
-"hn" = (
-/obj/structure/closet/crate/bin/trashbin{
-	pixel_x = 6
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/wooden,
-/area/f13/ncr)
+/obj/effect/decal/remains/human,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "ho" = (
 /obj/structure/rack/large/shelf_rust,
 /obj/effect/spawner/lootdrop/clothing_middle,
@@ -2447,23 +2213,9 @@
 	icon_state = "tunnelrusty"
 	},
 /area/f13/building/powered)
-"hv" = (
-/obj/structure/flora/grass/brown{
-	pixel_x = -6
-	},
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
 "hw" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/reagent_containers/glass/bucket{
-	pixel_y = 17;
-	pixel_x = -8
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "hx" = (
 /obj/structure/railing/wood/post{
 	desc = "A wooden stanchion.";
@@ -2552,29 +2304,6 @@
 /obj/effect/spawner/lootdrop/f13/attachments,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"hL" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/rack,
-/obj/item/radio/tribal{
-	pixel_x = 3;
-	pixel_y = 17
-	},
-/obj/item/reagent_containers/glass/beaker/waterbottle{
-	pixel_x = 4
-	},
-/obj/item/reagent_containers/glass/beaker/waterbottle{
-	pixel_x = -2;
-	pixel_y = -4
-	},
-/obj/item/smelling_salts{
-	pixel_x = 7;
-	pixel_y = -4
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "hM" = (
 /obj/item/bedsheet/blanket/blanketalt{
 	layer = -7
@@ -2606,17 +2335,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"hP" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 10
-	},
-/obj/structure/flora/rock/pile/largejungle{
-	icon_state = "bush2";
-	pixel_x = -13;
-	pixel_y = -4
-	},
-/turf/open/indestructible/ground/outside/water,
-/area/f13/caves)
 "hQ" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -2631,13 +2349,6 @@
 /obj/structure/simple_door/bunker,
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building/powered)
-"hU" = (
-/obj/structure/sign/departments/medbay/alt{
-	name = "TRIAGE"
-	},
-/obj/structure/decoration/rag,
-/turf/closed/wall/f13/wood,
-/area/f13/ncr)
 "hW" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -2692,6 +2403,14 @@
 /obj/item/mop,
 /turf/open/floor/wood_fancy,
 /area/maintenance/bar)
+"id" = (
+/obj/machinery/hydroponics/soil,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"ie" = (
+/obj/structure/flora/tree/tall,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "if" = (
 /mob/living/simple_animal/hostile/handy/gutsy/flamer,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
@@ -2791,15 +2510,19 @@
 	dir = 1
 	},
 /area/f13/building/powered)
-"iu" = (
-/obj/structure/table/wood,
-/turf/open/floor/plating/f13/outside/roof/wood/old,
+"iv" = (
+/obj/structure/flora/grass/coyote/six,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "iw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/sofa,
 /turf/open/floor/carpet/red,
 /area/maintenance/bar)
+"ix" = (
+/obj/structure/rack,
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/ambientlighting/building/u)
 "iy" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 4
@@ -2837,12 +2560,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/red,
 /area/maintenance/bar)
-"iI" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 5
-	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "iJ" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/low,
@@ -2942,12 +2659,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
-"jd" = (
-/obj/structure/chair/folding{
-	dir = 8
-	},
-/turf/open/floor/wood_common/wood_common_dark,
-/area/f13/ncr)
 "je" = (
 /obj/structure/window/fulltile/house/broken,
 /obj/structure/barricade/bars,
@@ -2965,19 +2676,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"jg" = (
-/obj/structure/table/booth,
-/obj/machinery/computer/terminal{
-	dir = 1;
-	pixel_y = 3;
-	pixel_x = 5
-	},
-/obj/machinery/light/small{
-	dir = 4;
-	light_color = "#ff4747"
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "ji" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
@@ -3043,6 +2741,12 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
+"jr" = (
+/obj/structure/shelf_wood,
+/obj/item/book/random,
+/obj/item/book/random,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "js" = (
 /obj/structure/window/fulltile/store{
 	icon_state = "storewindowbottom"
@@ -3099,12 +2803,6 @@
 	icon_state = "floordirtysolid"
 	},
 /area/f13/building/abandoned/m)
-"jA" = (
-/obj/structure/fireplace,
-/turf/open/indestructible/ground/outside/ruins{
-	name = "cobblestone floor"
-	},
-/area/f13/ncr)
 "jB" = (
 /obj/effect/turf_decal/caution/stand_clear,
 /obj/effect/turf_decal/big{
@@ -3132,10 +2830,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/building/abandoned/m)
-"jE" = (
-/obj/structure/flora/grass/brown,
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
 "jF" = (
 /obj/machinery/light{
 	dir = 8;
@@ -3204,9 +2898,24 @@
 	},
 /area/f13/building/powered)
 "jQ" = (
-/obj/structure/flora/grass/both,
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
+/obj/structure/barricade/tentclothcorner,
+/obj/effect/overlay/desert/sonora/edge{
+	dir = 9
+	},
+/obj/structure/barricade/tentclothedge{
+	dir = 4;
+	pixel_x = 15;
+	pixel_y = 12;
+	layer = 5
+	},
+/obj/item/paper/crumpled{
+	name = "tied crude paper";
+	desc = "A piece of paper with a hole near the top, tied to the wooden fence using a leather strip.";
+	info = "It's been days since they dug in and we blew the tunnel, trapping ourselves up here. We were finally forced to feed on horse. We'll last a while like this but--When the horses run out? I have no idea what happens.";
+	anchored = 1
+	},
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/ambientlighting/building/u)
 "jR" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 1;
@@ -3346,6 +3055,23 @@
 "ko" = (
 /turf/open/floor/f13/wood{
 	icon_state = "housebase4-broken"
+	},
+/area/f13/wasteland)
+"kp" = (
+/obj/structure/railing/wood/post{
+	desc = "A wooden stanchion.";
+	name = "wooden stanchion";
+	pixel_y = -4;
+	pixel_x = -16
+	},
+/obj/structure/railing/wood/post{
+	desc = "A wooden stanchion.";
+	name = "wooden stanchion";
+	pixel_y = -20;
+	pixel_x = -7
+	},
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirtcorner"
 	},
 /area/f13/wasteland)
 "kq" = (
@@ -3507,6 +3233,10 @@
 "kP" = (
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/p)
+"kQ" = (
+/obj/structure/flora/grass/coyote/thirteen,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "kR" = (
 /obj/structure/destructible/tribal_torch/lit,
 /turf/open/floor/f13{
@@ -3521,6 +3251,12 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
+"kU" = (
+/obj/structure/simple_door/tentflap_cloth{
+	pixel_y = -3
+	},
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "kV" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -3539,18 +3275,6 @@
 	name = "dirty floor"
 	},
 /area/f13/brotherhood/offices1st)
-"kW" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/storage/toolbox/ammo{
-	pixel_y = 16;
-	pixel_x = 3
-	},
-/obj/item/storage/toolbox/ammo{
-	pixel_y = 10;
-	pixel_x = -6
-	},
-/turf/open/floor/wood_wide,
-/area/f13/ncr)
 "kX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3610,17 +3334,6 @@
 	color = "#c5bab2"
 	},
 /area/f13/building/abandoned/z)
-"lh" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/turf/open/floor/plating/dirt/dark,
-/area/f13/caves)
-"li" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "lj" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -3704,12 +3417,6 @@
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/bar)
-"ls" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 1
-	},
-/turf/open/transparent/openspace,
-/area/f13/caves)
 "lt" = (
 /obj/machinery/light/fo13colored/Red{
 	dir = 4
@@ -3739,13 +3446,6 @@
 "lw" = (
 /turf/open/floor/plating/f13/outside/roof/metal,
 /area/f13/wasteland)
-"lx" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/wood_common/wood_common_dark,
-/area/f13/ncr)
 "ly" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 4
@@ -3788,11 +3488,9 @@
 /turf/open/floor/f13/wood,
 /area/f13/ncr)
 "lE" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_wide{
-	icon_state = "wide-broken4"
-	},
-/area/f13/ncr)
+/obj/effect/decal/fakelattice,
+/turf/open/indestructible/ground/outside/ruins,
+/area/f13/wasteland)
 "lF" = (
 /obj/structure/railing,
 /obj/machinery/light/small{
@@ -3864,10 +3562,6 @@
 /obj/machinery/light/small/broken,
 /turf/open/floor/wood_common,
 /area/f13/clinic)
-"lQ" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
 "lR" = (
 /obj/structure/railing{
 	dir = 10
@@ -3911,26 +3605,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"lY" = (
-/obj/structure/railing{
-	color = "#A47449";
-	dir = 8
-	},
-/obj/structure/table,
-/obj/item/tank/internals/anesthetic,
-/obj/item/tank/internals/anesthetic{
-	pixel_y = -2;
-	pixel_x = 4
-	},
-/obj/item/clothing/mask/breath/medical,
-/obj/item/clothing/mask/breath/medical{
-	pixel_x = 3;
-	pixel_y = -2
-	},
-/turf/open/floor/wood_common{
-	icon_state = "common-broken2"
-	},
-/area/f13/ncr)
 "lZ" = (
 /obj/structure/falsewall/rust,
 /turf/open/floor/f13{
@@ -3981,12 +3655,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"mg" = (
-/obj/structure/sign/departments/medbay/alt{
-	name = "TRIAGE"
-	},
-/turf/closed/wall/f13/wood,
-/area/f13/ncr)
 "mh" = (
 /obj/machinery/door/window{
 	dir = 1
@@ -3997,26 +3665,10 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"mi" = (
-/obj/structure/chair/folding,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "mj" = (
 /obj/machinery/vending/snack,
 /turf/open/floor/wood_common,
 /area/engine/workshop)
-"mk" = (
-/obj/structure/fluff/rails,
-/obj/effect/turf_decal/weather/dirt{
-	dir = 6
-	},
-/obj/effect/turf_decal/weather/dirt{
-	dir = 5
-	},
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelchess2"
-	},
-/area/f13/caves)
 "ml" = (
 /obj/effect/decal/remains/human,
 /obj/item/clothing/head/f13/enclave/peacekeeper,
@@ -4044,10 +3696,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"mp" = (
-/obj/structure/fluff/hedge,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "mq" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 8
@@ -4084,6 +3732,9 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
+"mx" = (
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "my" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -4135,6 +3786,12 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
+"mD" = (
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 8;
+	icon_state = "dirtcorner"
+	},
+/area/f13/wasteland)
 "mE" = (
 /turf/open/transparent/openspace{
 	name = "air";
@@ -4190,6 +3847,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_fancy,
 /area/f13/ambientlighting/building/c)
+"mM" = (
+/obj/structure/barricade/tentclothcorner{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 4;
+	icon_state = "dirt"
+	},
+/area/f13/ambientlighting/building/u)
 "mN" = (
 /obj/structure/bed/old,
 /obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
@@ -4243,11 +3909,10 @@
 	},
 /area/f13/building/powered)
 "mW" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 5
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 1;
+	icon_state = "dirtcorner"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/f13/outside/roof/wood/old,
 /area/f13/wasteland)
 "mX" = (
 /obj/structure/weightmachine/stacklifter,
@@ -4266,16 +3931,14 @@
 /area/f13/ambientlighting/building/c)
 "mZ" = (
 /obj/effect/turf_decal/weather/dirt{
-	dir = 6
+	dir = 1
 	},
-/obj/structure/flora/grass/wasteland,
 /turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
-"nc" = (
-/obj/structure/barricade/sandbags,
-/obj/structure/table/wood,
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
+/area/f13/wasteland)
+"ne" = (
+/obj/structure/flora/branch,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "nh" = (
 /obj/effect/turf_decal/big{
 	dir = 1
@@ -4319,10 +3982,6 @@
 	name = "dirty floor"
 	},
 /area/f13/brotherhood/offices1st)
-"nn" = (
-/obj/structure/barricade/wooden,
-/turf/closed/wall/f13/wood,
-/area/f13/caves)
 "no" = (
 /obj/structure/fluff/railing{
 	dir = 4
@@ -4407,14 +4066,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"nF" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/fluff/rug/rug_rubber{
-	icon = 'icons/fallout/objects/64x64_rugs.dmi';
-	icon_state = "rug_fancy"
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "nG" = (
 /turf/open/floor/carpet/royalblack,
 /area/f13/clinic)
@@ -4437,19 +4088,14 @@
 /turf/open/floor/plasteel/f13/vault_floor/blue/side,
 /area/f13/building/powered)
 "nK" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 8
+/obj/structure/barricade/tentclothedge{
+	dir = 4
 	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
-"nL" = (
-/obj/item/newspaper{
-	pixel_x = -6;
-	pixel_y = 6
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 8;
+	icon_state = "dirt"
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/red,
-/area/f13/ncr)
+/area/f13/ambientlighting/building/u)
 "nM" = (
 /turf/closed/wall/f13/wood,
 /area/f13/ambientlighting/building/e)
@@ -4482,14 +4128,6 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
-"nS" = (
-/obj/structure/railing{
-	color = "#A47449";
-	dir = 4;
-	layer = 4.1
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "nU" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /obj/structure/lattice,
@@ -4515,23 +4153,11 @@
 "nX" = (
 /turf/open/indestructible,
 /area/f13/tcoms)
-"nY" = (
-/obj/item/reagent_containers/glass/bucket/wood{
-	pixel_y = 17;
-	pixel_x = -8
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "nZ" = (
 /obj/structure/barricade/wooden,
 /obj/structure/simple_door/metal/dirtystore,
 /turf/open/floor/plating/rust,
 /area/f13/brotherhood/offices1st)
-"oa" = (
-/turf/open/floor/plating/wooden{
-	icon_state = "housebase4-broken"
-	},
-/area/f13/ncr)
 "ob" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -4558,6 +4184,11 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
+"od" = (
+/obj/effect/decal/fakelattice,
+/obj/effect/decal/fakelattice,
+/turf/open/indestructible/ground/outside/ruins,
+/area/f13/wasteland)
 "oe" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 1;
@@ -4642,12 +4273,6 @@
 	},
 /turf/open/floor/carpet/royalblue,
 /area/f13/building/powered)
-"op" = (
-/obj/structure/railing{
-	color = "#A47449"
-	},
-/turf/open/transparent/openspace,
-/area/f13/ncr)
 "oq" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/f13/cash_random_med,
@@ -4660,6 +4285,10 @@
 	color = "#c5bab2"
 	},
 /area/f13/building/abandoned/z)
+"ot" = (
+/obj/machinery/autolathe/ammo/unlocked_basic,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "ou" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/big{
@@ -4701,11 +4330,12 @@
 /turf/open/floor/carpet/royalblack,
 /area/f13/clinic)
 "oA" = (
-/obj/structure/window/fulltile/wood,
-/obj/structure/barricade/bars,
-/obj/structure/curtain,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
+/obj/structure/closet/crate/footlocker,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/obj/item/reagent_containers/hypospray/medipen/stimpak,
+/obj/effect/spawner/lootdrop/f13/cash_random_med,
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/ambientlighting/building/u)
 "oB" = (
 /obj/machinery/autolathe,
 /obj/machinery/light{
@@ -4771,14 +4401,6 @@
 	dir = 6
 	},
 /area/f13/building/powered)
-"oL" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small{
-	dir = 8;
-	light_color = "#ff4747"
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "oM" = (
 /obj/structure/wreck/trash/machinepile,
 /obj/machinery/light/fo13colored/Red{
@@ -4831,15 +4453,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"oT" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 9
-	},
-/obj/effect/turf_decal/weather/dirt{
-	dir = 5
-	},
-/turf/open/indestructible/ground/outside/water,
-/area/f13/caves)
 "oU" = (
 /obj/structure/window/fulltile/house{
 	opacity = 1
@@ -4858,11 +4471,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
-"oW" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/unpowered/secure_NCR,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "oX" = (
 /obj/effect/landmark/poster_spawner/prewar,
 /turf/closed/indestructible/rock{
@@ -4897,6 +4505,10 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
+"pb" = (
+/obj/structure/campfire,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "pc" = (
 /obj/structure/simple_door/bunker,
 /obj/effect/turf_decal/bot,
@@ -4919,12 +4531,20 @@
 /turf/open/floor/plating/f13/outside/roof/metal,
 /area/f13/wasteland)
 "pg" = (
-/obj/machinery/light/small{
-	dir = 1;
-	light_color = "#ff4747"
+/obj/structure/railing/wood/post{
+	desc = "A wooden stanchion.";
+	name = "wooden stanchion";
+	pixel_y = 24;
+	pixel_x = -16
 	},
-/turf/open/transparent/openspace,
-/area/f13/ncr)
+/obj/structure/railing/wood/post{
+	desc = "A wooden stanchion.";
+	name = "wooden stanchion";
+	pixel_y = 24;
+	pixel_x = 16
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "ph" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -5046,21 +4666,12 @@
 /turf/open/floor/wood_wide/wood_wide_light,
 /area/engine/workshop)
 "px" = (
-/obj/structure/filingcabinet{
-	pixel_x = 11
+/obj/effect/turf_decal/weather/dirt{
+	dir = 4
 	},
-/obj/structure/filingcabinet{
-	pixel_x = 1
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
-"py" = (
-/obj/structure/decoration/rag{
-	icon_state = "skin";
-	pixel_y = 2
-	},
-/turf/closed/wall/f13/wood,
-/area/f13/ncr)
+/obj/effect/turf_decal/weather/dirt,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "pz" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/f13{
@@ -5217,17 +4828,20 @@
 /obj/structure/simple_door/glass,
 /turf/open/floor/wood_common,
 /area/engine/workshop)
+"pY" = (
+/obj/structure/barricade/tentclothedge{
+	dir = 1;
+	pixel_y = -3
+	},
+/obj/effect/overlay/desert/sonora/edge,
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/ambientlighting/building/u)
 "pZ" = (
 /obj/machinery/vending/robotics,
 /turf/open/floor/f13{
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"qa" = (
-/obj/structure/flora/rock/pile/largejungle,
-/obj/structure/car,
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
 "qb" = (
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
@@ -5428,14 +5042,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
-"qG" = (
-/obj/machinery/vending/snack,
-/obj/machinery/light/small{
-	dir = 4;
-	light_color = "#ff4747"
-	},
-/turf/open/floor/wood_common/wood_common_dark,
-/area/f13/ncr)
 "qH" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -5449,13 +5055,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
-"qJ" = (
-/obj/structure/window/fulltile/wood,
-/obj/structure/curtain{
-	color = "#808080"
-	},
-/turf/open/floor/f13/wood,
-/area/f13/ncr)
 "qK" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -5709,26 +5308,6 @@
 /obj/item/storage/toolbox/electrical,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"rw" = (
-/obj/structure/table,
-/obj/effect/decal/cleanable/ash{
-	pixel_x = 7;
-	pixel_y = -7
-	},
-/obj/item/reagent_containers/medspray/sterilizine{
-	pixel_x = -9;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/medspray/silver_sulf{
-	pixel_y = 5;
-	pixel_x = -5
-	},
-/obj/item/reagent_containers/glass/rag{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "rx" = (
 /obj/structure/curtain{
 	color = "#845f58";
@@ -5802,10 +5381,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/brotherhood/offices1st)
-"rJ" = (
-/obj/structure/barricade/wooden/planks,
-/turf/closed/wall/f13/wood,
-/area/f13/caves)
 "rK" = (
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/e)
@@ -5830,6 +5405,12 @@
 /obj/item/clothing/suit/armor/outfit/jacket/jamrock,
 /turf/open/floor/carpet/red,
 /area/f13/ambientlighting/building/c)
+"rN" = (
+/obj/structure/chair/bench{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "rO" = (
 /obj/structure/table/wood/settler,
 /obj/item/storage/backpack/duffelbag/med/surgery/primitive,
@@ -5947,26 +5528,20 @@
 	},
 /turf/open/floor/plating,
 /area/engine/workshop)
-"si" = (
-/obj/effect/turf_decal/weather/dirt,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "sj" = (
-/obj/structure/table/booth,
-/obj/item/folder{
-	pixel_x = -6;
-	pixel_y = 2
+/obj/structure/railing/wood/post{
+	desc = "A wooden stanchion.";
+	name = "wooden stanchion";
+	pixel_y = 24;
+	pixel_x = 16
 	},
-/obj/item/paper_bin{
-	pixel_x = 9;
-	pixel_y = 3
+/obj/structure/closet/crate/large,
+/obj/structure/closet/crate/large{
+	layer = 5;
+	pixel_y = 18
 	},
-/obj/item/pen{
-	pixel_x = 8;
-	pixel_y = 3
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "sl" = (
 /obj/effect/spawner/lootdrop/trash,
 /obj/effect/decal/cleanable/dirt{
@@ -6031,11 +5606,6 @@
 /obj/item/reagent_containers/hypospray/medipen/stimpak,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"su" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/generic,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "sv" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant,
@@ -6054,6 +5624,19 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
+"sx" = (
+/obj/structure/railing/wood/post{
+	desc = "A wooden stanchion.";
+	name = "wooden stanchion";
+	pixel_y = 24;
+	pixel_x = -16
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
+"sy" = (
+/obj/machinery/workbench,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "sz" = (
 /obj/structure/table_frame,
 /obj/item/stack/sheet/metal,
@@ -6112,6 +5695,10 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/followers)
+"sG" = (
+/obj/structure/flora/tree/joshua,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "sH" = (
 /mob/living/simple_animal/hostile/handy/gutsy/flamer,
 /obj/effect/decal/cleanable/blood/splatter,
@@ -6251,6 +5838,10 @@
 	icon_state = "common-broken5"
 	},
 /area/maintenance/bar)
+"td" = (
+/obj/structure/flora/brushwood,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "te" = (
 /obj/effect/decal/cleanable/greenglow,
 /obj/effect/decal/remains/human,
@@ -6324,13 +5915,8 @@
 /turf/closed/wall/f13/wood/house,
 /area/maintenance/bar)
 "ts" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 10
-	},
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 6
-	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
+/obj/effect/turf_decal/weather/dirt,
+/turf/open/indestructible/ground/inside/mountain,
 /area/f13/wasteland)
 "tu" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6387,6 +5973,10 @@
 	icon_state = "floordirty"
 	},
 /area/f13/building/abandoned/j)
+"tD" = (
+/obj/structure/sink/puddle,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "tE" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /mob/living/simple_animal/hostile/radroach,
@@ -6411,6 +6001,11 @@
 /obj/item/paper_bin,
 /turf/open/floor/holofloor/carpet,
 /area/f13/ambientlighting/building/e)
+"tH" = (
+/obj/structure/shelf_wood,
+/obj/effect/spawner/lootdrop/f13/cash_random_high,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "tI" = (
 /obj/structure/railing{
 	color = "#A47449";
@@ -6565,29 +6160,6 @@
 	icon_state = "greenrustyfull"
 	},
 /area/f13/followers)
-"uf" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 9
-	},
-/obj/effect/decal/cleanable/blood/old{
-	icon_state = "gibmid1"
-	},
-/obj/structure/flora/rock/jungle{
-	icon_state = "rock3";
-	pixel_x = -3
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
-"ug" = (
-/obj/structure/fluff/rails,
-/obj/structure/fluff{
-	icon = 'icons/fallout/objects/cave_decor.dmi';
-	icon_state = "minecart_fallen";
-	name = "minecart";
-	desc = "a toppled over minecart, filled with useless rocks"
-	},
-/turf/open/floor/plating/dirt/dark,
-/area/f13/caves)
 "uh" = (
 /obj/machinery/pool/drain,
 /obj/effect/decal/cleanable/dirt,
@@ -6778,17 +6350,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"uI" = (
-/obj/machinery/sleeper,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
-"uJ" = (
-/obj/structure/fluff/rails{
-	icon_state = "rails-r";
-	dir = 8
-	},
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
 "uK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/wood,
@@ -6983,24 +6544,11 @@
 /obj/structure/wreck/trash/brokenvendor,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"vi" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/wood_common/wood_common_dark,
-/area/f13/ncr)
 "vj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/p)
-"vk" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood{
-	dir = 8;
-	icon_state = "tracks"
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "vl" = (
 /mob/living/simple_animal/hostile/securitron/sentrybot,
 /turf/open/floor/f13{
@@ -7009,6 +6557,18 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
+"vm" = (
+/obj/structure/railing/wood/post{
+	desc = "A wooden stanchion.";
+	name = "wooden stanchion";
+	pixel_y = 24;
+	pixel_x = -16
+	},
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 8;
+	icon_state = "dirtcorner"
+	},
+/area/f13/wasteland)
 "vn" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -7038,13 +6598,6 @@
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/bar)
-"vs" = (
-/obj/structure/decoration/rag{
-	icon_state = "skin";
-	layer = 5.0
-	},
-/turf/closed/wall/f13/wood,
-/area/f13/caves)
 "vv" = (
 /obj/machinery/light/fo13colored/Red{
 	dir = 8
@@ -7098,15 +6651,6 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/d)
-"vC" = (
-/obj/structure/rack,
-/obj/effect/spawner/lootdrop/f13/attachments,
-/obj/effect/spawner/lootdrop/f13/attachments,
-/obj/effect/spawner/lootdrop/f13/attachments,
-/turf/open/floor/f13/wood{
-	icon_state = "housebase4-broken"
-	},
-/area/f13/ncr)
 "vD" = (
 /obj/machinery/light/fo13colored/Red,
 /obj/effect/decal/cleanable/blood/old,
@@ -7157,13 +6701,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"vJ" = (
-/obj/structure/flora/grass/brown{
-	pixel_x = 9;
-	pixel_y = 11
-	},
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
 "vK" = (
 /obj/structure/window/fulltile/house/broken,
 /obj/structure/barricade/wooden/planks/pregame,
@@ -7287,9 +6824,15 @@
 /turf/open/floor/mineral/titanium/white,
 /area/f13/clinic)
 "wc" = (
-/obj/structure/flora/junglebush/b,
-/turf/open/floor/plating/dirt/dark,
-/area/f13/caves)
+/obj/structure/railing/wood/post{
+	desc = "A wooden stanchion.";
+	name = "wooden stanchion";
+	pixel_y = -4;
+	pixel_x = -16
+	},
+/obj/structure/flora/branch_broken,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "we" = (
 /obj/structure/table,
 /obj/structure/railing/dancing_pole{
@@ -7510,6 +7053,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
+"wJ" = (
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "wM" = (
 /obj/structure/table/booth,
 /turf/open/floor/f13/wood{
@@ -7534,10 +7080,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"wP" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_common/wood_common_dark,
-/area/f13/ncr)
 "wQ" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
@@ -7568,6 +7110,17 @@
 "wT" = (
 /obj/structure/lattice/catwalk,
 /turf/open/transparent/openspace,
+/area/f13/wasteland)
+"wU" = (
+/turf/open/indestructible/ground/outside/ruins{
+	dir = 5;
+	icon_state = "rubbleplate"
+	},
+/area/f13/wasteland)
+"wV" = (
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirt"
+	},
 /area/f13/wasteland)
 "wW" = (
 /turf/closed/indestructible/f13vaultrusted,
@@ -7629,11 +7182,6 @@
 	dir = 8
 	},
 /area/f13/building/powered)
-"xf" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/blood/splatter,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "xg" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -7652,14 +7200,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/ambientlighting/building/p)
-"xi" = (
-/obj/structure/fluff{
-	icon = 'icons/fallout/objects/cave_decor.dmi';
-	icon_state = "support_wall_broken";
-	name = "support wall"
-	},
-/turf/closed/mineral/random/low_chance,
-/area/f13/wasteland)
 "xj" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
@@ -7670,6 +7210,11 @@
 	name = "dirty floor"
 	},
 /area/f13/brotherhood/offices1st)
+"xk" = (
+/obj/structure/bed/wooden,
+/obj/item/bedsheet/cult,
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/ambientlighting/building/u)
 "xl" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/advcrafting,
@@ -7792,9 +7337,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"xE" = (
-/turf/closed/indestructible/rock,
-/area/f13/caves)
 "xF" = (
 /obj/structure/destructible/tribal_torch/wall/lit{
 	dir = 4;
@@ -7876,10 +7418,6 @@
 	},
 /turf/open/floor/plating,
 /area/f13/bar)
-"xS" = (
-/obj/structure/fluff/rails,
-/turf/open/floor/plating/dirt/dark,
-/area/f13/caves)
 "xT" = (
 /obj/structure/simple_door/house/clean,
 /turf/open/floor/wood_fancy,
@@ -7901,13 +7439,9 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"xW" = (
-/obj/structure/fence/wooden{
-	dir = 4;
-	icon_state = "post_wood"
-	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
+"xX" = (
+/turf/closed/mineral/random/low_chance,
+/area/f13/caves)
 "xY" = (
 /obj/machinery/photocopier,
 /turf/open/floor/f13{
@@ -7968,13 +7502,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"yl" = (
-/obj/structure/window/fulltile/wood,
-/obj/structure/curtain{
-	color = "#808080"
-	},
-/turf/open/floor/wood_wide,
-/area/f13/ncr)
 "ym" = (
 /obj/structure/dresser,
 /obj/structure/sign/poster/contraband/pinup_couch{
@@ -7996,6 +7523,12 @@
 /obj/item/toy/plush/beeplushie,
 /turf/open/floor/carpet,
 /area/f13/ambientlighting/building/c)
+"yp" = (
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirt";
+	dir = 6
+	},
+/area/f13/wasteland)
 "yq" = (
 /obj/effect/decal/cleanable/ash/large,
 /turf/open/floor/f13{
@@ -8127,6 +7660,12 @@
 "yJ" = (
 /turf/open/floor/wood_fancy,
 /area/f13/ambientlighting/building/c)
+"yK" = (
+/obj/structure/fluff/railing/corner{
+	dir = 1
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "yL" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/stock_parts/cell/ammo/mfc,
@@ -8152,14 +7691,6 @@
 	dir = 1
 	},
 /area/f13/building/powered)
-"yO" = (
-/obj/structure/flora/grass/jungle/b{
-	icon_state = "grassb3";
-	pixel_x = -5;
-	pixel_y = 1
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "yP" = (
 /obj/effect/decal/cleanable/greenglow,
 /obj/effect/decal/remains/human,
@@ -8272,16 +7803,16 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/plasteel/f13,
 /area/f13/wasteland)
-"zf" = (
-/obj/structure/fluff/hedge,
-/turf/open/floor/wood_common{
-	icon_state = "common-broken2"
-	},
-/area/f13/ncr)
 "zg" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
+"zh" = (
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 4;
+	icon_state = "dirt"
+	},
+/area/f13/ambientlighting/building/u)
 "zi" = (
 /turf/open/floor/plating/f13/outside/roof/metal/corrugated,
 /area/f13/wasteland)
@@ -8445,12 +7976,6 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/clinic)
-"zJ" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 4
-	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "zL" = (
 /obj/machinery/computer/rdconsole/core,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -8488,25 +8013,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"zQ" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table,
-/obj/item/storage/backpack/duffelbag/med/surgery{
-	pixel_y = 11;
-	pixel_x = -2
-	},
-/obj/item/reagent_containers/medspray/sterilizine{
-	pixel_x = -9;
-	pixel_y = 4
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
-"zR" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 8
-	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "zS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/sofa/corp{
@@ -8525,11 +8031,10 @@
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/d)
 "zU" = (
-/obj/structure/bookcase/random{
-	icon_state = "bookempty"
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
+/obj/structure/rack,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/random_high,
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/ambientlighting/building/u)
 "zV" = (
 /obj/structure/rack/shelf_metal,
 /obj/item/storage/toolbox/emergency,
@@ -8637,12 +8142,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_fancy,
 /area/maintenance/bar)
-"Aj" = (
-/obj/structure/flora/grass/both{
-	icon_state = "snowgrass_esw"
-	},
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
 "Al" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood{
@@ -8679,14 +8178,9 @@
 	},
 /area/f13/building/powered)
 "Aq" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table/optable,
-/obj/effect/decal/cleanable/blood{
-	icon_state = "gib1";
-	pixel_y = -6
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
+/obj/structure/flora/ausbushes/ywflowers,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "Ar" = (
 /obj/structure/railing{
 	dir = 1
@@ -8711,26 +8205,6 @@
 "At" = (
 /turf/open/floor/plasteel/f13,
 /area/f13/wasteland)
-"Au" = (
-/obj/structure/table/wood,
-/obj/item/lighter{
-	pixel_x = 6;
-	pixel_y = 3
-	},
-/obj/item/storage/fancy/cigarettes/cigpack_bigboss{
-	pixel_x = 10
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/item/toy/cards/deck/unum{
-	pixel_y = 12;
-	pixel_x = -7
-	},
-/obj/item/radio/tribal{
-	pixel_x = -4;
-	pixel_y = 1
-	},
-/turf/open/floor/carpet/red,
-/area/f13/ncr)
 "Av" = (
 /obj/item/clothing/head/f13/enclave/peacekeeper,
 /obj/effect/decal/cleanable/dirt,
@@ -8789,6 +8263,11 @@
 "AE" = (
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/brotherhood/offices1st)
+"AF" = (
+/obj/structure/shelf_wood,
+/obj/effect/spawner/lootdrop/f13/weapon/melee/random_high,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "AH" = (
 /obj/effect/turf_decal/loading_area,
 /turf/open/floor/f13{
@@ -8830,12 +8309,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/f13/wood,
-/area/f13/ncr)
-"AQ" = (
-/obj/structure/barricade/bars,
-/obj/structure/curtain,
-/obj/structure/window/fulltile/wood/broken,
-/turf/open/floor/wood_common,
 /area/f13/ncr)
 "AR" = (
 /obj/structure/debris/v3,
@@ -8882,13 +8355,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/red,
 /area/maintenance/bar)
-"AY" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 6;
-	icon_state = "snow_corner"
-	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "AZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/ash,
@@ -8944,6 +8410,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/rarewhite,
 /area/f13/brotherhood/offices1st)
+"Bk" = (
+/obj/structure/legion_extractor,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "Bl" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/table/wood,
@@ -8997,6 +8467,12 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
+"Br" = (
+/obj/effect/decal/fakelattice,
+/turf/open/indestructible/ground/outside/ruins{
+	icon_state = "rubbleplate"
+	},
+/area/f13/wasteland)
 "Bs" = (
 /turf/open/floor/plating/f13/outside/roof/metal/verdigris,
 /area/f13/wasteland)
@@ -9072,17 +8548,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/wasteland)
-"BD" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 10
-	},
-/obj/effect/turf_decal/weather/dirt{
-	dir = 6
-	},
-/obj/structure/barricade/sandbags,
-/obj/structure/table/wood,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "BE" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -9113,6 +8578,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/purple,
 /area/f13/ambientlighting/building/c)
+"BI" = (
+/obj/structure/railing/wood/post{
+	desc = "A wooden stanchion.";
+	name = "wooden stanchion";
+	pixel_y = 24;
+	pixel_x = 16
+	},
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirtcorner"
+	},
+/area/f13/wasteland)
 "BJ" = (
 /obj/structure/debris/v1,
 /turf/open/floor/f13{
@@ -9236,13 +8712,14 @@
 	},
 /area/f13/brotherhood/offices1st)
 "BZ" = (
-/obj/item/newspaper{
-	pixel_x = -6;
-	pixel_y = 6
+/obj/structure/barricade/tentclothedge{
+	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
+/turf/open/indestructible/ground/outside/dirt{
+	icon_state = "dirt";
+	dir = 4
+	},
+/area/f13/ambientlighting/building/u)
 "Ca" = (
 /obj/structure/railing,
 /turf/open/transparent/openspace,
@@ -9305,38 +8782,11 @@
 /turf/open/transparent/openspace,
 /area/f13/brotherhood/offices1st)
 "Cj" = (
-/obj/structure/rack,
-/obj/item/gun/ballistic/automatic/m1garand,
-/obj/item/ammo_box/magazine/m556/rifle/empty{
-	pixel_x = 6;
-	pixel_y = -6
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 8;
+	icon_state = "dirt"
 	},
-/obj/item/ammo_box/magazine/m556/rifle/empty{
-	pixel_x = 6;
-	pixel_y = -6
-	},
-/obj/item/ammo_box/magazine/m556/rifle/empty{
-	pixel_x = 6;
-	pixel_y = -6
-	},
-/obj/item/ammo_box/magazine/m556/rifle/empty{
-	pixel_x = 6;
-	pixel_y = -6
-	},
-/obj/item/ammo_box/magazine/m556/rifle{
-	pixel_y = -7;
-	pixel_x = -5
-	},
-/obj/item/ammo_box/magazine/m556/rifle{
-	pixel_y = -7;
-	pixel_x = -5
-	},
-/obj/item/ammo_box/magazine/m556/rifle{
-	pixel_y = -7;
-	pixel_x = -5
-	},
-/turf/open/floor/wood_wide,
-/area/f13/ncr)
+/area/f13/wasteland)
 "Ck" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/wood/house,
@@ -9404,12 +8854,6 @@
 /obj/item/stack/f13Cash/denarius,
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
-"Cr" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_common/wood_common_dark{
-	icon_state = "common_dark-broken2"
-	},
-/area/f13/ncr)
 "Cs" = (
 /turf/closed/wall/f13/wood/house/broken,
 /area/f13/bar)
@@ -9480,13 +8924,6 @@
 	},
 /turf/open/floor/carpet/purple,
 /area/f13/bar)
-"CD" = (
-/obj/machinery/door/unpowered/secure_NCR{
-	color = "#e8e4ca";
-	name = "Ranger Lodge"
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "CE" = (
 /turf/closed/wall/f13/tentwall{
 	icon_state = "tent5"
@@ -9585,15 +9022,6 @@
 /obj/structure/barricade/wooden/strong,
 /turf/closed/wall/f13/wood/house,
 /area/f13/legioncamp)
-"CX" = (
-/obj/structure/bed/wooden,
-/obj/item/bedsheet/blanket,
-/obj/machinery/light/small{
-	dir = 8;
-	light_color = "#ff4747"
-	},
-/turf/open/floor/carpet,
-/area/f13/ncr)
 "CY" = (
 /obj/structure/table/wood/settler,
 /obj/item/storage/belt/fannypack/pink,
@@ -9616,9 +9044,6 @@
 	dir = 1
 	},
 /area/f13/building/powered)
-"Db" = (
-/turf/open/floor/plating/wooden,
-/area/f13/ncr)
 "Dc" = (
 /obj/structure/chair/comfy/black{
 	dir = 8
@@ -9769,13 +9194,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"Dx" = (
-/obj/structure/railing{
-	color = "#A47449";
-	dir = 9
-	},
-/turf/open/transparent/openspace,
-/area/f13/ncr)
 "Dz" = (
 /obj/machinery/light{
 	dir = 1;
@@ -9908,12 +9326,6 @@
 	name = "dirty floor"
 	},
 /area/f13/brotherhood/offices1st)
-"DX" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_common{
-	icon_state = "common-broken4"
-	},
-/area/f13/ncr)
 "DY" = (
 /obj/structure/reagent_dispensers/barrel/four,
 /obj/effect/decal/cleanable/dirt,
@@ -9931,6 +9343,10 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/plasteel/f13/vault_floor/blue/whitebluefull,
 /area/f13/building/powered)
+"Eb" = (
+/obj/structure/reagent_dispensers/compostbin,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "Ec" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -9938,8 +9354,11 @@
 /turf/open/transparent/openspace,
 /area/f13/building/powered)
 "Ed" = (
-/turf/closed/wall/f13/wood,
-/area/f13/caves)
+/obj/structure/fluff/railing{
+	dir = 6
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "Ee" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -10108,17 +9527,27 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
+"EC" = (
+/obj/structure/barricade/tentclothcorner{
+	dir = 8
+	},
+/obj/effect/overlay/desert/sonora/edge{
+	dir = 10
+	},
+/obj/structure/barricade/tentclothedge{
+	dir = 4;
+	pixel_x = 15;
+	pixel_y = 12;
+	layer = 5
+	},
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/ambientlighting/building/u)
 "ED" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood{
 	icon_state = "housebase"
 	},
 /area/f13/legioncamp)
-"EF" = (
-/obj/structure/flora/ausbushes/fullgrass,
-/obj/item/flag/ncr,
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
 "EG" = (
 /obj/structure/table/wood,
 /obj/item/clothing/shoes/f13/jamrock,
@@ -10143,10 +9572,6 @@
 /obj/item/storage/book/bible/booze,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/e)
-"EL" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating/dirt/dark,
-/area/f13/caves)
 "EM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/campfire,
@@ -10247,15 +9672,6 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/d)
-"EZ" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 5
-	},
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 6
-	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "Fa" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
@@ -10392,13 +9808,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"Ft" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/trash,
-/turf/open/floor/wood_common/wood_common_dark{
-	icon_state = "common_dark-broken6"
-	},
-/area/f13/ncr)
 "Fu" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/f13{
@@ -10407,6 +9816,10 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
+"Fv" = (
+/obj/structure/flora/ausbushes/grassybush,
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "Fw" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt{
@@ -10428,23 +9841,10 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"Fy" = (
-/obj/structure/table,
-/obj/item/storage/backpack/duffelbag/med/surgery{
-	pixel_y = 11;
-	pixel_x = -2
-	},
-/obj/item/reagent_containers/hypospray/medipen/stimpak/epipak,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "Fz" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/f13/wood,
 /area/f13/ncr)
-"FA" = (
-/obj/structure/wreck/trash/machinepiletwo,
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
 "FB" = (
 /obj/structure/window/fulltile/house/broken,
 /obj/structure/barricade/bars,
@@ -10507,24 +9907,15 @@
 	},
 /turf/open/floor/wood_fancy,
 /area/f13/ambientlighting/building/c)
-"FM" = (
-/obj/structure/rack,
-/obj/item/ammo_box/magazine/m556/rifle/assault{
-	pixel_x = 2
-	},
-/obj/item/ammo_box/magazine/m556/rifle/assault{
-	pixel_x = -4
-	},
-/turf/open/floor/wood_wide,
-/area/f13/ncr)
+"FL" = (
+/obj/item/grown/log/tree,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "FN" = (
 /obj/structure/bed,
 /obj/item/bedsheet/centcom,
 /turf/open/floor/wood_fancy,
 /area/f13/clinic)
-"FO" = (
-/turf/closed/mineral/random/low_chance,
-/area/f13/caves)
 "FP" = (
 /obj/structure/table/reinforced,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ammo/tier3,
@@ -10584,13 +9975,6 @@
 /obj/machinery/microwave/stove,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/p)
-"Ga" = (
-/obj/structure/railing/corner{
-	color = "#A47449";
-	dir = 1
-	},
-/turf/open/transparent/openspace,
-/area/f13/ncr)
 "Gc" = (
 /obj/structure/mirror{
 	pixel_x = 32
@@ -10645,28 +10029,35 @@
 	name = "dirty floor"
 	},
 /area/f13/brotherhood/offices1st)
-"Gh" = (
-/obj/structure/fluff/hedge,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_wide,
-/area/f13/ncr)
 "Gi" = (
-/obj/structure/flora/grass/jungle/b{
-	pixel_x = -22
+/obj/effect/turf_decal/weather/dirt{
+	dir = 5
 	},
-/obj/structure/fluff{
-	icon = 'icons/fallout/objects/cave_decor.dmi';
-	icon_state = "stalagmite";
-	name = "stalagmite";
-	density = 1
-	},
-/turf/open/floor/plating/dirt/dark,
-/area/f13/caves)
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "Gj" = (
 /obj/structure/table/wood,
 /obj/item/binoculars,
 /turf/open/floor/wood_common,
 /area/maintenance/bar)
+"Gk" = (
+/obj/structure/railing/wood/post{
+	desc = "A wooden stanchion.";
+	name = "wooden stanchion";
+	pixel_y = -4;
+	pixel_x = -9
+	},
+/obj/structure/railing/wood/post{
+	desc = "A wooden stanchion.";
+	name = "wooden stanchion";
+	pixel_y = -4;
+	pixel_x = -16
+	},
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 4;
+	icon_state = "dirt"
+	},
+/area/f13/ambientlighting/building/u)
 "Gl" = (
 /obj/structure/railing{
 	dir = 1
@@ -10694,13 +10085,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"Gq" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/unpowered/secure_NCR{
-	name = "Medical"
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "Gr" = (
 /obj/effect/turf_decal/stripes/white/corner{
 	dir = 4
@@ -10822,16 +10206,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"GG" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/railing{
-	color = "#A47449";
-	dir = 8;
-	layer = 4.1
-	},
-/obj/machinery/light/small,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "GH" = (
 /obj/effect/decal/cleanable/dirt,
 /mob/living/simple_animal/hostile/handy/gutsy/flamer,
@@ -10881,10 +10255,6 @@
 	dir = 4
 	},
 /area/f13/building/powered)
-"GQ" = (
-/obj/structure/flora/tree/pine,
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
 "GR" = (
 /obj/machinery/light/fo13colored/Red{
 	dir = 8
@@ -10992,12 +10362,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/purple,
 /area/f13/building/powered)
-"Hh" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/wooden{
-	icon_state = "housebase4-broken"
-	},
-/area/f13/ncr)
 "Hi" = (
 /obj/structure/disposalpipe/junction/yjunction,
 /obj/effect/decal/cleanable/dirt,
@@ -11090,19 +10454,6 @@
 /obj/item/book/granter/crafting_recipe/blueprint/aer9,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"Hw" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 1
-	},
-/obj/effect/turf_decal/weather/dirt,
-/obj/structure/fluff{
-	icon = 'icons/fallout/objects/cave_decor.dmi';
-	icon_state = "boards_drought_we-2";
-	name = "planks";
-	desc = "planks to keep your shoes clean of mud"
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "Hx" = (
 /obj/structure/table,
 /obj/item/newspaper,
@@ -11274,6 +10625,13 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
+"HU" = (
+/obj/structure/barricade/tentclothcorner,
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 8;
+	icon_state = "dirt"
+	},
+/area/f13/ambientlighting/building/u)
 "HW" = (
 /mob/living/simple_animal/hostile/supermutant/nightkin/rangedmutant,
 /obj/structure/chair/office{
@@ -11286,12 +10644,11 @@
 	},
 /area/f13/building/powered)
 "HX" = (
-/obj/structure/railing{
-	color = "#A47449";
-	dir = 1
+/obj/effect/turf_decal/weather/dirt{
+	dir = 6
 	},
-/turf/open/transparent/openspace,
-/area/f13/ncr)
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/wasteland)
 "HY" = (
 /obj/structure/closet/cabinet,
 /turf/open/floor/wood_fancy,
@@ -11315,10 +10672,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"Ib" = (
-/obj/structure/fluff/rails,
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
 "Ic" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/drip,
@@ -11332,6 +10685,13 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
+"Ie" = (
+/obj/effect/decal/fakelattice,
+/turf/open/indestructible/ground/outside/ruins{
+	dir = 5;
+	icon_state = "rubbleplate"
+	},
+/area/f13/wasteland)
 "If" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -11340,12 +10700,6 @@
 /obj/item/clothing/head/helmet/f13/brahmincowboyhat,
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/d)
-"Ih" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 10
-	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "Ii" = (
 /obj/structure/sign/warning/fire,
 /turf/closed/indestructible/f13vaultrusted,
@@ -11415,12 +10769,11 @@
 /obj/structure/dresser,
 /turf/open/floor/carpet/cyan,
 /area/maintenance/bar)
-"Iu" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_common{
-	icon_state = "common-broken5"
-	},
-/area/f13/ncr)
+"It" = (
+/obj/structure/barricade/wooden,
+/obj/structure/barricade/wooden/planks/pregame,
+/turf/closed/mineral/random/low_chance,
+/area/f13/caves)
 "Iv" = (
 /obj/structure/lattice,
 /obj/structure/table_frame,
@@ -11510,10 +10863,6 @@
 /obj/item/bikehorn,
 /turf/open/floor/plating/f13/outside/roof/metal/corrugated,
 /area/f13/wasteland)
-"II" = (
-/obj/structure/fence/wooden,
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "IJ" = (
 /obj/structure/railing{
 	dir = 6
@@ -11530,8 +10879,10 @@
 	},
 /area/f13/building/powered)
 "IM" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating/f13/outside/roof/wood/old,
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 4;
+	icon_state = "dirt"
+	},
 /area/f13/wasteland)
 "IN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11652,12 +11003,6 @@
 	},
 /turf/open/floor/wood_wide,
 /area/f13/followers)
-"Jd" = (
-/obj/structure/obstacle/barbedwire/end{
-	dir = 8
-	},
-/turf/open/floor/plating/dirt/dark,
-/area/f13/caves)
 "Je" = (
 /obj/structure/debris/v3,
 /turf/closed/wall/mineral/brick,
@@ -11691,18 +11036,6 @@
 /obj/structure/table,
 /turf/open/floor/wood_fancy,
 /area/f13/clinic)
-"Jl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/f13/ncrveteranranger,
-/obj/structure/chair/office/dark,
-/obj/structure/fluff/paper/stack{
-	desc = "A stack of various papers, illegible scribbles scattered across each page.";
-	pixel_x = 6;
-	pixel_y = -4;
-	dir = 4
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "Jm" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "#363636"
@@ -11758,12 +11091,6 @@
 	icon_state = "floordirty"
 	},
 /area/f13/building/abandoned/j)
-"Ju" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 4
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "Jw" = (
 /obj/item/storage/bag/money/small,
 /obj/effect/decal/cleanable/dirt,
@@ -11809,6 +11136,9 @@
 /mob/living/simple_animal/pet/fox,
 /turf/open/floor/carpet/royalblack,
 /area/f13/clinic)
+"JD" = (
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/ambientlighting/building/u)
 "JF" = (
 /obj/structure/closet/cabinet/anchored,
 /obj/item/clothing/under/f13/cowboyg,
@@ -11922,12 +11252,6 @@
 /obj/structure/window/fulltile/house,
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/building/abandoned/m)
-"JW" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_wide{
-	icon_state = "wide-broken5"
-	},
-/area/f13/ncr)
 "JX" = (
 /obj/item/pizzabox/meat,
 /obj/effect/decal/cleanable/dirt,
@@ -11948,6 +11272,10 @@
 /obj/structure/dresser,
 /turf/open/floor/carpet/blue,
 /area/f13/followers)
+"Kb" = (
+/obj/effect/decal/cleanable/generic,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "Kc" = (
 /obj/structure/table/glass,
 /obj/item/flashlight/lamp/green,
@@ -11991,10 +11319,6 @@
 	dir = 1
 	},
 /area/f13/building/powered)
-"Kj" = (
-/obj/structure/flora/brushwood,
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
 "Kk" = (
 /obj/structure/decoration/clock/old/active{
 	pixel_y = 28
@@ -12034,15 +11358,6 @@
 "Kq" = (
 /turf/open/transparent/openspace,
 /area/f13/ambientlighting/building/d)
-"Kr" = (
-/obj/structure/railing/corner{
-	color = "#A47449";
-	dir = 8
-	},
-/turf/open/floor/wood_common{
-	icon_state = "common-broken5"
-	},
-/area/f13/ncr)
 "Ks" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/chair/stool{
@@ -12118,12 +11433,6 @@
 "KE" = (
 /turf/closed/wall/f13/store,
 /area/f13/ambientlighting/building/m)
-"KF" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_common{
-	icon_state = "common-broken3"
-	},
-/area/f13/ncr)
 "KG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -12139,25 +11448,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"KJ" = (
-/obj/structure/fluff/rails{
-	icon_state = "rails-b2"
-	},
-/obj/structure/fluff/rails{
-	icon_state = "rails-b1";
-	pixel_y = 11;
-	pixel_x = -3
-	},
-/obj/effect/turf_decal/weather/dirt{
-	dir = 10
-	},
-/obj/effect/turf_decal/weather/dirt{
-	dir = 9
-	},
-/turf/open/floor/plating/tunnel{
-	icon_state = "tunnelrusty"
-	},
-/area/f13/caves)
 "KK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -12445,10 +11735,6 @@
 	},
 /turf/closed/indestructible/f13vaultrusted,
 /area/f13/building/powered)
-"LD" = (
-/obj/structure/barricade/wooden,
-/turf/closed/wall/f13/wood,
-/area/f13/ncr)
 "LE" = (
 /turf/open/transparent/openspace,
 /area/f13/underground/cave)
@@ -12517,12 +11803,6 @@
 /obj/machinery/photocopier,
 /turf/open/floor/carpet/royalblack,
 /area/f13/clinic)
-"LO" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 10
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "LQ" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/splatter,
@@ -12569,6 +11849,15 @@
 	icon_state = "bluerustysolid"
 	},
 /area/f13/followers)
+"LW" = (
+/obj/structure/simple_door/tentflap_cloth{
+	pixel_y = -3
+	},
+/obj/effect/overlay/desert/sonora/edge{
+	dir = 1
+	},
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/ambientlighting/building/u)
 "LX" = (
 /obj/structure/chair/booth{
 	icon_state = "booth_east_south"
@@ -12578,14 +11867,6 @@
 "LY" = (
 /turf/open/floor/plating/f13/outside/roof,
 /area/f13/wasteland)
-"LZ" = (
-/obj/structure/railing{
-	color = "#A47449";
-	dir = 8;
-	layer = 4.1
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "Ma" = (
 /obj/machinery/light,
 /turf/open/floor/plasteel/f13/vault_floor/red/white/whiteredchess,
@@ -12616,13 +11897,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"Mg" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 6;
-	icon_state = "snow_corner"
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "Mh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/food/drinks/bottle/fernet{
@@ -12641,25 +11915,6 @@
 "Mj" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/plating/f13/outside/roof/metal/corrugated/green,
-/area/f13/wasteland)
-"Mk" = (
-/obj/structure/fireplace{
-	pixel_y = 10
-	},
-/obj/structure/table/wood,
-/obj/effect/spawner/lootdrop/f13/foodspawner,
-/obj/item/toy/cards/deck{
-	pixel_x = 6
-	},
-/turf/open/floor/wood_common/wood_common_dark{
-	icon_state = "common_dark-broken3"
-	},
-/area/f13/ncr)
-"Mm" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 9
-	},
-/turf/open/transparent/openspace,
 /area/f13/wasteland)
 "Mn" = (
 /obj/structure/table/reinforced,
@@ -12700,15 +11955,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"Mw" = (
-/obj/structure/fluff{
-	icon = 'icons/fallout/objects/cave_decor.dmi';
-	icon_state = "stalagmite2";
-	name = "stalagmite";
-	density = 1
-	},
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
 "Mx" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/mid,
@@ -12761,12 +12007,14 @@
 	},
 /area/f13/building/powered)
 "MF" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 5;
-	icon_state = "snow_corner"
+/obj/structure/barricade/tentclothcorner{
+	dir = 4
 	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
+/obj/effect/overlay/desert/sonora/edge{
+	dir = 5
+	},
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/ambientlighting/building/u)
 "MG" = (
 /obj/structure/dresser,
 /turf/open/floor/carpet/black,
@@ -12818,14 +12066,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"MP" = (
-/obj/structure/fluff{
-	icon = 'icons/fallout/objects/cave_decor.dmi';
-	icon_state = "support_beams";
-	name = "support wall"
-	},
-/turf/closed/mineral/random/low_chance,
-/area/f13/wasteland)
 "MQ" = (
 /obj/structure/railing{
 	color = "#A47449";
@@ -12890,16 +12130,6 @@
 	icon_state = "floordirtysolid"
 	},
 /area/f13/building/abandoned/m)
-"Na" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 1
-	},
-/obj/structure/flora/grass/jungle/b{
-	pixel_x = -19;
-	pixel_y = 10
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "Nb" = (
 /obj/structure/lattice,
 /turf/open/floor/plating/tunnel{
@@ -12928,9 +12158,6 @@
 	name = "dirty floor"
 	},
 /area/f13/brotherhood/offices1st)
-"Nf" = (
-/turf/open/transparent/openspace,
-/area/f13/ncr)
 "Ng" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/simple_door/interior,
@@ -13006,12 +12233,6 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/followers)
-"Nt" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 5
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "Nu" = (
 /turf/open/floor/mineral/titanium/white,
 /area/f13/clinic)
@@ -13025,19 +12246,6 @@
 	},
 /turf/open/floor/carpet/purple,
 /area/f13/bar)
-"Nw" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/stool/retro/tan{
-	pixel_x = -9;
-	pixel_y = 11
-	},
-/obj/item/kirbyplants{
-	icon_state = "plant-12";
-	pixel_x = 11;
-	pixel_y = 20
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "Nx" = (
 /obj/effect/decal/cleanable/robot_debris{
 	pixel_x = 4;
@@ -13065,9 +12273,11 @@
 	},
 /area/f13/brotherhood/offices1st)
 "NA" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
+/obj/effect/turf_decal/weather/dirt{
+	dir = 4
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "NB" = (
 /obj/structure/railing{
 	color = "#A47449";
@@ -13103,10 +12313,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/mineral/titanium/white,
 /area/f13/followers)
-"NI" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/red,
-/area/f13/ncr)
 "NJ" = (
 /obj/structure/chair/booth{
 	icon_state = "booth_west_north"
@@ -13118,9 +12324,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_common,
 /area/maintenance/bar)
-"NL" = (
-/obj/effect/turf_decal/weather/snow/corner,
-/turf/open/floor/plating/f13/outside/roof/wood/old,
+"NM" = (
+/obj/structure/flora/wasteplant/wild_broc,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "NN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -13312,10 +12518,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"Ot" = (
-/obj/structure/flora/grass/wasteland,
-/turf/open/floor/plating/dirt,
-/area/f13/caves)
 "Ou" = (
 /obj/structure/window/fulltile/house,
 /obj/structure/curtain{
@@ -13431,15 +12633,6 @@
 	},
 /turf/open/floor/wood_fancy/wood_fancy_dark,
 /area/f13/bar)
-"OK" = (
-/obj/structure/table/optable,
-/obj/effect/decal/cleanable/blood{
-	icon_state = "gib2_flesh"
-	},
-/turf/open/floor/wood_common{
-	icon_state = "common-broken4"
-	},
-/area/f13/ncr)
 "OL" = (
 /obj/structure/debris/v1,
 /obj/effect/decal/cleanable/dirt,
@@ -13458,16 +12651,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"ON" = (
-/obj/structure/fluff/paper/stack,
-/obj/structure/fluff/paper/stack{
-	desc = "A stack of various papers, illegible scribbles scattered across each page.";
-	pixel_x = 6;
-	pixel_y = -4;
-	dir = 1
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "OO" = (
 /obj/structure/simple_door/interior,
 /turf/open/indestructible/ground/outside/desert,
@@ -13496,20 +12679,10 @@
 /obj/machinery/hydroponics/soil/pot,
 /turf/open/floor/wood_common,
 /area/engine/workshop)
-"OS" = (
-/obj/effect/turf_decal/weather/snow/corner,
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
 "OT" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/m)
-"OU" = (
-/obj/structure/obstacle/barbedwire/end{
-	dir = 4
-	},
-/turf/open/floor/plating/dirt/dark,
-/area/f13/caves)
 "OV" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/firstaid/brute,
@@ -13523,10 +12696,12 @@
 	},
 /area/f13/building/powered)
 "OW" = (
-/obj/structure/bed/wooden,
-/obj/item/bedsheet/blanket,
-/turf/open/floor/carpet,
-/area/f13/ncr)
+/obj/effect/decal/remains/xeno{
+	desc = "They look like the remains of...A horse?";
+	name = "animal remains"
+	},
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "OX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/destructible/tribal_torch/wall/lit{
@@ -13543,23 +12718,6 @@
 	icon_state = "floordirtysolid"
 	},
 /area/f13/building/abandoned/j)
-"OZ" = (
-/obj/machinery/smartfridge/bottlerack,
-/obj/effect/spawner/lootdrop/f13/alcoholspawner,
-/obj/effect/spawner/lootdrop/f13/alcoholspawner,
-/obj/item/flashlight/lamp/green{
-	pixel_y = 17;
-	pixel_x = -6
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
-"Pb" = (
-/obj/structure/railing/corner{
-	color = "#A47449";
-	dir = 8
-	},
-/turf/open/transparent/openspace,
-/area/f13/ncr)
 "Pc" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/plasteel/f13/vault_floor/blue/side{
@@ -13617,12 +12775,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/f13/outside/roof/metal,
-/area/f13/wasteland)
-"Pl" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 6
-	},
-/turf/open/transparent/openspace,
 /area/f13/wasteland)
 "Pm" = (
 /obj/structure/window/fulltile/store{
@@ -13694,10 +12846,6 @@
 	name = "dirty floor"
 	},
 /area/f13/brotherhood/offices1st)
-"Pv" = (
-/obj/structure/decoration/rag,
-/turf/closed/wall/f13/wood,
-/area/f13/ncr)
 "Pw" = (
 /obj/effect/landmark/poster_spawner/pinup,
 /turf/closed/indestructible/f13vaultrusted,
@@ -13757,23 +12905,12 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/d)
-"PD" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 6;
-	icon_state = "snow_corner"
-	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "PE" = (
 /obj/structure/table/wood,
 /turf/open/floor/f13{
 	icon_state = "floordirtysolid"
 	},
 /area/f13/building/abandoned/m)
-"PI" = (
-/turf/open/floor/wood_wide,
-/area/f13/ncr)
 "PJ" = (
 /obj/structure/toilet{
 	pixel_y = 10
@@ -13887,16 +13024,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"PY" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/table,
-/obj/item/defibrillator/loaded,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
-"PZ" = (
-/obj/effect/turf_decal/weather/dirt,
-/turf/open/transparent/openspace,
-/area/f13/caves)
 "Qa" = (
 /obj/machinery/light/fo13colored/Red,
 /obj/effect/decal/cleanable/dirt,
@@ -14167,10 +13294,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"QM" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
 "QN" = (
 /obj/structure/table/wood,
 /obj/item/clothing/accessory/necklace{
@@ -14291,41 +13414,9 @@
 	},
 /turf/open/indestructible/ground/outside/desert,
 /area/f13/followers)
-"Re" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/secure/weapon{
-	anchored = 1
-	},
-/obj/item/ammo_box/magazine/m9mm,
-/obj/item/ammo_box/magazine/m9mm,
-/obj/item/ammo_box/magazine/m9mm,
-/obj/item/ammo_box/magazine/m9mm/doublestack{
-	pixel_x = 6;
-	pixel_y = -2
-	},
-/obj/item/ammo_box/magazine/m9mm/doublestack{
-	pixel_x = 6;
-	pixel_y = -2
-	},
-/obj/item/ammo_box/magazine/m9mm/doublestack{
-	pixel_x = 6;
-	pixel_y = -2
-	},
-/obj/machinery/light/small{
-	dir = 4;
-	light_color = "#ff4747"
-	},
-/turf/open/floor/wood_wide,
-/area/f13/ncr)
 "Rf" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/f13,
-/area/f13/wasteland)
-"Rg" = (
-/obj/structure/flora/grass/both{
-	icon_state = "snowgrass_w"
-	},
-/turf/open/indestructible/ground/outside/snow,
 /area/f13/wasteland)
 "Rh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -14403,12 +13494,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"Rs" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_common{
-	icon_state = "common-broken2"
-	},
-/area/f13/ncr)
 "Rt" = (
 /obj/structure/debris/v3{
 	pixel_x = -15;
@@ -14457,14 +13542,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/legioncamp)
-"RB" = (
-/obj/structure/fluff{
-	icon = 'icons/fallout/objects/cave_decor.dmi';
-	icon_state = "support_wall";
-	name = "support wall"
-	},
-/turf/closed/mineral/random/low_chance,
-/area/f13/wasteland)
 "RC" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/circuit/f13_blue,
@@ -14485,9 +13562,9 @@
 /turf/open/floor/carpet/purple,
 /area/f13/bar)
 "RE" = (
-/obj/structure/simple_door/wood,
-/turf/open/floor/f13/wood,
-/area/f13/ncr)
+/obj/structure/closet/crate/large,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "RF" = (
 /mob/living/simple_animal/hostile/handy,
 /turf/open/floor/f13{
@@ -14496,6 +13573,18 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
+"RG" = (
+/obj/structure/railing/wood/post{
+	desc = "A wooden stanchion.";
+	name = "wooden stanchion";
+	pixel_y = 24;
+	pixel_x = 16
+	},
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 10;
+	icon_state = "dirt"
+	},
+/area/f13/wasteland)
 "RH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/poster_spawner/prewar,
@@ -14587,10 +13676,6 @@
 /obj/structure/debris/v2,
 /turf/closed/indestructible/f13vaultrusted,
 /area/f13/building/powered)
-"RS" = (
-/obj/structure/barricade/wooden/strong,
-/turf/closed/wall/f13/wood,
-/area/f13/ncr)
 "RT" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/sweater/turtleskirt/blackpink,
@@ -14675,10 +13760,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"Se" = (
-/obj/machinery/vending/cigarette,
-/turf/open/floor/wood_common/wood_common_dark,
-/area/f13/ncr)
 "Sf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/fo13colored/Red{
@@ -14701,12 +13782,6 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/e)
-"Sj" = (
-/obj/structure/chair/folding{
-	dir = 4
-	},
-/turf/open/floor/wood_common/wood_common_dark,
-/area/f13/ncr)
 "Sk" = (
 /obj/machinery/light/small{
 	dir = 4;
@@ -14805,15 +13880,6 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/followers)
-"SC" = (
-/turf/open/floor/carpet,
-/area/f13/ncr)
-"SD" = (
-/obj/structure/chair/folding{
-	dir = 8
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "SF" = (
 /obj/structure/sign/poster/official/fruit_bowl,
 /turf/closed/wall/f13/wood/house,
@@ -14845,9 +13911,14 @@
 	},
 /area/f13/building/powered)
 "SJ" = (
-/obj/structure/flora/grass/wasteland,
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
+/obj/effect/decal/cleanable/generic,
+/obj/item/book/granter/crafting_recipe/gunsmith_one,
+/obj/item/book/granter/crafting_recipe/gunsmith_two,
+/obj/item/book/granter/crafting_recipe/gunsmith_three,
+/obj/item/book/granter/crafting_recipe/gunsmith_four,
+/obj/structure/shelf_wood,
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/caves)
 "SK" = (
 /obj/structure/railing/corner{
 	color = "#A47449";
@@ -15032,13 +14103,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"Tm" = (
-/obj/structure/table/booth,
-/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
-/obj/effect/spawner/lootdrop/f13/medical/wasteland/meds,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "Tn" = (
 /obj/structure/sign/flag_enclave{
 	pixel_y = 34
@@ -15074,10 +14138,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"Ts" = (
-/obj/structure/chair/folding,
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "Tt" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/decal/remains/human,
@@ -15208,9 +14268,6 @@
 	},
 /turf/open/floor/plating,
 /area/f13/bar)
-"TN" = (
-/turf/closed/wall/f13/wood,
-/area/f13/ncr)
 "TO" = (
 /obj/machinery/light/fo13colored/Red{
 	dir = 1
@@ -15228,21 +14285,6 @@
 	name = "dirty floor"
 	},
 /area/f13/brotherhood/offices1st)
-"TQ" = (
-/obj/structure/table/wood,
-/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
-	pixel_x = -7;
-	pixel_y = 16
-	},
-/obj/item/reagent_containers/food/drinks/drinkingglass/shotglass{
-	pixel_x = 9;
-	pixel_y = 3
-	},
-/obj/item/clothing/head/beret/ncr/ncr_sof{
-	pixel_x = -6
-	},
-/turf/open/floor/carpet,
-/area/f13/ncr)
 "TR" = (
 /obj/item/flag/bos,
 /obj/effect/decal/cleanable/dirt{
@@ -15355,25 +14397,6 @@
 	icon_state = "floordirtysolid"
 	},
 /area/f13/building/abandoned/m)
-"Uh" = (
-/obj/structure/table/booth,
-/obj/effect/spawner/lootdrop/f13/ncr_k_ration{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/structure/decoration/clock{
-	pixel_x = 30
-	},
-/obj/effect/spawner/lootdrop/f13/ncr_k_ration{
-	pixel_x = 5;
-	pixel_y = 12
-	},
-/obj/item/reagent_containers/food/drinks/bottle/nukashine{
-	pixel_y = 5;
-	pixel_x = -5
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "Ui" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
@@ -15407,10 +14430,12 @@
 	icon_state = "floordirtysolid"
 	},
 /area/f13/building/abandoned/n)
-"Us" = (
-/obj/structure/decoration/rag,
-/turf/closed/wall/f13/wood,
-/area/f13/caves)
+"Uq" = (
+/obj/structure/fluff/railing{
+	dir = 9
+	},
+/turf/open/transparent/openspace,
+/area/f13/wasteland)
 "Ut" = (
 /obj/structure/window/fulltile/house,
 /obj/structure/curtain{
@@ -15442,15 +14467,6 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"Ux" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small{
-	light_color = "#ff4747"
-	},
-/turf/open/floor/wood_wide{
-	icon_state = "wide-broken2"
-	},
-/area/f13/ncr)
 "Uy" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/f13/wood/house,
@@ -15517,6 +14533,12 @@
 /obj/item/radio/old,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
+"UK" = (
+/obj/structure/chair/bench{
+	dir = 1
+	},
+/turf/open/indestructible/ground/outside/dirt,
+/area/f13/wasteland)
 "UL" = (
 /obj/structure/chair/stool,
 /obj/effect/decal/cleanable/dirt,
@@ -15548,6 +14570,9 @@
 /mob/living/simple_animal/hostile/handy,
 /turf/open/floor/carpet/purple,
 /area/f13/building/powered)
+"UR" = (
+/turf/open/indestructible/ground/inside/mountain,
+/area/f13/ambientlighting/building/u)
 "US" = (
 /obj/machinery/light/fo13colored/Red,
 /obj/effect/decal/cleanable/dirt,
@@ -15602,11 +14627,9 @@
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
 "UZ" = (
-/obj/structure/railing{
-	color = "#A47449"
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
+/obj/structure/flora/wasteplant/fever_blossom,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "Va" = (
 /obj/structure/bed/mattress{
 	icon_state = "mattress5"
@@ -15621,11 +14644,6 @@
 	},
 /turf/open/floor/f13/wood,
 /area/f13/ambientlighting/building/e)
-"Vc" = (
-/obj/structure/rack,
-/obj/item/book/granter/crafting_recipe/blueprint/service,
-/turf/open/floor/wood_wide,
-/area/f13/ncr)
 "Vd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/splatter,
@@ -15661,13 +14679,6 @@
 	},
 /turf/open/floor/plating/f13/outside/roof/metal,
 /area/f13/wasteland)
-"Vj" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 1
-	},
-/obj/effect/turf_decal/weather/dirt,
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "Vk" = (
 /turf/closed/mineral/random/no_caves,
 /area/f13/underground/cave)
@@ -15689,6 +14700,9 @@
 	icon_state = "floordirtysolid"
 	},
 /area/f13/building/abandoned/j)
+"Vo" = (
+/turf/closed/wall/f13/ruins,
+/area/f13/wasteland)
 "Vp" = (
 /obj/machinery/shower{
 	dir = 4
@@ -15717,12 +14731,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/f13/building/abandoned/l)
-"Vv" = (
-/obj/structure/chair/sofa/left{
-	color = "#475340"
-	},
-/turf/open/floor/carpet/red,
-/area/f13/ncr)
 "Vw" = (
 /turf/closed/wall/f13/wood/house,
 /area/f13/legioncamp)
@@ -15833,6 +14841,10 @@
 	icon_state = "housewood4-broken"
 	},
 /area/f13/ambientlighting/building/m)
+"VM" = (
+/obj/item/reagent_containers/glass/bucket,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "VN" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /obj/effect/decal/cleanable/dirt,
@@ -15971,23 +14983,6 @@
 	name = "dirty floor"
 	},
 /area/f13/building/powered)
-"Wn" = (
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 1
-	},
-/turf/open/transparent/openspace,
-/area/f13/wasteland)
-"Wp" = (
-/obj/structure/chair/office/dark{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/small{
-	dir = 4;
-	light_color = "#ff4747"
-	},
-/turf/open/floor/wood_common,
-/area/f13/ncr)
 "Wr" = (
 /obj/structure/railing{
 	color = "#A47449"
@@ -16215,15 +15210,16 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
-"Xa" = (
-/obj/structure/fence/corner/wooden,
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
 "Xb" = (
 /mob/living/simple_animal/hostile/centaur,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
+"Xc" = (
+/turf/open/indestructible/ground/outside/ruins{
+	icon_state = "rubbleplate"
+	},
+/area/f13/wasteland)
 "Xd" = (
 /obj/structure/table/wood/settler,
 /obj/effect/decal/cleanable/dirt{
@@ -16348,6 +15344,9 @@
 	icon_state = "bluedirtychess2"
 	},
 /area/f13/building/powered)
+"Xz" = (
+/turf/open/floor/plating/f13/outside/roof/metal/corrugated/red,
+/area/f13/wasteland)
 "XA" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/f13/blueprintLowMid,
@@ -16439,12 +15438,6 @@
 /obj/item/bedsheet/brown,
 /turf/open/floor/carpet/red,
 /area/f13/legioncamp)
-"XM" = (
-/obj/effect/turf_decal/weather/dirt{
-	dir = 1
-	},
-/turf/open/indestructible/ground/inside/mountain,
-/area/f13/caves)
 "XN" = (
 /obj/machinery/vending/clothing{
 	force_free = 1
@@ -16668,6 +15661,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/red,
 /area/f13/legioncamp)
+"Yu" = (
+/obj/structure/barricade/tentclothedge{
+	dir = 8
+	},
+/obj/effect/overlay/desert/sonora/edge{
+	dir = 4
+	},
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/ambientlighting/building/u)
 "Yv" = (
 /obj/structure/simple_door/interior,
 /turf/open/floor/wood_fancy,
@@ -16733,11 +15735,9 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"YH" = (
-/obj/structure/fence/corner/wooden{
-	dir = 8
-	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
+"YI" = (
+/obj/machinery/smartfridge/bottlerack/seedbin/primitive,
+/turf/open/indestructible/ground/outside/desert,
 /area/f13/wasteland)
 "YJ" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -16804,11 +15804,6 @@
 	},
 /turf/open/floor/wood_wide,
 /area/f13/followers)
-"YT" = (
-/obj/structure/fluff/hedge,
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/wood_common/wood_common_dark,
-/area/f13/ncr)
 "YU" = (
 /obj/structure/bed,
 /turf/open/floor/carpet/vault,
@@ -16969,21 +15964,14 @@
 /turf/closed/mineral/random/low_chance,
 /area/f13/wasteland)
 "Zu" = (
-/obj/structure/barricade/wooden,
-/turf/closed/mineral/random/low_chance,
-/area/f13/caves)
-"Zv" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/fermenting_barrel{
-	pixel_y = 15;
-	pixel_x = -6;
-	density = 0
+/obj/structure/barricade/tentclothedge{
+	pixel_y = -4
 	},
-/obj/effect/turf_decal/weather/snow/corner{
-	dir = 9
+/obj/effect/overlay/desert/sonora/edge{
+	dir = 1
 	},
-/turf/open/floor/plating/f13/outside/roof/wood/old,
-/area/f13/wasteland)
+/turf/open/floor/wood_common/wood_common_dark,
+/area/f13/ambientlighting/building/u)
 "Zw" = (
 /obj/item/storage/trash_stack{
 	icon_state = "trash_2"
@@ -17007,12 +15995,6 @@
 "ZA" = (
 /turf/closed/mineral/random,
 /area/f13/wasteland)
-"ZB" = (
-/obj/structure/fence/wooden{
-	pixel_x = 13
-	},
-/turf/open/transparent/openspace,
-/area/f13/ncr)
 "ZC" = (
 /obj/structure/railing{
 	dir = 1
@@ -17034,6 +16016,16 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/carpet/royalblue,
 /area/f13/building/powered)
+"ZI" = (
+/turf/open/indestructible/ground/outside/dirt{
+	dir = 10;
+	icon_state = "dirt"
+	},
+/area/f13/wasteland)
+"ZJ" = (
+/obj/structure/flora/wasteplant/wild_xander,
+/turf/open/indestructible/ground/outside/desert,
+/area/f13/wasteland)
 "ZK" = (
 /obj/effect/spawner/lootdrop/f13/advcrafting,
 /obj/effect/turf_decal/bot_white,
@@ -17049,14 +16041,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood_fancy,
 /area/f13/ambientlighting/building/c)
-"ZM" = (
-/obj/structure/flora/twig{
-	pixel_y = 23;
-	pixel_x = -8
-	},
-/obj/structure/flora/grass/brown,
-/turf/open/indestructible/ground/outside/snow,
-/area/f13/wasteland)
 "ZN" = (
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
@@ -17076,12 +16060,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating/rust,
 /area/f13/building/powered)
-"ZS" = (
-/obj/structure/railing/corner{
-	color = "#A47449"
+"ZP" = (
+/obj/structure/fluff/railing/corner{
+	dir = 8
 	},
 /turf/open/transparent/openspace,
-/area/f13/ncr)
+/area/f13/wasteland)
 "ZU" = (
 /obj/structure/barricade/wooden,
 /turf/closed/indestructible/rock{
@@ -17575,103 +16559,103 @@ yT
 yT
 yT
 yT
-xm
-xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-IM
-IM
-TN
-TN
-TN
-TN
-TN
-Zt
-Zt
-Zt
-Zt
-Zt
-xm
-xm
-xm
-fX
-dD
-dD
-GQ
-QM
-QM
-Aj
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-xm
-xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -17784,22 +16768,6 @@ ZA
 ZA
 ZA
 ZA
-iX
-iX
-iX
-iX
-iX
-iX
-iX
-iX
-iX
-iX
-iX
-iX
-iX
-iX
-iX
-iX
 ZA
 ZA
 ZA
@@ -17811,6 +16779,22 @@ ZA
 ZA
 ZA
 ZA
+ZA
+ZA
+ZA
+ZA
+ZA
+ZA
+ZA
+ZA
+ZA
+ZA
+ZA
+ZA
+ZA
+ZA
+ZA
+ZA
 xm
 xm
 xm
@@ -17877,103 +16861,103 @@ yT
 yT
 yT
 yT
-xm
-xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-xm
-xm
-Zt
-Zt
-zy
-IM
-IM
-PD
-dD
-dD
-aY
-xm
-xm
-xm
-xm
-xm
-zy
-TN
-TN
-OW
-TQ
-CX
-TN
-TN
-iu
-zy
-Zt
-Zt
-xm
-xm
-xm
-xm
-fX
-QM
-dD
-dD
-GQ
-fV
-dD
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -18101,7 +17085,6 @@ WC
 WC
 WC
 zi
-iX
 ZA
 ZA
 ZA
@@ -18112,6 +17095,7 @@ ZA
 ZA
 ZA
 ZA
+ZA
 xm
 xm
 xm
@@ -18179,102 +17163,102 @@ yT
 yT
 yT
 yT
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-xm
-xm
-xm
-xm
-zy
-TN
-TN
-qJ
-TN
-RS
-aR
-aY
-xm
-xm
-xm
-xm
-xm
-IM
-qJ
-OZ
-SC
-SC
-fR
-mp
-qJ
-zy
-zy
-xW
-xm
-xm
-xm
-xm
-xm
-xm
-nK
-nK
-nK
-nK
-fX
-GQ
-dD
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -18404,7 +17388,6 @@ tk
 NP
 zi
 iX
-iX
 ZA
 ZA
 ZA
@@ -18414,6 +17397,7 @@ ZA
 ZA
 ZA
 ZA
+ZA
 xm
 xm
 xm
@@ -18481,102 +17465,102 @@ yT
 yT
 yT
 yT
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-xm
-xm
-xm
-xm
-IM
-TN
-aq
-cc
-YT
-TN
-Zv
-IM
-xm
-xm
-xm
-xm
-xm
-IM
-TN
-jA
-Rs
-BZ
-eO
-KF
-CD
-zy
-IM
-xW
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Mg
-dD
-fV
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
 xm
 xm
 xm
@@ -18783,102 +17767,102 @@ yT
 yT
 yT
 yT
+xX
+xX
+xX
+xX
+xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-GQ
-Wn
-xm
-xm
-xm
-zy
-RS
-Vv
-nL
-Ft
-RE
-zy
-IM
-xm
-xm
-xm
-xm
-xm
-zy
-qJ
-Oy
-Wp
-eO
-zU
-aM
-qJ
-IM
-IM
-xW
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-OS
-QM
-dD
-GQ
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
 xm
 xm
 xm
@@ -19010,7 +17994,6 @@ zi
 iX
 iX
 iX
-iX
 ZA
 ZA
 ZA
@@ -19018,6 +18001,7 @@ ZA
 ZA
 ZA
 ZA
+ZA
 xm
 xm
 xm
@@ -19085,112 +18069,112 @@ yT
 yT
 yT
 yT
+xX
+xX
+xX
+xm
+xm
+xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
 xm
 xm
 xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-jE
-QM
-Wn
-xm
-IM
-IM
-TN
-TN
-Au
-NI
-wP
-qJ
-IM
-IM
-xm
-xm
-xm
-xm
-xm
-zy
-TN
-TN
-TN
-oW
-TN
-TN
-TN
-IM
-zy
-xW
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-OS
-QM
-dD
-Rg
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -19313,13 +18297,13 @@ iX
 iX
 iX
 iX
-iX
 ZA
 ZA
 ZA
 ZA
 ZA
 ZA
+ZA
 xm
 xm
 xm
@@ -19393,96 +18377,89 @@ xm
 xm
 xm
 xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-dD
-GQ
-dD
-Wn
-xm
-RS
-RS
-Pv
-qJ
-hn
-Cr
-wP
-qJ
-zy
-xm
-xm
-xm
-xm
-xm
-xm
-zy
-CD
-oL
-nF
-eO
-ON
-sj
-py
-zy
-Ts
-xW
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-OS
-dD
-QM
-Aj
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -19491,8 +18468,15 @@ xm
 xm
 xm
 xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -19603,7 +18587,7 @@ zi
 xm
 xm
 xm
-xm
+fb
 rt
 wM
 tk
@@ -19695,106 +18679,106 @@ xm
 xm
 xm
 xm
-xm
-xm
-Zt
-Zt
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-lQ
-fV
-Mm
-xm
-xm
-qJ
-Sj
-lx
-al
-wP
-hh
-HX
-TN
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zy
-CD
-DX
-eO
-Hh
-Jl
-jg
-qJ
-gs
-YH
-Xa
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Pl
-GQ
-vJ
-Zt
-Zt
-Zt
-gw
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -19905,7 +18889,7 @@ zi
 xm
 xm
 xm
-xm
+cw
 zi
 NP
 tk
@@ -19998,105 +18982,105 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-QM
-hv
-Wn
-xm
-xm
-TN
-Mk
-wP
-Db
-Se
-Dx
-Ga
-TN
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-py
-TN
-Uh
-Tm
-Iu
-px
-TN
-TN
-II
-Xa
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-OS
-dD
-dD
-dD
-Zt
-Zt
-Zt
-gw
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -20207,7 +19191,7 @@ zi
 xm
 xm
 xm
-xm
+cw
 zi
 rt
 Oy
@@ -20301,94 +19285,81 @@ xm
 xm
 xm
 xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-GQ
-QM
-Wn
-xm
-xm
-qJ
-jd
-oa
-vi
-qG
-HX
-Nf
-RS
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-TN
-TN
-qJ
-qJ
-qJ
-TN
-zy
-zy
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-OS
-dD
-QM
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -20397,8 +19368,21 @@ xm
 xm
 xm
 xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -20509,7 +19493,7 @@ zi
 zi
 xm
 xm
-xm
+cw
 zi
 WC
 WC
@@ -20603,94 +19587,80 @@ xm
 xm
 xm
 xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-dD
-Wn
-xm
-xm
-TN
-TN
-qJ
-qJ
-RS
-TN
-Pv
-TN
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zy
-IM
-zy
-zJ
-IM
-IM
-zy
-xm
-xm
-xm
-OS
-dD
-dD
-jQ
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -20700,7 +19670,21 @@ xm
 xm
 xm
 xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -20905,94 +19889,79 @@ xm
 xm
 xm
 xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-xm
-nK
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-IM
-IM
-AY
-dD
-iI
-IM
-IM
-xm
-xm
-xm
-OS
-xm
-GQ
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -21003,6 +19972,21 @@ xm
 xm
 xm
 xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -21114,8 +20098,6 @@ zi
 qy
 vd
 uQ
-ec
-ec
 zi
 zi
 zi
@@ -21130,7 +20112,9 @@ zi
 zi
 zi
 zi
-xm
+zi
+zi
+lC
 xm
 xm
 xm
@@ -21208,103 +20192,103 @@ xm
 xm
 xm
 xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-IM
-NL
-dD
-dD
-dD
-iI
-zy
-xm
-xm
-xm
-xm
-fX
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
+Ao
+TJ
+cz
+Ao
+Ao
+Ao
 xm
 xm
 xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -21415,24 +20399,24 @@ zi
 Sn
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+ZP
+BC
+BC
+BC
+BC
+BC
+BC
+fR
 zi
 rt
 WC
 rt
-rt
+cu
 rt
 WC
 Je
 zi
-xm
+lC
 xm
 xm
 xm
@@ -21510,103 +20494,103 @@ xm
 xm
 xm
 xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zy
-zy
-Ih
-dD
-dD
-dD
-aY
-xm
-xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
 xm
+Ao
+gN
+kP
+xh
+kP
+Ao
 xm
 xm
 xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -21724,7 +20708,7 @@ xm
 xm
 xm
 xm
-xm
+cw
 zi
 WC
 AV
@@ -21734,7 +20718,7 @@ Ha
 lf
 WC
 zi
-xm
+lC
 xm
 xm
 xm
@@ -21812,103 +20796,103 @@ xm
 xm
 xm
 xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+wc
+pY
+zU
+JD
+oA
+Zu
+sx
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zy
-zy
-zy
-zR
-Ih
-dD
-aY
-xm
-zy
-zy
-IM
-zy
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+Ao
+Cn
+ZY
+Fd
+kP
+Ao
 xm
 xm
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -22026,8 +21010,8 @@ xm
 xm
 xm
 xm
-xm
-ec
+cw
+zi
 zi
 rt
 QI
@@ -22036,7 +21020,7 @@ XI
 qN
 rt
 zi
-xm
+lC
 xm
 xm
 xm
@@ -22114,103 +21098,103 @@ xm
 xm
 xm
 xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+hw
+ie
+pY
+xk
+JD
+JD
+LW
+hw
+sG
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-xE
-xE
-xE
-xE
-FO
-FO
-FO
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zy
-IM
-IM
-zR
-zy
-xm
-zy
-IM
-zy
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+Ao
+bj
+ZY
+Al
+ZY
+YA
 xm
 xm
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -22328,8 +21312,8 @@ xm
 xm
 xm
 xm
-xm
-xm
+ZP
+fR
 zi
 iL
 Vs
@@ -22338,7 +21322,7 @@ XI
 vo
 rt
 zi
-xm
+lC
 xm
 xm
 xm
@@ -22417,100 +21401,100 @@ xm
 xm
 xm
 xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+eq
+OW
+kQ
+EC
+hg
+hg
+hg
+jQ
+hw
+xm
+hw
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
-Zt
-Zt
-Zt
-Zt
-xE
-xE
-Nf
-Nf
-Nf
-FO
-py
-TN
-oA
-oA
-mg
-LD
-LZ
-GG
-Pv
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zy
-zy
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+Ao
+fK
+kP
+Cb
+ZY
+Ao
 xm
 xm
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -22631,7 +21615,7 @@ xm
 xm
 xm
 xm
-xm
+cw
 zi
 rt
 Ny
@@ -22640,7 +21624,7 @@ XI
 hy
 WC
 zi
-xm
+lC
 xm
 xm
 xm
@@ -22720,99 +21704,99 @@ xm
 xm
 xm
 xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+wJ
+xX
+xX
+eq
+RE
+FL
+kp
+zh
+zh
+zh
+zh
+Gk
+IM
 xm
-xm
-Zt
-Zt
-Zt
-xE
-TN
-pg
-Nf
-ZS
-LD
-LD
-Fy
-OK
-rw
 hw
-Gq
-fR
-Iu
-fd
-xm
-Rk
-Rk
-Rk
-Rk
-Rk
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zy
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+hw
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
 xm
 xm
 xm
+Ao
+Yq
+kP
+kP
+ke
+Ao
+Ao
+Ao
 xm
 xm
 xm
 xm
 xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -22933,7 +21917,7 @@ xm
 xm
 xm
 xm
-xm
+cw
 zi
 WC
 gE
@@ -22942,7 +21926,7 @@ XI
 lD
 WC
 zi
-xm
+lC
 xm
 xm
 xm
@@ -23023,86 +22007,69 @@ xm
 xm
 xm
 xm
-xm
-xm
-Zt
-Zt
-xE
-TN
-Nf
-Nf
-op
-zQ
-ac
-su
-vk
-nS
-nS
-LD
-nY
-fR
-fd
-xm
-Rk
-Rk
-Rk
-Rk
-Rk
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-TN
-TN
-yl
-yl
-py
-TN
-xm
-xm
-xm
-NL
-dD
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+wJ
+Kb
+xX
+sj
+hw
+hw
+BI
+yp
+Fv
+mx
+mx
+bs
+mx
+mx
+eO
+hw
+hw
+hw
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -23110,11 +22077,28 @@ xm
 xm
 xm
 xm
+Ao
+Ao
+Ao
+yS
+Ao
+Ao
+zG
+Ao
 xm
 xm
 xm
 xm
 xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -23235,7 +22219,7 @@ xm
 xm
 xm
 xm
-xm
+cw
 zi
 WC
 vo
@@ -23244,7 +22228,7 @@ XI
 vo
 am
 zi
-xm
+lC
 xm
 xm
 xm
@@ -23327,82 +22311,67 @@ xm
 xm
 xm
 xm
-xm
-Zt
-xE
-xE
-Nf
-Nf
-op
-Aq
-dU
-eO
-fq
-Nf
-Nf
-oA
-fR
-eO
-fd
-xm
-Rk
-Rk
-Rk
-Rk
-Rk
-xm
-xm
-Rk
-Rk
-Rk
-Rk
-xm
-xm
-xm
-xm
-xm
-xm
-IM
-cE
-TN
-fb
-Nf
-Nf
-Nf
-TN
-xm
-xm
-xm
-hk
-dD
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+ot
+wJ
+wJ
+xX
+BZ
+BZ
+mM
+yp
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+aK
+OW
+hw
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -23411,12 +22380,27 @@ xm
 xm
 xm
 xm
+Ao
+uL
+ZY
+kP
+kP
+vj
+Ao
 xm
 xm
 xm
 xm
 xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -23537,7 +22521,7 @@ xm
 xm
 xm
 xm
-xm
+cw
 zi
 WC
 bQ
@@ -23546,7 +22530,7 @@ Fz
 bQ
 am
 zi
-xm
+lC
 xm
 xm
 xm
@@ -23630,80 +22614,65 @@ xm
 xm
 xm
 xm
-xm
-Zt
-xE
-Nf
-Nf
-op
-PY
-Nw
-Iu
-fR
-Nf
-Nf
-AQ
-eO
-KF
-UZ
-xm
-Rk
-Rk
-Rk
-Rk
-Rk
-xm
-xm
-Rk
-Rk
-Rk
-Rk
-xm
-xm
-xm
-xm
-xm
-xm
-NL
-dD
-Pv
-PI
-gH
-ZB
-ZB
-TN
-iI
-zy
-NL
-dD
-dD
-dD
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+sy
+wJ
+wJ
+kU
+UR
+UR
+cc
+Aq
+mx
+mx
+mx
+mx
+mx
+cf
+aK
+mW
+hw
+ie
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -23713,12 +22682,27 @@ xm
 xm
 xm
 xm
+Ao
+UC
+gm
+eU
+ZY
+DP
+en
 xm
 xm
 xm
 xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -23839,7 +22823,7 @@ xm
 xm
 xm
 xm
-xm
+cw
 zi
 WC
 XI
@@ -23848,7 +22832,7 @@ Fz
 AP
 rt
 zi
-xm
+lC
 xm
 xm
 xm
@@ -23932,76 +22916,64 @@ xm
 xm
 xm
 xm
-xm
-xm
-xE
-xE
-Nf
-Pb
-TN
-hl
-xf
-eO
-lY
-FO
-hU
-mi
-eO
-Kr
-xm
-Rk
-Rk
-Rk
-Rk
-Rk
-xm
-xm
-Rk
-Rk
-Rk
-Rk
-xm
-xm
-xm
-xm
-xm
-xm
-NL
-dD
-yl
-lE
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+SJ
+wJ
+wJ
+xX
+nK
+nK
+HU
+ZI
+mx
+UK
+pb
+mx
+aK
 Cj
-Vc
-FM
-TN
-dD
 mW
-zy
-ts
-dD
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+hw
+hw
+hw
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -24012,15 +22984,27 @@ xm
 xm
 xm
 xm
+Ao
+pp
+FZ
+Xg
+mN
+uA
+Ao
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -24127,13 +23111,13 @@ xm
 xm
 xm
 zi
+OE
+OE
+Vo
+Vo
+Vo
+OE
 zi
-zi
-zi
-zi
-zi
-zi
-zi
 xm
 xm
 xm
@@ -24141,7 +23125,7 @@ xm
 xm
 xm
 xm
-xm
+cw
 zi
 rt
 vo
@@ -24150,7 +23134,7 @@ XI
 vo
 rt
 zi
-xm
+lC
 xm
 xm
 xm
@@ -24234,74 +23218,63 @@ xm
 xm
 xm
 xm
-xm
-xm
-Zt
-xE
-xE
-xE
-TN
-TN
-uI
-hL
-dc
-FO
-FO
-zf
-SD
-fR
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Rk
-Rk
-Rk
-Rk
-xm
-xm
-xm
-xm
-xm
-xm
-NL
-dD
-yl
-JW
-PI
-Db
-Ux
-py
-dD
-dD
-EZ
-dD
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-xm
-xm
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+It
+jr
+wJ
+xX
+xX
+pg
+sG
+hl
+vm
+RG
+mx
+rN
+aK
+hw
+hw
+hw
+ne
+hw
+hw
+Eb
+Eb
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -24313,16 +23286,27 @@ xm
 xm
 xm
 xm
+Ao
+Ao
+Pm
+Ao
+Jh
+Ao
+Ao
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -24429,13 +23413,13 @@ xm
 xm
 xm
 zi
+OE
+cr
+cr
+cr
+cr
+OE
 zi
-zi
-zi
-zi
-zi
-zi
-zi
 xm
 xm
 xm
@@ -24443,7 +23427,7 @@ xm
 xm
 xm
 xm
-xm
+cw
 zi
 Tc
 bQ
@@ -24452,7 +23436,7 @@ XI
 DD
 WC
 zi
-xm
+lC
 xm
 xm
 xm
@@ -24537,68 +23521,65 @@ xm
 xm
 xm
 xm
-xm
-xm
-Zt
-Zt
-xE
-xE
-TN
-TN
-TN
-FO
-FO
-FO
-FO
-FO
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zy
-IM
-IM
-zy
-xm
-xm
-xm
-xm
-xm
-xm
-IM
-zR
-TN
-kW
-ha
-ha
-Gh
-TN
-Zt
-dD
-Zt
-Zt
-gw
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-xm
-xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+It
+tH
+wJ
+xX
+xX
+Yu
+Yu
+Yu
+MF
+wV
+mx
+aK
+mW
+hw
+hw
+hw
+hw
+hw
+hw
+fB
+hw
+id
+id
+id
+id
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
@@ -24618,13 +23599,16 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -24731,21 +23715,21 @@ xm
 xm
 xm
 zi
+OE
+cr
+cr
+cr
+cr
+OE
 zi
-zi
-zi
-zi
-zi
-zi
-zi
 xm
 xm
 xm
 xm
 xm
-xm
-xm
-xm
+fb
+no
+Ed
 zi
 iL
 XI
@@ -24754,7 +23738,7 @@ SY
 WC
 WC
 zi
-xm
+lC
 xm
 xm
 xm
@@ -24840,73 +23824,70 @@ xm
 xm
 xm
 xm
-xm
-xm
-Zt
-Zt
-xE
-xE
-xE
-xE
-FO
-FO
-FO
-FO
-QM
-MF
-xm
-xm
-xm
-xm
-Rk
-Rk
-Rk
-Rk
-Rk
-zy
-IM
-zy
-xm
-Zt
-Zt
-xm
-xm
-Ju
-li
-hk
-TN
-vC
-Re
-de
-TN
-TN
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+AF
+wJ
+xX
+xX
+oA
+JD
+JD
+LW
+mD
+Cj
+mW
+hw
+hw
+hw
+hw
+hw
+sG
+hw
+hw
+VM
+hw
+hw
+hw
+hw
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
@@ -24919,14 +23900,17 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -25033,21 +24017,21 @@ xm
 xm
 xm
 zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
+Vo
+lE
+Ie
 cr
 cr
+OE
+zi
+xm
+xm
+xm
+xm
+xm
+cw
+zi
+zi
 zi
 WC
 BV
@@ -25056,7 +24040,7 @@ vo
 rt
 zi
 zi
-xm
+lC
 xm
 xm
 xm
@@ -25142,75 +24126,70 @@ xm
 xm
 xm
 xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+It
+xX
+wJ
+xX
+xX
+oA
+JD
+JD
+Zu
+ie
+hw
+td
+hw
+sG
+hw
+hw
+hw
+hw
+hw
+tD
+hw
+id
+id
+id
+id
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
-xm
-xm
-xm
-Zt
-Zt
-Zt
-gw
-gw
-gw
-Zt
-GQ
-jE
-jE
-MF
-Ju
-xm
-xm
-Rk
-Rk
-Rk
-Rk
-Rk
-zy
-zy
-Zt
-Zt
-Zt
-Zt
-Zt
-Mg
-dD
-GQ
-fV
-TN
-TN
-TN
-TN
-TN
-Zt
-Zt
-gw
-gw
-gw
-Zt
-Zt
-Zt
-gw
-gw
-gw
-gw
-gw
-gw
-gw
-gw
-Zt
-Zt
-Zt
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
@@ -25223,12 +24202,17 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -25335,19 +24319,19 @@ xm
 xm
 xm
 zi
-zi
-zi
-zi
-zi
-zi
-zi
+Vo
+cr
+lE
+lE
+cr
+Vo
 zi
 xm
 xm
 xm
 xm
 xm
-xm
+cw
 zi
 zi
 WC
@@ -25357,8 +24341,8 @@ XI
 dv
 rt
 zi
-xm
-xm
+Uq
+yK
 xm
 xm
 xm
@@ -25445,74 +24429,69 @@ xm
 xm
 xm
 xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+It
+xX
+xX
+xX
+xX
+JD
+JD
+JD
+Zu
+hw
+tD
+hw
+FL
+hw
+hw
+hw
+hw
+hw
+hw
+Bk
+YI
+hw
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-gw
-Zt
-QM
-dD
-dD
-GQ
-dD
-Wn
-xm
-Rk
-Rk
-Rk
-Rk
-Rk
-zy
-Zt
-Zt
-gw
-gw
-gw
-gw
-GQ
-jE
-dD
-SJ
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
@@ -25525,8 +24504,13 @@ xm
 xm
 xm
 xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -25637,12 +24621,12 @@ xm
 xm
 xm
 zi
-zi
-zi
-zi
-zi
-zi
-zi
+OE
+cr
+cr
+lE
+cr
+Vo
 zi
 Zk
 MY
@@ -25659,7 +24643,7 @@ XI
 XI
 rt
 zi
-xm
+lC
 xm
 xm
 xm
@@ -25747,75 +24731,69 @@ xm
 xm
 xm
 xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xk
+ix
+xk
+Zu
+fd
+iv
+OW
+hw
+hw
+hw
+hw
+NM
+hw
+hw
+hw
+hw
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
-xm
-xm
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-GQ
-ZM
-QM
-Zt
-xm
-Zt
-Rk
-Rk
-Rk
-Rk
-Rk
-Zt
-gw
-gw
-gw
-Zt
-Zt
-gw
-gw
-Zt
-jQ
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
@@ -25827,7 +24805,13 @@ xm
 xm
 xm
 xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -25939,12 +24923,12 @@ xm
 xm
 xm
 zi
-zi
-zi
-zi
-zi
-zi
-zi
+OE
+cr
+cr
+cr
+cr
+Vo
 zi
 qy
 As
@@ -25961,7 +24945,7 @@ XI
 vo
 rt
 zi
-xm
+lC
 xm
 xm
 xm
@@ -26049,76 +25033,69 @@ xm
 xm
 xm
 xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+eq
+RE
+hw
+hw
+hw
+hw
+sG
+hw
+ZJ
+hw
+hw
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
 xm
 xm
 xm
-Zt
-Zt
-Zt
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-FO
-ls
-PZ
-FO
-gw
-gw
-Zt
-Zt
-Zt
-gw
-gw
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
@@ -26130,6 +25107,13 @@ xm
 xm
 xm
 xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -26241,20 +25225,20 @@ xm
 xm
 xm
 zi
-zi
-zi
-zi
-zi
-zi
-zi
+OE
+cr
+cr
+cr
+cr
+OE
 zi
 xm
 xm
 xm
 xm
 xm
-xm
-ec
+cw
+zi
 zi
 WC
 Lx
@@ -26263,7 +25247,7 @@ XI
 qo
 iL
 zi
-xm
+lC
 xm
 xm
 xm
@@ -26352,56 +25336,44 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-Zt
-gw
-gw
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-FO
-FO
-lh
-Nt
-si
-OU
-rJ
-gw
-gw
-gw
-gw
-gw
-FO
-FO
-FO
-FO
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+gu
+sG
+hw
+hw
+gB
+hw
+hw
+hw
+hw
+aQ
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -26411,15 +25383,21 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
@@ -26431,7 +25409,13 @@ xm
 xm
 xm
 xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -26543,20 +25527,20 @@ xm
 xm
 xm
 zi
-zi
-zi
-zi
-zi
-zi
-zi
+Vo
+cr
+cr
+cr
+lE
+OE
 zi
 xm
 xm
 xm
 xm
 xm
-xm
-xm
+ZP
+fR
 zi
 iL
 AZ
@@ -26565,7 +25549,7 @@ bo
 iL
 Tc
 zi
-xm
+lC
 xm
 xm
 xm
@@ -26656,52 +25640,38 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-Zt
-gw
-gw
-gw
-gw
-gw
-gw
-gw
-Zt
-Zt
-Zt
-gw
-gw
-FO
-FO
-FO
-FO
-Ot
-fM
-Jd
-FO
-FO
-FO
-FO
-FO
-FO
-FO
-FO
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+Gi
+UZ
+hw
+sG
+hw
+hw
+hw
+NA
+aQ
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -26715,6 +25685,21 @@ xm
 xm
 xm
 xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
@@ -26726,14 +25711,13 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -26845,12 +25829,12 @@ xm
 xm
 xm
 zi
-zi
-zi
-zi
-zi
-zi
-zi
+Vo
+cr
+cr
+lE
+lE
+OE
 zi
 xm
 xm
@@ -26858,7 +25842,7 @@ xm
 xm
 xm
 xm
-xm
+cw
 zi
 iL
 XI
@@ -26867,7 +25851,7 @@ SV
 WC
 zi
 zi
-xm
+lC
 xm
 xm
 xm
@@ -26959,49 +25943,34 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-gw
-gw
-gw
-gw
-gw
-FO
-FO
-FO
-FO
-nn
-nc
-Hw
-lh
-FO
-FO
-FO
-FO
-FO
-FO
-FO
-FO
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+Gi
+hw
+hw
+NA
+NA
+px
+ts
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -27009,20 +25978,30 @@ xm
 xm
 xm
 xm
+ec
+ec
+ec
+ec
+ec
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
@@ -27034,8 +26013,13 @@ xm
 xm
 xm
 xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -27120,30 +26104,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 zi
 zi
 zi
@@ -27161,6 +26121,30 @@ xm
 xm
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+zi
+zi
+zi
+Vo
+cr
+Xc
+lE
+lE
+OE
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+cw
 zi
 rt
 cu
@@ -27168,8 +26152,8 @@ rt
 WC
 rt
 zi
-xm
-xm
+Uq
+yK
 xm
 xm
 xm
@@ -27261,83 +26245,83 @@ xm
 xm
 xm
 xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+Gi
+aQ
+iX
+iX
+iX
+HX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
 xm
 xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-FO
-FO
-FO
-FO
-FO
-FO
-FO
-FO
-FO
-FO
-uf
-dA
-Kj
-FO
-FO
-FO
-FO
-FO
-FO
-FO
-FO
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
 xm
 xm
 xm
 xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
 xm
+Bs
+Bs
+Bs
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -27422,9 +26406,78 @@ xm
 xm
 xm
 xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+zi
+Vo
+Vo
+Vo
+cr
+lE
+lE
+lE
+OE
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+cw
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+lC
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 zi
 zi
 zi
@@ -27446,16 +26499,6 @@ xm
 xm
 xm
 xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
 xm
 xm
 xm
@@ -27463,27 +26506,91 @@ xm
 xm
 xm
 xm
-zi
-zi
+xm
+xm
+xm
+Rk
+Rk
+Rk
+Rk
+Rk
+Rk
+xm
+xm
+lw
+lw
+lw
+lw
+lw
+lw
+lw
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+mZ
+iX
+iX
+ts
+xX
+xX
+xX
+xX
+xX
+xm
+xm
 ec
 ec
 ec
-zi
-zi
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
 zi
 zi
 zi
@@ -27499,147 +26606,24 @@ zi
 zi
 zi
 zi
-zi
-zi
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Rk
-Rk
-Rk
-Rk
-Rk
-Rk
-xm
-xm
-lw
-lw
-lw
-lw
-lw
-lw
-lw
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-FO
-FO
-FO
-FO
-FO
-FO
-FO
-FO
-EF
-XM
-fL
-BD
-vs
-FO
-FO
-FO
-FO
-FO
-FO
-Zt
-Zt
-Zt
-Zt
-Zt
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -27724,30 +26708,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 zi
 zi
 zi
@@ -27757,6 +26717,30 @@ zi
 zi
 zi
 zi
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+zi
+Vo
+cr
+cr
+cr
+cr
+lE
+lE
+Vo
 zi
 xm
 xm
@@ -27768,11 +26752,11 @@ xm
 hx
 AI
 OE
-xm
-xm
-xm
-xm
-xm
+BC
+BC
+BC
+BC
+yK
 xm
 xm
 xm
@@ -27865,6 +26849,46 @@ xm
 xm
 xm
 xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+mZ
+iX
+iX
+ts
+xX
+xX
+xX
+xX
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
 xm
 xm
 xm
@@ -27872,76 +26896,36 @@ xm
 xm
 xm
 xm
-xm
-xm
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
-FO
-FO
-FO
-FO
-oT
-hP
-EL
-XM
-eq
-FA
-FO
-FO
-FO
-FO
-FO
-Zt
-Zt
-Zt
-Zt
-Zt
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -28026,30 +27010,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 zi
 zi
 zi
@@ -28059,6 +27019,30 @@ zi
 zi
 zi
 zi
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+zi
+Vo
+cr
+cr
+cr
+lE
+lE
+lE
+Vo
 zi
 xm
 xm
@@ -28167,6 +27151,23 @@ xm
 xm
 xm
 xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -28178,27 +27179,18 @@ xm
 xm
 xm
 xm
-xm
-Zt
-Zt
-Zt
-Zt
-FO
-FO
-FO
-FO
-cB
-qa
-Vj
-aA
-Mw
-FO
-Zt
-Zt
-Zt
-Zt
-Zt
-Zt
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
 xm
 xm
 xm
@@ -28206,44 +27198,36 @@ xm
 xm
 xm
 xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -28328,30 +27312,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 zi
 zi
 zi
@@ -28361,6 +27321,30 @@ zi
 zi
 zi
 zi
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+zi
+OE
+cr
+cr
+lE
+lE
+lE
+lE
+Vo
 zi
 xm
 xm
@@ -28470,6 +27454,21 @@ xm
 xm
 xm
 xm
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -28482,22 +27481,18 @@ xm
 xm
 xm
 xm
-Zt
-Zt
-Zt
-Zt
-FO
-FO
-FO
-di
-dL
-XM
-LO
-KJ
-Zu
-Zt
-Zt
-Zt
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
 xm
 xm
 xm
@@ -28505,47 +27500,36 @@ xm
 xm
 xm
 xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -28630,30 +27614,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 zi
 zi
 zi
@@ -28663,6 +27623,30 @@ zi
 zi
 zi
 zi
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+zi
+OE
+cr
+cr
+cr
+lE
+lE
+lE
+Vo
 zi
 xm
 xm
@@ -28774,32 +27758,16 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-FO
-FO
-FO
-Gi
-XM
-mZ
-mk
-aD
-Zt
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -28815,16 +27783,18 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
 xm
 xm
 xm
@@ -28848,6 +27818,20 @@ xm
 xm
 xm
 xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -28932,30 +27916,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 zi
 zi
 zi
@@ -28965,6 +27925,30 @@ zi
 zi
 zi
 zi
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+zi
+OE
+cr
+cr
+cr
+cr
+lE
+lE
+OE
 zi
 zi
 zi
@@ -29078,29 +28062,11 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-FO
-FO
-NA
-da
-dL
-ug
-aD
-Zt
-Zt
+xX
+xX
+xX
+xX
+xX
 xm
 xm
 xm
@@ -29119,13 +28085,18 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
 xm
 xm
 xm
@@ -29149,6 +28120,19 @@ xm
 xm
 xm
 xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -29234,9 +28218,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
 zi
 zi
 zi
@@ -29244,32 +28225,35 @@ zi
 zi
 zi
 zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
 xm
 xm
+xm
+xm
+xm
+xm
 zi
 zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
+OE
+cr
+cr
+cr
+cr
+lE
+lE
+OE
+OE
+Vo
+Vo
 zi
 zi
 SQ
@@ -29382,27 +28366,9 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-FO
-Us
-cf
-fL
-LO
-xS
-Ed
-Zt
-Zt
+xX
+xX
+xX
 xm
 xm
 xm
@@ -29421,6 +28387,18 @@ xm
 xm
 xm
 xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
 xm
 xm
 xm
@@ -29444,6 +28422,12 @@ xm
 xm
 xm
 xm
+Bs
+Bs
+Bs
+Bs
+Bs
+Bs
 xm
 xm
 xm
@@ -29535,9 +28519,7 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
+zi
 zi
 zi
 zi
@@ -29559,19 +28541,21 @@ xm
 xm
 xm
 xm
+xm
+xm
 zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
+OE
+OE
+cr
+cr
+cr
+wU
+cr
+lE
+lE
+lE
+lE
+OE
 zi
 zi
 xm
@@ -29685,25 +28669,7 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Zt
-Zt
-xi
-Nt
-yO
-si
-xS
-Zt
-Zt
+xX
 xm
 xm
 xm
@@ -29716,6 +28682,24 @@ xm
 xm
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
 xm
 xm
 xm
@@ -29837,9 +28821,7 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
+zi
 zi
 zi
 zi
@@ -29861,20 +28843,22 @@ xm
 xm
 xm
 xm
+xm
+xm
 zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
+Vo
+lE
+Xc
+cr
+cr
+cr
+cr
+cr
+lE
+lE
+lE
+Vo
+Vo
 zi
 xm
 xm
@@ -29979,70 +28963,70 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Zt
-RB
-wc
-Na
-eq
-Ib
-Zt
-Zt
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 lw
 lw
 lw
 lw
 lw
-lw
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -30139,30 +29123,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 zi
 zi
 zi
@@ -30187,6 +29147,30 @@ xm
 xm
 xm
 xm
+zi
+Vo
+lE
+lE
+cr
+cr
+cr
+cr
+cr
+cr
+lE
+lE
+lE
+OE
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -30248,65 +29232,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Zt
-MP
-aW
-Vj
-NA
-uJ
-Zt
 xm
 xm
 xm
@@ -30348,6 +29273,65 @@ lw
 lw
 lw
 lw
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -30441,30 +29425,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 zi
 zi
 zi
@@ -30489,6 +29449,30 @@ xm
 xm
 xm
 xm
+zi
+OE
+lE
+lE
+lE
+cr
+cr
+cr
+cr
+cr
+cr
+lE
+lE
+OE
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -30550,65 +29534,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Zt
-FO
-fL
-LO
-FO
-Zt
 xm
 xm
 xm
@@ -30650,6 +29575,65 @@ lw
 lw
 lw
 lw
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -30743,30 +29727,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 zi
 zi
 zi
@@ -30791,6 +29751,30 @@ xm
 xm
 xm
 xm
+zi
+OE
+lE
+lE
+lE
+cr
+cr
+cr
+cr
+Xc
+cr
+cr
+lE
+OE
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -30823,65 +29807,6 @@ zi
 zi
 zi
 zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 xm
 xm
 xm
@@ -30952,6 +29877,65 @@ lw
 lw
 lw
 lw
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -31045,9 +30029,7 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
+zi
 zi
 zi
 zi
@@ -31069,20 +30051,22 @@ xm
 xm
 xm
 xm
+xm
+xm
 zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
+OE
+od
+Br
+lE
+cr
+cr
+cr
+cr
+cr
+cr
+cr
+cr
+OE
 zi
 zi
 zi
@@ -31183,65 +30167,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 lw
 lw
 lw
@@ -31254,6 +30179,65 @@ lw
 lw
 lw
 lw
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -31347,32 +30331,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zi
-zi
 zi
 zi
 zi
@@ -31397,6 +30355,32 @@ xm
 xm
 xm
 xm
+zi
+OE
+lE
+lE
+lE
+lE
+lE
+lE
+cr
+cr
+cr
+cr
+cr
+Vo
+Vo
+Vo
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -31427,63 +30411,6 @@ zi
 zi
 zi
 zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 xm
 xm
 xm
@@ -31552,12 +30479,69 @@ lw
 lw
 lw
 lw
-lw
-lw
-lw
-lw
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+Xz
+Xz
+Xz
+Xz
+Xz
 xm
 xm
 xm
@@ -31649,32 +30633,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zi
-zi
 zi
 zi
 zi
@@ -31699,6 +30657,32 @@ xm
 xm
 xm
 xm
+zi
+OE
+lE
+lE
+lE
+lE
+cr
+cr
+cr
+cr
+cr
+cr
+cr
+cr
+cr
+OE
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -31789,65 +30773,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Ao
-TJ
-cz
-Ao
-Ao
-Ao
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-lw
 lw
 lw
 lw
@@ -31867,6 +30792,65 @@ xm
 xm
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
 xm
 xm
 xm
@@ -31951,32 +30935,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zi
-zi
 zi
 zi
 zi
@@ -32001,6 +30959,32 @@ xm
 xm
 xm
 xm
+zi
+OE
+OE
+OE
+OE
+Vo
+Vo
+Vo
+Vo
+cr
+cr
+cr
+cr
+cr
+cr
+OE
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -32120,6 +31104,18 @@ xm
 xm
 xm
 xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
 xm
 xm
 xm
@@ -32134,30 +31130,6 @@ xm
 xm
 xm
 xm
-Ao
-gN
-kP
-xh
-kP
-Ao
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-lw
-lw
-lw
-lw
-lw
-lw
-lw
-lw
-lw
 xm
 xm
 xm
@@ -32169,6 +31141,18 @@ xm
 xm
 xm
 xm
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
 xm
 xm
 xm
@@ -32253,9 +31237,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
 zi
 zi
 zi
@@ -32270,13 +31251,16 @@ zi
 zi
 zi
 zi
-xm
-xm
+zi
 xm
 xm
 xm
 xm
 xm
+xm
+xm
+xm
+xm
 zi
 zi
 zi
@@ -32285,14 +31269,14 @@ zi
 zi
 zi
 zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
+Vo
+cr
+cr
+cr
+cr
+cr
+lE
+Vo
 zi
 xm
 xm
@@ -32401,65 +31385,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Ao
-Cn
-ZY
-Fd
-kP
-Ao
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-lw
-lw
-lw
-lw
-lw
-lw
-lw
-lw
-lw
 zi
 zi
 zi
@@ -32471,6 +31396,65 @@ xm
 xm
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
 xm
 xm
 xm
@@ -32555,71 +31539,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
 zi
 zi
 zi
@@ -32651,6 +31570,16 @@ xm
 xm
 xm
 xm
+zi
+Vo
+cr
+cr
+cr
+cr
+Br
+lE
+Vo
+zi
 xm
 xm
 xm
@@ -32669,6 +31598,27 @@ xm
 xm
 xm
 xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
@@ -32719,31 +31669,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Ao
-bj
-ZY
-Al
-ZY
-YA
 xm
 xm
 xm
@@ -32773,6 +31698,65 @@ xm
 xm
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
 xm
 xm
 xm
@@ -32857,75 +31841,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
 zi
 zi
 zi
@@ -32957,6 +31872,16 @@ xm
 xm
 xm
 xm
+zi
+Vo
+cr
+cr
+cr
+lE
+lE
+lE
+Vo
+zi
 xm
 xm
 xm
@@ -32975,6 +31900,27 @@ xm
 xm
 xm
 xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
@@ -33025,27 +31971,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-Ao
-fK
-kP
-Cb
-ZY
-Ao
 xm
 xm
 xm
@@ -33075,6 +32000,65 @@ xm
 xm
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
 xm
 xm
 xm
@@ -33159,9 +32143,9 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
+zi
+zi
+zi
 zi
 zi
 zi
@@ -33191,53 +32175,14 @@ xm
 xm
 xm
 zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
-zi
+OE
+OE
+OE
+OE
+OE
+OE
+OE
+OE
 zi
 xm
 xm
@@ -33257,6 +32202,27 @@ xm
 xm
 xm
 xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
@@ -33309,47 +32275,6 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-SU
-SU
-SU
-SU
-SU
-xm
-Ao
-Yq
-kP
-kP
-ke
-Ao
-Ao
-Ao
 xm
 xm
 xm
@@ -33377,6 +32302,65 @@ xm
 xm
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
 xm
 xm
 xm
@@ -33461,9 +32445,9 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
+zi
+zi
+zi
 zi
 zi
 zi
@@ -33608,65 +32592,6 @@ xm
 xm
 xm
 xm
-zy
-zy
-zy
-zy
-zy
-zy
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-xm
-Ao
-Ao
-Ao
-yS
-Ao
-Ao
-zG
-Ao
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 xm
 zi
 zi
@@ -33676,6 +32601,65 @@ zi
 zi
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
 xm
 xm
 xm
@@ -33763,9 +32747,9 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
+zi
+zi
+zi
 zi
 zi
 zi
@@ -33910,65 +32894,6 @@ xm
 xm
 xm
 xm
-zy
-zy
-zy
-zy
-zy
-zy
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-xm
-xm
-Ao
-uL
-ZY
-kP
-kP
-vj
-Ao
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 xm
 zi
 zi
@@ -33978,6 +32903,65 @@ zi
 zi
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
 xm
 xm
 xm
@@ -34065,9 +33049,9 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
+zi
+zi
+zi
 zi
 zi
 zi
@@ -34212,65 +33196,6 @@ xm
 xm
 xm
 xm
-zy
-zy
-zy
-zy
-zy
-zy
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-xm
-Ao
-UC
-gm
-eU
-ZY
-DP
-en
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 xm
 zi
 zi
@@ -34280,6 +33205,65 @@ zi
 zi
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
 xm
 xm
 xm
@@ -34367,9 +33351,9 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
+zi
+zi
+zi
 zi
 zi
 zi
@@ -34514,65 +33498,6 @@ xm
 xm
 xm
 xm
-zy
-zy
-zy
-zy
-zy
-zy
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-xm
-Ao
-pp
-FZ
-Xg
-mN
-uA
-Ao
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 xm
 zi
 zi
@@ -34582,6 +33507,65 @@ zi
 zi
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
 xm
 xm
 xm
@@ -34669,9 +33653,9 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
+zi
+zi
+zi
 zi
 zi
 zi
@@ -34816,65 +33800,6 @@ xm
 xm
 xm
 xm
-zy
-zy
-zy
-zy
-zy
-zy
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-xm
-Ao
-Ao
-Pm
-Ao
-Jh
-Ao
-Ao
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 xm
 zi
 zi
@@ -34884,6 +33809,65 @@ zi
 zi
 xm
 xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
+Xz
 xm
 xm
 xm
@@ -34971,9 +33955,9 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
+zi
+zi
+zi
 zi
 zi
 zi
@@ -35119,71 +34103,71 @@ xm
 xm
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
 zi
 zi
 zi
 zi
 zi
 zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -35273,6 +34257,151 @@ xm
 xm
 xm
 xm
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+zi
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
+xm
 xm
 xm
 xm
@@ -35282,8 +34411,6 @@ zi
 zi
 zi
 zi
-zi
-zi
 xm
 xm
 xm
@@ -35298,164 +34425,21 @@ xm
 xm
 xm
 xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
 xm
 xm
 xm
@@ -35723,6 +34707,12 @@ xm
 xm
 xm
 xm
+zi
+zi
+zi
+zi
+zi
+zi
 xm
 xm
 xm
@@ -35737,27 +34727,21 @@ xm
 xm
 xm
 xm
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
 xm
 xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-xm
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
-SU
 xm
 xm
 xm
