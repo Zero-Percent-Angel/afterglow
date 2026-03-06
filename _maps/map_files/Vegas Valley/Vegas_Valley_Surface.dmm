@@ -34899,7 +34899,9 @@
 /turf/open/floor/f13,
 /area/f13/ambientlighting/building/o)
 "kuS" = (
-/mob/living/simple_animal/hostile/handy/protectron,
+/mob/living/simple_animal/hostile/handy/protectron{
+	faction = list("raider")
+	},
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
 	},
@@ -68119,9 +68121,11 @@
 	},
 /area/f13/wasteland)
 "uvn" = (
-/mob/living/simple_animal/hostile/handy/protectron,
 /obj/effect/decal/cleanable/dirt{
 	color = "000000"
+	},
+/mob/living/simple_animal/hostile/handy/protectron{
+	faction = list("raider")
 	},
 /turf/open/floor/f13{
 	icon_state = "floorrusty"
