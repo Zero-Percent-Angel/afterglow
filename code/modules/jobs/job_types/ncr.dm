@@ -537,8 +537,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	//ADD_TRAIT(H, TRAIT_IRONFIST, src)
 	//ADD_TRAIT(H, TRAIT_SILENT_STEP, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	var/datum/martial_art/rangertakedown/RT = new
-	RT.teach(H)
+	//var/datum/martial_art/rangertakedown/RT = new
+	//RT.teach(H)
 
 /datum/outfit/smutant/ranger/veteran
 	head = /obj/item/clothing/head/helmet/f13/ncr/veteran/mutie
@@ -635,8 +635,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 	//ADD_TRAIT(H, TRAIT_HARD_YARDS, src)
 	//ADD_TRAIT(H, TRAIT_LIGHT_STEP, src)
 	ADD_TRAIT(H, TRAIT_GENERIC, src)
-	var/datum/martial_art/rangertakedown/RT = new
-	RT.teach(H)
+	//var/datum/martial_art/rangertakedown/RT = new
+	//RT.teach(H)
 
 /datum/outfit/smutant/ranger
 	head = /obj/item/clothing/head/helmet/f13/ncr/patrol/mutie

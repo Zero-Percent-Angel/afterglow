@@ -34,6 +34,7 @@
 #define AUTOBOTTLER  	(1<<10) //Uses booze, for printing
 #define AMMOLATHE		(1<<11) //For ammo and magazine production.
 #define AMMOLATHE_HOBO	(1<<12) //For ammo and magazine production, but worse.
+#define VENDORLATHE		(1<<13) //for buying shit
 //Note: More then one of these can be added to a design but imprinter and lathe designs are incompatable.
 
 //Modular computer/NTNet defines
