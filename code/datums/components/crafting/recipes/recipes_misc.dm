@@ -692,3 +692,59 @@
 	tools = list(TOOL_WORKBENCH)
 	time = 5 SECONDS
 	category = CAT_ROBOT */
+
+/datum/crafting_recipe/nvg
+	time = 80
+	tools = list(TOOL_AWORKBENCH, TOOL_SCREWDRIVER, TOOL_MULTITOOL, TOOL_WIRECUTTER)
+	category = CAT_CRAFTING
+	subcategory = CAT_SCAVENGING
+	skill_needed = SKILL_SCIENCE
+	//skill_level = EASY_CHECK
+
+/datum/crafting_recipe/nvg/fullconvert
+	name = "Convert Pilot Goggles to NVGs"
+	reqs = list(/obj/item/stack/cable_coil = 20,
+				/obj/item/advanced_crafting_components/conductors = 1,
+				/obj/item/advanced_crafting_components/p_circuits = 1,
+				/obj/item/clothing/glasses/night/f13/enclave = 1,
+				/obj/item/stack/crafting/electronicparts = 5)
+	result = /obj/item/clothing/glasses/night
+	skill_level = HARD_CHECK
+
+/datum/crafting_recipe/nvg/pilottollgoggles
+	name = "Convert Pilot Goggles to Low-Light Goggles"
+	reqs = list(/obj/item/stack/cable_coil = 5,
+				/obj/item/clothing/glasses/night/f13/enclave = 1,
+				/obj/item/clothing/glasses/legiongoggles = 1,
+				/obj/item/stock_parts/cell/ammo/ec = 1,
+				/obj/item/stack/crafting/electronicparts = 5)
+	result = /obj/item/clothing/glasses/night/llgoggles
+	skill_level = EASY_CHECK
+
+/datum/crafting_recipe/nvg/pilottollshades
+	name = "Convert Pilot Goggles to Low-Light Shades"
+	reqs = list(/obj/item/stack/cable_coil = 5,
+				/obj/item/clothing/glasses/night/f13/enclave = 1,
+				/obj/item/clothing/glasses/sunglasses = 1,
+				/obj/item/stock_parts/cell/ammo/ec = 1,
+				/obj/item/stack/crafting/electronicparts = 5)
+	result = /obj/item/clothing/glasses/night/llshades
+	skill_level = EASY_CHECK
+
+/datum/crafting_recipe/nvg/llshadestopilot
+	name = "Convert Low-Light Shades to Pilot Goggles"
+	reqs = list(/obj/item/stack/cable_coil = 10,
+				/obj/item/advanced_crafting_components/flux = 1,
+				/obj/item/clothing/glasses/night/llshades = 1,
+				/obj/item/stack/crafting/electronicparts = 5)
+	result = /obj/item/clothing/glasses/night/f13/enclave
+	skill_level = REGULAR_CHECK
+
+/datum/crafting_recipe/nvg/llgogglestopilot
+	name = "Convert Low-Light Goggles to Pilot Goggles"
+	reqs = list(/obj/item/stack/cable_coil = 10,
+				/obj/item/advanced_crafting_components/flux = 1,
+				/obj/item/clothing/glasses/night/llgoggles = 1,
+				/obj/item/stack/crafting/electronicparts = 5)
+	result = /obj/item/clothing/glasses/night/f13/enclave
+	skill_level = REGULAR_CHECK

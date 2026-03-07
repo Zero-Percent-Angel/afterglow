@@ -18,32 +18,39 @@
 /obj/item/clothing/glasses/legionpolarizing
 	icon_state = "legpolarizing"
 	item_state = "legpolarizing"
+	name = "polarizing goggles"
+	desc = "Fancy goggles with rare polarizing glass from some old cache, usually reserved for commanders and a few select scouts. Well suited for protecting your eyes from bright lights."
 	darkness_view = 1
 	flash_protect = 1
 	tint = 1
 	glass_colour_type = /datum/client_colour/glass_colour/lightorange
 
-/obj/item/clothing/glasses/night/polarizing
-	name = "polarizing goggles"
-	desc = "Fancy goggles with rare polarizing glass from some old cache, usually reserved for commanders and a few select scouts."
+/obj/item/clothing/glasses/night/llgoggles
+	name = "low-light goggles"
+	desc = "Fancy low-light goggles with a thin layer of colored glass across the lenses. This particular set seems to have thicker lensing and a small battery pack on the back of the headstrap. You wouldn't want to be wearing this around any bright flashes."
 	icon_state = "legpolarizing"
 	item_state = "legpolarizing"
 	darkness_view = 12
-	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT
+	vision_correction = 1
 	glass_colour_type = /datum/client_colour/glass_colour/lightorange
 
 /obj/item/clothing/glasses/night/f13/enclave
 	name = "\improper pilot goggles"
-	desc = "Heat-sensitive goggles commonly worn by Enclave Personnel."
+	desc = "Heat-sensitive low-light vision goggles commonly worn by Enclave Personnel. They're in remarkably good condition, although they'll do more harm than good when faced with bright abrupt flashes."
 	icon_state = "enclavegoggles"
 	item_state = "enclavegoggles"
+	darkness_view = 12
 	vision_correction = 1
+	glass_colour_type = /datum/client_colour/glass_colour/gray
 
-/obj/item/clothing/glasses/night/ncr
-	name = "lit shades"
-	desc = "Strangely ancient technology used to help provide rudimentary eye cover. Larger than average enhanced shielding blocks flashes, it's also got Night Vision installed, wow!"
+/obj/item/clothing/glasses/night/llshades
+	name = "low-light shades"
+	desc = "Fancy looking sunglasses with thick frames. This particular set seems to have even thicker lensing and a small battery pack on the arms, with much if not all of the actual sun-protection part missing."
 	icon_state = "bigsunglasses"
 	item_state = "bigsunglasses"
+	darkness_view = 12
+	vision_correction = 1
+	glass_colour_type = /datum/client_colour/glass_colour/gray
 
 
 //Fallout 13 sunglasses
