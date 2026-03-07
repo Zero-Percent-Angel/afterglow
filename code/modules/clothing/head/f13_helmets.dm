@@ -769,6 +769,12 @@
 	item_state = "mutie_ncr_ranger"
 	species_restricted = list("exclude","Human","Ghoul")
 
+/obj/item/clothing/head/helmet/f13/ncr/patrol/helmet
+	name = "NCR patrol helmet"
+	desc = "A combat helmet hand-manufactured in the NCR and issued to patrol rangers."
+	icon_state = "ncr_patrol_helmet"
+	item_state = "ncr_patrol_helmet"
+
 /obj/item/clothing/head/helmet/f13/ncr/veteran
 	name = "NCR veteran ranger combat helmet"
 	desc = "An old combat helmet, out of use around the time of the war."

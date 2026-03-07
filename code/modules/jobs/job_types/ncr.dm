@@ -688,7 +688,8 @@ Weapons		Service Rifle, Grease Gun, 9mm pistol, all good.
 		/obj/item/ammo_box/magazine/m556/rifle/extended = 1,
 		/obj/item/gun/ballistic/revolver/m29 = 1,
 		/obj/item/ammo_box/m44 = 2,
-		/obj/item/clothing/head/helmet/f13/ncr/patrol = 1
+		/obj/item/clothing/head/helmet/f13/ncr/patrol = 1,
+		/obj/item/clothing/head/helmet/f13/ncr/patrol/helmet = 1
 		)
 
 /datum/outfit/loadout/rangerrecon
