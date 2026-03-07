@@ -523,6 +523,7 @@
 	uniform = /obj/item/clothing/under/f13/legskirt
 	suit = /obj/item/clothing/suit/armor/tiered/light/legion/prime
 	shoes = /obj/item/clothing/shoes/f13/military/legion
+	glasses = /obj/item/clothing/glasses/legiongoggles
 	head = /obj/item/clothing/head/helmet/f13/legion/prime
 	gender = MALE
 
@@ -586,6 +587,7 @@
 	suit = /obj/item/clothing/suit/armor/tiered/medium/legion/vet
 	shoes = /obj/item/clothing/shoes/f13/military/legion
 	gloves = /obj/item/clothing/gloves/legion
+	glasses = /obj/item/clothing/glasses/legiongoggles
 	head = /obj/item/clothing/head/helmet/f13/legion/prime/decan
 
 ////////////////

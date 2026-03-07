@@ -75,3 +75,8 @@
 /datum/gear/glasses/biker
 	name = "biker goggles"
 	path = /obj/item/clothing/glasses/f13/biker
+
+/datum/gear/glasses/sandstorm
+	name = "sandstorm goggles"
+	path = /obj/item/clothing/glasses/legiongoggles
+
