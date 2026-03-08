@@ -299,7 +299,7 @@
 	desc = "An old military grade pre-war combat helmet. This one is marked with NCR colors."
 	icon_state = "combat_helmet_ncr"
 	item_state = "combat_helmet_ncr"
-	armor = ARMOR_VALUE_MEDIUM
+	armor = ARMOR_VALUE_MEDIUM_T3
 	strip_delay = 50
 	flags_inv = HIDEEARS|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -315,6 +315,8 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
+	armor = ARMOR_VALUE_MEDIUM_T4
+	tier = 4
 
 //Legion
 /obj/item/clothing/head/helmet/f13/combat/legion
@@ -322,7 +324,7 @@
 	desc = "An old military grade pre-war combat helmet. This one is marked with Legion colors."
 	icon_state = "combat_helmet_legion"
 	item_state = "combat_helmet_legion"
-	armor = ARMOR_VALUE_MEDIUM
+	armor = ARMOR_VALUE_MEDIUM_T3
 	strip_delay = 50
 	flags_inv = HIDEEARS|HIDEHAIR
 	resistance_flags = LAVA_PROOF | FIRE_PROOF
@@ -338,6 +340,8 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2)
 	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
 	flags_cover = HEADCOVERSEYES
+	armor = ARMOR_VALUE_MEDIUM_T4
+	tier = 4
 
 
 /obj/item/clothing/head/helmet/f13/combat/rangerbroken
