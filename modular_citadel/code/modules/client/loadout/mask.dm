@@ -14,6 +14,11 @@
 	path = /obj/item/clothing/mask/rat
 	cost = 3
 
+/datum/gear/mask/gas
+	name = "gas mask"
+	path = /obj/item/clothing/mask/gas
+	cost = 5
+
 /datum/gear/mask/tribal
 	name = "tribal mask"
 	path = /obj/item/clothing/mask/rat/tribal
@@ -119,7 +124,7 @@
 	path = /obj/item/clothing/mask/bandana/legion/legdecan
 	cost = 2
 
-/datum/gear/mask/bandana/bandito 
+/datum/gear/mask/bandana/bandito
 	name = "bandito bandana"
 	path = /obj/item/clothing/mask/bandana/legion/legvet
 	cost = 2

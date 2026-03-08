@@ -26,6 +26,11 @@
 	path = /obj/item/storage/fancy/donut_box
 	cost = 2
 
+/datum/gear/backpack/soap
+	name = "soap bar"
+	path = /obj/item/soap
+	cost = 1
+
 //// "Toys"
 
 /datum/gear/backpack/crayons

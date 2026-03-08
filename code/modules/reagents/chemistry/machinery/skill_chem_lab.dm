@@ -486,7 +486,7 @@
 		GLOB.skill_chemical_reactions = list()
 		GLOB.skill_chemical_reactions_steps = list()
 
-	var/list/recipe = GLOB.skill_chemical_reactions[r]
+	var/list/recipe = GLOB.skill_chemical_reactions[(r.name + num2text(total_steps))]
 
 	if (istype(recipe))
 		return recipe
@@ -520,7 +520,7 @@
 		text_id += get_id_from_step(picked)
 
 	if (!GLOB.skill_chemical_reactions_steps.Find(text_id))
-		GLOB.skill_chemical_reactions[r] = recipe
+		GLOB.skill_chemical_reactions[(r.name + num2text(total_steps))] = recipe
 		GLOB.skill_chemical_reactions_steps[text_id] = r
 
 		return recipe
