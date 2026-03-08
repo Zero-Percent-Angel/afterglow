@@ -421,6 +421,14 @@
 	build_path = /obj/item/reagent_containers/glass/beaker
 	category = list("initial", "Medical")
 
+/datum/design/glassbottle
+	name = "Glass Bottle"
+	id = "glassbottle"
+	build_type = AUTOLATHE
+	materials = list(MAT_GLASS = 1000)
+	build_path = /obj/effect/spawner/lootdrop/emptyglassbottles
+	category = list("initial", "Medical")
+
 /datum/design/large_beaker
 	name = "Large Beaker"
 	id = "large_beaker"

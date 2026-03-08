@@ -925,9 +925,10 @@
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/superhigh
 	name = "superhigh tier energy gun"
-	loot = list(/obj/item/gun/energy/laser/plasma/caster/balanced,
-				/obj/item/minigunpack,
-				/obj/item/gun/energy/laser/aer14
+	loot = list(/obj/item/gun/energy/laser/plasma/caster/balanced = 35, //equal to its good laser counterpart in chance
+				/obj/item/minigunpack = 29, //lower chance since in unique and kind of meh.
+				/obj/effect/spawner/bundle/f13/aer14 = 35, //in unique yet not bad, so equal to good plasma counterpart
+				/obj/effect/spawner/bundle/f13/multiplas = 1 // 1% chance, he's just too good- yet he deserves a seat at the table... (there's only 3 of these spawners on map)
 				)
 
 /obj/effect/spawner/lootdrop/f13/weapon/gun/energy/unique
