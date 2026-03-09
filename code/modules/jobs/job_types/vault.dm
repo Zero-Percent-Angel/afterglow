@@ -184,8 +184,8 @@ Head of Security
 
 /datum/outfit/loadout/sec_riot_suppression
 	name = "Riot Suppression"
-	suit = /obj/item/clothing/suit/armor/tiered/power_armor/vaulttec
-	head = /obj/item/clothing/head/helmet/f13/power_armor/vaulttec
+	suit = /obj/item/clothing/suit/armor/tiered/power_armor/fh46
+	head = /obj/item/clothing/head/helmet/f13/power_armor/fh46
 	backpack_contents = list(
 		/obj/item/book/granter/trait/pa_wear = 1
 	)
