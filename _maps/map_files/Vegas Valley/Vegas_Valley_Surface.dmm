@@ -1536,9 +1536,7 @@
 /area/f13/bar)
 "ayI" = (
 /obj/structure/table/reinforced,
-/obj/structure/railing{
-	dir = 4
-	},
+/obj/structure/barricade/bars,
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/x)
 "ayJ" = (
@@ -3623,6 +3621,8 @@
 	dir = 1;
 	flickering = 1
 	},
+/obj/item/hand_labeler,
+/obj/item/stack/sheet/cardboard/twenty,
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/x)
 "bdX" = (
@@ -10296,7 +10296,7 @@
 /area/f13/bar)
 "dcU" = (
 /obj/structure/bed,
-/obj/item/bedsheet/grey,
+/obj/effect/spawner/lootdrop/bedsheet,
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/z)
 "dcV" = (
@@ -11810,6 +11810,7 @@
 /area/f13/brotherhood)
 "dAB" = (
 /obj/structure/wreck/trash/one_tire,
+/obj/structure/tires/two,
 /turf/open/floor/plating/f13/inside/gravel,
 /area/f13/wasteland/town)
 "dAD" = (
@@ -13942,7 +13943,6 @@
 	id = "townunderupperright";
 	height = 2
 	},
-/obj/effect/landmark/start/f13/deputy,
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/n)
 "ejo" = (
@@ -14550,9 +14550,6 @@
 /area/f13/ambientlighting/building/w)
 "esI" = (
 /obj/structure/window/fulltile/house,
-/obj/structure/curtain{
-	color = "#845f58"
-	},
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/x)
 "esJ" = (
@@ -17558,6 +17555,11 @@
 	},
 /turf/open/indestructible/ground/inside/mountain,
 /area/f13/ncr)
+"fot" = (
+/obj/structure/table,
+/obj/machinery/processor/chopping_block,
+/turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
+/area/maintenance/bar)
 "fow" = (
 /mob/living/simple_animal/hostile/radscorpion/black,
 /turf/open/indestructible/ground/inside/mountain,
@@ -18454,6 +18456,12 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/building/powered)
+"fBm" = (
+/obj/structure/curtain{
+	pixel_x = 32
+	},
+/turf/open/floor/wood_common,
+/area/f13/building/abandoned/z)
 "fBo" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/indestructible/ground/outside/sidewalk{
@@ -22507,9 +22515,6 @@
 /area/f13/building/tribal)
 "gMk" = (
 /obj/structure/window/fulltile/house,
-/obj/structure/curtain{
-	color = "#808080"
-	},
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/z)
 "gMp" = (
@@ -24097,9 +24102,7 @@
 /turf/open/indestructible/ground/inside/dirt,
 /area/f13/wasteland/town)
 "hjG" = (
-/obj/machinery/door/window{
-	dir = 4
-	},
+/obj/structure/simple_door/metal/barred,
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/x)
 "hjI" = (
@@ -34722,6 +34725,14 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/indestructible/ground/outside/dirt,
 /area/f13/wasteland)
+"ksQ" = (
+/obj/machinery/shower{
+	dir = 8;
+	pixel_y = -6;
+	pixel_x = 1
+	},
+/turf/open/floor/plating/f13/inside/gravel,
+/area/f13/wasteland/town)
 "ksS" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/open/floor/plating/rust,
@@ -35167,6 +35178,10 @@
 "kzG" = (
 /obj/structure/chair/sofa/left{
 	dir = 1
+	},
+/obj/structure/curtain{
+	color = "#845f58";
+	pixel_y = -32
 	},
 /turf/open/floor/wood_fancy,
 /area/f13/building/abandoned/x)
@@ -37485,7 +37500,7 @@
 /area/f13/ambientlighting/building/r)
 "lil" = (
 /obj/structure/bed,
-/obj/item/bedsheet/blue,
+/obj/item/bedsheet/gondola,
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/z)
 "lio" = (
@@ -39763,7 +39778,6 @@
 	id = "townunderupperleft";
 	height = 2
 	},
-/obj/effect/landmark/start/f13/deputy,
 /turf/open/floor/f13/wood,
 /area/f13/building/abandoned/n)
 "lTG" = (
@@ -54688,8 +54702,8 @@
 	},
 /area/f13/wasteland)
 "qse" = (
-/obj/structure/wreck/trash/engine,
 /obj/structure/sign/brotherhoodcardboard,
+/obj/item/storage/trash_stack,
 /turf/open/floor/plating/f13/inside/gravel,
 /area/f13/wasteland/town)
 "qsh" = (
@@ -59752,6 +59766,10 @@
 	icon_state = "common-broken3"
 	},
 /area/f13/wasteland)
+"rRu" = (
+/obj/structure/wreck/trash/engine,
+/turf/open/floor/plating/f13/inside/gravel,
+/area/f13/wasteland/town)
 "rRz" = (
 /turf/closed/mineral/random/low_chance,
 /area/f13/wasteland)
@@ -63131,9 +63149,10 @@
 	},
 /area/f13/ambientlighting/building/o)
 "sTH" = (
-/obj/structure/wreck/trash/one_barrel,
-/turf/open/floor/plating/f13/inside/gravel,
-/area/f13/wasteland/town)
+/obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/obj/effect/landmark/start/f13/deputy,
+/turf/open/floor/f13/wood,
+/area/f13/building/abandoned/n)
 "sTJ" = (
 /obj/structure/table/reinforced,
 /turf/open/floor/plating/rust,
@@ -63980,9 +63999,6 @@
 /area/f13/wasteland)
 "tfm" = (
 /obj/structure/window/fulltile/house,
-/obj/structure/curtain{
-	color = "#808080"
-	},
 /obj/effect/mapping_helpers/network_builder/power_cable/auto,
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/z)
@@ -66011,8 +66027,11 @@
 /turf/open/floor/wood_common/wood_common_dark,
 /area/f13/building/abandoned/n)
 "tMm" = (
-/obj/structure/simple_door/metal/iron,
 /obj/effect/mapping_helpers/network_builder/power_cable/auto,
+/obj/machinery/door/airlock/engineering{
+	req_one_access_txt = "25";
+	name = "Maintenance Only"
+	},
 /turf/open/floor/plasteel/dark,
 /area/engine/workshop)
 "tMo" = (
@@ -68115,6 +68134,7 @@
 	dir = 8;
 	pixel_x = -12
 	},
+/obj/structure/table,
 /turf/open/floor/plasteel/f13/vault_floor/misc/cafeteria,
 /area/maintenance/bar)
 "uqz" = (
@@ -68700,7 +68720,14 @@
 /turf/open/floor/plasteel/grimy,
 /area/f13/ncr)
 "uAo" = (
-/obj/structure/tires/two,
+/obj/structure/ladder/unbreakable{
+	height = 2;
+	icon_state = "manhole_open";
+	id = "town_lair"
+	},
+/obj/structure/reagent_dispensers/barrel/four{
+	pixel_y = 4
+	},
 /turf/open/floor/plating/f13/inside/gravel,
 /area/f13/wasteland/town)
 "uAp" = (
@@ -69917,8 +69944,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/white,
 /area/f13/clinic)
 "uRz" = (
-/obj/item/bedsheet/black,
 /obj/structure/bed,
+/obj/effect/spawner/lootdrop/bedsheet,
 /turf/open/floor/wood_mosaic,
 /area/f13/building/abandoned/x)
 "uSc" = (
@@ -71867,6 +71894,13 @@
 	icon_state = "dirt"
 	},
 /area/f13/wasteland)
+"vvj" = (
+/obj/structure/curtain{
+	color = "#808080";
+	pixel_y = 32
+	},
+/turf/open/floor/wood_common,
+/area/f13/building/abandoned/z)
 "vvo" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 1
@@ -74192,6 +74226,13 @@
 	},
 /turf/open/floor/wood_common,
 /area/f13/ambientlighting/building/m)
+"whV" = (
+/obj/structure/curtain{
+	color = "#808080";
+	pixel_x = 32
+	},
+/turf/open/floor/wood_common,
+/area/f13/building/abandoned/z)
 "wid" = (
 /obj/structure/fluff/rails,
 /turf/open/indestructible/ground/inside/mountain,
@@ -75697,8 +75738,9 @@
 	},
 /area/f13/followers)
 "wCq" = (
-/obj/structure/window/fulltile/house,
-/obj/structure/curtain,
+/obj/structure/curtain{
+	pixel_y = -32
+	},
 /turf/open/floor/wood_common,
 /area/f13/building/abandoned/z)
 "wCw" = (
@@ -78459,8 +78501,11 @@
 /turf/open/floor/plasteel/grimy,
 /area/f13/ambientlighting/building/m)
 "xpX" = (
-/obj/machinery/door/airlock/engineering,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/airlock/engineering/glass{
+	req_one_access_txt = "25";
+	name = "N.T. Workshop"
+	},
 /turf/open/floor/plasteel,
 /area/engine/workshop)
 "xqb" = (
@@ -107538,7 +107583,7 @@ apD
 apD
 gDa
 ncr
-voV
+uAo
 chT
 dAB
 voV
@@ -107841,8 +107886,8 @@ aGd
 aGd
 aGd
 qse
+rRu
 pvq
-sTH
 voV
 apD
 voV
@@ -108142,9 +108187,9 @@ oPT
 dsJ
 rJQ
 aGd
-pwE
+ksQ
+voV
 xxa
-uAo
 voV
 rPm
 voV
@@ -108463,14 +108508,14 @@ dJe
 xDy
 voV
 tfm
-bto
+vvj
 dbU
 xoT
 pSE
 qIt
 szx
-bto
 wCq
+gMk
 kDF
 oks
 apD
@@ -109974,11 +110019,11 @@ tGg
 slp
 pSE
 voR
-bto
+whV
 rBh
 pSE
 rBh
-bto
+fBm
 voR
 pSE
 kDF
@@ -110280,7 +110325,7 @@ gMk
 pSE
 pSE
 pSE
-wCq
+gMk
 mGG
 iKE
 kDF
@@ -110837,7 +110882,7 @@ azA
 azA
 dIZ
 lpd
-ftp
+sTH
 dkX
 gIs
 apD
@@ -113253,7 +113298,7 @@ azA
 azA
 dIZ
 lpd
-ftp
+sTH
 dkX
 dIZ
 apD
@@ -118711,7 +118756,7 @@ rQh
 pAW
 rQh
 uqr
-rQh
+fot
 qEt
 pGU
 pGU
