@@ -380,6 +380,19 @@
 	special_modifications = list("a" = -1, "s" = 3)
 	armor_tier_desc = "This is a suit of power armor, able to withstand a tank shell and still finish a marathon. (-1 Agility, 10% Slowdown, +3 Strength - while powered)"
 
+/obj/item/clothing/suit/armor/tiered/power_armor/t51b/midwest
+	name = "Mid-West power armor"
+	desc = "Mid-western PA, developed by the mid-western BoS. This suit of power armor provides substantial protection to the wearer."
+	icon_state = "midwestgrey_pa"
+	item_state = "midwestgrey_pa"
+
+/obj/item/clothing/suit/armor/tiered/power_armor/t51b/midwest/hardened
+	name = "Hardened Mid-West power armor"
+	icon_state = "midwestpa"
+	item_state = "midwestpa"
+	tier = 5
+	armor = ARMOR_VALUE_SALVAGE_T5
+
 /obj/item/clothing/suit/armor/tiered/power_armor/t51b/hardened
 	name = "Hardened T-51b power armor"
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer. It's plates have been chemially treated to be stronger."
