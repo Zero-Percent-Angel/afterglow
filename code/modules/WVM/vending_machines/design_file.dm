@@ -48,6 +48,8 @@
 
 /* --Tier 1 Ammo and Magazines-- */
 //Tier 1 Magazines
+
+/* Duplicate Design IDs... Not allowed I'm afraid
 /datum/design/vendorlathe/zip9mm
 	name = "zipgun clip (9mm)"
 	id = "zip9m"
@@ -61,3 +63,4 @@
 	materials = list(/datum/material/f13cash = 15)
 	build_path = /obj/item/ammo_box/magazine/m45/empty
 	category = list("initial", "Simple Magazines")
+*/
