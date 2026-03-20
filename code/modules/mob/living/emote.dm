@@ -1579,6 +1579,10 @@ GLOBAL_LIST_INIT(special_phrases, list(
 		if(skill_phrase_input in GLOB.skills_triggers[which_skill])
 			skill_choosen = which_skill
 
+	if (skill_choosen == null)
+		to_chat(user, span_phobia("Skill not found."))
+		return FALSE
+
 	var/message_first = span_notice("[user] tests their [skill_choosen] skill!")
 
 	user.visible_message(
@@ -1602,3 +1606,4 @@ GLOBAL_LIST_INIT(special_phrases, list(
 			self_message = fail_message,
 			blind_message = fail_message)
 		user.emote_for_ghost_sight(fail_message)
+	return TRUE
