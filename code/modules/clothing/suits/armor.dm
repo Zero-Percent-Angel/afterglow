@@ -57,6 +57,8 @@
 
 /obj/item/clothing/suit/armor/tiered/proc/colour_text(txt)
 	switch(tier)
+		if (1)
+			return span_brass(txt)
 		if (2)
 			return span_green(txt)
 		if (3)

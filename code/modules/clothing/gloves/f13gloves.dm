@@ -147,9 +147,14 @@
 
 /obj/item/clothing/gloves/f13/mutie/gloves
 	name = "mutant gloves"
-	desc = "A pair of oversized gloves."
+	desc = "A pair of oversized gloves. Just insulated enough for a thick-skinned wearer."
 	icon_state = "mutie_ranger_gloves"
 	item_state = "mutie_ranger_gloves"
+	cold_protection = HANDS
+	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+
 
 /obj/item/clothing/gloves/botanic_leather
 	name = "farmers gloves"

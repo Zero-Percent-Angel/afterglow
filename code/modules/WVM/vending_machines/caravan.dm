@@ -21,19 +21,6 @@
 	/// does this bench accept books?
 	tooadvanced = TRUE //technophobes will still need to be able to make ammo	//not anymore they wont
 
-	/obj/machinery/autolathe/Initialize()
-		var/list/mats = allowed_materials
-		if(!mats)
-			mats = SSmaterials.materialtypes_by_category[MAT_CATEGORY_RIGID]
-		AddComponent(/datum/component/material_container, mats, _show_on_examine=TRUE, _after_insert=CALLBACK(src, PROC_REF(AfterMaterialInsert)))
-		. = ..()
-		wires = new /datum/wires/autolathe(src)
-		stored_research = new stored_research
-		matching_designs = list()
-		stored_research.add_design(/datum/design/vendorlathe)
-
-
-
 
 // no discounts for sticky fingers!
 /obj/machinery/autolathe/ammo_buyer/get_design_cost(datum/design/D)

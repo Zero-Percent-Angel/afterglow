@@ -19,6 +19,8 @@
 
 /obj/item/clothing/head/helmet/f13/proc/colour_text(txt)
 	switch(tier)
+		if (1)
+			return span_brass(txt)
 		if (2)
 			return span_green(txt)
 		if (3)
@@ -1351,6 +1353,16 @@
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_LASER_T1)
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	salvaged_type = /obj/item/clothing/head/helmet/f13/heavy/salvaged_pa/t51b
+
+/obj/item/clothing/head/helmet/f13/power_armor/t51b/midwest
+	name = "Mid West power helmet"
+	desc = "It's a mid west power helmet, typically used by the Brotherhood. It looks somewhat un-nerving."
+	icon_state = "midwestpa_helm"
+	item_state = "midwestpa_helm"
+
+/obj/item/clothing/head/helmet/f13/power_armor/t51b/midwest/grey
+	icon_state = "midwestgrey_helm"
+	item_state = "midwestgrey_helm"
 
 /obj/item/clothing/head/helmet/f13/power_armor/t51b/update_icon_state()
 	icon_state = "t51bhelmet[light_on]"
