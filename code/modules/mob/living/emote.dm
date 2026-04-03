@@ -1101,6 +1101,94 @@ GLOBAL_LIST_INIT(special_skill_list, list(
 	EMOTE_SPECIAL_LCK,
 	EMOTE_SPECIAL_GEN))
 
+GLOBAL_LIST_INIT(emote_skills_list, list(
+	SKILL_GUNS,
+	SKILL_ENERGY,
+	SKILL_UNARMED,
+	SKILL_MELEE,
+	SKILL_THROWING,
+	SKILL_DOCTOR,
+	SKILL_SNEAK,
+	SKILL_SCIENCE,
+	SKILL_REPAIR,
+	SKILL_SPEECH,
+	SKILL_OUTDOORSMAN
+))
+
+GLOBAL_LIST_INIT(skills_triggers, list(
+	SKILL_GUNS = list(
+		"g",
+		"gu",
+		"gun",
+		"guns"
+	),
+	SKILL_ENERGY = list(
+		"e",
+		"en",
+		"energy",
+		"laser",
+		"lasers"
+	),
+	SKILL_UNARMED = list(
+		"unarmed",
+		"un",
+		"brawl",
+		"fighting",
+		"u"
+	),
+	SKILL_MELEE = list(
+		"melee",
+		"me",
+		"m"
+	),
+	SKILL_THROWING = list(
+		"throwing",
+		"thorwn",
+		"th",
+		"throw",
+		"t"
+	),
+	SKILL_DOCTOR = list(
+		"doctor",
+		"do",
+		"doctoring",
+		"medical",
+		"d"
+	),
+	SKILL_SNEAK = list(
+		"sneaking",
+		"sn",
+		"sneak",
+		"stealth",
+		"st"
+	),
+	SKILL_SCIENCE = list(
+		"sc",
+		"science",
+		"lab"
+	),
+	SKILL_REPAIR = list(
+		"repair",
+		"re",
+		"craft",
+		"engineer",
+		"r"
+	),
+	SKILL_SPEECH = list(
+		"sp",
+		"speech",
+		"talk",
+		"barter",
+		"ba"
+	),
+	SKILL_OUTDOORSMAN = list(
+		"outdoorsman",
+		"outdoors",
+		"ou",
+		"o"
+	)
+))
+
 GLOBAL_LIST_INIT(special_triggers, list(
 	EMOTE_SPECIAL_STR = list(
 		"s",
@@ -1461,3 +1549,61 @@ GLOBAL_LIST_INIT(special_phrases, list(
 			self_message = message_second,
 			blind_message = message_second)
 		user.emote_for_ghost_sight(message_second)
+
+/datum/emote/living/skill
+	key = "skill"
+	message = null
+	cooldown = 2.5 SECONDS // longer than it takes for the emote to run
+	stat_allowed = CONSCIOUS
+
+
+/datum/emote/living/skill/run_emote(mob/user, params, type_override, intentional, only_overhead)
+
+	if(!can_run_emote(user, TRUE, intentional))
+		return FALSE
+	if(jobban_isbanned(user, "emote"))	// emote ban
+		to_chat(user, "You cannot send emotes (banned).")
+		return FALSE
+	else if(user.client && user.client.prefs.muted & MUTE_IC)	// muted
+		to_chat(user, "You cannot send IC messages (muted).")
+		return FALSE
+	if(!istype(user, /mob/living))
+		to_chat(user, span_phobia("You have no skills."))
+		return FALSE
+
+	var/skill_choosen = null
+	var/skill_phrase_input = lowertext(params)
+
+	for(var/which_skill in GLOB.emote_skills_list)
+		/// if the thing we said after the emote is in one of these lists, pick the corresponding key
+		if(skill_phrase_input in GLOB.skills_triggers[which_skill])
+			skill_choosen = which_skill
+
+	if (skill_choosen == null)
+		to_chat(user, span_phobia("Skill not found."))
+		return FALSE
+
+	var/message_first = span_notice("[user] tests their [skill_choosen] skill!")
+
+	user.visible_message(
+		message = message_first,
+		self_message = message_first,
+		blind_message = message_first)
+	user.emote_for_ghost_sight(message_first)
+	spawn(20)
+
+	if (user.skill_roll(skill_choosen, DIFFICULTY_NORMAL))
+		var/success_message = span_green("[user] had the [skill_choosen] skills to pay the bills!")
+		user.visible_message(
+			message = success_message,
+			self_message = success_message,
+			blind_message = success_message)
+		user.emote_for_ghost_sight(success_message)
+	else
+		var/fail_message = span_red("[user] failed miserably at [skill_choosen]!")
+		user.visible_message(
+			message = fail_message,
+			self_message = fail_message,
+			blind_message = fail_message)
+		user.emote_for_ghost_sight(fail_message)
+	return TRUE
