@@ -43,7 +43,7 @@
 		return //the tool fails this check, so stop
 	user.visible_message("[user] starts disassembling [src].")
 	for(var/i1 in 1 to 2)
-		if(!I.use_tool(src, user, 75, volume=100))
+		if(!I.use_tool(src, user, 30, volume=100))
 			user.visible_message("[user] stops disassembling [src].")
 			inuse = FALSE
 			return //you did something, like moving, so stop
@@ -51,7 +51,7 @@
 		user.visible_message("[user] slices through a [fake_dismantle].")
 
 	var/turf/usr_turf = get_turf(user) //Bellow are the changes made by PR#256
-	var/modifier = 0
+	var/modifier = 1
 	if(HAS_TRAIT(user,TRAIT_TECHNOPHREAK))
 		modifier += rand(1,3)
 	var/obj/item/l = user.get_inactive_held_item()
