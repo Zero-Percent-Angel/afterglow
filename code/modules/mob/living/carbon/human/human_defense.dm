@@ -32,10 +32,10 @@
 				if ((C.obj_integrity > 1) || d_type != "damage_threshold")
 					protection += C.armor.getRating(d_type)
 					if (protection)
-						if(istype(C, /obj/item/clothing/suit/armor/tiered))
+						if(istype(C, /obj/item/clothing/suit/armor/tiered) && d_type != "rad")
 							var/obj/item/clothing/suit/armor/tiered/tiered_armor = C
 							tiered_armor.take_damage(1)
-						if (istype(C, /obj/item/clothing/head/helmet/f13))
+						if (istype(C, /obj/item/clothing/head/helmet/f13) && d_type != "rad")
 							var/obj/item/clothing/head/helmet/f13/tiered_armor = C
 							tiered_armor.take_damage(1)
 	protection += physiology.armor.getRating(d_type)

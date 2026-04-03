@@ -206,7 +206,7 @@ GLOBAL_LIST_INIT(blueprint_fluff, list(
 		to_chat(user, span_notice("You begin blueprint creation."))
 		if (do_after(user, 10 SECONDS, target = src))
 			if (user.skill_roll(SKILL_SCIENCE, DIFFICULTY_EXPERT))
-				var/type = pick(subtypesof(/obj/item/book/granter/crafting_recipe/blueprint))
+				var/type = pick(subtypesof(/obj/item/book/granter/crafting_recipe/blueprint) - list(/obj/item/book/granter/crafting_recipe/blueprint/fh_46, /obj/item/book/granter/crafting_recipe/blueprint/fh_46/bos, /obj/item/book/granter/crafting_recipe/blueprint/fh_46/unmarked))
 				new type(user.loc)
 				to_chat(user, span_notice("You succeed creating a blueprint."))
 			else
