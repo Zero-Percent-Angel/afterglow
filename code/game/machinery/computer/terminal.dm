@@ -13,6 +13,7 @@
 	var/termnumber = null // Flavor
 	var/mode = 0 // What page we're on. 0 is the main menu.
 	var/vault_secrets = FALSE
+	var/vault_secrets_old = FALSE
 	var/maybe_vault_secrets = FALSE
 
 // Document variables
@@ -49,7 +50,7 @@
 	. = ..()
 	if (vault_secrets || (maybe_vault_secrets && prob(40)))
 		doc_title_4 = "TOP SECRET - VAULT TEC"
-		doc_content_4 = "To whom it may concern.<br> Vault external access code is as follows: [GLOB.vault_password], This code is valid for Vaults: {113, 13, 141, 0}<br> Not to be redistributed."
+		doc_content_4 = "To whom it may concern.<br> Vault external access code is as follows: [vault_secrets_old? "ewfgsd" : GLOB.vault_password], This code is valid for Vaults: {113, 13, 141, 0}<br> Not to be redistributed."
 
 
 /obj/machinery/computer/terminal/ui_interact(mob/user)
