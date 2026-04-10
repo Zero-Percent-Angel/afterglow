@@ -752,7 +752,7 @@ datum/crafting_recipe/steelbib/heavy
 
 /datum/crafting_recipe/ncr_facewrap
 	name = "Facewrap"
-	result = /obj/item/clothing/mask/facewrap
+	result = /obj/item/clothing/mask/ncr_facewrap
 	reqs = list(/obj/item/stack/sheet/cloth = 2)
 	tools = list(TOOL_WORKBENCH)
 	time = 10
