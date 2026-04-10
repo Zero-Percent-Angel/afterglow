@@ -1111,6 +1111,27 @@ obj/item/storage/box/stingbangs
 	new /obj/item/stock_parts/matter_bin/simple(src)
 	new /obj/item/stock_parts/matter_bin/simple(src)
 
+/obj/item/storage/box/stockparts/good
+	name = "box of good stock parts"
+	desc = "Contains a variety of good stock parts."
+
+/obj/item/storage/box/stockparts/good/PopulateContents()
+	new /obj/item/stock_parts/capacitor/adv(src)
+	new /obj/item/stock_parts/capacitor/adv(src)
+	new /obj/item/stock_parts/capacitor/adv(src)
+	new /obj/item/stock_parts/scanning_module/adv(src)
+	new /obj/item/stock_parts/scanning_module/adv(src)
+	new /obj/item/stock_parts/scanning_module/adv(src)
+	new /obj/item/stock_parts/manipulator/nano(src)
+	new /obj/item/stock_parts/manipulator/nano(src)
+	new /obj/item/stock_parts/manipulator/nano(src)
+	new /obj/item/stock_parts/micro_laser/high(src)
+	new /obj/item/stock_parts/micro_laser/high(src)
+	new /obj/item/stock_parts/micro_laser/high(src)
+	new /obj/item/stock_parts/matter_bin/adv(src)
+	new /obj/item/stock_parts/matter_bin/adv(src)
+	new /obj/item/stock_parts/matter_bin/adv(src)
+
 /obj/item/storage/box/stockparts/deluxe
 	name = "box of deluxe stock parts"
 	desc = "Contains a variety of deluxe stock parts."
