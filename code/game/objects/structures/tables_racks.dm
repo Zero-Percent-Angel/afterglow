@@ -479,6 +479,7 @@
  	icon = 'icons/fallout/objects/structures/tables.dmi'
  	buildstack = /obj/item/stack/sheet/plastic
  	smooth = SMOOTH_FALSE
+ 	canSmoothWith = list()
  	max_integrity = 50
 
 /obj/structure/table/wood/fancy
