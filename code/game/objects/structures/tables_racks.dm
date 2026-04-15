@@ -468,6 +468,19 @@
 /obj/structure/table/wood/poker/narsie_act()
 	..(FALSE)
 
+/*
+ * Plastic/Card Table
+ */
+
+ /obj/structure/table/plastic
+ 	name = "plastic table"
+ 	desc = "a cheap table made of plastic usually used for playing card games,"
+ 	icon_state = "card_table"
+ 	icon = 'icons/fallout/objects/structures/tables.dmi'
+ 	buildstack = /obj/item/stack/sheet/plastic
+ 	smooth = SMOOTH_FALSE
+ 	max_integrity = 50
+
 /obj/structure/table/wood/fancy
 	name = "fancy table"
 	desc = "A standard metal table frame covered with an amazingly fancy, patterned cloth."
