@@ -473,7 +473,7 @@
  */
 
  /obj/structure/table/plastic
- 	name = "plastic table"
+ 	name = "card table"
  	desc = "a cheap table made of plastic usually used for playing card games,"
  	icon_state = "card_table"
  	icon = 'icons/fallout/objects/structures/tables.dmi'
