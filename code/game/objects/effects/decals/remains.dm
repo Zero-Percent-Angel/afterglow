@@ -74,3 +74,67 @@
 	desc = "A destroyed or deactivated eyebot. Best not stick around to see if it's still functioning."
 	icon = 'icons/fallout/mobs/robots/eyebots.dmi'
 	icon_state = "eyebot_d"
+
+/obj/effect/decal/remains/bottles
+	name = "pile of bottles"
+	desc = "Someone's evening fun."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "bottles1"
+	drop_amount = 2
+	debris_result = list(/obj/item/reagent_containers/food/drinks/beer)
+
+/obj/effect/decal/remains/bottles/two
+	name = "pile of bottles"
+	desc = "Someone's evening fun."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "bottles2"
+	drop_amount = 2
+	debris_result = list(/obj/item/reagent_containers/food/drinks/beer)
+
+/obj/effect/decal/remains/bottles/three
+	name = "pile of bottles"
+	desc = "Someone's evening fun."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "bottles3"
+	drop_amount = 2
+	debris_result = list(/obj/item/reagent_containers/food/drinks/beer)
+
+/obj/effect/decal/remains/cans
+	name = "pile of cans"
+	desc = "Someone's evening fun."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "cans1"
+	drop_amount = 1
+	debris_result = list(/obj/item/reagent_containers/food/drinks/soda_cans/sodawater)
+
+/obj/effect/decal/remains/cans/two
+	name = "pile of cans"
+	desc = "Someone's evening fun."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "cans2"
+	drop_amount = 1
+	debris_result = list(/obj/item/reagent_containers/food/drinks/soda_cans/sodawater)
+
+/obj/effect/decal/remains/cans/three
+	name = "pile of cans"
+	desc = "Someone's evening fun."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "cans3"
+	drop_amount = 1
+	debris_result = list(/obj/item/reagent_containers/food/drinks/soda_cans/sodawater)
+
+/obj/effect/decal/remains/sign
+	name = "sign"
+	desc = "A sign. Probably not very useful in its current state."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "sign1"
+	drop_amount = 8
+	debris_result = list(/obj/item/stack/sheet/mineral/wood)
+
+/obj/effect/decal/remains/sign/two
+	name = "sign"
+	desc = "A sign. Probably not very useful in its current state."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "sign2"
+	drop_amount = 8
+	debris_result = list(/obj/item/stack/sheet/mineral/wood)
