@@ -3261,7 +3261,7 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "biS" = (
-/mob/living/simple_animal/hostile/raider/junker,
+/mob/living/simple_animal/hostile/raider/firefighter,
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrustysolid"
 	},
@@ -4464,6 +4464,10 @@
 	icon_state = "tunnelchess2"
 	},
 /area/f13/vault)
+"bHv" = (
+/obj/item/pickaxe,
+/turf/open/indestructible/ground/inside/subway,
+/area/maintenance/disposal)
 "bHz" = (
 /obj/effect/spawner/lootdrop/f13/weapon/melee/tier3,
 /turf/open/floor/plating/dirt/dark,
@@ -5820,7 +5824,7 @@
 /obj/structure/rack/shelf_metal,
 /obj/effect/decal/fakelattice,
 /obj/effect/spawner/bundle/f13/r84,
-/obj/item/book/granter/crafting_recipe/blueprint/r84,
+/obj/effect/spawner/lootdrop/f13/blueprintHigh,
 /turf/open/floor/plating/tunnel,
 /area/maintenance/disposal)
 "cim" = (
@@ -11693,8 +11697,8 @@
 /area/f13/bar/heaven)
 "eCo" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/combat,
-/obj/item/book/granter/crafting_recipe/blueprint/combatrifle,
+/obj/effect/spawner/lootdrop/f13/blueprintHigh,
+/obj/effect/spawner/lootdrop/weapons/oldarmyelite,
 /turf/open/floor/f13{
 	icon_state = "darkrusty"
 	},
@@ -26982,12 +26986,9 @@
 /turf/open/floor/plasteel/dark,
 /area/f13/caves)
 "kCH" = (
-/obj/structure/chair/stool/retro/black,
-/mob/living/simple_animal/hostile/raider/junker,
-/turf/open/floor/plasteel/f13{
-	icon_state = "darkrustysolid"
-	},
-/area/f13/ambientlighting/building/i)
+/obj/structure/barricade/wooden/planks/pregame,
+/turf/closed/wall/f13/ruins,
+/area/maintenance/disposal)
 "kCM" = (
 /mob/living/simple_animal/hostile/raider/ranged,
 /turf/open/floor/f13/wood{
@@ -34195,6 +34196,7 @@
 /obj/structure/sign/poster/prewar/poster93{
 	pixel_y = 31
 	},
+/mob/living/simple_animal/hostile/raider/ranged,
 /turf/open/floor/plasteel/f13{
 	icon_state = "darkrustysolid"
 	},
@@ -49964,6 +49966,12 @@
 /obj/effect/spawner/lootdrop/f13/weapon/gun/ballistic/mid,
 /turf/open/floor/plasteel/f13,
 /area/f13/tunnel)
+"tlk" = (
+/mob/living/simple_animal/hostile/raider/ranged,
+/turf/open/floor/plasteel/f13{
+	icon_state = "darkrustysolid"
+	},
+/area/f13/ambientlighting/building/i)
 "tlB" = (
 /obj/structure/table/wood,
 /obj/machinery/processor/chopping_block{
@@ -56393,6 +56401,10 @@
 	},
 /turf/open/floor/plasteel/f13/vault_floor/floor,
 /area/f13/vault/garden)
+"vDQ" = (
+/obj/structure/ore_furnace,
+/turf/open/indestructible/ground/inside/subway,
+/area/maintenance/disposal)
 "vDS" = (
 /obj/machinery/light{
 	dir = 4
@@ -88714,7 +88726,7 @@ ivg
 kZE
 dTZ
 ivg
-ivg
+tlk
 gny
 lUy
 yhR
@@ -89016,7 +89028,7 @@ ivg
 mLx
 lUy
 ivg
-biS
+ivg
 rVB
 lUy
 oEb
@@ -89621,7 +89633,7 @@ ivg
 lUy
 lUy
 ivg
-ivg
+biS
 mhk
 dWW
 lUy
@@ -90214,7 +90226,7 @@ yhR
 lUy
 ivg
 kZE
-ivg
+biS
 ivg
 ivg
 hMz
@@ -90517,7 +90529,7 @@ lUy
 beP
 ivg
 ivg
-kCH
+rVB
 ivg
 dys
 lUy
@@ -91128,7 +91140,7 @@ lUy
 fuW
 lUy
 nmi
-biS
+ivg
 ivg
 dys
 gny
@@ -97503,10 +97515,10 @@ gxT
 yhR
 yhR
 oeO
-oeO
-oeO
-oeO
-oeO
+kCH
+bHv
+vDQ
+kCH
 oeO
 oeO
 oeO
