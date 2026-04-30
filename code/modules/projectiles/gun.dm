@@ -187,6 +187,7 @@ ATTACHMENTS
 	COOLDOWN_DECLARE(hold_it_right_message_antispam)
 	/// Cooldown between times the gun will tell you it shot, 0.5 seconds cus its not super duper important
 	COOLDOWN_DECLARE(shoot_message_antispam)
+	var/tier = 1
 
 /obj/item/gun/Initialize()
 	if(!recoil_dat && islist(init_recoil))
@@ -230,6 +231,23 @@ ATTACHMENTS
 		var/datum/firemode/FM = init_firemodes[i]
 		firemodes.Add(new FM(src))
 	update_firemode_hud()
+
+/obj/item/gun/get_examine_string(mob/user, thats = FALSE)
+	return "[icon2html(src, user)] [thats? "That's ":""][colour_text(get_examine_name(user))]"
+
+/obj/item/gun/proc/colour_text(txt)
+	switch(tier)
+		if (1)
+			return span_brass(txt)
+		if (2)
+			return span_green(txt)
+		if (3)
+			return span_blue(txt)
+		if (4)
+			return span_purple(txt)
+		if (5)
+			return span_red(txt)
+	return txt
 
 /obj/item/gun/proc/update_firemode_hud() // this has never worked
 	var/obj/screen/item_action/action = locate(/obj/screen/item_action/top_bar/gun/fire_mode) in hud_actions
