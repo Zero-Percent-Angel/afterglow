@@ -759,10 +759,10 @@
 	icon_state = "legion_prime"
 	item_state = "legion_prime"
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
-	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T1)
+	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_DT_T3)
 	custom_price = PRICE_ABOVE_EXPENSIVE
-	armor = ARMOR_VALUE_LIGHT_T2
-	tier = 2
+	armor = ARMOR_VALUE_LIGHT_T3
+	tier = 3
 
 /obj/item/clothing/suit/armor/tiered/light/legion/explorer
 	name = "legion explorer armor"
@@ -783,7 +783,7 @@
 	slowdown = ARMOR_SLOWDOWN_LIGHT * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_UP_DT_T2)
 	custom_price = PRICE_REALLY_EXPENSIVE
-	armor = ARMOR_VALUE_LIGHT_T3
+	armor = ARMOR_VALUE_LIGHT_T4
 	tier = 3
 
 //////////////////////////
