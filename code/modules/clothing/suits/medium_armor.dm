@@ -709,13 +709,18 @@
 	desc = "A standard issue NCR Infantry vest reinforced with a groinpad and a mantle."
 	icon_state = "ncr_reinforced_mantle"
 	item_state = "ncr_reinforced_mantle"
+	armor = ARMOR_VALUE_MEDIUM_T3
+	tier = 3
+	armor_tokens = list()
 
 /obj/item/clothing/suit/armor/tiered/medium/vest/ncr/officer
 	name = "NCR officer armor vest"
 	desc = "A reinforced set of NCR mantle armour, with added padding on the groin, neck and shoulders. Intended for use by the officer class."
 	icon_state = "ncr_lt_armour"
 	item_state = "ncr_lt_armour"
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T2, ARMOR_MODIFIER_UP_DT_T2)
+	armor = ARMOR_VALUE_MEDIUM_T3
+	tier = 3
+	armor_tokens = list()
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_GLOBAL_MULT
 
 //Rangers
@@ -768,6 +773,8 @@
 	max_integrity = ARMOR_INTEGRITY
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT // lighter, cus melee focus
+	armor = ARMOR_VALUE_MEDIUM_T2
+	tier = 2
 
 /obj/item/clothing/suit/armor/tiered/medium/legion/vet
 	name = "legion veteran armor"
@@ -785,12 +792,16 @@
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	armor_tokens = list(ARMOR_MODIFIER_UP_ENV_T1, ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_DT_T1)
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT // lighter, cus melee focus
+	armor = ARMOR_VALUE_MEDIUM_T3
+	tier = 3
 
 /obj/item/clothing/suit/armor/tiered/medium/legion/orator
 	name = "legion orator armor"
 	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of bracers, a chainmail skirt, and large pauldrons.  A tabard emblazoned with the bull is loosely draped over the torso."
 	icon_state = "legion_orator"
 	item_state = "legion_orator"
+	armor = ARMOR_VALUE_MEDIUM_T3
+	tier = 3
 
 /obj/item/clothing/suit/armor/tiered/medium/legion/rangercent //speed and bullet resist, sacrifices all else
 	name = "legion centurion ranger-hunter armor"
@@ -801,6 +812,8 @@
 	heat_protection = CHEST | GROIN | LEGS| ARMS | HEAD
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T1, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T1, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T2)
+	armor = ARMOR_VALUE_MEDIUM_T3
+	tier = 3
 
 //////////////////////////
 // Brotherhood of Steel //
@@ -819,6 +832,7 @@
 	desc = "An old military grade pre war combat armor, repainted to the colour scheme of the Brotherhood of Steel."
 	icon_state = "brotherhood_armor"
 	item_state = "brotherhood_armor"
+	armor_tokens = list()
 
 /obj/item/clothing/suit/armor/tiered/medium/combat/brotherhood/mk2
 	name = "brotherhood armor Mk II"
@@ -828,7 +842,7 @@
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_MORE_T1 * ARMOR_SLOWDOWN_GLOBAL_MULT
 	armor = ARMOR_VALUE_MEDIUM_T4
 	tier = 4
-	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1, ARMOR_MODIFIER_UP_DT_T3)
+	armor_tokens = list(ARMOR_MODIFIER_UP_BULLET_T2, ARMOR_MODIFIER_UP_MELEE_T1, ARMOR_MODIFIER_UP_LASER_T2, ARMOR_MODIFIER_DOWN_ENV_T1)
 
 /obj/item/clothing/suit/armor/tiered/medium/combat/brotherhood/senior
 	name = "brotherhood senior knight armor"
@@ -853,6 +867,8 @@
 	desc = "A weathered coat made for most part out of ballistic fiber and stuffed with ceramic plates underneath, it provides more than enough protection for the big gun of the town."
 	icon_state = "towntrench_heavy"
 	item_state = "towntrench_heavy"
+	tier = 3
+	armor = ARMOR_VALUE_MEDIUM_T3
 
 /obj/item/clothing/suit/armor/tiered/medium/duster/mutie
 	name = "mutant's trenchcoat"
