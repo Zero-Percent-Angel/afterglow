@@ -73,6 +73,12 @@
 	has_color = TRUE
 	gender = MALE
 
+/datum/sprite_accessory/underwear/bottom/lingerie
+	name = "Lingerie"
+	icon_state = "lingerie_bottom_greyscale"
+	has_color = TRUE
+	gender = FEMALE
+
 /datum/sprite_accessory/underwear/bottom/longjon
 	name = "Long John Bottoms"
 	icon_state = "ljonb"
