@@ -472,7 +472,7 @@
  * Plastic/Card Table
  */
 
- /obj/structure/table/plastic
+/obj/structure/table/plastic
  	name = "card table"
  	desc = "a cheap table made of plastic usually used for playing card games,"
  	icon_state = "card_table"
