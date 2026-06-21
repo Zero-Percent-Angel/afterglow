@@ -244,6 +244,18 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
+/obj/item/clothing/head/helmet/f13/combat/stealth
+	name = "enclave stealth helmet"
+	desc = "An advanced titanium plated, ceramic coated, kevlar, padded helmet with built in stealth technology."
+	icon_state = "enclave_stealth"
+	item_state = "enclave_stealth"
+	armor = ARMOR_VALUE_MEDIUM_T3
+	tier = 3
+	custom_price = PRICE_ULTRA_EXPENSIVE
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
+
 /obj/item/clothing/head/helmet/f13/combat/mk2
 	name = "reinforced combat helmet"
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms."

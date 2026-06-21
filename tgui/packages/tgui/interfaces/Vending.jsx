@@ -74,10 +74,7 @@ const VendingRow = (props, context) => {
             fluid
             disabled={(
               productStock === 0
-              || !free && (
-                !data.user
-                || product.price > data.user.cash
-              )
+              || !free && product.price > insertedCaps
             )}
             content={data.forceFree || product.price === 0 ? 'FREE' : product.price + ' caps'}
             onClick={() => act('vend', {

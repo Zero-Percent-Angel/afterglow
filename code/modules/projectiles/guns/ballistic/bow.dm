@@ -89,6 +89,13 @@
 
 /obj/item/gun/ballistic/bow/do_fire(atom/target, mob/living/user, message = TRUE, params, zone_override = "", bonus_spread = 0, stam_cost = 0)
 	..()
+	var/mob/living/carbon/shooter = user
+	var/obj/item = shooter.get_item_by_slot(shooter.getBeltSlot())
+	if (istype(item, /obj/item/storage/bag/tribe_quiver))
+		var/obj/item/ammo_casing/caseless/arrow/L = locate() in item.contents
+		if(L)
+			to_chat(user, span_notice("You take \a [L] out of the quiver and notch it."))
+			magazine.load_from_casing(L, shooter, TRUE)
 	if(HAS_TRAIT(user, TRAIT_AUTO_DRAW) && !chambered && get_ammo(FALSE))
 		user.visible_message(span_warning("[user] instinctively draws the string on [src]!"), span_warning("You instinctively draw the string on [src]!"))
 		draw(user, FALSE)
