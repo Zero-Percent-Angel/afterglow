@@ -5,6 +5,11 @@
 // WASTELAND //
 ///////////////
 
+/obj/item/clothing/suit/bowstrap
+	name = "bowstrap"
+	desc = "A simple strap for a weapon such as a bow"
+	icon_state = "armorkit"
+	item_state = "armorkit"
 
 /obj/item/clothing/suit/toggle/labcoat
 	name = "labcoat"

@@ -9,6 +9,7 @@ const VendingRow = (props, context) => {
     product,
     productStock,
     custom,
+	insertedCaps,
   } = props;
   const {
     onstation,
@@ -141,6 +142,7 @@ export const Vending = (props, context) => {
                 key={product.name}
                 custom={custom}
                 product={product}
+				insertedCaps={insertedCaps}
                 productStock={stock[product.name]} />
             ))}
           </Table>
