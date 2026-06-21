@@ -1,5 +1,6 @@
 /datum/crafting_recipe/tribalwar
 	category = CAT_PRIMAL
+	falls_back_on_outdoors = TRUE
 
 //ARMOR//
 
@@ -70,6 +71,7 @@
 
 /datum/crafting_recipe/tribal
 	category = CAT_PRIMAL
+	falls_back_on_outdoors = TRUE
 
 /datum/crafting_recipe/tribal/tikimask
 	name = "Tiki mask"
