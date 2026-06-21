@@ -229,8 +229,19 @@
 			if(!check_tools(a, R, contents))
 				return ", missing tool."
 			var/list/parts = del_reqs(R, a)
-			var/atom/movable/I = new R.result (get_turf(a.loc))
-			I.CheckParts(parts, R)
+			var/list/atom/I = list()
+			if (islist(R.result))
+				for (var/result in R.result)
+					var/amount = R.result[result]
+					if (amount > 1)
+						for (var/i = 0 to amount)
+							I += new result (get_turf(a.loc))
+					else
+						I += new R.result (get_turf(a.loc))
+			else
+				I += new R.result (get_turf(a.loc))
+			for (var/atom/item in I)
+				item.CheckParts(parts, R)
 			if(send_feedback)
 				SSblackbox.record_feedback("tally", "object_crafted", 1, I.type)
 			return I //Send the item back to whatever called this proc so it can handle whatever it wants to do with the new item
@@ -449,12 +460,14 @@
 			busy = TRUE
 			CHECK_TICK
 			ui_interact(user)
-			var/atom/movable/result = construct_item(user, TR)
+			var/list/atom/result = construct_item(user, TR)
 			if(!istext(result)) //We made an item and didn't get a fail message
-				if(ismob(user) && isitem(result)) //In case the user is actually possessing a non mob like a machine
-					user.put_in_hands(result)
-				else
-					result.forceMove(user.drop_location())
+				if(ismob(user)) //In case the user is actually possessing a non mob like a machine
+					for(var/atom/movable/created in result)
+						if (isitem(created))
+							user.put_in_hands(created)
+						else
+							created.forceMove(user.drop_location())
 				to_chat(user, span_notice("[TR.name] constructed."))
 			else
 				to_chat(user, span_warning("Construction failed[result]"))

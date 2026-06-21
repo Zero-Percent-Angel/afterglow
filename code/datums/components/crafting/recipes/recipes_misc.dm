@@ -116,7 +116,7 @@
 
 /datum/crafting_recipe/bobby_pin
 	name = "Bobby Pin"
-	result = /obj/item/lockpick_set/bobby_pin
+	result = list(/obj/item/lockpick_set/bobby_pin = 4)
 	reqs = 	list(/obj/item/stack/rods = 1)
 	time = 10
 	subcategory = CAT_MISCELLANEOUS

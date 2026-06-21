@@ -99,6 +99,8 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/duster
 	slowdown = ARMOR_SLOWDOWN_MEDIUM * ARMOR_SLOWDOWN_LESS_T2 * ARMOR_SLOWDOWN_GLOBAL_MULT // lighter, cus melee focus
 	armor_tokens = list(ARMOR_MODIFIER_UP_DT_T2)
+	tier = 2
+	armor = ARMOR_VALUE_MEDIUM_T2
 
 /obj/item/clothing/suit/armor/tiered/medium/tribal/chitinarmor
 	name = "insect chitin armor"
@@ -898,6 +900,128 @@
 	desc = "Premium prewar military armor worn under a coat for Enclave officers."
 	icon_state = "armor_enclave_officer"
 	item_state = "armor_enclave_officer"
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth
+	name = "enclave stealth suit"
+	desc = "An advanced recent development based of the FH-46 frame, but with PA components stripped out in favour of stealth technology."
+	icon = 'icons/obj/clothing/suits.dmi'
+	mob_overlay_icon = null
+	icon_state = "stealth-enclave"
+	item_state = "stealth-enclave"
+	var/obj/item/stock_parts/cell/cell = /obj/item/stock_parts/cell/high
+	var/use_per_tick = 40 // normal cell has 10000 charge, 200 charge/second = 50 seconds of stealth
+	var/on = FALSE
+	actions_types = list(/datum/action/item_action/stealthboy_cloak)
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/Initialize()
+	. = ..()
+	if(ispath(cell))
+		cell = new cell(src)
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/Destroy()
+	. = ..()
+	var/mob/living/carbon/human/user = loc
+	if(ishuman(user))
+		user.alpha = initial(user.alpha)
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/ui_action_click(mob/user)
+	if(!ishuman(user))
+		return
+	if(!istype(user.get_item_by_slot(SLOT_HEAD), /obj/item/clothing/head/helmet/f13/combat/stealth))
+		to_chat(user, "You must have the helmet on in order to activate the stealth field")
+		return
+	if(user.get_item_by_slot(SLOT_WEAR_SUIT) == src)
+		on = !on
+		if(on)
+			Activate(user)
+		else
+			Deactivate(user)
+	return
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/AltClick(mob/living/user)
+	if(!user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return ..()
+	eject_cell(user)
+	return
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/proc/eject_cell(mob/living/user)
+	if(!cell)
+		to_chat(user, span_warning("[src] has no cell installed."))
+		return
+	if(on && user.get_item_by_slot(SLOT_WEAR_SUIT) == src)
+		Deactivate(user)
+	cell.add_fingerprint(user)
+	user.put_in_hands(cell)
+	user.show_message(span_notice("You remove [cell]."))
+	cell = null
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/proc/insert_cell(mob/living/user, obj/item/stock_parts/cell/new_cell)
+	if(cell)
+		eject_cell(user)
+	if(user.transferItemToLoc(new_cell, src))
+		cell = new_cell
+		to_chat(user, span_notice("You successfully install \the [cell] into [src]."))
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/attackby(obj/item/I, mob/living/carbon/human/user, params)
+	if(istype(I, /obj/item/stock_parts/cell))
+		insert_cell(user, I)
+		return
+	. = ..()
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/item_action_slot_check(slot, mob/user)
+	if(slot == SLOT_WEAR_SUIT)
+		return 1
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/examine(mob/user)
+	. = ..()
+	if(istype(cell))
+		. += "The charge meter reads [round(cell.percent() )]%."
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/proc/Activate(mob/living/carbon/human/user)
+	if(!user)
+		Deactivate(FALSE)
+		return
+	if(!istype(cell))
+		user.show_message(span_alert("There's no cell in [src]!"))
+		Deactivate(FALSE)
+		return
+	if(!cell.use(use_per_tick))
+		user.show_message(span_alert("There's not enough power in [src]'s [cell.name]!"))
+		Deactivate(FALSE)
+		return
+	to_chat(user, span_notice("You activate \The [src]."))
+	animate(user, alpha = 0, time = 3 SECONDS)
+	START_PROCESSING(SSobj, src)
+	on = TRUE
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/proc/Deactivate(mob/living/carbon/human/user)
+	if(!ishuman(user))
+		user = loc
+		if(!ishuman(user))
+			return
+	animate(user, alpha = initial(user.alpha), time = 3 SECONDS)
+	to_chat(user, span_notice("You deactivate \The [src]."))
+	STOP_PROCESSING(SSobj, src)
+	on = FALSE
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/dropped(mob/user)
+	..()
+	Deactivate(user)
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/equipped(mob/user, slot)
+	. = ..()
+	if(user?.get_item_by_slot(SLOT_WEAR_SUIT) != src)
+		Deactivate(user)
+
+/obj/item/clothing/suit/armor/tiered/medium/combat/stealth/process()
+	var/mob/living/carbon/human/user = loc
+	if(!ishuman(user) || user.get_item_by_slot(SLOT_WEAR_SUIT) != src)
+		Deactivate()
+		return
+	if((!istype(cell) || !cell?.use(use_per_tick)))
+		Deactivate(user)
+		return
+
 
 /////////////////
 // Great Khans //
