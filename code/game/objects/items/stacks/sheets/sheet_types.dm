@@ -849,6 +849,7 @@ GLOBAL_LIST_INIT(plastic_recipes, list(
 	throwforce = 7
 	grind_results = list(/datum/reagent/glitter/white = 60)
 	material_type = /datum/material/plastic
+	tableVariant = /obj/structure/table/plastic
 	merge_type = /obj/item/stack/sheet/plastic
 
 /obj/item/stack/sheet/plastic/fifty

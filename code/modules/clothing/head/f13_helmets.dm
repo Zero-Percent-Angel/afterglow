@@ -244,6 +244,18 @@
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
+/obj/item/clothing/head/helmet/f13/combat/stealth
+	name = "enclave stealth helmet"
+	desc = "An advanced titanium plated, ceramic coated, kevlar, padded helmet with built in stealth technology."
+	icon_state = "enclave_stealth"
+	item_state = "enclave_stealth"
+	armor = ARMOR_VALUE_MEDIUM_T3
+	tier = 3
+	custom_price = PRICE_ULTRA_EXPENSIVE
+	flags_inv = HIDEEARS|HIDEEYES|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 5)
+
 /obj/item/clothing/head/helmet/f13/combat/mk2
 	name = "reinforced combat helmet"
 	desc = "An advanced pre-war titanium plated, ceramic coated, kevlar, padded helmet designed to withstand extreme punishment of all forms."
@@ -478,7 +490,7 @@
 	dynamic_hair_suffix = ""
 	dynamic_fhair_suffix = ""
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 1)
-	armor = ARMOR_VALUE_LIGHT
+	armor = ARMOR_VALUE_LIGHT_T2
 
 /////////////
 /*LINE LEG */
@@ -490,6 +502,7 @@
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
 	flags_inv = HIDEEARS|HIDEHAIR
+	tier = 2
 
 /obj/item/clothing/head/helmet/f13/legion/prime
 	name = "legion prime helmet"
@@ -508,8 +521,8 @@
 	item_state = "legvet"
 	salvage_loot = list(/obj/item/stack/crafting/armor_plate = 2)
 	flags_inv = HIDEEARS|HIDEHAIR
-	armor = ARMOR_VALUE_MEDIUM_T2
-	tier = 2
+	armor = ARMOR_VALUE_MEDIUM_T3
+	tier = 3
 	custom_price = PRICE_EXPENSIVE
 
 ////////////////
@@ -546,6 +559,8 @@
 	righthand_file = ""
 	icon_state = "legdecan"
 	item_state = "legdecan"
+	armor = ARMOR_VALUE_LIGHT_T3
+	tier = 3
 
 /obj/item/clothing/head/helmet/f13/legion/prime/decan
 	name = "legion prime decanus helmet"
@@ -568,6 +583,8 @@
 	desc = "This helmet is decorated with the pelt of a desert fox."
 	icon_state = "legvex"
 	item_state = "legvex"
+	armor = ARMOR_VALUE_LIGHT_T3
+	tier = 3
 
 /obj/item/clothing/head/helmet/f13/legion/vet/combvexil
 	name = "legion bear vexillarius helmet"
@@ -576,6 +593,7 @@
 	righthand_file = ""
 	icon_state = "legvex_alt"
 	item_state = "legvex_alt"
+	armor = ARMOR_VALUE_LIGHT_T4
 
 /obj/item/clothing/head/helmet/f13/legion/vet/decan/heavy
 	name = "reinforced legion veteran decanus helmet"

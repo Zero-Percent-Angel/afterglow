@@ -368,7 +368,7 @@
 /datum/crafting_recipe/tribalwar/arrowburn
 	name = "Burning Oil Arrow"
 	result = /obj/item/ammo_casing/caseless/arrow/burning
-	time = 30
+	time = 10
 	reqs = list(/obj/item/ammo_casing/caseless/arrow = 1,
 				/datum/reagent/fuel = 10)
 	category = CAT_TRIBAL
@@ -376,7 +376,7 @@
 
 /datum/crafting_recipe/tribalwar/arrowap
 	name = "Sturdy Arrow"
-	result = /obj/item/ammo_casing/caseless/arrow/ap
+	result = list(/obj/item/ammo_casing/caseless/arrow/ap = 10)
 	time = 40
 	reqs = list(
 		/obj/item/stack/rods = 2,
@@ -387,7 +387,7 @@
 
 /datum/crafting_recipe/tribalwar/arrowbronze
 	name = "Bronze Arrow"
-	result = /obj/item/ammo_casing/caseless/arrow/bronze
+	result = list(/obj/item/ammo_casing/caseless/arrow/bronze = 10)
 	time = 30
 	reqs = list(/obj/item/stack/sheet/bronze = 1,
 				/obj/item/stack/sheet/mineral/wood = 1)
@@ -396,7 +396,7 @@
 
 /datum/crafting_recipe/tribalwar/arrowpoison
 	name = "Poison Arrow"
-	result = /obj/item/ammo_casing/caseless/arrow/poison
+	result = list(/obj/item/ammo_casing/caseless/arrow/poison = 10)
 	time = 30
 	reqs = list(
 		/obj/item/ammo_casing/caseless/arrow = 1,
@@ -407,7 +407,7 @@
 
 /datum/crafting_recipe/tribalwar/arrowbone
 	name = "Bone Arrow"
-	result = /obj/item/ammo_casing/caseless/arrow/bone
+	result = list(/obj/item/ammo_casing/caseless/arrow/bone = 10)
 	time = 30
 	reqs = list(/obj/item/stack/sheet/bone = 1,
 				/obj/item/stack/sheet/mineral/wood = 1)
@@ -417,7 +417,7 @@
 
 /datum/crafting_recipe/tribalwar/cheaparrow
 	name = "Lightweight Wooden Arrow"
-	result = /obj/item/ammo_casing/caseless/arrow/cheap
+	result = list(/obj/item/ammo_casing/caseless/arrow/cheap = 10)
 	time = 15
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
 				/obj/item/stack/sheet/mineral/sandstone = 2)
@@ -427,7 +427,7 @@
 
 /datum/crafting_recipe/tribalwar/arrowwound
 	name = "Serrated Arrow"
-	result = /obj/item/ammo_casing/caseless/arrow/serrated
+	result = list(/obj/item/ammo_casing/caseless/arrow/serrated = 10)
 	time = 10
 	reqs = list(
 		/obj/item/stack/rods = 1,
@@ -438,7 +438,7 @@
 
 /datum/crafting_recipe/tribalwar/arrowembed
 	name = "Broadhead Arrow"
-	result = /obj/item/ammo_casing/caseless/arrow/broadhead
+	result = list(/obj/item/ammo_casing/caseless/arrow/broadhead = 10)
 	time = 10
 	reqs = list(
 		/obj/item/stack/rods = 1,
@@ -449,7 +449,7 @@
 
 /datum/crafting_recipe/tribalwar/arrowemp
 	name = "Ion-Spirit Arrow"
-	result = /obj/item/ammo_casing/caseless/arrow/ion
+	result = list(/obj/item/ammo_casing/caseless/arrow/ion = 10)
 	time = 30
 	reqs = list(/obj/item/stack/crafting/electronicparts = 3,
 				/obj/item/stack/rods = 2)
@@ -458,7 +458,7 @@
 
 /datum/crafting_recipe/tribalwar/arrowblunt
 	name = "Blunt Arrow (Nonlethal)"
-	result = /obj/item/projectile/bullet/reusable/arrow/blunt
+	result = list(/obj/item/projectile/bullet/reusable/arrow/blunt = 10)
 	time = 10
 	reqs = list(
 		/obj/item/stack/sheet/mineral/wood = 1,
@@ -566,6 +566,8 @@
 /datum/crafting_recipe/tribalwar/legendaryclawcloak
 	name = "Legendary Deathclaw Cloak"
 	result = /obj/item/clothing/suit/armor/tiered/hooded/light/cloak/hhunter
+	skill_needed = SKILL_OUTDOORSMAN
+	skill_level = REGULAR_CHECK
 	time = 300
 	reqs = list(/obj/item/melee/unarmed/deathclawgauntlet = 1,
 				/obj/item/stack/sheet/animalhide/chitin = 10,
