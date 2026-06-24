@@ -20,8 +20,6 @@
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -34,7 +32,7 @@
 		SP_DISTANT_RANGE(PLASMA_RANGE_DISTANT)
 	)
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 //Plasma pistol: Eve
 /obj/item/gun/energy/laser/plasma/pistol/eve
@@ -54,8 +52,6 @@
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -89,8 +85,6 @@
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -114,17 +108,14 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/glock)
 	equipsound = 'sound/f13weapons/equipsounds/pistolplasequip.ogg'
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
-
 	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 //Glock 86 A Plasma pistol
 /obj/item/gun/energy/laser/plasma/glock/extended
@@ -134,14 +125,11 @@
 	desc = "This Glock 86 plasma pistol has had its magnetic housing chamber realigned to reduce the drain on its energy cell. Its efficiency has doubled, allowing it to fire more shots before the battery is expended."
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/glock/extended)
 	cell_type = /obj/item/stock_parts/cell/ammo/ec
-
 	slowdown = GUN_SLOWDOWN_PISTOL_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 
 //Plasma Rifle
@@ -160,11 +148,10 @@
 	automatic_charge_overlays = FALSE
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOWER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
+	tier = 5
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slower
+		/datum/firemode/semi_auto
 	)
 
 //Plasma carbine
@@ -181,17 +168,14 @@
 	scope_x_offset = 13
 	scope_y_offset = 16
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
-
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOWER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 2
 	init_firemodes = list(
-		/datum/firemode/burst/two/slower
+		/datum/firemode/burst/two
 	)
 //Multiplas rifle
 /obj/item/gun/energy/laser/plasma/scatter
@@ -202,19 +186,16 @@
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/scatter)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
-
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	init_recoil = RIFLE_RECOIL(5)
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOWEST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	added_spread = (GUN_SPREAD_AWFUL*3) //Added as part of egun recoil removal
 	burst_size = 1
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slowest
+		/datum/firemode/semi_auto
 	)
 
 
@@ -229,23 +210,19 @@
 	icon_state = "plasmacaster_fnv"
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
-
 	desc = "A model P94 plasma caster.An industrial-grade energy weapon, firing superheated bolts of plasma down a superconducting barrel.Some people call it a plasma rifle despite looking nothing like one."
 	equipsound = 'sound/f13weapons/equipsounds/plasequip.ogg'
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/caster)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LMG //heavy weapon
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY //bludgeon
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_FAST //yes, it is a fast weapon. wait till you get the turbo
-	autofire_shot_delay =GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION //weapon long range in FO1/2
 	init_firemodes = list(
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/semi_auto
 	)
 
 //for the love of god, make sure this is the only one to spawn normally

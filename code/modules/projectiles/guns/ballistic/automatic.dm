@@ -18,16 +18,12 @@
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_FASTER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
-
 	slot_flags = ITEM_SLOT_BACK
 	force = 15
 	burst_size = 1
-	burst_shot_delay = 3
 	var/automatic_burst_overlay = TRUE
 	var/semi_auto = FALSE
 	var/auto_eject = 0
@@ -39,8 +35,8 @@
 	equipsound = 'sound/f13weapons/equipsounds/riflequip.ogg'
 	init_recoil = SMG_RECOIL(1)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm400,
-		/datum/firemode/semi_auto/faster
+		/datum/firemode/automatic,
+		/datum/firemode/semi_auto
 	)
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -145,8 +141,6 @@
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
 	fire_delay = GUN_FIRE_DELAY_FASTER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -172,23 +166,21 @@
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/m22smg
 	init_mag_type = /obj/item/ammo_box/magazine/m22smg
-
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FASTER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
+	fire_delay = GUN_FIRE_RATE_300
 	burst_size = 1
+	tier = 3
+	base_damage = 12
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(0.7)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm300,
-		/datum/firemode/semi_auto/faster
+		/datum/firemode/automatic,
+		/datum/firemode/semi_auto
 	)
-
 	is_automatic = TRUE
 	automatic = TRUE
 	silenced = TRUE
@@ -225,22 +217,21 @@
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/smg14
 	init_mag_type = /obj/item/ammo_box/magazine/smg14
-
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FASTER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_150
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	tier = 3
+	base_damage = 23
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(0.8)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm150,
-		/datum/firemode/burst/three/slow,
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/automatic,
+		/datum/firemode/burst/three,
+		/datum/firemode/semi_auto
 	)
 
 	is_automatic = TRUE
@@ -278,22 +269,20 @@
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/greasegun
 	init_mag_type = /obj/item/ammo_box/magazine/greasegun
-
 	slowdown = GUN_SLOWDOWN_SMG_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FASTER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_150
 	burst_size = 1
+	tier = 2
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	base_damage = 18
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm150,
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/automatic,
+		/datum/firemode/semi_auto
 	)
-
 	is_automatic = TRUE
 	automatic = 1
 	suppressor_state = "uzi_suppressor"
@@ -334,22 +323,20 @@
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/m10mm/smg
 	init_mag_type = /obj/item/ammo_box/magazine/m10mm/smg
-
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FASTER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_150
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
+	base_damage = 19
+	tier = 3
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
-		/datum/firemode/semi_auto/faster
+		/datum/firemode/automatic,
+		/datum/firemode/semi_auto
 	)
-
 	is_automatic = TRUE
 	automatic = 1
 	suppressor_state = "10mm_suppressor" //activate if sprited
@@ -383,21 +370,18 @@
 	name = "worn-out 10mm submachine gun"
 	desc = "Mass-produced weapon from the Great War, this one has seen use ever since. Grip is wrapped in tape to keep the plastic from crumbling, the metals are oxidizing, but the gun still works."
 	worn_out = TRUE
-
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FASTER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_150
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(1.2)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm150,
-		/datum/firemode/semi_auto/faster
+		/datum/firemode/automatic,
+		/datum/firemode/semi_auto
 	)
 
 
@@ -426,17 +410,16 @@
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_AKIMBO
 	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_300
+	base_damage = 6
+	tier = 2
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm300,
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/automatic,
+		/datum/firemode/semi_auto
 	)
-
 	automatic = 1
 	is_automatic = TRUE
 	can_suppress = TRUE
@@ -480,15 +463,12 @@
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	draw_time = GUN_DRAW_NORMAL
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_SLOW
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(0.75)
 	automatic = TRUE
 	automatic_burst_overlay = FALSE
-
 	automatic = 1
 	is_automatic = TRUE
 	can_suppress = TRUE
@@ -513,23 +493,22 @@
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/tommygunm45
 	init_mag_type = /obj/item/ammo_box/magazine/tommygunm45/stick
-
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	fire_delay = GUN_FIRE_RATE_300
+	base_damage = 12
 	burst_size = 1
+	tier = 4
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	base_threshold_pen = 5
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = SMG_RECOIL(1)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/automatic,
+		/datum/firemode/semi_auto
 	)
-
 	fire_sound = 'sound/weapons/gunshot_smg.ogg'
 	is_automatic = TRUE
 	automatic = 1
@@ -558,14 +537,11 @@
 	desc = "A recovered ancient Thompson from an armory far up North. Commonly used by raiders of the White Legs tribe."
 	mag_type = /obj/item/ammo_box/magazine/tommygunm45
 	init_mag_type = /obj/item/ammo_box/magazine/tommygunm45/stick
-
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
 	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	is_automatic = FALSE
@@ -590,24 +566,23 @@
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/m10mm_p90
 	init_mag_type = /obj/item/ammo_box/magazine/m10mm_p90
-
 	slowdown = GUN_SLOWDOWN_SMG_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_AKIMBO
 	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
+	fire_delay = GUN_FIRE_RATE_600
+	base_damage = 7
+	tier = 5
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	base_threshold_pen = 7
 	cock_delay = GUN_COCK_RIFLE_BASE
-	init_recoil = SMG_RECOIL(0.8)
+	init_recoil = SMG_RECOIL(0.6)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm600,
-		/datum/firemode/burst/three/fast,
-		/datum/firemode/semi_auto/faster
+		/datum/firemode/automatic,
+		/datum/firemode/burst/three,
+		/datum/firemode/semi_auto
 	)
-
 	is_automatic = TRUE
 	automatic = 1
 	can_suppress = TRUE
@@ -641,21 +616,19 @@
 /obj/item/gun/ballistic/automatic/smg/p90/worn
 	name = "Worn FN P90c"
 	desc = "A FN P90 manufactured by Fabrique Nationale. This one is beat to hell but still works."
-
 	slowdown = GUN_SLOWDOWN_SMG_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_AKIMBO
 	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_DELAY_FASTEST
 	burst_size = 1
-	damage_multiplier = GUN_LESS_DAMAGE_T3
+	damage_multiplier = GUN_LESS_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
-		/datum/firemode/burst/five/slow,
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/burst/five,
+		/datum/firemode/semi_auto
 	)
+	tier  = 3
 
 /* * * * * * * * * * *
  * MP-5 SD SMG
@@ -676,23 +649,21 @@
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	init_mag_type = /obj/item/ammo_box/magazine/uzim9mm
-
 	slowdown = GUN_SLOWDOWN_SMG_HEAVY
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FASTER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_200
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	base_damage = 16
+	tier = 3
 	cock_delay = GUN_COCK_RIFLE_BASE
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION // Accurate semiauto fire
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
-		/datum/firemode/semi_auto/faster
+		/datum/firemode/automatic,
+		/datum/firemode/semi_auto
 	)
-
 	is_automatic = TRUE
 	automatic = 1
 	silenced = TRUE
@@ -730,17 +701,16 @@
 	slowdown = GUN_SLOWDOWN_SMG_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTEST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
+	fire_delay = GUN_FIRE_RATE_600
 	burst_size = 1
+	base_damage = 1
+	tier = 2
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm300,
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/automatic,
+		/datum/firemode/semi_auto
 	)
-
 	is_automatic = TRUE
 	automatic = 1
 	can_scope = FALSE
@@ -783,16 +753,15 @@
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	mag_type = /obj/item/ammo_box/magazine/m10mm
 	init_mag_type = /obj/item/ammo_box/magazine/m10mm/adv
-
 	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_100
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T2
 	projectile_speed_multiplier = GUN_EXTRA_DAMAGE_T2
+	base_damage = 25
+	tier = 2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(0.8)
 	init_firemodes = list(
@@ -800,7 +769,6 @@
 	)
 	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
 	automatic_burst_overlay = FALSE
 	can_bayonet = TRUE
 	bayonet_state = "bayonet"
@@ -840,13 +808,10 @@
 	icon_state = "m1a1carbine"
 	var/stock = FALSE
 	w_class = WEIGHT_CLASS_NORMAL
-
 	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T2
 	projectile_speed_multiplier = GUN_EXTRA_DAMAGE_T2
@@ -893,15 +858,14 @@
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	mag_type = /obj/item/ammo_box/magazine/tommygunm45
 	init_mag_type = /obj/item/ammo_box/magazine/tommygunm45/stick
-
 	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_100
 	burst_size = 1
+	base_damage = 25
+	tier = 2
 	damage_multiplier = GUN_EXTRA_DAMAGE_T2
 	projectile_speed_multiplier = GUN_EXTRA_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -952,14 +916,13 @@
 	icon_prefix = "servicerifle"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	fire_delay = GUN_FIRE_RATE_100
 	burst_size = 1
+	tier = 2
+	base_damage = 25
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
@@ -967,7 +930,6 @@
 		/datum/firemode/semi_auto
 	)
 	gun_tags = list(GUN_FA_MODDABLE)
-
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
 	can_bayonet = TRUE
@@ -998,21 +960,16 @@
 	name = "scout carbine"
 	desc = "A cut down version of the standard-issue service rifle tapped with mounting holes for a scope. Shorter barrel, lower muzzle velocity."
 	icon_state = "scout_carbine"
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_100
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(0.8)
-
 	gun_tags = list(GUN_SCOPE)
-
 	can_scope = TRUE
 	scope_state = "scope_short"
 	scope_x_offset = 4
@@ -1035,23 +992,21 @@
 	item_state = "marksman"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_200
+	tier = 3
+	base_damage = 17
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.2)
 	init_firemodes = list(
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/semi_auto
 	)
 	gun_tags = list(GUN_FA_MODDABLE)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
 	semi_auto = TRUE
 	automatic_burst_overlay = FALSE
 	can_scope = FALSE
@@ -1086,13 +1041,11 @@
 	item_state = "marksman"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_200
+	tier = 2
 	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1102,7 +1055,6 @@
 	)
 	gun_tags = list(GUN_FA_MODDABLE)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
 	semi_auto = TRUE
 	automatic_burst_overlay = FALSE
 	can_scope = FALSE
@@ -1144,20 +1096,15 @@
 	icon_prefix = "assault_carbine"
 	icon_state = "rifle-police"
 	item_state = "assault_carbine"
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_200
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
-
 	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
-
 	can_suppress = FALSE
 	can_scope = TRUE
 	zoomable = FALSE
@@ -1180,23 +1127,21 @@
 	force = 20
 	mag_type = /obj/item/ammo_box/magazine/m762
 	init_mag_type = /obj/item/ammo_box/magazine/m762
-
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_100
 	burst_size = 1
+	tier = 2
+	base_damage = 26
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.2)
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
 	automatic_burst_overlay = FALSE
 	semi_auto = TRUE
 	can_scope = TRUE
@@ -1237,24 +1182,21 @@
 	icon_prefix = "308"
 	mag_type = /obj/item/ammo_box/magazine/garand308
 	init_mag_type = /obj/item/ammo_box/magazine/garand308
-
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_100
 	burst_size = 1
+	base_damage = 35
+	tier = 3
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.2)
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
 	gun_tags = list(GUN_SCOPE)
-
 	en_bloc = 1
 	auto_eject = 1
 	semi_auto = TRUE
@@ -1302,14 +1244,11 @@
 	name = "Old Glory"
 	desc = "This Machine kills communists!"
 	icon_state = "oldglory"
-
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1330,22 +1269,17 @@
 	desc = "A well-tuned scoped M1C rifle crafted by master gunsmith from the Gunrunners. Chambered in 7.62x51."
 	icon_state = "republics_pride"
 	item_state = "scoped308"
-
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
-
 	zoom_factor = 1.6
 	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_MID
-
 	fire_delay = 0.5
 	can_scope = FALSE
 
@@ -1368,18 +1302,15 @@
 	item_state = "sks"
 	mag_type = /obj/item/ammo_box/magazine/sks
 	init_mag_type = /obj/item/ammo_box/magazine/sks
-
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_100
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	damage_multiplier = GUN_LESS_DAMAGE_T3
+	tier = 2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
-
 	bayonet_state = "bayonet"
 	knife_x_offset = 24
 	knife_y_offset = 23
@@ -1408,22 +1339,19 @@
 	item_state = "sniper_rifle"
 	mag_type = /obj/item/ammo_box/magazine/w308
 	init_mag_type = /obj/item/ammo_box/magazine/w308
-
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_50
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T5
+	base_damage = 69
+	tier = 4
+	damage_multiplier = GUN_EXTRA_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(2.2)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
-	init_firemodes = list(/datum/firemode/semi_auto/slower)
-
+	init_firemodes = list(/datum/firemode/semi_auto)
 	semi_auto = TRUE
 	can_bayonet = FALSE
 	can_scope = FALSE
@@ -1456,16 +1384,13 @@
 	desc = "A DKS 501, chambered in .308 Winchester. This one has a gold trim and the words 'Old Cassius' engraved into the stock."
 	icon_state = "gold_sniper"
 	item_state = "gold_sniper"
-
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOWER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T5
+	damage_multiplier = GUN_EXTRA_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
 
 /* * * * * * * * * * *
@@ -1488,14 +1413,11 @@
 	mob_overlay_icon = 'icons/fallout/onmob/backslot_weapon.dmi'
 	icon_state = "venator_sniper"
 	item_state = "venator_sniper"
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
 	fire_delay = GUN_FIRE_DELAY_SLOWER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T3
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -1528,22 +1450,19 @@
 	item_state = "fnfal"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
+	fire_delay = GUN_FIRE_RATE_200
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	tier = 3
+	base_damage = 18
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/automatic,
+		/datum/firemode/semi_auto
 	)
-
 	is_automatic = TRUE
 	automatic = 1
 	can_bayonet = FALSE
@@ -1580,22 +1499,18 @@
 	desc = "A customized R91 assault rifle, with an integrated suppressor, small scope, cut down stock and polymer furniture. The supressor takes away stopping-power, but a cleaner action allows it to fire faster."
 	icon_state = "infiltrator"
 	item_state = "fnfal"
-
 	slowdown = GUN_SLOWDOWN_CARBINE
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_FAST
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
+	fire_delay = GUN_FIRE_RATE_200
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.1)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
+		/datum/firemode/automatic,
 		/datum/firemode/semi_auto
 	)
-
 	is_automatic = TRUE
 	automatic = 1
 	can_suppress = FALSE
@@ -1633,21 +1548,18 @@
 	icon_prefix = "handmade_rifle"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_BASE
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
+	fire_delay = GUN_FIRE_RATE_200
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
+	tier = 3
+	base_damage = 17
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.2)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200
+		/datum/firemode/automatic
 	)
-
 	is_automatic = TRUE
 	automatic = 1
 	can_suppress = TRUE
@@ -1687,23 +1599,22 @@
 	slot_flags = ITEM_SLOT_BACK
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
-
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_300
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	base_damage = 16
+	base_threshold_pen = 6
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(0.8)
+	tier = 4
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm300,
-		/datum/firemode/burst/two/fast
+		/datum/firemode/automatic,
+		/datum/firemode/burst/two
 	)
-
 	is_automatic = TRUE
 	automatic = 1
 	zoomable = TRUE
@@ -1738,20 +1649,20 @@
 	slot_flags = 0
 	mag_type = /obj/item/ammo_box/magazine/m5mm
 	init_mag_type = /obj/item/ammo_box/magazine/m5mm
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
+	fire_delay = GUN_FIRE_RATE_200
 	burst_size = 1
+	tier = 3
+	base_damage = 16
+	base_threshold_pen = 5
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(0.8)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
-		/datum/firemode/burst/three,
+		/datum/firemode/automatic,
+		/datum/firemode/burst,
 		/datum/firemode/semi_auto
 	)
 	gun_tags = list(GUN_FA_MODDABLE, GUN_SCOPE)
@@ -1794,19 +1705,15 @@
 	desc = "A pre-war rifle produced by Colt onced used by the U.S military. These models were well out of date even before the war. Fast firing, reliable, but nothing to brag about."
 	icon = 'icons/fallout/objects/guns/longguns.dmi'
 	icon_state = "ak112"
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTER
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTER
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.1)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm300,
+		/datum/firemode/automatic,
 		/datum/firemode/semi_auto
 	)
 
@@ -1827,19 +1734,15 @@
 	lefthand_file = 'icons/fallout/onmob/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/fallout/onmob/weapons/guns_righthand.dmi'
 	icon_state = "rifle-police"
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = CARBINE_RECOIL(1.2)
 	init_firemodes = list(
-		/datum/firemode/burst/three/fast,
+		/datum/firemode/burst/three,
 		/datum/firemode/semi_auto
 	)
 	gun_tags = list(GUN_SCOPE)
@@ -1859,22 +1762,19 @@
 	item_state = "fnfal"
 	mag_type = /obj/item/ammo_box/magazine/m762
 	init_mag_type = /obj/item/ammo_box/magazine/m762
-
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_150
 	burst_size = 1
+	base_damage = 25
 	damage_multiplier = GUN_LESS_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.2)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm150,
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/automatic,
+		/datum/firemode/semi_auto
 	)
-
 	is_automatic = TRUE
 	automatic = 1
 	fire_sound = 'sound/f13weapons/automaticrifle_BAR.ogg'
@@ -1906,23 +1806,20 @@
 	icon_prefix = "rifle"
 	mag_type = /obj/item/ammo_box/magazine/m762
 	init_mag_type = /obj/item/ammo_box/magazine/m762/ext
-
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_150
 	burst_size = 1
+	base_damage = 25
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(1.3)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm150,
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/automatic,
+		/datum/firemode/semi_auto
 	)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
 	automatic = 1
 	fire_sound = 'sound/f13weapons/automaticrifle_BAR.ogg'
 	gun_sound_properties = list(
@@ -1952,23 +1849,21 @@
 	mag_type = /obj/item/ammo_box/magazine/m473
 	init_mag_type = /obj/item/ammo_box/magazine/m473
 	disallowed_mags = list(/obj/item/ammo_box/magazine/m473/small, /obj/item/ammo_box/magazine/m473/small/empty)
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTEST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
+	fire_delay = GUN_FIRE_RATE_300
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
+	base_damage = 14
+	base_threshold_pen = 4
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(0.8)
 	init_firemodes = list(
-		/datum/firemode/burst/three/fastest,
+		/datum/firemode/burst/three,
 		/datum/firemode/semi_auto
 	)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
 	is_automatic = TRUE
 	automatic = 1
 	semi_auto = TRUE
@@ -1998,13 +1893,9 @@
 	mag_type = /obj/item/ammo_box/magazine/m473
 	init_mag_type = /obj/item/ammo_box/magazine/m473
 	disallowed_mags = list(/obj/item/ammo_box/magazine/m473/small, /obj/item/ammo_box/magazine/m473/small/empty)
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FASTEST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
 	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T2
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -2013,7 +1904,6 @@
 		/datum/firemode/semi_auto
 	)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
 	is_automatic = TRUE
 	automatic = 1
 	semi_auto = TRUE
@@ -2061,21 +1951,19 @@
 	item_state = "R84"
 	mag_type = /obj/item/ammo_box/magazine/lmg
 	init_mag_type = /obj/item/ammo_box/magazine/lmg
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LMG
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_200
+	base_damage = 23
+	tier = 4
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = LMG_RECOIL(0.7)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200
+		/datum/firemode/automatic
 	)
-
 	is_automatic = TRUE
 	automatic = 1
 	actions_types = null
@@ -2109,21 +1997,19 @@
 	item_state = "lsw"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle/extended
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LMG * 0.8
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_200
+	base_damage = 25
+	tier = 4
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = LMG_RECOIL(0.8)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200
+		/datum/firemode/automatic
 	)
-
 	is_automatic = TRUE
 	automatic = 1
 	spawnwithmagazine = TRUE
@@ -2161,21 +2047,19 @@
 	slowdown = 1.25
 	mag_type = /obj/item/ammo_box/magazine/mm762
 	init_mag_type = /obj/item/ammo_box/magazine/mm762
-
 	slowdown = GUN_SLOWDOWN_RIFLE_LMG * 1.5
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	draw_time = GUN_DRAW_LONG * 2
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+	fire_delay = GUN_FIRE_RATE_200
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T2
+	base_damage = 25
+	tier = 4
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = LMG_RECOIL(1.0)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200
+		/datum/firemode/automatic
 	)
-
 	is_automatic = TRUE
 	automatic = 1
 	var/cover_open = FALSE
@@ -2261,22 +2145,20 @@
 	slot_flags = ITEM_SLOT_BACK
 	mag_type = /obj/item/ammo_box/magazine/m2mm
 	init_mag_type = /obj/item/ammo_box/magazine/m2mm
-
+	tier = 5
 	slowdown = GUN_SLOWDOWN_RIFLE_GAUSS
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_LONG
-	fire_delay = GUN_FIRE_DELAY_SLOWER
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_75
+	base_damage = 65
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(2)
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slower
+		/datum/firemode/semi_auto
 	)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION // obviously
-
 	can_scope = FALSE
 	zoom_factor = 1.5
 	scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_MID
@@ -2307,24 +2189,22 @@
 	item_state = "xl70e3"
 	mag_type = /obj/item/ammo_box/magazine/m556/rifle
 	init_mag_type = /obj/item/ammo_box/magazine/m556/rifle
-
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_AUTO
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	draw_time = GUN_DRAW_MODERATE
-	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_FAST
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_200
 	burst_size = 1
+	tier = 4
+	base_damage = 24
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(0.6)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
+		/datum/firemode/automatic,
 		/datum/firemode/burst/three,
 		/datum/firemode/semi_auto
 	)
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
-
 	is_automatic = TRUE
 	spawnwithmagazine = TRUE
 	zoom_factor = 1.5
@@ -2375,34 +2255,30 @@
 	slowdown = GUN_SLOWDOWN_SMG_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	draw_time = GUN_DRAW_NORMAL
-	fire_delay = GUN_FIRE_DELAY_FAST
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FAST
+	fire_delay = GUN_FIRE_RATE_150
 	burst_size = 1
+	tier = 3
+	base_damage = 25
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_firemodes = list(
-		/datum/firemode/semi_auto/fast,
-		/datum/firemode/burst/three/fast
+		/datum/firemode/semi_auto,
+		/datum/firemode/burst/three
 	)
-
 	gun_tags = list(GUN_SCOPE, GUN_SILENCABLE)
 	can_scope = TRUE
 	scope_state = "AEP7_scope"
 	scope_x_offset = 10
 	scope_y_offset = 22
 	can_flashlight = TRUE
-
 	can_flashlight = TRUE
 	scope_state = "flight"
 	flight_x_offset = 16
 	flight_y_offset = 18
-
 	can_suppress = TRUE
 	suppressor_state = "pistol_suppressor"
 	suppressor_x_offset = 31
 	suppressor_y_offset = 17
-
 	actions_types = list(/datum/action/item_action/toggle_sidewinder)
 	fire_sound = 'sound/f13weapons/9mm.ogg'
 	gun_sound_properties = list(
@@ -2524,7 +2400,7 @@
 			available out here. This model is locked to semi-auto!"
 	icon_state = "sidewinder"
 	init_firemodes = list(
-		/datum/firemode/semi_auto/fast
+		/datum/firemode/semi_auto
 	)
 
 /// multical-magnum
@@ -2541,7 +2417,7 @@
 	init_mag_type = /obj/item/ammo_box/magazine/m44
 	current_caliber = "44"
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 

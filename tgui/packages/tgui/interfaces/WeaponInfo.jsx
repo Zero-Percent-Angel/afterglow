@@ -7,10 +7,10 @@ export const WeaponInfo = (props, context) => {
   // Extract `health` and `color` variables from the `data` object.
   const {
     damage_multiplier,
+	base_damage,
     penetration_multiplier,
     fire_delay,
     burst,
-    burst_delay,
     force,
     force_max,
     armor_penetration,
@@ -28,6 +28,7 @@ export const WeaponInfo = (props, context) => {
     projectile_name,
     projectile_damage,
     projectile_AP,
+	projectile_threshold_pen,
     projectile_recoil,
     firemode_count,
   } = data;
@@ -42,17 +43,15 @@ export const WeaponInfo = (props, context) => {
             <LabeledList.Item label="Projectile damage multiplier">
               {data.damage_multiplier}x
             </LabeledList.Item>
+			<LabeledList.Item label="Base Damage">
+              {data.base_damage}
+            </LabeledList.Item>
             <LabeledList.Item label="Fire delay">
               {data.fire_delay} ms
             </LabeledList.Item>
             {data.burst > 1 && (
               <LabeledList.Item label="Rounds per burst">
                 {data.burst} rounds
-              </LabeledList.Item>
-            )}
-            {data.burst > 1 && (
-              <LabeledList.Item label="Burst delay">
-                {data.burst_delay} ms
               </LabeledList.Item>
             )}
           </LabeledList>
@@ -169,6 +168,9 @@ export const WeaponInfo = (props, context) => {
               </LabeledList.Item>
               <LabeledList.Item label="Overall AP">
                 {data.projectile_AP}
+              </LabeledList.Item>
+			  <LabeledList.Item label="Overall Threshold Pen">
+                {data.projectile_threshold_pen}
               </LabeledList.Item>
               <LabeledList.Item label="Recoil multiplier">
                 {data.projectile_recoil}x

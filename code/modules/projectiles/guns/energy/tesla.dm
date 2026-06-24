@@ -12,5 +12,5 @@
 	equipsound = 'sound/f13weapons/equipsounds/aer14equip.ogg'
 
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slower
+		/datum/firemode/semi_auto
 	)

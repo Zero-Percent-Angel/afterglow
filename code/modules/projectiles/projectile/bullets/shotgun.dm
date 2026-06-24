@@ -1,3 +1,7 @@
+/obj/item/projectile/bullet/pellet
+	damage_threshold_penetration = 0
+	armour_penetration = -0.2
+
 /* buckshot pellet
  * DAMAGE: 8
  * STAMIN: 1
@@ -11,14 +15,11 @@
 	stamina = BULLET_STAMINA_SHOTGUN_PELLET
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_SHOTGUN_PELLET
-
 	wound_bonus = BULLET_WOUND_SHOTGUN_PELLET
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
-
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
 
 /* rubber pellet
@@ -34,14 +35,11 @@
 	stamina = RUBBERY_STAMINA_SHOTGUN_PELLET
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = RUBBERY_RECOIL_SHOTGUN_PELLET
-
 	wound_bonus = RUBBERY_WOUND_SHOTGUN_PELLET
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET_NAKED_MULT
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
-
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
 	sharpness = SHARP_NONE
 	embedding = null
@@ -95,14 +93,11 @@
 	stamina = BULLET_STAMINA_SHOTGUN_SLUG
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_SHOTGUN_SLUG
-
 	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG_NAKED_MULT
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
-
 	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
 
 /* 12g slug
@@ -142,14 +137,11 @@
 	stamina = RUBBERY_STAMINA_SHOTGUN_SLUG
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = RUBBERY_RECOIL_SHOTGUN_SLUG
-
 	wound_bonus = RUBBERY_WOUND_SHOTGUN_SLUG
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG_NAKED_MULT
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
-
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION
 
 /* train
@@ -165,14 +157,11 @@
 	stamina = BULLET_STAMINA_SHOTGUN_TRAIN
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_SHOTGUN_TRAIN
-
 	wound_bonus = BULLET_WOUND_SHOTGUN_TRAIN
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_TRAIN_NAKED_MULT
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-
 	pixels_per_second = BULLET_SPEED_SHOTGUN_TRAIN
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
-
 	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
 	sharpness = SHARP_NONE //crunch
 
@@ -190,20 +179,17 @@
  * WOUNDS: 120
  * WNAKED: 0
  */
-/obj/item/projectile/bullet/incendiary/shotgun
+/obj/item/projectile/bullet/shotgun/incendiary
 	name = "incendiary slug"
 	damage = BULLET_DAMAGE_SHOTGUN_SLUG * BULLET_DAMAGE_FIRE
 	stamina = BULLET_STAMINA_SHOTGUN_SLUG * BULLET_STAMINA_FIRE
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_SHOTGUN_SLUG
-
 	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_WOUND_FIRE
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG_NAKED_MULT * BULLET_NAKED_WOUND_FIRE
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
-
 	zone_accuracy_type = ZONE_WEIGHT_SEMI_AUTO
 	sharpness = SHARP_NONE
 
@@ -220,14 +206,11 @@
 	stamina = BULLET_STAMINA_SHOTGUN_PELLET * BULLET_STAMINA_FIRE
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_SHOTGUN_PELLET
-
 	wound_bonus = BULLET_WOUND_SHOTGUN_PELLET * BULLET_WOUND_FIRE
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_PELLET_NAKED_MULT * BULLET_NAKED_WOUND_FIRE
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_PELLET
-
 	pixels_per_second = BULLET_SPEED_SHOTGUN_PELLET
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_PELLET
-
 	sharpness = SHARP_NONE
 	zone_accuracy_type = ZONE_WEIGHT_SHOTGUN
 
@@ -244,18 +227,15 @@
 	icon_state = "3"
 	light_range = LIGHT_RANGE_FIRE
 	light_color = LIGHT_COLOR_FIRE
-
 	damage = BULLET_DAMAGE_SHOTGUN_SLUG * BULLET_DAMAGE_FIRE
 	stamina = BULLET_STAMINA_SHOTGUN_SLUG * BULLET_STAMINA_FIRE
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_SHOTGUN_SLUG
 	armour_penetration = 0.20
 	damage_threshold_penetration = 15
-
 	wound_bonus = BULLET_WOUND_SHOTGUN_SLUG * BULLET_WOUND_FIRE
 	bare_wound_bonus = BULLET_WOUND_SHOTGUN_SLUG_NAKED_MULT * BULLET_NAKED_WOUND_FIRE
 	wound_falloff_tile = BULLET_FALLOFF_START_SHOTGUN_SLUG
-
 	pixels_per_second = BULLET_SPEED_SHOTGUN_SLUG
 	damage_falloff = BULLET_FALLOFF_START_SHOTGUN_SLUG
 

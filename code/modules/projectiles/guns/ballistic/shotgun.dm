@@ -26,8 +26,6 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_SHOTGUN_BASE
@@ -42,7 +40,7 @@
 	fire_sound = 'sound/f13weapons/shotgun.ogg'
 	init_recoil = RIFLE_RECOIL(2.5)
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 	gun_sound_properties = list(
 		SP_VARY(FALSE),
@@ -150,8 +148,6 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_NORMAL
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	init_firemodes = list(
@@ -201,8 +197,6 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	init_firemodes = list(
@@ -265,8 +259,6 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_FASTEST
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	gun_accuracy_zone_type = ZONE_WEIGHT_PRECISION
@@ -328,13 +320,12 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_SHOTGUN_BASE
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 
 /obj/item/gun/ballistic/shotgun/hunting/update_icon_state()
@@ -370,8 +361,7 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 
@@ -381,7 +371,7 @@
 	flight_x_offset = 23
 	flight_y_offset = 21
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 
 /obj/item/gun/ballistic/shotgun/police/AltClick(mob/living/user)
@@ -432,8 +422,7 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_SHOTGUN_FAST
@@ -466,8 +455,7 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_SHOTGUN_BASE
@@ -482,7 +470,7 @@
 		SP_DISTANT_RANGE(SHOTGUN_RANGE_DISTANT)
 	)
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 
 /obj/item/gun/ballistic/shotgun/automatic/combat/update_icon_state()
@@ -510,13 +498,12 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_SLOW
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_SHOTGUN_BASE
 	init_firemodes = list(
-		/datum/firemode/semi_auto/slow
+		/datum/firemode/semi_auto
 	)
 
 	fire_sound = 'sound/f13weapons/auto5.ogg'
@@ -547,8 +534,7 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_SHOTGUN_FAST
@@ -582,8 +568,7 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_SHOTGUN_BASE
@@ -645,8 +630,6 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_FIRE_DELAY_SLOW
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_SHOTGUN_BASE
@@ -681,8 +664,7 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+
 	burst_size = 1
 	damage_multiplier = GUN_LESS_DAMAGE_T1
 	cock_delay = GUN_COCK_SHOTGUN_BASE
@@ -727,14 +709,13 @@
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_MODERATE
 	fire_delay = GUN_FIRE_DELAY_NORMAL
-	autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
-	burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
+
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	cock_delay = GUN_COCK_SHOTGUN_BASE
 	init_recoil = RIFLE_RECOIL(2.8)
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm150,
+		/datum/firemode/automatic,
 		/datum/firemode/semi_auto
 	)
 

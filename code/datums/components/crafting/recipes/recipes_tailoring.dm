@@ -12,6 +12,17 @@
 	skill_level = HARD_CHECK
 	falls_back_on_outdoors = TRUE
 
+/datum/crafting_recipe/armor_repair_kit_5
+	name = "5x Armor Repair Kit"
+	result = /obj/item/armor_repair_kit
+	reqs = list(/obj/item/stack/crafting/metalparts = 10,
+				/obj/item/stack/sheet/cloth = 50)
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	skill_level = HARD_CHECK
+	falls_back_on_outdoors = TRUE
+	time = 150
+
 /datum/crafting_recipe/armorkit
 	name = "Armor Kit"
 	result = /obj/item/clothing/suit/armor/tiered/light/kit
