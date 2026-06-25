@@ -14,7 +14,7 @@
 
 /datum/crafting_recipe/armor_repair_kit_5
 	name = "5x Armor Repair Kit"
-	result = /obj/item/armor_repair_kit
+	result = list(/obj/item/armor_repair_kit = 5)
 	reqs = list(/obj/item/stack/crafting/metalparts = 10,
 				/obj/item/stack/sheet/cloth = 50)
 	category = CAT_CLOTHING
