@@ -73,7 +73,7 @@
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/zipgun
-
+	base_damage = 10
 	slowdown = GUN_SLOWDOWN_PISTOL_LIGHT
 	force = GUN_MELEE_FORCE_PISTOL_LIGHT
 	weapon_weight = GUN_ONE_HAND_AKIMBO
@@ -120,14 +120,13 @@
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvisedpipe
-
+	base_damage = 17
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T5
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(3)
 	init_firemodes = list(
@@ -154,9 +153,8 @@
 	item_state = "rocketlauncher"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised_any
 	fire_sound = 'sound/weapons/magrifle.ogg'
-
-	damage_multiplier = GUN_LESS_DAMAGE_T5
-	projectile_speed_multiplier = 0.1
+	base_damage = 3
+	projectile_speed_multiplier = 0.5
 	misfire_possibilities = list()
 
 /obj/item/gun/ballistic/revolver/hobo/piperifle/romckit/update_icon_state()
@@ -193,7 +191,8 @@
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised10mm
-
+	tier = 2
+	base_damage = 19
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_LIGHT
 	weapon_weight = GUN_TWO_HAND_ONLY
@@ -240,7 +239,6 @@
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/improvised
-
 	added_spread = 5 // its a melee weapon lol
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
@@ -248,7 +246,8 @@
 	draw_time = GUN_DRAW_QUICK
 	fire_delay = GUN_FIRE_DELAY_NORMAL
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T2
+	tier = 2
+	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = RIFLE_RECOIL(3.1)
 	init_firemodes = list(
@@ -289,7 +288,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 	weapon_weight = GUN_ONE_HAND_AKIMBO
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised44
-
+	base_damage = 22
+	tier = 2
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
@@ -331,7 +331,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 	slot_flags = ITEM_SLOT_GLOVES
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised45
-
+	base_damage = 20
+	tier = 2
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
@@ -377,7 +378,8 @@
 	item_state = "autopipe"
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/autopipe
-
+	tier = 2
+	base_damage = 23
 	slowdown = GUN_SLOWDOWN_RIFLE_LIGHT_SEMI
 	force = GUN_MELEE_FORCE_RIFLE_HEAVY
 	weapon_weight = GUN_TWO_HAND_ONLY
@@ -414,6 +416,7 @@
 	item_state = "lasmusket"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lasmusket
 	fire_delay = 15
+	tier = 3
 	dryfire_sound = 'sound/f13weapons/noammoenergy.ogg'
 	dryfire_text = "*power failure*"
 	var/bolt_open = FALSE
@@ -448,14 +451,14 @@
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/hunting
-
+	tier = 2
+	base_damage = 27
 	slowdown = GUN_SLOWDOWN_RIFLE_MEDIUM_SEMI
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_NORMAL
+	fire_delay = GUN_FIRE_DELAY_SLOWER
 	burst_size = 1
-	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
 	init_recoil = HANDGUN_RECOIL(4)
 	init_firemodes = list(
@@ -482,12 +485,13 @@
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_BELT
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/improvised762
 	w_class = WEIGHT_CLASS_BULKY
-
+	base_damage = 30
+	tier = 3
 	slowdown = GUN_SLOWDOWN_SHOTGUN_FIXED
 	force = GUN_MELEE_FORCE_PISTOL_HEAVY
 	weapon_weight = GUN_ONE_HAND_ONLY
 	draw_time = GUN_DRAW_QUICK
-	fire_delay = GUN_FIRE_DELAY_NORMAL
+	fire_delay = GUN_FIRE_DELAY_SLOWER
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_T1
 	cock_delay = GUN_COCK_RIFLE_BASE
@@ -497,7 +501,6 @@
 		/datum/firemode/burst/two/shotgun_fixed
 	)
 	prefered_power = CASING_POWER_MEDIUM_RIFLE * CASING_POWER_MOD_SURPLUS
-
 	sawn_desc = "Someone took the time to chop the last few inches off the barrel and stock of this shotgun. Now, the wide spread of this hand-cannon's short-barreled shots makes it perfect for short-range crowd control."
 	fire_sound = 'sound/f13weapons/max_sawn_off.ogg'
 

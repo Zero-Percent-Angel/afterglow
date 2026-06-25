@@ -102,6 +102,10 @@
 	fire_type = GUN_FIREMODE_BURST
 	burst_count = 2
 
+/datum/firemode/burst/two/shotgun_fixed/apply_firemode()
+	..()
+	gun.fire_delay = 0
+
 /datum/firemode/burst/four
 	name = "4-Round Burst"
 	desc = "Short, controlled bursts."
