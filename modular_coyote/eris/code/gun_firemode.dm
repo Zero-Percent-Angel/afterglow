@@ -52,6 +52,7 @@
 	gun.automatic = (fire_type == GUN_FIREMODE_AUTO)
 	gun.burst_size = burst_count
 	gun.added_spread = initial(gun.added_spread) + accuracy_mod
+	gun.fire_delay = initial(gun.fire_delay)
 
 	for(var/obj/I in gun.item_upgrades)
 		var/datum/component/item_upgrade/IU = I.GetComponent(/datum/component/item_upgrade)
