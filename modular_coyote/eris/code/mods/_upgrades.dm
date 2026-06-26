@@ -275,8 +275,6 @@
 		G.projectile_speed_multiplier *= weapon_upgrades[GUN_UPGRADE_PROJ_SPEED_MULT]
 	if(weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT])
 		G.fire_delay *= weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT]
-		G.autofire_shot_delay *= weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT]
-		G.burst_shot_delay *= weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT]
 	if(weapon_upgrades[GUN_UPGRADE_MOVE_DELAY_MULT])
 		G.slowdown *= weapon_upgrades[GUN_UPGRADE_MOVE_DELAY_MULT]
 	if(weapon_upgrades[GUN_UPGRADE_RECOIL])
@@ -358,7 +356,7 @@
 
 /datum/component/item_upgrade/proc/add_values_gun(obj/item/gun/G)
 	if(weapon_upgrades[GUN_UPGRADE_FULLAUTO])
-		G.firemodes.Add(new /datum/firemode/automatic/rpm200(G))
+		G.firemodes.Add(new /datum/firemode/automatic(G))
 
 /datum/component/item_upgrade/proc/apply_values_firemode(datum/firemode/F)
 	if(weapon_upgrades[GUN_UPGRADE_FIRE_DELAY_MULT])

@@ -52,6 +52,8 @@ ATTACHMENTS
 	var/scope_slowdown = SCOPED_IN_ADD_SLOWDOWN_MID
 
 	var/damage_multiplier = 1 //Multiplies damage of projectiles fired from this gun
+	var/base_damage = 0
+	var/base_threshold_pen = 0
 	var/animal_mod = 1 // animal damage mulitplier
 	var/penetration_multiplier = 1 //Multiplies armor penetration of projectiles fired from this gun
 
@@ -66,11 +68,8 @@ ATTACHMENTS
 	/// Weapon is burst fire if this is above 1
 	var/burst_size = 1
 	/// The time between shots in burst.
-	var/burst_shot_delay = GUN_BURSTFIRE_DELAY_NORMAL
-	/// The time between firing actions, this means between bursts if this is burst weapon. The reason this is 0 is because you are still, by default, limited by clickdelay.
 	var/fire_delay = GUN_FIRE_DELAY_NORMAL
-	/// Time between individual shots when firing full-auto.
-	var/autofire_shot_delay = GUN_AUTOFIRE_DELAY_NORMAL
+	/// If the gun is full auto or not
 	var/automatic = 0 // Does the gun fire when the clicker's held down?
 
 	/// Last world.time this was fired
@@ -187,6 +186,7 @@ ATTACHMENTS
 	COOLDOWN_DECLARE(hold_it_right_message_antispam)
 	/// Cooldown between times the gun will tell you it shot, 0.5 seconds cus its not super duper important
 	COOLDOWN_DECLARE(shoot_message_antispam)
+	var/tier = 1
 
 /obj/item/gun/Initialize()
 	if(!recoil_dat && islist(init_recoil))
@@ -230,6 +230,23 @@ ATTACHMENTS
 		var/datum/firemode/FM = init_firemodes[i]
 		firemodes.Add(new FM(src))
 	update_firemode_hud()
+
+/obj/item/gun/get_examine_string(mob/user, thats = FALSE)
+	return "[icon2html(src, user)] [thats? "That's ":""][colour_text(get_examine_name(user))]"
+
+/obj/item/gun/proc/colour_text(txt)
+	switch(tier)
+		if (1)
+			return span_brass(txt)
+		if (2)
+			return span_green(txt)
+		if (3)
+			return span_blue(txt)
+		if (4)
+			return span_purple(txt)
+		if (5)
+			return span_red(txt)
+	return txt
 
 /obj/item/gun/proc/update_firemode_hud() // this has never worked
 	var/obj/screen/item_action/action = locate(/obj/screen/item_action/top_bar/gun/fire_mode) in hud_actions
@@ -444,7 +461,7 @@ ATTACHMENTS
 	if (automatic == 0)
 		user.DelayNextAction(1)
 	if (automatic == 1)
-		user.DelayNextAction(autofire_shot_delay)
+		user.DelayNextAction(fire_delay)
 
 	//DUAL (or more!) WIELDING
 	var/loop_counter = 0
@@ -487,7 +504,7 @@ ATTACHMENTS
 		return 1
 		//return isnull(chambered?.click_cooldown_override)? get_fire_delay(user) : chambered.click_cooldown_override
 	if (automatic == 1)
-		return isnull(chambered?.click_cooldown_override)? autofire_shot_delay : chambered.click_cooldown_override
+		return isnull(chambered?.click_cooldown_override)? fire_delay : chambered.click_cooldown_override
 
 /obj/item/gun/GetEstimatedAttackSpeed(mob/user)
 	return get_clickcd()
@@ -562,7 +579,7 @@ ATTACHMENTS
 			update_icon()
 			return
 		if(i < burst_size)
-			sleep(burst_shot_delay)
+			sleep(fire_delay)
 		process_chamber(user)
 		update_icon()
 	SSblackbox.record_feedback("tally", "gun_fired", 1, type)
@@ -1124,20 +1141,16 @@ ATTACHMENTS
 /obj/item/gun/ui_data(mob/user)
 	var/list/data = list()
 	data["damage_multiplier"] = damage_multiplier
+	data["base_damage"] = base_damage
 	//data["pierce_multiplier"] = pierce_multiplier
 	//data["ricochet_multiplier"] = ricochet_multiplier
 	data["penetration_multiplier"] = penetration_multiplier
-	if (automatic)
-		data["fire_delay"] = autofire_shot_delay * 100 //time between shot, in ms
-	else
-		data["fire_delay"] = fire_delay * 100 //time between shot, in ms
-
+	data["fire_delay"] = fire_delay * 100 //time between shot, in ms
 	data["burst"] = burst_size //How many shots are fired per click
-	data["burst_delay"] = burst_shot_delay * 100 //time between shot in burst mode, in ms
 
 	data["force"] = force
 	data["force_max"] = initial(force)*10
-	data["armor_penetration"] = armour_penetration
+	data["armor_penetration"] = penetration_multiplier
 	//data["muzzle_flash"] = muzzle_flash
 
 	var/total_recoil = 0
@@ -1207,8 +1220,9 @@ ATTACHMENTS
 		return list()
 	var/list/data = list()
 	data["projectile_name"] = P.name
-	data["projectile_damage"] = (P.damage * damage_multiplier)
+	data["projectile_damage"] = (P.damage + base_damage) * damage_multiplier
 	data["projectile_AP"] = P.armour_penetration * penetration_multiplier
+	data["projectile_threshold_pen"] = P.damage_threshold_penetration + base_threshold_pen
 	data["projectile_recoil"] = P.recoil
 	qdel(P)
 	return data
@@ -1243,7 +1257,6 @@ ATTACHMENTS
 	projectile_speed_multiplier = initial(projectile_speed_multiplier)
 	//proj_agony_multiplier = initial(proj_agony_multiplier)
 	fire_delay = initial(fire_delay)
-	burst_shot_delay = initial(burst_shot_delay)
 	//move_delay = initial(move_delay)
 	//muzzle_flash = initial(muzzle_flash)
 	silenced = initial(silenced)

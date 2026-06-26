@@ -88,6 +88,7 @@
 	icon_state = "m10mm"
 	desc = "A gun magazine."
 	caliber = list(CALIBER_10MM)
+	ammo_type = /obj/item/ammo_casing/c10mm
 	custom_materials = list(/datum/material/iron = MATS_MEDIUM_PISTOL_MAGAZINE)
 	w_class = WEIGHT_CLASS_TINY
 

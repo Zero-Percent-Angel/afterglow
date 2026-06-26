@@ -24,13 +24,11 @@
 	stamina = BULLET_STAMINA_RIFLE_223
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_223_MATCH
-	armour_penetration = 0.20
-	damage_threshold_penetration = 5
-
+	armour_penetration = 0.35
+	damage_threshold_penetration = 8
 	wound_bonus = BULLET_WOUND_RIFLE_223_MATCH
 	bare_wound_bonus = BULLET_WOUND_RIFLE_223_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_223_MATCH
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
@@ -191,9 +189,8 @@
 	stamina = BULLET_STAMINA_RIFLE_473
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_473
-	armour_penetration = 0.20
-	damage_threshold_penetration = 5
-
+	armour_penetration = 0.35
+	damage_threshold_penetration = 7
 	wound_bonus = BULLET_WOUND_RIFLE_473
 	bare_wound_bonus = BULLET_WOUND_RIFLE_473_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
@@ -280,11 +277,9 @@
 	recoil = BULLET_RECOIL_RIFLE_473
 	armour_penetration = 0
 	damage_threshold_penetration = 0
-
 	wound_bonus = BULLET_WOUND_RIFLE_473
 	bare_wound_bonus = BULLET_WOUND_RIFLE_473_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_473
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 	supereffective_damage = BULLET_DAMAGE_RIFLE_473 * 2
@@ -331,14 +326,11 @@
 	stamina = BULLET_STAMINA_RIFLE_473 * BULLET_STAMINA_SHOCK
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_473
-
 	wound_bonus = BULLET_WOUND_RIFLE_473 * BULLET_WOUND_SHOCK
 	bare_wound_bonus = BULLET_WOUND_RIFLE_473_NAKED_MULT * BULLET_NAKED_WOUND_SHOCK
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_473
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
-
 	damage_type = BURN // still checks bullet resist
 	sharpness = SHARP_NONE
 
@@ -359,11 +351,9 @@
 	stamina = BULLET_STAMINA_RIFLE_473
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_473
-
 	wound_bonus = BULLET_WOUND_RIFLE_473
 	bare_wound_bonus = BULLET_WOUND_RIFLE_473_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_473
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 	hitscan = TRUE
@@ -391,13 +381,11 @@
 	stamina = BULLET_STAMINA_RIFLE_5MM
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_5MM
-	armour_penetration = 0.20
-	damage_threshold_penetration = 5
-
+	armour_penetration = 0.35
+	damage_threshold_penetration = 8
 	wound_bonus = BULLET_WOUND_RIFLE_5MM
 	bare_wound_bonus = BULLET_WOUND_RIFLE_5MM_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_5MM
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
@@ -414,11 +402,9 @@
 	stamina = BULLET_STAMINA_RIFLE_5MM
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_5MM_MATCH
-
 	wound_bonus = BULLET_WOUND_RIFLE_5MM_MATCH
 	bare_wound_bonus = BULLET_WOUND_RIFLE_5MM_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_5MM_MATCH
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
@@ -435,11 +421,9 @@
 	stamina = BULLET_STAMINA_RIFLE_5MM
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_5MM_HANDLOAD
-
 	wound_bonus = BULLET_WOUND_RIFLE_5MM_HANDLOAD
 	bare_wound_bonus = BULLET_WOUND_RIFLE_5MM_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_5MM_HANDLOAD
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
@@ -466,14 +450,11 @@
 	stamina = BULLET_STAMINA_RIFLE_5MM * BULLET_STAMINA_SHOCK
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_5MM
-
 	wound_bonus = BULLET_WOUND_RIFLE_5MM * BULLET_WOUND_SHOCK
 	bare_wound_bonus = BULLET_WOUND_RIFLE_5MM_NAKED_MULT * BULLET_NAKED_WOUND_SHOCK
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_5MM
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
-
 	damage_type = BURN // still checks bullet resist
 	sharpness = SHARP_NONE
 
@@ -499,11 +480,9 @@
 	stamina = BULLET_STAMINA_RIFLE_5MM
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_5MM
-
 	wound_bonus = BULLET_WOUND_RIFLE_5MM
 	bare_wound_bonus = BULLET_WOUND_RIFLE_5MM_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_5MM
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_LIGHT
 
@@ -534,9 +513,8 @@
 	stamina = BULLET_STAMINA_RIFLE_308
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_308_MATCH
-	armour_penetration = 0.15
-	damage_threshold_penetration = 6
-
+	armour_penetration = 0.30
+	damage_threshold_penetration = 7
 	wound_bonus = BULLET_WOUND_RIFLE_308_MATCH
 	bare_wound_bonus = BULLET_WOUND_RIFLE_308_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
@@ -681,13 +659,11 @@
 	stamina = BULLET_STAMINA_RIFLE_50MG
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG_MATCH
-	armour_penetration = 0.55
-	damage_threshold_penetration = 9
-
+	armour_penetration = 0.6
+	damage_threshold_penetration = 15
 	wound_bonus = BULLET_WOUND_RIFLE_50MG_MATCH
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG_MATCH
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 
@@ -705,11 +681,9 @@
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG
 	armour_penetration = 0.45
-
 	wound_bonus = BULLET_WOUND_RIFLE_50MG
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 
@@ -727,11 +701,9 @@
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG_HANDLOAD
 	armour_penetration = 0.35
-
 	wound_bonus = BULLET_WOUND_RIFLE_50MG_HANDLOAD
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG_HANDLOAD
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 
@@ -749,14 +721,11 @@
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG
 	armour_penetration = 0.35
-
 	wound_bonus = BULLET_WOUND_RIFLE_50MG * BULLET_WOUND_FIRE
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT * BULLET_NAKED_WOUND_FIRE
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
-
 	damage_type = BURN // still checks bullet resist
 	sharpness = SHARP_NONE
 	var/fire_stacks = 4
@@ -782,11 +751,9 @@
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG
 	armour_penetration = 0.35
-
 	wound_bonus = BULLET_WOUND_RIFLE_50MG * BULLET_WOUND_EXPLOSIVE
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT * BULLET_NAKED_WOUND_EXPLOSIVE
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 
@@ -808,14 +775,11 @@
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = RUBBERY_RECOIL_RIFLE_50MG
 	armour_penetration = 0.35
-
 	wound_bonus = RUBBERY_WOUND_RIFLE_50MG
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
-
 	sharpness = SHARP_NONE
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION // Rubbers go where you want
 
@@ -832,12 +796,10 @@
 	stamina = BULLET_STAMINA_RIFLE_50MG
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG
-	armour_penetration = 0.7
-
+	armour_penetration = 0.75
 	wound_bonus = BULLET_WOUND_RIFLE_50MG
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 	movement_type = FLYING | UNSTOPPABLE
@@ -864,11 +826,9 @@
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_50MG
 	armour_penetration = 0.35
-
 	wound_bonus = BULLET_WOUND_RIFLE_50MG * BULLET_WOUND_POISON
 	bare_wound_bonus = BULLET_WOUND_RIFLE_50MG_NAKED_MULT * BULLET_NAKED_WOUND_POISON
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_50MG
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_HEAVY
 	var/smoke_radius = 3
@@ -918,11 +878,9 @@
 	recoil = BULLET_RECOIL_RIFLE_4570
 	armour_penetration = 0.35
 	damage_threshold_penetration = 7
-
 	wound_bonus = BULLET_WOUND_RIFLE_4570
 	bare_wound_bonus = BULLET_WOUND_RIFLE_4570_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_4570
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
@@ -939,11 +897,9 @@
 	stamina = BULLET_STAMINA_RIFLE_4570
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_4570
-
 	wound_bonus = BULLET_WOUND_RIFLE_4570
 	bare_wound_bonus = BULLET_WOUND_RIFLE_4570_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_4570
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
@@ -960,11 +916,9 @@
 	stamina = BULLET_STAMINA_RIFLE_4570
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_4570
-
 	wound_bonus = BULLET_WOUND_RIFLE_4570
 	bare_wound_bonus = BULLET_WOUND_RIFLE_4570_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_4570
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
 
@@ -1046,14 +1000,11 @@
 	stamina = RUBBERY_STAMINA_RIFLE_4570
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = RUBBERY_RECOIL_RIFLE_4570
-
 	wound_bonus = RUBBERY_WOUND_RIFLE_4570
 	bare_wound_bonus = BULLET_WOUND_RIFLE_4570_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_4570
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
-
 	sharpness = SHARP_NONE
 	zone_accuracy_type = ZONE_WEIGHT_PRECISION // Rubbers go where you want
 
@@ -1091,18 +1042,15 @@
 	stamina = BULLET_STAMINA_RIFLE_GAUSS
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_GAUSS
-
 	wound_bonus = BULLET_WOUND_RIFLE_GAUSS
 	bare_wound_bonus = BULLET_WOUND_RIFLE_GAUSS_NAKED_MULT
 	wound_falloff_tile = BULLET_WOUND_FALLOFF_PISTOL_LIGHT
-
 	pixels_per_second = BULLET_SPEED_RIFLE_GAUSS
 	damage_falloff = BULLET_FALLOFF_DEFAULT_RIFLE_MEDIUM
-
 	movement_type = FLYING | UNSTOPPABLE
 	hitscan = TRUE
-	armour_penetration = 0.5
-	damage_threshold_penetration = 9
+	armour_penetration = 0.55
+	damage_threshold_penetration = 10
 	tracer_type = /obj/effect/projectile/tracer/laser/blue
 	muzzle_type = /obj/effect/projectile/muzzle/laser/blue
 	impact_type = /obj/effect/projectile/impact/laser/blue
@@ -1131,9 +1079,7 @@
  */
 /obj/item/projectile/bullet/c2mm/blender //welcome to pain town
 	name = "2mm blender projectile"
-
 	movement_type = FLYING
-
 	pass_flags = PASSTABLE
 	ricochets_max = 9 //ain't called the 'blender' for nothin'
 	ricochet_incidence_leeway = 0

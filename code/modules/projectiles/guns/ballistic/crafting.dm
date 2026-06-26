@@ -52,7 +52,6 @@
 	name = "advanced m3a1 grease gun"
 	burst_size = 3
 	fire_delay = 2
-	burst_shot_delay = 2
 	penetration_multiplier = 1.1
 	damage_multiplier = 1
 
@@ -134,7 +133,6 @@
 	name = "advanced 10mm submachine gun"
 	burst_size = 3
 	fire_delay = 2
-	burst_shot_delay = 2
 	damage_multiplier = 1
 	penetration_multiplier = 1.12
 
@@ -186,7 +184,6 @@
 */
 /obj/item/gun/ballistic/automatic/smg/ppsh/mid
 	name = "enhanced ppsh-41"
-	burst_shot_delay = 1.5
 	fire_delay = 5
 	damage_multiplier = 1
 	penetration_multiplier = 1
@@ -218,7 +215,6 @@
 	name = "advanced ppsh41"
 	damage_multiplier = 1
 	penetration_multiplier = 1
-	burst_shot_delay = 1.5
 
 /*
 /obj/item/gun/ballistic/automatic/smg/ppsh/high/attackby(obj/item/W, mob/user, params)
@@ -358,7 +354,6 @@
 	fire_delay = 3
 	penetration_multiplier = 1
 	damage_multiplier = 1
-	burst_shot_delay = 2
 
 /*
 /obj/item/gun/ballistic/automatic/assault_rifle/mid/attackby(obj/item/W, mob/user, params)
@@ -390,7 +385,6 @@
 	fire_delay = 3
 	damage_multiplier = 1
 	penetration_multiplier = 1.12
-	burst_shot_delay = 2
 	burst_size = 3
 
 /*

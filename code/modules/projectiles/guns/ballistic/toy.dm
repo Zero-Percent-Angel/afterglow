@@ -15,7 +15,7 @@
 	item_flags = NONE
 	casing_ejector = FALSE
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
+		/datum/firemode/automatic,
 		/datum/firemode/burst/three,
 		/datum/firemode/semi_auto
 	)
@@ -99,7 +99,7 @@
 	casing_ejector = FALSE
 	clumsy_check = FALSE
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
+		/datum/firemode/automatic,
 		/datum/firemode/burst/three,
 		/datum/firemode/semi_auto
 	)
@@ -124,7 +124,7 @@
 	casing_ejector = FALSE
 	clumsy_check = FALSE
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
+		/datum/firemode/automatic,
 		/datum/firemode/burst/three,
 		/datum/firemode/semi_auto
 	)
@@ -154,7 +154,7 @@
 	dualwield_spread_mult = 1.4
 	w_class = WEIGHT_CLASS_BULKY
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
+		/datum/firemode/automatic,
 		/datum/firemode/burst/three,
 		/datum/firemode/semi_auto
 	)
@@ -172,7 +172,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	weapon_weight = GUN_ONE_HAND_ONLY
 	init_firemodes = list(
-		/datum/firemode/automatic/rpm200,
+		/datum/firemode/automatic,
 		/datum/firemode/burst/three,
 		/datum/firemode/semi_auto
 	)

@@ -85,8 +85,7 @@ these should not be used */
 	UPGRADE_HEALTH_THRESHOLD = 10
 	)*/
 	I.weapon_upgrades = list(
-		GUN_UPGRADE_RECOIL = 0.9,
-		GUN_UPGRADE_FIRE_DELAY_MULT = 1.1
+		GUN_UPGRADE_RECOIL = 0.9
 	)
 	//I.required_qualities = list(QUALITY_CUTTING,QUALITY_DRILLING, QUALITY_SAWING, QUALITY_DIGGING, QUALITY_EXCAVATION, QUALITY_WELDING, QUALITY_HAMMERING)
 	I.prefix = "shielded"
@@ -108,8 +107,8 @@ these should not be used */
 		)*/
 	I.weapon_upgrades = list(
 		GUN_UPGRADE_DAMAGE_MULT = 0.75,
-		GUN_UPGRADE_FIRE_DELAY_MULT = 0.8,
-		GUN_UPGRADE_PROJ_SPEED_MULT = 1.4
+		GUN_UPGRADE_FIRE_DELAY_MULT = 0.6,
+		GUN_UPGRADE_PROJ_SPEED_MULT = 1.2
 	)
 	I.prefix = "plasma-cooled"
 	I.req_fuel_cell = REQ_FUEL_OR_CELL
@@ -326,7 +325,6 @@ these should not be used */
 	)*/
 	I.weapon_upgrades = list(
 		GUN_UPGRADE_DAMAGE_MULT = 1.20,
-		GUN_UPGRADE_FIRE_DELAY_MULT = 1.1,
 		GUN_UPGRADE_CHARGECOST = 1.35
 	)
 	I.prefix = "boosted"
