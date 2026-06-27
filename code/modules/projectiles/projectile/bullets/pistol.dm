@@ -249,7 +249,7 @@
  */
 /obj/item/projectile/bullet/c9mm/simple //also for simple mobs, separate to allow balancing
 	name = "9mm bullet"
-	damage = BULLET_DAMAGE_PISTOL_9MM_HANDLOAD
+	damage = 22
 	stamina = BULLET_STAMINA_PISTOL_9MM
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_PISTOL_9MM
@@ -363,7 +363,7 @@
  */
 /obj/item/projectile/bullet/c10mm/simple
 	name = "10mm FMJ bullet"
-	damage = BULLET_DAMAGE_PISTOL_10MM_HANDLOAD
+	damage = 24
 	stamina = BULLET_STAMINA_PISTOL_10MM
 	spread = BULLET_SPREAD_HANDLOAD
 	recoil = BULLET_RECOIL_PISTOL_10MM_HANDLOAD
@@ -488,7 +488,7 @@
 
 /obj/item/projectile/bullet/c45/simple
 	name = ".45 FMJ bullet"
-	damage = BULLET_DAMAGE_PISTOL_45ACP_HANDLOAD
+	damage = 31
 	stamina = BULLET_STAMINA_PISTOL_45ACP
 	spread = BULLET_SPREAD_HANDLOAD * 2
 	recoil = BULLET_RECOIL_PISTOL_45ACP_HANDLOAD
@@ -502,6 +502,7 @@
 
 /obj/item/projectile/bullet/c45/op
 	name = ".45 +P bullet"
+	damage = 40
 
 /* 45 rubber
  * DAMAGE: 3
@@ -772,7 +773,7 @@
  */
 /obj/item/projectile/bullet/m44/simple //for simple mobs, separate to allow balancing
 	name = ".44 bullet"
-	damage = BULLET_DAMAGE_PISTOL_44_HANDLOAD
+	damage = 32
 	stamina = BULLET_STAMINA_PISTOL_44
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_PISTOL_44_HANDLOAD

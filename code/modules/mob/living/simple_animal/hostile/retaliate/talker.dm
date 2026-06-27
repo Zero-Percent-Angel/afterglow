@@ -56,7 +56,7 @@
 	retreat_distance = 3
 	minimum_distance = 5
 	casingtype = /obj/item/ammo_casing/c9mm
-	projectiletype = /obj/item/projectile/bullet/c46x30mm
+	projectiletype = /obj/item/projectile/bullet/c9mm/simple
 	projectilesound = 'sound/weapons/gunshot_smg.ogg'
 	loot = list(/obj/item/gun/ballistic/automatic/autopipe,
 				/obj/effect/mob_spawn/human/corpse/nanotrasensoldier)

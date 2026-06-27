@@ -681,7 +681,8 @@
 	weapon_weight = GUN_ONE_HAND_AKIMBO
 	draw_time = GUN_DRAW_FAST
 	fire_delay = GUN_FIRE_DELAY_SLOWER
-
+	tier = 3
+	base_damage = 50
 	burst_size = 1
 	damage_multiplier = GUN_EXTRA_DAMAGE_0
 	gun_accuracy_zone_type = ZONE_WEIGHT_AUTOMATIC

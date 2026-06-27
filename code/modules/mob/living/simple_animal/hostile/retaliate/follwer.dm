@@ -329,7 +329,7 @@
 	retreat_distance = 3
 	minimum_distance = 5
 	casingtype = /obj/item/ammo_casing/c9mm
-	projectiletype = /obj/item/projectile/bullet/c9mm/improvised
+	projectiletype = /obj/item/projectile/bullet/c9mm/simple
 	projectilesound = 'sound/weapons/gunshot_smg.ogg'
 	loot = list(/obj/effect/mob_spawn/human/corpse/wastelander, /obj/item/gun/ballistic/automatic/smg/mini_uzi)
 
