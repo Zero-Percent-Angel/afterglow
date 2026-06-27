@@ -107,7 +107,7 @@
  */
 /obj/item/projectile/bullet/a556/microshrapnel
 	name = "5.56 microshrapnel bullet"
-	damage = BULLET_DAMAGE_RIFLE_223 * BULLET_DAMAGE_MICROSHRAPNEL
+	damage = 12
 	stamina = BULLET_STAMINA_RIFLE_223 * BULLET_STAMINA_MICROSHRAPNEL
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_223
@@ -142,7 +142,7 @@
  */
 /obj/item/projectile/bullet/a556/simple //for simple mobs, separate to allow balancing
 	name = "5.56 bullet"
-	damage = BULLET_DAMAGE_RIFLE_223_HANDLOAD
+	damage = 25
 	stamina = BULLET_STAMINA_RIFLE_223
 	spread = BULLET_SPREAD_SURPLUS
 	recoil = BULLET_RECOIL_RIFLE_223_HANDLOAD
@@ -436,6 +436,7 @@
  */
 /obj/item/projectile/bullet/m5mm/simple //for simple mobs, separate to allow balancing
 	name = "5mm bullet"
+	damage = 30
 
 /* 5mm shock
  * DAMAGE: 12
@@ -621,6 +622,7 @@
  */
 /obj/item/projectile/bullet/a762/sport/simple //for simple mobs, separate to allow balancing
 	name = ".308 bullet"
+	damage = 30
 
 /*
 /obj/item/projectile/bullet/a762/uraniumtipped
