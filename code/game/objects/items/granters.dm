@@ -550,7 +550,7 @@
 	user.invalidate_skill_caches()
 	for(var/crafting_recipe_type in crafting_recipe_types)
 		var/datum/crafting_recipe/R = crafting_recipe_type
-		if (user.skill_check(initial(R.skill_needed), initial(R.skill_level)))
+		if (user.skill_check(initial(R.skill_needed), initial(R.skill_level)) || (R.falls_back_on_outdoors && user.skill_check(SKILL_OUTDOORSMAN, initial(R.skill_level))))
 			if (!already_learned.Find(crafting_recipe_type) || !oneuse)
 				user.mind.teach_crafting_recipe(crafting_recipe_type)
 				to_chat(user,span_notice("You learned how to make [initial(R.name)]."))

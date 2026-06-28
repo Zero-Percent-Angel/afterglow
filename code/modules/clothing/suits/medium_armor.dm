@@ -992,6 +992,7 @@
 	to_chat(user, span_notice("You activate \The [src]."))
 	animate(user, alpha = 0, time = 3 SECONDS)
 	START_PROCESSING(SSobj, src)
+	ADD_TRAIT(user, TRAIT_STEALTH_EFFECT, src.name)
 	on = TRUE
 
 /obj/item/clothing/suit/armor/tiered/medium/combat/stealth/proc/Deactivate(mob/living/carbon/human/user)
@@ -1002,6 +1003,7 @@
 	animate(user, alpha = initial(user.alpha), time = 3 SECONDS)
 	to_chat(user, span_notice("You deactivate \The [src]."))
 	STOP_PROCESSING(SSobj, src)
+	REMOVE_TRAIT(user, TRAIT_STEALTH_EFFECT, src.name)
 	on = FALSE
 
 /obj/item/clothing/suit/armor/tiered/medium/combat/stealth/dropped(mob/user)

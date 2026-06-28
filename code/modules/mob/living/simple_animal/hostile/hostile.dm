@@ -234,6 +234,9 @@
 				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier, 0)) && prob((100 - 10 + (A.special_l))))
 					to_chat(A, span_notice("[name] has not spotted you."))
 					heardm -= A
+				else if (HAS_TRAIT(A, TRAIT_STEALTH_EFFECT))
+					to_chat(A, span_notice("[name] has not spotted you."))
+					heardm -= A
 				else
 					A.stop_sneaking(TRUE)
 					to_chat(A, span_danger("[name] has spotted you!"))
@@ -254,6 +257,8 @@
 			CHECK_TICK
 			if (A.sneaking)
 				if ((A.skill_check(SKILL_SNEAK, sneak_detection_threshold) || A.skill_roll(SKILL_SNEAK, sneak_roll_modifier, 0)) && prob((100 - 10 + (A.special_l))))
+					to_chat(A, span_notice("[name] has not spotted you."))
+				else if (HAS_TRAIT(A, TRAIT_STEALTH_EFFECT))
 					to_chat(A, span_notice("[name] has not spotted you."))
 				else
 					A.stop_sneaking(TRUE)

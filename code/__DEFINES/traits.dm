@@ -269,6 +269,7 @@
 #define TRAIT_MENTAT_ADDICT "mentats_addict"
 #define TRAIT_SMOKER "smoker"
 #define TRAIT_PIEDPIPER "rat_lord"
+#define TRAIT_STEALTH_EFFECT "stealth"
 
 // mobility flag traits
 // IN THE FUTURE, IT WOULD BE NICE TO DO SOMETHING SIMILAR TO https://github.com/tgstation/tgstation/pull/48923/files (ofcourse not nearly the same because I have my.. thoughts on it)
