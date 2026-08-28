@@ -239,6 +239,10 @@
 	name = "flower dress"
 	path = /obj/item/clothing/under/dress/flower
 
+/datum/gear/uniform/dress/blackdressalt
+	name = "black pre-war dress"
+	path = /obj/item/clothing/under/f13/blackdressalt
+
 /datum/gear/uniform/dress/bustle
 	name = "western bustle dress"
 	path = /obj/item/clothing/under/dress/westernbustle

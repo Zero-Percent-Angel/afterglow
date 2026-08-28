@@ -407,6 +407,7 @@
 /turf/open/floor/plasteel/f13/metal/stayclear
 	icon_state = "steel_stayclear"
 
+
 ////Concrete Floors////
 
 /turf/open/floor/plasteel/f13/concrete
@@ -614,6 +615,15 @@ turf/open/floor/plasteel/f13/tile/broken
 
 /turf/open/floor/plasteel/f13/stone/rugged
 	icon_state = "khanstone"
+
+/turf/open/floor/plasteel/f13/stone/metalbrick //the filename from fallout 2
+	icon_state = "metalbrick"
+
+/turf/open/floor/plasteel/f13/stone/metalbrick/corner
+	icon_state = "metalbrick_corner"
+
+/turf/open/floor/plasteel/f13/stone/metalbrick/border
+	icon_state = "metalbrick_border"
 
 /turf/open/floor/circuit/f13_blue
 	icon = 'icons/turf/f13floors2.dmi'

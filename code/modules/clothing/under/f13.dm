@@ -635,10 +635,21 @@
 	can_adjust = FALSE
 
 /obj/item/clothing/under/f13/blackdress
-	name = "black dress"
+	name = "revealing black dress"
 	desc = "A dark and revealing dress that mixes formality and seduction."
 	icon_state = "blackdress"
 	item_state = "blackdress"
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE
+	body_parts_hidden = ARMS
+
+/obj/item/clothing/under/f13/blackdressalt
+	name = "black dress"
+	desc = "A cute, but plain, common pre-war dress."
+	icon = 'icons/fallout/clothing/suits_cosmetic.dmi'
+	mob_overlay_icon = 'icons/fallout/onmob/clothes/uniform_leisure.dmi'
+	icon_state = "dress_black"
+	item_state = "dress_black"
 	fitted = FEMALE_UNIFORM_TOP
 	can_adjust = FALSE
 	body_parts_hidden = ARMS
