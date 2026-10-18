@@ -102,6 +102,7 @@
 	casing_ejector = FALSE
 	weapon_weight = GUN_TWO_HAND_ONLY
 	magazine_wording = "rocket"
+	tier = 5
 
 /obj/item/gun/ballistic/rocketlauncher/romket
 	name = "\improper romckit launcher"
@@ -119,6 +120,7 @@
 	casing_ejector = FALSE
 	weapon_weight = GUN_TWO_HAND_ONLY
 	magazine_wording = "rocket"
+	tier = 2
 
 /obj/item/storage/box/rocketlauncher_tox
 	name = "romckit launcher kit"

@@ -12,7 +12,7 @@
 	name ="\improper HEDP rocket"
 	desc = "USE A WEEL GUN"
 	icon_state= "84mm-hedp"
-	damage = 0
+	damage = 15
 	armour_penetration = 0.01
 	ricochets_max = 0
 	var/anti_armour_damage = 200
@@ -34,7 +34,7 @@
 	desc = "Fwoosh."
 	icon_state = "missile" //temp until sprites
 	ricochets_max = 0
-	damage = 15
+	damage = 25
 	var/fire_stacks = 8
 	damage_type = BURN
 
@@ -87,12 +87,12 @@
 	name ="\improper low yield HE missile"
 	desc = "Boom."
 	icon_state = "missile"
-	damage = 25
+	damage = 30
 	ricochets_max = 0 //it's a MISSILE
 
 /obj/item/projectile/bullet/a84mm_he/on_hit(atom/target, blocked=0)
 	..()
-	explosion(target, 0, 0, 2, 4)
+	explosion(target, 0, 1, 2, 4)
 	new /obj/effect/temp_visual/explosion(get_turf(target))
 	return BULLET_ACT_HIT
 
@@ -100,12 +100,12 @@
 	name ="\improper high yield HE missile"
 	desc = "Boom plus."
 	icon_state = "missile"
-	damage = 15
+	damage = 30
 	ricochets_max = 0 //it's a MISSILE
 
 /obj/item/projectile/bullet/a84mm_he_big/on_hit(atom/target, blocked=0)
 	..()
-	explosion(target, 0, 3, 5, 5)
+	explosion(target, 1, 3, 5, 5)
 	new /obj/effect/temp_visual/explosion(get_turf(target))
 	return BULLET_ACT_HIT
 
@@ -113,8 +113,8 @@
 	name ="\improper APHE missile"
 	desc = "Boom."
 	icon_state = "missile"
-	damage = 20
-	armour_penetration = 0.25
+	damage = 40
+	armour_penetration = 0.4
 	ricochets_max = 0 //Guess what? Still a MISSILE
 	var/sturdy = list(
 	/turf/closed,
